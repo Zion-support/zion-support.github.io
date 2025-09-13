@@ -66,6 +66,11 @@ import RevolutionaryContent2026Banner from '../components/RevolutionaryContent20
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 
+// New breakthrough banners
+import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
+import AI2026QuantumNeuralFusionBreakthroughBanner from '../components/AI2026QuantumNeuralFusionBreakthroughBanner';
+import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -77,11 +82,20 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* NEW CONTENT 2026 PROMOTION BANNER */}
-        <NewContent2026PromotionBanner />
+        {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
+        <AI2025UltimateBreakthroughRevolutionBanner />
+        
+        {/* NEW AI 2026 QUANTUM NEURAL FUSION BREAKTHROUGH BANNER */}
+        <AI2026QuantumNeuralFusionBreakthroughBanner />
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 BANNER */}
         <UltimateContentShowcase2026Banner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2026 */}
+        <InteractiveContentDiscoveryWidget2026 />
+        
+        {/* NEW CONTENT 2026 PROMOTION BANNER */}
+        <NewContent2026PromotionBanner />
         
         {/* REVOLUTIONARY CONTENT 2026 BANNER */}
         <RevolutionaryContent2026Banner />
@@ -94,9 +108,6 @@ export default function HomePage() {
         
         {/* AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
-        
-        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2026 */}
-        <InteractiveContentDiscoveryWidget2026 />
         
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
@@ -115,11 +126,6 @@ export default function HomePage() {
         
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
-        
-=======
-      <div className='min-h-screen bg-white'>
-        {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
-        <AI2025UltimateBreakthroughRevolutionBanner />
         
         {/* NEW AI 2026-2030 FUTURE PREDICTIONS BREAKTHROUGH BANNER */}
         <AI20262030FuturePredictionsBreakthroughBanner />
