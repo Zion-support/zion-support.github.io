@@ -9,121 +9,141 @@ export default function NewContentPromotionBanner() {
     {
       id: 1,
       title: "🚀 AI 2025 Ultimate Breakthrough Revolution",
-      description: "Experience the most revolutionary AI breakthrough in history with 2,500-5,000% ROI",
+      description: "Achieve 10,000% ROI with revolutionary AI technologies",
       link: "/ai-2025-ultimate-breakthrough-revolution",
       badge: "BREAKTHROUGH",
       color: "from-red-500 to-pink-500",
-      bgColor: "from-red-50 to-pink-50"
+      bgColor: "from-red-900/20 to-pink-900/20"
     },
     {
       id: 2,
       title: "⚛️ Quantum Computing Solutions 2025",
-      description: "Revolutionary quantum computing delivering breakthrough performance and quantum supremacy",
+      description: "Experience 15,000% ROI with quantum-enhanced AI",
       link: "/quantum-computing-solutions",
       badge: "REVOLUTIONARY",
-      color: "from-indigo-500 to-purple-500",
-      bgColor: "from-indigo-50 to-purple-50"
+      color: "from-cyan-500 to-blue-500",
+      bgColor: "from-cyan-900/20 to-blue-900/20"
     },
     {
       id: 3,
-      title: "🤖 Advanced Automation Solutions 2026-2030",
-      description: "100% autonomous operations with 5,000%+ ROI across all business processes",
-      link: "/advanced-automation-solutions-2026",
+      title: "🏆 Global Transformation Success Story",
+      description: "Fortune 500 company achieved 10,000% ROI in 6 months",
+      link: "/case-studies/ai-2025-global-transformation-breakthrough",
+      badge: "SUCCESS",
+      color: "from-green-500 to-emerald-500",
+      bgColor: "from-green-900/20 to-emerald-900/20"
+    },
+    {
+      id: 4,
+      title: "🧠 Neural Interface Revolution",
+      description: "Direct brain-computer interfaces with 99.7% accuracy",
+      link: "/ai-2026-neural-interface-revolution",
       badge: "FUTURE",
-      color: "from-emerald-500 to-cyan-500",
-      bgColor: "from-emerald-50 to-cyan-50"
+      color: "from-purple-500 to-indigo-500",
+      bgColor: "from-purple-900/20 to-indigo-900/20"
     }
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % promotions.length);
     }, 5000);
 
-    return () => clearInterval(interval);
-  }, []);
-
-  const currentPromotion = promotions[currentSlide];
+    return () => clearInterval(timer);
+  }, [promotions.length]);
 
   if (!isVisible) return null;
 
+  const currentPromotion = promotions[currentSlide];
+
   return (
-    <div className="relative bg-gradient-to-r from-gray-900 to-gray-800 text-white py-4 px-4 overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
+    <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 border-b border-white/20">
+      <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
       
-      <div className="relative max-w-7xl mx-auto flex items-center justify-between">
-        {/* Left side - Promotion content */}
-        <div className="flex-1 flex items-center space-x-4">
-          <div className="flex items-center space-x-2">
-            <span className="text-2xl animate-bounce">🔥</span>
-            <span className="text-sm font-semibold bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">
-              NEW CONTENT
-            </span>
-          </div>
-          
-          <div className="flex-1 min-w-0">
-            <Link 
-              href={currentPromotion.link}
-              className="group block hover:opacity-90 transition-opacity duration-300"
-            >
-              <div className="flex items-center space-x-3">
-                <div className={`px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${currentPromotion.color} text-white animate-pulse`}>
-                  {currentPromotion.badge}
-                </div>
-                <div className="min-w-0 flex-1">
-                  <h3 className="text-sm md:text-base font-bold truncate group-hover:text-yellow-300 transition-colors">
+      {/* Animated background particles */}
+      <div className="absolute inset-0">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-white/30 rounded-full animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 3}s`
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="flex items-center justify-between">
+          <div className="flex-1">
+            <div className="flex items-center space-x-4">
+              <div className={`inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r ${currentPromotion.color} text-white text-sm font-bold animate-pulse`}>
+                {currentPromotion.badge}
+              </div>
+              <div className="flex-1">
+                <Link 
+                  href={currentPromotion.link}
+                  className="group block"
+                >
+                  <h3 className="text-lg font-bold text-white group-hover:text-yellow-400 transition-colors duration-300">
                     {currentPromotion.title}
                   </h3>
-                  <p className="text-xs md:text-sm text-gray-300 truncate">
+                  <p className="text-sm text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                     {currentPromotion.description}
                   </p>
-                </div>
+                </Link>
               </div>
+            </div>
+          </div>
+
+          <div className="flex items-center space-x-4">
+            {/* Slide indicators */}
+            <div className="flex space-x-2">
+              {promotions.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentSlide 
+                      ? 'bg-white scale-125' 
+                      : 'bg-white/50 hover:bg-white/75'
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <Link
+              href={currentPromotion.link}
+              className={`bg-gradient-to-r ${currentPromotion.color} hover:opacity-90 text-white font-bold py-2 px-6 rounded-lg text-sm transition-all duration-300 transform hover:scale-105`}
+            >
+              Learn More
             </Link>
+
+            {/* Close button */}
+            <button
+              onClick={() => setIsVisible(false)}
+              className="text-white/70 hover:text-white transition-colors duration-300 p-1"
+              aria-label="Close banner"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
-        </div>
-
-        {/* Right side - CTA and controls */}
-        <div className="flex items-center space-x-4">
-          {/* Slide indicators */}
-          <div className="flex space-x-1">
-            {promotions.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-yellow-400' : 'bg-gray-500'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-
-          {/* CTA Button */}
-          <Link
-            href={currentPromotion.link}
-            className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-4 py-2 rounded-lg text-sm font-bold hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
-          >
-            Explore Now
-          </Link>
-
-          {/* Close button */}
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-gray-400 hover:text-white transition-colors duration-300 p-1"
-            aria-label="Close banner"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
         </div>
       </div>
 
       {/* Progress bar */}
-      <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 transition-all duration-5000 ease-linear"
-           style={{ width: `${((currentSlide + 1) / promotions.length) * 100}%` }} />
+      <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 animate-pulse">
+        <div 
+          className="h-full bg-gradient-to-r from-transparent to-white/50 transition-all duration-5000 ease-linear"
+          style={{ width: '100%' }}
+        />
+      </div>
     </div>
   );
 }
