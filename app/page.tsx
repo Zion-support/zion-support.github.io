@@ -40,6 +40,10 @@ import BusinessSuccessStories2025PromotionBanner from '../components/BusinessSuc
 import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
 import InteractiveTechDemo2025PromotionBanner from '../components/InteractiveTechDemo2025PromotionBanner';
 
+// New 2025 revolutionary content promotion banners
+import AI2035FutureVisionPromotionBanner from '../components/AI2035FutureVisionPromotionBanner';
+import QuantumAIBreakthrough2030PromotionBanner from '../components/QuantumAIBreakthrough2030PromotionBanner';
+
 // New revolutionary components
 import RevolutionaryAIContentPromotionBanner from '../components/RevolutionaryAIContentPromotionBanner';
 import RevolutionaryCaseStudiesShowcase from '../components/RevolutionaryCaseStudiesShowcase';
@@ -146,6 +150,12 @@ export default function HomePage() {
         
         {/* NEW SUCCESS STORIES 2026 PROMOTION BANNER */}
         <SuccessStoriesShowcase2026PromotionBanner />
+
+        {/* AI 2035 FUTURE VISION PROMOTION BANNER */}
+        <AI2035FutureVisionPromotionBanner />
+
+        {/* QUANTUM AI BREAKTHROUGH 2030 PROMOTION BANNER */}
+        <QuantumAIBreakthrough2030PromotionBanner />
 
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
