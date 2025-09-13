@@ -1,5 +1,5 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
@@ -9,6 +9,8 @@ import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { FloatingCTA } from "./components/FloatingCTA";
 import { PageLoader } from "./components/ui/PageLoader";
+import Navigation from "./components/Navigation";
+import { EnhancedFooter } from "./components/EnhancedFooter";
 import { AuthRoutes, DashboardRoutes, MarketplaceRoutes, TalentRoutes, AdminRoutes, MobileAppRoutes, ContentRoutes, ErrorRoutes, EnterpriseRoutes, CommunityRoutes, DeveloperRoutes } from './routes';
 // Lazy load pages for better performance
 const Home = React.lazy(() => import('./pages/Home'));
@@ -34,11 +36,11 @@ const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const ExpandedServicesPage = React.lazy(() => import('./pages/ExpandedServicesPage'));
 const ServiceComparisonPage = React.lazy(() => import('./pages/ServiceComparisonPage'));
-const ServiceCalculatorPage = React.lazy(() => import('./pages/ServiceCalculatorPage'));
-const AllServicesOverviewPage = React.lazy(() => import('./pages/AllServicesOverviewPage'));
-const ServiceAnalyticsDashboard = React.lazy(() => import('./pages/ServiceAnalyticsDashboard'));
-const ServiceMarketplace = React.lazy(() => import('./pages/ServiceMarketplace'));
-const ServicesShowcase = React.lazy(() => import('./pages/ServicesShowcase'));
+// const ServiceCalculatorPage = React.lazy(() => import('./pages/ServiceCalculatorPage'));
+const AllServicesOverviewPage = React.lazy(() => import('./pages/AllServicesPage'));
+const ServiceAnalyticsDashboard = React.lazy(() => import('./pages/Analytics'));
+const ServiceMarketplace = React.lazy(() => import('./pages/Marketplace'));
+const ServicesShowcase = React.lazy(() => import('./pages/ServicesShowcase.tsx'));
 const baseRoutes = [
     { path: '/', element: _jsx(Home, {}) },
     { path: '/match', element: _jsx(AIMatcherPage, {}) },
@@ -50,7 +52,7 @@ const baseRoutes = [
     { path: '/expanded-services', element: _jsx(ExpandedServicesPage, {}) },
     { path: '/all-services', element: _jsx(AllServicesOverviewPage, {}) },
     { path: '/service-comparison', element: _jsx(ServiceComparisonPage, {}) },
-    { path: '/service-calculator', element: _jsx(ServiceCalculatorPage, {}) },
+    // { path: '/service-calculator', element: _jsx(ServiceCalculatorPage, {}) },
     { path: '/service-analytics', element: _jsx(ServiceAnalyticsDashboard, {}) },
     { path: '/service-marketplace', element: _jsx(ServiceMarketplace, {}) },
     { path: '/services-showcase', element: _jsx(ServicesShowcase, {}) },
@@ -100,6 +102,6 @@ const App = () => {
     const handleThemeToggle = () => {
         setIsDarkMode(!isDarkMode);
     };
-    return (_jsx(WhitelabelProvider, { children: _jsxs(ThemeProvider, { defaultTheme: "dark", children: [_jsxs("div", { className: "min-h-screen bg-background", children: [_jsx(EnhancedNavigation, { onThemeToggle: handleThemeToggle, isDarkMode: isDarkMode }), _jsx("main", { className: "pt-20", children: _jsx(Suspense, { fallback: _jsx(PerformanceOptimizedLoader, { fullScreen: true, text: "Loading..." }), children: _jsxs(Routes, { children: [baseRoutes.map(({ path, element }) => (_jsx(Route, { path: path, element: element }, path))), _jsx(Route, { path: "/auth/*", element: _jsx(AuthRoutes, {}) }), _jsx(Route, { path: "/dashboard/*", element: _jsx(DashboardRoutes, {}) }), _jsx(Route, { path: "/marketplace/*", element: _jsx(MarketplaceRoutes, {}) }), _jsx(Route, { path: "/talent/*", element: _jsx(TalentRoutes, {}) }), _jsx(Route, { path: "/admin/*", element: _jsx(AdminRoutes, {}) }), _jsx(Route, { path: "/mobile/*", element: _jsx(MobileAppRoutes, {}) }), _jsx(Route, { path: "/content/*", element: _jsx(ContentRoutes, {}) }), _jsx(Route, { path: "/enterprise/*", element: _jsx(EnterpriseRoutes, {}) }), _jsx(Route, { path: "/community/*", element: _jsx(CommunityRoutes, {}) }), _jsx(Route, { path: "/developers/*", element: _jsx(DeveloperRoutes, {}) }), _jsx(Route, { path: "*", element: _jsx(ErrorRoutes, {}) })] }) }) }), _jsx(EnhancedFooter, {})] }), _jsx(Toaster, {}), _jsx(SonnerToaster, { position: "top-right" })] }) }));
+    return (_jsx(WhitelabelProvider, { children: _jsxs(ThemeProvider, { defaultTheme: "dark", children: [_jsxs("div", { className: "min-h-screen bg-background", children: [_jsx(Navigation, {}), _jsx("main", { className: "pt-20", children: _jsx(Suspense, { fallback: _jsx(PageLoader, { text: "Loading..." }), children: _jsxs(Routes, { children: [baseRoutes.map(({ path, element }) => (_jsx(Route, { path: path, element: element }, path))), _jsx(Route, { path: "/auth/*", element: _jsx(AuthRoutes, {}) }), _jsx(Route, { path: "/dashboard/*", element: _jsx(DashboardRoutes, {}) }), _jsx(Route, { path: "/marketplace/*", element: _jsx(MarketplaceRoutes, {}) }), _jsx(Route, { path: "/talent/*", element: _jsx(TalentRoutes, {}) }), _jsx(Route, { path: "/admin/*", element: _jsx(AdminRoutes, {}) }), _jsx(Route, { path: "/mobile/*", element: _jsx(MobileAppRoutes, {}) }), _jsx(Route, { path: "/content/*", element: _jsx(ContentRoutes, {}) }), _jsx(Route, { path: "/enterprise/*", element: _jsx(EnterpriseRoutes, {}) }), _jsx(Route, { path: "/community/*", element: _jsx(CommunityRoutes, {}) }), _jsx(Route, { path: "/developers/*", element: _jsx(DeveloperRoutes, {}) }), _jsx(Route, { path: "*", element: _jsx(ErrorRoutes, {}) })] }) }) }), _jsx(EnhancedFooter, {})] }), _jsx(Toaster, {}), _jsx(SonnerToaster, { position: "top-right" })] }) }));
 };
 export default App;
