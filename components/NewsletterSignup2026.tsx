@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Mail, Send, CheckCircle, Sparkles } from 'lucide-react';
 
 export default function NewsletterSignup2026() {
   const [email, setEmail] = useState('');
@@ -19,23 +20,23 @@ export default function NewsletterSignup2026() {
 
   if (isSubscribed) {
     return (
-      <div className="bg-gradient-to-r from-green-900 via-emerald-900 to-teal-900 text-white py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="text-6xl mb-6">🎉</div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
-            Welcome to the AI Revolution!
+      <div className="bg-gradient-to-r from-green-600 to-emerald-600 py-16">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <CheckCircle className="h-16 w-16 text-white mx-auto mb-6" />
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Welcome to the Future!
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            You're now part of our exclusive community of AI pioneers. Get ready for revolutionary content delivered directly to your inbox.
+          <p className="text-xl text-gray-200 mb-8">
+            You're now subscribed to our exclusive 2026 content updates. 
+            Get ready for the most advanced AI and quantum computing insights.
           </p>
-          <div className="bg-gradient-to-r from-green-800/50 to-emerald-800/50 rounded-xl p-6 border border-green-500/30">
-            <h3 className="text-2xl font-bold mb-4 text-green-400">What's Next?</h3>
-            <ul className="text-left text-gray-300 space-y-2">
-              <li>✓ Weekly AI breakthrough updates</li>
-              <li>✓ Exclusive case studies and success stories</li>
-              <li>✓ Early access to new AI technologies</li>
-              <li>✓ Free implementation guides and toolkits</li>
-              <li>✓ Invitations to exclusive webinars and events</li>
+          <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
+            <h3 className="text-lg font-semibold text-white mb-4">What's Next?</h3>
+            <ul className="text-gray-200 space-y-2 text-left">
+              <li>• Weekly AI breakthrough updates</li>
+              <li>• Exclusive quantum computing insights</li>
+              <li>• Early access to new content</li>
+              <li>• Invitation to virtual tech events</li>
             </ul>
           </div>
         </div>
@@ -44,58 +45,27 @@ export default function NewsletterSignup2026() {
   }
 
   return (
-    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div>
-            <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🚀 EXCLUSIVE AI REVOLUTION UPDATES
-            </div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Join the AI Revolution
+    <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center mb-6">
+            <Sparkles className="h-8 w-8 text-cyan-400 mr-3" />
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
+              Stay Ahead of the Curve
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get exclusive access to revolutionary AI breakthroughs, success stories, and implementation guides. 
-              Join thousands of business leaders transforming their organizations with AI.
-            </p>
-            
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center text-gray-300">
-                <span className="text-green-400 mr-3">✓</span>
-                Weekly AI breakthrough updates
-              </div>
-              <div className="flex items-center text-gray-300">
-                <span className="text-green-400 mr-3">✓</span>
-                Exclusive case studies with 10,000%+ ROI
-              </div>
-              <div className="flex items-center text-gray-300">
-                <span className="text-green-400 mr-3">✓</span>
-                Early access to new AI technologies
-              </div>
-              <div className="flex items-center text-gray-300">
-                <span className="text-green-400 mr-3">✓</span>
-                Free implementation guides and toolkits
-              </div>
-              <div className="flex items-center text-gray-300">
-                <span className="text-green-400 mr-3">✓</span>
-                Invitations to exclusive webinars
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-yellow-900/30 to-orange-900/30 rounded-xl p-6 border border-yellow-500/30">
-              <h3 className="text-lg font-bold text-yellow-400 mb-2">🎁 Special Bonus</h3>
-              <p className="text-gray-300">
-                Get your free <span className="text-yellow-400 font-bold">AI Readiness Assessment</span> worth $10,000 
-                when you subscribe to our newsletter.
-              </p>
-            </div>
+            <Sparkles className="h-8 w-8 text-cyan-400 ml-3" />
           </div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Get exclusive access to the latest AI breakthroughs, quantum computing innovations, 
+            and future technology insights. Join thousands of tech leaders who are already subscribed.
+          </p>
+        </div>
 
-          {/* Signup Form */}
-          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-8 border border-gray-700/50">
-            <h3 className="text-2xl font-bold mb-6 text-center text-cyan-400">
-              Start Your AI Journey
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Newsletter Form */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-6">
+              Subscribe to 2026 Updates
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -103,67 +73,128 @@ export default function NewsletterSignup2026() {
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                   Email Address
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  placeholder="Enter your email address"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                  Company (Optional)
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  placeholder="Your company name"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="industry" className="block text-sm font-medium text-gray-300 mb-2">
-                  Industry
-                </label>
-                <select
-                  id="industry"
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-                  <option value="">Select your industry</option>
-                  <option value="technology">Technology</option>
-                  <option value="finance">Finance</option>
-                  <option value="healthcare">Healthcare</option>
-                  <option value="manufacturing">Manufacturing</option>
-                  <option value="retail">Retail</option>
-                  <option value="automotive">Automotive</option>
-                  <option value="other">Other</option>
-                </select>
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                  <input
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email address"
+                    required
+                    className="w-full pl-10 pr-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                  />
+                </div>
               </div>
 
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-lg font-bold text-lg hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? (
-                  <div className="flex items-center justify-center">
+                  <>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                     Subscribing...
-                  </div>
+                  </>
                 ) : (
-                  'Join the Revolution'
+                  <>
+                    <Send className="h-5 w-5 mr-2" />
+                    Subscribe Now
+                  </>
                 )}
               </button>
             </form>
 
-            <p className="text-xs text-gray-400 mt-4 text-center">
+            <p className="text-sm text-gray-400 mt-4">
               We respect your privacy. Unsubscribe at any time.
             </p>
+          </div>
+
+          {/* Benefits */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6">
+                What You'll Get
+              </h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="bg-cyan-500/20 p-2 rounded-lg mr-4">
+                    <Sparkles className="h-6 w-6 text-cyan-400" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">
+                      Exclusive AI Insights
+                    </h4>
+                    <p className="text-gray-300">
+                      Get the latest breakthroughs in artificial intelligence, machine learning, 
+                      and neural network technologies before they go public.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="bg-purple-500/20 p-2 rounded-lg mr-4">
+                    <Sparkles className="h-6 w-6 text-purple-400" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">
+                      Quantum Computing Updates
+                    </h4>
+                    <p className="text-gray-300">
+                      Stay informed about quantum computing developments, quantum algorithms, 
+                      and their real-world applications.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="bg-pink-500/20 p-2 rounded-lg mr-4">
+                    <Sparkles className="h-6 w-6 text-pink-400" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">
+                      Early Access Content
+                    </h4>
+                    <p className="text-gray-300">
+                      Be the first to access new content, research papers, and technology 
+                      demonstrations as they're released.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="bg-green-500/20 p-2 rounded-lg mr-4">
+                    <Sparkles className="h-6 w-6 text-green-400" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">
+                      Expert Analysis
+                    </h4>
+                    <p className="text-gray-300">
+                      Receive in-depth analysis and commentary from our team of AI and 
+                      quantum computing experts.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h4 className="text-lg font-semibold text-white mb-4">Join Our Community</h4>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-cyan-400">50K+</div>
+                  <div className="text-sm text-gray-300">Subscribers</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-400">Weekly</div>
+                  <div className="text-sm text-gray-300">Updates</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
