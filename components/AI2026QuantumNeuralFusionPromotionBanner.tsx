@@ -3,105 +3,73 @@ import Link from 'next/link';
 
 export default function AI2026QuantumNeuralFusionPromotionBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16">
-      {/* Quantum animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-24 h-24 bg-cyan-400/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-32 right-20 w-20 h-20 bg-purple-400/20 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-pink-400/20 rounded-full animate-ping"></div>
-        <div className="absolute bottom-32 right-1/3 w-18 h-18 bg-yellow-400/20 rounded-full animate-pulse"></div>
-        {/* Quantum field lines */}
-        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent animate-pulse"></div>
-        <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400/30 to-transparent animate-pulse delay-1000"></div>
-        <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-400/30 to-transparent animate-pulse delay-2000"></div>
+    <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-8 relative overflow-hidden">
+      {/* Animated quantum particles */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 animate-pulse"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-cyan-400/20 rounded-full animate-bounce"></div>
+        <div className="absolute top-20 right-20 w-16 h-16 bg-purple-400/20 rounded-full animate-bounce delay-1000"></div>
+        <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-blue-400/20 rounded-full animate-bounce delay-2000"></div>
+        <div className="absolute bottom-20 right-1/3 w-14 h-14 bg-pink-400/20 rounded-full animate-bounce delay-3000"></div>
+        <div className="absolute top-1/2 left-1/3 w-8 h-8 bg-yellow-400/20 rounded-full animate-bounce delay-500"></div>
+        <div className="absolute top-1/3 right-1/4 w-10 h-10 bg-green-400/20 rounded-full animate-bounce delay-1500"></div>
       </div>
-
+      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          {/* Quantum Badge */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-bold mb-6 animate-pulse shadow-lg">
-            ⚛️ QUANTUM BREAKTHROUGH - 15,000% ROI GUARANTEED
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-semibold mb-4 animate-pulse">
+            ⚛️ QUANTUM BREAKTHROUGH - REVOLUTIONARY
           </div>
-
-          {/* Main heading */}
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-600 bg-clip-text text-transparent leading-tight">
+          
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
             AI 2026 Quantum-Neural Fusion
           </h2>
-
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            The world's first quantum-neural fusion AI system. Revolutionary consciousness integration and neural interface technology delivering unprecedented 15,000% ROI.
+          
+          <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-4xl mx-auto">
+            Revolutionary fusion of quantum computing and neural networks delivering <span className="text-cyan-400 font-bold text-2xl">15,000% ROI</span> through consciousness-level AI processing
           </p>
-
-          {/* Quantum stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">15,000%</div>
-              <div className="text-sm text-gray-300">Quantum ROI</div>
+          
+          <div className="flex flex-wrap justify-center gap-4 mb-6">
+            <div className="bg-black/30 px-4 py-2 rounded-lg border border-cyan-400/50">
+              <span className="text-cyan-400 font-bold text-lg">15,000% ROI</span>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-1">99.97%</div>
-              <div className="text-sm text-gray-300">Accuracy</div>
+            <div className="bg-black/30 px-4 py-2 rounded-lg border border-blue-400/50">
+              <span className="text-blue-400 font-bold text-lg">99.97% Accuracy</span>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-1">50,000x</div>
-              <div className="text-sm text-gray-300">Faster</div>
+            <div className="bg-black/30 px-4 py-2 rounded-lg border border-purple-400/50">
+              <span className="text-purple-400 font-bold text-lg">∞ Processing</span>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-1">∞</div>
-              <div className="text-sm text-gray-300">Quantum Scale</div>
+            <div className="bg-black/30 px-4 py-2 rounded-lg border border-pink-400/50">
+              <span className="text-pink-400 font-bold text-lg">Conscious AI</span>
             </div>
           </div>
-
-          {/* CTA buttons */}
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/ai-2026-quantum-neural-fusion-breakthrough"
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-xl"
+              href="/ai-2026-quantum-neural-fusion-breakthrough" 
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               ⚛️ Explore Quantum Fusion
             </Link>
             <Link 
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 shadow-xl"
+              href="/case-studies/ai-2026-quantum-neural-fusion-success" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              🚀 Start Quantum Journey
+              📊 View Case Studies
+            </Link>
+            <Link 
+              href="/webinars/ai-2026-quantum-demo" 
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              🎥 Watch Quantum Demo
             </Link>
           </div>
-
-          {/* Quantum trust indicators */}
-          <div className="mt-8 flex flex-wrap justify-center items-center gap-6 text-sm text-gray-400">
-            <div className="flex items-center gap-2">
-              <span className="text-cyan-400">⚛️</span>
-              <span>Quantum Verified</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-purple-400">🧠</span>
-              <span>Neural Integration</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-pink-400">🌌</span>
-              <span>Consciousness Fusion</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-yellow-400">∞</span>
-              <span>Infinite Scalability</span>
-            </div>
+          
+          <div className="mt-6 text-sm text-gray-400">
+            🌟 Limited Time: Quantum implementation consultation free for first 50 enterprises
           </div>
         </div>
       </div>
-
-      {/* Quantum floating elements */}
-      <div className="absolute top-1/4 left-8 w-3 h-3 bg-cyan-400 rounded-full animate-ping"></div>
-      <div className="absolute top-1/3 right-12 w-4 h-4 bg-purple-400 rounded-full animate-bounce"></div>
-      <div className="absolute bottom-1/4 left-16 w-3 h-3 bg-pink-400 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-1/3 right-8 w-4 h-4 bg-yellow-400 rounded-full animate-ping"></div>
-      
-      {/* Quantum field particles */}
-      <div className="absolute top-20 left-1/4 w-1 h-1 bg-cyan-300 rounded-full animate-ping delay-500"></div>
-      <div className="absolute top-40 right-1/4 w-1 h-1 bg-purple-300 rounded-full animate-ping delay-1000"></div>
-      <div className="absolute bottom-40 left-1/3 w-1 h-1 bg-pink-300 rounded-full animate-ping delay-1500"></div>
-      <div className="absolute bottom-20 right-1/3 w-1 h-1 bg-yellow-300 rounded-full animate-ping delay-2000"></div>
     </div>
   );
 }
