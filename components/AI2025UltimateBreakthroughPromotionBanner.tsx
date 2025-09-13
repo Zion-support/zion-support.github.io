@@ -61,13 +61,13 @@ const AI2025UltimateBreakthroughPromotionBanner = () => {
               🚀 Read Full Breakthrough
             </Link>
             <Link 
-              href="/case-studies/ai-2025-global-transformation-breakthrough-10000-roi"
+              href="/case-studies/ai-2025-global-transformation-breakthrough"
               className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               🏆 See 10,000% ROI Case Study
             </Link>
             <Link 
-              href="/resources/ai-2025-ultimate-implementation-master-guide"
+              href="/resources/ai-2025-synthetic-intelligence-implementation-guide"
               className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               📚 Implementation Guide
