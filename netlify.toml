@@ -5,7 +5,7 @@
 
 [build]
   command = "yarn install --frozen-lockfile && yarn build"
-  publish = "dist"
+  publish = "out"
   command_timeout = "30m"
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- ."
 
@@ -78,12 +78,6 @@
 
 [context.branch-deploy]
   command = "yarn build"
-
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
