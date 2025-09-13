@@ -6,25 +6,6 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import NewsletterSignup2025 from '../components/NewsletterSignup2025';
-
-// Import new 2027 components
-import UltimateContentShowcase2027 from '../components/UltimateContentShowcase2027';
-import UltimateContentShowcase2027PromotionBanner from '../components/UltimateContentShowcase2027PromotionBanner';
-import BusinessSolutionsShowcase2027 from '../components/BusinessSolutionsShowcase2027';
-import BusinessSolutionsShowcase2027PromotionBanner from '../components/BusinessSolutionsShowcase2027PromotionBanner';
-import InteractiveTechDemo2027 from '../components/InteractiveTechDemo2027';
-import InteractiveTechDemo2027PromotionBanner from '../components/InteractiveTechDemo2027PromotionBanner';
-
-// Import new 2028 components
-import UltimateContentShowcase2028 from '../components/UltimateContentShowcase2028';
-import UltimateContentShowcase2028PromotionBanner from '../components/UltimateContentShowcase2028PromotionBanner';
-import BusinessSolutionsShowcase2028 from '../components/BusinessSolutionsShowcase2028';
-import BusinessSolutionsShowcase2028PromotionBanner from '../components/BusinessSolutionsShowcase2028PromotionBanner';
-import InteractiveTechDemo2028 from '../components/InteractiveTechDemo2028';
-import InteractiveTechDemo2028PromotionBanner from '../components/InteractiveTechDemo2028PromotionBanner';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -147,16 +128,6 @@ import AI2030FutureVisionPromotionBanner from '../components/AI2030FutureVisionP
 import NewContent2025UltimateInnovationsPromotionBanner from '../components/NewContent2025UltimateInnovationsPromotionBanner';
 import AITrends2025UltimatePredictionsPromotionBanner from '../components/AITrends2025UltimatePredictionsPromotionBanner';
 import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025UltimatePredictionsBanner';
-
-// Import new 2025-2026 innovation showcase components
-import AI2025_2026UltimateInnovationShowcase from '../components/AI2025_2026UltimateInnovationShowcase';
-import AI2025_2026UltimateInnovationPromotionBanner from '../components/AI2025_2026UltimateInnovationPromotionBanner';
-
-// Import new quantum computing showcase components
-import QuantumComputingBreakthroughs2030Showcase from '../components/QuantumComputingBreakthroughs2030Showcase';
-
-// Import new automation solutions showcase components
-import AdvancedAutomationSolutions2030Showcase from '../components/AdvancedAutomationSolutions2030Showcase';
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner';
 
@@ -176,6 +147,12 @@ import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBann
 // Import new breakthrough announcement banners
 import AI2025UltimateBreakthroughAnnouncementBanner from '../components/AI2025UltimateBreakthroughAnnouncementBanner';
 import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
+
+// Import new 2025 content showcase and interactive demo components
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentShowcase2025PromotionBanner from '../components/UltimateContentShowcase2025PromotionBanner';
+import InteractiveAIDemo2025 from '../components/InteractiveAIDemo2025';
+import InteractiveAIDemo2025PromotionBanner from '../components/InteractiveAIDemo2025PromotionBanner';
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import FeaturedBlogPost2025 from '../components/FeaturedBlogPost2025';
 import CaseStudyShowcase2025 from '../components/CaseStudyShowcase2025';
@@ -196,7 +173,6 @@ import ContentDiscoveryWidget from '../components/ContentDiscoveryWidget';
 // Import new 2025 promotional components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import AI2025BreakthroughShowcase from '../components/AI2025BreakthroughShowcase';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 
 // Import new content and advertising components
 import AIInnovationShowcase2025 from '../components/AIInnovationShowcase2025';
@@ -223,23 +199,9 @@ import InteractiveTechDemo2026PromotionBanner from '../components/InteractiveTec
 import UltimateContentHub2026 from '../components/UltimateContentHub2026';
 import UltimateContentHub2026PromotionBanner from '../components/UltimateContentHub2026PromotionBanner';
 
-// Import new 2025 content showcase components
-import NewContentShowcase2025 from '../components/NewContentShowcase2025';
-import NewContentShowcase2025PromotionBanner from '../components/NewContentShowcase2025PromotionBanner';
-import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
-import InteractiveTechDemo2025PromotionBanner from '../components/InteractiveTechDemo2025PromotionBanner';
-import BusinessSolutionsShowcase2025 from '../components/BusinessSolutionsShowcase2025';
-import BusinessSolutionsShowcase2025PromotionBanner from '../components/BusinessSolutionsShowcase2025PromotionBanner';
-
 // Import new content promotion banners
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import AI2025UltimateContentShowcaseBanner from '../components/AI2025UltimateContentShowcaseBanner';
-
-// Import new advanced content management and AI recommendation components
-import AdvancedContentManagementSystem from '../components/AdvancedContentManagementSystem';
-import AdvancedContentManagementSystemPromotionBanner from '../components/AdvancedContentManagementSystemPromotionBanner';
-import AIPoweredContentRecommendationSystem from '../components/AIPoweredContentRecommendationSystem';
-import AIPoweredContentRecommendationSystemPromotionBanner from '../components/AIPoweredContentRecommendationSystemPromotionBanner';
 
 export default function HomePage() {
   return (
@@ -252,24 +214,6 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* NEW 2027 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
-        <UltimateContentShowcase2027PromotionBanner />
-        
-        {/* NEW 2027 BUSINESS SOLUTIONS SHOWCASE PROMOTION BANNER */}
-        <BusinessSolutionsShowcase2027PromotionBanner />
-        
-        {/* NEW 2027 INTERACTIVE TECH DEMO PROMOTION BANNER */}
-        <InteractiveTechDemo2027PromotionBanner />
-        
-        {/* NEW 2028 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
-        <UltimateContentShowcase2028PromotionBanner />
-        
-        {/* NEW 2028 BUSINESS SOLUTIONS SHOWCASE PROMOTION BANNER */}
-        <BusinessSolutionsShowcase2028PromotionBanner />
-        
-        {/* NEW 2028 INTERACTIVE TECH DEMO PROMOTION BANNER */}
-        <InteractiveTechDemo2028PromotionBanner />
-        
         {/* NEW: AI 2025 ULTIMATE CONTENT SHOWCASE BANNER */}
         <AI2025UltimateContentShowcaseBanner />
         
@@ -282,6 +226,12 @@ export default function HomePage() {
         {/* NEW: AI 2026 QUANTUM BREAKTHROUGH PROMOTION BANNER */}
         <AI2026QuantumBreakthroughPromotionBanner />
         
+        {/* NEW: ULTIMATE CONTENT SHOWCASE 2025 PROMOTION BANNER */}
+        <UltimateContentShowcase2025PromotionBanner />
+        
+        {/* NEW: INTERACTIVE AI DEMO 2025 PROMOTION BANNER */}
+        <InteractiveAIDemo2025PromotionBanner />
+        
         {/* NEW: AI 2026 NEURAL INTERFACES PROMOTION BANNER */}
         <AI2026NeuralInterfacesPromotionBanner />
         
@@ -293,15 +243,6 @@ export default function HomePage() {
         
         {/* NEW: CONTENT SHOWCASE 2026 PROMOTION BANNER */}
         <NewContentShowcase2026PromotionBanner />
-        
-        {/* NEW: CONTENT SHOWCASE 2025 PROMOTION BANNER */}
-        <NewContentShowcase2025PromotionBanner />
-        
-        {/* NEW: INTERACTIVE TECH DEMO 2025 PROMOTION BANNER */}
-        <InteractiveTechDemo2025PromotionBanner />
-        
-        {/* NEW: BUSINESS SOLUTIONS 2025 PROMOTION BANNER */}
-        <BusinessSolutionsShowcase2025PromotionBanner />
         
         {/* NEW: REVOLUTIONARY CONTENT BANNER */}
         <RevolutionaryContentBanner />
@@ -327,23 +268,11 @@ export default function HomePage() {
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
         
-        {/* NEW 2027 ULTIMATE CONTENT SHOWCASE */}
-        <UltimateContentShowcase2027 />
+        {/* NEW: ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
         
-        {/* NEW 2027 BUSINESS SOLUTIONS SHOWCASE */}
-        <BusinessSolutionsShowcase2027 />
-        
-        {/* NEW 2027 INTERACTIVE TECH DEMO */}
-        <InteractiveTechDemo2027 />
-        
-        {/* NEW 2028 ULTIMATE CONTENT SHOWCASE */}
-        <UltimateContentShowcase2028 />
-        
-        {/* NEW 2028 BUSINESS SOLUTIONS SHOWCASE */}
-        <BusinessSolutionsShowcase2028 />
-        
-        {/* NEW 2028 INTERACTIVE TECH DEMO */}
-        <InteractiveTechDemo2028 />
+        {/* NEW: INTERACTIVE AI DEMO 2025 */}
+        <InteractiveAIDemo2025 />
         
         {/* NEW CONTENT SHOWCASE 2026 */}
         <NewContentShowcase2026 />
@@ -366,26 +295,11 @@ export default function HomePage() {
         {/* REVOLUTIONARY CASE STUDIES SHOWCASE 2026 */}
         <RevolutionaryCaseStudiesShowcase2026 />
         
-        {/* ADVANCED CONTENT MANAGEMENT SYSTEM PROMOTION BANNER */}
-        <AdvancedContentManagementSystemPromotionBanner />
-        
-        {/* ADVANCED CONTENT MANAGEMENT SYSTEM */}
-        <AdvancedContentManagementSystem />
-        
-        {/* AI-POWERED CONTENT RECOMMENDATION SYSTEM PROMOTION BANNER */}
-        <AIPoweredContentRecommendationSystemPromotionBanner />
-        
-        {/* AI-POWERED CONTENT RECOMMENDATION SYSTEM */}
-        <AIPoweredContentRecommendationSystem />
-        
         {/* AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
         
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
-        
-        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
-        <UltimateContentShowcase2025 />
         
         {/* AI 2025 BREAKTHROUGH SHOWCASE */}
         <AI2025BreakthroughShowcase />
@@ -456,15 +370,6 @@ export default function HomePage() {
         {/* NEW 2025-2026 INNOVATION PROMOTION BANNERS */}
         <AI2025_2026UltimateInnovationPromotionBanner />
         <BusinessTransformation2025PromotionBanner />
-        
-        {/* NEW 2025-2026 ULTIMATE INNOVATION SHOWCASE */}
-        <AI2025_2026UltimateInnovationShowcase />
-        
-        {/* NEW QUANTUM COMPUTING BREAKTHROUGHS 2030 SHOWCASE */}
-        <QuantumComputingBreakthroughs2030Showcase />
-        
-        {/* NEW ADVANCED AUTOMATION SOLUTIONS 2030 SHOWCASE */}
-        <AdvancedAutomationSolutions2030Showcase />
         
         {/* NEW CONTENT 2026 PROMOTION BANNER */}
         <NewContent2026PromotionBanner />
@@ -3643,29 +3548,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* NEW ULTIMATE CONTENT SHOWCASE 2025 */}
-      <UltimateContentShowcase2025 />
-
-      {/* NEW INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
-      <InteractiveContentDiscoveryWidget2025 />
-
-      {/* NEW ULTIMATE CONTENT PROMOTION BANNER 2025 */}
-      <UltimateContentPromotionBanner2025 />
-
-      {/* NEW CONTENT SHOWCASE 2025 */}
-      <NewContentShowcase2025 />
-
-      {/* INTERACTIVE TECH DEMO 2025 */}
-      <InteractiveTechDemo2025 />
-
-      {/* BUSINESS SOLUTIONS SHOWCASE 2025 */}
-      <BusinessSolutionsShowcase2025 />
-
-      {/* NEW NEWSLETTER SIGNUP 2025 */}
-      <NewsletterSignup2025 />
-        </div>
-      </PerformanceOptimizer>
-    </ErrorBoundary>
+    </div>
   );
 }
