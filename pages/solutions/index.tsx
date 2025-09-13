@@ -2,30 +2,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-
-
-import { motion } from 'framer-motion';
-
-import { ;
-
-import Layout from '../../components/Layout';
-import Layout from '../../components/Layout';
-
-
-
-
-
-
-export default function SolutionsPage() {;
-
-    <Layout
-
-
-
-
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
 const SolutionsPage: NextPage = () => {
   const solutions = [
     // Healthcare Solutions
@@ -223,16 +199,12 @@ const SolutionsPage: NextPage = () => {
           pricing: "$75,000 - $300,000",
           link: "https://ziontechgroup.com/solutions/digital-identity",
           icon: "🆔"
+        }
+      ]
+    }
+  ];
 
-
-
-
-
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                </Link>
-
+  return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
       <Head>
         <title>Industry Solutions - Zion Tech Group | Tailored Technology Solutions</title>
@@ -258,64 +230,19 @@ const SolutionsPage: NextPage = () => {
           {solutions.map((category, categoryIndex) => (
             <div key={categoryIndex} className="bg-white rounded-2xl shadow-xl p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-
-
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
-                </Link>;
-
-
-
-
-
-
-
-
-
-                      <IconComponent className="w-8 h-8 text-white" />;
-
-
-
-
-
-                    <Link
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
-                    </Link>;
-
-
-
-
-
-
-
-
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
-                </Link>;
-    </Layout>;
-
-
-export default SolutionsPage;
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                </Link>
-                      <IconComponent className="w - 8 h - 8 text - white" />;
-                          <CheckCircle className="w - 4 h - 4 text - green - 500 mr - 2 flex - shrink - 0" />;
-                    <Link;
-      <Head>
-      </Head>
-                      <IconComponent className="w-8 h-8 text-white" />
+                {category.category}
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {category.solutions.map((solution, solutionIndex) => (
+                  <div key={solutionIndex} className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-purple-100">
+                    <div className="text-4xl mb-4">{solution.icon}</div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {solution.name}
                     </h3>
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {solution.description}
                     </p>
                     
-
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    <Link
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-800 mb-2">Use Cases:</h4>
                       <ul className="space-y-1">
@@ -352,26 +279,118 @@ export default SolutionsPage;
                     >
                       Learn More
                     </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
 
+        {/* Success Stories Section */}
+        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 mt-16 text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">
+            Success Stories
+          </h2>
+          <p className="text-xl mb-6 opacity-90">
+            See how our solutions have transformed businesses across industries
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div>
+              <h3 className="font-semibold mb-2">🏥 Healthcare Provider</h3>
+              <p>40% reduction in diagnostic time with AI-powered imaging</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">🏭 Manufacturing Company</h3>
+              <p>60% decrease in downtime with IoT predictive maintenance</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">🏦 Financial Institution</h3>
+              <p>80% reduction in fraud losses with AI risk assessment</p>
+            </div>
+          </div>
           <Link 
+            href="/contact"
+            className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
+            View Case Studies
           </Link>
+        </div>
 
+        {/* Custom Solutions Section */}
+        <div className="mt-16 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            Need a Custom Solution?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Can't find exactly what you need? Our expert team can design and develop 
+            custom solutions tailored to your specific requirements and industry challenges.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="text-center">
+              <div className="text-4xl mb-4">🔧</div>
+              <h3 className="text-xl font-semibold mb-2">Custom Development</h3>
+              <p className="text-gray-600">Tailored solutions built from the ground up</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🔗</div>
+              <h3 className="text-xl font-semibold mb-2">System Integration</h3>
+              <p className="text-gray-600">Seamless integration with existing systems</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">📚</div>
+              <h3 className="text-xl font-semibold mb-2">Training & Support</h3>
+              <p className="text-gray-600">Comprehensive training and ongoing support</p>
+            </div>
+          </div>
           <Link 
+            href="/contact"
+            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
+            Discuss Custom Solutions
           </Link>
+        </div>
 
+        {/* Contact Section */}
+        <div className="mt-16 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Let's discuss how our industry-specific solutions can address your unique challenges 
+            and drive measurable business outcomes.
+          </p>
+          <div className="flex justify-center gap-4 mb-8">
             <Link 
+              href="/contact"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Schedule Consultation
             </Link>
             <Link 
+              href="/contact"
+              className="bg-transparent border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Request Demo
             </Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 text-sm text-gray-600">
+            <div>
+              <h3 className="font-semibold mb-2">📱 Mobile</h3>
+              <p>+1 302 464 0950</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">✉️ Email</h3>
+              <p>kleber@ziontechgroup.com</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">🌐 Website</h3>
+              <p>https://ziontechgroup.com</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+};
 
 export default SolutionsPage;
-                    <Link;
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-
-
-export default SolutionsPage;
-
-
-export default SolutionsPage;
-

@@ -31,8 +31,8 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
       life: number;
     }> = [];
 
-
-
+    // Create initial particles
+    for (let i = 0; i < 100; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -122,16 +122,6 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
       canvas.height = window.innerHeight;
     };
 
-
-
-
-
-
-
-
-
-
-
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -141,11 +131,6 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-
-
-
-
 
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
@@ -163,22 +148,16 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           className="absolute inset-0 opacity-20"
           style={{
             backgroundImage: `
+              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+            `,
             backgroundSize: '50px 50px'
           }}
           animate={{
-            backgroundPosition: ['0px 0px', '50px 50px'],
-          }}
+            backgroundPosition: ['0px 0px', '50px 50px']}}
           transition={{
-
-
-
-
-
-
-
-
-
-
+            duration: 20,
+            repeat: Infinity,
             ease: 'linear'
           }}
         />
@@ -189,29 +168,8 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           animate={{
             rotate: [0, 360],
             scale: [1, 1.1, 1],
-
-
-
-          }}
+            opacity: [0.3, 0.6, 0.3]}}
           transition={{
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             duration: 8,
             repeat: Infinity,
             ease: 'easeInOut'
@@ -223,8 +181,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           animate={{
             rotate: [360, 0],
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.7, 0.3],
-          }}
+            opacity: [0.3, 0.7, 0.3]}}
           transition={{
             duration: 6,
             repeat: Infinity,
@@ -237,8 +194,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           animate={{
             rotate: [45, 405],
             scale: [1, 1.15, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
+            opacity: [0.3, 0.5, 0.3]}}
           transition={{
             duration: 10,
             repeat: Infinity,
@@ -251,7 +207,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full"
           animate={{
             y: [0, -20, 0],
-            opacity: [0.2, 0.5, 0.2],
+            opacity: [0.2, 0.5, 0.2]}}
           transition={{
             duration: 4,
             repeat: Infinity,
@@ -263,24 +219,13 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 transform rotate-12"
           animate={{
             rotate: [12, 372],
-            scale: [1, 1.1, 1],
-          }}
+            scale: [1, 1.1, 1]}}
           transition={{
             duration: 12,
             repeat: Infinity,
-
-
             ease: 'linear'
           }}
         />
-
-
-
-
-
-
-
-
 
         {/* Energy Orbs */}
         <motion.div
@@ -288,8 +233,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           animate={{
             scale: [1, 1.5, 1],
             opacity: [0.5, 1, 0.5],
-            y: [0, -10, 0],
-          }}
+            y: [0, -10, 0]}}
           transition={{
             duration: 3,
             repeat: Infinity,
@@ -297,23 +241,13 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           }}
         />
 
-
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full shadow-lg shadow-purple-400/50"
           animate={{
             scale: [1, 1.8, 1],
             opacity: [0.4, 0.9, 0.4],
-            x: [0, 15, 0],
-          }}
+            x: [0, 15, 0]}}
           transition={{
-
-
-
-
-
-
-
-
-
-
             duration: 4,
             repeat: Infinity,
             ease: 'easeInOut'
@@ -341,8 +275,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             backgroundSize: '200% 100%'
           }}
           animate={{
-            backgroundPosition: ['-200% 0', '200% 0'],
-          }}
+            backgroundPosition: ['-200% 0', '200% 0']}}
           transition={{
             duration: 15,
             repeat: Infinity,

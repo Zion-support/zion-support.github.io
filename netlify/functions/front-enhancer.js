@@ -7,23 +7,26 @@ function runNode(relPath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-exports.config = { schedule: '0 3 * * *' };
+exports.config = {
+  schedule: '*/20 * * * *', // every 20 minutes
+};
 
 exports.handler = async () => {
   const logs = [];
-  function step(name, rel, args = []) {
+  function logStep(name, fn) {
     logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = runNode(rel, args);
->>>>>>> origin/content/blog-sept12
+    const { status, stdout, stderr } = fn();
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
     return status;
   }
 
-  step('orphans:find', 'automation/orphan-pages-finder.cjs');
-  step('git:sync', 'automation/advanced-git-sync.cjs');
->>>>>>> origin/content/blog-sept12
+  // Update the front page auto-generated section
+  logStep('front-index:advertise', () => runNode('automation/front-index-advertiser.cjs'));
+
+  // Attempt to sync changes back to main (best-effort)
+  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, body: logs.join('\n') };
 };

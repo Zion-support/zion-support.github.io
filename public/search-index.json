@@ -1,0 +1,161 @@
+{
+  "version": "1.0",
+  "generated": "2025-09-05T21:52:45.982Z",  "pages": [
+    {
+      "title": "Home",
+      "url": "/",
+      "description": "Zion Tech Group - AI and Technology Solutions",
+      "keywords": [
+        "AI",
+        "technology",
+        "solutions",
+        "automation"
+      ],
+      "id": 1
+    },
+    {
+      "title": "About",
+      "url": "/about",
+      "description": "About Zion Tech Group - Leading AI and Technology Company",
+      "keywords": [
+        "about",
+        "company",
+        "team",
+        "mission"
+      ],
+      "id": 2
+    },
+    {
+      "title": "Services",
+      "url": "/services",
+      "description": "Our Services - AI Development, Automation, and Technology Solutions",
+      "keywords": [
+        "services",
+        "AI",
+        "automation",
+        "development"
+      ],
+      "id": 3
+    },
+    {
+      "title": "Contact",
+      "url": "/contact",
+      "description": "Contact Us - Get in Touch with Zion Tech Group",
+      "keywords": [
+        "contact",
+        "support",
+        "help"
+      ],
+      "id": 4
+    },
+    {
+      "title": "Portfolio",
+      "url": "/portfolio",
+      "description": "Our Portfolio - AI and Technology Projects",
+      "keywords": [
+        "portfolio",
+        "projects",
+        "work",
+        "examples"
+      ],
+      "id": 5
+  "pages": [
+    {
+      "title": "Zion Tech Group — Autonomous Innovation Hub",
+      "url": "/",
+      "description": "Leading-edge technology solutions and autonomous innovation systems.",
+      "keywords": [
+        "technology",
+        "innovation",
+        "automation",
+        "AI",
+        "autonomous systems"
+      ],
+      "category": "home"
+    },
+    {
+      "title": "About Us",
+      "url": "/about",
+      "description": "Learn about Zion Tech Group and our mission.",
+      "keywords": [
+        "about",
+        "company",
+        "mission",
+        "team"
+      ],
+      "category": "company"
+    },
+    {
+      "title": "Our Services",
+      "url": "/services",
+      "description": "Explore our comprehensive technology services.",
+      "keywords": [
+        "services",
+        "technology",
+        "solutions",
+        "consulting"
+      ],
+      "category": "services"
+    },
+    {
+      "title": "Resources",
+      "url": "/resources",
+      "description": "Access our knowledge base and resources.",
+      "keywords": [
+        "resources",
+        "knowledge",
+        "guides",
+        "documentation"
+      ],
+      "category": "resources"
+    },
+    {
+      "title": "Case Studies",
+      "url": "/case-studies",
+      "description": "Real-world examples of our technology solutions.",
+      "keywords": [
+        "case studies",
+        "examples",
+        "success stories",
+        "projects"
+      ],
+      "category": "portfolio"
+    },
+    {
+      "title": "Blog",
+      "url": "/blog",
+      "description": "Blog - Latest AI and Technology Insights",
+      "keywords": [
+        "blog",
+        "articles",
+        "insights",
+        "news"
+      ],
+      "id": 6
+    }
+  ]
+      "description": "Latest insights and updates from our team.",
+      "keywords": [
+        "blog",
+        "insights",
+        "updates",
+        "news"
+      ],
+      "category": "content"
+    },
+    {
+      "title": "Contact",
+      "url": "/contact",
+      "description": "Get in touch with our team.",
+      "keywords": [
+        "contact",
+        "support",
+        "inquiry",
+        "get quote"
+      ],
+      "category": "contact"
+    }
+  ],
+  "lastUpdated": "2025-08-20T00:07:28.186Z",
+  "totalPages": 7
+}

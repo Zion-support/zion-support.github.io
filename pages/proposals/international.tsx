@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
-
 type ProposalListItem = {
   id: string;
   title: string;
@@ -12,17 +11,11 @@ type ProposalListItem = {
   createdAt: string;
 };
 
-import React, { useEffect, useState } from 'react',
-import EnhancedLayout from '../../components / layout / EnhancedLayout',
-import EnhancedLayout from '../../components / layout / EnhancedLayout',
-
-
-
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([]);
   const [filter, setFilter] = useState('All');
 
-
+  useEffect(() => {
     fetch('/api/proposals')
       .then((r) => r.json())
       .then((d) => setItems(d.items || []))
@@ -61,27 +54,11 @@ export default function InternationalProposalsPage() {
                 <a className="text-blue-600 underline" href={`/proposals/${i.id}.pdf`} target="_blank" rel="noreferrer">PDF</a>
               </div>
             </div>
-
-
+          ))}
+          {filtered.length === 0 && <div className="p-4 text-sm text-gray-600">No proposals yet.</div>}
         </div>
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
-
-
-export default /**
-    <EnhancedLayout>;
-    </EnhancedLayout>);
-
-
-import React, { useEffect, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout'
-import EnhancedLayout from '../../components/layout/EnhancedLayout'
-import React, { useEffect, useState } from 'react',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-import React, { useEffect, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout'
-import EnhancedLayout from '../../components/layout/EnhancedLayout'
-
-
+  );
+}
