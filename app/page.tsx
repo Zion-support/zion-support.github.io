@@ -139,6 +139,10 @@ import NewContent2025RevolutionaryShowcase from '../components/NewContent2025Rev
 
 // New 2026 Content Components
 import AI2026BreakthroughPromotionBanner from '../components/AI2026BreakthroughPromotionBanner';
+import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
+import AI2026RevolutionaryContentShowcase from '../components/AI2026RevolutionaryContentShowcase';
+import AI2027NeuralSynthesisPromotionBanner from '../components/AI2027NeuralSynthesisPromotionBanner';
+import AI2028AutomotiveTransformationPromotionBanner from '../components/AI2028AutomotiveTransformationPromotionBanner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
 import ComprehensiveContentDiscovery2026 from '../components/ComprehensiveContentDiscovery2026';
@@ -258,6 +262,18 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* LATEST CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED CONTENT */}
         <LatestContentPromotionBanner2025 />
+        
+        {/* AI 2026 QUANTUM-NEURAL FUSION PROMOTION BANNER - BREAKTHROUGH */}
+        <AI2026QuantumNeuralFusionPromotionBanner />
+        
+        {/* AI 2026 REVOLUTIONARY CONTENT SHOWCASE - FUTURE TECH */}
+        <AI2026RevolutionaryContentShowcase />
+        
+        {/* AI 2027 NEURAL SYNTHESIS PROMOTION BANNER - REVOLUTIONARY */}
+        <AI2027NeuralSynthesisPromotionBanner />
+        
+        {/* AI 2028 AUTOMOTIVE TRANSFORMATION PROMOTION BANNER - BREAKTHROUGH */}
+        <AI2028AutomotiveTransformationPromotionBanner />
         
         {/* COMPREHENSIVE CONTENT SHOWCASE 2025 - REVOLUTIONARY SOLUTIONS */}
         <ComprehensiveContentShowcase2025 />
