@@ -35,14 +35,11 @@ const Navigation = () => {
 
   const navigationItems = [
     { name: 'Home', href: '/', icon: '🏠' },
-    { name: 'New Trends 2025', href: '/blog/ai-2025-revolutionary-trends-comprehensive-analysis', icon: '🚀', isNew: true, isHot: true },
-    { name: 'Quantum Breakthrough', href: '/case-studies/ai-2025-quantum-breakthrough-50000-roi', icon: '⚡', isNew: true, isHot: true },
-    { name: 'AI Masterclass', href: '/tutorials/ai-implementation-step-by-step-masterclass', icon: '🎓', isNew: true },
-    { name: 'Ultimate Toolkit', href: '/resources/ai-2025-ultimate-implementation-toolkit', icon: '🛠️', isNew: true },
+    { name: 'Latest Content', href: '/blog/ai-2025-future-of-work-revolution', icon: '✨', isNew: true, isHot: true },
+    { name: 'Case Studies', href: '/case-studies/ai-transformation-global-tech-giant-2025', icon: '📈', isNew: true },
+    { name: 'Free Resources', href: '/resources/ai-2025-complete-implementation-master-guide', icon: '📚', isNew: true },
     { name: 'Blog', href: '/blog', icon: '📝', isTrending: true },
-    { name: 'Case Studies', href: '/case-studies', icon: '📊' },
-    { name: 'Tutorials', href: '/tutorials', icon: '🎯' },
-    { name: 'Resources', href: '/resources', icon: '📚' },
+    { name: 'All Case Studies', href: '/case-studies', icon: '📊' },
     { name: 'Services', href: '/services', icon: '🚀' },
     { name: 'About', href: '/about', icon: 'ℹ️' },
     { name: 'Contact', href: '/contact', icon: '📞' }
@@ -94,11 +91,6 @@ const Navigation = () => {
                 )}
                 {item.isTrending && (
                   <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-xs px-2 py-0.5 rounded-full font-bold">
-                    🔥
-                  </span>
-                )}
-                {item.isHot && (
-                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full font-bold">
                     🔥
                   </span>
                 )}
@@ -168,11 +160,6 @@ const Navigation = () => {
                 )}
                 {item.isTrending && (
                   <span className="bg-orange-500 text-white text-xs px-2 py-0.5 rounded-full font-bold ml-auto">
-                    🔥
-                  </span>
-                )}
-                {item.isHot && (
-                  <span className="bg-red-500 text-white text-xs px-2 py-0.5 rounded-full font-bold ml-auto">
                     🔥
                   </span>
                 )}
