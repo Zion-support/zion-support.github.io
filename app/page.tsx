@@ -63,6 +63,7 @@ import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import AnimatedContentShowcase from '../components/AnimatedContentShowcase';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
+import UltimateBreakthroughPromotionBanner from '../components/UltimateBreakthroughPromotionBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 
 // New 2030+ breakthrough components
@@ -464,6 +465,12 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
+        
+        {/* ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
+        <UltimateBreakthroughPromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <InteractiveContentDiscoveryWidget />
         
         {/* REVOLUTIONARY CONTENT SHOWCASE 2026 */}
         <RevolutionaryContentShowcase2026 />
