@@ -157,6 +157,8 @@ import AITools2025UltimateShowcaseBanner from '../components/AITools2025Ultimate
 // Import new content promotion components
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import TechnologyInsights2025 from '../components/TechnologyInsights2025';
+import NewContentAnnouncementBanner2025 from '../components/NewContentAnnouncementBanner2025';
 
 export default function HomePage() {
   return (
@@ -169,11 +171,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT ANNOUNCEMENT BANNER 2025 */}
+        <NewContentAnnouncementBanner2025 />
+        
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
         
         {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
         <NewContent2025UltimateShowcase />
+        
+        {/* TECHNOLOGY INSIGHTS 2025 */}
+        <TechnologyInsights2025 />
         
         {/* AI 2025 REVOLUTIONARY CONTENT BANNER */}
         <AI2025RevolutionaryContentBanner />
