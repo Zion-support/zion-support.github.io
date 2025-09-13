@@ -379,6 +379,15 @@ export default function HomePage() {
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
         
+        {/* NEW CONTENT SHOWCASE 2025 */}
+        <NewContentShowcase2025 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
+        
+        {/* NEWSLETTER SIGNUP 2025 */}
+        <NewsletterSignup2025 />
+        
         {/* INTERACTIVE TECH DEMO 2025 PROMOTION BANNER */}
         <InteractiveTechDemo2025PromotionBanner />
         
