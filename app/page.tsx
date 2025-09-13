@@ -291,6 +291,12 @@ export default function HomePage() {
         {/* NEW CONTENT 2025 ULTIMATE SHOWCASE */}
         <NewContent2025UltimateShowcase />
         
+        {/* NEW CONTENT PROMOTION BANNER - FEATURED NEW CONTENT */}
+        <NewContentPromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET - NEW FEATURE */}
+        <InteractiveContentDiscoveryWidget />
+        
         {/* ULTIMATE TECH SHOWCASE 2026 */}
         <UltimateTechShowcase2026 />
         {/* EDGE AI REVOLUTION PROMOTION BANNER */}
