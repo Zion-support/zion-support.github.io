@@ -2,198 +2,124 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function InteractiveContentDiscoveryWidget2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  
+  const [activeTab, setActiveTab] = useState('ai-2025');
+
   const contentCategories = {
-    all: {
-      title: 'All Revolutionary Content',
-      icon: '🚀',
-      color: 'from-purple-500 to-pink-500'
-    },
-    ai2025: {
+    'ai-2025': {
       title: 'AI 2025 Breakthroughs',
-      icon: '🧠',
-      color: 'from-red-500 to-pink-500'
+      color: 'from-purple-500 to-pink-500',
+      content: [
+        {
+          title: 'AI 2025 Ultimate Breakthrough Revolution',
+          description: 'Experience the most revolutionary AI technologies of 2025 delivering unprecedented 10,000% ROI',
+          link: '/ai-2025-ultimate-breakthrough-revolution',
+          roi: '10,000% ROI',
+          icon: '🚀'
+        },
+        {
+          title: 'Quantum Computing Breakthroughs 2030',
+          description: 'Revolutionary quantum computing with error-corrected quantum computers and 15,000% ROI',
+          link: '/quantum-computing-breakthroughs-2030',
+          roi: '15,000% ROI',
+          icon: '⚛️'
+        },
+        {
+          title: 'Neural Interface Solutions',
+          description: 'Direct brain-computer communication with 99.7% accuracy and 3,000% ROI',
+          link: '/neural-interface-solutions',
+          roi: '3,000% ROI',
+          icon: '🧠'
+        }
+      ]
     },
-    ai2026: {
-      title: 'AI 2026 Revolutionary',
-      icon: '🌌',
-      color: 'from-cyan-500 to-purple-500'
+    'ai-2026': {
+      title: 'AI 2026 Revolutionary Content',
+      color: 'from-cyan-500 to-purple-500',
+      content: [
+        {
+          title: 'AI 2026 Breakthrough Revolutionary Content',
+          description: 'Quantum-neural fusion, consciousness AI, and transcendent intelligence with infinite ROI',
+          link: '/ai-2026-breakthrough-revolutionary-content',
+          roi: '∞ ROI',
+          icon: '🌌'
+        },
+        {
+          title: 'AI 2027 Future Predictions Revolutionary',
+          description: 'Neural synthesis, quantum-AI fusion, and transcendent intelligence delivering 8,000% ROI',
+          link: '/ai-2027-future-predictions-revolutionary',
+          roi: '8,000% ROI',
+          icon: '🔮'
+        },
+        {
+          title: 'AI 2028 Future Predictions Breakthrough',
+          description: 'Automotive transformation, quantum neural fusion, and advanced AI systems with 3,000% ROI',
+          link: '/ai-2028-future-predictions-breakthrough',
+          roi: '3,000% ROI',
+          icon: '🚗'
+        }
+      ]
     },
-    quantum: {
-      title: 'Quantum Computing',
-      icon: '⚛️',
-      color: 'from-indigo-500 to-purple-500'
+    'quantum': {
+      title: 'Quantum Computing Solutions',
+      color: 'from-indigo-500 to-pink-500',
+      content: [
+        {
+          title: 'Quantum Computing Breakthroughs 2030',
+          description: 'Error-corrected quantum computers, quantum internet, and quantum-AI fusion',
+          link: '/quantum-computing-breakthroughs-2030',
+          roi: '15,000% ROI',
+          icon: '⚛️'
+        },
+        {
+          title: 'Quantum Internet Implementation',
+          description: 'Ultra-secure quantum internet with 100% security and instant communication',
+          link: '/quantum-internet-implementation',
+          roi: '100% Secure',
+          icon: '🌐'
+        },
+        {
+          title: 'Quantum-AI Fusion Technology',
+          description: 'Revolutionary fusion of quantum computing and AI with infinite capabilities',
+          link: '/quantum-ai-fusion-technology',
+          roi: '∞ Potential',
+          icon: '⚛️🧠'
+        }
+      ]
     }
   };
 
-  const contentItems = {
-    all: [
-      {
-        title: 'AI 2025 Ultimate Breakthrough Revolution',
-        description: 'Revolutionary AI systems delivering 10,000% ROI through autonomous operations',
-        href: '/ai-2025-ultimate-breakthrough-revolution',
-        category: 'ai2025',
-        roi: '10,000%',
-        icon: '🧠'
-      },
-      {
-        title: 'AI 2026 Breakthrough Revolutionary Content',
-        description: 'Quantum-neural fusion technology with consciousness integration',
-        href: '/ai-2026-breakthrough-revolutionary-content',
-        category: 'ai2026',
-        roi: '15,000%',
-        icon: '🌌'
-      },
-      {
-        title: 'Quantum Computing Breakthroughs 2030',
-        description: 'Error-corrected quantum supremacy with infinite computational power',
-        href: '/quantum-computing-breakthroughs-2030',
-        category: 'quantum',
-        roi: '∞ ROI',
-        icon: '⚛️'
-      },
-      {
-        title: 'Enterprise Automation Mastery 2025',
-        description: 'Complete automation solutions delivering 2,500% ROI',
-        href: '/enterprise-automation-mastery-2025',
-        category: 'ai2025',
-        roi: '2,500%',
-        icon: '🤖'
-      },
-      {
-        title: 'Neural Interface Revolution 2026',
-        description: 'Direct brain-computer interfaces with 95% success rate',
-        href: '/neural-interface-revolution-2026',
-        category: 'ai2026',
-        roi: '5,000%',
-        icon: '🧠'
-      },
-      {
-        title: 'Quantum Internet Implementation',
-        description: 'Instant, secure communication across infinite distances',
-        href: '/quantum-internet-implementation',
-        category: 'quantum',
-        roi: '∞ ROI',
-        icon: '🌐'
-      }
-    ],
-    ai2025: [
-      {
-        title: 'AI 2025 Ultimate Breakthrough Revolution',
-        description: 'Revolutionary AI systems delivering 10,000% ROI through autonomous operations',
-        href: '/ai-2025-ultimate-breakthrough-revolution',
-        category: 'ai2025',
-        roi: '10,000%',
-        icon: '🧠'
-      },
-      {
-        title: 'Enterprise Automation Mastery 2025',
-        description: 'Complete automation solutions delivering 2,500% ROI',
-        href: '/enterprise-automation-mastery-2025',
-        category: 'ai2025',
-        roi: '2,500%',
-        icon: '🤖'
-      },
-      {
-        title: 'AI 2025 Global Transformation',
-        description: 'Global enterprise transformation with 8,000% ROI',
-        href: '/ai-2025-global-transformation',
-        category: 'ai2025',
-        roi: '8,000%',
-        icon: '🌍'
-      }
-    ],
-    ai2026: [
-      {
-        title: 'AI 2026 Breakthrough Revolutionary Content',
-        description: 'Quantum-neural fusion technology with consciousness integration',
-        href: '/ai-2026-breakthrough-revolutionary-content',
-        category: 'ai2026',
-        roi: '15,000%',
-        icon: '🌌'
-      },
-      {
-        title: 'Neural Interface Revolution 2026',
-        description: 'Direct brain-computer interfaces with 95% success rate',
-        href: '/neural-interface-revolution-2026',
-        category: 'ai2026',
-        roi: '5,000%',
-        icon: '🧠'
-      },
-      {
-        title: 'Consciousness AI Integration 2026',
-        description: 'AI systems with genuine consciousness and creativity',
-        href: '/consciousness-ai-integration-2026',
-        category: 'ai2026',
-        roi: '12,000%',
-        icon: '🎭'
-      }
-    ],
-    quantum: [
-      {
-        title: 'Quantum Computing Breakthroughs 2030',
-        description: 'Error-corrected quantum supremacy with infinite computational power',
-        href: '/quantum-computing-breakthroughs-2030',
-        category: 'quantum',
-        roi: '∞ ROI',
-        icon: '⚛️'
-      },
-      {
-        title: 'Quantum Internet Implementation',
-        description: 'Instant, secure communication across infinite distances',
-        href: '/quantum-internet-implementation',
-        category: 'quantum',
-        roi: '∞ ROI',
-        icon: '🌐'
-      },
-      {
-        title: 'Quantum-AI Fusion Technology',
-        description: 'Revolutionary integration of quantum computing with AI',
-        href: '/quantum-ai-fusion-technology',
-        category: 'quantum',
-        roi: '∞ ROI',
-        icon: '⚛️🧠'
-      }
-    ]
-  };
-
-  const filteredContent = contentItems[selectedCategory as keyof typeof contentItems] || contentItems.all;
-
   return (
-    <div className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-cyan-400/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-32 w-24 h-24 bg-purple-400/10 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-32 left-1/3 w-20 h-20 bg-pink-400/10 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-16 h-16 bg-blue-400/10 rounded-full animate-bounce"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
-            <span className="text-purple-400 font-semibold text-sm uppercase tracking-wide">
-              🔍 INTERACTIVE CONTENT DISCOVERY
-            </span>
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-            Discover Revolutionary Content
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            🎯 Interactive Content Discovery
           </h2>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our comprehensive library of breakthrough AI, quantum computing, and automation content. 
-            Find the perfect solution for your business transformation.
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
+            Explore our revolutionary AI content library and discover breakthrough technologies delivering unprecedented ROI across all industries.
           </p>
         </div>
 
-        {/* Category Filter */}
+        {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {Object.entries(contentCategories).map(([key, category]) => (
             <button
               key={key}
-              onClick={() => setSelectedCategory(key)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                selectedCategory === key
+              onClick={() => setActiveTab(key)}
+              className={`px-6 py-3 rounded-lg font-bold text-lg transition-all duration-300 ${
+                activeTab === key
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                  : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20'
               }`}
             >
-              <span className="mr-2">{category.icon}</span>
               {category.title}
             </button>
           ))}
@@ -201,62 +127,55 @@ export default function InteractiveContentDiscoveryWidget2025() {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((item, index) => (
+          {contentCategories[activeTab as keyof typeof contentCategories].content.map((item, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
+              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-8 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
             >
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-3xl">{item.icon}</div>
-                  <div className="px-3 py-1 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-full">
-                    <span className="text-yellow-400 font-bold text-sm">{item.roi}</span>
-                  </div>
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
-                  {item.title}
-                </h3>
-                
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                  {item.description}
-                </p>
-                
-                <Link
-                  href={item.href}
-                  className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold text-sm transition-colors group-hover:translate-x-1 transform duration-300"
-                >
-                  Explore Content
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                {item.icon}
               </div>
+              <h3 className="text-xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors duration-300">
+                {item.title}
+              </h3>
+              <p className="text-gray-300 mb-6 text-sm leading-relaxed">
+                {item.description}
+              </p>
+              <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-4 mb-6">
+                <div className="text-green-400 font-bold text-lg">{item.roi}</div>
+                <div className="text-sm text-gray-300">Success Rate</div>
+              </div>
+              <Link
+                href={item.link}
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:translate-x-2 transition-all duration-300"
+              >
+                Explore Content →
+              </Link>
             </div>
           ))}
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-8 rounded-xl border border-purple-500/30">
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 rounded-xl p-8 mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-300 mb-6">
-              Join thousands of companies achieving unprecedented success with our revolutionary content and solutions.
+              Join thousands of companies already achieving unprecedented ROI with our revolutionary AI technologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"
               >
-                Get Started Now
+                Start Your Transformation
               </Link>
               <Link
-                href="/content-showcase"
-                className="px-8 py-4 border-2 border-white/30 hover:border-white/60 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10"
+                href="/resources"
+                className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all duration-300"
               >
-                Browse All Content
+                View All Resources
               </Link>
             </div>
           </div>
