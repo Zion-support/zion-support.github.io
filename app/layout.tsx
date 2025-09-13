@@ -226,6 +226,12 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <Link href="/ai-2026-future-predictions-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-cyan-50 to-purple-50 border-l-4 border-cyan-500">
+                  🌌 AI 2026 Future Predictions Breakthrough (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2026-quantum-consciousness-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 Quantum Consciousness Breakthrough (25,000% ROI) (NEW)
+                </Link>
                 <Link href="/ai-2026-breakthrough-revolutionary-content" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-cyan-50 to-purple-50 border-l-4 border-cyan-500">
                   🌌 AI 2026 Breakthrough Revolutionary Content (NEW)
                 </Link>
