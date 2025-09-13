@@ -189,8 +189,8 @@ function Header() {
                 <Link href="/ai-2025-ultimate-breakthrough-announcement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🚀 AI 2025 Ultimate Breakthrough (5,000% ROI) (BREAKTHROUGH)
                 </Link>
-                <Link href="/blog/ai-2025-ultimate-automation-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-500">
-                  🚀 AI 2025 Ultimate Automation Revolution (5,000% ROI) (NEW)
+                <Link href="/blog/ai-2025-ultimate-automation-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
+                  🚀 AI 2025 Ultimate Automation Revolution (5,000% ROI) (BREAKTHROUGH)
                 </Link>
                 <Link href="/case-studies/ai-2025-synthetic-intelligence-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Synthetic Intelligence Transformation (50,000% ROI) (BREAKTHROUGH)
@@ -221,7 +221,7 @@ function Header() {
                   🚀 AI 2025 Advanced Automation Mastery (NEW)
                 </Link>
                 <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
-                  🛠️ Ultimate Implementation Toolkit (47 RESOURCES)
+                  🛠️ Ultimate Implementation Toolkit (47 RESOURCES) (NEW)
                 </Link>
 <<<<<<< HEAD
 =======
@@ -996,7 +996,7 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
-                <Link href="/content-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
+                <Link href="/revolutionary-content-showcase-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 Revolutionary Content Showcase 2025 (NEW)
                 </Link>
                 <Link href="/blog/ai-2025-advanced-automation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-500">
