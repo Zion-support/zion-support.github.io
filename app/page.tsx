@@ -58,6 +58,12 @@ import InteractiveTechDemo2026 from '../components/InteractiveTechDemo2026';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
 import UltimateContentHub2026 from '../components/UltimateContentHub2026';
 
+// New 2025 advertising and content components
+import UltimateContentAdvertisingBanner2025 from '../components/UltimateContentAdvertisingBanner2025';
+import InteractiveContentShowcase2025 from '../components/InteractiveContentShowcase2025';
+import ComprehensiveServicesShowcase2025 from '../components/ComprehensiveServicesShowcase2025';
+import SuccessStoriesShowcase2025 from '../components/SuccessStoriesShowcase2025';
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -90,6 +96,18 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Ultimate Content Advertising Banner */}
+      <UltimateContentAdvertisingBanner2025 />
+
+      {/* Interactive Content Showcase */}
+      <InteractiveContentShowcase2025 />
+
+      {/* Comprehensive Services Showcase */}
+      <ComprehensiveServicesShowcase2025 />
+
+      {/* Success Stories Showcase */}
+      <SuccessStoriesShowcase2025 />
 
       {/* New Content Banner */}
       <NewContentBanner variant="featured" />

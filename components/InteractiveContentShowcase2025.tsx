@@ -1,380 +1,350 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, 
+  Cpu, 
+  Database, 
+  Shield, 
   Zap, 
-  Target, 
-  TrendingUp, 
-  Users, 
-  Globe, 
+  Globe,
   ArrowRight,
   Play,
+  Download,
   Star,
-  CheckCircle,
-  Lightbulb,
-  Rocket
+  Users,
+  TrendingUp,
+  Award,
+  ChevronRight,
+  ExternalLink
 } from 'lucide-react';
 
 const InteractiveContentShowcase2025 = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState('ai-solutions');
+  const [hoveredCard, setHoveredCard] = useState(null);
 
-  const tabs = [
-    { id: 0, label: 'AI Solutions', icon: Brain },
-    { id: 1, label: 'Automation', icon: Zap },
-    { id: 2, label: 'Analytics', icon: TrendingUp },
-    { id: 3, label: 'Integration', icon: Target }
-  ];
-
-  const content = [
-    {
-      title: "Revolutionary AI-Powered Business Intelligence",
-      description: "Transform your data into actionable insights with our cutting-edge AI algorithms that learn and adapt to your business needs.",
-      features: [
-        "Real-time data processing",
-        "Predictive analytics",
-        "Automated reporting",
-        "Custom dashboards"
-      ],
-      stats: { value: "300%", label: "ROI Increase" },
-      color: "from-blue-500 to-purple-600"
+  const contentCategories = {
+    'ai-solutions': {
+      title: 'AI Solutions',
+      icon: <Brain className="w-6 h-6" />,
+      color: 'from-purple-500 to-pink-500',
+      bgColor: 'bg-purple-50',
+      borderColor: 'border-purple-200'
     },
-    {
-      title: "Intelligent Process Automation Suite",
-      description: "Eliminate manual tasks and boost productivity with our comprehensive automation platform that handles complex workflows seamlessly.",
-      features: [
-        "Workflow automation",
-        "Smart document processing",
-        "API integrations",
-        "Custom triggers"
-      ],
-      stats: { value: "85%", label: "Time Saved" },
-      color: "from-green-500 to-teal-600"
+    'automation': {
+      title: 'Automation',
+      icon: <Zap className="w-6 h-6" />,
+      color: 'from-blue-500 to-cyan-500',
+      bgColor: 'bg-blue-50',
+      borderColor: 'border-blue-200'
     },
-    {
-      title: "Advanced Performance Analytics",
-      description: "Gain deep insights into your business performance with our sophisticated analytics engine that tracks every metric that matters.",
-      features: [
-        "Real-time monitoring",
-        "Custom metrics",
-        "Performance alerts",
-        "Trend analysis"
-      ],
-      stats: { value: "250%", label: "Efficiency Gain" },
-      color: "from-orange-500 to-red-600"
+    'quantum': {
+      title: 'Quantum Computing',
+      icon: <Cpu className="w-6 h-6" />,
+      color: 'from-indigo-500 to-purple-500',
+      bgColor: 'bg-indigo-50',
+      borderColor: 'border-indigo-200'
     },
-    {
-      title: "Seamless System Integration",
-      description: "Connect all your business tools and systems with our powerful integration platform that ensures data flows smoothly across your organization.",
-      features: [
-        "API management",
-        "Data synchronization",
-        "Security protocols",
-        "Custom connectors"
-      ],
-      stats: { value: "99.9%", label: "Uptime" },
-      color: "from-purple-500 to-pink-600"
+    'security': {
+      title: 'Security',
+      icon: <Shield className="w-6 h-6" />,
+      color: 'from-green-500 to-emerald-500',
+      bgColor: 'bg-green-50',
+      borderColor: 'border-green-200'
     }
-  ];
+  };
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CEO, TechCorp",
-      content: "This platform revolutionized our operations. We've seen incredible results in just 3 months.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO, InnovateLabs",
-      content: "The automation capabilities are unmatched. Our team productivity has skyrocketed.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Operations Director, GlobalTech",
-      content: "The analytics insights helped us identify opportunities we never knew existed.",
-      rating: 5
-    }
-  ];
+  const contentItems = {
+    'ai-solutions': [
+      {
+        id: 1,
+        title: 'Neural Language Processing 2025',
+        description: 'Advanced AI that understands context, emotion, and intent with 99.7% accuracy.',
+        image: '/api/placeholder/400/250',
+        category: 'AI Solutions',
+        rating: 4.9,
+        users: '10,000+',
+        price: 'Starting at $299/month',
+        features: ['Real-time Processing', 'Multi-language Support', 'Emotion Detection'],
+        href: '/ai-2025-neural-language-processing'
+      },
+      {
+        id: 2,
+        title: 'Predictive Analytics Engine',
+        description: 'Forecast business trends with 95% accuracy using machine learning algorithms.',
+        image: '/api/placeholder/400/250',
+        category: 'AI Solutions',
+        rating: 4.8,
+        users: '5,000+',
+        price: 'Starting at $199/month',
+        features: ['Trend Analysis', 'Risk Assessment', 'ROI Prediction'],
+        href: '/ai-2025-predictive-analytics'
+      },
+      {
+        id: 3,
+        title: 'Computer Vision Suite',
+        description: 'Advanced image recognition and analysis for industrial applications.',
+        image: '/api/placeholder/400/250',
+        category: 'AI Solutions',
+        rating: 4.9,
+        users: '8,000+',
+        price: 'Starting at $399/month',
+        features: ['Object Detection', 'Quality Control', 'Real-time Analysis'],
+        href: '/ai-2025-computer-vision'
+      }
+    ],
+    'automation': [
+      {
+        id: 4,
+        title: 'Workflow Automation Platform',
+        description: 'Automate complex business processes with drag-and-drop interface.',
+        image: '/api/placeholder/400/250',
+        category: 'Automation',
+        rating: 4.7,
+        users: '15,000+',
+        price: 'Starting at $149/month',
+        features: ['Visual Workflow Builder', 'API Integration', 'Custom Triggers'],
+        href: '/automation-workflow-platform'
+      },
+      {
+        id: 5,
+        title: 'Intelligent Document Processing',
+        description: 'Extract and process data from documents automatically with 98% accuracy.',
+        image: '/api/placeholder/400/250',
+        category: 'Automation',
+        rating: 4.8,
+        users: '12,000+',
+        price: 'Starting at $249/month',
+        features: ['OCR Technology', 'Data Extraction', 'Format Conversion'],
+        href: '/automation-document-processing'
+      }
+    ],
+    'quantum': [
+      {
+        id: 6,
+        title: 'Quantum Computing Cloud',
+        description: 'Access quantum computing power through our secure cloud platform.',
+        image: '/api/placeholder/400/250',
+        category: 'Quantum Computing',
+        rating: 4.9,
+        users: '2,000+',
+        price: 'Starting at $999/month',
+        features: ['Quantum Algorithms', 'Secure Processing', 'Real-time Results'],
+        href: '/quantum-computing-cloud'
+      }
+    ],
+    'security': [
+      {
+        id: 7,
+        title: 'Zero-Trust Security Framework',
+        description: 'Comprehensive security solution with continuous verification.',
+        image: '/api/placeholder/400/250',
+        category: 'Security',
+        rating: 4.9,
+        users: '20,000+',
+        price: 'Starting at $199/month',
+        features: ['Continuous Monitoring', 'Threat Detection', 'Automated Response'],
+        href: '/security-zero-trust'
+      }
+    ]
+  };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveTab((prev) => (prev + 1) % tabs.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  const currentItems = contentItems[activeTab] || [];
 
   return (
-    <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-sm font-medium mb-4"
-          >
-            <Star className="w-4 h-4 mr-2" />
-            Interactive Content Showcase 2025
-          </motion.div>
-          
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           >
-            Experience the Future of
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Business Technology</span>
+            Interactive Content Showcase
           </motion.h2>
-          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Discover how our cutting-edge solutions can transform your business with interactive demos, real-time analytics, and intelligent automation.
+            Explore our cutting-edge solutions through interactive demonstrations, 
+            real-time demos, and hands-on experiences.
           </motion.p>
         </div>
 
-        {/* Interactive Tabs */}
-        <div className="mb-12">
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {tabs.map((tab) => {
-              const Icon = tab.icon;
-              return (
-                <motion.button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
-                  }`}
-                >
-                  <Icon className="w-5 h-5 mr-2" />
-                  {tab.label}
-                </motion.button>
-              );
-            })}
-          </div>
-
-          {/* Content Display */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden"
-            >
-              <div className={`h-2 bg-gradient-to-r ${content[activeTab].color}`} />
-              <div className="p-8 md:p-12">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                      {content[activeTab].title}
-                    </h3>
-                    <p className="text-lg text-gray-600 mb-6">
-                      {content[activeTab].description}
-                    </p>
-                    
-                    <div className="space-y-3 mb-6">
-                      {content[activeTab].features.map((feature, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.1 }}
-                          className="flex items-center"
-                        >
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                          <span className="text-gray-700">{feature}</span>
-                        </motion.div>
-                      ))}
-                    </div>
-
-                    <div className="flex items-center gap-6">
-                      <div className="text-center">
-                        <div className={`text-3xl font-bold bg-gradient-to-r ${content[activeTab].color} bg-clip-text text-transparent`}>
-                          {content[activeTab].stats.value}
-                        </div>
-                        <div className="text-sm text-gray-600">{content[activeTab].stats.label}</div>
-                      </div>
-                      
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300"
-                      >
-                        <Play className="w-4 h-4 mr-2" />
-                        Watch Demo
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </motion.button>
-                    </div>
-                  </div>
-
-                  <div className="relative">
-                    <motion.div
-                      whileHover={{ scale: 1.02 }}
-                      className={`h-80 rounded-xl bg-gradient-to-br ${content[activeTab].color} p-8 text-white relative overflow-hidden`}
-                    >
-                      <div className="absolute inset-0 bg-black/10" />
-                      <div className="relative z-10">
-                        <div className="text-6xl font-bold mb-4">
-                          {content[activeTab].stats.value}
-                        </div>
-                        <div className="text-xl opacity-90 mb-6">
-                          {content[activeTab].stats.label}
-                        </div>
-                        <div className="space-y-2">
-                          {content[activeTab].features.slice(0, 2).map((feature, index) => (
-                            <div key={index} className="flex items-center">
-                              <CheckCircle className="w-4 h-4 mr-2" />
-                              <span className="text-sm">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </motion.div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
-        {/* Interactive Demo Section */}
-        <div className="mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-8"
-          >
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Try Our Interactive Demo
-            </h3>
-            <p className="text-lg text-gray-600">
-              Experience our platform capabilities firsthand
-            </p>
-          </motion.div>
-
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { icon: Brain, title: "AI Analysis", description: "See how our AI processes your data" },
-                { icon: Zap, title: "Automation", description: "Watch workflows execute automatically" },
-                { icon: TrendingUp, title: "Analytics", description: "Explore real-time performance metrics" }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  onHoverStart={() => setHoveredCard(index)}
-                  onHoverEnd={() => setHoveredCard(null)}
-                  className={`p-6 rounded-xl border-2 transition-all duration-300 cursor-pointer ${
-                    hoveredCard === index
-                      ? 'border-blue-500 bg-blue-50'
-                      : 'border-gray-200 hover:border-gray-300'
-                  }`}
-                >
-                  <item.icon className={`w-8 h-8 mb-4 ${
-                    hoveredCard === index ? 'text-blue-600' : 'text-gray-600'
-                  }`} />
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-600 text-sm">
-                    {item.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Testimonials */}
-        <div className="mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-8"
-          >
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              What Our Clients Say
-            </h3>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg p-6"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-4 italic">
-                  "{testimonial.content}"
-                </p>
-                <div>
-                  <div className="font-semibold text-gray-900">
-                    {testimonial.name}
-                  </div>
-                  <div className="text-sm text-gray-500">
-                    {testimonial.role}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
+        {/* Category Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          <h3 className="text-3xl font-bold mb-4">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-xl mb-8 opacity-90">
-            Join thousands of companies already using our platform to drive growth and innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-white text-blue-600 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center"
+          {Object.entries(contentCategories).map(([key, category]) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`group flex items-center gap-3 px-6 py-4 rounded-full transition-all duration-300 ${
+                activeTab === key
+                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                  : `bg-white text-gray-700 hover:bg-gray-100 ${category.borderColor} border-2`
+              }`}
             >
-              <Rocket className="w-5 h-5 mr-2" />
-              Start Free Trial
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center"
-            >
-              <Lightbulb className="w-5 h-5 mr-2" />
-              Schedule Demo
-            </motion.button>
+              {category.icon}
+              <span className="font-semibold">{category.title}</span>
+              <ChevronRight className={`w-4 h-4 transition-transform ${
+                activeTab === key ? 'rotate-90' : 'group-hover:translate-x-1'
+              }`} />
+            </button>
+          ))}
+        </motion.div>
+
+        {/* Content Grid */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {currentItems.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                onHoverStart={() => setHoveredCard(item.id)}
+                onHoverEnd={() => setHoveredCard(null)}
+                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              >
+                {/* Image */}
+                <div className="relative h-48 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      {contentCategories[activeTab]?.icon}
+                    </div>
+                  </div>
+                  
+                  {/* Overlay Actions */}
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                    <button className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors">
+                      <Play className="w-6 h-6 text-white" />
+                    </button>
+                    <button className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors">
+                      <Download className="w-6 h-6 text-white" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${contentCategories[activeTab]?.bgColor} ${contentCategories[activeTab]?.borderColor} border`}>
+                      {item.category}
+                    </span>
+                    <div className="flex items-center gap-1">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-sm font-medium text-gray-600">{item.rating}</span>
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                    {item.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-2">
+                    {item.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="mb-4">
+                    <div className="flex flex-wrap gap-2">
+                      {item.features.slice(0, 2).map((feature, idx) => (
+                        <span
+                          key={idx}
+                          className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                      {item.features.length > 2 && (
+                        <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                          +{item.features.length - 2} more
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Stats */}
+                  <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
+                    <div className="flex items-center gap-1">
+                      <Users className="w-4 h-4" />
+                      <span>{item.users} users</span>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-semibold text-gray-900">{item.price}</div>
+                    </div>
+                  </div>
+
+                  {/* CTA */}
+                  <Link
+                    href={item.href}
+                    className={`group/btn inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${contentCategories[activeTab]?.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300`}
+                  >
+                    <span>Explore Solution</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+
+                {/* Hover Effect */}
+                {hoveredCard === item.id && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 pointer-events-none"
+                  />
+                )}
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Join thousands of companies already using our solutions to drive innovation and growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+              >
+                <ExternalLink className="w-5 h-5 mr-2" />
+                Schedule Demo
+              </Link>
+              <Link
+                href="/pricing"
+                className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-300"
+              >
+                View Pricing
+              </Link>
+            </div>
           </div>
         </motion.div>
       </div>
