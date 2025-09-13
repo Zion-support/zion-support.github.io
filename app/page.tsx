@@ -100,6 +100,13 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 // Import new breakthrough promotional components
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 
+// Import new content components
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
+import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
+
 // Import new 2026 content components
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import RevolutionaryTechShowcase2026Banner from '../components/RevolutionaryTechShowcase2026Banner';
@@ -279,6 +286,9 @@ export default function HomePage() {
         <UltimateContentShowcase2026PromotionBanner />
         <AITrendsPredictions2026PromotionBanner />
         <QuantumComputingSolutions2026PromotionBanner />
+        
+        {/* NEW CONTENT 2026 PROMOTION BANNER */}
+        <NewContent2026PromotionBanner />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
@@ -501,6 +511,9 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 */}
         <UltimateContentDiscoveryWidget2025 />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2026 */}
+        <UltimateContentDiscoveryWidget2026 />
         
         {/* REVOLUTIONARY CONTENT DISCOVERY WIDGET 2026 */}
         <RevolutionaryContentDiscoveryWidget2026 />
