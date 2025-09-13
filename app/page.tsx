@@ -45,6 +45,7 @@ import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWi
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 // Import new 2025 content promotion components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
@@ -162,6 +163,7 @@ import AITools2025UltimateShowcaseBanner from '../components/AITools2025Ultimate
 // Import new content promotion components
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import AIToolsShowcase2025 from '../components/AIToolsShowcase2025';
 
 export default function HomePage() {
   return (
@@ -182,6 +184,12 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY 2025 */}
         <InteractiveContentDiscovery2025 />
+        
+        {/* New Content Promotion Banner */}
+        <NewContentPromotionBanner2025 />
+        
+        {/* AI Tools Showcase */}
+        <AIToolsShowcase2025 />
         
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
