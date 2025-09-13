@@ -217,6 +217,9 @@ function Header() {
                   ⚛️ Quantum Manufacturing Success (10,000% ROI) (NEW)
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
+                <Link href="/resources/ai-2025-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
+                  📚 AI Implementation Master Guide (150+ Pages) (NEW)
+                </Link>
                 <Link href="/resources/ai-2025-synthetic-intelligence-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   📚 Synthetic Intelligence Implementation Guide (BREAKTHROUGH)
                 </Link>
