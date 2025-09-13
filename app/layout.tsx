@@ -1105,7 +1105,7 @@ function Header() {
             </span>
           </Link>
           <Link 
-            href="/quantum-computing-solutions-2025" 
+            href="/quantum-computing-breakthrough-2025" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
           >
             Quantum Computing
