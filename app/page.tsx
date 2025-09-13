@@ -74,6 +74,7 @@ import AIInnovationShowcase2025 from '../components/AIInnovationShowcase2025';
 
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
+import RevolutionaryAutomationPromotionBanner from '../components/RevolutionaryAutomationPromotionBanner';
 
 // Import new content promotion banners
 import AIInnovationShowcase2025PromotionBanner from '../components/AIInnovationShowcase2025PromotionBanner';
@@ -353,6 +354,9 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* REVOLUTIONARY AUTOMATION BREAKTHROUGH BANNER */}
+        <RevolutionaryAutomationPromotionBanner />
+        
         {/* ULTIMATE CONTENT REVOLUTION 2025 BANNER */}
         <UltimateContentRevolution2025Banner />
         
