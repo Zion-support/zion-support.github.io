@@ -48,6 +48,9 @@ import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryC
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 // Import new 2025 content promotion components
+import ContentShowcasePromotionBanner from '../components/ContentShowcasePromotionBanner';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import NewsletterSignupForm from '../components/NewsletterSignupForm';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 
@@ -243,6 +246,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT SHOWCASE PROMOTION BANNER */}
+        <ContentShowcasePromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <InteractiveContentDiscoveryWidget />
+        
+        {/* NEWSLETTER SIGNUP FORM */}
+        <NewsletterSignupForm />
+        
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER - FEATURED */}
         <AI2025RevolutionaryBreakthroughBanner />
         
