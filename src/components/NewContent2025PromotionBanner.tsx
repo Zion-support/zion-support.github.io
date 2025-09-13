@@ -1,130 +1,140 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, TrendingUp, Brain, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  Brain, 
+  Atom, 
+  Bot, 
+  ArrowRight,
+  Zap,
+  Star,
+  Sparkles,
+  ChevronRight
+} from 'lucide-react';
 
-const NewContent2025PromotionBanner: React.FC = () => {
+export default function NewContent2025PromotionBanner() {
+  const newContentPages = [
+    {
+      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      title: "AI Innovation Hub 2025",
+      description: "Revolutionary AI solutions with autonomous operations and quantum-enhanced processing",
+      link: "/ai-innovation-hub-2025",
+      highlight: "New"
+    },
+    {
+      icon: <Atom className="w-6 h-6 text-purple-400" />,
+      title: "Quantum Computing Solutions",
+      description: "Cutting-edge quantum technology for finance, security, and optimization",
+      link: "/quantum-computing-solutions-2025",
+      highlight: "Featured"
+    },
+    {
+      icon: <Bot className="w-6 h-6 text-green-400" />,
+      title: "Autonomous Business Operations",
+      description: "Self-managing AI systems that run your business automatically",
+      link: "/autonomous-business-operations-2025",
+      highlight: "Popular"
+    }
+  ];
+
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-slate-900/90 via-purple-900/90 to-slate-900/90 backdrop-blur-xl p-8 mb-8"
+    >
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-green-500/5 opacity-50" />
+      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-400/20 to-transparent rounded-full blur-2xl" />
+      <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-400/20 to-transparent rounded-full blur-2xl" />
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative z-10">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-4">
+            <Sparkles className="w-4 h-4 mr-2" />
+            New Content Available
+          </div>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            Discover Revolutionary Technology Solutions
+          </h2>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            Explore our latest AI innovation hub, quantum computing solutions, and autonomous business operations. 
+            Experience the future of technology today.
+          </p>
+        </div>
+
+        {/* Content Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {newContentPages.map((page, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="group"
+            >
+              <Link href={page.link} className="block">
+                <div className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 group-hover:scale-105">
+                  {/* Hover effect */}
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-cyan-500/0 via-purple-400/10 to-green-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  
+                  {/* Highlight badge */}
+                  <div className="absolute top-4 right-4">
+                    <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
+                      page.highlight === 'New' ? 'bg-cyan-500/20 text-cyan-300' :
+                      page.highlight === 'Featured' ? 'bg-purple-500/20 text-purple-300' :
+                      'bg-green-500/20 text-green-300'
+                    }`}>
+                      {page.highlight}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center mb-4">
+                    <div className="p-3 bg-gradient-to-r from-white/10 to-white/5 rounded-lg mr-4">
+                      {page.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">
+                        {page.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                    {page.description}
+                  </p>
+
+                  <div className="flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                    Explore Now
+                    <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* CTA Section */}
         <div className="text-center">
-          {/* Header */}
-          <div className="flex items-center justify-center mb-6">
-            <Sparkles className="h-8 w-8 text-yellow-400 mr-3 animate-pulse" />
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-              🚀 NEW CONTENT 2025 🚀
-            </h2>
-            <Sparkles className="h-8 w-8 text-yellow-400 ml-3 animate-pulse" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/services" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
+              <Zap className="w-4 h-4 mr-2" />
+              View All Services
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
+            <Link href="/contact" className="inline-flex items-center px-6 py-3 border border-white/20 text-white hover:bg-white/10 font-semibold rounded-lg transition-all duration-300">
+              Get Free Consultation
+              <Star className="ml-2 w-4 h-4" />
+            </Link>
           </div>
           
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto">
-            Discover the latest AI breakthroughs, implementation guides, and success stories that are revolutionizing business in 2025
+          <p className="text-sm text-gray-400 mt-4">
+            Join 500+ businesses already transforming with our revolutionary technology solutions
           </p>
-
-          {/* Feature Cards */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {/* Blog Post Card */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-              <div className="flex items-center mb-4">
-                <Brain className="h-6 w-6 text-blue-400 mr-3" />
-                <h3 className="text-lg font-semibold">AI Business Revolution</h3>
-              </div>
-              <p className="text-gray-300 text-sm mb-4">
-                Complete guide to autonomous business operations with AI, neural networks, and quantum computing
-              </p>
-              <Link 
-                href="/blog/ai-2025-autonomous-business-revolution-complete-guide"
-                className="inline-flex items-center text-blue-400 hover:text-blue-300 group-hover:translate-x-1 transition-transform duration-300"
-              >
-                Read More <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-
-            {/* Case Study Card */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-              <div className="flex items-center mb-4">
-                <TrendingUp className="h-6 w-6 text-green-400 mr-3" />
-                <h3 className="text-lg font-semibold">$10B ROI Success</h3>
-              </div>
-              <p className="text-gray-300 text-sm mb-4">
-                Fortune 500 company achieves $10 billion ROI with comprehensive AI transformation in 2025
-              </p>
-              <Link 
-                href="/case-studies/fortune-500-ai-transformation-2025-10-billion-roi"
-                className="inline-flex items-center text-green-400 hover:text-green-300 group-hover:translate-x-1 transition-transform duration-300"
-              >
-                View Case Study <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-
-            {/* Implementation Guide Card */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-              <div className="flex items-center mb-4">
-                <Zap className="h-6 w-6 text-purple-400 mr-3" />
-                <h3 className="text-lg font-semibold">Implementation Guide</h3>
-              </div>
-              <p className="text-gray-300 text-sm mb-4">
-                Step-by-step master guide to implementing AI technologies in 2025 with proven methodologies
-              </p>
-              <Link 
-                href="/resources/ai-2025-implementation-guide"
-                className="inline-flex items-center text-purple-400 hover:text-purple-300 group-hover:translate-x-1 transition-transform duration-300"
-              >
-                Get Started <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business with AI?
-            </h3>
-            <p className="text-white/90 mb-6">
-              Join thousands of companies already revolutionizing their operations with our proven AI implementation strategies.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 inline-flex items-center justify-center"
-              >
-                Get Expert Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link 
-                href="/resources"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors duration-300 inline-flex items-center justify-center"
-              >
-                Explore All Resources
-              </Link>
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400">500%</div>
-              <div className="text-gray-300 text-sm">Efficiency Increase</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400">$10B+</div>
-              <div className="text-gray-300 text-sm">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400">99.9%</div>
-              <div className="text-gray-300 text-sm">System Uptime</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400">95%</div>
-              <div className="text-gray-300 text-sm">Cost Reduction</div>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
-};
-
-export default NewContent2025PromotionBanner;
+}
