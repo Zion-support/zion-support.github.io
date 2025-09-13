@@ -43,6 +43,9 @@ import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025
 import AI2026RevolutionaryContentPromotionBanner from '../components/AI2026RevolutionaryContentPromotionBanner';
 import RevolutionaryContentDiscoveryWidget2026 from '../components/RevolutionaryContentDiscoveryWidget2026';
 
+// New AI 2025 Content Promotion Banner
+import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -54,6 +57,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW AI 2025 CONTENT PROMOTION BANNER */}
+        <AI2025NewContentPromotionBanner />
+        
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
