@@ -1517,6 +1517,18 @@ const HomePage: React.FC = () => {
               </div>
             </Link>
             
+            <Link href='/blog/ai-governance-in-practice-2025' className='group'>
+            </Link>
+
+            <Link href='/blog/edge-ai-privacy-by-design-2025' className='group'>
+            </Link>
+
+            <Link href='/blog/ai-sales-automation-2025' className='group'>
+            </Link>
+
+            <Link href='/blog/ai-governance-blueprint-2026' className='group'>
+            </Link>
+
             <Link href='/resources' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📋</div>
