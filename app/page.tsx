@@ -25,6 +25,8 @@ import InteractiveContentDiscoveryWidget from '../components/InteractiveContentD
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
+import { BreakthroughBanner, QuantumBanner, ContentShowcaseBanner, SuccessStoryBanner } from '../components/PromotionalBanner';
+import ContentPromotion from '../components/ContentPromotion';
 
 export default function HomePage() {
   return (
@@ -37,6 +39,19 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW PROMOTIONAL BANNERS */}
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <BreakthroughBanner />
+          <QuantumBanner />
+          <ContentShowcaseBanner />
+          <SuccessStoryBanner />
+        </div>
+        
+        {/* CONTENT PROMOTION SECTION */}
+        <div className="max-w-7xl mx-auto px-4">
+          <ContentPromotion />
+        </div>
+        
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
         
