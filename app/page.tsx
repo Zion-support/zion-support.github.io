@@ -53,6 +53,11 @@ import InteractiveDemoRequest from '../components/InteractiveDemoRequest';
 import NeuralConsensus2026PromotionBanner from '../components/NeuralConsensus2026PromotionBanner';
 import NeuralConsensus2026Showcase from '../components/NeuralConsensus2026Showcase';
 
+// New 2026 Content Components
+import AIInnovationShowcase2026PromotionBanner from '../components/AIInnovationShowcase2026PromotionBanner';
+import AIToolsComprehensiveShowcase2026PromotionBanner from '../components/AIToolsComprehensiveShowcase2026PromotionBanner';
+import InteractiveContentShowcase2026 from '../components/InteractiveContentShowcase2026';
+
 // New 2026 content components
 import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
@@ -217,6 +222,12 @@ export default function HomePage() {
         {/* NEURAL CONSENSUS 2026 PROMOTION BANNER */}
         <NeuralConsensus2026PromotionBanner />
         
+        {/* NEW AI INNOVATION SHOWCASE 2026 PROMOTION BANNER */}
+        <AIInnovationShowcase2026PromotionBanner />
+        
+        {/* NEW AI TOOLS COMPREHENSIVE SHOWCASE 2026 PROMOTION BANNER */}
+        <AIToolsComprehensiveShowcase2026PromotionBanner />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER 2026 */}
         <UltimateContentPromotionBanner2026 />
         
@@ -234,6 +245,9 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
         <InteractiveContentDiscoveryWidget />
+        
+        {/* NEW INTERACTIVE CONTENT SHOWCASE 2026 */}
+        <InteractiveContentShowcase2026 />
         
         {/* NEW 2025-2026 ULTIMATE INNOVATION SHOWCASE */}
         <AI2025_2026UltimateInnovationShowcase />
