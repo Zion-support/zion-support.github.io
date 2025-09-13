@@ -288,6 +288,8 @@ import AIInnovationShowcase2025 from '../components/AIInnovationShowcase2025';
 import AIInnovationShowcase2025PromotionBanner from '../components/AIInnovationShowcase2025PromotionBanner';
 import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
 import InteractiveTechDemo2025PromotionBanner from '../components/InteractiveTechDemo2025PromotionBanner';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 
 export default function HomePage() {
   return (
@@ -302,6 +304,12 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* Structured Data for SEO */}
         <StructuredData2025 />
+        
+        {/* NEW CONTENT 2025 PROMOTION BANNER - LATEST RELEASES */}
+        <NewContent2025PromotionBanner />
+        
+        {/* LATEST CONTENT SHOWCASE 2025 */}
+        <LatestContentShowcase2025 />
         
         {/* NEW 2025-2026 ULTIMATE INNOVATION SHOWCASE PROMOTION BANNER */}
         <AI2025_2026UltimateInnovationPromotionBanner />
