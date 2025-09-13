@@ -31,6 +31,14 @@ import AI2025BreakthroughContentPromotionBanner from '../components/AI2025Breakt
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 
+// Import new 2026 promotional banners
+import AI2026BreakthroughShowcasePromotionBanner from '../components/AI2026BreakthroughShowcasePromotionBanner';
+import QuantumComputingSolutions2026PromotionBanner from '../components/QuantumComputingSolutions2026PromotionBanner';
+import AdvancedAutomationSolutions2026PromotionBanner from '../components/AdvancedAutomationSolutions2026PromotionBanner';
+import NeuralInterfaceRevolution2026PromotionBanner from '../components/NeuralInterfaceRevolution2026PromotionBanner';
+import AI2027FuturePredictionsPromotionBanner from '../components/AI2027FuturePredictionsPromotionBanner';
+import FeaturedContentCarousel from '../components/FeaturedContentCarousel';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -53,6 +61,24 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT REVOLUTION BANNER 2025 */}
         <UltimateContentRevolutionBanner2025 />
+        
+        {/* FEATURED CONTENT CAROUSEL */}
+        <FeaturedContentCarousel />
+        
+        {/* AI 2026 BREAKTHROUGH SHOWCASE PROMOTION BANNER */}
+        <AI2026BreakthroughShowcasePromotionBanner />
+        
+        {/* QUANTUM COMPUTING SOLUTIONS 2026 PROMOTION BANNER */}
+        <QuantumComputingSolutions2026PromotionBanner />
+        
+        {/* ADVANCED AUTOMATION SOLUTIONS 2026 PROMOTION BANNER */}
+        <AdvancedAutomationSolutions2026PromotionBanner />
+        
+        {/* NEURAL INTERFACE REVOLUTION 2026 PROMOTION BANNER */}
+        <NeuralInterfaceRevolution2026PromotionBanner />
+        
+        {/* AI 2027 FUTURE PREDICTIONS PROMOTION BANNER */}
+        <AI2027FuturePredictionsPromotionBanner />
         
         {/* BREAKTHROUGH CONTENT HIGHLIGHT SECTION */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
