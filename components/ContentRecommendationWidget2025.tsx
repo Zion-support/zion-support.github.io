@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Search, 
-  Filter, 
+  Brain, 
   TrendingUp, 
   Star, 
-  Zap, 
-  Brain, 
-  Cpu,
+  Clock, 
+  Users, 
+  Award, 
+  Rocket, 
+  ArrowRight,
+  RefreshCw,
+  ThumbsUp,
+  Eye,
+  BookOpen,
+  FileText,
+  Video,
+  Tool,
   Globe,
-  Rocket,
-  Target,
-  Award,
-  Users,
-  ChevronDown,
-  X
+  Zap
 } from 'lucide-react';
 
 interface ContentItem {
@@ -37,6 +40,10 @@ interface ContentItem {
   url: string;
   estimatedROI?: string;
   rating?: number;
+  completionRate?: number;
+  relatedTopics?: string[];
+  userInterests?: string[];
+  personalizedScore?: number;
 }
 
 const contentData: ContentItem[] = [
@@ -58,7 +65,11 @@ const contentData: ContentItem[] = [
     author: 'Dr. Sarah Chen',
     url: '/guides/ai-2025-autonomous-operations',
     estimatedROI: '2,500-5,000%',
-    rating: 4.9
+    rating: 4.9,
+    completionRate: 87,
+    relatedTopics: ['Machine Learning', 'Process Automation', 'ROI Optimization'],
+    userInterests: ['AI Implementation', 'ROI Optimization', 'Enterprise Solutions'],
+    personalizedScore: 95
   },
   {
     id: 'quantum-neural-fusion-2026',
@@ -78,7 +89,11 @@ const contentData: ContentItem[] = [
     author: 'Prof. Michael Rodriguez',
     url: '/whitepapers/quantum-neural-fusion-2026',
     estimatedROI: '10,000x Performance',
-    rating: 4.8
+    rating: 4.8,
+    completionRate: 92,
+    relatedTopics: ['Quantum Physics', 'Neural Networks', 'Computational Power'],
+    userInterests: ['Quantum Computing', 'Future Technology', 'Research'],
+    personalizedScore: 88
   },
   {
     id: 'ai-2027-neural-synthesis',
@@ -98,47 +113,11 @@ const contentData: ContentItem[] = [
     author: 'Dr. Elena Volkov',
     url: '/articles/ai-2027-neural-synthesis',
     estimatedROI: 'Revolutionary Capabilities',
-    rating: 4.7
-  },
-  {
-    id: 'automotive-ai-transformation-2028',
-    title: 'Automotive AI Transformation: The 2028 Revolution',
-    description: 'How AI will completely transform the automotive industry by 2028, from autonomous vehicles to smart manufacturing and predictive maintenance.',
-    category: 'Industry Transformation',
-    type: 'case-study',
-    readTime: '25 min',
-    difficulty: 'intermediate',
-    tags: ['Automotive', 'AI Transformation', '2028', 'Autonomous Vehicles', 'Smart Manufacturing'],
-    featured: false,
-    trending: true,
-    new: true,
-    views: 11200,
-    likes: 445,
-    publishedAt: '2025-01-12',
-    author: 'James Mitchell',
-    url: '/case-studies/automotive-ai-transformation-2028',
-    estimatedROI: '300-500%',
-    rating: 4.6
-  },
-  {
-    id: 'ai-2030-transcendent-intelligence',
-    title: 'AI 2030: Transcendent Intelligence and Omniversal Computing',
-    description: 'Explore the future of AI in 2030 where transcendent intelligence meets omniversal computing, creating unprecedented possibilities for humanity.',
-    category: 'Future Vision',
-    type: 'whitepaper',
-    readTime: '90 min',
-    difficulty: 'expert',
-    tags: ['AI 2030', 'Transcendent Intelligence', 'Omniversal Computing', 'Future Vision', 'Humanity'],
-    featured: true,
-    trending: false,
-    new: true,
-    views: 8750,
-    likes: 567,
-    publishedAt: '2025-01-11',
-    author: 'Dr. Alexander Quantum',
-    url: '/whitepapers/ai-2030-transcendent-intelligence',
-    estimatedROI: 'Unlimited Potential',
-    rating: 4.9
+    rating: 4.7,
+    completionRate: 78,
+    relatedTopics: ['Consciousness', 'Neural Networks', 'Human-AI Interaction'],
+    userInterests: ['Future AI', 'Consciousness', 'Human-AI Collaboration'],
+    personalizedScore: 82
   },
   {
     id: 'enterprise-ai-mastery-2026',
@@ -158,17 +137,79 @@ const contentData: ContentItem[] = [
     author: 'Maria Santos',
     url: '/guides/enterprise-ai-mastery-2026',
     estimatedROI: '400-800%',
-    rating: 4.8
+    rating: 4.8,
+    completionRate: 89,
+    relatedTopics: ['Enterprise Implementation', 'ROI Optimization', 'Competitive Strategy'],
+    userInterests: ['Enterprise AI', 'Implementation', 'ROI Optimization'],
+    personalizedScore: 91
+  },
+  {
+    id: 'ai-tools-showcase-2025',
+    title: 'Revolutionary AI Tools Showcase 2025',
+    description: 'Discover the most powerful AI tools and platforms that will revolutionize your workflow in 2025, from automation to intelligence augmentation.',
+    category: 'AI Tools',
+    type: 'tool',
+    readTime: '20 min',
+    difficulty: 'intermediate',
+    tags: ['AI Tools', 'Productivity', 'Automation', 'Intelligence Augmentation', '2025'],
+    featured: false,
+    trending: true,
+    new: true,
+    views: 13200,
+    likes: 567,
+    publishedAt: '2025-01-09',
+    author: 'Tech Team',
+    url: '/tools/ai-tools-showcase-2025',
+    estimatedROI: '200-400%',
+    rating: 4.5,
+    completionRate: 82,
+    relatedTopics: ['Productivity Tools', 'Workflow Automation', 'AI Platforms'],
+    userInterests: ['AI Tools', 'Productivity', 'Automation'],
+    personalizedScore: 76
+  },
+  {
+    id: 'ai-webinar-series-2025',
+    title: 'AI Webinar Series: Future of Technology 2025-2030',
+    description: 'Join our exclusive webinar series featuring industry experts discussing the future of AI, quantum computing, and emerging technologies.',
+    category: 'Education',
+    type: 'webinar',
+    readTime: '60 min',
+    difficulty: 'intermediate',
+    tags: ['Webinar', 'Education', 'Future Tech', 'Expert Insights', 'Live Learning'],
+    featured: true,
+    trending: false,
+    new: true,
+    views: 8900,
+    likes: 423,
+    publishedAt: '2025-01-08',
+    author: 'Expert Panel',
+    url: '/webinars/ai-webinar-series-2025',
+    estimatedROI: 'Knowledge Enhancement',
+    rating: 4.7,
+    completionRate: 76,
+    relatedTopics: ['Professional Development', 'Expert Insights', 'Live Learning'],
+    userInterests: ['Education', 'Professional Development', 'Expert Insights'],
+    personalizedScore: 79
   }
 ];
 
 const categoryIcons = {
   'AI Implementation': Brain,
-  'Quantum Computing': Cpu,
+  'Quantum Computing': Award,
   'Future AI': Zap,
-  'Industry Transformation': Globe,
-  'Future Vision': Rocket,
-  'Enterprise AI': Target
+  'Enterprise AI': Globe,
+  'AI Tools': Tool,
+  'Education': Users
+};
+
+const typeIcons = {
+  'article': BookOpen,
+  'guide': FileText,
+  'case-study': Globe,
+  'tool': Tool,
+  'video': Video,
+  'whitepaper': FileText,
+  'webinar': Video
 };
 
 const typeColors = {
@@ -188,49 +229,60 @@ const difficultyColors = {
   'expert': 'bg-red-100 text-red-800'
 };
 
-const InteractiveContentDiscovery2025: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState<string>('');
+const ContentRecommendationWidget2025: React.FC = () => {
+  const [recommendations, setRecommendations] = useState<ContentItem[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedType, setSelectedType] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('trending');
-  const [showFilters, setShowFilters] = useState<boolean>(false);
+
+  // Simulate personalized recommendations based on user behavior
+  useEffect(() => {
+    setIsLoading(true);
+    
+    // Simulate API call delay
+    setTimeout(() => {
+      let filteredContent = [...contentData];
+      
+      // Filter by category
+      if (selectedCategory !== 'all') {
+        filteredContent = filteredContent.filter(item => item.category === selectedCategory);
+      }
+      
+      // Filter by type
+      if (selectedType !== 'all') {
+        filteredContent = filteredContent.filter(item => item.type === selectedType);
+      }
+      
+      // Sort by personalized score and other factors
+      const sortedContent = filteredContent.sort((a, b) => {
+        // Primary sort by personalized score
+        const scoreDiff = (b.personalizedScore || 0) - (a.personalizedScore || 0);
+        if (scoreDiff !== 0) return scoreDiff;
+        
+        // Secondary sort by trending status
+        const trendingDiff = (b.trending ? 1 : 0) - (a.trending ? 1 : 0);
+        if (trendingDiff !== 0) return trendingDiff;
+        
+        // Tertiary sort by views
+        return b.views - a.views;
+      });
+      
+      setRecommendations(sortedContent.slice(0, 6));
+      setIsLoading(false);
+    }, 1000);
+  }, [selectedCategory, selectedType]);
 
   const categories = ['all', ...Array.from(new Set(contentData.map(item => item.category)))];
   const types = ['all', ...Array.from(new Set(contentData.map(item => item.type)))];
 
-  const filteredContent = contentData.filter(item => {
-    const matchesSearch = searchQuery === '' || 
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    const matchesType = selectedType === 'all' || item.type === selectedType;
-    
-    return matchesSearch && matchesCategory && matchesType;
-  });
-
-  const sortedContent = [...filteredContent].sort((a, b) => {
-    switch (sortBy) {
-      case 'trending':
-        return b.views - a.views;
-      case 'newest':
-        return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
-      case 'popular':
-        return b.likes - a.likes;
-      case 'featured':
-        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-      case 'rating':
-        return (b.rating || 0) - (a.rating || 0);
-      default:
-        return 0;
-    }
-  });
-
-  const featuredContent = sortedContent.filter(item => item.featured);
-  const trendingContent = sortedContent.filter(item => item.trending);
-  const newContent = sortedContent.filter(item => item.new);
+  const refreshRecommendations = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      const shuffled = [...contentData].sort(() => Math.random() - 0.5);
+      setRecommendations(shuffled.slice(0, 6));
+      setIsLoading(false);
+    }, 1000);
+  };
 
   return (
     <div className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -243,7 +295,7 @@ const InteractiveContentDiscovery2025: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Interactive Content Discovery
+            Personalized Content Recommendations
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-300 max-w-3xl mx-auto"
@@ -251,11 +303,11 @@ const InteractiveContentDiscovery2025: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Discover, explore, and find the perfect AI content tailored to your needs with our advanced discovery engine.
+            Discover content tailored to your interests and learning goals, powered by our advanced AI recommendation engine.
           </motion.p>
         </div>
 
-        {/* Search and Controls */}
+        {/* Filters */}
         <motion.div 
           className="mb-8"
           initial={{ opacity: 0, y: 20 }}
@@ -263,31 +315,10 @@ const InteractiveContentDiscovery2025: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-            {/* Search Bar */}
-            <div className="relative mb-6">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search content, authors, topics, or tags..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              )}
-            </div>
-
-            {/* Controls Row */}
-            <div className="flex flex-col lg:flex-row gap-4 mb-4">
-              <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
+              <div className="flex flex-col sm:flex-row gap-4 flex-1">
                 {/* Category Filter */}
-                <div>
+                <div className="flex-1">
                   <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
                   <select
                     value={selectedCategory}
@@ -303,7 +334,7 @@ const InteractiveContentDiscovery2025: React.FC = () => {
                 </div>
                 
                 {/* Type Filter */}
-                <div>
+                <div className="flex-1">
                   <label className="block text-sm font-medium text-gray-300 mb-2">Type</label>
                   <select
                     value={selectedType}
@@ -317,74 +348,51 @@ const InteractiveContentDiscovery2025: React.FC = () => {
                     ))}
                   </select>
                 </div>
-                
-                {/* Sort Options */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  >
-                    <option value="trending" className="bg-gray-800">Trending</option>
-                    <option value="newest" className="bg-gray-800">Newest</option>
-                    <option value="popular" className="bg-gray-800">Most Popular</option>
-                    <option value="featured" className="bg-gray-800">Featured</option>
-                    <option value="rating" className="bg-gray-800">Highest Rated</option>
-                  </select>
-                </div>
               </div>
-            </div>
-
-            {/* Results Summary */}
-            <div className="mt-4 pt-4 border-t border-white/20">
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                <div className="text-sm text-gray-400 mb-2 sm:mb-0">
-                  Showing {sortedContent.length} of {contentData.length} content items
-                  {searchQuery && ` for "${searchQuery}"`}
-                </div>
-                <div className="flex items-center space-x-4 text-sm text-gray-400">
-                  <span className="flex items-center">
-                    <Star className="w-4 h-4 mr-1 text-yellow-400" />
-                    {featuredContent.length} Featured
-                  </span>
-                  <span className="flex items-center">
-                    <TrendingUp className="w-4 h-4 mr-1 text-orange-400" />
-                    {trendingContent.length} Trending
-                  </span>
-                  <span className="flex items-center">
-                    <Zap className="w-4 h-4 mr-1 text-green-400" />
-                    {newContent.length} New
-                  </span>
-                </div>
-              </div>
+              
+              {/* Refresh Button */}
+              <button
+                onClick={refreshRecommendations}
+                disabled={isLoading}
+                className="flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white rounded-lg transition-colors"
+              >
+                <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
+                Refresh
+              </button>
             </div>
           </div>
         </motion.div>
 
-        {/* Content Grid */}
+        {/* Recommendations Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          {sortedContent.length === 0 ? (
-            <div className="text-center py-12">
-              <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">No content found</h3>
-              <p className="text-gray-400 mb-4">Try adjusting your search criteria or filters</p>
+          {isLoading ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[...Array(6)].map((_, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 animate-pulse">
+                  <div className="h-4 bg-white/20 rounded mb-4"></div>
+                  <div className="h-6 bg-white/20 rounded mb-2"></div>
+                  <div className="h-4 bg-white/20 rounded mb-4"></div>
+                  <div className="h-4 bg-white/20 rounded mb-4"></div>
+                  <div className="h-8 bg-white/20 rounded"></div>
+                </div>
+              ))}
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {sortedContent.map((item, index) => (
+              {recommendations.map((item, index) => (
                 <motion.div
                   key={item.id}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.8 + index * 0.05 }}
+                  transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                   whileHover={{ y: -5 }}
                 >
+                  {/* Header */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-2">
                       {React.createElement(categoryIcons[item.category as keyof typeof categoryIcons] || Brain, {
@@ -392,44 +400,69 @@ const InteractiveContentDiscovery2025: React.FC = () => {
                       })}
                       <span className="text-sm text-gray-300">{item.category}</span>
                     </div>
-                    <div className="flex space-x-1">
+                    <div className="flex items-center space-x-2">
+                      {item.personalizedScore && (
+                        <div className="flex items-center text-xs text-green-400">
+                          <Star className="w-3 h-3 mr-1" />
+                          {item.personalizedScore}% match
+                        </div>
+                      )}
                       {item.featured && <span className="px-2 py-1 bg-yellow-400/20 text-yellow-400 text-xs rounded">Featured</span>}
                       {item.trending && <span className="px-2 py-1 bg-orange-400/20 text-orange-400 text-xs rounded">Trending</span>}
                       {item.new && <span className="px-2 py-1 bg-green-400/20 text-green-400 text-xs rounded">New</span>}
                     </div>
                   </div>
                   
-                  <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                  {/* Title */}
+                  <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors line-clamp-2">
                     {item.title}
                   </h4>
                   
+                  {/* Description */}
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                     {item.description}
                   </p>
                   
+                  {/* Meta Information */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     <span className={`px-2 py-1 text-xs rounded ${typeColors[item.type]}`}>
+                      {React.createElement(typeIcons[item.type] || BookOpen, {
+                        className: "w-3 h-3 inline mr-1"
+                      })}
                       {item.type.charAt(0).toUpperCase() + item.type.slice(1)}
                     </span>
                     <span className={`px-2 py-1 text-xs rounded ${difficultyColors[item.difficulty]}`}>
                       {item.difficulty.charAt(0).toUpperCase() + item.difficulty.slice(1)}
                     </span>
                     <span className="px-2 py-1 text-xs bg-gray-600 text-gray-300 rounded">
+                      <Clock className="w-3 h-3 inline mr-1" />
                       {item.readTime}
                     </span>
                     {item.rating && (
                       <span className="px-2 py-1 text-xs bg-yellow-500/20 text-yellow-400 rounded">
-                        ⭐ {item.rating}
+                        <Star className="w-3 h-3 inline mr-1" />
+                        {item.rating}
                       </span>
                     )}
                   </div>
                   
+                  {/* Stats */}
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <span>By {item.author}</span>
-                    <span>{item.views.toLocaleString()} views</span>
-                    <span>{item.likes} likes</span>
+                    <div className="flex items-center">
+                      <Eye className="w-4 h-4 mr-1" />
+                      {item.views.toLocaleString()}
+                    </div>
+                    <div className="flex items-center">
+                      <ThumbsUp className="w-4 h-4 mr-1" />
+                      {item.likes}
+                    </div>
+                    <div className="flex items-center">
+                      <Users className="w-4 h-4 mr-1" />
+                      {item.author}
+                    </div>
                   </div>
                   
+                  {/* ROI Badge */}
                   {item.estimatedROI && (
                     <div className="mb-4 p-3 bg-green-500/20 rounded-lg">
                       <div className="flex items-center">
@@ -441,6 +474,7 @@ const InteractiveContentDiscovery2025: React.FC = () => {
                     </div>
                   )}
                   
+                  {/* Tags */}
                   <div className="flex flex-wrap gap-1 mb-4">
                     {item.tags.slice(0, 3).map(tag => (
                       <span key={tag} className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">
@@ -454,12 +488,20 @@ const InteractiveContentDiscovery2025: React.FC = () => {
                     )}
                   </div>
                   
+                  {/* Action Button */}
                   <Link
                     to={item.url}
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm group-hover:underline"
+                    className="inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors group-hover:bg-blue-500"
                   >
-                    Read More
-                    <Rocket className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    {item.type === 'webinar' ? 'Join Webinar' : 
+                     item.type === 'guide' ? 'Read Guide' : 
+                     item.type === 'article' ? 'Read Article' :
+                     item.type === 'case-study' ? 'View Case Study' :
+                     item.type === 'tool' ? 'Try Tool' :
+                     item.type === 'video' ? 'Watch Video' :
+                     item.type === 'whitepaper' ? 'Read Whitepaper' :
+                     'View Content'}
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </motion.div>
               ))}
@@ -476,23 +518,23 @@ const InteractiveContentDiscovery2025: React.FC = () => {
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Can't Find What You're Looking For?
+              Want More Personalized Recommendations?
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Our content library is constantly growing. Request specific content or let us know what topics you'd like to see covered.
+              Sign up for our newsletter to get personalized content recommendations delivered to your inbox weekly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                to="/newsletter"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
-                Request Content
+                Subscribe to Newsletter
               </Link>
               <Link
-                to="/newsletter"
+                to="/profile"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
-                Get Notified of New Content
+                Customize Preferences
               </Link>
             </div>
           </div>
@@ -502,4 +544,4 @@ const InteractiveContentDiscovery2025: React.FC = () => {
   );
 };
 
-export default InteractiveContentDiscovery2025;
+export default ContentRecommendationWidget2025;
