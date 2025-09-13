@@ -34,6 +34,8 @@ import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
 import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBanner';
 
 export default function HomePage() {
   return (
@@ -46,6 +48,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
+        {/* AI 2025 CONTENT SHOWCASE BANNER */}
+        <AI2025ContentShowcaseBanner />
+        
         {/* NEW CONTENT 2026 PROMOTION BANNER */}
         <NewContent2026PromotionBanner />
         
