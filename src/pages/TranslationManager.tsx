@@ -1,4 +1,3 @@
->>>>>>>> origin/content/blog-sept12:src/pages/TranslationManager.tsx
 import React, { useState, useEffect } from 'react';
 import Header from "@/components/Header";
 import { SEO } from "@/components/SEO";

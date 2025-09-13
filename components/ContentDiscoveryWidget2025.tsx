@@ -1,334 +1,470 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { 
-  Search, 
-  Filter, 
-  BookOpen, 
-  TrendingUp, 
-  DollarSign, 
-  Lightbulb, 
-  Users, 
-  Star,
-  Clock,
-  ArrowRight,
-  X
-} from 'lucide-react';
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Search, Filter, Star, Clock, TrendingUp, Eye, Heart, BookOpen, Zap, Brain, Cpu } from 'lucide-react';
 
-const contentCategories = [
-  { id: 'all', label: 'All Content', icon: Search, count: 247 },
-  { id: 'tutorials', label: 'Tutorials', icon: BookOpen, count: 89 },
-  { id: 'insights', label: 'Insights', icon: TrendingUp, count: 67 },
-  { id: 'guides', label: 'Guides', icon: Lightbulb, count: 45 },
-  { id: 'case-studies', label: 'Case Studies', icon: Users, count: 46 }
-];
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  tags: string[];
+  readTime: string;
+  views: number;
+  rating: number;
+  isLiked: boolean;
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+  type: 'Article' | 'Video' | 'Tutorial' | 'Case Study' | 'Prediction';
+  featured: boolean;
+  trending: boolean;
+  new: boolean;
+}
 
-const difficultyLevels = [
-  { id: 'beginner', label: 'Beginner', color: 'bg-green-100 text-green-800' },
-  { id: 'intermediate', label: 'Intermediate', color: 'bg-blue-100 text-blue-800' },
-  { id: 'advanced', label: 'Advanced', color: 'bg-purple-100 text-purple-800' }
-];
-
-const featuredContent = [
-  {
-    id: 1,
-    title: 'AI Implementation Masterclass 2025',
-    description: 'Comprehensive guide to implementing AI in your organization',
-    category: 'tutorials',
-    difficulty: 'intermediate',
-    duration: '12+ Hours',
-    rating: 4.9,
-    students: 2847,
-    price: '$299',
-    url: '/tutorials/ai-implementation-masterclass-2025',
-    badges: ['New', 'Popular'],
-    image: '/api/placeholder/300/200'
-  },
-  {
-    id: 2,
-    title: 'AI Industry Trends Analysis',
-    description: 'Deep dive into AI market trends and future predictions',
-    category: 'insights',
-    difficulty: 'beginner',
-    duration: '30 Min',
-    rating: 4.8,
-    students: 1523,
-    price: 'Free',
-    url: '/insights/ai-industry-trends-2025',
-    badges: ['Trending', 'Free'],
-    image: '/api/placeholder/300/200'
-  },
-  {
-    id: 3,
-    title: 'AI Startup Funding Guide',
-    description: 'Complete guide to securing funding for AI ventures',
-    category: 'guides',
-    difficulty: 'beginner',
-    duration: '45 Min',
-    rating: 4.9,
-    students: 2189,
-    price: 'Free',
-    url: '/guides/ai-startup-funding-guide-2025',
-    badges: ['Popular', 'Free'],
-    image: '/api/placeholder/300/200'
-  },
-  {
-    id: 4,
-    title: 'Fortune 500 AI Transformation',
-    description: 'How global enterprises successfully implemented AI',
-    category: 'case-studies',
-    difficulty: 'advanced',
-    duration: '25 Min',
-    rating: 4.7,
-    students: 987,
-    price: 'Free',
-    url: '/case-studies/ai-2025-fortune-500-transformation-breakthrough',
-    badges: ['Case Study', 'Enterprise'],
-    image: '/api/placeholder/300/200'
-  },
-  {
-    id: 5,
-    title: 'AI Ethics & Governance Framework',
-    description: 'Building responsible AI systems in your organization',
-    category: 'guides',
-    difficulty: 'intermediate',
-    duration: '60 Min',
-    rating: 4.8,
-    students: 1456,
-    price: '$199',
-    url: '/guides/ai-ethics-governance-framework-2025',
-    badges: ['Critical', 'Compliance'],
-    image: '/api/placeholder/300/200'
-  },
-  {
-    id: 6,
-    title: 'Quantum AI Revolution 2026',
-    description: 'The future of quantum-enhanced artificial intelligence',
-    category: 'insights',
-    difficulty: 'advanced',
-    duration: '40 Min',
-    rating: 4.9,
-    students: 2341,
-    price: 'Free',
-    url: '/insights/quantum-ai-revolution-2026',
-    badges: ['Future Tech', 'Quantum'],
-    image: '/api/placeholder/300/200'
-  }
-];
-
-export default function ContentDiscoveryWidget2025() {
-  const [searchTerm, setSearchTerm] = useState('');
+const ContentDiscoveryWidget2025: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedDifficulty, setSelectedDifficulty] = useState('all');
+  const [sortBy, setSortBy] = useState('trending');
+  const [content, setContent] = useState<ContentItem[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
 
-  const filteredContent = featuredContent.filter(content => {
-    const matchesSearch = content.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         content.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || content.category === selectedCategory;
-    const matchesDifficulty = selectedDifficulty === 'all' || content.difficulty === selectedDifficulty;
-    
-    return matchesSearch && matchesCategory && matchesDifficulty;
-  });
+  const categories = [
+    'all', 'AI Predictions', 'Quantum Computing', 'Automation', 'Machine Learning', 
+    'Neural Networks', 'Business Intelligence', 'Future Technology', 'Case Studies'
+  ];
 
-  const getCategoryIcon = (category: string) => {
-    const categoryData = contentCategories.find(cat => cat.id === category);
-    return categoryData ? categoryData.icon : Search;
+  const difficulties = ['all', 'Beginner', 'Intermediate', 'Advanced'];
+
+  const sortOptions = [
+    { value: 'trending', label: 'Trending', icon: TrendingUp },
+    { value: 'featured', label: 'Featured', icon: Star },
+    { value: 'rating', label: 'Highest Rated', icon: Star },
+    { value: 'views', label: 'Most Viewed', icon: Eye },
+    { value: 'recent', label: 'Most Recent', icon: Clock }
+  ];
+
+  // Mock data - in a real app, this would come from an API
+  const mockContent: ContentItem[] = [
+    {
+      id: '1',
+      title: 'AI 2025: The Neural Interface Revolution',
+      description: 'Explore how direct brain-computer interfaces will transform human-computer interaction by 2025.',
+      category: 'AI Predictions',
+      tags: ['neural interfaces', 'brain-computer', '2025 predictions', 'future tech'],
+      readTime: '12 min read',
+      views: 25430,
+      rating: 4.9,
+      isLiked: false,
+      difficulty: 'Advanced',
+      type: 'Prediction',
+      featured: true,
+      trending: true,
+      new: false
+    },
+    {
+      id: '2',
+      title: 'Quantum Machine Learning: 10,000x Speed Boost',
+      description: 'Discover how quantum algorithms are revolutionizing machine learning performance.',
+      category: 'Quantum Computing',
+      tags: ['quantum computing', 'machine learning', 'algorithms', 'performance'],
+      readTime: '18 min read',
+      views: 18920,
+      rating: 4.8,
+      isLiked: true,
+      difficulty: 'Advanced',
+      type: 'Tutorial',
+      featured: true,
+      trending: false,
+      new: true
+    },
+    {
+      id: '3',
+      title: 'Automation ROI Calculator: 2,500% Returns',
+      description: 'Learn how to calculate and achieve massive ROI with intelligent process automation.',
+      category: 'Automation',
+      tags: ['ROI', 'automation', 'business intelligence', 'efficiency'],
+      readTime: '8 min read',
+      views: 32150,
+      rating: 4.7,
+      isLiked: false,
+      difficulty: 'Intermediate',
+      type: 'Case Study',
+      featured: false,
+      trending: true,
+      new: false
+    },
+    {
+      id: '4',
+      title: 'Neural Networks for Beginners',
+      description: 'A comprehensive guide to understanding neural networks from the ground up.',
+      category: 'Machine Learning',
+      tags: ['neural networks', 'beginner', 'tutorial', 'deep learning'],
+      readTime: '15 min read',
+      views: 45670,
+      rating: 4.6,
+      isLiked: true,
+      difficulty: 'Beginner',
+      type: 'Tutorial',
+      featured: false,
+      trending: false,
+      new: false
+    },
+    {
+      id: '5',
+      title: 'Future of Work: AI-Powered Teams',
+      description: 'How artificial intelligence will reshape team dynamics and collaboration.',
+      category: 'Future Technology',
+      tags: ['future of work', 'AI teams', 'collaboration', 'workplace'],
+      readTime: '10 min read',
+      views: 28750,
+      rating: 4.8,
+      isLiked: false,
+      difficulty: 'Intermediate',
+      type: 'Article',
+      featured: true,
+      trending: false,
+      new: true
+    },
+    {
+      id: '6',
+      title: 'Quantum Security: Unbreakable Encryption',
+      description: 'Explore quantum-based security protocols that provide unbreakable encryption.',
+      category: 'Quantum Computing',
+      tags: ['quantum security', 'encryption', 'cybersecurity', 'quantum protocols'],
+      readTime: '14 min read',
+      views: 15230,
+      rating: 4.9,
+      isLiked: false,
+      difficulty: 'Advanced',
+      type: 'Article',
+      featured: false,
+      trending: true,
+      new: false
+    }
+  ];
+
+  useEffect(() => {
+    setIsLoading(true);
+    // Simulate API call
+    setTimeout(() => {
+      let filtered = mockContent;
+
+      // Filter by search query
+      if (searchQuery) {
+        filtered = filtered.filter(item =>
+          item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+        );
+      }
+
+      // Filter by category
+      if (selectedCategory !== 'all') {
+        filtered = filtered.filter(item => item.category === selectedCategory);
+      }
+
+      // Filter by difficulty
+      if (selectedDifficulty !== 'all') {
+        filtered = filtered.filter(item => item.difficulty === selectedDifficulty);
+      }
+
+      // Sort
+      switch (sortBy) {
+        case 'featured':
+          filtered = filtered.filter(item => item.featured);
+          break;
+        case 'rating':
+          filtered.sort((a, b) => b.rating - a.rating);
+          break;
+        case 'views':
+          filtered.sort((a, b) => b.views - a.views);
+          break;
+        case 'recent':
+          // In a real app, you'd sort by date
+          break;
+        default:
+          // Trending (default)
+          filtered.sort((a, b) => b.views - a.views);
+      }
+
+      setContent(filtered);
+      setIsLoading(false);
+    }, 500);
+  }, [searchQuery, selectedCategory, selectedDifficulty, sortBy]);
+
+  const toggleLike = (id: string) => {
+    setContent(prev =>
+      prev.map(item =>
+        item.id === id ? { ...item, isLiked: !item.isLiked } : item
+      )
+    );
   };
 
-  const getDifficultyColor = (difficulty: string) => {
-    const difficultyData = difficultyLevels.find(diff => diff.id === difficulty);
-    return difficultyData ? difficultyData.color : 'bg-gray-100 text-gray-800';
+  const formatViews = (views: number) => {
+    if (views >= 1000) {
+      return `${(views / 1000).toFixed(1)}K`;
+    }
+    return views.toString();
+  };
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'AI Predictions':
+        return Brain;
+      case 'Quantum Computing':
+        return Cpu;
+      case 'Automation':
+        return Zap;
+      default:
+        return BookOpen;
+    }
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Discover AI Content
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Content Discovery Widget 2025
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Explore our comprehensive library of AI tutorials, insights, guides, and case studies.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover the most relevant and trending content tailored to your interests with our advanced AI-powered recommendation engine.
           </p>
         </div>
 
         {/* Search and Filters */}
-        <div className="mb-8">
-          <div className="flex flex-col md:flex-row gap-4 mb-6">
-            <div className="relative flex-1">
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20">
+          <div className="flex flex-col lg:flex-row gap-4">
+            {/* Search Bar */}
+            <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <Input
-                placeholder="Search AI content..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10"
+              <input
+                type="text"
+                placeholder="Search content, tags, or topics..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
-            <Button
-              variant="outline"
-              onClick={() => setShowFilters(!showFilters)}
-              className="flex items-center gap-2"
-            >
-              <Filter className="w-4 h-4" />
-              Filters
-            </Button>
-          </div>
 
-          {/* Category Filters */}
-          <div className="flex flex-wrap gap-2 mb-4">
-            {contentCategories.map((category) => {
-              const IconComponent = category.icon;
-              return (
-                <Button
-                  key={category.id}
-                  variant={selectedCategory === category.id ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setSelectedCategory(category.id)}
-                  className="flex items-center gap-2"
-                >
-                  <IconComponent className="w-4 h-4" />
-                  {category.label}
-                  <Badge variant="secondary" className="ml-1 text-xs">
-                    {category.count}
-                  </Badge>
-                </Button>
-              );
-            })}
+            {/* Filter Toggle */}
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              className="flex items-center px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white hover:bg-white/30 transition-colors"
+            >
+              <Filter className="w-5 h-5 mr-2" />
+              Filters
+            </button>
           </div>
 
           {/* Advanced Filters */}
           {showFilters && (
-            <Card className="p-4">
-              <div className="flex flex-wrap gap-4">
+            <div className="mt-6 pt-6 border-t border-white/20">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {/* Category Filter */}
                 <div>
-                  <label className="text-sm font-medium text-gray-700 mb-2 block">
-                    Difficulty Level
-                  </label>
-                  <div className="flex gap-2">
-                    <Button
-                      variant={selectedDifficulty === 'all' ? "default" : "outline"}
-                      size="sm"
-                      onClick={() => setSelectedDifficulty('all')}
-                    >
-                      All
-                    </Button>
-                    {difficultyLevels.map((level) => (
-                      <Button
-                        key={level.id}
-                        variant={selectedDifficulty === level.id ? "default" : "outline"}
-                        size="sm"
-                        onClick={() => setSelectedDifficulty(level.id)}
-                      >
-                        {level.label}
-                      </Button>
+                  <label className="block text-white text-sm font-semibold mb-2">Category</label>
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    {categories.map(category => (
+                      <option key={category} value={category} className="bg-gray-800">
+                        {category === 'all' ? 'All Categories' : category}
+                      </option>
                     ))}
+                  </select>
+                </div>
+
+                {/* Difficulty Filter */}
+                <div>
+                  <label className="block text-white text-sm font-semibold mb-2">Difficulty</label>
+                  <select
+                    value={selectedDifficulty}
+                    onChange={(e) => setSelectedDifficulty(e.target.value)}
+                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    {difficulties.map(difficulty => (
+                      <option key={difficulty} value={difficulty} className="bg-gray-800">
+                        {difficulty === 'all' ? 'All Levels' : difficulty}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Sort Options */}
+                <div>
+                  <label className="block text-white text-sm font-semibold mb-2">Sort By</label>
+                  <div className="flex gap-2">
+                    {sortOptions.map(option => {
+                      const Icon = option.icon;
+                      return (
+                        <button
+                          key={option.value}
+                          onClick={() => setSortBy(option.value)}
+                          className={`flex items-center px-3 py-2 rounded-lg text-sm transition-all duration-300 ${
+                            sortBy === option.value
+                              ? 'bg-blue-600 text-white'
+                              : 'bg-white/20 text-gray-300 hover:bg-white/30'
+                          }`}
+                        >
+                          <Icon className="w-4 h-4 mr-1" />
+                          {option.label}
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
-            </Card>
+            </div>
           )}
         </div>
 
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredContent.map((content) => {
-            const CategoryIcon = getCategoryIcon(content.category);
-            return (
-              <Card key={content.id} className="group hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-3">
-                  <div className="flex items-start justify-between mb-2">
-                    <div className="flex items-center gap-2">
-                      <CategoryIcon className="w-5 h-5 text-blue-600" />
-                      <Badge variant="outline" className="text-xs capitalize">
-                        {content.category.replace('-', ' ')}
-                      </Badge>
-                    </div>
-                    <div className="flex gap-1">
-                      {content.badges.map((badge, index) => (
-                        <Badge key={index} variant="secondary" className="text-xs">
-                          {badge}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                  <CardTitle className="text-lg group-hover:text-blue-600 transition-colors">
-                    {content.title}
-                  </CardTitle>
-                  <CardDescription className="text-sm">
-                    {content.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <div className="flex items-center gap-4">
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {content.duration}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
-                        {content.students}
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                      {content.rating}
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <Badge className={`${getDifficultyColor(content.difficulty)} capitalize`}>
-                        {content.difficulty}
-                      </Badge>
-                      <span className="font-semibold text-gray-900">{content.price}</span>
-                    </div>
-                    <Button size="sm" variant="outline" asChild>
-                      <Link href={content.url}>
-                        View
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
-
-        {filteredContent.length === 0 && (
+        {/* Loading State */}
+        {isLoading && (
           <div className="text-center py-12">
-            <div className="text-gray-400 mb-4">
-              <Search className="w-12 h-12 mx-auto" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">No content found</h3>
-            <p className="text-gray-600 mb-4">Try adjusting your search or filters</p>
-            <Button
-              variant="outline"
-              onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-                setSelectedDifficulty('all');
-              }}
-            >
-              Clear Filters
-            </Button>
+            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+            <p className="text-gray-300 mt-4">Finding the perfect content for you...</p>
           </div>
         )}
 
+        {/* Content Grid */}
+        {!isLoading && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {content.map((item) => {
+              const CategoryIcon = getCategoryIcon(item.category);
+              return (
+                <div
+                  key={item.id}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group relative"
+                >
+                  {/* Badges */}
+                  <div className="absolute top-4 right-4 flex gap-2">
+                    {item.featured && (
+                      <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs font-semibold rounded-full">
+                        Featured
+                      </span>
+                    )}
+                    {item.trending && (
+                      <span className="px-2 py-1 bg-red-500/20 text-red-400 text-xs font-semibold rounded-full">
+                        Trending
+                      </span>
+                    )}
+                    {item.new && (
+                      <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs font-semibold rounded-full">
+                        New
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Content Header */}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <CategoryIcon className="w-5 h-5 text-blue-400" />
+                        <span className="text-blue-400 text-sm font-semibold">{item.category}</span>
+                      </div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                          item.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
+                          item.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
+                          'bg-red-500/20 text-red-400'
+                        }`}>
+                          {item.difficulty}
+                        </span>
+                        <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-400">
+                          {item.type}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {item.tags.slice(0, 3).map((tag, index) => (
+                      <span
+                        key={index}
+                        className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-lg"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Stats */}
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <div className="flex items-center gap-4">
+                      <span className="flex items-center gap-1">
+                        <Eye className="w-4 h-4" />
+                        {formatViews(item.views)}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-400" />
+                        {item.rating}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {item.readTime}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex gap-2">
+                    <Link
+                      to={`/content/${item.id}`}
+                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-500 hover:to-purple-500 transition-all duration-300 flex items-center justify-center group"
+                    >
+                      <BookOpen className="w-4 h-4 mr-2" />
+                      Read Now
+                    </Link>
+                    <button
+                      onClick={() => toggleLike(item.id)}
+                      className={`p-2 rounded-lg transition-colors ${
+                        item.isLiked
+                          ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30'
+                          : 'bg-white/20 text-gray-400 hover:bg-white/30'
+                      }`}
+                    >
+                      <Heart className={`w-4 h-4 ${item.isLiked ? 'fill-current' : ''}`} />
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* No Results */}
+        {!isLoading && content.length === 0 && (
+          <div className="text-center py-12">
+            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-2">No content found</h3>
+            <p className="text-gray-400">Try adjusting your search criteria or filters.</p>
+          </div>
+        )}
+
+        {/* Call to Action */}
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
-            <Link href="/content-showcase">
-              View All Content
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-          </Button>
+          <Link
+            to="/content-discovery-2025"
+            className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            Explore All Content
+            <BookOpen className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default ContentDiscoveryWidget2025;

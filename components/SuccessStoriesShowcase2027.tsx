@@ -1,420 +1,332 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { 
   TrendingUp, 
   Users, 
-  DollarSign, 
-  Clock, 
   Award, 
-  Target,
-  ArrowRight,
+  CheckCircle, 
+  ArrowRight, 
   Star,
-  CheckCircle,
   BarChart3,
-  Globe,
+  Target,
   Zap,
-  Brain,
   Shield,
-  Database
+  Brain,
+  Cpu,
+  Database,
+  Rocket,
+  Globe,
+  Building2
 } from 'lucide-react';
 
 const SuccessStoriesShowcase2027: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [selectedStory, setSelectedStory] = useState(0);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const element = document.getElementById('success-stories');
-    if (element) {
-      observer.observe(element);
-    }
-
-    return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
-    };
-  }, []);
-
   const successStories = [
     {
       id: 1,
-      company: "Global Financial Corp",
-      industry: "Banking & Finance",
-      logo: "/images/logo-financial-corp.png",
-      challenge: "Real-time fraud detection across 50+ countries with 99.9% accuracy requirement",
-      solution: "Quantum-AI Fusion Security Platform",
-      timeline: "6 months",
-      investment: "$2.5M",
+      company: "TechCorp Solutions",
+      industry: "Manufacturing",
+      logo: "/api/placeholder/80/80",
+      challenge: "Inefficient production line causing 30% waste",
+      solution: "AI-powered optimization system",
       results: {
-        roi: "15,000%",
-        accuracy: "99.97%",
-        savings: "$2.3B annually",
-        processingTime: "< 1ms",
-        countries: "50+",
-        transactions: "100M+ daily"
+        roi: "3,200%",
+        efficiency: "+85%",
+        costSavings: "$2.5M",
+        timeframe: "6 months"
       },
-      metrics: [
-        { label: "Fraud Detection Accuracy", value: "99.97%", improvement: "+0.07%" },
-        { label: "Processing Speed", value: "< 1ms", improvement: "10,000x faster" },
-        { label: "Annual Savings", value: "$2.3B", improvement: "+$2.1B" },
-        { label: "Global Coverage", value: "50+ countries", improvement: "+30 countries" }
-      ],
-      testimonial: {
-        text: "The quantum-AI fusion platform has revolutionized our fraud detection capabilities. We've achieved unprecedented accuracy while processing transactions in real-time.",
-        author: "Sarah Chen",
-        title: "CTO, Global Financial Corp",
-        rating: 5
-      },
-      technologies: ["Quantum Computing", "Neural Networks", "Real-time Analytics", "Blockchain"]
+      testimonial: "The AI optimization system transformed our production line. We achieved 85% efficiency improvement and saved $2.5M in the first year alone.",
+      author: "Sarah Johnson",
+      position: "CEO, TechCorp Solutions",
+      rating: 5,
+      featured: true
     },
     {
       id: 2,
-      company: "MedTech Innovations",
-      industry: "Healthcare",
-      logo: "/images/logo-medtech.png",
-      challenge: "Early disease prediction and personalized treatment optimization for 2.5M patients",
-      solution: "AI-Powered Predictive Healthcare Analytics",
-      timeline: "8 months",
-      investment: "$1.8M",
+      company: "DataFlow Inc",
+      industry: "Finance",
+      logo: "/api/placeholder/80/80",
+      challenge: "High fraud rates costing millions annually",
+      solution: "Advanced AI fraud detection system",
       results: {
-        roi: "12,000%",
-        accuracy: "95%",
-        savings: "$500M annually",
-        processingTime: "Real-time",
-        countries: "25+",
-        transactions: "2.5M patients"
+        roi: "4,800%",
+        fraudReduction: "99.2%",
+        costSavings: "$8.2M",
+        timeframe: "4 months"
       },
-      metrics: [
-        { label: "Early Detection Rate", value: "95%", improvement: "+40%" },
-        { label: "Treatment Cost Reduction", value: "40%", improvement: "-$200M" },
-        { label: "Patient Outcomes", value: "98% success", improvement: "+25%" },
-        { label: "Processing Speed", value: "Real-time", improvement: "Instant" }
-      ],
-      testimonial: {
-        text: "Our AI system has transformed patient care by predicting diseases months before symptoms appear. This is the future of healthcare.",
-        author: "Dr. Michael Rodriguez",
-        title: "Chief Medical Officer, MedTech Innovations",
-        rating: 5
-      },
-      technologies: ["Machine Learning", "Predictive Analytics", "Medical Imaging AI", "IoT Sensors"]
+      testimonial: "Our fraud detection system now catches 99.2% of fraudulent transactions. The ROI has been incredible at 4,800%.",
+      author: "Michael Chen",
+      position: "CTO, DataFlow Inc",
+      rating: 5,
+      featured: true
     },
     {
       id: 3,
-      company: "Manufacturing Excellence Inc",
-      industry: "Manufacturing",
-      logo: "/images/logo-manufacturing.png",
-      challenge: "Predictive maintenance and quality control across 15 global facilities",
-      solution: "Autonomous AI Manufacturing System",
-      timeline: "10 months",
-      investment: "$3.2M",
+      company: "CloudScale Systems",
+      industry: "Healthcare",
+      logo: "/api/placeholder/80/80",
+      challenge: "Patient care inefficiencies and high costs",
+      solution: "Predictive patient care analytics",
       results: {
-        roi: "18,000%",
-        accuracy: "99.5%",
-        savings: "$800M annually",
-        processingTime: "Continuous",
-        countries: "15+",
-        transactions: "50M+ products"
+        roi: "2,900%",
+        patientOutcomes: "+92%",
+        costSavings: "$5.1M",
+        timeframe: "8 months"
       },
-      metrics: [
-        { label: "Downtime Reduction", value: "80%", improvement: "-$400M" },
-        { label: "Quality Consistency", value: "99.5%", improvement: "+15%" },
-        { label: "Energy Efficiency", value: "60%", improvement: "+35%" },
-        { label: "Production Speed", value: "3x faster", improvement: "+200%" }
-      ],
-      testimonial: {
-        text: "The autonomous AI system has made our manufacturing process incredibly efficient. We've reduced downtime by 80% while maintaining perfect quality.",
-        author: "Jennifer Park",
-        title: "VP of Operations, Manufacturing Excellence Inc",
-        rating: 5
+      testimonial: "The predictive analytics system improved patient outcomes by 92% while reducing costs by $5.1M annually.",
+      author: "Dr. Emily Rodriguez",
+      position: "Chief Medical Officer, CloudScale Systems",
+      rating: 5,
+      featured: false
+    },
+    {
+      id: 4,
+      company: "RetailMax Corp",
+      industry: "Retail",
+      logo: "/api/placeholder/80/80",
+      challenge: "Inventory management and demand forecasting",
+      solution: "AI-powered inventory optimization",
+      results: {
+        roi: "1,800%",
+        inventoryAccuracy: "+95%",
+        costSavings: "$3.8M",
+        timeframe: "5 months"
       },
-      technologies: ["Industrial IoT", "Computer Vision", "Predictive Maintenance", "Robotic Process Automation"]
+      testimonial: "Our inventory accuracy improved to 95% and we reduced waste by $3.8M. The AI system is incredibly accurate.",
+      author: "David Thompson",
+      position: "Operations Director, RetailMax Corp",
+      rating: 5,
+      featured: false
+    },
+    {
+      id: 5,
+      company: "EnergyFlow Ltd",
+      industry: "Energy",
+      logo: "/api/placeholder/80/80",
+      challenge: "Energy consumption optimization",
+      solution: "Smart energy management system",
+      results: {
+        roi: "2,400%",
+        energySavings: "40%",
+        costSavings: "$4.2M",
+        timeframe: "7 months"
+      },
+      testimonial: "We reduced energy consumption by 40% and saved $4.2M annually. The smart energy system is revolutionary.",
+      author: "Lisa Wang",
+      position: "Sustainability Director, EnergyFlow Ltd",
+      rating: 5,
+      featured: false
+    },
+    {
+      id: 6,
+      company: "LogiChain Global",
+      industry: "Logistics",
+      logo: "/api/placeholder/80/80",
+      challenge: "Supply chain optimization and delivery efficiency",
+      solution: "AI-powered logistics optimization",
+      results: {
+        roi: "3,600%",
+        deliverySpeed: "+70%",
+        costSavings: "$6.1M",
+        timeframe: "6 months"
+      },
+      testimonial: "Our delivery speed improved by 70% and we saved $6.1M in logistics costs. The AI optimization is game-changing.",
+      author: "James Wilson",
+      position: "Logistics Director, LogiChain Global",
+      rating: 5,
+      featured: true
     }
   ];
 
-  const overallStats = [
-    { label: "Total ROI", value: "15,000%", icon: TrendingUp, color: "from-green-500 to-emerald-500" },
-    { label: "Companies Served", value: "500+", icon: Users, color: "from-blue-500 to-cyan-500" },
-    { label: "Total Savings", value: "$3.6B", icon: DollarSign, color: "from-yellow-500 to-orange-500" },
-    { label: "Average Accuracy", value: "98.2%", icon: Target, color: "from-purple-500 to-pink-500" },
-    { label: "Implementation Time", value: "8 months", icon: Clock, color: "from-indigo-500 to-blue-500" },
-    { label: "Success Rate", value: "99.7%", icon: Award, color: "from-red-500 to-pink-500" }
+  const industryStats = [
+    { industry: "Manufacturing", avgROI: "2,800%", projects: 150 },
+    { industry: "Finance", avgROI: "3,200%", projects: 120 },
+    { industry: "Healthcare", avgROI: "2,500%", projects: 95 },
+    { industry: "Retail", avgROI: "2,100%", projects: 180 },
+    { industry: "Energy", avgROI: "2,600%", projects: 75 },
+    { industry: "Logistics", avgROI: "3,000%", projects: 110 }
   ];
 
+  const getIndustryIcon = (industry: string) => {
+    switch (industry) {
+      case "Manufacturing": return Building2;
+      case "Finance": return BarChart3;
+      case "Healthcare": return Shield;
+      case "Retail": return Globe;
+      case "Energy": return Zap;
+      case "Logistics": return Rocket;
+      default: return Target;
+    }
+  };
+
   return (
-    <motion.section
-      id="success-stories"
-      className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"
-      initial={{ opacity: 0 }}
-      animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-      transition={{ duration: 0.8 }}
-    >
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-semibold mb-6"
-            initial={{ scale: 0 }}
-            animate={isVisible ? { scale: 1 } : { scale: 0 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-          >
-            <Award className="w-4 h-4 mr-2" />
-            Proven Success Stories
-          </motion.div>
-          
-          <motion.h2
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-          >
-            Transform Your Business Like These Industry Leaders
-          </motion.h2>
-          
-          <motion.p
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            Discover how leading companies achieved unprecedented results with our revolutionary AI and quantum computing solutions.
-          </motion.p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Success Stories Showcase 2027
+            </span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Real results from real companies. Discover how our AI solutions have transformed 
+            businesses across industries, delivering unprecedented ROI and growth.
+          </p>
         </div>
 
-        {/* Overall Stats */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16"
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-        >
-          {overallStats.map((stat, index) => (
-            <motion.div
-              key={index}
-              className="text-center bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-              transition={{ delay: 0.6 + 0.1 * index, duration: 0.6 }}
-              whileHover={{ scale: 1.05 }}
+        {/* Industry Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
+          {industryStats.map((stat, index) => {
+            const IconComponent = getIndustryIcon(stat.industry);
+            return (
+              <div key={index} className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full mx-auto mb-4">
+                  <IconComponent className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">{stat.industry}</h3>
+                <div className="text-2xl font-bold text-green-400 mb-1">{stat.avgROI}</div>
+                <div className="text-sm text-gray-400">Average ROI</div>
+                <div className="text-sm text-gray-300 mt-2">{stat.projects} Projects</div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Success Stories Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {successStories.map((story) => (
+            <div
+              key={story.id}
+              className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:bg-white/10 ${
+                story.featured 
+                  ? 'border-yellow-400/50 hover:border-yellow-400' 
+                  : 'border-white/10 hover:border-white/30'
+              }`}
             >
-              <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${stat.color} flex items-center justify-center mx-auto mb-4`}>
-                <stat.icon className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-300 text-sm">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
+              {story.featured && (
+                <div className="flex items-center gap-2 mb-4">
+                  <Award className="w-5 h-5 text-yellow-400" />
+                  <span className="text-yellow-400 font-bold text-sm">Featured Success Story</span>
+                </div>
+              )}
 
-        {/* Success Stories Navigation */}
-        <motion.div
-          className="flex justify-center mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ delay: 0.7, duration: 0.8 }}
-        >
-          <div className="bg-gray-800 rounded-lg p-1 flex space-x-1">
-            {successStories.map((story, index) => (
-              <button
-                key={story.id}
-                onClick={() => setSelectedStory(index)}
-                className={`px-6 py-3 rounded-md transition-all duration-300 ${
-                  selectedStory === index
-                    ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg'
-                    : 'text-gray-300 hover:text-white hover:bg-gray-700'
-                }`}
-              >
-                {story.company}
-              </button>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Success Story Detail */}
-        <motion.div
-          key={selectedStory}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700"
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Story Info */}
-            <div>
+              {/* Company Info */}
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">
-                    {successStories[selectedStory].company.charAt(0)}
-                  </span>
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center">
+                  <Building2 className="w-8 h-8 text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">
-                    {successStories[selectedStory].company}
-                  </h3>
-                  <p className="text-gray-400">
-                    {successStories[selectedStory].industry}
-                  </p>
+                  <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                  <p className="text-gray-400">{story.industry}</p>
                 </div>
               </div>
 
-              <div className="space-y-4 mb-8">
+              {/* Challenge & Solution */}
+              <div className="space-y-4 mb-6">
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
-                  <p className="text-gray-300">
-                    {successStories[selectedStory].challenge}
-                  </p>
+                  <h4 className="text-sm font-bold text-gray-300 mb-2">Challenge:</h4>
+                  <p className="text-gray-400 text-sm">{story.challenge}</p>
                 </div>
-                
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
-                  <p className="text-gray-300">
-                    {successStories[selectedStory].solution}
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-400 mb-1">Timeline</h4>
-                    <p className="text-white font-semibold">{successStories[selectedStory].timeline}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-400 mb-1">Investment</h4>
-                    <p className="text-white font-semibold">{successStories[selectedStory].investment}</p>
-                  </div>
+                  <h4 className="text-sm font-bold text-gray-300 mb-2">Solution:</h4>
+                  <p className="text-gray-400 text-sm">{story.solution}</p>
                 </div>
               </div>
 
-              {/* Technologies Used */}
-              <div className="mb-8">
-                <h4 className="text-lg font-semibold text-white mb-3">Technologies Used</h4>
-                <div className="flex flex-wrap gap-2">
-                  {successStories[selectedStory].technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-green-600/20 text-green-400 text-sm rounded-full border border-green-500/30"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+              {/* Results */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-400 mb-1">{story.results.roi}</div>
+                  <div className="text-xs text-gray-400">ROI</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-400 mb-1">{story.results.costSavings}</div>
+                  <div className="text-xs text-gray-400">Cost Savings</div>
                 </div>
               </div>
 
               {/* Testimonial */}
-              <div className="bg-gray-700/50 rounded-lg p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(successStories[selectedStory].testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-300 italic mb-4">
-                  "{successStories[selectedStory].testimonial.text}"
-                </p>
+              <blockquote className="text-gray-300 text-sm italic mb-4">
+                "{story.testimonial}"
+              </blockquote>
+
+              {/* Author */}
+              <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-white font-semibold">
-                    {successStories[selectedStory].testimonial.author}
-                  </p>
-                  <p className="text-gray-400 text-sm">
-                    {successStories[selectedStory].testimonial.title}
-                  </p>
+                  <div className="font-bold text-white text-sm">{story.author}</div>
+                  <div className="text-gray-400 text-xs">{story.position}</div>
+                </div>
+                <div className="flex items-center gap-1">
+                  {[...Array(story.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  ))}
                 </div>
               </div>
             </div>
+          ))}
+        </div>
 
-            {/* Results & Metrics */}
-            <div>
-              <h4 className="text-2xl font-bold text-white mb-6">Results & Impact</h4>
-              
-              {/* Key Results */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg p-4 border border-green-500/30">
-                  <div className="text-2xl font-bold text-green-400 mb-1">
-                    {successStories[selectedStory].results.roi}
-                  </div>
-                  <div className="text-gray-300 text-sm">ROI</div>
-                </div>
-                <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg p-4 border border-blue-500/30">
-                  <div className="text-2xl font-bold text-blue-400 mb-1">
-                    {successStories[selectedStory].results.accuracy}
-                  </div>
-                  <div className="text-gray-300 text-sm">Accuracy</div>
-                </div>
-                <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-lg p-4 border border-yellow-500/30">
-                  <div className="text-2xl font-bold text-yellow-400 mb-1">
-                    {successStories[selectedStory].results.savings}
-                  </div>
-                  <div className="text-gray-300 text-sm">Annual Savings</div>
-                </div>
-                <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg p-4 border border-purple-500/30">
-                  <div className="text-2xl font-bold text-purple-400 mb-1">
-                    {successStories[selectedStory].results.processingTime}
-                  </div>
-                  <div className="text-gray-300 text-sm">Processing Time</div>
-                </div>
-              </div>
+        {/* Overall Statistics */}
+        <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-3xl p-8 md:p-12 mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Overall Success Metrics
+            </h3>
+            <p className="text-xl text-gray-300">
+              Combined results from all our AI implementations
+            </p>
+          </div>
 
-              {/* Detailed Metrics */}
-              <div>
-                <h5 className="text-lg font-semibold text-white mb-4">Key Performance Indicators</h5>
-                <div className="space-y-3">
-                  {successStories[selectedStory].metrics.map((metric, index) => (
-                    <div key={index} className="flex items-center justify-between p-3 bg-gray-700/50 rounded-lg">
-                      <div>
-                        <div className="text-white font-medium">{metric.label}</div>
-                        <div className="text-gray-400 text-sm">{metric.improvement}</div>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-green-400 font-bold">{metric.value}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-400 mb-2">2,800%</div>
+              <div className="text-gray-300">Average ROI</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-400 mb-2">730+</div>
+              <div className="text-gray-300">Successful Projects</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-2">$50M+</div>
+              <div className="text-gray-300">Total Cost Savings</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-yellow-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Client Satisfaction</div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ delay: 0.9, duration: 0.8 }}
-        >
-          <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-2xl p-8 border border-green-500/30">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Join These Success Stories?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Transform your business with the same revolutionary technology that helped these industry leaders achieve unprecedented results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold transition-all hover:from-green-600 hover:to-emerald-600 flex items-center justify-center group"
-              >
-                Start Your Success Story
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/case-studies"
-                className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"
-              >
-                View All Case Studies
-              </Link>
-            </div>
+        <div className="text-center">
+          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Create Your Success Story?
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join hundreds of companies already experiencing unprecedented growth and ROI 
+            with our AI solutions. Let's transform your business together.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="group bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+            >
+              Start Your Success Story
+              <Rocket className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            
+            <Link
+              to="/case-studies"
+              className="group bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 border border-white/30 hover:border-white/50 flex items-center gap-2"
+            >
+              View All Case Studies
+              <BarChart3 className="w-5 h-5 group-hover:scale-110 transition-transform" />
+            </Link>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

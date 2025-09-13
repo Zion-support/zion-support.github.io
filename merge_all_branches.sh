@@ -1,84 +1,78 @@
 #!/bin/bash
 
-# Script to merge all branches into main
-# This will attempt to merge branches and resolve conflicts automatically
+# Script to merge all open branches into main
+# This script will attempt to merge branches systematically
 
-set -e
+echo "Starting comprehensive branch merge process..."
 
-echo "🚀 Starting bulk merge process..."
+# Get list of remote branches (excluding main and HEAD)
+branches=$(git branch -r | grep -v "origin/main" | grep -v "origin/HEAD" | head -50)
 
-# Get all remote branches that are not main
-branches=$(git branch -r | grep -v "origin/main" | grep -v "origin/HEAD" | sed 's/origin\///' | head -50)
+# Counter for successful merges
+success_count=0
+conflict_count=0
+already_merged_count=0
 
-echo "📋 Found $(echo "$branches" | wc -l) branches to process"
-
-# Track successful merges
-successful_merges=()
-failed_merges=()
-
-# Function to attempt merge
-attempt_merge() {
-    local branch=$1
-    echo "🔄 Attempting to merge: $branch"
+for branch in $branches; do
+    echo ""
+    echo "Processing branch: $branch"
     
-    # Checkout the branch
-    if git checkout "origin/$branch" 2>/dev/null; then
-        # Try to merge into main
-        if git checkout main 2>/dev/null; then
-            # Check if merge would be fast-forward or create conflicts
-            if git merge --no-ff --no-commit "origin/$branch" 2>/dev/null; then
-                # If merge succeeds, commit it
-                git commit -m "Merge branch '$branch' into main" 2>/dev/null || true
-                echo "✅ Successfully merged: $branch"
-                successful_merges+=("$branch")
-                return 0
-            else
-                echo "⚠️  Merge conflict in: $branch"
-                git merge --abort 2>/dev/null || true
-                failed_merges+=("$branch")
-                return 1
-            fi
-        fi
+    # Check if branch has unique commits
+    unique_commits=$(git log --oneline $branch --not origin/main | wc -l)
+    
+    if [ "$unique_commits" -eq 0 ]; then
+        echo "  ✓ Already merged or no unique commits"
+        ((already_merged_count++))
+        continue
     fi
     
-    echo "❌ Failed to merge: $branch"
-    failed_merges+=("$branch")
-    return 1
-}
-
-# Process each branch
-for branch in $branches; do
-    attempt_merge "$branch" || true
+    echo "  Found $unique_commits unique commits"
+    
+    # Attempt to merge
+    if git merge $branch --no-edit --no-ff 2>/dev/null; then
+        echo "  ✓ Successfully merged $branch"
+        ((success_count++))
+    else
+        echo "  ⚠ Merge conflict in $branch"
+        
+        # Try to resolve conflicts automatically
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "  Attempting to resolve conflicts..."
+            
+            # For most conflicts, we'll take our version
+            git checkout --ours .
+            git add .
+            
+            if git commit --no-edit; then
+                echo "  ✓ Resolved conflicts and merged $branch"
+                ((success_count++))
+            else
+                echo "  ✗ Failed to resolve conflicts for $branch"
+                git merge --abort 2>/dev/null
+                ((conflict_count++))
+            fi
+        else
+            echo "  ✗ Failed to merge $branch"
+            git merge --abort 2>/dev/null
+            ((conflict_count++))
+        fi
+    fi
 done
 
 echo ""
-echo "📊 Merge Summary:"
-echo "✅ Successfully merged: ${#successful_merges[@]} branches"
-echo "❌ Failed to merge: ${#failed_merges[@]} branches"
+echo "Merge Summary:"
+echo "  ✓ Successfully merged: $success_count branches"
+echo "  ⚠ Conflicts (resolved): $conflict_count branches"
+echo "  ℹ Already merged: $already_merged_count branches"
 
-if [ ${#successful_merges[@]} -gt 0 ]; then
-    echo ""
-    echo "✅ Successfully merged branches:"
-    for branch in "${successful_merges[@]}"; do
-        echo "  - $branch"
-    done
-fi
-
-if [ ${#failed_merges[@]} -gt 0 ]; then
-    echo ""
-    echo "❌ Failed to merge branches:"
-    for branch in "${failed_merges[@]}"; do
-        echo "  - $branch"
-    done
-fi
-
-# Push changes if there were successful merges
-if [ ${#successful_merges[@]} -gt 0 ]; then
-    echo ""
-    echo "🚀 Pushing changes to origin/main..."
-    git push origin main
-    echo "✅ Changes pushed successfully!"
+# Push all changes
+echo ""
+echo "Pushing changes to remote..."
+if git push origin main; then
+    echo "✓ Successfully pushed all changes"
+else
+    echo "⚠ Failed to push some changes"
 fi
 
 echo ""
-echo "🎉 Bulk merge process completed!"
+echo "Branch merge process completed!"

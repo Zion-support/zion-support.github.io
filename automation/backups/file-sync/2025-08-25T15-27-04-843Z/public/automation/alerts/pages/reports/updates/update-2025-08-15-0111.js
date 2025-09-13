@@ -38,7 +38,6 @@ function UpdateReport() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("meta", {
         name: "twitter:card",
         content: "summary_large_image"
-      }), "=======", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("meta", {
         name: "description",
         content: "Autonomous system update and performance metrics from Zion Tech Group."
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("meta", {

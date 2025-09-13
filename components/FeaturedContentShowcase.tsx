@@ -21,7 +21,117 @@ interface ContentItem {
 const FeaturedContentShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState('all');
 
+  const featuredContent: ContentItem[] = [
+    {
+      id: 'ai-2026-revolutionary-trends',
+      title: 'AI 2026: Revolutionary Trends That Will Transform Every Industry',
+      description: 'Discover the groundbreaking AI trends of 2026 that are set to revolutionize industries, from quantum AI to autonomous business ecosystems.',
+      href: '/blog/ai-2026-revolutionary-trends',
+      type: 'blog',
+      icon: Brain,
+      color: 'from-cyan-500 to-blue-600',
+      readTime: '30 min read',
+      featured: true
+    },
+    {
+      id: 'ai-2026-agent-economy',
+      title: 'AI Agent Economy 2026: How Autonomous Agents Create New Markets',
+      description: 'Why autonomous agents are moving into production and how new marketplaces, protocols, and ROI models are forming.',
+      href: '/blog/ai-2026-agent-economy',
+      type: 'blog',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-600',
+      readTime: '18 min read',
+      featured: true
+    },
+    {
+      id: 'ai-2025-industry-disruption',
+      title: 'AI Industry Disruption 2025: How Every Sector is Changing',
+      description: 'Deep analysis of AI-driven disruption across 12 industries with quantified impacts, adoption timelines, and risk controls.',
+      href: '/blog/ai-2025-industry-disruption',
+      type: 'blog',
+      icon: Brain,
+      color: 'from-emerald-500 to-teal-600',
+      readTime: '25 min read',
+      featured: true
+    },
+    {
+      id: 'ai-2025-enterprise-implementation-masterclass',
+      title: 'AI Enterprise Implementation Masterclass 2025',
+      description: 'Comprehensive, 45-minute masterclass covering governance, data, architecture, security, and ROI for enterprise AI.',
+      href: '/blog/ai-2025-enterprise-implementation-masterclass',
+      type: 'blog',
+      icon: BookOpen,
+      color: 'from-yellow-500 to-orange-600',
+      readTime: '45 min read',
+      featured: true
+    },
+    {
+      id: 'ai-2025-go-to-market-playbook',
+      title: 'AI Go-To-Market 2025: From Zero to Traction',
+      description: 'Positioning, pricing, distribution, and growth loops that work for AI products in 2025.',
+      href: '/blog/ai-2025-go-to-market-playbook',
+      type: 'blog',
+      icon: TrendingUp,
+      color: 'from-indigo-500 to-purple-600',
+      readTime: '22 min read'
+    },
+    {
+      id: 'ai-manufacturing-transformation-2025',
+      title: 'AI Manufacturing Transformation: 75% Efficiency Gain Case Study',
+      description: 'How a Fortune 500 manufacturer achieved 75% efficiency gains, 50% cost reduction, and zero-defect production through comprehensive AI transformation.',
+      href: '/case-studies/ai-manufacturing-transformation-2025',
+      type: 'case-study',
+      icon: Users,
+      color: 'from-green-500 to-emerald-600',
+      readTime: '20 min read',
+      featured: true
+    },
+    {
+      id: 'ai-2026-strategy-playbook',
+      title: 'AI 2026 Strategy Playbook: Complete Guide to Future-Proof Your Business',
+      description: 'Download our comprehensive 250-page AI 2026 strategy playbook with frameworks, templates, and actionable strategies.',
+      href: '/resources/ai-2026-strategy-playbook',
+      type: 'service',
+      icon: BookOpen,
+      color: 'from-red-500 to-pink-600',
+      readTime: '250+ pages',
+      featured: true
+    },
+    {
+      id: 'ai-transformation-healthcare-2025',
+      title: 'AI Healthcare Transformation: 60% Faster Diagnosis Case Study',
+      description: 'How a major healthcare system achieved 60% faster diagnosis times, 40% cost reduction, and 95% patient satisfaction through comprehensive AI transformation.',
+      href: '/case-studies/ai-transformation-healthcare-2025',
+      type: 'case-study',
+      icon: Users,
+      color: 'from-blue-500 to-cyan-600',
+      readTime: '15 min read'
+    },
+    {
+      id: 'ai-implementation-master-guide-2025',
+      title: 'AI Implementation Master Guide 2025: Complete Playbook',
+      description: 'The definitive guide to implementing AI in your organization. 200+ pages of strategies, frameworks, and best practices for successful AI transformation.',
+      href: '/resources/ai-implementation-master-guide-2025',
+      type: 'service',
+      icon: BookOpen,
+      color: 'from-orange-500 to-red-600',
+      readTime: '200+ pages'
+    },
+    {
+      id: 'ai-2025-breakthrough-innovations',
+      title: 'AI Breakthrough Innovations 2025: The Technologies Reshaping Business',
+      description: 'Explore the most significant AI breakthrough innovations of 2025 that are transforming industries and creating new business opportunities.',
+      href: '/blog/ai-2025-breakthrough-innovations',
+      type: 'blog',
+      icon: Zap,
+      color: 'from-violet-500 to-purple-600',
+      readTime: '25 min read'
+    }
+  ];
+
   const contentItems: ContentItem[] = [
+    ...featuredContent,
     {
       id: 'ai-quantum-breakthrough',
       title: 'Revolutionary AI-Quantum Breakthrough 2025',

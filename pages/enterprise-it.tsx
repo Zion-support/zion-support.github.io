@@ -6,11 +6,6 @@ import { Server, CheckCircle, Database, Cloud } from 'lucide-react';
 
 export default function EnterpriseITPage() {
   const features = [
-    'Cloud migration and landing zones with cost governance',
-    'DevOps automation, CI/CD, and platform engineering',
-    'Data platforms, lineage, and quality monitoring',
-    'Observability, SLOs, and incident automation',
-  ];
 
   const solutions = [
     { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
@@ -19,8 +14,22 @@ export default function EnterpriseITPage() {
     { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' },
   ];
 
-  return (
     <Layout>
+
+    <Layout>
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import Layout from '../components/layout/Layout',;
+import { Server, CheckCircle, Database, Cloud } from 'lucide-react',;
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+import Layout from '../components/layout/Layout'
+import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
+export default function EnterpriseITPage() {
+export default function EnterpriseITPage() {_const _features = [
+  return (_<Layout>
       <Head>
         <title>Enterprise IT | Zion Tech Group</title>
         <meta name="description" content="Cloud, DevOps, data platforms, and SRE with cost, performance, and reliability in focus." />
@@ -35,8 +44,12 @@ export default function EnterpriseITPage() {
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Enterprise IT</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Ship secure, reliable platforms with measurable business outcomes.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/contact" className="px-8 py-4">Get a Roadmap</a>
-              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
+
+
+              <a href="/contact" className="px-8 py-4">Get a Roadmap</Link>
+              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
+
+
             </div>
           </header>
 
@@ -67,4 +80,25 @@ export default function EnterpriseITPage() {
       </div>
     </Layout>
   );
-}
+
+                </Link>
+
+
+
+import React from 'react',
+import Head from 'next / head',
+import Layout from '../components / layout / Layout',
+import Layout from '../components / layout / Layout',
+import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
+export default /**
+    <Layout>;
+      <Head>;
+      </Head>;
+              <Server className="w - 8 h - 8 text - white" />;
+                  <CheckCircle className="w - 5 h - 5 text - emerald - 400 mt - 0.5" />;
+                </Link>
+
+    </Layout>;
+
+
+

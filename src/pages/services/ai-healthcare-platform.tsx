@@ -124,7 +124,7 @@ export default function AIHealthcarePlatform() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
                 Transform healthcare delivery with our cutting-edge AI platform. 
                 From predictive diagnostics to personalized treatment plans, 
-                we're making healthcare smarter, more efficient, and more accessible.
+                we&apos;re making healthcare smarter, more efficient, and more accessible.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">

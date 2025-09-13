@@ -23,27 +23,27 @@ const Terms: React.FC = () => {
             <div className="prose prose-invert max-w-none">
               <h2>1. Acceptance of Terms</h2>
               <p>
-                By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms and provision of this agreement.
+                By accessing and using Zion Tech Group&apos;s services, you accept and agree to be bound by the terms and provision of this agreement.
               </p>
               
               <h2>2. Use License</h2>
               <p>
-                Permission is granted to temporarily download one copy of the materials on Zion Tech Group's website for personal, non-commercial transitory viewing only.
+                Permission is granted to temporarily download one copy of the materials on Zion Tech Group&apos;s website for personal, non-commercial transitory viewing only.
               </p>
               
               <h2>3. Disclaimer</h2>
               <p>
-                The materials on Zion Tech Group's website are provided on an 'as is' basis. Zion Tech Group makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+                The materials on Zion Tech Group&apos;s website are provided on an &apos;as is&apos; basis. Zion Tech Group makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
               </p>
               
               <h2>4. Limitations</h2>
               <p>
-                In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group's website, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.
+                In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group&apos;s website, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.
               </p>
               
               <h2>5. Accuracy of Materials</h2>
               <p>
-                The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete, or current.
+                The materials appearing on Zion Tech Group&apos;s website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete, or current.
               </p>
               
               <h2>6. Links</h2>

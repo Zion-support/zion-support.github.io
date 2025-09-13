@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
 // import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
-// import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 // import { generateSearchSuggestions } from "@/data/marketplaceData";
 // import { SearchSuggestion } from "@/types/search";
 // import {logErrorToProduction} from '@/utils/productionLogger';
@@ -156,7 +156,7 @@ export default function SearchPage() {
           </div>
         )}
         {!loading && marketplaceResults.length === 0 && blogResults.length === 0 && query && (
-          <p className="text-zion-slate-light">No results found for "{query}".</p>
+          <p className="text-zion-slate-light">No results found for &quot;{query}&quot;.</p>
         )}
         {!loading && marketplaceResults.length > 0 && (
           <Tabs defaultValue="products" className="space-y-4">

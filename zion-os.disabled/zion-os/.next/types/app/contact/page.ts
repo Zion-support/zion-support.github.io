@@ -56,7 +56,6 @@ export interface LayoutProps {
   params?: any
 }
 
-// =============
 // Utility types
 type RevalidateRange<T> = T extends { revalidate: any } ? NonNegative<T['revalidate']> : never
 
