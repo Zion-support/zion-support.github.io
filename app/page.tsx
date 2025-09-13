@@ -64,12 +64,13 @@ import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDis
 // AI 2026 new content components
 import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromotionBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
->>>>>>> 8a32472f4c63f8c1f00e9a2ed50b576a716afb42
->>>>>>> origin/cursor/create-and-deploy-new-content-029c
 
 // Import new breakthrough promotional components
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
+
+// New AI 2025 Content Promotion Banner
+import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
 
 export default function HomePage() {
   return (
@@ -82,6 +83,27 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW AI 2025 CONTENT PROMOTION BANNER */}
+        <AI2025NewContentPromotionBanner />
+        
+        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
+        <AI2025RevolutionaryBreakthroughPromotionBanner />
+        
+        {/* AI 2026 REVOLUTIONARY CONTENT PROMOTION BANNER */}
+        <AI2026RevolutionaryContentPromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT DISCOVERY WIDGET 2026 */}
+        <RevolutionaryContentDiscoveryWidget2026 />
+        
+        {/* AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
+        <AI2026QuantumNeuralFusionPromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2026 */}
+        <InteractiveContentDiscoveryWidget2026 />
+        
+        {/* NEWSLETTER SIGNUP 2026 */}
+        <NewsletterSignup2026 />
+        
         {/* NEW 2025 CONTENT PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
