@@ -93,6 +93,10 @@ import UltimateContentRevolutionBanner2026 from '../components/UltimateContentRe
 import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
 import RevolutionaryNewsletterSignup2026 from '../components/RevolutionaryNewsletterSignup2026';
 
+// Import new promotional banners
+import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
+import AI2026UltimateBreakthroughPredictionsBanner from '../components/AI2026UltimateBreakthroughPredictionsBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -104,6 +108,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
+        <AI2025UltimateBreakthroughRevolutionBanner />
+        
+        {/* NEW AI 2026 ULTIMATE BREAKTHROUGH PREDICTIONS BANNER */}
+        <AI2026UltimateBreakthroughPredictionsBanner />
+        
         {/* NEW AI 2026 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2026UltimateBreakthroughPromotionBanner />
         
