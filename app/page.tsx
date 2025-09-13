@@ -111,6 +111,44 @@ import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025Ult
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner';
 
+// Import new 2026 content components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import RevolutionaryContentDiscoveryWidget2026 from '../components/RevolutionaryContentDiscoveryWidget2026';
+import NewsletterSignup2026 from '../components/NewsletterSignup2026';
+
+// Import new 2025 content showcase components
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
+import UltimateContentCarousel2025 from '../components/UltimateContentCarousel2025';
+import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBanner';
+import FeaturedBlogPost2025 from '../components/FeaturedBlogPost2025';
+import CaseStudyShowcase2025 from '../components/CaseStudyShowcase2025';
+
+// Import new 2025 innovation showcase components
+import NewContent2025InnovationShowcaseBanner from '../components/NewContent2025InnovationShowcaseBanner';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
+
+// Import new promotional banners for 2026
+import AI2026UltimateContentRevolutionPromotionBanner from '../components/AI2026UltimateContentRevolutionPromotionBanner';
+import AdvancedAutomationSolutions2026UltimatePromotionBanner from '../components/AdvancedAutomationSolutions2026UltimatePromotionBanner';
+import QuantumComputingSolutions2026UltimatePromotionBanner from '../components/QuantumComputingSolutions2026UltimatePromotionBanner';
+
+// Import new 2025 ultimate content promotion banner
+import AI2025UltimateContentPromotionBanner from '../components/AI2025UltimateContentPromotionBanner';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+
+// Import new showcase banners
+import AI2025UltimateInnovationShowcaseBanner from '../components/AI2025UltimateInnovationShowcaseBanner';
+import AITools2025UltimateShowcaseBanner from '../components/AITools2025UltimateShowcaseBanner';
+
+// Import new content promotion components
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import AIToolsShowcase2025 from '../components/AIToolsShowcase2025';
+
+>>>>>>> cursor/create-and-deploy-new-content-d196
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -122,6 +160,61 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* LATEST CONTENT 2025 PROMOTION BANNER */}
+        <LatestContent2025PromotionBanner />
+        
+        {/* AI 2025-2026 TECHNOLOGY SHOWCASE */}
+        <AI2025_2026TechnologyShowcase />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2025 */}
+        <InteractiveContentDiscovery2025 />
+        
+        {/* NEW 2025 INNOVATION SHOWCASE BANNER */}
+        <NewContent2025InnovationShowcaseBanner />
+        
+        {/* New Content Promotion Banner */}
+        <NewContentPromotionBanner2025 />
+        
+        {/* AI Tools Showcase */}
+        <AIToolsShowcase2025 />
+        
+        {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
+        <NewContentShowcase2025PromotionBanner />
+        
+        {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
+        <NewContent2025UltimateShowcase />
+        
+        {/* AI 2025 REVOLUTIONARY CONTENT BANNER */}
+        <AI2025RevolutionaryContentBanner />
+        
+        {/* ULTIMATE CONTENT CAROUSEL 2025 */}
+        <UltimateContentCarousel2025 />
+        
+        {/* AI 2025 CONTENT SHOWCASE BANNER */}
+        <AI2025ContentShowcaseBanner />
+        
+        {/* FEATURED BLOG POSTS 2025 */}
+        <FeaturedBlogPost2025 />
+        
+        {/* CASE STUDY SHOWCASE 2025 */}
+        <CaseStudyShowcase2025 />
+        
+        {/* NEW CONTENT PROMOTION BANNER 2025 */}
+        <NewContentPromotionBanner2025 />
+        
+        {/* AI TOOLS 2025 ULTIMATE SHOWCASE BANNER */}
+        <AITools2025UltimateShowcaseBanner />
+        
+        {/* AI 2025 ULTIMATE INNOVATION SHOWCASE BANNER */}
+        <AI2025UltimateInnovationShowcaseBanner />
+        
+        {/* NEW 2025 ULTIMATE CONTENT PROMOTION BANNER */}
+        <AI2025UltimateContentPromotionBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
+        <UltimateContentShowcase2026PromotionBanner />
+        
+>>>>>>> cursor/create-and-deploy-new-content-d196
         {/* NEW 2025 ULTIMATE CONTENT REVOLUTION BANNER */}
         <AI2025UltimateContentRevolutionBanner />
         
@@ -160,6 +253,9 @@ export default function HomePage() {
         
         {/* NEWSLETTER SIGNUP 2026 */}
         <NewsletterSignup2026 />
+        
+        {/* NEWSLETTER SIGNUP 2025 */}
+        <NewsletterSignup2025 />
         
         {/* NEW AI 2025 CONTENT PROMOTION BANNER */}
         <AI2025NewContentPromotionBanner />
