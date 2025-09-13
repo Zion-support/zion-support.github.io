@@ -1,86 +1,112 @@
-'use client';
-
-import React, { useEffect } from 'react';
+import React from 'react';
+import Head from 'next/head';
 
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
-  keywords?: string[];
+  keywords?: string;
   canonicalUrl?: string;
+  ogImage?: string;
+  structuredData?: any;
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
-export default function SEOOptimizer({ 
-  title, 
-  description, 
-  keywords = [], 
-  canonicalUrl 
+export default function SEOOptimizer({
+  title = "Zion Tech Group - AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
+  keywords = "AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation",
+  canonicalUrl = "https://zion.app",
+  ogImage = "https://zion.app/images/og-image.jpg",
+  structuredData,
+  noindex = false,
+  nofollow = false
 }: SEOOptimizerProps) {
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
+  const robotsContent = [
+    noindex ? 'noindex' : 'index',
+    nofollow ? 'nofollow' : 'follow',
+    'max-snippet:-1',
+    'max-image-preview:large',
+    'max-video-preview:-1'
+  ].join(', ');
 
-    // Update page title
-    if (title) {
-      document.title = title;
-    }
-
-    // Update meta description
-    if (description) {
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      metaDescription.setAttribute('content', description);
-    }
-
-    // Update meta keywords
-    if (keywords.length > 0) {
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (!metaKeywords) {
-        metaKeywords = document.createElement('meta');
-        metaKeywords.setAttribute('name', 'keywords');
-        document.head.appendChild(metaKeywords);
-      }
-      metaKeywords.setAttribute('content', keywords.join(', '));
-    }
-
-    // Add canonical URL
-    if (canonicalUrl) {
-      let canonical = document.querySelector('link[rel="canonical"]');
-      if (!canonical) {
-        canonical = document.createElement('link');
-        canonical.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonical);
-      }
-      canonical.setAttribute('href', canonicalUrl);
-    }
-
-    // Add structured data
-    const addStructuredData = () => {
-      const structuredData = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Zion Tech Group",
-        "url": "https://zion.tech",
-        "description": "Leading provider of revolutionary AI 2025-2030 autonomous operations, quantum computing breakthroughs, and advanced automation solutions.",
-        "sameAs": [
-          "https://twitter.com/ziontechgroup",
-          "https://linkedin.com/company/zion-tech-group"
-        ]
-      };
-
-      let script = document.querySelector('script[type="application/ld+json"]');
-      if (!script) {
-        script = document.createElement('script');
-        script.setAttribute('type', 'application/ld+json');
-        document.head.appendChild(script);
-      }
-      script.textContent = JSON.stringify(structuredData);
-    };
-
-    addStructuredData();
-  }, [title, description, keywords, canonicalUrl]);
-
-  return null;
+  return (
+    <Head>
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="robots" content={robotsContent} />
+      <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="distribution" content="global" />
+      <meta name="rating" content="general" />
+      
+      {/* Mobile App Meta Tags */}
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      
+      {/* Theme Color */}
+      <meta name="theme-color" content="#3B82F6" />
+      <meta name="msapplication-TileColor" content="#3B82F6" />
+      
+      {/* Favicon */}
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+      
+      {/* DNS Prefetch */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
+          }}
+        />
+      )}
+      
+      {/* Additional Performance Hints */}
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/images/hero-bg.jpg" as="image" />
+    </Head>
+  );
 }
