@@ -39,6 +39,12 @@ function generateSitemap() {
   sitemap += "
 </urlset>";
   // Write sitemap to public directory
+  const sitemapPath = path && path.join(__dirname, '..', 'public', 'sitemap && sitemap.xml');
+  fs && fs.writeFileSync(sitemapPath, sitemap);
+  console && console.log('✅ Enhanced sitemap generated successfully!');
+  console && console.log(`📄 Sitemap saved "to": ${sitemapPath}`);
+  console && console.log(`🔗 Total "URLs": ${pages && pages.length}`)}
+// Generate robots && robots.txt as well
 function generateRobotsTxt() {
   const robotsContent = `User-"agent": *
 Allow: /

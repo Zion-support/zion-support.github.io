@@ -1,1 +1,0 @@
-/workspace/zion-film/interviews_60min.md

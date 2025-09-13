@@ -73,17 +73,6 @@
     ],
     link: 'https://ziontechgroup.com / quantum - ai - orchestrator',
 
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-
     icon: '⚛️',
     color: 'from - indigo - 500 to - blue - 600',
     popular: true,
@@ -704,15 +693,6 @@
     description:;
       'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.',
     category: 'Healthcare & Biotechnology',
-
-      'Improve diagnostic accuracy by 99 && 99.9%',
-    id: 'ai - healthcare - diagnostic',
-    name: 'AI Healthcare Diagnostic Platform',
-    tagline:;
-      'AI - powered medical diagnostics with 99.9% accuracy for early disease detection',
-    description:;
-      'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.',
-    category: 'Healthcare & Biotechnology',
     price: {
       monthly: 1599,
       yearly: 15990,
@@ -855,7 +835,6 @@
     ],
     link: 'https://ziontechgroup.com / ai - healthcare - diagnostic',
 
-
     icon: '🏥',
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
@@ -869,11 +848,9 @@
   tagline: string, description: string,
   category: string,
   price: {
-      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string
-  
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
@@ -897,8 +874,6 @@
     compliance: ['FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards'];
 
     icon: '🏥';
-];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
-
     color: 'from - blue - 500 to - indigo - 600';
     popular: true;
     launch_date: '2025 - 02 - 15';
@@ -907,10 +882,6 @@
     rating: 4 && 4.9,
 
     reviews: 189
-    rating: 4.9,
-    reviews: 189;
-  }
-
 
 export interface InnovativeAIService {;
 
@@ -918,9 +889,6 @@ export interface InnovativeAIService {;
 
 ];
 ;
-;
-  }
-];
 export interface InnovativeAIService {;
   id: string,;
   name: string,;
@@ -1396,10 +1364,6 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     launchDate: '2025-02-15',;
     customers: 350,;
     rating: 4.9,;
-    reviews: 189;
-  }
-];
-    rating: 4.9,
     reviews: 189;
   }
 ];

@@ -1,85 +1,77 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: { ignoreBuildErrors: true },
-  eslint: { ignoreDuringBuilds: true },
-  pageExtensions: ['page.tsx'],
-  // Temporarily exclude problematic pages from the build
-  async rewrites() {
+  reactStrictMode: true,
+  images: {
+    domains: ['ziontechgroup.com'],
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  // Performance optimizations
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
+  // Caching headers
+  async headers() {
     return [
-      // Redirect problematic routes to working pages
       {
-        source: '/2026-innovations-showcase',
-        destination: '/services',
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+        ],
       },
       {
-        source: '/2026-services-showcase',
-        destination: '/services',
+        source: '/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
       },
       {
-        source: '/2026-services-showcase-enhanced',
-        destination: '/services',
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
       },
       {
-        source: '/2026-services-showcase-v4',
-        destination: '/services',
-      },
-      {
-        source: '/2026-ultimate-services-showcase',
-        destination: '/services',
-      },
-      {
-        source: '/autonomous-manufacturing',
-        destination: '/services',
-      },
-      {
-        source: '/pricing-enhanced-2026',
-        destination: '/services',
-      },
-      {
-        source: '/quantum-cybersecurity',
-        destination: '/services',
-      },
-      {
-        source: '/quantum-logistics',
-        destination: '/services',
-      },
-      {
-        source: '/revolutionary-2025-pricing',
-        destination: '/services',
-      },
-      {
-        source: '/revolutionary-2025-services-showcase',
-        destination: '/services',
-      },
-      {
-        source: '/revolutionary-2026-services',
-        destination: '/services',
-      },
-      {
-        source: '/revolutionary-2026-services-showcase-v4',
-        destination: '/services',
-      },
-      {
-        source: '/revolutionary-2027-services-showcase',
-        destination: '/services',
-      },
-      {
-        source: '/services-2024',
-        destination: '/services',
-      },
-      {
-        source: '/solutions',
-        destination: '/services',
+        source: '/images/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400',
+          },
+        ],
       },
     ];
   },
-  // Optimize the build
-  swcMinify: true,
-  compress: true,
-  poweredByHeader: false,
-  reactStrictMode: true,
-  // Use standalone output for deployment
-  output: 'standalone',
+  // Experimental features for better performance
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+  },
 };
 
 export default nextConfig;

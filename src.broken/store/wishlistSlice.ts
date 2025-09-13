@@ -1,39 +1,83 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
-export interface WishlistItem {
-  id: string,
-  type: string,
-  data?: any
+
+interface WishlistItem {
+  id: string;
+  title: string;
+  price: number;
+  image: string;
+  addedAt: string;
 }
 
-export interface WishlistState {
-  items: WishlistItem[]
+interface WishlistState {
+  items: WishlistItem[];
+  loading: boolean;
+  error: string | null;
 }
 
-const initialState: WishlistState = $2;
-export const getApiUrl = $2;
-  return env.VITE_API_URL || env.API_URL || ''
-},
+const initialState: WishlistState = {
+  items: [],
+  loading: false,
+  error: null,
+};
 
-export const loadWishlistFromDB = createAsyncThunk<WishlistItem[], string>(
-  'wishlist/loadFromDB',
-  async (userId: string) => {
-    const res = $2;
-    if (!res.ok) throw new Error($2);
-    return (await res.json()) as WishlistItem[]
+// Async thunk for fetching wishlist items
+export const fetchWishlistItems = createAsyncThunk(
+  'wishlist/fetchItems',
+  async () => {
+    // Simulate API call
+    const response = await new Promise<WishlistItem[]>((resolve) => {
+      setTimeout(() => {
+        resolve([
+          {
+            id: '1',
+            title: 'AI-Powered CRM System',
+            price: 299,
+            image: '/images/crm-system.jpg',
+            addedAt: new Date().toISOString(),
+          },
+        ]);
+      }, 1000);
+    });
+    return response;
   }
-),
+);
 
-const wishlistSlice = $2;
+const wishlistSlice = createSlice({
+  name: 'wishlist',
   initialState,
   reducers: {
-    addToWishlist(state, action: PayloadAction<WishlistItem>) {
-      const exists = $2;
-      if (!exists) state.items.push(action.payload)
+    addToWishlist: (state, action: PayloadAction<Omit<WishlistItem, 'addedAt'>>) => {
+      const existingItem = state.items.find(item => item.id === action.payload.id);
+      if (!existingItem) {
+        state.items.push({
+          ...action.payload,
+          addedAt: new Date().toISOString(),
+        });
+      }
     },
-    removeFromWishlist(state, action: PayloadAction<{ id: string}>) {
-      state.items = $2;
+    removeFromWishlist: (state, action: PayloadAction<string>) => {
+      state.items = state.items.filter(item => item.id !== action.payload);
+    },
+    clearWishlist: (state) => {
+      state.items = [];
+    },
+  },
   extraReducers: (builder) => {
-    builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {
-      state.items = $2;
-export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions,
-export default wishlistSlice.reducer,
+    builder
+      .addCase(fetchWishlistItems.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchWishlistItems.fulfilled, (state, action) => {
+        state.loading = false;
+        state.items = action.payload;
+      })
+      .addCase(fetchWishlistItems.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message || 'Failed to fetch wishlist items';
+      });
+  },
+});
+
+export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
+export default wishlistSlice.reducer;

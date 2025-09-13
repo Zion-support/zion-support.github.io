@@ -48,12 +48,9 @@ export interface EmergingTech2026ServiceV4 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
-  contactInfo: {
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -61,7 +58,6 @@ export interface EmergingTech2026ServiceV4 {
   reviews: number
 
 }
-
 export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
   // Neuromorphic Computing Platform
   {
@@ -85,37 +81,30 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     technology: ['Neuromorphic ChipsSpiking Neural NetworksPythonC++CUDAAWSCustom Hardware'], integrations: ['TensorFlowPyTorchAI frameworksIoT devicesEdge computing platforms'],
     useCases: ['AI accelerationEdge computingAutonomous systemsHealthcare AIRobotics'],
     roi: 'Reduce AI processing costs by 80%, improve energy efficiency by 90%, accelerate AI training by 10x',
-    competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip'],
-    marketSize: '$8B neuromorphic computing market by 2030',
-    growthRate: '150% annual growth',
-    variant: 'quantum-futuristic',
+    competitors: ['Intel LoihiIBM TrueNorthBrainChip'], marketSize: '$8B neuromorphic computing market by 2030',
+    growthRate: '150% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
-    realImplementation: true,
-    implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture and ultra-efficient AI processing.',
-    launchDate: '2026-04-01',
-    customers: 15,
+    realImplementation: true, implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture and ultra-efficient AI processing.',
+    launchDate: '2026-04-01', customers: 15,
     rating: 4.9,
     reviews: 12
   };
   // Quantum Internet Security Gateway
   {
-    id: 'quantum-internet-security-gateway',
-    name: 'Quantum Internet Security Gateway',
-    tagline: 'Unbreakable quantum encryption for the future internet',
-    price: '$899',
+    id: 'quantum-internet-security-gateway', name: 'Quantum Internet Security Gateway',
+    tagline: 'Unbreakable quantum encryption for the future internet', price: '$899',
     period: '/month',
     description: 'Next-generation quantum internet security gateway that provides unbreakable encryption using quantum key distribution, quantum-resistant algorithms, and post-quantum cryptography for ultra-secure communications.',
     features: [
       'Quantum key distributionPost-quantum cryptographyQuantum-resistant algorithmsReal-time encryptionQuantum random number generationSecure key managementNetwork monitoringThreat detection';
       'Compliance reportingAPI integration'
     ];
+    popular: true, icon: '🔐',
     color: 'from-green-600 to-emerald-600', textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/quantum-internet-security-gateway',
     marketPosition: 'First quantum internet security gateway. Competitive advantage: Unbreakable encryption, quantum-resistant algorithms, and future-proof security.',
@@ -128,11 +117,9 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['CiscoPalo Alto NetworksFortinet'], marketSize: '$45B cybersecurity market',
     growthRate: '60% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
     realImplementation: true, implementationDetails: 'Quantum internet security gateway with unbreakable encryption and quantum-resistant algorithms.',
     launchDate: '2026-03-15', customers: 45,
@@ -150,6 +137,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       'AI-powered DNA designGenetic circuit simulationProtein engineeringMetabolic pathway designCRISPR optimizationBiological modelingLab automation integrationSafety assessment';
       'Regulatory complianceExpert consultation'
     ];
+    popular: false, icon: '🧬',
     color: 'from-blue-600 to-cyan-600', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/synthetic-biology-ai-platform',
     marketPosition: 'First AI-powered synthetic biology platform. Competitive advantage: AI-driven design, comprehensive simulation, and lab integration.',
@@ -159,49 +147,30 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     technology: ['AI/MLGenetic EngineeringCRISPRPythonReactPostgreSQLAWSLab Automation'], integrations: ['Lab equipmentDNA synthesizersSequencing platformsBioinformatics tools'],
     useCases: ['Drug discoveryAgricultural improvementIndustrial enzymesBiomaterialsBiofuels'],
     roi: 'Accelerate research by 10x, reduce development costs by 70%, increase success rates by 300%',
-    competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Benchling'],
-    marketSize: '$15B synthetic biology market',
-    growthRate: '80% annual growth',
-    variant: 'ai-futuristic',
+    competitors: ['Ginkgo BioworksTwist BioscienceBenchling'], marketSize: '$15B synthetic biology market',
+    growthRate: '80% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
-    realImplementation: true,
-    implementationDetails: 'AI-powered synthetic biology platform with genetic engineering and lab automation integration.',
-    launchDate: '2026-04-15',
-    customers: 25,
+    realImplementation: true, implementationDetails: 'AI-powered synthetic biology platform with genetic engineering and lab automation integration.',
+    launchDate: '2026-04-15', customers: 25,
     rating: 4.9,
     reviews: 20
-  },
-
+  };
   // Autonomous Drone Fleet Management
   {
-    id: 'autonomous-drone-fleet-management',
-    name: 'Autonomous Drone Fleet Management',
-    tagline: 'Manage thousands of drones with AI-powered autonomy',
-    price: '$699',
+    id: 'autonomous-drone-fleet-management', name: 'Autonomous Drone Fleet Management',
+    tagline: 'Manage thousands of drones with AI-powered autonomy', price: '$699',
     period: '/month',
     description: 'Advanced autonomous drone fleet management platform that enables businesses to operate large-scale drone operations for delivery, surveillance, agriculture, and infrastructure inspection with zero human intervention.',
     features: [
-      'AI-powered flight planning',
-      'Autonomous navigation',
-      'Fleet coordination',
-      'Real-time monitoring',
-      'Predictive maintenance',
-      'Weather optimization',
-      'Regulatory compliance',
-      'Safety protocols',
-      'Analytics dashboard',
-      'API integration'
-    ],
-    popular: true,
-    icon: '🚁',
-    color: 'from-sky-600 to-blue-600',
-    textColor: 'text-sky-400',
+      'AI-powered flight planningAutonomous navigationFleet coordinationReal-time monitoringPredictive maintenanceWeather optimizationRegulatory complianceSafety protocols';
+      'Analytics dashboardAPI integration'
+    ];
+    popular: true, icon: '🚁',
+    color: 'from-sky-600 to-blue-600', textColor: 'text-sky-400',
     link: 'https://ziontechgroup.com/autonomous-drone-fleet-management',
     marketPosition: 'First autonomous drone fleet management platform. Competitive advantage: AI autonomy, fleet coordination, and zero human intervention.',
     targetAudience: 'Delivery companies, Agriculture companies, Infrastructure companies, Security firms, Surveying companies',
@@ -213,11 +182,9 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['DroneDeployPrecisionHawkAirMap'], marketSize: '$50B drone services market',
     growthRate: '70% annual growth', variant: 'ai-autonomous',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
     realImplementation: true, implementationDetails: 'Autonomous drone fleet management platform with AI-powered navigation and fleet coordination.',
     launchDate: '2026-03-01', customers: 80,
@@ -235,6 +202,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       'EEG signal processingNeural pattern recognitionDevice control interfacesReal-time brain mappingMachine learning modelsAPI development toolsHardware integrationSafety protocols';
       'DocumentationExpert support'
     ];
+    popular: false, icon: '🧠',
     color: 'from-purple-600 to-pink-600', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/brain-computer-interface-devkit',
     marketPosition: 'First comprehensive BCI development kit. Competitive advantage: Complete BCI solution, neural processing, and device control.',
@@ -247,11 +215,9 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['NeuralinkKernelCTRL-labs'], marketSize: '$3B BCI market by 2030',
     growthRate: '200% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
     realImplementation: true, implementationDetails: 'Comprehensive brain-computer interface development kit with neural processing and device control.',
     launchDate: '2026-05-01', customers: 20,
@@ -269,6 +235,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       'Quantum algorithmsHybrid quantum-classical MLQuantum feature mapsQuantum neural networksOptimization solversPerformance benchmarkingModel deploymentAPI access';
       'DocumentationExpert consultation'
     ];
+    popular: true, icon: '⚛️',
     color: 'from-cyan-600 to-blue-600', textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/quantum-machine-learning-platform',
     marketPosition: 'First commercial quantum machine learning platform. Competitive advantage: Quantum algorithms, hybrid ML, and quantum advantage.',
@@ -278,21 +245,15 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     technology: ['Quantum ComputingMachine LearningPythonQiskitReactPostgreSQLAWS'], integrations: ['TensorFlowPyTorchScikit-learnQuantum hardwareCloud platforms'],
     useCases: ['Optimization problemsPattern recognitionFinancial modelingDrug discoveryLogistics'],
     roi: 'Solve previously intractable problems, accelerate ML training by 100x, achieve quantum advantage',
-    competitors: ['IBM Qiskit', 'Google Cirq', 'Rigetti'],
-    marketSize: '$20B quantum computing market',
-    growthRate: '120% annual growth',
-    variant: 'quantum-futuristic',
+    competitors: ['IBM QiskitGoogle CirqRigetti'], marketSize: '$20B quantum computing market',
+    growthRate: '120% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
-    realImplementation: true,
-    implementationDetails: 'Advanced quantum machine learning platform with quantum algorithms and hybrid ML capabilities.',
-    launchDate: '2026-04-01',
-    customers: 35,
+    realImplementation: true, implementationDetails: 'Advanced quantum machine learning platform with quantum algorithms and hybrid ML capabilities.',
+    launchDate: '2026-04-01', customers: 35,
     rating: 4.8,
     reviews: 28
   };
@@ -307,6 +268,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       'Level 5 autonomyAdvanced perception systemsReal-time decision makingSafety protocolsPredictive maintenanceFleet managementRegulatory compliancePerformance analytics';
       'OTA updatesExpert support'
     ];
+    popular: true, icon: '🚗',
     color: 'from-red-600 to-orange-600', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform-2026',
     marketPosition: 'First level 5 autonomous vehicle AI platform. Competitive advantage: Full autonomy, advanced safety, and comprehensive AI.',
@@ -319,11 +281,9 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['WaymoTeslaCruise'], marketSize: '$2T autonomous vehicle market by 2030',
     growthRate: '150% annual growth', variant: 'ai-autonomous',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
     realImplementation: true, implementationDetails: 'Next-generation autonomous vehicle AI platform with level 5 autonomy and advanced safety systems.',
     launchDate: '2026-06-01', customers: 15,
@@ -341,6 +301,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       '3D city modelingReal-time data integrationIoT sensor networksTraffic optimizationInfrastructure monitoringCitizen servicesPredictive analyticsUrban planning tools';
       'API accessCustom dashboards'
     ];
+    popular: false, icon: '🏙️',
     color: 'from-gray-600 to-slate-600', textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/digital-twin-smart-cities',
     marketPosition: 'First comprehensive smart city digital twin platform. Competitive advantage: Complete city modeling, real-time data, and predictive analytics.',
@@ -353,33 +314,10 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['Bentley SystemsAutodeskSiemens'], marketSize: '$30B smart city market',
     growthRate: '90% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
-    },
-    realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
-    launchDate: '2026-05-15', customers: 30,
-    rating: 4.8,
-    reviews: 25
-  }
-];
 
-;
-
-    rating: 4.8,
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    reviews: 25;
-
-    realImplementation: true;
-    implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.';
-    launchDate: '2026-05-15';
-    customers: 30;
 
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV4 {;
@@ -775,5 +713,10 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     customers: 30,;
     rating: 4.8;
     reviews: 25;
+
+
   }
 ];
+
+;
+

@@ -1,41 +1,53 @@
-exports.handler = async function(event, context, callback) {
-  try {
-    console.log('ultrafast-front-orchestrator function triggered');
-    
-    // Ultrafast front orchestration simulation
-    const result = {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        message: 'Ultrafast front orchestrator executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'ultrafast-front-orchestrator',
-        source: event.source || 'unknown',
-        orchestration: {
-          status: 'ultrafast',
-          services: 0,
-          lastOrchestration: new Date().toISOString()
-        }
-      })
-    };
-    
-    return result;
-  } catch (error) {
-    console.error('Error in ultrafast-front-orchestrator:', error);
-    return {
-      statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'ultrafast-front-orchestrator'
-      })
-    };
+const path = require('path');
+const { execFile } = require('child_process');
+
+function runNodeScript(relPath, args = []) {
+  const cwd = path.resolve(__dirname, '..', '..');
+  const abs = path.resolve(cwd, relPath);
+  return new Promise((resolve) => {
+    const startedAt = Date.now();
+    const child = execFile('node', [abs, ...args], { cwd, env: process.env }, (error, stdout, stderr) => {
+      resolve({
+        script: relPath,
+        ok: !error,
+        code: error ? error.code : 0,
+        durationMs: Date.now() - startedAt,
+        stdout: stdout ? stdout.toString() : '',
+        stderr: stderr ? stderr.toString() : '',
+      });
+    });
+    child.on('error', () => {});
+  });
+}
+
+exports.config = {
+  schedule: '*/5 * * * *',
+};
+
+exports.handler = async () => {
+  const steps = [
+    'automation/homepage-updater.cjs',
+    'automation/homepage-auto-advertiser.cjs',
+    'automation/front-index-auto-advertiser.cjs',
+    'automation/front-index-ads.cjs',
+    'automation/front-futurizer.cjs',
+    'automation/advanced-git-sync.cjs',
+  ];
+
+  const results = [];
+  for (const step of steps) {
+    try {
+      results.push(await runNodeScript(step));
+    } catch (err) {
+      results.push({ script: step, ok: false, code: -1, durationMs: 0, stdout: '', stderr: String(err) });
+    }
   }
+
+  const ok = results.every(r => r.ok || /No changes|No updates|Updated|updated/i.test(r.stdout));
+
+  return {
+    statusCode: ok ? 200 : 207,
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ engine: 'ultrafast-front-orchestrator', results, timestamp: new Date().toISOString() }),
+  };
 };

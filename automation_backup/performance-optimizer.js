@@ -1,2 +1,0 @@
-    optimizer.stop();
-    process.exit(0)})}

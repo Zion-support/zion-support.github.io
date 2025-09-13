@@ -86,7 +86,7 @@ function fixFile(filePath) {
 }
 
 async function main() {
-  console.log(' Starting comprehensive syntax fixes...');
+  console.log('🔧 Starting comprehensive syntax fixes...');
   
   const patterns = [
     'src/**/*.tsx',

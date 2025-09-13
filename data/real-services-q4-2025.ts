@@ -2,116 +2,6 @@
 
   {
 
-      'Link shortener and branded domains',
-      'UTM builder and traffic quality scoring',
-      'Multi - touch attribution and deduplication',
-
-  {
-
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-;
-export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
-  {
-    id: 'ai - email - responder - pro',
-    name: 'AI Email Responder Pro',
-    tagline:;
-      'Autonomous replies, triage, and sentiment insights for Gmail / O365',
-    price: '$129',
-    period: '/month',
-    description:;
-      'LLM - powered email assistant that drafts context - aware replies, routes by intent, summarizes threads, and syncs with your CRM. SOC 2 - ready with redaction.',
-    features: [;
-      'LLM reply drafts with tone controls',
-      'Intent routing and SLA prediction',
-      'Smart summaries and action extraction',
-      'CRM and ticket sync (Salesforce, HubSpot, Zendesk)',
-      'PII redaction and governance',
-      'Dashboard with analytics and coaching',
-    ],
-    popular: true,
-    icon: '📧',
-    color: 'from - cyan - 600 to - blue - 700',
-    text_color: 'text - cyan - 300',
-    link: 'https://ziontechgroup.com / services / ai - email - responder - pro',
-    market_position:;
-      'Alternative to Front / Superhuman add - ons with deeper AI and governance.',
-    target_audience: 'Sales, Success, Support, Ops',
-    trial_days: 14,
-    setup_time: '2 hours',
-    category: 'AI & Data',
-    real_service: true,
-    technology: ['Gmail / O365 APIs', 'OpenAI / Groq', 'Next.js'],
-    integrations: ['Gmail', 'Outlook', 'Salesforce', 'HubSpot', 'Zendesk'],
-    use_cases: ['Inbound triage', 'Follow - ups', 'NPS outreach'],
-    roi: 'Reduce first response time by 60% and improve CSAT by 20%+',
-    competitors: ['Superhuman AI', 'Front Workflows'],
-    market_size: '$10B+ communications AI',
-    growth_rate: '25% CAGR',
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'OAuth, vector memory, policy guardrails',
-    launch_date: '2025 - 10 - 15',
-    customers: 24,
-    rating: 4 && 4.8,
-    reviews: 17,
-  },
-  {
-
-      'Link shortener and branded domains',
-      'UTM builder and traffic quality scoring',
-      'Multi - touch attribution and deduplication',
-    id: 'affiliate-analytics-hub'
-    name: 'Affiliate Analytics Hub'
-    tagline: 'Track referrals, payouts, and ROI with multi-touch attribution'
-    price: '$89'
-    period: '/month'
-    description:
-      'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross-device attribution.'
-    features: [
-      'Link shortener and branded domains'
-      'UTM builder and traffic quality scoring'
-      'Multi-touch attribution and deduplication'
-      'Automated payouts and tax forms'
-      'Fraud and bot detection'
-      'Partner portal and reports'
-    ]
-    popular: true
-    color: 'from-emerald-600 to-teal-700'
-    textColor: 'text-emerald-300'
-    link: 'https://ziontechgroup.com/services/affiliate-analytics-hub'
-    marketPosition:
-      'Easier than enterprise suites; purpose-built for small teams.'
-    targetAudience: 'E-commerce, SaaS, Media'
-    trialDays: 14
-    setupTime: '1 day'
-    category: 'Developer Tools'
-    realService: true
-    technology: ['Next.js', 'PostgreSQL', 'Workers/Edge']
-    integrations: ['Stripe', 'Shopify', 'WooCommerce']
-    useCases: ['Partner programs', 'Influencer payouts']
-    competitors: ['Impact.com (complex)', 'Tune (enterprise)']
-    marketSize: '$15B+ affiliate tech'
-    growthRate: '12% CAGR'
-    variant: 'network-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Webhook ingestion, cookie-less heuristics'
-    launchDate: '2025-11-01'
-    customers: 35
-    rating: 4.6
-    reviews: 21
-  }
-      'Link shortener and branded domains',
-      'UTM builder and traffic quality scoring',
-      'Multi-touch attribution and deduplication',
-
     id: 'affiliate - analytics - hub',
     name: 'Affiliate Analytics Hub',
     tagline: 'Track referrals, payouts, and ROI with multi - touch attribution',
@@ -121,12 +11,10 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
       'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross - device attribution.',
     features: [;
 
+
       'Link shortener and branded domains',
       'UTM builder and traffic quality scoring',
-      'Multi - touch attribution and deduplication',
-      'Link shortener and branded domains',
-      'UTM builder and traffic quality scoring',
-      'Multi - touch attribution and deduplication',
+      'Multi-touch attribution and deduplication',
       'Automated payouts and tax forms',
       'Fraud and bot detection',
       'Partner portal and reports',
@@ -166,25 +54,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 
   {
 
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['Next.js', 'PostgreSQL', 'Workers / Edge'],
-    integrations: ['Stripe', 'Shopify', 'WooCommerce'],
-    use_cases: ['Partner programs', 'Influencer payouts'],
-    roi: 'Grow partner - attributed revenue by 10–30%',
-    competitors: ['Impact.com (complex)', 'Tune (enterprise)'],
-    marketSize: '$15B+ affiliate tech',
-    growthRate: '12% CAGR',
-    variant: 'network-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Webhook ingestion, cookie-less heuristics',
-    launchDate: '2025-11-01',
-    customers: 35,
-    rating: 4.6,
-    reviews: 21,
-  },
-  {
     id: 'return - management - saas',
     name: 'Return Management SaaS',
     tagline:;
@@ -195,15 +64,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
       'Branded returns portal with label generation, disposition workflows, warehouse updates, and refund / exchange automations.',
     features: [;
 
-    market_size: '$15B+ affiliate tech',
-    growth_rate: '12% CAGR',
-    variant: 'network - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Webhook ingestion, cookie - less heuristics',
-    launch_date: '2025 - 11 - 01',
-
-  {
       'Portal and RMA workflows',
       'Label generation and tracking',
       'Warehousing and disposition updates',
@@ -348,7 +208,6 @@ const contact = {
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
-
 export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'ai-email-responder-pro', name: 'AI Email Responder Pro',
@@ -553,10 +412,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		rating: 4 && 4.5,
 
 		reviews: 6
-	}
-];
-
-
   id: 'ai - email - responder - pro';
   name: 'AI Email Responder Pro',
   tagline: 'Autonomous replies, triage, and sentiment insights for Gmail / O365';

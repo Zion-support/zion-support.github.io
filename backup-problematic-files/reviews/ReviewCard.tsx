@@ -1,12 +1,79 @@
 
+
 }</div> </div>) };
 
-:backup-problematic-files/reviews/ReviewCard.tsx
+const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
+  return (import React from 'react';
+import StarRating from './StarRating';
+import type { PublicReview } from '../../types/reviews';
+import React from 'react';
+import StarRating from './StarRating';
+import type { PublicReview } from '../../types/reviews';
+import { Star } from 'lucide-react';
+type Props = {
+  review: PublicReview,
+  onReport?: (id: string) => void
+};
+import {Star} from 'lucide-react';
+
+type Props = {;
+  review: PublicReview,;
+  onReport?: (id: string) => void;
+const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
+
+  return (
+  return (
+
+
+          onClick={() => onReport && onReport(review.id)}
+
+
+
+
         >
           Report abuse
         </button>
       </div>
 
+      <div className='flex items-center gap-2 mb-3'>
+        <span className='text-sm font-medium'>{review.authorName}</span>
+        {review.categories?.wouldWorkWithAgain && (
+          <span className='pill pill-success'>Would work again</span>
+        )}
+
+      </div>;
+      <p className='text-sm leading-6'>{review && review.text}</p>;
+      <div className='flex flex-wrap gap-2 mt-3'>;
+        {typeof review && review.categories?.communication === 'number' && (;
+          <span className='pill'>;
+            Communication: {review && review.categories.communication}★;
+          </span>;
+
+        )}
+        {typeof review && review.categories?.qualityOfWork === 'number' && (;
+          <span className='pill'>;
+            Quality: {review && review.categories.qualityOfWork}★;
+          </span>;
+        )}
+        {typeof review && review.categories?.timeliness === 'number' && (;
+          <span className='pill'>;
+            Timeliness: {review && review.categories.timeliness}★;
+          </span>;
+        )}
+      </div>;
+    </div>;
+  );
+
+
+};
+export default ReviewCard;        {review && review.categories?.wouldWorkWithAgain && (;
+          <span className="pill pill-success">Would work again</span>;
+        )}
+      </div>;
+      <p className="text-sm leading-6">{review && review.text}</p>;
+      <div className="flex flex-wrap gap-2 mt-3">;
+        {typeof review && review.categories?.communication === 'number' && (;
+          <span className="pill">Communication: {review && review.categories.communication}★</span>;
 
 
         )}
@@ -102,28 +169,3 @@ export default ReviewCard;
 ;
 
 export default ReviewCard;
-:components/reviews/ReviewCard.tsx
-export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
-          <span className="pill pill-success">Would work again</span>
-        )}
-      </div>
-      <p className="text-sm leading-6">{review.text}</p>
-      <div className="flex flex-wrap gap-2 mt-3">
-        {typeof review.categories?.communication === 'number' && (
-          <span className="pill">Communication: {review.categories.communication}★</span>
-};
-export default ReviewCard;        {review && review.categories?.wouldWorkWithAgain && (;
-          <span className="pill pill-success">Would work again</span>;
-        )}
-      </div>;
-
-        )}
-      </div>;
-    </div>;
-  )}export default ReviewCard;
-> Report abuse </button> </div>)}</div> </div>) }const "ReviewCard": React.FC < Props> = ({ review, on_report }) => {return (import React from 'react';'
-  )
-};
-export default ReviewCard;
-
-:backup-problematic-files/reviews/ReviewCard.tsx

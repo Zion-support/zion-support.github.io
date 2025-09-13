@@ -22,12 +22,7 @@ exports.handler = async () => {
     return status;
   };
 
-  step('front-index:auto-advertiser', () => runNode('automation/front-index-auto-advertiser.cjs'));
-  step('front:futurizer', () => runNode('automation/front-futurizer.cjs'));
-  step('homepage:auto-advertiser', () => runNode('automation/homepage-auto-advertiser.cjs'));
-  step('homepage:updater', () => runNode('automation/homepage-updater.cjs'));
-  step('opportunity-miner', () => runNode('automation/opportunity-miner.cjs'));
-  step('seo-audit', () => runNode('scripts/seo-audit.js'));
+  step('content-freshness-auditor', () => runNode('automation/content-freshness-auditor.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };

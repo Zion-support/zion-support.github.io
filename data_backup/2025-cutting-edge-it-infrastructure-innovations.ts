@@ -1,5 +1,0 @@
-
-  id: string;
-
-
-  realImplementation: boolean;

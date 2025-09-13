@@ -3,14 +3,74 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { 
-  ArrowRight, 
-  Search, 
   Users, 
   Briefcase, 
   Settings, 
+  ShoppingCart, 
   MessageSquare, 
-  Smartphone 
-} from "lucide-react";
+  BarChart3,
+  Zap,
+  Globe,
+  Shield,
+  Clock
+} from 'lucide-react';
+
+const quickAccessItems = [
+  {
+    title: 'Find Talent',
+    description: 'Discover skilled professionals',
+    icon: Users,
+    href: '/talent',
+    color: 'from-zion-cyan to-zion-blue',
+    bgColor: 'bg-zion-cyan/10',
+    iconColor: 'text-zion-cyan'
+  },
+  {
+    title: 'Hire AI',
+    description: 'AI-powered hiring solutions',
+    icon: Zap,
+    href: '/zion-hire-ai',
+    color: 'from-zion-purple to-zion-purple-dark',
+    bgColor: 'bg-zion-purple/10',
+    iconColor: 'text-zion-purple'
+  },
+  {
+    title: 'IT Services',
+    description: '24/7 global IT support',
+    icon: Settings,
+    href: '/it-onsite-services',
+    color: 'from-zion-blue to-zion-blue-dark',
+    bgColor: 'bg-zion-blue/10',
+    iconColor: 'text-zion-blue'
+  },
+  {
+    title: 'Marketplace',
+    description: 'Browse products & services',
+    icon: ShoppingCart,
+    href: '/marketplace',
+    color: 'from-zion-green to-zion-green-dark',
+    bgColor: 'bg-zion-green/10',
+    iconColor: 'text-zion-green'
+  },
+  {
+    title: 'Community',
+    description: 'Connect with peers',
+    icon: MessageSquare,
+    href: '/community',
+    color: 'from-zion-orange to-zion-orange-dark',
+    bgColor: 'bg-zion-orange/10',
+    iconColor: 'text-zion-orange'
+  },
+  {
+    title: 'Analytics',
+    description: 'Track your performance',
+    icon: BarChart3,
+    href: '/analytics',
+    color: 'from-zion-pink to-zion-pink-dark',
+    bgColor: 'bg-zion-pink/10',
+    iconColor: 'text-zion-pink'
+  }
+];
 
 export function QuickAccess() {
   const { t } = useTranslation();
@@ -51,17 +111,55 @@ export function QuickAccess() {
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
       link: "/mobile-launch"
     }
-  ];
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
 
   return (
-    <section className="py-12 bg-zion-blue-dark">
+    <section className="py-20 bg-gradient-to-b from-background to-zion-slate/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
             Quick Access
           </h2>
-          <p className="text-zion-slate-light text-lg">
-            Jump directly to our most popular features
+          <p className="text-lg md:text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
+            Everything you need to grow your business, find talent, and access IT services 
+            is just one click away.
           </p>
         </div>
         

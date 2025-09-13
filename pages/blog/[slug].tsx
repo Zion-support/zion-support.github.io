@@ -1,79 +1,130 @@
+
+
+
+
+import React from 'react',;
+import ReactMarkdown from 'react-markdown',;
+import { useRouter } from 'next/router',;
+import AdvancedSEO from '@/components/seo/AdvancedSEO',;
+import AdvancedSEO from '@/components/seo/AdvancedSEO',;
+import { BLOG_POSTS } from '@/data/blog-posts',;
+import { AuthorBio } from '@/components/blog/AuthorBio',;
+import { AuthorBio } from '@/components/blog/AuthorBio',;
+import { SocialShareButtons } from '@/components/blog/SocialShareButtons',;
+import { SocialShareButtons } from '@/components/blog/SocialShareButtons',;
+import { CommentsSection } from '@/components/blog/CommentsSection',;
+import { CommentsSection } from '@/components/blog/CommentsSection',;
+import type { BlogPost } from '@/types/blog',;
+import type { GetStaticPaths, GetStaticProps } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import Head from 'next/head';
-import { NextSeo } from '@/components/NextSeo';
-import type { GetStaticPaths, GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
+import AdvancedSEO from '@/components/seo/AdvancedSEO';
 import { BLOG_POSTS } from '@/data/blog-posts';
+import { AuthorBio } from '@/components/blog/AuthorBio';
+import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
+import { CommentsSection } from '@/components/blog/CommentsSection';
 import type { BlogPost } from '@/types/blog';
+import type { GetStaticPaths, GetStaticProps } from 'next';
+import fs from 'fs';
+import path from 'path';
 
-interface BlogProps {
-  post: BlogPost | null;
-}
 
-const BlogPostPage: React.FC<BlogProps> = ({ post }) => {
+
+const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
+  const [post, setPost] = React.useState<BlogPost | null>(initialPost);
+
+      }
+    }
+  }, [slug, initialPost]);
+
+  if (error) {
+
+
+
+
+    return <div>{error}</div>;
+  }
   if (!post) {
     return <div>Article not found</div>;
   }
-  const articleLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    image: post.featuredImage,
-    datePublished: post.publishedDate,
-    author: {
-      "@type": "Person",
-      name: post.author.name,
-    },
-  };
+
+
+  const body = (post as any).body || post.content;
   return (
     <>
-      <NextSeo
+      <AdvancedSEO
         title={post.title}
         description={post.excerpt}
-        openGraph={{ title: post.title, description: post.excerpt, images: post.featuredImage }}
+        image={post.featuredImage}
+        type="article"
+        article={articleLd}
       />
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
-        />
-      </Head>
       <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
         <h1>{post.title}</h1>
-        <ReactMarkdown>{post.content}</ReactMarkdown>
+        {post.excerpt && <p className="lead">{post.excerpt}</p>}
+        <div className="flex items-center gap-3 mb-6">
+          <img
+
+
+
+
+
+
+          </div>
+        </div>
+        {post.featuredImage && (
+          <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
+            <img
+
+
+
+
+
+
+
+
+              }}
+            />
+          </div>
+        )}
+        <ReactMarkdown>{body}</ReactMarkdown>
+        <AuthorBio author={post.author} />
+        <SocialShareButtons title={post.title} />
+        <CommentsSection slug={post.slug} />
       </main>
     </>
   );
 };
 
+export default BlogPostPage;
+
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = BLOG_POSTS.map((p) => ({ params: { slug: p.slug } }));
+  const dir = path.join(process.cwd(), 'content', 'blog');
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md'));
+  const paths = files.map((f) => ({
+    params: { slug: f.replace(/\.md$/, '') },
+  }));
+  // Use `blocking` so new posts added after build can be generated on demand
   return { paths, fallback: 'blocking' };
 };
 
-export const getStaticProps: GetStaticProps<BlogProps> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
+  params,
+}: {
+  params?: { slug?: string };
+}) => {
   const slug = params?.slug as string;
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-
-  try {
-    const res = await fetch(`${appUrl}/api/blog/${slug}`);
-    if (res.ok) {
-      const post: BlogPost = await res.json();
-      return { props: { post }, revalidate: 60 };
-    }
-  } catch (e) {
-    console.error('Failed to fetch blog post', e);
+  // Validate slug to prevent malformed paths
+  if (!/^[a-z0-9-]+$/.test(slug)) {
+    return { notFound: true };
   }
-
-  const post = BLOG_POSTS.find((p) => p.slug === slug) || null;
-
+  const filePath = path.join(process.cwd(), 'content', 'blog', `${slug}.md`);
+  const post = parseMarkdown(filePath);
   if (!post) {
     return { notFound: true };
   }
 
-  return { props: { post } };
-};
-
-export default BlogPostPage;
 

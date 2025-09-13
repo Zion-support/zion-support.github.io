@@ -1,31 +1,19 @@
 #!/bin/bash
 
-echo "🚀 Completing the current merge..."
+# Complete the merge process and push changes
+echo "Completing merge process..."
 
 # Check current status
-echo "📍 Current git status:"
 git status
 
-# Check if there are any unmerged files
-unmerged_files=$(git status --porcelain | grep "^UU" | awk '{print $2}')
+# Add all changes
+git add .
 
-if [ -n "$unmerged_files" ]; then
-    echo "⚠️  Found unmerged files:"
-    echo "$unmerged_files"
-    
-    # Resolve conflicts by keeping our changes
-    for file in $unmerged_files; do
-        echo "🔧 Resolving conflicts in: $file"
-        git checkout --ours "$file"
-        git add "$file"
-    done
-    
-    # Complete the merge
-    echo "✅ Completing merge..."
-    git commit -m "Merge remote main into feature branch - conflicts resolved"
-else
-    echo "✅ No conflicts found, completing merge..."
-    git commit -m "Merge remote main into feature branch"
-fi
+# Commit any remaining changes
+git commit -m "Complete website audit and enhancement merge - Enhanced navigation structure - Fixed broken links - Created missing pages - Improved site organization"
 
-echo "🎉 Merge completed successfully!"
+# Push the branch
+git push origin website-audit-and-enhancement-final
+
+echo "Branch pushed successfully!"
+echo "Now create a Pull Request on GitHub to merge into main"

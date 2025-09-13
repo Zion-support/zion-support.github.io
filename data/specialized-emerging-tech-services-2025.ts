@@ -4,7 +4,7 @@
   name: string;
   tagline: string;
   price: string;
-  period: string,
+  period: string;
   description: string;
   features: string[];
   popular: boolean;
@@ -30,7 +30,6 @@
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
 
@@ -53,11 +52,6 @@ const contact = {
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
-    }
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
-    },;
-  ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
     features: [
       'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications';
       'Advanced pattern recognitionCustom neuromorphic algorithms'
@@ -87,19 +81,6 @@ const contact = {
   }
 ];
 ;
-  }
-];
-;
-    popular: true, icon: '🧠',
-    color: 'from - pink - 600 to - rose - 600', text_color: 'text - pink - 400',
-    link: 'https://ziontechgroup.com / neuromorphic - computing - platform', market_position: 'Advanced neuromorphic platform competing with Intel Loihi ($1000 / month) and IBM TrueNorth ($800 / month)',
-    target_audience: 'AI research labs, Robotics companies, Cognitive computing firms, Research institutions',
-    trial_days: 30, setup_time: '3 weeks',
-    category: 'Neuromorphic Computing', real_service: true,
-    technology: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms'];
-    integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms'];
-    useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities'
-    competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];
     marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth'
     variant: 'ai-futuristic', contactInfo: contact
     realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities'
@@ -107,9 +88,6 @@ const contact = {
     rating: 4.8, reviews: 34
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
-  }
-];
-
 import { ServiceVariant } from '../types/service-variants',;
 export interface SpecializedEmergingTechService {;
   id: string,;
@@ -155,13 +133,6 @@ export interface SpecializedEmergingTechService {;
   marketAdvantage: string;
 }
 ;
-    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth'
-    variant: 'ai-futuristic', contactInfo: contact
-    realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities'
-    launchDate: '2024-02-15', customers: 45
-    rating: 4.8, reviews: 34
-    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
-    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
 const contact = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
@@ -462,11 +433,5 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'],;
     capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'];
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
-  }
-];
-    ];
-
-    popular: true, icon: '🧠',
-
   }
 ];

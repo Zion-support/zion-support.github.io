@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,7 +20,6 @@ import React from 'react';
 
 const PortfolioBuilder = ({ className }) => {
   return (
-
     <div className={className || ''}>
       <h1>PortfolioBuilder</h1>
       <p>This component is under development.</p>
