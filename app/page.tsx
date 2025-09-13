@@ -24,6 +24,8 @@ const InteractiveContentDiscoveryWidget = lazy(() => import('../components/Inter
 // Import new promotional banners
 import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
 import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2025GlobalTransformation15000ROIPromotionBanner';
+import ContentPromotionBanner from '../components/ContentPromotionBanner';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
 
 export default function HomePage() {
   return (
@@ -36,6 +38,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW: CONTENT PROMOTION BANNER */}
+        <ContentPromotionBanner />
+        
         {/* NEW: AI 2025 ULTIMATE TRENDS BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateTrendsBreakthroughPromotionBanner />
         
@@ -104,6 +109,9 @@ export default function HomePage() {
             </Suspense>
           </div>
         </section>
+        
+        {/* NEW: INTERACTIVE CONTENT DISCOVERY */}
+        <InteractiveContentDiscovery />
         
         {/* REVOLUTIONARY CONTENT RECOMMENDATION ENGINE 2026 */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI Recommendations..." />}>
