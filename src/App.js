@@ -14,7 +14,6 @@ import { AuthRoutes, DashboardRoutes, MarketplaceRoutes, TalentRoutes, AdminRout
 const Home = React.lazy(() => import('./pages/Home'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
-const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
 const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
 const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
@@ -34,10 +33,6 @@ const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const ExpandedServicesPage = React.lazy(() => import('./pages/ExpandedServicesPage'));
 const ServiceComparisonPage = React.lazy(() => import('./pages/ServiceComparisonPage'));
-const ServiceCalculatorPage = React.lazy(() => import('./pages/ServiceCalculatorPage'));
-const AllServicesOverviewPage = React.lazy(() => import('./pages/AllServicesOverviewPage'));
-const ServiceAnalyticsDashboard = React.lazy(() => import('./pages/ServiceAnalyticsDashboard'));
-const ServiceMarketplace = React.lazy(() => import('./pages/ServiceMarketplace'));
 const ServicesShowcase = React.lazy(() => import('./pages/ServicesShowcase'));
 const baseRoutes = [
     { path: '/', element: _jsx(Home, {}) },
@@ -45,14 +40,9 @@ const baseRoutes = [
     { path: '/login', element: _jsx(Login, {}) },
     { path: '/signup', element: _jsx(Signup, {}) },
     { path: '/talent', element: _jsx(TalentDirectory, {}) },
-    { path: '/talents', element: _jsx(TalentsPage, {}) },
     { path: '/services', element: _jsx(ServicesPage, {}) },
     { path: '/expanded-services', element: _jsx(ExpandedServicesPage, {}) },
-    { path: '/all-services', element: _jsx(AllServicesOverviewPage, {}) },
     { path: '/service-comparison', element: _jsx(ServiceComparisonPage, {}) },
-    { path: '/service-calculator', element: _jsx(ServiceCalculatorPage, {}) },
-    { path: '/service-analytics', element: _jsx(ServiceAnalyticsDashboard, {}) },
-    { path: '/service-marketplace', element: _jsx(ServiceMarketplace, {}) },
     { path: '/services-showcase', element: _jsx(ServicesShowcase, {}) },
     { path: '/it-onsite-services', element: _jsx(ITOnsiteServicesPage, {}) },
     { path: '/categories', element: _jsx(Categories, {}) },
