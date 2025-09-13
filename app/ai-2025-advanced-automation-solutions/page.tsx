@@ -231,8 +231,8 @@ export default function AI2025AdvancedAutomationSolutions() {
                 <h3 className="text-xl font-bold text-gray-900">Fortune 500 Manufacturing</h3>
               </div>
               <p className="text-gray-700 mb-4">
-                "Implemented our enterprise process automation solution across 15 manufacturing facilities. 
-                Achieved 6,200% ROI in 8 months with 89% reduction in manual processes."
+                &ldquo;Implemented our enterprise process automation solution across 15 manufacturing facilities. 
+                Achieved 6,200% ROI in 8 months with 89% reduction in manual processes.&rdquo;
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-2xl font-bold text-green-600">6,200% ROI</span>
@@ -246,8 +246,8 @@ export default function AI2025AdvancedAutomationSolutions() {
                 <h3 className="text-xl font-bold text-gray-900">Global Financial Services</h3>
               </div>
               <p className="text-gray-700 mb-4">
-                "Deployed AI-powered security automation across our entire infrastructure. 
-                Achieved 7,800% ROI with 95% reduction in security incidents and 100% compliance."
+                &ldquo;Deployed AI-powered security automation across our entire infrastructure. 
+                Achieved 7,800% ROI with 95% reduction in security incidents and 100% compliance.&rdquo;
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-2xl font-bold text-green-600">7,800% ROI</span>
