@@ -4,32 +4,49 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
+  TrendingUp, 
+  Calendar, 
   ArrowRight, 
   Brain, 
   Zap, 
-  TrendingUp, 
+  Target,
   X,
   Star,
+  Sparkles,
   Rocket,
-  Target
+  Eye
 } from 'lucide-react';
 
-const AIInnovationShowcase2025PromotionBanner = () => {
+const AITrendsPredictions2025PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
+  const [currentPrediction, setCurrentPrediction] = useState(0);
+
+  const predictions = [
+    "Quantum-Neural Fusion: 10,000x speed improvement",
+    "Autonomous Business Operations: 99.9% accuracy",
+    "Synthetic General Intelligence by 2026",
+    "AI-Human Symbiosis: The future is here"
+  ];
 
   useEffect(() => {
     // Check if banner was previously dismissed
-    const dismissed = localStorage.getItem('ai-innovation-banner-dismissed');
+    const dismissed = localStorage.getItem('ai-trends-banner-dismissed');
     if (!dismissed) {
       setIsVisible(true);
     }
+
+    // Rotate predictions
+    const interval = setInterval(() => {
+      setCurrentPrediction((prev) => (prev + 1) % predictions.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
   }, []);
 
   const handleDismiss = () => {
     setIsDismissed(true);
-    localStorage.setItem('ai-innovation-banner-dismissed', 'true');
+    localStorage.setItem('ai-trends-banner-dismissed', 'true');
   };
 
   if (isDismissed || !isVisible) return null;
@@ -41,23 +58,35 @@ const AIInnovationShowcase2025PromotionBanner = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 border-b border-blue-400/30"
+        className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 border-b border-purple-400/30"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
             {/* Left Content */}
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
-                <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
-                  <Sparkles className="w-5 h-5 text-white" />
+                <div className="p-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg">
+                  <TrendingUp className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white">
-                    🚀 New AI Innovation Showcase 2025
+                    🔮 AI Trends & Predictions 2025-2027
                   </h3>
-                  <p className="text-sm text-blue-200">
-                    Discover revolutionary AI breakthroughs and technologies
-                  </p>
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4 text-purple-300" />
+                    <AnimatePresence mode="wait">
+                      <motion.p
+                        key={currentPrediction}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.5 }}
+                        className="text-sm text-purple-200"
+                      >
+                        {predictions[currentPrediction]}
+                      </motion.p>
+                    </AnimatePresence>
+                  </div>
                 </div>
               </div>
             </div>
@@ -66,7 +95,7 @@ const AIInnovationShowcase2025PromotionBanner = () => {
             <div className="hidden md:flex items-center gap-6">
               <div className="flex items-center gap-2 text-white/80">
                 <Brain className="w-4 h-4" />
-                <span className="text-sm">Quantum-Neural Fusion</span>
+                <span className="text-sm">AGI by 2026</span>
               </div>
               <div className="flex items-center gap-2 text-white/80">
                 <Zap className="w-4 h-4" />
@@ -76,16 +105,20 @@ const AIInnovationShowcase2025PromotionBanner = () => {
                 <Target className="w-4 h-4" />
                 <span className="text-sm">99.9% Accuracy</span>
               </div>
+              <div className="flex items-center gap-2 text-white/80">
+                <Sparkles className="w-4 h-4" />
+                <span className="text-sm">Quantum AI</span>
+              </div>
             </div>
 
             {/* Right Actions */}
             <div className="flex items-center gap-3">
               <Link
-                href="/ai-innovation-showcase-2025"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm"
+                href="/ai-trends-predictions-2025"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-full font-medium hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 text-sm"
               >
-                <Rocket className="w-4 h-4" />
-                Explore Now
+                <Eye className="w-4 h-4" />
+                View Predictions
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <button
@@ -103,15 +136,19 @@ const AIInnovationShowcase2025PromotionBanner = () => {
             <div className="flex items-center justify-center gap-4 text-white/80">
               <div className="flex items-center gap-1">
                 <Brain className="w-3 h-3" />
-                <span className="text-xs">Quantum AI</span>
+                <span className="text-xs">AGI 2026</span>
               </div>
               <div className="flex items-center gap-1">
                 <TrendingUp className="w-3 h-3" />
-                <span className="text-xs">2,500% ROI</span>
+                <span className="text-xs">Future Trends</span>
               </div>
               <div className="flex items-center gap-1">
                 <Star className="w-3 h-3" />
-                <span className="text-xs">Revolutionary</span>
+                <span className="text-xs">Predictions</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Rocket className="w-3 h-3" />
+                <span className="text-xs">Breakthrough</span>
               </div>
             </div>
           </div>
@@ -125,11 +162,11 @@ const AIInnovationShowcase2025PromotionBanner = () => {
               opacity: [0.3, 0.6, 0.3],
             }}
             transition={{
-              duration: 4,
+              duration: 5,
               repeat: Infinity,
               ease: "linear"
             }}
-            className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl"
+            className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-xl"
           />
           <motion.div
             animate={{
@@ -137,12 +174,25 @@ const AIInnovationShowcase2025PromotionBanner = () => {
               opacity: [0.2, 0.5, 0.2],
             }}
             transition={{
-              duration: 6,
+              duration: 7,
               repeat: Infinity,
               ease: "linear",
               delay: 2
             }}
             className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl"
+          />
+          <motion.div
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0.1, 0.3, 0.1],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-full blur-2xl"
           />
         </div>
       </motion.div>
@@ -150,4 +200,4 @@ const AIInnovationShowcase2025PromotionBanner = () => {
   );
 };
 
-export default AIInnovationShowcase2025PromotionBanner;
+export default AITrendsPredictions2025PromotionBanner;

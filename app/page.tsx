@@ -98,6 +98,17 @@ import AISolutions2025UltimatePromotionBanner from '../components/AISolutions202
 import TechTrends2025_2030PromotionBanner from '../components/TechTrends2025_2030PromotionBanner';
 import BusinessTransformationGuide2025PromotionBanner from '../components/BusinessTransformationGuide2025PromotionBanner';
 
+// New AI Innovation Showcase 2025 Components
+import AIInnovationShowcase2025 from '../components/AIInnovationShowcase2025';
+import AIInnovationShowcase2025PromotionBanner from '../components/AIInnovationShowcase2025PromotionBanner';
+
+// New AI Trends & Predictions 2025 Components
+import AITrendsPredictions2025 from '../components/AITrendsPredictions2025';
+import AITrendsPredictions2025PromotionBanner from '../components/AITrendsPredictions2025PromotionBanner';
+
+// New Ultimate Content Showcase 2025 Component
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+
 // New 2026 promotion banners
 import AISolutions2026ComprehensivePromotionBanner from '../components/AISolutions2026ComprehensivePromotionBanner';
 import BusinessAutomationMastery2026PromotionBanner from '../components/BusinessAutomationMastery2026PromotionBanner';
@@ -144,6 +155,12 @@ export default function HomePage() {
 
         {/* NEW AI INNOVATION SHOWCASE 2026 PROMOTION BANNER */}
         <AIInnovationShowcase2026PromotionBanner />
+        
+        {/* NEW AI INNOVATION SHOWCASE 2025 PROMOTION BANNER */}
+        <AIInnovationShowcase2025PromotionBanner />
+        
+        {/* NEW AI TRENDS & PREDICTIONS 2025 PROMOTION BANNER */}
+        <AITrendsPredictions2025PromotionBanner />
         
         {/* NEW INTERACTIVE TECH DEMO 2026 PROMOTION BANNER */}
         <InteractiveTechDemo2026PromotionBanner />
@@ -351,6 +368,12 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
+        
+        {/* NEW AI TRENDS & PREDICTIONS 2025 */}
+        <AITrendsPredictions2025 />
+        
+        {/* NEW ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
         
         {/* AI TOOLS ULTIMATE SHOWCASE 2026 */}
         <AIToolsUltimateShowcase2026 />
