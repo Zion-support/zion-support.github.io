@@ -196,6 +196,12 @@ function Header() {
                 <Link href="/ai-2025-ultimate-breakthrough-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🚀 AI 2025 Ultimate Breakthrough Revolution (NEW)
                 </Link>
+                <Link href="/quantum-computing-solutions-2026" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
+                  ⚛️ Quantum Computing Solutions 2026 (BREAKTHROUGH)
+                </Link>
+                <Link href="/advanced-automation-solutions-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500">
+                  🤖 Advanced Automation Solutions 2025 (NEW)
+                </Link>
                 <Link href="/blog/ai-2025-revolutionary-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🔮 AI 2025 Revolutionary Trends & Predictions (NEW)
                 </Link>
