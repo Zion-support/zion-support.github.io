@@ -149,6 +149,14 @@ import RevolutionaryContentDiscoveryWidget2026 from '../components/Revolutionary
 import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 
 // Import new 2025 content showcase components
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentShowcase2025PromotionBanner from '../components/UltimateContentShowcase2025PromotionBanner';
+import BusinessTransformationShowcase2025 from '../components/BusinessTransformationShowcase2025';
+import BusinessTransformationShowcase2025PromotionBanner from '../components/BusinessTransformationShowcase2025PromotionBanner';
+import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
+import InteractiveTechDemo2025PromotionBanner from '../components/InteractiveTechDemo2025PromotionBanner';
+
+// Import new 2025 content showcase components
 import AI2025UltimateTechnologyShowcaseBanner from '../components/AI2025UltimateTechnologyShowcaseBanner';
 import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
@@ -243,6 +251,15 @@ export default function HomePage() {
         {/* NEW 2027 INTERACTIVE TECH DEMO PROMOTION BANNER */}
         <InteractiveTechDemo2027PromotionBanner />
         
+        {/* NEW 2025 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
+        <UltimateContentShowcase2025PromotionBanner />
+        
+        {/* NEW 2025 BUSINESS TRANSFORMATION PROMOTION BANNER */}
+        <BusinessTransformationShowcase2025PromotionBanner />
+        
+        {/* NEW 2025 INTERACTIVE TECH DEMO PROMOTION BANNER */}
+        <InteractiveTechDemo2025PromotionBanner />
+        
         {/* NEW: AI 2025 ULTIMATE CONTENT SHOWCASE BANNER */}
         <AI2025UltimateContentShowcaseBanner />
         
@@ -308,6 +325,15 @@ export default function HomePage() {
         
         {/* NEW 2027 INTERACTIVE TECH DEMO */}
         <InteractiveTechDemo2027 />
+        
+        {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
+        <UltimateContentShowcase2025 />
+        
+        {/* NEW 2025 BUSINESS TRANSFORMATION SHOWCASE */}
+        <BusinessTransformationShowcase2025 />
+        
+        {/* NEW 2025 INTERACTIVE TECH DEMO */}
+        <InteractiveTechDemo2025 />
         
         {/* NEW CONTENT SHOWCASE 2026 */}
         <NewContentShowcase2026 />
