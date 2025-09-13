@@ -29,6 +29,12 @@ import NewContent2025RevolutionaryBanner from '../components/NewContent2025Revol
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
+// New 2030 breakthrough components
+import AI2030TranscendentIntelligenceShowcase from '../components/AI2030TranscendentIntelligenceShowcase';
+import QuantumNeuralFusion2030Showcase from '../components/QuantumNeuralFusion2030Showcase';
+import AI2030UltimateBreakthroughBanner from '../components/AI2030UltimateBreakthroughBanner';
+import RevolutionaryContentHub2026 from '../components/RevolutionaryContentHub2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -48,6 +54,18 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
+        
+        {/* AI 2030 ULTIMATE BREAKTHROUGH BANNER - NEW */}
+        <AI2030UltimateBreakthroughBanner />
+        
+        {/* AI 2030 TRANSCENDENT INTELLIGENCE SHOWCASE - NEW */}
+        <AI2030TranscendentIntelligenceShowcase />
+        
+        {/* QUANTUM NEURAL FUSION 2030 SHOWCASE - NEW */}
+        <QuantumNeuralFusion2030Showcase />
+        
+        {/* REVOLUTIONARY CONTENT HUB 2026 - NEW */}
+        <RevolutionaryContentHub2026 />
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
