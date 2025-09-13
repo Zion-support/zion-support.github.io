@@ -1,3 +1,43 @@
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MessageCircle, X, ArrowUp, Star, Zap, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) {
+        return (<AnimatePresence>
+            <ArrowUp className="w-5 h-5"/>
+      </AnimatePresence>);
+        <AnimatePresence>
+                <Zap className="w-6 h-6"/>
+                  <X className="w-5 h-5"/>
+              
+                <Link to="/marketplace" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
+                    <Star className="w-5 h-5 text-zion-cyan"/>
+                </Link>
+                
+                <Link to="/contact" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
+                    <MessageCircle className="w-5 h-5 text-zion-purple"/>
+                </Link>
+                
+                <Link to="/signup" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
+                    <Users className="w-5 h-5 text-zion-cyan-light"/>
+                </Link>
+              
+        </AnimatePresence>
+      <AnimatePresence>
+              <MessageCircle className="w-6 h-6"/>
+                <X className="w-5 h-5"/>
+            
+              <Link to="/marketplace" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
+                  <Star className="w-5 h-5 text-zion-cyan"/>
+              </Link>
+              
+              <Link to="/contact" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
+                  <MessageCircle className="w-5 h-5 text-zion-purple"/>
+              </Link>
+            
+      </AnimatePresence>
+import { MessageCircle, X, ArrowUp, Star, Zap, Users, ChevronUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
