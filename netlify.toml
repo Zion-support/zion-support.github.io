@@ -4,6 +4,8 @@
   functions = "netlify/functions"
 
 [build.environment]
+  NPM_CONFIG_PACKAGE_LOCK = "true"
+  YARN = "false"
   NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
 
 [[plugins]]
