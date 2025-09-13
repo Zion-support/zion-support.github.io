@@ -1,101 +1,154 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function RevolutionaryContentPromotionBanner() {
+  const [currentContent, setCurrentContent] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const revolutionaryContent = [
+    {
+      id: 1,
+      title: "AI 2025 Ultimate Breakthrough Revolution",
+      description: "Experience revolutionary AI breakthroughs with 2,500-10,000% ROI",
+      link: "/ai-2025-ultimate-breakthrough-revolution",
+      badge: "BREAKTHROUGH",
+      color: "from-purple-500 to-blue-500",
+      icon: "🚀"
+    },
+    {
+      id: 2,
+      title: "AI 2026 Quantum-Neural Fusion",
+      description: "Revolutionary convergence delivering 15,000% ROI",
+      link: "/ai-2026-quantum-neural-fusion-breakthrough",
+      badge: "REVOLUTIONARY",
+      color: "from-indigo-500 to-purple-500",
+      icon: "🌌"
+    },
+    {
+      id: 3,
+      title: "Transcendent Intelligence 2030",
+      description: "Consciousness-level AI with infinite scalability",
+      link: "/ai-2030-transcendent-intelligence",
+      badge: "TRANSCENDENT",
+      color: "from-cyan-500 to-indigo-500",
+      icon: "🧠"
+    },
+    {
+      id: 4,
+      title: "Quantum Computing Solutions 2026",
+      description: "Error-corrected quantum systems delivering exponential power",
+      link: "/quantum-computing-solutions-2026",
+      badge: "QUANTUM",
+      color: "from-green-500 to-emerald-500",
+      icon: "⚛️"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentContent((prev) => (prev + 1) % revolutionaryContent.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [revolutionaryContent.length]);
+
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null;
+
   return (
-    <div className="bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 text-white py-8 px-4 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 via-purple-600/20 to-blue-600/20 animate-pulse"></div>
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-cyan-400 animate-pulse"></div>
-      
+    <div className="relative bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 text-white py-4 px-4 overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 animate-pulse"></div>
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
+      </div>
+
       <div className="relative max-w-7xl mx-auto">
-        <div className="text-center mb-6">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-bold mb-4 animate-bounce">
-            🚀 REVOLUTIONARY BREAKTHROUGH ANNOUNCEMENT
+        <div className="flex items-center justify-between">
+          {/* Close button */}
+          <button
+            onClick={handleClose}
+            className="absolute top-2 right-2 text-white/70 hover:text-white transition-colors z-10"
+            aria-label="Close banner"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Content showcase */}
+          <div className="flex-1 pr-12">
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <span className="text-2xl animate-bounce">{revolutionaryContent[currentContent].icon}</span>
+                <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-xs font-bold animate-pulse">
+                  {revolutionaryContent[currentContent].badge}
+                </div>
+              </div>
+              <div className="flex-1">
+                <Link 
+                  href={revolutionaryContent[currentContent].link}
+                  className="group block"
+                >
+                  <h3 className="text-lg font-bold group-hover:text-yellow-300 transition-colors duration-300">
+                    {revolutionaryContent[currentContent].title}
+                  </h3>
+                  <p className="text-sm text-gray-300 group-hover:text-white transition-colors duration-300">
+                    {revolutionaryContent[currentContent].description}
+                  </p>
+                </Link>
+              </div>
+            </div>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            AI 2025 Ultimate Breakthrough Revolution
-          </h2>
-          <p className="text-xl md:text-2xl mb-6 max-w-4xl mx-auto">
-            Experience the most revolutionary AI breakthrough in history, delivering 
-            <span className="font-bold text-yellow-300"> 2,500-5,000% ROI</span> with 
-            <span className="font-bold text-cyan-300"> 99.9% accuracy</span> and 
-            <span className="font-bold text-pink-300"> 10,000x faster processing</span>
-          </p>
+
+          {/* CTA Button */}
+          <div className="flex items-center space-x-4">
+            <Link
+              href={revolutionaryContent[currentContent].link}
+              className={`px-6 py-2 bg-gradient-to-r ${revolutionaryContent[currentContent].color} text-white font-semibold rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center space-x-2`}
+            >
+              <span>Explore Now</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         </div>
 
-        {/* Key Metrics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-yellow-300 mb-1">2,500-5,000%</div>
-            <div className="text-sm font-semibold">Average ROI</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-cyan-300 mb-1">99.9%</div>
-            <div className="text-sm font-semibold">Accuracy Rate</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-pink-300 mb-1">10,000x</div>
-            <div className="text-sm font-semibold">Faster Processing</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-green-300 mb-1">24/7</div>
-            <div className="text-sm font-semibold">Autonomous Operations</div>
-          </div>
+        {/* Progress indicator */}
+        <div className="flex justify-center space-x-2 mt-4">
+          {revolutionaryContent.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentContent(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentContent 
+                  ? 'bg-yellow-400 scale-125' 
+                  : 'bg-white/30 hover:bg-white/50'
+              }`}
+              aria-label={`Go to content ${index + 1}`}
+            />
+          ))}
         </div>
+      </div>
 
-        {/* Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link 
-            href="/ai-2025-ultimate-breakthrough-revolution" 
-            className="bg-white text-purple-600 px-8 py-4 rounded-lg text-lg font-bold hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-yellow-100"
-          >
-            🚀 Explore the Revolution
-          </Link>
-          <Link 
-            href="/case-studies/ai-2025-global-transformation-breakthrough" 
-            className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-white hover:text-purple-600 transition-all duration-300"
-          >
-            📊 View Success Stories
-          </Link>
-          <Link 
-            href="/tools/ai-2025-roi-calculator" 
-            className="bg-gradient-to-r from-yellow-400 to-pink-400 text-white px-8 py-4 rounded-lg text-lg font-bold hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-          >
-            🧮 Calculate Your ROI
-          </Link>
-        </div>
-
-        {/* Additional Content Links */}
-        <div className="mt-8 text-center">
-          <p className="text-sm text-white/80 mb-4">Don't miss these revolutionary breakthroughs:</p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <Link 
-              href="/quantum-computing-solutions" 
-              className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/30 transition-colors"
-            >
-              ⚛️ Quantum Computing (15,000% ROI)
-            </Link>
-            <Link 
-              href="/advanced-automation-solutions-2026" 
-              className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/30 transition-colors"
-            >
-              🤖 Advanced Automation (10,000% ROI)
-            </Link>
-            <Link 
-              href="/blog/ai-2025-revolutionary-trends-predictions" 
-              className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/30 transition-colors"
-            >
-              🔮 Future Predictions
-            </Link>
-            <Link 
-              href="/webinars/ai-2025-revolutionary-breakthroughs" 
-              className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full border border-white/30 transition-colors"
-            >
-              🔥 Live Webinars
-            </Link>
-          </div>
-        </div>
+      {/* Floating particles effect */}
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-white/30 rounded-full animate-ping"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 2}s`
+            }}
+          />
+        ))}
       </div>
     </div>
   );
