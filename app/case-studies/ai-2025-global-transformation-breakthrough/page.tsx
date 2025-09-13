@@ -257,9 +257,9 @@ export default function AI2025GlobalTransformationBreakthrough() {
             
             <div className="bg-gradient-to-br from-blue-800 to-cyan-800 p-8 rounded-xl border border-blue-500">
               <div className="text-4xl mb-4">⚛️</div>
-              <h3 className="text-2xl font-bold mb-4">Quantum Computing</h3>
+              <h3 className="text-2xl font-bold mb-4">Quantum-Neural Fusion</h3>
               <p className="text-gray-300 mb-4">
-                Revolutionary quantum-AI fusion delivering infinite computational power and speed.
+                Revolutionary quantum-neural fusion delivering infinite computational power and speed.
               </p>
               <div className="text-yellow-400 font-bold">Processing Engine</div>
             </div>

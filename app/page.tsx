@@ -21,12 +21,15 @@ const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../compo
 
 // New promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
 import AI2025RevolutionaryContentPromotionBanner from '../components/AI2025RevolutionaryContentPromotionBanner';
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+import QuantumNeuralFusion2026PromotionBanner from '../components/QuantumNeuralFusion2026PromotionBanner';
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
 
@@ -38,10 +41,13 @@ import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWi
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+
+// Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2026FuturePredictionsPromotionBanner from '../components/AI2026FuturePredictionsPromotionBanner';
 import QuantumComputing2026PromotionBanner from '../components/QuantumComputing2026PromotionBanner';
 import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
+import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 
 export default function HomePage() {
   return (
@@ -54,20 +60,26 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
+        {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
-        {/* AI 2026 FUTURE PREDICTIONS PROMOTION BANNER */}
-        <AI2026FuturePredictionsPromotionBanner />
+        {/* NEW AI 2026 ULTIMATE BREAKTHROUGH BANNER */}
+        <AI2026UltimateBreakthroughPromotionBanner />
         
-        {/* QUANTUM COMPUTING 2026 PROMOTION BANNER */}
-        <QuantumComputing2026PromotionBanner />
+        {/* QUANTUM-NEURAL FUSION 2026 BREAKTHROUGH BANNER */}
+        <QuantumNeuralFusion2026PromotionBanner />
         
         {/* ULTIMATE CONTENT REVOLUTION BANNER 2025 */}
         <UltimateContentRevolutionBanner2025 />
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
+        
+        {/* NEW CONTENT PROMOTION BANNER 2025 */}
+        <NewContentPromotionBanner2025 />
+        
+        {/* NEW SERVICES SHOWCASE 2025 */}
+        <NewServicesShowcase2025 />
         
         {/* NEW CONTENT 2026 PROMOTION BANNER */}
         <NewContent2026PromotionBanner />
@@ -77,9 +89,6 @@ export default function HomePage() {
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
-        
-        {/* AI 2026 QUANTUM-NEURAL FUSION PROMOTION BANNER */}
-        <AI2026QuantumNeuralFusionPromotionBanner />
         
         {/* AI 2026 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
         <AI2026RevolutionaryBreakthroughPromotionBanner />

@@ -27,85 +27,43 @@ export default function RevolutionaryContentShowcase2025() {
       color: "from-green-500 to-blue-500",
       bgColor: "from-green-800 to-blue-800",
       icon: "🏆",
-      metrics: "30 Days ROI"
+      metrics: "10,000% ROI"
     },
     {
       id: 3,
-      title: "AI 2025 Revolutionary Trends & Predictions",
-      description: "Discover the future of AI that will transform every industry on Earth.",
+      title: "Revolutionary AI Trends & Predictions",
+      description: "Discover the 2025 AI trends that will reshape the future of business.",
       link: "/blog/ai-2025-revolutionary-trends-predictions",
-      category: "blog",
-      badge: "FUTURE",
-      color: "from-purple-500 to-pink-500",
-      bgColor: "from-purple-800 to-pink-800",
-      icon: "🔮",
-      metrics: "95% Probability"
-    },
-    {
-      id: 4,
-      title: "Quantum Computing Solutions 2025",
-      description: "Revolutionary quantum-AI fusion delivering infinite computational power.",
-      link: "/quantum-computing-solutions",
-      category: "technology",
-      badge: "REVOLUTIONARY",
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "from-blue-800 to-cyan-800",
-      icon: "⚛️",
-      metrics: "∞ Processing"
-    },
-    {
-      id: 5,
-      title: "Autonomous Operations Mastery",
-      description: "Complete automation of all business processes with zero human intervention.",
-      link: "/ai-services-2025",
-      category: "services",
-      badge: "AUTONOMOUS",
-      color: "from-indigo-500 to-purple-500",
-      bgColor: "from-indigo-800 to-purple-800",
-      icon: "🤖",
-      metrics: "100% Automated"
-    },
-    {
-      id: 6,
-      title: "Reality Manipulation Technology",
-      description: "AI systems capable of manipulating reality itself and creating new dimensions.",
-      link: "/ai-2025-ultimate-breakthrough-revolution",
-      category: "breakthrough",
-      badge: "TRANSCENDENT",
-      color: "from-yellow-500 to-orange-500",
-      bgColor: "from-yellow-800 to-orange-800",
-      icon: "🌌",
-      metrics: "Reality Override"
+      category: "insights",
+      badge: "TRENDS",
+      color: "from-purple-500 to-indigo-500",
+      bgColor: "from-purple-800 to-indigo-800",
+      icon: "📈",
+      metrics: "Future-Ready"
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length },
-    { id: 'breakthrough', name: 'Breakthroughs', count: contentItems.filter(item => item.category === 'breakthrough').length },
-    { id: 'case-study', name: 'Case Studies', count: contentItems.filter(item => item.category === 'case-study').length },
-    { id: 'blog', name: 'Blog Posts', count: contentItems.filter(item => item.category === 'blog').length },
-    { id: 'technology', name: 'Technology', count: contentItems.filter(item => item.category === 'technology').length },
-    { id: 'services', name: 'Services', count: contentItems.filter(item => item.category === 'services').length }
+    { id: 'all', label: 'All Content', count: contentItems.length },
+    { id: 'breakthrough', label: 'Breakthroughs', count: contentItems.filter(item => item.category === 'breakthrough').length },
+    { id: 'case-study', label: 'Case Studies', count: contentItems.filter(item => item.category === 'case-study').length },
+    { id: 'insights', label: 'Insights', count: contentItems.filter(item => item.category === 'insights').length }
   ];
 
-  const filteredContent = activeTab === 'all' 
+  const filteredItems = activeTab === 'all' 
     ? contentItems 
     : contentItems.filter(item => item.category === activeTab);
 
   return (
-    <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+    <div className="py-16 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-semibold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY CONTENT
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-300 to-pink-300 bg-clip-text text-transparent">
-            AI 2025 Content Revolution
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Revolutionary Content Showcase 2025
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the most revolutionary AI content ever created. Transform your business with breakthrough insights, 
-            case studies, and technologies that deliver infinite ROI.
+            Explore our groundbreaking AI content that's transforming industries and delivering unprecedented results
           </p>
         </div>
 
@@ -115,83 +73,85 @@ export default function RevolutionaryContentShowcase2025() {
             <button
               key={category.id}
               onClick={() => setActiveTab(category.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeTab === category.id
-                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg transform scale-105'
                   : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
               }`}
             >
-              {category.name} ({category.count})
+              {category.label} ({category.count})
             </button>
           ))}
         </div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((item) => (
+          {filteredItems.map((item) => (
             <div
               key={item.id}
-              className={`bg-gradient-to-br ${item.bgColor} p-8 rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group`}
+              className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/30 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl"
             >
               {/* Badge */}
-              <div className="flex items-center justify-between mb-4">
-                <div className={`inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r ${item.color} text-white text-xs font-bold`}>
-                  {item.badge}
-                </div>
-                <div className="text-3xl group-hover:scale-110 transition-transform duration-300">
-                  {item.icon}
-                </div>
+              <div className={`absolute -top-3 -right-3 px-4 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${item.color} text-white shadow-lg`}>
+                {item.badge}
               </div>
 
-              {/* Content */}
-              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-yellow-300 transition-colors duration-300">
+              {/* Icon */}
+              <div className="text-4xl mb-4">{item.icon}</div>
+
+              {/* Title */}
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
                 {item.title}
               </h3>
+
+              {/* Description */}
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {item.description}
               </p>
 
               {/* Metrics */}
               <div className="mb-6">
-                <div className="text-sm text-gray-400 mb-1">Key Metric</div>
-                <div className={`text-2xl font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>
+                <div className={`inline-block px-3 py-1 rounded-full bg-gradient-to-r ${item.bgColor} text-white text-sm font-semibold`}>
                   {item.metrics}
                 </div>
               </div>
 
-              {/* CTA */}
+              {/* CTA Button */}
               <Link
                 href={item.link}
-                className={`inline-flex items-center justify-center w-full bg-gradient-to-r ${item.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg`}
+                className={`inline-flex items-center justify-center w-full py-3 px-6 rounded-xl bg-gradient-to-r ${item.color} text-white font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 group-hover:from-white group-hover:to-gray-100 group-hover:text-gray-900`}
               >
                 Explore Now
-                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
             </div>
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-purple-800 to-pink-800 p-8 rounded-2xl border border-purple-500 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
-            <p className="text-xl text-gray-300 mb-6">
-              Join thousands of companies already achieving 10,000% ROI with our revolutionary AI solutions.
+          <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Join thousands of companies already experiencing the AI 2025 revolution. 
+              Start your transformation journey today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-yellow-500 to-red-500 hover:from-yellow-600 hover:to-red-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300"
               >
-                Start Your Revolution
+                Get Started Now
               </Link>
               <Link
-                href="/webinars/ai-2025-revolutionary-breakthroughs"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300"
+                href="/about"
+                className="px-8 py-4 border-2 border-purple-500 text-purple-300 font-bold rounded-xl hover:bg-purple-500 hover:text-white transition-all duration-300"
               >
-                Watch Live Demo
+                Learn More
               </Link>
             </div>
           </div>
