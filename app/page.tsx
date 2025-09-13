@@ -249,6 +249,14 @@ import UltimateContentShowcase2029PromotionBanner from '../components/UltimateCo
 import InteractiveTechDemo2029 from '../components/InteractiveTechDemo2029';
 import InteractiveTechDemo2029PromotionBanner from '../components/InteractiveTechDemo2029PromotionBanner';
 
+// Import new 2025 content components
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentShowcase2025PromotionBanner from '../components/UltimateContentShowcase2025PromotionBanner';
+import AIInnovationShowcase2025 from '../components/AIInnovationShowcase2025';
+import AIInnovationShowcase2025PromotionBanner from '../components/AIInnovationShowcase2025PromotionBanner';
+import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
+import InteractiveTechDemo2025PromotionBanner from '../components/InteractiveTechDemo2025PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -289,6 +297,19 @@ export default function HomePage() {
         
         {/* NEW 2025 INTERACTIVE TECH DEMO PROMOTION BANNER */}
         <InteractiveTechDemo2025PromotionBanner />
+        
+        {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
+        <UltimateContentShowcase2025 />
+        
+        {/* NEW 2025 AI INNOVATION SHOWCASE PROMOTION BANNER */}
+        <AIInnovationShowcase2025PromotionBanner />
+        
+        {/* NEW 2025 AI INNOVATION SHOWCASE */}
+        <AIInnovationShowcase2025 />
+        
+        {/* NEW 2025 INTERACTIVE TECH DEMO */}
+        <InteractiveTechDemo2025 />
+        
         {/* NEW 2028 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2028PromotionBanner />
         
