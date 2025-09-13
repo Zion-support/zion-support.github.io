@@ -286,6 +286,16 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import DynamicContentCarousel2025 from '../components/DynamicContentCarousel2025';
 import NewsletterSignupAndSocialSharing2025 from '../components/NewsletterSignupAndSocialSharing2025';
 
+// New 2026 Content Components
+import AI2026BreakthroughContentPromotionBanner from '../components/AI2026BreakthroughContentPromotionBanner';
+import AI2026BreakthroughContentShowcase from '../components/AI2026BreakthroughContentShowcase';
+import QuantumComputing2026_2030PredictionsPromotionBanner from '../components/QuantumComputing2026_2030PredictionsPromotionBanner';
+import QuantumComputing2026_2030PredictionsShowcase from '../components/QuantumComputing2026_2030PredictionsShowcase';
+import AutomationSolutions2026_2030PromotionBanner from '../components/AutomationSolutions2026_2030PromotionBanner';
+import AutomationSolutions2026_2030Showcase from '../components/AutomationSolutions2026_2030Showcase';
+import NeuralInterfaceSpaceTechPromotionBanner from '../components/NeuralInterfaceSpaceTechPromotionBanner';
+import NeuralInterfaceSpaceTechShowcase from '../components/NeuralInterfaceSpaceTechShowcase';
+
 // Lazy loaded components for performance
 const LazyAdvancedComponents = lazy(() => import('../components/LazyAdvancedComponents'));
 
@@ -332,7 +342,46 @@ const HomePage: React.FC = () => {
                 </div>
               </section>
 
-<<<<<<< HEAD
+              {/* NEW: AI 2026 Breakthrough Content Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2026BreakthroughContentPromotionBanner />
+              </Suspense>
+
+              {/* NEW: AI 2026 Breakthrough Content Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2026BreakthroughContentShowcase />
+              </Suspense>
+
+              {/* NEW: Quantum Computing 2026-2030 Predictions Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputing2026_2030PredictionsPromotionBanner />
+              </Suspense>
+
+              {/* NEW: Quantum Computing 2026-2030 Predictions Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputing2026_2030PredictionsShowcase />
+              </Suspense>
+
+              {/* NEW: Automation Solutions 2026-2030 Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AutomationSolutions2026_2030PromotionBanner />
+              </Suspense>
+
+              {/* NEW: Automation Solutions 2026-2030 Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AutomationSolutions2026_2030Showcase />
+              </Suspense>
+
+              {/* NEW: Neural Interface & Space Technology Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NeuralInterfaceSpaceTechPromotionBanner />
+              </Suspense>
+
+              {/* NEW: Neural Interface & Space Technology Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NeuralInterfaceSpaceTechShowcase />
+              </Suspense>
+
               {/* AI 2025-2030 Ultimate Predictions Promotion Banner - NEW! */}
               <Suspense fallback={<LoadingSpinner />}>
                 <AI2025_2030UltimatePredictionsPromotionBanner />
