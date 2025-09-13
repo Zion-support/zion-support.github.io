@@ -29,6 +29,7 @@ import InteractiveContentDiscoveryWidget from '../components/InteractiveContentD
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
+import RevolutionaryContentPromotionBanner from '../components/RevolutionaryContentPromotionBanner';
 <<<<<<< HEAD
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
@@ -107,6 +108,9 @@ export default function HomePage() {
         
         {/* AI 2026 ENTERPRISE TRANSFORMATION PROMOTION BANNER */}
         <AI2026EnterpriseTransformationPromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT PROMOTION BANNER */}
+        <RevolutionaryContentPromotionBanner />
         
         {/* NEW AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2025UltimateBreakthroughAnnouncementBanner />
@@ -296,6 +300,15 @@ export default function HomePage() {
         <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Suspense fallback={<LoadingSpinner size="lg" text="Loading Interactive Discovery..." />}>
+              <InteractiveContentDiscoveryWidget />
+            </Suspense>
+          </div>
+        </section>
+        
+        {/* REVOLUTIONARY CONTENT DISCOVERY WIDGET */}
+        <section className="py-16 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Suspense fallback={<LoadingSpinner size="lg" text="Loading Revolutionary Content..." />}>
               <InteractiveContentDiscoveryWidget />
             </Suspense>
           </div>
