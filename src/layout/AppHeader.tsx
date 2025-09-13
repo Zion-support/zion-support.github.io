@@ -221,14 +221,21 @@ export function AppHeader() {
       name: 'Blog & Insights',
       href: '/blog',
       icon: BookOpen,
-      description: 'Latest industry trends and insights',
+      description: 'Latest AI trends and revolutionary breakthroughs',
       featured: true
     },
     {
       name: 'Case Studies',
       href: '/case-studies',
       icon: Target,
-      description: 'Real-world success stories',
+      description: '500% ROI success stories and transformations',
+      featured: true
+    },
+    {
+      name: 'Implementation Guides',
+      href: '/resources',
+      icon: FileText,
+      description: 'Step-by-step AI implementation guides',
       featured: true
     },
     {
