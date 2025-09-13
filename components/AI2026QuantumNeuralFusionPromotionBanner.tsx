@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 export default function AI2026QuantumNeuralFusionPromotionBanner() {
   return (
+<<<<<<< HEAD
     <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 px-4 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20"></div>
@@ -74,6 +75,8 @@ export default function AI2026QuantumNeuralFusionPromotionBanner() {
         </div>
       </div>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8d9e
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-purple-600/10"></div>
@@ -175,7 +178,10 @@ export default function AI2026QuantumNeuralFusionPromotionBanner() {
       <div className="absolute top-20 right-20 w-6 h-6 bg-purple-400 rounded-full animate-bounce delay-300"></div>
       <div className="absolute bottom-20 left-20 w-3 h-3 bg-pink-400 rounded-full animate-bounce delay-500"></div>
       <div className="absolute bottom-10 right-10 w-5 h-5 bg-cyan-400 rounded-full animate-bounce delay-700"></div>
+<<<<<<< HEAD
 >>>>>>> 26f8d2c09d200d7c603f75b688c6b1bec94e2011
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8d9e
     </div>
   );
 }
