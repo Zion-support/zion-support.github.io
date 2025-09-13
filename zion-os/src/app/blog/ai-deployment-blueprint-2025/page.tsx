@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import { SocialShare } from '../../../components/SocialShare';
+import { NewsletterSignup } from '../../../components/NewsletterSignup';
 
 export const metadata: Metadata = {
   title: 'AI Deployment Blueprint: Launch Faster in 2025 | Zion OS Blog',
@@ -192,7 +194,7 @@ export default function Article() {
               provides all the tools you need to deploy, monitor, and scale AI applications 
               with confidence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
               </a>
@@ -200,6 +202,11 @@ export default function Article() {
                 📊 View Examples
               </a>
             </div>
+            <SocialShare 
+              url="https://zion.app/blog/ai-deployment-blueprint-2025"
+              title="AI Deployment Blueprint: Launch Faster in 2025"
+              description="A pragmatic guide to ship AI assistants, analytics, and automation safely and quickly."
+            />
           </div>
         </div>
       </article>
@@ -222,6 +229,13 @@ export default function Article() {
               <p className="text-white/70 text-sm">From policy to production implementation</p>
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <NewsletterSignup />
         </div>
       </section>
     </div>
