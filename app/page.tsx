@@ -159,6 +159,8 @@ import NewContentPromotionBanner2025 from '../components/NewContentPromotionBann
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import TechnologyInsights2025 from '../components/TechnologyInsights2025';
 import NewContentAnnouncementBanner2025 from '../components/NewContentAnnouncementBanner2025';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
 export default function HomePage() {
   return (
@@ -174,11 +176,20 @@ export default function HomePage() {
         {/* NEW CONTENT ANNOUNCEMENT BANNER 2025 */}
         <NewContentAnnouncementBanner2025 />
         
+        {/* NEW CONTENT PROMOTION BANNER 2025 */}
+        <NewContentPromotionBanner2025 />
+        
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
         
         {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
         <NewContent2025UltimateShowcase />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
         
         {/* TECHNOLOGY INSIGHTS 2025 */}
         <TechnologyInsights2025 />
