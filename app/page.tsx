@@ -159,6 +159,11 @@ import QuantumComputingSolutions2026UltimatePromotionBanner from '../components/
 import AI2025UltimateContentPromotionBanner from '../components/AI2025UltimateContentPromotionBanner';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
+// Import new 2025 content promotional banners
+import NewContent2025AdvancedAutomationBanner from '../components/NewContent2025AdvancedAutomationBanner';
+import NewContent2025EnterpriseSuccessBanner from '../components/NewContent2025EnterpriseSuccessBanner';
+import NewContent2025ImplementationToolkitBanner from '../components/NewContent2025ImplementationToolkitBanner';
+
 // Import new showcase banners
 import AI2025UltimateInnovationShowcaseBanner from '../components/AI2025UltimateInnovationShowcaseBanner';
 import AITools2025UltimateShowcaseBanner from '../components/AITools2025UltimateShowcaseBanner';
@@ -178,6 +183,62 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2026 REVOLUTIONARY CONTENT PROMOTION BANNER */}
+        <UltimateBreakthroughBanner2026 />
+        
+        {/* REVOLUTIONARY TECH 2026 PROMOTION BANNER */}
+        <RevolutionaryTech2026PromotionBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2026 */}
+        <UltimateContentShowcase2026 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
+        <InteractiveContentDiscovery2026 />
+        
+        {/* ULTIMATE SERVICES SHOWCASE 2026 */}
+        <UltimateServicesShowcase2026 />
+        
+        {/* QUANTUM AI BREAKTHROUGH PROMOTION BANNER - FEATURED */}
+        <QuantumAIBreakthroughPromotionBanner />
+        
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
+        {/* NEW 2025 ADVANCED AUTOMATION MASTERY BANNER */}
+        <NewContent2025AdvancedAutomationBanner />
+        
+        {/* NEW 2025 ENTERPRISE SUCCESS BANNER */}
+        <NewContent2025EnterpriseSuccessBanner />
+        
+        {/* NEW 2025 IMPLEMENTATION TOOLKIT BANNER */}
+        <NewContent2025ImplementationToolkitBanner />
+        
+        {/* AI 2025 BREAKTHROUGH SHOWCASE BANNER */}
+        <AI2025BreakthroughShowcaseBanner />
+        
+        {/* ULTIMATE CONTENT DISCOVERY 2025 */}
+        <UltimateContentDiscovery2025 />
+        {/* LATEST CONTENT 2025 PROMOTION BANNER */}
+        <LatestContent2025PromotionBanner />
+        
+        {/* AI 2025-2026 TECHNOLOGY SHOWCASE */}
+        <AI2025_2026TechnologyShowcase />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2025 */}
+        <InteractiveContentDiscovery2025 />
+        
+        {/* NEW 2025 INNOVATION SHOWCASE BANNER */}
+        <NewContent2025InnovationShowcaseBanner />
+        
+        {/* NEW CONTENT ANNOUNCEMENT BANNER 2025 */}
+        <NewContentAnnouncementBanner2025 />
+        
+        {/* New Content Promotion Banner */}
+        <NewContentPromotionBanner2025 />
+        
+        {/* AI Tools Showcase */}
+        <AIToolsShowcase2025 />
+>>>>>>> cursor/create-and-deploy-new-content-1d24
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
         
