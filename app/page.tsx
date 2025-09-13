@@ -6,6 +6,8 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import FeaturedContent2025 from '../components/FeaturedContent2025';
+import NewContentNavigation from '../components/NewContentNavigation';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -36,6 +38,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* FEATURED CONTENT 2025 - NEW CONTENT PROMOTION */}
+        <FeaturedContent2025 />
+        
+        {/* NEW CONTENT NAVIGATION */}
+        <NewContentNavigation />
+        
         {/* NEW: AI 2025 ULTIMATE TRENDS BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateTrendsBreakthroughPromotionBanner />
         
