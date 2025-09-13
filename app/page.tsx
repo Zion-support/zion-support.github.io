@@ -256,6 +256,12 @@ export default function HomePage() {
         {/* NEW 2026 REVOLUTIONARY CONTENT PROMOTION BANNER */}
         <UltimateBreakthroughBanner2026 />
         
+        {/* NEW CONTENT 2026 PROMOTION BANNER */}
+        <NewContent2026PromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT BANNER 2026 */}
+        <RevolutionaryContentBanner2026 />
+        
         {/* REVOLUTIONARY TECH 2026 PROMOTION BANNER */}
         <RevolutionaryTech2026PromotionBanner />
         
