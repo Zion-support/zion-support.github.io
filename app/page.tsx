@@ -21,6 +21,11 @@ const UltimateAIAssistant2026 = lazy(() => import('../components/UltimateAIAssis
 const AdvancedAnalyticsDashboard2026 = lazy(() => import('../components/AdvancedAnalyticsDashboard2026'));
 const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../components/RevolutionaryContentRecommendationEngine2026'));
 
+// New 2026 Content Components
+const UltimateContentShowcase2026 = lazy(() => import('../components/UltimateContentShowcase2026'));
+const UltimateContentPromotionBanner2026 = lazy(() => import('../components/UltimateContentPromotionBanner2026'));
+const AdvancedContentDiscoveryWidget2026 = lazy(() => import('../components/AdvancedContentDiscoveryWidget2026'));
+
 // New promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
@@ -543,6 +548,21 @@ export default function HomePage() {
             <NewContent2026PromotionalBanner />
           </div>
         </div>
+
+        {/* ULTIMATE CONTENT PROMOTION BANNER 2026 */}
+        <Suspense fallback={<LoadingSpinner />}>
+          <UltimateContentPromotionBanner2026 />
+        </Suspense>
+
+        {/* ULTIMATE CONTENT SHOWCASE 2026 */}
+        <Suspense fallback={<LoadingSpinner />}>
+          <UltimateContentShowcase2026 />
+        </Suspense>
+
+        {/* ADVANCED CONTENT DISCOVERY WIDGET 2026 */}
+        <Suspense fallback={<LoadingSpinner />}>
+          <AdvancedContentDiscoveryWidget2026 />
+        </Suspense>
         {/* NEW ULTIMATE CONTENT SHOWCASE 2025 BANNERS */}
         <UltimateContentShowcase2025Banner />
         <NewContent2025UltimatePromotionBanner />
