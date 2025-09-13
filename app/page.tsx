@@ -77,6 +77,8 @@ import NewContent2025RevolutionaryBanner from '../components/NewContent2025Revol
 
 // Import new breakthrough promotional components
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import AI2025UltimateAutomationRevolutionBanner from '../components/AI2025UltimateAutomationRevolutionBanner';
+import AI2026QuantumNeuralBreakthroughBanner from '../components/AI2026QuantumNeuralBreakthroughBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 
 export default function HomePage() {
@@ -92,6 +94,12 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* FEATURED REVOLUTIONARY CONTENT BANNER */}
         <FeaturedContentBanner />
+        
+        {/* AI 2025 ULTIMATE AUTOMATION REVOLUTION BANNER */}
+        <AI2025UltimateAutomationRevolutionBanner />
+        
+        {/* AI 2026 QUANTUM-NEURAL BREAKTHROUGH BANNER */}
+        <AI2026QuantumNeuralBreakthroughBanner />
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
