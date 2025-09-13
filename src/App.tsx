@@ -51,6 +51,7 @@ const LoginPage = React.lazy(() => import('./pages/Login'));
 // New 2025 service imports
 const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
 const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
+const ContentShowcase2025 = React.lazy(() => import('../app/content-showcase-2025/page'));
 
 // Sitemap-aligned pages
 
@@ -205,6 +206,7 @@ function App() {
               <Route path="/white-papers" element={<WhitePapers />} />
               <Route path="/webinars" element={<Webinars />} />
               <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/content-showcase-2025" element={<ContentShowcase2025 />} />
               
               {/* New sitemap routes */}
               
