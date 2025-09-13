@@ -117,6 +117,12 @@ import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025Ult
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner';
 
+// Import new 2026 content components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+import EnhancedNewsletterSignup2026 from '../components/EnhancedNewsletterSignup2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -131,14 +137,23 @@ export default function HomePage() {
         {/* NEW 2025 ULTIMATE CONTENT REVOLUTION BANNER */}
         <AI2025UltimateContentRevolutionBanner />
         
+        {/* REVOLUTIONARY CONTENT BANNER 2026 */}
+        <RevolutionaryContentBanner2026 />
+        
         {/* AI TRENDS 2025-2030 ULTIMATE PREDICTIONS BANNER */}
         <AITrends2025UltimatePredictionsBanner />
         
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 */}
         <UltimateContentDiscoveryWidget2025 />
         
+        {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
+        <InteractiveContentDiscovery2026 />
+        
         {/* AI SUCCESS STORIES 2025 BANNER */}
         <AISuccessStories2025Banner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2026 */}
+        <UltimateContentShowcase2026 />
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH CONTENT BANNER */}
         <AI2025UltimateBreakthroughContentBanner />
@@ -3261,6 +3276,9 @@ export default function HomePage() {
       {/* Enhanced Management and Feedback Components */}
       <ContentManagementSystem />
       <UserFeedbackSystem />
+      
+      {/* Enhanced Newsletter Signup 2026 */}
+      <EnhancedNewsletterSignup2026 />
     </div>
   );
 }
