@@ -48,6 +48,11 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 // Import new 2025 content promotion components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
+
+// Import new content promotion components
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import ContentDiscoveryWidget from '../components/ContentDiscoveryWidget';
+import AI2025NewsletterSignup from '../components/AI2025NewsletterSignup';
 import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025';
 
 // Import new content showcase components
@@ -172,6 +177,9 @@ export default function HomePage() {
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
         
+        {/* NEW CONTENT PROMOTION BANNER */}
+        <NewContentPromotionBanner />
+        
         {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
         <NewContent2025UltimateShowcase />
         
@@ -214,6 +222,13 @@ export default function HomePage() {
             <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Discovery..." />}>
               <InteractiveContentDiscoveryWidget2025 />
             </Suspense>
+          </div>
+        </section>
+        
+        {/* NEW CONTENT DISCOVERY WIDGET */}
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ContentDiscoveryWidget />
           </div>
         </section>
         
@@ -347,6 +362,13 @@ export default function HomePage() {
             <AI2025NewsletterSignup />
           </div>
         </div>
+        
+        {/* NEW AI 2025 NEWSLETTER SIGNUP */}
+        <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="max-w-6xl mx-auto">
+            <AI2025NewsletterSignup />
+          </div>
+        </section>
         
         {/* AI 2030 TRANSCENDENT INTELLIGENCE PROMOTION BANNER */}
         <AI2030TranscendentIntelligencePromotionBanner />

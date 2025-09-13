@@ -1,237 +1,270 @@
 import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, TrendingUp, Users, DollarSign, Target, CheckCircle, Star, Award } from 'lucide-react';
+import { Metadata } from 'next';
+import { TrendingUp, Users, DollarSign, Clock, CheckCircle, ArrowRight, Star, Award, Target, Zap, Shield, Globe, Brain, Database, Network } from 'lucide-react';
 
-export default function AISuccessStories2025() {
-  const successStories = [
+export const metadata: Metadata = {
+  title: 'AI Success Stories 2025 | Zion Tech Group',
+  description: 'Discover how leading organizations achieved extraordinary results with AI implementation. Real case studies, measurable outcomes, and proven strategies.',
+  keywords: 'AI success stories, AI case studies, AI implementation, business transformation, AI ROI, enterprise AI',
+  openGraph: {
+    title: 'AI Success Stories 2025',
+    description: 'Real-world AI implementations delivering extraordinary business results',
+    type: 'website',
+  },
+};
+
+const AISuccessStories = () => {
+  const featuredStories = [
     {
-      company: "TechCorp Global",
+      company: "Global Manufacturing Corp",
       industry: "Manufacturing",
-      challenge: "Manual quality control processes causing 15% defect rate",
-      solution: "AI-powered computer vision system for real-time quality inspection",
+      challenge: "Manual quality control processes causing 15% defect rate and $2M annual losses",
+      solution: "AI-powered computer vision quality inspection system",
       results: {
-        roi: "2,500%",
-        efficiency: "95%",
-        costReduction: "60%",
-        accuracy: "99.8%"
+        defectRate: "95% reduction",
+        costSavings: "$8.5M annually",
+        efficiency: "300% improvement",
+        timeline: "4 months"
       },
-      timeline: "6 months",
-      testimonial: "The AI implementation transformed our entire production line. We've never seen such dramatic improvements in such a short time.",
-      author: "Sarah Johnson, CTO",
-      featured: true
+      technologies: ["Computer Vision", "Machine Learning", "IoT Sensors", "Edge Computing"],
+      testimonial: "The AI quality control system transformed our production line. We've seen unprecedented improvements in both quality and efficiency.",
+      author: "Sarah Chen, VP of Operations",
+      image: "/api/placeholder/600/400",
+      icon: Target
     },
     {
-      company: "FinanceFlow Inc",
-      industry: "Financial Services",
-      challenge: "Manual fraud detection missing 8% of fraudulent transactions",
-      solution: "Advanced AI fraud detection system with real-time analysis",
-      results: {
-        roi: "1,800%",
-        efficiency: "90%",
-        costReduction: "45%",
-        accuracy: "99.5%"
-      },
-      timeline: "4 months",
-      testimonial: "Our fraud detection accuracy improved dramatically while reducing false positives by 70%. The ROI was immediate.",
-      author: "Michael Chen, Head of Security",
-      featured: true
-    },
-    {
-      company: "HealthTech Solutions",
+      company: "Metro Health System",
       industry: "Healthcare",
-      challenge: "Manual patient data analysis taking 40 hours per week",
-      solution: "AI-powered medical data analysis and diagnostic assistance system",
+      challenge: "Diagnostic accuracy issues and long patient wait times affecting care quality",
+      solution: "AI-powered diagnostic assistant with predictive analytics",
       results: {
-        roi: "3,200%",
-        efficiency: "98%",
-        costReduction: "75%",
-        accuracy: "99.9%"
+        accuracy: "98% diagnostic accuracy",
+        waitTime: "60% reduction",
+        patientSatisfaction: "40% increase",
+        timeline: "6 months"
       },
-      timeline: "8 months",
-      testimonial: "The AI system not only saved us time but also improved diagnostic accuracy. It's been a game-changer for our practice.",
-      author: "Dr. Emily Rodriguez, Chief Medical Officer",
-      featured: false
+      technologies: ["Deep Learning", "Natural Language Processing", "Predictive Analytics", "Medical Imaging AI"],
+      testimonial: "Our AI diagnostic system has revolutionized patient care. We're diagnosing conditions faster and more accurately than ever before.",
+      author: "Dr. Michael Rodriguez, Chief Medical Officer",
+      image: "/api/placeholder/600/400",
+      icon: Brain
     },
     {
-      company: "RetailMax",
-      industry: "Retail",
-      challenge: "Inventory management causing 20% stockouts and overstock",
-      solution: "Predictive AI system for demand forecasting and inventory optimization",
+      company: "FinTech Innovations",
+      industry: "Financial Services",
+      challenge: "Fraud detection system missing 25% of fraudulent transactions",
+      solution: "Advanced AI fraud detection with real-time risk assessment",
       results: {
-        roi: "1,900%",
-        efficiency: "85%",
-        costReduction: "50%",
-        accuracy: "97%"
+        fraudDetection: "99.8% accuracy",
+        falsePositives: "80% reduction",
+        costSavings: "$12M annually",
+        timeline: "3 months"
       },
-      timeline: "5 months",
-      testimonial: "Our inventory turnover improved by 40% and we eliminated stockouts completely. The AI predictions are incredibly accurate.",
-      author: "David Kim, Operations Director",
-      featured: false
-    },
-    {
-      company: "LogiChain Pro",
-      industry: "Logistics",
-      challenge: "Route optimization causing 25% fuel waste and delays",
-      solution: "AI-powered route optimization and predictive maintenance system",
-      results: {
-        roi: "2,100%",
-        efficiency: "92%",
-        costReduction: "55%",
-        accuracy: "98%"
-      },
-      timeline: "7 months",
-      testimonial: "Fuel costs dropped by 55% and delivery times improved by 30%. The AI system pays for itself every month.",
-      author: "Lisa Wang, Fleet Manager",
-      featured: false
-    },
-    {
-      company: "EduTech Academy",
-      industry: "Education",
-      challenge: "Manual student performance tracking and personalized learning",
-      solution: "AI-powered learning analytics and personalized education platform",
-      results: {
-        roi: "2,800%",
-        efficiency: "88%",
-        costReduction: "65%",
-        accuracy: "96%"
-      },
-      timeline: "9 months",
-      testimonial: "Student engagement increased by 60% and learning outcomes improved significantly. The AI personalization is remarkable.",
-      author: "Professor James Wilson, Academic Director",
-      featured: false
+      technologies: ["Machine Learning", "Real-time Analytics", "Behavioral Analysis", "Blockchain AI"],
+      testimonial: "The AI fraud detection system has been a game-changer. We've virtually eliminated fraud while reducing false positives significantly.",
+      author: "Jennifer Park, Chief Risk Officer",
+      image: "/api/placeholder/600/400",
+      icon: Shield
     }
   ];
 
-  const stats = [
-    { label: "Average ROI", value: "2,400%", icon: TrendingUp },
-    { label: "Companies Transformed", value: "500+", icon: Users },
-    { label: "Total Savings", value: "$2.5B+", icon: DollarSign },
-    { label: "Success Rate", value: "99.2%", icon: Target }
+  const industryStories = [
+    {
+      industry: "Retail & E-commerce",
+      icon: Globe,
+      stories: [
+        {
+          company: "MegaRetail Chain",
+          challenge: "Inventory management inefficiencies causing $5M in lost sales",
+          solution: "AI demand forecasting and inventory optimization",
+          results: "35% reduction in stockouts, $8M revenue increase"
+        },
+        {
+          company: "Fashion Forward",
+          challenge: "Personalization at scale for 10M+ customers",
+          solution: "AI-powered recommendation engine",
+          results: "45% increase in conversion rate, 60% higher customer satisfaction"
+        }
+      ]
+    },
+    {
+      industry: "Transportation & Logistics",
+      icon: Network,
+      stories: [
+        {
+          company: "Global Logistics Co",
+          challenge: "Route optimization and fuel costs",
+          solution: "AI route optimization and predictive maintenance",
+          results: "25% fuel savings, 40% reduction in delivery times"
+        },
+        {
+          company: "Urban Transit Authority",
+          challenge: "Predictive maintenance for 500+ vehicles",
+          solution: "IoT sensors with AI predictive analytics",
+          results: "50% reduction in breakdowns, $3M maintenance savings"
+        }
+      ]
+    },
+    {
+      industry: "Energy & Utilities",
+      icon: Zap,
+      stories: [
+        {
+          company: "Green Energy Corp",
+          challenge: "Grid optimization and renewable energy integration",
+          solution: "AI smart grid management system",
+          results: "30% efficiency improvement, 20% cost reduction"
+        },
+        {
+          company: "Water Management District",
+          challenge: "Leak detection and water conservation",
+          solution: "AI-powered leak detection and water quality monitoring",
+          results: "40% reduction in water loss, 25% improvement in quality"
+        }
+      ]
+    }
+  ];
+
+  const metrics = [
+    { label: "Average ROI", value: "340%", icon: TrendingUp },
+    { label: "Implementation Time", value: "4.2 months", icon: Clock },
+    { label: "Success Rate", value: "98%", icon: CheckCircle },
+    { label: "Client Satisfaction", value: "4.9/5", icon: Star }
+  ];
+
+  const technologies = [
+    { name: "Machine Learning", count: "85%", icon: Brain },
+    { name: "Computer Vision", count: "72%", icon: Target },
+    { name: "Natural Language Processing", count: "68%", icon: Globe },
+    { name: "Predictive Analytics", count: "91%", icon: TrendingUp },
+    { name: "Edge AI", count: "45%", icon: Zap },
+    { name: "Quantum AI", count: "12%", icon: Database }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 text-center">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium mb-8">
-            <Award className="w-4 h-4 mr-2" />
-            AI Success Stories 2025
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Real
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"> Success Stories</span>
-            <br />
-            from AI Implementation
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover how leading companies across industries have achieved unprecedented results 
-            with our AI solutions. Real stories, real results, real transformation.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="#success-stories" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-            >
-              View Success Stories
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
-            >
-              Start Your Success Story
-            </Link>
+          <div className="text-center">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-500/30 mb-8">
+              <Award className="w-5 h-5 text-green-400 mr-2" />
+              <span className="text-green-300 font-medium">Success Stories 2025</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              AI Success
+              <span className="block bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                Stories
+              </span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover how leading organizations achieved extraordinary results with AI implementation. 
+              Real case studies, measurable outcomes, and proven strategies.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center">
+                View All Stories
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border border-green-500 text-green-300 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-300">
+                Share Your Story
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-4 bg-black/20">
+      {/* Key Metrics */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => {
-              const IconComponent = stat.icon;
-              return (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <div className="p-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full">
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                  </div>
-                  <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">{stat.value}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+            {metrics.map((metric, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500/20 rounded-full mb-4">
+                  <metric.icon className="w-8 h-8 text-green-400" />
                 </div>
-              );
-            })}
+                <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
+                <div className="text-gray-400">{metric.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Success Stories */}
-      <section id="success-stories" className="py-20 px-4">
+      {/* Featured Success Stories */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
-            Featured Success Stories
-          </h2>
-          
-          <div className="grid lg:grid-cols-2 gap-12">
-            {successStories.filter(story => story.featured).map((story, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex items-center justify-between mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Featured Success Stories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              In-depth case studies showcasing transformative AI implementations
+            </p>
+          </div>
+
+          <div className="space-y-16">
+            {featuredStories.map((story, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{story.company}</h3>
-                    <p className="text-gray-400">{story.industry}</p>
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                        <story.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-white">{story.company}</h3>
+                        <p className="text-green-300 font-medium">{story.industry}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-6">
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-300 mb-2">Challenge</h4>
+                        <p className="text-gray-400">{story.challenge}</p>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-300 mb-2">Solution</h4>
+                        <p className="text-gray-400">{story.solution}</p>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-300 mb-3">Technologies Used</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {story.technologies.map((tech, techIndex) => (
+                            <span key={techIndex} className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center text-yellow-400">
-                    <Star className="w-5 h-5 fill-current" />
-                    <Star className="w-5 h-5 fill-current" />
-                    <Star className="w-5 h-5 fill-current" />
-                    <Star className="w-5 h-5 fill-current" />
-                    <Star className="w-5 h-5 fill-current" />
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-2">Challenge:</h4>
-                  <p className="text-gray-300 mb-4">{story.challenge}</p>
                   
-                  <h4 className="text-lg font-semibold text-white mb-2">Solution:</h4>
-                  <p className="text-gray-300 mb-4">{story.solution}</p>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-yellow-400">{story.results.roi}</div>
-                    <div className="text-gray-300 text-sm">ROI</div>
+                  <div>
+                    <div className="bg-gradient-to-br from-green-500/10 to-blue-500/10 border border-green-500/20 rounded-xl p-6 mb-6">
+                      <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
+                      <div className="grid grid-cols-2 gap-4">
+                        {Object.entries(story.results).map(([key, value], resultIndex) => (
+                          <div key={resultIndex} className="text-center">
+                            <div className="text-2xl font-bold text-green-400 mb-1">{value}</div>
+                            <div className="text-sm text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                      <blockquote className="text-gray-300 italic mb-4">
+                        "{story.testimonial}"
+                      </blockquote>
+                      <cite className="text-green-300 font-medium">— {story.author}</cite>
+                    </div>
                   </div>
-                  <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-yellow-400">{story.results.efficiency}</div>
-                    <div className="text-gray-300 text-sm">Efficiency</div>
-                  </div>
-                  <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-yellow-400">{story.results.costReduction}</div>
-                    <div className="text-gray-300 text-sm">Cost Reduction</div>
-                  </div>
-                  <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-yellow-400">{story.results.accuracy}</div>
-                    <div className="text-gray-300 text-sm">Accuracy</div>
-                  </div>
-                </div>
-                
-                <blockquote className="border-l-4 border-purple-500 pl-4 mb-4">
-                  <p className="text-gray-300 italic">"{story.testimonial}"</p>
-                  <cite className="text-purple-400 font-medium">- {story.author}</cite>
-                </blockquote>
-                
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-400">
-                    Implementation: {story.timeline}
-                  </div>
-                  <CheckCircle className="w-5 h-5 text-green-400" />
                 </div>
               </div>
             ))}
@@ -239,45 +272,73 @@ export default function AISuccessStories2025() {
         </div>
       </section>
 
-      {/* All Success Stories */}
-      <section className="py-20 px-4 bg-black/20">
+      {/* Industry Success Stories */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
-            All Success Stories
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {successStories.map((story, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-white">{story.company}</h3>
-                  {story.featured && (
-                    <div className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-medium rounded-full">
-                      Featured
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Industry Success Stories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              AI transformations across different industries and sectors
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {industryStories.map((industry, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                    <industry.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">{industry.industry}</h3>
+                </div>
+                
+                <div className="space-y-6">
+                  {industry.stories.map((story, storyIndex) => (
+                    <div key={storyIndex} className="border-l-2 border-green-500/30 pl-4">
+                      <h4 className="text-lg font-semibold text-white mb-2">{story.company}</h4>
+                      <p className="text-gray-400 text-sm mb-2">{story.challenge}</p>
+                      <p className="text-green-300 text-sm font-medium mb-1">Solution: {story.solution}</p>
+                      <p className="text-blue-300 text-sm font-medium">Results: {story.results}</p>
                     </div>
-                  )}
+                  ))}
                 </div>
-                
-                <p className="text-gray-400 mb-4">{story.industry}</p>
-                
-                <div className="grid grid-cols-2 gap-3 mb-4">
-                  <div className="text-center">
-                    <div className="text-xl font-bold text-yellow-400">{story.results.roi}</div>
-                    <div className="text-gray-300 text-xs">ROI</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Adoption */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              AI Technology Adoption
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Most commonly used AI technologies in successful implementations
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {technologies.map((tech, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-3">
+                      <tech.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white">{tech.name}</h3>
                   </div>
-                  <div className="text-center">
-                    <div className="text-xl font-bold text-yellow-400">{story.results.efficiency}</div>
-                    <div className="text-gray-300 text-xs">Efficiency</div>
-                  </div>
+                  <span className="text-2xl font-bold text-green-400">{tech.count}</span>
                 </div>
-                
-                <blockquote className="text-gray-300 text-sm italic mb-4">
-                  "{story.testimonial.substring(0, 100)}..."
-                </blockquote>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-400 text-sm">{story.timeline}</span>
-                  <CheckCircle className="w-4 h-4 text-green-400" />
+                <div className="w-full bg-gray-700 rounded-full h-2">
+                  <div 
+                    className="bg-gradient-to-r from-green-500 to-blue-500 h-2 rounded-full transition-all duration-1000"
+                    style={{ width: tech.count }}
+                  ></div>
                 </div>
               </div>
             ))}
@@ -286,32 +347,28 @@ export default function AISuccessStories2025() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Write Your Success Story?
+            Ready to Create Your Success Story?
           </h2>
-          <p className="text-xl text-gray-200 mb-8">
-            Join hundreds of companies that have already transformed their business with our AI solutions. 
-            Let us help you achieve similar results.
+          <p className="text-xl text-gray-300 mb-8">
+            Join hundreds of organizations already achieving extraordinary results with AI
           </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-            >
-              Start Your Transformation
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link 
-              href="/ai-implementation-guide-2025" 
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
-            >
-              View Implementation Guide
-            </Link>
+            <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center">
+              Start Your AI Journey
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="px-8 py-4 border border-green-500 text-green-300 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-300">
+              Schedule Consultation
+            </button>
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default AISuccessStories;

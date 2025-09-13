@@ -1,293 +1,225 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react';
+import { Search, Filter, ArrowRight, Star, Clock, Users, TrendingUp, Brain, Target, Award, Zap, Globe } from 'lucide-react';
 
-export default function ContentDiscoveryWidget() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const [recommendations, setRecommendations] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+const ContentDiscoveryWidget = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const tags = [
-    { id: 'breakthrough', name: 'Breakthrough', color: 'from-red-500 to-pink-500' },
-    { id: 'roi', name: 'High ROI', color: 'from-green-500 to-emerald-500' },
-    { id: 'quantum', name: 'Quantum', color: 'from-indigo-500 to-purple-500' },
-    { id: 'automation', name: 'Automation', color: 'from-blue-500 to-cyan-500' },
-    { id: 'case-study', name: 'Case Study', color: 'from-orange-500 to-red-500' },
-    { id: 'implementation', name: 'Implementation', color: 'from-teal-500 to-green-500' },
-    { id: 'predictions', name: 'Predictions', color: 'from-purple-500 to-pink-500' },
-    { id: 'revolutionary', name: 'Revolutionary', color: 'from-yellow-500 to-orange-500' }
-  ];
-
-  const contentDatabase = [
+  const contentItems = [
     {
       id: 1,
-      title: "AI 2025 Ultimate Breakthrough Revolution",
-      description: "Revolutionary AI breakthrough delivering 10,000% ROI with 99.9% accuracy",
-      link: "/ai-2025-ultimate-breakthrough-revolution",
-      tags: ['breakthrough', 'roi', 'revolutionary'],
-      category: 'breakthrough',
-      icon: '🚀',
-      metrics: { roi: '10,000%', accuracy: '99.9%' }
+      title: "AI 2025-2026 Ultimate Showcase",
+      description: "Revolutionary AI technologies and breakthroughs for 2025-2026",
+      category: "showcase",
+      type: "Technology Showcase",
+      link: "/ai-2025-2026-ultimate-showcase",
+      views: "15.2k",
+      rating: 4.9,
+      duration: "10 min read",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500",
+      trending: true
     },
     {
       id: 2,
-      title: "Global Transformation Success Story",
-      description: "Fortune 500 company achieves unprecedented ROI through AI implementation",
-      link: "/case-studies/ai-2025-global-transformation-breakthrough",
-      tags: ['case-study', 'roi', 'breakthrough'],
-      category: 'case-studies',
-      icon: '🏆',
-      metrics: { roi: '10,000%', efficiency: '500%' }
+      title: "Interactive Learning Hub",
+      description: "Master AI through hands-on tutorials and comprehensive courses",
+      category: "learning",
+      type: "Learning Platform",
+      link: "/ai-interactive-learning-hub",
+      views: "8.7k",
+      rating: 4.8,
+      duration: "Interactive",
+      icon: Target,
+      color: "from-blue-500 to-cyan-500",
+      trending: false
     },
     {
       id: 3,
-      title: "Quantum-Neural Fusion Breakthrough",
-      description: "Revolutionary integration of quantum computing with neural networks",
-      link: "/blog/quantum-neural-fusion-2026",
-      tags: ['quantum', 'breakthrough', 'revolutionary'],
-      category: 'blog',
-      icon: '⚛️',
-      metrics: { speed: '10,000x', accuracy: '99.9%' }
+      title: "AI Success Stories 2025",
+      description: "Real case studies showing extraordinary business results",
+      category: "case-studies",
+      type: "Case Studies",
+      link: "/ai-success-stories-2025",
+      views: "12.3k",
+      rating: 4.9,
+      duration: "15 min read",
+      icon: Award,
+      color: "from-green-500 to-emerald-500",
+      trending: true
     },
     {
       id: 4,
-      title: "Revolutionary Implementation Guide",
-      description: "Complete step-by-step guide for AI 2025 breakthrough implementation",
-      link: "/resources/ai-2025-revolutionary-implementation-guide",
-      tags: ['implementation', 'roi', 'revolutionary'],
-      category: 'resources',
-      icon: '📚',
-      metrics: { phases: '4', success: '99%' }
+      title: "Quantum AI Revolution",
+      description: "Explore the intersection of quantum computing and AI",
+      category: "showcase",
+      type: "Technology Deep Dive",
+      link: "/quantum-ai-revolution",
+      views: "6.1k",
+      rating: 4.7,
+      duration: "12 min read",
+      icon: Zap,
+      color: "from-yellow-500 to-orange-500",
+      trending: false
     },
     {
       id: 5,
-      title: "Autonomous Manufacturing Revolution",
-      description: "8,500% ROI achieved through autonomous manufacturing systems",
-      link: "/case-studies/ai-2026-autonomous-manufacturing-revolution",
-      tags: ['automation', 'roi', 'case-study'],
-      category: 'case-studies',
-      icon: '🏭',
-      metrics: { roi: '8,500%', efficiency: '300%' }
+      title: "AI Implementation Guide",
+      description: "Step-by-step guide to implementing AI in your organization",
+      category: "learning",
+      type: "Implementation Guide",
+      link: "/ai-implementation-guide",
+      views: "9.8k",
+      rating: 4.6,
+      duration: "20 min read",
+      icon: Globe,
+      color: "from-indigo-500 to-purple-500",
+      trending: false
     },
     {
       id: 6,
-      title: "Future Technology Predictions",
-      description: "Comprehensive analysis of AI trends and future technology developments",
-      link: "/blog/ai-2026-future-predictions-breakthrough",
-      tags: ['predictions', 'revolutionary', 'breakthrough'],
-      category: 'blog',
-      icon: '🔮',
-      metrics: { probability: '95%', impact: 'Transformative' }
+      title: "Enterprise AI Transformation",
+      description: "How Fortune 500 companies are transforming with AI",
+      category: "case-studies",
+      type: "Enterprise Case Study",
+      link: "/enterprise-ai-transformation",
+      views: "7.4k",
+      rating: 4.8,
+      duration: "18 min read",
+      icon: TrendingUp,
+      color: "from-red-500 to-pink-500",
+      trending: true
     }
   ];
 
-  useEffect(() => {
-    if (searchQuery || selectedTags.length > 0) {
-      setIsLoading(true);
-      // Simulate search delay
-      setTimeout(() => {
-        const filtered = contentDatabase.filter(item => {
-          const matchesSearch = searchQuery === '' || 
-            item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.description.toLowerCase().includes(searchQuery.toLowerCase());
-          
-          const matchesTags = selectedTags.length === 0 || 
-            selectedTags.some(tag => item.tags.includes(tag));
-          
-          return matchesSearch && matchesTags;
-        });
-        
-        setRecommendations(filtered);
-        setIsLoading(false);
-      }, 500);
-    } else {
-      setRecommendations([]);
-    }
-  }, [searchQuery, selectedTags]);
+  const categories = [
+    { value: 'all', label: 'All Content', count: contentItems.length },
+    { value: 'showcase', label: 'Technology Showcase', count: contentItems.filter(item => item.category === 'showcase').length },
+    { value: 'learning', label: 'Learning & Tutorials', count: contentItems.filter(item => item.category === 'learning').length },
+    { value: 'case-studies', label: 'Case Studies', count: contentItems.filter(item => item.category === 'case-studies').length }
+  ];
 
-  const toggleTag = (tagId: string) => {
-    setSelectedTags(prev => 
-      prev.includes(tagId) 
-        ? prev.filter(id => id !== tagId)
-        : [...prev, tagId]
-    );
-  };
-
-  const clearFilters = () => {
-    setSearchQuery('');
-    setSelectedTags([]);
-    setRecommendations([]);
-  };
+  const filteredContent = contentItems.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         item.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-8">
-      <div className="text-center mb-8">
-        <h3 className="text-3xl font-bold text-gray-900 mb-4">
-          Content Discovery Widget
-        </h3>
-        <p className="text-gray-600">
-          Discover the perfect AI content for your needs using our intelligent search and recommendation system
-        </p>
+    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+      <div className="mb-6">
+        <h3 className="text-2xl font-bold text-white mb-2">Discover AI Content</h3>
+        <p className="text-gray-300">Find the perfect content for your AI journey</p>
       </div>
 
-      {/* Search Bar */}
-      <div className="mb-8">
+      {/* Search and Filter */}
+      <div className="mb-6 space-y-4">
         <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
           <input
             type="text"
-            placeholder="Search for AI content, breakthroughs, case studies..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-6 py-4 pr-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+            placeholder="Search content..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
           />
-          <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-            <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </div>
         </div>
-      </div>
 
-      {/* Tags Filter */}
-      <div className="mb-8">
-        <h4 className="text-lg font-semibold text-gray-900 mb-4">Filter by Tags</h4>
-        <div className="flex flex-wrap gap-3">
-          {tags.map((tag) => (
+        <div className="flex flex-wrap gap-2">
+          {categories.map((category) => (
             <button
-              key={tag.id}
-              onClick={() => toggleTag(tag.id)}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                selectedTags.includes(tag.id)
-                  ? `bg-gradient-to-r ${tag.color} text-white shadow-lg transform scale-105`
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              key={category.value}
+              onClick={() => setSelectedCategory(category.value)}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                selectedCategory === category.value
+                  ? 'bg-purple-500 text-white'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
               }`}
             >
-              {tag.name}
+              {category.label} ({category.count})
             </button>
           ))}
         </div>
-        {(searchQuery || selectedTags.length > 0) && (
-          <button
-            onClick={clearFilters}
-            className="mt-4 text-blue-600 hover:text-blue-800 font-semibold"
-          >
-            Clear all filters
-          </button>
-        )}
       </div>
 
-      {/* Results */}
-      <div className="min-h-[400px]">
-        {isLoading ? (
-          <div className="flex items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-            <span className="ml-4 text-gray-600">Searching content...</span>
-          </div>
-        ) : recommendations.length > 0 ? (
-          <div className="space-y-6">
-            <div className="flex items-center justify-between">
-              <h4 className="text-lg font-semibold text-gray-900">
-                Found {recommendations.length} content items
-              </h4>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {recommendations.map((item) => (
-                <div
-                  key={item.id}
-                  className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="text-3xl">{item.icon}</div>
-                    <div className="flex-1">
-                      <h5 className="text-lg font-semibold text-gray-900 mb-2">
-                        {item.title}
-                      </h5>
-                      <p className="text-gray-600 mb-4 line-clamp-2">
-                        {item.description}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex space-x-2">
-                          {item.tags.slice(0, 2).map((tag) => (
-                            <span
-                              key={tag}
-                              className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
-                            >
-                              {tags.find(t => t.id === tag)?.name}
-                            </span>
-                          ))}
-                        </div>
-                        <Link
-                          href={item.link}
-                          className="text-blue-600 hover:text-blue-800 font-semibold"
-                        >
-                          Read More →
-                        </Link>
-                      </div>
+      {/* Content Grid */}
+      <div className="space-y-4 max-h-96 overflow-y-auto">
+        {filteredContent.map((item) => (
+          <div key={item.id} className="group bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-all duration-300">
+            <div className="flex items-start space-x-4">
+              <div className={`w-10 h-10 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                <item.icon className="w-5 h-5 text-white" />
+              </div>
+              
+              <div className="flex-1 min-w-0">
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <h4 className="text-lg font-semibold text-white group-hover:text-purple-300 transition-colors duration-300">
+                      {item.title}
+                    </h4>
+                    <p className="text-sm text-purple-300 font-medium">{item.type}</p>
+                  </div>
+                  {item.trending && (
+                    <span className="px-2 py-1 bg-red-500/20 text-red-300 rounded-full text-xs font-semibold flex items-center">
+                      <TrendingUp className="w-3 h-3 mr-1" />
+                      Trending
+                    </span>
+                  )}
+                </div>
+                
+                <p className="text-gray-300 text-sm mb-3 line-clamp-2">
+                  {item.description}
+                </p>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4 text-sm text-gray-400">
+                    <div className="flex items-center">
+                      <Users className="w-4 h-4 mr-1" />
+                      <span>{item.views}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Star className="w-4 h-4 mr-1 text-yellow-400" />
+                      <span>{item.rating}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      <span>{item.duration}</span>
                     </div>
                   </div>
+                  
+                  <a
+                    href={item.link}
+                    className="inline-flex items-center px-3 py-1.5 bg-purple-500 text-white text-sm font-semibold rounded-lg hover:bg-purple-600 transition-all duration-300 group-hover:scale-105"
+                  >
+                    View
+                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                  </a>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
-        ) : searchQuery || selectedTags.length > 0 ? (
-          <div className="text-center py-12">
-            <div className="text-6xl mb-4">🔍</div>
-            <h4 className="text-xl font-semibold text-gray-900 mb-2">No content found</h4>
-            <p className="text-gray-600 mb-4">
-              Try adjusting your search terms or filters
-            </p>
-            <button
-              onClick={clearFilters}
-              className="text-blue-600 hover:text-blue-800 font-semibold"
-            >
-              Clear filters and start over
-            </button>
-          </div>
-        ) : (
-          <div className="text-center py-12">
-            <div className="text-6xl mb-4">🌟</div>
-            <h4 className="text-xl font-semibold text-gray-900 mb-2">Discover Amazing Content</h4>
-            <p className="text-gray-600">
-              Use the search bar or tags above to find the perfect AI content for your needs
-            </p>
-          </div>
-        )}
+        ))}
       </div>
 
-      {/* Quick Access */}
-      <div className="mt-8 pt-8 border-t border-gray-200">
-        <h4 className="text-lg font-semibold text-gray-900 mb-4">Quick Access</h4>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <Link
-            href="/ai-2025-ultimate-breakthrough-revolution"
-            className="bg-gradient-to-r from-red-50 to-pink-50 border border-red-200 rounded-lg p-4 text-center hover:shadow-md transition-shadow duration-300"
-          >
-            <div className="text-2xl mb-2">🚀</div>
-            <div className="text-sm font-semibold text-gray-900">Breakthrough</div>
-          </Link>
-          <Link
-            href="/case-studies"
-            className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-lg p-4 text-center hover:shadow-md transition-shadow duration-300"
-          >
-            <div className="text-2xl mb-2">🏆</div>
-            <div className="text-sm font-semibold text-gray-900">Case Studies</div>
-          </Link>
-          <Link
-            href="/blog"
-            className="bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 rounded-lg p-4 text-center hover:shadow-md transition-shadow duration-300"
-          >
-            <div className="text-2xl mb-2">📝</div>
-            <div className="text-sm font-semibold text-gray-900">Blog Posts</div>
-          </Link>
-          <Link
-            href="/resources"
-            className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-4 text-center hover:shadow-md transition-shadow duration-300"
-          >
-            <div className="text-2xl mb-2">📚</div>
-            <div className="text-sm font-semibold text-gray-900">Resources</div>
-          </Link>
+      {filteredContent.length === 0 && (
+        <div className="text-center py-8">
+          <Search className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+          <p className="text-gray-400">No content found matching your criteria</p>
         </div>
+      )}
+
+      <div className="mt-6 text-center">
+        <a
+          href="/content-showcase"
+          className="inline-flex items-center px-6 py-3 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
+        >
+          View All Content
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </a>
       </div>
     </div>
   );
-}
+};
+
+export default ContentDiscoveryWidget;
