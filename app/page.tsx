@@ -24,6 +24,18 @@ import UltimateContentShowcase2028PromotionBanner from '../components/UltimateCo
 import BusinessTransformation2028Showcase from '../components/BusinessTransformation2028Showcase';
 import BusinessTransformation2028PromotionBanner from '../components/BusinessTransformation2028PromotionBanner';
 
+// Import new 2029 components
+import UltimateContentShowcase2029 from '../components/UltimateContentShowcase2029';
+import UltimateContentShowcase2029PromotionBanner from '../components/UltimateContentShowcase2029PromotionBanner';
+
+// Import new 2030 quantum computing components
+import QuantumComputingBreakthrough2030 from '../components/QuantumComputingBreakthrough2030';
+import QuantumComputingBreakthrough2030PromotionBanner from '../components/QuantumComputingBreakthrough2030PromotionBanner';
+
+// Import new 2035 neural interface components
+import NeuralInterfaceRevolution2035 from '../components/NeuralInterfaceRevolution2035';
+import NeuralInterfaceRevolution2035PromotionBanner from '../components/NeuralInterfaceRevolution2035PromotionBanner';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -356,6 +368,15 @@ export default function HomePage() {
         {/* NEW 2025 INTERACTIVE TECH DEMO */}
         <InteractiveTechDemo2025 />
         
+        {/* NEW 2029 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
+        <UltimateContentShowcase2029PromotionBanner />
+
+        {/* NEW QUANTUM COMPUTING BREAKTHROUGH 2030 PROMOTION BANNER */}
+        <QuantumComputingBreakthrough2030PromotionBanner />
+
+        {/* NEW NEURAL INTERFACE REVOLUTION 2035 PROMOTION BANNER */}
+        <NeuralInterfaceRevolution2035PromotionBanner />
+
         {/* NEW 2028 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2028PromotionBanner />
         
@@ -3759,6 +3780,24 @@ export default function HomePage() {
 
       {/* NEW ULTIMATE CONTENT SHOWCASE 2028 */}
       <UltimateContentShowcase2028 />
+
+      {/* NEW ULTIMATE CONTENT SHOWCASE 2029 PROMOTION BANNER */}
+      <UltimateContentShowcase2029PromotionBanner />
+
+      {/* NEW ULTIMATE CONTENT SHOWCASE 2029 */}
+      <UltimateContentShowcase2029 />
+
+      {/* NEW QUANTUM COMPUTING BREAKTHROUGH 2030 PROMOTION BANNER */}
+      <QuantumComputingBreakthrough2030PromotionBanner />
+
+      {/* NEW QUANTUM COMPUTING BREAKTHROUGH 2030 */}
+      <QuantumComputingBreakthrough2030 />
+
+      {/* NEW NEURAL INTERFACE REVOLUTION 2035 PROMOTION BANNER */}
+      <NeuralInterfaceRevolution2035PromotionBanner />
+
+      {/* NEW NEURAL INTERFACE REVOLUTION 2035 */}
+      <NeuralInterfaceRevolution2035 />
 
       {/* NEW BUSINESS TRANSFORMATION 2028 PROMOTION BANNER */}
       <BusinessTransformation2028PromotionBanner />
