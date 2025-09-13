@@ -186,6 +186,12 @@ function Header() {
                 <Link href="/case-studies/ai-2025-global-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Global Transformation Breakthrough (10,000% ROI) (NEW)
                 </Link>
+                <Link href="/blog/ai-2025-advanced-automation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-500">
+                  🎯 Advanced Automation Mastery (2,400% ROI) (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-enterprise-automation-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 Global Enterprise Success ($180M Savings) (NEW)
+                </Link>
                 <Link href="/case-studies/ai-2025-revolutionary-breakthrough-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Revolutionary Breakthrough Success (2000% ROI)
                 </Link>

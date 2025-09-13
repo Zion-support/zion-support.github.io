@@ -1,145 +1,143 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import Link from 'next/link';
 
-const NewContentShowcase2025: React.FC = () => {
+export default function NewContentShowcase2025() {
   const newContent = [
     {
-      id: 1,
-      title: "AI 2025 Ultimate Breakthrough",
-      description: "Revolutionary neural architectures and quantum-enhanced processing delivering unprecedented performance gains.",
-      link: "/ai-2025-ultimate-breakthrough",
-      image: "🧠",
-      category: "AI Breakthrough",
-      metrics: "10,000x Faster, 99.9% Accuracy",
-      gradient: "from-blue-600 to-purple-600"
+      title: "AI 2025 Advanced Automation Mastery",
+      description: "Complete implementation guide with proven methodologies for achieving 2,400% ROI",
+      type: "Implementation Guide",
+      category: "AI Automation",
+      href: "/blog/ai-2025-advanced-automation-mastery",
+      badge: "BREAKTHROUGH",
+      badgeColor: "bg-red-500",
+      icon: "🎯",
+      metrics: "2,400% ROI"
     },
     {
-      id: 2,
-      title: "Quantum AI Fusion 2030",
-      description: "The convergence of quantum computing and artificial intelligence creating unprecedented computational capabilities.",
-      link: "/quantum-ai-fusion-2030",
-      image: "🌌",
+      title: "Global Enterprise Automation Success",
+      description: "Fortune 500 case study showing $180M annual savings and 95% efficiency gains",
+      type: "Case Study",
+      category: "Success Stories",
+      href: "/case-studies/ai-2025-global-enterprise-automation-success",
+      badge: "SUCCESS",
+      badgeColor: "bg-green-500",
+      icon: "🏆",
+      metrics: "$180M Savings"
+    },
+    {
+      title: "AI 2025 Quantum Computing Breakthroughs",
+      description: "Revolutionary quantum computing solutions delivering 15,000% ROI in pilot programs",
+      type: "Technology Guide",
       category: "Quantum Computing",
-      metrics: "Infinite Processing, 100% Security",
-      gradient: "from-cyan-600 to-purple-600"
+      href: "/blog/ai-2025-quantum-computing-breakthroughs",
+      badge: "REVOLUTIONARY",
+      badgeColor: "bg-purple-500",
+      icon: "⚛️",
+      metrics: "15,000% ROI"
     },
     {
-      id: 3,
-      title: "Autonomous Business Systems",
-      description: "Fully autonomous business operations with self-learning capabilities and 24/7 optimization.",
-      link: "/autonomous-business-systems-2025",
-      image: "🤖",
-      category: "Automation",
-      metrics: "24/7 Operation, 40% Cost Reduction",
-      gradient: "from-green-600 to-blue-600"
+      title: "Neural Interface Revolution 2025",
+      description: "Breakthrough neural interface technology achieving 99.7% accuracy in healthcare applications",
+      type: "Technology Guide",
+      category: "Neural Interfaces",
+      href: "/blog/ai-2025-neural-interface-revolution",
+      badge: "BREAKTHROUGH",
+      badgeColor: "bg-blue-500",
+      icon: "🧠",
+      metrics: "99.7% Accuracy"
     },
     {
-      id: 4,
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer interfaces enabling seamless human-AI collaboration and enhanced cognitive abilities.",
-      link: "/neural-interface-future-2035",
-      image: "🧬",
-      category: "Neural Technology",
-      metrics: "10x Cognitive Enhancement",
-      gradient: "from-pink-600 to-purple-600"
+      title: "Enterprise AI Transformation Blueprint",
+      description: "Step-by-step blueprint for transforming enterprise operations with AI automation",
+      type: "Implementation Guide",
+      category: "Enterprise AI",
+      href: "/resources/ai-2025-enterprise-transformation-blueprint",
+      badge: "ESSENTIAL",
+      badgeColor: "bg-indigo-500",
+      icon: "🏢",
+      metrics: "500% ROI"
     },
     {
-      id: 5,
-      title: "Space Technology Solutions",
-      description: "Advanced space technology applications for satellite networks, space exploration, and interplanetary communication.",
-      link: "/space-technology-solutions-2025",
-      image: "🚀",
-      category: "Space Tech",
-      metrics: "Global Coverage, 99.9% Uptime",
-      gradient: "from-orange-600 to-red-600"
-    },
-    {
-      id: 6,
-      title: "Enterprise AI Transformation",
-      description: "Comprehensive AI transformation solutions for large enterprises with custom implementation and support.",
-      link: "/enterprise-ai-transformation-2025",
-      image: "🏢",
-      category: "Enterprise",
-      metrics: "5,000% ROI, 90% Efficiency",
-      gradient: "from-indigo-600 to-purple-600"
+      title: "AI 2025 ROI Calculator Pro",
+      description: "Advanced ROI calculator with predictive analytics for AI implementation projects",
+      type: "Tool",
+      category: "ROI Analysis",
+      href: "/tools/ai-2025-roi-calculator-pro",
+      badge: "NEW",
+      badgeColor: "bg-yellow-500",
+      icon: "🧮",
+      metrics: "Predictive Analytics"
     }
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            New Content & Breakthrough Solutions
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-6 py-2 mb-4">
+            <span className="text-sm font-medium">🚀 NEW CONTENT JUST RELEASED</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Revolutionary AI Content for 2025
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the latest revolutionary technologies and breakthrough solutions transforming industries worldwide
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover our latest breakthrough content featuring proven strategies, real case studies, 
+            and implementation guides that are transforming businesses worldwide.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {newContent.map((content, index) => (
-            <motion.div
-              key={content.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group"
-            >
-              <Link to={content.link}>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 transform hover:scale-105">
-                  <div className="flex items-center mb-4">
-                    <div className="text-4xl mr-4">{content.image}</div>
-                    <div className="flex-1">
-                      <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 text-sm font-semibold rounded-full mb-2">
-                        {content.category}
-                      </div>
-                      <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
-                        {content.title}
-                      </h3>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {content.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-400">
-                      {content.metrics}
-                    </div>
-                    <div className={`bg-gradient-to-r ${content.gradient} text-white px-4 py-2 rounded-lg text-sm font-semibold group-hover:scale-105 transition-transform`}>
-                      Explore →
-                    </div>
-                  </div>
+            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden">
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-3xl">{content.icon}</div>
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${content.badgeColor}`}>
+                    {content.badge}
+                  </span>
                 </div>
-              </Link>
-            </motion.div>
+                
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {content.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-4 text-sm">
+                  {content.description}
+                </p>
+                
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm text-gray-500">{content.type}</span>
+                  <span className="text-sm font-medium text-blue-600">{content.metrics}</span>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded">
+                    {content.category}
+                  </span>
+                  <Link
+                    href={content.href}
+                    className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors"
+                  >
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-12"
-        >
+        <div className="text-center mt-12">
           <Link
-            to="/content-showcase"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+            href="/content-showcase"
+            className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
-            View All Content
+            <span className="mr-2">📚</span>
+            Explore All Content
+            <span className="ml-2">→</span>
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
-};
-
-export default NewContentShowcase2025;
+}
