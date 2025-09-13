@@ -57,7 +57,6 @@ import InteractiveContentDiscovery from '../components/InteractiveContentDiscove
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
-import AI2025UltimateBreakthroughContentShowcase from '../components/AI2025UltimateBreakthroughContentShowcase';
 import AI2026_2030FuturePredictionsPromotionBanner from '../components/AI2026_2030FuturePredictionsPromotionBanner';
 import QuantumComputingAdvancedPromotionBanner from '../components/QuantumComputingAdvancedPromotionBanner';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
@@ -73,16 +72,8 @@ import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
 import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
 import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
-// New Revolutionary Tech Components
-import NewYear2025PromotionBanner from '../src/components/NewYear2025PromotionBanner';
-import RevolutionaryTechShowcase from '../src/components/RevolutionaryTechShowcase';
-import InteractiveServiceSelector from '../src/components/InteractiveServiceSelector';
-import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
-import EnhancedContentDiscovery2025 from '../components/EnhancedContentDiscovery2025';
-import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
-import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
-import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
-import AI2026UltimateContentDiscoveryWidget from '../components/AI2026UltimateContentDiscoveryWidget';
+import AI2025UltimateBreakthroughAnnouncementBanner from '../components/AI2025UltimateBreakthroughAnnouncementBanner';
+import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
@@ -121,7 +112,6 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import AI2025ContentPromotionBanner from '../components/AI2025ContentPromotionBanner';
 import AI2025ContentShowcase from '../components/AI2025ContentShowcase';
-import AI2025EnterpriseAutomationPromotionBanner from '../components/AI2025EnterpriseAutomationPromotionBanner';
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
 import AI2025NewContentShowcase from '../components/AI2025NewContentShowcase';
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
@@ -249,6 +239,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER - NEWEST CONTENT */}
+        <AI2025UltimateBreakthroughAnnouncementBanner />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 - NEWEST CONTENT */}
+        <UltimateContentDiscoveryWidget2025 />
+        
         {/* AI 2027 LATEST BREAKTHROUGHS PROMOTION BANNER - NEWEST CONTENT */}
         <AI2027LatestBreakthroughsPromotionBanner />
         
@@ -260,18 +256,6 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2025 BREAKTHROUGH BANNER */}
         <NewContent2025BreakthroughBanner />
-        
-        {/* AI 2025 ENTERPRISE AUTOMATION PROMOTION BANNER - NEW */}
-        <AI2025EnterpriseAutomationPromotionBanner />
-        
-        {/* AI 2025 ULTIMATE CONTENT REVOLUTION BANNER */}
-        <AI2025UltimateContentRevolutionBanner />
-        
-        {/* NEW CONTENT PROMOTION BANNER 2025 - LATEST CONTENT */}
-        <NewContentPromotionBanner2025 />
-        
-        {/* CONTENT DISCOVERY WIDGET 2025 - ENHANCED DISCOVERY */}
-        <ContentDiscoveryWidget2025 />
         
         {/* AI 2025 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
         <AI2025BreakthroughPromotionBanner />
@@ -293,9 +277,6 @@ export default function HomePage() {
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER - NEW */}
         <AI2025UltimateBreakthroughPromotionBanner />
-        
-        {/* AI 2025 ULTIMATE BREAKTHROUGH CONTENT SHOWCASE - NEW */}
-        <AI2025UltimateBreakthroughContentShowcase />
         
         {/* AI 2025 ULTIMATE CONTENT HUB BANNER - NEW */}
         <AI2025UltimateContentHubBanner />
@@ -3519,15 +3500,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* NEW YEAR 2025 PROMOTION BANNER - REVOLUTIONARY TECH */}
-      <NewYear2025PromotionBanner />
-
-      {/* REVOLUTIONARY TECHNOLOGY SHOWCASE */}
-      <RevolutionaryTechShowcase />
-
-      {/* INTERACTIVE SERVICE SELECTOR */}
-      <InteractiveServiceSelector />
     </div>
     </EnhancedErrorBoundary>
   );
