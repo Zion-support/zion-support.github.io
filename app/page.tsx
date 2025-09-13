@@ -213,6 +213,12 @@ import InteractiveContentDiscovery2027 from '../components/InteractiveContentDis
 import SuccessStoriesShowcase2027 from '../components/SuccessStoriesShowcase2027';
 import UltimateContentPromotionBanner2027 from '../components/UltimateContentPromotionBanner2027';
 import DynamicContentCarousel2027 from '../components/DynamicContentCarousel2027';
+
+// New Ultimate Breakthrough Content Components
+import AI2025_2030UltimateBreakthroughContentBanner from '../components/AI2025_2030UltimateBreakthroughContentBanner';
+import AI2025_2030UltimateBreakthroughContentShowcase from '../components/AI2025_2030UltimateBreakthroughContentShowcase';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import QuantumComputingBreakthroughShowcase2025 from '../components/QuantumComputingBreakthroughShowcase2025';
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -265,6 +271,26 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </section>
+
+              {/* AI 2025-2030 Ultimate Breakthrough Content Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025_2030UltimateBreakthroughContentBanner />
+              </Suspense>
+
+              {/* AI 2025-2030 Ultimate Breakthrough Content Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025_2030UltimateBreakthroughContentShowcase />
+              </Suspense>
+
+              {/* Interactive Content Discovery Widget 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscoveryWidget2025 />
+              </Suspense>
+
+              {/* Quantum Computing Breakthrough Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputingBreakthroughShowcase2025 />
+              </Suspense>
 
               {/* AI 2025 Ultimate Breakthrough Content Banner */}
               <Suspense fallback={<LoadingSpinner />}>
