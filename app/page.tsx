@@ -23,6 +23,11 @@ const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../compo
 import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
 import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2025GlobalTransformation15000ROIPromotionBanner';
 
+// New content promotion components
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import NewContentCarousel from '../components/NewContentCarousel';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -34,6 +39,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTION BANNER */}
+        <NewContentPromotionBanner />
+        
         {/* NEW: AI 2025 ULTIMATE TRENDS BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateTrendsBreakthroughPromotionBanner />
         
@@ -48,6 +56,16 @@ export default function HomePage() {
         
         {/* AI 2026 CONTENT SHOWCASE */}
         <AI2026ContentShowcase />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <div className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <InteractiveContentDiscoveryWidget />
+          </div>
+        </div>
+        
+        {/* NEW CONTENT CAROUSEL */}
+        <NewContentCarousel />
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
