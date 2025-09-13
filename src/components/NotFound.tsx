@@ -7,4 +7,3 @@ export function App() {
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3

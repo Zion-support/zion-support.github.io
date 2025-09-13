@@ -3,18 +3,15 @@ import { Link } from 'react-router-dom';
 import {
   Users,
   Award,
-  Globe,
-  Heart,
-  Zap,
-  Shield,
-  ArrowRight,
-  Brain,
-  Star,
+import { motion } from 'framer-motion';
+import { 
   TrendingUp,
   CheckCircle,
   Target,
   Clock
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO';
 
 export default function About() {
   const companyStats = [
@@ -72,7 +69,8 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+      <SEO 
+
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4">
