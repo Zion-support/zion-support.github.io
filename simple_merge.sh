@@ -1,44 +1,79 @@
 #!/bin/bash
 
-# Simple merge script to handle the current situation
 echo "🚀 Starting simple merge process..."
 
-# Make scripts executable
-chmod +x resolve_merge_conflicts.sh
-chmod +x merge_prs_script.sh
-
-# Try the simple approach first
-echo "📍 Current directory: $(pwd)"
-echo "📍 Current branch: $(git branch --show-current 2>/dev/null || echo 'unknown')"
-
-# Check if we have uncommitted changes
-if git diff --quiet && git diff --cached --quiet; then
-    echo "✅ Working directory is clean"
-else
-    echo "⚠️  Working directory has uncommitted changes"
-    echo "📝 Staging all changes..."
-    git add .
-    git commit -m "Auto-commit before merge - New content and advertising components"
+# Check if we're in a git repository
+if [ ! -d ".git" ]; then
+    echo "❌ Not in a git repository. Exiting."
+    exit 1
 fi
 
-# Try to switch to main and merge
-echo "🔄 Switching to main branch..."
-git checkout main 2>/dev/null || echo "Already on main"
+# Fetch latest changes
+echo "📥 Fetching latest changes..."
+git fetch origin --all
 
-echo "📥 Pulling latest changes..."
-git pull origin main 2>/dev/null || echo "Pull failed, continuing..."
+# Check current branch
+current_branch=$(git branch --show-current)
+echo "📍 Current branch: $current_branch"
 
+# Switch to main if not already there
+if [ "$current_branch" != "main" ]; then
+    echo "🔄 Switching to main branch..."
+    git checkout main
+    git pull origin main
+fi
+
+# Try to merge our feature branch
 echo "🔄 Attempting to merge feature branch..."
-git merge cursor/create-and-deploy-new-content-9e4d 2>/dev/null || {
-    echo "⚠️  Merge conflicts detected - resolving automatically"
+if git merge cursor/create-and-deploy-new-content-1c73 --no-ff -m "Merge: Add revolutionary AI breakthrough content and enhanced frontend advertising"; then
+    echo "✅ Successfully merged feature branch!"
     
-    # Auto-resolve conflicts by keeping our version
-    git checkout --ours . 2>/dev/null || true
-    git add . 2>/dev/null || true
-    git commit -m "Merge cursor/create-and-deploy-new-content-9e4d into main - Conflicts resolved" 2>/dev/null || true
-}
+    # Push changes
+    echo "📤 Pushing changes to remote..."
+    if git push origin main; then
+        echo "✅ Successfully pushed changes to remote!"
+        echo "🎉 Merge completed successfully!"
+    else
+        echo "❌ Failed to push changes to remote"
+        exit 1
+    fi
+else
+    echo "⚠️  Merge conflict detected. Attempting resolution..."
+    
+    # Check for conflicted files
+    conflicted_files=$(git diff --name-only --diff-filter=U)
+    echo "📄 Conflicted files: $conflicted_files"
+    
+    # Try to resolve by taking our version for key files
+    for file in $conflicted_files; do
+        echo "🔧 Resolving conflicts in $file..."
+        if [[ "$file" == "public/index.html" || "$file" == "tailwind.config.ts" ]]; then
+            git checkout --ours "$file"
+        else
+            git checkout --theirs "$file"
+        fi
+    done
+    
+    # Add resolved files
+    git add .
+    
+    # Complete the merge
+    if git commit --no-edit; then
+        echo "✅ Successfully resolved conflicts and completed merge!"
+        
+        # Push changes
+        echo "📤 Pushing changes to remote..."
+        if git push origin main; then
+            echo "✅ Successfully pushed changes to remote!"
+            echo "🎉 Merge completed successfully!"
+        else
+            echo "❌ Failed to push changes to remote"
+            exit 1
+        fi
+    else
+        echo "❌ Failed to complete merge"
+        exit 1
+    fi
+fi
 
-echo "📤 Pushing changes..."
-git push origin main 2>/dev/null || echo "Push failed, but merge completed locally"
-
-echo "✅ Simple merge process completed!"
+echo "🏁 Merge process completed!"
