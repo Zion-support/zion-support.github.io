@@ -5,6 +5,8 @@ import { ServicesShowcase } from "@/components/home/ServicesShowcase";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import AutomationMasteryPromotionBanner from '@/components/AutomationMasteryPromotionBanner';
+import NewContentShowcaseWidget from '@/components/NewContentShowcaseWidget';
 import { 
   ArrowRight, 
   Brain, 
@@ -218,6 +220,20 @@ export default function Home() {
 
       {/* Services Showcase */}
       <ServicesShowcase />
+
+      {/* New Content Promotion */}
+      <section className="py-16 bg-gradient-to-br from-slate-900 to-slate-800">
+        <div className="container mx-auto px-4">
+          <AutomationMasteryPromotionBanner />
+        </div>
+      </section>
+
+      {/* Content Showcase Widget */}
+      <section className="py-16 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <NewContentShowcaseWidget />
+        </div>
+      </section>
 
       {/* Why Choose Zion Tech Group */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
