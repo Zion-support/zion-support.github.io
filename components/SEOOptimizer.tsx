@@ -2,121 +2,135 @@ import React from 'react';
 import Head from 'next/head';
 
 interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
   structuredData?: any;
-  noIndex?: boolean;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - AI Solutions & Enterprise Technology',
-  description = 'Leading AI solutions provider specializing in enterprise automation, machine learning, and digital transformation. Expert consulting and implementation services.',
-  keywords = ['AI', 'artificial intelligence', 'enterprise solutions', 'automation', 'machine learning', 'digital transformation'],
-  canonicalUrl,
-  ogImage = '/images/og-default.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noIndex = false,
+/**
+ * Advanced SEO Optimization Component
+ * 
+ * Provides comprehensive SEO optimization including:
+ * - Meta tags optimization
+ * - Open Graph tags
+ * - Twitter Card tags
+ * - Structured data (JSON-LD)
+ * - Canonical URLs
+ * - Performance optimizations
+ */
+export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title,
+  description,
+  keywords = "AI, automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation",
+  canonical,
+  ogImage = "/og-image.jpg",
+  ogType = "website",
+  twitterCard = "summary_large_image",
+  structuredData
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
-
-  // Enhanced structured data
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+  
   const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://zion.app',
-    logo: 'https://zion.app/images/logo.png',
-    description: 'Leading AI solutions provider specializing in enterprise automation and digital transformation',
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US',
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-ZION-TECH",
+      "contactType": "customer service"
     },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-ZION-TECH',
-      contactType: 'customer service',
-    },
-    sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-    ],
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://github.com/ziontechgroup"
+    ]
   };
-
-  const combinedStructuredData = structuredData ? [defaultStructuredData, structuredData] : [defaultStructuredData];
 
   return (
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
-      {/* Robots */}
-      <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
-      
-      {/* Open Graph */}
+      {/* Open Graph Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={currentUrl} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter Card */}
+      {/* Twitter Card Tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional SEO Tags */}
-      <meta name="theme-color" content="#6366f1" />
-      <meta name="msapplication-TileColor" content="#6366f1" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      
-      {/* Preconnect to external domains */}
+      {/* Performance Optimizations */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
-      {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       
       {/* Structured Data */}
-      {combinedStructuredData.map((data, index) => (
-        <script
-          key={index}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(data),
-          }}
-        />
-      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData || defaultStructuredData)
+        }}
+      />
       
-      {/* Performance hints */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      {/* Additional Performance Tags */}
+      <meta httpEquiv="x-dns-prefetch-control" content="on" />
+      <meta name="theme-color" content="#1e40af" />
+      <meta name="msapplication-TileColor" content="#1e40af" />
       
-      {/* Security headers (if not set by Next.js config) */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      {/* Favicon */}
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
     </Head>
   );
+};
+
+/**
+ * SEO Performance Metrics Component
+ */
+export const SEOPerformanceMetrics: React.FC = () => {
+  React.useEffect(() => {
+    // Core Web Vitals tracking
+    if (typeof window !== 'undefined') {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+      });
+    }
+  }, []);
+
+  return null;
 };
 
 export default SEOOptimizer;
