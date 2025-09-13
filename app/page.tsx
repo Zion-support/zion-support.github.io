@@ -166,6 +166,8 @@ import NeuralConsensusRevolutionBanner from '../components/NeuralConsensusRevolu
 
 // Import new content promotion banners
 import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
+import AIToolsUtilities2025Banner from '../components/AIToolsUtilities2025Banner';
+import RevolutionaryContentShowcase2025Banner from '../components/RevolutionaryContentShowcase2025Banner';
 
 // Import new 2026 content components
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
@@ -287,6 +289,15 @@ export default function HomePage() {
         
         {/* NEW REVOLUTIONARY CONTENT SHOWCASE BANNER */}
         <NewContent2025RevolutionaryShowcaseBanner />
+        
+        {/* AI 2025 ULTIMATE CONTENT REVOLUTION BANNER */}
+        <AI2025UltimateContentRevolutionBanner />
+        
+        {/* AI TOOLS & UTILITIES 2025 BANNER */}
+        <AIToolsUtilities2025Banner />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2025 BANNER */}
+        <RevolutionaryContentShowcase2025Banner />
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2025UltimateBreakthroughAnnouncementBanner />
