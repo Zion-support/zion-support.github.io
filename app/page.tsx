@@ -136,6 +136,7 @@ import NeuralInterfacePromotionBanner2026 from '../components/NeuralInterfacePro
 import NeuralInterfaceContentShowcase2026 from '../components/NeuralInterfaceContentShowcase2026';
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import NewContent2025RevolutionaryShowcase from '../components/NewContent2025RevolutionaryShowcase';
+import NewContentPromotion2025 from '../src/components/NewContentPromotion2025';
 
 // New 2026 Content Components
 import AI2026BreakthroughPromotionBanner from '../components/AI2026BreakthroughPromotionBanner';
@@ -300,6 +301,9 @@ export default function HomePage() {
         
         {/* AI 2025 BREAKTHROUGH CONTENT SHOWCASE - NEWEST CONTENT */}
         <AI2025BreakthroughContentShowcase />
+        
+        {/* NEW CONTENT PROMOTION 2025 - REVOLUTIONARY AI CONTENT */}
+        <NewContentPromotion2025 />
         
         {/* AI 2035 BREAKTHROUGH PROMOTION BANNER - NEWEST CONTENT */}
         <AI2035BreakthroughPromotionBanner />
