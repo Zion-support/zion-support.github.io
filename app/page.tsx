@@ -26,6 +26,12 @@ import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025Ultim
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
 
+// Future Tech Promotion Components
+import AI2035SingularityPromotionBanner from '../components/AI2035SingularityPromotionBanner';
+import QuantumAIFusionPromotionBanner from '../components/QuantumAIFusionPromotionBanner';
+import NeuralInterfaceRevolutionPromotionBanner from '../components/NeuralInterfaceRevolutionPromotionBanner';
+import FutureTechContentDiscoveryWidget from '../components/FutureTechContentDiscoveryWidget';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -37,6 +43,18 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2035 SINGULARITY PROMOTION BANNER */}
+        <AI2035SingularityPromotionBanner />
+        
+        {/* QUANTUM AI FUSION 2030 PROMOTION BANNER */}
+        <QuantumAIFusionPromotionBanner />
+        
+        {/* NEURAL INTERFACE REVOLUTION 2035 PROMOTION BANNER */}
+        <NeuralInterfaceRevolutionPromotionBanner />
+        
+        {/* FUTURE TECH CONTENT DISCOVERY WIDGET */}
+        <FutureTechContentDiscoveryWidget />
+        
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
         
