@@ -227,6 +227,14 @@ import PerformanceMetrics from '../components/PerformanceMetrics';
 // UI Components
 import TechnologyStack from '../components/TechnologyStack';
 
+// New 2025 Content Showcase Components
+import AI2025BreakthroughContentShowcase from '../components/AI2025BreakthroughContentShowcase';
+import QuantumComputingSolutions2025Showcase from '../components/QuantumComputingSolutions2025Showcase';
+import AutomationSolutions2025Showcase from '../components/AutomationSolutions2025Showcase';
+import SuccessStories2025Showcase from '../components/SuccessStories2025Showcase';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+
 // Lazy loaded components for performance
 const LazyAdvancedComponents = lazy(() => import('../components/LazyAdvancedComponents'));
 
@@ -301,6 +309,11 @@ const HomePage: React.FC = () => {
               {/* Interactive Content Discovery Widget 2025 */}
               <Suspense fallback={<LoadingSpinner />}>
                 <InteractiveContentDiscoveryWidget2025 />
+              </Suspense>
+
+              {/* New Content 2025 Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewContent2025PromotionBanner />
               </Suspense>
 
               {/* New Content 2025 Promotion Banner */}
@@ -945,6 +958,27 @@ const HomePage: React.FC = () => {
               {/* Comprehensive Content Discovery 2025 */}
               <Suspense fallback={<LoadingSpinner />}>
                 <ComprehensiveContentDiscovery2025 />
+              </Suspense>
+
+              {/* New 2025 Content Showcases */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025BreakthroughContentShowcase />
+              </Suspense>
+
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputingSolutions2025Showcase />
+              </Suspense>
+
+              <Suspense fallback={<LoadingSpinner />}>
+                <AutomationSolutions2025Showcase />
+              </Suspense>
+
+              <Suspense fallback={<LoadingSpinner />}>
+                <SuccessStories2025Showcase />
+              </Suspense>
+
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscovery2025 />
               </Suspense>
 
               {/* Lazy loaded advanced components */}
