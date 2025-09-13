@@ -31,6 +31,7 @@ import NewContentPromotionBanner2026 from '../components/NewContentPromotionBann
 
 // New 2025 content promotion components
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import RevolutionaryTechBanner2025 from '../components/RevolutionaryTechBanner2025';
 
 // New 2025 content showcase components
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
@@ -135,6 +136,13 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW REVOLUTIONARY TECH BANNER 2025 */}
+        <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <RevolutionaryTechBanner2025 />
+          </div>
+        </div>
+
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
