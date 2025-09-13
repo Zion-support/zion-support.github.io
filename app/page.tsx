@@ -72,6 +72,10 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
 
+// Import enhanced monitoring and management components
+import ContentManagementSystem from '../components/ContentManagementSystem';
+import UserFeedbackSystem from '../components/UserFeedbackSystem';
+
 // Import new content showcase and recommendation components
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
@@ -3235,6 +3239,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
+      {/* Enhanced Management and Feedback Components */}
+      <ContentManagementSystem />
+      <UserFeedbackSystem />
     </div>
   );
 }
