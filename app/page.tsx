@@ -38,6 +38,10 @@ import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026Quantu
 import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
 import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 
+// New 2035-2040 components
+import AI2035SingularityBreakthrough from '../components/AI2035SingularityBreakthrough';
+import AI2040OmniversalConsciousness from '../components/AI2040OmniversalConsciousness';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -84,6 +88,12 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2026 */}
         <UltimateContentDiscoveryWidget2026 />
+        
+        {/* AI 2035 SINGULARITY BREAKTHROUGH */}
+        <AI2035SingularityBreakthrough />
+        
+        {/* AI 2040 OMNIVERSAL CONSCIOUSNESS */}
+        <AI2040OmniversalConsciousness />
         
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
