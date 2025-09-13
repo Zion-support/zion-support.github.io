@@ -9,10 +9,8 @@
 [build.environment]
   # Set Node.js version
   NODE_VERSION = "20.18.0"
-  # Set Yarn version
-  YARN_VERSION = "1.22.22"
-  # Disable Yarn cache to avoid corruption issues
-  YARN_CACHE_FOLDER = ".yarn-cache"
+  # Set pnpm version
+  PNPM_VERSION = "8.15.0"
   # Set production environment
   NODE_ENV = "production"
   # Increase timeout for dependency installation
