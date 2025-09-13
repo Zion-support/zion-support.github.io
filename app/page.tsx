@@ -99,6 +99,12 @@ import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026Ultim
 import QuantumComputingBreakthrough2026PromotionBanner from '../components/QuantumComputingBreakthrough2026PromotionBanner';
 import AI2026EnterpriseTransformationPromotionBanner from '../components/AI2026EnterpriseTransformationPromotionBanner';
 
+// Import new content promotional banners
+import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
+import AI20262030FuturePredictionsBreakthroughBanner from '../components/AI20262030FuturePredictionsBreakthroughBanner';
+import QuantumComputingSolutions2025Banner from '../components/QuantumComputingSolutions2025Banner';
+import NewContentDiscoveryWidget2025 from '../components/NewContentDiscoveryWidget2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -111,6 +117,18 @@ export default function HomePage() {
       
       <MobileOptimizer>
         <div className='min-h-screen bg-white'>
+          {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
+          <AI2025UltimateBreakthroughRevolutionBanner />
+          
+          {/* NEW AI 2026-2030 FUTURE PREDICTIONS BREAKTHROUGH BANNER */}
+          <AI20262030FuturePredictionsBreakthroughBanner />
+          
+          {/* NEW QUANTUM COMPUTING SOLUTIONS 2025 BANNER */}
+          <QuantumComputingSolutions2025Banner />
+          
+          {/* NEW CONTENT DISCOVERY WIDGET 2025 */}
+          <NewContentDiscoveryWidget2025 />
+          
           {/* LATEST BREAKTHROUGH CONTENT PROMOTION BANNER */}
         <AI2025UltimateBreakthroughContentBanner />
         
