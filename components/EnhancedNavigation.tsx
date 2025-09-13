@@ -43,7 +43,9 @@ const EnhancedNavigation: React.FC = () => {
         { label: 'Neural Architecture Revolution', href: '/blog/ai-2025-neural-architecture-revolution', isNew: true, isHot: true },
         { label: 'Quantum Machine Learning', href: '/blog/ai-2025-quantum-machine-learning', isNew: true, isHot: true },
         { label: 'Fintech Transformation Success', href: '/case-studies/ai-2025-fintech-transformation-breakthrough', isNew: true, isHot: true },
-        { label: 'AI Implementation Master Guide 2026', href: '/resources/ai-implementation-master-guide-2026', isNew: true, isHot: true },
+        { label: 'AI Implementation Mastery Guide 2026', href: '/resources/ai-implementation-mastery-2026', isNew: true, isHot: true },
+        { label: 'Quantum-AI Breakthrough Case Study', href: '/case-studies/quantum-ai-breakthrough-enterprise-transformation', isNew: true, isHot: true },
+        { label: 'AI ROI Calculator 2026', href: '/tools/ai-roi-calculator-2026', isNew: true, isHot: true },
         { label: 'Blog Articles', href: '/blog', isNew: true },
         { label: 'Case Studies', href: '/case-studies', isNew: true },
         { label: 'Resources', href: '/resources', isNew: true },
@@ -64,31 +66,31 @@ const EnhancedNavigation: React.FC = () => {
 
   const featuredContent = [
     {
+      title: "AI Implementation Mastery Guide 2026",
+      description: "Complete roadmap to 15,000x performance improvements",
+      href: "/resources/ai-implementation-mastery-2026",
+      icon: "📚",
+      isNew: true
+    },
+    {
+      title: "Quantum-AI Breakthrough Case Study",
+      description: "Fortune 500 company achieves $2.3B in savings",
+      href: "/case-studies/quantum-ai-breakthrough-enterprise-transformation",
+      icon: "💼",
+      isNew: true
+    },
+    {
+      title: "AI ROI Calculator 2026",
+      description: "Calculate your AI investment returns",
+      href: "/tools/ai-roi-calculator-2026",
+      icon: "📊",
+      isNew: true
+    },
+    {
       title: "AI Innovation Hub 2026",
       description: "Revolutionary AI breakthroughs and innovations",
       href: "/ai-innovation-hub-2026",
       icon: "🚀",
-      isNew: true
-    },
-    {
-      title: "Technology Showcase 2026",
-      description: "Interactive demos of breakthrough technologies",
-      href: "/revolutionary-technology-showcase-2026",
-      icon: "⚡",
-      isNew: true
-    },
-    {
-      title: "AI Mastery Academy 2026",
-      description: "World-class AI education and certification",
-      href: "/ai-mastery-academy-2026",
-      icon: "🎓",
-      isNew: true
-    },
-    {
-      title: "Revolutionary Resources 2026",
-      description: "Comprehensive AI resource library",
-      href: "/revolutionary-resources-2026",
-      icon: "📚",
       isNew: true
     }
   ];

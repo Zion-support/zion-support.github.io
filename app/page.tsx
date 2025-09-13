@@ -48,6 +48,10 @@ import AI2026UltimateContentDiscoveryWidget from '../components/AI2026UltimateCo
 import AI2026_2030FuturePredictionsPromotionBanner from '../components/AI2026_2030FuturePredictionsPromotionBanner';
 import AI2026FuturePredictionsBanner from '../components/AI2026FuturePredictionsBanner';
 
+// New 2026 Content Components
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026';
+
 // 2027+ Content Components
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
@@ -156,6 +160,11 @@ const HomePage: React.FC = () => {
                 </div>
               </section>
 
+              {/* New 2026 Content Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewContent2026PromotionBanner />
+              </Suspense>
+
               {/* New Quantum-AI Content Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <QuantumAIContentPromotionBanner />
@@ -227,6 +236,11 @@ const HomePage: React.FC = () => {
               {/* Interactive Content Discovery */}
               <Suspense fallback={<LoadingSpinner />}>
                 <InteractiveContentDiscovery />
+              </Suspense>
+
+              {/* New Content Discovery Widget 2026 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <ContentDiscoveryWidget2026 />
               </Suspense>
 
               {/* Featured Content Showcase */}
