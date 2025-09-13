@@ -148,6 +148,14 @@ import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025Ult
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner';
 
+// Import new AI tools interactive demo components
+import AIToolsInteractiveDemo2025 from '../components/AIToolsInteractiveDemo2025';
+import AIToolsInteractiveDemo2025PromotionBanner from '../components/AIToolsInteractiveDemo2025PromotionBanner';
+
+// Import new enterprise automation solutions components
+import EnterpriseAutomationSolutions2025 from '../components/EnterpriseAutomationSolutions2025';
+import EnterpriseAutomationSolutions2025PromotionBanner from '../components/EnterpriseAutomationSolutions2025PromotionBanner';
+
 // Import new 2026 content components
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
@@ -261,6 +269,20 @@ export default function HomePage() {
         {/* NEW 2027 INTERACTIVE TECH DEMO PROMOTION BANNER */}
         <InteractiveTechDemo2027PromotionBanner />
         
+        {/* NEW AI TOOLS INTERACTIVE DEMO 2025 PROMOTION BANNER */}
+        <AIToolsInteractiveDemo2025PromotionBanner />
+        
+        {/* NEW ENTERPRISE AUTOMATION SOLUTIONS 2025 PROMOTION BANNER */}
+        <EnterpriseAutomationSolutions2025PromotionBanner />
+        
+        {/* NEW 2025 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
+        <UltimateContentShowcase2025PromotionBanner />
+        
+        {/* NEW 2025 BUSINESS TRANSFORMATION PROMOTION BANNER */}
+        <BusinessTransformationShowcase2025PromotionBanner />
+        
+        {/* NEW 2025 INTERACTIVE TECH DEMO PROMOTION BANNER */}
+        <InteractiveTechDemo2025PromotionBanner />
         {/* NEW 2028 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2028PromotionBanner />
         
@@ -434,7 +456,6 @@ export default function HomePage() {
         <NewContent2025PromotionBanner />
         
         {/* NEW: AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
-<<<<<<< HEAD
         {/* NEW PROMOTIONAL BANNERS */}
         <NewContent2025UltimateShowcasePromotionBanner />
         <AI2025RevolutionaryContentBanner />
@@ -518,6 +539,12 @@ export default function HomePage() {
         <AI2025_2026UltimateInnovationShowcase />
         <BusinessTransformation2025Showcase />
         
+        {/* NEW AI TOOLS INTERACTIVE DEMO 2025 SHOWCASE */}
+        <AIToolsInteractiveDemo2025 />
+        
+        {/* NEW ENTERPRISE AUTOMATION SOLUTIONS 2025 SHOWCASE */}
+        <EnterpriseAutomationSolutions2025 />
+        
         {/* INTERACTIVE TECH DEMO 2025 */}
         <InteractiveTechDemo2025 />
         
@@ -586,7 +613,6 @@ export default function HomePage() {
         {/* NEURAL CONSENSUS REVOLUTION BANNER */}
         <NeuralConsensusRevolutionBanner />
         
-<<<<<<< HEAD
         {/* NEW 2026 REVOLUTIONARY TECH BANNER */}
         <RevolutionaryTechBanner2026 />
         
@@ -595,9 +621,6 @@ export default function HomePage() {
         
         {/* NEW CONTENT PROMOTION BANNER 2026 */}
         <NewContentPromotionBanner2026 />
-        
-=======
->>>>>>> 40caa684d731039eacbf2a57ff90b1b5728aba9d
         {/* NEW REVOLUTIONARY CONTENT SHOWCASE BANNER */}
         <NewContent2025RevolutionaryShowcaseBanner />
         
@@ -638,7 +661,6 @@ export default function HomePage() {
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
         
-<<<<<<< HEAD
         {/* REVOLUTIONARY CONTENT SHOWCASE 2026 - FEATURED */}
         <RevolutionaryContentShowcase2026 />
         
@@ -647,9 +669,6 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2026 */}
         <UltimateContentDiscoveryWidget2026 />
-        
-=======
->>>>>>> 40caa684d731039eacbf2a57ff90b1b5728aba9d
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
         
