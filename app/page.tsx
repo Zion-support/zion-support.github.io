@@ -91,6 +91,11 @@ import NewContent2026UltimatePromotionBanner from '../components/NewContent2026U
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
 import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 
+// Import new 2026 content showcase components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026';
+
 // New AI 2025 Content Promotion Banner
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
 
@@ -128,6 +133,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
+        <UltimateContentShowcase2026PromotionBanner />
+        
+        {/* CONTENT DISCOVERY WIDGET 2026 */}
+        <ContentDiscoveryWidget2026 />
+        
         {/* NEW 2025 ULTIMATE CONTENT REVOLUTION BANNER */}
         <AI2025UltimateContentRevolutionBanner />
         

@@ -1,260 +1,202 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles, 
-  ArrowRight, 
-  Star, 
   Zap, 
   Brain, 
-  Rocket,
-  CheckCircle,
-  X,
+  Rocket, 
+  Star, 
+  TrendingUp, 
+  ChevronRight,
   Play,
-  TrendingUp
+  BookOpen,
+  X,
+  ArrowRight,
+  Clock,
+  Users,
+  Award
 } from 'lucide-react';
 
 const UltimateContentShowcase2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const promotionalContent = [
+    {
+      title: "🚀 Revolutionary AI 2026 Content Showcase",
+      subtitle: "Discover breakthrough technologies delivering 10,000%+ ROI",
+      cta: "Explore Now",
+      link: "/ultimate-content-showcase-2026",
+      color: "from-purple-600 to-pink-600",
+      icon: <Sparkles className="w-6 h-6" />
+    },
+    {
+      title: "🧠 Quantum Neural Fusion Technology",
+      subtitle: "Breakthrough AI achieving 99.9% accuracy in complex problem solving",
+      cta: "Learn More",
+      link: "/ai-2026-quantum-neural-fusion",
+      color: "from-blue-600 to-cyan-600",
+      icon: <Brain className="w-6 h-6" />
+    },
+    {
+      title: "⚡ Autonomous Business Operations",
+      subtitle: "Complete automation with 95% cost reduction and self-healing systems",
+      cta: "Get Started",
+      link: "/ai-2026-autonomous-operations",
+      color: "from-green-600 to-emerald-600",
+      icon: <Zap className="w-6 h-6" />
+    },
+    {
+      title: "🎯 AI 2026-2030 Predictions",
+      subtitle: "Exclusive insights into the future of artificial intelligence",
+      cta: "View Predictions",
+      link: "/ai-2026-2030-future-predictions",
+      color: "from-orange-600 to-red-600",
+      icon: <Rocket className="w-6 h-6" />
+    }
+  ];
+
+  const stats = [
+    { label: "ROI Delivered", value: "10,000%+", icon: <TrendingUp className="w-4 h-4" /> },
+    { label: "Accuracy Rate", value: "99.9%", icon: <Award className="w-4 h-4" /> },
+    { label: "Global Users", value: "50,000+", icon: <Users className="w-4 h-4" /> }
+  ];
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
-    return () => clearTimeout(timer);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % promotionalContent.length);
+    }, 4000);
+    return () => clearInterval(interval);
   }, []);
 
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  const handlePlay = () => {
-    setIsPlaying(true);
-    // Simulate video play
-    setTimeout(() => setIsPlaying(false), 3000);
-  };
-
-  if (isDismissed) return null;
+  if (!isVisible) return null;
 
   return (
     <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: -100, scale: 0.9 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative overflow-hidden"
-        >
-          {/* Background with animated gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600">
-            <div className="absolute inset-0 bg-black/20"></div>
-            {/* Animated background elements */}
-            <div className="absolute top-0 left-0 w-full h-full">
-              <motion.div
-                animate={{ 
-                  x: [0, 100, 0],
-                  y: [0, -50, 0],
-                  rotate: [0, 180, 360]
-                }}
-                transition={{ 
-                  duration: 20, 
-                  repeat: Infinity, 
-                  ease: "linear" 
-                }}
-                className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl"
-              />
-              <motion.div
-                animate={{ 
-                  x: [0, -80, 0],
-                  y: [0, 60, 0],
-                  rotate: [360, 180, 0]
-                }}
-                transition={{ 
-                  duration: 25, 
-                  repeat: Infinity, 
-                  ease: "linear" 
-                }}
-                className="absolute bottom-10 right-10 w-24 h-24 bg-yellow-400/20 rounded-full blur-lg"
-              />
-              <motion.div
-                animate={{ 
-                  x: [0, 120, 0],
-                  y: [0, -30, 0],
-                  scale: [1, 1.2, 1]
-                }}
-                transition={{ 
-                  duration: 15, 
-                  repeat: Infinity, 
-                  ease: "easeInOut" 
-                }}
-                className="absolute top-1/2 left-1/4 w-16 h-16 bg-pink-400/20 rounded-full blur-md"
-              />
-            </div>
-          </div>
-
-          <div className="relative z-10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-              <div className="flex items-center justify-between">
-                {/* Close button */}
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  onClick={handleDismiss}
-                  className="text-white/80 hover:text-white transition-colors duration-200 p-2"
-                >
-                  <X className="w-6 h-6" />
-                </motion.button>
-
-                {/* Main content */}
-                <div className="flex-1 text-center">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="mb-4"
-                  >
-                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-4">
-                      <Sparkles className="w-4 h-4 mr-2" />
-                      🚀 NEW: Ultimate Content Showcase 2026
-                    </div>
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                      Revolutionary Technology Solutions
-                    </h2>
-                    <p className="text-xl text-white/90 max-w-3xl mx-auto mb-6">
-                      Discover the most advanced AI, automation, and quantum computing solutions that are reshaping industries and creating unprecedented opportunities for business growth.
-                    </p>
-                  </motion.div>
-
-                  {/* Features */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className="flex flex-wrap justify-center gap-6 mb-8"
-                  >
-                    {[
-                      { icon: Brain, text: "AI Breakthroughs" },
-                      { icon: Zap, text: "Advanced Automation" },
-                      { icon: Rocket, text: "Quantum Computing" },
-                      { icon: TrendingUp, text: "Future Technologies" }
-                    ].map((feature, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                        className="flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-white"
-                      >
-                        <feature.icon className="w-4 h-4 mr-2" />
-                        <span className="text-sm font-medium">{feature.text}</span>
-                      </motion.div>
-                    ))}
-                  </motion.div>
-
-                  {/* CTA Buttons */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
-                    className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                  >
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-                    >
-                      Explore Showcase
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </motion.button>
-                    
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={handlePlay}
-                      className="inline-flex items-center px-6 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
-                    >
-                      <Play className="w-5 h-5 mr-2" />
-                      Watch Demo
-                    </motion.button>
-                  </motion.div>
-
-                  {/* Stats */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 1.0 }}
-                    className="flex flex-wrap justify-center gap-8 mt-8 text-white/80"
-                  >
-                    <div className="flex items-center">
-                      <Star className="w-4 h-4 mr-1 text-yellow-400" />
-                      <span className="text-sm">4.9/5 Rating</span>
-                    </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="w-4 h-4 mr-1 text-green-400" />
-                      <span className="text-sm">10,000+ Users</span>
-                    </div>
-                    <div className="flex items-center">
-                      <TrendingUp className="w-4 h-4 mr-1 text-blue-400" />
-                      <span className="text-sm">340% ROI</span>
-                    </div>
-                  </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.5 }}
+        className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/20"
+      >
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 animate-pulse" />
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            {/* Main Content */}
+            <div className="flex-1 text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start gap-4 mb-4">
+                <div className="flex items-center gap-2">
+                  {promotionalContent[currentSlide].icon}
+                  <span className="text-sm font-semibold text-purple-300">
+                    NEW CONTENT 2026
+                  </span>
                 </div>
+                <div className="flex items-center gap-1 text-yellow-400">
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                </div>
+              </div>
 
-                {/* Video placeholder */}
+              <AnimatePresence mode="wait">
                 <motion.div
-                  initial={{ opacity: 0, x: 50 }}
+                  key={currentSlide}
+                  initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                  className="hidden lg:block ml-8"
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.5 }}
                 >
-                  <div className="relative w-64 h-48 bg-black/30 rounded-2xl overflow-hidden backdrop-blur-sm border border-white/20">
-                    {isPlaying ? (
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-purple-500 to-blue-500"
-                      >
-                        <div className="text-center text-white">
-                          <motion.div
-                            animate={{ scale: [1, 1.2, 1] }}
-                            transition={{ duration: 1, repeat: Infinity }}
-                            className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-2"
-                          >
-                            <Play className="w-8 h-8" />
-                          </motion.div>
-                          <p className="text-sm">Playing Demo...</p>
-                        </div>
-                      </motion.div>
-                    ) : (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <motion.button
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          onClick={handlePlay}
-                          className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
-                        >
-                          <Play className="w-8 h-8 ml-1" />
-                        </motion.button>
-                      </div>
-                    )}
-                  </div>
+                  <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
+                    {promotionalContent[currentSlide].title}
+                  </h2>
+                  <p className="text-lg text-gray-300 mb-4">
+                    {promotionalContent[currentSlide].subtitle}
+                  </p>
                 </motion.div>
+              </AnimatePresence>
+
+              {/* Stats */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mb-4">
+                {stats.map((stat, index) => (
+                  <div key={index} className="flex items-center gap-2 text-sm">
+                    <div className="text-purple-400">{stat.icon}</div>
+                    <span className="text-white font-semibold">{stat.value}</span>
+                    <span className="text-gray-400">{stat.label}</span>
+                  </div>
+                ))}
               </div>
             </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <Link
+                href={promotionalContent[currentSlide].link}
+                className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${promotionalContent[currentSlide].color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+              >
+                {promotionalContent[currentSlide].cta}
+                <ChevronRight className="w-5 h-5 ml-2" />
+              </Link>
+              
+              <Link
+                href="/ultimate-content-showcase-2026"
+                className="inline-flex items-center px-6 py-3 border-2 border-purple-400 text-purple-300 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >
+                <BookOpen className="w-5 h-5 mr-2" />
+                View All Content
+              </Link>
+
+              <Link
+                href="/ai-2026-2030-future-predictions"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Watch Predictions
+              </Link>
+            </div>
+
+            {/* Close Button */}
+            <button
+              onClick={() => setIsVisible(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
           </div>
 
-          {/* Bottom border animation */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 2, delay: 0.5 }}
-            className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 origin-left"
-            style={{ width: '100%' }}
-          />
-        </motion.div>
-      )}
+          {/* Progress Indicators */}
+          <div className="flex justify-center mt-4">
+            <div className="flex gap-2">
+              {promotionalContent.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentSlide 
+                      ? 'bg-purple-400 w-8' 
+                      : 'bg-gray-600 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Floating Elements */}
+        <div className="absolute top-4 left-4 text-purple-400 animate-bounce">
+          <Sparkles className="w-6 h-6" />
+        </div>
+        <div className="absolute bottom-4 right-4 text-pink-400 animate-pulse">
+          <Rocket className="w-6 h-6" />
+        </div>
+      </motion.div>
     </AnimatePresence>
   );
 };
