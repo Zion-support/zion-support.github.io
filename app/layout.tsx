@@ -9,10 +9,10 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 
 export const metadata = {
   title: {
-    default: 'Zion Tech Group - Revolutionary AI Solutions & Technology Services',
+    default: 'Zion Tech Group - Revolutionary AI 2025 Autonomous Operations & Technology Services',
     template: '%s | Zion Tech Group'
   },
-  description: 'Leading provider of revolutionary AI solutions, quantum computing breakthroughs, and digital transformation services. Discover cutting-edge technology that transforms businesses worldwide.',
+  description: 'Leading provider of revolutionary AI 2025 autonomous operations, quantum computing breakthroughs, and digital transformation services. New content: implementation guides, case studies, and breakthrough insights delivering 2,500-5,000% ROI.',
   metadataBase: new URL('https://zion.tech'),
   applicationName: 'Zion Tech Group',
   generator: 'Next.js',
@@ -20,6 +20,13 @@ export const metadata = {
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
   keywords: [
+    'AI 2025',
+    'Autonomous Operations',
+    'AI Implementation Guide',
+    'Business Automation',
+    'ROI 2500%',
+    '99.9% Accuracy',
+    '10,000x Faster Processing',
     'AI solutions',
     'Artificial Intelligence',
     'Quantum Computing',
@@ -33,7 +40,6 @@ export const metadata = {
     'Case Studies',
     'Implementation Guide',
     'ROI Calculator',
-    'AI 2025',
     'AI 2026',
     'Revolutionary Technology',
     'Breakthrough Solutions'
