@@ -93,6 +93,12 @@ import AI2026AdvancedAutomationPromotionBanner from '../components/AI2026Advance
 import AI2026NeuralInterfacePromotionBanner from '../components/AI2026NeuralInterfacePromotionBanner';
 import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
 
+// Performance and Optimization Components
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import EnhancedSEO from '../components/EnhancedSEO';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import MobileOptimizer from '../components/MobileOptimizer';
+
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
 import NewContent2025BreakthroughBanner from '../components/NewContent2025BreakthroughBanner';
@@ -3623,6 +3629,11 @@ export default function HomePage() {
       <AI2026QuantumNeuralPromotionBanner />
       <AI2026ContentDiscoveryWidget />
       <AI2026ROICalculator />
+
+      {/* Performance and Optimization Components */}
+      <PerformanceOptimizer />
+      <AccessibilityEnhancer />
+      <MobileOptimizer />
     </div>
     </EnhancedErrorBoundary>
   );
