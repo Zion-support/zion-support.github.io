@@ -296,7 +296,7 @@ export function FeaturedNewContentSection() {
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 hover:border-slate-600 transition-all duration-300"
               >
                 {/* Background Pattern */}
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Ccircle cx="20" cy="20" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252240%2522%2520height%253D%252240%2522%2520viewBox%253D%25220%25200%252040%252040%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.02%2522%253E%253Ccircle%2520cx%253D%252220%2522%2520cy%253D%252220%2522%2520r%253D%25221%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-50"></div>
                 
                 <div className="relative z-10 p-6">
                   <div className="flex items-start gap-4 mb-4">
@@ -359,7 +359,7 @@ export function SuccessMetricsPromotionBanner() {
   return (
     <div className="relative overflow-hidden rounded-lg p-6 bg-gradient-to-r from-green-600 to-emerald-600 border border-green-500/30">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="20" cy="20" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252240%2522%2520height%253D%252240%2522%2520viewBox%253D%25220%25200%252040%252040%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252220%2522%2520cy%253D%252220%2522%2520r%253D%25221%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-50"></div>
       
       <div className="relative z-10">
         <div className="flex items-start gap-4">
