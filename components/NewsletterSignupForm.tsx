@@ -1,5 +1,28 @@
 import React, { useState } from 'react';
-import { Mail, Send, CheckCircle, Star, Zap, Brain } from 'lucide-react';
+import { Mail, Send, CheckCircle, Star, Zap, Gift, ArrowRight } from 'lucide-react';
+
+const benefits = [
+  "Exclusive access to new content",
+  "Early bird pricing on services",
+  "Weekly tech insights & trends",
+  "Free consultation calls",
+  "Priority support & updates"
+];
+
+const testimonials = [
+  {
+    name: "Sarah Chen",
+    role: "CTO, TechCorp",
+    content: "The weekly insights have been invaluable for our AI strategy. Highly recommended!",
+    rating: 5
+  },
+  {
+    name: "Michael Rodriguez",
+    role: "CEO, InnovateLabs",
+    content: "Early access to new features has given us a competitive edge. Amazing value!",
+    rating: 5
+  }
+];
 
 export default function NewsletterSignupForm() {
   const [email, setEmail] = useState('');
@@ -15,159 +38,146 @@ export default function NewsletterSignupForm() {
     
     setIsSubscribed(true);
     setIsLoading(false);
-    setEmail('');
   };
 
   if (isSubscribed) {
     return (
-      <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-green-500 p-4 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-            <CheckCircle className="h-10 w-10 text-white" />
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Welcome to the Future!
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            You're now subscribed to our exclusive newsletter. Get ready for the latest AI innovations, 
-            quantum breakthroughs, and automation solutions delivered directly to your inbox.
+      <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-center">
+        <CheckCircle className="w-16 h-16 text-white mx-auto mb-4" />
+        <h3 className="text-2xl font-bold text-white mb-2">Welcome to the Future!</h3>
+        <p className="text-green-100 mb-6">
+          You've successfully subscribed to our newsletter. Check your email for a confirmation link.
+        </p>
+        <div className="bg-white/20 rounded-lg p-4">
+          <p className="text-green-100 text-sm">
+            🎉 You'll receive your first update within 24 hours with exclusive content and early access to new features!
           </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">What's Next?</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-              <div className="flex items-start">
-                <Star className="h-6 w-6 text-yellow-400 mt-1 mr-3 flex-shrink-0" />
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Exclusive Content</h4>
-                  <p className="text-gray-300 text-sm">Get early access to new content and features before anyone else.</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <Zap className="h-6 w-6 text-blue-400 mt-1 mr-3 flex-shrink-0" />
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Weekly Updates</h4>
-                  <p className="text-gray-300 text-sm">Stay informed with our weekly roundup of the latest developments.</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <Brain className="h-6 w-6 text-purple-400 mt-1 mr-3 flex-shrink-0" />
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Expert Insights</h4>
-                  <p className="text-gray-300 text-sm">Learn from industry experts and thought leaders in AI and technology.</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Stay Ahead of the
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              {' '}Curve
-            </span>
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Get exclusive access to the latest AI innovations, quantum computing breakthroughs, 
-            and automation solutions. Join thousands of forward-thinking professionals.
-          </p>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Content */}
+          <div>
+            <div className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <Star className="w-4 h-4" />
+              Exclusive Newsletter
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Stay Ahead of the
+              <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                AI Revolution
+              </span>
+            </h2>
+            
+            <p className="text-xl text-gray-300 mb-8">
+              Get exclusive access to the latest AI innovations, quantum computing breakthroughs, and automation solutions delivered directly to your inbox.
+            </p>
 
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Benefits */}
-            <div>
-              <h3 className="text-3xl font-bold text-white mb-8">Why Subscribe?</h3>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-blue-500 p-2 rounded-lg mr-4">
-                    <Star className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-white mb-2">Exclusive Content</h4>
-                    <p className="text-gray-300">Access to premium content, early releases, and insider insights not available anywhere else.</p>
-                  </div>
+            <div className="space-y-4 mb-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
                 </div>
-                <div className="flex items-start">
-                  <div className="bg-purple-500 p-2 rounded-lg mr-4">
-                    <Zap className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-white mb-2">Weekly Updates</h4>
-                    <p className="text-gray-300">Stay informed with our curated weekly newsletter featuring the most important developments.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="bg-cyan-500 p-2 rounded-lg mr-4">
-                    <Brain className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-white mb-2">Expert Analysis</h4>
-                    <p className="text-gray-300">Deep insights from industry experts and thought leaders in AI, quantum computing, and automation.</p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
 
-            {/* Signup Form */}
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Join Our Community</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="w-full pl-10 pr-4 py-4 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                  />
+            {/* Testimonials */}
+            <div className="space-y-4">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20">
+                  <div className="flex items-center gap-1 mb-2">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 text-sm italic mb-2">"{testimonial.content}"</p>
+                  <div className="text-white font-semibold text-sm">{testimonial.name}</div>
+                  <div className="text-gray-400 text-xs">{testimonial.role}</div>
                 </div>
-                
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                >
-                  {isLoading ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Subscribing...
-                    </>
-                  ) : (
-                    <>
-                      Subscribe Now
-                      <Send className="ml-2 h-5 w-5" />
-                    </>
-                  )}
-                </button>
-              </form>
-
-              <div className="mt-6 text-center">
-                <p className="text-sm text-gray-400">
-                  By subscribing, you agree to our privacy policy. Unsubscribe at any time.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
-        </div>
 
-        {/* Social Proof */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-300 mb-6">Join thousands of professionals who trust us</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <div className="text-2xl font-bold text-white">TechCorp</div>
-            <div className="text-2xl font-bold text-white">InnovateLab</div>
-            <div className="text-2xl font-bold text-white">FutureTech</div>
-            <div className="text-2xl font-bold text-white">QuantumAI</div>
-            <div className="text-2xl font-bold text-white">AutoFlow</div>
+          {/* Right Side - Form */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">Join 10,000+ Subscribers</h3>
+              <p className="text-gray-300">Get instant access to exclusive content and updates</p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email address"
+                  required
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                />
+              </div>
+
+              <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Gift className="w-5 h-5 text-purple-400" />
+                  <span className="text-purple-400 font-semibold">Welcome Bonus</span>
+                </div>
+                <p className="text-purple-100 text-sm">
+                  Get our exclusive "AI Implementation Guide 2026" PDF worth $299 - completely free!
+                </p>
+              </div>
+
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isLoading ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    Subscribing...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-5 h-5" />
+                    Subscribe Now
+                  </>
+                )}
+              </button>
+
+              <p className="text-gray-400 text-xs text-center">
+                We respect your privacy. Unsubscribe at any time.
+              </p>
+            </form>
+
+            {/* Social Proof */}
+            <div className="mt-8 pt-6 border-t border-white/20">
+              <div className="flex items-center justify-center gap-4 text-gray-400 text-sm">
+                <div className="flex items-center gap-1">
+                  <Zap className="w-4 h-4" />
+                  <span>10,000+ subscribers</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Star className="w-4 h-4" />
+                  <span>4.9/5 rating</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
