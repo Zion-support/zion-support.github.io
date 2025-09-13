@@ -69,6 +69,16 @@ export default function HomePage() {
         {/* REVOLUTIONARY CONTENT SHOWCASE 2026 */}
         <RevolutionaryContentShowcase2026 />
         
+        {/* AI-POWERED SEARCH 2026 */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI Search..." />}>
+          <AIPoweredSearch2026 />
+        </Suspense>
+        
+        {/* ULTIMATE CONTENT DISCOVERY 2026 */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Discovery..." />}>
+          <UltimateContentDiscovery2026 />
+        </Suspense>
+        
         {/* DYNAMIC CONTENT CAROUSEL 2026 */}
         <DynamicContentCarousel2026 />
         

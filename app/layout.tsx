@@ -8,6 +8,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import NewContentBanner from '../components/NewContentBanner';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedSEO from '../components/EnhancedSEO';
+import AdvancedPerformanceMonitor2026 from '../components/AdvancedPerformanceMonitor2026';
 
 export const metadata = {
   title: {
@@ -1317,6 +1318,7 @@ export default function RootLayout({
         <ErrorBoundary>
           <PerformanceMonitor>
             <AccessibilityEnhancer>
+              <AdvancedPerformanceMonitor2026 />
               {/* Skip to main content for accessibility */}
               <a 
                 href="#main-content" 
