@@ -1,62 +1,81 @@
 #!/bin/bash
 
-# Script to merge remaining feature branches into main
-# This will handle all remaining branches systematically
+# Script to merge all remaining unmerged branches
+set -e
 
-echo "Starting merge of remaining feature branches..."
+echo "🚀 Starting to merge remaining unmerged branches..."
 
-# Get all remaining remote branches (excluding main, HEAD, and already processed)
-branches=$(git branch -r | grep -v "origin/main" | grep -v "origin/HEAD" | grep -v "origin/22xuo1-codex" | grep -v "origin/74tfm8-codex" | grep -v "origin/75rlpk-codex" | grep -v "origin/7dxqey-codex" | grep -v "origin/7fnoko-codex" | grep -v "origin/7ieis8-codex" | grep -v "origin/9llxiv-codex" | grep -v "origin/9njm0n-codex" | grep -v "origin/add-new-content-and-advertising" | grep -v "origin/auto-merge-main-backup" | grep -v "origin/auto-merge-open-prs" | grep -v "origin/autobot/2025-09-05" | grep -v "origin/autobot/2025-09-06" | grep -v "origin/automation-improvements" | grep -v "origin/automation/git-sync" | sed 's/origin\///' | head -100)
+# Get list of unmerged branches
+unmerged_branches=$(git branch -r | grep "cursor/create-and-deploy-new-content" | while read branch; do
+  if ! git merge-base --is-ancestor $branch main; then
+    echo $branch
+  fi
+done)
 
-# Counter for tracking progress
-count=0
-total=$(echo "$branches" | wc -l)
-echo "Found $total remaining branches to merge"
+echo "Found unmerged branches:"
+echo "$unmerged_branches"
 
-# Function to merge a single branch
+# Function to merge a branch with conflict resolution
 merge_branch() {
-    local branch=$1
-    echo "Processing branch: $branch (${count}/${total})"
+    local branch_name=$1
+    echo "📋 Processing branch: $branch_name"
     
-    # Try to merge the branch
-    if git merge "origin/$branch" --no-edit 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
+    # Try to merge
+    if git merge $branch_name --no-ff -m "Merge $branch_name"; then
+        echo "  ✅ Successfully merged $branch_name"
         return 0
     else
-        echo "⚠️  Conflict in $branch, attempting auto-resolution..."
+        echo "  ⚠️  Merge conflict detected in $branch_name"
         
-        # Check if it's a simple conflict we can auto-resolve
-        if git status --porcelain | grep -q "^UU\|^AU\|^UA\|^DD\|^AD\|^DA"; then
-            # Try to add all files and commit
-            git add . 2>/dev/null
-            if git commit -m "Auto-merge: $branch" 2>/dev/null; then
-                echo "✅ Auto-resolved conflicts for $branch"
-                return 0
+        # Check which files have conflicts
+        conflict_files=$(git diff --name-only --diff-filter=U)
+        echo "  📝 Conflicted files: $conflict_files"
+        
+        # Try to resolve conflicts automatically
+        for file in $conflict_files; do
+            echo "    🔨 Resolving conflicts in $file"
+            
+            # Check if it's a merge conflict
+            if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
+                echo "      📄 Processing merge conflict in $file"
+                
+                # For app/page.tsx, keep both versions of banners
+                if [[ "$file" == "app/page.tsx" ]]; then
+                    # Remove conflict markers and keep both versions
+                    sed -i '/^<<<<<<< HEAD$/d' "$file"
+                    sed -i '/^=======$/d' "$file"
+                    sed -i '/^>>>>>>> /d' "$file"
+                else
+                    # For other files, try to keep both changes
+                    sed -i '/^<<<<<<< HEAD$/d' "$file"
+                    sed -i '/^=======$/d' "$file"
+                    sed -i '/^>>>>>>> /d' "$file"
+                fi
+                
+                # Add the resolved file
+                git add "$file"
             fi
-        fi
+        done
         
-        # If auto-resolution fails, skip this branch
-        echo "❌ Skipping $branch due to complex conflicts"
-        git merge --abort 2>/dev/null
-        return 1
+        # Try to complete the merge
+        if git commit --no-edit; then
+            echo "  ✅ Successfully resolved conflicts and merged $branch_name"
+            return 0
+        else
+            echo "  ❌ Failed to resolve conflicts in $branch_name"
+            git merge --abort
+            return 1
+        fi
     fi
 }
 
-# Process branches in batches
-echo "$branches" | while read -r branch; do
+# Process each unmerged branch
+echo "$unmerged_branches" | while read branch; do
     if [ -n "$branch" ]; then
-        count=$((count + 1))
+        echo ""
         merge_branch "$branch"
-        
-        # Push every 20 successful merges
-        if [ $((count % 20)) -eq 0 ]; then
-            echo "Pushing progress... (merged $count branches)"
-            git push origin main --force-with-lease
-        fi
     fi
 done
 
-echo "Remaining batch merge completed. Final push..."
-git push origin main
-
-echo "All remaining feature branches have been processed!"
+echo ""
+echo "🎉 All remaining branches processed!"

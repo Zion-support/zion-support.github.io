@@ -3,98 +3,65 @@ import Link from 'next/link';
 
 export default function AI2027FuturePredictionsPromotionBanner() {
   return (
-    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-indigo-600 text-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-16 bg-gradient-to-r from-rose-900 via-pink-900 to-rose-900 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
-          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-4">
-            <span className="text-sm font-semibold text-white animate-pulse">
-              🔮 FUTURE PREDICTIONS
-            </span>
+          {/* Badge */}
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white text-sm font-semibold mb-6 animate-pulse">
+            🔮 FUTURE PREDICTIONS
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            AI 2027{' '}
-            <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-              Future Predictions
-            </span>
+          {/* Main Content */}
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-rose-400 to-pink-400 bg-clip-text text-transparent">
+            AI 2027 Future Predictions
           </h2>
           
-          <p className="text-xl md:text-2xl text-cyan-100 mb-8 max-w-4xl mx-auto">
-            Discover the revolutionary AI breakthroughs predicted for 2027. From neural synthesis 
-            to quantum-AI fusion - explore the future of artificial intelligence.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Explore the revolutionary AI predictions and breakthrough technologies that will 
+            reshape the world in 2027 and beyond.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              href="/ai-2027-future-predictions-revolutionary"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              🔮 Explore Predictions
-            </Link>
-            <Link
-              href="/blog/ai-2027-neural-synthesis-breakthrough"
-              className="bg-transparent text-white px-8 py-4 rounded-lg font-bold text-lg border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
-              🧠 Neural Synthesis
-            </Link>
-          </div>
-          
-          {/* Key Predictions */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">🧠</div>
-              <h3 className="text-lg font-bold mb-2">Neural Synthesis</h3>
-              <p className="text-cyan-100 text-sm">
-                99.7% accuracy in neural synthesis with 8,000% ROI
-              </p>
+          {/* Key Features */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+              <div className="text-3xl mb-3">🧠✨</div>
+              <h3 className="text-lg font-bold text-white mb-2">Artificial General Intelligence</h3>
+              <p className="text-gray-300 text-sm">99.9% accuracy matching human intelligence</p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">⚛️</div>
-              <h3 className="text-lg font-bold mb-2">Quantum-AI Fusion</h3>
-              <p className="text-cyan-100 text-sm">
-                10,000x faster processing with 15,000% ROI
-              </p>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+              <div className="text-3xl mb-3">⚛️🤖</div>
+              <h3 className="text-lg font-bold text-white mb-2">Quantum-AI Fusion</h3>
+              <p className="text-gray-300 text-sm">1 million times faster processing speeds</p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">🤖</div>
-              <h3 className="text-lg font-bold mb-2">Autonomous Systems</h3>
-              <p className="text-cyan-100 text-sm">
-                100% autonomous decision making with 5,000% ROI
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">🚀</div>
-              <h3 className="text-lg font-bold mb-2">Space AI</h3>
-              <p className="text-cyan-100 text-sm">
-                Autonomous space missions with 5,000% ROI
-              </p>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+              <div className="text-3xl mb-3">🌌💭</div>
+              <h3 className="text-lg font-bold text-white mb-2">AI Consciousness</h3>
+              <p className="text-gray-300 text-sm">True consciousness and self-awareness</p>
             </div>
           </div>
           
-          {/* Probability Indicators */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">95%</div>
-              <div className="text-cyan-200 text-sm">Neural Synthesis Probability</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">88%</div>
-              <div className="text-cyan-200 text-sm">Quantum-AI Probability</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">92%</div>
-              <div className="text-cyan-200 text-sm">Autonomous Systems Probability</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">85%</div>
-              <div className="text-cyan-200 text-sm">Space AI Probability</div>
-            </div>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/ai-2027-future-predictions"
+              className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-rose-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+            >
+              View Predictions
+            </Link>
+            <Link 
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-rose-900 transition-all duration-300"
+            >
+              Get Started
+            </Link>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

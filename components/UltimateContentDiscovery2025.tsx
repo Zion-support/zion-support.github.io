@@ -1,279 +1,260 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, Filter, TrendingUp, Clock, Star, ArrowRight, X } from 'lucide-react';
+'use client';
 
-const UltimateContentDiscovery2025: React.FC = () => {
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Search, Filter, ArrowRight, Clock, TrendingUp, Star, Eye, BookOpen, Video, FileText, Users, Zap } from 'lucide-react';
+
+const UltimateContentDiscovery2025 = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [showFilters, setShowFilters] = useState(false);
 
   const categories = [
-    { id: 'all', name: 'All Content', count: 580 },
-    { id: 'ai-research', name: 'AI Research', count: 150 },
-    { id: 'quantum-computing', name: 'Quantum Computing', count: 75 },
-    { id: 'autonomous-systems', name: 'Autonomous Systems', count: 120 },
-    { id: 'edge-computing', name: 'Edge Computing', count: 90 },
-    { id: 'ethics', name: 'AI Ethics', count: 60 },
-    { id: 'predictions', name: 'Future Predictions', count: 85 }
+    { id: 'all', name: 'All Content', icon: <BookOpen className="w-5 h-5" /> },
+    { id: 'ai', name: 'AI & Machine Learning', icon: <Zap className="w-5 h-5" /> },
+    { id: 'automation', name: 'Automation', icon: <TrendingUp className="w-5 h-5" /> },
+    { id: 'cloud', name: 'Cloud Computing', icon: <Users className="w-5 h-5" /> },
+    { id: 'quantum', name: 'Quantum Computing', icon: <Star className="w-5 h-5" /> }
   ];
 
-  const trendingContent = [
+  const contentItems = [
     {
       id: 1,
-      title: "Neural Synthesis Breakthroughs 2025",
-      description: "Latest advances in neural network architectures enabling human-level understanding",
-      category: "AI Research",
-      readTime: "15 min",
-      views: "45.2K",
+      title: "AI-Powered Business Transformation Guide 2025",
+      description: "Complete roadmap for implementing AI solutions in your organization",
+      category: 'ai',
+      type: 'guide',
+      readTime: '15 min',
+      views: '12.5k',
       rating: 4.9,
-      trending: true,
-      href: "/neural-synthesis-breakthroughs-2025"
+      featured: true,
+      image: '/api/placeholder/400/250'
     },
     {
       id: 2,
-      title: "Quantum Supremacy in Business",
-      description: "How quantum computing is solving previously impossible optimization problems",
-      category: "Quantum Computing",
-      readTime: "20 min",
-      views: "38.7K",
+      title: "Quantum Computing: The Future is Now",
+      description: "Exploring quantum computing applications and their business impact",
+      category: 'quantum',
+      type: 'article',
+      readTime: '8 min',
+      views: '8.2k',
       rating: 4.8,
-      trending: true,
-      href: "/quantum-supremacy-business"
+      featured: false,
+      image: '/api/placeholder/400/250'
     },
     {
       id: 3,
-      title: "Autonomous AI Implementation Guide",
-      description: "Complete guide to building self-managing AI systems",
-      category: "Autonomous Systems",
-      readTime: "25 min",
-      views: "52.1K",
+      title: "Automation Mastery: From Zero to Hero",
+      description: "Step-by-step guide to implementing automation in your workflow",
+      category: 'automation',
+      type: 'video',
+      readTime: '25 min',
+      views: '15.3k',
       rating: 4.9,
-      trending: true,
-      href: "/autonomous-ai-implementation"
+      featured: true,
+      image: '/api/placeholder/400/250'
     },
     {
       id: 4,
-      title: "Edge AI Deployment Strategies",
-      description: "Deploy AI models at the edge for maximum performance and minimal latency",
-      category: "Edge Computing",
-      readTime: "18 min",
-      views: "29.3K",
+      title: "Cloud Infrastructure Best Practices",
+      description: "Essential strategies for building scalable cloud solutions",
+      category: 'cloud',
+      type: 'whitepaper',
+      readTime: '20 min',
+      views: '6.7k',
       rating: 4.7,
-      trending: false,
-      href: "/edge-ai-deployment"
+      featured: false,
+      image: '/api/placeholder/400/250'
     },
     {
       id: 5,
-      title: "AI Ethics Framework 2025",
-      description: "Comprehensive framework for developing ethical AI systems",
-      category: "AI Ethics",
-      readTime: "22 min",
-      views: "24.8K",
+      title: "Neural Networks Explained Simply",
+      description: "Understanding neural networks without the technical jargon",
+      category: 'ai',
+      type: 'tutorial',
+      readTime: '12 min',
+      views: '9.8k',
       rating: 4.8,
-      trending: false,
-      href: "/ai-ethics-framework-2025"
+      featured: false,
+      image: '/api/placeholder/400/250'
     },
     {
       id: 6,
-      title: "Future of AI: 2025-2030 Predictions",
-      description: "Expert predictions on AI trends and technological breakthroughs",
-      category: "Future Predictions",
-      readTime: "30 min",
-      views: "67.5K",
+      title: "The Future of Work: AI Integration",
+      description: "How AI is reshaping the modern workplace and job roles",
+      category: 'ai',
+      type: 'article',
+      readTime: '10 min',
+      views: '11.2k',
       rating: 4.9,
-      trending: true,
-      href: "/future-ai-predictions-2025-2030"
+      featured: true,
+      image: '/api/placeholder/400/250'
     }
   ];
 
-  const filteredContent = trendingContent.filter(content => {
-    const matchesSearch = content.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         content.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || 
-                           content.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory;
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'video': return <Video className="w-4 h-4" />;
+      case 'article': return <FileText className="w-4 h-4" />;
+      case 'guide': return <BookOpen className="w-4 h-4" />;
+      case 'tutorial': return <Zap className="w-4 h-4" />;
+      case 'whitepaper': return <FileText className="w-4 h-4" />;
+      default: return <BookOpen className="w-4 h-4" />;
+    }
+  };
+
+  const filteredContent = contentItems.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ultimate Content Discovery
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-4">
+            <Search className="w-4 h-4 mr-2" />
+            Content Discovery
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Ultimate Content Hub 2025
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Find the perfect AI and technology content tailored to your needs with our advanced discovery engine
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover, explore, and access our comprehensive library of cutting-edge technology content, guides, and resources.
           </p>
         </div>
 
-        {/* Search and Filters */}
-        <div className="mb-12">
-          <div className="flex flex-col lg:flex-row gap-4 mb-6">
+        {/* Search and Filter */}
+        <div className="bg-white rounded-2xl p-8 shadow-lg mb-12">
+          <div className="flex flex-col lg:flex-row gap-6">
             {/* Search Bar */}
-            <div className="flex-1 relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search AI content, technologies, and insights..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-              />
+            <div className="flex-1">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search content, guides, articles..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
             </div>
 
-            {/* Filter Button */}
-            <button
-              onClick={() => setShowFilters(!showFilters)}
-              className="inline-flex items-center px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white hover:bg-white/20 transition-all duration-300"
-            >
-              <Filter className="w-5 h-5 mr-2" />
-              Filters
-            </button>
-          </div>
-
-          {/* Category Filters */}
-          <div className="flex flex-wrap gap-2 mb-6">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-cyan-500 text-white'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                }`}
-              >
-                {category.name} ({category.count})
-              </button>
-            ))}
-          </div>
-
-          {/* Advanced Filters */}
-          {showFilters && (
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 mb-6">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-white">Advanced Filters</h3>
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
                 <button
-                  onClick={() => setShowFilters(false)}
-                  className="text-gray-400 hover:text-white"
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    selectedCategory === category.id
+                      ? 'bg-blue-600 text-white shadow-lg'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
                 >
-                  <X className="w-5 h-5" />
+                  {category.icon}
+                  <span className="ml-2">{category.name}</span>
                 </button>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Read Time</label>
-                  <select className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white">
-                    <option>Any Length</option>
-                    <option>Under 10 min</option>
-                    <option>10-20 min</option>
-                    <option>20-30 min</option>
-                    <option>Over 30 min</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Rating</label>
-                  <select className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white">
-                    <option>Any Rating</option>
-                    <option>4.5+ Stars</option>
-                    <option>4.0+ Stars</option>
-                    <option>3.5+ Stars</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
-                  <select className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white">
-                    <option>Most Popular</option>
-                    <option>Latest</option>
-                    <option>Highest Rated</option>
-                    <option>Most Viewed</option>
-                  </select>
-                </div>
-              </div>
+              ))}
             </div>
-          )}
+          </div>
         </div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((content) => (
-            <div key={content.id} className="group bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
-              {/* Content Header */}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm font-medium rounded-full">
-                    {content.category}
-                  </span>
-                  {content.trending && (
-                    <div className="flex items-center text-orange-400 text-sm">
-                      <TrendingUp className="w-4 h-4 mr-1" />
-                      Trending
-                    </div>
+          {filteredContent.map((item) => (
+            <div key={item.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+              {/* Image */}
+              <div className="relative h-48 bg-gradient-to-br from-blue-400 to-purple-500 overflow-hidden">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute top-4 left-4 flex items-center space-x-2">
+                  {item.featured && (
+                    <span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-medium">
+                      Featured
+                    </span>
                   )}
+                  <span className="bg-white/20 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs font-medium flex items-center">
+                    {getTypeIcon(item.type)}
+                    <span className="ml-1 capitalize">{item.type}</span>
+                  </span>
                 </div>
+                <div className="absolute bottom-4 right-4 flex items-center space-x-4 text-white text-sm">
+                  <span className="flex items-center">
+                    <Eye className="w-4 h-4 mr-1" />
+                    {item.views}
+                  </span>
+                  <span className="flex items-center">
+                    <Star className="w-4 h-4 mr-1 fill-current" />
+                    {item.rating}
+                  </span>
+                </div>
+              </div>
 
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                  {content.title}
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  {item.title}
                 </h3>
-                <p className="text-gray-300 mb-4 line-clamp-3">
-                  {content.description}
+                <p className="text-gray-600 mb-4 line-clamp-2">
+                  {item.description}
                 </p>
-
-                {/* Stats */}
+                
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-4 text-sm text-gray-400">
-                    <div className="flex items-center space-x-1">
-                      <Clock className="w-4 h-4" />
-                      <span>{content.readTime}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Star className="w-4 h-4 text-yellow-400" />
-                      <span>{content.rating}</span>
-                    </div>
+                  <span className="flex items-center text-sm text-gray-500">
+                    <Clock className="w-4 h-4 mr-1" />
+                    {item.readTime}
+                  </span>
+                  <div className="flex items-center space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`w-4 h-4 ${
+                          i < Math.floor(item.rating)
+                            ? 'text-yellow-400 fill-current'
+                            : 'text-gray-300'
+                        }`}
+                      />
+                    ))}
                   </div>
-                  <span className="text-sm text-gray-400">{content.views} views</span>
                 </div>
 
-                {/* CTA */}
-                <Link 
-                  to={content.href}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors group-hover:translate-x-1 transform duration-300"
+                <Link
+                  href={`/content/${item.id}`}
+                  className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors group"
                 >
-                  Read Article
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  Read More
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
           ))}
         </div>
 
-        {/* No Results */}
-        {filteredContent.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-semibold text-white mb-2">No content found</h3>
-            <p className="text-gray-300 mb-6">Try adjusting your search terms or filters</p>
-            <button
-              onClick={() => {
-                setSearchQuery('');
-                setSelectedCategory('all');
-              }}
-              className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
-            >
-              Clear Filters
-            </button>
-          </div>
-        )}
-
         {/* Load More */}
-        {filteredContent.length > 0 && (
-          <div className="text-center mt-12">
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-              Load More Content
-            </button>
-          </div>
-        )}
+        <div className="text-center mt-12">
+          <button className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
+            Load More Content
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </button>
+        </div>
+
+        {/* Stats */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { number: '500+', label: 'Articles & Guides' },
+            { number: '50+', label: 'Video Tutorials' },
+            { number: '100+', label: 'Case Studies' },
+            { number: '1M+', label: 'Monthly Readers' }
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>
+              <div className="text-gray-600">{stat.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

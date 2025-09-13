@@ -1,196 +1,307 @@
 import React from 'react';
+import SEO from '../../components/SEO';
 import Link from 'next/link';
-import { ArrowRight, Zap, Shield, Globe, Users, TrendingUp, Star, CheckCircle, Brain, Cpu, Database, Cloud } from 'lucide-react';
 
 export default function ServicesPage() {
-  const services = [
-    {
-      icon: <Brain className="w-12 h-12 text-blue-400" />,
-      title: "AI Autonomous Operations",
-      description: "Revolutionary AI systems that operate independently, making intelligent decisions and optimizing processes in real-time.",
-      features: [
-        "Real-time Decision Making",
-        "Predictive Analytics", 
-        "Autonomous Optimization",
-        "Machine Learning Models",
-        "Neural Network Processing"
-      ],
-      pricing: "Starting at $10,000/month",
-      roi: "2,500% average ROI"
-    },
-    {
-      icon: <Shield className="w-12 h-12 text-purple-400" />,
-      title: "Quantum Computing Solutions",
-      description: "Breakthrough quantum computing solutions delivering exponential computational power and security.",
-      features: [
-        "Quantum Supremacy",
-        "Error-Corrected Quantum",
-        "Quantum Internet",
-        "Quantum Machine Learning",
-        "Quantum Cryptography"
-      ],
-      pricing: "Starting at $25,000/month",
-      roi: "5,000% average ROI"
-    },
-    {
-      icon: <Globe className="w-12 h-12 text-cyan-400" />,
-      title: "Advanced Automation",
-      description: "Intelligent process automation that streamlines operations and eliminates manual tasks.",
-      features: [
-        "Process Automation",
-        "Smart Resource Management",
-        "Predictive Maintenance",
-        "Workflow Optimization",
-        "Intelligent Monitoring"
-      ],
-      pricing: "Starting at $5,000/month",
-      roi: "1,800% average ROI"
-    },
-    {
-      icon: <Users className="w-12 h-12 text-green-400" />,
-      title: "Enterprise Solutions",
-      description: "Comprehensive enterprise-grade solutions designed for scalability and reliability.",
-      features: [
-        "Scalable Architecture",
-        "Enterprise Security",
-        "24/7 Support",
-        "Custom Development",
-        "Integration Services"
-      ],
-      pricing: "Custom pricing",
-      roi: "3,200% average ROI"
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12 text-yellow-400" />,
-      title: "Business Intelligence",
-      description: "Advanced analytics and insights that drive data-driven decision making and growth.",
-      features: [
-        "Real-time Analytics",
-        "Predictive Insights",
-        "Performance Optimization",
-        "Data Visualization",
-        "Custom Dashboards"
-      ],
-      pricing: "Starting at $3,000/month",
-      roi: "1,500% average ROI"
-    },
-    {
-      icon: <Star className="w-12 h-12 text-pink-400" />,
-      title: "Innovation Hub",
-      description: "Cutting-edge research and development in emerging technologies and future solutions.",
-      features: [
-        "R&D Excellence",
-        "Future Technologies",
-        "Innovation Labs",
-        "Prototype Development",
-        "Technology Consulting"
-      ],
-      pricing: "Project-based",
-      roi: "Variable ROI"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.1),transparent_50%)]" />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Revolutionary
-              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                AI Services
-              </span>
+    <>
+      <SEO
+        title="AI-Powered Technology Services | Zion Tech Group"
+        description="Comprehensive AI, cybersecurity, cloud, and digital transformation services. From enterprise automation to quantum computing solutions - transform your business with cutting-edge technology."
+        keywords="AI services, cybersecurity, cloud solutions, digital transformation, enterprise automation, quantum computing, blockchain, IoT solutions"
+        canonicalUrl="https://ziontechgroup.com/services"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Revolutionary Technology Services
             </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with our cutting-edge AI, quantum computing, and automation solutions. 
-              Experience unprecedented growth and efficiency.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Transform your business with our comprehensive suite of AI-powered solutions, from enterprise automation to quantum computing
             </p>
+          </div>
+
+          {/* Service Categories */}
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold text-white text-center mb-12">
+              Our Service Portfolio
+            </h2>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
+            {/* AI & Machine Learning */}
+            <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-3xl p-8 mb-8 border border-purple-500/30">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">🤖 AI & Machine Learning</h3>
+                  <p className="text-gray-300 mb-6">
+                    Harness the power of artificial intelligence to automate processes, gain insights, and drive innovation across your organization.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white/10 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-purple-400">300%</div>
+                      <div className="text-gray-300 text-sm">Productivity Increase</div>
+                    </div>
+                    <div className="bg-white/10 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-blue-400">$299</div>
+                      <div className="text-gray-300 text-sm">Starting Price/Month</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">AI-Powered Business Process Automation</h4>
+                    <p className="text-gray-300 text-sm">Reduce operational costs by 40-60% with intelligent automation</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">Enterprise AI Content Generation</h4>
+                    <p className="text-gray-300 text-sm">Save 80% on content creation time with AI-powered tools</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">Customer Behavior Analytics</h4>
+                    <p className="text-gray-300 text-sm">Increase customer retention by 35% with predictive insights</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Cybersecurity */}
+            <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-3xl p-8 mb-8 border border-red-500/30">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">🔒 Cybersecurity</h3>
+                  <p className="text-gray-300 mb-6">
+                    Protect your organization with advanced security solutions, threat detection, and compliance frameworks.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white/10 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-red-400">90%</div>
+                      <div className="text-gray-300 text-sm">Threat Reduction</div>
+                    </div>
+                    <div className="bg-white/10 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-orange-400">$899</div>
+                      <div className="text-gray-300 text-sm">Starting Price/Month</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">Zero-Trust Security Architecture</h4>
+                    <p className="text-gray-300 text-sm">Reduce security incidents by 90% with comprehensive protection</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">AI-Powered Threat Detection</h4>
+                    <p className="text-gray-300 text-sm">Detect threats 10x faster with automated monitoring</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">Compliance Management</h4>
+                    <p className="text-gray-300 text-sm">Meet SOC 2, ISO 27001, GDPR, and HIPAA requirements</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Cloud & DevOps */}
+            <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-3xl p-8 mb-8 border border-cyan-500/30">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">☁️ Cloud & DevOps</h3>
+                  <p className="text-gray-300 mb-6">
+                    Optimize your cloud infrastructure and streamline development processes with automated CI/CD pipelines.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white/10 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-cyan-400">40%</div>
+                      <div className="text-gray-300 text-sm">Cost Reduction</div>
+                    </div>
+                    <div className="bg-white/10 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-blue-400">$399</div>
+                      <div className="text-gray-300 text-sm">Starting Price/Month</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">Multi-Cloud Management Platform</h4>
+                    <p className="text-gray-300 text-sm">Reduce cloud costs by 30-40% with unified management</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">Enterprise CI/CD Pipeline</h4>
+                    <p className="text-gray-300 text-sm">Deploy 10x faster with automated quality gates</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">Infrastructure Automation</h4>
+                    <p className="text-gray-300 text-sm">Scale infrastructure automatically with demand</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Quantum Computing */}
+            <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-3xl p-8 mb-8 border border-indigo-500/30">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">⚛️ Quantum Computing</h3>
+                  <p className="text-gray-300 mb-6">
+                    Leverage quantum computing for complex optimization problems, cryptography, and scientific research.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white/10 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-indigo-400">10x</div>
+                      <div className="text-gray-300 text-sm">Speed Improvement</div>
+                    </div>
+                    <div className="bg-white/10 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-purple-400">$3,999</div>
+                      <div className="text-gray-300 text-sm">Starting Price/Month</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">Quantum Algorithm Development</h4>
+                    <p className="text-gray-300 text-sm">Custom quantum algorithms for optimization problems</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">Quantum Cryptography</h4>
+                    <p className="text-gray-300 text-sm">Unbreakable encryption for secure communications</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">Quantum Machine Learning</h4>
+                    <p className="text-gray-300 text-sm">Accelerate AI model training with quantum computing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Blockchain & Web3 */}
+            <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-3xl p-8 mb-8 border border-green-500/30">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">⛓️ Blockchain & Web3</h3>
+                  <p className="text-gray-300 mb-6">
+                    Build decentralized applications, implement smart contracts, and create secure blockchain solutions.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white/10 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-green-400">90%</div>
+                      <div className="text-gray-300 text-sm">Security Improvement</div>
+                    </div>
+                    <div className="bg-white/10 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-emerald-400">$899</div>
+                      <div className="text-gray-300 text-sm">Starting Price/Month</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">DeFi Platform Development</h4>
+                    <p className="text-gray-300 text-sm">Custom decentralized finance platforms and protocols</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">NFT Marketplace Solutions</h4>
+                    <p className="text-gray-300 text-sm">Complete NFT platforms with minting and trading</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">Smart Contract Development</h4>
+                    <p className="text-gray-300 text-sm">Secure, audited smart contracts for any use case</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* IoT & Edge Computing */}
+            <div className="bg-gradient-to-r from-orange-500/20 to-yellow-500/20 rounded-3xl p-8 mb-8 border border-orange-500/30">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">📡 IoT & Edge Computing</h3>
+                  <p className="text-gray-300 mb-6">
+                    Connect devices, process data at the edge, and create intelligent IoT ecosystems for your business.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white/10 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-orange-400">50%</div>
+                      <div className="text-gray-300 text-sm">Downtime Reduction</div>
+                    </div>
+                    <div className="bg-white/10 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-yellow-400">$799</div>
+                      <div className="text-gray-300 text-sm">Starting Price/Month</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">Enterprise IoT Platform</h4>
+                    <p className="text-gray-300 text-sm">Monitor thousands of devices with real-time analytics</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">Predictive Maintenance</h4>
+                    <p className="text-gray-300 text-sm">Reduce unplanned downtime by 50% with AI predictions</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2">Edge Computing Solutions</h4>
+                    <p className="text-gray-300 text-sm">Process data closer to source for faster insights</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Why Choose Us */}
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold text-white text-center mb-12">
+              Why Choose Zion Tech Group?
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10 text-center">
+                <div className="text-5xl mb-4">🏆</div>
+                <h3 className="text-2xl font-bold text-white mb-3">Proven Expertise</h3>
+                <p className="text-gray-300">
+                  15+ years of experience delivering cutting-edge technology solutions to enterprises worldwide.
+                </p>
+              </div>
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10 text-center">
+                <div className="text-5xl mb-4">⚡</div>
+                <h3 className="text-2xl font-bold text-white mb-3">Rapid Implementation</h3>
+                <p className="text-gray-300">
+                  Most services deploy in 2-8 weeks with our proven methodologies and expert support teams.
+                </p>
+              </div>
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10 text-center">
+                <div className="text-5xl mb-4">💰</div>
+                <h3 className="text-2xl font-bold text-white mb-3">Competitive Pricing</h3>
+                <p className="text-gray-300">
+                  Up to 70% cost savings compared to market alternatives with transparent, flexible pricing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl p-8 border border-blue-500/30">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Schedule a free consultation to discuss your specific needs and discover how our technology solutions can drive your success.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link 
+                href="/contact" 
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-transform duration-300"
               >
-                Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
+                Get Free Consultation
+              </Link>
+              <Link 
+                href="/case-studies" 
+                className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold border border-white/20 hover:bg-white/20 transition-colors duration-300"
+              >
+                View Case Studies
               </Link>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                
-                <ul className="space-y-3 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <div className="border-t border-white/10 pt-6">
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="text-lg font-semibold text-white">{service.pricing}</span>
-                    <span className="text-sm text-green-400 font-medium">{service.roi}</span>
-                  </div>
-                  <Link
-                    href="/contact"
-                    className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 bg-black/20 backdrop-blur-sm">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of companies already experiencing unprecedented growth with our 
-            revolutionary AI and automation solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
-            >
-              Start Your Transformation
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link
-              href="/case-studies"
-              className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
-            >
-              View Success Stories
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+    </>
   );
 }

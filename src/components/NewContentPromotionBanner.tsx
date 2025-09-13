@@ -34,6 +34,45 @@ interface NewContentItem {
 
 const newContentItems: NewContentItem[] = [
   {
+    id: 'neural-architecture-revolution',
+    type: 'blog',
+    title: 'AI 2026: The Neural Architecture Revolution Reshaping Enterprise Computing',
+    description: 'Discover the revolutionary neural architectures that are making advanced AI 300-500% faster and accessible to enterprises.',
+    ctaText: 'Read Revolution',
+    ctaLink: '/blog/ai-2026-neural-architecture-revolution',
+    badge: 'Revolutionary',
+    icon: Brain,
+    gradient: 'from-purple-500 to-indigo-600',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: 'fortune-500-transformation',
+    type: 'case-study',
+    title: 'Fortune 500 Manufacturing: $2.4B Neural Architecture Transformation',
+    description: 'See how a global manufacturing giant achieved 380% ROI and $2.4B in business value with neural architecture implementation.',
+    ctaText: 'View Case Study',
+    ctaLink: '/case-studies/fortune-500-neural-architecture-transformation-2026',
+    badge: 'Success Story',
+    icon: TrendingUp,
+    gradient: 'from-green-500 to-emerald-600',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: 'neural-architecture-guide',
+    type: 'resource',
+    title: 'Complete Neural Architecture Implementation Guide 2026',
+    description: 'Your comprehensive blueprint for implementing revolutionary neural architectures with proven methodologies and best practices.',
+    ctaText: 'Download Guide',
+    ctaLink: '/resources/ai-2026-neural-architecture-implementation-guide',
+    badge: 'Expert Guide',
+    icon: BookOpen,
+    gradient: 'from-blue-500 to-cyan-600',
+    featured: true,
+    isNew: true
+  },
+  {
     id: 'quantum-ai-breakthrough',
     type: 'blog',
     title: 'Quantum-AI Fusion: The Breakthrough Revolutionizing Everything in 2025',
@@ -44,7 +83,7 @@ const newContentItems: NewContentItem[] = [
     icon: Zap,
     gradient: 'from-purple-500 to-indigo-600',
     featured: true,
-    isNew: true
+    isNew: false
   },
   {
     id: 'healthcare-ai-success',
@@ -57,20 +96,7 @@ const newContentItems: NewContentItem[] = [
     icon: TrendingUp,
     gradient: 'from-green-500 to-emerald-600',
     featured: true,
-    isNew: true
-  },
-  {
-    id: 'enterprise-automation-guide',
-    type: 'blog',
-    title: 'Complete Enterprise AI Automation Guide 2025',
-    description: 'Comprehensive guide to transforming business operations with cutting-edge AI automation solutions.',
-    ctaText: 'Read Guide',
-    ctaLink: '/blog/ai-automation-enterprise-guide-2025',
-    badge: 'Expert Guide',
-    icon: BookOpen,
-    gradient: 'from-blue-500 to-cyan-600',
-    featured: true,
-    isNew: true
+    isNew: false
   },
   {
     id: 'ai-implementation-checklist',
@@ -83,20 +109,7 @@ const newContentItems: NewContentItem[] = [
     icon: CheckCircle,
     gradient: 'from-orange-500 to-red-600',
     featured: true,
-    isNew: true
-  },
-  {
-    id: 'ai-roi-calculator',
-    type: 'resource',
-    title: 'AI ROI Calculator Guide 2025',
-    description: 'Maximize your return on AI investment with our comprehensive ROI calculation tools and benchmarks.',
-    ctaText: 'Calculate ROI',
-    ctaLink: '/resources/ai-roi-calculator-guide-2025',
-    badge: 'ROI Tool',
-    icon: Target,
-    gradient: 'from-teal-500 to-green-600',
-    featured: true,
-    isNew: true
+    isNew: false
   }
 ];
 
