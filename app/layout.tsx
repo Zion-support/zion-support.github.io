@@ -226,6 +226,15 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <Link href="/ai-2026-ultimate-predictions-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
+                  🔮 AI 2026 Ultimate Predictions (BREAKTHROUGH)
+                </Link>
+                <Link href="/quantum-computing-breakthrough-2030" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
+                  ⚛️ Quantum Computing Breakthrough 2030 (REVOLUTIONARY)
+                </Link>
+                <Link href="/case-studies/ai-2026-enterprise-transformation-50000-roi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 Enterprise Transformation 50,000% ROI (BREAKTHROUGH)
+                </Link>
                 <Link href="/blog/ai-2026-next-generation-business-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🚀 AI 2026 Next-Gen Business Automation (NEW)
                 </Link>
