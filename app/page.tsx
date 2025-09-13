@@ -148,6 +148,11 @@ import NeuralConsensusRevolutionBanner from '../components/NeuralConsensusRevolu
 // Import new content promotion banners
 import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
 
+// Import new ultimate breakthrough content banners
+import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
+import RevolutionaryContentShowcase2025Banner from '../components/RevolutionaryContentShowcase2025Banner';
+import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
+
 // Import new interactive components
 import AIToolsShowcase2025 from '../components/AIToolsShowcase2025';
 import AIToolsShowcase2025PromotionBanner from '../components/AIToolsShowcase2025PromotionBanner';
@@ -243,6 +248,15 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
+        <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2025 BANNER */}
+        <RevolutionaryContentShowcase2025Banner />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 */}
+        <UltimateContentDiscoveryWidget2025 />
+        
         {/* EDGE AI REVOLUTION PROMOTION BANNER */}
         <EdgeAIRevolutionPromotionBanner />
         

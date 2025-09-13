@@ -1,208 +1,204 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, TrendingUp, Clock, Star, ArrowRight, Zap, Users, Award } from 'lucide-react';
+import { Search, Filter, TrendingUp, Star, Clock, ArrowRight, BookOpen, Users, Target, Zap } from 'lucide-react';
 
 const UltimateContentDiscoveryWidget2025 = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [isSearching, setIsSearching] = useState(false);
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: <Zap className="w-4 h-4" /> },
-    { id: 'ai', name: 'AI Solutions', icon: <Users className="w-4 h-4" /> },
-    { id: 'automation', name: 'Automation', icon: <Award className="w-4 h-4" /> },
-    { id: 'analytics', name: 'Analytics', icon: <TrendingUp className="w-4 h-4" /> }
+    { id: 'all', name: 'All Content', icon: BookOpen },
+    { id: 'trends', name: 'AI Trends', icon: TrendingUp },
+    { id: 'case-studies', name: 'Case Studies', icon: Target },
+    { id: 'guides', name: 'Implementation Guides', icon: BookOpen },
+    { id: 'breakthroughs', name: 'Breakthroughs', icon: Zap }
   ];
 
   const featuredContent = [
     {
-      id: 1,
-      title: "AI 2025 Ultimate Breakthrough",
-      description: "Revolutionary AI solutions transforming industries worldwide",
-      category: "ai",
-      rating: 5,
-      readTime: "5 min read",
-      trending: true,
-      href: "/ai-2025-ultimate-breakthrough"
+      title: "AI 2025-2026 Ultimate Trends Breakthrough",
+      description: "Revolutionary predictions and breakthrough technologies",
+      category: "trends",
+      type: "Blog Post",
+      href: "/blog/ai-2025-2026-ultimate-trends-breakthrough",
+      featured: true,
+      stats: "50,000% ROI potential"
     },
     {
-      id: 2,
-      title: "Advanced Automation Solutions",
-      description: "Next-generation automation tools for enterprise efficiency",
-      category: "automation",
-      rating: 4.8,
-      readTime: "7 min read",
-      trending: false,
-      href: "/advanced-automation-solutions-2025"
+      title: "Revolutionary Enterprise Transformation: 50,000% ROI",
+      description: "Fortune 500 company achieves unprecedented ROI",
+      category: "case-studies",
+      type: "Case Study",
+      href: "/case-studies/ai-2025-revolutionary-enterprise-transformation-50000-roi",
+      featured: true,
+      stats: "50,000% ROI achieved"
     },
     {
-      id: 3,
-      title: "Performance Analytics Dashboard",
-      description: "Real-time insights and monitoring for optimal performance",
-      category: "analytics",
-      rating: 4.9,
-      readTime: "4 min read",
-      trending: true,
-      href: "/performance-analytics-2025"
+      title: "Ultimate Implementation Master Guide",
+      description: "Complete business transformation blueprint",
+      category: "guides",
+      type: "Resource Guide",
+      href: "/resources/ai-2025-ultimate-implementation-master-guide",
+      featured: true,
+      stats: "100% success rate"
     },
     {
-      id: 4,
-      title: "Quantum Computing Revolution",
-      description: "Exploring the future of quantum-powered solutions",
-      category: "ai",
-      rating: 4.7,
-      readTime: "8 min read",
-      trending: false,
-      href: "/quantum-computing-2025"
+      title: "Quantum Consciousness Integration",
+      description: "Breakthrough in quantum-neural fusion",
+      category: "breakthroughs",
+      type: "Breakthrough",
+      href: "/blog/ai-2025-quantum-consciousness-breakthrough",
+      featured: false,
+      stats: "10,000x faster processing"
+    },
+    {
+      title: "Autonomous Business Operations",
+      description: "Complete process automation with 99.9% accuracy",
+      category: "trends",
+      type: "Trend Analysis",
+      href: "/blog/ai-2025-autonomous-operations",
+      featured: false,
+      stats: "99.9% autonomous"
+    },
+    {
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer interfaces",
+      category: "breakthroughs",
+      type: "Breakthrough",
+      href: "/blog/ai-2025-neural-interface-revolution",
+      featured: false,
+      stats: "Revolutionary workflow"
     }
   ];
 
-  const filteredContent = featuredContent.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+  const filteredContent = featuredContent.filter(content => {
+    const matchesSearch = content.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         content.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || content.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-  const handleSearch = async (query: string) => {
-    setIsSearching(true);
-    setSearchQuery(query);
-    // Simulate search delay
-    setTimeout(() => setIsSearching(false), 500);
-  };
-
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl p-8 border border-purple-500/20">
-      {/* Header */}
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-white mb-4">
-          Discover Amazing Content
-        </h2>
-        <p className="text-gray-300 max-w-2xl mx-auto">
-          Explore our curated collection of AI solutions, automation tools, and cutting-edge technology insights
-        </p>
-      </div>
+    <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ultimate Content Discovery
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Find Your Perfect AI Solution
+            </span>
+          </h2>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            Discover the most relevant AI content, case studies, and implementation guides 
+            tailored to your business needs and transformation goals.
+          </p>
+        </div>
 
-      {/* Search and Filters */}
-      <div className="mb-8">
-        <div className="relative mb-6">
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-          <input
-            type="text"
-            placeholder="Search content, solutions, or topics..."
-            value={searchQuery}
-            onChange={(e) => handleSearch(e.target.value)}
-            className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-          />
-          {isSearching && (
-            <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-500"></div>
+        {/* Search and Filter */}
+        <div className="mb-8">
+          <div className="flex flex-col md:flex-row gap-4 mb-6">
+            {/* Search Bar */}
+            <div className="flex-1 relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search AI content, trends, case studies..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20"
+              />
             </div>
-          )}
+            
+            {/* Category Filter */}
+            <div className="flex gap-2 overflow-x-auto pb-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'
+                  }`}
+                >
+                  <category.icon className="h-4 w-4" />
+                  {category.name}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap gap-2">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-                selectedCategory === category.id
-                  ? 'bg-purple-600 text-white'
-                  : 'bg-white/5 text-gray-300 hover:bg-white/10'
-              }`}
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredContent.map((content, index) => (
+            <Link
+              key={index}
+              href={content.href}
+              className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
             >
-              {category.icon}
-              <span className="text-sm font-medium">{category.name}</span>
-            </button>
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-2">
+                  {content.featured && (
+                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                  )}
+                  <span className="text-sm text-blue-400 font-medium">{content.type}</span>
+                </div>
+                <div className="text-xs text-gray-400">
+                  <Clock className="h-3 w-3 inline mr-1" />
+                  {content.category}
+                </div>
+              </div>
+              
+              <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                {content.title}
+              </h3>
+              
+              <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                {content.description}
+              </p>
+              
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-green-400 font-medium">
+                  {content.stats}
+                </div>
+                <div className="flex items-center text-sm text-blue-400 group-hover:text-blue-300">
+                  <span>Explore</span>
+                  <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
-      </div>
 
-      {/* Content Grid */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={`${searchQuery}-${selectedCategory}`}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
-        >
-          {filteredContent.map((item) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3 }}
-              className="group relative p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"
-            >
-              {/* Trending Badge */}
-              {item.trending && (
-                <div className="absolute top-4 right-4 flex items-center space-x-1 px-2 py-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full">
-                  <TrendingUp className="w-3 h-3 text-white" />
-                  <span className="text-xs font-medium text-white">Trending</span>
-                </div>
-              )}
-
-              <div className="mb-4">
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-gray-300 text-sm mb-4">{item.description}</p>
-              </div>
-
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-4">
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-sm text-gray-300">{item.rating}</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <Clock className="w-4 h-4 text-gray-400" />
-                    <span className="text-sm text-gray-300">{item.readTime}</span>
-                  </div>
-                </div>
-              </div>
-
+        {/* CTA Section */}
+        <div className="text-center mt-12">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Can't Find What You're Looking For?
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Our AI experts can help you find the perfect solution for your specific needs
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href={item.href}
-                className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium text-sm group-hover:translate-x-1 transition-all duration-300"
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
-                Read More
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <Users className="h-5 w-5 mr-2" />
+                Get Expert Consultation
               </Link>
-            </motion.div>
-          ))}
-        </motion.div>
-      </AnimatePresence>
-
-      {/* No Results */}
-      {filteredContent.length === 0 && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-center py-12"
-        >
-          <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-white mb-2">No content found</h3>
-          <p className="text-gray-300">Try adjusting your search terms or filters</p>
-        </motion.div>
-      )}
-
-      {/* View All Button */}
-      <div className="text-center mt-8">
-        <Link
-          href="/content-showcase"
-          className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-        >
-          View All Content
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
+              <Link
+                href="/blog"
+                className="inline-flex items-center px-6 py-3 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                <BookOpen className="h-5 w-5 mr-2" />
+                Browse All Content
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
