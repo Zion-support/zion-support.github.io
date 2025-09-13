@@ -136,6 +136,11 @@ import AI2027BreakthroughContentShowcase from '../components/AI2027BreakthroughC
 // AI 2028 Future Technology Components
 import AI2028FutureTechPromotionBanner from '../components/AI2028FutureTechPromotionBanner';
 
+// New 2025 Content Promotion Components
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import ContentROICalculator from '../components/ContentROICalculator';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -191,6 +196,16 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </section>
+
+              {/* New 2025 Content Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewContent2025PromotionBanner />
+              </Suspense>
+
+              {/* Content ROI Calculator */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <ContentROICalculator />
+              </Suspense>
 
               {/* New 2026 Content Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
@@ -368,6 +383,11 @@ const HomePage: React.FC = () => {
               {/* Success Stories Showcase 2027 */}
               <Suspense fallback={<LoadingSpinner />}>
                 <SuccessStoriesShowcase2027 />
+              </Suspense>
+
+              {/* Interactive Content Discovery Widget */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscoveryWidget />
               </Suspense>
 
               {/* New Content Discovery Widget 2026 */}
