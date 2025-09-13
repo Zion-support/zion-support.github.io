@@ -97,6 +97,12 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import AI2025SyntheticIntelligenceBreakthroughBanner from '../components/AI2025SyntheticIntelligenceBreakthroughBanner';
 import AI2026FuturePredictionsBreakthroughBanner from '../components/AI2026FuturePredictionsBreakthroughBanner';
 
+// Import new content showcase and promotional components
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import UltimatePromotionBanner2025 from '../components/UltimatePromotionBanner2025';
+import InteractiveContentWidget2025 from '../components/InteractiveContentWidget2025';
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -152,6 +158,18 @@ export default function HomePage() {
         
         {/* AI 2026 FUTURE PREDICTIONS BREAKTHROUGH BANNER */}
         <AI2026FuturePredictionsBreakthroughBanner />
+        
+        {/* NEW CONTENT SHOWCASE 2025 */}
+        <NewContentShowcase2025 />
+        
+        {/* ULTIMATE PROMOTION BANNER 2025 */}
+        <UltimatePromotionBanner2025 />
+        
+        {/* INTERACTIVE CONTENT WIDGET 2025 */}
+        <InteractiveContentWidget2025 />
+        
+        {/* NEW CONTENT PROMOTION BANNER 2025 */}
+        <NewContentPromotionBanner2025 />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
