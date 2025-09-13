@@ -1,16 +1,9 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 
-
-
-
 export default function AccountSettingsPage() {
   const [user, setUser] = useState<{ address: string; chain: 'evm' | 'sol' } | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-
-export default function AccountSettingsPage(req, res) {
-
-
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
@@ -33,10 +26,6 @@ export default function AccountSettingsPage(req, res) {
   };
 
   const linkDID = async () => {
-
-
-
-
     if (!user) return;
     setLinking(true);
     setStatus(null);
@@ -64,8 +53,7 @@ export default function AccountSettingsPage(req, res) {
       const res = await fetch('/api/did/link', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ payload, message: msg, signature }),
-      });
+        body: JSON.stringify({ payload, message: msg, signature })});
       if (!res.ok) throw new Error('Failed to link DIDs');
       setStatus('Linked successfully');
     } catch (e: any) {
@@ -84,19 +72,11 @@ export default function AccountSettingsPage(req, res) {
         did: { ens, lens, ceramic, farcaster },
         resume: {},
         projects: [],
-        reviews: [],
-
-
-
-
-
-
-      };
+        reviews: []};
       const res = await fetch('/api/backup/upload', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(profile),
-      });
+        body: JSON.stringify(profile)});
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Backup failed');
       setBackupCid(data.cid);
@@ -114,24 +94,18 @@ export default function AccountSettingsPage(req, res) {
       if (!res.ok) throw new Error(data?.error || 'Restore failed');
       const { user: u, preferences, did } = data;
       if (u) setUser(u);
-
-
-
-
-
-
-
-      <Head>;
-      </Head>;
-
-
-
+      if (preferences) saveDisplayPref(!!preferences.displayWeb3);
+      if (did) {
         setEns(did.ens || '');
         setLens(did.lens || '');
         setCeramic(did.ceramic || '');
         setFarcaster(did.farcaster || '');
       }
       setStatus('Profile restored from backup');
+    } catch (e: any) {
+      setStatus(e?.message || 'Restore failed');
+    }
+  };
 
   return (
     <>
@@ -172,9 +146,7 @@ export default function AccountSettingsPage(req, res) {
           <p className="text-sm text-gray-500 mb-3">Back up talent profiles, resume, and project reviews to IPFS/Arweave (via Web3.Storage). Opt-in only.</p>
           <div className="flex flex-wrap items-center gap-3">
             <button onClick={doBackup} className="rounded-md bg-emerald-600 text-white px-4 py-2">Create Backup</button>
-
-
-
+            {backupCid && <span className="text-xs">CID: <code className="bg-gray-100 dark:bg-neutral-800 px-2 py-1 rounded">{backupCid}</code></span>}
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
@@ -182,15 +154,8 @@ export default function AccountSettingsPage(req, res) {
           </div>
         </section>
 
-
-
-
-
+        {status && <div className="text-sm text-gray-600">{status}</div>}
       </div>
     </>
   );
 }
-
-
-
-

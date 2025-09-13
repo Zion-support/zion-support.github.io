@@ -1,7 +1,0 @@
-echo "🚀 Enhanced Pre-push System Starting..."
-
-# Temporarily disabled for development - will re-enable after major issues are resolved
-echo "⚠️ Pre-push checks temporarily disabled for development"
-echo "✅ Proceeding with push..."
-
-echo "🚀 Ready to push to repository!"

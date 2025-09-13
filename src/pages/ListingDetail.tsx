@@ -2,47 +2,50 @@
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { ChatWidget } from "@/components/ChatWidget";
-import { useParams } from "react-router-dom";
+import { useRouter } from "next/router";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
-import { MessageSquare, Brain, Shield } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
+import Skeleton from "@/components/ui/skeleton";
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { Star, MessageSquare, Brain, Shield } from 'lucide-react'
 import { cn } from "@/lib/utils";
+import Link from 'next/link';
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 import { toast } from "@/hooks/use-toast";
 import { PaymentButton } from "@/components/transactions/PaymentButton";
 import { ProfileContact } from "@/components/profile/ProfileContact";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { useCurrency } from '@/hooks/useCurrency';
 
 export default function ListingDetail() {
-  // Cast to specify the expected route param type since useParams may be untyped
-  const { id } = useParams() as { id?: string };
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const router = useRouter();
+  const id = router.query.id as string;
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isLoading, _setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { user } = useAuth();
+  const { formatPrice } = useCurrency();
 
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
 
   if (!listing) {
     return (
-      
-        <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
-            <div className="text-center py-20">
-              <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
+      <div className="min-h-screen bg-zion-blue py-12 px-4">
+        <div className="container mx-auto">
+          <div className="text-center py-20">
+            <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
               <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>
               <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">
-                <a href="/marketplace">Back to Marketplace</a>
+                <Link href="/marketplace">Back to Marketplace</Link>
               </Button>
             </div>
           </div>
         </div>
-      
-    );
+      );
   }
 
   const handleContact = () => {
@@ -54,7 +57,7 @@ export default function ListingDetail() {
   };
 
   return (
-    
+    <>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -64,9 +67,9 @@ export default function ListingDetail() {
                 <div className="aspect-[16/9] w-full relative">
                   {listing.images && listing.images.length > 0 ? (
                     <ImageWithRetry
-                      src={listing.images[selectedImageIndex]}
+                      src={listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg"}
                       alt={listing.title}
-                      className="w-full h-full object-cover"
+                      className="object-cover"
                       fallbackSrc="/placeholder.svg"
                     />
                   ) : (
@@ -90,7 +93,7 @@ export default function ListingDetail() {
                         <ImageWithRetry
                           src={image}
                           alt={`${listing.title} - image ${index + 1}`}
-                          className="w-full h-full object-cover"
+                          className="object-cover"
                           fallbackSrc="/placeholder.svg"
                         />
                       </div>
@@ -161,7 +164,17 @@ export default function ListingDetail() {
                 
                 {listing.rating && (
                   <div className="flex items-center gap-2 mb-6">
-                    <RatingStars value={listing.rating} />
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={cn(
+                            "h-5 w-5",
+                            i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+                          )}
+                        />
+                      ))}
+                    </div>
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
                     </span>
@@ -172,7 +185,7 @@ export default function ListingDetail() {
                 <div className="mb-6">
                   {listing.price !== null ? (
                     <div className="text-3xl font-bold text-white">
-                      {listing.currency}{listing.price.toLocaleString()}
+                      {formatPrice(listing.price)}
                     </div>
                   ) : (
                     <div className="text-2xl font-bold text-white">
@@ -223,15 +236,17 @@ export default function ListingDetail() {
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
                   <div className="flex items-center gap-3">
                     {listing.author.avatarUrl ? (
-                      <img loading="lazy" 
-                        src={listing.author.avatarUrl} 
-                        alt={listing.author.name} 
-                        className="h-12 w-12 rounded-full"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);
-                        }}
-                      />
+                      <div className="relative h-12 w-12 rounded-full overflow-hidden">
+                        <ImageWithRetry
+                          src={listing.author.avatarUrl}
+                          alt={listing.author.name}
+                          className="object-cover"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);
+                          }}
+                        />
+                      </div>
                     ) : (
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
                         <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>
@@ -275,12 +290,12 @@ export default function ListingDetail() {
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
           <ProfileContact 
-            email={listing.author.email || ''}
+            email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
             profileType="service"
           />
         </DialogContent>
       </Dialog>
-    
+    </>
   );
 }

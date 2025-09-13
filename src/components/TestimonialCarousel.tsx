@@ -4,8 +4,7 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+  CarouselPrevious} from "@/components/ui/carousel";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -31,8 +30,7 @@ export function TestimonialCarousel() {
           <Carousel
             opts={{
               align: "start",
-              loop: true,
-            }}
+              loop: true}}
             className="w-full"
           >
             <CarouselContent>
@@ -42,9 +40,11 @@ export function TestimonialCarousel() {
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">
                       <div className="flex-shrink-0 flex flex-col items-center">
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
-                          <img
+                          <Image
                             src={testimonial.avatar}
                             alt={testimonial.author}
+                            width={80}
+                            height={80}
                             loading="lazy"
                           />
                         </Avatar>

@@ -2,61 +2,23 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, BarChart3, Brain, Database, Users, Target, BarChart, PieChart, Activity, Eye, Lock } from 'lucide-react';
-
-
+import { 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
+  DollarSign, Shield, Mail, MapPin, Rocket, BarChart3,
+  Brain, Database, TrendingUp as TrendingUpIcon, Users,
+  Target, BarChart, PieChart, Activity, Eye, Lock
+} from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import { 
-
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import {
-
-
-
-import Button from '../components/ui/Button',;
-import Button from '../components/ui/Button',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
-
-export default function AIBusinessIntelligenceSuite() {
-
-
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import { 
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import {
-import Button from '../components/ui/Button',;
-import Button from '../components/ui/Button',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
 export default function AIBusinessIntelligenceSuite() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-
-
+  };
 
   const features = [
     'Real-time data analysis and visualization',
@@ -90,9 +52,14 @@ export default function AIBusinessIntelligenceSuite() {
   ];
 
   return (
-    <UltraAdvancedFuturisticBackground>
-
-
+    <UltraAdvancedFuturisticBackground 
+      intensity="high" 
+      colorScheme="quantum-fusion"
+      particleCount={500}
+      animationSpeed={2.0}
+      enableHolographic={true}
+      enableQuantumEffects={true}
+    >
       <div className="min-h-screen">
         <Head>
           <title>AI Business Intelligence Suite - Zion Tech Group | Transform Data into Insights</title>
@@ -122,7 +89,6 @@ export default function AIBusinessIntelligenceSuite() {
                 initial={{ scale: 0.8, rotate: -5 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
-
                 className="mb-8"
               >
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden">
@@ -145,8 +111,6 @@ export default function AIBusinessIntelligenceSuite() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-
-
                 className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
               >
                 Transform data into actionable insights with <span className="text-blue-400 font-bold">AI-powered analytics</span>
@@ -172,7 +136,6 @@ export default function AIBusinessIntelligenceSuite() {
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-
                   className="bg-gradient-to-r from-blue-500 to-indigo-600 p-1 rounded-2xl shadow-2xl"
                 >
                   <div className="bg-gray-900 rounded-2xl px-8 py-6">
@@ -197,10 +160,7 @@ export default function AIBusinessIntelligenceSuite() {
                   transition={{ duration: 0.2, delay: 0.1 }}
                 >
                   <Button 
-
-
-
-
+                    href="/contact" 
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
                   >
@@ -217,8 +177,6 @@ export default function AIBusinessIntelligenceSuite() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
-
-
                 className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
               >
                 <div className="text-center p-4">
@@ -246,7 +204,6 @@ export default function AIBusinessIntelligenceSuite() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -267,10 +224,7 @@ export default function AIBusinessIntelligenceSuite() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
-
-
-
+                  whileHover={{ scale: 1.02, y: -5 }}
                   className="group bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/60 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -295,7 +249,6 @@ export default function AIBusinessIntelligenceSuite() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -316,8 +269,7 @@ export default function AIBusinessIntelligenceSuite() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
-
+                  whileHover={{ scale: 1.02, y: -5 }}
                   className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -334,9 +286,6 @@ export default function AIBusinessIntelligenceSuite() {
           </div>
         </section>
 
-                      <Target className="w - 5 h - 5 text - white" />;
-
-
         {/* Technology & Integrations */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-7xl mx-auto">
@@ -347,9 +296,6 @@ export default function AIBusinessIntelligenceSuite() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-
-
-
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -364,8 +310,6 @@ export default function AIBusinessIntelligenceSuite() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
-
-
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
@@ -375,11 +319,12 @@ export default function AIBusinessIntelligenceSuite() {
                 </div>
               </motion.div>
 
-
-
-
-
-
+              {/* Integrations */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -394,8 +339,6 @@ export default function AIBusinessIntelligenceSuite() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
-
-
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
@@ -408,11 +351,14 @@ export default function AIBusinessIntelligenceSuite() {
           </div>
         </section>
 
-
-
-
-
-
+        {/* Market Position & ROI */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -424,10 +370,10 @@ export default function AIBusinessIntelligenceSuite() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
-
-
-
-
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantage</h3>
@@ -452,10 +398,10 @@ export default function AIBusinessIntelligenceSuite() {
               </motion.div>
 
               <motion.div
-
-
-
-
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Return on Investment</h3>
@@ -465,15 +411,15 @@ export default function AIBusinessIntelligenceSuite() {
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <TrendingUp className="w-5 h-5 text-green-400" />
+                    <TrendingUpIcon className="w-5 h-5 text-green-400" />
                     <span className="text-gray-200">Improved decision-making</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <TrendingUp className="w-5 h-5 text-green-400" />
+                    <TrendingUpIcon className="w-5 h-5 text-green-400" />
                     <span className="text-gray-200">Operational efficiency gains</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <TrendingUp className="w-5 h-5 text-green-400" />
+                    <TrendingUpIcon className="w-5 h-5 text-green-400" />
                     <span className="text-gray-200">Reduced manual reporting time</span>
                   </div>
                 </div>
@@ -482,9 +428,7 @@ export default function AIBusinessIntelligenceSuite() {
           </div>
         </section>
 
-
-
-
+        {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -492,18 +436,22 @@ export default function AIBusinessIntelligenceSuite() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business Intelligence?
+              </h2>
+              <p className="text-gray-300 text-xl mb-8 leading-relaxed">
+                Join 1800+ businesses that have already transformed their data into actionable insights with our AI-powered platform.
+              </p>
               
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <motion.div
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                >
                   <Button 
-                    <CheckCircle className="w - 5 h - 5 text - yellow - 400" />;
-                    <CheckCircle className="w - 5 h - 5 text - yellow - 400" />;
-                    <CheckCircle className="w - 5 h - 5 text - yellow - 400" />;
-                    <TrendingUpIcon className="w - 5 h - 5 text - green - 400" />;
-                    <TrendingUpIcon className="w - 5 h - 5 text - green - 400" />;
-                    <TrendingUpIcon className="w - 5 h - 5 text - green - 400" />;
-
-
-
-
+                    href="/contact" 
                     variant="primary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-2xl hover:shadow-blue-500/25"
                   >
@@ -521,10 +469,7 @@ export default function AIBusinessIntelligenceSuite() {
                   transition={{ duration: 0.2, delay: 0.1 }}
                 >
                   <Button 
-
-
-
-
+                    href="/contact" 
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
                   >
@@ -537,11 +482,7 @@ export default function AIBusinessIntelligenceSuite() {
               </div>
 
               <div className="mt-8 text-gray-400">
-
-
-                <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-blue-400 hover:text-blue-300">{contactInfo.mobile}</Link> | <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300">{contactInfo.email}</Link></p>
-
-
+                <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-blue-400 hover:text-blue-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300">{contactInfo.email}</a></p>
                 <p className="mt-2">{contactInfo.address}</p>
               </div>
             </motion.div>
@@ -549,15 +490,5 @@ export default function AIBusinessIntelligenceSuite() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-
-
-                  <Button;
-                      <Rocket className="mr - 3 w - 5 h - 5" />;
-                      <ArrowRight className="ml - 3 w - 5 h - 5" />;
-                  </Button>;
-                  <Button;
-                      <Phone className="mr - 3 w - 5 h - 5" />;
-                  </Button>;
-    </UltraAdvancedFuturisticBackground>);
-
-
+  );
+}

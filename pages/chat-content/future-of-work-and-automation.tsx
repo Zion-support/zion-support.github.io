@@ -1,8 +1,20 @@
-export default function FutureOfWorkAndAutomation() {
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+const FutureOfWorkAndAutomation: NextPage = () => {
   return (
     <div>
-      <h1 className="text-2xl font-semibold">Future of Work & Automation</h1>
-      <p className="text-sm text-gray-600">Content coming soon.</p>
+      <Head>
+        <title>FutureOfWorkAndAutomation - Zion Tech Solutions</title>
+        <meta name="description" content="FutureOfWorkAndAutomation page" />
+      </Head>
+      
+      <main>
+        <h1>FutureOfWorkAndAutomation</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
   );
-}
+};
+
+export default FutureOfWorkAndAutomation;
