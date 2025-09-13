@@ -1,0 +1,9 @@
+{
+  "generatedAt": "2025-08-26T10:30:33.512Z",
+  "functions": [],
+<<<<<<< HEAD
+  "note": "Placeholder manifest generated because scripts/generate-netlify-functions-manifest.cjs was missing."
+=======
+  "generatedAt": "2025-08-26T23:09:07.728Z"
+>>>>>>> origin/backup-main-20250827-101138
+}

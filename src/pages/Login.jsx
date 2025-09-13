@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { safeStorage } from '@/utils/safeStorage';
-import { LoginContent } from '@/components/auth/login';
+import { LoginForm } from '@/components/auth/login/LoginForm';
 import { ErrorBoundary } from 'react-error-boundary';
-import { useCart } from '@/context/CartContext';
 
+import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
 import { useDispatch } from 'react-redux';
 import { setLoggedIn } from '@/store/authSlice';
@@ -35,7 +35,7 @@ export default function Login() {
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
-      const next = location.state?.from?.pathname || '/dashboard';
+      const next = location.state?.next || '/dashboard';
       navigate(next, { replace: true });
     }
   }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
@@ -43,8 +43,8 @@ export default function Login() {
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
     return (
-      <ErrorBoundary fallback={<div>Something went wrong. Please try again.</div>}>
-        <LoginContent />
+      <ErrorBoundary>
+        <LoginForm />
       </ErrorBoundary>
     );
   }

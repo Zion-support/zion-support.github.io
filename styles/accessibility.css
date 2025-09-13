@@ -1,3 +1,112 @@
+/* Accessibility Enhancements */
+
+/* High Contrast Mode */
+.high-contrast {
+  filter: contrast(150%) brightness(1.2);
+}
+
+.high-contrast * {
+  background-color: white !important;
+  color: black !important;
+  border-color: black !important;
+}
+
+.high-contrast button,
+.high-contrast a,
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  border: 2px solid black !important;
+  background-color: white !important;
+  color: black !important;
+}
+
+.high-contrast button:hover,
+.high-contrast a:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* Large Text Mode */
+.large-text {
+  font-size: 1.25rem !important;
+  line-height: 1.6 !important;
+}
+
+.large-text h1 {
+  font-size: 3rem !important;
+  line-height: 1.2 !important;
+}
+
+.large-text h2 {
+  font-size: 2.5rem !important;
+  line-height: 1.3 !important;
+}
+
+.large-text h3 {
+  font-size: 2rem !important;
+  line-height: 1.4 !important;
+}
+
+.large-text h4 {
+  font-size: 1.75rem !important;
+  line-height: 1.4 !important;
+}
+
+.large-text h5 {
+  font-size: 1.5rem !important;
+  line-height: 1.5 !important;
+}
+
+.large-text h6 {
+  font-size: 1.25rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Reduced Motion */
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Enhanced Focus */
+.focus-visible *:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3) !important;
+}
+
+.focus-visible button:focus,
+.focus-visible a:focus,
+.focus-visible input:focus,
+.focus-visible select:focus,
+.focus-visible textarea:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Skip Links */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Screen Reader Only */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -10,57 +119,7 @@
   border: 0;
 }
 
-.sr-only-focusable:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  padding: inherit;
-  margin: inherit;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
-}
-
-.focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-@media (prefers-contrast: high) {
-  .text-gray-600 {
-    color: #000000;
-  }
-  .bg-gray-100 {
-    background-color: #ffffff;
-    border: 1px solid #000000;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-.skip-to-content {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  text-decoration: none;
-  z-index: 1000;
-}
-
-.skip-to-content:focus {
-  top: 6px;
-}
-
+/* Focus Management */
 .focus-trap {
   position: relative;
 }
@@ -75,10 +134,70 @@
   pointer-events: none;
 }
 
-[aria-live] {
-  position: absolute;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+/* High Contrast Focus */
+.high-contrast .focus-visible *:focus {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5) !important;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  
+  .page-break {
+    page-break-before: always;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .auto-dark {
+    background-color: #1f2937;
+    color: #f9fafb;
+  }
+  
+  .auto-dark h1,
+  .auto-dark h2,
+  .auto-dark h3,
+  .auto-dark h4,
+  .auto-dark h5,
+  .auto-dark h6 {
+    color: #f9fafb;
+  }
+  
+  .auto-dark a {
+    color: #60a5fa;
+  }
+  
+  .auto-dark a:hover {
+    color: #93c5fd;
+  }
+}
+
+/* Reduced Data Mode */
+@media (prefers-reduced-data: reduce) {
+  .data-heavy {
+    display: none !important;
+  }
+  
+  img {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f3f4f6"/><text x="50" y="50" text-anchor="middle" dy=".3em" fill="%236b7280" font-size="12">Image</text></svg>');
+  }
 }

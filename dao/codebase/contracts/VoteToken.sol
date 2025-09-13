@@ -1,32 +1,33 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.24;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
+import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import {ERC20Permit} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
+import {ERC20Votes} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
+import {Nonces} from "@openzeppelin/contracts/utils/Nonces.sol";
 
-/// @title VoteToken
-/// @notice ERC20 token used for ZionDAO voting with staking capability.
-contract VoteToken is ERC20, ERC20Burnable {
-    /// @notice mapping of address to staked amount
-    mapping(address => uint256) public stakedBalance;
-
-    constructor(string memory name, string memory symbol) ERC20(name, symbol) {}
-
-    /// @notice mint initial supply to an address
-    function mint(address to, uint256 amount) external {
-        _mint(to, amount);
+contract VoteToken is ERC20, ERC20Permit, ERC20Votes {
+    constructor(string memory name_, string memory symbol_, uint256 initialSupply, address initialRecipient)
+        ERC20(name_, symbol_)
+        ERC20Permit(name_)
+    {
+        _mint(initialRecipient, initialSupply);
     }
 
-    /// @notice stake tokens to participate in governance
-    function stake(uint256 amount) external {
-        _burn(_msgSender(), amount);
-        stakedBalance[_msgSender()] += amount;
+    // OZ v5 uses _update hook instead of _afterTokenTransfer/_mint/_burn
+    function _update(address from, address to, uint256 value)
+        internal
+        override(ERC20, ERC20Votes)
+    {
+        super._update(from, to, value);
     }
 
-    /// @notice unstake staked tokens
-    function unstake(uint256 amount) external {
-        require(stakedBalance[_msgSender()] >= amount, "insufficient stake");
-        stakedBalance[_msgSender()] -= amount;
-        _mint(_msgSender(), amount);
+    function nonces(address owner)
+        public
+        view
+        override(ERC20Permit, Nonces)
+        returns (uint256)
+    {
+        return super.nonces(owner);
     }
 }

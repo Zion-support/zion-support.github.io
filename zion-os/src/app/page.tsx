@@ -1,7 +1,15 @@
-import FeatureCard from './components/FeatureCard',
+import FeatureCard from './components/FeatureCard';
+
 export default function HomePage() {
-  const features = [
-    {
+
+
+
+import FeatureCard from './components / FeatureCard',
+import FeatureCard from './components / FeatureCard',
+export default /**
+import FeatureCard from './components/FeatureCard'
+import FeatureCard from './components/FeatureCard'
+export default function HomePage() {
       icon: "🤖",
       title: "AI-Powered Intelligence",
       description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
@@ -73,10 +81,35 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
-  ],
+  ];
 
   return (
+            
+            
+
+
+
+              </Link>
+              </Link>
+
+
+
+
+              <FeatureCard
+              </Link>;
+              </Link>;
+              <FeatureCard;
     <div className="min-h-screen">
+      {/* Promo Banner */}
+      <div className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
+          <span className="font-semibold">New:</span>
+          <span className="opacity-90">3 fresh guides on AI deployment, services pricing, and Web3.</span>
+          <a href="/blog" className="underline underline-offset-4 decoration-white/60 hover:decoration-white font-semibold">
+            Read the blog →
+          </a>
+        </div>
+      </div>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -128,12 +161,15 @@ export default function HomePage() {
                 description={feature.description}
                 features={feature.features}
                 gradient={feature.gradient}
-              />;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
+
+
+
+
+
+              </Link>
+              </Link>
+              </Link>;
+              </Link>;
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-effect rounded-2xl p-12 animate-slide-up">
@@ -150,10 +186,15 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
+              <a href="/blog" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 Read the Blog
+              </a>
             </div>
           </div>
         </div>
       </section>
+
+
 
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -179,5 +220,3 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  )
-}

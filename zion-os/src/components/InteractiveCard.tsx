@@ -1,3 +1,32 @@
+
+'use client',
+import React, { useState } from 'react',
+import Link from 'next / link',
+interface InteractiveCardProps {
+  title: string,
+  description: string,
+  icon: string,
+  href: string,
+  color?: string,
+  class_name?: string,
+  children?: React.ReactNode;
+}
+export default /**
+ * InteractiveCard - Function description
+ */
+function InteractiveCard() {
+  const [is_hovered, setIsHovered] = useState (false),
+  return (
+
+    <Link;
+      href={href}
+      className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
+      onMouseEnter={() => setIsHovered (true)}
+      onMouseLeave={() => setIsHovered (false)}
+      aria - label={`Navigate to ${title} page`}
+>;
+      <div className=&quot;relative & quot;>;
+
 'use client',;
 import React, { useState } from 'react',;
 import Link from 'next/link',;
@@ -21,6 +50,7 @@ export default function InteractiveCard({;
   children;
 }: InteractiveCardProps) {;
   const [isHovered, setIsHovered] = useState(false),;
+
   return (;
     <Link;
       href={href}
@@ -28,37 +58,55 @@ export default function InteractiveCard({;
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-label={`Navigate to ${title} page`}
+
     >
       <div className="relative">
+
         {/* Animated background */}
         <div;
-          className={`absolute inset-0 bg-gradient-to-r ${color} rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl`}
+          className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
         />;
         {/* Icon */}
+
+
         <div className="relative z-10 text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
           {icon}
         </div>;
         {/* Content */}
         <div className="relative z-10">
           <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
+
+
             {title}
-          </h3>
-          <p className="text-gray-400 leading-relaxed text-lg mb-6">
+          </h3>;
+          <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
             {description}
           </p>;
           {/* Custom children or default arrow */}
+
+
+{children || (
+
+            <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
           {children || (
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
+
+
+
               <span>Learn More</span>
-              <svg 
+              <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
                   isHovered ? 'translate-x-2' : ''
+
+
                 }`} 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
+
+
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M13 7l5 5m0 0l-5 5m5-5H6&quot; />
               </svg>
             </div>
           )}
@@ -66,14 +114,45 @@ export default function InteractiveCard({;
         {/* Hover effect overlay */}
         <div;
           className={`absolute inset-0 border-2 border-transparent rounded-xl bg-gradient-to-r ${color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+
+{children || (
+            <div className=&quot;flex items - center text - purple - 400 font - medium group - hover:text - purple - 300 transition - colors duration - 300 & quot;>;
+              <span > Learn More</span>;
+              <svg;
+                className={`ml - 2 w - 5 h - 5 transition - all duration - 300 ${
+                  is_hovered ? 'translate - x-2' : '';
+                }`}
+                fill=&quot;none & quot; ;
+                stroke=&quot;current_color & quot; ;
+                view_box=&quot;0 0 24 24 & quot;
+              >;
+                <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M13 7l5 5m0 0l - 5 5m5 - 5H6 & quot; />;
+              </svg>;
+            </div>)}
+        </div>;
+        {/* Hover effect overlay */}
+        <div;
+          className={`absolute inset - 0 border - 2 border - transparent rounded - xl bg - gradient - to - r ${color} opacity - 0 group - hover:opacity - 20 transition - opacity duration - 500`}
+          style={{
+            background: `linear - gradient (45deg, var (--${color.split ('-')[1]}-500), var (--${color.split ('-')[3]}-500))`;
+
+
           style={{;
             background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
+
           }}
         />;
       </div>;
-    </Link>;
-  );
+    </Link>);
 }
+
+export /**
+ * FeatureCard - Function description
+ */
+function FeatureCard() {
+  return (
+
+
 ;
 export function FeatureCard({;
   title,;
@@ -84,13 +163,14 @@ export function FeatureCard({;
   className = '';
 }: InteractiveCardProps & { stats?: { label: string, value: string }[] }) {;
   return (;
+
     <InteractiveCard;
       title={title}
       description={description}
       icon={icon}
       href={href}
-      className={className}
-    >
+      className={class_name}
+>;
       {stats && (
         <div className="mt-6 pt-6 border-t border-white/10">
           <div className="grid grid-cols-2 gap-4">
@@ -101,11 +181,20 @@ export function FeatureCard({;
               </div>
             ))}
           </div>;
-        </div>;
-      )}
-    </InteractiveCard>;
-  );
+        </div>)}
+    </InteractiveCard>);
 }
+
+export /**
+ * TestimonialCard - Function description
+ */
+function TestimonialCard() {
+  return (
+    <div className={`bg - black / 30 backdrop - blur - sm border border - white / 10 rounded - 2xl p - 8 hover:bg - black / 50 transition - all duration - 300 transform hover:scale - 105 ${class_name}`}>;
+      {/* Quote icon */}
+<div className=&quot;text - 4xl mb - 4&quot;>💬</div>;
+
+
 ;
 export function TestimonialCard({;
   quote,;
@@ -125,8 +214,7 @@ export function TestimonialCard({;
   return (;
     <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
       {/* Quote icon */}
-      <div className="text-4xl mb-4">💬</div>
-      
+
       {/* Rating */}
       <div className="flex mb-4">
         {Array.from({ length: rating }).map((_, i) => (
@@ -136,10 +224,16 @@ export function TestimonialCard({;
         ))}
       </div>;
       {/* Quote */}
+
+
+      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
+        "{quote}"
+
+
+      </blockquote>
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
       </blockquote>
-      
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">
         <div className="font-semibold text-white">{author}</div>

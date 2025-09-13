@@ -1,343 +1,292 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import {;
-  Menu,;
-  X,;
-  ChevronDown,;
-  Phone,;
-  Mail,;
-  Zap,;
-  Brain,;
-  Shield,;
-  Cloud,;
-  Code,;
-  Building,;
-  Globe;
+import { 
+  Menu, 
+  X, 
+  Search, 
+  User, 
+  Bell, 
+  Settings,
+  Zap,
+  ChevronDown
 } from 'lucide-react';
-;
-const Header = ("props": "any) => {;
-  const [isMenuOpen", setIsMenuOpen] = useState<any>(false);
-  const [isServicesOpen, setIsServicesOpen] = useState<any>(false);
-  const [isScrolled, setIsScrolled] = useState<any>(false);
-  const location = useLocation();
-;
-  useEffect(() => {;
-    const handleScroll = ("props": "any) => {;
-      setIsScrolled(window.scrollY > 50);
-    "};
-;
+import { MainNavigation } from '../header/MainNavigation';
+import { cn } from '@/lib/utils';
+
+export function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-;
-  const services = [;
-    {;
-      "icon": "Brai n",;
-      "title": 'AI & Machine Learning',;
-      "description": 'Intelligent solutions for business automation',;
-      "href": '/services/ai-solutions',;
-      "color": 'from-purple-500 to-pink-500';
-    },;
-    {;
-      "icon": "Shiel d",;
-      "title": 'Cybersecurity',;
-      "description": 'Advanced security and threat protection',;
-      "href": '/services/cybersecurity',;
-      "color": 'from-red-500 to-orange-500';
-    },;
-    {;
-      "icon": "Clou d",;
-      "title": 'Cloud Infrastructure',;
-      "description": 'Scalable cloud solutions and migration',;
-      "href": '/services/cloud-infrastructure',;
-      "color": 'from-blue-500 to-cyan-500';
-    },;
-    {;
-      "icon": "Cod e",;
-      "title": 'Blockchain & Web3',;
-      "description": 'Decentralized applications and smart contracts',;
-      "href": '/services/blockchain-web3',;
-      "color": 'from-indigo-500 to-purple-500';
-    },;
-    {;
-      "icon": "Buildin g",;
-      "title": 'Smart City Solutions',;
-      "description": 'AI-powered urban management systems',;
-      "href": '/services/smart-city',;
-      "color": 'from-green-500 to-blue-500';
-    },;
-    {;
-      "icon": "Za p",;
-      "title": 'Quantum Computing',;
-      "description": 'Next-generation computational power',;
-      "href": '/services/quantum-computing',;
-      "color": 'from-yellow-500 to-orange-500';
-    }
-  ];
-;
-  const navigation = [;
-    { "name": 'Home', "href": '/' },;
-    { "name": 'About', "href": '/about' },;
-    { "name": 'Services', "href": '/services', "hasDropdown": "tru e "},;
-    { "name": 'Contact', "href": '/contact' }
-  ];
-;
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const closeMenu = () => setIsMenuOpen(false);
-;
-  return (;
-    <>;
-      <header;
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
-          isScrolled;
-            ? 'bg-slate-900/95 backdrop-blur-lg border-b border-white/10';
-            : 'bg-transparent';
-        }`}
-      >;
-        <div className="container mx-auto px-4">;
-          <div className="flex items-center justify-between h-20">;
-            {/* Logo */}
-            <Link;
-              to="/";
-              className="flex items-center space-x-3 group";
-              onClick={closeMenu}
-            >;
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-"hover": "scal e-110 transition-transform duration-200">;
-                <Globe className="w-6 h-6 text-white"  />;
-              </div>;
-              <div>;
-                <div className="text-xl font-bold text-white">ZionTech Group</div>;
-                <div className="text-xs text-cyan-400">AI & Technology Solutions</div>;
-              </div>;
-            </Link>;
-            {/* Desktop Navigation */"}
-            <nav className="hidden "lg": "flex items-center space-x-8">;
-              {navigation.map((item) => (;
-                <div key={item.name"} className="relative">;
-                  {item.hasDropdown ? (;
-                    <div;
-                      className="relative";
-                      onMouseEnter={() => setIsServicesOpen(true)}
-                      onMouseLeave={() => setIsServicesOpen(false)}
-                    >;
-                      <button;
-                        className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-colors duration-200 ${;
-                          location.pathname.startsWith('/services');
-                            ? 'text-cyan-400 bg-cyan-400/10';
-                            : 'text-gray-300 "hover": "tex t-cyan-400 "hover": b g-cyan-400/5';
-                        "}`}
-                      >;
-                        <span>{item.name}</span>;
-                        <ChevronDown className="w-4 h-4"  />;
-                      </button>;
-                      <AnimatePresence>;
-                        {isServicesOpen && (;
-                          <motion.div;
-                            initial={{ "opacity": "0", "y": "1 0 "}}
-                            animate={{ "opacity": "1", "y": "0 "}}
-                            exit={{ "opacity": "0", "y": "1 0 "}}
-                            transition={{ "duration": "0.2 "}}
-                            className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-xl shadow-xl";
-                          >;
-                            <div className="p-4">;
-                              <div className="grid gap-3">;
-                                {services.map((service) => (;
-                                  <Link;
-                                    key={service.title}
-                                    to={service.href}
-                                    className="flex items-start space-x-3 p-3 rounded-lg "hover": "b g-white/5 transition-colors duration-200 group";
-                                    onClick={() => setIsServicesOpen(false)"}
-                                  >;
-                                    <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center group-"hover": "scal e-110 transition-transform duration-200`"}>;
-                                      <service.icon className="w-5 h-5 text-white" />;
-                                    </div>;
-                                    <div className="flex-1">;
-                                      <div className="text-white font-medium group-"hover": "tex t-cyan-400 transition-colors">;
-                                        {service.title"}
-                                      </div>;
-                                      <div className="text-sm text-gray-400">;
-                                        {service.description}
-                                      </div>;
-                                    </div>;
-                                  </Link>;
-                                ))}
-                              </div>;
-                              <div className="mt-4 pt-4 border-t border-white/10">;
-                                <Link;
-                                  to="/services";
-                                  className="block text-center py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg "hover": "fro m-cyan-600 "hover": t o-blue-600 transition-all duration-200";
-                                  onClick={() => setIsServicesOpen(false)"}
-                                >;
-                                  View All Services;
-                                </Link>;
-                              </div>;
-                            </div>;
-                          </motion.div>;
-                        )}
-                      </AnimatePresence>;
-                    </div>;
-                  ) : "(;
-                    <Link;
-                      to={item.href"}
-                      className={`px-3 py-2 rounded-lg transition-colors duration-200 ${;
-                        location.pathname === item.href;
-                          ? 'text-cyan-400 bg-cyan-400/10';
-                          : 'text-gray-300 "hover": "tex t-cyan-400 "hover": b g-cyan-400/5';
-                      "}`}            </nav>
-"
-            {/* Contact Info & CTA */}""
-            <div className="hidden "lg": flex items-center space-x-4">""
-              <div className="flex items-center space-x-4 text-sm text-gray-300">"
-                <a";,";,
-                  href="tel:+13024640950"";,";,
-                  className="flex items-center space-x-2 hover: tex t-cyan-400 transition-colors""
-                >""
-                  <Phone className="w-4 h-4"  />
-                  <span>+1 302 464 0950</span>
-                </a>"
-                <a";,";,
-                  href="mailto: klebe r@ziontechgroup.com"";,";,
-                  className="flex items-center space-x-2 hover: tex t-cyan-400 transition-colors""
-                >""
-                  <Mail className="w-4 h-4"  />
-                  <span>Email</span>
-                </a>
-              </div>"
-              <Link";,";,
-                to="/contact"";,";,
-                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: fro m-cyan-600 hover: t o-blue-600 transition-all duration-200 transform hover:-translate-y-0.5"
-              >;,;,
-                Get Quote
-              </Link>
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  return (
+    <header 
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        isScrolled 
+          ? "bg-zion-blue-dark/95 backdrop-blur-md border-b border-zion-purple/30 shadow-lg" 
+          : "bg-transparent"
+      )}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+              <Zap className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
             </div>
+            <div className="hidden sm:block">
+              <h1 className="text-xl lg:text-2xl font-bold text-white group-hover:text-zion-cyan transition-colors">
+                Zion Tech Group
+              </h1>
+              <p className="text-xs lg:text-sm text-zion-slate-light group-hover:text-zion-cyan/80 transition-colors">
+                Innovation • Technology • Solutions
+              </p>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:block">
+            <MainNavigation />
+          </div>
+
+          {/* Right Side Actions */}
+          <div className="flex items-center space-x-4">
+            
+            {/* Search Button */}
+            <button
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-lg hover:bg-zion-purple/10"
+              aria-label="Search"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+
+            {/* Notifications */}
+            <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-lg hover:bg-zion-purple/10 relative">
+              <Bell className="w-5 h-5" />
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+            </button>
+
+            {/* User Menu */}
+            <div className="relative group">
+              <button className="flex items-center space-x-2 p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-lg hover:bg-zion-purple/10">
+                <User className="w-5 h-5" />
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {/* User Dropdown */}
+              <div className="absolute right-0 top-full mt-2 w-48 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="p-2">
+                  <Link 
+                    to="/profile" 
+                    className="block px-3 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded transition-colors"
+                  >
+                    Profile
+                  </Link>
+                  <Link 
+                    to="/dashboard" 
+                    className="block px-3 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded transition-colors"
+                  >
+                    Dashboard
+                  </Link>
+                  <Link 
+                    to="/settings" 
+                    className="block px-3 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded transition-colors"
+                  >
+                    Settings
+                  </Link>
+                  <div className="border-t border-zion-purple/20 my-1"></div>
+                  <Link 
+                    to="/logout" 
+                    className="block px-3 py-2 text-sm text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded transition-colors"
+                  >
+                    Sign Out
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             {/* Mobile Menu Button */}
-            <button;,";,
-              onClick={toggleMenu}";,";,
-              className=""lg": hidden p-2 text-gray-300 hover: tex t-cyan-400 transition-colors"
-            >"
-              {isMenuOpen ? (""
-                <X className="w-6 h-6"  />"
-              ) : (""
-                <Menu className="w-6 h-6"  />
+            <button
+              onClick={toggleMobileMenu}
+              className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-lg hover:bg-zion-purple/10"
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
               )}
             </button>
           </div>
         </div>
-        {/* Mobile Menu */}
-        <AnimatePresence>'
-          {isMenuOpen && (''"
-            <motion.div';";,'";,
-              initial={{ "opacity": 0, "height": 0 }}'";,'";,
-              animate={{ "opacity": 1, "height": 'auto' }}";,";,
-              exit={{ "opacity": 0, "height": 0 }}";,";,
-              transition={{ "duration": 0.3 }}";,";,
-              className=""lg": hidden bg-slate-900/95 backdrop-blur-lg border-t border-white/10""
-            >""
-              <div className="container mx-auto px-4 py-6">""
-                <nav className="space-y-4">
-                  {navigation.map((item) => (
-                    <div key={item.name}>
-                      {item.hasDropdown ? (
-                        <div>
-                          <button;,";,
-                            onClick={() => setIsServicesOpen(!isServicesOpen)}";,";,
-                            className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 "hover": tex t-cyan-400 transition-colors"
-                          >
-                            <span>{item.name}</span>'"
-                            <ChevronDown className={`w-4 h-4 transition-transform ${'";,'";,
-                                isServicesOpen ? 'rotate-180' : "
-                              }`}
-                             />
-                          </button>
-                          <AnimatePresence>'
-                            {isServicesOpen && (''"
-                              <motion.div';";,'";,
-                                initial={{ "opacity": 0, "height": 0 }}'";,'";,
-                                animate={{ "opacity": 1, "height": 'auto' }}";,";,
-                                exit={{ "opacity": 0, "height": 0 }}";,";,
-                                transition={{ "duration": 0.2 }}";,";,
-                                className="mt-2 pl-4 space-y-2"
-                              >
-                                {services.map((service) => (
-                                  <Link;,;,
-                                    key={service.title}";,
-                                    to={service.href}";,";,
-                                    className="block px-3 py-2 text-sm text-gray-400 "hover": tex t-cyan-400 transition-colors";,;,
-                                    onClick={closeMenu}
-                                  >
-                                    {service.title}
-                                  </Link>
-                                ))}"
-                                <Link";,";,
-                                  to="/services"";,";,
-                                  className="block px-3 py-2 text-sm text-cyan-400 font-medium";,;,
-                                  onClick={closeMenu}
-                                >;,;,
-                                  View All Services
-                                </Link>
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
-                        </div>
-                      ) : (
-                        <Link;,;,
-                          to={item.href}';,
-                          className={`block px-3 py-2 rounded-lg transition-colors ${';,';,
-                            location.pathname === item.href';';''"
-                              ? 'text-cyan-400 bg-cyan-400/10''"'"
-                              : 'text-gray-300 "hover": tex t-cyan-400'
-                          }`}
-                          onClick={closeMenu}
-                        >;
-                          {item.name}
-                        </Link>;
-                      )}
-                    </div>;
-                  ))}
-                </nav>;
-                {/* Mobile Contact & CTA */}
-                <div className="mt-6 pt-6 border-t border-white/10 space-y-4">;
-                  <div className="space-y-2">;
-                    <a;
-                      href=""tel": "+13024640950";
-                      className="flex items-center space-x-2 text-gray-300 "hover": tex t-cyan-400 transition-colors";
-                    >;
-                      <Phone className="w-4 h-4"  />;
-                      <span>+1 302 464 0950</span>;
-                    </a>;
-                    <a;
-                      href=""mailto": klebe r@ziontechgroup.com";
-                      className="flex items-center space-x-2 text-gray-300 "hover": tex t-cyan-400 transition-colors";
-                    >;
-                      <Mail className="w-4 h-4"  />;
-                      <span>kleber@ziontechgroup.com</span>;
-                    </a>;
-                  </div>;
-                  <Link;
-                    to="/contact";
-                    className="block w-full text-center py-3 px-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg "hover": fro m-cyan-600 "hover": t o-blue-600 transition-all duration-200";
-                    onClick={closeMenu"}
-                  >;
-                    Get Quote;
-                  </Link>;
-                </div>;
-              </div>;
-            </motion.div>;
+
+        {/* Search Bar */}
+        <AnimatePresence>
+          {isSearchOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="pb-4"
+            >
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search services, solutions, or resources..."
+                  className="w-full px-4 py-3 pl-12 bg-zion-blue border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+              </div>
+            </motion.div>
           )}
-        </AnimatePresence>;
-      </header>;
-      {/* Spacer for fixed header */}
-      <div className="h-20"  />;
-    </>;
+        </AnimatePresence>
+      </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-zion-blue-dark border-t border-zion-purple/30"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {/* Mobile Navigation Links */}
+              <div className="space-y-2">
+                <Link 
+                  to="/" 
+                  onClick={closeMobileMenu}
+                  className="block px-3 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded transition-colors"
+                >
+                  Home
+                </Link>
+                
+                {/* Services Section */}
+                <div className="space-y-2">
+                  <div className="px-3 py-2 text-zion-cyan font-semibold">Services</div>
+                  <Link 
+                    to="/ai-services" 
+                    onClick={closeMobileMenu}
+                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded transition-colors"
+                  >
+                    AI Services
+                  </Link>
+                  <Link 
+                    to="/it-services" 
+                    onClick={closeMobileMenu}
+                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded transition-colors"
+                  >
+                    IT Services
+                  </Link>
+                  <Link 
+                    to="/micro-saas" 
+                    onClick={closeMobileMenu}
+                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded transition-colors"
+                  >
+                    Micro SAAS
+                  </Link>
+                </div>
+
+                {/* Solutions Section */}
+                <div className="space-y-2">
+                  <div className="px-3 py-2 text-zion-cyan font-semibold">Solutions</div>
+                  <Link 
+                    to="/solutions/healthcare" 
+                    onClick={closeMobileMenu}
+                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded transition-colors"
+                  >
+                    Healthcare
+                  </Link>
+                  <Link 
+                    to="/solutions/financial" 
+                    onClick={closeMobileMenu}
+                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded transition-colors"
+                  >
+                    Financial
+                  </Link>
+                  <Link 
+                    to="/solutions/education" 
+                    onClick={closeMobileMenu}
+                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded transition-colors"
+                  >
+                    Education
+                  </Link>
+                </div>
+
+                {/* Company Section */}
+                <div className="space-y-2">
+                  <div className="px-3 py-2 text-zion-cyan font-semibold">Company</div>
+                  <Link 
+                    to="/about" 
+                    onClick={closeMobileMenu}
+                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded transition-colors"
+                  >
+                    About Us
+                  </Link>
+                  <Link 
+                    to="/contact" 
+                    onClick={closeMobileMenu}
+                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded transition-colors"
+                  >
+                    Contact
+                  </Link>
+                </div>
+
+                {/* Support & Resources */}
+                <div className="space-y-2">
+                  <div className="px-3 py-2 text-zion-cyan font-semibold">Support</div>
+                  <Link 
+                    to="/help" 
+                    onClick={closeMobileMenu}
+                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded transition-colors"
+                  >
+                    Help Center
+                  </Link>
+                  <Link 
+                    to="/docs" 
+                    onClick={closeMobileMenu}
+                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded transition-colors"
+                  >
+                    Documentation
+                  </Link>
+                </div>
+              </div>
+
+              {/* Mobile CTA */}
+              <div className="pt-4 border-t border-zion-purple/20">
+                <Link 
+                  to="/contact" 
+                  onClick={closeMobileMenu}
+                  className="block w-full text-center bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white py-3 px-6 rounded-lg font-medium hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300"
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   );
-};
-;
-export default Header;
-</motion>;
-</ChevronDown>;
-</motion>;
-</motion>;
-</any>;
-</any>;
-</any>
+}

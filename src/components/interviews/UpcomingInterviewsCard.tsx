@@ -1,31 +1,26 @@
-import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { useInterviews } from '@/hooks/useInterviews';
-import { Interview } from '@/types/interview';
-import { format, isPast, parseISO } from 'date-fns';
-import { Link  } from 'react-router-dom';
-import { Calendar, Clock, Video  } from 'lucide-react';
-import { Avatar } from '@/components/ui/avatar'; // Assuming AvatarImage and AvatarFallback are part of this or separate
 
-export function UpcomingInterviewsCard(props: any) {
+import React, { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useInterviews } from "@/hooks/useInterviews";
+import { Interview } from "@/types/interview";
+import { format, isPast, parseISO } from "date-fns";
+import Link from "next/link";
+import { Calendar, Clock, Video } from "lucide-react";
+import { Avatar } from "@/components/ui/avatar";
+
+export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
-  const [isLoading, setIsLoading] = useState<any>(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
     const loadInterviews = async () => {
       setIsLoading(true);
       try {
         const interviews = await fetchInterviews();
-        // const now = new Date(); // Not used here, can be removed if only for filtering future
         
+        // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview => 
             interview.status === 'confirmed' && 
@@ -34,10 +29,10 @@ export function UpcomingInterviewsCard(props: any) {
           .sort((a, b) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
           )
-          .slice(0, 3); 
+          .slice(0, 3); // Take only the next 3 interviews
         
         setUpcomingInterviews(upcoming);
-      } catch(error) {
+      } catch (error) {
         console.error("Error loading upcoming interviews:", error);
       } finally {
         setIsLoading(false);
@@ -45,13 +40,14 @@ export function UpcomingInterviewsCard(props: any) {
     };
 
     loadInterviews();
-  }, [fetchInterviews]); // Added fetchInterviews
+  }, []);
 
-  if(isLoading) {
-    return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+  if (isLoading) {
+    return (
+      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
-            <Video className="h-5 w-5 mr-2 text-zion-purple"  />
+            <Video className="h-5 w-5 mr-2 text-zion-purple" />
             Upcoming Interviews
           </CardTitle>
         </CardHeader>
@@ -72,20 +68,21 @@ export function UpcomingInterviewsCard(props: any) {
     );
   }
 
-  if(upcomingInterviews.length === 0) {
-    return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+  if (upcomingInterviews.length === 0) {
+    return (
+      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
-            <Video className="h-5 w-5 mr-2 text-zion-purple"  />
+            <Video className="h-5 w-5 mr-2 text-zion-purple" />
             Upcoming Interviews
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="text-center py-6">
-            <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground"  />
+            <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />
             <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>
             <Button asChild className="mt-4" variant="outline" size="sm">
-              <Link to="/interviews">Schedule Interview</Link>
+              <Link href="/interviews">Schedule Interview</Link>
             </Button>
           </div>
         </CardContent>
@@ -93,10 +90,11 @@ export function UpcomingInterviewsCard(props: any) {
     );
   }
 
-  return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+  return (
+    <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
-          <Video className="h-5 w-5 mr-2 text-zion-purple"  />
+          <Video className="h-5 w-5 mr-2 text-zion-purple" />
           Upcoming Interviews
         </CardTitle>
       </CardHeader>
@@ -105,21 +103,23 @@ export function UpcomingInterviewsCard(props: any) {
           {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
-            const formattedTime = format(interviewDate, 'h: mm a');
+            const formattedTime = format(interviewDate, 'h:mm a');
             
+            // Determine if interview is happening soon (within 30 minutes)
             const now = new Date();
             const isStartingSoon = 
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime();
             
-            return (<div key={interview.id} className="flex items-center gap-3">
+            return (
+              <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
-                  {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
-                  {/* For now, conditional rendering based on available image */}
                   {interview.client_avatar || interview.talent_avatar ? (
-                    <img src={interview.client_avatar || interview.talent_avatar || undefined} // Ensure src is string | undefined
-                      alt={interview.client_name || interview.talent_name || "User"} // Ensure alt is string
-                      />
+                    <img
+                      src={interview.client_avatar || interview.talent_avatar}
+                      alt={interview.client_name || interview.talent_name}
+                      loading="lazy"
+                    />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
@@ -138,7 +138,7 @@ export function UpcomingInterviewsCard(props: any) {
                     )}
                   </div>
                   <div className="flex items-center text-sm text-muted-foreground">
-                    <Clock className="h-3 w-3 mr-1"  />
+                    <Clock className="h-3 w-3 mr-1" />
                     {formattedDate} at {formattedTime}
                   </div>
                 </div>
@@ -149,7 +149,7 @@ export function UpcomingInterviewsCard(props: any) {
         
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
           <Button asChild size="sm" variant="outline" className="w-full">
-            <Link to="/interviews">
+            <Link href="/interviews">
               View All Interviews
             </Link>
           </Button>
@@ -158,6 +158,3 @@ export function UpcomingInterviewsCard(props: any) {
     </Card>
   );
 }
-
-</any>
-</Interview>

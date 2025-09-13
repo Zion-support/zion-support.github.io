@@ -1,0 +1,67 @@
+<<<<<<< HEAD
+[build]
+=======
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
+  NODE_ENV = "production"
+
+
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+
+[[plugins]]
+  package = "./netlify/plugins/run-functions-and-rerun"
+  [plugins.inputs]
+    # Optional: comma-separated includes/excludes
+    include = ""
+    exclude = ""
+    concurrency = 6
+    timeoutMs = 180000
+
+# Scheduled Functions (new automations replacing some GitHub Actions cadence)
+[[scheduled.functions]]
+  name = "homepage_advertiser"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+[[scheduled.functions]]
+  name = "cloud_orchestrator"
+  schedule = "0 */4 * * *" # every 4 hours
+
+[[scheduled.functions]]
+  name = "front-enhancer"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+[[scheduled.functions]]
+  name = "front-index-orchestrator"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+[[scheduled.functions]]
+  name = "frontpage-enhancer"
+  schedule = "*/20 * * * *" # every 20 minutes
+
+[[scheduled.functions]]
+  name = "marketing-and-features-promo"
+  schedule = "0 */2 * * *" # every 2 hours
+
+[[redirects]]
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+=======
+[[redirects]]
+  from = "/api/*"
+  to = "https://backend.example.com/:splat"
+  status = 200
+=======
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[plugins]]
+  package = "netlify-plugin-compress"
+  [plugins.inputs]
+    gzip = true
+    brotli = true
+>>>>>>> origin/backup-main-20250826-120740

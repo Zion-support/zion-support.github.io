@@ -1,166 +1,168 @@
 # GitHub Actions Workflows
 
-This directory contains all the GitHub Actions workflows for the Zion Tech Group project.
+This directory contains all GitHub Actions workflows for the Zion Tech Group application.
 
-## Workflows Overview
+## Workflow Overview
 
-### 🚀 CI (Continuous Integration)
-**File:** `ci.yml`  
-**Trigger:** Push to main, Pull requests to main  
-**Purpose:** Main CI pipeline that runs on every PR and push to main
+### 🚀 **Deploy** (`deploy.yml`)
+**Main deployment workflow** - Handles building, testing, and deploying the application.
 
-**Features:**
-- Linting and type checking
-- Building the project
-- Running tests with coverage
-- Cypress end-to-end testing
-- Security scanning
-- Artifact uploads
+- **Triggers**: Push to main/develop, PRs, manual dispatch
+- **Jobs**: 
+  - `build-and-test`: Builds app, runs tests, security scans
+  - `deploy-preview`: Deploys PR previews
+  - `deploy-production`: Deploys to production (main branch only)
+- **Node.js**: 18.x
+- **Artifacts**: Build outputs, test results
 
-### 🧪 Node.js Matrix Testing
-**File:** `node-matrix.yml`  
-**Trigger:** Push to main/develop, Pull requests to main/develop  
-**Purpose:** Ensures compatibility across different Node.js versions
+### 🔄 **CI** (`ci.yml`)
+**Continuous Integration** - Runs on every push and PR.
 
-**Node.js Versions:** 18, 20, 21
+- **Triggers**: Push to main/develop/cursor branches, PRs
+- **Jobs**:
+  - `build`: Lint, type-check, build
+  - `test`: Run test suite
+- **Node.js**: 18.x
+- **Features**: Error handling, non-blocking failures
 
-### 🔒 CodeQL Security Analysis
-**File:** `codeql.yml`  
-**Trigger:** Push to main/develop/cursor branches, Pull requests, Weekly schedule  
-**Purpose:** Automated security vulnerability detection
+### 🧪 **Test** (`test.yml`)
+**Dedicated testing workflow** - Comprehensive testing with coverage.
 
-**Schedule:** Every Monday at 1:33 AM UTC
+- **Triggers**: Push to main/develop/cursor branches, PRs
+- **Jobs**:
+  - `test`: Build, verify, test, upload artifacts
+- **Node.js**: 18.x
+- **Features**: Build verification, test results upload
 
-### 📦 NPM Package Publishing
-**File:** `npm-publish.yml`  
-**Trigger:** Push to main (excluding markdown files)  
-**Purpose:** Automatically publishes packages to npm registry
+### 🔍 **CodeQL** (`codeql.yml`)
+**Security analysis** - Automated security scanning.
 
-**Requirements:** `NPM_TOKEN` secret
+- **Triggers**: Push/PR to main/develop/cursor branches, weekly schedule
+- **Jobs**:
+  - `analyze`: JavaScript/TypeScript security analysis
+- **Features**: Language-specific security scanning
 
-### 🔄 Continuous Improvement
-**File:** `continuous-improvement.yml`  
-**Trigger:** Every 4 hours, Manual dispatch  
-**Purpose:** Automated code improvements and diversity checks
+### 🤖 **Agent Factory** (`agent-factory.yml`)
+**Link crawler automation** - Monitors and reports broken links.
 
-**Features:**
-- Automated improvement suggestions
-- Diversity analysis
-- Auto-merge pull requests
+- **Triggers**: Every 30 minutes, manual dispatch
+- **Jobs**:
+  - `generate-matrix`: Creates parallel processing matrix
+  - `agent`: Parallel link crawling
+  - `aggregate`: Merges results, creates issues
+- **Features**: Parallel processing, broken link reporting
 
-### 🕷️ Link Crawler Factory
-**File:** `agent-factory.yml`  
-**Trigger:** Every 30 minutes, Manual dispatch  
-**Purpose:** Automated link checking and broken link detection
+### 📈 **Continuous Improvement** (`continuous-improvement.yml`)
+**Automated improvements** - Runs automation scripts and creates PRs.
 
-**Features:**
-- Parallel link crawling
-- Broken link reporting
-- Queue management
-- Issue creation for broken links
+- **Triggers**: Every 4 hours, manual dispatch
+- **Jobs**:
+  - `improve`: Runs automation, creates auto-merge PRs
+- **Features**: Auto-PR creation, auto-merge
 
-### 📊 Performance Testing
-**File:** `performance.yml`  
-**Trigger:** Push to main, Pull requests, Weekly schedule  
-**Purpose:** Bundle size analysis and performance monitoring
+### 📊 **Health Check** (`health-check.yml`)
+**Workflow monitoring** - Monitors health of all other workflows.
 
-**Schedule:** Every Monday at 2:00 AM UTC
+- **Triggers**: Every 6 hours, manual dispatch
+- **Jobs**:
+  - `health-check`: Analyzes workflow success rates
+- **Features**: Health reporting, issue creation for failures
 
-### ♿ Accessibility Testing
-**File:** `accessibility.yml`  
-**Trigger:** Push to main/develop, Pull requests, Weekly schedule  
-**Purpose:** Automated accessibility compliance checking
+### 📦 **NPM Publish** (`npm-publish.yml`)
+**Package publishing** - Publishes npm packages on main branch.
 
-**Schedule:** Every Monday at 4:00 AM UTC
+- **Triggers**: Push to main (excluding markdown files)
+- **Jobs**:
+  - `publish`: Test, build, publish to npm
+- **Node.js**: 18.x
 
-### 🔍 Dependency Review
-**File:** `dependency-review.yml`  
-**Trigger:** Pull requests to main/develop  
-**Purpose:** Security and license compliance for dependencies
+## Configuration
 
-**Features:**
-- Vulnerability scanning
-- License compliance
-- Dependency updates
+### Node.js Version
+All workflows use **Node.js 18.x** for compatibility with Next.js and dependencies.
 
-### 🚀 Deployment Check
-**File:** `deployment-check.yml`  
-**Trigger:** After successful CI completion  
-**Purpose:** Post-deployment validation and health checks
+### Permissions
+- `contents: read` - Repository access
+- `actions: read` - Workflow status access
+- `security-events: write` - CodeQL results
+- `pull-requests: write` - PR creation (continuous improvement)
+- `issues: write` - Issue creation (health check, agent factory)
 
-**Features:**
-- Build output validation
-- Bundle size monitoring
-- Security audit
-
-## Required Secrets
-
-The following secrets must be configured in your repository:
-
-### For CI Workflow:
-- `CODECOV_TOKEN` - Codecov coverage reporting
-- `CYPRESS_TEST_USER_EMAIL` - Cypress test user email
-- `CYPRESS_TEST_USER_PASSWORD` - Cypress test user password
-- `CYPRESS_TEST_USER_DISPLAY_NAME` - Cypress test user display name
-- `VITE_REOWN_PROJECT_ID_CI` - Reown project ID for CI
-- `VITE_SUPABASE_URL_CI` - Supabase URL for CI
-- `VITE_SUPABASE_ANON_KEY_CI` - Supabase anonymous key for CI
-- `NEXT_PUBLIC_API_URL_CI` - API URL for CI
-- `VITE_VAPID_PUBLIC_KEY_CI` - VAPID public key for CI
-
-### For NPM Publishing:
-- `NPM_TOKEN` - NPM authentication token
-
-## Local Development
-
-To test workflows locally, you can use [act](https://github.com/nektos/act):
-
-```bash
-# Install act
-brew install act  # macOS
-# or download from GitHub releases
-
-# Run a specific workflow
-act -W .github/workflows/ci.yml
-
-# Run with specific event
-act push -W .github/workflows/ci.yml
-```
-
-## Workflow Dependencies
-
-- **CI** → **Deployment Check** (workflow_run trigger)
-- **CI** → **Performance Testing** (shared artifacts)
-- **CI** → **Accessibility Testing** (shared build)
+### Concurrency
+- Most workflows use concurrency groups to prevent parallel runs
+- Agent factory allows parallel processing for scalability
 
 ## Troubleshooting
 
-### Common Issues:
+### Common Issues
 
-1. **Node.js Version Mismatch**: Ensure all workflows use Node.js 20
-2. **Missing Scripts**: Check package.json for required npm scripts
-3. **Secret Configuration**: Verify all required secrets are set
-4. **Permission Issues**: Check workflow permissions for repository access
+1. **Build Failures**
+   - Check Node.js version compatibility
+   - Verify all dependencies are installed
+   - Check for TypeScript errors
 
-### Debugging:
+2. **Test Failures**
+   - Ensure Jest configuration is correct
+   - Check for missing test dependencies
+   - Verify test environment variables
 
-- Enable debug logging by setting `ACTIONS_STEP_DEBUG=true` in repository secrets
-- Check workflow run logs for detailed error information
-- Use `continue-on-error: true` for non-critical steps
+3. **Permission Errors**
+   - Verify workflow permissions in repository settings
+   - Check if secrets are properly configured
+   - Ensure workflow has access to required resources
 
-## Contributing
+4. **Node.js Compatibility**
+   - All workflows use Node 18.x
+   - Update local development to match
+   - Check package.json engines field
 
-When adding new workflows:
+### Debugging Steps
 
-1. Follow the existing naming convention
-2. Include proper error handling
-3. Add appropriate permissions
-4. Document any new secrets or requirements
-5. Test locally with act before committing
+1. **Check Workflow Logs**
+   - Go to Actions tab in GitHub
+   - Click on failed workflow run
+   - Review step-by-step logs
 
-## Performance Considerations
+2. **Verify Dependencies**
+   - Check package.json for missing scripts
+   - Ensure all required packages are installed
+   - Verify Node.js version compatibility
 
-- Use `concurrency` groups to prevent overlapping runs
-- Implement proper caching strategies
-- Use `timeout-minutes` for long-running jobs
-- Consider using `strategy.matrix` for parallel execution
+3. **Test Locally**
+   - Run `npm run build` locally
+   - Run `npm test` locally
+   - Check for environment-specific issues
+
+4. **Review Configuration**
+   - Verify workflow YAML syntax
+   - Check trigger conditions
+   - Review job dependencies
+
+## Maintenance
+
+### Regular Tasks
+- Monitor workflow success rates
+- Update Node.js versions when needed
+- Review and update dependencies
+- Check for security vulnerabilities
+
+### Updates
+- Keep actions up to date (check for updates monthly)
+- Review workflow performance metrics
+- Optimize build and test times
+- Add new workflows as needed
+
+## Support
+
+For workflow issues:
+1. Check the health check workflow for alerts
+2. Review recent workflow runs
+3. Check GitHub Actions documentation
+4. Create an issue with workflow logs
+
+## Security
+
+- All workflows use minimal required permissions
+- Secrets are stored in GitHub repository secrets
+- CodeQL provides automated security scanning
+- Regular security audits are performed

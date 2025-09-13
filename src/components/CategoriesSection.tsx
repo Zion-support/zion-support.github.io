@@ -1,147 +1,148 @@
-* CategoriesSection function;
- * @param {*} params - Function parameters;
- * @returns {*} Function return value;
- */;
-function CategoriesSection("props": "any) {;
-const categories = [{;
-    "title": "AI Services"",;
-    "description": "Cutting - edge AI solutions, chatbots, and machine learning",;
-    "icon": "🤖",;
-    "link": "/ai - services",;
-    "color": "from - purple - 500 to - indigo - 600",;
-  },;
-  {;
-    "title": "Micro SAAS",;
-    "description": "Cloud - based software solutions for modern businesses",;
-    "icon": "☁️",;
-    "link": "/micro - saas",;
-    "color": "from - cyan - 500 to - blue - 600",;
-  },;
-  {;
-    "title": "IT Services",;
-    "description": "Infrastructure, security, and technical consulting",;
-    "icon": "⚡",;
-    "link": "/all - services",;
-    "color": "from - amber - 500 to - orange - 600",;
-  },;
-  {;
-    "title": "Digital Transformation",;
-    "description": "Business modernization and digital strategy",;
-    "icon": "📈",;
-    "link": "/all - services",;
-    "color": "from - emerald - 500 to - green - 600",;
-  },;
+
+import { GradientHeading } from "./GradientHeading";
+import { Link } from "react-router-dom";
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
+
+const categories = [
+  {
+    title: "Services",
+    description: "On-demand IT support, consulting, development, and more",
+    icon: <Briefcase className="w-10 h-10" />,
+    link: "/services",
+    color: "from-purple-500 to-indigo-600",
+  },
+  {
+    title: "Talents",
+    description: "Connect with AI experts, developers, and tech specialists",
+    icon: <Users className="w-10 h-10" />,
+    link: "/talent",
+    color: "from-cyan-500 to-blue-600",
+  },
+  {
+    title: "Equipment",
+    description: "Rent or buy specialized hardware, servers, and devices",
+    icon: <HardDrive className="w-10 h-10" />,
+    link: "/equipment",
+    color: "from-amber-500 to-orange-600",
+  },
 ];
-;
-const specialServices = [{;
-    "title": "IT Onsite Services",;
-    "link": "/it - onsite - services";
-  },;
-  {;
-    "title": "Comprehensive Services",;
-    "link": "/comprehensive - services";
-  },;
-  {;
-    "title": "Services Comparison",;
-    "link": "/services - comparison";
+
+const specialServices = [
+  {
+    title: "Enhanced AI & IT Services",
+    link: "/enhanced-services"
+  },
+  {
+    title: "IT Onsite Services",
+    link: "/it-onsite-services"
+  },
+  {
+    title: "Services Pricing",
+    description: "Compare pricing and ROI for all our services",
+    icon: <TrendingUp className="w-10 h-10" />,
+    link: "/services-pricing",
+    color: "from-green-500 to-emerald-600",
+    features: ["Transparent Pricing", "ROI Calculator", "Custom Quotes", "Volume Discounts"]
+  },
+  {
+    title: "AI Solutions",
+    description: "Cutting-edge AI and machine learning services",
+    icon: <Brain className="w-10 h-10" />,
+    link: "/ai-services",
+    color: "from-cyan-500 to-blue-600",
+    features: ["Machine Learning", "NLP", "Computer Vision", "Predictive Analytics"]
+  },
+  {
+    title: "Cybersecurity",
+    description: "Advanced security and threat protection services",
+    icon: <Shield className="w-10 h-10" />,
+    link: "/cybersecurity-services",
+    color: "from-red-500 to-pink-600",
+    features: ["Threat Detection", "Penetration Testing", "Compliance", "Incident Response"]
+  },
+  {
+    title: "Cost Calculator",
+    link: "/service-calculator"
+  },
+  {
+    title: "Service Analytics",
+    link: "/service-analytics"
+  },
+  {
+    title: "Service Marketplace",
+    link: "/service-marketplace"
   }
 ];
-interface CategoriesSectionProps {;
-  // Add your props "here": "any;
-;
-  showTitle?: boolean;
-"}
-;
-;
-;
-;
-export function CategoriesSection("props": "any) {;
-  return (";
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">;
-      {/* Background pattern */"}";
-      <div className="absolute inset-0 opacity-5">";
-        <div className="absolute inset-0" style="{{{;
-          "backgroundImage": "`radial-gradient(circle at 25% 25%; "backgroundSize": '50px 50px'"}}"}></div>;
-      </div>;
-      <div className="container mx - auto px-4 relative z -10">;
-        {showTitle && (<motion.div;
-            className="text-center mb-16"            initial={{ "opacity": "0", "y": "2 0 "}}
-            whileInView={{ "opacity": "1", "y": "0 "}}
-            viewport={{ "once": "tru e "}}
-            transition={{ "duration": "0.6 "}}
-";
-            <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-4">;
-              Explore Categories;
-            </h2>";
-            <p className="text-gray-300 text-lg mt-4 max-w-2xl mx-auto">;
-              Discover our comprehensive ecosystem of tech services", talent, equipment, and innovation;
-            </p>;
-          </motion.div>;) }
-;
-        <motion.div;
-          className="grid grid - cols - 1 "sm": "gri d - cols - 2 "lg": gri d - cols - 4 gap-6";
-          variants={containerVariants"}          initial="hidden";
-          whileInView="visible";
-          viewport={{ "once": "tru e "}}
-        >;
-          {categories.map((category, index) => (<motion.div;
-              key={category.title}
-              variants={itemVariants}";
-              className="group block";
-            >";
-              <Link to={category.link} className="block">";
-                <div className="rounded-lg overflow-hidden h-full border border-blue-600 bg-slate-800 p-6 transition-all duration-300 "hover": "borde r-purple-500/50 "hover": translat e-y-[-5px] "hover": shado w-lg "hover": shado w-blue-500/25">`;
-                  <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color"} flex items-center justify-center mb-6 group-"hover": "scal e-110 transition-transform duration-300`"}>";
-                    <div className="text-white text-2xl">;
-                      {category.icon}
-                    </div>;
-                  </div>";
-                  <h3 className="text-xl font-bold text-white mb-3">{category.title}</h3>";
-                  <p className="text-gray-300 text-sm">{category.description}</p>;
-                </div>;
-              </Link>;        <motion.div
-          className="mt-12"          initial={{ opacity: 0, y: 2 0 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >"
-          <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services"
-          <div className="flex flex-wrap justify-center gap-4">
-            {specialServices.map((service) => (
-              <Link
-                key={service.title}
-                to={service.link}";
-                className="px-6 py-3 bg-blue-600 "hover": "b g-blue-700 border border-blue-500/20 "hover": borde r-blue-400/50 rounded-full text-white transition-all duration-300 "hover": shado w-lg "hover": shado w-blue-500/25 flex items-center gap-2";
-              >;
-                {service.title"}";
-                <span className="text-sm">→</span>;
-              </Link>;
-            ))}
-          </div>;
-        </motion.div>;
-        >;
-          <Link ";
-            to="/services";
-            className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan "hover": "borde r-zion-cyan-light transition-colors text-lg font-medium py-2";
-            View All Services < ArrowRight className="w-5 h-5 ml-2 group - "hover": translat e - x-1 transition -transform"  />;
-        <motion.div;
-          className="mt-12 flex justify -center"          initial={{ "opacity": 0", "y": "2 0 "}}
-          whileInView={{ "opacity": "1", "y": "0 "}}
-          viewport={{ "once": "tru e "}}
-          transition={{ "duration": "0.6", "delay": "0.6 "}}
-        >;
-          <Link;
-            to="/categories";
-            className="text-cyan - 400 border-b border-cyan - 400 "hover": "borde r-cyan - 300 transition - colors flex items - center gap-2"          >;
-            View All Categories";
-            <span className="text-sm group-"hover": translat e-x-1 transition-transform duration-300">→</span>;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>;
-  )"}}}}}}}}}}'"`;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>
+
+const advancedCategories = [
+  {
+    title: "AI & Machine Learning",
+    icon: <Brain className="w-6 h-6" />,
+    description: "Process automation, NLP, computer vision",
+    link: "/expanded-services?category=AI%20%26%20Machine%20Learning",
+    color: "from-purple-500 to-pink-600",
+    features: ["Neural Networks", "Deep Learning", "Natural Language Processing"]
+  },
+  {
+    title: "Cybersecurity",
+    icon: <Shield className="w-6 h-6" />,
+    description: "Zero-trust, threat detection, compliance",
+    link: "/expanded-services?category=Cybersecurity",
+    color: "from-red-500 to-orange-600",
+    features: ["Zero Trust", "Threat Intelligence", "SOC Services"]
+  },
+  {
+    title: "Cloud & DevOps",
+    icon: <Globe className="w-6 h-6" />,
+    description: "Multi-cloud, automation, orchestration",
+    link: "/expanded-services?category=Cloud%20%26%20DevOps",
+    color: "from-blue-500 to-cyan-600",
+    features: ["Multi-Cloud", "Infrastructure as Code", "Monitoring"]
+  },
+  {
+    title: "Data & Analytics",
+    icon: <Database className="w-6 h-6" />,
+    description: "Big data, BI, predictive analytics",
+    link: "/expanded-services?category=Data%20%26%20Analytics",
+    color: "from-green-500 to-emerald-600",
+    features: ["Data Warehousing", "ETL Pipelines", "Real-time Analytics"]
+  },
+  {
+    title: "IoT & Edge Computing",
+    icon: <Network className="w-6 h-6" />,
+    description: "Connected devices, real-time processing",
+    link: "/expanded-services?category=IoT%20%26%20Edge%20Computing",
+    color: "from-indigo-500 to-purple-600",
+    features: ["IoT Platforms", "Edge Computing", "Sensor Networks"]
+  },
+  {
+    title: "Blockchain & Web3",
+    icon: <Zap className="w-6 h-6" />,
+    description: "Smart contracts, decentralized solutions",
+    link: "/expanded-services?category=Blockchain%20%26%20Web3",
+    color: "from-yellow-500 to-orange-600",
+    features: ["Smart Contracts", "DeFi", "NFTs", "DApps"]
+  },
+  {
+    title: "Quantum Computing",
+    icon: <Leaf className="w-6 h-6" />,
+    description: "Quantum algorithms, optimization",
+    link: "/expanded-services?category=Quantum%20Computing",
+    color: "from-teal-500 to-blue-600",
+    features: ["Quantum Algorithms", "Optimization", "Simulation"]
+  },
+  {
+    title: "AR/VR & Metaverse",
+    icon: <Eye className="w-6 h-6" />,
+    description: "Immersive experiences, virtual worlds",
+    link: "/expanded-services?category=AR%2FVR%20%26%20Metaverse",
+    color: "from-pink-500 to-rose-600",
+    features: ["Virtual Reality", "Augmented Reality", "3D Modeling"]
+  },
+  {
+    title: "FinTech & Digital Banking",
+    icon: <CreditCard className="w-6 h-6" />,
+    description: "Digital banking, payments, lending",
+    link: "/expanded-services?category=FinTech%20%26%20Digital%20Banking",
+    color: "from-blue-600 to-indigo-600",
+    features: ["Digital Banking", "Payment Systems", "Lending Platforms"]

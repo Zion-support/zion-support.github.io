@@ -6,20 +6,13 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
 # Allow important pages
 Allow: /about/
 Allow: /services/
-<<<<<<< HEAD
-Allow: /ai-solutions/
-Allow: /quantum-computing/
-Allow: /research-development/
-Allow: /case-studies/
-Allow: /news/
-Allow: /contact/
-
-# Crawl delay (optional)
-Crawl-delay: 1
-=======
 Allow: /ai-services/
 Allow: /quantum-services/
 Allow: /enterprise-it/

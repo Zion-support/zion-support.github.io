@@ -25,6 +25,7 @@ pm2 logs
 ```
 
 ## 🎯 What This Does
+
 - **226 Automation Tasks** running simultaneously with GitHub Actions
 - **100% Redundancy Coverage** - if GitHub Actions fail, PM2 continues ALL tasks
 - **Zero Downtime** - continuous automation regardless of GitHub Actions status
@@ -55,6 +56,7 @@ pm2 save
 ```
 
 ## 📊 What's Running
+
 - **Repository Management** (45 workflows)
 - **AI & Content Generation** (38 workflows)
 - **Marketing & Social Media** (32 workflows)
@@ -128,6 +130,7 @@ pm2 logs [process-name]
 ```
 
 ## 🚀 Advanced Features
+
 - **Load Balancing**: Intelligent process distribution
 - **Error Handling**: Comprehensive error catching and reporting
 - **Auto-restart**: Processes restart automatically on failure

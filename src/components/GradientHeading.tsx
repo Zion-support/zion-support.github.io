@@ -1,7 +1,14 @@
-import React from 'react';';';
-import { cn } from '@/lib / utils';';
-;';;';
-import React from 'react'; import { cn } from '@/lib / utils';
-import React from &apos;react&apos;; import { cn } from &apos;@/lib / utils&apos;; ;&apos;;&apos;;
-const React from "react"; import { cn } from "@/lib / utils"; ;";";''"
-import _React from 'react'; import { cn } from '@/lib / utils'; ;';';
+import React from 'react';
+
+interface GradientHeadingProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function GradientHeading({ children, className = '' }: GradientHeadingProps) {
+  return (
+    <h2 className={`text-4xl md:text-5xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent ${className}`}>
+      {children}
+    </h2>
+  );
+}

@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #0a0a0a;
+  --fg: #ffffff;
+  --primary: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --accent: #8b5cf6;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --border: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.2);
+  --card-bg: rgba(255, 255, 255, 0.02);
+  --card-hover: rgba(255, 255, 255, 0.05);
+  --focus-ring: rgba(59, 130, 246, 0.5);
+}
+
 @layer components {
   .btn-primary {
     @apply bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200;
@@ -16,11 +32,6 @@
   }
 }
 
-<<<<<<< HEAD
-@layer utilities {
-  .text-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600;
-=======
 *:focus {
   outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
@@ -321,5 +332,6 @@ body {
 /* Responsive typography */
 @media (max-width: 640px) {
   .text-balance {
-    text-wrap: normal;  }
+    text-wrap: normal;
+  }
 }

@@ -1,13 +1,12 @@
 {
   "summary": {
-    "totalFiles": 0,
-    "filesWithIssues": 0,
-    "totalIssues": 0,
-    "totalWarnings": 0,
-    "buildBreakingFiles": 0,
-    "canBuild": true
+    "totalFiles": 332,
+    "filesWithIssues": 332,
+    "totalIssues": 401,
+    "totalWarnings": 129,
+    "buildBreakingFiles": 275,
+    "canBuild": false
   },
-  "results": [],
-  "buildBreakingFiles": [],
-  "generatedAt": "2025-08-20T19:03:33.426Z"
-  "generatedAt": "2025-08-20T19:21:03.555Z"}
+  "results": [
+    {
+          "line": 0,

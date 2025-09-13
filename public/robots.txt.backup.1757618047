@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+<<<<<<< HEAD
+# Sitemap location
+Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap
+=======
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+>>>>>>> origin/backup-20250824-222848
+
+# Crawl-delay
+Crawl-delay: 1
+<<<<<<< HEAD
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /services
+Allow: /technologies
+=======
+>>>>>>> origin/backup-20250824-222848

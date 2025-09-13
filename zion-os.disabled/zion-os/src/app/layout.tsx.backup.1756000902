@@ -1,55 +1,5 @@
 import "./globals.css";
 import type { ReactNode } from "react";
-export const metadata = {
-  title: "Zion Tech Group - AI-Powered Digital Solutions & Quantum Computing",
-  description: "Leading provider of AI automation, quantum computing, cybersecurity, and enterprise IT solutions. Transform your business with cutting-edge technology.",
-  keywords: "AI, quantum computing, cybersecurity, enterprise IT, automation, Zion Tech Group, digital transformation",
-  authors: [{ name: "Zion Tech Group" }],
-  viewport: "width=device-width, initial-scale=1",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: "Zion Tech Group - AI-Powered Digital Solutions & Quantum Computing",
-    description: "Leading provider of AI automation, quantum computing, cybersecurity, and enterprise IT solutions",
-    type: "website",
-    locale: "en_US",
-    url: "https://ziontechgroup.com",
-    siteName: "Zion OS",
-    title: "Zion OS - Sovereign AI-Powered Digital Economies",
-    description: "Launch sovereign AI-powered digital economies with one click",
-    images: [
-      {
-        url: "/og-image.svg",
-        width: 1200,
-        height: 630,
-        alt: "Zion OS - Sovereign AI-Powered Digital Economies",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Zion OS - Sovereign AI-Powered Digital Economies",
-    description: "Launch sovereign AI-powered digital economies with one click",
-    images: ["/og-image.svg"],
-    creator: "@ziontechgroup",
-    site: "@ziontechgroup",
-  },
-  verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
-    yahoo: "your-yahoo-verification-code",
-  },
-  category: "technology",
-=======
 import { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
@@ -78,11 +28,29 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0f172a",};
+  themeColor: "#0f172a",
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <body className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white antialiased">
+        {/* Navigation */}
+        <nav className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16">
+              {/* Logo */}
+              <div className="flex items-center">
+                <a href="/" className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">Z</span>
+                  </div>
+                  <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    Zion Tech Group
+                  </span>
+                </a>
+              </div>
+
               {/* Desktop Navigation */}
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-8">
@@ -102,53 +70,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     Contact
                   </a>
                   <a href="/admin/instances" className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                    Admin                  </a>
+                    Admin
+                  </a>
                 </div>
               </div>
 
-              {/* AI Solutions */}
-              <div>
-                <h4 className="font-semibold mb-4 text-white">AI Solutions</h4>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link href="/ai-agents" className="hover:text-white transition-colors">AI Agents</Link></li>
-                  <li><Link href="/ai-assistant" className="hover:text-white transition-colors">AI Assistant</Link></li>
-                  <li><Link href="/ai-consciousness-evolution" className="hover:text-white transition-colors">Consciousness Evolution</Link></li>
-                  <li><Link href="/ai-autonomous-research" className="hover:text-white transition-colors">Research Assistant</Link></li>
-                  <li><Link href="/ai-autonomous-business-manager" className="hover:text-white transition-colors">Business Manager</Link></li>
-                  <li><Link href="/ai-blockchain-analytics" className="hover:text-white transition-colors">Blockchain Analytics</Link></li>
-                </ul>
-              </div>
-
-              {/* Company & Support */}
-              <div>
-                <h4 className="font-semibold mb-4 text-white">Company & Support</h4>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                  <li><Link href="/case-studies" className="hover:text-white transition-colors">Case Studies</Link></li>
-                  <li><Link href="/news" className="hover:text-white transition-colors">News</Link></li>
-                  <li><Link href="/events" className="hover:text-white transition-colors">Events</Link></li>
-                  <li><Link href="/docs" className="hover:text-white transition-colors">Documentation</Link></li>
-                  <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Bottom Section */}
-            <div className="border-t border-white/10 pt-8">
-              <div className="flex flex-col md:flex-row justify-between items-center">
-                <div className="text-sm text-gray-400 mb-4 md:mb-0">
-                  <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-                </div>
-                <div className="flex space-x-6 text-sm text-gray-400">
-                  <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-                  <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-                  <Link href="/cookies" className="hover:text-white transition-colors">Cookie Policy</Link>
-                  <Link href="/accessibility" className="hover:text-white transition-colors">Accessibility</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-=======
               {/* CTA Button */}
               <div className="hidden md:block">
                 <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">
@@ -232,7 +158,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <div className="border-t border-slate-700/50 mt-8 pt-8 text-center text-slate-400">
               <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
             </div>
-          </div>        </footer>
+          </div>
+        </footer>
       </body>
     </html>
   );

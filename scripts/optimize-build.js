@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * Build optimization script
- * Analyzes bundle size and provides optimization recommendations
+ * Build optimization script for Zion Tech Group
+ * This script helps optimize the build process and identify potential issues
  */
 
 import fs from 'fs';
@@ -11,168 +11,154 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const projectRoot = path.join(__dirname, '..');
 
-const colors = {
-  reset: '\x1b[0m',
-  bright: '\x1b[1m',
-  red: '\x1b[31m',
-  green: '\x1b[32m',
-  yellow: '\x1b[33m',
-  blue: '\x1b[34m',
-  magenta: '\x1b[35m',
-  cyan: '\x1b[36m',
-  white: '\x1b[37m'
-};
+console.log('🚀 Starting build optimization...');
 
-function log(message, color = 'reset') {
-  console.log(`${colors[color]}${message}${colors.reset}`);
-}
-
-function analyzeBundleSize() {
-  log('\n📊 Bundle Size Analysis', 'cyan');
-  log('='.repeat(50), 'cyan');
-
-  const distPath = path.join(projectRoot, 'dist');
-  const assetsPath = path.join(distPath, 'assets');
-  const files = fs.readdirSync(assetsPath);
+// Check for duplicate imports in main page
+function checkDuplicateImports() {
+  const pagePath = path.join(__dirname, '../app/page.tsx');
+  const content = fs.readFileSync(pagePath, 'utf8');
   
-  let totalSize = 0;
-  const fileSizes = [];
-
-  files.forEach(file => {
-    const filePath = path.join(assetsPath, file);
-    const stats = fs.statSync(filePath);
-    const sizeKB = (stats.size / 1024).toFixed(2);
-    totalSize += stats.size;
-    
-    fileSizes.push({
-      name: file,
-      size: stats.size,
-      sizeKB: parseFloat(sizeKB),
+  const imports = content.match(/^import.*from.*$/gm) || [];
+  const importMap = new Map();
+  const duplicates = [];
+  
+  imports.forEach((importLine, index) => {
+    const cleanImport = importLine.trim();
+    if (importMap.has(cleanImport)) {
+      duplicates.push({
+        line: index + 1,
+        import: cleanImport,
+        firstOccurrence: importMap.get(cleanImport)
+      });
+    } else {
+      importMap.set(cleanImport, index + 1);
+    }
+  });
+  
+  if (duplicates.length > 0) {
+    console.log('⚠️  Found duplicate imports:');
+    duplicates.forEach(dup => {
+      console.log(`   Line ${dup.line}: ${dup.import}`);
+      console.log(`   First occurrence at line ${dup.firstOccurrence}`);
     });
-  });
-
-  // Sort by size
-  fileSizes.sort((a, b) => b.size - a.size);
-
-  log('\n📁 File Sizes:', 'yellow');
-  fileSizes.forEach(file => {
-    const sizeColor = file.sizeKB > 100 ? 'red' : file.sizeKB > 50 ? 'yellow' : 'green';
-    log(`  ${file.name}: ${file.sizeKB} KB`, sizeColor);
-  });
-
-  const totalSizeKB = (totalSize / 1024).toFixed(2);
-  const totalSizeMB = (totalSize / 1024 / 1024).toFixed(2);
-  
-  log(`\n📈 Total Bundle Size: ${totalSizeKB} KB (${totalSizeMB} MB)`, 'bright');
-  
-  // Recommendations
-  log('\n💡 Optimization Recommendations:', 'magenta');
-  
-  if (totalSize > 500 * 1024) { // > 500KB
-    log('  ⚠️  Bundle size is large. Consider:', 'yellow');
-    log('     - Code splitting with dynamic imports', 'yellow');
-    log('     - Tree shaking unused code', 'yellow');
-    log('     - Using lighter alternatives for heavy dependencies', 'yellow');
-  }
-  
-  if (fileSizes.some(f => f.sizeKB > 100)) {
-    log('  ⚠️  Some files are large. Consider:', 'yellow');
-    log('     - Splitting large chunks', 'yellow');
-    log('     - Lazy loading components', 'yellow');
-    log('     - Optimizing images and assets', 'yellow');
-  }
-
-  return {
-    totalSize,
-    totalSizeKB: parseFloat(totalSizeKB),
-    totalSizeMB: parseFloat(totalSizeMB),
-    fileSizes
-  };
-}
-
-function checkBuildConfig() {
-  log('\n🔧 Build Configuration Check', 'cyan');
-  log('='.repeat(50), 'cyan');
-
-  const viteConfigPath = path.join(projectRoot, 'vite.config.ts');
-  const netlifyConfigPath = path.join(projectRoot, 'netlify.toml');
-
-  if (fs.existsSync(viteConfigPath)) {
-    log('  ✓ Vite configuration found', 'green');
-  }
-
-  if (fs.existsSync(netlifyConfigPath)) {
-    log('  ✓ Netlify configuration found', 'green');
-  }
-
-  // Check for common optimizations
-  const optimizations = [
-    'Minification enabled',
-    'Source maps disabled in production',
-    'CSS code splitting enabled',
-    'Manual chunk splitting configured',
-    'Bundle analyzer configured'
-  ];
-
-  optimizations.forEach(opt => {
-    log(`  ✓ ${opt}`, 'green');
-  });
-}
-
-function generateReport(analysis) {
-  log('\n📋 Summary:', 'bright');
-  log('='.repeat(50), 'bright');
-  
-  if (analysis.totalSizeKB < 300) {
-    log('  ✅ Bundle size is good', 'green');
-  } else if (analysis.totalSizeKB < 500) {
-    log('  ⚠️  Bundle size is acceptable but could be optimized', 'yellow');
   } else {
-    log('  ❌ Bundle size is large and needs optimization', 'red');
+    console.log('✅ No duplicate imports found');
   }
-
-  log('\n🎯 Next Steps:', 'bright');
-  log('  1. Run npm run build:analyze for detailed bundle analysis', 'blue');
-  log('  2. Consider implementing code splitting for large components', 'blue');
-  log('  3. Use dynamic imports for route-based code splitting', 'blue');
-  log('  4. Optimize images and assets', 'blue');
-  log('  5. Remove unused dependencies', 'blue');
+  
+  return duplicates.length;
 }
 
-function checkDependencies() {
-  log('\n🔍 Dependency Analysis:', 'cyan');
-  log('='.repeat(50), 'cyan');
+// Check for unused imports
+function checkUnusedImports() {
+  const pagePath = path.join(__dirname, '../app/page.tsx');
+  const content = fs.readFileSync(pagePath, 'utf8');
   
-  const packageJsonPath = path.join(projectRoot, 'package.json');
-  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+  const imports = content.match(/^import.*from.*$/gm) || [];
+  const renderSection = content.match(/<[A-Z][^>]*>/g) || [];
   
-  const deps = Object.keys(packageJson.dependencies || {});
-  const devDeps = Object.keys(packageJson.devDependencies || {});
+  const unusedImports = [];
   
-  log(`  ✓ Dependencies: ${deps.length}`, 'green');
-  log(`  ✓ Dev Dependencies: ${devDeps.length}`, 'green');
+  imports.forEach(importLine => {
+    const componentMatch = importLine.match(/import\s+(\w+)/);
+    if (componentMatch) {
+      const componentName = componentMatch[1];
+      const isUsed = renderSection.some(tag => tag.includes(componentName));
+      if (!isUsed && !componentName.includes('default')) {
+        unusedImports.push(componentName);
+      }
+    }
+  });
   
-  // Check for common heavy dependencies
-  const heavyDeps = ['react', 'react-dom', 'framer-motion', 'three', 'lodash'];
-  const foundHeavy = deps.filter(dep => heavyDeps.some(heavy => dep.includes(heavy)));
-  
-  if (foundHeavy.length > 0) {
-    log(`  ✓ Heavy dependencies found: ${foundHeavy.join(', ')}`, 'yellow');
+  if (unusedImports.length > 0) {
+    console.log('⚠️  Potentially unused imports:');
+    unusedImports.forEach(imp => console.log(`   ${imp}`));
+  } else {
+    console.log('✅ All imports appear to be used');
   }
+  
+  return unusedImports.length;
 }
 
-function main() {
-  log('\n🚀 Build Optimization Report', 'bright');
-  log('='.repeat(50), 'bright');
-
-  const analysis = analyzeBundleSize();
-  checkDependencies();
-  checkBuildConfig();
-  generateReport(analysis);
-
-  log('\n✨ Build optimization complete!', 'green');
+// Check file sizes
+function checkFileSizes() {
+  const pagePath = path.join(__dirname, '../app/page.tsx');
+  const stats = fs.statSync(pagePath);
+  const sizeKB = Math.round(stats.size / 1024);
+  
+  console.log(`📊 Main page size: ${sizeKB}KB`);
+  
+  if (sizeKB > 100) {
+    console.log('⚠️  Main page is quite large, consider splitting into smaller components');
+  } else {
+    console.log('✅ Main page size is reasonable');
+  }
+  
+  return sizeKB;
 }
 
-main();
+// Check for performance issues
+function checkPerformanceIssues() {
+  const pagePath = path.join(__dirname, '../app/page.tsx');
+  const content = fs.readFileSync(pagePath, 'utf8');
+  
+  const issues = [];
+  
+  // Check for too many Suspense boundaries
+  const suspenseCount = (content.match(/<Suspense/g) || []).length;
+  if (suspenseCount > 20) {
+    issues.push(`Too many Suspense boundaries (${suspenseCount})`);
+  }
+  
+  // Check for inline styles
+  const inlineStyles = (content.match(/style=\{[^}]*\}/g) || []).length;
+  if (inlineStyles > 10) {
+    issues.push(`Too many inline styles (${inlineStyles})`);
+  }
+  
+  // Check for console.log statements
+  const consoleLogs = (content.match(/console\.log/g) || []).length;
+  if (consoleLogs > 0) {
+    issues.push(`Found ${consoleLogs} console.log statements`);
+  }
+  
+  if (issues.length > 0) {
+    console.log('⚠️  Performance issues found:');
+    issues.forEach(issue => console.log(`   ${issue}`));
+  } else {
+    console.log('✅ No major performance issues found');
+  }
+  
+  return issues.length;
+}
+
+// Main optimization function
+function optimize() {
+  console.log('\n🔍 Analyzing main page...\n');
+  
+  const duplicateCount = checkDuplicateImports();
+  const unusedCount = checkUnusedImports();
+  const fileSize = checkFileSizes();
+  const performanceIssues = checkPerformanceIssues();
+  
+  console.log('\n📈 Optimization Summary:');
+  console.log(`   Duplicate imports: ${duplicateCount}`);
+  console.log(`   Unused imports: ${unusedCount}`);
+  console.log(`   File size: ${fileSize}KB`);
+  console.log(`   Performance issues: ${performanceIssues}`);
+  
+  const totalIssues = duplicateCount + unusedCount + performanceIssues;
+  
+  if (totalIssues === 0) {
+    console.log('\n🎉 Great! No optimization issues found.');
+  } else {
+    console.log(`\n💡 Found ${totalIssues} issues that could be optimized.`);
+  }
+  
+  return totalIssues;
+}
+
+// Run optimization
+optimize();
+
+export { optimize, checkDuplicateImports, checkUnusedImports, checkFileSizes, checkPerformanceIssues };
