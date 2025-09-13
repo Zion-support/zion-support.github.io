@@ -1,403 +1,323 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, 
   Zap, 
-  Cpu, 
-  Database, 
+  Target, 
+  TrendingUp, 
   Shield, 
   Globe, 
   Rocket, 
-  Target,
-  TrendingUp,
-  Users,
-  CheckCircle,
-  ArrowRight,
   Star,
-  Lightbulb,
-  Code,
-  BarChart3,
-  Lock,
-  RefreshCw,
-  Sparkles
+  ArrowRight,
+  CheckCircle,
+  Sparkles,
+  Cpu,
+  Database,
+  Cloud,
+  Lock
 } from 'lucide-react';
 
-interface Innovation {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  impact: string;
-  status: 'released' | 'beta' | 'coming-soon';
-  features: string[];
-  icon: React.ComponentType<any>;
-  color: string;
-  metrics: {
-    efficiency: number;
-    accuracy: number;
-    adoption: number;
-  };
-}
+const AIInnovationShowcase2025 = () => {
+  const [activeTab, setActiveTab] = useState('breakthroughs');
+  const [isVisible, setIsVisible] = useState(false);
 
-const innovations: Innovation[] = [
-  {
-    id: 'neural-consensus',
-    title: 'Neural Consensus Engine',
-    description: 'Revolutionary AI system that achieves consensus across distributed neural networks, enabling unprecedented decision-making capabilities.',
-    category: 'AI Architecture',
-    impact: 'High',
-    status: 'released',
-    features: ['Distributed Learning', 'Consensus Algorithms', 'Real-time Adaptation', 'Scalable Architecture'],
-    icon: Brain,
-    color: 'from-purple-500 to-pink-500',
-    metrics: { efficiency: 95, accuracy: 98, adoption: 87 }
-  },
-  {
-    id: 'quantum-ai-fusion',
-    title: 'Quantum-AI Fusion Platform',
-    description: 'Breakthrough integration of quantum computing with artificial intelligence, delivering exponential performance improvements.',
-    category: 'Quantum Computing',
-    impact: 'Revolutionary',
-    status: 'beta',
-    features: ['Quantum Algorithms', 'AI Optimization', 'Parallel Processing', 'Error Correction'],
-    icon: Cpu,
-    color: 'from-blue-500 to-cyan-500',
-    metrics: { efficiency: 99, accuracy: 99, adoption: 45 }
-  },
-  {
-    id: 'autonomous-systems',
-    title: 'Autonomous Business Systems',
-    description: 'Self-managing AI systems that autonomously optimize business processes, reducing human intervention by 90%.',
-    category: 'Automation',
-    impact: 'High',
-    status: 'released',
-    features: ['Self-Healing', 'Auto-Optimization', 'Predictive Maintenance', 'Adaptive Learning'],
-    icon: RefreshCw,
-    color: 'from-green-500 to-emerald-500',
-    metrics: { efficiency: 92, accuracy: 94, adoption: 78 }
-  },
-  {
-    id: 'neural-interfaces',
-    title: 'Neural Interface Technology',
-    description: 'Direct brain-computer interfaces that enable seamless interaction between human cognition and AI systems.',
-    category: 'Human-AI Interaction',
-    impact: 'Revolutionary',
-    status: 'coming-soon',
-    features: ['Brain-Computer Interface', 'Thought Recognition', 'Neural Feedback', 'Cognitive Enhancement'],
-    icon: Target,
-    color: 'from-orange-500 to-red-500',
-    metrics: { efficiency: 88, accuracy: 91, adoption: 23 }
-  },
-  {
-    id: 'ai-security',
-    title: 'AI-Powered Security Suite',
-    description: 'Advanced AI security systems that detect and prevent threats in real-time with 99.9% accuracy.',
-    category: 'Security',
-    impact: 'High',
-    status: 'released',
-    features: ['Threat Detection', 'Real-time Response', 'Behavioral Analysis', 'Zero-day Protection'],
-    icon: Shield,
-    color: 'from-red-500 to-pink-500',
-    metrics: { efficiency: 97, accuracy: 99, adoption: 82 }
-  },
-  {
-    id: 'global-ai-network',
-    title: 'Global AI Network',
-    description: 'Worldwide distributed AI network that provides intelligent services across all continents.',
-    category: 'Infrastructure',
-    impact: 'High',
-    status: 'released',
-    features: ['Global Coverage', 'Edge Computing', 'Low Latency', 'High Availability'],
-    icon: Globe,
-    color: 'from-indigo-500 to-purple-500',
-    metrics: { efficiency: 94, accuracy: 96, adoption: 91 }
-  }
-];
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-const categories = ['All', 'AI Architecture', 'Quantum Computing', 'Automation', 'Human-AI Interaction', 'Security', 'Infrastructure'];
-
-export default function AIInnovationShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedInnovation, setSelectedInnovation] = useState<Innovation | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const filteredInnovations = selectedCategory === 'All' 
-    ? innovations 
-    : innovations.filter(innovation => innovation.category === selectedCategory);
-
-  const handleInnovationClick = (innovation: Innovation) => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setSelectedInnovation(innovation);
-      setIsLoading(false);
-    }, 300);
+  const innovations = {
+    breakthroughs: [
+      {
+        id: 1,
+        title: "Quantum-Neural Fusion Technology",
+        description: "Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power.",
+        icon: Brain,
+        impact: "10,000x faster processing",
+        category: "Quantum AI"
+      },
+      {
+        id: 2,
+        title: "Autonomous Business Operations",
+        description: "Self-managing AI systems that handle complex business processes without human intervention.",
+        icon: Zap,
+        impact: "99.9% accuracy",
+        category: "Automation"
+      },
+      {
+        id: 3,
+        title: "Predictive Intelligence Platform",
+        description: "AI that predicts market trends and business outcomes with 95% accuracy.",
+        icon: Target,
+        impact: "95% prediction accuracy",
+        category: "Predictive AI"
+      },
+      {
+        id: 4,
+        title: "Multi-Modal AI Consciousness",
+        description: "Advanced AI that processes text, images, voice, and data simultaneously.",
+        icon: Sparkles,
+        impact: "Unified processing",
+        category: "Consciousness"
+      }
+    ],
+    applications: [
+      {
+        id: 1,
+        title: "Enterprise Automation Suite",
+        description: "Complete business process automation with intelligent decision making.",
+        features: ["Workflow automation", "Smart scheduling", "Predictive analytics"],
+        roi: "2,500% ROI"
+      },
+      {
+        id: 2,
+        title: "AI-Powered Security Platform",
+        description: "Advanced cybersecurity with AI-driven threat detection and response.",
+        features: ["Real-time monitoring", "Threat prediction", "Auto-response"],
+        roi: "99.9% threat prevention"
+      },
+      {
+        id: 3,
+        title: "Intelligent Content Generation",
+        description: "AI that creates high-quality content across multiple formats and languages.",
+        features: ["Multi-language support", "Brand consistency", "SEO optimization"],
+        roi: "500% content efficiency"
+      }
+    ],
+    technologies: [
+      {
+        id: 1,
+        name: "Neural Architecture Search",
+        description: "AI that designs optimal neural network architectures automatically.",
+        icon: Cpu
+      },
+      {
+        id: 2,
+        name: "Quantum Machine Learning",
+        description: "Machine learning algorithms running on quantum computers.",
+        icon: Database
+      },
+      {
+        id: 3,
+        name: "Edge AI Computing",
+        description: "AI processing at the edge for real-time decision making.",
+        icon: Cloud
+      },
+      {
+        id: 4,
+        name: "Federated Learning",
+        description: "Distributed AI training while preserving data privacy.",
+        icon: Lock
+      }
+    ]
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'released': return 'bg-green-100 text-green-800';
-      case 'beta': return 'bg-yellow-100 text-yellow-800';
-      case 'coming-soon': return 'bg-blue-100 text-blue-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  const getImpactColor = (impact: string) => {
-    switch (impact) {
-      case 'Revolutionary': return 'text-red-600';
-      case 'High': return 'text-orange-600';
-      case 'Medium': return 'text-yellow-600';
-      default: return 'text-gray-600';
-    }
-  };
+  const tabs = [
+    { id: 'breakthroughs', label: 'AI Breakthroughs', icon: Rocket },
+    { id: 'applications', label: 'Applications', icon: Target },
+    { id: 'technologies', label: 'Technologies', icon: Cpu }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Header Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="flex items-center justify-center mb-6">
-              <Sparkles className="h-8 w-8 text-yellow-400 mr-3" />
-              <h1 className="text-4xl md:text-6xl font-bold text-white">
-                AI Innovation Showcase 2025
-              </h1>
-              <Sparkles className="h-8 w-8 text-yellow-400 ml-3" />
-            </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover the most groundbreaking AI innovations that are reshaping the future of technology and business.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3">
-                <div className="flex items-center text-white">
-                  <Rocket className="h-5 w-5 mr-2" />
-                  <span className="font-semibold">6 Revolutionary Technologies</span>
-                </div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3">
-                <div className="flex items-center text-white">
-                  <TrendingUp className="h-5 w-5 mr-2" />
-                  <span className="font-semibold">95% Average Efficiency</span>
-                </div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3">
-                <div className="flex items-center text-white">
-                  <Users className="h-5 w-5 mr-2" />
-                  <span className="font-semibold">67% Global Adoption</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Category Filter */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
         >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg transform scale-105'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <Sparkles className="w-4 h-4" />
+            Revolutionary AI 2025
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI Innovation
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Showcase</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover the cutting-edge AI technologies and breakthroughs that are reshaping industries and creating unprecedented opportunities for growth and innovation.
+          </p>
         </motion.div>
 
-        {/* Innovations Grid */}
+        {/* Tabs */}
         <motion.div
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          <AnimatePresence>
-            {filteredInnovations.map((innovation, index) => (
-              <motion.div
-                key={innovation.id}
-                layout
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group cursor-pointer"
-                onClick={() => handleInnovationClick(innovation)}
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
               >
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${innovation.color}`}>
-                      <innovation.icon className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="flex gap-2">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(innovation.status)}`}>
-                        {innovation.status.replace('-', ' ')}
-                      </span>
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getImpactColor(innovation.impact)}`}>
-                        {innovation.impact}
-                      </span>
-                    </div>
-                  </div>
+                <Icon className="w-5 h-5" />
+                {tab.label}
+              </button>
+            );
+          })}
+        </motion.div>
 
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                    {innovation.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 mb-4 line-clamp-3">
-                    {innovation.description}
-                  </p>
-
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-gray-400">Efficiency</span>
-                      <div className="flex items-center">
-                        <div className="w-20 bg-gray-700 rounded-full h-2 mr-2">
-                          <div 
-                            className="bg-gradient-to-r from-green-400 to-green-500 h-2 rounded-full transition-all duration-1000"
-                            style={{ width: `${innovation.metrics.efficiency}%` }}
-                          />
+        {/* Content */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.5 }}
+            className="grid gap-8"
+          >
+            {activeTab === 'breakthroughs' && (
+              <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                {innovations.breakthroughs.map((innovation, index) => {
+                  const Icon = innovation.icon;
+                  return (
+                    <motion.div
+                      key={innovation.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 group"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">
+                          <Icon className="w-6 h-6 text-white" />
                         </div>
-                        <span className="text-white font-medium">{innovation.metrics.efficiency}%</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-gray-400">Accuracy</span>
-                      <div className="flex items-center">
-                        <div className="w-20 bg-gray-700 rounded-full h-2 mr-2">
-                          <div 
-                            className="bg-gradient-to-r from-blue-400 to-blue-500 h-2 rounded-full transition-all duration-1000"
-                            style={{ width: `${innovation.metrics.accuracy}%` }}
-                          />
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">
+                              {innovation.category}
+                            </span>
+                          </div>
+                          <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
+                            {innovation.title}
+                          </h3>
+                          <p className="text-gray-300 mb-4">
+                            {innovation.description}
+                          </p>
+                          <div className="flex items-center gap-2 text-green-400 font-medium">
+                            <TrendingUp className="w-4 h-4" />
+                            {innovation.impact}
+                          </div>
                         </div>
-                        <span className="text-white font-medium">{innovation.metrics.accuracy}%</span>
                       </div>
-                    </div>
-                  </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            )}
 
-                  <div className="mt-4 flex items-center text-purple-300 group-hover:text-purple-200 transition-colors">
-                    <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+            {activeTab === 'applications' && (
+              <div className="grid md:grid-cols-3 gap-8">
+                {innovations.applications.map((application, index) => (
+                  <motion.div
+                    key={application.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300"
+                  >
+                    <h3 className="text-xl font-bold text-white mb-4">
+                      {application.title}
+                    </h3>
+                    <p className="text-gray-300 mb-6">
+                      {application.description}
+                    </p>
+                    <div className="space-y-3 mb-6">
+                      {application.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-green-400" />
+                          <span className="text-gray-300 text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="text-center">
+                      <span className="inline-block bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                        {application.roi}
+                      </span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            )}
+
+            {activeTab === 'technologies' && (
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {innovations.technologies.map((tech, index) => {
+                  const Icon = tech.icon;
+                  return (
+                    <motion.div
+                      key={tech.id}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 text-center group"
+                    >
+                      <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl w-fit mx-auto mb-4">
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                        {tech.name}
+                      </h3>
+                      <p className="text-gray-300 text-sm">
+                        {tech.description}
+                      </p>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of companies already leveraging our AI innovations to achieve unprecedented growth and efficiency.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-medium hover:bg-white/20 transition-all duration-300"
+              >
+                View Success Stories
+                <Star className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
         </motion.div>
       </div>
-
-      {/* Innovation Detail Modal */}
-      <AnimatePresence>
-        {selectedInnovation && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedInnovation(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/20"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex items-start justify-between mb-6">
-                <div className={`p-4 rounded-xl bg-gradient-to-r ${selectedInnovation.color}`}>
-                  <selectedInnovation.icon className="h-12 w-12 text-white" />
-                </div>
-                <button
-                  onClick={() => setSelectedInnovation(null)}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-
-              <h2 className="text-3xl font-bold text-white mb-4">
-                {selectedInnovation.title}
-              </h2>
-              
-              <p className="text-gray-300 mb-6 text-lg">
-                {selectedInnovation.description}
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <div className="text-sm text-gray-400 mb-2">Efficiency</div>
-                  <div className="text-2xl font-bold text-white">{selectedInnovation.metrics.efficiency}%</div>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <div className="text-sm text-gray-400 mb-2">Accuracy</div>
-                  <div className="text-2xl font-bold text-white">{selectedInnovation.metrics.accuracy}%</div>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <div className="text-sm text-gray-400 mb-2">Adoption</div>
-                  <div className="text-2xl font-bold text-white">{selectedInnovation.metrics.adoption}%</div>
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <h3 className="text-xl font-semibold text-white mb-4">Key Features</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {selectedInnovation.features.map((feature, index) => (
-                    <div key={index} className="flex items-center text-gray-300">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <button className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
-                  Get Started
-                </button>
-                <button className="flex-1 bg-white/10 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Loading Overlay */}
-      <AnimatePresence>
-        {isLoading && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 flex items-center justify-center"
-          >
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="flex items-center space-x-3">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-500"></div>
-                <span className="text-white text-lg">Loading innovation details...</span>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
-}
+};
+
+export default AIInnovationShowcase2025;
