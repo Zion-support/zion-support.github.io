@@ -125,6 +125,14 @@ import UltimateContentShowcase2026PromotionBanner from '../components/UltimateCo
 import RevolutionaryContentDiscoveryWidget2026 from '../components/RevolutionaryContentDiscoveryWidget2026';
 import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 
+// Import new 2025 content showcase components
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
+import UltimateContentCarousel2025 from '../components/UltimateContentCarousel2025';
+import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBanner';
+import FeaturedBlogPost2025 from '../components/FeaturedBlogPost2025';
+import CaseStudyShowcase2025 from '../components/CaseStudyShowcase2025';
+
 // Import new promotional banners for 2026
 import AI2026UltimateContentRevolutionPromotionBanner from '../components/AI2026UltimateContentRevolutionPromotionBanner';
 import AdvancedAutomationSolutions2026UltimatePromotionBanner from '../components/AdvancedAutomationSolutions2026UltimatePromotionBanner';
@@ -149,6 +157,24 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
+        <NewContent2025UltimateShowcase />
+        
+        {/* AI 2025 REVOLUTIONARY CONTENT BANNER */}
+        <AI2025RevolutionaryContentBanner />
+        
+        {/* ULTIMATE CONTENT CAROUSEL 2025 */}
+        <UltimateContentCarousel2025 />
+        
+        {/* AI 2025 CONTENT SHOWCASE BANNER */}
+        <AI2025ContentShowcaseBanner />
+        
+        {/* FEATURED BLOG POSTS 2025 */}
+        <FeaturedBlogPost2025 />
+        
+        {/* CASE STUDY SHOWCASE 2025 */}
+        <CaseStudyShowcase2025 />
+        
         {/* AI TOOLS 2025 ULTIMATE SHOWCASE BANNER */}
         <AITools2025UltimateShowcaseBanner />
         
