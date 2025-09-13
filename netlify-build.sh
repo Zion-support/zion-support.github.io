@@ -34,22 +34,28 @@ for attempt in {1..3}; do
   # Try different installation strategies
   case $attempt in
     1)
-      echo "Attempt 1: Standard installation with frozen lockfile..."
-      if yarn install --frozen-lockfile; then
+      echo "Attempt 1: Standard Yarn installation..."
+      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
         echo "Dependencies installed successfully!"
         break
       fi
       ;;
     2)
-      echo "Attempt 2: Installation without frozen lockfile..."
-      if yarn install; then
+      echo "Attempt 2: Yarn installation with specific resolutions..."
+      # Force specific versions for problematic packages
+      yarn add find-up@5.0.0 --exact --network-timeout 120000 --ignore-engines --no-cache
+      yarn add glob-parent@6.0.2 --exact --network-timeout 120000 --ignore-engines --no-cache
+      yarn add glob@10.4.5 --exact --network-timeout 120000 --ignore-engines --no-cache
+      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
         echo "Dependencies installed successfully!"
         break
       fi
       ;;
     3)
-      echo "Attempt 3: Installation with force flag..."
-      if yarn install --force; then
+      echo "Attempt 3: Last resort - clean install with fresh lockfile..."
+      # Remove existing lockfile and do fresh install
+      rm -f yarn.lock
+      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
         echo "Dependencies installed successfully!"
         break
       else
@@ -73,6 +79,6 @@ fi
 
 # Build the project
 echo "Building project..."
-yarn build
+yarn run build
 
 echo "Build completed successfully!"
