@@ -160,6 +160,12 @@ import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import TechnologyInsights2025 from '../components/TechnologyInsights2025';
 import NewContentAnnouncementBanner2025 from '../components/NewContentAnnouncementBanner2025';
 
+// Import new 2026 components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import RevolutionaryTech2026PromotionBanner from '../components/RevolutionaryTech2026PromotionBanner';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+import UltimateServicesShowcase2026 from '../components/UltimateServicesShowcase2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -171,6 +177,18 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* REVOLUTIONARY TECH 2026 PROMOTION BANNER */}
+        <RevolutionaryTech2026PromotionBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2026 */}
+        <UltimateContentShowcase2026 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
+        <InteractiveContentDiscovery2026 />
+        
+        {/* ULTIMATE SERVICES SHOWCASE 2026 */}
+        <UltimateServicesShowcase2026 />
+        
         {/* NEW CONTENT ANNOUNCEMENT BANNER 2025 */}
         <NewContentAnnouncementBanner2025 />
         
