@@ -1,8 +1,6 @@
 
 import { useState } from "react";
-// Local stub is used in place of the @hello-pangea/dnd package which isn't
-// available in this environment.
-import { Draggable } from "@/lib/dnd-stub";
+import { Draggable } from "@hello-pangea/dnd";
 import { formatDistanceToNow } from "date-fns";
 import { Link } from "react-router-dom";
 import { JobApplication } from "@/types/jobs";
@@ -78,9 +76,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                 <div className="flex items-center gap-2">
                   <Avatar className="h-8 w-8">
                     {application.talent_profile?.profile_picture_url ? (
-                      <img 
-                        src={application.talent_profile.profile_picture_url} 
-                        alt={application.talent_profile.full_name || "Candidate"} 
+                      <img
+                        src={application.talent_profile.profile_picture_url}
+                        alt={application.talent_profile.full_name || "Candidate"}
+                        loading="lazy"
                       />
                     ) : (
                       <User className="h-4 w-4" />

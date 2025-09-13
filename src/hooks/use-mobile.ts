@@ -1,24 +1,22 @@
-
 import { useState, useEffect } from 'react';
 
-export function useIsMobile() {
-  // Avoid using `window` during the initial render to prevent hydration
-  // mismatches when server-side rendering. Determine the width after mount.
+export const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 1024); // lg breakpoint
     };
 
-    if (typeof window !== 'undefined') {
-      // Determine the current width on mount
-      handleResize();
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
-    }
-    return undefined;
+    // Check on mount
+    checkIsMobile();
+
+    // Add event listener
+    window.addEventListener('resize', checkIsMobile);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
 
   return isMobile;
-}
+};

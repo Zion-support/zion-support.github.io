@@ -19,10 +19,6 @@ jest.mock('react-router-dom', () => ({
   useNavigate: jest.fn(),
 }));
 
-jest.mock('@/integrations/supabase/client', () => ({
-  supabase: { functions: { invoke: jest.fn() } }
-}));
-
 describe('MarketplaceCard Buy Now', () => {
   it('navigates to login when unauthenticated', () => {
     const navigateMock = jest.fn();
@@ -35,6 +31,7 @@ describe('MarketplaceCard Buy Now', () => {
     );
 
     fireEvent.click(screen.getByRole('button'));
+    expect(navigateMock).toHaveBeenCalledWith('/login', { state: { from: '/' } });
     expect(navigateMock).toHaveBeenCalledWith('/login', { state: { from: '/' } });
   });
 });

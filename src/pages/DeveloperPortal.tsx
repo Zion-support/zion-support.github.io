@@ -1,15 +1,6 @@
-
-import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { 
-  BookOpen, 
-  Code, 
-  Key, 
-  List, 
-  LucideIcon, 
-  Terminal, 
-  Webhook 
-} from "lucide-react";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Code, BookOpen, Shield, Users, ArrowRight, Terminal, Database, FileCode, CheckCircle } from 'lucide-react';
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
@@ -78,13 +69,5 @@ export function DeveloperPortal() {
         {activeTab === "logs" && <ApiLogs />}
       </div>
     </div>
-  );
-}
-
-export default function ProtectedDeveloperPortal() {
-  return (
-    <ProtectedRoute>
-      <DeveloperPortal />
-    </ProtectedRoute>
   );
 }
