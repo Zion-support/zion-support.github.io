@@ -1,57 +1,27 @@
-
-  'react-router-dom', () => ({
-  ...(jest.requireActual('
-  'react-router-dom') as any),
+import { render } from '@testing-library/react';
+import EquipmentDetail from '@/pages/EquipmentDetail';
+import * as router from 'react-router-dom';
+jest.mock('@/hooks/useAuth', () => ({ useAuth: () => ({ isAuthenticated: true }) }));
+jest.mock('react-router-dom', () => ({
+  ...(jest.requireActual('react-router-dom') as any),
   useParams: jest.fn(),
-  useNavigate: jest.fn()}))
-describe('EquipmentDetail page'', () => {
-  it('
-  'displays equipment info', () => {'
+  useNavigate: jest.fn(),
+}));
 
-jest.mock(
-  'react-router-dom, () => ({
-  ...(jest.requireActual(
-  'react-router-dom') as any)
-  useParams: jest.fn()
-  useNavigate: jest.fn()}))
-describe(EquipmentDetail page'', () => {
-  it(
-  displays equipment info', () => {
+describe('EquipmentDetail page', () => {
+  it('displays equipment info', () => {
+    (router.useParams as jest.Mock).mockReturnValue({ equipmentId: 'pro-camera-x1000' });
 
-    (router.useParams as jest.Mock).mockReturnValue({ id: 'pro-camera-x1000 });
-    const { asFragment, getByText, container } = render(
+    const { asFragment, getByText } = render(<EquipmentDetail />);
+    expect(getByText(/Pro Camera X1000/i)).toBeInTheDocument();
+    expect(getByText(/Full-frame CMOS/i)).toBeInTheDocument();
+    (router.useParams as jest.Mock).mockReturnValue({ equipmentId: 'pro-camera-x1000' });
 
-      <MemoryRouter>
-        <AppLayout>
-          <EquipmentDetail />
-        </AppLayout>
-      </MemoryRouter>
-
-    expect(asFragment()).toMatchSnapshot()})
-  it('
-  'redirects to Stripe when authenticated', async () => {'
-    (router.useParams as jest.Mock).mockReturnValue({ id: 'pro-camera-x1000 });
-
-      .spyOn(global,
-,
-  fetch' as: any);';
-      .mockResolvedValue({
-
-    (window as any).location = { assign: assignMock, href:' }
-
-    delete (window as any).location
-    (window as any).location = { assign: assignMock, href: }
-
-    const { getByText } = render(
-
-      <MemoryRouter>
-        <AppLayout>
-          <EquipmentDetail />
-        </AppLayout>
-      </MemoryRouter>
-
-    expect(assignMock).toHaveBeenCalledWith('https: //stripe.test/session)
-    fetchMock.mockRestore()})});
-
+    const { asFragment, getByText } = render(<EquipmentDetail />);
+    expect(getByText(/Pro Camera X1000/i)).toBeInTheDocument();
+    expect(getByText(/Full-frame CMOS/i)).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
 
 

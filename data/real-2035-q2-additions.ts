@@ -1,41 +1,10 @@
 
 
-      'Intent classification + prioritization'
-      'On-brand response drafting'
-      'Automatic polite follow-ups'
-      'Lead/contact enrichment'
-      'Analytics and response SLAs'
-    ]
-    popular: true
-    icon: '📧'
-    color: 'from-cyan-600 to-blue-700'
-    textColor: 'text-cyan-300'
-    link: 'https://ziontechgroup.com/services/ai-email-responder'
-    marketPosition: 'Competes with Superhuman/Front add-ons; turnkey for SMBs'
-    targetAudience: 'Sales, support, founder-led teams'
-    trialDays: 14
-    setupTime: '30 minutes'
-    category: 'Developer Tools'
-    realService: true
-    technology: ['Gmail/Outlook APIs', 'LLM', 'Webhook']
-    integrations: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack']
-    useCases: ['Inbound triage', 'Nurture sequences', 'SLA reporting']
-    roi: 'Cuts manual email time by 60–80%'
-    competitors: ['Superhuman AI', 'Front AI', 'Gmail add-ons']
-    marketSize: '$10B+ email productivity'
-    growthRate: '15% CAGR'
-    variant: 'network-futuristic'
-    contactInfo: contact
-    realImplementation: true
       'Intent classification + prioritization',
       'On-brand response drafting',
       'Automatic polite follow-ups',
       'Lead/contact enrichment',
-
-      'Intent classification + prioritization',
-      'On - brand response drafting',
-      'Automatic polite follow - ups',
-      'Lead / contact enrichment',      'Analytics and response SLAs',
+      'Analytics and response SLAs',
     ],
     popular: true,
     icon: '📧',
@@ -54,13 +23,6 @@
     integrations: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack'],
     use_cases: ['Inbound triage', 'Nurture sequences', 'SLA reporting'],
     roi: 'Cuts manual email time by 60–80%',
-    implementationDetails:
-      'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
-    launchDate: '2025-08-20'
-    customers: 48
-    rating: 4.7
-    reviews: 12
-  }
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],
     market_size: '$10B+ email productivity',
     growth_rate: '15% CAGR',
@@ -76,33 +38,6 @@
   },
   {
 
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-300',
-    link: 'https://ziontechgroup.com/services/ai-email-responder',;
-    marketPosition: 'Competes with Superhuman/Front add-ons; turnkey for SMBs',
-    targetAudience: 'Sales, support, founder-led teams',
-    trialDays: 14,
-    setupTime: '30 minutes',
-    category: 'Developer Tools',
-    realService: true,
-    technology: ['Gmail/Outlook APIs', 'LLM', 'Webhook'],
-    integrations: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack'],
-    useCases: ['Inbound triage', 'Nurture sequences', 'SLA reporting'],
-    roi: 'Cuts manual email time by 60–80%',
-    competitors: ['Superhuman AI', 'Front AI', 'Gmail add-ons'],
-    marketSize: '$10B+ email productivity',
-    growthRate: '15% CAGR',
-    variant: 'network-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails:
-      'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
-    launchDate: '2025-08-20'
-    customers: 48
-    rating: 4.7
-    reviews: 12
-  }
-  {
       'Branching logic + A/B prompts',
       'SMS/WhatsApp/web delivery',
       'Real-time analytics',
@@ -121,7 +56,6 @@
       'Real - time analytics',
       'CSV / Sheets export',
 
-  {
       'Webhooks + API',
     ],
     popular: false,
@@ -822,71 +756,8 @@
       'Hand - off to human',
     ],
     popular: true,
-    category: 'AI & Data',
-    real_service: true,
-    technology: ['LLM', 'Embeddings'],
-    integrations: ['HubSpot', 'Calendly'],
-    use_cases: ['Lead capture', 'Meeting booking'],
-    competitors: ['Drift (lite)', 'Intercom Fin'],
-    market_size: '$3B chatbots',
-    growth_rate: '12% CAGR',
-    variant: 'network - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Widget + flows + routing',
-    launch_date: '2025 - 08 - 20',
-    customers: 23,
-    rating: 4 && 4.6,
-    reviews: 7,
-  },
-  {
-
-    id: 'gdpr - dsar - portal - lite',
-    name: 'GDPR DSAR Portal Lite',
-    tagline: 'Accept, verify, export, and fulfill data subject requests',
-    price: '$49',
-    period: '/month',
-    description:;
-      'Hosted portal for DSARs with identity verification, workflow, and export helpers.',
-    features: [;
-
-      'Request intake',
-      'Identity check',
-      'Triage + workflow',
-      'Exports',
-      'Audit logs',
-    ],
-    popular: true,
-    integrations: ['Zendesk', 'Google Drive'],
-    use_cases: ['DSAR fulfillment'],
-    roi: 'Avoid compliance toil and risk',
-    competitors: ['Transcend (lite)', 'Osano'],
-    market_size: '$6B privacy ops',
-    growth_rate: '18% CAGR',
-    variant: 'holographic - matrix',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Portal + workflow + exports',
-    launch_date: '2025 - 08 - 20',
-    customers: 10,
-    rating: 4 && 4.5,
-    reviews: 4,
-  },
-  {
-
-    period: '/month',
-    description:;
-      'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.',
-    features: [;
-
-      'Qualifying flows',
-      'Calendar booking',
-      'CRM routing',
-      'Visitor insights',
-      'Hand - off to human',
-    ],
-    popular: true,
     icon: '🤖',
+
     color: 'from - teal - 600 to - emerald - 700',
     text_color: 'text - teal - 300',
     link: 'https://ziontechgroup.com / services / agentic - lead - qualifier',
@@ -894,6 +765,7 @@
     target_audience: 'B2B SaaS, agencies',
     trial_days: 14,
     setup_time: '30 minutes',
+
     category: 'AI & Data',
     real_service: true,
     technology: ['LLM', 'Embeddings'],
@@ -913,6 +785,7 @@
     reviews: 7,
   },
   {
+
     id: 'gdpr - dsar - portal - lite',
     name: 'GDPR DSAR Portal Lite',
     tagline: 'Accept, verify, export, and fulfill data subject requests',
@@ -921,6 +794,7 @@
     description:;
       'Hosted portal for DSARs with identity verification, workflow, and export helpers.',
     features: [;
+
       'Request intake',
       'Identity check',
       'Triage + workflow',
@@ -929,6 +803,7 @@
     ],
     popular: true,
     icon: '🛡️',
+
     color: 'from - red - 600 to - rose - 700',
     text_color: 'text - red - 300',
     link: 'https://ziontechgroup.com / services / gdpr - dsar - portal - lite',
@@ -939,6 +814,7 @@
     category: 'Quality & Monitoring',
     real_service: true,
     technology: ['Next.js', 'Storage'],
+
     integrations: ['Zendesk', 'Google Drive'],
     use_cases: ['DSAR fulfillment'],
     roi: 'Avoid compliance toil and risk',
@@ -955,578 +831,6 @@
     reviews: 4,
   },
   {
-    id: 'feature-flag-auditor'
-    name: 'Feature Flag Auditor'
-    tagline: 'Flag hygiene checks and end-of-life automation'
-    price: '$19'
-    period: '/month'
-    description:
-      'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.'
-    features: [
-      'Repo scanner'
-      'Flag inventory'
-      'Risk detection'
-      'PR suggestions'
-      'CI integration'
-    ]
-    popular: false
-    icon: '🚩'
-    color: 'from-rose-600 to-pink-700'
-    textColor: 'text-rose-300'
-    link: 'https://ziontechgroup.com/services/feature-flag-auditor'
-    marketPosition: 'Proactive hygiene vs manual debt'
-    targetAudience: 'Platform + app teams'
-    trialDays: 7
-    setupTime: '30 minutes'
-    category: 'Developer Tools'
-    realService: true
-    technology: ['Git APIs', 'Static analysis']
-    integrations: ['GitHub', 'GitLab', 'Flagsmith']
-    useCases: ['Cleanup debt', 'Reduce risk']
-    roi: 'Avoid outages; reduce toil'
-    competitors: ['LaunchDarkly add-ons']
-    marketSize: '$1B flags'
-    growthRate: '10% CAGR'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Scanner + PR bot'
-    launchDate: '2025-08-20'
-    customers: 8
-    rating: 4.4
-    reviews: 3
-  }
-      'Repo scanner',
-      'Flag inventory',
-      'Risk detection',
-      'PR suggestions',
-      'CI integration',
-    ],
-    popular: false,
-    icon: '🚩',
-
-    color: 'from - rose - 600 to - pink - 700',
-    text_color: 'text - rose - 300',
-    link: 'https://ziontechgroup.com / services / feature - flag - auditor',
-    market_position: 'Proactive hygiene vs manual debt',
-    target_audience: 'Platform + app teams',
-    trial_days: 7,
-    setup_time: '30 minutes',
-
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['Git APIs', 'Static analysis'],
-    integrations: ['GitHub', 'GitLab', 'Flagsmith'],
-    use_cases: ['Cleanup debt', 'Reduce risk'],
-    roi: 'Avoid outages; reduce toil',
-    competitors: ['LaunchDarkly add - ons'],
-    market_size: '$1B flags',
-    growth_rate: '10% CAGR',
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Scanner + PR bot',
-    launch_date: '2025 - 08 - 20',
-    customers: 8,
-    rating: 4 && 4.4,
-    reviews: 3,
-  },
-
-
-
-  {
-
-    id: 'postgres - index - advisor - pro',
-    name: 'Postgres Index Advisor Pro',
-    tagline: 'Index recommendations and controlled PR rollouts',
-    price: '$79',
-    period: '/month',
-    description:;
-      'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.',
-    features: [;
-      'Slow query capture',
-      'Index suggestions',
-      'Risk scoring',
-      'PR generation',
-      'Rollback assist',
-    ],
-    popular: true,
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['pg_stat_statements', 'Advisor'],
-    integrations: ['GitHub Actions'],
-    use_cases: ['DB tuning', 'Perf boosts'],
-    roi: 'Cut query costs 20–50%',
-    competitors: ['pganalyze (adjacent)'],
-    market_size: '$2B DB tuning',
-    growth_rate: '9% CAGR',
-    variant: 'network - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Collector + advisor + PRs',
-    launch_date: '2025 - 08 - 20',
-    customers: 15,
-    rating: 4 && 4.6,
-    reviews: 5,
-  },
-  {
-      'Usage analysis',
-      'Rule suggestions',
-      'Cost simulator',
-      'Change sets',
-      'Alerting',
-    ],
-    popular: false,
-    category: 'Cloud & FinOps',
-    real_service: true,
-    technology: ['AWS S3', 'Cost models'],
-    integrations: ['AWS'],
-    use_cases: ['Storage hygiene', 'Cost cuts'],
-    roi: 'Save 10–30% storage spend',
-    competitors: ['Kubecost (adjacent)'],
-    market_size: '$3B cloud cost',
-    growth_rate: '12% CAGR',
-    variant: 'holographic - matrix',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Analyzer + simulator + rule export',
-    launch_date: '2025 - 08 - 20',
-    customers: 17,
-    rating: 4 && 4.5,
-    reviews: 4,
-  },
-  {
-      'Connectors',
-      'Sensitive entity detection',
-      'Sampling with redaction',
-      'Findings export',
-      'Alerting',
-    ],
-    popular: true,
-    category: 'Quality & Monitoring',
-    real_service: true,
-    technology: ['DLP', 'Connectors'],
-    integrations: ['AWS', 'GCP', 'Snowflake'],
-    use_cases: ['Compliance audits', 'Risk reduction'],
-    roi: 'Avoid incidents and fines',
-    competitors: ['Google DLP', 'AWS Macie'],
-    market_size: '$5B data security',
-    growth_rate: '15% CAGR',
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Connectors + scan jobs + exports',
-    launch_date: '2025 - 08 - 20',
-    customers: 13,
-    rating: 4 && 4.6,
-    reviews: 5,
-  },
-  {
-    id: 'api-breaking-change-watcher',
-    name: 'API Breaking Change Watcher',
-    tagline: 'Schema diffs with CI gates and notifications',
-    price: '$49',
-    period: '/month',
-    description:;
-      'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
-    features: [
-
-    id: 'api - breaking - change - watcher',
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['OpenAPI', 'GraphQL'],
-    integrations: ['GitHub', 'Slack'],
-    use_cases: ['Schema governance', 'Release safety'],
-    roi: 'Fewer incidents; faster integration',
-    competitors: ['Stoplight (adjacent)'],
-    market_size: '$1B API tooling',
-    growth_rate: '9% CAGR',
-    variant: 'network - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Registry + diff engine + CI',
-    launch_date: '2025 - 08 - 20',
-    customers: 12,
-    rating: 4 && 4.5,
-    reviews: 3,
-  },
-  {
-
-  {
-    id: 'postgres-index-advisor-pro'
-    name: 'Postgres Index Advisor Pro'
-    tagline: 'Index recommendations and controlled PR rollouts'
-    price: '$79'
-    period: '/month'
-    description:
-      'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
-    features: [
-      'Slow query capture'
-      'Index suggestions'
-      'Risk scoring'
-      'PR generation'
-      'Rollback assist'
-    ]
-    popular: true
-    icon: '🗄️'
-    color: 'from-blue-700 to-indigo-800'
-    textColor: 'text-blue-300'
-    link: 'https://ziontechgroup.com/services/postgres-index-advisor-pro'
-    marketPosition: 'Productized tuning for small teams'
-    targetAudience: 'Data + platform teams'
-    trialDays: 14
-    setupTime: '1 day'
-    category: 'Developer Tools'
-    realService: true
-    technology: ['pg_stat_statements', 'Advisor']
-    integrations: ['GitHub Actions']
-    useCases: ['DB tuning', 'Perf boosts']
-    roi: 'Cut query costs 20–50%'
-    competitors: ['pganalyze (adjacent)']
-    marketSize: '$2B DB tuning'
-    growthRate: '9% CAGR'
-    variant: 'network-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Collector + advisor + PRs'
-    launchDate: '2025-08-20'
-    customers: 15
-    rating: 4.6
-    reviews: 5
-  }
-  {
-    id: 's3-lifecycle-optimizer'
-    name: 'S3 Lifecycle Optimizer'
-    tagline: 'Move objects between storage classes to cut costs'
-    price: '$59'
-    period: '/month'
-    description:
-      'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
-    features: [
-      'Usage analysis'
-      'Rule suggestions'
-      'Cost simulator'
-      'Change sets'
-      'Alerting'
-    ]
-    popular: false
-    icon: '🗂️'
-    color: 'from-emerald-700 to-teal-800'
-    textColor: 'text-emerald-300'
-    link: 'https://ziontechgroup.com/services/s3-lifecycle-optimizer'
-    marketPosition: 'No-friction cost hygiene'
-    targetAudience: 'Cloud + finops'
-    trialDays: 7
-    setupTime: '1 hour'
-    category: 'Cloud & FinOps'
-    realService: true
-    technology: ['AWS S3', 'Cost models']
-    integrations: ['AWS']
-    useCases: ['Storage hygiene', 'Cost cuts']
-    roi: 'Save 10–30% storage spend'
-    competitors: ['Kubecost (adjacent)']
-    marketSize: '$3B cloud cost'
-    growthRate: '12% CAGR'
-    variant: 'holographic-matrix'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Analyzer + simulator + rule export'
-    launchDate: '2025-08-20'
-    customers: 17
-    rating: 4.5
-    reviews: 4
-  }
-  {
-    id: 'pii-discovery-scanner'
-    name: 'PII Discovery Scanner'
-    tagline: 'Scan buckets and DBs for PII/PHI with evidence exports'
-    price: '$89'
-    period: '/month'
-    description:
-      'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'
-    features: [
-      'Connectors'
-      'Sensitive entity detection'
-      'Sampling with redaction'
-      'Findings export'
-      'Alerting'
-    ]
-    popular: true
-    icon: '🕵️'
-    color: 'from-red-700 to-rose-800'
-    textColor: 'text-red-300'
-    link: 'https://ziontechgroup.com/services/pii-discovery-scanner'
-    marketPosition: 'Compliance-first discovery'
-    targetAudience: 'Security, compliance'
-    trialDays: 7
-    setupTime: '1–2 days'
-    category: 'Quality & Monitoring'
-    realService: true
-    technology: ['DLP', 'Connectors']
-    integrations: ['AWS', 'GCP', 'Snowflake']
-    useCases: ['Compliance audits', 'Risk reduction']
-    roi: 'Avoid incidents and fines'
-    competitors: ['Google DLP', 'AWS Macie']
-    marketSize: '$5B data security'
-    growthRate: '15% CAGR'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Connectors + scan jobs + exports'
-    launchDate: '2025-08-20'
-    customers: 13
-    rating: 4.6
-    reviews: 5
-  }
-  {
-      'Repo scanner',
-      'Flag inventory',
-      'Risk detection',
-      'PR suggestions',
-      'CI integration',
-    ],
-    popular: false,
-    icon: '🚩',
-    color: 'from-rose-600 to-pink-700',
-    textColor: 'text-rose-300',
-    link: 'https://ziontechgroup.com/services/feature-flag-auditor',
-    marketPosition: 'Proactive hygiene vs manual debt',
-    targetAudience: 'Platform + app teams',
-    trialDays: 7,
-    setupTime: '30 minutes',
-    category: 'Developer Tools',
-    realService: true,
-    technology: ['Git APIs', 'Static analysis'],
-    integrations: ['GitHub', 'GitLab', 'Flagsmith'],
-    useCases: ['Cleanup debt', 'Reduce risk'],;
-    roi: 'Avoid outages; reduce toil',
-    competitors: ['LaunchDarkly add-ons'],
-    marketSize: '$1B flags',
-    growthRate: '10% CAGR',
-    variant: 'ai-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Scanner + PR bot',
-    launchDate: '2025-08-20',
-    customers: 8,
-    rating: 4.4,
-    reviews: 3,
-  },
-  {
-    id: 'postgres - index - advisor - pro',
-    name: 'Postgres Index Advisor Pro',
-    tagline: 'Index recommendations and controlled PR rollouts',
-    price: '$79',
-    period: '/month',
-    description:;
-      'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.',
-    features: [;
-      'Slow query capture',
-      'Index suggestions',
-      'Risk scoring',
-      'PR generation',
-      'Rollback assist',
-    ],
-    popular: true,
-    icon: '🗄️',
-    color: 'from - blue - 700 to - indigo - 800',
-    text_color: 'text - blue - 300',
-    link: 'https://ziontechgroup.com / services / postgres - index - advisor - pro',
-    market_position: 'Productized tuning for small teams',
-    target_audience: 'Data + platform teams',
-    trial_days: 14,
-    setup_time: '1 day',
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['pg_stat_statements', 'Advisor'],
-    integrations: ['GitHub Actions'],
-    use_cases: ['DB tuning', 'Perf boosts'],
-    roi: 'Cut query costs 20–50%',
-    competitors: ['pganalyze (adjacent)'],
-    market_size: '$2B DB tuning',
-    growth_rate: '9% CAGR',
-    variant: 'network - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Collector + advisor + PRs',
-    launch_date: '2025 - 08 - 20',
-    customers: 15,
-    rating: 4 && 4.6,
-    reviews: 5,
-  },
-  {
-    id: 's3 - lifecycle - optimizer',
-    name: 'S3 Lifecycle Optimizer',
-    tagline: 'Move objects between storage classes to cut costs',
-    price: '$59',
-    period: '/month',
-    description:;
-      'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.',
-    features: [;
-      'Usage analysis',
-      'Rule suggestions',
-      'Cost simulator',
-      'Change sets',
-      'Alerting',
-    ],
-    popular: false,
-    icon: '🗂️',
-    color: 'from - emerald - 700 to - teal - 800',
-    text_color: 'text - emerald - 300',
-    link: 'https://ziontechgroup.com / services / s3 - lifecycle - optimizer',
-    market_position: 'No - friction cost hygiene',
-    target_audience: 'Cloud + finops',
-    trial_days: 7,
-    setup_time: '1 hour',
-    category: 'Cloud & FinOps',
-    real_service: true,
-    technology: ['AWS S3', 'Cost models'],
-    integrations: ['AWS'],
-    use_cases: ['Storage hygiene', 'Cost cuts'],
-    roi: 'Save 10–30% storage spend',
-    competitors: ['Kubecost (adjacent)'],
-    market_size: '$3B cloud cost',
-    growth_rate: '12% CAGR',
-    variant: 'holographic - matrix',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Analyzer + simulator + rule export',
-    launch_date: '2025 - 08 - 20',
-    customers: 17,
-    rating: 4 && 4.5,
-    reviews: 4,
-  },
-  {
-    id: 'pii - discovery - scanner',
-    name: 'PII Discovery Scanner',
-    tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
-    price: '$89',
-    period: '/month',
-    description:;
-      'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.',
-    features: [;
-      'Connectors',
-      'Sensitive entity detection',
-      'Sampling with redaction',
-      'Findings export',
-      'Alerting',
-    ],
-    popular: true,
-    icon: '🕵️',
-    color: 'from - red - 700 to - rose - 800',
-    text_color: 'text - red - 300',
-    link: 'https://ziontechgroup.com / services / pii - discovery - scanner',
-    market_position: 'Compliance - first discovery',
-    target_audience: 'Security, compliance',
-    trial_days: 7,
-    setup_time: '1–2 days',
-    category: 'Quality & Monitoring',
-    real_service: true,
-    technology: ['DLP', 'Connectors'],
-    integrations: ['AWS', 'GCP', 'Snowflake'],
-    use_cases: ['Compliance audits', 'Risk reduction'],
-    roi: 'Avoid incidents and fines',
-    competitors: ['Google DLP', 'AWS Macie'],
-    market_size: '$5B data security',
-    growth_rate: '15% CAGR',
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Connectors + scan jobs + exports',
-    launch_date: '2025 - 08 - 20',
-    customers: 13,
-    rating: 4 && 4.6,
-    reviews: 5,
-  },
-  {
-    id: 'api-breaking-change-watcher'
-    name: 'API Breaking Change Watcher'
-    tagline: 'Schema diffs with CI gates and notifications'
-    price: '$49'
-    period: '/month'
-    description:
-      'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.'
-    id: 'api-breaking-change-watcher',
-    name: 'API Breaking Change Watcher',
-    tagline: 'Schema diffs with CI gates and notifications',
-    price: '$49',
-    period: '/month',
-    description:;
-      'Monitor OpenAPI / GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
-    features: [;
-
-      'Schema registry',
-      'Diff rules',
-      'Owner mapping',
-      'CI checks',
-      'Changelog hints',
-    ],
-    popular: false,
-    icon: '🧭',
-
-    color: 'from - indigo - 700 to - violet - 800',
-    text_color: 'text - indigo - 300',
-    link: 'https://ziontechgroup.com / services / api - breaking - change - watcher',
-    market_position: 'Operationalize API hygiene',
-    target_audience: 'Platform + API teams',
-    trial_days: 7,
-    setup_time: '1 hour',
-
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['OpenAPI', 'GraphQL'],
-    integrations: ['GitHub', 'Slack'],
-    use_cases: ['Schema governance', 'Release safety'],
-    roi: 'Fewer incidents; faster integration',
-    competitors: ['Stoplight (adjacent)'],
-    market_size: '$1B API tooling',
-    growth_rate: '9% CAGR',
-    variant: 'network - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Registry + diff engine + CI',
-    launch_date: '2025 - 08 - 20',
-    customers: 12,
-    rating: 4 && 4.5,
-    reviews: 3,
-  },
-  {
-
-      'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
-    features: [
-      'Schema registry'
-      'Diff rules'
-      'Owner mapping'
-      'CI checks'
-      'Changelog hints'
-    ]
-    popular: false
-    icon: '🧭'
-    color: 'from-indigo-700 to-violet-800'
-    textColor: 'text-indigo-300'
-    link: 'https://ziontechgroup.com/services/api-breaking-change-watcher'
-    marketPosition: 'Operationalize API hygiene'
-    targetAudience: 'Platform + API teams'
-    trialDays: 7
-    setupTime: '1 hour'
-    category: 'Developer Tools'
-    realService: true
-    technology: ['OpenAPI', 'GraphQL']
-    integrations: ['GitHub', 'Slack']
-    useCases: ['Schema governance', 'Release safety']
-    roi: 'Fewer incidents; faster integration'
-    competitors: ['Stoplight (adjacent)']
-    marketSize: '$1B API tooling'
-    growthRate: '9% CAGR'
-    variant: 'network-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Registry + diff engine + CI'
-    launchDate: '2025-08-20'
-    customers: 12
-    rating: 4.5
-    reviews: 3
-  }
 
     id: 'feature - flag - auditor',
     name: 'Feature Flag Auditor',
@@ -1774,7 +1078,6 @@
   },
   {
 
-  {
     id: 'synthetic - journey - monitor',
     name: 'Synthetic Journey Monitor',
     tagline: 'Record and replay user flows with SLO alerts',
@@ -2011,7 +1314,6 @@ const contact = {
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
-
 export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'ai-email-responder', name: 'AI Email Responder',
@@ -2058,8 +1360,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		name: 'Mobile Survey Studio'
 		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics';
 		price: '$19';
-		period: '/month',
-  description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.';
+		period: '/month';
+		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.';
 		features: [
 			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
 		];
@@ -2218,8 +1520,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		name: 'SMB Analytics Lite'
 		tagline: 'Traffic, funnels, and conversions without complexity';
 		price: '$15';
-		period: '/month',
-  description: 'Privacy-friendly analytics for small businesses with funnel insights and weekly summaries.';
+		period: '/month';
+		description: 'Privacy-friendly analytics for small businesses with funnel insights and weekly summaries.';
 		features: ['Page + event analyticsFunnels + cohortsWeekly email summariesCSV exportNo cookies mode'];
 		popular: false;
 		icon: '📊';
@@ -2335,8 +1637,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		name: 'Automated Email Follow‑ups';
 		tagline: 'No-lead-left-behind sequences across inboxes';
 		price: '$15';
-		period: '/month',
-  description: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto-scheduling.';
+		period: '/month';
+		description: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto-scheduling.';
 		features: ['Sequences + delaysInbox integrationSmart stop on replyTemplatesAnalytics'];
 		popular: false;
 		icon: '📨';
@@ -2491,8 +1793,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		name: 'Lead Enrichment API'
 		tagline: 'Company, role, and social signals from an email/domain';
 		price: '$49';
-		period: '/month',
-  description: 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.';
+		period: '/month';
+		description: 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.';
 		features: ['FirmographicsRole detectionValidated email signalsConfidence scoringUsage dashboards'];
 		popular: false;
 		icon: '🧩';
@@ -2795,8 +2097,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		name: 'S3 Lifecycle Optimizer';
 		tagline: 'Move objects between storage classes to cut costs';
 		price: '$59';
-		period: '/month',
-  description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.';
+		period: '/month';
+		description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.';
 		features: ['Usage analysisRule suggestionsCost simulatorChange setsAlerting'];
 		popular: false;
 		icon: '🗂️';
@@ -2947,8 +2249,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		name: 'IAM Permission Analyzer';
 		tagline: 'Detect over-privileged access and propose least-privilege policies';
 		price: '$79';
-		period: '/month',
-  description: 'Continuously analyze IAM policies/usage to propose safe permission reductions and open PRs.';
+		period: '/month';
+		description: 'Continuously analyze IAM policies/usage to propose safe permission reductions and open PRs.';
 		features: ['Policy inventoryUsage analysisRecommendationsPR generationAlerting'];
 		popular: true;
 		icon: '🔐';
@@ -2984,8 +2286,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		name: 'Data Warehouse Cost Optimizer';
 		tagline: 'Right-size warehouses and schedule off-peak workloads';
 		price: '$99';
-		period: '/month',
-  description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake/BigQuery costs.';
+		period: '/month';
+		description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake/BigQuery costs.';
 		features: ['Query profilingSize/schedule proposalsCost simulatorPR templatesAlerts'];
 		popular: true;
 		icon: '🧱';
@@ -3021,8 +2323,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		name: 'Email Warmup & Reputation Monitor';
 		tagline: 'Track sender reputation and run inbox placement tests';
 		price: '$39';
-		period: '/month',
-  description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.';
+		period: '/month';
+		description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.';
 		features: ['Warmup campaignsSeed inbox testsDomain/auth checksAlertsReports'];
 		popular: false;
 		icon: '🔥';
@@ -3091,10 +2393,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4 && 4.6,
 
 		reviews: 6
-	}
-];
-
-
   id: 'ai - email - responder';
   name: 'AI Email Responder',
   tagline: 'Autonomous email triage, drafting, and follow - ups for sales and support';
@@ -3136,7 +2434,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   name: 'Mobile Survey Studio',
   tagline: 'Adaptive, mobile - first surveys with branching logic and analytics';
   price: '$19';
-  period: '/month',
+  period: '/month';
   description: 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.';
   features: [;
   'Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API';
@@ -3282,7 +2580,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   name: 'SMB Analytics Lite',
   tagline: 'Traffic, funnels, and conversions without complexity';
   price: '$15';
-  period: '/month',
+  period: '/month';
   description: 'Privacy - friendly analytics for small businesses with funnel insights and weekly summaries.';
   features: ['Page + event analytics_funnels + cohorts_weekly email summariesCSV export_no cookies mode'];
   popular: false;
@@ -3387,7 +2685,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   name: 'Automated Email Follow‑ups';
   tagline: 'No - lead - left - behind sequences across inboxes';
   price: '$15';
-  period: '/month',
+  period: '/month';
   description: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.';
   features: ['Sequences + delays_inbox integration_smart stop on replyTemplatesAnalytics'];
   popular: false;
@@ -3527,7 +2825,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   name: 'Lead Enrichment API',
   tagline: 'Company, role, and social signals from an email / domain';
   price: '$49';
-  period: '/month',
+  period: '/month';
   description: 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.';
   features: ['FirmographicsRole detection_validated email signals_confidence scoring_usage dashboards'];
   popular: false;
@@ -3807,7 +3105,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   name: 'S3 Lifecycle Optimizer';
   tagline: 'Move objects between storage classes to cut costs';
   price: '$59';
-  period: '/month',
+  period: '/month';
   description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.';
   features: ['Usage analysis_rule suggestions_cost simulator_change sets_alerting'];
   popular: false;
@@ -3947,7 +3245,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   name: 'IAM Permission Analyzer';
   tagline: 'Detect over - privileged access and propose least - privilege policies';
   price: '$79';
-  period: '/month',
+  period: '/month';
   description: 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.';
   features: ['Policy inventory_usage analysisRecommendationsPR generation_alerting'];
   popular: true;
@@ -3982,7 +3280,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   name: 'Data Warehouse Cost Optimizer';
   tagline: 'Right - size warehouses and schedule off - peak workloads';
   price: '$99';
-  period: '/month',
+  period: '/month';
   description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.';
   features: ['Query profiling_size / schedule proposals_cost simulatorPR templates_alerts'];
   popular: true;
@@ -4017,7 +3315,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   name: 'Email Warmup & Reputation Monitor';
   tagline: 'Track sender reputation and run inbox placement tests';
   price: '$39';
-  period: '/month',
+  period: '/month';
   description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.';
   features: ['Warmup campaigns_seed inbox tests_domain / auth checksAlertsReports'];
   popular: false;

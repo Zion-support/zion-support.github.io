@@ -1,7 +1,8 @@
-
+import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-const MachineLearningApplicationsInEnterpriseSoftwareChat = () => {
+
+const MachineLearningApplicationsInEnterpriseSoftwareChat: NextPage = () => {
   return (
     <div>
       <Head>
@@ -12,10 +13,10 @@ const MachineLearningApplicationsInEnterpriseSoftwareChat = () => {
       <main>
         <h1>MachineLearningApplicationsInEnterpriseSoftwareChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
-  )
-},
+  );
+};
 
-export default MachineLearningApplicationsInEnterpriseSoftwareChat,
+export default MachineLearningApplicationsInEnterpriseSoftwareChat;

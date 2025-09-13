@@ -1,1 +1,0 @@
-export default CollaborativeTextEditor.js;

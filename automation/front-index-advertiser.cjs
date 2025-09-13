@@ -65,11 +65,6 @@ function discoverInternalPages() {
     }
   } catch {}
 
-  // Add anchor deep-links for capabilities and benefits on the same page
-  results.push({ type: 'internal', href: '/main/front#features', label: 'Features', tagline: 'Explore capabilities' });
-  results.push({ type: 'internal', href: '/main/front#capabilities', label: 'Capabilities', tagline: 'What agents can do' });
-  results.push({ type: 'internal', href: '/main/front#benefits', label: 'Benefits', tagline: 'Outcomes & ROI' });
-
   // Unique by href, limit
   const seen = new Set();
   const unique = [];
@@ -79,14 +74,15 @@ function discoverInternalPages() {
       unique.push(r);
     }
   }
-  return unique.slice(0, 16);
+  return unique.slice(0, 12);
 }
 
 function discoverExternalLinks() {
+  const repoUrl = 'https://github.com/Zion-Holdings/zion.app';
   return [
-    { type: 'internal', href: '/.netlify/functions/docs-index-runner', label: 'Docs — technical notes & guides', tagline: 'Documentation' },
-    { type: 'internal', href: '/newsroom', label: 'AI Changelog — highlights', tagline: 'Summarized updates' },
-    { type: 'internal', href: '/.netlify/functions/autonomous-innovation-generator', label: 'Autonomous Innovation Generator', tagline: 'Front promos + homepage refresh' },
+    { type: 'external', href: repoUrl + '/actions', label: 'Live Pipelines', tagline: 'CI logs & artifacts' },
+    { type: 'external', href: repoUrl + '/tree/main/docs', label: 'Documentation', tagline: 'Technical notes & guides' },
+    { type: 'external', href: repoUrl + '/blob/main/docs/CHANGELOG_AI.md', label: 'AI Changelog', tagline: 'Summarized updates' },
   ];
 }
 
@@ -129,7 +125,7 @@ function replaceBetweenMarkers(source, startMarker, endMarker, replacement) {
   }
   const internal = discoverInternalPages();
   const external = discoverExternalLinks();
-  const combined = [...internal, ...external].slice(0, 16);
+  const combined = [...internal, ...external].slice(0, 12);
   const block = generateSection(combined);
   const original = fs.readFileSync(FRONT_PAGE, 'utf8');
   let updated;

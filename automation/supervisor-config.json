@@ -1,5 +1,0 @@
-{
-  "exclude": ["supervisor-cron.sh"],
-  "protect": ["self-healing-cron.sh"],
-  "intervalSeconds": 300
-}

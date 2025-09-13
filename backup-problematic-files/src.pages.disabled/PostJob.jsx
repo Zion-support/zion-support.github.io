@@ -21,9 +21,8 @@ import React from 'react';
 const PostJob = ({ className }) => {
   return (
     <div className={className || ''}>
-
       <h1>PostJob</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
 }

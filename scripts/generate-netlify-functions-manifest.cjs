@@ -1,54 +1,21 @@
 #!/usr/bin/env node
-/*
- * Generates or refreshes a lightweight Netlify functions manifest.
- * Safe no-op if the manifest already exists.
- */
+
+'use strict';
+
 const fs = require('fs');
 const path = require('path');
 
-function ensureDirectory(directoryPath) {
-	if (!fs.existsSync(directoryPath)) {
-		fs.mkdirSync(directoryPath, { recursive: true });
-	}
+function listFunctions(dir) {
+  const entries = fs.readdirSync(dir).filter(f => f.endsWith('.js'));
+  return entries.map(f => f.replace(/\.js$/, ''));
 }
 
-function writeJson(filePath, data) {
-	fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + '\n', 'utf8');
-}
-
-function generateManifest() {
-	const baseDir = process.cwd();
-	const netlifyDir = path.join(baseDir, 'netlify', 'functions');
-	const manifestPath = path.join(netlifyDir, 'functions-manifest.json');
-
-	ensureDirectory(netlifyDir);
-
-	let existing = null;
-	if (fs.existsSync(manifestPath)) {
-		try {
-			existing = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-		} catch (_) {
-			// ignore parse error; we'll overwrite
-		}
-	}
-
-	const manifest = {
-		version: 1,
-		generatedAt: new Date().toISOString(),
-		environment: {
-			node: process.version,
-		},
-		functions: existing && Array.isArray(existing.functions) ? existing.functions : [],
-	};
-
-	writeJson(manifestPath, manifest);
-	console.log(`[netlify:manifest] Manifest written to ${manifestPath}`);
-}
-
-try {
-	generateManifest();
-} catch (error) {
-	console.error('[netlify:manifest] Failed to generate manifest:', error?.message || error);
-	process.exitCode = 0; // do not fail build; treat as non-blocking
-}
-
+(function main() {
+  const root = process.cwd();
+  const fnDir = path.join(root, 'netlify', 'functions');
+  const out = path.join(fnDir, 'functions-manifest.json');
+  const names = listFunctions(fnDir).filter(n => n !== 'functions-manifest');
+  const json = { generatedAt: new Date().toISOString(), functions: names.sort() };
+  fs.writeFileSync(out, JSON.stringify(json, null, 2), 'utf8');
+  console.log(`Wrote manifest with ${names.length} functions.`);
+})();

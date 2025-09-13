@@ -16,8 +16,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
+
+      - name: Run Lighthouse on production baseline
+        uses: treosh/lighthouse-ci-action@v12
         with:
           node-version: '20'
           cache: npm

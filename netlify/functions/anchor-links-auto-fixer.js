@@ -1,41 +1,29 @@
-exports.handler = async function(event, context, callback) {
-  try {
-    console.log('anchor-links-auto-fixer function triggered');
-    
-    // Anchor links auto-fixing simulation
-    const result = {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        message: 'Anchor links auto-fixer executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'anchor-links-auto-fixer',
-        source: event.source || 'unknown',
-        fixing: {
-          status: 'active',
-          linksProcessed: 0,
-          lastFix: new Date().toISOString()
-        }
-      })
-    };
-    
-    return result;
-  } catch (error) {
-    console.error('Error in anchor-links-auto-fixer:', error);
-    return {
-      statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'anchor-links-auto-fixer'
-      })
-    };
-  }
+const path = require('path');
+const { spawnSync } = require('child_process');
+
+function runNode(relativePath, args = []) {
+  const abs = path.resolve(__dirname, '..', '..', relativePath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+}
+
+exports.config = { schedule: '*/5 * * * *' };
+
+>>>>>>> origin/content/blog-sept12
+exports.handler = async () => {
+  const logs = [];
+  const step = (name, fn) => {
+    logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = fn();
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+    return status;
+  };
+
+  step('links:scan', () => runNode('automation/site-link-crawler.cjs'));
+>>>>>>> origin/content/blog-sept12
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
 };

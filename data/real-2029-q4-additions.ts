@@ -1,45 +1,11 @@
 
 
-      'Intent classification and priority scoring'
-      'One-click reply drafts with tone controls'
-      'Auto-tagging and routing to teams'
-      'PII redaction and allowlist domains'
-      'SLA-aware escalations and summaries'
-      'Analytics: response time, CSAT impact, volume by topic'
-    ]
-    popular: true
-    icon: '✉️'
-    color: 'from-cyan-600 to-blue-700'
-    textColor: 'text-cyan-300'
-    link: 'https://ziontechgroup.com/services/ai-email-triage-copilot'
-    marketPosition:
-      'Alternative to basic autoresponders; focuses on triage quality and CRM integration.'
-    targetAudience: 'Support teams, sales ops, founders'
-    trialDays: 14
-    setupTime: '1 day'
-    category: 'AI & Data'
-    realService: true
-    technology: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL']
-    integrations: ['Zendesk', 'Freshdesk', 'HubSpot', 'Gmail', 'Microsoft 365']
-    useCases: ['Customer support triage', 'Lead routing', 'Internal helpdesk']
-    roi: 'Reduce manual triage time by 60–80% and improve first-response SLAs.'
-    competitors: ['Superhuman AI', 'Zendesk AI', 'HubSpot AI']
-    marketSize: 'Helpdesk software $20B+'
-    growthRate: '25% YoY'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
       'Intent classification and priority scoring',
       'One-click reply drafts with tone controls',
       'Auto-tagging and routing to teams',
       'PII redaction and allowlist domains',
       'SLA-aware escalations and summaries',
-
-      'Intent classification and priority scoring',
-      'One - click reply drafts with tone controls',
-      'Auto - tagging and routing to teams',
-      'PII redaction and allowlist domains',
-      'SLA - aware escalations and summaries',      'Analytics: response time, CSAT impact, volume by topic',
+      'Analytics: response time, CSAT impact, volume by topic',
     ],
     popular: true,
     icon: '✉️',
@@ -87,40 +53,11 @@
     features: [;
       'Branching logic and progress - save',
 
-      'Branching logic and progress-save'
-      'Question bank: CSAT, NPS, PMF, churn'
-      'Anonymous or identified responses'
-      'Webhooks and Zapier integration'
-      'Real-time charts and cohort filters'
-      'GDPR/CCPA consent and deletion tools'
-    ]
-    popular: false
-    icon: '📱'
-    color: 'from-emerald-600 to-teal-700'
-    textColor: 'text-emerald-300'
-    link: 'https://ziontechgroup.com/services/mobile-survey-studio'
-    marketPosition:
-      'Lightweight alternative to enterprise survey suites; optimized for mobile.'
-    targetAudience: 'Growth teams, product managers, agencies'
-    trialDays: 7
-    setupTime: 'Same day'
-    category: 'Developer Tools'
-    realService: true
-    technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge']
-    integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery']
-      'Branching logic and progress-save',
       'Question bank: CSAT, NPS, PMF, churn',
       'Anonymous or identified responses',
       'Webhooks and Zapier integration',
       'Real-time charts and cohort filters',
       'GDPR/CCPA consent and deletion tools',
-    ],
-    popular: false,
-      'Question bank: CSAT, NPS, PMF, churn',
-      'Anonymous or identified responses',
-      'Webhooks and Zapier integration',
-      'Real - time charts and cohort filters',
-      'GDPR / CCPA consent and deletion tools',
     ],
     popular: false,
     icon: '📱',
@@ -138,8 +75,6 @@
 
 
 
-
-    category: 'Developer Tools',
     useCases: [
       'Landing page surveys'
       'In-product polls'
@@ -201,11 +136,23 @@
       'Feedback / NPS post - event forms',
       'Budget tracker and P & L exports',
 
-  {
       'Embeddable agendas and live updates',
     ],
     popular: true,
     icon: '🎟️',
+
+    color: 'from - purple - 600 to - pink - 600',
+    text_color: 'text - purple - 300',
+    link: 'https://ziontechgroup.com / services / event - ops - dashboard',
+    market_position:;
+      'Focused micro - SaaS alternative to all - in - one event platforms.',
+    target_audience: 'Marketing teams, conference organizers, communities',
+    trial_days: 14,
+    setup_time: '2 days',
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Next.js', 'Stripe', 'Resend', 'PostgreSQL'],
+
     integrations: ['Stripe', 'Resend', 'Mailchimp', 'Twilio'],
     use_cases: ['Meetups', 'Webinars', 'Conferences'],
     roi: 'Cut ops overhead by 50% and improve attendance by 15–30%.',
@@ -242,11 +189,22 @@
       'SLO and error budget reminders',
     ],
     popular: false,
+    icon: '📆',
+
+    color: 'from - indigo - 600 to - blue - 700',
+    text_color: 'text - indigo - 300',
+    link: 'https://ziontechgroup.com / services / oncall - scheduler - pro',
+    market_position:;
+
       'Lean alternative for SMBs; complements enterprise incident suites.',
     target_audience: 'SRE teams, startups, agencies',
     trial_days: 14,
     setup_time: '1 day',
     category: 'Observability',
+
+    real_service: true,
+    technology: ['Next.js', 'PostgreSQL', 'Twilio'],
+
     integrations: ['Slack', 'Microsoft Teams', 'Twilio'],
     use_cases: ['On - call management', 'Incident response'],
     roi: 'Reduce paging confusion and missed alerts by 30–50%.',
@@ -282,6 +240,21 @@
       'CMS export (Markdown / Headless)',
     ],
     popular: true,
+    icon: '🔎',
+
+    color: 'from - amber - 600 to - orange - 700',
+    text_color: 'text - amber - 300',
+    link: 'https://ziontechgroup.com / services / seo - content - optimizer - pro',
+    market_position:;
+      'Practical mid - market tool between basic plugins and enterprise suites.',
+    target_audience: 'Content teams, agencies, solo founders',
+    trial_days: 7,
+    setup_time: 'Same day',
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Next.js', 'OpenAI', 'SerpAPI'],
+    integrations: [;
+
       'Google Search Console',
       'Ahrefs (export)',
       'Semrush (export)',
@@ -320,15 +293,35 @@
       'Webhook notifications',
     ],
     popular: false,
+    icon: '🚩',
+
+    color: 'from - slate - 700 to - gray - 800',
+    text_color: 'text - slate - 300',
+    link: 'https://ziontechgroup.com / services / feature - flags - lite',
+    market_position:;
+
       'Minimal alternative to enterprise flag platforms for SMBs.',
     target_audience: 'Startups, agencies, indie devs',
     trial_days: 14,
     setup_time: 'Same day',
     category: 'Developer Tools',
+
+    real_service: true,
+    technology: ['Next.js', 'Edge KV / Redis'],
+
     integrations: ['Vercel', 'Netlify'],
     use_cases: ['Kill switches', 'Safe migrations', 'Cohort experiments'],
     roi: 'Reduce incident impact and deploy more frequently.',
     competitors: ['LaunchDarkly (entry)', 'Flagsmith'],
+
+    market_size: 'Feature management $1.5B+',
+    growth_rate: '22% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Rules engine with SDKs and environment isolation.',
+    launch_date: '2029 - 10 - 02',
+
     customers: 70,
     rating: 4 && 4.5,
     reviews: 21,
@@ -336,6 +329,17 @@
   {
 
       'Company/person enrich via email or domain',
+    id: 'sales - lead - enrichment',
+    name: 'Sales Lead Enrichment',
+    tagline:;
+      'Firmographics and signals to qualify leads instantly via API and CSV',
+    price: '$129',
+    period: '/month',
+    description:;
+      'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.',
+    features: [;
+      'Company / person enrich via email or domain',
+
       'Tech stack detection and hiring signals',
       'CSV bulk processing and API',
       'CRM enrichment workflows',
@@ -343,6 +347,19 @@
       'Usage - based pricing tiers',
     ],
     popular: true,
+    icon: '🧭',
+
+    color: 'from - sky - 600 to - blue - 700',
+    text_color: 'text - sky - 300',
+    link: 'https://ziontechgroup.com / services / sales - lead - enrichment',
+    market_position: 'Affordable enrichment focused on actionable signals.',
+    target_audience: 'Sales teams, SDRs, growth marketers',
+    trial_days: 7,
+    setup_time: 'Same day',
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Next.js', 'Node', 'External data partners'],
+
     integrations: ['HubSpot', 'Salesforce (export)', 'Airtable'],
     use_cases: ['Lead scoring', 'ICP matching', 'Outbound targeting'],
     roi: 'Improve conversion rates by 10–25%.',
@@ -362,6 +379,17 @@
   {
 
       'High-accuracy OCR and field mapping',
+    id: 'invoice - ocr - processor',
+    name: 'Invoice OCR Processor',
+    tagline:;
+      'Extract line items and totals from invoices and receipts to your ERP',
+    price: '$79',
+    period: '/month',
+    description:;
+      'Upload PDFs / images and get structured outputs (vendor, dates, taxes, line items). Human - in - the - loop validation and retraining for edge cases.',
+    features: [;
+      'High - accuracy OCR and field mapping',
+
       'Line item extraction and taxes',
       'Validation UI and review queues',
       'Export to CSV, JSON, or webhook',
@@ -369,6 +397,20 @@
       'PII redaction and retention policies',
     ],
     popular: false,
+    icon: '🧾',
+
+    color: 'from - rose - 600 to - pink - 700',
+    text_color: 'text - rose - 300',
+    link: 'https://ziontechgroup.com / services / invoice - ocr - processor',
+    market_position:;
+      'Cost - effective alternative with human review for accuracy.',
+    target_audience: 'Finance teams, accounting firms, SMBs',
+    trial_days: 7,
+    setup_time: '2 days',
+    category: 'AI & Data',
+    real_service: true,
+    technology: ['Next.js', 'Tesseract / LLMs', 'PostgreSQL'],
+
     integrations: ['QuickBooks (export)', 'Xero (export)', 'SAP (export)'],
     use_cases: ['AP automation', 'Expense processing'],
     roi: 'Reduce manual data entry by 70–90%.',
@@ -405,6 +447,22 @@
       'Human approval steps',
     ],
     popular: true,
+    icon: '🤖',
+
+    color: 'from - fuchsia - 600 to - purple - 700',
+    text_color: 'text - fuchsia - 300',
+    link: 'https://ziontechgroup.com / services / rpa - browser - automation',
+    market_position: 'Builder - focused alternative to heavyweight RPA suites.',
+    target_audience: 'Ops teams, agencies, internal tools',
+    trial_days: 14,
+    setup_time: '3 days',
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Playwright', 'Next.js', 'PostgreSQL'],
+    integrations: ['Zapier', 'Make.com', 'S3 / R2'],
+    use_cases: ['Partner portal automations', 'Data collection', 'Bulk updates'],
+
+    roi: 'Automate repetitive tasks and cut manual hours by 50–90%.',
     competitors: ['UiPath (SMB)', 'Robocorp'],
     market_size: 'RPA $13B+',
     growth_rate: '20% YoY',
@@ -468,49 +526,6 @@
   },
   {
 
-    id: 'kpi-scorecards-studio'
-    name: 'KPI Scorecards Studio'
-    tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries'
-    price: '$69'
-    period: '/month'
-    description:
-      'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
-    features: [
-      'Goal trees and KPI ownership'
-      'Weekly executive summaries'
-      'Alerting on thresholds and trends'
-      'Warehouse connectors'
-      'Shareable links with permissions'
-      'Annotations and change logs'
-    ]
-    popular: false
-    icon: '📊'
-    color: 'from-green-600 to-emerald-700'
-    textColor: 'text-green-300'
-    link: 'https://ziontechgroup.com/services/kpi-scorecards-studio'
-    marketPosition: 'Simple executive dashboards without BI bloat.'
-    targetAudience: 'Founders, execs, ops'
-    trialDays: 7
-    setupTime: 'Same day'
-    category: 'Business Intelligence'
-    realService: true
-    technology: ['Next.js', 'Supabase', 'BigQuery']
-    integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)']
-    useCases: ['OKRs/scorecards', 'Exec reporting']
-    roi: 'Improve visibility and accountability.'
-    competitors: ['Grid', 'Grow']
-    marketSize: 'BI $30B+'
-    growthRate: '11% YoY'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Metrics ingestion and templated reporting.'
-    launchDate: '2029-10-20'
-    customers: 36
-    rating: 4.4
-    reviews: 16
-  }
-
     id: 'kpi - scorecards - studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries',
@@ -562,6 +577,32 @@
 
 ];	{
 
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-300',
+    link: 'https://ziontechgroup.com/services/kpi-scorecards-studio',
+    marketPosition: 'Simple executive dashboards without BI bloat.',
+    targetAudience: 'Founders, execs, ops',
+    trialDays: 7,
+    setupTime: 'Same day',
+    category: 'Business Intelligence',
+    realService: true,
+    technology: ['Next.js', 'Supabase', 'BigQuery'],
+    integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)'],
+    useCases: ['OKRs/scorecards', 'Exec reporting'],
+    roi: 'Improve visibility and accountability.',
+    competitors: ['Grid', 'Grow'],
+    marketSize: 'BI $30B+',
+    growthRate: '11% YoY',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Metrics ingestion and templated reporting.',
+    launchDate: '2029-10-20',
+    customers: 36,
+    rating: 4.4,
+    reviews: 16,
+  },;
+];	{
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -575,7 +616,6 @@ export const real2029Q4Additions: RealMarketService[] = [
 		description: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
     features: [
 
-];	{
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
 		];
 		popular: true;
@@ -740,7 +780,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month'
 		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.';
 		features: [
-			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)'
+			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)';
 		];
 		popular: true;
 		icon: '🔎';
@@ -942,8 +982,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		name: 'Redaction & Compliance API';
 		tagline: 'PII detection and redaction for text and documents with audit logs';
 		price: '$79';
-		period: '/month',
-  description: 'Detect and redact sensitive data (PII/PHI/PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.'
+		period: '/month';
+		description: 'Detect and redact sensitive data (PII/PHI/PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.'
 		features: [
 			'Configurable detectors (SSN, phone, email, credit card)Context-aware redaction and maskingAudit logs and retention policiesBatch processing and streamingWebhook retries and DLQsExport to S3/R2 and BigQuery'
 		];
@@ -1018,10 +1058,6 @@ export const real2029Q4Additions: RealMarketService[] = [
 		rating: 4 && 4.4,
 
 		reviews: 16
-	}
-];
-
-
   id: 'ai - email - triage - copilot';
   name: 'AI Email Triage Copilot',
   tagline: 'Auto - categorize, summarize, and draft replies for inbound email';
@@ -1359,7 +1395,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   name: 'Redaction & Compliance API';
   tagline: 'PII detection and redaction for text and documents with audit logs';
   price: '$79';
-  period: '/month',
+  period: '/month';
   description: 'Detect and redact sensitive data (PII / PHI / PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.',
   features: [;
   'Configurable detectors (SSN, phone, email, credit card)Context - aware redaction and masking_audit logs and retention policies_batch processing and streaming_webhook retries and DLQsExport to S3 / R2 and BigQuery';

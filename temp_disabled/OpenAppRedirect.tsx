@@ -1,3 +1,20 @@
+import React, { useEffect, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { 
+  ExternalLink, 
+  Download, 
+  Smartphone, 
+  Globe, 
+  CheckCircle, 
+  Clock,
+  ArrowRight,
+  Loader2,
+  Phone,
+  Mail
+} from 'lucide-react';
+
 const OpenAppRedirect = () => {
   const [countdown, setCountdown] = useState<number>(5);
   const [isRedirecting, setIsRedirecting] = useState(false);
@@ -53,8 +70,6 @@ const OpenAppRedirect = () => {
       }
     ]
   };
-=======
-
 
   return (
     <div className="min-h-screen bg-background py-20">

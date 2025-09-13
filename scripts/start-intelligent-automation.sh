@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# 🧠 Intelligent PM2 Automation System - Quick Start Script
-# Zion Tech Group - Intelligent Automation v2.0
+# 🚀 Intelligent PM2 Automation System - Quick Start Script
+# This script sets up and starts all intelligent PM2 automation processes
 
 set -e
 
@@ -10,14 +10,7 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
 NC='\033[0m' # No Color
-
-# Script configuration
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
-ECOSYSTEM_CONFIG="$PROJECT_ROOT/ecosystem.config.cjs"
 
 # Function to print colored output
 print_status() {
@@ -36,299 +29,202 @@ print_error() {
     echo -e "${RED}[ERROR]${NC} $1"
 }
 
-print_header() {
-    echo -e "${PURPLE}}
+# Function to check if command exists
+command_exists() {
+    command -v "$1" >/dev/null 2>&1
+}
 
 # Function to check if PM2 is installed
 check_pm2() {
-    if ! command -v pm2 &> /dev/null; then
-        print_error "PM2 is not installed. Installing PM2 globally..."
-        npm install -g pm2
-        if [ $? -eq 0 ]; then
-            print_success "PM2 installed successfully"
-        else
-            print_error "Failed to install PM2. Please install manually: npm install -g pm2"
-            exit 1
-        fi
+    if ! command_exists pm2; then
+        print_error "PM2 is not installed. Please install it first:"
+        echo "npm install -g pm2"
+        exit 1
+    fi
+    print_success "PM2 is installed"
+}
+
+# Function to check if Node.js is installed
+check_node() {
+    if ! command_exists node; then
+        print_error "Node.js is not installed. Please install it first."
+        exit 1
+    fi
+    
+    NODE_VERSION=$(node --version)
+    print_success "Node.js $NODE_VERSION is installed"
+}
+
+# Function to check if npm is available
+check_npm() {
+    if ! command_exists npm; then
+        print_error "npm is not installed. Please install it first."
+        exit 1
+    fi
+    
+    NPM_VERSION=$(npm --version)
+    print_success "npm $NPM_VERSION is available"
+}
+
+# Function to create necessary directories
+create_directories() {
+    print_status "Creating necessary directories..."
+    
+    mkdir -p logs/pm2
+    mkdir -p reports
+    
+    print_success "Directories created"
+}
+
+# Function to install dependencies
+install_dependencies() {
+    print_status "Installing project dependencies..."
+    
+    if [ -f "package-lock.json" ]; then
+        npm ci
     else
-        print_success "PM2 is already installed"
+        npm install
+    fi
+    
+    print_success "Dependencies installed"
+}
+
+# Function to stop existing PM2 processes
+stop_existing_processes() {
+    print_status "Stopping existing PM2 processes..."
+    
+    if pm2 list | grep -q "intelligent"; then
+        pm2 stop ecosystem.config.js || true
+        pm2 delete ecosystem.config.js || true
+        print_success "Existing processes stopped"
+    else
+        print_status "No existing processes found"
     fi
 }
 
-# Function to check if required dependencies are installed
-check_dependencies() {
-    print_status "Checking required dependencies..."
+# Function to start PM2 processes
+start_pm2_processes() {
+    print_status "Starting intelligent PM2 automation processes..."
     
-    if [ ! -f "$PROJECT_ROOT/package.json" ]; then
-        print_error "package.json not found. Please run this script from the project root."
-        exit 1
-    fi
-    
-    # Check if semver is installed
-    if ! npm list semver &> /dev/null; then
-        print_warning "semver package not found. Installing..."
-        npm install semver
-    fi
-    
-    print_success "Dependencies check completed"
-}
-
-# Function to start intelligent automations
-start_automations() {
-    print_status "Starting Intelligent Automation System..."
-    
-    if [ ! -f "$ECOSYSTEM_CONFIG" ]; then
-        print_error "ecosystem.config.cjs not found at $ECOSYSTEM_CONFIG"
-        exit 1
-    fi
-    
-    # Start all automations
-    cd "$PROJECT_ROOT"
-    pm2 start ecosystem.config.cjs
+    pm2 start ecosystem.config.js
     
     if [ $? -eq 0 ]; then
-        print_success "Intelligent Automation System started successfully!"
+        print_success "PM2 processes started successfully"
     else
-        print_error "Failed to start automation system"
+        print_error "Failed to start PM2 processes"
         exit 1
     fi
 }
 
-# Function to start specific automation
-start_specific_automation() {
-    local automation_name="$1"
-    print_status "Starting $automation_name..."
+# Function to check PM2 status
+check_pm2_status() {
+    print_status "Checking PM2 process status..."
     
-    cd "$PROJECT_ROOT"
-    pm2 start ecosystem.config.cjs --only "$automation_name"
+    sleep 2
     
-    if [ $? -eq 0 ]; then
-        print_success "$automation_name started successfully!"
-    else
-        print_error "Failed to start $automation_name"
-        exit 1
-    fi
-}
-
-# Function to stop all automations
-stop_automations() {
-    print_status "Stopping Intelligent Automation System..."
-    
-    cd "$PROJECT_ROOT"
-    pm2 stop ecosystem.config.cjs
-    
-    if [ $? -eq 0 ]; then
-        print_success "All automations stopped successfully!"
-    else
-        print_error "Failed to stop automations"
-        exit 1
-    fi
-}
-
-# Function to restart all automations
-restart_automations() {
-    print_status "Restarting Intelligent Automation System..."
-    
-    cd "$PROJECT_ROOT"
-    pm2 restart ecosystem.config.cjs
-    
-    if [ $? -eq 0 ]; then
-        print_success "All automations restarted successfully!"
-    else
-        print_error "Failed to restart automations"
-        exit 1
-    fi
-}
-
-# Function to show automation status
-show_status() {
-    print_status "Intelligent Automation System Status:"
     echo ""
+    echo "📊 PM2 Process Status:"
+    echo "======================"
     pm2 status
-}
-
-# Function to show automation logs
-show_logs() {
-    local automation_name="$1"
-    if [ -z "$automation_name" ]; then
-        print_status "Showing logs for all automations..."
-        pm2 logs
-    else
-        print_status "Showing logs for $automation_name..."
-        pm2 logs "$automation_name"
-    fi
-}
-
-# Function to open PM2 monitoring interface
-open_monitor() {
-    print_status "Opening PM2 monitoring interface..."
-    pm2 monit
-}
-
-# Function to generate health report
-generate_health_report() {
-    print_status "Generating health report..."
     
-    # Create health report directory if it doesn't exist
-    mkdir -p "$PROJECT_ROOT/health-reports"
-    
-    # Generate comprehensive health report
-    local report_file="$PROJECT_ROOT/health-reports/health-report-$(date +%Y%m%d-%H%M%S).md"
-    
-    cat > "$report_file" << EOF
-# 🧠 Intelligent Automation System Health Report
-
-**Generated:** $(date)
-**System:** Intelligent PM2 Automation v2.0
-
-## 📊 System Status
-
-\`\`\`
-$(pm2 status)
-\`\`\`
-
-## 🔍 Automation Details
-
-### Intelligent Code Analyzer
-- **Status:** $(pm2 jlist | jq -r '.[] | select(.name=="intelligent-code-analyzer") | .pm2_env.status // "Not Found"')
-- **Uptime:** $(pm2 jlist | jq -r '.[] | select(.name=="intelligent-code-analyzer") | .pm2_env.pm_uptime // "N/A"')
-
-### Intelligent Dependency Manager
-- **Status:** $(pm2 jlist | jq -r '.[] | select(.name=="intelligent-dependency-manager") | .pm2_env.status // "Not Found"')
-- **Uptime:** $(pm2 jlist | jq -r '.[] | select(.name=="intelligent-dependency-manager") | .pm2_env.pm_uptime // "N/A"')
-
-### Intelligent Performance Optimizer
-- **Status:** $(pm2 jlist | jq -r '.[] | select(.name=="intelligent-performance-optimizer") | .pm2_env.status // "Not Found"')
-- **Uptime:** $(pm2 jlist | jq -r '.[] | select(.name=="intelligent-performance-optimizer") | .pm2_env.pm_uptime // "Not Found"')
-
-### Intelligent Automation Orchestrator
-- **Status:** $(pm2 jlist | jq -r '.[] | select(.name=="intelligent-automation-orchestrator") | .pm2_env.status // "Not Found"')
-- **Uptime:** $(pm2 jlist | jq -r '.[] | select(.name=="intelligent-automation-orchestrator") | .pm2_env.pm_uptime // "Not Found"')
-
-## 📁 Report Directories
-
-- **Intelligent Analysis Reports:** \`intelligent-analysis-reports/\`
-- **Dependency Analysis Reports:** \`dependency-analysis-reports/\`
-- **Performance Optimization Reports:** \`performance-optimization-reports/\`
-- **Orchestration Reports:** \`orchestration-reports/\`
-
-## 🚀 Next Steps
-
-1. Review automation reports for insights
-2. Address any critical issues identified
-3. Monitor automation performance
-4. Share findings with development team
-
----
-
-*Generated automatically by Intelligent Automation System*
-EOF
-
-    print_success "Health report generated: $report_file"
+    echo ""
+    echo "📋 Process Details:"
+    echo "=================="
+    pm2 jlist | jq -r '.[] | "\(.name): \(.pm2_env.status) - Memory: \(.monit.memory/1024/1024 | round)MB, CPU: \(.monit.cpu)%"' 2>/dev/null || pm2 list
 }
 
-# Function to show help
-show_help() {
-    echo "🧠 Intelligent PM2 Automation System - Quick Start Script"
+# Function to show automation commands
+show_automation_commands() {
     echo ""
-    echo "Usage: $0 [COMMAND] [OPTIONS]"
+    echo "🚀 Available Automation Commands:"
+    echo "================================="
+    echo "npm run test:smart          - Run smart test runner"
+    echo "npm run security:scan       - Run security scanner"
+    echo "npm run bundle:optimize     - Run bundle optimizer"
+    echo "npm run git:workflow        - Run git workflow automator"
+    echo "npm run automation:full     - Run all automations"
     echo ""
-    echo "Commands:"
-    echo "  start                    Start all intelligent automations"
-    echo "  start-code-analyzer      Start Intelligent Code Analyzer only"
-    echo "  start-dependency-manager Start Intelligent Dependency Manager only"
-    echo "  start-performance-opt    Start Intelligent Performance Optimizer only"
-    echo "  start-orchestrator      Start Intelligent Automation Orchestrator only"
-    echo "  stop                     Stop all automations"
-    echo "  restart                  Restart all automations"
-    echo "  status                   Show automation status"
-    echo "  logs [AUTOMATION]        Show logs (all or specific automation)"
-    echo "  monitor                  Open PM2 monitoring interface"
-    echo "  health                   Generate health report"
-    echo "  help                     Show this help message"
-    echo ""
-    echo "Examples:"
-    echo "  $0 start                 # Start all automations"
-    echo "  $0 logs                  # Show all logs"
-    echo "  $0 logs intelligent-code-analyzer  # Show specific automation logs"
-    echo "  $0 health               # Generate health report"
-    echo ""
-    echo "For more information, see: INTELLIGENT_AUTOMATION_README.md"
+    echo "📊 Monitoring Commands:"
+    echo "======================="
+    echo "npm run pm2:status          - Check PM2 status"
+    echo "npm run pm2:monit           - Open PM2 monitoring"
+    echo "npm run pm2:logs            - View all logs"
+    echo "npm run pm2:restart         - Restart all processes"
+    echo "npm run automation:stop     - Stop all automations"
 }
 
-# Main script logic
+# Function to show automation schedule
+show_automation_schedule() {
+    echo ""
+    echo "⏰ Automation Schedule:"
+    echo "======================"
+    echo "Smart Test Runner     - Every 2 hours"
+    echo "Git Workflow          - Every 3 hours"
+    echo "Code Quality          - Every 12 hours"
+    echo "Performance Monitor   - Every 8 hours"
+    echo "Lint Fixer            - Every 6 hours"
+    echo "Auto Commit           - Every 4 hours"
+    echo "Dependency Monitor    - Weekly (Sunday)"
+    echo "Security Scanner      - Daily (midnight)"
+    echo "Bundle Optimizer      - Daily (6 AM)"
+}
+
+# Function to show next steps
+show_next_steps() {
+    echo ""
+    echo "🎯 Next Steps:"
+    echo "=============="
+    echo "1. Monitor the automation processes: npm run pm2:monit"
+    echo "2. Check logs for any issues: npm run pm2:logs"
+    echo "3. Run individual automations to test: npm run test:smart"
+    echo "4. Review generated reports in logs/pm2/ directory"
+    echo "5. Customize automation schedules in ecosystem.config.js"
+    echo ""
+    echo "📚 Documentation:"
+    echo "================="
+    echo "Read PM2-AUTOMATION-README.md for detailed information"
+    echo "Visit https://pm2.keymetrics.io/ for PM2 documentation"
+}
+
+# Main execution
 main() {
-    print_header
+    echo ""
+    echo "🚀 Intelligent PM2 Automation System - Quick Start"
+    echo "=================================================="
+    echo ""
     
-    # Check if we're in the right directory
-    if [ ! -f "$ECOSYSTEM_CONFIG" ]; then
-        print_error "This script must be run from the project root directory"
-        print_error "Expected location: $ECOSYSTEM_CONFIG"
-        exit 1
-    fi
+    # Check prerequisites
+    print_status "Checking prerequisites..."
+    check_node
+    check_npm
+    check_pm2
     
-    # Parse command line arguments
-    case "${1:-start}" in
-        "start")
-            check_pm2
-            check_dependencies
-            start_automations
-            show_status
-            ;;
-        "start-code-analyzer")
-            check_pm2
-            check_dependencies
-            start_specific_automation "intelligent-code-analyzer"
-            ;;
-        "start-dependency-manager")
-            check_pm2
-            check_dependencies
-            start_specific_automation "intelligent-dependency-manager"
-            ;;
-        "start-performance-opt")
-            check_pm2
-            check_dependencies
-            start_specific_automation "intelligent-performance-optimizer"
-            ;;
-        "start-orchestrator")
-            check_pm2
-            check_dependencies
-            start_specific_automation "intelligent-automation-orchestrator"
-            ;;
-        "stop")
-            stop_automations
-            ;;
-        "restart")
-            restart_automations
-            ;;
-        "status")
-            show_status
-            ;;
-        "logs")
-            show_logs "$2"
-            ;;
-        "monitor")
-            open_monitor
-            ;;
-        "health")
-            generate_health_report
-            ;;
-        "help"|"-h"|"--help")
-            show_help
-            ;;
-        *)
-            print_error "Unknown command: $1"
-            echo ""
-            show_help
-            exit 1
-            ;;
-    esac
+    # Create directories
+    create_directories
+    
+    # Install dependencies
+    install_dependencies
+    
+    # Stop existing processes
+    stop_existing_processes
+    
+    # Start PM2 processes
+    start_pm2_processes
+    
+    # Check status
+    check_pm2_status
+    
+    # Show information
+    show_automation_commands
+    show_automation_schedule
+    show_next_steps
     
     echo ""
-    print_success "Command completed successfully!"
+    print_success "🎉 Intelligent PM2 Automation System is now running!"
     echo ""
-    print_status "For more information, see: INTELLIGENT_AUTOMATION_README.md"
+    echo "💡 Tip: Use 'npm run pm2:monit' to monitor all processes in real-time"
+    echo ""
 }
 
-# Run main function with all arguments
+# Run main function
 main "$@"

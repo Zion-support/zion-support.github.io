@@ -1,8 +1,0 @@
-
-
-    isAuthenticated;
-    user;
-    isLoading}
-}
-
-

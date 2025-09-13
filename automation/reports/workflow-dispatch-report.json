@@ -1,9 +1,11 @@
 {
   "plan": {
-    "timestamp": "2025-08-18T16:59:55.346Z",
+    "timestamp": "2025-08-17T21:20:41.633Z",
+>>>>>>> origin/content/blog-sept12
     "changes": [
       "package.json",
-      "src/components/Button.tsx"
+      "src/components/Button.tsx",
+      "docs/README.md"
     ],
     "manualTrigger": null,
     "workflows": [
@@ -67,15 +69,18 @@
       "executions": [
         {
           "workflow": "ci.yml",
-          "success": false,
-          "skipped": true,
-          "reason": "skip_condition_met"
+          "success": true,
+          "skipped": false,
+          "executionId": "exec_1755465643873_tb52arjal",
+          "duration": 5970.8235986943655
+>>>>>>> origin/content/blog-sept12
         }
       ],
-      "success": 0,
+      "success": 1,
       "failed": 0,
-      "skipped": 1,
-      "duration": 0
+      "skipped": 0,
+      "duration": 2237
+>>>>>>> origin/content/blog-sept12
     },
     {
       "type": "security",
@@ -90,19 +95,23 @@
       "executions": [
         {
           "workflow": "dependency-auto-upgrade.yml",
-          "success": false,
-          "skipped": true,
-          "reason": "skip_condition_met"
+          "success": true,
+          "skipped": false,
+          "executionId": "exec_1755465649889_ccs42l39w",
+          "duration": 4190.30269933698
+>>>>>>> origin/content/blog-sept12
         }
       ],
-      "success": 0,
+      "success": 1,
       "failed": 0,
-      "skipped": 1,
-      "duration": 0
+      "skipped": 0,
+      "duration": 1016
+>>>>>>> origin/content/blog-sept12
     }
   ],
-  "success": 0,
+  "success": 2,
   "failed": 0,
-  "skipped": 2,
-  "totalDuration": 0
+  "skipped": 0,
+  "totalDuration": 3253
+>>>>>>> origin/content/blog-sept12
 }

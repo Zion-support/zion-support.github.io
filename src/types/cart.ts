@@ -1,16 +1,16 @@
 export interface CartItem {
-  id: string | number;
+  id: string;
   name: string;
   price: number;
   quantity: number;
 }
 
-export interface CartState {
+export interface CartContextType {
   items: CartItem[];
+  dispatch: React.Dispatch<CartAction>;
 }
 
 export type CartAction =
   | { type: 'ADD_ITEM'; payload: CartItem }
-  | { type: 'REMOVE_ITEM'; payload: { id: string | number } }
-  | { type: 'UPDATE_QUANTITY'; payload: { id: string | number; quantity: number } }
-  | { type: 'LOAD_CART'; payload: CartItem[] };
+  | { type: 'REMOVE_ITEM'; payload: string }
+  | { type: 'CLEAR_CART' };

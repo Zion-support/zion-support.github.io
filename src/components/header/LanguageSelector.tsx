@@ -1,79 +1,41 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
 import { Globe } from 'lucide-react';
-=======
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-
-export function LanguageSelector() {
-  return (
-    <div className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer">
-      <Globe className="w-4 h-4" />
-      <span className="hidden sm:inline">EN</span>
-<<<<<<< HEAD
-=======
-=======
-import React, { useState } from 'react';
-import { ChevronDown, Globe } from 'lucide-react';
-
-interface Language {
-  code: string;
-  name: string;
-  flag: string;
-}
-
-export const LanguageSelector: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState('EN');
-
-  const languages: Language[] = [
-    { code: 'EN', name: 'English', flag: '🇺🇸' },
-    { code: 'ES', name: 'Español', flag: '🇪🇸' },
-    { code: 'FR', name: 'Français', flag: '🇫🇷' },
-    { code: 'DE', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'IT', name: 'Italiano', flag: '🇮🇹' },
-    { code: 'PT', name: 'Português', flag: '🇵🇹' },
-    { code: 'RU', name: 'Русский', flag: '🇷🇺' },
-    { code: 'ZH', name: '中文', flag: '🇨🇳' },
-    { code: 'JA', name: '日本語', flag: '🇯🇵' },
-    { code: 'KO', name: '한국어', flag: '🇰🇷' }
-  ];
-
-  const handleLanguageChange = (languageCode: string) => {
-    setCurrentLanguage(languageCode);
-    setIsOpen(false);
-    // Here you would typically implement language change logic
-  };
-
-  const currentLang = languages.find(lang => lang.code === currentLanguage);
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10">
-          <Globe className="h-5 w-5" />
-          <span className="sr-only">{t('general.select_language')}</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="bg-zion-blue-dark border border-zion-purple/20">
-        {supportedLanguages.map((lang) => (
-          <DropdownMenuItem
-            key={lang.code}
-            className={`cursor-pointer ${
-              currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10'
-            }`}
-            onClick={() => changeLanguage(lang.code)}
-          >
-            <div className="flex items-center gap-2">
+    <div className="relative">
+      <Button
+        variant="ghost"
+        size="sm"
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center space-x-2"
+      >
+        <Globe className="w-4 h-4" />
+        <span className="hidden md:block">{currentLanguage.flag}</span>
+        <span className="hidden lg:block">{currentLanguage.name}</span>
+        <ChevronDown className="w-4 h-4" />
+      </Button>
+
+      {isOpen && (
+        <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border">
+          {LANGUAGES.map((lang) => (
+            <button
+              key={lang.code}
+              onClick={() => {
+                setLanguage(lang.code as any);
+                setIsOpen(false);
+              }}
+              className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 flex items-center space-x-3 ${
+                language === lang.code ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+              }`}
+            >
               <span className="text-lg">{lang.flag}</span>
-              <span>{t(`language.${lang.code.split('-')[0]}`)}</span>
-            </div>
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+              <span>{lang.name}</span>
+              {language === lang.code && (
+                <span className="ml-auto text-blue-600">✓</span>
+              )}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };

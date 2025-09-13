@@ -1,147 +1,112 @@
-        
-      }
-    }},
-  {
-    "name": 'Sitemap Check',
-    "action": () => {
-      
-      const sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml');
-      if (fs.existsSync(sitemapPath)) {
-        
-      } else {
-        
-      }
-    }},
-  {
-    "name": 'Robots.txt Check',
-    "action": () => {
-      
-      const robotsPath = path.join(process.cwd(), 'public', 'robots.txt');
-      if (fs.existsSync(robotsPath)) {
-        
-      } else {
-        
-      }
-    }},
-  {
-    "name": 'Structured Data Check',
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pages = fs
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let structuredDataCount = 0;
+#!/usr/bin/env node
 
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          if (
-            content.includes('application/ld+json') ||
-            content.includes('schema.org')
-          ) {
-            structuredDataCount++;
-          }
-        });
+const fs = require('fs');
+const path = require('path');
 
-        
-      }
-    }},
-  {
-    "name": 'Alt Text Check',
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pages = fs
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let imagesWithAlt = 0;
-        let totalImages = 0;
+function log(message, type = 'INFO') {
+  const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
+  console.log(`[${new Date().toISOString()}] [${type}] ${message}`);
+}
 
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          const imgTags = content.match(/<img[^>]*>/g) || [];
-          totalImages += imgTags.length;
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
 
-          imgTags.forEach(img => {
-            if (img.includes('alt=')) {
-              imagesWithAlt++;
-            }
-          });
-        });
-
-        
-      }
-    }},
-  {
-    "name": 'Heading Structure Check',
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pages = fs
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let h1Count = 0;
-        let h2Count = 0;
-
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          h1Count += (content.match(/<h1[^>]*>/g) || []).length;
-          h2Count += (content.match(/<h2[^>]*>/g) || []).length;
-        });
-
-        
-      }
-    }},
-];
-
-// Run SEO checks
-let successCount = 0;
-let totalCount = seoChecks.length;
-
-for (const check of seoChecks) {
-  try {
-    
-    check.action();
-    
-    successCount++;
-  } catch (error) {
-    
+function findFiles(dir, exts) {
+  if (!fs.existsSync(dir)) return [];
+  const results = [];
+  for (const entry of fs.readdirSync(dir)) {
+    const p = path.join(dir, entry);
+    const stat = fs.statSync(p);
+    if (stat.isDirectory()) {
+      results.push(...findFiles(p, exts));
+    } else if (exts.includes(path.extname(entry).toLowerCase())) {
+      results.push(p);
+    }
   }
+  return results;
 }
 
+function optimizeSEO(rootDir, report) {
+  const htmlFiles = findFiles(rootDir, ['.html', '.tsx', '.jsx']);
+  let optimizedCount = 0;
 
+  for (const file of htmlFiles) {
+    try {
+      const content = fs.readFileSync(file, 'utf8');
+      let updated = content;
+      let modified = false;
 
+      // Add meta description if missing
+      if (
+        !content.includes('name="description"') &&
+        !content.includes('property="og:description"')
+      ) {
+        const metaDescription =
+          '    <meta name="description" content="Zion Tech Group - Advanced AI, IT Solutions, and Digital Transformation Services" />';
+        if (content.includes('<head>')) {
+          updated = updated.replace('<head>', `<head>\n${metaDescription}`);
+          modified = true;
+        }
+      }
 
-// Generate SEO report
-const report = {
-  "timestamp": new Date().toISOString(),
-  "checks": seoChecks.map(check => ({
-    name: check.name,
-    "status": 'completed'})),
-  "summary": {
-    total: totalCount,
-    "successful": successCount,
-    "failed": totalCount - successCount}};
+      // Add Open Graph tags if missing
+      if (!content.includes('property="og:title"')) {
+        const ogTags = `    <meta property="og:title" content="Zion Tech Group" />
+    <meta property="og:description" content="Advanced AI, IT Solutions, and Digital Transformation Services" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com" />`;
+        if (content.includes('<head>')) {
+          updated = updated.replace('<head>', `<head>\n${ogTags}`);
+          modified = true;
+        }
+      }
 
-const reportsDir = path.join(process.cwd(), 'automation-reports');
-if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { "recursive": true });
+      if (modified) {
+        fs.writeFileSync(file, updated);
+        optimizedCount++;
+        report.actions.push(`Optimized SEO for ${path.basename(file)}`);
+      }
+    } catch (e) {
+      report.errors.push(`Failed optimizing ${file}: ${e.message}`);
+    }
+  }
+
+  report.actions.push(`Optimized SEO for ${optimizedCount} files`);
 }
 
-const reportFile = path.join(reportsDir, `seo-report-${Date.now()}.json`);
-fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+function main() {
+  const root = process.cwd();
+  const timestamp = Date.now();
+  const report = {
+    timestamp,
+    actions: [],
+    modifiedFiles: [],
+    errors: [],
+  };
 
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-console.log(' SEO Optimizer Starting...\n')
-    "name"
-    "name"
-    "name"
-    "name"
-    "name"
-    "name"
-    "status"
+  log('Starting SEO Optimizer');
+
+  ensureDir(path.join(root, 'automation-reports'));
+
+  // Optimize SEO in src/ directory
+  optimizeSEO(path.join(root, 'src'), report);
+
+  const outFile = path.join(
+    root,
+    `automation-reports/seo-optimizer-report-${timestamp}.json`
+  );
+  fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
+
+  log(
+    `SEO optimization complete. Report: ${path.basename(outFile)}`,
+    'SUCCESS'
+  );
+}
+
+try {
+  main();
+} catch (e) {
+  log(`SEO optimizer failed: ${e.message}`, 'ERROR');
+  process.exit(1);
+}

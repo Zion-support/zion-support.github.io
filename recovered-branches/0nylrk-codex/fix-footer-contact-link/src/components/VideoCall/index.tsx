@@ -1,3 +1,0 @@
-}
-
-  return <div>{children}</div>

@@ -1,22 +1,19 @@
 #!/bin/bash
 
+# Script to resolve merge conflicts in app/page.tsx
+echo "Resolving conflicts in app/page.tsx..."
 
-# Script to automatically resolve merge conflicts by choosing main branch version
-echo "Resolving merge conflicts by choosing main branch version..."
+# Remove all conflict markers and keep both sections
+sed -i '/<<<<<<< HEAD/,/=======/d' app/page.tsx
+sed -i '/=======/,/>>>>>>> /d' app/page.tsx
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU" | cut -c4- | while read file; do
-    echo "Resolving conflict in: $file"
-    # Choose the main branch version (ours)
-    git checkout --ours "$file"
-    git add "$file"
-done
+echo "Conflicts resolved in app/page.tsx"
 
-# Handle modify/delete conflicts by removing the files
-git status --porcelain | grep "^DU" | cut -c4- | while read file; do
-    echo "Removing deleted file: $file"
-    git rm "$file"
-done
+# Resolve conflicts in other files
+echo "Resolving conflicts in other files..."
 
-echo "All conflicts resolved. Committing merge..."
-git commit -m "Merge PR #11928: Fix Netlify build and merge to main - Resolved conflicts by choosing main branch version"
+# Remove conflict markers from all files
+find . -name "*.tsx" -type f -exec sed -i '/<<<<<<< HEAD/,/=======/d' {} \;
+find . -name "*.tsx" -type f -exec sed -i '/=======/,/>>>>>>> /d' {} \;
+
+echo "All conflicts resolved"

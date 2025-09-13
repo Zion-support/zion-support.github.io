@@ -1,41 +1,46 @@
-exports.handler = async function(event, context, callback) {
-  try {
-    console.log('homepage_advertiser function triggered');
-    
-    // Homepage advertising simulation
-    const result = {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        message: 'Homepage advertiser executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'homepage_advertiser',
-        source: event.source || 'unknown',
-        advertising: {
-          status: 'active',
-          ads: 0,
-          lastAd: new Date().toISOString()
-        }
-      })
-    };
-    
-    return result;
-  } catch (error) {
-    console.error('Error in homepage_advertiser:', error);
-    return {
-      statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'homepage_advertiser'
-      })
-    };
-  }
+// homepage_advertiser.js
+const { spawn } = require('child_process');
+const path = require('path');
+
+exports.config = {
+  schedule: '*/10 * * * *', // every 10 minutes
+};
+
+function runNodeScript(scriptPath, args = []) {
+  return new Promise((resolve) => {
+    const child = spawn('node', [scriptPath, ...args], {
+      cwd: path.join(__dirname, '..', '..'),
+      stdio: ['ignore', 'pipe', 'pipe'],
+      env: process.env,
+    });
+
+    let stdout = '';
+    let stderr = '';
+
+    child.stdout.on('data', (d) => { stdout += d.toString(); });
+    child.stderr.on('data', (d) => { stderr += d.toString(); });
+
+    child.on('close', (code) => {
+      resolve({ code, stdout, stderr });
+    });
+  });
+}
+
+exports.handler = async () => {
+  const script = path.join(process.cwd(), 'automation', 'homepage-auto-advertiser.cjs');
+  const result = await runNodeScript(script);
+
+  const ok = result.code === 0 || /Homepage updated between markers|No changes needed/.test(result.stdout);
+
+  return {
+    statusCode: ok ? 200 : 500,
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({
+      ok,
+      code: result.code,
+      stdout: result.stdout.slice(-4000),
+      stderr: result.stderr.slice(-4000),
+      ran: 'automation/homepage-auto-advertiser.cjs',
+    }),
+  };
 };

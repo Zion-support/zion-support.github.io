@@ -1,0 +1,94 @@
+import React, { createContext, useContext, useState, useCallback } from 'react';
+
+<<<<<<< HEAD
+interface WhitelabelConfig {
+  companyName: string;
+  logo: string;
+  primaryColor: string;
+  secondaryColor: string;
+  theme: 'light' | 'dark' | 'auto';
+}
+
+interface WhitelabelContextType {
+  tenant: string;
+  setTenant: (tenant: string) => void;
+}
+
+const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
+
+export const WhitelabelProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [config, setConfig] = useState<WhitelabelConfig>(defaultConfig);
+
+  const updateConfig = useCallback((newConfig: Partial<WhitelabelConfig>) => {
+    setConfig(prev => ({ ...prev, ...newConfig }));
+  }, []);
+
+  const resetConfig = useCallback(() => {
+    setConfig(defaultConfig);
+  }, []);
+
+  const value: WhitelabelContextType = {
+    config,
+    updateConfig,
+    resetConfig
+  };
+
+  return (
+    <WhitelabelContext.Provider value={{ tenant, setTenant }}>
+      {children}
+    </WhitelabelContext.Provider>
+  );
+};
+
+export const useWhitelabel = (): WhitelabelContextType => {
+  const context = useContext(WhitelabelContext);
+  if (context === undefined) {
+=======
+interface WhitelabelContextType {
+  isWhitelabel: boolean;
+  brandName: string;
+  brandLogo: string;
+  primaryColor: string;
+}
+
+const defaultWhitelabelContext: WhitelabelContextType = {
+  isWhitelabel: false,
+  brandName: 'Zion Tech Group',
+  brandLogo: '/logo.png',
+  primaryColor: '#3B82F6'
+};
+
+const WhitelabelContext = createContext<WhitelabelContextType>(defaultWhitelabelContext);
+
+export const useWhitelabel = () => {
+  const context = useContext(WhitelabelContext);
+  if (!context) {
+>>>>>>> origin/backup-main-20250826-120740
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
+  }
+  return context;
+};
+<<<<<<< HEAD
+=======
+
+interface WhitelabelProviderProps {
+  children: ReactNode;
+  value?: Partial<WhitelabelContextType>;
+}
+
+export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ 
+  children, 
+  value = {} 
+}) => {
+  const contextValue = {
+    ...defaultWhitelabelContext,
+    ...value
+  };
+
+  return (
+    <WhitelabelContext.Provider value={contextValue}>
+      {children}
+    </WhitelabelContext.Provider>
+  );
+};
+>>>>>>> origin/backup-main-20250826-120740
