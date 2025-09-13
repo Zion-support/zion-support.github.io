@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
+  "generatedAt": "2025-08-19T18:22:42.684Z",
+  "functions": []
+=======
   "generatedAt": "2025-08-17T21:41:15.189Z",
   "functions": [
     "a11y-alt-text-runner",
@@ -99,4 +103,5 @@
     "ultrafast-orchestrator",
     "unused-media-scanner"
   ]
+>>>>>>> origin/backup/sync-2025-08-17T21-41-30-183Z
 }
