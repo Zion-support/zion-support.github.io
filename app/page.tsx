@@ -148,6 +148,12 @@ import ContentManagementSystem from '../components/ContentManagementSystem';
 import UserFeedbackSystem from '../components/UserFeedbackSystem';
 
 // Import new content showcase and recommendation components
+
+// Import new 2027 content components
+import UltimateContentShowcase2027 from '../components/UltimateContentShowcase2027';
+import UltimateContentShowcase2027PromotionBanner from '../components/UltimateContentShowcase2027PromotionBanner';
+import InteractiveAIToolsShowcase2027 from '../components/InteractiveAIToolsShowcase2027';
+import InteractiveAIToolsShowcase2027PromotionBanner from '../components/InteractiveAIToolsShowcase2027PromotionBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
@@ -349,6 +355,10 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2027 ULTIMATE CONTENT SHOWCASE BANNERS */}
+        <UltimateContentShowcase2027PromotionBanner />
+        <InteractiveAIToolsShowcase2027PromotionBanner />
+        
         {/* NEW ULTIMATE CONTENT SHOWCASE 2025 BANNERS */}
         <UltimateContentShowcase2025Banner />
         <NewContent2025UltimatePromotionBanner />
@@ -464,6 +474,12 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
+        
+        {/* NEW 2027 ULTIMATE CONTENT SHOWCASE */}
+        <UltimateContentShowcase2027 />
+        
+        {/* NEW 2027 INTERACTIVE AI TOOLS SHOWCASE */}
+        <InteractiveAIToolsShowcase2027 />
         
         {/* NEWSLETTER SIGNUP 2025 */}
         <NewsletterSignup2025 />
