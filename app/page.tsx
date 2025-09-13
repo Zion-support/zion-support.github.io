@@ -147,6 +147,17 @@ import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 
 // Import new 2025 content showcase components
 import AI2025UltimateTechnologyShowcaseBanner from '../components/AI2025UltimateTechnologyShowcaseBanner';
+
+// Import new 2025-2026 innovation showcase components
+import AI2025_2026UltimateInnovationShowcase from '../components/AI2025_2026UltimateInnovationShowcase';
+import AI2025_2026UltimateInnovationPromotionBanner from '../components/AI2025_2026UltimateInnovationPromotionBanner';
+
+// Import new interactive AI tools demo components
+import InteractiveAIToolsDemo2025 from '../components/InteractiveAIToolsDemo2025';
+import InteractiveAIToolsDemo2025PromotionBanner from '../components/InteractiveAIToolsDemo2025PromotionBanner';
+
+// Import new enterprise automation solutions components
+import EnterpriseAutomationSolutions2025 from '../components/EnterpriseAutomationSolutions2025';
 import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 import UltimateContentCarousel2025 from '../components/UltimateContentCarousel2025';
@@ -235,6 +246,12 @@ export default function HomePage() {
         {/* NEW: AI 2025 ULTIMATE CONTENT SHOWCASE BANNER */}
         <AI2025UltimateContentShowcaseBanner />
         
+        {/* NEW: AI 2025-2026 ULTIMATE INNOVATION SHOWCASE PROMOTION BANNER */}
+        <AI2025_2026UltimateInnovationPromotionBanner />
+        
+        {/* NEW: INTERACTIVE AI TOOLS DEMO 2025 PROMOTION BANNER */}
+        <InteractiveAIToolsDemo2025PromotionBanner />
+        
         {/* NEW: CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
@@ -279,6 +296,15 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
+        
+        {/* NEW: AI 2025-2026 ULTIMATE INNOVATION SHOWCASE */}
+        <AI2025_2026UltimateInnovationShowcase />
+        
+        {/* NEW: INTERACTIVE AI TOOLS DEMO 2025 */}
+        <InteractiveAIToolsDemo2025 />
+        
+        {/* NEW: ENTERPRISE AUTOMATION SOLUTIONS 2025 */}
+        <EnterpriseAutomationSolutions2025 />
         
         {/* NEW 2027 ULTIMATE CONTENT SHOWCASE */}
         <UltimateContentShowcase2027 />
