@@ -43,6 +43,7 @@ import InteractiveContentDiscovery2026 from '../components/InteractiveContentDis
 
 // New 2025 content promotion components
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import NewContentPromotionBanner2025Latest from '../components/NewContentPromotionBanner2025';
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
@@ -96,6 +97,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* LATEST NEW CONTENT PROMOTION BANNER */}
+        <NewContentPromotionBanner2025Latest />
+        
         {/* NEW BREAKTHROUGH CONTENT PROMOTION BANNERS */}
         <AI2025UltimateBreakthroughRevolutionPromotionBanner />
         
