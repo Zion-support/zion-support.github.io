@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# Merge All PRs Script
+# Resolve and Merge All PRs
 # This script will resolve all merge conflicts and merge all open PRs into main
 
 set -e
 
-echo "🚀 Starting merge process for all PRs..."
+echo "🚀 Resolving merge conflicts and merging all PRs..."
+echo "================================================="
 
 # Function to log with timestamp
 log() {
