@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+export interface EnhancedMicroSaasService {
+=======
+<<<<<<< HEAD
 export interface MicroSaasService {
 =======
 export interface EnhancedMicroSaasService {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cc37
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   id: string;
   name: string;
   tagline: string;
@@ -28,6 +32,8 @@ export interface EnhancedMicroSaasService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }
 
@@ -393,6 +399,7 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$300M emerging market',
     growthRate: '250% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   contactInfo: {
     mobile: string;
     email: string;
@@ -840,11 +847,16 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cc37
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
 export const serviceCategories = [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   'All',
   'AI & Machine Learning',
@@ -876,6 +888,7 @@ export function getServicesByPriceRange(min: number, max: number) {
   });
 }
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Quantum AI & Computing',
   'Edge AI & IoT',
   'Synthetic Biology & Healthcare',
@@ -902,4 +915,7 @@ export const getServicesByPriceRange = (min: number, max: number) => {
     return price >= min && (max === Infinity || price <= max);
   });
 };
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cc37
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

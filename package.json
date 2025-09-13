@@ -4,6 +4,23 @@
   "private": true,
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
+    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
+    "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next dev",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
+    "build:fallback": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" NEXT_DISABLE_SWC=1 next build",
+    "build:netlify": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" NEXT_SWC_DISABLED=1 NEXT_MINIFY=terser next build",
+    "export": "NODE_OPTIONS=--openssl-legacy-provider next build && next export",
+    "start": "next start",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit",
+    "prepare": "git config core.hooksPath .husky || true",
+    "fix:all": "npm run lint -- --fix || true",
+    "build:heal": "npm run build || (npm run fix:all && npm run build)",
+    "ci:heal": "npm run fix:all && (npm run type-check || true) && npm run build:heal",
+=======
     "dev": "next dev",
     "build": "next build",
     "build:netlify": "node scripts/build-with-error-handling.js",
@@ -24,10 +41,17 @@
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
     "prepare": "echo 'Husky prepare script disabled'",
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
     "autonomous:status": "node automation/launch-autonomous-systems-clean.js status",
     "linkedin:run": "ts-node scripts/linkedin-automation.ts run",
+<<<<<<< HEAD
+    "linkedin:cron": "ts-node scripts/linkedin-automation.ts cron",
+    "linkedin:generate": "ts-node scripts/linkedin-automation.ts generate",
+    "linkedin:start": "npm run linkedin:cron",
+=======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     "linkedin:test": "ts-node scripts/test-linkedin-automation.ts",
     "mcp:start": "node mcp-automation-system.js",
     "mcp:client": "node mcp-client-integration.js",
@@ -50,14 +74,30 @@
     "cursor:memory:dev": "nodemon run-cursor-memory-automation.js",
     "cursor:memory:config": "node -e \"console.log(JSON.stringify(require('./cursor-memory-config.json'), null, 2))\"",
     "cursor:memory:status": "node -e \"const fs = require('fs'); const path = './cursor-memory/memory-summary.json'; try { const data = JSON.parse(fs.readFileSync(path, 'utf8')); console.log('Memory Status:'); console.log('- Total entries:', data.totalEntries); console.log('- Categories:', Object.keys(data.categories).length); console.log('- High confidence:', data.confidenceDistribution.high); } catch(e) { console.log('No memory data found'); }\"",
+<<<<<<< HEAD
+    "automation:factory": "node automation/automation-factory.cjs generate",
+    "automation:factory:dev": "nodemon automation/ultimate-automation-factory-system.js",
+    "automation:orchestrator": "node automation/intelligent-orchestrator.cjs continuous",
+    "automation:dashboard": "node automation/automation-dashboard.cjs start",
+    "automation:all": "node automation/launch-all-automation.cjs start",
+    "automation:status": "node automation/launch-all-automation.cjs status",
+    "automation:report": "node automation/launch-all-automation.cjs report",
+    "automation:git-sync": "node automation/git-sync.cjs",
+=======
     "automation:factory": "node automation/ultimate-automation-factory-system.js",
     "automation:factory:dev": "nodemon automation/ultimate-automation-factory-system.js",
     "automation:orchestrator": "node automation/intelligent-automation-orchestrator.js",
     "automation:orchestrator:dev": "nodemon automation/intelligent-automation-orchestrator.js",
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     "automation:improvement": "node automation/continuous-automation-improvement-system.js",
     "automation:improvement:dev": "nodemon automation/continuous-automation-improvement-system.js",
     "automation:coordinator": "node automation/master-automation-coordinator.js",
     "automation:coordinator:dev": "nodemon automation/master-automation-coordinator.js",
+<<<<<<< HEAD
+    "automation:restart": "node automation/restart-all-automation.js",
+    "automation:enhance": "node automation/enhance-all-automation.js",
+    "automation:beautify": "node automation/beautify-ui.cjs",
+=======
     "automation:all": "npm run automation:master",
     "automation:status": "node automation/master-automation.cjs status",
     "automation:restart": "node automation/master-automation.cjs restart",
@@ -114,6 +154,7 @@
     "system:status": "pm2 status && node scripts/automation/system-status-checker.cjs",
     "system:health": "node scripts/automation/health-dashboard.cjs",
     "system:optimize": "npm run ai:all && npm run quality:fix && npm run security:audit && npm run performance:optimize",
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     "autonomous:start": "node automation/launch-autonomous-systems-clean.js start",
     "autonomous:stop": "node automation/launch-autonomous-systems-clean.js stop",
     "autonomous:restart": "node automation/launch-autonomous-systems-clean.js restart",
@@ -154,12 +195,82 @@
     "linting:cron:dev": "nodemon automation/linting-cron-automation.js",
     "linting:watcher": "node automation/linting-file-watcher.js",
     "linting:watcher:dev": "nodemon automation/linting-file-watcher.js",
+<<<<<<< HEAD
+    "linting:orchestrator": "node automation/lint-automation-manager.cjs start",
+    "linting:orchestrator:dev": "nodemon automation/lint-automation-manager.cjs",
+=======
     "linting:orchestrator": "node automation/linting-automation-orchestrator.cjs",
     "linting:orchestrator:dev": "nodemon automation/linting-automation-orchestrator.cjs",
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     "linting:all": "npm run linting:factory & npm run linting:cron & npm run linting:watcher & npm run linting:orchestrator",
     "linting:start": "npm run linting:orchestrator continuous",
     "linting:status": "npm run linting:orchestrator status",
     "linting:check": "npm run linting:orchestrator check",
+<<<<<<< HEAD
+    "linting:fix": "node automation/lint-error-fixer.cjs all",
+    "healing:scan": "node automation/automation-error-scanner.cjs",
+    "healing:fix": "node automation/automation-error-fixer.cjs",
+    "healing:start": "node automation/self-healing-orchestrator.cjs",
+    "healing:cron:start": "bash automation/self-healing-cron.sh start",
+    "healing:cron:stop": "bash automation/self-healing-cron.sh stop",
+    "healing:cron:status": "bash automation/self-healing-cron.sh status",
+    "design:orchestrator": "node automation/design-orchestrator.cjs",
+    "design:cron:start": "bash automation/design-cron.sh",
+    "design:analyze": "node automation/design-analyzer.cjs && node automation/design-factory.cjs",
+    "diversify": "node automation/diversification-orchestrator.cjs",
+    "responsive:start": "node automation/responsive-content-orchestrator.cjs",
+    "responsive:cron:start": "bash automation/responsive-content-cron.sh",
+    "responsive:analyze": "node automation/responsive-content-analyzer.cjs && node automation/responsive-content-factory.cjs",
+    "variation:start": "node automation/variation-orchestrator.cjs",
+    "variation:analyze": "node automation/variation-analyzer.cjs && node automation/variation-factory.cjs",
+    "frontend-sync:start": "node automation/frontend-sync-orchestrator.cjs",
+    "frontend-sync:cron:start": "bash automation/frontend-sync-cron.sh",
+    "frontend-sync:analyze": "node automation/frontend-sync-analyzer.cjs && node automation/frontend-sync-factory.cjs",
+    "saas:start": "node automation/saas-services-orchestrator.cjs",
+    "saas:cron:start": "bash automation/saas-services-cron.sh",
+    "saas:analyze": "node automation/saas-services-analyzer.cjs && node automation/saas-services-factory.cjs",
+    "homepage-promo:start": "node automation/homepage-promo-orchestrator.cjs",
+    "homepage-promo:cron:start": "bash automation/homepage-promo-cron.sh",
+    "homepage-promo:analyze": "node automation/homepage-promo-analyzer.cjs && node automation/homepage-promo-factory.cjs",
+    "feature-marketing:start": "node automation/feature-marketing-orchestrator.cjs",
+    "feature-marketing:cron:start": "bash automation/feature-marketing-cron.sh",
+    "feature-marketing:analyze": "node automation/feature-marketing-analyzer.cjs && node automation/feature-marketing-factory.cjs",
+    "linkedin:marketing:start": "node automation/linkedin-marketing-orchestrator.cjs",
+    "linkedin:marketing:cron:start": "bash automation/linkedin-marketing-cron.sh",
+    "linkedin:marketing:analyze": "node automation/linkedin-marketing-analyzer.cjs && node automation/linkedin-marketing-factory.cjs",
+    "cursor:chat:start": "node automation/cursor-chat-orchestrator.cjs",
+    "cursor:chat:cron:start": "bash automation/cursor-chat-cron.sh",
+    "cursor:chat:analyze": "node automation/cursor-chat-analyzer.cjs && node automation/cursor-chat-factory.cjs",
+    "links:start": "node automation/site-link-orchestrator.cjs",
+    "links:cron:start": "bash automation/site-link-cron.sh",
+    "links:scan": "node automation/site-link-crawler.cjs && node automation/site-link-fixer.cjs",
+    "promo:start": "node automation/site-promo-orchestrator.cjs",
+    "promo:cron:start": "bash automation/site-promo-cron.sh",
+    "promo:scan": "node automation/site-promo-analyzer.cjs && node automation/homepage-promo-applier.cjs",
+    "spec-dev:start": "node automation/spec-dev-orchestrator.cjs",
+    "spec-dev:cron:start": "bash automation/spec-dev-cron.sh",
+    "spec-dev:scan": "node automation/spec-dev-chat-fetcher.cjs && node automation/spec-dev-site-crawler.cjs && node automation/spec-dev-analyzer.cjs && node automation/spec-dev-factory.cjs",
+    "linkedin:pro:start": "node automation/linkedin-pro-orchestrator.cjs",
+    "linkedin:pro:cron:start": "bash automation/linkedin-pro-cron.sh",
+    "linkedin:pro:analyze": "node automation/linkedin-pro-analyzer.cjs && node automation/linkedin-pro-factory.cjs",
+    "instagram:marketing:start": "node automation/instagram-marketing-orchestrator.cjs",
+    "instagram:marketing:cron:start": "bash automation/instagram-marketing-cron.sh",
+    "instagram:marketing:analyze": "node automation/instagram-marketing-analyzer.cjs && node automation/instagram-marketing-factory.cjs",
+    "alignment:start": "node automation/alignment-orchestrator.cjs",
+    "alignment:cron:start": "bash automation/alignment-cron.sh",
+    "alignment:scan": "node automation/chat-fetcher.cjs && (node automation/google-doc-fetcher.cjs || true) && node automation/alignment-crawler.cjs && node automation/alignment-analyzer.cjs && node automation/alignment-factory.cjs && node automation/alignment-dev-factory.cjs",
+    "maintenance:run": "node automation/site-maintenance-orchestrator.cjs",
+    "maintenance:cron:start": "bash automation/site-maintenance-cron.sh start",
+    "maintenance:cron:stop": "bash automation/site-maintenance-cron.sh stop",
+    "maintenance:cron:status": "bash automation/site-maintenance-cron.sh status",
+    "maintenance:cron:run": "bash automation/site-maintenance-cron.sh run",
+    "health:start": "node automation/auto-health-monitor/index.mjs",
+    "health:dev": "nodemon automation/auto-health-monitor/index.mjs",
+    "automation:all:plus": "npm run automation:all & npm run health:start",
+    "postautomation": "npm run automation:git-sync",
+    "lint:staged": "lint-staged"
+>>>>>>> origin/deps-maint
+=======
     "linting:fix": "npm run linting:orchestrator fix",
     "linkedin:cron": "ts-node scripts/linkedin-automation.ts cron",
     "linkedin:generate": "ts-node scripts/linkedin-automation.ts generate",
@@ -258,6 +369,7 @@
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -288,6 +400,46 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-toggle-group": "^1.0.4",
     "@radix-ui/react-tooltip": "^1.0.7",
+<<<<<<< HEAD
+    "@stripe/stripe-js": "^2.3.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "@tanstack/react-query": "^5.17.19",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^14.3.1",
+    "@types/node": "^24.3.3",
+    "@types/node-cron": "^3.0.11",
+    "@types/react": "^19.1.13",
+    "@types/react-datepicker": "^6.2.0",
+    "@types/react-dom": "^19.1.9",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "autoprefixer": "^10.4.21",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "cmdk": "^0.2.1",
+    "date-fns": "^3.3.1",
+    "embla-carousel-react": "^8.0.0-rc19",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^15.4.6",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "husky": "^9.1.7",
+    "i18next": "^23.7.16",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "input-otp": "^1.1.0",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.1",
+    "lint-staged": "^16.1.4",
+    "next-themes": "^0.2.1",
+    "react-day-picker": "^8.10.1",
+    "react-helmet-async": "^2.0.4",
+    "react-hook-form": "^7.50.1",
+    "react-i18next": "^14.1.3",
+    "react-router-dom": "^6.22.0",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss": "^3.4.0",
+=======
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
     "@supabase/ssr": "^0.6.1",
@@ -304,6 +456,7 @@
     "chokidar": "^4.0.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cmdk": "^0.2.1",
     "critters": "^0.0.23",
     "cron-parser": "^5.3.0",
     "d3-color": "^3.1.0",
@@ -335,15 +488,18 @@
     "react-helmet-async": "^2.0.5",
     "react-hook-form": "^7.62.0",
     "react-hot-toast": "^2.6.0",
+    "react-i18next": "^15.7.2",
     "react-is": "^19.1.1",
     "react-markdown": "^10.1.0",
-    "react-router-dom": "^6.30.1",
+    "react-router-dom": "^7.8.2",
+    "recharts": "^3.1.2",
     "sharp": "^0.34.3",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^11.1.0",
-    "web-vitals": "^5.1.0"
+    "web-vitals": "^5.1.0",
+    "zod": "^4.1.3"
   },
   "optionalDependencies": {
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
@@ -377,11 +533,20 @@
     "tailwindcss": "^3.4.17",
     "terser": "^5.43.1",
     "ts-jest": "^29.2.5",
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
   },
+<<<<<<< HEAD
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
+}
+=======
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=10.0.0"
@@ -408,3 +573,4 @@
   "author": "Zion Tech Group",
   "license": "MIT"
 }
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

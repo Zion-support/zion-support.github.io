@@ -996,8 +996,11 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     customers: 1250,
     rating: 4.8,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     reviews: 567
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     reviews: 98
   },
   {
@@ -2123,7 +2126,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     customers: 125,
     rating: 4.8,
     reviews: 68
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
@@ -2135,16 +2141,22 @@ export const serviceCategories = [
     icon: '🚀',
     color: 'from-purple-500 to-pink-500',
 <<<<<<< HEAD
+    count: enhancedRealMicroSaasServices.length
+=======
+<<<<<<< HEAD
     count: 12
 =======
     count: enhancedRealMicroSaasServices.length
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     name: 'AI & Machine Learning',
     description: 'Advanced artificial intelligence and ML platforms',
     icon: '🧠',
     color: 'from-blue-500 to-cyan-500',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     count: 18
   },
@@ -2155,6 +2167,7 @@ export const serviceCategories = [
     color: 'from-red-500 to-orange-500',
     count: 8
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('AI')).length
   },
   {
@@ -2163,7 +2176,10 @@ export const serviceCategories = [
     icon: '⚛️',
     color: 'from-purple-500 to-pink-500',
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Quantum')).length
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     name: 'Blockchain & Web3',
@@ -2171,8 +2187,11 @@ export const serviceCategories = [
     icon: '⛓️',
     color: 'from-indigo-500 to-purple-500',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     count: 6
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Blockchain')).length
   },
   {
@@ -2181,7 +2200,10 @@ export const serviceCategories = [
     icon: '🔒',
     color: 'from-red-500 to-orange-500',
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Cybersecurity')).length
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     name: 'IoT & Smart Cities',
@@ -2189,10 +2211,14 @@ export const serviceCategories = [
     icon: '🌐',
     color: 'from-teal-500 to-green-500',
 <<<<<<< HEAD
+    count: enhancedRealMicroSaasServices.filter(s => s.category.includes('IoT')).length
+=======
+<<<<<<< HEAD
     count: 6
 =======
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('IoT')).length
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     name: 'Metaverse & VR/AR',
@@ -2200,10 +2226,14 @@ export const serviceCategories = [
     icon: '🕶️',
     color: 'from-pink-500 to-rose-500',
 <<<<<<< HEAD
+    count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Metaverse')).length
+=======
+<<<<<<< HEAD
     count: 4
 =======
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Metaverse')).length
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     name: 'Robotics & Automation',
@@ -2211,10 +2241,14 @@ export const serviceCategories = [
     icon: '🤖',
     color: 'from-orange-500 to-red-500',
 <<<<<<< HEAD
+    count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Robotics')).length
+=======
+<<<<<<< HEAD
     count: 6
 =======
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Robotics')).length
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     name: 'Energy & Sustainability',
@@ -2222,10 +2256,14 @@ export const serviceCategories = [
     icon: '⚡',
     color: 'from-yellow-500 to-orange-500',
 <<<<<<< HEAD
+    count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Energy')).length
+=======
+<<<<<<< HEAD
     count: 4
 =======
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Energy')).length
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     name: 'Logistics & Supply Chain',
@@ -2233,10 +2271,14 @@ export const serviceCategories = [
     icon: '🚚',
     color: 'from-blue-500 to-indigo-500',
 <<<<<<< HEAD
+    count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Logistics')).length
+=======
+<<<<<<< HEAD
     count: 4
 =======
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Logistics')).length
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     name: 'Financial Technology',
@@ -2244,10 +2286,14 @@ export const serviceCategories = [
     icon: '💰',
     color: 'from-violet-500 to-purple-500',
 <<<<<<< HEAD
+    count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Financial')).length
+=======
+<<<<<<< HEAD
     count: 5
 =======
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Financial')).length
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     name: 'Biotechnology & Healthcare',
@@ -2255,10 +2301,14 @@ export const serviceCategories = [
     icon: '🧬',
     color: 'from-emerald-500 to-teal-500',
 <<<<<<< HEAD
+    count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Biotechnology')).length
+=======
+<<<<<<< HEAD
     count: 4
 =======
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Biotechnology')).length
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     name: 'Space Technology',
@@ -2266,10 +2316,14 @@ export const serviceCategories = [
     icon: '🚀',
     color: 'from-blue-500 to-indigo-500',
 <<<<<<< HEAD
+    count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Space')).length
+=======
+<<<<<<< HEAD
     count: 3
 =======
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Space')).length
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     name: 'Content Creation',
@@ -2277,16 +2331,23 @@ export const serviceCategories = [
     icon: '📝',
     color: 'from-pink-500 to-rose-500',
 <<<<<<< HEAD
+    count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Content')).length
+=======
+<<<<<<< HEAD
     count: 5
 =======
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Content')).length
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     name: 'Analytics & Business Intelligence',
     description: 'Advanced analytics and business insights',
     icon: '📊',
     color: 'from-cyan-500 to-blue-500',
+<<<<<<< HEAD
+    count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Analytics')).length
+=======
 <<<<<<< HEAD
     count: 4
   },
@@ -2306,12 +2367,15 @@ export const serviceCategories = [
 =======
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Analytics')).length
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     name: 'Cloud & Infrastructure',
     description: 'Scalable cloud solutions and infrastructure',
     icon: '☁️',
     color: 'from-slate-500 to-gray-500',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     count: 3
   },
@@ -3585,6 +3649,7 @@ export const serviceCategories = [
       website: 'https://ziontechgroup.com'
     }
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Cloud')).length
   },
   {
@@ -3621,7 +3686,10 @@ export const serviceCategories = [
     icon: '🤖',
     color: 'from-cyan-500 to-blue-500',
     count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Customer Service')).length
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
@@ -3642,27 +3710,38 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
     'Robotics & Automation': ['Robotics & Automation', 'Autonomous Systems', 'Industrial AI & Automation'],
     'Energy & Sustainability': ['Energy & Sustainability', 'Climate Technology'],
 <<<<<<< HEAD
+    'Logistics & Supply Chain': ['Logistics & Supply Chain', 'AI & Logistics'],
+    'Financial Technology': ['Financial Technology', 'Financial Technology & Trading', 'Quantum Finance & Trading'],
+=======
+<<<<<<< HEAD
 =======
     'Logistics & Supply Chain': ['Logistics & Supply Chain', 'AI & Logistics'],
     'Financial Technology': ['Financial Technology', 'Financial Technology & Trading', 'Quantum Finance & Trading'],
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     'Biotechnology & Healthcare': ['Biotechnology & Healthcare', 'Biomedical AI', 'Biotechnology & Healthcare AI'],
     'Space Technology': ['Space Technology & Aerospace'],
     'Content Creation': ['AI & Content Creation', 'AI & Video Production'],
     'Analytics & Business Intelligence': ['AI & Data Analytics', 'AI & Market Research'],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     'Cloud & Infrastructure': ['Cloud Platform', 'Edge Computing & IoT'],
     'AI & Neuroscience': ['AI & Neuroscience'],
     'Climate Technology': ['Climate Technology'],
     'Biomedical AI': ['Biomedical AI']
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     'Cloud & Infrastructure': ['Cloud Platform', 'Edge Computing & IoT', 'Cloud & DevOps'],
     'Legal Tech': ['AI & Legal Tech'],
     'HR Tech': ['AI & HR Tech'],
     'Market Intelligence': ['AI & Market Research'],
     'Sales Automation': ['AI & Sales Automation'],
     'Customer Service': ['AI & Customer Service']
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   };
 
   const mappedCategories = categoryMapping[categoryName] || [categoryName];

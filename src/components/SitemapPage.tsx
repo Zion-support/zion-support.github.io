@@ -23,7 +23,12 @@ const pathMap: Record<string, string> = {
   '/messages': '/dashboard/messages',
   '/notifications': '/dashboard/notifications',
   '/project/:projectId/room': '/dashboard/project/:projectId/room',
+<<<<<<< HEAD
+  '/post-job': '/marketplace/post-job',
+};
+=======
   '/post-job': '/marketplace/post-job'};
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
 const resolvePath = (path: string): string => pathMap[path] ?? path;
 

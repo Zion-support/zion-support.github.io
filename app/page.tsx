@@ -129,22 +129,11 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 
 // Import new breakthrough content promotional banners
 import AI2025UltimateBreakthroughRevolutionPromotionBanner from '../components/AI2025UltimateBreakthroughRevolutionPromotionBanner';
+import AI2026UltimatePredictionsBreakthroughPromotionBanner from '../components/AI2026UltimatePredictionsBreakthroughPromotionBanner';
+import AI2026EnterpriseTransformation50000ROIPromotionBanner from '../components/AI2026EnterpriseTransformation50000ROIPromotionBanner';
 import AI2026FuturePredictionsBreakthroughPromotionBanner from '../components/AI2026FuturePredictionsBreakthroughPromotionBanner';
 import AI2026QuantumNeuralFusionCaseStudyPromotionBanner from '../components/AI2026QuantumNeuralFusionCaseStudyPromotionBanner';
 
-// Import new content components
-import AI2025UltimateInnovationShowcase from '../components/AI2025UltimateInnovationShowcase';
-import AI2025UltimateInnovationPromotionBanner from '../components/AI2025UltimateInnovationPromotionBanner';
-import QuantumComputingRevolution2025 from '../components/QuantumComputingRevolution2025';
-import QuantumComputingRevolutionPromotionBanner from '../components/QuantumComputingRevolutionPromotionBanner';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
-import UltimateContentShowcasePromotionBanner from '../components/UltimateContentShowcasePromotionBanner';
-import RevolutionaryTechAnnouncementBanner from '../components/RevolutionaryTechAnnouncementBanner';
-
-// Import new breakthrough banners
-import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
-import AI2026BreakthroughRevolutionaryContentBanner from '../components/AI2026BreakthroughRevolutionaryContentBanner';
-import QuantumComputingBreakthroughs2030Banner from '../components/QuantumComputingBreakthroughs2030Banner';
 
 // Import new promotional components
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
@@ -153,6 +142,19 @@ import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveCont
 
 import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
 import QuantumComputingBreakthrough2030PromotionBanner from '../components/QuantumComputingBreakthrough2030PromotionBanner';
+
+// Import new AI 2026 breakthrough components
+import AI2026BreakthroughContentPromotionBanner from '../components/AI2026BreakthroughContentPromotionBanner';
+import AI2026UltimateBreakthroughShowcase from '../components/AI2026UltimateBreakthroughShowcase';
+import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
+
+// Import new ultimate content components
+import AI2026UltimateBreakthroughPredictionsPromotionBanner from '../components/AI2026UltimateBreakthroughPredictionsPromotionBanner';
+import AI2026EnterpriseTransformation50000ROIPromotionBanner from '../components/AI2026EnterpriseTransformation50000ROIPromotionBanner';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+
+// Import revolutionary content showcase promotion banner
+import RevolutionaryContentShowcase2025PromotionBanner from '../components/RevolutionaryContentShowcase2025PromotionBanner';
 
 // New Ultimate Content Revolution 2026 Components
 import UltimateContentRevolution2026 from '../components/UltimateContentRevolution2026';
@@ -174,14 +176,9 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
         
-        {/* REVOLUTIONARY TECH ANNOUNCEMENT BANNER */}
-        <RevolutionaryTechAnnouncementBanner />
-        
         {/* NEW CONTENT 2025 PROMOTION BANNER - LATEST RELEASES */}
         <NewContent2025PromotionBanner />
         
-        {/* AI 2025 ULTIMATE INNOVATION PROMOTION BANNER */}
-        <AI2025UltimateInnovationPromotionBanner />
         
         {/* AI 2025 ULTIMATE INNOVATION SHOWCASE */}
         <AI2025UltimateInnovationShowcase />

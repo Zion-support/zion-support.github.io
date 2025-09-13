@@ -1935,6 +1935,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     category: 'Human Resources',
     realService: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     technology: ['AI/ML', 'NLP', 'Predictive Analytics', 'Automation'],
     integrations: ['ATS systems', 'Job boards', 'LinkedIn', 'HRIS platforms'],
     useCases: ['Candidate screening', 'Job matching', 'Hiring automation'],
@@ -2051,6 +2053,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$2.8B global market',
     growthRate: '40% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Computer Vision'],
     integrations: ['ATS systems', 'HRIS platforms', 'Job boards', 'Social media'],
     useCases: ['Recruitment', 'Performance management', 'Employee engagement', 'Workforce planning'],
@@ -2454,7 +2457,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Tempus', 'Flatiron Health', 'Foundation Medicine', 'Guardant Health'],
     marketSize: '$2.9B emerging market',
     growthRate: '280% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
@@ -2486,6 +2492,8 @@ export const serviceCategories = [
   'Government & Defense',
   'Education & Training',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   'Space Technology & Mining',
   'Quantum Finance & Trading',
   'Metaverse & Virtual Reality',
@@ -2495,6 +2503,7 @@ export const serviceCategories = [
   'Space Technology & Colonization',
   'Nanotechnology & Molecular Engineering'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Quantum Biology',
   'Nanotechnology',
   'Fusion Energy',
@@ -2503,7 +2512,10 @@ export const serviceCategories = [
   'Holographic Computing',
   'Time Series Analysis',
   'Predictive Medicine'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];
 
 export const getServicesByCategory = (category: string) => {

@@ -44,11 +44,21 @@ export function CategoryListingPage({
     { label: 'Highest Rating', value: 'rating-high' },
     { label: 'Highest AI Match', value: 'ai-match' },
     { label: 'A-Z', value: 'a-z' },
+<<<<<<< HEAD
+    { label: 'Z-A', value: 'z-a' },
+  ],
+  filterOptions = [
+    { label: 'All', value: 'all' },
+    { label: 'Highly Rated', value: 'high-rating' },
+    { label: 'Best AI Match', value: 'best-match' },
+  ]
+=======
     { label: 'Z-A', value: 'z-a' }],
   filterOptions = [
     { label: 'All', value: 'all' },
     { label: 'Highly Rated', value: 'high-rating' },
     { label: 'Best AI Match', value: 'best-match' }]
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }: CategoryListingPageProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedSort, setSelectedSort] = useState(
@@ -235,4 +245,8 @@ export function CategoryListingPage({
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

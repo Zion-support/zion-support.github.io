@@ -2043,6 +2043,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     category: 'Compliance & Risk',
     realService: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     technology: ['AI/ML', 'NLP', 'Risk Modeling', 'Automation'],
     integrations: ['ERP systems', 'GRC platforms', 'Regulatory databases', 'Audit systems'],
     useCases: ['Compliance monitoring', 'Risk management', 'Regulatory reporting'],
@@ -2051,6 +2053,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$2.8B global market',
     growthRate: '40% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['Quantum Computing', 'Operations Research', 'Machine Learning', 'Optimization Algorithms', 'Supply Chain Analytics'],
     integrations: ['ERP systems', 'WMS platforms', 'TMS solutions', 'IoT sensors', 'Blockchain networks'],
     useCases: ['Route optimization', 'Inventory management', 'Demand planning', 'Supplier optimization', 'Risk mitigation'],
@@ -2454,7 +2457,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Coursera', 'Udemy', 'Khan Academy', 'Duolingo'],
     marketSize: '$30B global market',
     growthRate: '180% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ef9e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

@@ -1571,6 +1571,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     category: 'AI & Machine Learning',
     realService: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     technology: ['Machine Learning', 'Natural Language Processing', 'Adaptive Learning', 'Cloud Computing'],
     integrations: ['LMS platforms', 'Video conferencing', 'Assessment tools', 'Content management'],
     useCases: ['K-12 education', 'Higher education', 'Corporate training', 'Skill development'],
@@ -1651,6 +1653,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$1.4B global market',
     growthRate: '180% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['Quantum Computing', 'Quantum Chemistry', 'Molecular Dynamics', 'Materials Science', 'Computational Chemistry'],
     integrations: ['VASP', 'Gaussian', 'NWChem', 'Materials Project', 'Crystallography databases'],
     useCases: ['Materials discovery', 'Drug development', 'Catalyst design', 'Battery research', 'Nanotechnology'],
@@ -2451,7 +2454,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Siemens', 'Rockwell Automation', 'ABB', 'Schneider Electric'],
     marketSize: '$35B global market',
     growthRate: '140% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a01f
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

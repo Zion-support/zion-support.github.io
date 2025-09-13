@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-export default function EnhancedFooter() {
-  return <footer className="p-4 border-t">© {new Date().getFullYear()}</footer>;
-}
-=======
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -292,4 +286,3 @@ const EnhancedFooter: React.FC = () => {
 };
 
 export default EnhancedFooter;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-221f

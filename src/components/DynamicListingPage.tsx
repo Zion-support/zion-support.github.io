@@ -10,7 +10,12 @@ import {
   SelectValue,
   SelectTrigger,
   SelectContent,
+<<<<<<< HEAD
+  SelectItem,
+} from "@/components/ui/select";
+=======
   SelectItem} from "@/components/ui/select";
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 import { Checkbox } from "@/components/ui/checkbox";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
@@ -45,7 +50,12 @@ export function DynamicListingPage({
   listings: allListings,
   categoryFilters,
   initialPrice = { min: 0, max: 10000 },
+<<<<<<< HEAD
+  detailBasePath = "/marketplace/listing",
+}: DynamicListingPageProps) {
+=======
   detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -68,7 +78,12 @@ export function DynamicListingPage({
   const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>({
     min: 0,
+<<<<<<< HEAD
+    max: 10000,
+  });
+=======
     max: 10000});
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
   const [selectedBrand, setSelectedBrand] = useState("all");
@@ -187,7 +202,12 @@ export function DynamicListingPage({
       if (listing) {
         toast({
           title: "Quote Requested",
+<<<<<<< HEAD
+          description: `Your quote request for ${listing.title} has been sent.`,
+        });
+=======
           description: `Your quote request for ${listing.title} has been sent.`});
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
@@ -196,7 +216,13 @@ export function DynamicListingPage({
             id: listing.id,
             title: listing.title,
             category: listing.category,
+<<<<<<< HEAD
+            image: listing.images?.[0],
+          },
+        };
+=======
             image: listing.images?.[0]}};
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
         
         if (typeof window !== 'undefined') {
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData));

@@ -22,13 +22,24 @@ const initialPosts: DiscussionPost[] = [
     author: "Anna Zhou",
     time: "2h ago",
     title: "What AI trends are you most excited for in 2025?",
+<<<<<<< HEAD
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",
+  },
+=======
     body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 2,
     author: "David Kim",
     time: "50m ago",
     title: "Quick tip: How to rank your Zion listing higher",
+<<<<<<< HEAD
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",
+  },
+];
+=======
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}];
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
 export const CommunityDiscussion: React.FC = () => {
   const [posts, setPosts] = useState(initialPosts);
@@ -44,8 +55,15 @@ export const CommunityDiscussion: React.FC = () => {
         author: "You",
         time: "Now",
         title: newTitle,
+<<<<<<< HEAD
+        body: newBody,
+      },
+      ...posts,
+    ]);
+=======
         body: newBody},
       ...posts]);
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     setNewTitle("");
     setNewBody("");
     setShowNew(false);
@@ -142,4 +160,8 @@ export const CommunityDiscussion: React.FC = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

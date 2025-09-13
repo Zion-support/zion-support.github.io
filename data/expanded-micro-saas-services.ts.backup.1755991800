@@ -833,6 +833,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'AI device management',
       'Predictive maintenance',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       'Real-time data analytics',
       'Device health monitoring',
       'Automated alerts',
@@ -895,6 +897,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$400M emerging market',
     growthRate: '300% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       'Quality assurance',
       'Supply chain optimization',
       'Energy management',
@@ -1712,7 +1715,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Zillow', 'Redfin', 'Realtor.com', 'CoStar'],
     marketSize: '$1.4B global market',
     growthRate: '180% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-93c6
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

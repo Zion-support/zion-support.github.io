@@ -102,6 +102,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
   },
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     id: 'biomedical-ai-research',
     name: 'Biomedical AI Research Platform',
     tagline: 'AI-powered drug discovery and medical research',
@@ -171,6 +173,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     roi: '600% average ROI in 24 months',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'autonomous-ai-agents',
     name: 'Autonomous AI Agents',
     tagline: 'Self-learning AI agents for business automation',
@@ -348,11 +351,16 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     useCases: ['Portfolio optimization', 'Risk assessment', 'Option pricing', 'Stress testing'],
     roi: '800% average ROI in 12 months',
     competitors: ['Goldman Sachs Quantum', 'JP Morgan Quantum', 'Barclays Quantum'],
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-695e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     marketSize: '$800M emerging market',
     growthRate: '200% annual growth'
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'blockchain-enterprise-platform',
     name: 'Enterprise Blockchain Platform',
@@ -522,6 +530,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketPosition: 'AI content creation platform with advanced SEO and optimization capabilities',
     targetAudience: 'Marketing agencies, content creators, e-commerce businesses, bloggers',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'ai-legal-research-assistant',
     name: 'AI Legal Research Assistant',
     tagline: 'Intelligent legal research and document analysis',
@@ -617,11 +626,16 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     link: 'https://ziontechgroup.com/ai-creative-studio',
     marketPosition: 'AI creative platform with 90% design satisfaction rate',
     targetAudience: 'Design agencies, marketing teams, startups, and creative professionals',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-695e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     trialDays: 14,
     setupTime: '2 hours',
     category: 'AI & Machine Learning',
     realService: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     technology: ['Natural Language Processing', 'Machine Learning', 'SEO', 'Content Optimization'],
     integrations: ['WordPress', 'Shopify', 'Social media platforms', 'CMS systems'],
@@ -1104,6 +1118,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     name: 'AI-Powered Sustainable Cities',
     tagline: 'Intelligent urban planning and sustainability management',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['Generative AI', 'Computer Vision', 'Machine Learning', 'Design Automation'],
     integrations: ['Adobe Creative Suite', 'Canva', 'Figma', 'Social media platforms'],
     useCases: ['Brand design', 'Marketing materials', 'Social media content', 'Product packaging'],
@@ -1188,7 +1203,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     id: 'ai-supply-chain-optimizer',
     name: 'AI Supply Chain Optimizer',
     tagline: 'Intelligent supply chain optimization and management',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-695e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     price: '$299',
     period: '/month',
     description: 'Advanced AI-powered supply chain platform that optimizes logistics, inventory, and operations for maximum efficiency and cost savings.',
@@ -1203,6 +1221,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Mobile app'
     ],
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     popular: false,
     icon: '🏙️',
     color: 'from-emerald-500 to-teal-600',
@@ -1211,6 +1231,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketPosition: 'Leading AI platform for smart city sustainability and urban planning',
     targetAudience: 'City governments, urban planners, utility companies, and environmental organizations',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     popular: true,
     icon: '📦',
     color: 'from-amber-500 to-orange-600',
@@ -1218,11 +1239,16 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     link: 'https://ziontechgroup.com/ai-supply-chain',
     marketPosition: 'AI supply chain optimization with 30% cost reduction and 50% efficiency improvement',
     targetAudience: 'Manufacturing companies, retailers, logistics firms, and e-commerce businesses',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-695e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     trialDays: 14,
     setupTime: '8 hours',
     category: 'AI & Machine Learning',
     realService: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     technology: ['IoT Sensors', 'Machine Learning', 'Big Data Analytics', 'Edge Computing'],
     integrations: ['Smart meters', 'Traffic systems', 'Environmental sensors', 'Utility platforms'],
@@ -1231,13 +1257,17 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Siemens', 'IBM Watson', 'Microsoft CityNext', 'Cisco Smart Cities'],
     marketSize: '$1.2B global market',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['Machine Learning', 'Predictive Analytics', 'IoT', 'Blockchain', 'Cloud Computing'],
     integrations: ['ERP systems', 'WMS platforms', 'Transportation management', 'E-commerce platforms'],
     useCases: ['Inventory management', 'Logistics optimization', 'Supplier collaboration', 'Risk management'],
     roi: '450% average ROI in 8 months',
     competitors: ['SAP Supply Chain', 'Oracle SCM', 'Manhattan Associates', 'JDA Software'],
     marketSize: '$2.8B global market',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-695e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '140% annual growth'
   },
   {
@@ -1248,6 +1278,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     period: '/month',
     description: 'Revolutionary metaverse commerce platform that enables businesses to create, manage, and monetize virtual storefronts and experiences.',
     features: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       '3D product visualization',
       'Virtual storefronts',
@@ -1942,6 +1974,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Advanced security protocols',
       'Scalable device orchestration'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       '3D store creation',
       'Virtual product showcase',
       'Cryptocurrency payments',
@@ -1950,12 +1983,17 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Analytics dashboard',
       'Mobile app',
       'API access'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-695e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🌐',
     color: 'from-cyan-500 to-blue-600',
     textColor: 'text-cyan-400',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/quantum-iot-platform',
     marketPosition: 'First quantum-secured IoT platform, military-grade security',
@@ -2873,6 +2911,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$1.5B quantum finance market',
     growthRate: '300% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/metaverse-commerce',
     marketPosition: 'Metaverse commerce platform with 200% higher engagement than traditional e-commerce',
     targetAudience: 'E-commerce businesses, brands, creators, and metaverse enthusiasts',
@@ -3211,11 +3250,16 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Zendesk', 'Intercom', 'Drift', 'HubSpot'],
     marketSize: '$2.2B global market',
     growthRate: '150% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-695e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     id: 'autonomous-vehicle-ai',
     name: 'Autonomous Vehicle AI',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     tagline: 'Next-generation self-driving technology',
     price: '$3,499',
@@ -3736,6 +3780,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Cloud processing',
       'OTA updates'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     tagline: 'AI-powered autonomous vehicle control and safety',
     price: '$999',
     period: '/month',
@@ -3749,6 +3794,11 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Safety monitoring',
       'Real-time processing',
       '24/7 support'
+<<<<<<< HEAD
+    ],
+    popular: true,
+    icon: '🚗',
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-695e
     ],
     popular: true,
@@ -4870,6 +4920,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Automated recommendations',
       'API integration'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     color: 'from-slate-500 to-gray-600',
     textColor: 'text-slate-400',
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai',
@@ -4976,12 +5027,17 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Compliance monitoring',
       'API access',
       '24/7 trading support'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-695e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '📈',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-powered-seo',
     marketPosition: 'AI-first SEO platform, competitive with Ahrefs and SEMrush',
@@ -5250,6 +5306,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$28B global business intelligence market',
     growthRate: '30% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/quantum-financial-trading',
     marketPosition: 'Quantum trading platform with 100x faster execution and 99.9% accuracy',
     targetAudience: 'Investment banks, hedge funds, trading firms, and financial institutions',
@@ -5480,7 +5537,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Midjourney', 'DALL-E', 'Stable Diffusion', 'Canva AI'],
     marketSize: '$1.5B global market',
     growthRate: '200% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-695e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

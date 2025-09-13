@@ -3,6 +3,8 @@ export interface EnhancedMicroSaasService {
   name: string;
   tagline: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   description: string;
   category: string;
   price: {
@@ -34,6 +36,7 @@ export interface EnhancedMicroSaasService {
   rating: number;
   reviews: number;
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   price: string;
   period: string;
   description: string;
@@ -62,12 +65,17 @@ export interface EnhancedMicroSaasService {
     address: string;
     website: string;
   };
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-200f
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }
 
 export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
   // AI & Machine Learning Services
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'quantum-ai-optimizer',
     name: 'Quantum AI Optimizer',
@@ -408,6 +416,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     rating: 4.6,
     reviews: 123
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'ai-content-generator-pro',
     name: 'AI Content Generator Pro',
     tagline: 'Professional AI-powered content creation',
@@ -958,13 +967,18 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-200f
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
 export const serviceCategories = [
   'All',
   'AI & Machine Learning',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   'Cybersecurity',
   'Blockchain & Web3',
@@ -975,13 +989,17 @@ export const serviceCategories = [
   'Data Analytics',
   'Business Automation'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Cloud & Infrastructure',
   'Cybersecurity',
   'Data Analytics & BI',
   'IoT & Edge Computing',
   'Blockchain & Web3',
   'Emerging Technologies'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-200f
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];
 
 export const getServicesByCategory = (category: string) => {
@@ -995,14 +1013,20 @@ export const getPopularServices = () => {
 
 export const getServicesByPriceRange = (min: number, max: number) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return enhancedMicroSaasServices.filter(service => 
     service.price.monthly >= min && service.price.monthly <= max
   );
 };
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   return enhancedMicroSaasServices.filter(service => {
     const price = parseFloat(service.price.replace('$', ''));
     return price >= min && (max === Infinity ? true : price <= max);
   });
 };
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-200f
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
