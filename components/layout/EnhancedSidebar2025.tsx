@@ -2,6 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+  X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
+  Phone, Mail, MapPin, ChevronRight, ChevronDown, 
+  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
+  Award, Clock, Heart, Lightbulb, Users, FileText, 
+  HelpCircle, BookOpen, Target, TrendingUp, Star, DollarSign, CheckCircle
+=======
   X, ChevronRight, Home, Star, Users, 
   Settings, HelpCircle, Mail, Phone, MapPin,
   Brain, Atom, Shield, Rocket, DollarSign,
@@ -10,6 +17,7 @@ import {
   ArrowRight, Search, Menu, X as CloseIcon,
   Target, BookOpen, Truck, BarChart3,
   Sparkles, Eye, Lightbulb, Palette, Code
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -30,6 +38,107 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
+<<<<<<< HEAD
+    icon: <Globe className="w-5 h-5" />
+
+  componentDidCatch(error, errorInfo) {
+}</div>) : (<ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />) ;
+}</button> <AnimatePresence> > <CloseIcon className="w-5 h-5" /> </button> </div> </div> </a>) ) ;
+}</div> </div> </span> </div> <ChevronRightclassName= {
+}/> </button> <AnimatePresence> > {;
+  item && item.children?.map ( (child) => (<Linkkey= {
+}</AnimatePresence> </div>) ) ;
+}</div> </div> <span>Quick Links</span> </h3> <div className="space-y-2" > <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > Contact Us </div> <div className="text-xs text-gray-500" >Get in touch with our team</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > View Pricing </div> <div className="text-xs text-gray-500" >Explore our pricing plans</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > About Us </div> <div className="text-xs text-gray-500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-blue-400" >1000+</div> <div className="text-xs text-gray-400" >Clients</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-purple-400" >24/7</div> <div className="text-xs text-gray-400" >Support</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-green-400" >99 && 99.9%</div> <div className="text-xs text-gray-400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25" > <span>Get Started Today</span> <ArrowRight className="w-4 h-4 ml-2 inline" /> </a> </div> </div> </motion && motion.aside>) ;
+};export default EnhancedSidebar2025;
+    icon: <Globe className="w-5 h-5" />,;
+
+
+    icon: <Brain className="w-5 h-5" />,;
+    icon: <Atom className="w-5 h-5" />,;
+    icon: <Shield className="w-5 h-5" />,;
+    icon: <Rocket className="w-5 h-5" />,;
+    icon: <Palette className="w-5 h-5" />,;
+    icon: <BookOpen className="w-5 h-5" />,;
+    icon: <Truck className="w-5 h-5" />,;
+    icon: <DollarSign className="w-5 h-5" />,;
+    icon: <BookOpen className="w-5 h-5" />,;
+    icon: <Settings className="w-5 h-5" />,;
+}</div>) : (<ChevronRight className="w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition - colors duration - 200" />);
+}</button> <AnimatePresence> > <CloseIcon className="w - 5 h - 5" /> </button> </div> </div> </a>) );
+}</div> </div> </span> </div> <ChevronRight className= {
+}/> </button> <AnimatePresence> > {
+  item.children?.map ( (child) => (<Link key= {
+}</AnimatePresence> </div>) );
+}</div> </div> <span > Quick Links</span> </h3> <div className="space - y-2" > <Link > <div className="font - medium text - gray - 300 group - hover:text - white transition - colors duration - 200" > Contact Us </div> <div className="text - xs text - gray - 500" >Get in touch with our team</div> </a> <Link > <div className="font - medium text - gray - 300 group - hover:text - white transition - colors duration - 200" > View Pricing </div> <div className="text - xs text - gray - 500" >Explore our pricing plans</div> </a> <Link > <div className="font - medium text - gray - 300 group - hover:text - white transition - colors duration - 200" > About Us </div> <div className="text - xs text - gray - 500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text - center p - 3 bg - gray - 800 / 50 rounded - lg" > <div className="text - lg font - bold text - blue - 400" >1000+</div> <div className="text - xs text - gray - 400" >Clients</div> </div> <div className="text - center p - 3 bg - gray - 800 / 50 rounded - lg" > <div className="text - lg font - bold text - purple - 400" >24 / 7</div> <div className="text - xs text - gray - 400" >Support</div> </div> <div className="text - center p - 3 bg - gray - 800 / 50 rounded - lg" > <div className="text - lg font - bold text - green - 400" >99.9%</div> <div className="text - xs text - gray - 400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w - full text - center px - 4 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white font - medium rounded - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25" > <span > Get Started Today</span> <ArrowRight className="w - 4 h - 4 ml - 2 inline" /> </a> </div> </div> </motion.aside>);
+}export default EnhancedSidebar2025;
+    icon: <Globe className="w - 5 h - 5" />,
+    icon: <Brain className="w - 5 h - 5" />,
+    icon: <Atom className="w - 5 h - 5" />,
+    icon: <Shield className="w - 5 h - 5" />,
+    icon: <Rocket className="w - 5 h - 5" />,
+    icon: <Palette className="w - 5 h - 5" />,
+    icon: <BookOpen className="w - 5 h - 5" />,
+    icon: <Truck className="w - 5 h - 5" />,
+    icon: <DollarSign className="w - 5 h - 5" />,
+    icon: <BookOpen className="w - 5 h - 5" />,
+    icon: <Settings className="w - 5 h - 5" />,
+
+
+
+
+  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> }
+  { name: 'API Reference', href: '/api-documentation', icon: <Settings className="w-4 h-4" /> }
+  { name: 'Case Studies', href: '/case-studies', icon: <BookOpen className="w-4 h-4" /> }
+  { name: 'Blog & News', href: '/blog', icon: <FileText className="w-4 h-4" /> }
+  { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> }
+  { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
+
+
+
+
+  { name: 'Documentation', href: '/docs', icon: <FileText className="w - 4 h - 4" /> },
+  { name: 'API Reference', href: '/api - documentation', icon: <Settings className="w - 4 h - 4" /> },
+  { name: 'Case Studies', href: '/case - studies', icon: <BookOpen className="w - 4 h - 4" /> },
+  { name: 'Blog & News', href: '/blog', icon: <FileText className="w - 4 h - 4" /> },
+  { name: 'Training & Certification', href: '/training', icon: <Award className="w - 4 h - 4" /> },
+  { name: 'Community Forum', href: '/community', icon: <Users className="w - 4 h - 4" /> }
+
+
+  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },;
+  { name: 'API Reference', href: '/api-documentation', icon: <Settings className="w-4 h-4" /> },;
+  { name: 'Case Studies', href: '/case-studies', icon: <BookOpen className="w-4 h-4" /> },;
+  { name: 'Blog & News', href: '/blog', icon: <FileText className="w-4 h-4" /> },;
+  { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> },;
+  { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
+
+
+              <Zap className="w-6 h-6 text-white" />;
+            <Phone className="w-3 h-3 text-cyan-400" />;
+            <Mail className="w-3 h-3 text-cyan-400" />;
+            <Globe className="w-3 h-3 text-cyan-400" />;
+
+
+                <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />;
+                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />;
+
+                <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
+                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
+
+
+
+
+            <AnimatePresence>
+              <Zap className="w - 6 h - 6 text - white" />;
+            <Phone className="w - 3 h - 3 text - cyan - 400" />;
+            <Mail className="w - 3 h - 3 text - cyan - 400" />;
+            <Globe className="w - 3 h - 3 text - cyan - 400" />;
+                <ChevronDown className="w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition - colors duration - 200" />) : (
+                <ChevronRight className="w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition - colors duration - 200" />)}
+            <AnimatePresence>;
+
+
+
+=======
 const sidebarItems: SidebarItem[] = [
   {
     name: 'All Services',
@@ -49,6 +158,7 @@ const sidebarItems: SidebarItem[] = [
     ]
   },
   {
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     name: 'AI & Consciousness',
     href: '/ai-services',
     icon: <Brain className="w-5 h-5" />,
@@ -226,6 +336,18 @@ const resources = [
   { name: 'Blog & News', href: '/blog', icon: <FileText className="w-4 h-4" /> },
   { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> },
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
+<<<<<<< HEAD
+              <Zap className="w-6 h-6 text-white" />
+            <Phone className="w-3 h-3 text-cyan-400" />
+            <Mail className="w-3 h-3 text-cyan-400" />
+            <Globe className="w-3 h-3 text-cyan-400" />
+                <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
+                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
+
+            <AnimatePresence>
+
+
+=======
 ];
 
 
@@ -247,6 +369,7 @@ const supportLinks = [
     }
     setExpandedSections(newExpanded);
   };
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
   const filteredServices = sidebarItems.flatMap(item =>
     item.children?.filter(child =>
@@ -279,6 +402,9 @@ const supportLinks = [
           </div>
         </div>
 
+<<<<<<< HEAD
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;
+=======
         {/* Contact Info */}
         <div className="space-y-2 text-xs text-gray-300">
           <div className="flex items-center space-x-2">
@@ -295,6 +421,7 @@ const supportLinks = [
           </div>
         </div>
       </div>
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
       {/* Navigation Sections */}
       <div className="p-4 space-y-2">
@@ -383,6 +510,310 @@ const supportLinks = [
               )}
             </div>
 
+<<<<<<< HEAD
+
+
+
+                <Mail className="w-5 h-5 text-cyan-400" />
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <Mail className="w-4 h-4 text-cyan-400" />
+                  <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
+                <Mail className="w-5 h-5 text-cyan-400" />;
+                  <Phone className="w-4 h-4 text-cyan-400" />;
+                  <Mail className="w-4 h-4 text-cyan-400" />;
+                  <MapPin className="w-4 h-4 text-cyan-400 mt-1" />;
+                <TrendingUp className="w-5 h-5 text-cyan-400" />;
+
+
+
+
+
+
+                <Star className="w-5 h-5 text-cyan-400" />;
+                  <Link
+                  </Link>;
+
+
+
+
+
+
+                <Rocket className="w-5 h-5 text-cyan-400" />;
+
+                  <CloseIcon className="w - 5 h - 5" />;
+                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - gray - 400" />;
+                        <Link;
+                        </Link>
+
+                <Mail className="w-5 h-5 text-cyan-400" />
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <Mail className="w-4 h-4 text-cyan-400" />
+                  <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
+                <TrendingUp className="w-5 h-5 text-cyan-400" />
+
+                <Star className="w-5 h-5 text-cyan-400" />
+                  <Link
+                  </Link>
+
+                <Rocket className="w-5 h-5 text-cyan-400" />
+
+
+
+                <Zap className="w-5 h-5 text-cyan-400" />;
+                <Link
+                </Link>;
+                <Link
+                </Link>;
+                <Link
+
+                </Link>;
+
+
+          <Link
+
+                      <ChevronRight;
+                      <ChevronRight 
+                    
+                    <AnimatePresence>
+
+
+
+import React, { useState, useEffect              } from 'react.ts;
+import Link from 'next/link.ts;
+import { motion, AnimatePresence               } from 'framer-motion.ts;
+import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown,'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
+import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, '  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export: default function EnhancedSidebar2025(): any (...args[]: any):  {;
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
+export: default function EnhancedSidebar2025 (...args[]: any):  {
+
+
+export default function EnhancedSidebar2025 (...args[]: any):  {
+export default function EnhancedSidebar2025 (...args[]: any):  {
+export default /**
+export default /**
+
+
+
+
+
+      <AnimatePresence>;
+      <AnimatePresence>;
+      <AnimatePresence>;
+      <AnimatePresence>;
+
+
+      </AnimatePresence>;
+
+            <button className="lg: " hidden p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200""              <X className="w-5" h-5 text-gray-400       />"            </button>"          </div>,;
+
+          <div className="space-y-3">"            <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>              <Phone className="w-4 h-4 text-cyan-400" />              <span className="text-sm" text-gray-300">{contactInfo && contactInfo.mobile}</span>"            </div>            <div className="flex" items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">"              <Mail className="w-4" h-4 text-cyan-400 />"              <span className="text-sm text-gray-300>{contactInfo && contactInfo.email}</span>            </div>"          </div>";
+        <div className="sticky" top - 0 bg - black / 80 backdrop - blur - xl border - b border - gray - 800 / 50 p - 6>"          <div className="flex items - center justify - between mb - 6>            <div className="flex items - center gap - 3">              <div class_name = relative">"                <div className="w - 12" h - 12 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl flex items - center justify - center>"                  <Zap className="w - 6 h - 6 text - white       />                </div>"                <div className="absolute -inset - 1 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl blur opacity - 20></div>              </div>"              <div>;
+            <button className="lg: " hidden p - 2 hover:bg - gray - 800 / 50 rounded - lg transition - colors duration - 200""              <X className="w - 5" h - 5 text - gray - 400       />"            </button>"          </div>,
+          <div className="space - y-3">"            <div className="flex items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30>              <Phone className="w - 4 h - 4 text - cyan - 400" />              <span className="text - sm" text - gray - 300">{contact_info.mobile}</span>"            </div>            <div className="flex" items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30">"              <Mail className="w - 4" h - 4 text - cyan - 400 />"              <span className="text - sm text - gray - 300>{contact_info.email}</span>            </div>"          </div>";
+
+
+        <div className="sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6>          <div className="flex items-center justify-between mb-6">"            <div className="flex items-center gap-3>              <div className="relative">"                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center>                  <Zap className="w-6 h-6 text-white" />"                </div>"                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20></div>              </div>"              <div>;
+              className="lg:hidden p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"              <X className="w-5 h-5 text-gray-400 />            </button>"          </div>;
+          <div className="space-y-3>            <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">"              <Phone className="w-4 h-4 text-cyan-400 />              <span className="text-sm text-gray-300">{contactInfo && contactInfo.mobile}</span>"            </div>"            <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>              <Mail className="w-4 h-4 text-cyan-400" />"              <span className="text-sm text-gray-300>{contactInfo && contactInfo.email}</span>            </div>"          </div>;
+
+        <div className="p-6" space-y-6>"          {/* comment */}"          <Link href=/"            onClick={onClose}"            className="flex" items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover: from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group""            <Home className="w-5" h-5 text-cyan-400       />"            <span className="text-white font-semibold>Home</span>          </Link>",;
+        <div className="p-6" space-y-6>"          {/* comment */}"          <Link href=/"            onClick={onClose}"            className="flex" items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover: from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group""            <Home className="w-5" h-5 text-cyan-400       />"            <span className="text-white font-semibold>Home</span>          </Link>",;
+
+        <div className="p-6 space-y-6>          {/* Home Link */}"          <Link
+            href="/""            onClick={onClose}"            className="flex items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover:from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group"            <Home className="w-5 h-5 text-cyan-400 />            <span className="text-white font-semibold">Home</span>"          </Link>";
+            href="/""            onClick={onClose}"            className="flex items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover:from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group"            <Home className="w-5 h-5 text-cyan-400 />            <span className="text-white font-semibold">Home</span>"          </Link>";
+                className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"                <div className="flex items-center gap-3>                  <div className={`w-8 h-8 bg-gradient-to-r ${section && section.color} rounded-lg flex items-center justify-center`}>"                    <section && section.icon className="w-4 h-4 text-white />                  </div>"                  <span className="text-white font-semibold>{section && section.title}</span>                </div>"                <ChevronDownclassName={w-4 h-4 text-gray-400 transition-transform duration-300 ${`
+'                  }`}'                />              </button><AnimatePresence>;
+
+const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClose }) => {;
+
+        <div className="sticky top - 0 bg - black / 80 backdrop - blur - xl border - b border - gray - 800 / 50 p - 6>          <div className="flex items - center justify - between mb - 6">"            <div className="flex items - center gap - 3>              <div className="relative">"                <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl flex items - center justify - center>                  <Zap className="w - 6 h - 6 text - white" />"                </div>"                <div className="absolute -inset - 1 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl blur opacity - 20></div>              </div>"              <div>;
+              className="lg:hidden p - 2 hover:bg - gray - 800 / 50 rounded - lg transition - colors duration - 200"              <X className="w - 5 h - 5 text - gray - 400 />            </button>"          </div>;
+          <div className="space - y-3>            <div className="flex items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30">"              <Phone className="w - 4 h - 4 text - cyan - 400 />              <span className="text - sm text - gray - 300">{contact_info.mobile}</span>"            </div>"            <div className="flex items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30>              <Mail className="w - 4 h - 4 text - cyan - 400" />"              <span className="text - sm text - gray - 300>{contact_info.email}</span>            </div>"          </div>;
+        <div className="p - 6" space - y-6>"          {/* comment */}"          <Link href=/"            on_click={on_close}"            className="flex" items - center gap - 3 p - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 hover: from - cyan - 500 / 30 hover:to - purple - 600 / 30 rounded - lg border border - cyan - 500 / 30 transition - all duration - 300 group""            <Home className="w - 5" h - 5 text - cyan - 400       />"            <span className="text - white font - semibold > Home</span>          </Link>",
+        <div className="p - 6" space - y-6>"          {/* comment */}"          <Link href=/"            on_click={on_close}"            className="flex" items - center gap - 3 p - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 hover: from - cyan - 500 / 30 hover:to - purple - 600 / 30 rounded - lg border border - cyan - 500 / 30 transition - all duration - 300 group""            <Home className="w - 5" h - 5 text - cyan - 400       />"            <span className="text - white font - semibold > Home</span>          </Link>",
+        <div className="p - 6 space - y-6>          {/* Home Link */}"          <Link;
+            href="/""            on_click={on_close}"            className="flex items - center gap - 3 p - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 hover:from - cyan - 500 / 30 hover:to - purple - 600 / 30 rounded - lg border border - cyan - 500 / 30 transition - all duration - 300 group"            <Home className="w - 5 h - 5 text - cyan - 400 />            <span className="text - white font - semibold">Home</span>"          </Link>";
+            href="/""            on_click={on_close}"            className="flex items - center gap - 3 p - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 600 / 20 hover:from - cyan - 500 / 30 hover:to - purple - 600 / 30 rounded - lg border border - cyan - 500 / 30 transition - all duration - 300 group"            <Home className="w - 5 h - 5 text - cyan - 400 />            <span className="text - white font - semibold">Home</span>"          </Link>";
+                className="w - full flex items - center justify - between p - 3 bg - gray - 800 / 30 hover: bg - gray - 800 / 50 rounded - lg border border - gray - 700 / 30 transition - all duration - 300 group"                <div className="flex items - center gap - 3>                  <div className={`w - 8 h - 8 bg - gradient - to - r ${section.color} rounded - lg flex items - center justify - center`}>"                    <section.icon className="w - 4 h - 4 text - white />                  </div>"                  <span className="text - white font - semibold>{section.title}</span>                </div>"                <ChevronDown                  className={w - 4 h - 4 text - gray - 400 transition - transform duration - 300 ${`;
+'                  }`}'                />              </button><AnimatePresence>;
+
+
+
+                  <Zap: className = "w-6" h-6 text-white />",";
+                  <Zap: class_name = "w - 6" h - 6 text - white />", ";
+
+
+
+                  <Zap className="w - 6" h - 6 text - white       />;
+
+
+
+
+
+
+                <Zap className="w - 5 h - 5 text - white       />";
+              <X className="w - 5 h - 5 text - gray - 400"  />;
+              <X className="w - 5 h - 5 text - gray - 400"  />";
+              <X className="w - 6 h - 6"  />;
+
+
+                      <ChevronDown className="w-5 h-5 text-gray-500"  />;
+                      <ChevronRight className="w-5" h-5 text-gray-500"  />;
+
+
+                      <ChevronDown className="w-4 h-4       />;
+                      <ChevronRight className="w-4" h-4"  />;
+                      <ChevronDown className="w - 5 h - 5 text - gray - 500"  />) : (";
+                      <ChevronRight className="w - 5" h - 5 text - gray - 500"  />;
+                      <ChevronDown className="w - 4 h - 4       />) : (";
+                      <ChevronRight className="w - 4" h - 4"  />;
+
+
+              <Phone className="w-4 h-4 text-cyan-400       />";
+              <Mail className="w-4" h-4 text-cyan-400"  />";
+          <Link href=/"";";
+            <Home: class_name = "w - 5 h - 5 text - cyan - 400 />, ";
+              <Phone className="w - 4 h - 4 text - cyan - 400       />";
+              <Mail className="w - 4" h - 4 text - cyan - 400"  />";
+
+          <Link href="/";
+            <Home className="w - 5 h - 5 text - cyan - 400       />";
+
+          </Link>;
+
+              <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - gray - 400" />;
+
+
+                <ChevronDown className="{"w - 4" h - 4 text - gray - 400 transition - transform duration - 300 ${">;
+
+                            <ChevronRight;
+
+
+                            <ChevronRight
+
+
+
+
+
+                                  <Link: key="{subIndex}
+
+className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group"                                    <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>                                    <span className="text-gray-400" group-hover:text-cyan-300 transition-colors duration-200 text-xs">"                                      {subItem && subItem.name}                                    </span></Link>";
+
+
+
+
+                                  <Link: key="{sub_index}
+className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded - lg transition - all duration - 300 group"                                    <div className="w - 1.5 h - 1.5 bg - cyan - 400 rounded - full group - hover:scale - 150 transition - transform duration - 200"></div>                                    <span className="text - gray - 400" group - hover:text - cyan - 300 transition - colors duration - 200 text - xs">"                                      {sub_item.name}                                    </span></Link>";
+                            <ChevronRight class_name = "{`w - 4" h - 4 text - gray - 500 transition - transform duration - 300 ${
+
+
+
+
+                            <ChevronRightclassName = "{`w-4" h-4 text-gray-500 transition-transform duration-300 ${
+
+
+
+                                  <Link: key="{subIndex}""
+className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group"                                    <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>                                    <span className="text-gray-400" group-hover:text-cyan-300 transition-colors duration-200 text-xs">"                                      {subItem && subItem.name}                                    </span></Link>";
+
+
+                                  <Link: key="{sub_index}"";
+className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded - lg transition - all duration - 300 group"                                    <div className="w - 1.5 h - 1.5 bg - cyan - 400 rounded - full group - hover:scale - 150 transition - transform duration - 200"></div>                                    <span className="text - gray - 400" group - hover:text - cyan - 300 transition - colors duration - 200 text - xs">"                                      {sub_item.name}                                    </span></Link>";
+
+
+
+
+
+
+
+
+                <Globe className="w-5 h-5       />;
+
+
+                <Mail className="w-5 h-5"  />";
+                <Globe className="w - 5 h - 5       />;
+                <Mail className="w - 5 h - 5"  />";
+
+
+
+
+
+
+                            <ChevronRightclassName="{"w-4" h-4 text-gray-500 transition-transform duration-300 ${
+
+
+
+                          <AnimatePresence>;
+                            <ChevronRight className="{"w - 4" h - 4 text - gray - 500 transition - transform duration - 300 ${
+                          <AnimatePresence>;
+
+
+
+
+
+
+                          </AnimatePresence>;
+
+
+
+              </AnimatePresence>;
+className="space - y-1 ml - 6"                                {item.sub_items.map ((sub_item, sub_index) => (<Link;
+className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded - lg transition - all duration - 300 group"                                    <div className="w - 1.5 h - 1.5 bg - cyan - 400 rounded - full group - hover:scale - 150 transition - transform duration - 200></div>                                    <span className="text - gray - 400 group - hover:text - cyan - 300 transition - colors duration - 200 text - xs">"                                      {sub_item.name}"                                    </span></Link>))}
+                          </AnimatePresence>)}
+              </AnimatePresence>;
+
+              <Link;
+                <ChevronRight className="w - 4 h - 4 />              </Link>"            </div>;
+                <ChevronRight className="w - 4 h - 4 />              </Link>"            </div>;
+
+              <Link href=/contact"">;
+                <ChevronRight className="w - 4" h - 4"  />;
+              </Link>;
+export default EnhancedSidebar2025, "),          <div className="pt - 6" border - t border - gray - 800 / 50>";
+
+
+                <ChevronRight className="w-4 h-4" />,";
+                <ChevronRight className="w - 4 h - 4" />, ";
+                <ChevronRight className="w - 4 h - 4 / />;
+              <Link href=/contact"">;
+                <ChevronRight className="w - 4" h - 4" />;
+              </Link>;
+
+export default EnhancedSidebar2025, "), ,,
+
+=======
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -593,3 +1024,4 @@ const supportLinks = [
 };
 
 export default EnhancedSidebar2025;
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

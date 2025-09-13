@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+export interface EnhancedMicroSaasService {
+=======
+<<<<<<< HEAD
 export interface MicroSaasService {
 =======
 export interface EnhancedMicroSaasService {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8bf7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   id: string;
   name: string;
   tagline: string;
@@ -29,10 +33,13 @@ export interface EnhancedMicroSaasService {
   marketSize: string;
   growthRate: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 
 export const enhancedMicroSaasServices: MicroSaasService[] = [
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   contactInfo: {
     mobile: string;
     email: string;
@@ -42,7 +49,10 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
 }
 
 export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8bf7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   // AI & Machine Learning Services
   {
     id: 'ai-content-generator-pro',
@@ -78,6 +88,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     roi: '300% average ROI in 3 months',
     competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly'],
     marketSize: '$1.2B global market',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     growthRate: '25% annual growth'
   },
@@ -336,6 +348,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     growthRate: '150% annual growth',
     variant: 'cyberpunk-holographic',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '25% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -507,7 +520,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Microsoft Power Automate'],
     marketSize: '$600M emerging market',
     growthRate: '250% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8bf7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -517,6 +533,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
   },
   // New Innovative Services
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'quantum-biomedical-research-platform',
     name: 'Quantum Biomedical Research Platform',
@@ -601,6 +619,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'ai-powered-legal-assistant',
     name: 'AI Legal Assistant Pro',
     tagline: 'Intelligent legal document analysis and automation',
@@ -635,7 +654,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['DoNotPay', 'Harvey AI', 'Casetext', 'ROSS Intelligence'],
     marketSize: '$800M global market',
     growthRate: '180% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8bf7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -645,6 +667,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
   },
   {
     id: 'quantum-financial-modeling',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     name: 'Quantum Financial Modeling Platform',
     tagline: 'Revolutionary financial analysis with quantum computing',
@@ -998,6 +1022,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     growthRate: '220% annual growth',
     variant: 'quantum-neural-advanced',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     name: 'Quantum Financial Modeling',
     tagline: 'Quantum-powered financial analysis and risk assessment',
     price: '$599',
@@ -1031,7 +1056,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'D-Wave'],
     marketSize: '$200M emerging market',
     growthRate: '300% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8bf7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1040,6 +1068,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     }
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'quantum-blockchain-platform',
     name: 'Quantum Blockchain Platform',
@@ -1079,6 +1109,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     growthRate: '300% annual growth',
     variant: 'quantum-entanglement',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'ai-powered-hr-automation',
     name: 'AI HR Automation Suite',
     tagline: 'Intelligent human resources automation platform',
@@ -1113,7 +1144,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['BambooHR', 'Workday', 'Zenefits', 'Namely'],
     marketSize: '$1.5B global market',
     growthRate: '120% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8bf7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1127,6 +1161,8 @@ export const serviceCategories = [
   'All',
   'AI & Machine Learning',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   'Cybersecurity',
   'Healthcare & Life Sciences',
   'Transportation & Mobility',
@@ -1139,6 +1175,7 @@ export const serviceCategories = [
   'Creative & Media',
   'Blockchain & Web3'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Blockchain & Web3',
   'Emerging Technologies',
   'Cloud & Infrastructure',
@@ -1146,7 +1183,10 @@ export const serviceCategories = [
   'Cybersecurity',
   'IoT & Smart Cities',
   'AR/VR & Metaverse'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8bf7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];
 
 export const getServicesByCategory = (category: string) => {
@@ -1162,6 +1202,11 @@ export const getServicesByPriceRange = (min: number, max: number) => {
   return enhancedMicroSaasServices.filter(service => {
     const price = parseFloat(service.price.replace('$', ''));
 <<<<<<< HEAD
+    return price >= min && (max === Infinity ? true : price <= max);
+  });
+};
+=======
+<<<<<<< HEAD
     return price >= min && (max === Infinity || price <= max);
   });
 };
@@ -1170,3 +1215,4 @@ export const getServicesByPriceRange = (min: number, max: number) => {
   });
 };
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8bf7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

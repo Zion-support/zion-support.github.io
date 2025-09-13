@@ -491,6 +491,13 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     id: 'quantum-ai-cognitive-platform',
     name: 'Quantum AI Cognitive Platform',
 <<<<<<< HEAD
+    tagline: 'Revolutionary quantum AI platform with unprecedented problem-solving capabilities',
+    price: '$2,499',
+    period: '/month',
+    description: 'The world\'s first commercially available quantum AI platform that combines quantum computing with advanced machine learning. Solve previously impossible problems in drug discovery, financial modeling, and scientific research.',
+    features: [
+=======
+<<<<<<< HEAD
     tagline: 'Revolutionary quantum-powered artificial intelligence',
     price: '$2,999',
 =======
@@ -512,6 +519,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'Quantum cryptography integration',
       '24/7 quantum computing access'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       'Quantum-enhanced neural networks',
       'Cognitive reasoning engine',
       'Multi-dimensional problem solving',
@@ -522,12 +530,20 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'Predictive analytics engine',
       'Quantum encryption integration',
       'Scalable quantum architecture'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🧠',
     color: 'from-purple-600 to-indigo-800',
     textColor: 'text-purple-400',
+<<<<<<< HEAD
+    link: 'https://ziontechgroup.com/quantum-ai-cognitive',
+    marketPosition: 'First-to-market quantum AI solution. No direct competitors in quantum cognitive computing space.',
+    targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions, Government agencies, Tech companies, Universities',
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/quantum-ai-platform',
     marketPosition: 'First-to-market quantum AI platform. No direct competitors in commercial quantum AI space. Positioned as premium enterprise solution.',
@@ -537,10 +553,13 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     marketPosition: 'First-to-market quantum AI solution. No direct competitors in quantum cognitive computing space.',
     targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions, Government agencies, Tech companies, Universities',
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Quantum Computing & AI',
     realService: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     technology: ['IBM Quantum', 'Google Cirq', 'Qiskit', 'Python', 'TensorFlow Quantum', 'AWS Braket', 'Azure Quantum'],
     integrations: ['Jupyter Notebooks', 'MATLAB', 'R', 'Python scientific stack', 'Cloud platforms', 'HPC clusters'],
@@ -551,6 +570,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     growthRate: '450% annual growth',
     variant: 'quantum-advanced',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['IBM Quantum', 'Google Quantum', 'Python', 'Qiskit', 'TensorFlow', 'AWS Braket', 'Azure Quantum'],
     integrations: ['Jupyter Notebooks', 'MATLAB', 'R', 'Python libraries', 'Cloud platforms', 'HPC clusters'],
     useCases: ['Drug discovery', 'Financial modeling', 'Climate prediction', 'Logistics optimization', 'Material science', 'Cryptography'],
@@ -559,7 +579,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     marketSize: '$2.1B market',
     growthRate: '350% annual growth',
     variant: 'quantum-entanglement',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -567,6 +590,8 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     implementationDetails: 'Fully operational quantum AI platform with quantum-classical hybrid architecture. Includes quantum error correction, real-time monitoring, and comprehensive API access.',
     launchDate: '2024-03-15',
@@ -582,6 +607,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Revolutionary autonomous manufacturing platform that combines AI, robotics, and IoT to create fully automated production lines. Reduce operational costs by 60% while increasing productivity by 300%.',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     implementationDetails: 'Fully functional quantum AI platform with quantum circuit simulator, cognitive reasoning engine, and advanced analytics dashboard. Includes API access and cloud deployment options.',
     launchDate: '2024-06-15',
     customers: 45,
@@ -595,7 +621,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     price: '$4,999',
     period: '/month',
     description: 'Industry 4.0 leader - complete autonomous manufacturing system that runs 24/7 with zero human intervention. Achieves 200% productivity increase and 99.9% quality consistency.',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     features: [
       'AI-powered production optimization',
       'Autonomous robotic assembly lines',
@@ -603,23 +632,31 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'Real-time quality control',
       'Supply chain automation',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       'Energy consumption optimization',
       'Workforce safety monitoring',
       'Production analytics dashboard',
       'Custom workflow automation',
       'Multi-factory management'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       'Energy efficiency management',
       'Custom manufacturing workflows',
       '3D printing integration',
       'IoT sensor network',
       'Advanced robotics control'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🏭',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/autonomous-manufacturing',
     marketPosition: 'Leading autonomous manufacturing platform. Competes with Siemens Mindsphere ($500-2000), PTC ThingWorx ($1000-3000). Our advantage: Full autonomy and AI integration.',
@@ -636,6 +673,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     marketSize: '$12.3B autonomous manufacturing market',
     growthRate: '320% annual growth',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/autonomous-ai-factory',
     marketPosition: 'Leading autonomous manufacturing solution. Competes with Siemens Mindsphere ($500-2000) and GE Predix ($400-1500). Our advantage: Complete autonomy and AI integration.',
     targetAudience: 'Manufacturing companies, Automotive industry, Aerospace companies, Electronics manufacturers, Food processing, Pharmaceutical manufacturing',
@@ -701,7 +739,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne', 'Cylance', 'Darktrace'],
     marketSize: '$3.2B market',
     growthRate: '280% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     variant: 'cyberpunk-holographic',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -710,6 +751,8 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     implementationDetails: 'Complete autonomous manufacturing platform with AI-powered robotics, IoT sensors, predictive analytics, and real-time monitoring. Includes mobile app and comprehensive API.',
     launchDate: '2024-02-10',
@@ -725,6 +768,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Advanced cybersecurity suite that uses quantum-resistant algorithms and AI to protect against current and future threats. Includes quantum key distribution, post-quantum cryptography, and AI-powered threat detection.',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     implementationDetails: 'Complete quantum-resistant cybersecurity platform with encryption, threat detection, monitoring, and incident response. Includes mobile app and real-time security dashboard.',
     launchDate: '2024-04-10',
     customers: 156,
@@ -738,7 +782,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     price: '$1,299',
     period: '/month',
     description: 'Revolutionary AI platform that accelerates biomedical research and drug discovery by 10x while maintaining scientific accuracy. Used by leading pharmaceutical companies and research institutions.',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     features: [
       'Quantum-resistant encryption algorithms',
       'AI-powered threat detection',
@@ -898,6 +945,8 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'Personalized medicine algorithms',
       'Clinical trial optimization',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       'Drug interaction prediction',
       'Biomarker identification',
       'Genomic analysis tools',
@@ -923,6 +972,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     competitors: ['Insitro', 'Atomwise', 'BenevolentAI', 'Exscientia', 'Recursion Pharmaceuticals'],
     marketSize: '$3.2B biomedical AI market',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       'Research automation',
       'Protein structure prediction',
       'Drug interaction analysis',
@@ -948,7 +998,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     roi: 'Average customer sees 1200% ROI within 24 months through accelerated research and faster time to market.',
     competitors: ['Benchling', 'LabArchives', 'Labguru', 'PerkinElmer', 'Thermo Fisher'],
     marketSize: '$3.2B market',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '200% annual growth',
     variant: 'neural-quantum',
     contactInfo: {
@@ -958,6 +1011,8 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     implementationDetails: 'Complete biomedical AI platform with quantum molecular modeling, AI drug discovery, and personalized medicine algorithms. Includes comprehensive API and collaboration tools.',
     launchDate: '2024-01-10',
@@ -984,6 +1039,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'API for integrations',
       'White-label solutions'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     implementationDetails: 'Complete biomedical research platform with AI-powered analysis tools, data management, collaboration features, and research automation. Includes mobile app and advanced analytics dashboard.',
     launchDate: '2024-03-25',
     customers: 89,
@@ -1008,12 +1064,17 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'Backtesting engine',
       'Performance tracking',
       'API for integrations'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '💰',
     color: 'from-yellow-600 to-amber-700',
     textColor: 'text-yellow-400',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/quantum-finance',
     marketPosition: 'Leading quantum finance platform. Competes with Bloomberg Terminal ($2000-3000), Refinitiv ($1500-2500). Our advantage: Quantum computing integration and AI algorithms.',
@@ -1031,6 +1092,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     growthRate: '450% annual growth',
     variant: 'quantum-holographic-advanced',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/quantum-financial-optimization',
     marketPosition: 'First-to-market quantum financial platform. Competes with Bloomberg Terminal ($24,000/year), Thomson Reuters ($15,000/year), and FactSet ($12,000/year). Our advantage: Quantum computing power.',
     targetAudience: 'Hedge funds, Investment banks, Asset management firms, Trading firms, Financial advisors, Institutional investors',
@@ -1046,7 +1108,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     marketSize: '$5.6B market',
     growthRate: '380% annual growth',
     variant: 'quantum-advanced',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1054,6 +1119,8 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     implementationDetails: 'Complete quantum finance platform with portfolio optimization, risk assessment, and algorithmic trading. Includes comprehensive API and white-label solutions.',
     launchDate: '2024-02-01',
@@ -1080,6 +1147,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'Multi-carrier integration',
       'Sustainability tracking'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     implementationDetails: 'Complete quantum financial platform with portfolio optimization, trading algorithms, risk management, and real-time analytics. Includes mobile app and advanced reporting dashboard.',
     launchDate: '2024-06-01',
     customers: 34,
@@ -1155,22 +1223,33 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'Fleet management',
       'Inventory optimization',
       'Multi-modal transportation'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🚛',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/autonomous-logistics',
     marketPosition: 'Leading autonomous logistics platform. Competes with Flexport ($500-1000), Convoy ($400-800). Our advantage: AI integration and autonomous vehicle support.',
     targetAudience: 'Logistics companies, E-commerce businesses, Manufacturing companies, Retail chains, Food delivery, Healthcare logistics',
     trialDays: 14,
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/autonomous-logistics-ai',
     marketPosition: 'Leading autonomous logistics platform. Competes with Flexport ($100-1000), Convoy ($50-500), and Uber Freight ($25-300). Our advantage: AI-powered optimization and autonomous systems.',
     targetAudience: 'Logistics companies, E-commerce businesses, Manufacturing companies, Retail chains, Food delivery, Healthcare logistics',
     trialDays: 30,
+<<<<<<< HEAD
+    setupTime: '2 weeks',
+    category: 'Autonomous Systems & Robotics',
+    realService: true,
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
     setupTime: '2 weeks',
     category: 'Autonomous Systems & Robotics',
@@ -1183,6 +1262,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     competitors: ['Flexport', 'Convoy', 'Transfix', 'Loadsmart', 'Uber Freight'],
     marketSize: '$15.6B autonomous logistics market',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['TensorFlow', 'PyTorch', 'Computer Vision', 'IoT platforms', 'Autonomous vehicle SDKs', 'Machine Learning', 'Cloud computing'],
     integrations: ['WMS systems', 'TMS platforms', 'ERP systems', 'E-commerce platforms', 'Fleet management tools', 'GPS services'],
     useCases: ['Route optimization', 'Fleet management', 'Warehouse automation', 'Last-mile delivery', 'Supply chain optimization', 'Inventory management'],
@@ -1597,7 +1677,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     roi: 'Average customer saves 80% of time in content creation and improves engagement by 60% within 3 months.',
     competitors: ['ElevenLabs', 'Play.ht', 'Murf.ai', 'Synthesia', 'Lovo.ai'],
     marketSize: '$1.8B market',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '280% annual growth',
     variant: 'neural-cyberpunk',
     contactInfo: {
@@ -1877,6 +1960,8 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     description: 'Protect your future with quantum-resistant cybersecurity that stays ahead of emerging threats. Our suite combines quantum-resistant encryption, AI threat detection, and zero-trust architecture for ultimate protection.',
     features: [
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       'Quantum-resistant encryption algorithms',
       'AI-powered threat detection and response',
       'Zero-trust architecture implementation',
@@ -1888,6 +1973,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'Advanced analytics dashboard',
       'API for security tool integration'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       'Quantum-resistant encryption',
       'AI threat detection',
       'Zero-trust architecture',
@@ -1899,7 +1985,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'Multi-cloud security',
       'API security',
       'Security analytics dashboard'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🔒',
@@ -1942,6 +2031,8 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     description: 'Access the future of space technology with our comprehensive platform for satellite management, space data analytics, and orbital optimization. Perfect for space agencies, satellite operators, and research institutions.',
     features: [
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       'Satellite mission planning and management',
       'Real-time orbital tracking and optimization',
       'Space data analytics and visualization',
@@ -1953,6 +2044,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'API for space industry tools',
       'Mobile app for mission monitoring'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       'Drug discovery acceleration',
       'Genomic analysis',
       'Clinical trial optimization',
@@ -2014,7 +2106,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
       'Real-time monitoring',
       'Data processing pipeline',
       'Space weather forecasting'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🚀',
@@ -2394,6 +2489,8 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     launchDate: '2024-05-18',
     customers: 210,
     rating: 4.8,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     reviews: 131
   },
@@ -2903,6 +3000,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 91
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     reviews: 567
   },
   {
@@ -3261,7 +3359,10 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     customers: 34,
     rating: 4.9,
     reviews: 18
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
@@ -3280,6 +3381,10 @@ export const serviceCategories = [
   'AI & Blockchain',
   'AI & IoT',
 <<<<<<< HEAD
+  'AI & Machine Learning',
+  'AI & Professional Services',
+=======
+<<<<<<< HEAD
   'Quantum AI & Research',
   'Industrial AI & Automation',
   'Cybersecurity & Privacy',
@@ -3293,6 +3398,7 @@ export const serviceCategories = [
   'AI & Machine Learning',
   'AI & Professional Services',
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Quantum Computing & AI',
   'Quantum Finance & Trading',
   'Autonomous Manufacturing',
@@ -3307,16 +3413,25 @@ export const serviceCategories = [
   'Healthcare & Biotechnology',
   'Financial Technology',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   'Logistics & Supply Chain',
   'Energy & Sustainability',
   'Education Technology',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Space Technology & IoT',
   'Logistics & Supply Chain',
   'Energy & Sustainability',
   'Education Technology',
   'Metaverse & VR/AR',
   'Blockchain & Web3',
+<<<<<<< HEAD
+  'IoT & Smart Cities',
+  'Climate Technology',
+  'Robotics & Automation',
+  'Autonomous Systems & Robotics'
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
   'IoT & Smart Cities',
   'Climate Technology',
@@ -3329,6 +3444,7 @@ export const serviceCategories = [
 =======
   'Autonomous Systems & Robotics'
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5c95
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];
 
 // Helper functions

@@ -2956,6 +2956,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     growthRate: '180% annual growth'
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   {
     id: 'ai-powered-energy-optimization',
     name: 'AI-Powered Energy Optimization',
@@ -3280,6 +3282,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$1.8B global market',
     growthRate: '90% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   // Revolutionary New Services - 2025 Innovation Edition
   {
     id: 'quantum-brain-computer-interface',
@@ -3394,7 +3397,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Nanofabrica', 'Nanoscribe', 'Molecular Assemblies', 'DNA Script'],
     marketSize: '$5B+ emerging market',
     growthRate: '500% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dc1e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
@@ -3419,8 +3425,11 @@ export const serviceCategories = [
   'Biotechnology',
   'Financial Technology',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   'Energy & Sustainability'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Climate & Environment',
   'Manufacturing & Industry 4.0',
   'Transportation & Logistics',
@@ -3436,7 +3445,10 @@ export const serviceCategories = [
   'Neurotechnology & BCI',
   'Space Technology & Colonization',
   'Nanotechnology & Molecular Engineering'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dc1e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];
 
 export const getServicesByCategory = (category: string) => {

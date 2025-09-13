@@ -77,6 +77,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     }
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   
   // Edge AI & IoT Services
   {
@@ -113,6 +115,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     roi: '600% average ROI in 12 months',
     competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT'],
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'synthetic-biology-platform',
     name: 'Synthetic Biology Platform',
@@ -146,7 +149,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     useCases: ['Drug discovery', 'Genetic engineering', 'Biomaterial design'],
     roi: '1200% average ROI in 24 months',
     competitors: ['Benchling', 'DNA Script', 'Twist Bioscience'],
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-347d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     marketSize: '$3.8B global market',
     growthRate: '180% annual growth',
     contactInfo: {
@@ -156,6 +162,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     }
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   // Synthetic Biology & Healthcare
@@ -282,6 +290,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['Waymo', 'Tesla Autopilot', 'Boston Dynamics'],
     marketSize: '$4.2B global market',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'neuromorphic-computing-suite',
     name: 'Neuromorphic Computing Suite',
@@ -316,7 +325,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     roi: '600% average ROI in 12 months',
     competitors: ['Intel', 'IBM', 'BrainChip', 'Qualcomm'],
     marketSize: '$2.1B emerging market',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-347d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '160% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -325,6 +337,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     }
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   // Quantum Cryptography & Security
@@ -363,6 +377,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['ID Quantique', 'Qrypt', 'Quantum Xchange'],
     marketSize: '$1.5B global market',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'quantum-cryptography-vault',
     name: 'Quantum Cryptography Vault',
@@ -481,7 +496,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     roi: '700% average ROI in 18 months',
     competitors: ['Boston Dynamics', 'Waymo', 'Tesla', 'DJI'],
     marketSize: '$5.6B global market',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-347d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '220% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -490,6 +508,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     }
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   // Metaverse & AR/VR Platform
@@ -509,6 +529,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       'Cross-platform compatibility',
       'Real-time collaboration',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'metaverse-development-studio',
     name: 'Metaverse Development Studio',
@@ -524,11 +545,16 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       'Blockchain integration',
       'Avatar customization',
       'Social features',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-347d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       'Monetization tools'
     ],
     popular: true,
     icon: '🌍',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     color: 'from-blue-500 to-cyan-600',
     textColor: 'text-blue-400',
@@ -546,6 +572,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['Meta Horizon', 'Roblox', 'Decentraland', 'VRChat'],
     marketSize: '$3.2B global market',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     color: 'from-pink-500 to-rose-600',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/metaverse-studio',
@@ -561,7 +588,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     roi: '900% average ROI in 24 months',
     competitors: ['Meta', 'Roblox', 'Decentraland', 'VRChat'],
     marketSize: '$8.9B global market',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-347d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '280% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -570,6 +600,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     }
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   // AI-Powered Legal Tech
@@ -607,6 +639,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     roi: '500% average ROI in 12 months',
     competitors: ['Casetext', 'ROSS Intelligence', 'Harvey AI'],
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'quantum-financial-modeling',
     name: 'Quantum Financial Modeling',
@@ -640,7 +673,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     useCases: ['Portfolio optimization', 'Risk management', 'Trading strategies'],
     roi: '1500% average ROI in 12 months',
     competitors: ['Goldman Sachs', 'JP Morgan', 'Morgan Stanley'],
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-347d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     marketSize: '$2.8B global market',
     growthRate: '180% annual growth',
     contactInfo: {
@@ -650,6 +686,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     }
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   // Quantum Financial Services
@@ -689,6 +727,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     marketSize: '$1.8B global market',
     growthRate: '250% annual growth',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'ai-drug-discovery-platform',
     name: 'AI Drug Discovery Platform',
@@ -724,7 +763,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['Atomwise', 'Insilico Medicine', 'BenevolentAI'],
     marketSize: '$6.7B global market',
     growthRate: '240% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-347d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -732,6 +774,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     }
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   // AI-Powered Healthcare Analytics
@@ -770,6 +814,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare'],
     marketSize: '$4.5B global market',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'quantum-machine-learning',
     name: 'Quantum Machine Learning',
@@ -804,7 +849,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     roi: '800% average ROI in 18 months',
     competitors: ['IBM', 'Google', 'Microsoft', 'Rigetti'],
     marketSize: '$1.5B emerging market',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-347d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '200% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -815,6 +863,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
   }
 ];
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export const serviceCategories = [
   'Quantum AI & Computing',
@@ -844,6 +894,7 @@ export const getServicesByPriceRange = (min: number, max: number) => {
   });
 };
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 export const enhancedServiceCategories = [
   'Quantum AI & Computing',
   'Biotechnology & Life Sciences',
@@ -870,4 +921,7 @@ export const getEnhancedServicesByPriceRange = (min: number, max: number) => {
     return price >= min && (max === Infinity ? true : price <= max);
   });
 };
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-347d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

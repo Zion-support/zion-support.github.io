@@ -25,6 +25,8 @@ export interface MicroSaasService {
   marketSize: string;
   growthRate: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'blockchain-cyberpunk' | 'blockchain-identity' | 'blockchain-supply-chain';
   contactInfo: {
     mobile: string;
@@ -40,6 +42,7 @@ export interface MicroSaasService {
   reviews: number;
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-6601
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }
 
 export const enhancedRealMicroSaasServices: MicroSaasService[] = [
@@ -83,6 +86,8 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     growthRate: '180% annual growth'
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'quantum-ai-research-platform',
     name: 'Quantum AI Research Platform',
@@ -1704,6 +1709,7 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     rating: 4.9,
     reviews: 234
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'ai-video-editing-suite',
     name: 'AI Video Editing Suite',
     tagline: 'Professional video editing powered by artificial intelligence',
@@ -1816,11 +1822,16 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     competitors: ['Climate AI', 'Jupiter Intelligence', 'One Concern', 'Climate Engine'],
     marketSize: '$1.8B climate tech market',
     growthRate: '220% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-6601
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
 
   // BLOCKCHAIN & WEB3 SERVICES
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'space-technology-platform',
     name: 'Space Technology Platform',
@@ -2782,6 +2793,7 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     rating: 4.8,
     reviews: 210
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'blockchain-nft-marketplace',
     name: 'Blockchain NFT Marketplace',
     tagline: 'Launch your own NFT marketplace in minutes',
@@ -3090,11 +3102,16 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     competitors: ['Roblox', 'Decentraland', 'The Sandbox', 'VRChat'],
     marketSize: '$1.9B metaverse market',
     growthRate: '280% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-6601
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     id: 'iot-smart-city-platform',
     name: 'IoT Smart City Platform',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     tagline: 'Intelligent IoT platform for smart city management and optimization',
     price: '$1,099',
@@ -3513,6 +3530,7 @@ enhancedRealMicroSaasServices.push(...additionalInnovativeServices);
 
 // Service categories
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     tagline: 'Transform cities with intelligent IoT solutions',
     price: '$1,099',
     period: '/month',
@@ -3550,6 +3568,10 @@ enhancedRealMicroSaasServices.push(...additionalInnovativeServices);
   }
 ];
 
+<<<<<<< HEAD
+export const serviceCategories = [
+  'AI & Content Creation',
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-6601
 export const serviceCategories = [
   'AI & Content Creation',
@@ -3630,6 +3652,7 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
     )
   );
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'AI & Media',
   'Healthcare & AI',
   'Climate Tech & AI',
@@ -3646,7 +3669,10 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
 
 export const getServicesByCategory = (category: string) => {
   return enhancedRealMicroSaasServices.filter(service => service.category === category);
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-6601
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 };
 
 export const getPopularServices = (limit: number = 6): EnhancedRealMicroSaasService[] => {
@@ -3684,10 +3710,14 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number): Enh
   return enhancedRealMicroSaasServices.filter(service => {
     const price = parseFloat(service.price.replace('$', '').replace(',', ''));
 <<<<<<< HEAD
+    return price >= min && (max === Infinity || price <= max);
+=======
+<<<<<<< HEAD
     return price >= minPrice && price <= maxPrice;
 =======
     return price >= min && (max === Infinity || price <= max);
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-6601
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   });
 };
 

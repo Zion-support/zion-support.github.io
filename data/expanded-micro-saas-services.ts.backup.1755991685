@@ -2047,6 +2047,9 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
   },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'metaverse-commerce-platform',
     name: 'Metaverse Commerce Platform',
@@ -2084,7 +2087,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     growthRate: '200% annual growth'
   },
   // IoT & Smart City Services
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-28dd
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'iot-smart-city-platform',
     name: 'IoT Smart City Platform',
@@ -2122,6 +2128,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     growthRate: '180% annual growth'
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'blockchain-defi-platform',
     name: 'Blockchain DeFi Platform',
@@ -2230,6 +2238,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$3.2B AI education market',
     growthRate: '200% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'edge-computing-orchestrator',
     name: 'Edge Computing Orchestrator',
     tagline: 'Intelligent edge infrastructure management',
@@ -3020,7 +3029,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['MetricStream', 'SaiGlobal', 'LogicGate'],
     marketSize: '$2.8B global market',
     growthRate: '40% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-28dd
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

@@ -1,0 +1,208 @@
+{
+  "name": "Zion Tech Group - AI-Powered Technology Solutions",
+  "short_name": "Zion Tech",
+<<<<<<< HEAD
+  "description": "Leading provider of AI services, cybersecurity, cloud computing, and digital transformation solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#17072b",
+<<<<<<< HEAD
+  "theme_color": "#17072b",
+=======
+  "theme_color": "#22ddd2",
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
+=======
+  "description": "Leading-edge technology solutions and autonomous innovation platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+>>>>>>> origin/cursor/clean-merge-approach
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "productivity", "technology"],
+  "icons": [
+    {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      "src": "/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
+=======
+>>>>>>> origin/cursor/clean-merge-approach
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/clean-merge-approach
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+<<<<<<< HEAD
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
+=======
+>>>>>>> origin/cursor/clean-merge-approach
+    }
+  ],
+  "shortcuts": [
+    {
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "name": "AI Services",
+=======
+=======
+      "name": "Launch Economy",
+      "short_name": "Launch",
+      "description": "Quick access to launch your digital economy",
+      "url": "/multiverse/launch",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+>>>>>>> origin/cursor/clean-merge-approach
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our technology services",
+      "url": "/services",
+      "icons": [
+        {
+<<<<<<< HEAD
+          "src": "/icon-96x96.png",
+          "sizes": "96x96"
+=======
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+>>>>>>> origin/cursor/clean-merge-approach
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+<<<<<<< HEAD
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "AI Solutions",
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
+      "short_name": "AI",
+      "description": "Explore our AI services",
+      "url": "/ai-services",
+      "icons": [
+        {
+          "src": "/icon-ai.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with our team",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/icon-contact.png",
+          "sizes": "96x96"
+=======
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+>>>>>>> origin/cursor/clean-merge-approach
+        }
+      ]
+    }
+  ],
+<<<<<<< HEAD
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
+=======
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
+>>>>>>> origin/cursor/clean-merge-approach

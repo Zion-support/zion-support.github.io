@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
 const contact = {
@@ -766,6 +768,7 @@ const contact = {
 		reviews: 29
 	}
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 import type { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
 export const additionalEnhancedServices: EnhancedRealMicroSaasService[] = [
@@ -917,5 +920,8 @@ export const additionalEnhancedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 11
   }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7754
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];

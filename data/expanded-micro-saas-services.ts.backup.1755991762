@@ -1175,6 +1175,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     category: 'AI & Machine Learning',
     realService: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     technology: ['Machine Learning', 'IoT', 'Energy Management', 'Predictive Analytics', 'Cloud Computing'],
     integrations: ['Smart meters', 'Energy management systems', 'Renewable platforms', 'Sustainability tools'],
     useCases: ['Energy optimization', 'Renewable management', 'Sustainability tracking', 'Cost reduction'],
@@ -1219,6 +1221,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$1.5B global market',
     growthRate: '200% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['Quantum Computing', 'Blockchain', 'AI', 'Cryptography', 'Smart Contracts', 'DeFi'],
     integrations: ['Wallets', 'Exchanges', 'DeFi protocols', 'NFT platforms', 'Payment systems'],
     useCases: ['DeFi applications', 'NFT marketplaces', 'Smart contracts', 'Cross-chain operations', 'Financial services'],
@@ -1587,7 +1590,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Casetext', 'ROSS Intelligence', 'Harvey AI', 'DoNotPay'],
     marketSize: '$800M legal tech market',
     growthRate: '140% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-6acf
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

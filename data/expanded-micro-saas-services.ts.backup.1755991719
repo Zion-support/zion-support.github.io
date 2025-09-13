@@ -30,6 +30,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
   // AI & Machine Learning Services
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     id: 'ai-content-generator-pro',
     name: 'AI Content Generator Pro',
     tagline: 'Professional AI-powered content creation',
@@ -133,6 +135,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     integrations: ['TensorFlow', 'PyTorch', 'AWS', 'Google Cloud'],
     useCases: ['AI model optimization', 'Research acceleration', 'Performance enhancement'],
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'quantum-ai-optimizer',
     name: 'Quantum AI Optimizer',
     tagline: 'Next-generation AI optimization using quantum algorithms',
@@ -163,7 +166,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     technology: ['Quantum Computing', 'Machine Learning', 'Optimization Algorithms', 'Cloud Computing'],
     integrations: ['TensorFlow', 'PyTorch', 'AWS', 'Google Cloud', 'Azure'],
     useCases: ['Model optimization', 'Hyperparameter tuning', 'Neural network training', 'AI research'],
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-438b
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     roi: '500% average ROI in 12 months',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum'],
     marketSize: '$500M emerging market',
@@ -172,6 +178,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
   {
     id: 'ai-cybersecurity-sentinel',
     name: 'AI Cybersecurity Sentinel',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     tagline: 'Intelligent threat detection and response',
     price: '$149',
@@ -674,6 +682,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$800M quantum AI market',
     growthRate: '280% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     tagline: 'Intelligent threat detection and prevention',
     price: '$199',
     period: '/month',
@@ -1858,7 +1867,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Kira Systems', 'Luminance', 'eBrevia', 'LawGeex'],
     marketSize: '$1.2B global legal tech market',
     growthRate: '180% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-438b
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     id: 'ai-space-exploration-platform',
