@@ -70,6 +70,10 @@ import UltimateContentRevolution2026PromotionBanner from '../components/Ultimate
 import AIInnovationShowcase2026 from '../components/AIInnovationShowcase2026';
 import AIInnovationShowcase2026PromotionBanner from '../components/AIInnovationShowcase2026PromotionBanner';
 
+// New Ultimate Content Showcase 2026 Components
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
+
 export default function HomePage() {
   return (
 <<<<<<< HEAD
@@ -82,6 +86,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
+        <UltimateContentShowcase2026PromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2026 */}
+        <InteractiveContentDiscoveryWidget2026 />
+        
         {/* AI 2026 NEW CONTENT PROMOTION BANNER */}
         <AI2026NewContentPromotionBanner />
         
