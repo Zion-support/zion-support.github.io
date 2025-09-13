@@ -49,6 +49,11 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 
+// Import new revolutionary promotional components
+import RevolutionaryContentPromotionBanner from '../components/RevolutionaryContentPromotionBanner';
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import AnimatedSuccessMetrics from '../components/AnimatedSuccessMetrics';
+
 // Import new revolutionary content components
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
@@ -200,6 +205,9 @@ export default function HomePage() {
         
         {/* AI 2026 QUANTUM-NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT PROMOTION BANNER */}
+        <RevolutionaryContentPromotionBanner />
         
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 */}
         <UltimateContentDiscoveryWidget2025 />
@@ -612,6 +620,16 @@ export default function HomePage() {
             </Suspense>
           </div>
         </section>
+
+        {/* INTERACTIVE CONTENT SHOWCASE */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Showcase..." />}>
+          <InteractiveContentShowcase />
+        </Suspense>
+
+        {/* ANIMATED SUCCESS METRICS */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading Success Metrics..." />}>
+          <AnimatedSuccessMetrics />
+        </Suspense>
         
         {/* REVOLUTIONARY CONTENT RECOMMENDATION ENGINE 2026 */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI Recommendations..." />}>
