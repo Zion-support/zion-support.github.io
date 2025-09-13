@@ -95,6 +95,10 @@ import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026Ultim
 import QuantumComputingBreakthrough2026PromotionBanner from '../components/QuantumComputingBreakthrough2026PromotionBanner';
 import AI2026EnterpriseTransformationPromotionBanner from '../components/AI2026EnterpriseTransformationPromotionBanner';
 
+// Import new revolutionary content promotion components
+import RevolutionaryContentPromotionBanner from '../components/RevolutionaryContentPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -117,6 +121,9 @@ export default function HomePage() {
         
         {/* QUANTUM COMPUTING BREAKTHROUGH 2026 PROMOTION BANNER */}
         <QuantumComputingBreakthrough2026PromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT PROMOTION BANNER */}
+        <RevolutionaryContentPromotionBanner />
         
         {/* AI 2026 ENTERPRISE TRANSFORMATION PROMOTION BANNER */}
         <AI2026EnterpriseTransformationPromotionBanner />
@@ -297,6 +304,13 @@ export default function HomePage() {
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Discovery..." />}>
           <UltimateContentDiscovery2026 />
         </Suspense>
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-purple-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <InteractiveContentDiscoveryWidget />
+          </div>
+        </section>
         
         {/* AI 2025 CONTENT DISCOVERY WIDGET */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
