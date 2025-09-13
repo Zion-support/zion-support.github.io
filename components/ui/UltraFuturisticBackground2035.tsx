@@ -2,6 +2,16 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 export default function UltraFuturisticBackground2035() {
+
+
+
+
+
+
+
+
+
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -10,8 +20,6 @@ export default function UltraFuturisticBackground2035() {
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
 
     canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
     canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
@@ -32,18 +40,49 @@ export default function UltraFuturisticBackground2035() {
 
     // Initialize particles
     const initParticles = () => {
-      particles = [];
-      const isSmallScreen = window.innerWidth < 768;
-      const particleCount = prefersReducedMotion ? 12 : (isSmallScreen ? 40 : 100);
-      for (let i = 0; i < particleCount; i++) {
-        particles.push({
-          x: Math.random() * canvas.width / (window.devicePixelRatio || 1),
-          y: Math.random() * canvas.height / (window.devicePixelRatio || 1),
-          vx: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4,
-          vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4,
-          size: Math.random() * (isSmallScreen ? 1.5 : 2) + 0.8,
-          opacity: Math.random() * 0.35 + 0.08,
-          color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][Math.floor(Math.random() * 4)]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
         });
       }
     };
@@ -282,15 +321,27 @@ export default function UltraFuturisticBackground2035() {
               r="3"
               fill="url(#neuralGradient)"
               animate={{
-                r: [3, 6, 3],
-                opacity: [0.3, 0.8, 0.3]
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                delay: i * 0.5,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 ease: "easeInOut"
               }}
+
+
+
+
             />
           ))}
         </svg>
@@ -326,30 +377,12 @@ export default function UltraFuturisticBackground2035() {
           />
         </div>
 
-        {/* Data Streams */}
-        <div className="absolute right-0 top-0 w-32 h-full opacity-30">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={`stream-${i}`}
-              className="absolute w-1 h-8 bg-gradient-to-b from-purple-400 to-transparent"
-              style={{
-                right: `${Math.random() * 32}px`,
-                top: `${i * 5}%`
-              }}
-              animate={{
-                height: [8, 32, 8],
-                opacity: [0.3, 1, 0.3]
-              }}
-              transition={{
-                duration: 2 + Math.random() * 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-                ease: "easeInOut"
-              }}
-            />
-          ))}
-        </div>
-      </div>
-    </>
-  );
-}
+export default UltraFuturisticBackground2035;  );
+export default UltraFuturisticBackground2035;
+
+
+export default UltraFuturisticBackground2035);
+export default UltraFuturisticBackground2035;
+
+
+

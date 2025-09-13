@@ -2,8 +2,21 @@ import React, { useState } from 'react';
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
+
+import {
+
+
+  
+  
+  componentDidCatch(error, errorInfo) {
+  
+    
+import React, { useState } from 'react';
+import Layout from './layout / Layout';
+import { motion } from 'framer-motion';
+
+import {
+
   Search,
   Shield,
   Globe,
@@ -20,9 +33,14 @@ import {
   Sparkles,
   Target,
   Users,
-  Award,
-  Clock
-} from 'lucide-react';
+
+  Clock,;} from 'lucide-react';import { ;
+
+
+  Clock,;} from 'lucide-react';import { ;
+
+
+
 import Link from 'next/link';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import { innovative2041MicroSaasServices } from '../data/innovative-2041-micro-saas-services';
@@ -32,10 +50,7 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
 const Homepage2041: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`;
+
     }
   };
 
@@ -43,6 +58,12 @@ const Homepage2041: React.FC = () => {
     ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3),
     ...innovative2041ITServices.filter(s => s.popular).slice(0, 2),
     ...innovative2041AIServices.filter(s => s.popular).slice(0, 1)
+import Link from 'next / link';
+import UltraFuturisticServiceCard2026 from './ui / UltraFuturisticServiceCard2026';
+import { innovative2041MicroSaasServices } from '../data / innovative - 2041 - micro - saas - services';
+import { innovative2041ITServices } from '../data / innovative - 2041 - it - services';
+import { innovative2041AIServices } from '../data / innovative - 2041 - ai - services';
+
   ];
 
   const testimonials = [
@@ -79,9 +100,10 @@ const Homepage2041: React.FC = () => {
     { number: "24/7", label: "AI Operations", icon: Brain }
   ];
 
-  return (
     <Layout>
-      {/* Main Content */}
+
+
+
       <main className="relative z-10">
         {/* Hero Section */}
         <section 
@@ -116,6 +138,13 @@ const Homepage2041: React.FC = () => {
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
                   }}
+
+
+
+
+
+
+
                 />
               ))}
             </div>
@@ -123,6 +152,10 @@ const Homepage2041: React.FC = () => {
 
           {/* Hero Content */}
           <div className="text-center max-w-7xl mx-auto relative z-10">
+
+
+
+
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -170,8 +203,7 @@ const Homepage2041: React.FC = () => {
                 </form>
               </motion.div>
 
-              {/* CTA Buttons */}
-              <motion.div 
+
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -211,7 +243,11 @@ const Homepage2041: React.FC = () => {
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  className="text-center"
+
+
+
+
+
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -223,10 +259,17 @@ const Homepage2041: React.FC = () => {
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-400">{stat.label}</div>
                 </motion.div>
+
+
+
               ))}
             </motion.div>
           </div>
         </section>
+
+
+
+
 
         {/* Featured Services Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50">
@@ -234,6 +277,11 @@ const Homepage2041: React.FC = () => {
             <motion.div 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
+
+
+
+
+
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -248,6 +296,12 @@ const Homepage2041: React.FC = () => {
 
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+
+
+
+
+
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -266,8 +320,13 @@ const Homepage2041: React.FC = () => {
               ))}
             </motion.div>
 
-            <motion.div 
-              className="text-center mt-12"
+
+
+
+
+
+
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -305,6 +364,10 @@ const Homepage2041: React.FC = () => {
 
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
+
+
+
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -330,10 +393,17 @@ const Homepage2041: React.FC = () => {
                   <div className="text-cyan-400">{testimonial.role}</div>
                   <div className="text-gray-500 text-sm">{testimonial.company}</div>
                 </motion.div>
+
+
+
               ))}
             </motion.div>
           </div>
         </section>
+
+
+
+
 
         {/* CTA Section */}
         <section className="py-20 px-4">
@@ -341,6 +411,11 @@ const Homepage2041: React.FC = () => {
             <motion.div 
               className="bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm"
               initial={{ opacity: 0, y: 30 }}
+
+
+
+
+
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -361,19 +436,57 @@ const Homepage2041: React.FC = () => {
                   Start Your Journey
                 </Link>
                 <Link
-                  href="/2041-futuristic-services-showcase"
-                  className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3"
-                >
                   <Target className="w-6 h-6" />
-                  Explore Services
                 </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
     </Layout>
-  );
-};
 
 export default Homepage2041;
+                  <Target className='w-6 h-6' />                  Explore Services                Ready to Shape the Future?
+                  <Target className='w-6 h-6' />                  Explore Services                Ready to Shape the Future?;
+
+
+                <Link
+                  <Sparkles className="w-6 h-6" />;
+                </Link>;
+                <Link
+
+
+
+
+}<motion && motion.div > <Link href="/2041-futuristic-services-showcase" className="px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3" > <Rocket className="w-6 h-6" /> Explore 2041 Services <ArrowRight className="w-5 h-5" /> </a> <Link href="/contact" className="px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3" > <Users className="w-6 h-6" /> Start Your Journey </a> </motion && motion.div> </motion && motion.div> </div> </section> > {;
+
+
+
+
+}> <UltraFuturisticServiceCard2026service= {
+}</motion && motion.div> <motion && motion.div > <Link href="/2041-futuristic-services-showcase" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105" > <Eye className="w-5 h-5" /> View All 2041 Services <ArrowRight className="w-5 h-5" /> </a> </motion && motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-6" > Leading the Future </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > See how industry leaders are transforming their businesses with our revolutionary 2041 services. </p> </motion && motion.div> <motion && motion.div > {;
+}</motion && motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion && motion.div> </div> </section> </main> </Layout>) ;
+}</motion && motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion && motion.div> </div> </section> </main> </Layout>) ;
+export default Homepage2041;  );
+
+
+export default Homepage2041;
+
+
+                      <Star;
+                      <Star key={i} className="w - 5 h - 5 text - yellow - 400 fill - current" />))}
+                <Link;
+                  <Sparkles className='w - 6 h - 6' />;
+                </Link>;
+                <Link;
+                  <Target className='w - 6 h - 6' />                  Explore Services                Ready to Shape the Future?;
+                <Link;
+                  <Sparkles className="w - 6 h - 6" />;
+                </Link>;
+                <Link;
+                  <Target className="w - 6 h - 6" />;
+                </Link>;
+    </Layout>);
+
+}<motion.div > <Link href="/2041 - futuristic - services - showcase" className="px - 10 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - 2xl font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 flex items - center gap - 3" > <Rocket className="w - 6 h - 6" /> Explore 2041 Services <ArrowRight className="w - 5 h - 5" /> </a> <Link href="/contact" className="px - 10 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 rounded - 2xl font - semibold hover:bg - cyan - 500 / 10 transition - all duration - 300 flex items - center gap - 3" > <Users className="w - 6 h - 6" /> Start Your Journey </a> </motion.div> </motion.div> </div> </section> > {
+}> <UltraFuturisticServiceCard2026 service= {
+}</motion.div> <motion.div > <Link href="/2041 - futuristic - services - showcase" className="inline - flex items - center gap - 3 px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 600 text - white rounded - 2xl font - semibold hover:from - purple - 600 hover:to - pink - 700 transition - all duration - 300 transform hover:scale - 105" > <Eye className="w - 5 h - 5" /> View All 2041 Services <ArrowRight className="w - 5 h - 5" /> </a> </motion.div> </div> </section> > <h2 className="text - 5xl md:text - 6xl font - bold text - white mb - 6" > Leading the Future </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > See how industry leaders are transforming their businesses with our revolutionary 2041 services. </p> </motion.div> <motion.div > {
+
+}</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>) 
+}</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>) 
+

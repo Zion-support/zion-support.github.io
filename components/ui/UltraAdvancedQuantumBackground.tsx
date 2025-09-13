@@ -1,8 +1,97 @@
 import React from 'react';
 
-const UltraAdvancedQuantumBackground: React.FC = () => {
-  // Temporarily simplified to avoid build issues
-  return <div className="sr-only">UltraAdvancedQuantumBackground temporarily disabled</div>;
-};
 
 export default UltraAdvancedQuantumBackground;
+
+
+
+
+
+
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({ 
+
+
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default UltraAdvancedQuantumBackground;            ease: "linear",
+export default UltraAdvancedQuantumBackground);
+export default UltraAdvancedQuantumBackground;
+
+
