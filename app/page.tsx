@@ -155,10 +155,6 @@ import NewContentPromotionBanner2026 from '../components/NewContentPromotionBann
 import NewContent2026PromotionalBanner from '../components/NewContent2026PromotionalBanner';
 import NewContentDiscoveryWidget2026 from '../components/NewContentDiscoveryWidget2026';
 
-// New 2025 content promotion components
-import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
-import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
-
 // Import new 2025 ultimate content components
 import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
@@ -309,23 +305,6 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2025 PROMOTION BANNER - LATEST RELEASES */}
         <NewContent2025PromotionBanner />
-        
-        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
-        <div className="bg-gray-50 py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <InteractiveContentDiscoveryWidget2025 />
-          </div>
-        </div>
-        
-        {/* NEWSLETTER SIGNUP 2025 */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <NewsletterSignup2025 />
-          </div>
-        </div>
-        
-        {/* ULTIMATE SERVICES SHOWCASE 2025 */}
-        <UltimateServicesShowcase2025 />
         
         {/* LATEST CONTENT SHOWCASE 2025 */}
         <LatestContentShowcase2025 />
@@ -970,8 +949,6 @@ export default function HomePage() {
         <NewContent2025BreakthroughBanner />
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
-=======
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
         <AI2025UltimateBreakthroughRevolutionBanner />
         
         {/* NEW: AI 2026 BREAKTHROUGH REVOLUTIONARY CONTENT BANNER */}
