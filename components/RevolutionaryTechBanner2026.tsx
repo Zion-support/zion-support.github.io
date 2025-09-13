@@ -1,132 +1,111 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Cpu, Database, Cloud, Lock, Zap, Target } from 'lucide-react';
+import { motion } from 'react';
+import { ArrowRight, Sparkles, Cpu, Brain, Zap, Globe, Shield, Rocket } from 'lucide-react';
 
 const RevolutionaryTechBanner2026 = () => {
   const technologies = [
     {
+      icon: <Brain className="w-6 h-6" />,
+      title: "Neural AI",
+      description: "Advanced neural networks with consciousness-level processing"
+    },
+    {
       icon: <Cpu className="w-6 h-6" />,
       title: "Quantum Computing",
-      description: "Next-generation quantum processors for complex problem solving"
+      description: "Breakthrough quantum processors for complex problem solving"
     },
     {
-      icon: <Database className="w-6 h-6" />,
-      title: "Neural Networks",
-      description: "Advanced AI models with unprecedented learning capabilities"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Edge AI",
+      description: "Ultra-fast AI processing at the edge of networks"
     },
     {
-      icon: <Cloud className="w-6 h-6" />,
-      title: "Edge Computing",
-      description: "Distributed processing for real-time decision making"
+      icon: <Globe className="w-6 h-6" />,
+      title: "Global Mesh",
+      description: "Worldwide distributed computing infrastructure"
     },
     {
-      icon: <Lock className="w-6 h-6" />,
-      title: "Blockchain Security",
-      description: "Immutable security protocols for enterprise applications"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Quantum Security",
+      description: "Unbreakable encryption using quantum principles"
+    },
+    {
+      icon: <Rocket className="w-6 h-6" />,
+      title: "Space Tech",
+      description: "Revolutionary space-based computing solutions"
     }
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-black/20"></div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl"></div>
+    <section className="py-16 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Cpath d="M50 50c0-27.614 22.386-50 50-50v100c-27.614 0-50-22.386-50-50z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6">
-            <Sparkles className="w-4 h-4 mr-2" />
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-medium mb-6">
+            <Sparkles className="w-5 h-5 mr-2" />
             REVOLUTIONARY TECH 2026
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             The Future of Technology
-            <span className="block bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               Starts Here
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Experience cutting-edge technologies that will define the next decade. 
-            From quantum computing to neural interfaces, we're building tomorrow's solutions today.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Experience the most advanced technological breakthroughs that will define the next decade of innovation.
           </p>
         </motion.div>
 
         {/* Technology Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
           {technologies.map((tech, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all duration-300 group"
             >
-              <div className="text-blue-400 mb-4">
+              <div className="text-purple-400 mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center">
                 {tech.icon}
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">
-                {tech.title}
-              </h3>
-              <p className="text-gray-300 text-sm">
-                {tech.description}
-              </p>
+              <h3 className="text-sm font-semibold text-white mb-2">{tech.title}</h3>
+              <p className="text-xs text-gray-300">{tech.description}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Key Features */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10"
-        >
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">10x Performance</h3>
-              <p className="text-gray-300">Revolutionary speed improvements over traditional systems</p>
-            </div>
-            <div>
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">99.9% Accuracy</h3>
-              <p className="text-gray-300">Unprecedented precision in AI decision making</p>
-            </div>
-            <div>
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Lock className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Military Grade</h3>
-              <p className="text-gray-300">Enterprise-level security and compliance</p>
-            </div>
-          </div>
-        </motion.div>
-
         {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mt-12"
+          className="text-center"
         >
-          <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center mx-auto">
-            Explore 2026 Technologies
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </button>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Be Among the First to Experience 2026 Technology
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Join our exclusive beta program and get early access to revolutionary solutions.
+            </p>
+            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center mx-auto group">
+              Join Beta Program
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
         </motion.div>
       </div>
     </section>
