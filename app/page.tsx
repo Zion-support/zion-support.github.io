@@ -77,6 +77,13 @@ import AI2026BreakthroughBanner from '../components/AI2026BreakthroughBanner';
 import AI2025UltimateAutomationRevolutionBanner from '../components/AI2025UltimateAutomationRevolutionBanner';
 import AI2026QuantumNeuralFusionBanner from '../components/AI2026QuantumNeuralFusionBanner';
 
+// New 2025 Autonomous Revolution Banner
+import NewContent2025AutonomousRevolutionBanner from '../components/NewContent2025AutonomousRevolutionBanner';
+
+// New 2035-2040 components
+import AI2035SingularityBreakthrough from '../components/AI2035SingularityBreakthrough';
+import AI2040OmniversalConsciousness from '../components/AI2040OmniversalConsciousness';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -108,6 +115,9 @@ export default function HomePage() {
         
         {/* FEATURED CONTENT SHOWCASE 2025 */}
         <FeaturedContentShowcase2025 />
+        
+        {/* NEW 2025 AUTONOMOUS REVOLUTION BANNER */}
+        <NewContent2025AutonomousRevolutionBanner />
         
         {/* AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
