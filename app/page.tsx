@@ -185,6 +185,10 @@ import UltimateContentShowcase2026PromotionBanner from '../components/UltimateCo
 import InteractiveAIToolsDemo2026 from '../components/InteractiveAIToolsDemo2026';
 import InteractiveAIToolsDemo2026PromotionBanner from '../components/InteractiveAIToolsDemo2026PromotionBanner';
 
+// Import new content promotion banners
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import AI2025UltimateContentShowcaseBanner from '../components/AI2025UltimateContentShowcaseBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -196,6 +200,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW: AI 2025 ULTIMATE CONTENT SHOWCASE BANNER */}
+        <AI2025UltimateContentShowcaseBanner />
+        
+        {/* NEW: CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
         {/* NEW: AI 2026 FUTURE PREDICTIONS ULTIMATE PROMOTION BANNER */}
         <AI2026FuturePredictionsUltimatePromotionBanner />
         
