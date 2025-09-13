@@ -88,10 +88,8 @@ export class AIMarketResearchService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(request),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(request)});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -111,10 +109,8 @@ export class AIMarketResearchService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(request),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(request)});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -134,10 +130,8 @@ export class AIMarketResearchService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(request),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(request)});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -157,10 +151,8 @@ export class AIMarketResearchService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(request),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(request)});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -178,9 +170,7 @@ export class AIMarketResearchService {
     try {
       const response = await fetch(`${this.baseUrl}/api/market-research/realtime?keyword=${encodeURIComponent(keyword)}`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-        },
-      });
+          'Authorization': `Bearer ${this.apiKey}`}});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -200,10 +190,8 @@ export class AIMarketResearchService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ format }),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify({ format })});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -223,10 +211,8 @@ export class AIMarketResearchService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ ...request, schedule }),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify({ ...request, schedule })});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

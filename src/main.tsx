@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
-<<<<<<< HEAD
-import '../styles/globals.css';
-=======
 import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -13,7 +10,6 @@ import { SnackbarProvider } from 'notistack';
 import { captureException } from '@/utils/sentry';
 import { useTranslation } from 'react-i18next';
 // Removed ToastInitializer import as it doesn't exist
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
 
 // Import i18n configuration
 import './i18n';
@@ -98,4 +94,16 @@ try {
   }
 }
 
+<<<<<<< HEAD
 registerServiceWorker();
+=======
+registerServiceWorker();
+=======
+
+import './index.css';
+,
+ReactDOM.createRoot(document.getElementById('root')!).render(,
+  <React.StrictMode>,
+    <App />,
+  </React.StrictMode>),
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

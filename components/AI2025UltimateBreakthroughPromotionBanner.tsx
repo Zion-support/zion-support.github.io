@@ -3,53 +3,57 @@ import Link from 'next/link';
 
 export default function AI2025UltimateBreakthroughPromotionBanner() {
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 text-white py-12 px-4">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 border border-red-400/30 mb-6">
-            <span className="text-red-300 font-semibold text-sm animate-pulse">🚀 BREAKTHROUGH ANNOUNCEMENT</span>
+          <div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
+            🔥 BREAKTHROUGH ANNOUNCEMENT 🔥
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
-            AI 2025 Ultimate Breakthrough Revolution
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-cyan-400 bg-clip-text text-transparent">
+            AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION
           </h2>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover the most revolutionary AI breakthroughs of 2025, delivering unprecedented 10,000% ROI and 99.9% accuracy across all industries.
+          <p className="text-xl md:text-2xl mb-8 text-gray-100 max-w-5xl mx-auto">
+            The most revolutionary AI breakthrough in human history! Experience 10,000% ROI with autonomous operations, quantum-AI fusion, and transcendent intelligence that transforms reality itself.
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">10,000%</div>
-              <div className="text-sm text-gray-300">ROI Potential</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-black bg-opacity-30 p-6 rounded-xl border border-yellow-400">
+              <div className="text-3xl font-bold text-yellow-400 mb-2">10,000%</div>
+              <div className="text-lg font-semibold">ROI Achieved</div>
+              <div className="text-sm text-gray-300">In just 6 months</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">99.9%</div>
-              <div className="text-sm text-gray-300">Accuracy Rate</div>
+            <div className="bg-black bg-opacity-30 p-6 rounded-xl border border-cyan-400">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-lg font-semibold">Accuracy</div>
+              <div className="text-sm text-gray-300">Autonomous operations</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">1000x</div>
-              <div className="text-sm text-gray-300">Speed Improvement</div>
+            <div className="bg-black bg-opacity-30 p-6 rounded-xl border border-purple-400">
+              <div className="text-3xl font-bold text-purple-400 mb-2">∞</div>
+              <div className="text-lg font-semibold">Potential</div>
+              <div className="text-sm text-gray-300">Transcendent intelligence</div>
             </div>
           </div>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/ai-2025-ultimate-breakthrough-revolution" 
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/ai-2025-ultimate-breakthrough-revolution"
+              className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-xl hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
             >
-              Explore Breakthroughs
+              🚀 Experience the Revolution
             </Link>
             <Link 
-              href="/case-studies/ai-2025-global-transformation-breakthrough" 
-              className="bg-transparent border-2 border-white hover:bg-white hover:text-purple-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg"
+              href="/case-studies/ai-2025-global-transformation-breakthrough"
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-8 py-4 rounded-lg font-bold text-xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"
             >
-              View Success Stories
+              🏆 See Success Story
+            </Link>
+            <Link 
+              href="/webinars/ai-2025-revolutionary-breakthroughs"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-black px-8 py-4 rounded-lg font-bold text-xl hover:from-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105"
+            >
+              🔥 Watch Demo
             </Link>
           </div>
-          
-          <div className="mt-8 text-sm text-gray-400">
-            Join thousands of companies already experiencing the AI 2025 revolution
+          <div className="mt-6 text-sm text-gray-200">
+            ⚡ Limited Time: Join the AI revolution that's transforming businesses worldwide!
           </div>
         </div>
       </div>

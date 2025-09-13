@@ -1,76 +1,96 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-export default function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const navItems = [
-    { href: '/explore', label: 'Explore' },
-    { href: '/automation', label: 'Automation' },
-    { href: '/reports', label: 'Reports' },
-    { href: '/components', label: 'Components' },
-    { href: '/newsroom', label: 'Newsroom' },
-    { href: '/search', label: 'Search' },
-  ];
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50">
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 rounded bg-white px-3 py-2 text-slate-900">Skip to content</a>
-      <div className="backdrop-blur supports-[backdrop-filter]:bg-black/30 bg-black/50 border-b border-white/10">
-        <nav className="mx-auto max-w-7xl px-6">
-          <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Link href="/" className="inline-flex items-center gap-2">
-                <span className="text-xl font-extrabold tracking-wide bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
-              </Link>
-              <span className="hidden text-xs text-white/60 sm:inline">Autonomous Cloud Automations</span>
+    <header className="bg-white shadow-lg">
+      {/* Top Bar */}
+      <div className="bg-blue-900 text-white py-2">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
+            <div className="flex items-center space-x-6 mb-2 md:mb-0">
+              <div className="flex items-center">
+                <Phone className="w-4 h-4 mr-2" />
+                <a href="tel:+13024640950" className="hover:text-blue-300">+1 302 464 0950</a>
+              </div>
+              <div className="flex items-center">
+                <Mail className="w-4 h-4 mr-2" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">kleber@ziontechgroup.com</a>
+              </div>
             </div>
-
-            <div className="hidden items-center gap-6 md:flex">
-              {navItems.map((item) => (
-                <Link key={item.href} href={item.href} className="text-white/80 hover:text-white transition-colors">
-                  {item.label}
-                </Link>
-              ))}
-              <Link href="/main/front#features" className="rounded-lg bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-1.5 text-sm font-semibold shadow-[0_0_20px_rgba(34,211,238,0.35)] hover:shadow-[0_0_28px_rgba(34,211,238,0.6)] transition-shadow">
-                Get Started
-              </Link>
+            <div className="flex items-center space-x-4">
+              <span className="text-blue-200">24/7 Support Available</span>
+              <div className="flex space-x-2">
+                <a href="#" className="hover:text-blue-300"><Facebook className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-blue-300"><Twitter className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-blue-300"><Linkedin className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-blue-300"><Instagram className="w-4 h-4" /></a>
+              </div>
             </div>
-
-            <button
-              aria-label="Toggle navigation menu"
-              className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 bg-white/10 text-white/90 hover:bg-white/15"
-              aria-expanded={mobileOpen}
-              aria-controls="mobile-nav"
-              onClick={() => setMobileOpen((v) => !v)}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                {mobileOpen ? (
-                  <path d="M18 6L6 18M6 6l12 12" />
-                ) : (
-                  <path d="M3 12h18M3 6h18M3 18h18" />
-                )}
-              </svg>
-            </button>
           </div>
-        </nav>
-        {mobileOpen && (
-          <div id="mobile-nav" className="md:hidden border-t border-white/10">
-            <div className="mx-auto max-w-7xl px-6 py-3 grid gap-3">
-              {navItems.map((item) => (
-                <Link key={item.href} href={item.href} className="rounded-md px-3 py-2 text-white/90 hover:bg-white/10">
-                  {item.label}
-                </Link>
-              ))}
-              <Link href="/main/front#features" className="rounded-md bg-white/90 px-3 py-2 text-center font-semibold text-slate-900 hover:bg-white">
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <nav className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">Z</span>
+            </div>
+            <div>
+              <div className="text-xl font-bold text-gray-900">Zion Tech Group</div>
+              <div className="text-xs text-gray-500">Technology Solutions</div>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
+            <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium">Services</Link>
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium">About</Link>
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">Contact</Link>
+            <Link href="/blog" className="text-gray-700 hover:text-blue-600 font-medium">Blog</Link>
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden pb-4">
+            <div className="flex flex-col space-y-4">
+              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
+              <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium">Services</Link>
+              <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium">About</Link>
+              <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">Contact</Link>
+              <Link href="/blog" className="text-gray-700 hover:text-blue-600 font-medium">Blog</Link>
+              <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors text-center">
                 Get Started
               </Link>
             </div>
           </div>
         )}
-      </div>
+      </nav>
     </header>
   );
-}
+};
 
-
+export default Header;

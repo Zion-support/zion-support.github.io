@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface SEOProps {
   author?: string;
@@ -124,10 +125,39 @@ export function SEO({ title, description, keywords, canonical, noindex = false }
       {keywords && <meta name="keywords" content={keywords} />}
       {canonical && <link rel="canonical" href={canonical} />}
       {noindex && <meta name="robots" content="noindex, nofollow" />}
+=======
+import React from 'react';
+import Head from 'next/head';
+
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  url?: string;
+  image?: string;
+  type?: string;
+}
+
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - AI & Technology Solutions',
+  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
+  keywords = 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
+  url = '',
+  image = '/images/og-image.jpg',
+  type = 'website'
+}) => {
+  return (
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       
       {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+<<<<<<< HEAD
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <title>{fullTitle}</title>
@@ -145,10 +175,16 @@ export function SEO({ title, description, keywords, canonical, noindex = false }
         <meta key={tag} property="article:tag" content={tag} />
       ))}
       
+=======
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
+<<<<<<< HEAD
       <meta name="twitter:description" content={description} />
       
       
@@ -241,5 +277,15 @@ export function SEO({ title, description, keywords, canonical, noindex = false }
       
       
     </Helmet>
+=======
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      
+      {/* Canonical URL */}
+      {url && <link rel="canonical" href={url} />}
+    </Head>
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   );
 };
+
+export default SEO;
