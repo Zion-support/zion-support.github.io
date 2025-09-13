@@ -1,301 +1,195 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
   Building2, 
-  TrendingUp, 
-  DollarSign, 
-  Users,
   ArrowRight, 
-  X,
-  CheckCircle,
+  TrendingUp, 
+  Users, 
   Zap,
-  BarChart3,
-  Shield,
-  Award,
-  Clock
+  X,
+  Play,
+  Star,
+  CheckCircle
 } from 'lucide-react';
 
 const BusinessSolutionsShowcase2025PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
-  const [currentMetric, setCurrentMetric] = useState(0);
-
-  const metrics = [
-    { label: 'ROI', value: '300%', icon: TrendingUp, color: 'text-green-500' },
-    { label: 'Cost Savings', value: '$2.5B+', icon: DollarSign, color: 'text-blue-500' },
-    { label: 'Companies', value: '10K+', icon: Building2, color: 'text-purple-500' },
-    { label: 'Satisfaction', value: '98%', icon: Award, color: 'text-yellow-500' }
-  ];
-
-  const solutions = [
-    { name: 'Automation', icon: Zap, color: 'from-blue-500 to-cyan-500' },
-    { name: 'Analytics', icon: BarChart3, color: 'from-purple-500 to-pink-500' },
-    { name: 'Security', icon: Shield, color: 'from-green-500 to-emerald-500' }
-  ];
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 3000);
+    const timer = setTimeout(() => setIsVisible(true), 2000);
     return () => clearTimeout(timer);
   }, []);
-
-  useEffect(() => {
-    if (isVisible) {
-      const interval = setInterval(() => {
-        setCurrentMetric((prev) => (prev + 1) % metrics.length);
-      }, 2500);
-      return () => clearInterval(interval);
-    }
-  }, [isVisible, metrics.length]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  const containerVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: -100,
-      scale: 0.9
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15,
-        duration: 0.8
-      }
-    },
-    exit: {
-      opacity: 0,
-      y: -100,
-      scale: 0.9,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-
-  const textVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: 0.3,
-        duration: 0.6
-      }
-    }
-  };
-
-  const buttonVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delay: 0.6,
-        duration: 0.4
-      }
-    }
-  };
 
   if (isDismissed) return null;
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-2xl"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between py-4">
-              {/* Left Content */}
-              <motion.div 
-                className="flex items-center space-x-4 flex-1"
-                variants={textVariants}
+    <motion.div
+      initial={{ opacity: 0, y: -100 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      exit={{ opacity: 0, y: -100 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-900 via-green-900 to-emerald-900 border-b border-white/20 backdrop-blur-sm"
+    >
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            {/* Animated Icon */}
+            <motion.div
+              animate={{ 
+                rotate: [0, 5, -5, 0],
+                scale: [1, 1.1, 1]
+              }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="relative"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center">
+                <Building2 className="w-6 h-6 text-white" />
+              </div>
+              <motion.div
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  opacity: [0.7, 1, 0.7]
+                }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
               >
-                <div className="flex items-center space-x-3">
-                  <motion.div
-                    className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
-                    animate={{ 
-                      rotate: [0, 360],
-                      scale: [1, 1.1, 1]
-                    }}
-                    transition={{ 
-                      duration: 4, 
-                      repeat: Infinity, 
-                      ease: "easeInOut" 
-                    }}
-                  >
-                    <Building2 className="w-6 h-6 text-white" />
-                  </motion.div>
-                  <div>
-                    <h3 className="text-lg font-bold mb-1">
-                      🏢 Business Solutions 2025
-                    </h3>
-                    <p className="text-sm opacity-90 hidden sm:block">
-                      Transform your operations with proven solutions
-                    </p>
-                  </div>
-                </div>
+                <TrendingUp className="w-2 h-2 text-white" />
               </motion.div>
+            </motion.div>
 
-              {/* Center Metrics Rotator */}
-              <motion.div 
-                className="hidden md:flex items-center space-x-6"
-                variants={textVariants}
+            {/* Content */}
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="bg-gradient-to-r from-green-400 to-emerald-400 text-black px-2 py-1 rounded text-xs font-bold">
+                  BUSINESS SOLUTIONS
+                </span>
+                <span className="text-white font-semibold text-sm">
+                  Transform Your Operations 2025
+                </span>
+              </div>
+              <p className="text-gray-300 text-sm">
+                AI-powered automation • Advanced analytics • Enterprise security • 
+                <span className="text-blue-300 font-semibold"> Boost productivity by 300%</span>
+              </p>
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex items-center gap-3">
+            {/* Feature Icons */}
+            <div className="hidden md:flex items-center gap-2">
+              <motion.div
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+                className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center"
               >
-                <div className="text-center">
-                  <div className="text-sm opacity-80 mb-1">Live Results</div>
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={currentMetric}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      transition={{ duration: 0.5 }}
-                      className="flex items-center space-x-2"
-                    >
-                      <div className={`w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center`}>
-                        {React.createElement(metrics[currentMetric].icon, { 
-                          className: `w-4 h-4 ${metrics[currentMetric].color}` 
-                        })}
-                      </div>
-                      <div>
-                        <div className="text-2xl font-bold">{metrics[currentMetric].value}</div>
-                        <div className="text-xs opacity-80">{metrics[currentMetric].label}</div>
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-                <div className="w-px h-8 bg-white/30"></div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold">30</div>
-                  <div className="text-xs opacity-80">Days to Value</div>
-                </div>
-                <div className="w-px h-8 bg-white/30"></div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold">24/7</div>
-                  <div className="text-xs opacity-80">Support</div>
-                </div>
+                <Zap className="w-4 h-4 text-white" />
               </motion.div>
-
-              {/* Right Actions */}
-              <motion.div 
-                className="flex items-center space-x-3"
-                variants={buttonVariants}
+              <motion.div
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+                className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center"
               >
-                <button className="hidden sm:flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all duration-200 backdrop-blur-sm">
-                  <Users className="w-4 h-4" />
-                  <span className="text-sm font-medium">Case Studies</span>
-                </button>
-                
-                <button className="bg-white text-indigo-600 hover:bg-gray-100 px-6 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center space-x-2 shadow-lg">
-                  <span>Explore Solutions</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-                
-                <button 
-                  onClick={handleDismiss}
-                  className="p-2 hover:bg-white/20 rounded-lg transition-colors"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+                <TrendingUp className="w-4 h-4 text-white" />
+              </motion.div>
+              <motion.div
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"
+              >
+                <Users className="w-4 h-4 text-white" />
               </motion.div>
             </div>
 
-            {/* Mobile Content */}
-            <motion.div 
-              className="md:hidden flex items-center justify-between py-2 border-t border-white/20"
-              variants={textVariants}
-            >
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-2">
-                  <motion.div
-                    className={`w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center`}
-                    key={currentMetric}
-                    initial={{ scale: 0.8 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {React.createElement(metrics[currentMetric].icon, { 
-                      className: `w-3 h-3 ${metrics[currentMetric].color}` 
-                    })}
-                  </motion.div>
-                  <span className="text-sm font-medium">{metrics[currentMetric].value}</span>
-                </div>
-                <div className="w-px h-4 bg-white/30"></div>
-                <div className="flex items-center space-x-1">
-                  <Clock className="w-4 h-4" />
-                  <span className="text-sm">30 Days to Value</span>
-                </div>
+            {/* Success Metrics */}
+            <div className="hidden lg:flex items-center gap-4 text-xs text-gray-300">
+              <div className="flex items-center gap-1">
+                <CheckCircle className="w-3 h-3 text-green-400" />
+                <span>10,000+ Companies</span>
               </div>
-              <div className="flex items-center space-x-2">
-                {solutions.map((solution, index) => (
-                  <div
-                    key={index}
-                    className={`w-6 h-6 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center`}
-                  >
-                    {React.createElement(solution.icon, { className: "w-3 h-3 text-white" })}
-                  </div>
-                ))}
+              <div className="flex items-center gap-1">
+                <Star className="w-3 h-3 text-yellow-400" />
+                <span>99.8% Success Rate</span>
               </div>
-            </motion.div>
-          </div>
+            </div>
 
-          {/* Animated Background Elements */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <motion.div
-              className="absolute -top-4 -left-4 w-24 h-24 bg-white/10 rounded-full"
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.3, 0.6, 0.3]
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-            <motion.div
-              className="absolute -bottom-4 -right-4 w-32 h-32 bg-white/5 rounded-full"
-              animate={{
-                scale: [1, 1.3, 1],
-                opacity: [0.2, 0.4, 0.2]
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1
-              }}
-            />
-            <motion.div
-              className="absolute top-1/2 left-1/2 w-16 h-16 bg-white/8 rounded-full"
-              animate={{
-                scale: [1, 1.5, 1],
-                opacity: [0.1, 0.3, 0.1]
-              }}
-              transition={{
-                duration: 2.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 0.5
-              }}
-            />
+            {/* CTA Button */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-6 py-2 rounded-lg font-semibold text-sm flex items-center gap-2 hover:from-blue-700 hover:to-green-700 transition-all duration-300"
+            >
+              <Play className="w-4 h-4" />
+              Get Started
+              <ArrowRight className="w-4 h-4" />
+            </motion.button>
+
+            {/* Dismiss Button */}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setIsDismissed(true)}
+              className="text-gray-400 hover:text-white transition-colors p-1"
+            >
+              <X className="w-5 h-5" />
+            </motion.button>
           </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+        </div>
+
+        {/* Progress Bar */}
+        <motion.div
+          initial={{ width: "100%" }}
+          animate={{ width: "0%" }}
+          transition={{ duration: 25, ease: "linear" }}
+          className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-green-500"
+        />
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div
+          animate={{
+            y: [0, -8, 0],
+            opacity: [0.3, 0.7, 0.3]
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-2 left-1/4 w-2 h-2 bg-blue-400 rounded-full"
+        />
+        <motion.div
+          animate={{
+            y: [0, 8, 0],
+            opacity: [0.3, 0.7, 0.3]
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
+          className="absolute top-4 right-1/3 w-1 h-1 bg-green-400 rounded-full"
+        />
+        <motion.div
+          animate={{
+            y: [0, -6, 0],
+            opacity: [0.3, 0.7, 0.3]
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+          className="absolute top-3 right-1/4 w-1.5 h-1.5 bg-emerald-400 rounded-full"
+        />
+      </div>
+    </motion.div>
   );
 };
 
