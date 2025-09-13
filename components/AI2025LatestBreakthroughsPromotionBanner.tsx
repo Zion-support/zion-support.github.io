@@ -1,97 +1,157 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Zap, Brain, Cpu, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
 
 const AI2025LatestBreakthroughsPromotionBanner: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16">
-      <div className="absolute inset-0 bg-black/20"></div>
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-blue-500/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-purple-500/20 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500/20 rounded-full animate-pulse delay-500"></div>
+        <div className="absolute bottom-10 right-1/3 w-8 h-8 bg-cyan-500/20 rounded-full animate-pulse delay-700"></div>
+      </div>
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            <Sparkles className="w-4 h-4" />
-            NEW: AI 2025 Breakthroughs
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 mb-6">
+            <Sparkles className="w-5 h-5 text-blue-400 mr-2" />
+            <span className="text-blue-300 text-sm font-medium">Latest AI Breakthroughs 2025</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Revolutionary AI Breakthroughs
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              Transforming 2025
+          
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Revolutionary AI Solutions
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Transforming Business Operations
             </span>
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover the latest AI innovations that are reshaping industries, from autonomous systems to quantum-enhanced machine learning. 
-            Experience breakthrough technologies delivering unprecedented performance and capabilities.
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Discover the latest AI breakthroughs that are revolutionizing how businesses operate, 
+            from neural computing to quantum AI applications. Stay ahead of the competition with 
+            cutting-edge technology solutions.
           </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <Link 
+              to="/blog/ai-2025-next-generation-business-automation"
+              className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+            >
+              <Zap className="w-5 h-5 mr-2" />
+              Explore AI Automation
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            
+            <Link 
+              to="/blog/quantum-computing-business-applications-2025"
+              className="group inline-flex items-center px-8 py-4 bg-transparent border-2 border-purple-400 hover:bg-purple-400/10 text-purple-300 hover:text-white font-semibold rounded-lg transition-all duration-300"
+            >
+              <TrendingUp className="w-5 h-5 mr-2" />
+              Quantum Computing
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-              <Brain className="w-6 h-6 text-white" />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Neural Synthesis</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Advanced neural networks achieving 99.9% accuracy in complex decision-making processes.
-            </p>
-            <div className="text-yellow-400 font-semibold text-sm">+2,500% Performance</div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
+        {/* Featured content grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
               <Zap className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Quantum AI</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Quantum-enhanced algorithms processing data 10,000x faster than traditional systems.
+            <h3 className="text-xl font-semibold text-white mb-3">AI Automation Revolution</h3>
+            <p className="text-gray-300 mb-4">
+              Next-generation business automation delivering unprecedented efficiency and competitive advantages.
             </p>
-            <div className="text-yellow-400 font-semibold text-sm">10,000x Speed</div>
+            <Link 
+              to="/blog/ai-2025-next-generation-business-automation"
+              className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium group-hover:translate-x-1 transition-transform"
+            >
+              Read More <ArrowRight className="w-4 h-4 ml-1" />
+            </Link>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
-              <Cpu className="w-6 h-6 text-white" />
+          <div className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+            <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+              <TrendingUp className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Autonomous Systems</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Self-managing AI systems operating with 99.9% uptime and zero human intervention.
+            <h3 className="text-xl font-semibold text-white mb-3">Quantum Computing</h3>
+            <p className="text-gray-300 mb-4">
+              Business applications of quantum computing revolutionizing optimization and cryptography.
             </p>
-            <div className="text-yellow-400 font-semibold text-sm">99.9% Uptime</div>
+            <Link 
+              to="/blog/quantum-computing-business-applications-2025"
+              className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:translate-x-1 transition-transform"
+            >
+              Explore Now <ArrowRight className="w-4 h-4 ml-1" />
+            </Link>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+          <div className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+            <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
               <Sparkles className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Edge Intelligence</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Real-time AI processing at the edge with ultra-low latency and maximum efficiency.
+            <h3 className="text-xl font-semibold text-white mb-3">Neural Computing</h3>
+            <p className="text-gray-300 mb-4">
+              The 2026 neural computing revolution transforming business with brain-inspired AI systems.
             </p>
-            <div className="text-yellow-400 font-semibold text-sm">Ultra-Low Latency</div>
+            <Link 
+              to="/blog/ai-2026-neural-computing-revolution"
+              className="inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium group-hover:translate-x-1 transition-transform"
+            >
+              Learn More <ArrowRight className="w-4 h-4 ml-1" />
+            </Link>
           </div>
         </div>
 
-        <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              to="/ai-2025-breakthroughs" 
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center gap-2"
-            >
-              Explore Breakthroughs
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link 
-              to="/case-studies" 
-              className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/30 transition-all duration-300 border border-white/30"
-            >
-              View Success Stories
-            </Link>
+        {/* Success story highlight */}
+        <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-400/20 rounded-xl p-8 text-center">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-400/30 mb-4">
+            <TrendingUp className="w-5 h-5 text-green-400 mr-2" />
+            <span className="text-green-300 text-sm font-medium">Success Story</span>
           </div>
-          <p className="text-gray-400 text-sm mt-4">
-            Join 10,000+ companies already transforming with AI 2025 breakthroughs
+          
+          <h3 className="text-2xl font-bold text-white mb-4">
+            Enterprise AI Transformation: 300% ROI Achieved
+          </h3>
+          
+          <p className="text-gray-300 mb-6 max-w-3xl mx-auto">
+            Discover how a Fortune 500 company achieved remarkable success through comprehensive AI transformation, 
+            resulting in 300% ROI and industry-leading efficiency.
           </p>
+          
+          <Link 
+            to="/case-studies/enterprise-ai-transformation-2025-success"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300"
+          >
+            <TrendingUp className="w-5 h-5 mr-2" />
+            Read Success Story
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+
+        {/* Stats section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-blue-400 mb-2">300%</div>
+            <div className="text-gray-300 text-sm">Average ROI</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
+            <div className="text-gray-300 text-sm">Cost Reduction</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
+            <div className="text-gray-300 text-sm">Accuracy Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
+            <div className="text-gray-300 text-sm">Autonomous Operation</div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

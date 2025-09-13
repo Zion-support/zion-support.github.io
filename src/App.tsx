@@ -141,6 +141,7 @@ const InteractiveContentDiscovery2026Page = () => <InteractiveContentDiscovery20
 // New blog posts
 const BlogPostQuantumAI = React.lazy(() => import('./pages/BlogPostQuantumAI'));
 const BlogPostAutomationGuide = React.lazy(() => import('./pages/BlogPostAutomationGuide'));
+const BlogPostAIAutomation2025 = React.lazy(() => import('./pages/BlogPostAIAutomation2025'));
 
 // New case studies
 const CaseStudyHealthcareAI = React.lazy(() => import('./pages/CaseStudyHealthcareAI'));
@@ -341,6 +342,8 @@ function App() {
               {/* New blog post routes */}
               <Route path="/blog/quantum-ai-breakthrough-2025" element={<BlogPostQuantumAI />} />
               <Route path="/blog/ai-automation-enterprise-guide-2025" element={<BlogPostAutomationGuide />} />
+              <Route path="/blog/ai-2025-next-generation-business-automation" element={<BlogPostAIAutomation2025 />} />
+              <Route path="/blog/quantum-computing-business-applications-2025" element={<BlogPostAIAutomation2025 />} />
               <Route path="/blog/ai-2026-neural-computing-revolution" element={<InteractiveContentDiscovery2026Page />} />
               <Route path="/blog/quantum-ai-autonomous-systems-2026" element={<InteractiveContentDiscovery2026Page />} />
               

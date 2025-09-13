@@ -140,6 +140,7 @@ import AI2028FutureTechPromotionBanner from '../components/AI2028FutureTechPromo
 
 // New 2025 Content Promotion Components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import AI2025LatestBreakthroughsPromotionBanner from '../components/AI2025LatestBreakthroughsPromotionBanner';
 import ContentROICalculator from '../components/ContentROICalculator';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
@@ -265,6 +266,16 @@ const HomePage: React.FC = () => {
               {/* Hero Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <HeroPromotionBanner />
+              </Suspense>
+
+              {/* AI 2025 Latest Breakthroughs Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025LatestBreakthroughsPromotionBanner />
+              </Suspense>
+
+              {/* New Content 2025 Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewContent2025PromotionBanner />
               </Suspense>
 
               {/* New 2025 Enterprise Content Promotion Banner */}
