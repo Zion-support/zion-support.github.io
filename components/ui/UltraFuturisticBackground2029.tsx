@@ -1,11 +1,27 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-interface UltraFuturisticBackground2029Props {
-  children: React.ReactNode;
-}
 
 export default function UltraFuturisticBackground2029({ children }: UltraFuturisticBackground2029Props) {
+
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+
+
+
+
+}) {  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<Particle[]>([]);
+  const energyFieldsRef = useRef<EnergyField[]>([]);
+
+
+
+export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
+
+
+
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -31,16 +47,22 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
       opacity: number;
     }> = [];
 
-    // Initialize particles
-    for (let i = 0; i < 100; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 1,
-        color: `hsl(${200 + Math.random() * 60}, 70%, 60%)`,
-        opacity: Math.random() * 0.5 + 0.3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       });
     }
 
@@ -64,7 +86,13 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
 
         // Draw particle with glow effect
         ctx.save();
-        ctx.globalAlpha = particle.opacity;
+
+        
+
+export default /**
+
+
+
         
         // Outer glow
         ctx.shadowColor = particle.color;
@@ -101,47 +129,45 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.stroke();
           }
-        }
-      }
 
-      // Draw quantum waves
-      ctx.strokeStyle = 'rgba(139, 92, 246, 0.2)';
-      ctx.lineWidth = 2;
       
-      for (let i = 0; i < 5; i++) {
-        const waveY = canvas.height * 0.5 + Math.sin(time + i) * 50;
-        ctx.beginPath();
-        ctx.moveTo(0, waveY);
         
-        for (let x = 0; x < canvas.width; x += 10) {
-          const y = waveY + Math.sin(x * 0.01 + time + i) * 30;
-          ctx.lineTo(x, y);
-        }
         
-        ctx.stroke();
-      }
 
-      animationFrameId = requestAnimationFrame(animate);
-    };
 
-    animate();
 
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
 
-    window.addEventListener('resize', handleResize);
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, []);
 
-  return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
-      {/* Animated Canvas Background */}
+
+
+
+
+
+
+
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
@@ -166,9 +192,12 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rotate-45"
           animate={{
-            rotate: [45, 405],
-            scale: [1, 1.1, 1],
-            opacity: [0.3, 0.6, 0.3]
+
+
+
+
+
+
           }}
           transition={{
             duration: 8,
@@ -312,28 +341,38 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
           transition={{
             duration: 12,
             repeat: Infinity,
-            ease: "easeInOut"
-          }}
         />
         
         <motion.div
           className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.02),transparent_50%)]"
           animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.02, 0.04, 0.02]
+
+
+
+
+
           }}
           transition={{
             duration: 15,
             repeat: Infinity,
             ease: "easeInOut"
           }}
+
+
+
+
+
+
+
+
         />
       </div>
 
-      {/* Content */}
-      <div className="relative" style={{ zIndex: 10 }}>
-        {children}
-      </div>
+
+
+
+
+
     </div>
   );
-}
+

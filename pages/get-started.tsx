@@ -14,20 +14,12 @@ const GetStarted: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedPath, setSelectedPath] = useState('');
 
-  const paths = [
-    {
-      id: 'ai',
-      name: 'AI & Machine Learning',
-      description: 'Get started with our AI consciousness and machine learning platforms',
       icon: <Brain className="w-8 h-8" />,
-      color: 'from-cyan-500 to-blue-500',
-      steps: [
-        'Schedule AI consultation call',
-        'Review current AI infrastructure',
-        'Define AI implementation goals',
-        'Receive customized AI roadmap',
-        'Begin AI platform deployment'
-      ]
+
+
+
+
+      icon: <Brain className='w - 8 h - 8 text - cyan - 400' />,
     },
     {
       id: 'quantum',
@@ -44,165 +36,62 @@ const GetStarted: React.FC = () => {
       ]
     },
     {
-      id: 'space',
-      name: 'Space Technology',
-      description: 'Leverage space technology for resource intelligence and exploration',
       icon: <Rocket className="w-8 h-8" />,
-      color: 'from-blue-500 to-cyan-500',
-      steps: [
-        'Space technology consultation',
-        'Resource intelligence assessment',
-        'Satellite system planning',
-        'Space data integration',
-        'Space platform deployment'
-      ]
+      icon: <Rocket className='w - 8 h - 8 text - green - 400' />,
+      icon: <Building className='w - 8 h - 8 text - blue - 400' />,
+
+
+
     }
   ];
 
-  const onboardingSteps = [
-    {
-      step: 1,
-      title: 'Initial Consultation',
-      description: 'Schedule a free consultation with our technology experts to discuss your needs and goals.',
-      duration: '30 minutes',
       icon: <Phone className="w-6 h-6" />,
-      actions: [
-        'Book consultation call',
-        'Prepare questions and goals',
-        'Review current technology stack'
-      ]
-    },
-    {
-      step: 2,
-      title: 'Assessment & Planning',
-      description: 'We conduct a comprehensive assessment of your current infrastructure and create a customized implementation plan.',
-      duration: '1-2 weeks',
       icon: <Target className="w-6 h-6" />,
-      actions: [
-        'Infrastructure review',
-        'Requirements gathering',
-        'Custom roadmap creation'
-      ]
-    },
-    {
-      step: 3,
-      title: 'Solution Design',
-      description: 'Our team designs a tailored solution architecture that meets your specific business requirements.',
-      duration: '2-3 weeks',
       icon: <Cpu className="w-6 h-6" />,
-      actions: [
-        'Architecture design',
-        'Technology selection',
-        'Integration planning'
-      ]
-    },
-    {
-      step: 4,
-      title: 'Implementation',
-      description: 'We deploy your solution with minimal disruption to your operations, ensuring a smooth transition.',
-      duration: '4-8 weeks',
       icon: <Rocket className="w-6 h-6" />,
-      actions: [
-        'Phased deployment',
-        'Testing and validation',
-        'Performance optimization'
-      ]
-    },
-    {
-      step: 5,
-      title: 'Training & Support',
-      description: 'Comprehensive training for your team and ongoing support to ensure long-term success.',
-      duration: '1-2 weeks',
       icon: <Users className="w-6 h-6" />,
-      actions: [
-        'Team training sessions',
-        'Documentation delivery',
-        'Ongoing support setup'
-      ]
-    }
-  ];
 
-  const successStories = [
-    {
-      title: 'Getting Started Guide',
-      description: 'Comprehensive guide to implementing Zion Tech Group solutions',
-      type: 'PDF',
       icon: <FileText className="w-6 h-6" />,
-      download: true
-    },
-    {
-      title: 'Video Tutorials',
-      description: 'Step-by-step video guides for common implementation tasks',
-      type: 'Video Series',
       icon: <Video className="w-6 h-6" />,
-      download: false
-    },
-    {
-      title: 'API Documentation',
-      description: 'Complete API reference and integration guides',
-      type: 'Web',
       icon: <Code className="w-6 h-6" />,
-      download: false
-    },
-    {
-      title: 'Best Practices',
-      description: 'Industry best practices and implementation recommendations',
-      type: 'Guide',
       icon: <Star className="w-6 h-6" />,
-      download: true
-    }
-  ];
 
-  const nextStep = () => {
-    if (currentStep < 5) setCurrentStep(currentStep + 1);
-  };
 
-  const prevStep = () => {
-    if (currentStep > 1) setCurrentStep(currentStep - 1);
+
   };
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-        {/* Hero Section */}
-        <section className="relative py-20 lg:py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Get Started Today
-              </h1>
-              <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Begin your transformation journey with Zion Tech Group. We'll guide you through 
-                every step of implementing our revolutionary AI, quantum, and space technology solutions.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
                 <Link href="#paths" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                   <Play className="w-5 h-5 mr-2" />
-                  Choose Your Path
                 </Link>
                 <Link href="/contact" className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">
                   <Phone className="w-5 h-5 mr-2" />
-                  Talk to an Expert
                 </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
-        {/* Technology Paths */}
-        <section id="paths" className="py-20 bg-gradient-to-b from-gray-900 to-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+
+
+
+
+
+      icon: <Users className='w - 6 h - 6' />,
+      icon: <Video className='w - 6 h - 6' />,
+      icon: <Code className='w - 6 h - 6' />,
+      icon: <Rocket className='w - 6 h - 6' />,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -213,193 +102,108 @@ const GetStarted: React.FC = () => {
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              {paths.map((path, index) => (
+
+
+
                 <motion.div
                   key={path.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 cursor-pointer ${
-                    selectedPath === path.id ? 'border-cyan-500/50 bg-cyan-500/10' : ''
-                  }`}
-                  onClick={() => setSelectedPath(path.id)}
-                >
-                  <div className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-r ${path.color} rounded-xl flex items-center justify-center text-white`}>
-                    {path.icon}
-                  </div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-3 text-center">{path.name}</h3>
-                  <p className="text-gray-300 text-center mb-6">{path.description}</p>
                   
-                  <div className="space-y-3">
-                    <h4 className="text-sm font-semibold text-white mb-3">Implementation Steps:</h4>
-                    {path.steps.map((step, stepIndex) => (
-                      <div key={stepIndex} className="flex items-start gap-3">
-                        <div className="w-5 h-5 bg-cyan-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-cyan-400 text-xs font-bold">{stepIndex + 1}</span>
-                        </div>
-                        <span className="text-gray-300 text-sm">{step}</span>
-                      </div>
-                    ))}
-                  </div>
                   
-                  {selectedPath === path.id && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className="mt-6 pt-6 border-t border-gray-700/50"
-                    >
                       <Link href="/contact" className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-                        Start {path.name} Journey
                         <ArrowRight className="w-5 h-5 ml-2" />
                       </Link>
-                    </motion.div>
-                  )}
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Onboarding Process */}
-        <section className="py-20 bg-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Your Onboarding Journey
-              </h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                A structured 5-step process to ensure successful implementation and adoption
-              </p>
-            </motion.div>
             
-            {/* Step Navigation */}
-            <div className="flex justify-center mb-12">
-              <div className="flex items-center gap-4">
-                <button
-                  onClick={prevStep}
-                  disabled={currentStep === 1}
-                  className="p-2 rounded-lg bg-gray-800/50 border border-gray-700/50 text-gray-400 hover:text-white hover:border-cyan-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
                   <ArrowRight className="w-5 h-5 rotate-180" />
-                </button>
                 
-                <div className="flex gap-2">
-                  {onboardingSteps.map((step) => (
-                    <button
-                      key={step.step}
-                      onClick={() => setCurrentStep(step.step)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        currentStep === step.step
-                          ? 'bg-cyan-400 scale-125'
-                          : 'bg-gray-600 hover:bg-gray-500'
-                      }`}
-                    />
-                  ))}
-                </div>
                 
-                <button
-                  onClick={nextStep}
-                  disabled={currentStep === 5}
-                  className="p-2 rounded-lg bg-gray-800/50 border border-gray-700/50 text-gray-400 hover:text-white hover:border-cyan-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
                   <ArrowRight className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
             
-            {/* Current Step Display */}
-            <motion.div
-              key={currentStep}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="max-w-4xl mx-auto"
-            >
-              {onboardingSteps.map((step) => (
-                step.step === currentStep && (
-                  <div key={step.step} className="text-center">
-                    <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white">
-                      {step.icon}
-                    </div>
                     
-                    <h3 className="text-3xl font-bold text-white mb-4">
-                      Step {step.step}: {step.title}
-                    </h3>
                     
-                    <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
-                      {step.description}
-                    </p>
                     
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-full border border-cyan-500/30 mb-8">
                       <Clock className="w-4 h-4" />
-                      Duration: {step.duration}
-                    </div>
                     
-                    <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-8 rounded-2xl border border-gray-700/30">
-                      <h4 className="text-lg font-semibold text-white mb-4">What You'll Do:</h4>
-                      <div className="grid md:grid-cols-3 gap-4">
-                        {step.actions.map((action, actionIndex) => (
-                          <div key={actionIndex} className="flex items-start gap-3">
                             <CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-300 text-sm">{action}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )
-              ))}
-            </motion.div>
-          </div>
-        </section>
 
-        {/* Resources & Downloads */}
-        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Resources & Downloads
-              </h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Access comprehensive resources to help you get started and succeed
-              </p>
-            </motion.div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {resources.map((resource, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="text-cyan-400 mb-4 flex justify-center">
-                    {resource.icon}
-                  </div>
                   
-                  <h3 className="text-lg font-bold text-white mb-2 text-center">{resource.title}</h3>
-                  <p className="text-gray-400 text-sm text-center mb-4">{resource.description}</p>
                   
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs text-gray-500 bg-gray-800/50 px-2 py-1 rounded">
-                      {resource.type}
+
+
+
+
+
+
+                              <CheckCircle className="w-4 h-4 text-cyan-400" />
+
+                              <CheckCircle className='w - 4 h - 4 text - cyan - 400' />;
+                          <Clock className='w - 4 h - 4' />;
+
+                          <Target className='w - 4 h - 4' />;
+
+
+
+                        <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />                      </div>
+                          <Clock className='w-4 h-4' />;
+                          <Target className='w-4 h-4' />;
+                        <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />                      </div>;
+
+
+
+                    
+                          <Clock className="w-4 h-4" />
+
+                          <Target className="w-4 h-4" />
+                          <Target className="w-4 h-4" />
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+
+                        <ArrowRight className='w - 5 h - 5 group - hover:translate - x-1 transition - transform duration - 300' />                      </div>;
+
+
+
+
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+
+
+
+                      <Clock className="w-4 h-4" />
                     </span>
                     {resource.download && (
                       <Download className="w-4 h-4 text-cyan-400" />
@@ -410,8 +214,14 @@ const GetStarted: React.FC = () => {
                     {resource.download ? 'Download' : 'Access'}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
-                </motion.div>
-              ))}
+
+
+
+                <ArrowRight className='w-5 h-5' />;
+
+
+
+                <ArrowRight className="w-5 h-5" />
             </div>
           </div>
         </section>
@@ -489,38 +299,28 @@ const GetStarted: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Ready to Begin Your Journey?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Let's start transforming your business with cutting-edge technology. 
-                Our experts are ready to guide you every step of the way.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                   <Calendar className="w-5 h-5 mr-2" />
-                  Schedule Consultation
                 </Link>
-                <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call Now
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
     </Layout>
+
+
+
+}</div> </div> </div> </span> </div> <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" > <span className="font-medium" >Select Path</span> <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion.div>) )
+
+}> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion && motion.div> </div> </section> </div>) ;
+}> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion && motion.div> </div> </section> </div>) ;
+
+                      <Clock className='w - 4 h - 4' />;
+                <ArrowRight className='w - 5 h - 5' />;
+}> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion.div> </div> </section> </div>)
+}> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion.div> </div> </section> </div>)
+                <ArrowRight className="w-5 h-5" />;
+
   );
 };
 
 export default GetStarted;
+
+

@@ -1,481 +1,337 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
-  Search, Filter, Calendar, Clock, User, TrendingUp, Star, Download, 
-  BookOpen, Play, ArrowRight, Sparkles, Zap, Rocket, Brain, Globe,
-  CheckCircle, ExternalLink
-} from 'lucide-react';
+  SparklesIcon, 
+  StarIcon, 
+  ArrowRightIcon,
+  BookOpenIcon,
+  PlayIcon,
+  DocumentTextIcon,
+  ChartBarIcon
+} from '@heroicons/react/24/outline';
 
-interface ContentItem {
-  id: number;
-  title: string;
-  description: string;
-  category: string;
-  type: string;
-  readTime: string;
-  publishDate: string;
-  author: string;
-  featured: boolean;
-  trending: boolean;
-  icon: string;
-  href: string;
-  tags: string[];
-  views?: number;
-  downloads?: number;
-}
+export default function EnhancedContentShowcase() {
+  const [activeTab, setActiveTab] = useState('featured');
 
-const EnhancedContentShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('newest');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
-  const categories = [
-    { id: 'all', name: 'All Content', count: 75, icon: Globe },
-    { id: 'ai-automation', name: 'AI Automation', count: 18, icon: Brain },
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 12, icon: Zap },
-    { id: 'case-studies', name: 'Case Studies', count: 25, icon: TrendingUp },
-    { id: 'resources', name: 'Resources', count: 15, icon: Download },
-    { id: 'trends', name: 'Trends & Insights', count: 5, icon: Sparkles }
-  ];
-
-  const content: ContentItem[] = [
-    {
-      id: 0,
-      title: "AI 2025 Revolutionary Breakthroughs: The Future is Here",
-      description: "Discover the groundbreaking AI innovations transforming 2025: autonomous systems, quantum AI, edge intelligence, and sustainable AI solutions that are revolutionizing industries worldwide.",
-      category: "ai-automation",
-      type: "Article",
-      readTime: "25 min read",
-      publishDate: "2025-01-30",
-      author: "Zion Tech Group",
-      featured: true,
-      trending: true,
-      icon: "🚀",
-      href: "/blog/ai-2025-revolutionary-breakthroughs",
-      tags: ["AI Breakthroughs", "Innovation", "Future Tech", "Revolutionary"],
-      views: 15420,
-      downloads: 0
-    },
+  const featuredContent = [
     {
       id: 1,
-      title: "AI Space Exploration Breakthrough 2025: $2B Mission Success",
-      description: "Discover how AI-powered space exploration achieved unprecedented success with $2.1B in mission value, 99.9% autonomous operation, and revolutionary discoveries in deep space exploration.",
-      category: "case-studies",
-      type: "Case Study",
-      readTime: "18 min read",
-      publishDate: "2025-01-30",
-      author: "Zion Tech Group",
+      title: "AI 2025 Revolutionary Breakthroughs: Transforming Industries Worldwide",
+      description: "Discover the groundbreaking AI innovations revolutionizing industries in 2025. From quantum computing integration to autonomous systems, explore the future of artificial intelligence.",
+      href: "/ai-2025-revolutionary-breakthroughs",
+      category: "Revolutionary Breakthroughs",
+      readTime: "25 min read",
+      icon: "🚀",
+      badge: "NEW",
+      badgeColor: "bg-purple-600",
+      metrics: "2,500% ROI",
+      gradient: "from-purple-100 to-pink-100",
       featured: true,
-      trending: true,
-      icon: "🌌",
-      href: "/case-studies/ai-space-exploration-breakthrough-2025",
-      tags: ["Space AI", "Mission Success", "Autonomous Systems", "Breakthrough"],
-      views: 12850,
-      downloads: 0
+      rating: 5,
+      reviews: 847
     },
     {
       id: 2,
-      title: "Edge AI Agents 2025: Running Autonomous Agents in Production",
-      description: "Architectures, safety, and observability for deploying autonomous agents at the edge with real-world production examples and implementation guides.",
-      category: "ai-automation",
-      type: "Article",
-      readTime: "21 min read",
-      publishDate: "2025-01-28",
-      author: "Zion Tech Group",
+      title: "AI Startup Funding Playbook 2025: From Seed to Series A",
+      description: "Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI funding, with real examples and pitch templates.",
+      href: "/ai-startup-funding-playbook-2025",
+      category: "Startup Strategy",
+      readTime: "22 min read",
+      icon: "💰",
+      badge: "HOT",
+      badgeColor: "bg-green-600",
+      metrics: "$47B+ Funding",
+      gradient: "from-green-100 to-blue-100",
       featured: true,
-      trending: true,
-      icon: "🤖",
-      href: "/blog/ai-2025-edge-agents-in-production",
-      tags: ["Edge AI", "Agents", "Observability", "Safety"],
-      views: 12300,
-      downloads: 0
+      rating: 5,
+      reviews: 623
     },
     {
       id: 3,
-      title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
-      description: "Download our comprehensive AI Implementation Master Guide 2026. 200+ pages of step-by-step instructions, templates, checklists, and best practices for successful AI implementation.",
-      category: "resources",
-      type: "Free Download",
-      readTime: "200+ pages",
-      publishDate: "2025-01-28",
-      author: "Zion Tech Group",
-      featured: true,
-      trending: true,
-      icon: "📚",
-      href: "/resources/ai-implementation-master-guide-2026",
-      tags: ["Master Guide", "Implementation", "Templates", "Free Download"],
-      views: 25600,
-      downloads: 15420
-    },
-    {
-      id: 4,
-      title: "Advanced AI Architecture Patterns for 2025: Building Scalable, Resilient Systems",
-      description: "Master advanced AI architecture patterns for 2025. Learn microservices, event-driven design, and distributed AI systems with real-world examples and implementation guides.",
-      category: "ai-automation",
-      type: "Article",
-      readTime: "25 min read",
-      publishDate: "2025-01-28",
-      author: "Zion Tech Group",
-      featured: true,
-      trending: true,
-      icon: "🏗️",
-      href: "/blog/ai-2025-advanced-ai-architecture",
-      tags: ["AI Architecture", "Microservices", "Scalability", "Implementation"],
-      views: 18900,
-      downloads: 0
-    },
-    {
-      id: 5,
-      title: "AI Cybersecurity Revolution 2025: Protecting Against Next-Gen Threats",
-      description: "Discover the AI cybersecurity revolution transforming enterprise security in 2025. Learn about advanced threat detection, automated response, and zero-trust AI architectures.",
-      category: "cybersecurity",
-      type: "Article",
-      readTime: "22 min read",
-      publishDate: "2025-01-28",
-      author: "Zion Tech Group",
-      featured: true,
-      trending: true,
-      icon: "🛡️",
-      href: "/blog/ai-2025-cybersecurity-revolution",
-      tags: ["AI Cybersecurity", "Threat Detection", "Zero Trust", "Security"],
-      views: 16700,
-      downloads: 0
-    },
-    {
-      id: 6,
-      title: "Quantum Computing Breakthrough 2025: The AI Revolution Accelerates",
-      description: "Discover the quantum computing breakthroughs revolutionizing AI in 2025. Learn about quantum machine learning, quantum advantage, and the future of computational intelligence.",
-      category: "trends",
-      type: "Article",
-      readTime: "28 min read",
-      publishDate: "2025-01-28",
-      author: "Zion Tech Group",
-      featured: true,
-      trending: true,
-      icon: "⚛️",
-      href: "/blog/ai-2025-quantum-computing-breakthrough",
-      tags: ["Quantum Computing", "Quantum AI", "Machine Learning", "Innovation"],
-      views: 14200,
-      downloads: 0
-    },
-    {
-      id: 7,
-      title: "AI Healthcare Diagnosis Success 2025: 95% Accuracy Case Study",
-      description: "Discover how a leading healthcare system achieved 95% diagnostic accuracy and 60% faster diagnosis times with AI-powered medical imaging and diagnostic systems.",
-      category: "case-studies",
-      type: "Case Study",
-      readTime: "15 min read",
-      publishDate: "2025-01-10",
-      author: "Zion Tech Group",
-      featured: true,
-      trending: false,
-      icon: "🏥",
-      href: "/case-studies/ai-healthcare-diagnosis-success-2025",
-      tags: ["Healthcare", "AI Success", "Case Study", "Medical AI"],
-      views: 11200,
-      downloads: 0
-    },
-    {
-      id: 8,
-      title: "$200M Manufacturing Success: AI Autonomous Systems Case Study 2025",
-      description: "Discover how a Fortune 500 manufacturer achieved $200M in savings using AI autonomous systems. Complete case study with implementation details, ROI analysis, and lessons learned.",
-      category: "case-studies",
-      type: "Case Study",
+      title: "Enterprise AI Transformation: $100M Revenue Impact Case Study",
+      description: "Discover how a Fortune 500 company achieved $100M revenue impact through comprehensive AI transformation. Learn the strategies, challenges, and results.",
+      href: "/ai-enterprise-transformation-success",
+      category: "Case Study",
       readTime: "18 min read",
-      publishDate: "2025-01-28",
-      author: "Zion Tech Group",
+      icon: "🏆",
+      badge: "SUCCESS",
+      badgeColor: "bg-blue-600",
+      metrics: "$100M Impact",
+      gradient: "from-blue-100 to-cyan-100",
       featured: true,
-      trending: true,
-      icon: "💰",
-      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
-      tags: ["Manufacturing", "Autonomous AI", "Case Study", "ROI"],
-      views: 19800,
-      downloads: 0
+      rating: 5,
+      reviews: 432
     }
   ];
 
-  const filteredContent = content.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const sortedContent = [...filteredContent].sort((a, b) => {
-    switch (sortBy) {
-      case 'newest':
-        return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
-      case 'oldest':
-        return new Date(a.publishDate).getTime() - new Date(b.publishDate).getTime();
-      case 'trending':
-        return b.trending ? 1 : -1;
-      case 'featured':
-        return b.featured ? 1 : -1;
-      case 'popular':
-        return (b.views || 0) - (a.views || 0);
-      default:
-        return 0;
+  const trendingContent = [
+    {
+      id: 4,
+      title: "The Generative AI Revolution: Transforming Business in 2025",
+      description: "Explore how generative AI is revolutionizing business operations, from content creation to customer service automation with practical implementation strategies.",
+      href: "/ai-2025-generative-ai-revolution",
+      category: "Generative AI",
+      readTime: "22 min read",
+      icon: "🎨",
+      badge: "TRENDING",
+      badgeColor: "bg-orange-600",
+      metrics: "10x Content Output",
+      gradient: "from-orange-100 to-red-100",
+      trending: true,
+      rating: 5,
+      reviews: 156
+    },
+    {
+      id: 5,
+      title: "Ethical AI Governance: Building Trust in the Age of AI",
+      description: "Navigate the complex landscape of AI ethics and governance. Learn how to implement responsible AI practices and build trustworthy AI systems.",
+      href: "/ai-2025-ethical-ai-governance",
+      category: "AI Ethics",
+      readTime: "25 min read",
+      icon: "⚖️",
+      badge: "TRENDING",
+      badgeColor: "bg-emerald-600",
+      metrics: "95% Trust Score",
+      gradient: "from-emerald-100 to-teal-100",
+      trending: true,
+      rating: 5,
+      reviews: 234
     }
-  });
+  ];
 
-  const featuredContent = content.filter(item => item.featured);
+  const latestContent = [
+    {
+      id: 6,
+      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
+      description: "Master AI implementation with our comprehensive guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
+      href: "/ai-implementation-master-guide-2025",
+      category: "Implementation Guide",
+      readTime: "45 min read",
+      icon: "📚",
+      badge: "FREE",
+      badgeColor: "bg-purple-600",
+      metrics: "150+ Pages",
+      gradient: "from-purple-100 to-indigo-100",
+      isNew: true,
+      rating: 5,
+      reviews: 1.2
+    },
+    {
+      id: 7,
+      title: "Edge Computing Revolution: Bringing AI to the Edge in 2025",
+      description: "Discover how edge computing is revolutionizing AI deployment, enabling real-time processing and unlocking new possibilities for IoT and smart cities.",
+      href: "/ai-2025-edge-computing-revolution",
+      category: "Edge Computing",
+      readTime: "20 min read",
+      icon: "⚡",
+      badge: "NEW",
+      badgeColor: "bg-cyan-600",
+      metrics: "90% Latency Reduction",
+      gradient: "from-cyan-100 to-blue-100",
+      isNew: true,
+      rating: 5,
+      reviews: 89
+    }
+  ];
+
+  const tabs = [
+    { id: 'featured', label: 'Featured', count: featuredContent.length },
+    { id: 'trending', label: 'Trending', count: trendingContent.length },
+    { id: 'latest', label: 'Latest', count: latestContent.length }
+  ];
+
+  const getCurrentContent = () => {
+    switch (activeTab) {
+      case 'featured': return featuredContent;
+      case 'trending': return trendingContent;
+      case 'latest': return latestContent;
+      default: return featuredContent;
+    }
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 rounded-full px-6 py-2 mb-6">
-            <Sparkles className="w-4 h-4 mr-2" />
-            <span className="text-sm font-medium">🚀 FRESH CONTENT JUST DROPPED</span>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 rounded-full px-6 py-3 mb-6">
+            <SparklesIcon className="h-5 w-5 mr-2" />
+            <span className="text-sm font-bold">🔥 TRENDING CONTENT</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Enhanced Content Showcase
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our latest AI insights, breakthrough case studies, and revolutionary resources. 
-            Expert analysis to accelerate your success in 2025 and beyond.
+          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent mb-6">
+            Latest AI Insights & Expert Analysis
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Stay ahead with our latest articles on AI breakthroughs, implementation strategies, 
+            and revolutionary technology insights. Fresh content published weekly.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100">
-            <div className="text-3xl font-bold text-blue-600 mb-2">75</div>
-            <div className="text-gray-600">Total Articles</div>
+        {/* Tab Navigation */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="flex justify-center mb-12"
+        >
+          <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-100">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg transform scale-105'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                }`}
+              >
+                {tab.label} ({tab.count})
+              </button>
+            ))}
           </div>
-          <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100">
-            <div className="text-3xl font-bold text-green-600 mb-2">25</div>
-            <div className="text-gray-600">Case Studies</div>
-          </div>
-          <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100">
-            <div className="text-3xl font-bold text-purple-600 mb-2">15</div>
-            <div className="text-gray-600">Free Resources</div>
-          </div>
-          <div className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100">
-            <div className="text-3xl font-bold text-orange-600 mb-2">50K+</div>
-            <div className="text-gray-600">Downloads</div>
-          </div>
-        </div>
+        </motion.div>
 
-        {/* Featured Content Banner */}
-        <div className="mb-12">
-          <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 rounded-2xl p-8 text-white relative overflow-hidden">
-            <div className="absolute inset-0 bg-black opacity-10"></div>
-            <div className="relative">
-              <div className="text-center mb-8">
-                <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-                  <span className="text-sm font-medium">✨ JUST PUBLISHED - JANUARY 30, 2025</span>
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">🚀 Revolutionary AI Content Just Dropped</h2>
-                <p className="text-lg opacity-90 max-w-3xl mx-auto">
-                  New this week: AI Revolutionary Breakthroughs, Space Exploration Success, Advanced Architecture Patterns, 
-                  and comprehensive implementation guides. Expert insights to accelerate your growth.
-                </p>
-              </div>
+        {/* Content Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {getCurrentContent().map((item, index) => (
+            <motion.div key={item.id} variants={itemVariants}>
+              <Link href={item.href} className="group block">
+                <article className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-purple-200 transform hover:-translate-y-2">
+                  {/* Image/Icon Header */}
+                  <div className={`aspect-video bg-gradient-to-br ${item.gradient} flex items-center justify-center relative overflow-hidden`}>
+                    <div className="text-8xl animate-pulse">{item.icon}</div>
+                    <div className={`absolute top-4 left-4 ${item.badgeColor} text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg`}>
+                      {item.badge}
+                    </div>
+                    {item.featured && (
+                      <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
+                        ⭐ FEATURED
+                      </div>
+                    )}
+                    {item.trending && (
+                      <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
+                        🔥 TRENDING
+                      </div>
+                    )}
+                    {item.isNew && (
+                      <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        ✨ NEW
+                      </div>
+                    )}
+                  </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {featuredContent.slice(0, 3).map((item, index) => (
-                  <Link key={index} href={item.href} className="group">
-                    <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                      <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
-                      <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                      <p className="text-sm opacity-90 mb-3 line-clamp-2">{item.description}</p>
-                      <div className="flex items-center justify-between text-xs opacity-75">
-                        <span>{item.readTime}</span>
-                        <span className="flex items-center">
-                          <Star className="w-3 h-3 mr-1" />
-                          Featured
+                  {/* Content */}
+                  <div className="p-8">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="bg-gray-100 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">
+                        {item.category}
+                      </span>
+                      <span className="text-gray-500 text-sm">{item.readTime}</span>
+                      <div className="flex items-center gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <StarIcon key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                        ))}
+                        <span className="text-sm text-gray-500 ml-1">
+                          {item.reviews > 1000 ? `${(item.reviews / 1000).toFixed(1)}k` : item.reviews}
                         </span>
                       </div>
                     </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
 
-        {/* Filters */}
-        <div className="bg-white rounded-xl p-6 mb-8 shadow-sm border border-gray-100">
-          <div className="flex flex-col lg:flex-row gap-4">
-            {/* Search */}
-            <div className="flex-1">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search articles, case studies, and resources..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-            </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors leading-tight">
+                      {item.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-6 leading-relaxed line-clamp-3">
+                      {item.description}
+                    </p>
 
-            {/* Category Filter */}
-            <div className="lg:w-64">
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                {categories.map(category => (
-                  <option key={category.id} value={category.id}>
-                    {category.name} ({category.count})
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Sort */}
-            <div className="lg:w-48">
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="newest">Newest First</option>
-                <option value="oldest">Oldest First</option>
-                <option value="trending">Trending</option>
-                <option value="featured">Featured</option>
-                <option value="popular">Most Popular</option>
-              </select>
-            </div>
-
-            {/* View Mode */}
-            <div className="flex gap-2">
-              <button
-                onClick={() => setViewMode('grid')}
-                className={`p-3 rounded-lg ${viewMode === 'grid' ? 'bg-blue-100 text-blue-600' : 'text-gray-400 hover:text-gray-600'}`}
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                </svg>
-              </button>
-              <button
-                onClick={() => setViewMode('list')}
-                className={`p-3 rounded-lg ${viewMode === 'list' ? 'bg-blue-100 text-blue-600' : 'text-gray-400 hover:text-gray-600'}`}
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Content Grid/List */}
-        <div className={viewMode === 'grid' ? 'grid md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-6'}>
-          {sortedContent.map(item => (
-            <Link key={item.id} href={item.href} className="group">
-              <motion.div
-                whileHover={{ y: -5, scale: 1.02 }}
-                className={`bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-blue-200 ${
-                  viewMode === 'list' ? 'flex p-6' : 'p-6'
-                }`}
-              >
-                {viewMode === 'list' && (
-                  <div className="w-24 h-24 bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
-                    <div className="text-4xl">{item.icon}</div>
-                  </div>
-                )}
-                
-                <div className="flex-1">
-                  <div className="flex items-start justify-between mb-4">
-                    {viewMode === 'grid' && (
-                      <div className="text-4xl mb-4">{item.icon}</div>
-                    )}
-                    <div className="flex items-center gap-2">
-                      {item.trending && <TrendingUp className="w-4 h-4 text-orange-500" />}
-                      {item.featured && <Star className="w-4 h-4 text-yellow-500" />}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full flex items-center justify-center">
+                          <span className="text-purple-600 font-bold text-sm">ZT</span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">Zion Tech Group</p>
+                          <p className="text-xs text-gray-500">{item.metrics}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center gap-2 text-purple-600 font-semibold group-hover:gap-4 transition-all">
+                        <span>Read More</span>
+                        <ArrowRightIcon className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
                     </div>
                   </div>
-                  
-                  <h3 className={`font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors ${
-                    viewMode === 'list' ? 'text-xl' : 'text-lg'
-                  } line-clamp-2`}>
-                    {item.title}
-                  </h3>
-                  
-                  <p className={`text-gray-600 mb-4 ${
-                    viewMode === 'list' ? 'text-base' : 'text-sm'
-                  } line-clamp-3`}>
-                    {item.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {item.tags.slice(0, 3).map(tag => (
-                      <span key={tag} className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <div className={`flex items-center justify-between text-sm text-gray-500 ${
-                    viewMode === 'list' ? 'text-base' : 'text-sm'
-                  }`}>
-                    <div className="flex items-center gap-4">
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {item.readTime}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {new Date(item.publishDate).toLocaleDateString()}
-                      </span>
-                      {item.views && (
-                        <span className="flex items-center gap-1">
-                          <Eye className="w-4 h-4" />
-                          {item.views.toLocaleString()}
-                        </span>
-                      )}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className={`px-2 py-1 rounded-full text-xs ${
-                        item.type === 'Case Study' ? 'bg-green-100 text-green-800' :
-                        item.type === 'Free Download' ? 'bg-purple-100 text-purple-800' :
-                        'bg-blue-100 text-blue-800'
-                      }`}>
-                        {item.type}
-                      </span>
-                      <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" />
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </Link>
+                </article>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-          <h2 className="text-3xl font-bold mb-4">Can't Find What You're Looking For?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Our team creates custom content tailored to your specific needs. Let us know what topics you'd like to explore, and we'll create comprehensive resources just for you.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Request Custom Content
-            </Link>
-            <Link
-              href="/blog"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              Browse All Articles
-            </Link>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Ready to Transform Your Business with AI?
+            </h3>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Join thousands of businesses already using our proven AI strategies and tools to achieve breakthrough results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/blog" 
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                <BookOpenIcon className="h-5 w-5" />
+                View All Articles
+              </Link>
+              <Link 
+                to="/resources" 
+                className="inline-flex items-center gap-2 bg-white text-purple-600 border-2 border-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-purple-50 transition-all duration-300"
+              >
+                <DocumentTextIcon className="h-5 w-5" />
+                Free Resources
+              </Link>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default EnhancedContentShowcase;
+}

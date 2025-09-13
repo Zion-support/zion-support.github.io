@@ -1,101 +1,126 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-export default function AI2025NewContentPromotionBanner() {
+const AI2025NewContentPromotionBanner = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentContent, setCurrentContent] = useState(0);
+
+  const newContent = [
+    {
+      title: "🚀 AI 2025 Next-Generation Breakthroughs",
+      description: "Discover revolutionary AI technologies delivering 5,000-15,000% ROI",
+      link: "/blog/ai-2025-next-generation-breakthroughs",
+      badge: "BREAKTHROUGH",
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      title: "🏆 Global Tech Giant Transformation: 900% ROI",
+      description: "Learn how Fortune 500 companies achieve unprecedented success",
+      link: "/case-studies/ai-2025-global-tech-giant-transformation",
+      badge: "SUCCESS STORY",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "📚 AI 2025 Ultimate Implementation Master Guide",
+      description: "Complete step-by-step guide to achieving breakthrough results",
+      link: "/resources/ai-2025-ultimate-implementation-master-guide",
+      badge: "MASTER GUIDE",
+      color: "from-purple-500 to-pink-500"
+    }
+  ];
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentContent((prev) => (prev + 1) % newContent.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  if (!isVisible) return null;
+
+  const current = newContent[currentContent];
+
   return (
-    <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-8 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-6">
-          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
-            <span className="text-yellow-300 text-sm font-semibold mr-2">🚀 NEW</span>
-            <span className="text-sm">January 2025 Content Release</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Revolutionary AI Content for 2025
-          </h2>
-          <p className="text-xl text-blue-100 mb-6 max-w-3xl mx-auto">
-            Discover cutting-edge AI insights, success stories, and implementation guides that are transforming businesses worldwide.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-            <div className="flex items-center mb-3">
-              <span className="text-2xl mr-3">📝</span>
-              <h3 className="text-lg font-semibold">Enterprise Automation Revolution</h3>
+    <div className="relative overflow-hidden">
+      <div className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 py-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                <span className="text-sm font-semibold">NEW CONTENT</span>
+              </div>
+              <div className="hidden md:block w-px h-6 bg-gray-400"></div>
+              <div className="flex-1 min-w-0">
+                <Link 
+                  href={current.link}
+                  className="group block hover:opacity-90 transition-opacity"
+                >
+                  <div className="flex items-center space-x-3">
+                    <div className="flex-shrink-0">
+                      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r ${current.color} text-white`}>
+                        {current.badge}
+                      </span>
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-sm font-semibold truncate group-hover:text-blue-300 transition-colors">
+                        {current.title}
+                      </h3>
+                      <p className="text-xs text-gray-300 truncate">
+                        {current.description}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
             </div>
-            <p className="text-blue-100 text-sm mb-4">
-              Learn how AI automation is revolutionizing enterprise operations with 300-500% efficiency gains.
-            </p>
-            <Link 
-              href="/blog/ai-2025-enterprise-automation-revolution"
-              className="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold text-sm"
-            >
-              Read More →
-            </Link>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-            <div className="flex items-center mb-3">
-              <span className="text-2xl mr-3">🏆</span>
-              <h3 className="text-lg font-semibold">600% ROI Success Story</h3>
+            
+            <div className="flex items-center space-x-4">
+              <div className="hidden sm:flex items-center space-x-2 text-xs text-gray-300">
+                <span>Featured Content:</span>
+                <div className="flex space-x-1">
+                  {newContent.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentContent(index)}
+                      className={`w-2 h-2 rounded-full transition-colors ${
+                        index === currentContent ? 'bg-white' : 'bg-gray-400'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+              
+              <Link
+                href={current.link}
+                className="bg-white text-gray-900 px-4 py-1.5 rounded-full text-xs font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Explore Now
+              </Link>
+              
+              <button
+                onClick={() => setIsVisible(false)}
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Close banner"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
-            <p className="text-blue-100 text-sm mb-4">
-              Discover how a global retail chain achieved 600% ROI through strategic AI implementation.
-            </p>
-            <Link 
-              href="/case-studies/ai-2025-global-retail-transformation-success"
-              className="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold text-sm"
-            >
-              View Case Study →
-            </Link>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-            <div className="flex items-center mb-3">
-              <span className="text-2xl mr-3">🛠️</span>
-              <h3 className="text-lg font-semibold">Ultimate Implementation Toolkit</h3>
-            </div>
-            <p className="text-blue-100 text-sm mb-4">
-              Get everything you need for successful AI implementation with our comprehensive toolkit.
-            </p>
-            <Link 
-              href="/resources/ai-2025-ultimate-implementation-toolkit"
-              className="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold text-sm"
-            >
-              Download Toolkit →
-            </Link>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="flex flex-wrap justify-center gap-4 mb-4">
-            <div className="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-              <span className="text-sm font-semibold">500+ Successful Implementations</span>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-              <span className="text-sm font-semibold">Average 400% ROI</span>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-              <span className="text-sm font-semibold">Fortune 500 Clients</span>
-            </div>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link 
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Get Started Today
-            </Link>
-            <Link 
-              href="/content-showcase"
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              Explore All Content
-            </Link>
           </div>
         </div>
       </div>
+      
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-500 rounded-full opacity-20 animate-pulse"></div>
+        <div className="absolute top-2 right-8 w-4 h-4 bg-purple-500 rounded-full opacity-30 animate-pulse delay-1000"></div>
+        <div className="absolute bottom-2 left-1/4 w-6 h-6 bg-pink-500 rounded-full opacity-25 animate-pulse delay-2000"></div>
+      </div>
     </div>
   );
-}
+};
+
+export default AI2025NewContentPromotionBanner;

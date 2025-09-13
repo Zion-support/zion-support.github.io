@@ -1,293 +1,327 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { ArrowRight, ArrowLeft, Play, Clock, TrendingUp, Star, Eye, Heart } from 'lucide-react';
 
-interface ContentItem {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  image: string;
-  url: string;
-  featured: boolean;
-  publishDate: string;
-}
-
-const contentItems: ContentItem[] = [
-  {
-    id: '1',
-    title: 'AI 2026 Technology Showcase',
-    description: 'Explore revolutionary AI technologies including neural interfaces, quantum computing, and autonomous systems.',
-    category: 'Technology',
-    image: '🧠',
-    url: '/ai-2026-technology-showcase',
-    featured: true,
-    publishDate: '2026-01-15'
-  },
-  {
-    id: '2',
-    title: 'Global Manufacturing AI Transformation',
-    description: 'How a Fortune 500 company achieved 300% efficiency gains and $2.3B in cost savings through AI.',
-    category: 'Case Study',
-    image: '🏭',
-    url: '/case-studies/ai-2026-global-manufacturing-transformation-success',
-    featured: true,
-    publishDate: '2026-01-12'
-  },
-  {
-    id: '3',
-    title: 'AI 2026 Implementation Toolkit',
-    description: 'Complete implementation guide with checklists, templates, and best practices for AI success.',
-    category: 'Resource',
-    image: '🛠️',
-    url: '/resources/ai-2026-implementation-toolkit',
-    featured: true,
-    publishDate: '2026-01-10'
-  },
-  {
-    id: '4',
-    title: 'Neural Interface Breakthrough',
-    description: 'Direct brain-computer interfaces enabling seamless human-AI collaboration with unprecedented speed.',
-    category: 'Blog',
-    image: '⚡',
-    url: '/blog/ai-2026-neural-interface-breakthrough',
-    featured: false,
-    publishDate: '2026-01-08'
-  },
-  {
-    id: '5',
-    title: 'Quantum Machine Learning Revolution',
-    description: 'Quantum computing meets AI to solve previously impossible problems with exponential speed improvements.',
-    category: 'Blog',
-    image: '⚛️',
-    url: '/blog/ai-2026-quantum-machine-learning-revolution',
-    featured: false,
-    publishDate: '2026-01-05'
-  },
-  {
-    id: '6',
-    title: 'AI Ethics & Governance Framework',
-    description: 'Comprehensive frameworks ensuring responsible AI development and deployment across all industries.',
-    category: 'Resource',
-    image: '⚖️',
-    url: '/resources/ai-2025-ethical-governance-framework',
-    featured: false,
-    publishDate: '2026-01-03'
-  }
-];
-
-export default function DynamicContentCarousel2026() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const DynamicContentCarousel2026: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Auto-advance carousel
+  const carouselItems = [
+    {
+      id: 1,
+      title: "AI 2026: Quantum-Neural Fusion Revolution",
+      description: "Discover how quantum computing and neural networks are merging to create unprecedented AI capabilities with 10,000x processing improvements.",
+      category: "AI Breakthrough",
+      year: "2026",
+      type: "Video",
+      duration: "12:45",
+      views: 125000,
+      likes: 8900,
+      trending: true,
+      featured: true,
+      image: "/images/ai-2026-quantum-fusion.jpg",
+      tags: ["Quantum AI", "Neural Networks", "Breakthrough", "2026"],
+      author: "Dr. Sarah Chen",
+      publishedDate: "2025-01-15"
+    },
+    {
+      id: 2,
+      title: "Advanced Quantum Computing Solutions 2026",
+      description: "Comprehensive guide to implementing quantum computing solutions with error-corrected quantum computers and quantum machine learning platforms.",
+      category: "Quantum Computing",
+      year: "2026",
+      type: "Interactive Guide",
+      duration: "25:30",
+      views: 89000,
+      likes: 6500,
+      trending: true,
+      featured: false,
+      image: "/images/quantum-computing-2026.jpg",
+      tags: ["Quantum Computing", "Error Correction", "Implementation", "2026"],
+      author: "Prof. Michael Rodriguez",
+      publishedDate: "2025-01-14"
+    },
+    {
+      id: 3,
+      title: "Revolutionary Automation Solutions 2026",
+      description: "Transform your business with intelligent process automation achieving 10x efficiency improvements and 99.9% accuracy rates.",
+      category: "Automation",
+      year: "2026",
+      type: "Case Study",
+      duration: "18:20",
+      views: 156000,
+      likes: 12000,
+      trending: true,
+      featured: true,
+      image: "/images/automation-2026.jpg",
+      tags: ["Automation", "Process Optimization", "Efficiency", "2026"],
+      author: "Alex Thompson",
+      publishedDate: "2025-01-13"
+    },
+    {
+      id: 4,
+      title: "AI 2027: Autonomous Decision Systems",
+      description: "Self-evolving AI systems capable of making complex business decisions with human-level reasoning and superhuman speed.",
+      category: "AI Solutions",
+      year: "2027",
+      type: "Webinar",
+      duration: "45:15",
+      views: 72000,
+      likes: 4800,
+      trending: false,
+      featured: false,
+      image: "/images/ai-2027-autonomous.jpg",
+      tags: ["Autonomous AI", "Decision Making", "2027", "Business Intelligence"],
+      author: "Dr. Lisa Wang",
+      publishedDate: "2025-01-12"
+    },
+    {
+      id: 5,
+      title: "Quantum Internet Infrastructure 2027",
+      description: "Global quantum internet enabling ultra-secure communication and distributed quantum computing across the world.",
+      category: "Quantum Computing",
+      year: "2027",
+      type: "Technical Deep Dive",
+      duration: "32:10",
+      views: 56000,
+      likes: 3200,
+      trending: false,
+      featured: false,
+      image: "/images/quantum-internet-2027.jpg",
+      tags: ["Quantum Internet", "Security", "Infrastructure", "2027"],
+      author: "Dr. James Wilson",
+      publishedDate: "2025-01-11"
+    },
+    {
+      id: 6,
+      title: "Predictive Maintenance Systems 2026",
+      description: "Advanced AI systems that predict equipment failures before they occur, reducing downtime by 95% and maintenance costs by 70%.",
+      category: "Automation",
+      year: "2026",
+      type: "Implementation Guide",
+      duration: "22:35",
+      views: 98000,
+      likes: 7500,
+      trending: true,
+      featured: false,
+      image: "/images/predictive-maintenance-2026.jpg",
+      tags: ["Predictive Maintenance", "IoT", "Equipment", "2026"],
+      author: "Maria Garcia",
+      publishedDate: "2025-01-10"
+    }
+  ];
+
   useEffect(() => {
-    if (!isAutoPlaying) return;
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === contentItems.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying]);
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-    setIsAutoPlaying(false);
-  };
+    if (isAutoPlaying) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [isAutoPlaying, carouselItems.length]);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === contentItems.length - 1 ? 0 : prevIndex + 1
-    );
-    setIsAutoPlaying(false);
+    setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? contentItems.length - 1 : prevIndex - 1
-    );
-    setIsAutoPlaying(false);
+    setCurrentSlide((prev) => (prev - 1 + carouselItems.length) % carouselItems.length);
   };
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'Technology': return 'bg-blue-100 text-blue-800';
-      case 'Case Study': return 'bg-green-100 text-green-800';
-      case 'Resource': return 'bg-purple-100 text-purple-800';
-      case 'Blog': return 'bg-orange-100 text-orange-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
   };
+
+  const currentItem = carouselItems[currentSlide];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Latest AI 2026 Content
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Dynamic Content Carousel
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our newest articles, case studies, and resources featuring cutting-edge AI technologies and real-world implementations.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Explore our latest AI breakthroughs, quantum computing solutions, and automation technologies in an interactive, dynamic format
           </p>
         </div>
 
         {/* Carousel Container */}
         <div className="relative">
-          {/* Main carousel */}
-          <div className="relative overflow-hidden rounded-2xl bg-white shadow-2xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {contentItems.map((item, index) => (
-                <div key={item.id} className="w-full flex-shrink-0">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
-                    {/* Content */}
-                    <div className="flex flex-col justify-center">
-                      <div className="flex items-center mb-4">
-                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getCategoryColor(item.category)}`}>
-                          {item.category}
-                        </span>
-                        {item.featured && (
-                          <span className="ml-3 px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-full text-sm font-semibold">
-                            ⭐ Featured
-                          </span>
-                        )}
-                      </div>
-                      
-                      <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                        {item.title}
-                      </h3>
-                      
-                      <p className="text-lg text-gray-600 mb-6">
-                        {item.description}
-                      </p>
-                      
-                      <div className="flex items-center text-sm text-gray-500 mb-6">
-                        <span>📅 Published: {new Date(item.publishDate).toLocaleDateString()}</span>
-                      </div>
-                      
-                      <Link 
-                        href={item.url}
-                        className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-                      >
-                        Read More
-                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </div>
+          {/* Main Carousel */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              {/* Content */}
+              <div>
+                {/* Badges */}
+                <div className="flex items-center gap-3 mb-6">
+                  {currentItem.featured && (
+                    <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">
+                      Featured
+                    </span>
+                  )}
+                  {currentItem.trending && (
+                    <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center">
+                      <TrendingUp className="w-4 h-4 mr-1" />
+                      Trending
+                    </span>
+                  )}
+                  <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    {currentItem.category}
+                  </span>
+                  <span className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    {currentItem.year}
+                  </span>
+                </div>
 
-                    {/* Visual */}
-                    <div className="flex items-center justify-center">
-                      <div className="text-9xl opacity-20">
-                        {item.image}
-                      </div>
-                    </div>
+                {/* Title */}
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  {currentItem.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                  {currentItem.description}
+                </p>
+
+                {/* Meta Info */}
+                <div className="flex items-center gap-6 mb-6 text-sm text-gray-400">
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 mr-2" />
+                    {currentItem.duration}
+                  </div>
+                  <div className="flex items-center">
+                    <Eye className="w-4 h-4 mr-2" />
+                    {currentItem.views.toLocaleString()} views
+                  </div>
+                  <div className="flex items-center">
+                    <Heart className="w-4 h-4 mr-2" />
+                    {currentItem.likes.toLocaleString()} likes
                   </div>
                 </div>
+
+                {/* Author */}
+                <div className="text-sm text-gray-400 mb-6">
+                  <div>By {currentItem.author}</div>
+                  <div>{new Date(currentItem.publishedDate).toLocaleDateString()}</div>
+                </div>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {currentItem.tags.map((tag, index) => (
+                    <span key={index} className="bg-white/10 text-white px-3 py-1 rounded-full text-xs">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    to={`/content/${currentItem.id}`}
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center group"
+                  >
+                    {currentItem.type === 'Video' ? (
+                      <>
+                        <Play className="w-5 h-5 mr-2" />
+                        Watch Now
+                      </>
+                    ) : (
+                      <>
+                        Explore Content
+                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </>
+                    )}
+                  </Link>
+                  <button
+                    onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+                    className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 border border-white/30"
+                  >
+                    {isAutoPlaying ? 'Pause' : 'Play'} Auto
+                  </button>
+                </div>
+              </div>
+
+              {/* Image/Visual */}
+              <div className="relative">
+                <div className="w-full h-80 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center">
+                  <div className="text-white text-6xl font-bold">
+                    {currentItem.title.charAt(0)}
+                  </div>
+                </div>
+                {currentItem.type === 'Video' && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
+                      <Play className="w-12 h-12 text-white" />
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Navigation Controls */}
+          <div className="flex items-center justify-between mt-8">
+            <button
+              onClick={prevSlide}
+              className="bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-all duration-300 border border-white/20"
+            >
+              <ArrowLeft className="w-6 h-6" />
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="flex items-center gap-2">
+              {carouselItems.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide
+                      ? 'bg-blue-500 scale-125'
+                      : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                />
               ))}
             </div>
 
-            {/* Navigation arrows */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-              aria-label="Previous slide"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-              aria-label="Next slide"
+              className="bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-all duration-300 border border-white/20"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Dots indicator */}
-          <div className="flex justify-center mt-6 space-x-2">
-            {contentItems.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'bg-blue-600 scale-125' 
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-
-          {/* Auto-play toggle */}
-          <div className="flex justify-center mt-4">
-            <button
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${
-                isAutoPlaying 
-                  ? 'bg-green-100 text-green-800 hover:bg-green-200' 
-                  : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
-              }`}
-            >
-              {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'} Auto-advance
+              <ArrowRight className="w-6 h-6" />
             </button>
           </div>
         </div>
 
-        {/* Quick access grid */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
-            Quick Access to All Content
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {contentItems.slice(0, 6).map((item) => (
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Explore More Content
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Discover our complete library of AI breakthroughs, quantum computing solutions, and automation technologies.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                key={item.id}
-                href={item.url}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 group"
+                to="/content-library"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getCategoryColor(item.category)}`}>
-                    {item.category}
-                  </span>
-                  <div className="text-2xl opacity-60 group-hover:opacity-100 transition-opacity">
-                    {item.image}
-                  </div>
-                </div>
-                
-                <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                  {item.title}
-                </h4>
-                
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                  {item.description}
-                </p>
-                
-                <div className="flex items-center text-xs text-gray-500">
-                  <span>📅 {new Date(item.publishDate).toLocaleDateString()}</span>
-                  {item.featured && (
-                    <span className="ml-2 px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full">
-                      Featured
-                    </span>
-                  )}
-                </div>
+                Browse All Content
               </Link>
-            ))}
+              <Link
+                to="/newsletter"
+                className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 border border-white/30"
+              >
+                Subscribe for Updates
+              </Link>
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default DynamicContentCarousel2026;

@@ -8,6 +8,13 @@ import {
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
 
+
+
+
+
+
+import Link from 'next / link';
+import { AnimatePresence } from 'framer-motion';
 interface FooterLink {
   label: string;
   href: string;
@@ -35,13 +42,9 @@ const footerSections: FooterSection[] = [
     ]
   },
   {
-    title: 'Solutions',
-    links: [
-      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' },
-      { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' },
-      { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' },
-      { label: 'Retail & E-commerce', href: '/solutions?industry=retail', description: 'Digital commerce' },
-      { label: 'Government', href: '/solutions?industry=government', description: 'Public sector' },
+
+
+
       { label: 'Education', href: '/solutions?industry=education', description: 'EdTech solutions' }
     ]
   },
@@ -91,6 +94,7 @@ const quickLinks = [
   { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },
   { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
 ];
+
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -160,55 +164,26 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         { label: 'Innovation Lab', href: '/innovation-lab' },
         { label: 'Research & Development', href: '/research-development' }
       ]
-    },
-    {
-      title: 'Company',
+
+
+
+
+
+
+
+
       items: [
         { label: 'About Us', href: '/about' },
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
         { label: 'Investors', href: '/investors' },
-        { label: 'Press & Media', href: '/press' }
-      ]
-    },
-    {
-      title: 'Resources',
-      items: [
-        { label: 'Blog', href: '/blog' },
-        { label: 'Case Studies', href: '/case-studies' },
-        { label: 'White Papers', href: '/white-papers' },
-        { label: 'Documentation', href: '/docs' },
-        { label: 'Support', href: '/support' }
-      ]
-    }
-  ];
 
-  const socialLinks = [
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
-    { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' }
-  ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
+
+
+
+
   };
 
   return (
@@ -219,12 +194,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
-            animate={{
-              x: [0, Math.random() * 1000, 0],
-              y: [0, Math.random() * 1000, 0],
-              opacity: [0, 0.6, 0],
-              scale: [0, 1, 0],
+
+
+
+
             }}
             transition={{
               duration: 15 + Math.random() * 10,
@@ -326,80 +299,44 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                 </form>
               </div>
 
-              {/* Contact Information */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
-                <div className="space-y-3">
-                  <div className="flex items-start space-x-3">
                     <Phone className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                    <a 
-                      href={`tel:${contactInfo.phone}`}
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
-                      aria-label={`Call us at ${contactInfo.phone}`}
-                    >
-                      {contactInfo.phone}
-                    </a>
-                  </div>
-                  <div className="flex items-start space-x-3">
                     <Mail className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                    <a 
-                      href={`mailto:${contactInfo.email}`}
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
-                      aria-label={`Email us at ${contactInfo.email}`}
-                    >
-                      {contactInfo.email}
-                    </a>
-                  </div>
-                  <div className="flex items-start space-x-3">
                     <MapPin className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                    <address className="text-gray-400 not-italic">
-                      {contactInfo.address}
-                    </address>
-                  </div>
+
+
+
                 </div>
               </div>
             </motion.div>
 
-            <form onSubmit={handleNewsletterSubmit} className="space-y-4">
-              <div className="relative">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email address"
-                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500/50 transition-all duration-200"
-                  required
-                />
-                <button
-                  onClick={() => toggleSection(section.title)}
-                  onKeyDown={(e) => handleKeyDown(e, () => toggleSection(section.title))}
-                  className="flex items-center justify-between w-full text-left text-lg font-semibold text-white hover:text-cyan-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg lg:hidden"
-                  aria-expanded={expandedSections.has(section.title)}
-                  aria-controls={`footer-section-${section.title}`}
-                >
-                  {section.title}
                   <ChevronRight 
-                    className={`w-5 h-5 transition-transform duration-200 ${
-                      expandedSections.has(section.title) ? 'rotate-90' : ''
-                    }`} 
-                    aria-hidden="true" 
-                  />
-                </button>
                 
-                <h3 className="text-lg font-semibold text-white hidden lg:block">{section.title}</h3>
                 
-                <div 
-                  id={`footer-section-${section.title}`}
-                  className={`space-y-3 ${
-                    expandedSections.has(section.title) ? 'block' : 'hidden lg:block'
-                  }`}
-                >
-                  {section.links.map((link) => (
-                    <div key={link.label}>
                       <Link
-                        href={item.href}
-                        className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
-                      >
+                    <Crown className="w-7 h-7 text-white" />;
+
+                  {section.title === 'Services' && <Briefcase className="w-5 h-5 text-cyan-400" />}
+                  {section.title === 'Solutions' && <Zap className="w-5 h-5 text-purple-400" />}
+                  {section.title === 'Company' && <Users className="w-5 h-5 text-pink-400" />}
+                  {section.title === 'Resources' && <BookOpen className="w-5 h-5 text-blue-400" />}
+                      <Link
+                      <Link
+                  <Phone className='w - 4 h - 4 text - cyan - 400' />;
+                  <Mail className='w - 4 h - 4 text - purple - 400' />;
+                  <MapPin className='w - 4 h - 4 text - pink - 400' />;
+                  <Globe className='w - 4 h - 4 text - blue - 400' />;
+                    <Crown className="w - 7 h - 7 text - white" />;
+                  <Phone className="w - 4 h - 4 text - cyan - 400" />;
+                  <Mail className="w - 4 h - 4 text - purple - 400" />;
+                  <MapPin className="w - 4 h - 4 text - pink - 400" />;
+                  <Globe className="w - 4 h - 4 text - blue - 400" />;
+                    <Briefcase className='w - 5 h - 5 text - cyan - 400' />)}
+                    <Zap className='w - 5 h - 5 text - purple - 400' />)}
+                    <Users className='w - 5 h - 5 text - pink - 400' />)}
+                    <BookOpen className='w - 5 h - 5 text - blue - 400' />)}
+                      <Link;
+                      <Link;
+
                         {item.label}
                       </Link>
                     </li>
@@ -409,15 +346,21 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
             ))}
           </motion.div>
 
+
+
+
+
+
           {/* Social Links & Newsletter */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mt-16 pt-12 border-t border-gray-800/50"
-          >
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+
+
+
+
               {/* Social Links */}
               <div className="flex items-center space-x-6">
                 <span className="text-gray-400 font-medium">Follow Us:</span>
@@ -447,9 +390,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                     type="email"
                     placeholder="Enter your email"
                     className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  />
-                  <motion.button
-                    className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
+
+
+
+
+
+
+
+
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -461,12 +409,22 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
           </motion.div>
         </div>
 
-      {/* Floating Contact Button */}
-      <div className="fixed bottom-6 right-6 z-40">
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-2xl shadow-cyan-500/50 flex items-center justify-center text-white hover:shadow-cyan-500/75 transition-all duration-300"
+
+
+
+
+
+                      </Link>;
+
+
+
+                <Link
+                </Link>{' '}
+
+                </Link>
+                  <Brain className='w-4 h-4 text-cyan-400' />                  <span>AI Consciousness</span>
+                  <Atom className='w-4 h-4 text-purple-400' />
+                  <Rocket className='w-4 h-4 text-pink-400' />                  <span>Space Technology</span>                <div className="flex items-center space-x-2">
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -502,13 +460,32 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Floating CTA */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="absolute bottom-8 right-8 z-20"
+                <Link
+
+                </Link>;
+
+
+
+                  <Brain className='w-4 h-4 text-cyan-400' />                  <span>AI Consciousness</span>;
+                  <Atom className='w-4 h-4 text-purple-400' />;
+                  <Rocket className='w-4 h-4 text-pink-400' />                  <span>Space Technology</span>                <div className="flex items-center space-x-2">;
+                  <Rocket className="w-4 h-4 text-pink-400" />;
+                <Link;
+                </Link>{' '}
+                <Link;
+                </Link>;
+                  <Brain className='w - 4 h - 4 text - cyan - 400' />                  <span > AI Consciousness</span>;
+                  <Atom className='w - 4 h - 4 text - purple - 400' />;
+                  <Rocket className='w - 4 h - 4 text - pink - 400' />                  <span > Space Technology</span>                <div className="flex items - center space - x-2">;
+                  <Rocket className="w - 4 h - 4 text - pink - 400" />;
+
+export default UltraAdvancedFuturisticFooter2025;      </motion && motion.button>;
+
+
+
+
+
+
       >
         <motion.button
           whileHover={{ scale: 1.05 }}
@@ -521,7 +498,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         </motion.button>
       </motion.div>
     </footer>
+
+        <ArrowUp className='w - 6 h - 6 mx - auto' />;
+export default UltraAdvancedFuturisticFooter2025;      </motion.button>;
+export default UltraAdvancedFuturisticFooter2025;
+
   );
 };
 
 export default UltraAdvancedFuturisticFooter2025;
+

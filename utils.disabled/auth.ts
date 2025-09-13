@@ -16,7 +16,6 @@ export function authenticateRequest(req: NextApiRequest, allowPublicGet: boolean
   if (!tenant) return { ok: false, error: 'Invalid API key' };
 
   return { ok: true, tenantId: tenant.id };
-=======
 
 export function getRequestUserEmail(req: NextApiRequest): string | null {
   const emailHeader = req.headers['x-user-email'];

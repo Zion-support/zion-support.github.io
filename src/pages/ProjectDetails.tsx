@@ -1,10 +1,10 @@
 import React from 'react';
+
 export function ProjectDetails() {
   return (
     <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
+      <h1>Project Details</h1>
+      <p>Project details component</p>
     </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

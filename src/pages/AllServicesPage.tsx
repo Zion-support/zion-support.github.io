@@ -1,6 +1,6 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
-import { EnhancedServicesShowcase } from '@/components/EnhancedServicesShowcase';
+import { EnhancedServicesShowcase } from '@/components/home/EnhancedServicesShowcase';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -22,7 +22,8 @@ import {
   Mail,
   ArrowRight
 } from 'lucide-react';
-import { SERVICE_CATEGORIES, CONTACT_INFO, PRICING_TIERS } from '@/data/enhancedServices';
+import { PRICING_TIERS } from '@/data/enhancedServices';
+import { SERVICE_CATEGORIES, CONTACT_INFO } from '@/data/expandedServices';
 
 export default function AllServicesPage() {
   return (
