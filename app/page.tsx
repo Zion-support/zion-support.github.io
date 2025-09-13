@@ -31,6 +31,8 @@ import NewContentPromotionBanner2026 from '../components/NewContentPromotionBann
 
 // New 2025 content promotion components
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
 
 // New revolutionary components
 import RevolutionaryAIContentPromotionBanner from '../components/RevolutionaryAIContentPromotionBanner';
@@ -101,6 +103,20 @@ export default function HomePage() {
         <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <NewContentPromotionBanner2025 />
+          </div>
+        </div>
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <div className="bg-gray-50 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <InteractiveContentDiscoveryWidget2025 />
+          </div>
+        </div>
+        
+        {/* NEWSLETTER SIGNUP 2025 */}
+        <div className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <NewsletterSignup2025 />
           </div>
         </div>
         
