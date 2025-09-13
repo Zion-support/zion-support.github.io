@@ -43,6 +43,14 @@ export default function Home() {
 
       <Head>
       </Head>
+      
+            
+              <Link 
+              </Link>
+              <Link 
+              </Link>
+              <Link 
+              </Link>
 
                 <Link href="/" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
                 <Link href="/" className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
@@ -64,15 +72,43 @@ export default function Home() {
 
                 <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
                 <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
+                <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
+                <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
+                <li><Link href="/services" className="hover:text-white">Quantum Computing</Link></li>
+                <li><Link href="/services" className="hover:text-white">Quantum Computing</Link></li>
                 <li><Link href="/services" className="hover:text-white">Quantum Computing</Link></li>
                 <li><Link href="/services" className="hover:text-white">Quantum Computing</Link></li>
                 <li><Link href="/services" className="hover:text-white">Cybersecurity</Link></li>
                 <li><Link href="/services" className="hover:text-white">Cybersecurity</Link></li>
+                <li><Link href="/services" className="hover:text-white">Cybersecurity</Link></li>
+                <li><Link href="/services" className="hover:text-white">Cybersecurity</Link></li>
+                <li><Link href="/services" className="hover:text-white">Cloud Infrastructure</Link></li>
+                <li><Link href="/services" className="hover:text-white">Cloud Infrastructure</Link></li>
                 <li><Link href="/services" className="hover:text-white">Cloud Infrastructure</Link></li>
                 <li><Link href="/services" className="hover:text-white">Cloud Infrastructure</Link></li>
                 <li><Link href="/about" className="hover:text-white">About Us</Link></li>
                 <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+                <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
                 <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
                 <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
                 <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
                 <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+                <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+                <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+            
+                <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">
+                </Link>
+
+                <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold">
+                </Link>
+
+                <Link href="/it-services" className="text-green-400 hover:text-green-300 font-semibold">
+                </Link>
+
+            
+              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              </Link>
+            

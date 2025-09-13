@@ -14,100 +14,12 @@ interface State {
   errorId: string;
 }
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
-    };
-  }
-  static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      errorInfo
-    });
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-    // In production, you could send this to an error reporting service
-    // this.logErrorToService(error, errorInfo);
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // Example: Send to error reporting service
-    try {
-      const errorData = {
-        errorId: this.state.errorId,
-        message: error.message,
-        stack: error.stack,
         componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-      };
-      // Send to your error reporting service
-      // fetch('/api/error-reporting', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(errorData)
-      // });
-    } catch (reportingError) {
-      console.error('Failed to report error:', reportingError);
-    // Send to analytics or error reporting service
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: true
-      });
-  private handleRetry = () => {
-  };
-  private handleGoHome = () => {
-    if (typeof window !== 'undefined') {
-      window.location.href = '/';
-  private handleContactSupport = () => {
-    window.location.href = '/contact';
-  private handleCallSupport = () => {
-    window.location.href = 'tel:+1-555-123-4567';
-  private getErrorType(): string {
-    if (!this.state.error) return 'Unknown Error';
     
-    const error = this.state.error;
-    if (error.name === 'TypeError') return 'Type Error';
-    if (error.name === 'ReferenceError') return 'Reference Error';
-    if (error.name === 'SyntaxError') return 'Syntax Error';
-    if (error.name === 'RangeError') return 'Range Error';
-    if (error.name === 'URIError') return 'URI Error';
-    if (error.name === 'EvalError') return 'Evaluation Error';
-    return error.name || 'Runtime Error';
-  private getErrorMessage(): string {
-    if (!this.state.error) return 'An unexpected error occurred';
-    // Provide user-friendly error messages
-    if (error.message.includes('Failed to fetch')) {
-      return 'Network connection error. Please check your internet connection and try again.';
-    if (error.message.includes('Chunk load failed')) {
-      return 'Application update error. Please refresh the page to get the latest version.';
-    if (error.message.includes('Loading chunk')) {
-      return 'Resource loading error. Please refresh the page and try again.';
-    if (error.message.includes('Unexpected token')) {
-      return 'Application configuration error. Please contact support if this persists.';
-    return error.message || 'An unexpected error occurred while processing your request.';
-  private getRecoverySuggestions(): string[] {
-    const suggestions: string[] = [];
-    if (this.state.retryCount < 2) {
-      suggestions.push('Try refreshing the page');
-    if (this.state.retryCount < 3) {
-      suggestions.push('Check your internet connection');
-    suggestions.push('Clear your browser cache and cookies');
-    suggestions.push('Try using a different browser');
-    if (this.state.retryCount > 2) {
-      suggestions.push('Contact support if the issue persists');
-    return suggestions;
-  render() {
+  
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
