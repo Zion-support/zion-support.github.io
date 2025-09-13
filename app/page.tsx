@@ -98,6 +98,12 @@ import NeuralConsensusRevolutionBanner from '../components/NeuralConsensusRevolu
 
 // Import additional content promotion banners
 
+// Import new AI Revolution 2025 components
+import NextGenAIInnovationShowcase2025 from '../components/NextGenAIInnovationShowcase2025';
+import NextGenAIInnovationPromotionBanner from '../components/NextGenAIInnovationPromotionBanner';
+import AIRevolution2025PromotionBanner from '../components/AIRevolution2025PromotionBanner';
+import InteractiveAIDemo2025 from '../components/InteractiveAIDemo2025';
+
 // Import new content revolution components
 import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
 import ContentRevolutionShowcase2025 from '../components/ContentRevolutionShowcase2025';
@@ -305,8 +311,14 @@ export default function HomePage() {
         {/* Structured Data for SEO */}
         <StructuredData2025 />
         
+        {/* AI REVOLUTION 2025 PROMOTION BANNER - NEW BREAKTHROUGH */}
+        <AIRevolution2025PromotionBanner />
+        
         {/* NEW CONTENT 2025 PROMOTION BANNER - LATEST RELEASES */}
         <NewContent2025PromotionBanner />
+        
+        {/* NEXT-GEN AI INNOVATION SHOWCASE 2025 - REVOLUTIONARY TECHNOLOGY */}
+        <NextGenAIInnovationShowcase2025 />
         
         {/* LATEST CONTENT SHOWCASE 2025 */}
         <LatestContentShowcase2025 />
