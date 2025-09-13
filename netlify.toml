@@ -79,11 +79,7 @@
 [context.branch-deploy]
   command = "corepack enable && pnpm build"
 
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
+# Netlify has built-in compression support, no plugin needed
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
