@@ -154,7 +154,6 @@ const ResourceROICalculator = React.lazy(() => import('./pages/ResourceROICalcul
 
 // Content showcase hub
 const ContentShowcaseHub = React.lazy(() => import('./pages/ContentShowcaseHub'));
-const ContentShowcase2025 = React.lazy(() => import('./pages/ContentShowcase2025'));
 
 // Comprehensive services showcase - commented out as they don't exist yet
 // const ComprehensiveServicesShowcase2025Page = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
