@@ -72,6 +72,8 @@ import PerformanceMetrics from '../components/PerformanceMetrics';
 import TechnologyStack from '../components/TechnologyStack';
 import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
 import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
+import AI2025UltimateBreakthroughAnnouncementBanner from '../components/AI2025UltimateBreakthroughAnnouncementBanner';
+import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
@@ -237,6 +239,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER - NEWEST CONTENT */}
+        <AI2025UltimateBreakthroughAnnouncementBanner />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 - NEWEST CONTENT */}
+        <UltimateContentDiscoveryWidget2025 />
+        
         {/* AI 2027 LATEST BREAKTHROUGHS PROMOTION BANNER - NEWEST CONTENT */}
         <AI2027LatestBreakthroughsPromotionBanner />
         
