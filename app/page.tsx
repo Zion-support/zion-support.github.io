@@ -198,6 +198,14 @@ import AdvancedAutomationSolutions2026UltimatePromotionBanner from '../component
 import QuantumComputingSolutions2026UltimatePromotionBanner from '../components/QuantumComputingSolutions2026UltimatePromotionBanner';
 
 // Import new 2025 ultimate content promotion banner
+
+// Import new AI innovation showcase components
+import AIInnovationShowcase2025 from '../components/AIInnovationShowcase2025';
+import AIInnovationShowcase2025PromotionBanner from '../components/AIInnovationShowcase2025PromotionBanner';
+import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
+import InteractiveTechDemo2025PromotionBanner from '../components/InteractiveTechDemo2025PromotionBanner';
+import ComprehensiveServiceShowcase2025 from '../components/ComprehensiveServiceShowcase2025';
+import ComprehensiveServiceShowcase2025PromotionBanner from '../components/ComprehensiveServiceShowcase2025PromotionBanner';
 import AI2025UltimateContentPromotionBanner from '../components/AI2025UltimateContentPromotionBanner';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
