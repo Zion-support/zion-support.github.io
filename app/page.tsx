@@ -125,6 +125,11 @@ import UltimateContentShowcase2026PromotionBanner from '../components/UltimateCo
 import RevolutionaryContentDiscoveryWidget2026 from '../components/RevolutionaryContentDiscoveryWidget2026';
 import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 
+// Import new promotional banners for 2026
+import AI2026UltimateContentRevolutionPromotionBanner from '../components/AI2026UltimateContentRevolutionPromotionBanner';
+import AdvancedAutomationSolutions2026UltimatePromotionBanner from '../components/AdvancedAutomationSolutions2026UltimatePromotionBanner';
+import QuantumComputingSolutions2026UltimatePromotionBanner from '../components/QuantumComputingSolutions2026UltimatePromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -156,6 +161,15 @@ export default function HomePage() {
         
         {/* AI SUCCESS STORIES 2025 BANNER */}
         <AISuccessStories2025Banner />
+        
+        {/* AI 2026 ULTIMATE CONTENT REVOLUTION PROMOTION BANNER */}
+        <AI2026UltimateContentRevolutionPromotionBanner />
+        
+        {/* ADVANCED AUTOMATION SOLUTIONS 2026 ULTIMATE PROMOTION BANNER */}
+        <AdvancedAutomationSolutions2026UltimatePromotionBanner />
+        
+        {/* QUANTUM COMPUTING SOLUTIONS 2026 ULTIMATE PROMOTION BANNER */}
+        <QuantumComputingSolutions2026UltimatePromotionBanner />
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH CONTENT BANNER */}
         <AI2025UltimateBreakthroughContentBanner />
