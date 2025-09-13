@@ -48,6 +48,11 @@ import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025
 
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
+
+// Import new promotional components
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import AnimatedContentShowcase from '../components/AnimatedContentShowcase';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 
@@ -88,6 +93,15 @@ export default function HomePage() {
         
         {/* AI 2030 TRANSCENDENT INTELLIGENCE PROMOTION BANNER */}
         <AI2030TranscendentIntelligencePromotionBanner />
+        
+        {/* NEW CONTENT PROMOTION BANNER */}
+        <NewContentPromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <InteractiveContentDiscoveryWidget />
+        
+        {/* ANIMATED CONTENT SHOWCASE */}
+        <AnimatedContentShowcase />
         
         {/* AI 2035 SINGULARITY PROMOTION BANNER */}
         <AI2035SingularityPromotionBanner />
