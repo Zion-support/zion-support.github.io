@@ -1,65 +1,74 @@
 # Netlify Build Fix Summary
 
-## Problem
-The Netlify build was failing with the following error:
+## Issue
+The Netlify build was failing with a SWC (Speedy Web Compiler) download error:
 ```
-error Error: ENOENT: no such file or directory, copyfile '/opt/buildhome/.yarn_cache/v6/npm-find-up-5.0.0-integrity/node_modules/find-up/index.d.ts' -> '/opt/build/repo/node_modules/eslint/node_modules/find-up/index.d.ts'
+⨯ Failed to download swc package from https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-13.5.11.tgz
+unhandledRejection Error: request failed with status 404
 ```
-
-This was caused by a corrupted dependency cache on Netlify, specifically with the `find-up` package that ESLint depends on.
 
 ## Root Cause
-1. **Corrupted Yarn Cache**: The cached `find-up` package on Netlify was missing the `index.d.ts` file
-2. **Dependency Resolution Conflicts**: ESLint 8.57.1 requires `find-up ^5.0.0` but there were resolution conflicts
-3. **Missing Engine Specifications**: No explicit Node.js and Yarn version requirements
+1. **Version Mismatch**: The build environment was detecting Next.js version `13.5.11` but the `package.json` specified `^14.2.0`
+2. **SWC Binary Download Failure**: The SWC binary for Next.js 13.5.11 is no longer available on npm registry
+3. **Missing SWC Fallback Configuration**: The build wasn't properly configured to fall back to JavaScript-based SWC
 
-## Solutions Implemented
+## Fixes Applied
 
-### 1. Enhanced Build Script (`build.sh`)
-- Added cache clearing for Netlify environment
-- Implemented retry logic with fallback mechanisms
-- Added `--no-cache` and `--prefer-offline` flags to avoid corrupted cache
-- Added `--ignore-engines` flag for better compatibility
+### 1. Updated Netlify Configuration (`netlify.toml`)
+- Added environment variables to force SWC JavaScript fallback:
+  - `NEXT_FORCE_SWC = "1"`
+  - `NEXT_SWC_DISABLE = "1"`
+- Enhanced existing SWC fallback variables:
+  - `SWC_BINARY_PATH = ""`
+  - `NEXT_SWC_BINARY_PATH = ""`
 
-### 2. Package Configuration Updates (`package.json`)
-- Added `engines` field specifying Node.js >=20.18.0 and Yarn >=1.22.0
-- Added `find-up: "^5.0.0"` to both `resolutions` and `overrides` sections
-- This ensures consistent dependency resolution across all packages
+### 2. Enhanced Build Script (`netlify-build.sh`)
+- Added Next.js version verification and correction
+- Enhanced SWC fallback environment variables
+- Added explicit Next.js version forcing in installation attempts
+- Improved error handling and fallback strategies
 
-### 3. Netlify Configuration (`netlify.toml`)
-- Created proper Netlify configuration file
-- Specified exact Node.js and Yarn versions
-- Set proper build environment variables
+### 3. Updated Next.js Configuration (`next.config.js`)
+- Added `forceSwcTransforms: true` to experimental config
+- Enhanced SWC configuration to force JavaScript fallback
+- Maintained existing optimizations while ensuring compatibility
 
-### 4. Yarn Configuration (`.yarnrc`)
-- Added Yarn configuration for better dependency resolution
-- Set appropriate timeouts and preferences
+## Key Changes
 
-### 5. Lockfile Regeneration
-- Created `regenerate-lockfile.sh` script to update yarn.lock with new resolutions
-- Successfully regenerated the lockfile with proper dependency resolution
+### Environment Variables
+```bash
+export NEXT_FORCE_SWC=1
+export NEXT_SWC_DISABLE=1
+export SWC_BINARY_PATH=""
+export NEXT_SWC_BINARY_PATH=""
+```
 
-## Files Modified
-- `build.sh` - Enhanced with cache clearing and retry logic
-- `package.json` - Added engines, resolutions, and overrides
-- `netlify.toml` - Created Netlify configuration
-- `.yarnrc` - Created Yarn configuration
-- `yarn.lock` - Regenerated with proper dependency resolution
-- `regenerate-lockfile.sh` - Created utility script
+### Build Script Improvements
+- Version verification: Checks installed Next.js version
+- Automatic correction: Forces correct version if mismatch detected
+- Multiple fallback strategies for dependency installation
+- Enhanced error handling
 
-## Testing Results
-✅ Local build test passed successfully
-✅ Dependencies installed without errors
-✅ Build completed in 10.55s
-✅ All assets generated correctly
+### Next.js Config
+```javascript
+experimental: {
+  forceSwcTransforms: true,
+  swcMinify: true,
+  swcLoader: true,
+}
+```
 
-## Next Steps
-1. Commit all changes to your repository
-2. Trigger a new deployment on Netlify
-3. The build should now succeed with the enhanced error handling and cache clearing
+## Expected Results
+- Build should now use JavaScript-based SWC instead of trying to download binary
+- Next.js version will be forced to 14.2.0 as specified in package.json
+- Multiple fallback strategies ensure build success even with dependency issues
+- Enhanced error handling provides better debugging information
 
-## Prevention
-- The enhanced build script will automatically clear corrupted caches
-- Proper engine specifications ensure consistent environments
-- Dependency resolutions prevent future conflicts
-- Retry logic provides resilience against temporary issues
+## Testing
+The build script now includes:
+1. Version verification after installation
+2. Automatic version correction if needed
+3. Multiple build approaches with different SWC configurations
+4. Comprehensive error reporting
+
+This should resolve the Netlify build failure and ensure consistent builds going forward.

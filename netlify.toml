@@ -17,9 +17,13 @@
   NPM_CONFIG_PACKAGE_MANAGER = "yarn"
   # Disable Next.js telemetry
   NEXT_TELEMETRY_DISABLED = "1"
-  # Force SWC to use JavaScript fallback
+  # Force SWC to use JavaScript fallback to avoid binary download issues
   SWC_BINARY_PATH = ""
   NEXT_SWC_BINARY_PATH = ""
+  # Force Next.js to use the correct version
+  NEXT_FORCE_SWC = "1"
+  # Disable SWC binary download
+  NEXT_SWC_DISABLE = "1"
 
 # Build settings
 [build.processing]
