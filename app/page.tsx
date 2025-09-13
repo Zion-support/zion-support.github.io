@@ -18,6 +18,7 @@ const AdvancedPerformanceMonitor2026 = lazy(() => import('../components/Advanced
 const UltimateAIAssistant2026 = lazy(() => import('../components/UltimateAIAssistant2026'));
 const AdvancedAnalyticsDashboard2026 = lazy(() => import('../components/AdvancedAnalyticsDashboard2026'));
 const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../components/RevolutionaryContentRecommendationEngine2026'));
+const AI2025UltimateBreakthroughRevolutionBanner = lazy(() => import('../components/AI2025UltimateBreakthroughRevolutionBanner'));
 
 export default function HomePage() {
   return (
@@ -30,6 +31,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI 2025 Breakthrough..." />}>
+          <AI2025UltimateBreakthroughRevolutionBanner />
+        </Suspense>
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
         
