@@ -225,6 +225,10 @@ import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner20
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
 
+// Import new 2026 promotional components
+import NewContent2026PromotionalBanner from '../components/NewContent2026PromotionalBanner';
+import NewContentDiscoveryWidget2026 from '../components/NewContentDiscoveryWidget2026';
+
 // Import new 2025 ultimate content components
 import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
@@ -337,6 +341,13 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2026 CONTENT PROMOTIONAL BANNER */}
+        <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <NewContent2026PromotionalBanner />
+          </div>
+        </div>
+
         {/* NEW ULTIMATE CONTENT SHOWCASE 2025 BANNERS */}
         <UltimateContentShowcase2025Banner />
         <NewContent2025UltimatePromotionBanner />
@@ -635,6 +646,15 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Discovery..." />}>
               <InteractiveContentDiscoveryWidget2025 />
+            </Suspense>
+          </div>
+        </section>
+
+        {/* NEW 2026 CONTENT DISCOVERY WIDGET */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Suspense fallback={<LoadingSpinner size="lg" text="Loading New Content..." />}>
+              <NewContentDiscoveryWidget2026 />
             </Suspense>
           </div>
         </section>
