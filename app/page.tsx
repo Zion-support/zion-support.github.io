@@ -148,6 +148,14 @@ import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025Ult
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner';
 
+// Import new AI tools interactive demo components
+import AIToolsInteractiveDemo2025 from '../components/AIToolsInteractiveDemo2025';
+import AIToolsInteractiveDemo2025PromotionBanner from '../components/AIToolsInteractiveDemo2025PromotionBanner';
+
+// Import new enterprise automation solutions components
+import EnterpriseAutomationSolutions2025 from '../components/EnterpriseAutomationSolutions2025';
+import EnterpriseAutomationSolutions2025PromotionBanner from '../components/EnterpriseAutomationSolutions2025PromotionBanner';
+
 // Import new 2026 content components
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
@@ -256,6 +264,12 @@ export default function HomePage() {
         
         {/* NEW 2027 INTERACTIVE TECH DEMO PROMOTION BANNER */}
         <InteractiveTechDemo2027PromotionBanner />
+        
+        {/* NEW AI TOOLS INTERACTIVE DEMO 2025 PROMOTION BANNER */}
+        <AIToolsInteractiveDemo2025PromotionBanner />
+        
+        {/* NEW ENTERPRISE AUTOMATION SOLUTIONS 2025 PROMOTION BANNER */}
+        <EnterpriseAutomationSolutions2025PromotionBanner />
         
         {/* NEW 2025 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2025PromotionBanner />
@@ -525,6 +539,12 @@ export default function HomePage() {
         {/* NEW 2025-2026 INNOVATION SHOWCASE SECTIONS */}
         <AI2025_2026UltimateInnovationShowcase />
         <BusinessTransformation2025Showcase />
+        
+        {/* NEW AI TOOLS INTERACTIVE DEMO 2025 SHOWCASE */}
+        <AIToolsInteractiveDemo2025 />
+        
+        {/* NEW ENTERPRISE AUTOMATION SOLUTIONS 2025 SHOWCASE */}
+        <EnterpriseAutomationSolutions2025 />
         
         {/* INTERACTIVE TECH DEMO 2025 */}
         <InteractiveTechDemo2025 />
