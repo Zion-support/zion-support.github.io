@@ -1,84 +1,101 @@
-import React from 'react';
-import { ArrowRightIcon, StarIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
-const AI2025RevolutionaryContentBanner = () => {
-  const benefits = [
-    "10x Faster Content Creation",
-    "95% Cost Reduction",
-    "300% Higher Engagement",
-    "24/7 Content Generation"
+export default function AI2025RevolutionaryContentBanner() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentContent, setCurrentContent] = useState(0);
+
+  const contentItems = [
+    {
+      title: "AI 2025 Ultimate Breakthrough Revolution",
+      description: "Discover revolutionary AI technologies delivering 10,000% ROI",
+      link: "/ai-2025-ultimate-breakthrough-revolution",
+      badge: "BREAKTHROUGH",
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      title: "Global Transformation Case Study",
+      description: "Fortune 500 company achieves 10,000% ROI success story",
+      link: "/case-studies/ai-2025-global-transformation-breakthrough",
+      badge: "SUCCESS STORY",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "AI 2025 Revolutionary Trends & Predictions",
+      description: "Comprehensive guide to the future of AI technology",
+      link: "/blog/ai-2025-revolutionary-trends-predictions",
+      badge: "FUTURE PREDICTIONS",
+      color: "from-purple-500 to-blue-500"
+    }
   ];
 
+  useEffect(() => {
+    setIsVisible(true);
+    
+    const interval = setInterval(() => {
+      setCurrentContent((prev) => (prev + 1) % contentItems.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [contentItems.length]);
+
   return (
-    <section className="py-16 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div>
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-sm font-semibold mb-6">
-              <StarIcon className="w-4 h-4 mr-2" />
-              REVOLUTIONARY AI CONTENT 2025
-            </div>
-            
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              The Future of Content
-              <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-                is Here
-              </span>
-            </h2>
-            
-            <p className="text-xl text-gray-300 mb-8">
-              Experience the most advanced AI content generation platform that creates, optimizes, and distributes content across all channels with unprecedented speed and quality.
-            </p>
-
-            {/* Benefits List */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center text-white">
-                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="font-semibold">{benefit}</span>
+    <div className={`fixed top-0 left-0 right-0 z-50 transform transition-all duration-500 ${
+      isVisible ? 'translate-y-0' : '-translate-y-full'
+    }`}>
+      <div className={`bg-gradient-to-r ${contentItems[currentContent].color} text-white shadow-lg`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between py-3">
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <span className="text-2xl">🚀</span>
+                <div>
+                  <div className="flex items-center space-x-2">
+                    <span className="bg-white/20 px-2 py-1 rounded-full text-xs font-semibold">
+                      {contentItems[currentContent].badge}
+                    </span>
+                    <span className="text-sm font-medium">NEW CONTENT</span>
+                  </div>
+                  <h3 className="text-lg font-bold">{contentItems[currentContent].title}</h3>
+                  <p className="text-sm opacity-90">{contentItems[currentContent].description}</p>
                 </div>
-              ))}
+              </div>
             </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-200 flex items-center justify-center">
-                Get Started Now
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
+            
+            <div className="flex items-center space-x-4">
+              <Link
+                href={contentItems[currentContent].link}
+                className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                Explore Now
+              </Link>
+              <button
+                onClick={() => setIsVisible(false)}
+                className="text-white hover:text-gray-200 transition-colors"
+                aria-label="Close banner"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-black transition-all duration-200">
-                Watch Demo
-              </button>
-            </div>
-          </div>
-
-          {/* Right Content - Stats */}
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl font-bold text-yellow-400 mb-2">500K+</div>
-              <div className="text-white font-semibold">Content Pieces Generated</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl font-bold text-orange-400 mb-2">99.9%</div>
-              <div className="text-white font-semibold">Uptime Guarantee</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl font-bold text-pink-400 mb-2">50+</div>
-              <div className="text-white font-semibold">Languages Supported</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
-              <div className="text-white font-semibold">AI Content Generation</div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+      
+      {/* Content indicators */}
+      <div className="flex justify-center space-x-2 py-2 bg-gray-900/10">
+        {contentItems.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentContent(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentContent ? 'bg-white' : 'bg-white/50'
+            }`}
+            aria-label={`Go to content ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
   );
-};
-
-export default AI2025RevolutionaryContentBanner;
+}

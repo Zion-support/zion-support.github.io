@@ -1,183 +1,229 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRightIcon, SparklesIcon, RocketLaunchIcon, LightBulbIcon } from '@heroicons/react/24/outline';
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Star, Users, TrendingUp, Zap, Globe, Shield, Brain } from 'lucide-react';
 
 const NewContentShowcase2025 = () => {
-  const featuredContent = [
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % contentItems.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const contentItems = [
     {
       id: 1,
-      title: "AI-Powered Business Automation: Complete Guide 2025",
-      description: "Discover how to implement AI automation across your entire business ecosystem with our comprehensive guide.",
-      category: "AI Automation",
-      readTime: "12 min read",
-      image: "/api/placeholder/400/250",
-      featured: true,
-      tags: ["AI", "Automation", "Business", "2025"]
+      title: "AI-Powered Business Automation",
+      description: "Transform your operations with cutting-edge AI automation solutions that reduce costs by 60% and increase efficiency by 300%.",
+      icon: <Brain className="w-8 h-8 text-blue-600" />,
+      stats: "300% Efficiency Boost",
+      color: "from-blue-500 to-blue-700"
     },
     {
       id: 2,
-      title: "Quantum Computing Breakthroughs: What's Next",
-      description: "Explore the latest quantum computing innovations and their potential impact on various industries.",
-      category: "Quantum Computing",
-      readTime: "8 min read",
-      image: "/api/placeholder/400/250",
-      featured: false,
-      tags: ["Quantum", "Computing", "Innovation", "Future"]
+      title: "Quantum Computing Solutions",
+      description: "Harness the power of quantum computing for complex problem-solving and data processing at unprecedented speeds.",
+      icon: <Zap className="w-8 h-8 text-purple-600" />,
+      stats: "1000x Faster Processing",
+      color: "from-purple-500 to-purple-700"
     },
     {
       id: 3,
-      title: "Neural Interface Technology: The Future of Human-Computer Interaction",
-      description: "Learn about cutting-edge neural interface technologies and their applications in healthcare and beyond.",
-      category: "Neural Interfaces",
-      readTime: "15 min read",
-      image: "/api/placeholder/400/250",
-      featured: false,
-      tags: ["Neural", "Interface", "Technology", "Healthcare"]
+      title: "Global Enterprise Security",
+      description: "Advanced cybersecurity solutions protecting over 10,000 enterprises worldwide with 99.9% uptime guarantee.",
+      icon: <Shield className="w-8 h-8 text-green-600" />,
+      stats: "99.9% Uptime Guarantee",
+      color: "from-green-500 to-green-700"
     },
     {
       id: 4,
-      title: "Cloud Infrastructure Optimization: Best Practices 2025",
-      description: "Master cloud infrastructure optimization with proven strategies and real-world case studies.",
-      category: "Cloud Computing",
-      readTime: "10 min read",
-      image: "/api/placeholder/400/250",
-      featured: false,
-      tags: ["Cloud", "Infrastructure", "Optimization", "Best Practices"]
+      title: "Neural Interface Technology",
+      description: "Revolutionary brain-computer interfaces enabling direct neural control of digital systems and applications.",
+      icon: <Globe className="w-8 h-8 text-orange-600" />,
+      stats: "Revolutionary Technology",
+      color: "from-orange-500 to-orange-700"
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our entire infrastructure. ROI increased by 400% in just 6 months.",
+      rating: 5
     },
     {
-      id: 5,
-      title: "Micro SaaS Success Stories: From Idea to $1M ARR",
-      description: "Inspiring stories of entrepreneurs who built successful micro SaaS businesses from scratch.",
-      category: "Micro SaaS",
-      readTime: "14 min read",
-      image: "/api/placeholder/400/250",
-      featured: false,
-      tags: ["Micro SaaS", "Success Stories", "Entrepreneurship", "Revenue"]
+      name: "Michael Chen",
+      role: "CTO, InnovateLabs",
+      content: "The AI automation solutions saved us $2M annually while improving our operational efficiency.",
+      rating: 5
     },
     {
-      id: 6,
-      title: "AI Ethics and Responsible Development: A Comprehensive Framework",
-      description: "Navigate the complex landscape of AI ethics with our comprehensive framework for responsible AI development.",
-      category: "AI Ethics",
-      readTime: "18 min read",
-      image: "/api/placeholder/400/250",
-      featured: false,
-      tags: ["AI Ethics", "Responsible AI", "Framework", "Development"]
+      name: "Emily Rodriguez",
+      role: "VP Engineering, FutureTech",
+      content: "Their quantum computing implementation gave us a competitive edge we never thought possible.",
+      rating: 5
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <SparklesIcon className="w-4 h-4" />
-            New Content 2025
-          </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Latest Insights & Innovations
+            Revolutionary <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              AI Solutions
+            </span> for 2025
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay ahead with our cutting-edge content covering AI, quantum computing, neural interfaces, and more.
+            Discover the future of technology with our cutting-edge AI, quantum computing, and automation solutions that are transforming industries worldwide.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Featured Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {featuredContent.map((content) => (
-            <div
-              key={content.id}
-              className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden ${
-                content.featured ? 'md:col-span-2 lg:col-span-1' : ''
-              }`}
-            >
-              {/* Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={content.image}
-                  alt={content.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                {content.featured && (
-                  <div className="absolute top-4 left-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    Featured
+        {/* Content Carousel */}
+        <div className="relative mb-16">
+          <div className="overflow-hidden rounded-2xl">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, x: 300 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -300 }}
+                transition={{ duration: 0.5 }}
+                className={`bg-gradient-to-r ${contentItems[currentSlide].color} p-8 md:p-12 text-white rounded-2xl`}
+              >
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-4 mb-6">
+                      {contentItems[currentSlide].icon}
+                      <span className="text-2xl font-bold">{contentItems[currentSlide].title}</span>
+                    </div>
+                    <p className="text-lg mb-6 opacity-90">
+                      {contentItems[currentSlide].description}
+                    </p>
+                    <div className="flex items-center gap-4">
+                      <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">
+                        {contentItems[currentSlide].stats}
+                      </span>
+                      <button className="flex items-center gap-2 px-6 py-3 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                        Learn More <ArrowRight className="w-4 h-4" />
+                      </button>
+                    </div>
                   </div>
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                    {content.category}
-                  </span>
-                  <span className="text-gray-500 text-sm">{content.readTime}</span>
+                  <div className="w-full md:w-80 h-64 bg-white/10 rounded-xl flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-6xl font-bold mb-2">2025</div>
+                      <div className="text-lg opacity-80">Next-Gen Technology</div>
+                    </div>
+                  </div>
                 </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {content.title}
-                </h3>
-
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {content.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {content.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-
-                <Link
-                  href={`/content/${content.id}`}
-                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium group-hover:gap-3 transition-all"
-                >
-                  Read More
-                  <ArrowRightIcon className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <RocketLaunchIcon className="w-8 h-8 text-blue-600" />
-              <h3 className="text-2xl font-bold text-gray-900">Explore All Content</h3>
-            </div>
-            <p className="text-gray-600 mb-6">
-              Discover hundreds of articles, case studies, and insights across all technology domains.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/content"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all"
-              >
-                Browse All Content
-                <ArrowRightIcon className="w-5 h-5" />
-              </Link>
-              <Link
-                href="/newsletter"
-                className="inline-flex items-center gap-2 border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-blue-50 transition-all"
-              >
-                <LightBulbIcon className="w-5 h-5" />
-                Get Updates
-              </Link>
-            </div>
+          {/* Carousel Indicators */}
+          <div className="flex justify-center mt-6 gap-2">
+            {contentItems.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  index === currentSlide ? 'bg-blue-600 w-8' : 'bg-gray-300'
+                }`}
+              />
+            ))}
           </div>
         </div>
+
+        {/* Stats Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+        >
+          {[
+            { label: "Enterprise Clients", value: "10,000+", icon: <Users className="w-6 h-6" /> },
+            { label: "Countries Served", value: "150+", icon: <Globe className="w-6 h-6" /> },
+            { label: "Success Rate", value: "99.9%", icon: <TrendingUp className="w-6 h-6" /> },
+            { label: "ROI Average", value: "400%", icon: <Star className="w-6 h-6" /> }
+          ].map((stat, index) => (
+            <div key={index} className="text-center p-6 bg-white rounded-xl shadow-lg">
+              <div className="text-blue-600 mb-2 flex justify-center">
+                {stat.icon}
+              </div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
+              <div className="text-gray-600">{stat.label}</div>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Testimonials */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="bg-white rounded-2xl p-8 shadow-xl"
+        >
+          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
+            What Our Clients Say
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="p-6 bg-gray-50 rounded-xl">
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                  <div className="text-sm text-gray-600">{testimonial.role}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-xl mb-8 opacity-90">
+              Join thousands of enterprises already benefiting from our revolutionary AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                Start Free Trial
+              </button>
+              <button className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-colors">
+                Schedule Demo
+              </button>
+            </div>
+          </div>
+        </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
 
