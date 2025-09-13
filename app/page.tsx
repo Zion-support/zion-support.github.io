@@ -57,16 +57,15 @@ import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRe
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 
+// Import new content promotional components
+import NewContent2026BreakthroughBanner from '../components/NewContent2026BreakthroughBanner';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+
 // Import new content promotional banners
 import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
 import AI20262030FuturePredictionsBreakthroughBanner from '../components/AI20262030FuturePredictionsBreakthroughBanner';
 import QuantumComputingSolutions2025Banner from '../components/QuantumComputingSolutions2025Banner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
-
-// Import new promotional banners for content advertising
-import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
-import AI20262030FuturePredictionsBanner from '../components/AI20262030FuturePredictionsBanner';
->>>>>>> cursor/create-and-deploy-new-content-b354
 
 // Import new ultimate content banners
 import UltimateContentRevolutionBanner from '../components/UltimateContentRevolutionBanner';
@@ -82,7 +81,22 @@ export default function HomePage() {
         url="/"
       />
       
-        <div className='min-h-screen bg-white'>
+      <div className='min-h-screen bg-white'>
+        {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
+        <AI2025UltimateBreakthroughRevolutionBanner />
+        
+        {/* NEW AI 2026-2030 FUTURE PREDICTIONS BREAKTHROUGH BANNER */}
+        <AI20262030FuturePredictionsBreakthroughBanner />
+        
+        {/* NEW QUANTUM COMPUTING SOLUTIONS 2025 BANNER */}
+        <QuantumComputingSolutions2025Banner />
+        
+        {/* NEW CONTENT 2026 BREAKTHROUGH BANNER */}
+        <NewContent2026BreakthroughBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
+        <InteractiveContentDiscovery2026 />
+        
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
         
@@ -111,6 +125,7 @@ export default function HomePage() {
         {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
+<<<<<<< HEAD
       <div className='min-h-screen bg-white'>
         {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
         <AI2025UltimateBreakthroughRevolutionBanner />
@@ -121,6 +136,8 @@ export default function HomePage() {
         {/* NEW QUANTUM COMPUTING SOLUTIONS 2025 BANNER */}
         <QuantumComputingSolutions2025Banner />
         
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bfc7
         {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
