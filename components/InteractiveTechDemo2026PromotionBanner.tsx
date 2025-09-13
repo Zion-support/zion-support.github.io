@@ -1,264 +1,171 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
   Play, 
-  Pause, 
-  RotateCcw, 
-  Code, 
-  Database, 
-  Cpu, 
-  Network,
-  Brain,
+  ArrowRight, 
+  Star, 
   Zap,
-  BarChart3,
-  Eye,
-  MousePointer,
-  Monitor,
-  Smartphone,
-  Globe,
+  Brain,
+  Rocket,
+  Settings,
+  Code,
+  Cpu,
   CheckCircle,
-  ArrowRight,
-  Download,
-  Share2,
-  Star,
-  Users,
-  Award,
-  Clock,
-  X
+  ExternalLink
 } from 'lucide-react';
 
 const InteractiveTechDemo2026PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1500);
-    return () => clearTimeout(timer);
+    setIsVisible(true);
   }, []);
 
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  const handlePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  if (isDismissed) return null;
+  const features = [
+    'Real-time AI Demonstrations',
+    'Interactive Quantum Computing',
+    'Live Automation Workflows',
+    'Customizable Parameters'
+  ];
 
   return (
-    <AnimatePresence>
-      {isVisible && (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8 }}
+      className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600"
+    >
+      {/* Animated background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden"
-        >
-          {/* Background Pattern */}
-          <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -z-10" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-pink-400/20 rounded-full blur-2xl -z-10" />
-          
-          {/* Floating Elements */}
-          <div className="absolute top-4 left-4 w-3 h-3 bg-yellow-400 rounded-full animate-pulse" />
-          <div className="absolute top-8 right-8 w-2 h-2 bg-pink-400 rounded-full animate-bounce" />
-          <div className="absolute bottom-4 right-4 w-4 h-4 bg-green-400 rounded-full animate-ping" />
+          className="absolute top-0 left-0 w-full h-full"
+          animate={{
+            background: [
+              'radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)',
+              'radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)',
+              'radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)'
+            ]
+          }}
+          transition={{ duration: 8, repeat: Infinity }}
+        />
+      </div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-              {/* Content */}
-              <div className="flex-1 text-center lg:text-left">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-4"
-                >
-                  <Play className="w-4 h-4" />
-                  <span>Interactive Demo</span>
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                </motion.div>
-
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-3xl md:text-4xl font-bold mb-4"
-                >
-                  Experience Technology in Action
-                </motion.h2>
-
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="text-lg md:text-xl opacity-90 mb-6 max-w-2xl"
-                >
-                  Interact with cutting-edge AI, quantum computing, and automation technologies. See real-time performance metrics and experience the future today.
-                </motion.p>
-
-                {/* Demo Features */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6"
-                >
-                  {[
-                    { icon: Brain, label: 'AI Processing', color: 'text-blue-300' },
-                    { icon: Cpu, label: 'Quantum Simulation', color: 'text-purple-300' },
-                    { icon: Zap, label: 'Smart Automation', color: 'text-pink-300' },
-                    { icon: BarChart3, label: 'Live Analytics', color: 'text-green-300' }
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <feature.icon className={`w-5 h-5 ${feature.color}`} />
-                      <span className="text-sm font-medium">{feature.label}</span>
-                    </div>
-                  ))}
-                </motion.div>
-
-                {/* Interactive Demo Preview */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 mb-6"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-lg font-semibold">Live Demo Preview</h4>
-                    <div className="flex items-center gap-2">
-                      <button
-                        onClick={handlePlayPause}
-                        className={`p-2 rounded-full transition-all duration-300 ${
-                          isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'
-                        }`}
-                      >
-                        {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-                      </button>
-                      <button className="p-2 rounded-full bg-gray-500 hover:bg-gray-600 transition-all duration-300">
-                        <RotateCcw className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                  
-                  {/* Progress Bar */}
-                  <div className="w-full bg-white/20 rounded-full h-2 mb-4">
-                    <motion.div
-                      className="h-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-400"
-                      style={{ width: isPlaying ? '75%' : '0%' }}
-                      transition={{ duration: 0.5 }}
-                    />
-                  </div>
-                  
-                  <div className="grid grid-cols-3 gap-4 text-center">
-                    <div className="bg-white/10 rounded-lg p-2">
-                      <div className="text-sm font-bold">2.5ms</div>
-                      <div className="text-xs opacity-70">Processing</div>
-                    </div>
-                    <div className="bg-white/10 rounded-lg p-2">
-                      <div className="text-sm font-bold">99.7%</div>
-                      <div className="text-xs opacity-70">Accuracy</div>
-                    </div>
-                    <div className="bg-white/10 rounded-lg p-2">
-                      <div className="text-sm font-bold">10K/s</div>
-                      <div className="text-xs opacity-70">Throughput</div>
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Stats */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.7 }}
-                  className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm"
-                >
-                  <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4" />
-                    <span>50,000+ Users</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Award className="w-4 h-4" />
-                    <span>Industry Leading</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    <span>Real-time</span>
-                  </div>
-                </motion.div>
-              </div>
-
-              {/* CTA Section */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-                className="flex flex-col gap-4 items-center"
-              >
-                <button className="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105">
-                  Try Interactive Demo
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                  Watch Tutorial
-                </button>
-                
-                {/* Quick Actions */}
-                <div className="flex gap-2 mt-4">
-                  <button className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300">
-                    <Download className="w-5 h-5" />
-                  </button>
-                  <button className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300">
-                    <Share2 className="w-5 h-5" />
-                  </button>
-                </div>
-              </motion.div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          {/* Content */}
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <Play className="w-6 h-6 text-cyan-300" />
+              <span className="text-sm font-medium text-cyan-200 bg-cyan-400/20 px-3 py-1 rounded-full">
+                INTERACTIVE DEMO
+              </span>
             </div>
-
-            {/* Bottom Features */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
-              className="mt-8 pt-6 border-t border-white/20"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-                <div className="flex items-center justify-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-sm">No Installation</span>
+            
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+              Interactive Technology
+              <span className="block text-cyan-300">Demonstration 2026</span>
+            </h2>
+            
+            <p className="text-lg text-blue-100 mb-6">
+              Experience cutting-edge technologies in action. Watch real-time demonstrations 
+              of AI, automation, and quantum computing solutions with interactive controls.
+            </p>
+            
+            <div className="grid grid-cols-2 gap-3 mb-6">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-300 flex-shrink-0" />
+                  <span className="text-sm text-white">{feature}</span>
                 </div>
-                <div className="flex items-center justify-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-sm">Instant Access</span>
+              ))}
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="flex items-center gap-2 px-6 py-3 bg-white text-blue-600 rounded-full font-medium hover:bg-gray-100 transition-all duration-300 shadow-lg">
+                <Play className="w-5 h-5" />
+                Try Demo Now
+                <ArrowRight className="w-4 h-4" />
+              </button>
+              <button className="flex items-center gap-2 px-6 py-3 bg-white/20 text-white rounded-full font-medium hover:bg-white/30 transition-all duration-300">
+                <Settings className="w-5 h-5" />
+                Customize
+              </button>
+            </div>
+          </div>
+          
+          {/* Visual */}
+          <div className="relative">
+            <div className="bg-black/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <span className="text-sm text-gray-400 ml-4">Interactive Terminal</span>
+              </div>
+              
+              <div className="font-mono text-sm space-y-2">
+                <div className="flex items-center gap-2 text-green-400">
+                  <span>$</span>
+                  <span>Initializing AI demo...</span>
                 </div>
-                <div className="flex items-center justify-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-sm">Mobile Friendly</span>
+                <div className="flex items-center gap-2 text-blue-400">
+                  <span>$</span>
+                  <span>Loading neural network...</span>
                 </div>
-                <div className="flex items-center justify-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-sm">Free Forever</span>
+                <div className="flex items-center gap-2 text-purple-400">
+                  <span>$</span>
+                  <span>Training in progress...</span>
+                </div>
+                <div className="flex items-center gap-2 text-yellow-400">
+                  <span>$</span>
+                  <span>Accuracy: 97.3%</span>
+                </div>
+                <div className="flex items-center gap-2 text-green-400">
+                  <span>$</span>
+                  <span>Demo ready!</span>
+                  <motion.span
+                    animate={{ opacity: [1, 0, 1] }}
+                    transition={{ duration: 1, repeat: Infinity }}
+                    className="text-cyan-400"
+                  >
+                    _
+                  </motion.span>
                 </div>
               </div>
+            </div>
+            
+            {/* Floating tech icons */}
+            <motion.div
+              animate={{ y: [-10, 10, -10] }}
+              transition={{ duration: 3, repeat: Infinity }}
+              className="absolute -top-4 -right-4 w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center"
+            >
+              <Brain className="w-6 h-6 text-blue-300" />
+            </motion.div>
+            
+            <motion.div
+              animate={{ y: [10, -10, 10] }}
+              transition={{ duration: 4, repeat: Infinity }}
+              className="absolute -bottom-4 -left-4 w-10 h-10 bg-cyan-500/20 rounded-full flex items-center justify-center"
+            >
+              <Cpu className="w-5 h-5 text-cyan-300" />
+            </motion.div>
+            
+            <motion.div
+              animate={{ y: [-5, 15, -5] }}
+              transition={{ duration: 5, repeat: Infinity }}
+              className="absolute top-1/2 -right-8 w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center"
+            >
+              <Zap className="w-4 h-4 text-purple-300" />
             </motion.div>
           </div>
-
-          {/* Dismiss Button */}
-          <button
-            onClick={handleDismiss}
-            className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors duration-200"
-            aria-label="Dismiss banner"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </motion.div>
-      )}
-    </AnimatePresence>
+        </div>
+      </div>
+    </motion.div>
   );
 };
 

@@ -147,6 +147,13 @@ import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBann
 // Import new breakthrough announcement banners
 import AI2025UltimateBreakthroughAnnouncementBanner from '../components/AI2025UltimateBreakthroughAnnouncementBanner';
 import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
+
+// Import new 2026 content showcase components
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
+import NewContentShowcase2026PromotionBanner from '../components/NewContentShowcase2026PromotionBanner';
+import InteractiveTechDemo2026 from '../components/InteractiveTechDemo2026';
+import InteractiveTechDemo2026PromotionBanner from '../components/InteractiveTechDemo2026PromotionBanner';
+import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import FeaturedBlogPost2025 from '../components/FeaturedBlogPost2025';
 import CaseStudyShowcase2025 from '../components/CaseStudyShowcase2025';
@@ -232,6 +239,15 @@ export default function HomePage() {
         
         {/* NEW: CONTENT SHOWCASE 2026 PROMOTION BANNER */}
         <NewContentShowcase2026PromotionBanner />
+        
+        {/* NEW: REVOLUTIONARY CONTENT BANNER 2026 */}
+        <RevolutionaryContentBanner2026 />
+        
+        {/* NEW: CONTENT SHOWCASE 2026 */}
+        <NewContentShowcase2026 />
+        
+        {/* NEW: INTERACTIVE TECH DEMO 2026 */}
+        <InteractiveTechDemo2026 />
         
         {/* NEW: REVOLUTIONARY CONTENT BANNER */}
         <RevolutionaryContentBanner />
