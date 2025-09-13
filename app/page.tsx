@@ -110,6 +110,10 @@ import UltimateContentRevolutionBanner2026 from '../components/UltimateContentRe
 import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
 import RevolutionaryNewsletterSignup2026 from '../components/RevolutionaryNewsletterSignup2026';
 
+// Import new ultimate breakthrough components
+import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscoveryWidget';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -246,6 +250,9 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-b354
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET */}
+        <UltimateContentDiscoveryWidget />
         
         {/* AI 2026 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
         <AI2026RevolutionaryBreakthroughPromotionBanner />
