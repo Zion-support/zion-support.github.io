@@ -50,6 +50,9 @@ import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRe
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
+import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
+import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
 
 export default function HomePage() {
   return (
@@ -61,16 +64,18 @@ export default function HomePage() {
         url="/"
       />
       
-<<<<<<< HEAD
-        <div className='min-h-screen bg-white'>
-        {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
+      <div className='min-h-screen bg-white'>
+        {/* NEW AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
-        
-        {/* FEATURED CONTENT SHOWCASE 2025 */}
-        <FeaturedContentShowcase2025 />
         
         {/* AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2026 */}
+        <RevolutionaryContentShowcase2026 />
+        
+        {/* FEATURED CONTENT SHOWCASE 2025 */}
+        <FeaturedContentShowcase2025 />
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2026 */}
         <InteractiveContentDiscoveryWidget2026 />
@@ -90,21 +95,8 @@ export default function HomePage() {
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
-=======
-      <div className='min-h-screen bg-white'>
-        {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
-        <AI2025RevolutionaryBreakthroughPromotionBanner />
-        
-        {/* NEW AI 2026 ULTIMATE BREAKTHROUGH BANNER */}
+        {/* AI 2026 ULTIMATE BREAKTHROUGH BANNER */}
         <AI2026UltimateBreakthroughPromotionBanner />
-        
-        {/* QUANTUM-NEURAL FUSION 2026 BREAKTHROUGH BANNER */}
-        <QuantumNeuralFusion2026PromotionBanner />
-        
-        {/* ULTIMATE CONTENT REVOLUTION BANNER 2025 */}
-        <UltimateContentRevolutionBanner2025 />
-        
->>>>>>> 26f8d2c09d200d7c603f75b688c6b1bec94e2011
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
         
