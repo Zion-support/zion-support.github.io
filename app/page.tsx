@@ -229,6 +229,12 @@ import AdvancedContentManagementSystemPromotionBanner from '../components/Advanc
 import AIPoweredContentRecommendationSystem from '../components/AIPoweredContentRecommendationSystem';
 import AIPoweredContentRecommendationSystemPromotionBanner from '../components/AIPoweredContentRecommendationSystemPromotionBanner';
 
+// Import new 2029 components
+import UltimateContentShowcase2029 from '../components/UltimateContentShowcase2029';
+import UltimateContentShowcase2029PromotionBanner from '../components/UltimateContentShowcase2029PromotionBanner';
+import InteractiveTechDemo2029 from '../components/InteractiveTechDemo2029';
+import InteractiveTechDemo2029PromotionBanner from '../components/InteractiveTechDemo2029PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -240,6 +246,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2029 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
+        <UltimateContentShowcase2029PromotionBanner />
+        
+        {/* NEW 2029 INTERACTIVE TECH DEMO PROMOTION BANNER */}
+        <InteractiveTechDemo2029PromotionBanner />
+        
         {/* NEW 2027 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2027PromotionBanner />
         
@@ -323,6 +335,12 @@ export default function HomePage() {
         
         {/* NEW 2027 INTERACTIVE TECH DEMO */}
         <InteractiveTechDemo2027 />
+        
+        {/* NEW 2029 ULTIMATE CONTENT SHOWCASE */}
+        <UltimateContentShowcase2029 />
+        
+        {/* NEW 2029 INTERACTIVE TECH DEMO */}
+        <InteractiveTechDemo2029 />
         
         {/* NEW 2028 ULTIMATE CONTENT SHOWCASE */}
         <UltimateContentShowcase2028 />
