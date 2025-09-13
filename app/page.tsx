@@ -168,6 +168,12 @@ import NewContentShowcase2025PromotionBanner from '../components/NewContentShowc
 import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
 import InteractiveTechDemo2025PromotionBanner from '../components/InteractiveTechDemo2025PromotionBanner';
 
+// Import new 2025-2026 innovation showcase components
+import AI2025_2026UltimateInnovationShowcase from '../components/AI2025_2026UltimateInnovationShowcase';
+import AI2025_2026UltimateInnovationPromotionBanner from '../components/AI2025_2026UltimateInnovationPromotionBanner';
+import BusinessTransformation2025Showcase from '../components/BusinessTransformation2025Showcase';
+import BusinessTransformation2025PromotionBanner from '../components/BusinessTransformation2025PromotionBanner';
+
 // Import new content promotion banners
 import NewContent2025UltimateTransformationBanner from '../components/NewContent2025UltimateTransformationBanner';
 import AI2025RevolutionaryContentShowcaseBanner from '../components/AI2025RevolutionaryContentShowcaseBanner';
@@ -322,6 +328,10 @@ export default function HomePage() {
         {/* INTERACTIVE TECH DEMO 2025 PROMOTION BANNER */}
         <InteractiveTechDemo2025PromotionBanner />
         
+        {/* NEW 2025-2026 INNOVATION PROMOTION BANNERS */}
+        <AI2025_2026UltimateInnovationPromotionBanner />
+        <BusinessTransformation2025PromotionBanner />
+        
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
@@ -362,6 +372,10 @@ export default function HomePage() {
         
         {/* NEW CONTENT SHOWCASE 2025 */}
         <NewContentShowcase2025 />
+        
+        {/* NEW 2025-2026 INNOVATION SHOWCASE SECTIONS */}
+        <AI2025_2026UltimateInnovationShowcase />
+        <BusinessTransformation2025Showcase />
         
         {/* INTERACTIVE TECH DEMO 2025 */}
         <InteractiveTechDemo2025 />
