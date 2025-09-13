@@ -1,74 +1,71 @@
-'use client';
+import React, { useEffect, useRef } from 'react';
 
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-  interactionToNextPaint: number;
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isOptimized, setIsOptimized] = useState(false);
+export default function PerformanceOptimizer({ children }: PerformanceOptimizerProps) {
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const lazyElementsRef = useRef<Set<Element>>(new Set());
 
   useEffect(() => {
-    // Performance monitoring
-    const measurePerformance = () => {
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paintEntries = performance.getEntriesByType('paint');
-        
-        const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-        const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-        
-        const newMetrics: PerformanceMetrics = {
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          firstContentfulPaint: fcp ? fcp.startTime : 0,
-          largestContentfulPaint: lcp ? lcp.startTime : 0,
-          cumulativeLayoutShift: 0, // Would need to be measured with observer
-          firstInputDelay: 0, // Would need to be measured with observer
-          interactionToNextPaint: 0, // Would need to be measured with observer
-        };
-
-        setMetrics(newMetrics);
-        
-        // Check if performance is optimized
-        const isGoodPerformance = 
-          newMetrics.loadTime < 3000 && 
-          newMetrics.firstContentfulPaint < 2000 && 
-          newMetrics.largestContentfulPaint < 4000;
-        
-        setIsOptimized(isGoodPerformance);
+    // Initialize Intersection Observer for lazy loading
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const element = entry.target;
+            element.classList.add('animate-fade-in');
+            element.classList.remove('opacity-0');
+            observerRef.current?.unobserve(element);
+            lazyElementsRef.current.delete(element);
+          }
+        });
+      },
+      {
+        rootMargin: '50px 0px',
+        threshold: 0.1,
       }
-    };
+    );
 
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
+    // Observe all elements with lazy-load class
+    const lazyElements = document.querySelectorAll('.lazy-load');
+    lazyElements.forEach((element) => {
+      element.classList.add('opacity-0', 'transition-opacity', 'duration-500');
+      observerRef.current?.observe(element);
+      lazyElementsRef.current.add(element);
+    });
+
+    // Performance monitoring
+    const performanceObserver = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'largest-contentful-paint') {
+          console.log('LCP:', entry.startTime);
+        }
+        if (entry.entryType === 'first-input') {
+          console.log('FID:', entry.processingStart - entry.startTime);
+        }
+        if (entry.entryType === 'layout-shift') {
+          console.log('CLS:', entry.value);
+        }
+      });
+    });
+
+    performanceObserver.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 
     // Preload critical resources
     const preloadCriticalResources = () => {
-      const criticalResources = [
-        '/fonts/inter.woff2',
+      const criticalImages = [
         '/images/hero-bg.jpg',
-        '/images/logo.svg'
+        '/images/ai-showcase.jpg',
+        '/images/quantum-computing.jpg'
       ];
 
-      criticalResources.forEach(resource => {
+      criticalImages.forEach((src) => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
-        }
+        link.as = 'image';
+        link.href = src;
         document.head.appendChild(link);
       });
     };
@@ -78,7 +75,7 @@ const PerformanceOptimizer: React.FC = () => {
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
-      images.forEach(img => {
+      images.forEach((img) => {
         if (!img.loading) {
           img.loading = 'lazy';
         }
@@ -92,129 +89,19 @@ const PerformanceOptimizer: React.FC = () => {
 
     // Cleanup
     return () => {
-      window.removeEventListener('load', measurePerformance);
+      if (observerRef.current) {
+        lazyElementsRef.current.forEach((element) => {
+          observerRef.current?.unobserve(element);
+        });
+        observerRef.current.disconnect();
+      }
+      performanceObserver.disconnect();
     };
   }, []);
 
-  // Performance optimization suggestions
-  const getOptimizationSuggestions = () => {
-    if (!metrics) return [];
-
-    const suggestions = [];
-    
-    if (metrics.loadTime > 3000) {
-      suggestions.push('Consider code splitting and lazy loading');
-    }
-    if (metrics.firstContentfulPaint > 2000) {
-      suggestions.push('Optimize critical rendering path');
-    }
-    if (metrics.largestContentfulPaint > 4000) {
-      suggestions.push('Optimize images and fonts');
-    }
-
-    return suggestions;
-  };
-
-  if (typeof window === 'undefined') return null;
-
   return (
-    <div className="performance-optimizer">
-      {metrics && (
-        <div className="performance-metrics">
-          <div className="metric">
-            <span className="label">Load Time:</span>
-            <span className={`value ${metrics.loadTime < 3000 ? 'good' : 'warning'}`}>
-              {metrics.loadTime.toFixed(0)}ms
-            </span>
-          </div>
-          <div className="metric">
-            <span className="label">FCP:</span>
-            <span className={`value ${metrics.firstContentfulPaint < 2000 ? 'good' : 'warning'}`}>
-              {metrics.firstContentfulPaint.toFixed(0)}ms
-            </span>
-          </div>
-          <div className="metric">
-            <span className="label">LCP:</span>
-            <span className={`value ${metrics.largestContentfulPaint < 4000 ? 'good' : 'warning'}`}>
-              {metrics.largestContentfulPaint.toFixed(0)}ms
-            </span>
-          </div>
-          <div className="status">
-            <span className={`status-indicator ${isOptimized ? 'optimized' : 'needs-optimization'}`}>
-              {isOptimized ? '✓ Optimized' : '⚠ Needs Optimization'}
-            </span>
-          </div>
-        </div>
-      )}
-      
-      <style jsx>{`
-        .performance-optimizer {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          background: rgba(0, 0, 0, 0.9);
-          color: white;
-          padding: 15px;
-          border-radius: 8px;
-          font-family: monospace;
-          font-size: 12px;
-          z-index: 1000;
-          max-width: 300px;
-          display: none; /* Hidden by default, can be enabled for debugging */
-        }
-        
-        .performance-metrics {
-          display: flex;
-          flex-direction: column;
-          gap: 5px;
-        }
-        
-        .metric {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-        
-        .label {
-          color: #ccc;
-        }
-        
-        .value {
-          font-weight: bold;
-        }
-        
-        .value.good {
-          color: #4ade80;
-        }
-        
-        .value.warning {
-          color: #fbbf24;
-        }
-        
-        .status {
-          margin-top: 10px;
-          text-align: center;
-        }
-        
-        .status-indicator {
-          padding: 4px 8px;
-          border-radius: 4px;
-          font-size: 10px;
-          font-weight: bold;
-        }
-        
-        .status-indicator.optimized {
-          background: #10b981;
-          color: white;
-        }
-        
-        .status-indicator.needs-optimization {
-          background: #f59e0b;
-          color: white;
-        }
-      `}</style>
+    <div className="performance-optimized">
+      {children}
     </div>
   );
-};
-
-export default PerformanceOptimizer;
+}
