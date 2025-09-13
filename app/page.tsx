@@ -7,6 +7,14 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
+// Import new 2027 components
+import UltimateContentShowcase2027 from '../components/UltimateContentShowcase2027';
+import UltimateContentShowcase2027PromotionBanner from '../components/UltimateContentShowcase2027PromotionBanner';
+import BusinessSolutionsShowcase2027 from '../components/BusinessSolutionsShowcase2027';
+import BusinessSolutionsShowcase2027PromotionBanner from '../components/BusinessSolutionsShowcase2027PromotionBanner';
+import InteractiveTechDemo2027 from '../components/InteractiveTechDemo2027';
+import InteractiveTechDemo2027PromotionBanner from '../components/InteractiveTechDemo2027PromotionBanner';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -209,6 +217,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2027 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
+        <UltimateContentShowcase2027PromotionBanner />
+        
+        {/* NEW 2027 BUSINESS SOLUTIONS SHOWCASE PROMOTION BANNER */}
+        <BusinessSolutionsShowcase2027PromotionBanner />
+        
+        {/* NEW 2027 INTERACTIVE TECH DEMO PROMOTION BANNER */}
+        <InteractiveTechDemo2027PromotionBanner />
+        
         {/* NEW: AI 2025 ULTIMATE CONTENT SHOWCASE BANNER */}
         <AI2025UltimateContentShowcaseBanner />
         
@@ -256,6 +273,15 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
+        
+        {/* NEW 2027 ULTIMATE CONTENT SHOWCASE */}
+        <UltimateContentShowcase2027 />
+        
+        {/* NEW 2027 BUSINESS SOLUTIONS SHOWCASE */}
+        <BusinessSolutionsShowcase2027 />
+        
+        {/* NEW 2027 INTERACTIVE TECH DEMO */}
+        <InteractiveTechDemo2027 />
         
         {/* NEW CONTENT SHOWCASE 2026 */}
         <NewContentShowcase2026 />
