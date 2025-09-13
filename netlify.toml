@@ -1,21 +1,54 @@
 [build]
-  publish = "dist"
+  # Use our custom build script
   command = "./build.sh"
+  # Publish the dist directory
+  publish = "dist"
+  # Functions directory
   functions = "netlify/functions"
 
 [build.environment]
+  # Set Node.js version
   NODE_VERSION = "20.18.0"
+  # Set Yarn version
   YARN_VERSION = "1.22.22"
+  # Disable Yarn cache to avoid corruption issues
+  YARN_CACHE_FOLDER = ".yarn-cache"
+  # Set production environment
   NODE_ENV = "production"
+  # Increase timeout for dependency installation
+  NETLIFY_TIMEOUT = "600"
 
+# Build settings
+[build.processing]
+  skip_processing = false
+
+# Redirects and rewrites
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache settings
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Build plugins
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
+  [plugins.inputs]
+    output_path = "lighthouse-report.html"
 
-[context.production]
-  environment = { NODE_ENV = "production" }
-
-[context.deploy-preview]
-  environment = { NODE_ENV = "development" }
-
-[context.branch-deploy]
-  environment = { NODE_ENV = "development" }
+# Edge functions
+[functions]
+  directory = "netlify/functions"
