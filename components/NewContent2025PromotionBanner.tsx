@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 const NewContent2025PromotionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
@@ -88,6 +89,8 @@ const NewContent2025PromotionBanner: React.FC = () => {
               <span>NEW CONTENT 2025</span>
 >>>>>>> origin/cursor/create-and-deploy-new-content-0a3a
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c19b
 
 export default function NewContent2025PromotionBanner() {
   return (
@@ -138,7 +141,10 @@ export default function NewContent2025PromotionBanner() {
               >
                 Explore Now →
               </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-029c
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c19b
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -373,11 +379,19 @@ export default function NewContent2025PromotionBanner() {
         </div>
       </div>
       
+<<<<<<< HEAD
       {/* Animated background elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-blue-500/20 rounded-full animate-bounce"></div>
       <div className="absolute top-32 right-20 w-16 h-16 bg-purple-500/20 rounded-full animate-pulse"></div>
       <div className="absolute bottom-20 left-20 w-24 h-24 bg-pink-500/20 rounded-full animate-bounce delay-1000"></div>
       <div className="absolute top-1/2 left-20 w-12 h-12 bg-blue-400/20 rounded-full animate-pulse delay-500"></div>
+=======
+      {/* Floating elements */}
+      <div className="absolute top-10 left-10 w-16 h-16 bg-green-400/20 rounded-full animate-bounce"></div>
+      <div className="absolute top-20 right-20 w-12 h-12 bg-blue-400/20 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
+      <div className="absolute bottom-20 left-20 w-20 h-20 bg-purple-400/20 rounded-full animate-bounce" style={{animationDelay: '2s'}}></div>
+      <div className="absolute bottom-10 right-10 w-14 h-14 bg-cyan-400/20 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
+>>>>>>> cursor/create-and-deploy-new-content-c19b
     </div>
   );
 }
