@@ -49,6 +49,10 @@ import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 
+// Import our new 2026 promotional banner
+import NewContent2026PromotionalBanner from '../components/NewContent2026PromotionalBanner';
+import FeaturedContent2026Showcase from '../components/FeaturedContent2026Showcase';
+
 // Import new promotional components
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
@@ -122,6 +126,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2026 REVOLUTIONARY CONTENT PROMOTIONAL BANNER */}
+        <NewContent2026PromotionalBanner variant="hero" showStats={true} />
+        
+        {/* FEATURED CONTENT 2026 SHOWCASE */}
+        <FeaturedContent2026Showcase 
+          title="🚀 Revolutionary AI Content 2026"
+          subtitle="Discover the latest AI breakthroughs, success stories, and implementation guides that are transforming industries worldwide"
+          showStats={true}
+          maxItems={6}
+        />
+        
         {/* NEW 2025 ULTIMATE CONTENT REVOLUTION BANNER */}
         <AI2025UltimateContentRevolutionBanner />
         
@@ -3245,6 +3260,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
+      {/* FLOATING NEW CONTENT 2026 PROMOTIONAL BANNER */}
+      <NewContent2026PromotionalBanner variant="floating" showStats={true} autoHide={true} />
+      
     </div>
   );
 }
