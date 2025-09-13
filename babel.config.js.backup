@@ -1,0 +1,15 @@
+export default {
+  presets: [
+    ['@babel/preset-env', {
+      modules: false,
+      targets: {
+        esmodules: true,
+        node: '18'
+      }
+    }],
+    ['@babel/preset-react', {
+      runtime: 'automatic'
+    }],
+    '@babel/preset-typescript'
+  ]
+};

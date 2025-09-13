@@ -1,312 +1,364 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+import { Link } from 'react-router-dom';
+import SEO from "../../components/SEO";
+import Card from '../../../components/ui/Card';
 
 export default function AIImplementationRoadmap2025() {
+  const roadmapPhases = [
+    {
+      phase: "Phase 1: Foundation & Assessment",
+      duration: "Weeks 1-4",
+      status: "Planning",
+      color: "bg-blue-500",
+      items: [
+        {
+          title: "AI Readiness Assessment",
+          description: "Evaluate current infrastructure, data quality, and team capabilities",
+          duration: "Week 1",
+          deliverables: ["Readiness report", "Gap analysis", "Recommendations"]
+        },
+        {
+          title: "Data Infrastructure Audit",
+          description: "Assess data quality, storage, and accessibility",
+          duration: "Week 2",
+          deliverables: ["Data audit report", "Quality metrics", "Improvement plan"]
+        },
+        {
+          title: "Team Capability Assessment",
+          description: "Evaluate current AI/ML skills and identify training needs",
+          duration: "Week 3",
+          deliverables: ["Skills assessment", "Training roadmap", "Hiring plan"]
+        },
+        {
+          title: "Use Case Identification",
+          description: "Identify and prioritize AI use cases with highest ROI potential",
+          duration: "Week 4",
+          deliverables: ["Use case inventory", "ROI analysis", "Priority matrix"]
+        }
+      ]
+    },
+    {
+      phase: "Phase 2: Strategy & Planning",
+      duration: "Weeks 5-8",
+      status: "Design",
+      color: "bg-green-500",
+      items: [
+        {
+          title: "AI Strategy Development",
+          description: "Create comprehensive AI strategy aligned with business goals",
+          duration: "Week 5",
+          deliverables: ["AI strategy document", "Vision statement", "Success metrics"]
+        },
+        {
+          title: "Technology Stack Selection",
+          description: "Choose appropriate AI tools, platforms, and frameworks",
+          duration: "Week 6",
+          deliverables: ["Technology roadmap", "Tool evaluation", "Vendor selection"]
+        },
+        {
+          title: "Governance Framework",
+          description: "Establish AI governance, ethics, and compliance frameworks",
+          duration: "Week 7",
+          deliverables: ["Governance policies", "Ethics guidelines", "Compliance checklist"]
+        },
+        {
+          title: "Budget & Resource Planning",
+          description: "Allocate budget and resources for AI initiatives",
+          duration: "Week 8",
+          deliverables: ["Budget allocation", "Resource plan", "Timeline"]
+        }
+      ]
+    },
+    {
+      phase: "Phase 3: Infrastructure & Data",
+      duration: "Weeks 9-16",
+      status: "Development",
+      color: "bg-yellow-500",
+      items: [
+        {
+          title: "Data Pipeline Development",
+          description: "Build robust data collection, processing, and storage systems",
+          duration: "Weeks 9-10",
+          deliverables: ["Data pipeline", "ETL processes", "Data warehouse"]
+        },
+        {
+          title: "ML Infrastructure Setup",
+          description: "Set up MLOps infrastructure for model development and deployment",
+          duration: "Weeks 11-12",
+          deliverables: ["MLOps platform", "Model registry", "Monitoring tools"]
+        },
+        {
+          title: "Data Quality & Security",
+          description: "Implement data quality controls and security measures",
+          duration: "Weeks 13-14",
+          deliverables: ["Quality controls", "Security protocols", "Compliance measures"]
+        },
+        {
+          title: "Team Training & Development",
+          description: "Train teams on AI/ML tools and methodologies",
+          duration: "Weeks 15-16",
+          deliverables: ["Training program", "Certifications", "Knowledge transfer"]
+        }
+      ]
+    },
+    {
+      phase: "Phase 4: Pilot Implementation",
+      duration: "Weeks 17-24",
+      status: "Testing",
+      color: "bg-purple-500",
+      items: [
+        {
+          title: "Pilot Project Selection",
+          description: "Choose low-risk, high-impact pilot projects",
+          duration: "Week 17",
+          deliverables: ["Pilot selection", "Success criteria", "Timeline"]
+        },
+        {
+          title: "Model Development",
+          description: "Develop and train initial AI models",
+          duration: "Weeks 18-20",
+          deliverables: ["Trained models", "Performance metrics", "Validation results"]
+        },
+        {
+          title: "Integration & Testing",
+          description: "Integrate models into existing systems and test",
+          duration: "Weeks 21-22",
+          deliverables: ["Integrated solution", "Test results", "Performance benchmarks"]
+        },
+        {
+          title: "Pilot Deployment",
+          description: "Deploy pilot projects and monitor performance",
+          duration: "Weeks 23-24",
+          deliverables: ["Deployed pilots", "Performance monitoring", "User feedback"]
+        }
+      ]
+    },
+    {
+      phase: "Phase 5: Scale & Optimize",
+      duration: "Weeks 25-32",
+      status: "Production",
+      color: "bg-red-500",
+      items: [
+        {
+          title: "Scale Successful Pilots",
+          description: "Scale successful pilots across the organization",
+          duration: "Weeks 25-26",
+          deliverables: ["Scaling plan", "Resource allocation", "Timeline"]
+        },
+        {
+          title: "Advanced AI Implementation",
+          description: "Implement more complex AI solutions and automation",
+          duration: "Weeks 27-28",
+          deliverables: ["Advanced solutions", "Automation workflows", "Integration"]
+        },
+        {
+          title: "Performance Optimization",
+          description: "Optimize AI models and processes for better performance",
+          duration: "Weeks 29-30",
+          deliverables: ["Optimized models", "Performance improvements", "Cost reduction"]
+        },
+        {
+          title: "Continuous Improvement",
+          description: "Establish continuous improvement processes and feedback loops",
+          duration: "Weeks 31-32",
+          deliverables: ["Improvement processes", "Feedback systems", "Future roadmap"]
+        }
+      ]
+    }
+  ];
+
+  const keyMetrics = [
+    { metric: "Time to Value", value: "8-12 weeks", description: "First AI benefits realized" },
+    { metric: "ROI Achievement", value: "200-400%", description: "Expected ROI within 12 months" },
+    { metric: "Success Rate", value: "85%+", description: "Successful AI implementations" },
+    { metric: "Cost Reduction", value: "30-50%", description: "Operational cost savings" }
+  ];
+
+  const bestPractices = [
+    {
+      title: "Start Small, Scale Smart",
+      description: "Begin with pilot projects to prove value before scaling across the organization.",
+      icon: "🚀"
+    },
+    {
+      title: "Data Quality First",
+      description: "Ensure high-quality, clean data before implementing AI solutions.",
+      icon: "📊"
+    },
+    {
+      title: "Invest in People",
+      description: "Train and develop your team's AI capabilities alongside technology investments.",
+      icon: "👥"
+    },
+    {
+      title: "Measure Everything",
+      description: "Establish clear KPIs and metrics to track AI success and ROI.",
+      icon: "📈"
+    },
+    {
+      title: "Governance & Ethics",
+      description: "Implement strong governance frameworks and ethical AI practices from day one.",
+      icon: "⚖️"
+    },
+    {
+      title: "Continuous Learning",
+      description: "AI is evolving rapidly - maintain continuous learning and adaptation processes.",
+      icon: "🔄"
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       <SEO
-        title="AI Implementation Roadmap 2025: Complete Guide to Enterprise AI Success"
-        description="Download our comprehensive AI implementation roadmap for 2025. Get step-by-step guidance, checklists, and templates to successfully implement AI in your organization."
-        keywords="AI implementation roadmap, AI strategy, enterprise AI, AI planning, AI checklist, AI templates"
+        title="AI Implementation Roadmap 2025 - Zion Tech Group"
+        description="Complete 32-week AI implementation roadmap with phases, milestones, and best practices for successful AI transformation in 2025."
+        keywords="AI implementation, AI roadmap, AI strategy, AI transformation, digital transformation, AI planning, AI deployment"
         url="/resources/ai-implementation-roadmap-2025"
       />
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <header className="mb-12">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-              Free Resource
-            </span>
-            <span className="text-gray-500 text-sm">45 min read</span>
-            <span className="text-gray-500 text-sm">•</span>
-            <span className="text-gray-500 text-sm">Jan 30, 2025</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            AI Implementation Roadmap 2025: Complete Guide to Enterprise AI Success
-          </h1>
-          
-          <p className="text-xl text-gray-600 leading-relaxed mb-8">
-            Transform your organization with AI using our comprehensive implementation roadmap. 
-            This 150-page guide includes step-by-step instructions, checklists, templates, 
-            and real-world case studies to ensure your AI initiatives succeed.
-          </p>
-          
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h2 className="text-2xl font-bold mb-4">📋 What's Included in This Resource</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <ul className="space-y-3">
-                <li className="flex items-center gap-3">
-                  <span className="text-green-400">✓</span>
-                  <span>Complete 12-month implementation timeline</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-400">✓</span>
-                  <span>ROI calculation templates</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-400">✓</span>
-                  <span>Vendor evaluation frameworks</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-400">✓</span>
-                  <span>Risk assessment checklists</span>
-                </li>
-              </ul>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-3">
-                  <span className="text-green-400">✓</span>
-                  <span>Team structure recommendations</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-400">✓</span>
-                  <span>Budget planning worksheets</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-400">✓</span>
-                  <span>Success metrics templates</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-400">✓</span>
-                  <span>Change management playbook</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </header>
 
-        {/* Download Section */}
-        <section className="mb-12">
-          <div className="bg-gray-50 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Download Your Free Copy</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Get instant access to the complete AI Implementation Roadmap 2025. 
-              No registration required - download immediately.
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              🗺️ AI Implementation Roadmap 2025
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
+              Your complete 32-week guide to successful AI transformation with proven phases, milestones, and best practices.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg">
-                📥 Download PDF (2.3 MB)
-              </button>
-              <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg">
-                📊 Download Excel Templates
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/tools/ai-readiness-assessment"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+              >
+                🎯 Start Assessment
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                📞 Get Expert Help
+              </Link>
             </div>
-            
-            <p className="text-sm text-gray-500">
-              Downloaded by 15,000+ professionals • Updated monthly
-            </p>
-          </div>
-        </section>
-
-        {/* Table of Contents */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Complete Table of Contents</h2>
-          
-          <div className="space-y-6">
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Part 1: Foundation & Strategy</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Chapter 1: AI Readiness Assessment</li>
-                <li>• Chapter 2: Strategic AI Planning</li>
-                <li>• Chapter 3: Technology Stack Selection</li>
-                <li>• Chapter 4: Budget & Resource Planning</li>
-                <li>• Chapter 5: Risk Assessment & Mitigation</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Part 2: Implementation Phases</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Chapter 6: Phase 1 - Pilot Projects (Months 1-3)</li>
-                <li>• Chapter 7: Phase 2 - Scale & Optimize (Months 4-6)</li>
-                <li>• Chapter 8: Phase 3 - Full Deployment (Months 7-9)</li>
-                <li>• Chapter 9: Phase 4 - Advanced Applications (Months 10-12)</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Part 3: Operations & Management</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Chapter 10: Team Building & Training</li>
-                <li>• Chapter 11: Change Management</li>
-                <li>• Chapter 12: Performance Monitoring</li>
-                <li>• Chapter 13: Continuous Improvement</li>
-                <li>• Chapter 14: Scaling & Expansion</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Part 4: Templates & Tools</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Template 1: AI Readiness Assessment</li>
-                <li>• Template 2: ROI Calculation Worksheet</li>
-                <li>• Template 3: Vendor Evaluation Matrix</li>
-                <li>• Template 4: Project Timeline Template</li>
-                <li>• Template 5: Success Metrics Dashboard</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Key Features */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features & Benefits</h2>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <span className="text-blue-600 text-xl">📈</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Proven Methodology</h3>
-                  <p className="text-gray-700">Based on 500+ successful AI implementations across industries</p>
-                </div>
-              </div>
-              
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                  <span className="text-green-600 text-xl">⚡</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Time-Saving Templates</h3>
-                  <p className="text-gray-700">Ready-to-use templates that save weeks of planning time</p>
-                </div>
-              </div>
-              
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                  <span className="text-purple-600 text-xl">🎯</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Industry-Specific Guidance</h3>
-                  <p className="text-gray-700">Tailored recommendations for different industries and use cases</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                  <span className="text-orange-600 text-xl">💰</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">ROI Optimization</h3>
-                  <p className="text-gray-700">Strategies to maximize return on AI investments</p>
-                </div>
-              </div>
-              
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
-                  <span className="text-red-600 text-xl">🛡️</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Risk Mitigation</h3>
-                  <p className="text-gray-700">Comprehensive risk assessment and mitigation strategies</p>
-                </div>
-              </div>
-              
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
-                  <span className="text-indigo-600 text-xl">🔄</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Continuous Updates</h3>
-                  <p className="text-gray-700">Regular updates with latest AI trends and best practices</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Success Stories */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Success Stories</h2>
-          
-          <div className="space-y-6">
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Fortune 500 Manufacturing Company</h3>
-              <p className="text-gray-700 mb-4">
-                "Using this roadmap, we successfully implemented AI across our entire supply chain 
-                in just 8 months. The templates and checklists saved us countless hours and helped 
-                us avoid common pitfalls."
-              </p>
-              <div className="flex items-center gap-6 text-sm text-gray-600">
-                <span><strong>Result:</strong> 40% cost reduction</span>
-                <span><strong>Timeline:</strong> 8 months</span>
-                <span><strong>ROI:</strong> 340%</span>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Growing SaaS Startup</h3>
-              <p className="text-gray-700 mb-4">
-                "The AI implementation roadmap helped us scale from 0 to 5 AI-powered features 
-                in our product. The step-by-step guidance was invaluable for our small team."
-              </p>
-              <div className="flex items-center gap-6 text-sm text-gray-600">
-                <span><strong>Result:</strong> 5 new AI features</span>
-                <span><strong>Timeline:</strong> 6 months</span>
-                <span><strong>Impact:</strong> 200% user engagement increase</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-          
-          <div className="space-y-6">
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Is this roadmap suitable for small businesses?</h3>
-              <p className="text-gray-700">
-                Yes! The roadmap includes scalable approaches for organizations of all sizes, 
-                from startups to enterprise companies. We provide specific guidance for 
-                different company sizes and budgets.
-              </p>
-            </div>
-            
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">How often is the roadmap updated?</h3>
-              <p className="text-gray-700">
-                We update the roadmap monthly with the latest AI trends, technologies, and 
-                best practices. All updates are included at no additional cost.
-              </p>
-            </div>
-            
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Do I need technical expertise to use this roadmap?</h3>
-              <p className="text-gray-700">
-                No technical expertise required! The roadmap is designed for business leaders, 
-                project managers, and decision-makers. We provide clear, non-technical 
-                explanations and guidance.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business with AI?</h3>
-          <p className="text-xl opacity-90 mb-8">
-            Download the complete AI Implementation Roadmap 2025 and start your AI journey today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg">
-              📥 Download Now - Free
-            </button>
-            <a
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
-            >
-              Get Expert Consultation
-            </a>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Key Metrics */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">📊 Expected Outcomes</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {keyMetrics.map((metric, index) => (
+              <Card key={index} className="p-6 text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">{metric.value}</div>
+                <h3 className="text-lg font-semibold mb-2">{metric.metric}</h3>
+                <p className="text-gray-600 text-sm">{metric.description}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Roadmap Phases */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">🚀 Implementation Phases</h2>
+          <div className="space-y-12">
+            {roadmapPhases.map((phase, phaseIndex) => (
+              <div key={phaseIndex} className="relative">
+                {/* Phase Header */}
+                <div className="flex items-center mb-8">
+                  <div className={`w-16 h-16 ${phase.color} rounded-full flex items-center justify-center text-white font-bold text-xl mr-6`}>
+                    {phaseIndex + 1}
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">{phase.phase}</h3>
+                    <div className="flex items-center space-x-4 mt-2">
+                      <span className="text-gray-600">{phase.duration}</span>
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                        phase.status === 'Planning' ? 'bg-blue-100 text-blue-800' :
+                        phase.status === 'Design' ? 'bg-green-100 text-green-800' :
+                        phase.status === 'Development' ? 'bg-yellow-100 text-yellow-800' :
+                        phase.status === 'Testing' ? 'bg-purple-100 text-purple-800' :
+                        'bg-red-100 text-red-800'
+                      }`}>
+                        {phase.status}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Phase Items */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ml-22">
+                  {phase.items.map((item, itemIndex) => (
+                    <Card key={itemIndex} className="p-6">
+                      <div className="flex items-start justify-between mb-4">
+                        <h4 className="text-lg font-semibold text-gray-900">{item.title}</h4>
+                        <span className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded">{item.duration}</span>
+                      </div>
+                      <p className="text-gray-600 mb-4">{item.description}</p>
+                      <div>
+                        <h5 className="font-medium text-gray-900 mb-2">Deliverables:</h5>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          {item.deliverables.map((deliverable, delIndex) => (
+                            <li key={delIndex} className="flex items-center">
+                              <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                              {deliverable}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Best Practices */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">💡 Best Practices</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {bestPractices.map((practice, index) => (
+              <Card key={index} className="p-6 text-center">
+                <div className="text-4xl mb-4">{practice.icon}</div>
+                <h3 className="text-xl font-semibold mb-3">{practice.title}</h3>
+                <p className="text-gray-600">{practice.description}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Start Your AI Journey?
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Get personalized guidance and expert support to implement this roadmap successfully in your organization.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+            >
+              📞 Schedule Consultation
+            </Link>
+            <Link
+              href="/tools/ai-readiness-assessment"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-600 transition-colors"
+            >
+              🎯 Take Assessment
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

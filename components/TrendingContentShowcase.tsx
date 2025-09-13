@@ -1,269 +1,162 @@
 import React from 'react';
 import Link from 'next/link';
+import { ArrowRight, TrendingUp, Eye, Star, Clock, Tag } from 'lucide-react';
 
-interface TrendingItem {
+interface TrendingContentItem {
   title: string;
   description: string;
   href: string;
-  icon: string;
-  readTime: string;
-  type: 'article' | 'case-study' | 'resource';
   category: string;
-  trendingScore: number;
-  views: number;
-  shares: number;
-  publishedDate: string;
+  readTime: string;
+  views: string;
+  rating: number;
+  isNew?: boolean;
+  isTrending?: boolean;
+  icon: string;
+  badge?: string;
+  badgeColor?: string;
 }
 
 interface TrendingContentShowcaseProps {
-  maxItems?: number;
-  showMetrics?: boolean;
   className?: string;
 }
 
-const trendingItems: TrendingItem[] = [
+const trendingContent: TrendingContentItem[] = [
   {
-    title: 'AI 2026 Predictions: The Next Frontier',
-    description: 'Expert insights and predictions for the most significant AI developments expected to reshape technology and society in 2026.',
-    href: '/blog/ai-2026-predictions',
-    icon: '🔮',
-    readTime: '22 min read',
-    type: 'article',
-    category: 'AI Trends',
-    trendingScore: 95,
-    views: 12500,
-    shares: 340,
-    publishedDate: '2025-01-28'
+    title: "AI Enterprise Adoption Trends 2025: Complete Market Analysis",
+    description: "Discover the latest AI enterprise adoption trends for 2025. Learn how Fortune 500 companies are implementing AI, key success factors, and market predictions.",
+    href: "/blog/ai-2025-enterprise-adoption-trends",
+    category: "Enterprise AI",
+    readTime: "15 min read",
+    views: "2.3k views",
+    rating: 4.9,
+    isNew: true,
+    isTrending: true,
+    icon: "📈",
+    badge: "Trending",
+    badgeColor: "bg-red-100 text-red-800"
   },
   {
-    title: 'AI Productivity Automation 2025',
-    description: 'Achieve 300% productivity boost with AI-powered automation. Complete guide to implementing intelligent workflows and process optimization.',
-    href: '/blog/ai-productivity-automation-2025',
-    icon: '⚡',
-    readTime: '25 min read',
-    type: 'article',
-    category: 'Productivity',
-    trendingScore: 92,
-    views: 9800,
-    shares: 280,
-    publishedDate: '2025-01-28'
+    title: "AI Workflow Automation 2025: Complete Optimization Guide",
+    description: "Master AI workflow automation with our comprehensive 2025 guide. Learn proven strategies to optimize business processes, reduce costs by 60%, and boost productivity by 40%.",
+    href: "/blog/ai-automation-workflow-optimization-2025",
+    category: "AI Automation",
+    readTime: "18 min read",
+    views: "3.1k views",
+    rating: 4.8,
+    isNew: true,
+    isTrending: true,
+    icon: "⚡",
+    badge: "New",
+    badgeColor: "bg-green-100 text-green-800"
   },
   {
-    title: 'AI Transformation: 300% Revenue Growth',
-    description: 'How a Fortune 500 retail company achieved unprecedented growth through comprehensive AI transformation and operational automation.',
-    href: '/case-studies/ai-transformation-retail-giant-2025',
-    icon: '🏪',
-    readTime: '15 min read',
-    type: 'case-study',
-    category: 'Case Study',
-    trendingScore: 88,
-    views: 8700,
-    shares: 195,
-    publishedDate: '2025-01-28'
+    title: "AI Manufacturing Transformation: $2.8B Cost Savings Case Study",
+    description: "Discover how a Fortune 500 manufacturing company achieved $2.8B in cost savings and 45% efficiency gains through comprehensive AI transformation.",
+    href: "/case-studies/ai-manufacturing-transformation-2025",
+    category: "Case Study",
+    readTime: "20 min read",
+    views: "4.2k views",
+    rating: 4.9,
+    isNew: true,
+    isTrending: true,
+    icon: "🏭",
+    badge: "Featured",
+    badgeColor: "bg-blue-100 text-blue-800"
   },
   {
-    title: 'AI Implementation Master Guide 2025',
-    description: 'Complete 200+ page playbook with proven strategies, frameworks, checklists, and templates for successful AI transformation.',
-    href: '/resources/ai-implementation-master-guide-2025',
-    icon: '📚',
-    readTime: '200+ pages',
-    type: 'resource',
-    category: 'Guide',
-    trendingScore: 85,
-    views: 15200,
-    shares: 420,
-    publishedDate: '2025-01-28'
-  },
-  {
-    title: 'AI 2025: Year in Review',
-    description: 'Comprehensive analysis of the most significant AI developments, breakthroughs, and industry transformations that shaped 2025.',
-    href: '/blog/ai-2025-year-in-review',
-    icon: '📊',
-    readTime: '18 min read',
-    type: 'article',
-    category: 'Analysis',
-    trendingScore: 82,
-    views: 11200,
-    shares: 310,
-    publishedDate: '2025-01-27'
-  },
-  {
-    title: 'AI Multimodal Revolution',
-    description: 'Beyond text to vision, audio, and code - how multimodal AI is transforming human-computer interaction and creative industries.',
-    href: '/blog/ai-multimodal-revolution-2025',
-    icon: '🎯',
-    readTime: '22 min read',
-    type: 'article',
-    category: 'Technology',
-    trendingScore: 78,
-    views: 7600,
-    shares: 180,
-    publishedDate: '2025-01-26'
+    title: "AI Implementation Master Guide 2025: Complete 150-Page Playbook",
+    description: "Master AI implementation with our comprehensive 150-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
+    href: "/resources/ai-implementation-master-guide-2025",
+    category: "Resources",
+    readTime: "Free Download",
+    views: "12.5k downloads",
+    rating: 4.9,
+    isNew: true,
+    isTrending: true,
+    icon: "📚",
+    badge: "Popular",
+    badgeColor: "bg-purple-100 text-purple-800"
   }
 ];
 
-const getTrendingBadge = (score: number) => {
-  if (score >= 90) return { text: '🔥 HOT', color: 'bg-red-500 text-white' };
-  if (score >= 80) return { text: '📈 RISING', color: 'bg-orange-500 text-white' };
-  if (score >= 70) return { text: '⭐ POPULAR', color: 'bg-blue-500 text-white' };
-  return { text: '📊 TRENDING', color: 'bg-gray-500 text-white' };
-};
-
-const getTypeColor = (type: string) => {
-  switch (type) {
-    case 'article':
-      return 'text-blue-600 bg-blue-100';
-    case 'case-study':
-      return 'text-green-600 bg-green-100';
-    case 'resource':
-      return 'text-purple-600 bg-purple-100';
-    default:
-      return 'text-gray-600 bg-gray-100';
-  }
-};
-
-const formatNumber = (num: number) => {
-  if (num >= 1000) {
-    return (num / 1000).toFixed(1) + 'K';
-  }
-  return num.toString();
-};
-
-export default function TrendingContentShowcase({
-  maxItems = 6,
-  showMetrics = true,
-  className = ''
-}: TrendingContentShowcaseProps) {
-  const displayItems = trendingItems.slice(0, maxItems);
-
+export default function TrendingContentShowcase({ className = '' }: TrendingContentShowcaseProps) {
   return (
-    <section className={`py-20 bg-gray-50 ${className}`}>
+    <div className={`bg-gradient-to-br from-orange-50 to-red-50 py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-orange-100 text-orange-800 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium">🔥 TRENDING NOW</span>
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium mb-4">
+            <TrendingUp className="w-4 h-4 mr-2" />
+            TRENDING NOW
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Most Popular Content This Week
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Discover the most read and shared AI content from our experts. 
-            Fresh insights, practical guides, and real-world case studies that are trending now.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover the AI content that's capturing attention and driving results 
+            for businesses worldwide.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {displayItems.map((item, index) => {
-            const trendingBadge = getTrendingBadge(item.trendingScore);
-            return (
-              <Link key={index} href={item.href} className="group">
-                <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
-                    <div className="text-8xl">{item.icon}</div>
-                    <div className="absolute top-4 left-4">
-                      <div className={`${trendingBadge.color} px-3 py-1 rounded-full text-sm font-medium`}>
-                        #{index + 1} {trendingBadge.text}
-                      </div>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <div className={`${getTypeColor(item.type)} px-3 py-1 rounded-full text-sm font-medium`}>
-                        {item.type === 'article' && '📝 Article'}
-                        {item.type === 'case-study' && '📊 Case Study'}
-                        {item.type === 'resource' && '📋 Resource'}
-                      </div>
-                    </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {trendingContent.map((item, index) => (
+            <Link key={index} href={item.href} className="group">
+              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-4xl group-hover:scale-110 transition-transform">
+                    {item.icon}
                   </div>
-                  
-                  <div className="p-8">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="bg-gray-100 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">
-                        {item.category}
-                      </span>
-                      <span className="text-gray-500 text-sm">{item.readTime}</span>
-                      <span className="text-gray-500 text-sm">•</span>
-                      <span className="text-gray-500 text-sm">{item.publishedDate}</span>
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                      {item.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {item.description}
-                    </p>
-
-                    {showMetrics && (
-                      <div className="flex items-center justify-between mb-6">
-                        <div className="flex items-center gap-4 text-sm text-gray-500">
-                          <div className="flex items-center gap-1">
-                            <span>👁️</span>
-                            <span>{formatNumber(item.views)} views</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <span>📤</span>
-                            <span>{item.shares} shares</span>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                          <span className="text-sm text-gray-500">Trending</span>
-                        </div>
-                      </div>
-                    )}
-
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                          <span className="text-blue-600 font-bold text-sm">ZT</span>
-                        </div>
-                        <span className="text-sm text-gray-600">Zion Tech Group</span>
-                      </div>
-                      <span className="text-blue-600 font-medium group-hover:underline">
-                        {item.type === 'article' && 'Read Article →'}
-                        {item.type === 'case-study' && 'Read Case Study →'}
-                        {item.type === 'resource' && 'Download Resource →'}
-                      </span>
-                    </div>
+                  {item.badge && (
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${item.badgeColor}`}>
+                      {item.badge}
+                    </span>
+                  )}
+                </div>
+                
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  {item.title}
+                </h3>
+                
+                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  {item.description}
+                </p>
+                
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <div className="flex items-center">
+                    <Tag className="w-4 h-4 mr-1" />
+                    <span>{item.category}</span>
                   </div>
-                </article>
-              </Link>
-            );
-          })}
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 mr-1" />
+                    <span>{item.readTime}</span>
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <Eye className="w-4 h-4 mr-1 text-gray-400" />
+                    <span className="text-sm text-gray-500">{item.views}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 mr-1 text-yellow-400 fill-current" />
+                    <span className="text-sm text-gray-500">{item.rating}</span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
 
-        {/* Trending Stats */}
-        <div className="mt-16 bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">This Week's Trending Stats</h3>
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">45K+</div>
-              <div className="text-gray-600">Total Views</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">1.2K+</div>
-              <div className="text-gray-600">Social Shares</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">8.5K+</div>
-              <div className="text-gray-600">Downloads</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-600 mb-2">95%</div>
-              <div className="text-gray-600">Engagement Rate</div>
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
+        <div className="text-center">
+          <Link 
+            href="/content-showcase" 
+            className="inline-flex items-center px-8 py-4 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors font-semibold text-lg shadow-lg"
           >
             View All Trending Content
-            <span>→</span>
+            <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

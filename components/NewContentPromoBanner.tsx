@@ -1,179 +1,219 @@
-import React from 'react';
+'use client';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, Rocket, BookOpen } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, ArrowRight, Star, Clock, Sparkles, Rocket, Brain, Zap } from 'lucide-react';
+
+interface ContentItem {
+  title: string;
+  description: string;
+  href: string;
+  icon: any;
+  category: string;
+  readTime: string;
+  featured: boolean;
+  gradient: string;
+}
 
 interface NewContentPromoBannerProps {
-  variant?: 'default' | 'featured' | 'trending';
   className?: string;
 }
 
-export default function NewContentPromoBanner({ 
-  variant = 'default', 
-  className = '' 
-}: NewContentPromoBannerProps) {
-  const getVariantStyles = () => {
-    switch (variant) {
-      case 'featured':
-        return {
-          container: 'bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600',
-          text: 'text-white',
-          button: 'bg-white text-purple-600 hover:bg-gray-100',
-          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-purple-600'
-        };
-      case 'trending':
-        return {
-          container: 'bg-gradient-to-r from-orange-500 via-red-500 to-pink-500',
-          text: 'text-white',
-          button: 'bg-white text-orange-600 hover:bg-gray-100',
-          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-orange-600'
-        };
-      default:
-        return {
-          container: 'bg-gradient-to-r from-blue-600 to-purple-600',
-          text: 'text-white',
-          button: 'bg-white text-blue-600 hover:bg-gray-100',
-          buttonSecondary: 'border-2 border-white text-white hover:bg-white hover:text-blue-600'
-        };
-    }
-  };
+const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ className = '' }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentContent, setCurrentContent] = useState(0);
 
-  const styles = getVariantStyles();
-
-  const newContent = [
+  const newContent: ContentItem[] = [
     {
-      title: "AI-Quantum Computing Breakthrough",
-      description: "Revolutionary convergence unlocking unprecedented power",
-      href: "/blog/ai-quantum-computing-breakthrough-2025",
-      icon: "⚛️",
-      category: "Quantum AI",
-      isNew: true
+      title: "AI 2025 Revolutionary Breakthroughs",
+      description: "Discover groundbreaking AI innovations transforming industries worldwide",
+      href: "/blog/ai-2025-revolutionary-breakthroughs",
+      icon: Rocket,
+      category: "New Article",
+      readTime: "25 min read",
+      featured: true,
+      gradient: "from-purple-500 to-pink-500"
     },
     {
-      title: "AI Space Technology Revolution",
-      description: "Transforming space exploration with autonomous missions",
-      href: "/blog/ai-space-technology-revolution-2025",
-      icon: "🚀",
-      category: "Space AI",
-      isNew: true
+      title: "AI Space Exploration Breakthrough",
+      description: "$2.1B mission success with 99.9% autonomous operation",
+      href: "/case-studies/ai-space-exploration-breakthrough-2025",
+      icon: Brain,
+      category: "Case Study",
+      readTime: "18 min read",
+      featured: true,
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Manufacturing AI Success Story",
-      description: "300% productivity increase and $50M savings",
-      href: "/case-studies/ai-manufacturing-transformation-success-2025",
-      icon: "🏭",
-      category: "Manufacturing AI",
-      isNew: true
-    },
-    {
-      title: "AI Implementation Master Guide",
-      description: "Complete roadmap for successful AI transformation",
+      title: "AI Implementation Master Guide 2026",
+      description: "Complete 200+ page resource with proven strategies and templates",
       href: "/resources/ai-implementation-master-guide-2026",
-      icon: "📚",
-      category: "Implementation Guide",
-      isNew: true
+      icon: Zap,
+      category: "Free Download",
+      readTime: "200+ pages",
+      featured: true,
+      gradient: "from-green-500 to-teal-500"
+    },
+    {
+      title: "AI 2025 Advanced Automation",
+      description: "The future of intelligent business operations with 300% efficiency gains",
+      href: "/blog/ai-2025-advanced-automation",
+      icon: Sparkles,
+      category: "Trending",
+      readTime: "32 min read",
+      featured: true,
+      gradient: "from-orange-500 to-red-500"
+    },
+    {
+      title: "AI Cybersecurity Revolution",
+      description: "Protecting the digital future with 99.9% threat detection accuracy",
+      href: "/blog/ai-2025-cybersecurity-revolution",
+      icon: Star,
+      category: "Critical",
+      readTime: "38 min read",
+      featured: true,
+      gradient: "from-red-500 to-pink-500"
     }
   ];
 
+  useEffect(() => {
+    // Show banner after a short delay
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 2000);
+
+    // Auto-rotate content every 8 seconds
+    const rotationTimer = setInterval(() => {
+      setCurrentContent((prev) => (prev + 1) % newContent.length);
+    }, 8000);
+
+    return () => {
+      clearTimeout(timer);
+      clearInterval(rotationTimer);
+    };
+  }, [newContent.length]);
+
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+
+  const currentItem = newContent[currentContent];
+
+  if (!isVisible) return null;
+
   return (
-    <section className={`py-16 ${styles.container} ${className} relative overflow-hidden`}>
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full -translate-y-48 translate-x-48"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-            <Star className="w-4 h-4 mr-2" />
-            <span className="text-sm font-medium">✨ JUST PUBLISHED</span>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className={`fixed top-0 left-0 right-0 z-50 ${className}`}
+      >
+        <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden">
+          {/* Animated background */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[length:20px_20px] animate-pulse"></div>
           </div>
-          <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${styles.text}`}>
-            Revolutionary New Content
-          </h2>
-          <p className={`text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed ${styles.text} opacity-90`}>
-            Discover the latest breakthroughs in AI technology, quantum computing, space exploration, 
-            and real-world transformation success stories.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog"
-              className={`${styles.button} px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg shadow-lg hover:shadow-xl`}
-            >
-              <BookOpen className="inline w-5 h-5 mr-2" />
-              Explore All Content
-            </Link>
-            <Link
-              href="/resources"
-              className={`${styles.buttonSecondary} px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg`}
-            >
-              <Zap className="inline w-5 h-5 mr-2" />
-              Download Resources
-            </Link>
-          </div>
-        </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {newContent.map((item, index) => (
-            <Link key={index} href={item.href} className="group">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl transition-all duration-300 hover:bg-white/20 hover:scale-105">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                  {item.icon}
-                </div>
-                <div className="flex items-center mb-2">
-                  <span className="text-xs font-medium bg-white/20 px-2 py-1 rounded-full">
-                    {item.category}
-                  </span>
-                  {item.isNew && (
-                    <span className="ml-2 text-xs font-bold bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full">
-                      NEW
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div className="flex items-center justify-between">
+              {/* Content */}
+              <div className="flex items-center space-x-4 flex-1">
+                <div className="flex items-center space-x-2">
+                  <motion.div
+                    key={currentContent}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center"
+                  >
+                    <currentItem.icon className="w-5 h-5 text-white" />
+                  </motion.div>
+                  
+                  <div className="flex items-center space-x-2">
+                    <Sparkles className="w-4 h-4 text-yellow-400" />
+                    <span className="text-sm font-semibold bg-yellow-400/20 px-2 py-1 rounded-full">
+                      {currentItem.category}
                     </span>
-                  )}
+                  </div>
                 </div>
-                <h3 className={`text-lg font-semibold mb-2 group-hover:text-yellow-300 transition-colors ${styles.text}`}>
-                  {item.title}
-                </h3>
-                <p className={`text-sm opacity-90 ${styles.text}`}>
-                  {item.description}
-                </p>
-                <div className="flex items-center mt-4 text-sm font-medium opacity-75 group-hover:opacity-100 transition-opacity">
-                  <span className={styles.text}>Read More</span>
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+
+                <div className="flex-1 min-w-0">
+                  <motion.div
+                    key={currentContent}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <h3 className="text-sm font-bold truncate">
+                      {currentItem.title}
+                    </h3>
+                    <p className="text-xs text-white/80 truncate">
+                      {currentItem.description}
+                    </p>
+                  </motion.div>
+                </div>
+
+                <div className="flex items-center space-x-2 text-xs text-white/80">
+                  <Clock className="w-3 h-3" />
+                  <span>{currentItem.readTime}</span>
                 </div>
               </div>
-            </Link>
-          ))}
-        </div>
 
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className={`text-2xl font-bold mb-4 ${styles.text}`}>
-              Ready to Transform Your Business with AI?
-            </h3>
-            <p className={`text-lg mb-6 opacity-90 ${styles.text}`}>
-              Join thousands of companies already using our proven AI implementation strategies 
-              to achieve breakthrough results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className={`${styles.button} px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg shadow-lg hover:shadow-xl`}
-              >
-                <Rocket className="inline w-5 h-5 mr-2" />
-                Start Your AI Journey
-              </Link>
-              <Link
-                href="/case-studies"
-                className={`${styles.buttonSecondary} px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg`}
-              >
-                View Success Stories
-              </Link>
+              {/* Actions */}
+              <div className="flex items-center space-x-3 ml-4">
+                <Link
+                  href={currentItem.href}
+                  className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors flex items-center space-x-2"
+                >
+                  <span>Explore</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+
+                <button
+                  onClick={handleClose}
+                  className="text-white/80 hover:text-white transition-colors p-1"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Progress indicator */}
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
+              <motion.div
+                className="h-full bg-white/60"
+                initial={{ width: "0%" }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 8, ease: "linear" }}
+                key={currentContent}
+              />
             </div>
           </div>
         </div>
+
+        {/* Close Button */}
+        <button
+          onClick={() => setIsVisible(false)}
+          className="absolute top-4 right-4 text-white/75 hover:text-white transition-colors"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
-    </section>
+
+      {/* Progress Bar */}
+      <div className="absolute bottom-0 left-0 h-1 bg-white/20 w-full">
+        <div 
+          className="h-full bg-white transition-all duration-5000 ease-linear"
+          style={{ width: `${((currentContent + 1) / newContent.length) * 100}%` }}
+        />
+      </div>
+    </div>
   );
-}
+};
+
+export default NewContentPromoBanner;

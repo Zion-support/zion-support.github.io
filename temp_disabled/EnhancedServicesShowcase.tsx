@@ -1,258 +1,263 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { 
-  Brain, 
-  Cloud, 
-  Shield, 
   Zap, 
-  ArrowRight, 
-  Star, 
+  Shield, 
+  Globe, 
+  TrendingUp, 
+  ArrowUpRight, 
+  Award, 
   Users, 
-  TrendingUp,
-  CheckCircle,
-  Phone,
-  Mail,
-  Globe
+  Brain,
+  ArrowRight,
+  Star,
+  CheckCircle
 } from 'lucide-react';
 
-export function EnhancedServicesShowcase() {
-  const featuredServices = [
-    {
-      title: "AI-Powered Solutions",
-      description: "Transform your business with cutting-edge artificial intelligence. Chatbots, content generation, and predictive analytics.",
-      icon: <Brain className="w-8 h-8 text-zion-cyan" />,
-      link: "/ai-services",
-      category: "AI Services",
-      price: "From $800/month",
-      features: ["Chatbot Development", "Content Generation", "Data Analytics"],
-      benefits: ["40% Cost Reduction", "24/7 Availability", "3x Productivity Boost"]
-    },
-    {
-      title: "Micro SAAS Platforms",
-      description: "Powerful, affordable software solutions for modern businesses. Inventory management, project management, and CRM systems.",
-      icon: <Cloud className="w-8 h-8 text-zion-cyan" />,
-      link: "/micro-saas",
-      category: "Micro SAAS",
-      price: "From $150/month",
-      features: ["Cloud-Based", "Mobile Apps", "Analytics Dashboard"],
-      benefits: ["99.9% Uptime", "5min Setup", "24/7 Support"]
-    },
-    {
-      title: "IT Infrastructure Services",
-      description: "Expert cloud migration, cybersecurity, and DevOps automation. Modernize your technology stack with proven solutions.",
-      icon: <Shield className="w-8 h-8 text-zion-cyan" />,
-      link: "/comprehensive-services",
-      category: "IT Services",
-      price: "From $3,000",
-      features: ["Cloud Migration", "Security Audits", "DevOps Automation"],
-      benefits: ["40% Cost Savings", "Enhanced Security", "Faster Deployment"]
-    }
-  ];
+const featuredServices = [
+  {
+    id: "ai-ml-001",
+    title: "AI-Powered Customer Service Bot",
+    description: "Custom AI chatbot with NLP, sentiment analysis, and multi-language support",
+    category: "AI & Machine Learning",
+    price: "$3,500",
+    rating: 4.9,
+    reviewCount: 127,
+    icon: <Brain className="h-6 w-6" />,
+    color: "from-purple-500 to-indigo-600",
+    link: "/comprehensive-services",
+    features: ["NLP Processing", "Multi-language", "CRM Integration", "24/7 Support"]
+  },
+  {
+    id: "cybersecurity-001",
+    title: "Comprehensive Security Audit",
+    description: "Full security assessment with penetration testing and compliance review",
+    category: "Cybersecurity",
+    price: "$6,500",
+    rating: 4.9,
+    reviewCount: 178,
+    icon: <Shield className="h-6 w-6" />,
+    color: "from-red-500 to-pink-600",
+    link: "/comprehensive-services",
+    features: ["Vulnerability Scan", "Penetration Testing", "Compliance Review", "Security Roadmap"]
+  },
+  {
+    id: "cloud-devops-001",
+    title: "Multi-Cloud Migration",
+    description: "End-to-end cloud migration with optimization across AWS, Azure, and GCP",
+    category: "Cloud & DevOps",
+    price: "$8,500",
+    rating: 4.9,
+    reviewCount: 203,
+    icon: <Globe className="h-6 w-6" />,
+    color: "from-blue-500 to-cyan-600",
+    link: "/comprehensive-services",
+    features: ["Cloud Assessment", "Multi-cloud Design", "Security Setup", "24/7 Monitoring"]
+  },
+  {
+    id: "data-analytics-001",
+    title: "Big Data Pipeline & Analytics",
+    description: "Enterprise-scale data processing with ML-powered insights and visualization",
+    category: "Data & Analytics",
+    price: "$15,000",
+    rating: 4.9,
+    reviewCount: 67,
+    icon: <TrendingUp className="h-6 w-6" />,
+    color: "from-green-500 to-emerald-600",
+    link: "/comprehensive-services",
+    features: ["Data Ingestion", "Real-time Processing", "ML Analytics", "Scalable Infrastructure"]
+  }
+];
 
+const serviceCategories = [
+  {
+    name: "AI & Machine Learning",
+    description: "Intelligent automation and predictive analytics",
+    icon: <Zap className="h-8 w-8" />,
+    color: "from-purple-500 to-indigo-600",
+    link: "/comprehensive-services",
+    count: "12+ Services"
+  },
+  {
+    name: "Cybersecurity",
+    description: "Advanced protection and compliance solutions",
+    icon: <Shield className="h-8 w-8" />,
+    color: "from-red-500 to-pink-600",
+    link: "/comprehensive-services",
+    count: "8+ Services"
+  },
+  {
+    name: "Cloud & DevOps",
+    description: "Scalable infrastructure and automation",
+    icon: <Globe className="h-8 w-8" />,
+    color: "from-blue-500 to-cyan-600",
+    link: "/comprehensive-services",
+    count: "15+ Services"
+  },
+  {
+    name: "Data & Analytics",
+    description: "Business intelligence and insights",
+    icon: <TrendingUp className="h-8 w-8" />,
+    color: "from-green-500 to-emerald-600",
+    link: "/comprehensive-services",
+    count: "10+ Services"
+  }
+];
+
+export function EnhancedServicesShowcase() {
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Comprehensive Tech Solutions
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Comprehensive IT & AI Solutions
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Discover our complete ecosystem of AI services, micro SAAS platforms, IT solutions, and digital transformation consulting. 
-            All services include direct contact with our expert team.
+            Discover our extensive range of micro SAAS services, enterprise IT solutions, and cutting-edge AI services. 
+            From AI-powered chatbots to zero-trust security, we deliver innovative solutions that drive business growth.
           </p>
-          
-          {/* Contact Info Banner */}
-          <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 inline-block">
-            <div className="flex flex-col md:flex-row items-center gap-6 text-white">
-              <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5 text-zion-cyan" />
-                <span className="font-medium">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-5 h-5 text-zion-cyan" />
-                <span className="font-medium">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Globe className="w-5 h-5 text-zion-cyan" />
-                <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" 
-                   className="font-medium hover:text-zion-cyan transition-colors">
-                  ziontechgroup.com
-                </a>
-              </div>
-            </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/comprehensive-services">
+              <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
+                Explore All Services
+                <ArrowRight className="h-5 w-5 ml-2" />
+              </Button>
+            </Link>
+            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+              <Star className="h-5 w-5 mr-2" />
+              View Pricing
+            </Button>
           </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {featuredServices.map((service, index) => (
-            <Card key={index} className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-zion-blue-light bg-zion-blue-dark">
-              <CardHeader className="text-center">
-                <div className="mx-auto mb-4">
-                  {service.icon}
-                </div>
-                <Badge className="mx-auto mb-3 bg-zion-purple text-white">
-                  {service.category}
-                </Badge>
-                <CardTitle className="text-xl text-white">{service.title}</CardTitle>
-                <CardDescription className="text-zion-slate-light">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-
-              <CardContent className="space-y-6">
-                {/* Pricing */}
-                <div className="text-center p-4 bg-zion-blue-light rounded-lg">
-                  <div className="text-2xl font-bold text-zion-cyan mb-1">
-                    {service.price}
+        {/* Featured Services */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-bold text-white text-center mb-12">Featured Services</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredServices.map((service) => (
+              <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px] hover:shadow-xl">
+                <CardHeader className="text-center pb-4">
+                  <div className={`mx-auto mb-4 p-3 bg-gradient-to-br ${service.color} rounded-full w-16 h-16 flex items-center justify-center`}>
+                    <div className="text-white">
+                      {service.icon}
+                    </div>
                   </div>
-                  <div className="text-sm text-zion-slate-light">
-                    Professional solutions with proven ROI
-                  </div>
-                </div>
-
-                {/* Features */}
-                <div>
-                  <h4 className="font-semibold text-zion-cyan mb-3 flex items-center gap-2">
-                    <Zap className="w-4 h-4" />
-                    Key Features
-                  </h4>
-                  <div className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span>{feature}</span>
+                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan mb-2">
+                    {service.category}
+                  </Badge>
+                  <CardTitle className="text-white text-lg leading-tight">{service.title}</CardTitle>
+                  <CardDescription className="text-zion-slate-light text-sm">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-zion-slate-light text-sm">Price:</span>
+                      <span className="text-white font-semibold">{service.price}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-zion-slate-light text-sm">Rating:</span>
+                      <div className="flex items-center">
+                        <Star className="h-4 w-4 text-yellow-400 fill-current mr-1" />
+                        <span className="text-white text-sm">{service.rating}</span>
+                        <span className="text-zion-slate-light text-xs ml-1">({service.reviewCount})</span>
                       </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Benefits */}
-                <div>
-                  <h4 className="font-semibold text-zion-cyan mb-3 flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4" />
-                    Business Benefits
-                  </h4>
-                  <div className="space-y-2">
-                    {service.benefits.map((benefit, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <div className="w-2 h-2 bg-zion-cyan rounded-full flex-shrink-0"></div>
-                        <span>{benefit}</span>
+                    </div>
+                    <div className="pt-2">
+                      <h4 className="text-white font-semibold text-sm mb-2">Key Features:</h4>
+                      <div className="space-y-1">
+                        {service.features.map((feature, index) => (
+                          <div key={index} className="flex items-center text-xs text-zion-slate-light">
+                            <CheckCircle className="h-3 w-3 text-zion-cyan mr-2 flex-shrink-0" />
+                            {feature}
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
                   </div>
-                </div>
-
-                {/* CTA */}
-                <div className="text-center">
-                  <Link to={service.link}>
-                    <Button className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-bold">
-                      Explore {service.category}
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                </CardContent>
+                <CardFooter className="pt-4">
+                  <Link to={service.link} className="w-full">
+                    <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
+                      Learn More
+                      <ArrowRight className="h-4 w-4 ml-2" />
                     </Button>
                   </Link>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Service Categories */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-white text-center mb-12">Service Categories</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {serviceCategories.map((category) => (
+              <Link key={category.name} to={category.link} className="group block">
+                <Card className="bg-zion-blue-dark border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px] hover:shadow-xl cursor-pointer">
+                  <CardHeader className="text-center">
+                    <div className={`mx-auto mb-4 p-3 bg-gradient-to-br ${category.color} rounded-full w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                      <div className="text-white">
+                        {category.icon}
+                      </div>
+                    </div>
+                    <CardTitle className="text-white text-lg">{category.name}</CardTitle>
+                    <CardDescription className="text-zion-slate-light text-sm">
+                      {category.description}
+                    </CardDescription>
+                    <Badge variant="outline" className="border-zion-cyan text-zion-cyan mt-2">
+                      {category.count}
+                    </Badge>
+                  </CardHeader>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <Card className="bg-gradient-to-r from-zion-purple to-zion-purple-dark border-0 max-w-4xl mx-auto">
+            <CardHeader>
+              <CardTitle className="text-white text-3xl mb-4">
+                Ready to Transform Your Business?
+              </CardTitle>
+              <CardDescription className="text-zion-slate-light text-lg">
+                Our team of experts is ready to help you implement the perfect solution for your business needs.
+                Get in touch today for a free consultation and quote.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div className="text-center">
+                  <div className="text-zion-cyan font-semibold">Phone</div>
+                  <div className="text-zion-slate-light">+1 302 464 0950</div>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Additional Services */}
-        <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold text-white mb-6">
-            More Services Available
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/it-onsite-services">
-              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                <Globe className="h-4 w-4 mr-2" />
-                Global IT Onsite Services
-              </Button>
-            </Link>
-            <Link to="/comprehensive-services">
-              <Button variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
-                <Users className="h-4 w-4 mr-2" />
-                View All Services
-              </Button>
-            </Link>
-            <Link to="/request-quote">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10">
-                <Mail className="h-4 w-4 mr-2" />
-                Request Custom Quote
-              </Button>
-            </Link>
-          </div>
-        </div>
-
-        {/* Why Choose Us */}
-        <div className="bg-zion-blue-dark rounded-lg p-8">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Why Choose Zion Tech Group?
-            </h3>
-            <p className="text-zion-slate-light max-w-2xl mx-auto">
-              We combine cutting-edge technology with deep business understanding to deliver solutions that drive real results.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-3">
-                <Star className="w-6 h-6 text-white" />
+                <div className="text-center">
+                  <div className="text-zion-cyan font-semibold">Email</div>
+                  <div className="text-zion-slate-light">kleber@ziontechgroup.com</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-zion-cyan font-semibold">Website</div>
+                  <div className="text-zion-slate-light">ziontechgroup.com</div>
+                </div>
               </div>
-              <h4 className="text-white font-semibold mb-2">Proven Track Record</h4>
-              <p className="text-sm text-zion-slate-light">95% customer satisfaction rate</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-3">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <h4 className="text-white font-semibold mb-2">Expert Team</h4>
-              <p className="text-sm text-zion-slate-light">Certified professionals with years of experience</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-3">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <h4 className="text-white font-semibold mb-2">Fast Implementation</h4>
-              <p className="text-sm text-zion-slate-light">Quick deployment with minimal disruption</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-3">
-                <TrendingUp className="w-6 h-6 text-white" />
-              </div>
-              <h4 className="text-white font-semibold mb-2">Measurable ROI</h4>
-              <p className="text-sm text-zion-slate-light">Documented business impact and results</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Final CTA */}
-        <div className="text-center mt-12">
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h3>
-          <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-            Contact our expert team for a personalized consultation and discover how our solutions can transform your business.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact">
-              <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-bold">
-                <Phone className="w-4 h-4 mr-2" />
-                Schedule Consultation
-              </Button>
-            </Link>
-            <Link to="/request-quote">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                <Mail className="w-4 h-4 mr-2" />
-                Get Custom Quote
-              </Button>
-            </Link>
-          </div>
+            </CardContent>
+            <CardFooter className="flex justify-center">
+              <Link to="/comprehensive-services">
+                <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
+                  <ArrowUpRight className="h-5 w-5 mr-2" />
+                  Explore All Services
+                </Button>
+              </Link>
+            </CardFooter>
+          </Card>
         </div>
       </div>
     </section>
