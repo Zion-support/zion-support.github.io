@@ -114,6 +114,12 @@ import RevolutionaryNewsletterSignup2026 from '../components/RevolutionaryNewsle
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscoveryWidget';
 
+// Import new content showcase components
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+import RevolutionaryTechShowcase2025 from '../components/RevolutionaryTechShowcase2025';
+import NewsletterSignupPromotion2025 from '../components/NewsletterSignupPromotion2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -140,6 +146,18 @@ export default function HomePage() {
         {/* NEW AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2025UltimateBreakthroughAnnouncementBanner />
 >>>>>>> a375e9ceec8bd937c056ad6761fbb8457e411d83
+        
+        {/* NEW ULTIMATE CONTENT PROMOTION BANNER 2025 */}
+        <UltimateContentPromotionBanner2025 />
+        
+        {/* NEW CONTENT SHOWCASE 2025 */}
+        <NewContentShowcase2025 />
+        
+        {/* REVOLUTIONARY TECH SHOWCASE 2025 */}
+        <RevolutionaryTechShowcase2025 />
+        
+        {/* NEWSLETTER SIGNUP PROMOTION 2025 */}
+        <NewsletterSignupPromotion2025 />
         
         {/* AI 2025 QUANTUM CONSCIOUSNESS BREAKTHROUGH BANNER */}
         <AI2025QuantumConsciousnessBreakthroughBanner />
