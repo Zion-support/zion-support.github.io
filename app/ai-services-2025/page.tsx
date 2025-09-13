@@ -1,172 +1,159 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../../components/SEO';
+import Link from 'next/link';
 
-const AIServices2025: React.FC = () => {
-  const services = [
-    {
-      title: "AI-Powered Business Process Automation Suite",
-      price: "$299/month",
-      marketPrice: "$500-800/month",
-      description: "Reduce operational costs by 40-60% and increase productivity by 300% with our comprehensive AI automation platform.",
-      features: [
-        "Workflow automation and orchestration",
-        "Intelligent document processing",
-        "Automated decision making",
-        "ROI within 3 months guarantee"
-      ],
-      icon: "🤖"
-    },
-    {
-      title: "Enterprise AI Content Generation Platform",
-      price: "$199/month",
-      marketPrice: "$300-600/month",
-      description: "Save 80% on content creation time and improve SEO rankings by 200% with our AI-powered content platform.",
-      features: [
-        "Multi-language content generation",
-        "SEO optimization built-in",
-        "Brand voice customization",
-        "Plagiarism-free content guarantee"
-      ],
-      icon: "✍️"
-    },
-    {
-      title: "AI Customer Behavior Analytics & Insights Platform",
-      price: "$449/month",
-      marketPrice: "$800-1500/month",
-      description: "Increase customer retention by 35% and boost customer lifetime value by 200% with advanced AI analytics.",
-      features: [
-        "Real-time customer behavior analysis",
-        "Predictive customer insights",
-        "Automated segmentation",
-        "Churn reduction by 50%"
-      ],
-      icon: "📊"
-    },
-    {
-      title: "AI-Powered Cybersecurity Threat Detection System",
-      price: "$899/month",
-      marketPrice: "$1200-2500/month",
-      description: "Detect threats 10x faster and reduce false positives by 80% with our advanced AI security platform.",
-      features: [
-        "Real-time threat monitoring",
-        "AI-powered threat hunting",
-        "Automated incident response",
-        "24/7 security oversight"
-      ],
-      icon: "🔒"
-    },
-    {
-      title: "AI-Powered Legal Contract Analysis & Risk Assessment",
-      price: "$1,100/month",
-      marketPrice: "$1500-3800/month",
-      description: "Reduce contract review time by 80% and identify risks with 95% accuracy using advanced AI analysis.",
-      features: [
-        "Automated contract analysis",
-        "Risk identification and scoring",
-        "Compliance checking",
-        "Clause comparison and insights"
-      ],
-      icon: "⚖️"
-    },
-    {
-      title: "AI-Powered Marketing Automation & Customer Journey Orchestration",
-      price: "$850/month",
-      marketPrice: "$1200-3200/month",
-      description: "Increase conversion rates by 50% and reduce marketing costs by 40% with intelligent automation.",
-      features: [
-        "Multi-channel campaign automation",
-        "Customer journey mapping",
-        "Personalization engine",
-        "Performance optimization"
-      ],
-      icon: "📈"
-    }
-  ];
+export const metadata = {
+  title: 'AI Services 2025 - Revolutionary AI Solutions & Implementation | Zion Tech Group',
+  description: 'Transform your business with our revolutionary AI Services 2025. From autonomous operations to quantum computing integration, achieve 10,000% ROI with our breakthrough AI solutions.',
+  keywords: ['AI Services 2025', 'AI Solutions', 'Artificial Intelligence', 'Autonomous Operations', 'Quantum Computing', '10,000% ROI', 'AI Implementation'],
+};
 
+export default function AIServices2025() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <SEO
-        title="AI Services 2025 - Zion Tech Group"
-        description="Comprehensive AI services for 2025: Business automation, content generation, analytics, cybersecurity, and more. Transform your business with cutting-edge AI solutions."
-        keywords="AI services 2025, business automation, AI content generation, customer analytics, cybersecurity AI, marketing automation"
-        url="/ai-services-2025"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 NEW FOR 2025</span>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold mb-6">
+              🚀 REVOLUTIONARY AI SERVICES
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Services 2025
+              <span className="block text-blue-400">Revolutionary Solutions</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your business with our revolutionary AI Services 2025. From autonomous operations 
+              to quantum computing integration, achieve <span className="text-blue-400 font-bold">10,000% ROI</span> 
+              with our breakthrough AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="#services"
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"
+              >
+                Explore Our Services
+              </Link>
+              <Link 
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-all duration-300"
+              >
+                Get Started Today
+              </Link>
+            </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-6">
-            AI Services 2025
-          </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Transform your business with our comprehensive suite of AI-powered solutions. 
-            Each service is designed to deliver measurable ROI and competitive advantage in today's digital landscape.
+        </div>
+      </div>
+
+      {/* Services Overview */}
+      <div id="services" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Revolutionary AI Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our comprehensive suite of AI services delivers unprecedented results across every business function, 
+              from autonomous operations to transcendent intelligence integration.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Service 1 */}
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl border border-blue-200 hover:shadow-lg transition-all duration-300">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Autonomous Operations</h3>
+              <p className="text-gray-600 mb-6">
+                Deploy AI systems that operate 24/7 without human intervention, making intelligent decisions 
+                and optimizing processes in real-time.
+              </p>
+              <ul className="space-y-2 text-gray-600 mb-6">
+                <li>• 99.9% operational efficiency</li>
+                <li>• 24/7 autonomous decision-making</li>
+                <li>• Real-time process optimization</li>
+                <li>• Zero human intervention required</li>
+              </ul>
+              <div className="text-2xl font-bold text-blue-600 mb-4">10,000% ROI</div>
+              <Link 
+                href="/contact"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+
+            {/* Service 2 */}
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-200 hover:shadow-lg transition-all duration-300">
+              <div className="text-4xl mb-4">⚛️</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Quantum Computing Integration</h3>
+              <p className="text-gray-600 mb-6">
+                Leverage quantum computing power for exponential processing capabilities and complex 
+                problem-solving that transcends classical limitations.
+              </p>
+              <ul className="space-y-2 text-gray-600 mb-6">
+                <li>• 10,000x processing speed</li>
+                <li>• Quantum algorithm optimization</li>
+                <li>• Complex problem solving</li>
+                <li>• Exponential computational power</li>
+              </ul>
+              <div className="text-2xl font-bold text-green-600 mb-4">15,000% ROI</div>
+              <Link 
+                href="/contact"
+                className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+
+            {/* Service 3 */}
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-200 hover:shadow-lg transition-all duration-300">
+              <div className="text-4xl mb-4">🔮</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Predictive Analytics</h3>
+              <p className="text-gray-600 mb-6">
+                Predict future outcomes with 99.7% accuracy using advanced AI models that analyze 
+                patterns and trends across all business domains.
+              </p>
+              <ul className="space-y-2 text-gray-600 mb-6">
+                <li>• 99.7% prediction accuracy</li>
+                <li>• Real-time trend analysis</li>
+                <li>• Market forecasting</li>
+                <li>• Risk assessment</li>
+              </ul>
+              <div className="text-2xl font-bold text-purple-600 mb-4">8,500% ROI</div>
+              <Link 
+                href="/contact"
+                className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business with AI Services 2025?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Join thousands of companies already achieving 10,000% ROI with our revolutionary AI services. 
+            Start your transformation today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link 
               href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               Get Started Today
             </Link>
-            <Link
+            <Link 
               href="/case-studies"
-              className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
             >
-              View Case Studies
+              View Success Stories
             </Link>
           </div>
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-gray-100">
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-              <div className="flex items-center gap-2 mb-3">
-                <span className="text-2xl font-bold text-green-600">{service.price}</span>
-                <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
-              </div>
-              <p className="text-gray-600 mb-4">{service.description}</p>
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start gap-2">
-                    <span className="text-green-500 mt-1">✓</span>
-                    <span className="text-sm text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/contact"
-                className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
-              >
-                Get Started
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
-          <p className="text-lg opacity-90 mb-6">
-            Join thousands of businesses already using our AI solutions to drive growth and innovation.
-          </p>
-          <Link
-            href="/contact"
-            className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
-          >
-            Schedule Free Consultation
-          </Link>
         </div>
       </div>
     </div>
   );
-};
-
-export default AIServices2025;
+}

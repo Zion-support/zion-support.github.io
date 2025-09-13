@@ -12,9 +12,10 @@ export NPM_CONFIG_PACKAGE_MANAGER=yarn
 export NEXT_TELEMETRY_DISABLED=1
 export SWC_BINARY_PATH=""
 export NEXT_SWC_BINARY_PATH=""
-# Force SWC to use JavaScript fallback
-export NEXT_FORCE_SWC=1
-export NEXT_SWC_DISABLE=1
+# Disable SWC completely to avoid download issues
+export NEXT_SWC_DISABLED=1
+# Use Terser for minification instead of SWC
+export NEXT_MINIFY=terser
 
 # Clear all caches and corrupted packages
 echo "Clearing all caches and corrupted packages..."
@@ -109,29 +110,36 @@ echo "Building project..."
 # Try different build approaches
 build_success=false
 
-# Approach 1: Standard build
-echo "Attempting standard build..."
-if yarn run build; then
+# Approach 1: Standard build with Netlify config
+echo "Attempting standard build with Netlify configuration..."
+if [ -f "next.config.netlify.js" ]; then
+  cp next.config.netlify.js next.config.js
+fi
+
+if yarn run build:netlify; then
   echo "Standard build successful!"
   build_success=true
 else
   echo "Standard build failed, trying fallback approaches..."
 fi
 
-# Approach 2: Build with SWC fallback
+# Approach 2: Build with SWC completely disabled
 if [ "$build_success" = false ]; then
-  echo "Attempting build with SWC JavaScript fallback..."
+  echo "Attempting build with SWC completely disabled..."
   export SWC_BINARY_PATH=""
   export NEXT_SWC_BINARY_PATH=""
+  export NEXT_SWC_DISABLED=1
+  export NEXT_MINIFY=terser
   export NEXT_TELEMETRY_DISABLED=1
   export NEXT_FORCE_SWC=1
   export NEXT_SWC_DISABLE=1
   export NEXT_PRIVATE_SKIP_SWC_DOWNLOAD=1
   
-  if yarn run build; then
-    echo "SWC fallback build successful!"
+  if yarn run build:netlify; then
+    echo "SWC disabled build successful!"
     build_success=true
   else
+<<<<<<< HEAD
     echo "SWC fallback build failed, trying with fallback command..."
     # Use the fallback build command
     if yarn run build:fallback; then
@@ -140,6 +148,9 @@ if [ "$build_success" = false ]; then
     else
       echo "Fallback build failed, trying with legacy provider..."
     fi
+=======
+    echo "SWC disabled build failed, trying with legacy provider..."
+>>>>>>> origin/cursor/build-nextjs-application-with-swc-download-error-a9ea
   fi
 fi
 
@@ -148,13 +159,46 @@ if [ "$build_success" = false ]; then
   echo "Attempting build with legacy OpenSSL provider..."
   export NODE_OPTIONS="--max-old-space-size=8192 --openssl-legacy-provider"
   
+<<<<<<< HEAD
   if yarn run build:fallback; then
+=======
+  if yarn run build:netlify; then
+>>>>>>> origin/cursor/build-nextjs-application-with-swc-download-error-a9ea
     echo "Legacy provider build successful!"
     build_success=true
   else
-    echo "All build attempts failed!"
-    exit 1
+    echo "Legacy provider build failed, trying npm fallback..."
   fi
+fi
+
+# Approach 4: Fallback to npm if yarn fails
+if [ "$build_success" = false ]; then
+  echo "Attempting build with npm fallback..."
+  # Clear everything and use npm
+  rm -rf node_modules
+  rm -f yarn.lock
+  rm -f package-lock.json
+  
+  # Install with npm
+  if npm install --legacy-peer-deps --no-optional; then
+    echo "NPM dependencies installed successfully!"
+    
+    # Try build with npm
+    if npm run build:netlify; then
+      echo "NPM build successful!"
+      build_success=true
+    else
+      echo "NPM build failed!"
+    fi
+  else
+    echo "NPM installation failed!"
+  fi
+fi
+
+# Final check
+if [ "$build_success" = false ]; then
+  echo "All build attempts failed!"
+  exit 1
 fi
 
 echo "Build completed successfully!"

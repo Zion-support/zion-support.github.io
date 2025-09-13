@@ -6,6 +6,10 @@ const nextConfig = {
 	output: 'export',
 	pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
 	
+	// Disable SWC completely to avoid binary download issues
+	swcMinify: false,
+	swcLoader: false,
+	
 	// Performance optimizations
 	compiler: {
 		removeConsole: process.env.NODE_ENV === 'production',
@@ -22,20 +26,26 @@ const nextConfig = {
 	// Bundle optimization
 	experimental: {
 		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-		// Force SWC to use JavaScript fallback if native binary fails
-		optimizeCss: true,
-		swcMinify: true,
-		// Disable SWC binary download to force JavaScript fallback
-		forceSwcTransforms: true,
-		// Disable SWC if there are issues
-		swcMinify: true,
+		// Disable SWC to avoid binary download issues
+		swcMinify: false,
+		swcLoader: false,
 	},
 	
-	// SWC configuration
-	swcMinify: true,
+	// SWC configuration - force JavaScript fallback
+	swcMinify: false,
+	swcLoader: false,
 	
 	// Webpack optimizations
 	webpack: (config, { dev, isServer }) => {
+		// Force use of Terser instead of SWC
+		if (!dev) {
+			config.optimization.minimizer = config.optimization.minimizer || [];
+			// Remove SWC minifier if present
+			config.optimization.minimizer = config.optimization.minimizer.filter(
+				(plugin) => plugin.constructor.name !== 'SwcMinifyWebpackPlugin'
+			);
+		}
+		
 		// Production optimizations
 		if (!dev && !isServer) {
 			config.optimization.splitChunks = {
