@@ -1,214 +1,127 @@
-'use client';
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Zap, Star, TrendingUp, Users, Award } from 'lucide-react';
 
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Sparkles, 
-  ArrowRight, 
-  BookOpen, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield,
-  TrendingUp,
-  Users,
-  Star,
-  ChevronRight,
-  Play
-} from 'lucide-react';
-
-const NewContentShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Rotate features every 3 seconds
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const features = [
-    { icon: Brain, text: 'AI Innovations', color: 'from-purple-500 to-pink-500' },
-    { icon: Zap, text: 'Automation Solutions', color: 'from-blue-500 to-cyan-500' },
-    { icon: Cloud, text: 'Cloud Infrastructure', color: 'from-green-500 to-emerald-500' },
-    { icon: Shield, text: 'Security Innovation', color: 'from-red-500 to-orange-500' }
-  ];
-
-  const stats = [
-    { number: '50+', label: 'New Articles', icon: BookOpen },
-    { number: '25+', label: 'Case Studies', icon: TrendingUp },
-    { number: '15+', label: 'Tutorials', icon: Play },
-    { number: '10K+', label: 'Readers', icon: Users }
-  ];
-
-  if (!isVisible) return null;
-
+export default function NewContentShowcase2025PromotionBanner() {
   return (
-    <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-2xl animate-pulse" />
+    <section className="py-16 px-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white"
-          >
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-6"
-            >
-              <Sparkles className="w-4 h-4 mr-2 text-yellow-400" />
-              New Content Collection 2025
-            </motion.div>
-
-            {/* Main Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-            >
-              Discover Our Latest
-              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Content Showcase
-              </span>
-            </motion.h1>
-
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-xl text-blue-100 mb-8 leading-relaxed"
-            >
-              Explore cutting-edge insights, tutorials, and case studies covering the latest in AI, automation, cloud computing, and security innovation. Stay ahead with our comprehensive content library.
-            </motion.p>
-
-            {/* Rotating Feature */}
-            <motion.div
-              key={currentFeature}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.5 }}
-              className="flex items-center mb-8"
-            >
-              <div className={`p-3 rounded-xl bg-gradient-to-r ${features[currentFeature].color} bg-opacity-20 mr-4`}>
-                <features[currentFeature].icon className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <p className="text-sm text-blue-200">Featured Category</p>
-                <p className="text-lg font-semibold text-white">{features[currentFeature].text}</p>
-              </div>
-            </motion.div>
-
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <button className="group flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                <BookOpen className="w-5 h-5 mr-2" />
-                Explore Content
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-              
-              <button className="group flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-bold rounded-xl hover:bg-white/20 transition-all duration-300">
-                <Play className="w-5 h-5 mr-2" />
-                Watch Demo
-              </button>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Content - Stats Grid */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 gap-6"
-          >
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 transition-all duration-300"
-                >
-                  <div className="flex justify-center mb-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20">
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-blue-200 text-sm font-medium">{stat.label}</div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
+      
+      <div className="relative max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse">
+            <Zap className="w-4 h-4" />
+            NEW BREAKTHROUGH CONTENT 2025
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Revolutionary AI 2025
+            <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+              Content Showcase
+            </span>
+          </h2>
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Discover the latest breakthrough technologies, quantum computing solutions, and advanced automation that are reshaping the future of business.
+          </p>
         </div>
 
-        {/* Bottom Features */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
-          <div className="text-center">
-            <div className="flex justify-center mb-4">
-              <div className="p-3 rounded-xl bg-gradient-to-r from-green-500/20 to-emerald-500/20">
-                <Star className="w-8 h-8 text-green-400" />
+        {/* Content Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {/* AI 2025 Breakthrough Showcase */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                <Zap className="w-5 h-5 text-white" />
               </div>
+              <h3 className="text-xl font-bold text-white">AI 2025 Breakthrough</h3>
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">Expert Authored</h3>
-            <p className="text-blue-200">Content written by industry experts and thought leaders</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="flex justify-center mb-4">
-              <div className="p-3 rounded-xl bg-gradient-to-r from-yellow-500/20 to-orange-500/20">
-                <TrendingUp className="w-8 h-8 text-yellow-400" />
-              </div>
+            <p className="text-white/80 mb-4 text-sm">
+              Revolutionary AI technologies delivering 2,500-5,000% ROI with quantum-enhanced intelligence and autonomous operations.
+            </p>
+            <div className="flex items-center gap-2 mb-4">
+              <Star className="w-4 h-4 text-yellow-400 fill-current" />
+              <span className="text-white text-sm font-semibold">ROI: 2,500-5,000%</span>
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">Always Updated</h3>
-            <p className="text-blue-200">Fresh content published weekly with latest trends</p>
+            <Link 
+              href="/ai-2025-breakthrough-showcase" 
+              className="inline-flex items-center gap-2 bg-white text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100 transition-all duration-300"
+            >
+              Explore Now
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
-          
-          <div className="text-center">
-            <div className="flex justify-center mb-4">
-              <div className="p-3 rounded-xl bg-gradient-to-r from-pink-500/20 to-purple-500/20">
-                <Users className="w-8 h-8 text-pink-400" />
-              </div>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Community Driven</h3>
-            <p className="text-blue-200">Join thousands of professionals learning together</p>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-};
 
-export default NewContentShowcase2025PromotionBanner;
+          {/* Quantum Computing Solutions */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center">
+                <TrendingUp className="w-5 h-5 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white">Quantum Computing</h3>
+            </div>
+            <p className="text-white/80 mb-4 text-sm">
+              Error-corrected quantum computers and quantum supremacy delivering unprecedented computational power and security.
+            </p>
+            <div className="flex items-center gap-2 mb-4">
+              <Star className="w-4 h-4 text-yellow-400 fill-current" />
+              <span className="text-white text-sm font-semibold">ROI: 2,900-5,200%</span>
+            </div>
+            <Link 
+              href="/quantum-computing-solutions-2025" 
+              className="inline-flex items-center gap-2 bg-white text-indigo-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100 transition-all duration-300"
+            >
+              Explore Now
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Advanced Automation Solutions */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center">
+                <Users className="w-5 h-5 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white">Automation Solutions</h3>
+            </div>
+            <p className="text-white/80 mb-4 text-sm">
+              Intelligent process automation and autonomous operations reducing costs by 95% while increasing efficiency by 10,000x.
+            </p>
+            <div className="flex items-center gap-2 mb-4">
+              <Star className="w-4 h-4 text-yellow-400 fill-current" />
+              <span className="text-white text-sm font-semibold">ROI: 2,500-4,000%</span>
+            </div>
+            <Link 
+              href="/advanced-automation-solutions-2025" 
+              className="inline-flex items-center gap-2 bg-white text-green-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100 transition-all duration-300"
+            >
+              Explore Now
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/ai-services-2025" 
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Explore All Services
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            </Link>
+            <Link 
+              href="/contact" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+            >
+              Get Free Consultation
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
