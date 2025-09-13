@@ -19,6 +19,11 @@ const UltimateAIAssistant2026 = lazy(() => import('../components/UltimateAIAssis
 const AdvancedAnalyticsDashboard2026 = lazy(() => import('../components/AdvancedAnalyticsDashboard2026'));
 const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../components/RevolutionaryContentRecommendationEngine2026'));
 
+// Import new promotional components
+import RevolutionaryContentPromotionBanner from '../components/RevolutionaryContentPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import SocialProofMetrics from '../components/SocialProofMetrics';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -30,6 +35,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* REVOLUTIONARY CONTENT PROMOTION BANNER */}
+        <RevolutionaryContentPromotionBanner />
+        
+        {/* SOCIAL PROOF METRICS */}
+        <SocialProofMetrics />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <InteractiveContentDiscoveryWidget />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
         
