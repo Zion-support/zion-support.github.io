@@ -44,6 +44,7 @@ import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026
 
 // Newsletter and Communication
 import NewsletterSignup2025 from '../components/NewsletterSignup2025';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
 
 // Revolutionary and Breakthrough Content
 import RevolutionaryBreakthroughPromotionBanner from '../components/RevolutionaryBreakthroughPromotionBanner';
@@ -105,6 +106,13 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import RevolutionaryServicesPromotionBanner from '../components/RevolutionaryServicesPromotionBanner';
 import RevolutionaryServicesShowcase2025 from '../components/RevolutionaryServicesShowcase2025';
 import TechnologyBreakthroughBanner2025 from '../components/TechnologyBreakthroughBanner2025';
+
+// New 2025 Breakthrough Content Components
+import AI2025LatestBreakthroughsPromotionBanner from '../components/AI2025LatestBreakthroughsPromotionBanner';
+import AI2025LatestBreakthroughsShowcase from '../components/AI2025LatestBreakthroughsShowcase';
+import QuantumComputing2025PromotionBanner from '../components/QuantumComputing2025PromotionBanner';
+import AdvancedAutomation2025PromotionBanner from '../components/AdvancedAutomation2025PromotionBanner';
+import SuccessStories2025Showcase from '../components/SuccessStories2025Showcase';
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -161,6 +169,31 @@ const HomePage: React.FC = () => {
               {/* New Content Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <NewContentBanner />
+              </Suspense>
+
+              {/* AI 2025 Latest Breakthroughs Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025LatestBreakthroughsPromotionBanner />
+              </Suspense>
+
+              {/* AI 2025 Latest Breakthroughs Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025LatestBreakthroughsShowcase />
+              </Suspense>
+
+              {/* Quantum Computing 2025 Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputing2025PromotionBanner />
+              </Suspense>
+
+              {/* Advanced Automation 2025 Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAutomation2025PromotionBanner />
+              </Suspense>
+
+              {/* Success Stories 2025 Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <SuccessStories2025Showcase />
               </Suspense>
 
               {/* Ultimate Content Promotion Banner 2025 */}
@@ -416,6 +449,11 @@ const HomePage: React.FC = () => {
               {/* Technology Breakthrough Banner 2025 */}
               <Suspense fallback={<LoadingSpinner />}>
                 <TechnologyBreakthroughBanner2025 />
+              </Suspense>
+
+              {/* Interactive Content Discovery */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscovery2025 />
               </Suspense>
 
               {/* Newsletter Signup */}
