@@ -41,6 +41,7 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
 import AI2026BreakthroughRevolutionaryContentBanner from '../components/AI2026BreakthroughRevolutionaryContentBanner';
 import QuantumComputingBreakthroughs2030Banner from '../components/QuantumComputingBreakthroughs2030Banner';
+import AI2025RevolutionaryTrendsBanner from '../components/AI2025RevolutionaryTrendsBanner';
 
 // Import new interactive widgets
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
@@ -64,6 +65,9 @@ export default function HomePage() {
         
         {/* NEW: QUANTUM COMPUTING BREAKTHROUGHS 2030 BANNER */}
         <QuantumComputingBreakthroughs2030Banner />
+        
+        {/* NEW: AI 2025 REVOLUTIONARY TRENDS BANNER */}
+        <AI2025RevolutionaryTrendsBanner />
         
         {/* NEW: INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
