@@ -45,6 +45,10 @@ import FutureTechContentDiscoveryWidget from '../components/FutureTechContentDis
 import { BreakthroughBanner, QuantumBanner, ContentShowcaseBanner, SuccessStoryBanner } from '../components/PromotionalBanner';
 import ContentPromotion from '../components/ContentPromotion';
 
+// New 2026 promotional components
+import QuantumAIFusion2026PromotionBanner from '../components/QuantumAIFusion2026PromotionBanner';
+import RevolutionaryContentDiscoveryWidget2026 from '../components/RevolutionaryContentDiscoveryWidget2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -104,6 +108,12 @@ export default function HomePage() {
         
         {/* NEW: AI 2025 NEW CONTENT PROMOTION BANNER */}
         <AI2025NewContentPromotionBanner />
+        
+        {/* QUANTUM AI FUSION 2026 PROMOTION BANNER */}
+        <QuantumAIFusion2026PromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT DISCOVERY WIDGET 2026 */}
+        <RevolutionaryContentDiscoveryWidget2026 />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
