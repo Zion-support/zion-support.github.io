@@ -40,6 +40,11 @@ import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWi
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+
+// Import new promotional components
+import AI2025UltimateBreakthroughShowcasePromotionBanner from '../components/AI2025UltimateBreakthroughShowcasePromotionBanner';
+import AnimatedContentDiscoveryWidget2025 from '../components/AnimatedContentDiscoveryWidget2025';
+import SocialProofTestimonials2025 from '../components/SocialProofTestimonials2025';
 >>>>>>> 8a32472f4c63f8c1f00e9a2ed50b576a716afb42
 
 export default function HomePage() {
@@ -53,6 +58,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE BREAKTHROUGH SHOWCASE PROMOTION BANNER */}
+        <AI2025UltimateBreakthroughShowcasePromotionBanner />
+        
+        {/* ANIMATED CONTENT DISCOVERY WIDGET 2025 */}
+        <AnimatedContentDiscoveryWidget2025 />
+        
+        {/* SOCIAL PROOF & TESTIMONIALS 2025 */}
+        <SocialProofTestimonials2025 />
+        
         {/* AI 2026 NEW CONTENT PROMOTION BANNER */}
         <AI2026NewContentPromotionBanner />
         
