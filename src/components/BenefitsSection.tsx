@@ -1,55 +1,59 @@
-import React from 'react';
+
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
-import { Bot, Clock, Globe, TrendingDown } from "lucide-react";
+import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
-const benefits = [
-  {
-    title: "AI-Powered Matchmaking",
-    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
-    icon: <Bot className="w-8 h-8" />,
-  },
-  {
-    title: "Global Availability",
-    description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
-    icon: <Globe className="w-8 h-8" />,
-  },
-  {
-    title: "24/7 Support",
-    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",
-    icon: <Clock className="w-8 h-8" />,
-  },
-  {
-    title: "Cost-Effective Solutions",
-    description: "Find competitive pricing and value-driven solutions that fit your budget without compromising on quality or performance.",
-    icon: <TrendingDown className="w-8 h-8" />,
-  },
-];
+interface BenefitsSectionProps {
+  className?: string;
+  style?: React.CSSProperties;
+}
 
-export const BenefitsSection: React.FC = () => {
+const getBenefits = (t: any) => [
+  {
+    title: t('benefits.ai_matchmaking'),
+    description: t('benefits.ai_matchmaking_desc'),
+    icon: <Bot className="w-8 h-8" />},
+  {
+    title: t('benefits.global_availability'),
+    description: t('benefits.global_availability_desc'),
+    icon: <Globe className="w-8 h-8" />},
+  {
+    title: t('benefits.support_24_7'),
+    description: t('benefits.support_24_7_desc'),
+    icon: <Clock className="w-8 h-8" />},
+  {
+    title: t('benefits.cost_reduction'),
+    description: t('benefits.cost_reduction_desc'),
+    icon: <TrendingDown className="w-8 h-8" />}];
+
+export function BenefitsSection({ className, style }: BenefitsSectionProps) {
+  const { t } = useTranslation();
+  const benefits = getBenefits(t);
+  
   return (
-    <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className={cn("py-20 bg-zion-blue-light", className)} style={style}>
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <GradientHeading
-            title="Why Choose Zion Tech Group?"
-            subtitle="Discover the advantages that make us the preferred choice for tech solutions"
-            className="mb-8"
-          />
+        <div className="text-center mb-16">
+          <GradientHeading>{t('home.benefits_title')}</GradientHeading>
+          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
+            {t('home.benefits_subtitle')}
+          </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
             <FeatureCard
               key={index}
               title={benefit.title}
               description={benefit.description}
               icon={benefit.icon}
-              className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-colors"
+              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
             />
           ))}
         </div>
       </div>
     </section>
   );
-};
+}

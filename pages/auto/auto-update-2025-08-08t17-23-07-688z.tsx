@@ -1,1 +1,0 @@
-export default function AutoUpdate_172307() { return <div className="text-sm">Auto update page.</div>; }

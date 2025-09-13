@@ -275,9 +275,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
           background: [
             'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)',
             'linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)',
-            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)',
-          ],
-        }}
+            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)']}}
         transition={{
           duration: 10,
           repeat: Infinity,
@@ -300,19 +298,16 @@ const UltraFuturisticBackground2046: React.FC = () => {
             className="absolute w-32 h-32 border border-cyan-500/20 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
+              top: `${Math.random() * 100}%`}}
             animate={{
               rotate: [0, 360],
               scale: [0.5, 1, 0.5],
-              opacity: [0.1, 0.3, 0.1],
-            }}
+              opacity: [0.1, 0.3, 0.1]}}
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               ease: "linear",
-              delay: i * 0.5,
-            }}
+              delay: i * 0.5}}
           />
         ))}
         
@@ -322,19 +317,16 @@ const UltraFuturisticBackground2046: React.FC = () => {
             className="absolute w-24 h-24 border border-purple-500/20 rotate-45"
             style={{
               left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
+              top: `${Math.random() * 100}%`}}
             animate={{
               rotate: [45, 405],
               scale: [0.3, 0.8, 0.3],
-              opacity: [0.1, 0.2, 0.1],
-            }}
+              opacity: [0.1, 0.2, 0.1]}}
             transition={{
               duration: Math.random() * 8 + 8,
               repeat: Infinity,
               ease: "linear",
-              delay: i * 0.7,
-            }}
+              delay: i * 0.7}}
           />
         ))}
       </div>
@@ -344,25 +336,21 @@ const UltraFuturisticBackground2046: React.FC = () => {
         <motion.div
           className="absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent"
           animate={{
-            height: ['32px', '48px', '32px'],
-          }}
+            height: ['32px', '48px', '32px']}}
           transition={{
             duration: 4,
             repeat: Infinity,
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         />
         <motion.div
           className="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent"
           animate={{
-            height: ['24px', '40px', '24px'],
-          }}
+            height: ['24px', '40px', '24px']}}
           transition={{
             duration: 3,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: 1,
-          }}
+            delay: 1}}
         />
       </div>
       
@@ -373,18 +361,15 @@ const UltraFuturisticBackground2046: React.FC = () => {
             key={`interference-${i}`}
             className="absolute inset-0 opacity-5"
             style={{
-              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`,
-            }}
+              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`}}
             animate={{
               scale: [1, 1.5, 1],
-              opacity: [0.05, 0.1, 0.05],
-            }}
+              opacity: [0.05, 0.1, 0.05]}}
             transition={{
               duration: Math.random() * 6 + 4,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: i * 0.8,
-            }}
+              delay: i * 0.8}}
           />
         ))}
       </div>

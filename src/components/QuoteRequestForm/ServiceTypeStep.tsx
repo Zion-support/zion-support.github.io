@@ -1,12 +1,24 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+import { Search } from 'lucide-react'
 import { ListingScoreCard } from "@/components/ListingScoreCard";
-import api from '@/lib/api';
+import { captureException } from "@/utils/sentry";
+import Skeleton from "@/components/ui/skeleton";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useIsMounted } from "@/hooks/useIsMounted";
+import { z } from "zod";
+import {logErrorToProduction} from '@/utils/productionLogger';
+
+
+const listingSchema = z.object({
+  id: z.string(),
+  title: z.string(),
+  category: z.string(),
+  image: z.string().optional()});
+
+const listingsSchema = z.array(listingSchema);
 
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
@@ -16,47 +28,61 @@ interface ServiceTypeStepProps {
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
+  const debouncedQuery = useDebounce(searchQuery, 300);
   const [listings, setListings] = useState<ListingItem[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const isMounted = useIsMounted();
 
-  const fetchServices = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const response = await fetch('/api/services');
-      if (!response.ok) throw new Error('Failed to fetch');
-      const data = await response.json();
-      setListings(data as ListingItem[]);
-    } catch (err) {
-      console.error('Failed to fetch services', err);
-      setError('Failed to load services');
-      setListings(SAMPLE_SERVICES);
-    } finally {
-      setLoading(false);
+  // Fetch services when the service type or query changes
+  useEffect(() => {
+    if (!formData.serviceType) {
+      setListings([]);
+      return;
     }
-  }, []);
 
     const fetchServices = async () => {
       setLoading(true);
       setError(null);
-      try {
-        const response = await api.get(
-          `/api/services?categoryId=${encodeURIComponent(formData.serviceType)}`
-        );
-        if (response.status < 200 || response.status >= 300) throw new Error('Failed to fetch');
-        const data = response.data;
-        setListings(data as ListingItem[]);
-      } catch (err) {
-        // Fallback to sample data on error
-        setListings(SAMPLE_LISTINGS.filter(item => item.category.toLowerCase() === formData.serviceType.toLowerCase()));
-      } finally {
-        setLoading(false);
+      const url = `/api/public/services?category=${encodeURIComponent(
+        formData.serviceType
+      )}&q=${encodeURIComponent(debouncedQuery)}`;
+      const maxRetries = 3;
+
+      for (let attempt = 0; attempt < maxRetries; attempt++) {
+        try {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error('Failed to fetch');
+          const data = await response.json();
+          const parsed = listingsSchema.safeParse(data);
+          if (!parsed.success) throw new Error('Invalid response');
+          if (isMounted.current) {
+            setListings(parsed.data as ListingItem[]);
+            setError(null);
+          }
+          return;
+        } catch (err) {
+          if (attempt === maxRetries - 1) {
+            if (process.env.NODE_ENV === 'development') {
+              logErrorToProduction('Failed to load services:', { data: err });
+            } else {
+              captureException(err);
+            }
+            if (isMounted.current) {
+              setListings([]);
+              setError('Failed to load services');
+            }
+          } else {
+            await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
+          }
+        } finally {
+          if (isMounted.current) setLoading(false);
+        }
       }
     };
 
     fetchServices();
-  }, [fetchServices]);
+  }, [formData.serviceType, debouncedQuery, isMounted]);
   
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type });
@@ -70,7 +96,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     });
   };
   
-  const sourceListings = listings.length > 0 ? listings : SAMPLE_SERVICES;
+  const sourceListings = listings;
 
   const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected
@@ -142,10 +168,10 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           </div>
 
           {error && (
-            <div className="text-center text-red-400 text-sm">{error}. Showing sample data.</div>
+            <div className="text-center text-red-400 text-sm">{error}</div>
           )}
           
-          <div className="grid grid-cols-1 gap-4 mt-4">
+          <div className="grid grid-cols-1 gap-4 mt-4" aria-busy={loading}>
             {loading ? (
               <>
                 <Skeleton className="h-[120px] w-full" />

@@ -1,178 +1,181 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, Brain, Cpu, Target, TrendingUp, Users, Award, Globe, Shield, Rocket } from 'lucide-react';
 
 export default function UltimateContentShowcase2026() {
-  const contentItems = [
-    {
-      title: "AI 2025 Ultimate Content Revolution",
-      description: "Experience the most advanced AI-powered content ecosystem ever created with 10,000%+ ROI.",
-      href: "/ai-2025-ultimate-content-revolution",
-      category: "Content Revolution",
-      icon: <Zap className="w-6 h-6" />,
-      stats: "10,000%+ ROI",
-      color: "from-yellow-400 to-orange-500"
+  const [activeTab, setActiveTab] = useState('predictions');
+
+  const contentCategories = {
+    predictions: {
+      title: 'AI 2026 Predictions',
+      description: 'Revolutionary technology forecasts',
+      items: [
+        {
+          title: 'AI 2026 Ultimate Breakthrough Predictions',
+          description: 'Quantum-neural fusion, consciousness breakthroughs, and 15,000% ROI opportunities',
+          href: '/ai-2026-ultimate-breakthrough-predictions',
+          badge: 'BREAKTHROUGH',
+          color: 'purple',
+          roi: '15,000%'
+        },
+        {
+          title: 'Quantum Computing Breakthrough 2030',
+          description: 'Error-corrected quantum computers, quantum internet, and 50,000% processing improvements',
+          href: '/quantum-computing-breakthrough-2030',
+          badge: 'REVOLUTIONARY',
+          color: 'cyan',
+          roi: '50,000%'
+        }
+      ]
     },
-    {
-      title: "AI 2026 Future Predictions Revolutionary",
-      description: "Discover revolutionary AI predictions that will reshape industries and change everything.",
-      href: "/ai-2026-future-predictions-revolutionary",
-      category: "Future Predictions",
-      icon: <Brain className="w-6 h-6" />,
-      stats: "50,000% ROI",
-      color: "from-cyan-400 to-blue-500"
+    caseStudies: {
+      title: 'Success Stories',
+      description: 'Proven ROI achievements',
+      items: [
+        {
+          title: 'AI 2026 Enterprise Transformation - 50,000% ROI',
+          description: 'Fortune 500 company achieving unprecedented returns through quantum-neural fusion',
+          href: '/case-studies/ai-2026-enterprise-transformation-50000-roi',
+          badge: 'SUCCESS',
+          color: 'green',
+          roi: '50,000%'
+        }
+      ]
     },
-    {
-      title: "Quantum-Neural Fusion 2026",
-      description: "The first successful integration of quantum computing with neural networks.",
-      href: "/ai-2026-quantum-neural-fusion",
-      category: "Quantum Computing",
-      icon: <Cpu className="w-6 h-6" />,
-      stats: "1000x Speed",
-      color: "from-purple-400 to-pink-500"
-    },
-    {
-      title: "Neural Interface Revolution",
-      description: "Revolutionary brain-computer interfaces that will transform human-AI interaction.",
-      href: "/ai-2026-neural-interface-revolution",
-      category: "Neural Interfaces",
-      icon: <Target className="w-6 h-6" />,
-      stats: "99.99% Accuracy",
-      color: "from-green-400 to-teal-500"
-    },
-    {
-      title: "Autonomous Business Systems",
-      description: "Fully autonomous business operations with zero human intervention required.",
-      href: "/ai-2025-autonomous-operations-showcase",
-      category: "Automation",
-      icon: <Rocket className="w-6 h-6" />,
-      stats: "100% Automation",
-      color: "from-red-400 to-orange-500"
-    },
-    {
-      title: "Global AI Transformation",
-      description: "Worldwide AI network connecting all devices and systems for unprecedented coordination.",
-      href: "/ai-2026-global-transformation",
-      category: "Global Impact",
-      icon: <Globe className="w-6 h-6" />,
-      stats: "1B+ Users",
-      color: "from-indigo-400 to-purple-500"
+    technologies: {
+      title: 'Revolutionary Tech',
+      description: 'Breakthrough technologies',
+      items: [
+        {
+          title: 'Quantum-Neural Fusion Technology',
+          description: 'Revolutionary integration achieving 15,000% processing speed improvements',
+          href: '/quantum-neural-fusion-technology',
+          badge: 'BREAKTHROUGH',
+          color: 'indigo',
+          roi: '15,000%'
+        }
+      ]
     }
-  ];
+  };
+
+  const getColorClasses = (color: string) => {
+    const colors = {
+      purple: 'from-purple-500 to-pink-500',
+      cyan: 'from-cyan-500 to-blue-500',
+      green: 'from-green-500 to-emerald-500',
+      indigo: 'from-indigo-500 to-purple-500'
+    };
+    return colors[color as keyof typeof colors] || 'from-gray-500 to-gray-600';
+  };
+
+  const getBadgeColorClasses = (color: string) => {
+    const colors = {
+      purple: 'bg-purple-100 text-purple-800',
+      cyan: 'bg-cyan-100 text-cyan-800',
+      green: 'bg-green-100 text-green-800',
+      indigo: 'bg-indigo-100 text-indigo-800'
+    };
+    return colors[color as keyof typeof colors] || 'bg-gray-100 text-gray-800';
+  };
 
   return (
-    <div className="py-20 px-4 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <div className="max-w-7xl mx-auto">
+    <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-sm mb-6">
-            <Star className="w-4 h-4 mr-2" />
-            ULTIMATE CONTENT SHOWCASE 2026
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-semibold mb-6 animate-pulse">
+            🚀 ULTIMATE CONTENT SHOWCASE 2026
           </div>
-          
-          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Revolutionary Content
-            <span className="block bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-              That Changes Everything
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Revolutionary AI 2026
+            <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              Content Library
             </span>
           </h2>
-          
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Explore our comprehensive collection of revolutionary AI content, breakthrough technologies, 
-            and transformative solutions that are reshaping the future of business and technology.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover the most comprehensive collection of AI 2026 predictions, 
+            case studies, and breakthrough technologies.
           </p>
+        </div>
+
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center mb-12">
+          {Object.entries(contentCategories).map(([key, category]) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 m-2 ${
+                activeTab === key
+                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg transform scale-105'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+              }`}
+            >
+              {category.title}
+            </button>
+          ))}
         </div>
 
         {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {contentItems.map((item, index) => (
-            <div key={index} className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              {/* Category badge */}
-              <div className="absolute -top-3 left-6">
-                <span className="px-3 py-1 bg-gradient-to-r from-gray-800 to-gray-700 text-white text-xs font-bold rounded-full">
-                  {item.category}
-                </span>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {contentCategories[activeTab as keyof typeof contentCategories].items.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-200 overflow-hidden"
+            >
+              {/* Card Header */}
+              <div className={`h-2 bg-gradient-to-r ${getColorClasses(item.color)}`}></div>
               
-              {/* Icon */}
-              <div className={`text-${item.color.split('-')[1]}-400 mb-4`}>
-                {item.icon}
-              </div>
-              
-              {/* Content */}
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-yellow-400 transition-colors duration-300">
-                {item.title}
-              </h3>
-              
-              <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-                {item.description}
-              </p>
-              
-              {/* Stats */}
-              <div className="flex items-center justify-between mb-6">
-                <div className={`text-${item.color.split('-')[1]}-400 font-bold text-lg`}>
-                  {item.stats}
+              {/* Card Content */}
+              <div className="p-8">
+                {/* Badge */}
+                <div className="flex items-center justify-between mb-4">
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getBadgeColorClasses(item.color)}`}>
+                    {item.badge}
+                  </span>
+                  <span className="text-2xl font-bold text-gray-900">{item.roi}</span>
                 </div>
-                <div className="flex items-center text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-current" />
-                  ))}
-                </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-gray-900 mb-4 line-clamp-2">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 mb-6 line-clamp-3">
+                  {item.description}
+                </p>
+
+                {/* CTA Button */}
+                <Link
+                  href={item.href}
+                  className={`inline-flex items-center justify-center w-full bg-gradient-to-r ${getColorClasses(item.color)} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+                >
+                  Access Content
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
-              
-              {/* CTA */}
-              <Link 
-                href={item.href}
-                className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${item.color} text-black font-bold rounded-full hover:scale-105 transition-transform duration-300 w-full justify-center`}
-              >
-                Explore Now
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
             </div>
           ))}
         </div>
 
-        {/* Featured Stats */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {[
-            { icon: <TrendingUp className="w-8 h-8" />, metric: "10,000%+", label: "Average ROI" },
-            { icon: <Users className="w-8 h-8" />, metric: "1M+", label: "Active Users" },
-            { icon: <Award className="w-8 h-8" />, metric: "99.9%", label: "Success Rate" },
-            { icon: <Globe className="w-8 h-8" />, metric: "150+", label: "Countries" }
-          ].map((stat, index) => (
-            <div key={index} className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <div className="text-yellow-400 mb-4 flex justify-center">
-                {stat.icon}
-              </div>
-              <div className="text-4xl font-bold text-white mb-2">{stat.metric}</div>
-              <div className="text-gray-300">{stat.label}</div>
+        {/* Additional CTA */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+            <h3 className="text-3xl font-bold mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-xl text-gray-200 mb-6">
+              Join thousands of enterprises achieving revolutionary ROI through AI 2026 implementation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                Get Started Now
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Schedule Demo
+              </button>
             </div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-yellow-400/10 to-orange-500/10 backdrop-blur-lg rounded-2xl p-12 border border-yellow-400/30">
-          <h3 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses already experiencing revolutionary results with our AI solutions. 
-            Start your transformation journey today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-lg rounded-full hover:scale-105 transition-transform duration-300"
-            >
-              Get Started Now
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link 
-              href="/ai-2025-ultimate-breakthrough"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white hover:text-black transition-colors duration-300"
-            >
-              Learn More
-            </Link>
           </div>
         </div>
       </div>

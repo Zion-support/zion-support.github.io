@@ -1,43 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-}<AnimatePresence> {
-}</AnimatePresence> {
-
-}<AnimatePresence> {;
-}</AnimatePresence> {;
-
-export default MobileOptimizer;
-
-export default MobileOptimizer;
-export default MobileOptimizer;
-export default MobileOptimizer;
-
-
-
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -645,12 +605,4 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   );
 };
 
-export default MobileOptimizer;
-export default MobileOptimizer;
-
-  
-
-}<AnimatePresence> {
-}</AnimatePresence> {
-export default MobileOptimizer;
 export default MobileOptimizer;
