@@ -41,6 +41,10 @@ import QuantumAIFusionPromotionBanner from '../components/QuantumAIFusionPromoti
 import NeuralInterfaceRevolutionPromotionBanner from '../components/NeuralInterfaceRevolutionPromotionBanner';
 import FutureTechContentDiscoveryWidget from '../components/FutureTechContentDiscoveryWidget';
 
+// New promotional components
+import { BreakthroughBanner, QuantumBanner, ContentShowcaseBanner, SuccessStoryBanner } from '../components/PromotionalBanner';
+import ContentPromotion from '../components/ContentPromotion';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -52,6 +56,19 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW PROMOTIONAL BANNERS */}
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <BreakthroughBanner />
+          <QuantumBanner />
+          <ContentShowcaseBanner />
+          <SuccessStoryBanner />
+        </div>
+        
+        {/* CONTENT PROMOTION SECTION */}
+        <div className="max-w-7xl mx-auto px-4">
+          <ContentPromotion />
+        </div>
+        
         {/* AI 2035 SINGULARITY PROMOTION BANNER */}
         <AI2035SingularityPromotionBanner />
         
