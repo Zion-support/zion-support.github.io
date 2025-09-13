@@ -83,6 +83,11 @@ import AI20262030FuturePredictionsBanner from '../components/AI20262030FuturePre
 import UltimateContentRevolutionBanner from '../components/UltimateContentRevolutionBanner';
 import AI2026BreakthroughBanner from '../components/AI2026BreakthroughBanner';
 
+// Import new 2026 promotional banners
+import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
+import QuantumComputingBreakthrough2026PromotionBanner from '../components/QuantumComputingBreakthrough2026PromotionBanner';
+import AI2026EnterpriseTransformationPromotionBanner from '../components/AI2026EnterpriseTransformationPromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -94,6 +99,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW AI 2026 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
+        <AI2026UltimateBreakthroughPromotionBanner />
+        
+        {/* QUANTUM COMPUTING BREAKTHROUGH 2026 PROMOTION BANNER */}
+        <QuantumComputingBreakthrough2026PromotionBanner />
+        
+        {/* AI 2026 ENTERPRISE TRANSFORMATION PROMOTION BANNER */}
+        <AI2026EnterpriseTransformationPromotionBanner />
+        
         {/* NEW AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2025UltimateBreakthroughAnnouncementBanner />
         
