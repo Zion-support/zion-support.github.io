@@ -148,6 +148,12 @@ import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026Quantu
 // Import new promotional components
 import EdgeAIRevolutionPromotionBanner from '../components/EdgeAIRevolutionPromotionBanner';
 
+// Import new 2025-2026 innovation showcase components
+import AI2025_2026UltimateInnovationShowcase from '../components/AI2025_2026UltimateInnovationShowcase';
+import AI2025_2026UltimateInnovationPromotionBanner from '../components/AI2025_2026UltimateInnovationPromotionBanner';
+import BusinessTransformation2025Showcase from '../components/BusinessTransformation2025Showcase';
+import BusinessTransformation2025PromotionBanner from '../components/BusinessTransformation2025PromotionBanner';
+
 // Import new content promotion banners
 import NewContent2025UltimateTransformationBanner from '../components/NewContent2025UltimateTransformationBanner';
 import AI2025RevolutionaryContentShowcaseBanner from '../components/AI2025RevolutionaryContentShowcaseBanner';
@@ -290,6 +296,10 @@ export default function HomePage() {
         <AITrendsPredictions2026PromotionBanner />
         <QuantumComputingSolutions2026PromotionBanner />
         
+        {/* NEW 2025-2026 INNOVATION PROMOTION BANNERS */}
+        <AI2025_2026UltimateInnovationPromotionBanner />
+        <BusinessTransformation2025PromotionBanner />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
         
@@ -315,6 +325,10 @@ export default function HomePage() {
         <UltimateContentShowcase2026 />
         <AITrendsPredictions2026 />
         <QuantumComputingSolutions2026 />
+        
+        {/* NEW 2025-2026 INNOVATION SHOWCASE SECTIONS */}
+        <AI2025_2026UltimateInnovationShowcase />
+        <BusinessTransformation2025Showcase />
         
         {/* REVOLUTIONARY TECH BANNER 2026 */}
         <RevolutionaryTechBanner2026 />
