@@ -50,6 +50,7 @@ import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRe
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
+import AI2025NewContentBreakthroughBanner from '../components/AI2025NewContentBreakthroughBanner';
 
 export default function HomePage() {
   return (
@@ -92,6 +93,9 @@ export default function HomePage() {
         
 =======
       <div className='min-h-screen bg-white'>
+        {/* NEW AI 2025 CONTENT BREAKTHROUGH BANNER */}
+        <AI2025NewContentBreakthroughBanner />
+        
         {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         

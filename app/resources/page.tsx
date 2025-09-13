@@ -10,6 +10,18 @@ export const metadata: Metadata = {
 
 const resources = [
   {
+    id: 'ai-2025-implementation-guide',
+    title: 'AI 2025 Implementation Guide: Your Roadmap to Revolutionary Success',
+    description: 'Comprehensive implementation guide providing everything you need to successfully implement AI 2025 technologies. Based on 500+ successful implementations.',
+    type: 'PDF Guide',
+    pages: '150+',
+    downloads: '25,000+',
+    category: 'Implementation',
+    emoji: '🎯',
+    featured: true,
+    href: '/resources/ai-2025-implementation-guide',
+  },
+  {
     id: 'ai-implementation-master-guide-2025',
     title: 'AI Implementation Master Guide 2025',
     description: 'Complete 200+ page guide covering AI strategy, implementation, and best practices for enterprise organizations.',
