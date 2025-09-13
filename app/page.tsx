@@ -56,6 +56,16 @@ import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025Ulti
 import AI20262030FuturePredictionsBreakthroughBanner from '../components/AI20262030FuturePredictionsBreakthroughBanner';
 import QuantumComputingSolutions2025Banner from '../components/QuantumComputingSolutions2025Banner';
 
+// New 2035-2040 components
+import AI2035SingularityBreakthrough from '../components/AI2035SingularityBreakthrough';
+import AI2040OmniversalConsciousness from '../components/AI2040OmniversalConsciousness';
+
+// New 2026 promotional banners
+import UltimateContentShowcase2026Banner from '../components/UltimateContentShowcase2026Banner';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -66,8 +76,16 @@ export default function HomePage() {
         url="/"
       />
       
-<<<<<<< HEAD
-        <div className='min-h-screen bg-white'>
+      <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2026 PROMOTION BANNER */}
+        <NewContent2026PromotionBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2026 BANNER */}
+        <UltimateContentShowcase2026Banner />
+        
+        {/* REVOLUTIONARY CONTENT 2026 BANNER */}
+        <RevolutionaryContent2026Banner />
+        
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
         
@@ -79,6 +97,9 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2026 */}
         <InteractiveContentDiscoveryWidget2026 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
+        <InteractiveContentDiscovery2026 />
         
         {/* NEWSLETTER SIGNUP 2026 */}
         <NewsletterSignup2026 />
@@ -125,8 +146,6 @@ export default function HomePage() {
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
         
-<<<<<<< HEAD
-=======
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <NewContentPromotionBanner2025 />
         
@@ -138,7 +157,6 @@ export default function HomePage() {
         
         {/* REVOLUTIONARY CONTENT BANNER 2026 */}
         <RevolutionaryContentBanner2026 />
->>>>>>> 26f8d2c09d200d7c603f75b688c6b1bec94e2011
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
         
@@ -148,18 +166,20 @@ export default function HomePage() {
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2026 */}
         <UltimateContentDiscoveryWidget2026 />
         
+        {/* AI 2035 SINGULARITY BREAKTHROUGH */}
+        <AI2035SingularityBreakthrough />
+        
+        {/* AI 2040 OMNIVERSAL CONSCIOUSNESS */}
+        <AI2040OmniversalConsciousness />
+        
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
         
-<<<<<<< HEAD
-=======
         {/* NEW: AI 2025 REVOLUTIONARY CONTENT BANNER */}
         <AI2025RevolutionaryContentBanner />
         
         {/* NEW: AI 2025 NEW CONTENT PROMOTION BANNER */}
         <AI2025NewContentPromotionBanner />
-        
->>>>>>> 26f8d2c09d200d7c603f75b688c6b1bec94e2011
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
         
