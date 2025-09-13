@@ -61,20 +61,20 @@ import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWi
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
-<<<<<<< HEAD
-=======
 
 // Import new breakthrough content promotional banners
 import AI2025UltimateBreakthroughRevolutionPromotionBanner from '../components/AI2025UltimateBreakthroughRevolutionPromotionBanner';
 import AI2026FuturePredictionsBreakthroughPromotionBanner from '../components/AI2026FuturePredictionsBreakthroughPromotionBanner';
 import AI2026QuantumNeuralFusionCaseStudyPromotionBanner from '../components/AI2026QuantumNeuralFusionCaseStudyPromotionBanner';
 
+// Import new promotional components
+import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
+import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
+
 // Import new promotional banners for 2026 content
 import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
 import QuantumComputingBreakthrough2030PromotionBanner from '../components/QuantumComputingBreakthrough2030PromotionBanner';
-import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
->>>>>>> 8a32472f4c63f8c1f00e9a2ed50b576a716afb42
->>>>>>> cursor/create-and-deploy-new-content-6178
 
 // New Ultimate Content Revolution 2026 Components
 import UltimateContentRevolution2026 from '../components/UltimateContentRevolution2026';
@@ -86,12 +86,6 @@ import AIInnovationShowcase2026PromotionBanner from '../components/AIInnovationS
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <div className="min-h-screen bg-white">
-=======
->>>>>>> cursor/create-and-deploy-new-content-6178
     <ErrorBoundary>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
@@ -101,6 +95,13 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW BREAKTHROUGH CONTENT PROMOTION BANNERS */}
+        <NewContentPromotionBanner2026 />
+        
+        <AI2025UltimateBreakthroughPromotionBanner />
+        
+        <InteractiveContentDiscoveryWidget2026 />
+        
         {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
         <UltimateContentShowcase2026PromotionBanner />
         
@@ -113,6 +114,12 @@ export default function HomePage() {
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2026 */}
         <InteractiveContentDiscoveryWidget2026 />
         
+        {/* NEW BREAKTHROUGH CONTENT PROMOTION BANNERS */}
+        <NewContentPromotionBanner2026 />
+        
+        <AI2025UltimateBreakthroughPromotionBanner />
+        
+        <InteractiveContentDiscoveryWidget2026 />
         {/* NEW BREAKTHROUGH CONTENT PROMOTION BANNERS */}
         <AI2025UltimateBreakthroughRevolutionPromotionBanner />
         
