@@ -33,6 +33,9 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 
+// Import new 2027 promotional components
+import AI2027UltimatePredictionsBanner from '../components/AI2027UltimatePredictionsBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -44,6 +47,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW AI 2027 ULTIMATE PREDICTIONS BANNER */}
+        <AI2027UltimatePredictionsBanner />
+        
         {/* NEW 2025 CONTENT PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
