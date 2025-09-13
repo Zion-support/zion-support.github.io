@@ -1,109 +1,198 @@
-import React from 'react';
-import { Brain, Cloud, Cpu, Database, Globe, Lock, Rocket, Shield } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Play, ArrowRight, TrendingUp, Users, Award, Target } from 'lucide-react';
+
+interface TechItem {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  impact: string;
+  icon: React.ReactNode;
+  link: string;
+  featured: boolean;
+}
 
 const RevolutionaryTechShowcase2025: React.FC = () => {
-  const technologies = [
-    {
-      icon: Brain,
-      title: "AI-Powered Automation",
-      description: "Intelligent process automation that learns and adapts to your business needs.",
-      color: "from-blue-500 to-cyan-500",
-      features: ["Machine Learning", "Natural Language Processing", "Predictive Analytics"]
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Infrastructure",
-      description: "Scalable, secure, and high-performance cloud solutions for modern businesses.",
-      color: "from-purple-500 to-pink-500",
-      features: ["Multi-Cloud Strategy", "Auto-Scaling", "Cost Optimization"]
-    },
-    {
-      icon: Shield,
-      title: "Cybersecurity Solutions",
-      description: "Advanced security measures to protect your digital assets and data.",
-      color: "from-red-500 to-orange-500",
-      features: ["Threat Detection", "Zero Trust Architecture", "Compliance Management"]
-    },
-    {
-      icon: Database,
-      title: "Data Analytics Platform",
-      description: "Transform raw data into actionable insights with our advanced analytics tools.",
-      color: "from-green-500 to-emerald-500",
-      features: ["Real-time Analytics", "Data Visualization", "Business Intelligence"]
-    },
-    {
-      icon: Globe,
-      title: "Digital Transformation",
-      description: "Complete digital overhaul to modernize your business operations.",
-      color: "from-indigo-500 to-purple-500",
-      features: ["Process Optimization", "Digital Workflows", "Change Management"]
-    },
-    {
-      icon: Rocket,
-      title: "Innovation Labs",
-      description: "Cutting-edge research and development for next-generation solutions.",
-      color: "from-yellow-500 to-orange-500",
-      features: ["R&D Projects", "Prototype Development", "Technology Scouting"]
-    }
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [techItems, setTechItems] = useState<TechItem[]>([]);
+
+  useEffect(() => {
+    const items: TechItem[] = [
+      {
+        id: '1',
+        title: 'Neural-Synthetic Intelligence',
+        description: 'Advanced AI systems that combine neural networks with synthetic data generation for unprecedented accuracy and speed.',
+        category: 'ai',
+        impact: '99.97% accuracy',
+        icon: <TrendingUp className="w-8 h-8" />,
+        link: '/neural-synthetic-intelligence',
+        featured: true
+      },
+      {
+        id: '2',
+        title: 'Quantum-AI Fusion',
+        description: 'Revolutionary computing that merges quantum mechanics with artificial intelligence for exponential processing power.',
+        category: 'quantum',
+        impact: '50,000x faster',
+        icon: <Target className="w-8 h-8" />,
+        link: '/quantum-ai-fusion',
+        featured: true
+      },
+      {
+        id: '3',
+        title: 'Autonomous Business Systems',
+        description: 'Self-managing enterprise solutions that adapt and optimize operations without human intervention.',
+        category: 'automation',
+        impact: 'Zero downtime',
+        icon: <Award className="w-8 h-8" />,
+        link: '/autonomous-business-systems',
+        featured: true
+      },
+      {
+        id: '4',
+        title: 'Predictive Analytics Engine',
+        description: 'Advanced forecasting systems that predict market trends, customer behavior, and operational outcomes.',
+        category: 'analytics',
+        impact: '95% accuracy',
+        icon: <Users className="w-8 h-8" />,
+        link: '/predictive-analytics',
+        featured: false
+      },
+      {
+        id: '5',
+        title: 'Edge Computing Networks',
+        description: 'Distributed computing infrastructure that brings processing power closer to data sources.',
+        category: 'infrastructure',
+        impact: '10x faster response',
+        icon: <Play className="w-8 h-8" />,
+        link: '/edge-computing-networks',
+        featured: false
+      },
+      {
+        id: '6',
+        title: 'Blockchain Integration Platform',
+        description: 'Seamless blockchain technology integration for secure, transparent, and decentralized operations.',
+        category: 'blockchain',
+        impact: '100% secure',
+        icon: <Award className="w-8 h-8" />,
+        link: '/blockchain-integration',
+        featured: false
+      }
+    ];
+    setTechItems(items);
+  }, []);
+
+  const categories = [
+    { id: 'all', name: 'All Technologies' },
+    { id: 'ai', name: 'Artificial Intelligence' },
+    { id: 'quantum', name: 'Quantum Computing' },
+    { id: 'automation', name: 'Automation' },
+    { id: 'analytics', name: 'Analytics' },
+    { id: 'infrastructure', name: 'Infrastructure' },
+    { id: 'blockchain', name: 'Blockchain' }
   ];
 
+  const filteredItems = activeCategory === 'all' 
+    ? techItems 
+    : techItems.filter(item => item.category === activeCategory);
+
+  const featuredItems = techItems.filter(item => item.featured);
+
   return (
-    <div className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4">
+    <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
-            <Cpu className="h-4 w-4" />
-            <span className="text-sm font-medium">REVOLUTIONARY TECHNOLOGY</span>
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Leading the Future of
-            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Technology Innovation
-            </span>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Revolutionary Technology Showcase 2025
           </h2>
-          
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how our cutting-edge technologies are transforming industries and 
-            creating new possibilities for businesses worldwide.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover the cutting-edge technologies that are reshaping industries and creating unprecedented opportunities for growth and innovation.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {technologies.map((tech, index) => (
-            <div 
-              key={index}
-              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200"
-            >
-              <div className={`absolute inset-0 bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}></div>
-              
-              <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${tech.color} mb-6`}>
-                <tech.icon className="h-8 w-8 text-white" />
+
+        {/* Featured Technologies */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">Featured Breakthrough Technologies</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {featuredItems.map((item) => (
+              <div key={item.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 group">
+                <div className="text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {item.icon}
+                </div>
+                <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
+                <p className="text-gray-300 mb-4">{item.description}</p>
+                <div className="flex items-center justify-between">
+                  <span className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    {item.impact}
+                  </span>
+                  <Link 
+                    to={item.link}
+                    className="text-blue-400 hover:text-blue-300 transition-colors flex items-center"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
               </div>
-              
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{tech.title}</h3>
-              <p className="text-gray-600 mb-6">{tech.description}</p>
-              
-              <div className="space-y-2">
-                {tech.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center gap-2">
-                    <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${tech.color}`}></div>
-                    <span className="text-sm text-gray-600">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              
-              <button className={`mt-6 w-full py-3 px-4 bg-gradient-to-r ${tech.color} text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1`}>
-                Learn More
+            ))}
+          </div>
+        </div>
+
+        {/* Category Filter */}
+        <div className="mb-12">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`px-6 py-3 rounded-full font-semibold transition-all ${
+                  activeCategory === category.id
+                    ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-black'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                }`}
+              >
+                {category.name}
               </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Technology Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredItems.map((item) => (
+            <div key={item.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all duration-300 group">
+              <div className="text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                {item.icon}
+              </div>
+              <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
+              <p className="text-gray-400 mb-4 text-sm">{item.description}</p>
+              <div className="flex items-center justify-between">
+                <span className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded text-xs">
+                  {item.impact}
+                </span>
+                <Link 
+                  to={item.link}
+                  className="text-purple-400 hover:text-purple-300 transition-colors text-sm flex items-center"
+                >
+                  Explore
+                  <ArrowRight className="w-3 h-3 ml-1" />
+                </Link>
+              </div>
             </div>
           ))}
         </div>
-        
+
+        {/* Call to Action */}
         <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+          <Link 
+            to="/revolutionary-tech-2025"
+            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg transition-all hover:from-yellow-500 hover:to-orange-600 transform hover:scale-105 inline-flex items-center"
+          >
             Explore All Technologies
-          </button>
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </div>
     </div>
