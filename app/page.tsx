@@ -15,6 +15,9 @@ const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 const UltimateContentDiscovery2026 = lazy(() => import('../components/UltimateContentDiscovery2026'));
 const AIPoweredSearch2026 = lazy(() => import('../components/AIPoweredSearch2026'));
 const AdvancedPerformanceMonitor2026 = lazy(() => import('../components/AdvancedPerformanceMonitor2026'));
+const UltimateAIAssistant2026 = lazy(() => import('../components/UltimateAIAssistant2026'));
+const AdvancedAnalyticsDashboard2026 = lazy(() => import('../components/AdvancedAnalyticsDashboard2026'));
+const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../components/RevolutionaryContentRecommendationEngine2026'));
 
 export default function HomePage() {
   return (
@@ -77,6 +80,16 @@ export default function HomePage() {
         {/* ULTIMATE CONTENT DISCOVERY 2026 */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Discovery..." />}>
           <UltimateContentDiscovery2026 />
+        </Suspense>
+        
+        {/* REVOLUTIONARY CONTENT RECOMMENDATION ENGINE 2026 */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI Recommendations..." />}>
+          <RevolutionaryContentRecommendationEngine2026 />
+        </Suspense>
+        
+        {/* ADVANCED ANALYTICS DASHBOARD 2026 */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading Analytics Dashboard..." />}>
+          <AdvancedAnalyticsDashboard2026 />
         </Suspense>
         
         {/* DYNAMIC CONTENT CAROUSEL 2026 */}

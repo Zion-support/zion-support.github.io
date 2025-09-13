@@ -9,6 +9,7 @@ import NewContentBanner from '../components/NewContentBanner';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedSEO from '../components/EnhancedSEO';
 import AdvancedPerformanceMonitor2026 from '../components/AdvancedPerformanceMonitor2026';
+import UltimateAIAssistant2026 from '../components/UltimateAIAssistant2026';
 
 export const metadata = {
   title: {
@@ -1319,6 +1320,7 @@ export default function RootLayout({
           <PerformanceMonitor>
             <AccessibilityEnhancer>
               <AdvancedPerformanceMonitor2026 />
+              <UltimateAIAssistant2026 />
               {/* Skip to main content for accessibility */}
               <a 
                 href="#main-content" 
