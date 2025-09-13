@@ -5,6 +5,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const ExpandedServicesShowcase2027 = React.lazy(() => import('./pages/ExpandedServicesShowcase2027'));
 const ExpandedServicesPricingGuide2027 = React.lazy(() => import('./pages/ExpandedServicesPricingGuide2027'));
 
+// Import promotional components
+import NewContentPromotionBanner2025 from './components/NewContentPromotionBanner2025';
+import AI2025ContentPromotionBanner from './components/AI2025ContentPromotionBanner';
+import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
+
 // Simple loading component
 const LoadingSpinner = () => (
   <div className="min-h-screen bg-slate-900 flex items-center justify-center">
@@ -36,6 +41,10 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-slate-900 flex flex-col">
+        {/* Promotional Banners */}
+        <NewContentPromotionBanner2025 />
+        <AI2025ContentPromotionBanner />
+        
         <AppHeader />
         
         <main className="flex-1">
@@ -47,25 +56,66 @@ function App() {
               
               {/* Default route */}
               <Route path="/" element={
-                <div className="min-h-screen bg-slate-900 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <h1 className="text-4xl font-bold mb-4">Zion Tech Group</h1>
-                    <p className="text-xl text-gray-300 mb-8">Advanced Technology Solutions</p>
-                    <div className="space-y-4">
-                      <a 
-                        href="/expanded-services-2027" 
-                        className="block px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-white transition-colors"
-                      >
-                        View Expanded Services 2027
-                      </a>
-                      <a 
-                        href="/expanded-services-pricing-2027" 
-                        className="block px-8 py-4 border-2 border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white rounded-lg font-semibold transition-colors"
-                      >
-                        View Pricing Guide 2027
-                      </a>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                  {/* Hero Section */}
+                  <div className="flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
+                    <div className="text-center text-white max-w-4xl mx-auto">
+                      <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                        Zion Tech Group
+                        <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> 2027</span>
+                      </h1>
+                      <p className="text-2xl text-gray-300 mb-8 leading-relaxed">
+                        Advanced AI Solutions & Digital Transformation Services
+                      </p>
+                      <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+                        Empowering businesses with cutting-edge AI automation, cloud infrastructure, 
+                        and comprehensive digital transformation solutions.
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                        <a 
+                          href="/expanded-services-2027" 
+                          className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full font-semibold text-white transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
+                        >
+                          Explore Our Services
+                        </a>
+                        <a 
+                          href="/expanded-services-pricing-2027" 
+                          className="px-8 py-4 border-2 border-white/20 text-white hover:bg-white/10 rounded-full font-semibold transition-all duration-200 hover:scale-105"
+                        >
+                          View Pricing Guide
+                        </a>
+                      </div>
                     </div>
                   </div>
+                  
+                  {/* Content Showcase */}
+                  <LatestContentShowcase2025 />
+                  
+                  {/* Contact Section */}
+                  <section className="py-16 px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-4xl mx-auto text-center">
+                      <h2 className="text-3xl font-bold text-white mb-6">
+                        Ready to Transform Your Business?
+                      </h2>
+                      <p className="text-xl text-gray-300 mb-8">
+                        Contact us today to discuss how our AI solutions can drive your digital transformation.
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-300">
+                        <div className="flex items-center space-x-2">
+                          <span className="font-semibold">Phone:</span>
+                          <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">
+                            +1 302 464 0950
+                          </a>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="font-semibold">Email:</span>
+                          <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
+                            kleber@ziontechgroup.com
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
                 </div>
               } />
               
