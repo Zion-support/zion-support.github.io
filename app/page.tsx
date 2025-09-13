@@ -12,6 +12,9 @@ const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
 const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
+const UltimateContentDiscovery2026 = lazy(() => import('../components/UltimateContentDiscovery2026'));
+const AIPoweredSearch2026 = lazy(() => import('../components/AIPoweredSearch2026'));
+const AdvancedPerformanceMonitor2026 = lazy(() => import('../components/AdvancedPerformanceMonitor2026'));
 
 export default function HomePage() {
   return (
