@@ -94,6 +94,12 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <Link href="/blog/ai-2025-breakthrough-innovations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
+                  🚀 AI 2025 Breakthrough Innovations (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-tech-giant-transformation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 Global Tech Giant Transformation (BREAKTHROUGH)
+                </Link>
                 <Link href="/ai-2025-ultimate-breakthrough-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🚀 AI 2025 Ultimate Breakthrough Revolution (ULTIMATE)
                 </Link>
@@ -119,8 +125,8 @@ function Header() {
                   🏢 Fortune 500 Transformation (1500% ROI)
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
-                <Link href="/resources/ai-2025-revolutionary-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
-                  📚 Revolutionary Implementation Guide (BREAKTHROUGH)
+                <Link href="/resources/ai-2025-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
+                  📚 Ultimate Implementation Master Guide (BREAKTHROUGH)
                 </Link>
                 <Link href="/resources/ai-2025-ultimate-implementation-toolkit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🛠️ Ultimate Implementation Toolkit
@@ -746,8 +752,14 @@ function Header() {
                 <Link href="/blog/ai-2029-quantum-computing-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🔮 AI 2029 Quantum Revolution (BREAKTHROUGH)
                 </Link>
-                <Link href="/blog/ai-2025-enterprise-automation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  🚀 Enterprise Automation Mastery (NEW)
+                <Link href="/blog/ai-2025-enterprise-automation-mastery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-green-600">
+                  🏢 Enterprise Automation Mastery (NEW)
+                </Link>
+                <Link href="/case-studies/ai-enterprise-automation-success-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-blue-600">
+                  🏆 Fortune 500 Success Story (NEW)
+                </Link>
+                <Link href="/resources/ai-enterprise-automation-checklist-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-bold text-purple-600">
+                  📋 Implementation Checklist (NEW)
                 </Link>
                 <Link href="/blog/ai-2027-future-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   🔮 AI 2027 Future Trends (BREAKTHROUGH)
