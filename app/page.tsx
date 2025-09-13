@@ -254,6 +254,12 @@ import AITrendsPredictions2026PromotionBanner from '../components/AITrendsPredic
 import QuantumComputingSolutions2026 from '../components/QuantumComputingSolutions2026';
 import QuantumComputingSolutions2026PromotionBanner from '../components/QuantumComputingSolutions2026PromotionBanner';
 
+// Import new content promotion banner
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+
+// Import latest content navigation
+import LatestContentNavigation from '../components/LatestContentNavigation';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -282,6 +288,12 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
+        
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
+        {/* LATEST CONTENT NAVIGATION */}
+        <LatestContentNavigation />
         
         {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
         <NewContent2025UltimateBreakthroughBanner />
