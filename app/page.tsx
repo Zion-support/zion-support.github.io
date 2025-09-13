@@ -181,6 +181,12 @@ import AI2035OmniversalConsciousnessBanner from '../components/AI2035OmniversalC
 import AI2035OmniversalConsciousnessShowcase from '../components/AI2035OmniversalConsciousnessShowcase';
 import NeuralInterfaceRevolutionBanner from '../components/NeuralInterfaceRevolutionBanner';
 import SpaceTechnologySolutionsBanner from '../components/SpaceTechnologySolutionsBanner';
+
+// New 2026 Revolutionary Content Components
+import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
+import RevolutionaryContentPromotionBanner2026 from '../components/RevolutionaryContentPromotionBanner2026';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -233,6 +239,26 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </section>
+
+              {/* Revolutionary Content Promotion Banner 2026 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <RevolutionaryContentPromotionBanner2026 />
+              </Suspense>
+
+              {/* Revolutionary Content Showcase 2026 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <RevolutionaryContentShowcase2026 />
+              </Suspense>
+
+              {/* Interactive Content Discovery 2026 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscovery2026 />
+              </Suspense>
+
+              {/* Comprehensive Content Showcase 2026 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <ComprehensiveContentShowcase2026 />
+              </Suspense>
 
               {/* New Content 2025 Ultimate Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
