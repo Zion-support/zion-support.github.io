@@ -290,6 +290,11 @@ import AITrendsPredictions2026PromotionBanner from '../components/AITrendsPredic
 import QuantumComputingSolutions2026 from '../components/QuantumComputingSolutions2026';
 import QuantumComputingSolutions2026PromotionBanner from '../components/QuantumComputingSolutions2026PromotionBanner';
 
+// Import new promotional banners
+import NewContent2025UltimateShowcasePromotionBanner from '../components/NewContent2025UltimateShowcasePromotionBanner';
+import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
+import NewContentNavigation from '../components/NewContentNavigation';
+
 // Import new content promotion banner
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 
@@ -321,6 +326,13 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW PROMOTIONAL BANNERS */}
+        <NewContent2025UltimateShowcasePromotionBanner />
+        <AI2025RevolutionaryContentBanner />
+        
+        {/* NEW CONTENT NAVIGATION */}
+        <NewContentNavigation />
+        
         {/* NEW 2026 PROMOTIONAL BANNERS */}
         <UltimateContentShowcase2026PromotionBanner />
         <AITrendsPredictions2026PromotionBanner />
