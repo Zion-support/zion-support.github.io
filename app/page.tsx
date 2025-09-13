@@ -151,6 +151,11 @@ import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025Ult
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner';
 
+// Import new promotional banners for latest content
+import AI2025UltimateInnovationShowcasePromotionBanner from '../components/AI2025UltimateInnovationShowcasePromotionBanner';
+import AI2026FutureTrendsPredictionsPromotionBanner from '../components/AI2026FutureTrendsPredictionsPromotionBanner';
+import AI2025GlobalEnterpriseTransformation50000ROIPromotionBanner from '../components/AI2025GlobalEnterpriseTransformation50000ROIPromotionBanner';
+
 // Import new 2026 content components
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
@@ -224,6 +229,15 @@ export default function HomePage() {
         
         {/* AI 2026 QUANTUM-NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
+        
+        {/* NEW: AI 2025 ULTIMATE INNOVATION SHOWCASE PROMOTION BANNER */}
+        <AI2025UltimateInnovationShowcasePromotionBanner />
+        
+        {/* NEW: AI 2026 FUTURE TRENDS PREDICTIONS PROMOTION BANNER */}
+        <AI2026FutureTrendsPredictionsPromotionBanner />
+        
+        {/* NEW: AI 2025 GLOBAL ENTERPRISE TRANSFORMATION 50000 ROI PROMOTION BANNER */}
+        <AI2025GlobalEnterpriseTransformation50000ROIPromotionBanner />
         
         {/* AI 2025 ULTIMATE TECHNOLOGY SHOWCASE BANNER */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
