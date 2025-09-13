@@ -5,11 +5,25 @@
     "failedChecks": 1,
     "criticalFailures": 0,
     "canBuild": true,
+<<<<<<< HEAD
     "timestamp": "2025-08-19T20:26:25.559Z"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "timestamp": "2025-08-19T20:32:06.090Z"
+=======
+    "timestamp": "2025-08-19T20:26:25.559Z"
+>>>>>>> origin/cursor/build-and-fix-errors-8308
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 =======
     "timestamp": "2025-08-19T20:22:41.749Z"
 =======
     "timestamp": "2025-08-19T23:52:20.386Z"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-fad9
+>>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   "results": [
     {

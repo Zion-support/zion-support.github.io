@@ -242,7 +242,7 @@ class QRCodeService {
     vcard += `TEL:${data.phone}\n`;
     
     if (data.website) vcard += `URL:${data.website}\n`;
-    if (data.address) vcard += `ADR:;;${data.address};;\n`;
+    if (data.address) vcard += `ADR:;${data.address};\n`;
     
     vcard += 'END:VCARD';
     return vcard;

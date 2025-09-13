@@ -1,327 +1,193 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Grid, 
-  List, 
-  Star, 
-  TrendingUp, 
-  Clock, 
-  Users, 
-  Eye,
-  Heart,
-  Share2,
-  Download,
-  Bookmark,
-  Tag,
-  Calendar,
-  ArrowRight,
-  Sparkles,
-  Zap,
-  Brain,
-  Shield,
-  Globe,
-  Target,
-  Award,
-  Play,
-  ExternalLink,
-  Fire,
-  CheckCircle
-} from 'lucide-react';
+import { Search, Filter, Grid, List, Star, Clock, TrendingUp, ArrowRight, Eye, BookOpen, Play, Download } from 'lucide-react';
 
 const InteractiveContentDiscovery2026PromotionBanner = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isSearching, setIsSearching] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentContent, setCurrentContent] = useState(0);
 
-  const featuredContent = [
+  const contentTypes = [
     {
-      title: 'Neural Consensus AI Implementation',
-      category: 'AI Solutions',
-      rating: 4.9,
-      views: '12.5K',
-      type: 'Guide',
-      trending: true
+      title: 'AI Guides',
+      description: 'Complete implementation guides',
+      icon: BookOpen,
+      color: 'from-blue-500 to-cyan-500',
+      count: 342
     },
     {
-      title: 'Quantum-Safe Encryption for Enterprise',
-      category: 'Security',
-      rating: 4.8,
-      views: '8.9K',
-      type: 'Tutorial',
-      trending: true
+      title: 'Interactive Demos',
+      description: 'Hands-on experiences',
+      icon: Play,
+      color: 'from-purple-500 to-pink-500',
+      count: 156
     },
     {
-      title: 'Automated Workflow Optimization',
-      category: 'Case Studies',
-      rating: 4.9,
-      views: '15.6K',
-      type: 'Case Study',
-      trending: false
+      title: 'Case Studies',
+      description: 'Real-world success stories',
+      icon: TrendingUp,
+      color: 'from-green-500 to-emerald-500',
+      count: 134
+    },
+    {
+      title: 'Tutorials',
+      description: 'Step-by-step learning',
+      icon: Download,
+      color: 'from-orange-500 to-red-500',
+      count: 289
     }
   ];
 
-  const stats = [
-    { label: 'Content Items', value: '500+', icon: Bookmark },
-    { label: 'Active Users', value: '25K+', icon: Users },
-    { label: 'Categories', value: '7', icon: Tag },
-    { label: 'Success Rate', value: '99%', icon: Target }
-  ];
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentContent((prev) => (prev + 1) % contentTypes.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
-  const handleSearch = async (query) => {
-    setIsSearching(true);
-    setSearchQuery(query);
-    // Simulate search
-    setTimeout(() => setIsSearching(false), 1000);
-  };
+  const currentContentData = contentTypes[currentContent];
+  const IconComponent = currentContentData.icon;
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl" />
-        </div>
+    <div className={`relative overflow-hidden bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border border-indigo-500/30 rounded-2xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-indigo-600/20 animate-pulse" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.3),transparent_50%)]" />
+      
+      {/* Floating Particles */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-indigo-400/40 rounded-full animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 3}s`
+            }}
+          />
+        ))}
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white"
-          >
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-400/30 text-purple-200 px-4 py-2 rounded-full text-sm font-medium mb-6"
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>Interactive Content Discovery 2026</span>
-              <Fire className="w-4 h-4 text-orange-400" />
-            </motion.div>
-
-            {/* Title */}
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-4xl md:text-6xl font-bold mb-6"
-            >
-              <span className="bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">
-                Discover Amazing
+      <div className="relative z-10 p-8 md:p-12">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/20 border border-indigo-400/30 rounded-full text-indigo-200 text-sm font-medium mb-4">
+              <Search className="w-4 h-4 text-indigo-400" />
+              Interactive Content Discovery 2026
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+              Discover
+              <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                {' '}Amazing Content
               </span>
-              <br />
-              <span className="bg-gradient-to-r from-purple-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
-                Content
-              </span>
-            </motion.h2>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our vast library of cutting-edge content, tutorials, case studies, and interactive experiences
+            </p>
+          </div>
 
-            {/* Subtitle */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-xl text-purple-100 mb-6"
-            >
-              Explore our comprehensive library of AI solutions, tutorials, case studies, and more
-            </motion.p>
-
-            {/* Search Bar */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="relative mb-8"
-            >
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search content, tags, or authors..."
-                  value={searchQuery}
-                  onChange={(e) => handleSearch(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 border border-white/20 rounded-lg bg-white/10 backdrop-blur-sm text-white placeholder-slate-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                />
-                {isSearching && (
-                  <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                  </div>
-                )}
+          {/* Content Showcase */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Current Content Display */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-indigo-500/30 rounded-2xl p-8 h-80 flex flex-col justify-center items-center text-center">
+                <div className={`w-20 h-20 rounded-full bg-gradient-to-r ${currentContentData.color} flex items-center justify-center mb-6 transform transition-all duration-500 hover:scale-110`}>
+                  <IconComponent className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  {currentContentData.title}
+                </h3>
+                <p className="text-lg text-gray-300 mb-6">
+                  {currentContentData.description}
+                </p>
+                <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-400/30 rounded-xl px-4 py-2 mb-4">
+                  <span className="text-indigo-200 font-bold text-lg">
+                    {currentContentData.count} Items
+                  </span>
+                </div>
+                <div className="flex gap-2">
+                  {contentTypes.map((_, index) => (
+                    <div
+                      key={index}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === currentContent ? 'bg-indigo-400' : 'bg-gray-600'
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
-            </motion.div>
+            </div>
 
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
-            >
-              {stats.map((stat, index) => {
-                const Icon = stat.icon;
+            {/* Content List */}
+            <div className="space-y-4">
+              {contentTypes.map((content, index) => {
+                const IconComponent = content.icon;
                 return (
-                  <div key={index} className="text-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <Icon className="w-6 h-6 text-purple-300" />
+                  <div
+                    key={index}
+                    className={`flex items-center gap-4 p-4 rounded-xl border transition-all duration-300 cursor-pointer ${
+                      index === currentContent
+                        ? 'bg-indigo-500/20 border-indigo-400/50'
+                        : 'bg-slate-800/30 border-slate-700/50 hover:bg-slate-700/30'
+                    }`}
+                    onClick={() => setCurrentContent(index)}
+                  >
+                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${content.color} flex items-center justify-center`}>
+                      <IconComponent className="w-6 h-6 text-white" />
                     </div>
-                    <div className="text-2xl font-bold text-white">{stat.value}</div>
-                    <div className="text-sm text-purple-200">{stat.label}</div>
+                    <div className="flex-1">
+                      <h4 className="text-lg font-semibold text-white">
+                        {content.title}
+                      </h4>
+                      <p className="text-gray-400">
+                        {content.description}
+                      </p>
+                    </div>
+                    <div className="text-indigo-200 font-bold">
+                      {content.count}
+                    </div>
+                    {index === currentContent && (
+                      <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse" />
+                    )}
                   </div>
                 );
               })}
-            </motion.div>
-
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <button className="group bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105">
-                <Search className="w-5 h-5" />
-                Explore Content
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="group border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm">
-                <Filter className="w-5 h-5" />
-                Advanced Filters
-              </button>
-            </motion.div>
-
-            {/* Trust Indicators */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-8 flex flex-wrap items-center gap-6 text-sm text-slate-400"
-            >
-              <div className="flex items-center gap-1">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                <span>Free Access</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Shield className="w-4 h-4 text-blue-400" />
-                <span>Verified Content</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Award className="w-4 h-4 text-yellow-400" />
-                <span>Expert Reviewed</span>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
-            {/* Main Content Card */}
-            <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-bold text-white">Featured Content</h3>
-                <div className="flex gap-2">
-                  <button className="p-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors">
-                    <Grid className="w-4 h-4 text-white" />
-                  </button>
-                  <button className="p-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors">
-                    <List className="w-4 h-4 text-white" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Content List */}
-              <div className="space-y-4">
-                {featuredContent.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                    className="bg-white/5 backdrop-blur-sm rounded-lg p-4 hover:bg-white/10 transition-all duration-300 cursor-pointer group"
-                  >
-                    <div className="flex items-start justify-between mb-2">
-                      <h4 className="text-white font-semibold group-hover:text-purple-300 transition-colors line-clamp-1">
-                        {item.title}
-                      </h4>
-                      {item.trending && (
-                        <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">
-                          Trending
-                        </span>
-                      )}
-                    </div>
-                    
-                    <div className="flex items-center gap-4 text-sm text-slate-300 mb-2">
-                      <span className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full text-xs">
-                        {item.category}
-                      </span>
-                      <span className="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs">
-                        {item.type}
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 text-sm text-slate-400">
-                        <div className="flex items-center gap-1">
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span>{item.rating}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Eye className="w-4 h-4" />
-                          <span>{item.views}</span>
-                        </div>
-                      </div>
-                      <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-white group-hover:translate-x-1 transition-all" />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Load More */}
-              <button className="w-full mt-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-white py-2 rounded-lg font-medium hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300">
-                Load More Content
-              </button>
             </div>
+          </div>
 
-            {/* Floating Elements */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center shadow-lg"
-            >
-              <TrendingUp className="w-8 h-8 text-white" />
-            </motion.div>
+          {/* Features */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">1,247</div>
+              <div className="text-gray-400">Total Items</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">7</div>
+              <div className="text-gray-400">Categories</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">50K+</div>
+              <div className="text-gray-400">Monthly Views</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">4.9</div>
+              <div className="text-gray-400">Average Rating</div>
+            </div>
+          </div>
 
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg"
+          {/* CTA */}
+          <div className="text-center mt-12">
+            <Link
+              href="/interactive-content-discovery-2026"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-xl hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25"
             >
-              <Search className="w-6 h-6 text-white" />
-            </motion.div>
-
-            <motion.div
-              animate={{ y: [0, -5, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute top-1/2 -right-8 w-8 h-8 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center shadow-lg"
-            >
-              <Sparkles className="w-4 h-4 text-white" />
-            </motion.div>
-          </motion.div>
+              Explore Content Library
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 
 export function AppHeader() {
+<<<<<<< HEAD
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -43,6 +44,8 @@ export function AppHeader() {
     setSearchOpen(false);
   }, [location.pathname]);
 
+=======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   const navigationItems = [
     { name: 'Home', path: '/', icon: null },
     { 
@@ -50,6 +53,7 @@ export function AppHeader() {
       path: '/services', 
       icon: null,
       dropdown: [
+<<<<<<< HEAD
         { name: 'AI & Machine Learning', path: '/services?category=ai-ml', icon: Brain, color: 'from-purple-500 to-pink-500', description: 'Intelligent automation and insights' },
         { name: 'Quantum Computing', path: '/services?category=quantum', icon: Zap, color: 'from-blue-500 to-cyan-500', description: 'Next-generation problem solving' },
         { name: 'Blockchain & Web3', path: '/services?category=blockchain', icon: Lock, color: 'from-green-500 to-emerald-500', description: 'Decentralized solutions' },
@@ -58,11 +62,35 @@ export function AppHeader() {
         { name: 'FinTech Solutions', path: '/services?category=fintech', icon: Database, color: 'from-yellow-500 to-orange-500', description: 'Financial technology' },
         { name: 'Green Technology', path: '/services?category=green-tech', icon: Shield, color: 'from-green-400 to-teal-500', description: 'Sustainable solutions' },
         { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500', description: 'Advanced protection' },
+=======
+        { name: 'AI & Machine Learning', path: '/ai-services', icon: Brain, color: 'from-purple-500 to-pink-500' },
+        { name: 'Cybersecurity', path: '/cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500' },
+        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud, color: 'from-blue-500 to-cyan-500' },
+        { name: 'Quantum Computing', path: '/quantum-computing', icon: Zap, color: 'from-indigo-500 to-purple-500' },
+        { name: 'Blockchain & Web3', path: '/blockchain-services', icon: Shield, color: 'from-green-500 to-emerald-500' },
+        { name: 'IoT & Edge Computing', path: '/iot-services', icon: Database, color: 'from-orange-500 to-red-500' },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Rocket, color: 'from-yellow-500 to-orange-500' },
+        { name: 'Enterprise IT', path: '/enterprise-it', icon: Users, color: 'from-teal-500 to-green-500' },
+      ]
+    },
+    { 
+      name: 'Solutions', 
+      path: '/business-solutions', 
+      icon: null,
+      dropdown: [
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Shield, color: 'from-green-400 to-teal-500' },
+        { name: 'Financial Services', path: '/solutions/financial', icon: Database, color: 'from-yellow-500 to-orange-500' },
+        { name: 'Manufacturing', path: '/solutions/manufacturing', icon: Code, color: 'from-blue-500 to-indigo-500' },
+        { name: 'Retail & E-commerce', path: '/solutions/retail', icon: Users, color: 'from-purple-500 to-pink-500' },
+        { name: 'Government', path: '/solutions/government', icon: Lock, color: 'from-gray-500 to-slate-500' },
+        { name: 'Education', path: '/solutions/education', icon: Brain, color: 'from-cyan-500 to-blue-500' },
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       ]
     },
     { name: 'About', path: '/about', icon: null },
     { name: 'Contact', path: '/contact', icon: null },
   ];
+<<<<<<< HEAD
 
   const isActive = (path) => location.pathname === path;
 
@@ -70,6 +98,8 @@ export function AppHeader() {
     setActiveDropdown(activeDropdown === index ? null : index);
   };
 
+=======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   return (
     <motion.header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

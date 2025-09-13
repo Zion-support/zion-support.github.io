@@ -1,4 +1,56 @@
+<<<<<<< HEAD
 // Safe localStorage wrapper with error handling
+=======
+import { error as logErrorToProduction } from '@/utils/productionLogger';
+// In-memory storage for fallback with optimizations
+const inMemoryStore = {};
+let localStorageAvailable = null; // Cache the availability check
+let lastAvailabilityCheck = 0;
+const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
+// Recursion prevention for error logging
+let isLoggingError = false;
+function isLocalStorageAvailable() {
+    const now = Date.now();
+    // Use cached result if checked recently
+    if (localStorageAvailable !== null && (now - lastAvailabilityCheck) < AVAILABILITY_CHECK_INTERVAL) {
+        return localStorageAvailable;
+    }
+    lastAvailabilityCheck = now;
+    try {
+        if (typeof window === 'undefined') {
+            localStorageAvailable = false;
+            return false;
+        }
+        const testKey = '__localStorage_test__';
+        localStorage.setItem(testKey, 'test');
+        localStorage.removeItem(testKey);
+        localStorageAvailable = true;
+        return true;
+    }
+    catch {
+        localStorageAvailable = false;
+        return false;
+    }
+}
+function safeConsoleError(message, error) {
+    const env = globalThis.process?.env?.NODE_ENV ?? 'production';
+    // Prevent infinite recursion in console logging
+    if (isLoggingError || env === 'production')
+        return;
+    isLoggingError = true;
+    try {
+        if (env === 'development') {
+            logErrorToProduction(message, error);
+        }
+    }
+    catch {
+        // Silent fail if console.error causes recursion
+    }
+    finally {
+        isLoggingError = false;
+    }
+}
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 export const safeStorage = {
   getItem: (key) => {
     try {

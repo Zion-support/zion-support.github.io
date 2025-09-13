@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const EnhancedAnalytics: React.FC<{
+=======
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -48,11 +53,19 @@ interface ConversionGoal {
 }
 
 interface EnhancedAnalyticsProps {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
   trackingId?: string;
   enableHeatmap?: boolean;
   enableSessionRecording?: boolean;
   enableAITracking?: boolean;
   showDebugPanel?: boolean;
+<<<<<<< HEAD
+  conversionGoals?: any[];
+  children?: React.ReactNode;
+}> = ({ children }) => {
+  // Temporary placeholder to fix build issues
+  return <>{children}</>;
+=======
   conversionGoals?: ConversionGoal[];
   children?: React.ReactNode;
 }
@@ -729,6 +742,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       </button>
     </>
   );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 };
 
 export default EnhancedAnalytics;

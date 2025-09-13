@@ -1150,4 +1150,12 @@ export const getServicesByPriceRange = (min: number, max: number) => {
     const price = parseFloat(service.price.replace('$', ''));
     return price >= min && (max === Infinity || price <= max);
   });
+<<<<<<< HEAD
 };
+=======
+<<<<<<< HEAD
+};
+=======
+};
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9ec4
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

@@ -10,5 +10,13 @@
   },
   "results": [],
   "buildBreakingFiles": [],
+<<<<<<< HEAD
   "generatedAt": "2025-08-19T23:56:17.090Z"
+=======
+<<<<<<< HEAD
+  "generatedAt": "2025-08-19T21:07:35.449Z"
+=======
+  "generatedAt": "2025-08-19T23:56:17.090Z"
+>>>>>>> origin/cursor/check-and-fix-project-errors-05af
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }

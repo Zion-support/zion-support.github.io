@@ -63,7 +63,17 @@
   ],
   "results": [],
   "buildBreakingFiles": [],
+<<<<<<< HEAD
   "generatedAt": "2025-08-20T18:45:39.726Z"
 =======
   "generatedAt": "2025-08-20T19:06:39.096Z"
+=======
+<<<<<<< HEAD
+  "generatedAt": "2025-08-20T18:53:54.679Z"
+=======
+  "generatedAt": "2025-08-20T18:45:39.726Z"
+=======
+  "generatedAt": "2025-08-20T19:06:39.096Z"
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-005b
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }

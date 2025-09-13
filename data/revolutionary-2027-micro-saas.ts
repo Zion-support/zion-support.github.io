@@ -1,6 +1,27 @@
+<<<<<<< HEAD
 import { ProductListing } from "../src/types/listings";
 
 export const revolutionary2027MicroSaasServices: ProductListing[] = [
+=======
+export interface Revolutionary2027MicroSaas {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+  };
+}
+
+export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = [
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: "ai-powered-space-technology-2027",
     title: "AI-Powered Space Technology Platform 2027",

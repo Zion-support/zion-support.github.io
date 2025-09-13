@@ -787,6 +787,15 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     growthRate: '30% annual growth'
   },
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    id: 'ai-powered-database-optimization',
+    name: 'AI Database Performance Monitor',
+    tagline: 'Intelligent database optimization and monitoring',
+    price: '$159',
+=======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'metaverse-platform-pro',
     name: 'Metaverse Platform Pro',
     tagline: 'Build immersive 3D virtual worlds',
@@ -863,6 +872,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     name: 'Quantum AI Optimizer',
     tagline: 'Next-generation AI optimization using quantum algorithms',
     price: '$299',
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-acae
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     period: '/month',
     description: 'AI-powered database performance platform that automatically optimizes queries, monitors performance, and prevents database issues.',
     features: [
@@ -2871,6 +2884,14 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     integrations: ['IoT devices', 'Edge servers', 'Cloud platforms', 'AI frameworks'],
     useCases: ['Smart cities', 'Industrial monitoring', 'Environmental sensing', 'Predictive maintenance'],
     roi: '600% average ROI in 18 months',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    competitors: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'IBM Watson IoT'],
+    marketSize: '$22B IoT platform market',
+    growthRate: '220% annual growth'
+=======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     competitors: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Microsoft Power Automate'],
     marketSize: '$1.5B global market',
     growthRate: '200% annual growth'
@@ -2982,6 +3003,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['ID Quantique', 'QuintessenceLabs', 'Quantum Xchange', 'Toshiba'],
     marketSize: '$500M quantum security market',
     growthRate: '250% annual growth'
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-acae
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
@@ -2990,10 +3015,46 @@ export const serviceCategories = [
   'AI & Machine Learning',
   'Cloud & Infrastructure',
   'Cybersecurity',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  'Cybersecurity & Quantum',
+  'Data & Analytics',
+  'Business & Sales',
+  'Marketing & SEO',
+  'Development & Tools',
+  'Communication & Collaboration',
+  'Finance & Accounting',
+  'HR & Operations',
+  'Education & Training',
+  'Healthcare & Wellness',
+  'E-commerce & Retail',
+  'Real Estate & Property',
+  'Legal & Compliance',
+  'Creative & Design',
+  'Travel & Hospitality',
+  'Automotive & Transportation',
+  'Energy & Utilities',
+  'Agriculture & Farming',
+  'Sports & Fitness',
+  'Entertainment & Media',
+  'Non-profit & Social Impact',
+  'Government & Public Sector',
+  'Blockchain & Web3',
+  'IoT & Edge Computing',
+  'AR/VR & Immersive Tech',
+  'Quantum Computing',
+  'Data & Privacy'
+=======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Data Analytics & BI',
   'Cloud Infrastructure & DevOps',
   'Emerging Technologies',
   'Healthcare & Life Sciences'
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-acae
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];
 
 export const getServicesByCategory = (category: string) => {

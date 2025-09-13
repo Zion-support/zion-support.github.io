@@ -5,7 +5,15 @@
     "failedChecks": 1,
     "criticalFailures": 0,
     "canBuild": true,
+<<<<<<< HEAD
     "timestamp": "2025-08-19T15:46:17.568Z"
+=======
+<<<<<<< HEAD
+    "timestamp": "2025-08-19T17:25:37.405Z"
+=======
+    "timestamp": "2025-08-19T15:46:17.568Z"
+>>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-c86d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   "results": [
     {

@@ -7,6 +7,14 @@
     "buildBreakingFiles": 0,
     "canBuild": true
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  "results": [],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-19T17:56:48.039Z"
+=======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 =======
   "results": [
     {
@@ -24,5 +32,9 @@
     }
   ],
   "buildBreakingFiles": [],
+<<<<<<< HEAD
+=======
+>>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   "generatedAt": "2025-08-19T17:38:00.458Z"
 }

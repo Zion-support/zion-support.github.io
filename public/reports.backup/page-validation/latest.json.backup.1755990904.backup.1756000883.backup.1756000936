@@ -1,6 +1,16 @@
 {
   "summary": {
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+  "results": [],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-19T17:23:22.064Z"
+=======
+=======
+>>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     "totalFiles": 0,
     "filesWithIssues": 0,
     "totalIssues": 0,

@@ -15,9 +15,13 @@ const speakers: Speaker[] = [
     title: 'Founder & CEO',
     avatar: 'https://placehold.co/100x100',
     twitter: '#',
+<<<<<<< HEAD
     linkedin: '#',
   },
 ];
+=======
+    linkedin: '#'}];
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
 export function SpeakersSection() {
   return (

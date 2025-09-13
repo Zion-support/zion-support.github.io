@@ -1,6 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+interface DefaultSEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+=======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 const SITE_NAME = 'Zion Tech Group';
 const SITE_URL = 'https://ziontechgroup.com';
 const DEFAULT_TITLE = 'Zion Tech Group — Autonomous Cloud Automation';
@@ -63,6 +75,10 @@ export default function DefaultSEO() {
       />
     </Head>
   );
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-and-automate-web-app-with-ai-ae0d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }
 
 const DefaultSEO: React.FC<DefaultSEOProps> = ({

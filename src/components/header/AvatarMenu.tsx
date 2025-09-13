@@ -1,79 +1,74 @@
-import React, { useRef } from "react";
-import { Popover } from "@headlessui/react";
-import { Link } from "react-router-dom";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import React from 'react';
+import Link from 'next/link';
+import { useAuth } from '@/hooks/useAuth';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+  DropdownMenuLabel} from '@/components/ui/dropdown-menu';
+import { User as UserIcon, Package } from 'lucide-react'
+import { LogOut } from 'lucide-react'; // Assuming lucide-react is used
 
-export interface AvatarMenuProps {
-  avatarUrl?: string;
-  onLogout?: () => void;
-}
+export const AvatarMenu: React.FC = () => {
+  const { user, logout, avatarUrl } = useAuth();
 
-export function AvatarMenu({ avatarUrl, onLogout }: AvatarMenuProps) {
-  const itemRefs = useRef<(HTMLAnchorElement | HTMLButtonElement | null)[]>([]);
+  if (!user) return null;
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    const items = itemRefs.current.filter(Boolean);
-    const index = items.indexOf(document.activeElement as any);
-    if (e.key === "ArrowDown") {
-      e.preventDefault();
-      const next = index < items.length - 1 ? index + 1 : 0;
-      items[next]?.focus();
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      const prev = index > 0 ? index - 1 : items.length - 1;
-      items[prev]?.focus();
-    }
-  };
+  const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase();
 
   return (
-    <Popover className="relative">
-      {({ open, close }) => (
-        <>
-          <Popover.Button as={Button} variant="ghost" className="h-8 w-8 rounded-full" aria-expanded={open}>
-            <Avatar className="h-8 w-8">
-              <AvatarImage src={avatarUrl || ""} alt="User Avatar" />
-              <AvatarFallback>U</AvatarFallback>
-            </Avatar>
-            <span className="sr-only">Open user menu</span>
-          </Popover.Button>
-          {open && (
-            <Popover.Panel
-              static
-              className="absolute right-0 z-50 mt-2 w-40 rounded-md border border-zion-blue-light bg-zion-blue-dark p-2 shadow-md focus:outline-none"
-              onKeyDown={handleKeyDown}
-            >
-              <div className="py-1 flex flex-col text-sm text-white">
-                <Link
-                  to="/profile"
-                  ref={(el) => (itemRefs.current[0] = el)}
-                  className="rounded px-2 py-1 hover:bg-zion-blue-light focus:bg-zion-blue-light"
-                >
-                  Profile
-                </Link>
-                <Link
-                  to="/orders"
-                  ref={(el) => (itemRefs.current[1] = el)}
-                  className="rounded px-2 py-1 hover:bg-zion-blue-light focus:bg-zion-blue-light"
-                >
-                  Orders
-                </Link>
-                <button
-                  type="button"
-                  ref={(el) => (itemRefs.current[2] = el)}
-                  onClick={() => {
-                    close();
-                    onLogout?.();
-                  }}
-                  className="rounded px-2 py-1 text-left hover:bg-zion-blue-light focus:bg-zion-blue-light"
-                >
-                  Logout
-                </button>
-              </div>
-            </Popover.Panel>
-          )}
-        </>
-      )}
-    </Popover>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild data-testid="avatar-menu-trigger">
+        <button
+          className="flex items-center gap-2 rounded-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+          aria-label="Open user menu"
+        >
+          <Avatar className="h-8 w-8">
+            {avatarUrl ? (
+              <AvatarImage src={avatarUrl} alt={user.displayName || user.name || 'User avatar'} />
+            ) : (
+              <AvatarFallback>{initials}</AvatarFallback>
+            )}
+          </Avatar>
+        </button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56" align="end" data-testid="avatar-menu-content">
+        <DropdownMenuLabel className="font-normal">
+          <div className="flex flex-col space-y-1">
+            <p className="text-sm font-medium leading-none">
+              {user.displayName || user.name}
+            </p>
+            {user.email && (
+              <p className="text-xs leading-none text-muted-foreground">
+                {user.email}
+              </p>
+            )}
+          </div>
+        </DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem asChild>
+          <Link href="/profile" className="flex items-center">
+            <UserIcon className="mr-2 h-4 w-4" />
+            <span>Profile</span>
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href="/orders" className="flex items-center">
+            <Package className="mr-2 h-4 w-4" />
+            <span>Orders</span>
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem onClick={logout} className="flex items-center cursor-pointer">
+          <LogOut className="mr-2 h-4 w-4" />
+          <span>Logout</span>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
-}
+};
+
+export default AvatarMenu;
