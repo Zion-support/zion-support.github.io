@@ -8,6 +8,14 @@ import { RevolutionaryContentBanner } from './components/RevolutionaryContentBan
 import InnovativeContentShowcase2026 from './components/InnovativeContentShowcase2026';
 import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
 import EnhancedContentPromotionBanner from './components/EnhancedContentPromotionBanner';
+
+// New Revolutionary Content Components
+import AI2035OmniversalConsciousnessBanner from './components/AI2035OmniversalConsciousnessBanner';
+import AI2035OmniversalConsciousnessShowcase from './components/AI2035OmniversalConsciousnessShowcase';
+import NeuralInterfaceRevolutionBanner from './components/NeuralInterfaceRevolutionBanner';
+import SpaceTechnologySolutionsBanner from './components/SpaceTechnologySolutionsBanner';
+import RevolutionaryContentPromotionBanner from './components/RevolutionaryContentPromotionBanner';
+import FutureTechnologyShowcaseBanner from './components/FutureTechnologyShowcaseBanner';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -191,6 +199,8 @@ function App() {
         <RevolutionaryContentBanner />
         <NewContentPromotionBanner />
         <EnhancedContentPromotionBanner />
+        <RevolutionaryContentPromotionBanner />
+        <FutureTechnologyShowcaseBanner />
         <AppHeader />
         <main id="main-content" className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
