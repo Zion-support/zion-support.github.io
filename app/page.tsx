@@ -7,6 +7,14 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
+// Import new advanced AI components
+import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
+import RealTimePerformanceDashboard from '../components/RealTimePerformanceDashboard';
+import IntelligentSearchEngine from '../components/IntelligentSearchEngine';
+import AdvancedAIAssistant from '../components/AdvancedAIAssistant';
+import BusinessIntelligenceDashboard from '../components/BusinessIntelligenceDashboard';
+import AdvancedSecurityMonitor from '../components/AdvancedSecurityMonitor';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -3518,6 +3526,14 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
+      {/* Advanced AI Components */}
+      <AdvancedContentRecommendationEngine />
+      <RealTimePerformanceDashboard />
+      <IntelligentSearchEngine />
+      <AdvancedAIAssistant />
+      <BusinessIntelligenceDashboard />
+      <AdvancedSecurityMonitor />
     </div>
   );
 }
