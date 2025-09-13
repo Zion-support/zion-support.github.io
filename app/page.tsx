@@ -221,6 +221,8 @@ import AITools2025UltimateShowcaseBanner from '../components/AITools2025Ultimate
 // Import new content promotion components
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import NewContentShowcase2026Banner from '../components/NewContentShowcase2026Banner';
+import AI2026BreakthroughAnnouncementBanner from '../components/AI2026BreakthroughAnnouncementBanner';
 
 export default function HomePage() {
   return (
@@ -248,6 +250,12 @@ export default function HomePage() {
         
         {/* NEW CONTENT SHOWCASE BANNER 2025 */}
         <NewContentShowcaseBanner2025 />
+        
+        {/* NEW CONTENT SHOWCASE BANNER 2026 */}
+        <NewContentShowcase2026Banner />
+        
+        {/* AI 2026 BREAKTHROUGH ANNOUNCEMENT BANNER */}
+        <AI2026BreakthroughAnnouncementBanner />
         
         {/* NEURAL CONSENSUS REVOLUTION BANNER */}
         <NeuralConsensusRevolutionBanner />
