@@ -186,7 +186,7 @@ function Header() {
                 <Link href="/blog/ai-2025-revolutionary-trends-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🔮 AI 2025 Revolutionary Trends & Predictions (NEW)
                 </Link>
-                <Link href="/blog/ai-2025-ultimate-breakthrough-announcement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
+                <Link href="/ai-2025-ultimate-breakthrough-announcement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🚀 AI 2025 Ultimate Breakthrough (5,000% ROI) (BREAKTHROUGH)
                 </Link>
                 <Link href="/case-studies/ai-2025-synthetic-intelligence-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
