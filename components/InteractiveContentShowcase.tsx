@@ -1,361 +1,285 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 
 interface ContentItem {
+  id: string;
   title: string;
   description: string;
+  category: string;
+  image: string;
   href: string;
-  icon: string;
-  readTime?: string;
-  category?: string;
-  isNew?: boolean;
-  isTrending?: boolean;
-  views?: number;
-  likes?: number;
-  tags?: string[];
+  featured: boolean;
+  tags: string[];
+  readTime: string;
+  publishDate: string;
 }
 
-interface InteractiveContentShowcaseProps {
-  title: string;
-  subtitle: string;
-  items: ContentItem[];
-  variant?: 'default' | 'featured' | 'trending' | 'interactive';
-  showFilters?: boolean;
-  showStats?: boolean;
-  showSearch?: boolean;
-  className?: string;
-}
+const contentItems: ContentItem[] = [
+  {
+    id: 'ai-2026-automation',
+    title: 'AI 2026 Advanced Automation Mastery',
+    description: 'Master cutting-edge AI automation techniques for enterprise transformation with 95% process automation rates.',
+    category: 'Automation',
+    image: '/images/ai-automation-2026.jpg',
+    href: '/ai-2026-advanced-automation-mastery',
+    featured: true,
+    tags: ['AI', 'Automation', 'Enterprise', '2026'],
+    readTime: '15 min',
+    publishDate: '2025-01-17'
+  },
+  {
+    id: 'neural-interface-revolution',
+    title: 'AI 2026 Neural Interface Revolution',
+    description: 'Explore revolutionary brain-computer interface technology enabling direct human-AI communication.',
+    category: 'Neural Tech',
+    image: '/images/neural-interface-2026.jpg',
+    href: '/ai-2026-neural-interface-revolution',
+    featured: true,
+    tags: ['Neural Interface', 'BCI', 'Revolutionary', '2026'],
+    readTime: '12 min',
+    publishDate: '2025-01-17'
+  },
+  {
+    id: 'quantum-computing-breakthrough',
+    title: 'Quantum Computing Breakthrough 2026',
+    description: 'Discover the latest quantum computing advances and their impact on AI and business operations.',
+    category: 'Quantum',
+    image: '/images/quantum-computing-2026.jpg',
+    href: '/quantum-computing-solutions',
+    featured: false,
+    tags: ['Quantum', 'Computing', 'Breakthrough', '2026'],
+    readTime: '18 min',
+    publishDate: '2025-01-16'
+  },
+  {
+    id: 'ai-enterprise-transformation',
+    title: 'Enterprise AI Transformation Guide',
+    description: 'Complete guide to transforming your enterprise with AI solutions and automation platforms.',
+    category: 'Enterprise',
+    image: '/images/enterprise-ai-transformation.jpg',
+    href: '/enterprise-ai-transformation-2025',
+    featured: false,
+    tags: ['Enterprise', 'Transformation', 'AI', 'Guide'],
+    readTime: '25 min',
+    publishDate: '2025-01-15'
+  }
+];
 
-export default function InteractiveContentShowcase({
-  title,
-  subtitle,
-  items,
-  variant = 'interactive',
-  showFilters = true,
-  showStats = true,
-  showSearch = true,
-  className = ''
-}: InteractiveContentShowcaseProps) {
-  const [filteredItems, setFilteredItems] = useState(items);
-  const [selectedCategory, setSelectedCategory] = useState('all');
+export default function InteractiveContentShowcase() {
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('newest');
+  const [sortBy, setSortBy] = useState<'newest' | 'popular' | 'featured'>('featured');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  // Get unique categories
-  const categories = ['all', ...Array.from(new Set(items.map(item => item.category).filter(Boolean)))];
+  const categories = ['All', ...Array.from(new Set(contentItems.map(item => item.category)))];
 
-  // Filter and sort items
-  useEffect(() => {
-    let filtered = items;
+  const filteredItems = contentItems
+    .filter(item => {
+      const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      return matchesCategory && matchesSearch;
+    })
+    .sort((a, b) => {
+      switch (sortBy) {
+        case 'newest':
+          return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
+        case 'popular':
+          return b.featured ? 1 : -1;
+        case 'featured':
+          return b.featured ? 1 : -1;
+        default:
+          return 0;
+      }
+    });
 
-    // Filter by category
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(item => item.category === selectedCategory);
-    }
-
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(item =>
-        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.tags?.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
-    }
-
-    // Sort items
-    switch (sortBy) {
-      case 'newest':
-        filtered = filtered.sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
-        break;
-      case 'trending':
-        filtered = filtered.sort((a, b) => (b.isTrending ? 1 : 0) - (a.isTrending ? 1 : 0));
-        break;
-      case 'popular':
-        filtered = filtered.sort((a, b) => (b.views || 0) - (a.views || 0));
-        break;
-      case 'likes':
-        filtered = filtered.sort((a, b) => (b.likes || 0) - (a.likes || 0));
-        break;
-      default:
-        break;
-    }
-
-    setFilteredItems(filtered);
-  }, [items, selectedCategory, searchTerm, sortBy]);
-
-  const getVariantStyles = () => {
-    switch (variant) {
-      case 'featured':
-        return {
-          container: 'bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white',
-          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
-          cardHover: 'hover:bg-opacity-20',
-          title: 'text-white',
-          subtitle: 'text-white opacity-90',
-          itemTitle: 'text-white',
-          itemDesc: 'text-white opacity-90',
-          meta: 'text-white opacity-75'
-        };
-      case 'trending':
-        return {
-          container: 'bg-gradient-to-r from-orange-500 to-red-500 text-white',
-          card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
-          cardHover: 'hover:bg-opacity-20',
-          title: 'text-white',
-          subtitle: 'text-white opacity-90',
-          itemTitle: 'text-white',
-          itemDesc: 'text-white opacity-90',
-          meta: 'text-white opacity-75'
-        };
-      default:
-        return {
-          container: 'bg-white',
-          card: 'bg-white border border-gray-200',
-          cardHover: 'hover:shadow-lg',
-          title: 'text-gray-900',
-          subtitle: 'text-gray-600',
-          itemTitle: 'text-gray-900',
-          itemDesc: 'text-gray-600',
-          meta: 'text-gray-500'
-        };
-    }
-  };
-
-  const styles = getVariantStyles();
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   return (
-    <section className={`py-16 ${styles.container} ${className} relative overflow-hidden`}>
-      {variant === 'featured' && (
-        <div className="absolute inset-0 bg-black opacity-10"></div>
-      )}
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">
-              {variant === 'featured' ? '✨ FEATURED CONTENT' : 
-               variant === 'trending' ? '🔥 TRENDING NOW' : '📚 INTERACTIVE SHOWCASE'}
-            </span>
-          </div>
-          <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${styles.title}`}>
-            {title}
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Interactive Content Showcase
           </h2>
-          <p className={`text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed ${styles.subtitle}`}>
-            {subtitle}
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover our latest breakthrough content, cutting-edge technologies, and revolutionary AI solutions.
           </p>
         </div>
 
-        {/* Interactive Controls */}
-        {(showFilters || showSearch) && (
-          <div className="mb-8 space-y-4">
-            {/* Search Bar */}
-            {showSearch && (
-              <div className="max-w-md mx-auto">
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search content..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-4 py-3 pl-10 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <span className="text-gray-400">🔍</span>
-                  </div>
-                </div>
+        {/* Filters and Controls */}
+        <div className="mb-8 space-y-4">
+          {/* Search Bar */}
+          <div className="max-w-md mx-auto">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search content..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-4 py-3 pl-10 pr-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
               </div>
-            )}
-
-            {/* Filters and Controls */}
-            {showFilters && (
-              <div className="flex flex-wrap justify-center gap-4">
-                {/* Category Filter */}
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900"
-                >
-                  {categories.map(category => (
-                    <option key={category} value={category}>
-                      {category === 'all' ? 'All Categories' : category}
-                    </option>
-                  ))}
-                </select>
-
-                {/* Sort By */}
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900"
-                >
-                  <option value="newest">Newest First</option>
-                  <option value="trending">Trending</option>
-                  <option value="popular">Most Popular</option>
-                  <option value="likes">Most Liked</option>
-                </select>
-
-                {/* View Mode Toggle */}
-                <div className="flex border border-gray-300 rounded-lg overflow-hidden">
-                  <button
-                    onClick={() => setViewMode('grid')}
-                    className={`px-4 py-2 text-sm font-medium ${
-                      viewMode === 'grid' 
-                        ? 'bg-blue-600 text-white' 
-                        : 'bg-white text-gray-700 hover:bg-gray-50'
-                    }`}
-                  >
-                    Grid
-                  </button>
-                  <button
-                    onClick={() => setViewMode('list')}
-                    className={`px-4 py-2 text-sm font-medium ${
-                      viewMode === 'list' 
-                        ? 'bg-blue-600 text-white' 
-                        : 'bg-white text-gray-700 hover:bg-gray-50'
-                    }`}
-                  >
-                    List
-                  </button>
-                </div>
-              </div>
-            )}
+            </div>
           </div>
-        )}
 
-        {/* Results Count */}
-        <div className="text-center mb-6">
-          <p className={`text-sm ${styles.meta}`}>
-            Showing {filteredItems.length} of {items.length} items
-          </p>
+          {/* Category Filters */}
+          <div className="flex flex-wrap justify-center gap-2">
+            {categories.map(category => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                  selectedCategory === category
+                    ? 'bg-blue-600 text-white shadow-lg'
+                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          {/* Sort and View Controls */}
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            <div className="flex items-center space-x-2">
+              <label className="text-sm font-medium text-gray-700">Sort by:</label>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as 'newest' | 'popular' | 'featured')}
+                className="px-3 py-1 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
+                <option value="featured">Featured</option>
+                <option value="newest">Newest</option>
+                <option value="popular">Popular</option>
+              </select>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <label className="text-sm font-medium text-gray-700">View:</label>
+              <div className="flex border border-gray-300 rounded-md">
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100'}`}
+                >
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                  </svg>
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100'}`}
+                >
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Content Grid/List */}
-        <div className={
+        <div className={`${
           viewMode === 'grid' 
-            ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
-            : 'space-y-4'
-        }>
-          {filteredItems.map((item, index) => (
-            <Link key={index} href={item.href} className="group">
-              <div className={`${styles.card} p-6 rounded-xl transition-all duration-300 ${styles.cardHover} ${
-                viewMode === 'list' ? 'flex items-center space-x-4' : ''
-              }`}>
-                {/* Icon */}
-                <div className={`text-4xl mb-4 group-hover:scale-110 transition-transform ${
-                  viewMode === 'list' ? 'flex-shrink-0' : ''
-                }`}>
-                  {item.icon}
+            ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' 
+            : 'space-y-6'
+        }`}>
+          {filteredItems.map((item) => (
+            <div
+              key={item.id}
+              className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${
+                viewMode === 'list' ? 'flex' : ''
+              }`}
+              onMouseEnter={() => setHoveredItem(item.id)}
+              onMouseLeave={() => setHoveredItem(null)}
+            >
+              {/* Image */}
+              <div className={`${
+                viewMode === 'list' ? 'w-48 h-32' : 'h-48'
+              } relative overflow-hidden`}>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+                {item.featured && (
+                  <div className="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Featured
+                  </div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+
+              {/* Content */}
+              <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
+                    {item.category}
+                  </span>
+                  <span className="text-sm text-gray-500">{item.readTime}</span>
                 </div>
 
-                {/* Content */}
-                <div className={viewMode === 'list' ? 'flex-1' : ''}>
-                  {/* Badges */}
-                  <div className="flex items-center gap-2 mb-2">
-                    {item.isNew && (
-                      <span className="bg-green-600 text-white px-2 py-1 rounded-full text-xs font-medium">
-                        NEW
-                      </span>
-                    )}
-                    {item.isTrending && (
-                      <span className="bg-orange-600 text-white px-2 py-1 rounded-full text-xs font-medium">
-                        TRENDING
-                      </span>
-                    )}
-                    {item.category && (
-                      <span className={`${styles.meta} text-xs font-medium`}>
-                        {item.category}
-                      </span>
-                    )}
-                  </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {item.title}
+                </h3>
 
-                  {/* Title */}
-                  <h3 className={`text-lg font-semibold mb-2 ${styles.itemTitle}`}>
-                    {item.title}
-                  </h3>
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {item.description}
+                </p>
 
-                  {/* Description */}
-                  <p className={`text-sm mb-3 ${styles.itemDesc}`}>
-                    {item.description}
-                  </p>
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {item.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-md"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
 
-                  {/* Tags */}
-                  {item.tags && (
-                    <div className="flex flex-wrap gap-1 mb-3">
-                      {item.tags.slice(0, 3).map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"
-                        >
-                          #{tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* Meta Info */}
-                  <div className="flex items-center justify-between text-xs">
-                    <div className="flex items-center gap-2">
-                      {item.readTime && (
-                        <>
-                          <span className={styles.meta}>{item.readTime}</span>
-                          <span className={styles.meta}>•</span>
-                        </>
-                      )}
-                      <span className={styles.meta}>
-                        {item.href.includes('/blog/') ? 'Article' : 
-                         item.href.includes('/case-studies/') ? 'Case Study' : 
-                         item.href.includes('/resources/') ? 'Resource' : 'Content'}
-                      </span>
-                    </div>
-
-                    {/* Stats */}
-                    {showStats && (
-                      <div className="flex items-center gap-3">
-                        {item.views && (
-                          <span className={`${styles.meta} flex items-center gap-1`}>
-                            👁️ {item.views}
-                          </span>
-                        )}
-                        {item.likes && (
-                          <span className={`${styles.meta} flex items-center gap-1`}>
-                            ❤️ {item.likes}
-                          </span>
-                        )}
-                      </div>
-                    )}
-                  </div>
+                {/* Footer */}
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">
+                    {new Date(item.publishDate).toLocaleDateString()}
+                  </span>
+                  <a
+                    href={item.href}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:translate-x-1 transition-transform duration-200"
+                  >
+                    Read More
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
 
-        {/* No Results */}
-        {filteredItems.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className={`text-xl font-semibold mb-2 ${styles.title}`}>
-              No content found
-            </h3>
-            <p className={`${styles.subtitle}`}>
-              Try adjusting your search terms or filters
-            </p>
-          </div>
-        )}
+        {/* Results Count */}
+        <div className="mt-8 text-center">
+          <p className="text-gray-600">
+            Showing {filteredItems.length} of {contentItems.length} content items
+          </p>
+        </div>
 
         {/* Load More Button */}
-        {filteredItems.length > 0 && filteredItems.length < items.length && (
-          <div className="text-center mt-8">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Load More Content
-            </button>
-          </div>
-        )}
+        <div className="text-center mt-8">
+          <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            Load More Content
+          </button>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -98,6 +98,7 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import EnhancedSEO from '../components/EnhancedSEO';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import MobileOptimizer from '../components/MobileOptimizer';
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
@@ -3629,6 +3630,9 @@ export default function HomePage() {
       <AI2026QuantumNeuralPromotionBanner />
       <AI2026ContentDiscoveryWidget />
       <AI2026ROICalculator />
+
+      {/* Interactive Content Showcase */}
+      <InteractiveContentShowcase />
 
       {/* Performance and Optimization Components */}
       <PerformanceOptimizer />
