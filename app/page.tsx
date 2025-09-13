@@ -246,6 +246,12 @@ import AI2030FutureVisionPromotionBanner from '../components/AI2030FutureVisionP
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
 
+// Import new content promotion banner
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+
+// Import latest content navigation
+import LatestContentNavigation from '../components/LatestContentNavigation';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -267,6 +273,12 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
+        {/* LATEST CONTENT NAVIGATION */}
+        <LatestContentNavigation />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
         
