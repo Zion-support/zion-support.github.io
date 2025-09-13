@@ -20,26 +20,18 @@ export type InteractiveSearchProps = {
 
 export default function InteractiveSearch({ categories, value, onChange, priceEnabled = true, ratingEnabled = true }: InteractiveSearchProps) {
   return (
-    <div className="w-full mb-4 p-3 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-zinc-900">
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
-        <input
-          type="text"
-          value={value.keyword}
-          onChange={(e) => onChange({ ...value, keyword: e.target.value })}
-          placeholder="Search by keyword..."
-          className="col-span-2 px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm"
-        />
+import React from './react';
+export default /**
+export default /**
+
+
 
         <select
           value={value.category}
           onChange={(e) => onChange({ ...value, category: e.target.value })}
           className="px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm"
         >
-          <option value="">All Categories</option>
-          {categories.map((c) => (
-            <option key={c.value} value={c.value}>{c.label}</option>
-          ))}
-        </select>
+
 
         {priceEnabled && (
           <div className="flex items-center gap-2">
@@ -79,4 +71,3 @@ export default function InteractiveSearch({ categories, value, onChange, priceEn
       </div>
     </div>
   );
-}

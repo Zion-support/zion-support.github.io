@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Users, Star, Play, ArrowRight, CheckCircle, Gift } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const MasterclassPage = () => {
   const agenda = [

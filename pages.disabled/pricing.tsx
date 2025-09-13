@@ -382,9 +382,6 @@ export default function PricingPage() {
   const yearlyDiscount = 0.2; // 20% discount for yearly billing
 
   return (
-<<<<<<< HEAD
-    <EnhancedFuturisticBackground>
-=======
     <EnhancedFuturisticBackground variant="quantum-holographic-advanced" intensity="high">
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d240
       <div className="min-h-screen">

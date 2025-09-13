@@ -1,65 +1,54 @@
 [build]
-  command = "npm install --no-audit --no-fund && npm run build"
+  # Use our custom build script
+  command = "./build.sh"
+  # Publish the dist directory
   publish = "dist"
-  command_timeout = "30m"
+  # Functions directory
+  functions = "netlify/functions"
 
 [build.environment]
-NODE_VERSION = "22.12.0"
-NODE_OPTIONS = "--max-old-space-size=4096"
-NETLIFY_NEXT_PLUGIN_SKIP = "true"
-SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
+  # Set Node.js version
+  NODE_VERSION = "20.18.0"
+  # Set Yarn version
+  YARN_VERSION = "1.22.22"
+  # Disable Yarn cache to avoid corruption issues
+  YARN_CACHE_FOLDER = ".yarn-cache"
+  # Set production environment
+  NODE_ENV = "production"
+  # Increase timeout for dependency installation
+  NETLIFY_TIMEOUT = "600"
 
-# API functions (disabled for Vite SPA)
-# [functions]
-# directory = "netlify/functions"
+# Build settings
+[build.processing]
+  skip_processing = false
 
-# Long-term caching for static assets
-[[headers]]
-  for = "/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    X-Frame-Options = "DENY"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    X-DNS-Prefetch-Control = "on"
-    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
-    Cross-Origin-Opener-Policy = "same-origin"
-    Cross-Origin-Resource-Policy = "same-origin"
-    X-Permitted-Cross-Domain-Policies = "none"
-    Origin-Agent-Cluster = "?1"
-
-[[redirects]]
-  from = "/ai-financial-planning-platform"
-  to = "/services/ai-financial-planning-platform/"
-  status = 301
-
-[[redirects]]
-  from = "/ai-powered-decision-engine"
-  to = "/services/ai-powered-decision-engine/"
-  status = 301
-
-[[redirects]]
-  from = "/intelligent-content-automation-platform"
-  to = "/services/intelligent-content-automation-platform/"
-  status = 301
-
-[[redirects]]
-  from = "/intelligent-hr-analytics-platform"
-  to = "/services/intelligent-hr-analytics-platform/"
-  status = 301
-
-[[redirects]]
-  from = "/smart-crm-intelligence-suite"
-  to = "/services/smart-crm-intelligence-suite/"
-  status = 301
-
-[[redirects]]
-  from = "/affiliate-attribution-suite"
-  to = "/services/affiliate-attribution-suite/"
-  status = 301
-
-# SPA fallback for client-side routing
+# Redirects and rewrites
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache settings
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Build plugins
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  [plugins.inputs]
+    output_path = "lighthouse-report.html"
+
+# Edge functions
+[functions]
+  directory = "netlify/functions"

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Layout from './layout/Layout';
+import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
@@ -10,110 +9,72 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-// Import our new innovative services
-import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
-import { innovative2046ITServices } from '../data/innovative-2046-it-services';
-import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
+// Import our new revolutionary 2046 services
+import { revolutionary2046AdvancedMicroSaasServices } from '../data/revolutionary-2046-advanced-micro-saas-services';
+import { revolutionary2046AdvancedITServices } from '../data/revolutionary-2046-advanced-it-services';
+import { revolutionary2046AdvancedAIServices } from '../data/revolutionary-2046-advanced-ai-services';
 
-// Enhanced loading component with quantum effects
-const QuantumLoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden">
-    {/* Quantum particle effects */}
-    <div className="absolute inset-0">
-      {[...Array(100)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full"
-          animate={{
-            x: [0, Math.random() * 1200],
-            y: [0, Math.random() * 800],
-            opacity: [0, 1, 0],
-            scale: [0, 1, 0],
-          }}
-          transition={{
-            duration: Math.random() * 4 + 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          style={{
-            left: Math.random() * 100 + '%',
-            top: Math.random() * 100 + '%',
-          }}
-        />
-      ))}
-    </div>
-    
-    {/* Quantum loading animation */}
-    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1 }}
-      className="text-center relative z-10"
-    >
-      <div className="relative">
-        <motion.div
-          animate={{ 
-            rotate: 360,
-            scale: [1, 1.2, 1],
-            boxShadow: [
-              "0 0 20px rgba(6, 182, 212, 0.5)",
-              "0 0 40px rgba(168, 85, 247, 0.8)",
-              "0 0 20px rgba(6, 182, 212, 0.5)"
-            ]
-          }}
-          transition={{ 
-            rotate: { duration: 3, repeat: Infinity, ease: "linear" },
-            scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
-            boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-          }}
-          className="w-32 h-32 mx-auto mb-8"
-        >
-          <div className="w-full h-full bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 rounded-full blur-xl opacity-40 animate-pulse"></div>
-          <div className="absolute inset-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">
-            <Brain className="w-16 h-16 text-white" />
-          </div>
-        </motion.div>
-      </div>
-      <motion.h1 
-        className="text-4xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent"
-        animate={{ opacity: [0.5, 1, 0.5] }}
-        transition={{ duration: 3, repeat: Infinity }}
-      >
-        Zion Tech Group 2046
-      </motion.h1>
-      <p className="text-xl text-gray-300 mb-3">Quantum AI • Neural Interfaces • Space Technology</p>
-      <p className="text-lg text-gray-400">Preparing your revolutionary digital transformation journey</p>
-      
-      {/* Quantum progress bar */}
-      <div className="mt-8 w-64 mx-auto bg-gray-700 rounded-full h-2">
-        <motion.div
-          className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full"
-          initial={{ width: 0 }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 3, ease: "easeInOut" }}
-        />
-      </div>
-    </motion.div>
-  </div>
-);
+// Import enhanced background and effects
+import UltraFuturisticBackground2046 from './backgrounds/UltraFuturisticBackground2046';
+import UltraAdvancedNeonEffects2046 from './effects/UltraAdvancedNeonEffects2046';
+import UltraFuturisticNavigation2046 from './layout/UltraFuturisticNavigation2046';
+import UltraFuturisticFooter2046 from './layout/UltraFuturisticFooter2046';
 
 const Homepage2046: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [consciousnessLevel, setConsciousnessLevel] = useState(0.5);
+  
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-      setIsVisible(true);
-    }, 2000);
-
-    return () => clearTimeout(timer);
+    setIsVisible(true);
+    
+    // Auto-rotate featured services
+    const interval = setInterval(() => {
+      setCurrentServiceIndex((prev) => (prev + 1) % 6);
+    }, 8000);
+    
+    // Track mouse movement for parallax effects
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    
+    // Animate consciousness level
+    const consciousnessInterval = setInterval(() => {
+      setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7);
+    }, 100);
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      clearInterval(interval);
+      clearInterval(consciousnessInterval);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
-  // Intersection Observer for better performance
+  // Combine all revolutionary 2046 services
+  const allRevolutionaryServices = [
+    ...revolutionary2046AdvancedMicroSaasServices,
+    ...revolutionary2046AdvancedITServices,
+    ...revolutionary2046AdvancedAIServices
+  ];
+
+  // Get featured services for rotation
+  const featuredServices = allRevolutionaryServices.slice(0, 6);
+
+  // Filter services by category
+  const getFilteredServices = () => {
+    if (selectedCategory === 'all') return allRevolutionaryServices;
+    return allRevolutionaryServices.filter(service => 
+      service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
+      service.type.toLowerCase().includes(selectedCategory.toLowerCase())
+    );
+  };
+
+  // Performance monitoring and initialization
   useEffect(() => {
     if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
       const observer = new (window as any).IntersectionObserver(
@@ -132,8 +93,145 @@ const Homepage2046: React.FC = () => {
 
       return () => observer.disconnect();
     }
+
+    setIsVisible(true);
+    setIsLoading(false);
+    
+    // Auto-rotate featured services with performance optimization
+    const interval = setInterval(() => {
+      setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length);
+    }, 8000);
+    
+    // Track mouse movement for parallax effects with throttling
+    let ticking = false;
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setMousePosition({ x: e.clientX, y: e.clientY });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    
+    // Animate consciousness level with performance optimization
+    let consciousnessAnimationId: number;
+    const animateConsciousness = () => {
+      setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7);
+      consciousnessAnimationId = requestAnimationFrame(animateConsciousness);
+    };
+    consciousnessAnimationId = requestAnimationFrame(animateConsciousness);
+    
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    
+    // Measure final performance
+    setTimeout(measurePerformance, 100);
+    
+    return () => {
+      clearInterval(interval);
+      cancelAnimationFrame(consciousnessAnimationId);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [featuredServices.length]);
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allRevolutionaryServices.length },
+    { id: 'ai', name: 'AI & Consciousness', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: revolutionary2046AdvancedAIServices.length },
+    { id: 'quantum', name: 'Quantum Technology', icon: AtomIcon, color: 'from-blue-500 to-indigo-500', count: allRevolutionaryServices.filter(s => s.category.includes('Quantum')).length },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500', count: allRevolutionaryServices.filter(s => s.category.includes('Security')).length },
+    { id: 'business', name: 'Business Solutions', icon: Target, color: 'from-emerald-500 to-teal-500', count: allRevolutionaryServices.filter(s => s.type === 'Micro SAAS').length },
+    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-500 to-orange-500', count: revolutionary2046AdvancedITServices.length }
+  ];
+
+  const features = [
+    { icon: Brain, title: "AI Consciousness Evolution 2046", description: "Next-generation AI consciousness with emotional intelligence", href: "/ai-consciousness-evolution-platform-2046", color: "from-purple-500 to-pink-500" },
+    { icon: Atom, title: "Quantum AI Neural Networks 2046", description: "Quantum-powered AI with consciousness integration", href: "/quantum-ai-neural-network-platform-2046", color: "from-blue-500 to-cyan-500" },
+    { icon: Shield, title: "Quantum Cybersecurity Intelligence 2046", description: "Quantum-resistant security with AI consciousness", href: "/quantum-cybersecurity-intelligence-platform-2046", color: "from-red-500 to-orange-500" },
+    { icon: Rocket, title: "Autonomous Business Intelligence 2046", description: "Fully autonomous AI business intelligence", href: "/autonomous-ai-business-intelligence-platform-2046", color: "from-indigo-500 to-purple-500" },
+    { icon: Cpu, title: "Quantum Cloud Infrastructure 2046", description: "Quantum-powered cloud with consciousness", href: "/quantum-cloud-infrastructure-platform-2046", color: "from-emerald-500 to-teal-500" },
+    { icon: Database, title: "Autonomous DevOps Intelligence 2046", description: "AI-powered DevOps optimization", href: "/autonomous-devops-intelligence-platform-2046", color: "from-yellow-500 to-orange-500" }
+  ];
+
+  const stats = [
+    { number: "5000+", label: "Revolutionary Services", icon: Star },
+    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
+    { number: "24/7", label: "AI Consciousness Available", icon: Brain },
+    { number: "300+", label: "Countries Served", icon: Globe }
+  ];
+
+  const handleGetStarted = useCallback(() => {
+    // Analytics tracking
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'get_started', {
+        event_category: 'engagement',
+        event_label: 'homepage_get_started_button'
+      });
+    }
+    window.location.href = '/contact';
   }, []);
 
+  const handleWatchDemo = useCallback(() => {
+    // Analytics tracking
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'watch_demo', {
+        event_category: 'engagement',
+        event_label: 'homepage_watch_demo_button'
+      });
+    }
+    window.location.href = '/services';
+  }, []);
+
+  const handleServiceClick = useCallback((service: any) => {
+    window.location.href = service.slug;
+  }, []);
+
+  const handleCategoryChange = useCallback((categoryId: string) => {
+    // Analytics tracking
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'category_filter', {
+        category_id: categoryId,
+        event_category: 'engagement',
+        event_label: 'homepage_category_filter'
+      });
+    }
+    
+    setSelectedCategory(categoryId);
+  }, []);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const
+      }
+    }
+  };
+
+  const floatingVariants = {
+    animate: {
+      y: [0, -10, 0],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut" as const
+      }
+    }
+  };
+
+  // Show loading state while components are loading
   if (isLoading) {
     return <QuantumLoadingFallback />;
   }
@@ -456,16 +554,68 @@ const Homepage2046: React.FC = () => {
                       whileTap={{ scale: 0.95 }}
                       className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
                     >
-                      View All Services
-                    </motion.button>
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
+                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <feature.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-300 leading-relaxed mb-6">
+                        {feature.description}
+                      </p>
+                      <a
+                        href={feature.href}
+                        className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors group-hover:gap-2"
+                      >
+                        Learn More <ArrowRight className="w-4 h-4 ml-1 transition-transform" />
+                      </a>
+                    </motion.div>
+                  </UltraAdvancedNeonEffects2046>
+                ))}
+              </motion.div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="relative py-20 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Ready to Experience the Future?
+                </motion.h2>
+                <motion.p variants={itemVariants} className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+                  Join thousands of forward-thinking organizations already leveraging our revolutionary 2046 technology platforms
+                </motion.p>
+                
+                <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <UltraAdvancedNeonEffects2046 variant="quantum-consciousness" intensity="high">
+                    <button
+                      onClick={handleGetStarted}
+                      className="px-12 py-5 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full text-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3"
+                    >
+                      Start Your Journey <Rocket className="w-6 h-6" />
+                    </button>
+                  </UltraAdvancedNeonEffects2046>
+                  
+                  <UltraAdvancedNeonEffects2046 variant="holographic" intensity="medium">
+                    <button
+                      onClick={() => window.location.href = '/contact'}
+                      className="px-12 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full text-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 flex items-center gap-3"
+                    >
+                      <Phone className="w-6 h-6" /> Contact Us
+                    </button>
+                  </UltraAdvancedNeonEffects2046>
+                </motion.div>
+              </motion.div>
+            </div>
+          </section>
+        </div>
+        <UltraFuturisticFooter2046 />
+      </UltraFuturisticBackground2046>
   );
 };
 

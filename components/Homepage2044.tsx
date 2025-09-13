@@ -126,64 +126,6 @@ const Homepage2044: React.FC = () => {
     window.location.href = service.slug;
   }, []);
 
-  const handleCategoryChange = useCallback((categoryId: string) => {
-    setSelectedCategory(categoryId);
-    // Add analytics tracking
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'category_filter', { category: categoryId });
-    }
-  }, []);
-
-  useEffect(() => {
-    // Performance optimization: Use requestIdleCallback for non-critical operations
-    const initializePage = () => {
-      setIsVisible(true);
-      setIsLoading(false);
-    };
-
-    if ('requestIdleCallback' in window) {
-      (window as any).requestIdleCallback(initializePage);
-    } else {
-      setTimeout(initializePage, 100);
-    }
-    
-    // Auto-rotate featured services with better performance
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }, 6000);
-    
-    // Track mouse movement for parallax effects with throttling
-    let ticking = false;
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          setMousePosition({ x: e.clientX, y: e.clientY });
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-    
-    window.addEventListener('mousemove', handleMouseMove, { passive: true });
-    
-    // Track scroll progress for performance monitoring
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      const docHeight = document.body.offsetHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      setScrollProgress(scrollPercent);
-    };
-    
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // Loading state
   if (isLoading) {
     return (
       <Layout>
@@ -203,17 +145,7 @@ const Homepage2044: React.FC = () => {
 
   return (
     <Layout>
-      {/* Scroll Progress Indicator */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-gray-800 z-50">
-        <motion.div
-          className="h-full bg-gradient-to-r from-cyan-500 to-purple-600"
-          style={{ width: `${scrollProgress}%` }}
-          transition={{ duration: 0.1 }}
-        />
-      </div>
-
-      {/* Main Content */}
-      <main className="relative z-10">
+      <main className="relative">
         {/* Hero Section */}
         <section 
           className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden"
