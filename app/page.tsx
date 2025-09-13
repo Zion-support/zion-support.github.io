@@ -7,6 +7,11 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
+// Enhanced components for improvements
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
+import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';
+import AdvancedSEOAnalytics from '../components/AdvancedSEOAnalytics';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -3217,6 +3222,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Enhanced Content Showcase */}
+      <EnhancedContentShowcase />
+
+      {/* Advanced Performance Optimizer */}
+      <AdvancedPerformanceOptimizer />
+
+      {/* Advanced SEO Analytics */}
+      <AdvancedSEOAnalytics />
     </div>
   );
 }
