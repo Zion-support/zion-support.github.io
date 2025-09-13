@@ -8,13 +8,6 @@ import {
 } from 'lucide-react';
 
 // Import our new service data
-<<<<<<< HEAD
-import { advancedBusinessIntelligenceServices2025 } from '../data/2025-advanced-business-intelligence-services';
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
-=======
 import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
 import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services';
 import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services';
@@ -25,15 +18,6 @@ import { emergingTechnologyServices } from '../data/2025-emerging-technology-ser
 const ComprehensiveServicesShowcase2025 = () => {
   const [activeTab, setActiveTab] = useState('all');
 
-<<<<<<< HEAD
-  const allServices = [
-    ...advancedBusinessIntelligenceServices2025,
-    ...advancedAIAutomationServices2025,
-    ...innovative2025ITInfrastructureServices,
-    ...innovativeMicroSaasSolutions2025,
-    ...cuttingEdgeAIServices2025
-  ];
-=======
 // Helper function to get service pricing
 const getServicePricing = (service: any) => {
   if (service.pricing?.starter) return service.pricing.starter;
@@ -284,8 +268,6 @@ const allServices = [
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
-=======
 
           {/* Services Display */}
           <AnimatePresence mode="wait">
@@ -560,8 +542,5 @@ const allServices = [
   );
 };
 
-<<<<<<< HEAD
-export default ComprehensiveServicesShowcase2025;
-=======
 export default ComprehensiveServicesShowcase;
 >>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906

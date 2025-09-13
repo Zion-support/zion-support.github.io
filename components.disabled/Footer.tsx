@@ -147,6 +147,7 @@ const Footer: React.FC = () => {
               </Link>
             </div>
           </div>
+>>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
         </div>
       </div>
 

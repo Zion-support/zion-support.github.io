@@ -1,347 +1,336 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { BookOpen, FileText, Video, Download, ArrowRight, Star, Clock, Users, TrendingUp, CheckCircle, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Content Showcase: Latest AI & Technology Insights | Zion Tech Group',
-  description: 'Explore our comprehensive collection of AI and technology content. Discover the latest articles, case studies, and resources from industry experts.',
-  keywords: 'AI content, technology insights, case studies, resources, AI articles, tech guides',
-  openGraph: {
-    title: 'Content Showcase: Latest AI & Technology Insights',
-    description: 'Explore our comprehensive collection of AI and technology content. Discover the latest articles, case studies, and resources.',
-    type: 'website',
-  },
+  title: 'Content Showcase - Zion Tech Group Resources & Guides',
+  description: 'Explore our comprehensive collection of AI guides, implementation toolkits, case studies, and resources for business transformation.',
+  keywords: 'AI resources, business guides, implementation toolkits, automation guides, technology resources',
 };
 
-export default function ContentShowcase() {
+const ContentShowcasePage = () => {
+  const featuredContent = [
+    {
+      id: 1,
+      type: 'guide',
+      title: 'AI 2025: Ultimate Business Automation Mastery',
+      description: 'Comprehensive guide to transforming your business operations with cutting-edge AI solutions. Learn proven strategies, implementation frameworks, and real-world case studies.',
+      category: 'Automation',
+      readTime: '15 min read',
+      rating: 4.9,
+      downloads: '2.3k',
+      icon: BookOpen,
+      link: '/blog/ai-2025-ultimate-business-automation-mastery',
+      color: 'from-cyan-500 to-blue-500',
+      featured: true,
+      tags: ['AI', 'Automation', 'Business Transformation', 'ROI']
+    },
+    {
+      id: 2,
+      type: 'toolkit',
+      title: 'AI 2025 Automation Implementation Toolkit',
+      description: 'Complete toolkit with templates, guides, checklists, and best practices for successful automation implementation.',
+      category: 'Resources',
+      readTime: '50+ resources',
+      rating: 4.8,
+      downloads: '1.8k',
+      icon: Download,
+      link: '/resources/ai-2025-automation-implementation-toolkit',
+      color: 'from-purple-500 to-pink-500',
+      featured: true,
+      tags: ['Templates', 'Implementation', 'Best Practices', 'Toolkit']
+    },
+    {
+      id: 3,
+      type: 'tutorial',
+      title: 'Quantum Computing Solutions for Enterprise',
+      description: 'Advanced quantum computing implementations for business optimization and problem-solving in enterprise environments.',
+      category: 'Quantum',
+      readTime: '12 min read',
+      rating: 4.7,
+      downloads: '1.5k',
+      icon: Video,
+      link: '/tutorials/quantum-computing-enterprise-solutions',
+      color: 'from-green-500 to-teal-500',
+      featured: true,
+      tags: ['Quantum', 'Enterprise', 'Optimization', 'Advanced']
+    },
+    {
+      id: 4,
+      type: 'guide',
+      title: 'Neural Interface Revolution 2025',
+      description: 'Next-generation brain-computer interfaces and their applications in business and healthcare sectors.',
+      category: 'Neural',
+      readTime: '18 min read',
+      rating: 4.9,
+      downloads: '2.1k',
+      icon: FileText,
+      link: '/blog/neural-interface-revolution-2025',
+      color: 'from-yellow-500 to-orange-500',
+      featured: true,
+      tags: ['Neural', 'BCI', 'Healthcare', 'Innovation']
+    }
+  ];
+
+  const allContent = [
+    ...featuredContent,
+    {
+      id: 5,
+      type: 'case-study',
+      title: 'Fortune 500 Manufacturing Automation Success',
+      description: 'How a Fortune 500 manufacturing company achieved 85% defect reduction through AI automation.',
+      category: 'Case Study',
+      readTime: '8 min read',
+      rating: 4.8,
+      downloads: '1.2k',
+      icon: TrendingUp,
+      link: '/case-studies/fortune-500-manufacturing-automation',
+      color: 'from-red-500 to-pink-500',
+      featured: false,
+      tags: ['Manufacturing', 'Success Story', 'ROI', 'Quality Control']
+    },
+    {
+      id: 6,
+      type: 'guide',
+      title: 'AI Security Best Practices 2025',
+      description: 'Comprehensive security guidelines for AI implementation in enterprise environments.',
+      category: 'Security',
+      readTime: '20 min read',
+      rating: 4.6,
+      downloads: '1.4k',
+      icon: Zap,
+      link: '/guides/ai-security-best-practices-2025',
+      color: 'from-indigo-500 to-purple-500',
+      featured: false,
+      tags: ['Security', 'AI', 'Enterprise', 'Best Practices']
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Content Showcase
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
+              <BookOpen className="w-5 h-5 text-cyan-400 mr-2" />
+              <span className="text-cyan-300 font-medium">Content Showcase</span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Comprehensive
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                {' '}AI Resources
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Discover our comprehensive collection of AI and technology insights, 
-              case studies, and resources from industry experts.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Explore our extensive collection of guides, toolkits, case studies, and resources 
+              designed to help you master AI implementation and business transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/blog"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
-              >
-                Browse All Articles
-              </Link>
-              <Link
-                href="/resources"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg"
-              >
-                Download Resources
-              </Link>
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform">
+                Browse All Resources
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
+              </button>
+              <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+                Download Collection
+              </button>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Featured Content Banner */}
-      <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <span className="text-sm font-medium">✨ JUST PUBLISHED</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              🚀 Fresh AI & Tech Insights
-            </h2>
-            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-              New this week: AI Automation Complete Guide, Advanced Cost Optimization, Healthcare AI Success Story, 
-              and AI Implementation Master Guide. Expert insights to accelerate your digital transformation.
-            </p>
-          </div>
-
-          {/* Featured New Content Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/blog/ai-automation-2025-complete-guide' className='group">
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤖</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Automation Complete Guide</h3>
-                <p className='text-sm opacity-90 mb-3'>Master AI automation with our comprehensive implementation guide</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>15 min read</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href='/blog/ai-cost-optimization-advanced-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>⚡</div>
-                <h3 className='text-lg font-semibold mb-2'>Advanced AI Cost Optimization</h3>
-                <p className='text-sm opacity-90 mb-3'>Reduce AI expenses by 60% while maintaining performance</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>12 min read</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href='/case-studies/ai-healthcare-diagnosis-success-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🏥</div>
-                <h3 className='text-lg font-semibold mb-2'>Healthcare AI Success Story</h3>
-                <p className='text-sm opacity-90 mb-3'>95% accuracy in medical diagnosis with 50% cost reduction</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>Case Study</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href='/resources/ai-implementation-master-guide-2025' className='group'>
-              <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>📚</div>
-                <h3 className='text-lg font-semibold mb-2'>AI Implementation Master Guide</h3>
-                <p className='text-sm opacity-90 mb-3'>150+ page complete implementation guide with checklists</p>
-                <div className='flex items-center text-xs opacity-75'>
-                  <span>Free Download</span>
-                  <span className='mx-2'>•</span>
-                  <span>New</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Content Categories */}
-      <section className="py-16">
+      {/* Stats Section */}
+      <div className="py-16 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Explore Our Content Library
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Comprehensive resources covering AI, automation, cloud computing, and business transformation
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Blog Articles */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="text-4xl mb-4">📝</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Latest Articles</h3>
-              <p className="text-gray-600 mb-6">
-                In-depth articles covering AI trends, implementation strategies, and industry insights.
-              </p>
-              <div className="space-y-3 mb-6">
-                <Link href="/blog/ai-automation-2025-complete-guide" className="block group">
-                  <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                    <span className="text-sm font-medium text-blue-600 group-hover:text-blue-700">
-                      AI Automation 2025: Complete Guide
-                    </span>
-                    <span className="text-xs text-gray-500">New</span>
-                  </div>
-                </Link>
-                <Link href="/blog/ai-cost-optimization-advanced-2025" className="block group">
-                  <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                    <span className="text-sm font-medium text-blue-600 group-hover:text-blue-700">
-                      Advanced AI Cost Optimization
-                    </span>
-                    <span className="text-xs text-gray-500">New</span>
-                  </div>
-                </Link>
-                <Link href="/blog/ai-enterprise-integration-2025" className="block group">
-                  <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                    <span className="text-sm font-medium text-blue-600 group-hover:text-blue-700">
-                      AI Enterprise Integration 2025
-                    </span>
-                    <span className="text-xs text-gray-500">Popular</span>
-                  </div>
-                </Link>
-              </div>
-              <Link
-                href="/blog"
-                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
-              >
-                View All Articles
-                <span>→</span>
-              </Link>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
+              <div className="text-gray-300">Comprehensive Guides</div>
             </div>
-
-            {/* Case Studies */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Success Stories</h3>
-              <p className="text-gray-600 mb-6">
-                Real-world case studies showcasing successful AI implementations and business transformations.
-              </p>
-              <div className="space-y-3 mb-6">
-                <Link href="/case-studies/ai-healthcare-diagnosis-success-2025" className="block group">
-                  <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                    <span className="text-sm font-medium text-green-600 group-hover:text-green-700">
-                      Healthcare AI: 95% Accuracy
-                    </span>
-                    <span className="text-xs text-gray-500">New</span>
-                  </div>
-                </Link>
-                <Link href="/case-studies/ai-automation-manufacturing-2025" className="block group">
-                  <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                    <span className="text-sm font-medium text-green-600 group-hover:text-green-700">
-                      Manufacturing AI Success
-                    </span>
-                    <span className="text-xs text-gray-500">Popular</span>
-                  </div>
-                </Link>
-                <Link href="/case-studies/fortune-500-ai-transformation" className="block group">
-                  <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                    <span className="text-sm font-medium text-green-600 group-hover:text-green-700">
-                      Fortune 500 AI Transformation
-                    </span>
-                    <span className="text-xs text-gray-500">Featured</span>
-                  </div>
-                </Link>
-              </div>
-              <Link
-                href="/case-studies"
-                className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium"
-              >
-                View All Case Studies
-                <span>→</span>
-              </Link>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-2">100+</div>
+              <div className="text-gray-300">Implementation Templates</div>
             </div>
-
-            {/* Resources */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-              <div className="text-4xl mb-4">📋</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Free Resources</h3>
-              <p className="text-gray-600 mb-6">
-                Downloadable guides, checklists, templates, and tools to accelerate your AI journey.
-              </p>
-              <div className="space-y-3 mb-6">
-                <Link href="/resources/ai-implementation-master-guide-2025" className="block group">
-                  <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                    <span className="text-sm font-medium text-purple-600 group-hover:text-purple-700">
-                      AI Implementation Master Guide
-                    </span>
-                    <span className="text-xs text-gray-500">New</span>
-                  </div>
-                </Link>
-                <Link href="/resources/ai-automation-roi-calculator" className="block group">
-                  <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                    <span className="text-sm font-medium text-purple-600 group-hover:text-purple-700">
-                      AI Automation ROI Calculator
-                    </span>
-                    <span className="text-xs text-gray-500">Popular</span>
-                  </div>
-                </Link>
-                <Link href="/resources/ai-security-hardening-checklist" className="block group">
-                  <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                    <span className="text-sm font-medium text-purple-600 group-hover:text-purple-700">
-                      AI Security Hardening Checklist
-                    </span>
-                    <span className="text-xs text-gray-500">Essential</span>
-                  </div>
-                </Link>
-              </div>
-              <Link
-                href="/resources"
-                className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium"
-              >
-                View All Resources
-                <span>→</span>
-              </Link>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-400 mb-2">25+</div>
+              <div className="text-gray-300">Video Tutorials</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-yellow-400 mb-2">15k+</div>
+              <div className="text-gray-300">Total Downloads</div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Trending Topics */}
-      <section className="py-16 bg-gray-50">
+      {/* Featured Content */}
+      <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Trending Topics
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Featured Resources
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Explore the most popular topics and discussions in AI and technology
+            <p className="text-xl text-gray-300">
+              Our most popular and comprehensive guides for AI implementation
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {featuredContent.map((item) => {
+              const IconComponent = item.icon;
+              return (
+                <div key={item.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-colors group">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="text-right">
+                      <div className="flex items-center text-yellow-400 mb-1">
+                        <Star className="w-4 h-4 fill-current mr-1" />
+                        <span className="text-sm font-medium">{item.rating}</span>
+                      </div>
+                      <div className="flex items-center text-gray-400 text-xs">
+                        <Users className="w-3 h-3 mr-1" />
+                        {item.downloads}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <span className="inline-block px-3 py-1 bg-white/10 text-sm font-medium text-white rounded-full mb-3">
+                      {item.category}
+                    </span>
+                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-300 mb-4 leading-relaxed">
+                      {item.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {item.tags.map((tag) => (
+                        <span key={tag} className="px-2 py-1 bg-white/5 text-xs text-gray-300 rounded">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-gray-400 text-sm">
+                      <Clock className="w-4 h-4 mr-2" />
+                      {item.readTime}
+                    </div>
+                    <Link
+                      to={item.link}
+                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform"
+                    >
+                      Explore Resource
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* All Content Grid */}
+      <div className="py-20 bg-black/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Complete Resource Library
+            </h2>
+            <p className="text-xl text-gray-300">
+              Browse our entire collection of AI resources and guides
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <Link href="/blog?topic=ai-automation" className="group">
-              <div className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow border border-gray-100">
-                <div className="text-3xl mb-3">🤖</div>
-                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                  AI Automation
-                </h3>
-                <p className="text-gray-600 text-sm">15 articles</p>
-              </div>
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {allContent.map((item) => {
+              const IconComponent = item.icon;
+              return (
+                <div key={item.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-colors group">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
+                      <IconComponent className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-right">
+                      <div className="flex items-center text-yellow-400 mb-1">
+                        <Star className="w-3 h-3 fill-current mr-1" />
+                        <span className="text-xs font-medium">{item.rating}</span>
+                      </div>
+                      <div className="flex items-center text-gray-400 text-xs">
+                        <Users className="w-3 h-3 mr-1" />
+                        {item.downloads}
+                      </div>
+                    </div>
+                  </div>
 
-            <Link href="/blog?topic=cost-optimization" className="group">
-              <div className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow border border-gray-100">
-                <div className="text-3xl mb-3">⚡</div>
-                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
-                  Cost Optimization
-                </h3>
-                <p className="text-gray-600 text-sm">8 articles</p>
-              </div>
-            </Link>
+                  <div className="mb-4">
+                    <span className="inline-block px-2 py-1 bg-white/10 text-xs font-medium text-white rounded-full mb-2">
+                      {item.category}
+                    </span>
+                    <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-300 text-sm mb-3 line-clamp-2">
+                      {item.description}
+                    </p>
+                    <div className="flex flex-wrap gap-1 mb-3">
+                      {item.tags.slice(0, 3).map((tag) => (
+                        <span key={tag} className="px-2 py-1 bg-white/5 text-xs text-gray-400 rounded">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
 
-            <Link href="/blog?topic=healthcare-ai" className="group">
-              <div className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow border border-gray-100">
-                <div className="text-3xl mb-3">🏥</div>
-                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
-                  Healthcare AI
-                </h3>
-                <p className="text-gray-600 text-sm">12 articles</p>
-              </div>
-            </Link>
-
-            <Link href="/blog?topic=enterprise-ai" className="group">
-              <div className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow border border-gray-100">
-                <div className="text-3xl mb-3">🏢</div>
-                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                  Enterprise AI
-                </h3>
-                <p className="text-gray-600 text-sm">20 articles</p>
-              </div>
-            </Link>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-gray-400 text-xs">
+                      <Clock className="w-3 h-3 mr-1" />
+                      {item.readTime}
+                    </div>
+                    <Link
+                      to={item.link}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium"
+                    >
+                      Explore
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Newsletter Signup */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+      {/* CTA Section */}
+      <div className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Stay Updated with Latest Content
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
           </h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Get weekly updates on new articles, case studies, and resources delivered 
-            straight to your inbox. Join 10,000+ professionals.
+          <p className="text-xl text-gray-300 mb-8">
+            Get access to our complete resource library and start your AI transformation journey today.
           </p>
-          <div className="max-w-md mx-auto flex gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Subscribe
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform">
+              Download Complete Collection
+              <Download className="w-5 h-5 ml-2 inline" />
+            </button>
+            <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+              Schedule Consultation
             </button>
           </div>
-          <p className="text-sm opacity-75 mt-4">
-            No spam. Unsubscribe anytime. Read our privacy policy.
-          </p>
         </div>
-      </section>
+      </div>
     </div>
   );
-}
+};
+
+export default ContentShowcasePage;

@@ -1,306 +1,178 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
+  id: string;
   title: string;
   description: string;
-  href: string;
-  icon: string;
+  type: 'blog' | 'case-study' | 'resource' | 'webinar';
+  url: string;
+  image?: string;
+  publishedDate: string;
   readTime?: string;
-  type: 'article' | 'case-study' | 'resource';
-  badge?: string;
-}
-
-interface EnhancedContentPromotionBannerProps {
-  variant?: 'default' | 'featured' | 'trending' | 'latest';
-  maxItems?: number;
-  title?: string;
-  subtitle?: string;
-  showBadges?: boolean;
-  className?: string;
+  featured?: boolean;
 }
 
 const contentItems: ContentItem[] = [
   {
-    title: 'AI 2026 Predictions: The Next Frontier',
-    description: 'Expert insights and predictions for the most significant AI developments expected to reshape technology and society in 2026.',
-    href: '/blog/ai-2026-predictions',
-    icon: '🔮',
-    readTime: '22 min read',
-    type: 'article',
-    badge: 'New'
+    id: 'ai-transformation-2025',
+    title: 'AI Transformation in 2025: The Complete Guide',
+    description: 'Discover the latest AI transformation trends, strategies, and implementation guides for 2025.',
+    type: 'blog',
+    url: '/blog/ai-transformation-2025',
+    publishedDate: '2025-01-15',
+    readTime: '10 min read',
+    featured: true
   },
   {
-    title: 'AI Productivity Automation 2025',
-    description: 'Achieve 300% productivity boost with AI-powered automation. Complete guide to implementing intelligent workflows and process optimization.',
-    href: '/blog/ai-productivity-automation-2025',
-    icon: '⚡',
-    readTime: '25 min read',
-    type: 'article',
-    badge: 'Trending'
+    id: 'edge-computing-future',
+    title: 'Edge Computing: The Future of Distributed Intelligence',
+    description: 'Explore the revolutionary potential of edge computing in 2025 and how it\'s transforming industries.',
+    type: 'blog',
+    url: '/blog/edge-computing-future',
+    publishedDate: '2025-01-12',
+    readTime: '8 min read',
+    featured: true
   },
   {
-    title: 'AI Transformation: 300% Revenue Growth',
-    description: 'How a Fortune 500 retail company achieved unprecedented growth through comprehensive AI transformation and operational automation.',
-    href: '/case-studies/ai-transformation-retail-giant-2025',
-    icon: '🏪',
-    readTime: '15 min read',
+    id: 'ai-automation-manufacturing',
+    title: 'AI Automation Success: 40% Efficiency Gain',
+    description: 'Real case study showing how AI automation delivered 40% efficiency gains in manufacturing.',
     type: 'case-study',
-    badge: 'Featured'
-  },
-  {
-    title: 'AI Implementation Master Guide 2025',
-    description: 'Complete 200+ page playbook with proven strategies, frameworks, checklists, and templates for successful AI transformation.',
-    href: '/resources/ai-implementation-master-guide-2025',
-    icon: '📚',
-    readTime: '200+ pages',
-    type: 'resource',
-    badge: 'Free'
-  },
-  {
-    title: 'AI 2025: Year in Review',
-    description: 'Comprehensive analysis of the most significant AI developments, breakthroughs, and industry transformations that shaped 2025.',
-    href: '/blog/ai-2025-year-in-review',
-    icon: '📊',
-    readTime: '18 min read',
-    type: 'article',
-    badge: 'Popular'
-  },
-  {
-    title: 'AI Multimodal Revolution',
-    description: 'Beyond text to vision, audio, and code - how multimodal AI is transforming human-computer interaction and creative industries.',
-    href: '/blog/ai-multimodal-revolution-2025',
-    icon: '🎯',
-    readTime: '22 min read',
-    type: 'article',
-    badge: 'New'
-  },
-  {
-    title: 'Manufacturing AI Automation Success',
-    description: 'How a Fortune 500 manufacturer achieved 40% cost reduction and 60% faster processing times through AI automation.',
-    href: '/case-studies/ai-automation-manufacturing-2025',
-    icon: '🏭',
+    url: '/case-studies/ai-automation-manufacturing',
+    publishedDate: '2025-01-10',
     readTime: '12 min read',
-    type: 'case-study',
-    badge: 'Success'
+    featured: true
   },
   {
-    title: 'AI Security Hardening Checklist',
-    description: 'Essential security measures and best practices for AI systems. Comprehensive checklist for protecting your AI infrastructure.',
-    href: '/resources/ai-security-hardening-checklist',
-    icon: '🛡️',
-    readTime: 'Free Download',
+    id: 'ai-implementation-guide',
+    title: 'Complete AI Implementation Guide 2025',
+    description: 'Master AI implementation with our comprehensive step-by-step guide and best practices.',
     type: 'resource',
-    badge: 'Essential'
+    url: '/resources/ai-implementation-guide',
+    publishedDate: '2025-01-08',
+    readTime: '25 min read',
+    featured: true
   }
 ];
 
-const getVariantStyles = (variant: string) => {
-  switch (variant) {
-    case 'featured':
-      return {
-        background: 'bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600',
-        badge: 'bg-white bg-opacity-20',
-        badgeText: 'text-white',
-        title: 'text-white',
-        subtitle: 'text-white opacity-90',
-        card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
-        cardHover: 'hover:bg-opacity-20',
-        text: 'text-white',
-        textSecondary: 'text-white opacity-90'
-      };
-    case 'trending':
-      return {
-        background: 'bg-gradient-to-r from-orange-500 to-red-500',
-        badge: 'bg-white bg-opacity-20',
-        badgeText: 'text-white',
-        title: 'text-white',
-        subtitle: 'text-white opacity-90',
-        card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
-        cardHover: 'hover:bg-opacity-20',
-        text: 'text-white',
-        textSecondary: 'text-white opacity-90'
-      };
-    case 'latest':
-      return {
-        background: 'bg-gradient-to-r from-green-500 to-blue-500',
-        badge: 'bg-white bg-opacity-20',
-        badgeText: 'text-white',
-        title: 'text-white',
-        subtitle: 'text-white opacity-90',
-        card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
-        cardHover: 'hover:bg-opacity-20',
-        text: 'text-white',
-        textSecondary: 'text-white opacity-90'
-      };
-    default:
-      return {
-        background: 'bg-gradient-to-r from-blue-600 to-indigo-600',
-        badge: 'bg-white bg-opacity-20',
-        badgeText: 'text-white',
-        title: 'text-white',
-        subtitle: 'text-white opacity-90',
-        card: 'bg-white bg-opacity-10 backdrop-blur-sm border-white border-opacity-20',
-        cardHover: 'hover:bg-opacity-20',
-        text: 'text-white',
-        textSecondary: 'text-white opacity-90'
-      };
-  }
+const typeColors = {
+  blog: 'bg-blue-100 text-blue-800 border-blue-200',
+  'case-study': 'bg-green-100 text-green-800 border-green-200',
+  resource: 'bg-purple-100 text-purple-800 border-purple-200',
+  webinar: 'bg-orange-100 text-orange-800 border-orange-200'
 };
 
-const getTypeColor = (type: string) => {
-  switch (type) {
-    case 'article':
-      return 'text-blue-400';
-    case 'case-study':
-      return 'text-green-400';
-    case 'resource':
-      return 'text-purple-400';
-    default:
-      return 'text-gray-400';
-  }
+const typeIcons = {
+  blog: '📝',
+  'case-study': '📊',
+  resource: '📚',
+  webinar: '🎥'
 };
 
-const getBadgeColor = (badge: string) => {
-  switch (badge) {
-    case 'New':
-      return 'bg-green-500 text-white';
-    case 'Trending':
-      return 'bg-orange-500 text-white';
-    case 'Featured':
-      return 'bg-purple-500 text-white';
-    case 'Free':
-      return 'bg-blue-500 text-white';
-    case 'Popular':
-      return 'bg-pink-500 text-white';
-    case 'Success':
-      return 'bg-green-600 text-white';
-    case 'Essential':
-      return 'bg-red-500 text-white';
-    default:
-      return 'bg-gray-500 text-white';
-  }
-};
+export default function EnhancedContentPromotionBanner() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
-export default function EnhancedContentPromotionBanner({
-  variant = 'default',
-  maxItems = 4,
-  title,
-  subtitle,
-  showBadges = true,
-  className = ''
-}: EnhancedContentPromotionBannerProps) {
-  const styles = getVariantStyles(variant);
-  const displayItems = contentItems.slice(0, maxItems);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
+    }, 5000);
 
-  const getDefaultTitle = () => {
-    switch (variant) {
-      case 'featured':
-        return '🚀 Featured AI Content';
-      case 'trending':
-        return '🔥 Trending Now';
-      case 'latest':
-        return '✨ Latest Content';
-      default:
-        return '📚 AI Insights & Resources';
-    }
-  };
+    return () => clearInterval(interval);
+  }, []);
 
-  const getDefaultSubtitle = () => {
-    switch (variant) {
-      case 'featured':
-        return 'Discover our most popular and impactful AI content, case studies, and resources.';
-      case 'trending':
-        return 'The most read and shared AI content this week. Stay ahead with trending insights.';
-      case 'latest':
-        return 'Fresh AI content, case studies, and resources published this week.';
-      default:
-        return 'Explore our comprehensive collection of AI insights, case studies, and practical resources.';
-    }
-  };
+  const currentItem = contentItems[currentIndex];
+
+  if (!isVisible) return null;
 
   return (
-    <section className={`py-20 ${styles.background} text-white relative overflow-hidden ${className}`}>
-      <div className="absolute inset-0 bg-black opacity-10"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">
-              {variant === 'featured' && '✨ FEATURED'}
-              {variant === 'trending' && '🔥 TRENDING'}
-              {variant === 'latest' && '📅 JUST PUBLISHED'}
-              {variant === 'default' && '📚 CONTENT SHOWCASE'}
-            </span>
+    <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12"></div>
+      </div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 py-6">
+        <div className="flex items-center justify-between">
+          {/* Content */}
+          <div className="flex-1 pr-6">
+            <div className="flex items-center space-x-3 mb-2">
+              <span className="text-2xl">✨</span>
+              <span className="text-sm font-semibold uppercase tracking-wide opacity-90">
+                New Content Available
+              </span>
+            </div>
+            
+            <h3 className="text-xl font-bold mb-2 line-clamp-2">
+              {currentItem.title}
+            </h3>
+            
+            <p className="text-blue-100 text-sm mb-3 line-clamp-2">
+              {currentItem.description}
+            </p>
+            
+            <div className="flex items-center space-x-4 text-sm">
+              <div className="flex items-center space-x-2">
+                <span className="text-lg">{typeIcons[currentItem.type]}</span>
+                <span className={`px-2 py-1 rounded-full text-xs font-medium border ${typeColors[currentItem.type]}`}>
+                  {currentItem.type.replace('-', ' ').toUpperCase()}
+                </span>
+              </div>
+              <span className="opacity-75">{currentItem.readTime}</span>
+            </div>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            {title || getDefaultTitle()}
-          </h2>
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            {subtitle || getDefaultSubtitle()}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
             <Link
-              href="/blog"
-              className="bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+              href={currentItem.url}
+              className="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center whitespace-nowrap"
             >
-              📚 Read Latest Articles
+              Read Now
             </Link>
             <Link
-              href="/resources"
-              className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
+              href="/content-showcase"
+              className="border border-white text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center whitespace-nowrap"
             >
-              📋 Download Free Resources
+              View All
             </Link>
           </div>
+
+          {/* Close Button */}
+          <button
+            onClick={() => setIsVisible(false)}
+            className="ml-4 text-white hover:text-blue-200 transition-colors"
+            aria-label="Close banner"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {displayItems.map((item, index) => (
-            <Link key={index} href={item.href} className="group">
-              <div className={`${styles.card} ${styles.cardHover} p-6 rounded-xl transition-all duration-300 border`}>
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="text-4xl group-hover:scale-110 transition-transform">
-                    {item.icon}
-                  </div>
-                  {showBadges && item.badge && (
-                    <div className={`${getBadgeColor(item.badge)} px-2 py-1 rounded-full text-xs font-medium`}>
-                      {item.badge}
-                    </div>
-                  )}
-                </div>
-                <h3 className={`text-lg font-semibold mb-2 ${styles.text}`}>
-                  {item.title}
-                </h3>
-                <p className={`text-sm mb-3 ${styles.textSecondary}`}>
-                  {item.description}
-                </p>
-                <div className="flex items-center justify-between text-xs opacity-75">
-                  <span className={`${getTypeColor(item.type)} font-medium`}>
-                    {item.type === 'article' && '📝 Article'}
-                    {item.type === 'case-study' && '📊 Case Study'}
-                    {item.type === 'resource' && '📋 Resource'}
-                  </span>
-                  <span className={styles.textSecondary}>
-                    {item.readTime}
-                  </span>
-                </div>
-              </div>
-            </Link>
+        {/* Progress Indicators */}
+        <div className="flex space-x-2 mt-4">
+          {contentItems.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                index === currentIndex ? 'bg-white' : 'bg-white/50'
+              }`}
+              aria-label={`Go to content ${index + 1}`}
+            />
           ))}
         </div>
-
-        {/* View All Button */}
-        <div className="text-center mt-12">
-          <Link
-            href="/content-showcase"
-            className="inline-flex items-center gap-2 bg-white bg-opacity-20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-30 transition-colors text-lg"
-          >
-            View All Content
-            <span>→</span>
-          </Link>
-        </div>
       </div>
-    </section>
+
+      {/* Floating Elements */}
+      <div className="absolute top-4 right-4 opacity-20">
+        <div className="w-16 h-16 border-2 border-white rounded-full animate-pulse"></div>
+      </div>
+      <div className="absolute bottom-4 left-4 opacity-20">
+        <div className="w-8 h-8 border-2 border-white rounded-full animate-bounce"></div>
+      </div>
+    </div>
   );
 }

@@ -190,54 +190,6 @@ export default function MarketPricing() {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-black text-white">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-          >
-            Market Pricing Analysis
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
-          >
-            Comprehensive analysis of market positioning, competitive pricing, and strategic advantages 
-            across AI consciousness, quantum computing, and autonomous systems.
-          </motion.p>
-          
-          {/* Market Selector */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-wrap gap-3 justify-center mb-8"
-          >
-            {markets.map((market) => (
-              <button
-                key={market.id}
-                onClick={() => setSelectedMarket(market.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  selectedMarket === market.id
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                }`}
-              >
-                {market.icon}
-                {market.name}
-              </button>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-=======
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Market Pricing & Competitor References | Zion Tech Group</title>

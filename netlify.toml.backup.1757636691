@@ -1,0 +1,177 @@
+# Netlify build configuration (unified)
+[build]
+  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
+  publish = ".next"
+  functions = "netlify/functions"
+  command_timeout = "30m"
+
+[build.environment]
+<<<<<<< HEAD
+  NODE_VERSION = "22.12.0"
+  NODE_OPTIONS = "--max-old-space-size=6144"
+  SKIP_TYPE_CHECK = "true"
+  NPM_CONFIG_PRODUCTION = "false"
+  NPM_FLAGS = "--include=dev --include=optional"
+  NPM_CONFIG_OPTIONAL = "true"
+  NETLIFY_NEXT_PLUGIN_SKIP = "false"
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
+  # Skip Sharp postinstall to avoid NAPI issues
+  SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
+  SHARP_DIST_BASE_URL = "https://github.com/lovell/sharp-libvips/releases/download/v1.2.0/"
+  # Ensure proper build environment
+  NODE_ENV = "production"
+  CI = "true"
+  # Disable linting during build to prevent failures
+  ESLINT_NO_DEV_ERRORS = "true"
+
+# Security headers
+=======
+  NODE_OPTIONS = "--no-deprecation --max-old-space-size=6144 --no-warnings"
+  NPM_FLAGS = "--prefer-offline --legacy-peer-deps"
+  NEXT_PUBLIC_APP_ENV = "production"
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
+  CI = "true"
+  SKIP_TYPE_CHECK = "true"
+  
+  # Performance optimizations for large builds (with Netlify plugin)
+  NEXT_DISABLE_CSS_INLINE = "true"
+  NEXT_DISABLE_SOURCE_MAPS = "true"
+  GENERATE_SOURCEMAP = "false"
+  NEXT_BUILD_WORKERS = "1"
+  NEXT_PRIVATE_BUILD_CACHE = "false"
+  NEXT_PRIVATE_STATIC_OPTIMIZATION = "false"
+  
+  # CRITICAL FIX: Completely disable build trace collection to prevent hanging
+  NEXT_DISABLE_TRACE_COLLECTION = "true"
+  NEXT_PRIVATE_OUTPUT_TRACE = "false"
+  # NEXT_PRIVATE_OUTPUT_FILE_TRACING = "false" # Allowing Next.js default / plugin to manage this
+  UV_THREADPOOL_SIZE = "4"
+  NODE_NO_WARNINGS = "1"
+  NEXT_PRIVATE_MINIMIZE_BUILD_TIME = "true"
+  
+  # Configure secrets scanning to omit legitimate public environment variables
+  # NEXT_PUBLIC_* variables are meant to be public and embedded in client bundles
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,SENTRY_DSN"
+  
+
+# Skip Husky for CI builds
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+# Deploy contexts for different environments
+
+# Headers for security and performance
+>>>>>>> origin/backup-main-20250823-224612
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    X-Permitted-Cross-Domain-Policies = "none"
+    Origin-Agent-Cluster = "?1"
+
+<<<<<<< HEAD
+# Static assets caching
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/logos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[scheduled.functions]]
+  name = "health"
+  schedule = "*/5 * * * *"
+
+[context.production.environment]
+  NODE_ENV = "production"
+  NPM_CONFIG_PRODUCTION = "false"
+
+[context.deploy-preview]
+  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
+
+[context.branch-deploy]
+  command = "npm ci --no-audit --no-fund --include=optional && npm run build"
+
+=======
+>>>>>>> d84246c56c6de5f940a3c4ea6b197e062557aa6e
+[[redirects]]
+  from = "/ai-financial-planning-platform"
+  to = "/services/ai-financial-planning-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-powered-decision-engine"
+  to = "/services/ai-powered-decision-engine/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-content-automation-platform"
+  to = "/services/intelligent-content-automation-platform/"
+  status = 301
+
+<<<<<<< HEAD
+[[redirects]]
+  from = "/intelligent-hr-analytics-platform"
+  to = "/services/intelligent-hr-analytics-platform/"
+  status = 301
+=======
+[functions.healthCheckCron]
+    schedule = "*/5 * * * *"
+>>>>>>> origin/backup-main-20250823-224612
+
+[[redirects]]
+  from = "/smart-crm-intelligence-suite"
+  to = "/services/smart-crm-intelligence-suite/"
+  status = 301
+
+[[redirects]]
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

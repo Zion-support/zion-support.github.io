@@ -41,7 +41,7 @@ class Course(db.Model):
     enrollments = db.relationship('Enrollment', back_populates='course', cascade="all, delete-orphan")
     certificates = db.relationship('Certificate', backref='course', lazy=True)
     analytics_events = db.relationship('AnalyticsEvent', backref='course', lazy='dynamic', cascade="all, delete-orphan")
-    feedback_submissions = db.relationship('FeedbackSubmission', backref='course', lazy='dynamic', cascade="all, delete-orphan")
+    # Feedback submissions are linked via generic content_type/content_id on FeedbackSubmission
 
     def __repr__(self):
         return f'<Course {self.title}>'
@@ -57,7 +57,7 @@ class Lesson(db.Model):
 
     completions = db.relationship('LessonCompletion', backref='lesson', lazy='dynamic', cascade="all, delete-orphan")
     analytics_events = db.relationship('AnalyticsEvent', backref='lesson', lazy='dynamic', cascade="all, delete-orphan")
-    feedback_submissions = db.relationship('FeedbackSubmission', backref='lesson', lazy='dynamic', cascade="all, delete-orphan")
+    # Feedback submissions are linked via generic content_type/content_id on FeedbackSubmission
 
     def __repr__(self):
         return f'<Lesson {self.title} - Course {self.course_id}>'
@@ -168,9 +168,7 @@ class FeedbackSubmission(db.Model):
     admin_response = db.Column(db.Text, nullable=True)
     resolved_at = db.Column(db.DateTime, nullable=True)
     
-    # Relationships
-    course = db.relationship('Course', backref='feedback_submissions', lazy='dynamic')
-    lesson = db.relationship('Lesson', backref='feedback_submissions', lazy='dynamic')
+    # No direct FK relationships; linked generically by content_type/content_id
     
     def __repr__(self):
         return f'<FeedbackSubmission {self.feedback_type} - {self.title}>'
