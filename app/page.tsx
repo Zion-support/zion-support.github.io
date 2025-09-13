@@ -49,6 +49,11 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
 import ContentDiscoveryWidget from '../components/ContentDiscoveryWidget';
 
+// Import new AI 2026 promotional banners
+import AI2026FuturePredictionsUltimatePromotionBanner from '../components/AI2026FuturePredictionsUltimatePromotionBanner';
+import AI2026QuantumBreakthroughPromotionBanner from '../components/AI2026QuantumBreakthroughPromotionBanner';
+import AI2026NeuralInterfacesPromotionBanner from '../components/AI2026NeuralInterfacesPromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -60,6 +65,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW: AI 2026 FUTURE PREDICTIONS ULTIMATE PROMOTION BANNER */}
+        <AI2026FuturePredictionsUltimatePromotionBanner />
+        
+        {/* NEW: AI 2026 QUANTUM BREAKTHROUGH PROMOTION BANNER */}
+        <AI2026QuantumBreakthroughPromotionBanner />
+        
+        {/* NEW: AI 2026 NEURAL INTERFACES PROMOTION BANNER */}
+        <AI2026NeuralInterfacesPromotionBanner />
+        
         {/* NEW: REVOLUTIONARY CONTENT BANNER */}
         <RevolutionaryContentBanner />
         
