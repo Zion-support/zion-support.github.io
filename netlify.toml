@@ -14,8 +14,7 @@
   NODE_OPTIONS = "--max-old-space-size=4096"
   VITE_NODE_ENV = "production"
   SECRETS_SCAN_OMIT_KEYS = "VITE_CLOUDINARY_CLOUD_NAME"
-  YARN_CACHE_FOLDER = ".yarn-cache"
-  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
+  PNPM_CACHE_FOLDER = ".pnpm-cache"
 
 # Long-term caching for static assets
 [[headers]]
