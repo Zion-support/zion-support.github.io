@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Batch merge script for PRs (processes 100 at a time)
+# Ultimate script to merge all open PRs and resolve conflicts
 set -e
 
-echo "🚀 Starting batch merge of PRs..."
+echo "🚀 Starting ultimate merge of all open PRs..."
 echo "⏰ Started at: $(date)"
 
 # Create backup
@@ -23,13 +23,14 @@ SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
 SKIPPED_BRANCHES=0
 CONFLICT_RESOLUTIONS=0
+TOTAL_BRANCHES=0
 
-# Get first 100 branches
-echo "📊 Getting first 100 branches to process..."
-BATCH_BRANCHES=$(git branch -r | grep -E "(cursor|pr)" | sed 's/origin\///' | head -100)
-TOTAL_BRANCHES=$(echo "$BATCH_BRANCHES" | wc -l)
+# Get all branches that need to be merged
+echo "📊 Getting all branches to merge..."
+ALL_BRANCHES=$(git branch -r | grep -E "(cursor|pr)" | sed 's/origin\///' | sort)
+TOTAL_BRANCHES=$(echo "$ALL_BRANCHES" | wc -l)
 
-echo "📊 Processing $TOTAL_BRANCHES branches in this batch..."
+echo "📊 Total branches to process: $TOTAL_BRANCHES"
 
 # Function to resolve conflicts intelligently
 resolve_conflicts() {
@@ -156,7 +157,7 @@ echo "🔄 Starting branch processing..."
 echo "---"
 
 CURRENT=0
-for branch in $BATCH_BRANCHES; do
+for branch in $ALL_BRANCHES; do
     CURRENT=$((CURRENT + 1))
     echo "📋 [$CURRENT/$TOTAL_BRANCHES] Processing branch: $branch"
     
@@ -178,8 +179,8 @@ for branch in $BATCH_BRANCHES; do
     echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
     echo "---"
     
-    # Push changes every 25 branches
-    if [ $((SUCCESSFUL_MERGES % 25)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
+    # Push changes periodically to avoid losing work
+    if [ $((SUCCESSFUL_MERGES % 50)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
         echo "💾 Pushing progress to remote..."
         git push origin main
     fi
@@ -191,7 +192,7 @@ git push origin main
 
 # Summary
 echo ""
-echo "🎉 Batch merge process completed!"
+echo "🎉 Ultimate merge process completed!"
 echo "📊 Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
@@ -206,6 +207,14 @@ echo ""
 echo "📝 Recent commits:"
 git log --oneline -20
 
+# Cleanup recommendations
 echo ""
-echo "🎯 First batch of PRs processed successfully!"
-echo "💡 To process more PRs, run this script again or use the ultimate merge script."
+echo "🧹 Next steps:"
+echo "   1. Review the merged changes: git log --oneline -50"
+echo "   2. Test the application thoroughly"
+echo "   3. Check for any remaining conflicts: git status"
+echo "   4. Delete the backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
+echo "   5. Consider cleaning up old feature branches"
+
+echo ""
+echo "🎯 All open PRs have been processed!"
