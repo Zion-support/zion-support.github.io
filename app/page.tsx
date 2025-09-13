@@ -32,6 +32,14 @@ import NewContentPromotionBanner2026 from '../components/NewContentPromotionBann
 // New 2026 promotional components
 import UltimateContentRevolution2026PromotionBanner from '../components/UltimateContentRevolution2026PromotionBanner';
 import AIInnovationShowcase2026PromotionBanner from '../components/AIInnovationShowcase2026PromotionBanner';
+import RevolutionaryTechTrends2026PromotionBanner from '../components/RevolutionaryTechTrends2026PromotionBanner';
+import UltimateBusinessTransformation2026PromotionBanner from '../components/UltimateBusinessTransformation2026PromotionBanner';
+import InteractiveContentDiscovery2026PromotionBanner from '../components/InteractiveContentDiscovery2026PromotionBanner';
+
+// New 2026 content components
+import RevolutionaryTechTrends2026 from '../components/RevolutionaryTechTrends2026';
+import UltimateBusinessTransformation2026 from '../components/UltimateBusinessTransformation2026';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 
 // New 2025 content promotion components
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
@@ -174,6 +182,15 @@ export default function HomePage() {
 
         {/* AI INNOVATION SHOWCASE 2026 PROMOTION BANNER */}
         <AIInnovationShowcase2026PromotionBanner />
+
+        {/* REVOLUTIONARY TECH TRENDS 2026 PROMOTION BANNER */}
+        <RevolutionaryTechTrends2026PromotionBanner />
+
+        {/* ULTIMATE BUSINESS TRANSFORMATION 2026 PROMOTION BANNER */}
+        <UltimateBusinessTransformation2026PromotionBanner />
+
+        {/* INTERACTIVE CONTENT DISCOVERY 2026 PROMOTION BANNER */}
+        <InteractiveContentDiscovery2026PromotionBanner />
 
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
@@ -474,6 +491,15 @@ export default function HomePage() {
         
         {/* NEW CONTENT SHOWCASE 2026 */}
         <NewContentShowcase2026 />
+        
+        {/* REVOLUTIONARY TECH TRENDS 2026 */}
+        <RevolutionaryTechTrends2026 />
+        
+        {/* ULTIMATE BUSINESS TRANSFORMATION 2026 */}
+        <UltimateBusinessTransformation2026 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
+        <InteractiveContentDiscovery2026 />
         
         {/* NEURAL CONSENSUS 2026 SHOWCASE */}
         <NeuralConsensus2026Showcase />
