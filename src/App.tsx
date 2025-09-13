@@ -346,15 +346,19 @@ function App() {
               <Route path="/blog/quantum-computing-business-applications-2025" element={<BlogPostAIAutomation2025 />} />
               <Route path="/blog/ai-2026-neural-computing-revolution" element={<InteractiveContentDiscovery2026Page />} />
               <Route path="/blog/quantum-ai-autonomous-systems-2026" element={<InteractiveContentDiscovery2026Page />} />
+              <Route path="/blog/ai-2026-enterprise-autonomous-operations" element={<BlogPostAIAutomation2025 />} />
+              <Route path="/blog/quantum-ai-hybrid-systems-2026" element={<BlogPostAIAutomation2025 />} />
               
               {/* New case study routes */}
               <Route path="/case-studies/healthcare-ai-transformation-success" element={<CaseStudyHealthcareAI />} />
               <Route path="/case-studies/enterprise-quantum-ai-transformation-2026" element={<InteractiveContentDiscovery2026Page />} />
+              <Route path="/case-studies/global-manufacturing-quantum-ai-transformation" element={<CaseStudyHealthcareAI />} />
               
               {/* New resource routes */}
               <Route path="/resources/ai-implementation-checklist-2025" element={<ResourceImplementationChecklist />} />
               <Route path="/resources/ai-roi-calculator-guide-2025" element={<ResourceROICalculator />} />
               <Route path="/resources/quantum-ai-implementation-master-guide-2026" element={<InteractiveContentDiscovery2026Page />} />
+              <Route path="/resources/quantum-ai-implementation-roadmap-2026" element={<ResourceImplementationChecklist />} />
               
               {/* Content showcase hub */}
               <Route path="/content-showcase" element={<ContentShowcaseHub />} />
