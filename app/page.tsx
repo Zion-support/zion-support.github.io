@@ -19,6 +19,11 @@ const UltimateAIAssistant2026 = lazy(() => import('../components/UltimateAIAssis
 const AdvancedAnalyticsDashboard2026 = lazy(() => import('../components/AdvancedAnalyticsDashboard2026'));
 const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../components/RevolutionaryContentRecommendationEngine2026'));
 
+// New promotional components
+import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import AdvancedContentDiscoveryWidget from '../components/AdvancedContentDiscoveryWidget';
+import AdvancedNewsletterSignup from '../components/AdvancedNewsletterSignup';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -30,6 +35,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
+        <AI2025UltimateBreakthroughPromotionBanner />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
         
@@ -138,6 +146,20 @@ export default function HomePage() {
                 <ContentRecommendationWidget2026 />
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Advanced Content Discovery Widget */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <AdvancedContentDiscoveryWidget />
+          </div>
+        </section>
+
+        {/* Newsletter Signup */}
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <AdvancedNewsletterSignup />
           </div>
         </section>
         
