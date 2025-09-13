@@ -1,302 +1,337 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Clock, User, Tag, TrendingUp, Star } from 'lucide-react';
-import { Button } from './ui/button';
+import { ArrowRight, Clock, User, TrendingUp, Award, BookOpen, Play, Download } from 'lucide-react';
 import { BLOG_POSTS } from '../data/blog-posts';
+import { CASE_STUDIES } from '../data/case-studies';
 
-export function FeaturedContentSection() {
-  const featuredPosts = BLOG_POSTS.filter(post => post.featured);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
+export const FeaturedContentSection = () => {
+  const featuredPosts = BLOG_POSTS.filter(post => post.featured).slice(0, 3);
+  const featuredCaseStudies = CASE_STUDIES.slice(0, 3);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-slate-dark to-zion-blue">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <motion.div variants={itemVariants} className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 text-blue-700 dark:text-blue-300 text-sm font-medium mb-6">
-            <TrendingUp className="w-4 h-4 mr-2" />
-            Featured Content
-          </motion.div>
-          
-          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-            Latest Insights &{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Expert Knowledge
-            </span>
-          </motion.h2>
-          
-          <motion.p variants={itemVariants} className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            Stay ahead with our latest blog posts, expert insights, and cutting-edge technology trends
-          </motion.p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Featured Content & Resources
+          </h2>
+          <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto">
+            Stay ahead with our latest insights, case studies, and industry reports. 
+            Discover how leading companies are transforming their business with our solutions.
+          </p>
         </motion.div>
 
+        {/* Featured Blog Posts */}
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+          className="mb-16"
         >
-          {featuredPosts.map((post, index) => (
-            <motion.article
-              key={post.id}
-              variants={itemVariants}
-              className="group bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-700"
+          <div className="flex items-center justify-between mb-8">
+            <h3 className="text-2xl font-bold text-white flex items-center gap-3">
+              <BookOpen className="w-6 h-6 text-zion-cyan" />
+              Latest Insights & Trends
+            </h3>
+            <a 
+              href="/blog" 
+              className="text-zion-cyan hover:text-white transition-colors flex items-center gap-2"
             >
-              {/* Image */}
-              <div className="relative overflow-hidden h-48">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white text-xs font-semibold rounded-full shadow-lg">
-                    Featured
-                  </span>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
+              View All Posts
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
 
-              {/* Content */}
-              <div className="p-6">
-                <div className="flex items-center space-x-4 text-sm text-slate-500 dark:text-slate-400 mb-4">
-                  <div className="flex items-center space-x-1">
-                    <User className="w-4 h-4" />
-                    <span>{post.author}</span>
+          <div className="grid md:grid-cols-3 gap-8">
+            {featuredPosts.map((post, index) => (
+              <motion.article
+                key={post.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group cursor-pointer"
+              >
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                  {/* Image */}
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-zion-cyan text-zion-blue-dark px-3 py-1 rounded-full text-sm font-semibold">
+                        Featured
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex items-center space-x-1">
-                    <Clock className="w-4 h-4" />
-                    <span>{post.readTime}</span>
-                  </div>
-                </div>
 
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                  {post.title}
-                </h3>
+                  {/* Content */}
+                  <div className="p-6">
+                    <div className="flex items-center gap-4 text-sm text-zion-cyan/80 mb-3">
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {post.readTime}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <User className="w-4 h-4" />
+                        {post.author}
+                      </div>
+                    </div>
 
-                <p className="text-slate-600 dark:text-slate-300 mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
+                    <h4 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                      {post.title}
+                    </h4>
+                    
+                    <p className="text-zion-cyan/80 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {post.tags.slice(0, 3).map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs rounded-full"
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {post.tags.slice(0, 2).map((tag, tagIndex) => (
+                        <span 
+                          key={tagIndex}
+                          className="bg-zion-cyan/10 text-zion-cyan px-2 py-1 rounded text-xs"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <a 
+                      href={`/blog/${post.id}`}
+                      className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors font-semibold"
                     >
-                      {tag}
-                    </span>
-                  ))}
+                      Read More
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                  </div>
                 </div>
-
-                <Button
-                  asChild
-                  variant="outline"
-                  className="w-full group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-300"
-                >
-                  <Link to={`/blog/${post.id}`} className="flex items-center justify-center space-x-2">
-                    <span>Read Article</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </Button>
-              </div>
-            </motion.article>
-          ))}
+              </motion.article>
+            ))}
+          </div>
         </motion.div>
 
-        {/* CTA Section */}
+        {/* Featured Case Studies */}
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center"
+          className="mb-16"
         >
-          <motion.div variants={itemVariants} className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 md:p-12 text-white">
-            <div className="max-w-3xl mx-auto">
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready to Transform Your Business?
-              </h3>
-              <p className="text-xl mb-8 opacity-90">
-                Discover our comprehensive range of AI and technology services designed to accelerate your digital transformation
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-white text-blue-600 hover:bg-slate-100 border-0 shadow-lg"
-                >
-                  <Link to="/services" className="flex items-center space-x-2">
-                    <span>Explore Services</span>
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-blue-600"
-                >
-                  <Link to="/blog" className="flex items-center space-x-2">
-                    <span>View All Articles</span>
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </Button>
-              </div>
+          <div className="flex items-center justify-between mb-8">
+            <h3 className="text-2xl font-bold text-white flex items-center gap-3">
+              <Award className="w-6 h-6 text-zion-cyan" />
+              Success Stories & Case Studies
+            </h3>
+            <a 
+              href="/case-studies" 
+              className="text-zion-cyan hover:text-white transition-colors flex items-center gap-2"
+            >
+              View All Cases
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {featuredCaseStudies.map((study, index) => (
+              <motion.div
+                key={study.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group cursor-pointer"
+              >
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                  {/* Image */}
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={study.image} 
+                      alt={study.title}
+                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Success Story
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <div className="flex items-center gap-4 text-sm text-zion-cyan/80 mb-3">
+                      <div className="flex items-center gap-1">
+                        <TrendingUp className="w-4 h-4" />
+                        {study.roi}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {study.duration}
+                      </div>
+                    </div>
+
+                    <h4 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                      {study.title}
+                    </h4>
+                    
+                    <p className="text-zion-cyan/80 mb-4 line-clamp-3">
+                      {study.challenge}
+                    </p>
+
+                    {/* Key Results */}
+                    <div className="space-y-2 mb-4">
+                      {study.results.slice(0, 2).map((result, resultIndex) => (
+                        <div key={resultIndex} className="flex items-center gap-2 text-sm text-green-400">
+                          <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                          {result}
+                        </div>
+                      ))}
+                    </div>
+
+                    <a 
+                      href={`/case-studies/${study.id}`}
+                      className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors font-semibold"
+                    >
+                      Read Full Case Study
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Resource Center CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-3xl p-8 border border-zion-cyan/20"
+        >
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Access Our Complete Resource Library
+            </h3>
+            <p className="text-zion-cyan/80 mb-6 max-w-2xl mx-auto">
+              Get instant access to whitepapers, guides, webinars, and exclusive content 
+              designed to accelerate your digital transformation journey.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/resources"
+                className="inline-flex items-center gap-2 bg-zion-cyan text-zion-blue-dark px-8 py-4 rounded-full font-semibold hover:bg-zion-cyan/90 transition-colors"
+              >
+                <Download className="w-5 h-5" />
+                Download Resources
+              </a>
+              <a 
+                href="/webinars"
+                className="inline-flex items-center gap-2 border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-full font-semibold hover:bg-zion-cyan/10 transition-colors"
+              >
+                <Play className="w-5 h-5" />
+                Watch Webinars
+              </a>
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
   );
-}
+};
 
-export function ContentShowcase() {
+export const ContentShowcase = () => {
+  const contentTypes = [
+    {
+      icon: BookOpen,
+      title: "Technical Guides",
+      description: "Comprehensive guides on AI, cloud, and security best practices",
+      count: "25+ Guides",
+      color: "text-blue-400"
+    },
+    {
+      icon: TrendingUp,
+      title: "Industry Reports",
+      description: "Latest market insights and technology trend analysis",
+      count: "12 Reports",
+      color: "text-green-400"
+    },
+    {
+      icon: Award,
+      title: "Case Studies",
+      description: "Real-world success stories from our client implementations",
+      count: "50+ Cases",
+      color: "text-purple-400"
+    },
+    {
+      icon: Play,
+      title: "Video Content",
+      description: "Webinars, tutorials, and product demonstrations",
+      count: "30+ Videos",
+      color: "text-orange-400"
+    }
+  ];
+
   return (
-    <section className="py-16 bg-slate-900">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div>
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-400 text-sm font-medium mb-6">
-              <Star className="w-4 h-4 mr-2" />
-              Premium Content
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Expert Insights &{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Cutting-Edge Solutions
-              </span>
-            </h2>
-            
-            <p className="text-xl text-slate-300 mb-8">
-              Access our comprehensive library of expert articles, technical guides, and industry insights to stay ahead of the technology curve.
-            </p>
+    <section className="py-16 bg-zion-slate-dark">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Comprehensive Content Library
+          </h2>
+          <p className="text-xl text-zion-cyan/80 max-w-2xl mx-auto">
+            Access our extensive collection of resources designed to help you succeed
+          </p>
+        </motion.div>
 
-            <div className="space-y-6 mb-8">
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <TrendingUp className="w-4 h-4 text-white" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {contentTypes.map((content, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="group cursor-pointer"
+            >
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 mb-4 ${content.color}`}>
+                  <content.icon className="w-8 h-8" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Latest Technology Trends</h3>
-                  <p className="text-slate-300">Stay updated with the latest developments in AI, quantum computing, and emerging technologies.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <User className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Expert Authors</h3>
-                  <p className="text-slate-300">Learn from industry experts and thought leaders with years of experience in cutting-edge technologies.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Clock className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Regular Updates</h3>
-                  <p className="text-slate-300">New content published regularly to keep you informed about the latest developments and best practices.</p>
+                
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+                  {content.title}
+                </h3>
+                
+                <p className="text-zion-cyan/80 mb-4">
+                  {content.description}
+                </p>
+                
+                <div className={`text-sm font-semibold ${content.color}`}>
+                  {content.count}
                 </div>
               </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white border-0"
-              >
-                <Link to="/blog" className="flex items-center space-x-2">
-                  <span>Read Our Blog</span>
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-slate-600 text-slate-300 hover:bg-slate-800"
-              >
-                <Link to="/services" className="flex items-center space-x-2">
-                  <span>Our Services</span>
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-
-          {/* Visual */}
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-4">
-              {/* Blog Post Cards */}
-              <div className="space-y-4">
-                <div className="bg-slate-800 rounded-xl p-4 border border-slate-700">
-                  <div className="w-full h-32 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg mb-3"></div>
-                  <h4 className="text-white font-semibold mb-2">AI in Business 2025</h4>
-                  <p className="text-slate-400 text-sm">Future trends and predictions</p>
-                </div>
-                <div className="bg-slate-800 rounded-xl p-4 border border-slate-700">
-                  <div className="w-full h-32 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg mb-3"></div>
-                  <h4 className="text-white font-semibold mb-2">Edge Computing</h4>
-                  <p className="text-slate-400 text-sm">Revolutionizing AI deployment</p>
-                </div>
-              </div>
-              <div className="space-y-4 mt-8">
-                <div className="bg-slate-800 rounded-xl p-4 border border-slate-700">
-                  <div className="w-full h-32 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg mb-3"></div>
-                  <h4 className="text-white font-semibold mb-2">Quantum Security</h4>
-                  <p className="text-slate-400 text-sm">Next-gen cybersecurity</p>
-                </div>
-                <div className="bg-slate-800 rounded-xl p-4 border border-slate-700">
-                  <div className="w-full h-32 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg mb-3"></div>
-                  <h4 className="text-white font-semibold mb-2">Green IT</h4>
-                  <p className="text-slate-400 text-sm">Sustainable technology</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full animate-pulse"></div>
-            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-500 rounded-full animate-pulse delay-1000"></div>
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
   );
-}
+};

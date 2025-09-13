@@ -8,7 +8,6 @@ export default {
   ],
   theme: {
     extend: {
-<<<<<<< HEAD
       screens: {
         xs: "475px",
         sm: "640px",
@@ -75,7 +74,6 @@ export default {
         display: ['Poppins', 'system-ui', 'sans-serif'],
       },
       animation: {
-<<<<<<< HEAD
         'fade-in': 'fadeIn 0.5s ease-out',
         'fade-in-up': 'fadeInUp 0.5s ease-out',
         'slide-in-up': 'slideInUp 0.5s ease-out',
@@ -83,6 +81,8 @@ export default {
         'bounce-in': 'bounceIn 0.6s ease-out',
         'shimmer': 'shimmer 2s infinite',
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
       },
       keyframes: {
         fadeIn: {
@@ -111,8 +111,14 @@ export default {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(100%)' },
         },
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        glow: {
+          '0%': { boxShadow: '0 0 5px rgba(59, 130, 246, 0.5)' },
+          '100%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.8)' },
+        },
       },
     },
   },
