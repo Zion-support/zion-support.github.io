@@ -6,6 +6,10 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import InteractiveEngagementWidget from '../components/InteractiveEngagementWidget';
+import AdvancedAnalytics from '../components/AdvancedAnalytics';
+import MobileOptimizer from '../components/MobileOptimizer';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -3045,6 +3049,11 @@ export default function HomePage() {
       <AdvancedAnalyticsDashboard />
       <UserEngagementWidget />
       <SEOOptimizer />
+      
+      {/* New Interactive Components */}
+      <InteractiveEngagementWidget />
+      <AdvancedAnalytics />
+      <PerformanceMonitor />
     </div>
   );
 }
