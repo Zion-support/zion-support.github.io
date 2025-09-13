@@ -363,7 +363,6 @@ const HomePage: React.FC = () => {
               <Suspense fallback={<LoadingSpinner />}>
                 <InteractiveContentRecommendationWidget />
               </Suspense>
-              </Suspense>
 
               {/* Featured Content Showcase */}
               <Suspense fallback={<LoadingSpinner />}>
