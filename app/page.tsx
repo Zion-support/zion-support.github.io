@@ -49,6 +49,10 @@ import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026Ultim
 // Import new promotional components
 import RevolutionaryContentPromotionBanner from '../components/RevolutionaryContentPromotionBanner';
 import NewContentShowcaseBanner from '../components/NewContentShowcaseBanner';
+
+// Import new content showcase components
+import NewContentShowcase2025Banner from '../components/NewContentShowcase2025Banner';
+import FeaturedContentSection2025 from '../components/FeaturedContentSection2025';
 =======
 
 // Import new promotional banners for 2026
@@ -78,6 +82,9 @@ export default function HomePage() {
         
         {/* NEW CONTENT SHOWCASE BANNER */}
         <NewContentShowcaseBanner />
+        
+        {/* NEW CONTENT SHOWCASE 2025 BANNER */}
+        <NewContentShowcase2025Banner />
         
 <<<<<<< HEAD
         {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
@@ -215,6 +222,9 @@ export default function HomePage() {
             </Suspense>
           </div>
         </section>
+        
+        {/* FEATURED CONTENT SECTION 2025 */}
+        <FeaturedContentSection2025 />
         
         {/* REVOLUTIONARY CONTENT RECOMMENDATION ENGINE 2026 */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI Recommendations..." />}>
