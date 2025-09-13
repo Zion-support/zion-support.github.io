@@ -147,6 +147,12 @@ import QuantumComputing2025PromotionBanner from '../components/QuantumComputing2
 import AdvancedAutomation2025PromotionBanner from '../components/AdvancedAutomation2025PromotionBanner';
 import SuccessStories2025Showcase from '../components/SuccessStories2025Showcase';
 
+// New 2025 Ultimate Content Components
+import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
+import AI2025_2030ComprehensivePredictionsShowcase from '../components/AI2025_2030ComprehensivePredictionsShowcase';
+import QuantumComputingBreakthroughShowcase2025 from '../components/QuantumComputingBreakthroughShowcase2025';
+import AdvancedAutomationSolutionsShowcase2025 from '../components/AdvancedAutomationSolutionsShowcase2025';
+
 // New Ultimate Content Components
 import AI2025_2030UltimatePredictionsPromotionBanner from '../components/AI2025_2030UltimatePredictionsPromotionBanner';
 import AI2025_2030UltimatePredictionsShowcase from '../components/AI2025_2030UltimatePredictionsShowcase';
@@ -213,6 +219,11 @@ const HomePage: React.FC = () => {
                 </div>
               </section>
 
+              {/* New Content 2025 Ultimate Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewContent2025UltimatePromotionBanner />
+              </Suspense>
+
               {/* Hero Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <HeroPromotionBanner />
@@ -264,6 +275,21 @@ const HomePage: React.FC = () => {
               </Suspense>
 
               {/* Advanced Automation Solutions Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAutomationSolutionsShowcase2025 />
+              </Suspense>
+
+              {/* New Comprehensive AI 2025-2030 Predictions Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025_2030ComprehensivePredictionsShowcase />
+              </Suspense>
+
+              {/* New Quantum Computing Breakthrough Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputingBreakthroughShowcase2025 />
+              </Suspense>
+
+              {/* New Advanced Automation Solutions Showcase 2025 */}
               <Suspense fallback={<LoadingSpinner />}>
                 <AdvancedAutomationSolutionsShowcase2025 />
               </Suspense>
