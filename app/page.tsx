@@ -48,6 +48,11 @@ import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBa
 // Import new promotional banners
 import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
 import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2025GlobalTransformation15000ROIPromotionBanner';
+
+// Import new 2025 content promotional components
+import AI2025UltimateContentPromotionBanner from '../components/AI2025UltimateContentPromotionBanner';
+import AdvancedContentDiscoveryWidget2025 from '../components/AdvancedContentDiscoveryWidget2025';
+import AI2025NewsletterSignup from '../components/AI2025NewsletterSignup';
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
 import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
@@ -292,8 +297,25 @@ export default function HomePage() {
         {/* NEW 2025-2026 ULTIMATE INNOVATION SHOWCASE PROMOTION BANNER */}
         <AI2025_2026UltimateInnovationPromotionBanner />
         
+        {/* NEW 2025 ULTIMATE CONTENT PROMOTION BANNER */}
+        <AI2025UltimateContentPromotionBanner />
+        
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
         <InteractiveContentDiscoveryWidget />
+        
+        {/* ADVANCED CONTENT DISCOVERY WIDGET 2025 */}
+        <div className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <AdvancedContentDiscoveryWidget2025 />
+          </div>
+        </div>
+        
+        {/* AI 2025 NEWSLETTER SIGNUP */}
+        <div className="py-16 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <AI2025NewsletterSignup />
+          </div>
+        </div>
         
         {/* NEW 2025-2026 ULTIMATE INNOVATION SHOWCASE */}
         <AI2025_2026UltimateInnovationShowcase />
