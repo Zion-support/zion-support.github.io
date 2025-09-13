@@ -1,18 +1,7 @@
 import React, { useState } from 'react';
-import { 
-  Mail, 
-  Send, 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Globe, 
-  Shield,
-  ArrowRight,
-  Users,
-  TrendingUp
-} from 'lucide-react';
+import { Mail, Send, CheckCircle, Star, Zap, Brain, Atom, Bot } from 'lucide-react';
 
-const NewsletterSignup2025 = () => {
+export default function NewsletterSignup2025() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -26,163 +15,129 @@ const NewsletterSignup2025 = () => {
     
     setIsSubscribed(true);
     setIsLoading(false);
+    setEmail('');
   };
 
   const benefits = [
     {
-      icon: <Zap className="w-6 h-6 text-blue-500" />,
-      title: "Exclusive AI Insights",
-      description: "Get early access to breakthrough AI research and applications"
+      icon: Brain,
+      title: 'AI Innovation Updates',
+      description: 'Latest breakthroughs in artificial intelligence and machine learning'
     },
     {
-      icon: <Globe className="w-6 h-6 text-green-500" />,
-      title: "Global Case Studies",
-      description: "Real-world success stories from companies worldwide"
+      icon: Atom,
+      title: 'Quantum Computing News',
+      description: 'Cutting-edge developments in quantum computing and quantum AI'
     },
     {
-      icon: <Shield className="w-6 h-6 text-purple-500" />,
-      title: "Security Updates",
-      description: "Latest cybersecurity trends and protection strategies"
+      icon: Bot,
+      title: 'Automation Insights',
+      description: 'Advanced automation solutions and implementation strategies'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-orange-500" />,
-      title: "Market Analysis",
-      description: "Expert analysis of emerging technology markets"
+      icon: Zap,
+      title: 'Technology Trends',
+      description: 'Future predictions and emerging technology trends'
     }
-  ];
-
-  const stats = [
-    { label: "Subscribers", value: "50,000+", icon: <Users className="w-5 h-5" /> },
-    { label: "Open Rate", value: "95%", icon: <Mail className="w-5 h-5" /> },
-    { label: "Countries", value: "150+", icon: <Globe className="w-5 h-5" /> },
-    { label: "Weekly Updates", value: "3x", icon: <Send className="w-5 h-5" /> }
   ];
 
   if (isSubscribed) {
     return (
-      <section className="py-20 bg-gradient-to-r from-green-500 to-blue-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-2xl p-12 shadow-2xl">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-6">
-              <CheckCircle className="w-10 h-10 text-green-500" />
-            </div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Welcome to the Future!
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              You've successfully subscribed to our newsletter. Get ready for exclusive insights, breakthrough technologies, and industry-leading content delivered to your inbox.
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-3">
-                    {stat.icon}
-                  </div>
-                  <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
-                  <div className="text-sm text-gray-600">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+      <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 backdrop-blur-sm rounded-3xl p-12 border border-green-500/20">
+        <div className="text-center">
+          <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-6" />
+          <h3 className="text-3xl font-bold text-white mb-4">
+            Welcome to the Future!
+          </h3>
+          <p className="text-xl text-gray-300 mb-8">
+            You're now subscribed to our exclusive newsletter. Get ready for revolutionary insights and breakthrough updates.
+          </p>
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg">
+            <Star className="w-5 h-5 mr-2" />
+            Premium Subscriber
           </div>
         </div>
-      </section>
+      </div>
     );
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-white">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white bg-opacity-20 text-white text-sm font-medium mb-6">
-              <Star className="w-4 h-4 mr-2" />
-              Join Our Community
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Stay Ahead of the
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
-                Technology Curve
-              </span>
-            </h2>
-            
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Get exclusive access to breakthrough insights, cutting-edge research, and real-world case studies from the world's most innovative companies.
-            </p>
+    <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-3xl p-12 border border-purple-500/20">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium mb-6">
+            <Star className="w-4 h-4 mr-2" />
+            Exclusive Newsletter
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Stay Ahead of the
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              {" "}Technology Curve
+            </span>
+          </h2>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Get exclusive access to the latest AI innovations, quantum computing breakthroughs, and automation solutions. Join thousands of forward-thinking professionals.
+          </p>
+        </div>
 
-            {/* Benefits */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="flex-shrink-0 mr-3">
-                    {benefit.icon}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Benefits List */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-white mb-6">
+              What You'll Get:
+            </h3>
+            
+            {benefits.map((benefit, index) => {
+              const Icon = benefit.icon;
+              return (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white mb-1">{benefit.title}</h3>
-                    <p className="text-blue-200 text-sm">{benefit.description}</p>
+                    <h4 className="text-lg font-semibold text-white mb-2">
+                      {benefit.title}
+                    </h4>
+                    <p className="text-gray-300">
+                      {benefit.description}
+                    </p>
                   </div>
                 </div>
-              ))}
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-2xl font-bold text-yellow-300">{stat.value}</div>
-                  <div className="text-sm text-blue-200">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
 
-          {/* Right Content - Signup Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-2xl">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                Get Started Today
-              </h3>
-              <p className="text-gray-600">
-                Join thousands of professionals staying ahead with our insights
-              </p>
-            </div>
-
+          {/* Newsletter Signup Form */}
+          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">
+              Join Our Newsletter
+            </h3>
+            
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                   Email Address
                 </label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
                     type="email"
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email address"
                     required
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                 </div>
-              </div>
-
-              <div className="flex items-start">
-                <input
-                  type="checkbox"
-                  id="terms"
-                  className="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                  required
-                />
-                <label htmlFor="terms" className="ml-2 text-sm text-gray-600">
-                  I agree to receive weekly newsletters and understand that I can unsubscribe at any time.
-                </label>
               </div>
 
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? (
                   <>
@@ -191,23 +146,38 @@ const NewsletterSignup2025 = () => {
                   </>
                 ) : (
                   <>
+                    <Send className="w-5 h-5 mr-2" />
                     Subscribe Now
-                    <Send className="w-5 h-5 ml-2" />
                   </>
                 )}
               </button>
-            </form>
 
-            <div className="mt-6 text-center">
-              <p className="text-sm text-gray-500">
-                🔒 Your email is safe with us. We never spam.
+              <p className="text-sm text-gray-400 text-center">
+                By subscribing, you agree to receive our newsletter and marketing communications. 
+                You can unsubscribe at any time.
               </p>
+            </form>
+          </div>
+        </div>
+
+        {/* Social Proof */}
+        <div className="mt-12 text-center">
+          <div className="flex items-center justify-center space-x-8 text-gray-300">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white">50K+</div>
+              <div className="text-sm">Subscribers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white">99%</div>
+              <div className="text-sm">Satisfaction</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white">Weekly</div>
+              <div className="text-sm">Updates</div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default NewsletterSignup2025;
+}

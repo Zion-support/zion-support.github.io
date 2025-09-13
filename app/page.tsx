@@ -147,6 +147,11 @@ import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBann
 import FeaturedBlogPost2025 from '../components/FeaturedBlogPost2025';
 import CaseStudyShowcase2025 from '../components/CaseStudyShowcase2025';
 
+// Import new 2025 innovation showcase components
+import NewContent2025InnovationShowcaseBanner from '../components/NewContent2025InnovationShowcaseBanner';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
+
 // Import new promotional banners for 2026
 import AI2026UltimateContentRevolutionPromotionBanner from '../components/AI2026UltimateContentRevolutionPromotionBanner';
 import AdvancedAutomationSolutions2026UltimatePromotionBanner from '../components/AdvancedAutomationSolutions2026UltimatePromotionBanner';
@@ -184,6 +189,9 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY 2025 */}
         <InteractiveContentDiscovery2025 />
+        
+        {/* NEW 2025 INNOVATION SHOWCASE BANNER */}
+        <NewContent2025InnovationShowcaseBanner />
         
         {/* New Content Promotion Banner */}
         <NewContentPromotionBanner2025 />
@@ -300,6 +308,9 @@ export default function HomePage() {
         
         {/* NEWSLETTER SIGNUP 2026 */}
         <NewsletterSignup2026 />
+        
+        {/* NEWSLETTER SIGNUP 2025 */}
+        <NewsletterSignup2025 />
         
         {/* NEW AI 2025 CONTENT PROMOTION BANNER */}
         <AI2025NewContentPromotionBanner />
