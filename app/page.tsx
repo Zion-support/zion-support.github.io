@@ -71,6 +71,10 @@ import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025Interac
 
 // New AI 2025 Content Promotion Banner
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
+
+// Import new breakthrough promotional components
+import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
 // Import new promotional banners for 2025-2026
 import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
 import AI2026QuantumNeuralFusionBanner from '../components/AI2026QuantumNeuralFusionBanner';
@@ -91,6 +95,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION PROMOTION BANNER */}
+        <AI2025UltimateBreakthroughPromotionBanner />
+        
+        {/* AI 2025 REVOLUTIONARY CONTENT SHOWCASE */}
+        <AI2025RevolutionaryContentShowcase />
+        
         {/* NEW AI 2025 CONTENT PROMOTION BANNER */}
         <AI2025NewContentPromotionBanner />
         
