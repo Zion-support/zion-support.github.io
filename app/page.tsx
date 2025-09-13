@@ -33,6 +33,10 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
 
+// Import new ultimate content revolution components
+import UltimateContentRevolutionBanner from '../components/UltimateContentRevolutionBanner';
+import RevolutionaryBreakthroughShowcase from '../components/RevolutionaryBreakthroughShowcase';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -44,6 +48,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT REVOLUTION BANNER */}
+        <UltimateContentRevolutionBanner />
+        
+        {/* REVOLUTIONARY BREAKTHROUGH SHOWCASE */}
+        <RevolutionaryBreakthroughShowcase />
+        
         {/* NEW 2025 CONTENT PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
