@@ -223,6 +223,12 @@ import NewContent2025AdvancedAutomationBanner from '../components/NewContent2025
 import NewContent2025EnterpriseSuccessBanner from '../components/NewContent2025EnterpriseSuccessBanner';
 import NewContent2025ImplementationToolkitBanner from '../components/NewContent2025ImplementationToolkitBanner';
 
+// Import new ultimate content showcase components
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentShowcase2025PromotionBanner from '../components/UltimateContentShowcase2025PromotionBanner';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
+
 // Import new showcase banners
 import AI2025UltimateInnovationShowcaseBanner from '../components/AI2025UltimateInnovationShowcaseBanner';
 import AITools2025UltimateShowcaseBanner from '../components/AITools2025UltimateShowcaseBanner';
@@ -254,6 +260,18 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT SHOWCASE 2025 PROMOTION BANNER - FEATURED */}
+        <UltimateContentShowcase2025PromotionBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
+        
+        {/* NEWSLETTER SIGNUP 2025 */}
+        <NewsletterSignup2025 />
+        
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER - FEATURED */}
         <AI2025RevolutionaryBreakthroughBanner />
         
