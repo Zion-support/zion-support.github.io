@@ -12,6 +12,9 @@ export NPM_CONFIG_PACKAGE_MANAGER=yarn
 export NEXT_TELEMETRY_DISABLED=1
 export SWC_BINARY_PATH=""
 export NEXT_SWC_BINARY_PATH=""
+# Force SWC to use JavaScript fallback
+export NEXT_FORCE_SWC=1
+export NEXT_SWC_DISABLE=1
 
 # Clear all caches and corrupted packages
 echo "Clearing all caches and corrupted packages..."
@@ -50,6 +53,8 @@ for attempt in {1..3}; do
       yarn add find-up@5.0.0 --exact --network-timeout 120000 --ignore-engines --no-cache
       yarn add glob-parent@6.0.2 --exact --network-timeout 120000 --ignore-engines --no-cache
       yarn add glob@10.4.5 --exact --network-timeout 120000 --ignore-engines --no-cache
+      # Ensure we have the correct Next.js version
+      yarn add next@14.2.0 --exact --network-timeout 120000 --ignore-engines --no-cache
       if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
         echo "Dependencies installed successfully!"
         break
@@ -59,6 +64,8 @@ for attempt in {1..3}; do
       echo "Attempt 3: Last resort - clean install with fresh lockfile..."
       # Remove existing lockfile and do fresh install
       rm -f yarn.lock
+      # Force Next.js version
+      yarn add next@14.2.0 --exact --network-timeout 120000 --ignore-engines --no-cache
       if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
         echo "Dependencies installed successfully!"
         break
@@ -79,6 +86,18 @@ echo "Verifying installation..."
 if [ ! -d "node_modules" ]; then
   echo "node_modules directory not found!"
   exit 1
+fi
+
+# Verify Next.js version
+echo "Verifying Next.js version..."
+NEXT_VERSION=$(node -e "console.log(require('./node_modules/next/package.json').version)")
+echo "Installed Next.js version: $NEXT_VERSION"
+
+# Ensure we're using the correct version
+if [[ "$NEXT_VERSION" != "14.2.0" ]]; then
+  echo "Warning: Next.js version mismatch. Expected 14.2.0, got $NEXT_VERSION"
+  echo "Attempting to fix version..."
+  yarn add next@14.2.0 --exact --network-timeout 120000 --ignore-engines --no-cache
 fi
 
 # Build the project
@@ -102,6 +121,8 @@ if [ "$build_success" = false ]; then
   export SWC_BINARY_PATH=""
   export NEXT_SWC_BINARY_PATH=""
   export NEXT_TELEMETRY_DISABLED=1
+  export NEXT_FORCE_SWC=1
+  export NEXT_SWC_DISABLE=1
   
   if yarn run build; then
     echo "SWC fallback build successful!"
