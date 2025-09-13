@@ -9,6 +9,7 @@ import EnhancedContentPromotionBanner from '../components/EnhancedContentPromoti
 import AI2035ContentPromotionBanner from '../components/AI2035ContentPromotionBanner';
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2025BreakthroughContentBanner from '../components/AI2025BreakthroughContentBanner';
+import AI2025AutonomousSystemsPromotionBanner from '../components/AI2025AutonomousSystemsPromotionBanner';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedNavigationWithContent from '../components/EnhancedNavigationWithContent';
 import EnhancedNavigationWithNewContent from '../components/EnhancedNavigationWithNewContent';
@@ -107,6 +108,9 @@ function Header() {
                 <Link href="/blog/ai-2025-autonomous-business-operations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 AI 2025 Autonomous Business Operations (BREAKTHROUGH)
                 </Link>
+                <Link href="/blog/ai-2025-next-generation-autonomous-systems" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
+                  🚀 AI 2025 Next-Generation Autonomous Systems (BREAKTHROUGH)
+                </Link>
                 <Link href="/blog/ai-2025-next-generation-breakthroughs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 AI 2025 Next-Generation Breakthroughs (NEW)
                 </Link>
@@ -124,6 +128,9 @@ function Header() {
                 </Link>
                 <Link href="/case-studies/ai-2025-global-enterprise-autonomous-transformation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Global Enterprise: 2,500% ROI Autonomous Success (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-manufacturing-autonomy-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
+                  🏭 Global Manufacturing Autonomy Breakthrough (1,200% ROI)
                 </Link>
                 <Link href="/case-studies/ai-2025-enterprise-transformation-mega-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 15,000% ROI Enterprise Transformation (NEW)
@@ -149,6 +156,9 @@ function Header() {
                 <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/resources/ai-2025-autonomous-operations-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   📚 Autonomous Operations Implementation Guide (BREAKTHROUGH)
+                </Link>
+                <Link href="/resources/ai-2025-autonomous-systems-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500">
+                  📚 Autonomous Systems Implementation Master Guide (BREAKTHROUGH)
                 </Link>
                 <Link href="/resources/ai-2025-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   📚 Ultimate Implementation Master Guide (NEW)
@@ -1243,6 +1253,7 @@ export default function RootLayout({
           <AI2026BreakthroughPromotionBanner />
           <NewContentShowcaseBanner />
           <AutonomousOperationsPromotionBanner />
+          <AI2025AutonomousSystemsPromotionBanner />
           <AI2026FuturePredictionsPromotionBanner />
           <AI2025UltimateBreakthroughRevolutionBanner />
           <AI2025NewContentPromotionBanner />
