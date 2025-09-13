@@ -1,7 +1,12 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/ContentShowcase": "pages/ContentShowcase.js",
-  "/HomePage": "pages/HomePage.js",
+  "/ai-consciousness-evolution-2025": "pages/ai-consciousness-evolution-2025.js",
+  "/help": "pages/help.js",
+  "/it-services": "pages/it-services.js",
+  "/micro-saas": "pages/micro-saas.js",
+  "/pricing": "pages/pricing.js",
+  "/talent": "pages/talent.js",
+  "/ai-services": "pages/ai-services.js",
   "/_document": "pages/_document.js"
 }
