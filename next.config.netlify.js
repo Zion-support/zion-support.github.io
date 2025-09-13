@@ -6,7 +6,7 @@ const nextConfig = {
 	output: 'export',
 	pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
 	
-	// Disable SWC completely to avoid binary download issues
+	// Completely disable SWC to avoid binary download issues
 	swcMinify: false,
 	swcLoader: false,
 	
@@ -25,15 +25,12 @@ const nextConfig = {
 	
 	// Bundle optimization
 	experimental: {
+		optimizeCss: true,
 		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-		// Disable SWC to avoid binary download issues
+		// Disable SWC completely
 		swcMinify: false,
 		swcLoader: false,
 	},
-	
-	// SWC configuration - force JavaScript fallback
-	swcMinify: false,
-	swcLoader: false,
 	
 	// Webpack optimizations
 	webpack: (config, { dev, isServer }) => {
@@ -69,13 +66,12 @@ const nextConfig = {
 		return config;
 	},
 	
-	
 	// TypeScript and ESLint configuration
 	typescript: {
-		ignoreBuildErrors: true
+		ignoreBuildErrors: false
 	},
 	eslint: {
-		ignoreDuringBuilds: true
+		ignoreDuringBuilds: false
 	},
 };
 

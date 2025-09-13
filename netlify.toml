@@ -23,10 +23,10 @@
   # Force SWC to use JavaScript fallback to avoid binary download issues
   SWC_BINARY_PATH = ""
   NEXT_SWC_BINARY_PATH = ""
-  # Force Next.js to use the correct version
-  NEXT_FORCE_SWC = "1"
-  # Disable SWC binary download
-  NEXT_SWC_DISABLE = "1"
+  # Disable SWC completely to avoid download issues
+  NEXT_SWC_DISABLED = "1"
+  # Use Terser for minification instead of SWC
+  NEXT_MINIFY = "terser"
 
 # Build settings
 [build.processing]
