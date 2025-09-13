@@ -234,6 +234,13 @@ import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import NewContentShowcase2026Banner from '../components/NewContentShowcase2026Banner';
 import AI2026BreakthroughAnnouncementBanner from '../components/AI2026BreakthroughAnnouncementBanner';
 
+// Import new interactive content components
+import InteractiveAIToolsShowcase2025 from '../components/InteractiveAIToolsShowcase2025';
+import AIInnovationShowcase2025 from '../components/AIInnovationShowcase2025';
+import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
+import SuccessStoriesShowcase2025 from '../components/SuccessStoriesShowcase2025';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -257,6 +264,24 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
         <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* REVOLUTIONARY CONTENT BANNER 2025 - NEW */}
+        <RevolutionaryContentBanner2025 />
+        
+        {/* INTERACTIVE AI TOOLS SHOWCASE 2025 - NEW */}
+        <InteractiveAIToolsShowcase2025 />
+        
+        {/* AI INNOVATION SHOWCASE 2025 - NEW */}
+        <AIInnovationShowcase2025 />
+        
+        {/* NEW CONTENT PROMOTION BANNER 2025 - NEW */}
+        <NewContentPromotionBanner2025 />
+        
+        {/* SUCCESS STORIES SHOWCASE 2025 - NEW */}
+        <SuccessStoriesShowcase2025 />
+        
+        {/* NEWSLETTER SIGNUP 2025 - NEW */}
+        <NewsletterSignup2025 />
         
         {/* REVOLUTIONARY CONTENT SHOWCASE 2025 BANNER */}
         <RevolutionaryContentShowcase2025Banner />

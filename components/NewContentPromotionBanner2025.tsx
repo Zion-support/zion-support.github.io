@@ -1,133 +1,306 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Users, Zap, Globe } from 'lucide-react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Sparkles, 
+  Rocket, 
+  Zap, 
+  Brain, 
+  Globe, 
+  Target,
+  ArrowRight,
+  Play,
+  Star,
+  TrendingUp,
+  Users,
+  Award,
+  CheckCircle,
+  Clock,
+  Shield
+} from 'lucide-react';
 
 const NewContentPromotionBanner2025 = () => {
-  return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-black opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-      </div>
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState(0);
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const features = [
+    {
+      title: "AI-Powered Content Generation",
+      description: "Create high-quality content in seconds with our advanced AI technology",
+      icon: Brain,
+      color: "from-blue-500 to-purple-600"
+    },
+    {
+      title: "Real-Time Optimization",
+      description: "Automatically optimize your content for maximum engagement and performance",
+      icon: Zap,
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      title: "Global Distribution",
+      description: "Reach audiences worldwide with our intelligent content distribution network",
+      icon: Globe,
+      color: "from-green-500 to-teal-600"
+    },
+    {
+      title: "Advanced Analytics",
+      description: "Get deep insights into your content performance with detailed analytics",
+      icon: TrendingUp,
+      color: "from-orange-500 to-red-600"
+    }
+  ];
+
+  const benefits = [
+    "10x faster content creation",
+    "300% increase in engagement",
+    "99.9% uptime guarantee",
+    "24/7 AI assistance",
+    "Multi-language support",
+    "Advanced security features"
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
+  return (
+    <motion.div
+      className="relative py-16 px-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 overflow-hidden"
+      variants={containerVariants}
+      initial="hidden"
+      animate={isVisible ? "visible" : "hidden"}
+    >
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/80 via-purple-600/80 to-pink-600/80"></div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="text-white">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white bg-opacity-20 text-white text-sm font-medium mb-6">
-              <Star className="w-4 h-4 mr-2" />
-              New Content Available
-            </div>
+          <motion.div
+            className="text-white"
+            variants={itemVariants}
+          >
+            <motion.div
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-6"
+              whileHover={{ scale: 1.05 }}
+            >
+              <Sparkles className="w-5 h-5" />
+              <span className="font-medium">New Content Platform 2025</span>
+            </motion.div>
             
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
               Revolutionary Content
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
-                Just Released
+              <span className="block text-yellow-300">
+                Creation Platform
               </span>
             </h2>
             
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Discover our latest breakthrough insights, AI solutions, and cutting-edge technologies that are transforming businesses worldwide. Get exclusive access to expert analysis, case studies, and implementation guides.
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              Experience the future of content creation with our AI-powered platform 
+              that generates, optimizes, and distributes content at unprecedented scale 
+              and quality.
             </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-300">50+</div>
-                <div className="text-sm text-blue-200">New Articles</div>
+            {/* Rotating Feature */}
+            <motion.div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20"
+              key={currentFeature}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className={`p-3 rounded-xl bg-gradient-to-r ${features[currentFeature].color}`}>
+                  <features[currentFeature].icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white">
+                  {features[currentFeature].title}
+                </h3>
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-300">100K+</div>
-                <div className="text-sm text-blue-200">Readers</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-300">95%</div>
-                <div className="text-sm text-blue-200">Success Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-300">24/7</div>
-                <div className="text-sm text-blue-200">Updates</div>
-              </div>
+              <p className="text-white/80">
+                {features[currentFeature].description}
+              </p>
+            </motion.div>
+
+            {/* Benefits List */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-center gap-3"
+                  variants={itemVariants}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-white/90">{benefit}</span>
+                </motion.div>
+              ))}
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/content-hub"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors group"
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4"
+              variants={itemVariants}
+            >
+              <motion.button
+                className="group relative inline-flex items-center gap-3 px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Explore Content
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href="/newsletter"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+                <Play className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                Start Free Trial
+                <motion.div
+                  className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                  whileHover={{ scale: 1.1 }}
+                />
+              </motion.button>
+              
+              <motion.button
+                className="group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent text-white font-semibold rounded-full border-2 border-white/30 hover:border-white/60 hover:bg-white/10 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Subscribe Now
-              </Link>
-            </div>
-          </div>
+                Learn More
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </motion.button>
+            </motion.div>
+          </motion.div>
 
-          {/* Right Content - Feature Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="flex items-center mb-4">
-                <Zap className="w-8 h-8 text-yellow-300 mr-3" />
-                <h3 className="text-lg font-semibold text-white">AI Solutions</h3>
-              </div>
-              <p className="text-blue-100 text-sm mb-4">
-                Cutting-edge AI automation and machine learning solutions for modern businesses.
-              </p>
-              <div className="text-yellow-300 text-sm font-medium">15+ New Articles</div>
-            </div>
+          {/* Right Visual */}
+          <motion.div
+            className="relative"
+            variants={itemVariants}
+          >
+            <div className="relative">
+              {/* Main Card */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                <div className="text-center mb-8">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 mb-4">
+                    <Clock className="w-4 h-4" />
+                    <span className="text-sm font-medium">Live Demo</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    Interactive Content Creator
+                  </h3>
+                  <p className="text-white/70">
+                    Experience our AI-powered content generation in real-time
+                  </p>
+                </div>
 
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="flex items-center mb-4">
-                <Globe className="w-8 h-8 text-green-300 mr-3" />
-                <h3 className="text-lg font-semibold text-white">Global Impact</h3>
-              </div>
-              <p className="text-blue-100 text-sm mb-4">
-                Real-world case studies and success stories from around the world.
-              </p>
-              <div className="text-green-300 text-sm font-medium">25+ Case Studies</div>
-            </div>
+                {/* Demo Interface */}
+                <div className="space-y-6">
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                      <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                      <span className="text-xs text-white/60 ml-2">Content Generator</span>
+                    </div>
+                    <div className="h-32 bg-white/5 rounded-lg flex items-center justify-center">
+                      <div className="text-center">
+                        <Brain className="w-8 h-8 text-white/60 mx-auto mb-2" />
+                        <div className="text-sm text-white/60">AI Content Generation</div>
+                      </div>
+                    </div>
+                  </div>
 
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="flex items-center mb-4">
-                <TrendingUp className="w-8 h-8 text-purple-300 mr-3" />
-                <h3 className="text-lg font-semibold text-white">Future Tech</h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 text-center">
+                      <Target className="w-6 h-6 text-blue-400 mx-auto mb-2" />
+                      <div className="text-sm text-white/80">Optimization</div>
+                    </div>
+                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 text-center">
+                      <Shield className="w-6 h-6 text-green-400 mx-auto mb-2" />
+                      <div className="text-sm text-white/80">Security</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p className="text-blue-100 text-sm mb-4">
-                Insights into emerging technologies and future predictions.
-              </p>
-              <div className="text-purple-300 text-sm font-medium">10+ Predictions</div>
-            </div>
 
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="flex items-center mb-4">
-                <Users className="w-8 h-8 text-orange-300 mr-3" />
-                <h3 className="text-lg font-semibold text-white">Community</h3>
-              </div>
-              <p className="text-blue-100 text-sm mb-4">
-                Join our community of innovators and thought leaders.
-              </p>
-              <div className="text-orange-300 text-sm font-medium">50K+ Members</div>
+              {/* Floating Elements */}
+              <motion.div
+                className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
+                animate={{ 
+                  y: [0, -10, 0],
+                  rotate: [0, 5, 0]
+                }}
+                transition={{ 
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <Star className="w-8 h-8 text-white" />
+              </motion.div>
+
+              <motion.div
+                className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center"
+                animate={{ 
+                  y: [0, 10, 0],
+                  rotate: [0, -5, 0]
+                }}
+                transition={{ 
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <Rocket className="w-6 h-6 text-white" />
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
 
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg className="w-full h-12 text-white" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="currentColor"></path>
-          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="currentColor"></path>
-          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>
-        </svg>
+        {/* Bottom Stats */}
+        <motion.div
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
+          variants={itemVariants}
+        >
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">1M+</div>
+            <div className="text-white/70">Content Pieces Created</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">500K+</div>
+            <div className="text-white/70">Active Users</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+            <div className="text-white/70">Uptime</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">24/7</div>
+            <div className="text-white/70">AI Support</div>
+          </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.div>
   );
 };
 
