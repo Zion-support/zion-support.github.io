@@ -76,6 +76,9 @@ import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveCont
 import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
 import QuantumComputingBreakthrough2030PromotionBanner from '../components/QuantumComputingBreakthrough2030PromotionBanner';
 
+// Import revolutionary content showcase promotion banner
+import RevolutionaryContentShowcase2025PromotionBanner from '../components/RevolutionaryContentShowcase2025PromotionBanner';
+
 // New Ultimate Content Revolution 2026 Components
 import UltimateContentRevolution2026 from '../components/UltimateContentRevolution2026';
 import UltimateContentRevolution2026PromotionBanner from '../components/UltimateContentRevolution2026PromotionBanner';
@@ -95,6 +98,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* REVOLUTIONARY CONTENT SHOWCASE PROMOTION BANNER */}
+        <RevolutionaryContentShowcase2025PromotionBanner />
+        
         {/* NEW BREAKTHROUGH CONTENT PROMOTION BANNERS */}
         <NewContentPromotionBanner2026 />
         
