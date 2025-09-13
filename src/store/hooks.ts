@@ -2,7 +2,9 @@
 import React from 'react';
 
 export function useAppDispatch() {
-  return (() => {}) as unknown as () => void;
+  return ((action: any) => {
+    console.log('Dispatch action:', action);
+  }) as unknown as (action: any) => void;
 }
 
 export function useAppSelector<TSelected>(_selector: (state: unknown) => TSelected): TSelected {

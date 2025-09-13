@@ -44,7 +44,7 @@ export default function Home() {
                 id: item.id,
                 title: item.title,
                 description: item.description,
-                price: Number(item.price.replace(/[^0-9.]/g, "")),
+                price: Number(item.price.replace(/[^0-9.]/g, "")).toString(),
                 currency: item.price.replace(/[0-9.]/g, "") || "$",
                 category: item.category,
                 images: item.images,
