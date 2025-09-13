@@ -167,6 +167,8 @@ export default function HomePage() {
         </div>
       </section>
 
+
+
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">

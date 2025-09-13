@@ -1,22 +1,6 @@
 export default function NewsPage() {
   const articles = [
     {
-      emoji: "🧠",
-      title: "ZionGPT Core v2: Context Windows 10x and Tools API",
-      excerpt:
-        "Major upgrade delivers 10x larger context, a native Tools API, and faster, cheaper inference.",
-      date: "Sep 12, 2025",
-      href: "/news/ziongpt-core-v2",
-      gradient: "from-fuchsia-600 to-purple-600",
-    },
-    {
-      emoji: "🧠",
-      title: "Zion OS 1.3: Agent Workflows and RAG Built‑In",
-      excerpt:
-        "New autonomous agent workflows, built-in retrieval augmented generation, and analytics dashboards ship in 1.3.",
-      date: "Sep 12, 2025",
-      href: "/news/zion-os-1-3-agents-rag",
-      gradient: "from-fuchsia-600 to-purple-600",
     },
     {
       emoji: "🚀",
