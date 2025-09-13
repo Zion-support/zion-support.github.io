@@ -49,6 +49,11 @@ import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 
+// Import new revolutionary promotional components
+import RevolutionaryContentPromotionBanner from '../components/RevolutionaryContentPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import RevolutionaryNewsletterSignup from '../components/RevolutionaryNewsletterSignup';
+
 // Import new promotional components
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
@@ -82,6 +87,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* REVOLUTIONARY CONTENT PROMOTION BANNER */}
+        <RevolutionaryContentPromotionBanner />
+        
         {/* NEW 2025 CONTENT PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
@@ -101,6 +109,13 @@ export default function HomePage() {
         <div className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <AI2025NewsletterSignup />
+          </div>
+        </div>
+        
+        {/* REVOLUTIONARY NEWSLETTER SIGNUP */}
+        <div className="py-20 px-4 bg-gradient-to-br from-gray-50 to-purple-50">
+          <div className="max-w-4xl mx-auto">
+            <RevolutionaryNewsletterSignup />
           </div>
         </div>
         
