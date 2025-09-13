@@ -37,6 +37,8 @@ import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromo
 
 // Import new promotional banners
 import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
+import NewContent2025ShowcaseBanner from '../components/NewContent2025ShowcaseBanner';
+import AI2025ContentRevolutionBanner from '../components/AI2025ContentRevolutionBanner';
 import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2025GlobalTransformation15000ROIPromotionBanner';
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
 import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
@@ -653,6 +655,12 @@ export default function HomePage() {
       
       {/* New Content Promotional Banner */}
       <NewContentPromotionalBanner />
+      
+      {/* New Content 2025 Showcase Banner */}
+      <NewContent2025ShowcaseBanner />
+      
+      {/* AI 2025 Content Revolution Banner */}
+      <AI2025ContentRevolutionBanner />
       
       {/* Featured Content Section */}
       <FeaturedContentShowcase />
