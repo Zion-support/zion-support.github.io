@@ -60,6 +60,9 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import AI2027NeuralSynthesisPromotionBanner from '../components/AI2027NeuralSynthesisPromotionBanner';
 import AI2028AutomotiveTransformationPromotionBanner from '../components/AI2028AutomotiveTransformationPromotionBanner';
 
+// Future Technologies Showcase
+import FutureTechnologiesShowcaseBanner from '../components/FutureTechnologiesShowcaseBanner';
+
 // Featured and Dynamic Content
 import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
 import DynamicContentCarousel from '../components/DynamicContentCarousel';
@@ -254,6 +257,11 @@ const HomePage: React.FC = () => {
               {/* New Content 2025 Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <NewContent2025PromotionBanner />
+              </Suspense>
+
+              {/* Future Technologies Showcase Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <FutureTechnologiesShowcaseBanner />
               </Suspense>
 
               {/* Interactive Content Discovery Widget 2025 */}
