@@ -4,271 +4,184 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles, 
-  ArrowRight, 
-  X, 
+  Zap, 
+  Brain, 
+  Rocket, 
+  Star, 
+  TrendingUp, 
+  ArrowRight,
   Play,
-  Star,
-  Zap,
-  Brain,
-  Rocket,
-  TrendingUp,
-  Clock,
-  Users,
-  Award
+  BookOpen,
+  Lightbulb,
+  X,
+  ChevronRight
 } from 'lucide-react';
 
 const UltimateContentShowcase2029PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Auto-rotate features
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const features = [
+  const slides = [
     {
+      title: "Revolutionary AI Innovations 2029",
+      subtitle: "Discover quantum neural networks and conscious AI systems",
       icon: Brain,
-      title: 'Conscious AI Systems',
-      description: 'Revolutionary AI with self-awareness',
-      color: 'from-purple-500 to-pink-500'
+      color: "from-purple-600 to-blue-600",
+      stats: "2.3M+ Views"
     },
     {
-      icon: Zap,
-      title: 'Quantum Computing',
-      description: '1000x processing power',
-      color: 'from-blue-500 to-cyan-500'
+      title: "Business Transformation 2029",
+      subtitle: "Autonomous operations and quantum business intelligence",
+      icon: TrendingUp,
+      color: "from-green-600 to-emerald-600",
+      stats: "1.9M+ Views"
     },
     {
-      icon: Users,
-      title: 'Neural Interfaces',
-      description: 'Direct brain-computer integration',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
+      title: "Future Technology 2029",
+      subtitle: "Neural interfaces and quantum internet breakthroughs",
       icon: Rocket,
-      title: 'Space Technology',
-      description: 'Mars colonization ready',
-      color: 'from-orange-500 to-red-500'
+      color: "from-orange-600 to-red-600",
+      stats: "2.8M+ Views"
     }
   ];
 
-  const stats = [
-    { label: 'Breakthroughs', value: '500+' },
-    { label: 'Innovations', value: '100+' },
-    { label: 'Interfaces', value: '50+' },
-    { label: 'Missions', value: '25+' }
-  ];
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
 
-  if (isDismissed) return null;
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+  if (!isVisible) return null;
 
   return (
     <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-pink-900 to-blue-900"
-        >
-          {/* Animated Background */}
-          <div className="absolute inset-0">
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-blue-600/20"
-              animate={{
-                background: [
-                  'linear-gradient(45deg, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2), rgba(59, 130, 246, 0.2))',
-                  'linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2))',
-                  'linear-gradient(225deg, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2))',
-                  'linear-gradient(315deg, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2), rgba(59, 130, 246, 0.2))'
-                ]
-              }}
-              transition={{ duration: 8, repeat: Infinity }}
-            />
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-          </div>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
+        className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/20 overflow-hidden"
+      >
+        {/* Background Effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/10 via-transparent to-blue-600/10"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+        </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-              {/* Left Content */}
-              <div className="flex-1 text-center lg:text-left">
-                <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="flex items-center justify-center lg:justify-start gap-3 mb-4"
-                >
-                  <div className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                    <Sparkles className="w-4 h-4" />
-                    NEW: Ultimate Content Showcase 2029
-                  </div>
-                  <div className="flex items-center gap-1 text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                </motion.div>
-
-                <motion.h2
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
-                >
-                  The Future is{' '}
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    Here
-                  </span>
-                </motion.h2>
-
-                <motion.p
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="text-lg text-gray-200 mb-6 max-w-2xl"
-                >
-                  Explore groundbreaking technologies and innovations that will reshape our world in 2029 and beyond
-                </motion.p>
-
-                {/* Rotating Features */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  className="flex items-center gap-4 mb-6"
-                >
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={currentFeature}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      transition={{ duration: 0.5 }}
-                      className="flex items-center gap-3"
-                    >
-                      <div className={`p-2 rounded-lg bg-gradient-to-r ${features[currentFeature].color}`}>
-                        <features[currentFeature].icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <div className="text-white font-semibold">{features[currentFeature].title}</div>
-                        <div className="text-gray-300 text-sm">{features[currentFeature].description}</div>
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
-                </motion.div>
-
-                {/* Stats */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  className="flex flex-wrap gap-6 justify-center lg:justify-start mb-6"
-                >
-                  {stats.map((stat, index) => (
-                    <div key={index} className="text-center">
-                      <div className="text-2xl font-bold text-white">{stat.value}</div>
-                      <div className="text-gray-300 text-sm">{stat.label}</div>
-                    </div>
-                  ))}
-                </motion.div>
-
-                {/* CTA Buttons */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.7 }}
-                  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-                >
-                  <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-2 group">
-                    <Play className="w-5 h-5" />
-                    Explore Now
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                  <button className="border-2 border-white/30 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white/10 transition-all duration-300 flex items-center gap-2">
-                    <Clock className="w-5 h-5" />
-                    Limited Time
-                  </button>
-                </motion.div>
-              </div>
-
-              {/* Right Content - Visual */}
+        <div className="relative z-10 container mx-auto px-4 py-6">
+          <div className="flex items-center justify-between">
+            {/* Left Content */}
+            <div className="flex items-center gap-6 flex-1">
+              {/* Animated Icon */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                key={currentSlide}
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 0.5, type: "spring" }}
                 className="relative"
               >
-                <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-                  {/* Central Circle */}
-                  <motion.div
-                    className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 opacity-20"
-                    animate={{
-                      scale: [1, 1.1, 1],
-                      rotate: [0, 180, 360]
-                    }}
-                    transition={{ duration: 8, repeat: Infinity }}
-                  />
-                  
-                  {/* Orbiting Elements */}
-                  {features.map((feature, index) => (
-                    <motion.div
-                      key={index}
-                      className="absolute w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 flex items-center justify-center"
-                      style={{
-                        top: '50%',
-                        left: '50%',
-                        transformOrigin: '0 0'
-                      }}
-                      animate={{
-                        rotate: [0, 360],
-                        x: [0, Math.cos(index * Math.PI / 2) * 120],
-                        y: [0, Math.sin(index * Math.PI / 2) * 120]
-                      }}
-                      transition={{
-                        duration: 10,
-                        repeat: Infinity,
-                        delay: index * 0.5
-                      }}
-                    >
-                      <feature.icon className="w-8 h-8 text-white" />
-                    </motion.div>
-                  ))}
-
-                  {/* Center Icon */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <motion.div
-                      className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center"
-                      animate={{
-                        scale: [1, 1.1, 1],
-                        rotate: [0, 5, -5, 0]
-                      }}
-                      transition={{ duration: 4, repeat: Infinity }}
-                    >
-                      <Award className="w-10 h-10 text-white" />
-                    </motion.div>
-                  </div>
+                <div className={`w-16 h-16 bg-gradient-to-r ${slides[currentSlide].color} rounded-2xl flex items-center justify-center shadow-lg`}>
+                  {React.createElement(slides[currentSlide].icon, { 
+                    className: "w-8 h-8 text-white" 
+                  })}
+                </div>
+                <div className="absolute -top-1 -right-1 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center">
+                  <Star className="w-3 h-3 text-black" />
                 </div>
               </motion.div>
+
+              {/* Content */}
+              <div className="flex-1">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentSlide}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.3 }}
+                    className="space-y-1"
+                  >
+                    <div className="flex items-center gap-3">
+                      <h3 className="text-xl font-bold text-white">
+                        {slides[currentSlide].title}
+                      </h3>
+                      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-2 py-1 rounded-full text-xs font-bold">
+                        NEW
+                      </div>
+                    </div>
+                    <p className="text-gray-300 text-sm">
+                      {slides[currentSlide].subtitle}
+                    </p>
+                    <div className="flex items-center gap-4 text-xs text-gray-400">
+                      <span className="flex items-center gap-1">
+                        <Play className="w-3 h-3" />
+                        {slides[currentSlide].stats}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Star className="w-3 h-3" />
+                        Featured Content
+                      </span>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </div>
+
+            {/* Right Actions */}
+            <div className="flex items-center gap-4">
+              {/* Slide Indicators */}
+              <div className="flex items-center gap-2">
+                {slides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === currentSlide 
+                        ? 'bg-white w-6' 
+                        : 'bg-white/30 hover:bg-white/50'
+                    }`}
+                  />
+                ))}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex items-center gap-3">
+                <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center gap-2 group">
+                  <BookOpen className="w-4 h-4" />
+                  <span>Explore Now</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </button>
+                
+                <button className="bg-white/10 text-white px-4 py-3 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center gap-2">
+                  <Lightbulb className="w-4 h-4" />
+                  <span>Learn More</span>
+                </button>
+              </div>
+
+              {/* Close Button */}
+              <button
+                onClick={() => setIsVisible(false)}
+                className="text-gray-400 hover:text-white transition-colors duration-300 p-2 hover:bg-white/10 rounded-lg"
+              >
+                <X className="w-5 h-5" />
+              </button>
             </div>
           </div>
+        </div>
 
-          {/* Close Button */}
-          <button
-            onClick={() => setIsDismissed(true)}
-            className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors p-2"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </motion.div>
-      )}
+        {/* Progress Bar */}
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-white/10">
+          <motion.div
+            key={currentSlide}
+            initial={{ width: "0%" }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 4, ease: "linear" }}
+            className="h-full bg-gradient-to-r from-purple-600 to-blue-600"
+          />
+        </div>
+      </motion.div>
     </AnimatePresence>
   );
 };

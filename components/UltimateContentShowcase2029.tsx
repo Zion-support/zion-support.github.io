@@ -17,288 +17,312 @@ import {
   Lightbulb,
   Target,
   Award,
-  ChevronRight
+  ChevronRight,
+  ExternalLink
 } from 'lucide-react';
 
 const UltimateContentShowcase2029 = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTab, setActiveTab] = useState('ai-innovations');
+  const [hoveredCard, setHoveredCard] = useState(null);
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const contentSections = [
-    {
-      id: 'ai-breakthroughs',
-      title: 'AI Breakthroughs 2029',
+  const contentSections = {
+    'ai-innovations': {
+      title: 'Revolutionary AI Innovations 2029',
+      subtitle: 'Discover the future of artificial intelligence',
       icon: Brain,
-      color: 'from-purple-600 to-pink-600',
+      color: 'from-purple-600 to-blue-600',
       content: [
-        {
-          title: 'Conscious AI Systems',
-          description: 'Revolutionary AI that demonstrates self-awareness and emotional intelligence',
-          impact: '500% productivity increase',
-          category: 'Breakthrough'
-        },
         {
           title: 'Quantum Neural Networks',
-          description: 'Next-generation AI powered by quantum computing principles',
-          impact: '1000x processing speed',
-          category: 'Innovation'
+          description: 'Breakthrough in quantum computing and neural network fusion',
+          image: '/api/placeholder/400/250',
+          category: 'Quantum AI',
+          readTime: '8 min read',
+          featured: true,
+          stats: { views: '2.3M', likes: '45K', shares: '12K' }
         },
         {
-          title: 'Autonomous Business AI',
-          description: 'AI systems that can run entire business operations independently',
-          impact: '90% cost reduction',
-          category: 'Transformation'
+          title: 'Conscious AI Systems',
+          description: 'The emergence of self-aware artificial intelligence',
+          image: '/api/placeholder/400/250',
+          category: 'Consciousness',
+          readTime: '12 min read',
+          featured: true,
+          stats: { views: '1.8M', likes: '38K', shares: '9K' }
+        },
+        {
+          title: 'Edge AI Revolution',
+          description: 'Decentralized AI processing at the edge',
+          image: '/api/placeholder/400/250',
+          category: 'Edge Computing',
+          readTime: '6 min read',
+          featured: false,
+          stats: { views: '1.2M', likes: '25K', shares: '6K' }
+        },
+        {
+          title: 'Synthetic Intelligence',
+          description: 'Creating artificial minds that think and feel',
+          image: '/api/placeholder/400/250',
+          category: 'Synthetic Intelligence',
+          readTime: '10 min read',
+          featured: true,
+          stats: { views: '3.1M', likes: '67K', shares: '18K' }
         }
       ]
     },
-    {
-      id: 'quantum-computing',
-      title: 'Quantum Computing Revolution',
-      icon: Zap,
-      color: 'from-blue-600 to-cyan-600',
-      content: [
-        {
-          title: 'Quantum Supremacy Achieved',
-          description: 'Practical quantum computers solving real-world problems',
-          impact: 'Exponential speed gains',
-          category: 'Revolution'
-        },
-        {
-          title: 'Quantum Internet',
-          description: 'Ultra-secure quantum communication networks',
-          impact: 'Unbreakable security',
-          category: 'Security'
-        },
-        {
-          title: 'Quantum AI Fusion',
-          description: 'AI systems enhanced by quantum computing power',
-          impact: 'Unprecedented capabilities',
-          category: 'Fusion'
-        }
-      ]
-    },
-    {
-      id: 'neural-interfaces',
-      title: 'Neural Interface Technology',
-      icon: Users,
+    'business-transformation': {
+      title: 'Business Transformation 2029',
+      subtitle: 'Revolutionary business solutions and strategies',
+      icon: TrendingUp,
       color: 'from-green-600 to-emerald-600',
       content: [
         {
-          title: 'Brain-Computer Integration',
-          description: 'Direct neural interfaces for seamless human-AI interaction',
-          impact: 'Thought-to-action control',
-          category: 'Integration'
+          title: 'Autonomous Business Operations',
+          description: 'Fully automated business processes and decision making',
+          image: '/api/placeholder/400/250',
+          category: 'Automation',
+          readTime: '7 min read',
+          featured: true,
+          stats: { views: '1.9M', likes: '42K', shares: '11K' }
         },
         {
-          title: 'Consciousness Upload',
-          description: 'Digital preservation of human consciousness',
-          impact: 'Digital immortality',
-          category: 'Transcendence'
+          title: 'Quantum Business Intelligence',
+          description: 'Quantum-powered analytics and business insights',
+          image: '/api/placeholder/400/250',
+          category: 'Analytics',
+          readTime: '9 min read',
+          featured: true,
+          stats: { views: '2.1M', likes: '48K', shares: '13K' }
         },
         {
-          title: 'Neural Enhancement',
-          description: 'Cognitive augmentation through neural interfaces',
-          impact: 'Superhuman abilities',
-          category: 'Enhancement'
+          title: 'Neural Market Prediction',
+          description: 'AI-powered market forecasting and trading',
+          image: '/api/placeholder/400/250',
+          category: 'Finance',
+          readTime: '11 min read',
+          featured: false,
+          stats: { views: '1.6M', likes: '35K', shares: '8K' }
         }
       ]
     },
-    {
-      id: 'space-technology',
-      title: 'Space Technology 2029',
+    'future-tech': {
+      title: 'Future Technology 2029',
+      subtitle: 'Cutting-edge technologies shaping tomorrow',
       icon: Rocket,
       color: 'from-orange-600 to-red-600',
       content: [
         {
-          title: 'Mars Colonization',
-          description: 'First permanent human settlements on Mars',
-          impact: 'Multi-planetary species',
-          category: 'Exploration'
+          title: 'Neural Interface Revolution',
+          description: 'Direct brain-computer interfaces for seamless interaction',
+          image: '/api/placeholder/400/250',
+          category: 'Neural Interfaces',
+          readTime: '13 min read',
+          featured: true,
+          stats: { views: '2.8M', likes: '59K', shares: '16K' }
         },
         {
-          title: 'Space Manufacturing',
-          description: 'Zero-gravity manufacturing facilities in orbit',
-          impact: 'Revolutionary materials',
-          category: 'Industry'
+          title: 'Quantum Internet',
+          description: 'Ultra-secure quantum communication networks',
+          image: '/api/placeholder/400/250',
+          category: 'Quantum Computing',
+          readTime: '8 min read',
+          featured: true,
+          stats: { views: '2.2M', likes: '46K', shares: '12K' }
         },
         {
-          title: 'Interstellar Probes',
-          description: 'AI-powered probes exploring nearby star systems',
-          impact: 'Galactic exploration',
-          category: 'Discovery'
+          title: 'Holographic Displays',
+          description: '3D holographic technology for immersive experiences',
+          image: '/api/placeholder/400/250',
+          category: 'Display Technology',
+          readTime: '6 min read',
+          featured: false,
+          stats: { views: '1.4M', likes: '31K', shares: '7K' }
         }
       ]
     }
-  ];
+  };
 
-  const stats = [
-    { label: 'AI Breakthroughs', value: '500+', icon: Brain },
-    { label: 'Quantum Innovations', value: '100+', icon: Zap },
-    { label: 'Neural Interfaces', value: '50+', icon: Users },
-    { label: 'Space Missions', value: '25+', icon: Rocket }
+  const tabs = [
+    { id: 'ai-innovations', label: 'AI Innovations', icon: Brain },
+    { id: 'business-transformation', label: 'Business', icon: TrendingUp },
+    { id: 'future-tech', label: 'Future Tech', icon: Rocket }
   ];
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-blue-600/20"
-          animate={{
-            background: [
-              'linear-gradient(45deg, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2), rgba(59, 130, 246, 0.2))',
-              'linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2))',
-              'linear-gradient(225deg, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2))',
-              'linear-gradient(315deg, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2), rgba(59, 130, 246, 0.2))'
-            ]
-          }}
-          transition={{ duration: 10, repeat: Infinity }}
-        />
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Background Effects */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-6">
             <Sparkles className="w-4 h-4" />
-            Ultimate Content Showcase 2029
+            <span>Ultimate Content Showcase 2029</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            The Future is{' '}
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Here
-            </span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore groundbreaking technologies and innovations that will reshape our world in 2029 and beyond
+          
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent mb-6">
+            Revolutionary Content
+          </h1>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Explore the most groundbreaking innovations, business transformations, and future technologies that are reshaping our world in 2029.
           </p>
         </motion.div>
 
-        {/* Stats */}
+        {/* Tabs */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+          className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20"
-            >
-              <stat.icon className="w-8 h-8 text-purple-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-gray-300 text-sm">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
-
-        {/* Content Tabs */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-12"
-        >
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {contentSections.map((section, index) => (
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            const isActive = activeTab === tab.id;
+            return (
               <button
-                key={section.id}
-                onClick={() => setActiveTab(index)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${
-                  activeTab === index
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center gap-3 px-6 py-4 rounded-xl font-medium transition-all duration-300 ${
+                  isActive
+                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
               >
-                <section.icon className="w-5 h-5" />
-                {section.title}
+                <Icon className="w-5 h-5" />
+                <span>{tab.label}</span>
               </button>
-            ))}
-          </div>
-
-          {/* Tab Content */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.3 }}
-              className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
-            >
-              <div className="flex items-center gap-3 mb-8">
-                <div className={`p-3 rounded-2xl bg-gradient-to-r ${contentSections[activeTab].color}`}>
-                  <contentSections[activeTab].icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-3xl font-bold text-white">
-                  {contentSections[activeTab].title}
-                </h3>
-              </div>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {contentSections[activeTab].content.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-                  >
-                    <div className="flex items-start justify-between mb-4">
-                      <h4 className="text-xl font-semibold text-white group-hover:text-purple-300 transition-colors">
-                        {item.title}
-                      </h4>
-                      <span className="px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-medium rounded-full">
-                        {item.category}
-                      </span>
-                    </div>
-                    <p className="text-gray-300 mb-4 leading-relaxed">
-                      {item.description}
-                    </p>
-                    <div className="flex items-center gap-2 text-purple-400 font-medium">
-                      <TrendingUp className="w-4 h-4" />
-                      {item.impact}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
+            );
+          })}
         </motion.div>
+
+        {/* Content Grid */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {contentSections[activeTab].content.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                onHoverStart={() => setHoveredCard(item.title)}
+                onHoverEnd={() => setHoveredCard(null)}
+                className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10"
+              >
+                {/* Featured Badge */}
+                {item.featured && (
+                  <div className="absolute top-4 left-4 z-10">
+                    <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                      <Star className="w-3 h-3" />
+                      <span>FEATURED</span>
+                    </div>
+                  </div>
+                )}
+
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  
+                  {/* Play Button Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
+                      <Play className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                      {item.category}
+                    </span>
+                    <span className="text-gray-400 text-sm">{item.readTime}</span>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-300">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                    {item.description}
+                  </p>
+
+                  {/* Stats */}
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-1">
+                        <Users className="w-4 h-4" />
+                        <span>{item.stats.views}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4" />
+                        <span>{item.stats.likes}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <ExternalLink className="w-4 h-4" />
+                        <span>{item.stats.shares}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Action Button */}
+                  <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-xl font-medium flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-purple-500/25 transition-all duration-300">
+                    <span>Read More</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </button>
+                </div>
+
+                {/* Hover Effect Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
 
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center"
+          className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 md:p-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Shape the Future?
+          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Explore the Future?
             </h3>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Join us in building the technologies that will define the next decade
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Join thousands of innovators, entrepreneurs, and tech enthusiasts who are already shaping tomorrow's world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-2xl font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2">
-                <Play className="w-5 h-5" />
-                Watch Demo
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white hover:text-purple-600 transition-colors flex items-center gap-2">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center gap-2">
                 <BookOpen className="w-5 h-5" />
-                Learn More
+                <span>Start Learning</span>
+              </button>
+              <button className="bg-white/10 text-white px-8 py-4 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
+                <Lightbulb className="w-5 h-5" />
+                <span>Get Inspired</span>
               </button>
             </div>
           </div>
