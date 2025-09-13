@@ -344,16 +344,16 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW ULTIMATE CONTENT SHOWCASE 2025 BANNERS */}
+        <UltimateContentShowcase2025Banner />
+        <NewContent2025UltimatePromotionBanner />
+        
         {/* NEW PROMOTIONAL BANNERS */}
         <NewContent2025UltimateShowcasePromotionBanner />
         <AI2025RevolutionaryContentBanner />
         
         {/* NEW CONTENT NAVIGATION */}
         <NewContentNavigation />
-        
-        {/* NEW ULTIMATE CONTENT SHOWCASE 2025 BANNERS */}
-        <UltimateContentShowcase2025Banner />
-        <NewContent2025UltimatePromotionBanner />
         
         {/* NEW 2026 PROMOTIONAL BANNERS */}
         <UltimateContentShowcase2026PromotionBanner />
