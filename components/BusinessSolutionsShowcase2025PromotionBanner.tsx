@@ -3,43 +3,51 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  Code, 
-  Cpu, 
-  Brain, 
-  Zap,
+  Building2, 
+  TrendingUp, 
+  DollarSign, 
+  Users,
   ArrowRight, 
   X,
-  Rocket,
-  Settings,
   CheckCircle,
-  TrendingUp
+  Zap,
+  BarChart3,
+  Shield,
+  Award,
+  Clock
 } from 'lucide-react';
 
-const InteractiveTechDemo2025PromotionBanner = () => {
+const BusinessSolutionsShowcase2025PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
-  const [currentDemo, setCurrentDemo] = useState(0);
+  const [currentMetric, setCurrentMetric] = useState(0);
 
-  const demos = [
-    { name: 'AI Processing', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { name: 'Quantum Computing', icon: Cpu, color: 'from-blue-500 to-cyan-500' },
-    { name: 'Neural Networks', icon: Code, color: 'from-green-500 to-emerald-500' }
+  const metrics = [
+    { label: 'ROI', value: '300%', icon: TrendingUp, color: 'text-green-500' },
+    { label: 'Cost Savings', value: '$2.5B+', icon: DollarSign, color: 'text-blue-500' },
+    { label: 'Companies', value: '10K+', icon: Building2, color: 'text-purple-500' },
+    { label: 'Satisfaction', value: '98%', icon: Award, color: 'text-yellow-500' }
+  ];
+
+  const solutions = [
+    { name: 'Automation', icon: Zap, color: 'from-blue-500 to-cyan-500' },
+    { name: 'Analytics', icon: BarChart3, color: 'from-purple-500 to-pink-500' },
+    { name: 'Security', icon: Shield, color: 'from-green-500 to-emerald-500' }
   ];
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 2000);
+    const timer = setTimeout(() => setIsVisible(true), 3000);
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
     if (isVisible) {
       const interval = setInterval(() => {
-        setCurrentDemo((prev) => (prev + 1) % demos.length);
-      }, 3000);
+        setCurrentMetric((prev) => (prev + 1) % metrics.length);
+      }, 2500);
       return () => clearInterval(interval);
     }
-  }, [isVisible, demos.length]);
+  }, [isVisible, metrics.length]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
@@ -102,7 +110,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white shadow-2xl"
+          className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-2xl"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -117,55 +125,67 @@ const InteractiveTechDemo2025PromotionBanner = () => {
               >
                 <div className="flex items-center space-x-3">
                   <motion.div
-                    className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                    className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
+                    animate={{ 
+                      rotate: [0, 360],
+                      scale: [1, 1.1, 1]
+                    }}
+                    transition={{ 
+                      duration: 4, 
+                      repeat: Infinity, 
+                      ease: "easeInOut" 
+                    }}
                   >
-                    <Rocket className="w-6 h-6 text-white" />
+                    <Building2 className="w-6 h-6 text-white" />
                   </motion.div>
                   <div>
                     <h3 className="text-lg font-bold mb-1">
-                      🚀 Interactive Tech Demo 2025
+                      🏢 Business Solutions 2025
                     </h3>
                     <p className="text-sm opacity-90 hidden sm:block">
-                      Experience cutting-edge technology in real-time
+                      Transform your operations with proven solutions
                     </p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Center Demo Rotator */}
+              {/* Center Metrics Rotator */}
               <motion.div 
-                className="hidden md:flex items-center space-x-4"
+                className="hidden md:flex items-center space-x-6"
                 variants={textVariants}
               >
                 <div className="text-center">
-                  <div className="text-sm opacity-80 mb-1">Live Demo</div>
+                  <div className="text-sm opacity-80 mb-1">Live Results</div>
                   <AnimatePresence mode="wait">
                     <motion.div
-                      key={currentDemo}
+                      key={currentMetric}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5 }}
                       className="flex items-center space-x-2"
                     >
-                      <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${demos[currentDemo].color} flex items-center justify-center`}>
-                        {React.createElement(demos[currentDemo].icon, { className: "w-4 h-4 text-white" })}
+                      <div className={`w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center`}>
+                        {React.createElement(metrics[currentMetric].icon, { 
+                          className: `w-4 h-4 ${metrics[currentMetric].color}` 
+                        })}
                       </div>
-                      <span className="font-semibold">{demos[currentDemo].name}</span>
+                      <div>
+                        <div className="text-2xl font-bold">{metrics[currentMetric].value}</div>
+                        <div className="text-xs opacity-80">{metrics[currentMetric].label}</div>
+                      </div>
                     </motion.div>
                   </AnimatePresence>
                 </div>
                 <div className="w-px h-8 bg-white/30"></div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold">99.2%</div>
-                  <div className="text-xs opacity-80">Accuracy</div>
+                  <div className="text-2xl font-bold">30</div>
+                  <div className="text-xs opacity-80">Days to Value</div>
                 </div>
                 <div className="w-px h-8 bg-white/30"></div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold">2.3ms</div>
-                  <div className="text-xs opacity-80">Response</div>
+                  <div className="text-2xl font-bold">24/7</div>
+                  <div className="text-xs opacity-80">Support</div>
                 </div>
               </motion.div>
 
@@ -175,13 +195,12 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                 variants={buttonVariants}
               >
                 <button className="hidden sm:flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all duration-200 backdrop-blur-sm">
-                  <Settings className="w-4 h-4" />
-                  <span className="text-sm font-medium">Configure</span>
+                  <Users className="w-4 h-4" />
+                  <span className="text-sm font-medium">Case Studies</span>
                 </button>
                 
-                <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 px-6 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center space-x-2 shadow-lg">
-                  <Play className="w-4 h-4" />
-                  <span>Try Demo</span>
+                <button className="bg-white text-indigo-600 hover:bg-gray-100 px-6 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center space-x-2 shadow-lg">
+                  <span>Explore Solutions</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
                 
@@ -194,32 +213,41 @@ const InteractiveTechDemo2025PromotionBanner = () => {
               </motion.div>
             </div>
 
-            {/* Mobile Demo Rotator */}
+            {/* Mobile Content */}
             <motion.div 
-              className="md:hidden flex items-center justify-center space-x-4 py-2 border-t border-white/20"
+              className="md:hidden flex items-center justify-between py-2 border-t border-white/20"
               variants={textVariants}
             >
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
+                  <motion.div
+                    className={`w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center`}
+                    key={currentMetric}
+                    initial={{ scale: 0.8 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {React.createElement(metrics[currentMetric].icon, { 
+                      className: `w-3 h-3 ${metrics[currentMetric].color}` 
+                    })}
+                  </motion.div>
+                  <span className="text-sm font-medium">{metrics[currentMetric].value}</span>
+                </div>
+                <div className="w-px h-4 bg-white/30"></div>
+                <div className="flex items-center space-x-1">
+                  <Clock className="w-4 h-4" />
+                  <span className="text-sm">30 Days to Value</span>
+                </div>
+              </div>
               <div className="flex items-center space-x-2">
-                <motion.div
-                  className={`w-6 h-6 rounded-lg bg-gradient-to-r ${demos[currentDemo].color} flex items-center justify-center`}
-                  key={currentDemo}
-                  initial={{ scale: 0.8 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {React.createElement(demos[currentDemo].icon, { className: "w-3 h-3 text-white" })}
-                </motion.div>
-                <span className="text-sm font-medium">{demos[currentDemo].name}</span>
-              </div>
-              <div className="w-px h-4 bg-white/30"></div>
-              <div className="flex items-center space-x-1">
-                <TrendingUp className="w-4 h-4" />
-                <span className="text-sm">99.2% Accuracy</span>
-              </div>
-              <div className="w-px h-4 bg-white/30"></div>
-              <div className="flex items-center space-x-1">
-                <Zap className="w-4 h-4" />
-                <span className="text-sm">2.3ms Response</span>
+                {solutions.map((solution, index) => (
+                  <div
+                    key={index}
+                    className={`w-6 h-6 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center`}
+                  >
+                    {React.createElement(solution.icon, { className: "w-3 h-3 text-white" })}
+                  </div>
+                ))}
               </div>
             </motion.div>
           </div>
@@ -227,7 +255,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
-              className="absolute -top-4 -left-4 w-24 h-24 bg-blue-500/20 rounded-full"
+              className="absolute -top-4 -left-4 w-24 h-24 bg-white/10 rounded-full"
               animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.3, 0.6, 0.3]
@@ -239,7 +267,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
               }}
             />
             <motion.div
-              className="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-500/10 rounded-full"
+              className="absolute -bottom-4 -right-4 w-32 h-32 bg-white/5 rounded-full"
               animate={{
                 scale: [1, 1.3, 1],
                 opacity: [0.2, 0.4, 0.2]
@@ -252,7 +280,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
               }}
             />
             <motion.div
-              className="absolute top-1/2 left-1/2 w-16 h-16 bg-cyan-500/15 rounded-full"
+              className="absolute top-1/2 left-1/2 w-16 h-16 bg-white/8 rounded-full"
               animate={{
                 scale: [1, 1.5, 1],
                 opacity: [0.1, 0.3, 0.1]
@@ -271,4 +299,4 @@ const InteractiveTechDemo2025PromotionBanner = () => {
   );
 };
 
-export default InteractiveTechDemo2025PromotionBanner;
+export default BusinessSolutionsShowcase2025PromotionBanner;
