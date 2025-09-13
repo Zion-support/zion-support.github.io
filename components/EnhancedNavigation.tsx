@@ -50,6 +50,7 @@ const EnhancedNavigation: React.FC = () => {
         { label: 'Fintech Transformation Success', href: '/case-studies/ai-2025-fintech-transformation-breakthrough', isNew: true, isHot: true },
         { label: 'AI 2025 Ultimate Automation Platform', href: '/ai-2025-ultimate-automation-platform', isNew: true, isHot: true },
         { label: 'Future Technologies 2030-2035 Showcase', href: '/future-technologies-2030-2035-showcase', isNew: true, isHot: true },
+        { label: 'AI Innovation Hub 2025', href: '/ai-innovation-hub-2025', isNew: true, isHot: true },
         { label: 'AI Implementation Mastery Guide 2026', href: '/resources/ai-implementation-mastery-2026', isNew: true, isHot: true },
         { label: 'Enterprise Implementation Mastery', href: '/resources/ai-2025-enterprise-implementation-mastery', isNew: true, isHot: true },
         { label: 'AI Automation Implementation Toolkit', href: '/resources/ai-automation-implementation-toolkit-2025', isNew: true, isHot: true },
@@ -86,6 +87,13 @@ const EnhancedNavigation: React.FC = () => {
       description: "Revolutionary AI breakthroughs and singularity achievements",
       href: "/future-technologies-2030-2035-showcase",
       icon: "🔮",
+      isNew: true
+    },
+    {
+      title: "AI Innovation Hub 2025",
+      description: "Ultimate destination for revolutionary AI breakthroughs",
+      href: "/ai-innovation-hub-2025",
+      icon: "🚀",
       isNew: true
     },
     {

@@ -64,6 +64,9 @@ import AI2028AutomotiveTransformationPromotionBanner from '../components/AI2028A
 // Future Technologies Showcase
 import FutureTechnologiesShowcaseBanner from '../components/FutureTechnologiesShowcaseBanner';
 
+// AI Innovation Hub 2025
+import AIInnovationHub2025Banner from '../components/AIInnovationHub2025Banner';
+
 // New Content Components 2025
 import AIInsightsTrends2025 from '../components/AIInsightsTrends2025';
 import SuccessStoriesShowcase2025 from '../components/SuccessStoriesShowcase2025';
@@ -493,6 +496,11 @@ const HomePage: React.FC = () => {
               {/* Future Technologies Showcase Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <FutureTechnologiesShowcaseBanner />
+              </Suspense>
+
+              {/* AI Innovation Hub 2025 Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AIInnovationHub2025Banner />
               </Suspense>
 
               {/* Interactive Content Discovery Widget 2025 */}
