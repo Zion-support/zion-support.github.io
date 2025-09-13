@@ -26,6 +26,7 @@ import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025Ultim
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
+import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
 export default function HomePage() {
@@ -41,6 +42,9 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT 2025 REVOLUTIONARY BANNER */}
         <NewContent2025RevolutionaryBanner />
+        
+        {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
+        <UltimateContentPromotionBanner2025 />
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
