@@ -18,6 +18,8 @@ const AdvancedPerformanceMonitor2026 = lazy(() => import('../components/Advanced
 const UltimateAIAssistant2026 = lazy(() => import('../components/UltimateAIAssistant2026'));
 const AdvancedAnalyticsDashboard2026 = lazy(() => import('../components/AdvancedAnalyticsDashboard2026'));
 const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../components/RevolutionaryContentRecommendationEngine2026'));
+const AI2025RevolutionaryContentBanner = lazy(() => import('../components/AI2025RevolutionaryContentBanner'));
+const AI2025ContentDiscoveryWidget = lazy(() => import('../components/AI2025ContentDiscoveryWidget'));
 
 export default function HomePage() {
   return (
@@ -30,6 +32,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 REVOLUTIONARY CONTENT BANNER */}
+        <Suspense fallback={<LoadingSpinner />}>
+          <AI2025RevolutionaryContentBanner />
+        </Suspense>
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
         
@@ -75,6 +82,11 @@ export default function HomePage() {
         {/* AI-POWERED SEARCH 2026 */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI Search..." />}>
           <AIPoweredSearch2026 />
+        </Suspense>
+        
+        {/* AI 2025 CONTENT DISCOVERY WIDGET */}
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Discovery..." />}>
+          <AI2025ContentDiscoveryWidget />
         </Suspense>
         
         {/* ULTIMATE CONTENT DISCOVERY 2026 */}
