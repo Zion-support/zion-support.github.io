@@ -59,20 +59,25 @@ import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRe
 
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
-import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
-<<<<<<< HEAD
 
 // Import new content promotional banners
-import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
-import AI20262030FuturePredictionsBreakthroughBanner from '../components/AI20262030FuturePredictionsBreakthroughBanner';
-import QuantumComputingSolutions2025Banner from '../components/QuantumComputingSolutions2025Banner';
-=======
+import AI2025UltimateBreakthroughAnnouncementBanner from '../components/AI2025UltimateBreakthroughAnnouncementBanner';
+import AI2025QuantumConsciousnessBreakthroughBanner from '../components/AI2025QuantumConsciousnessBreakthroughBanner';
+import AI2025SyntheticIntelligenceTransformationBanner from '../components/AI2025SyntheticIntelligenceTransformationBanner';
+
+// Import new promotional components
+import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+import AI2025NewsletterSignup from '../components/AI2025NewsletterSignup';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import AnimatedContentShowcase from '../components/AnimatedContentShowcase';
+import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 
 // Import new promotional banners for content advertising
 import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
 import AI20262030FuturePredictionsBanner from '../components/AI20262030FuturePredictionsBanner';
->>>>>>> cursor/create-and-deploy-new-content-b354
 
 // Import new ultimate content banners
 import UltimateContentRevolutionBanner from '../components/UltimateContentRevolutionBanner';
@@ -88,11 +93,21 @@ export default function HomePage() {
         url="/"
       />
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className='min-h-screen bg-white'>
-        {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
-        <AI2025UltimateBreakthroughPromotionBanner />
+      <div className='min-h-screen bg-white'>
+        {/* NEW AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
+        <AI2025UltimateBreakthroughAnnouncementBanner />
+        
+        {/* AI 2025 QUANTUM CONSCIOUSNESS BREAKTHROUGH BANNER */}
+        <AI2025QuantumConsciousnessBreakthroughBanner />
+        
+        {/* AI 2025 SYNTHETIC INTELLIGENCE TRANSFORMATION BANNER */}
+        <AI2025SyntheticIntelligenceTransformationBanner />
+        
+        {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
+        <AI2025UltimateBreakthroughRevolutionBanner />
+        
+        {/* NEW 2026 ULTIMATE CONTENT PROMOTION BANNER */}
+        <NewContent2026UltimatePromotionBanner />
         
         {/* FEATURED CONTENT SHOWCASE 2025 */}
         <FeaturedContentShowcase2025 />
@@ -108,11 +123,6 @@ export default function HomePage() {
         
         {/* NEW 2025 CONTENT PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
-=======
-      <div className='min-h-screen bg-white'>
-        {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
-        <AI2025UltimateBreakthroughRevolutionBanner />
->>>>>>> cursor/create-and-deploy-new-content-b354
         
         {/* NEW AI 2026-2030 FUTURE PREDICTIONS BANNER */}
         <AI20262030FuturePredictionsBanner />
