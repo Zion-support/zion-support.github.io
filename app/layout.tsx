@@ -1107,6 +1107,9 @@ function Header() {
                 <Link href="/quantum-ai-fusion-technology" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   ⚛️🧠 Quantum-AI Fusion Technology (REVOLUTIONARY)
                 </Link>
+                <Link href="/quantum-computing-solutions-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500">
+                  🚀 Quantum Computing Solutions 2025 (NEW)
+                </Link>
                 <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/quantum-computing-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   All Quantum Solutions
@@ -1167,6 +1170,15 @@ function Header() {
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
             Services
+          </Link>
+          <Link 
+            href="/revolutionary-content-showcase-2026" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
+          >
+            Content Showcase
+            <span className="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+              NEW
+            </span>
           </Link>
           <Link 
             href="/contact" 

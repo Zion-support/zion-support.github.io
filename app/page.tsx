@@ -41,6 +41,7 @@ import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRe
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 import { BreakthroughBanner, QuantumBanner, ContentShowcaseBanner, SuccessStoryBanner } from '../components/PromotionalBanner';
 import ContentPromotion from '../components/ContentPromotion';
+import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 
 export default function HomePage() {
   return (
@@ -58,6 +59,9 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT REVOLUTION BANNER 2025 */}
         <UltimateContentRevolutionBanner2025 />
+        
+        {/* NEW CONTENT 2025 REVOLUTIONARY BANNER */}
+        <NewContent2025RevolutionaryBanner />
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
