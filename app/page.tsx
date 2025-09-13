@@ -179,6 +179,12 @@ import AI2025GlobalEnterpriseTransformation50000ROIPromotionBanner from '../comp
 // Import new 2026 content components
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+
+// Import new comprehensive content and service components
+import AI2025_2026UltimateTechnologyShowcase from '../components/AI2025_2026UltimateTechnologyShowcase';
+import UltimateContentPromotionBanner2025_2026 from '../components/UltimateContentPromotionBanner2025_2026';
+import InteractiveContentDiscoveryWidget2025_2026 from '../components/InteractiveContentDiscoveryWidget2025_2026';
+import ComprehensiveServiceShowcase2025_2026 from '../components/ComprehensiveServiceShowcase2025_2026';
 import RevolutionaryContentDiscoveryWidget2026 from '../components/RevolutionaryContentDiscoveryWidget2026';
 import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 
@@ -264,6 +270,20 @@ export default function HomePage() {
         
         {/* NEW: AI 2025 GLOBAL ENTERPRISE TRANSFORMATION 50000 ROI PROMOTION BANNER */}
         <AI2025GlobalEnterpriseTransformation50000ROIPromotionBanner />
+        
+        {/* NEW COMPREHENSIVE CONTENT PROMOTION BANNER */}
+        <UltimateContentPromotionBanner2025_2026 />
+        
+        {/* AI 2025-2026 ULTIMATE TECHNOLOGY SHOWCASE */}
+        <AI2025_2026UltimateTechnologyShowcase />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-16">
+          <InteractiveContentDiscoveryWidget2025_2026 />
+        </div>
+        
+        {/* COMPREHENSIVE SERVICE SHOWCASE */}
+        <ComprehensiveServiceShowcase2025_2026 />
         
         {/* AI 2025 ULTIMATE TECHNOLOGY SHOWCASE BANNER */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
