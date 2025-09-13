@@ -72,6 +72,12 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
 
+// Import new content showcase and recommendation components
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import AI2025ContentRecommendationEngine from '../components/AI2025ContentRecommendationEngine';
+
 // Import new quantum consciousness and neural interface banners
 import AI2025QuantumConsciousnessPromotionBanner from '../components/AI2025QuantumConsciousnessPromotionBanner';
 import AI2026NeuralInterfaceRevolutionPromotionBanner from '../components/AI2026NeuralInterfaceRevolutionPromotionBanner';
@@ -122,7 +128,18 @@ export default function HomePage() {
         
         {/* AI 2026 FUTURE PREDICTIONS BREAKTHROUGH BANNER */}
         <AI2026FuturePredictionsBreakthroughBanner />
-0e0996fe7622d10d62be0fde7a68a
+        
+        {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
+        <UltimateContentPromotionBanner2025 />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
+        
+        {/* AI 2025 CONTENT RECOMMENDATION ENGINE */}
+        <AI2025ContentRecommendationEngine />
         
         {/* NEW 2025 CONTENT PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
