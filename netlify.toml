@@ -1,5 +1,6 @@
 [build]
   functions = "netlify/functions"
+  command = "yarn build:netlify"
 
 [build.environment]
   # Set Node.js version
@@ -10,6 +11,10 @@
   NETLIFY_TIMEOUT = "600"
   # Force use of Yarn instead of pnpm
   NPM_CONFIG_PACKAGE_MANAGER = "yarn"
+  # Yarn version
+  YARN_VERSION = "1.22.22"
+  # NPM flags for better performance
+  NPM_FLAGS = "--prefer-offline --no-audit --progress=false"
   # Node.js options for build
   NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
   # Disable Next.js telemetry
