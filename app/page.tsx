@@ -198,6 +198,10 @@ import AI2035OmniversalConsciousnessShowcase from '../components/AI2035Omniversa
 import NeuralInterfaceRevolutionBanner from '../components/NeuralInterfaceRevolutionBanner';
 import SpaceTechnologySolutionsBanner from '../components/SpaceTechnologySolutionsBanner';
 
+// New 2025 Revolutionary Content Components
+import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
+import QuantumAIContentShowcase from '../components/QuantumAIContentShowcase';
+
 // New Neural Synthesis and Quantum-AI Content Components
 import NeuralSynthesisContentPromotionBanner from '../components/NeuralSynthesisContentPromotionBanner';
 import QuantumAIBreakthroughShowcase from '../components/QuantumAIBreakthroughShowcase';
@@ -306,6 +310,16 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </section>
+
+              {/* NEW: Revolutionary Content 2025 Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewContent2025RevolutionaryBanner />
+              </Suspense>
+
+              {/* NEW: Quantum-AI Content Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumAIContentShowcase />
+              </Suspense>
 
               {/* AI 2025 Ultimate Content Revolution Banner */}
               <Suspense fallback={<LoadingSpinner />}>
