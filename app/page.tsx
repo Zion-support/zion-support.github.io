@@ -147,6 +147,11 @@ import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026Quantu
 
 // Import new promotional components
 import EdgeAIRevolutionPromotionBanner from '../components/EdgeAIRevolutionPromotionBanner';
+
+// Import new content promotion banners
+import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
+import AIToolsUltimateShowcase2025Banner from '../components/AIToolsUltimateShowcase2025Banner';
+import AIFuturePredictionsUltimate2025_2035Banner from '../components/AIFuturePredictionsUltimate2025_2035Banner';
 import NewContentShowcaseBanner2025 from '../components/NewContentShowcaseBanner2025';
 import NeuralConsensusRevolutionBanner from '../components/NeuralConsensusRevolutionBanner';
 
@@ -466,6 +471,12 @@ export default function HomePage() {
         
         {/* NEW 2025 ULTIMATE CONTENT REVOLUTION BANNER */}
         <AI2025UltimateContentRevolutionBanner />
+        
+        {/* AI TOOLS ULTIMATE SHOWCASE 2025 BANNER */}
+        <AIToolsUltimateShowcase2025Banner />
+        
+        {/* AI FUTURE PREDICTIONS ULTIMATE 2025-2035 BANNER */}
+        <AIFuturePredictionsUltimate2025_2035Banner />
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
