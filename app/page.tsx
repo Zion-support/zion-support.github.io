@@ -148,6 +148,12 @@ import NeuralConsensusRevolutionBanner from '../components/NeuralConsensusRevolu
 // Import new content promotion banners
 import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
 
+// Import new 2026 content components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
+import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
+import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
+
 // Import new 2026 innovation showcase and 2030 future vision banners
 import AI2026UltimateInnovationShowcasePromotionBanner from '../components/AI2026UltimateInnovationShowcasePromotionBanner';
 import AI2030FutureVisionPromotionBanner from '../components/AI2030FutureVisionPromotionBanner';
@@ -221,6 +227,12 @@ export default function HomePage() {
         {/* NEURAL CONSENSUS REVOLUTION BANNER */}
         <NeuralConsensusRevolutionBanner />
         
+        {/* NEW 2026 REVOLUTIONARY TECH BANNER */}
+        <RevolutionaryTechBanner2026 />
+        
+        {/* NEW CONTENT PROMOTION BANNER 2026 */}
+        <NewContentPromotionBanner2026 />
+        
         {/* NEW REVOLUTIONARY CONTENT SHOWCASE BANNER */}
         <NewContent2025RevolutionaryShowcaseBanner />
         
@@ -266,6 +278,9 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2026 */}
+        <UltimateContentDiscoveryWidget2026 />
         
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
