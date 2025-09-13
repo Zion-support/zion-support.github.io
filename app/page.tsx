@@ -147,6 +147,10 @@ import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026Quantu
 
 // Import new promotional components
 import EdgeAIRevolutionPromotionBanner from '../components/EdgeAIRevolutionPromotionBanner';
+
+// Import new content promotion banners
+import NewContent2025UltimateTransformationBanner from '../components/NewContent2025UltimateTransformationBanner';
+import AI2025RevolutionaryContentShowcaseBanner from '../components/AI2025RevolutionaryContentShowcaseBanner';
 import NewContentShowcaseBanner2025 from '../components/NewContentShowcaseBanner2025';
 import NeuralConsensusRevolutionBanner from '../components/NeuralConsensusRevolutionBanner';
 
@@ -291,6 +295,12 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
+        
+        {/* NEW ULTIMATE TRANSFORMATION CONTENT BANNER */}
+        <NewContent2025UltimateTransformationBanner />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE BANNER */}
+        <AI2025RevolutionaryContentShowcaseBanner />
         
         {/* LATEST CONTENT NAVIGATION */}
         <LatestContentNavigation />
