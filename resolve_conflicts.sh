@@ -20,9 +20,10 @@ done
 echo "All conflicts resolved. Committing merge..."
 git commit -m "Resolve merge conflicts by choosing newer versions
 
-- Resolved conflicts in case study page
-- Resolved conflicts in homepage
+- Resolved conflicts in AI breakthrough pages
+- Resolved conflicts in case studies
+- Resolved conflicts in layout and homepage
 - Resolved conflicts in quantum computing solutions
-- Resolved conflicts in promotion banner component
+- Resolved conflicts in promotion banners and widgets
 
 All conflicts resolved by choosing the newer version from main branch."

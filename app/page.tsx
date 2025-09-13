@@ -72,6 +72,10 @@ import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025Ulti
 import AI20262030FuturePredictionsBanner from '../components/AI20262030FuturePredictionsBanner';
 >>>>>>> cursor/create-and-deploy-new-content-b354
 
+// Import new ultimate content banners
+import UltimateContentRevolutionBanner from '../components/UltimateContentRevolutionBanner';
+import AI2026BreakthroughBanner from '../components/AI2026BreakthroughBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -146,6 +150,12 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-b354
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
+        
+        {/* ULTIMATE CONTENT REVOLUTION BANNER */}
+        <UltimateContentRevolutionBanner />
+        
+        {/* AI 2026 BREAKTHROUGH BANNER */}
+        <AI2026BreakthroughBanner />
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />

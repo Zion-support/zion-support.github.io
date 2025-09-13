@@ -10,6 +10,9 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedSEO from '../components/EnhancedSEO';
 import AdvancedPerformanceMonitor2026 from '../components/AdvancedPerformanceMonitor2026';
 import UltimateAIAssistant2026 from '../components/UltimateAIAssistant2026';
+import OptimizedNavigation from '../components/OptimizedNavigation';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import SEOOptimizer from '../components/SEOOptimizer';
 
 export const metadata = {
   title: {
@@ -1383,6 +1386,8 @@ export default function RootLayout({
             <AccessibilityEnhancer>
               <AdvancedPerformanceMonitor2026 />
               <UltimateAIAssistant2026 />
+              <PerformanceOptimizer />
+              <SEOOptimizer />
               {/* Skip to main content for accessibility */}
               <a 
                 href="#main-content" 
