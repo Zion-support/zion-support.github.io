@@ -241,6 +241,14 @@ import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import NewContentShowcase2026Banner from '../components/NewContentShowcase2026Banner';
 import AI2026BreakthroughAnnouncementBanner from '../components/AI2026BreakthroughAnnouncementBanner';
 
+// Import new 2026 content components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import AITrendsPredictions2026 from '../components/AITrendsPredictions2026';
+import AITrendsPredictions2026PromotionBanner from '../components/AITrendsPredictions2026PromotionBanner';
+import QuantumComputingSolutions2026 from '../components/QuantumComputingSolutions2026';
+import QuantumComputingSolutions2026PromotionBanner from '../components/QuantumComputingSolutions2026PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -262,11 +270,21 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2026 PROMOTIONAL BANNERS */}
+        <UltimateContentShowcase2026PromotionBanner />
+        <AITrendsPredictions2026PromotionBanner />
+        <QuantumComputingSolutions2026PromotionBanner />
+        
         {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
         <NewContent2025UltimateBreakthroughBanner />
         
         {/* NEW CONTENT 2025 ULTIMATE SHOWCASE */}
         <NewContent2025UltimateShowcase />
+        
+        {/* NEW 2026 CONTENT SECTIONS */}
+        <UltimateContentShowcase2026 />
+        <AITrendsPredictions2026 />
+        <QuantumComputingSolutions2026 />
         
         {/* ULTIMATE CONTENT CAROUSEL 2025 */}
         <UltimateContentCarousel2025 />
