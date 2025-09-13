@@ -27,6 +27,8 @@ import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import RevolutionaryContentDiscoveryWidget from '../components/RevolutionaryContentDiscoveryWidget';
+import RevolutionaryNewsletterSignup from '../components/RevolutionaryNewsletterSignup';
 
 export default function HomePage() {
   return (
@@ -47,6 +49,9 @@ export default function HomePage() {
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT DISCOVERY WIDGET */}
+        <RevolutionaryContentDiscoveryWidget />
         
         {/* AI 2026 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
         <AI2026RevolutionaryBreakthroughPromotionBanner />
@@ -2831,6 +2836,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* REVOLUTIONARY NEWSLETTER SIGNUP */}
+      <RevolutionaryNewsletterSignup />
     </div>
   );
 }
