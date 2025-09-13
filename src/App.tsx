@@ -4,6 +4,9 @@ import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
 import NewContentPromotionBanner from './components/NewContentPromotionBanner';
+import { RevolutionaryContentBanner } from './components/RevolutionaryContentBanner';
+import InnovativeContentShowcase2026 from './components/InnovativeContentShowcase2026';
+import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -51,6 +54,7 @@ const LoginPage = React.lazy(() => import('./pages/Login'));
 // New 2025 service imports
 const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
 const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
+const ContentShowcase2025 = React.lazy(() => import('../app/content-showcase-2025/page'));
 
 // Sitemap-aligned pages
 
@@ -121,6 +125,8 @@ const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/AIQuan
 const AIRevolution2025 = React.lazy(() => import('./pages/AIRevolution2025'));
 const QuantumComputingBreakthrough = React.lazy(() => import('./pages/QuantumComputingBreakthrough'));
 const AutonomousBusinessPlatform = React.lazy(() => import('./pages/AutonomousBusinessPlatform'));
+const InnovativeContentShowcase2026Page = () => <InnovativeContentShowcase2026 />;
+const InteractiveContentDiscovery2026Page = () => <InteractiveContentDiscovery2026 />;
 
 // Comprehensive services showcase - commented out as they don't exist yet
 // const ComprehensiveServicesShowcase2025Page = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
@@ -166,6 +172,7 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
+        <RevolutionaryContentBanner />
         <NewContentPromotionBanner />
         <AppHeader />
         <main id="main-content" className="flex-1">
@@ -205,6 +212,7 @@ function App() {
               <Route path="/white-papers" element={<WhitePapers />} />
               <Route path="/webinars" element={<Webinars />} />
               <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/content-showcase-2025" element={<ContentShowcase2025 />} />
               
               {/* New sitemap routes */}
               
@@ -299,6 +307,8 @@ function App() {
               <Route path="/ai-revolution-2025" element={<AIRevolution2025 />} />
               <Route path="/quantum-computing-breakthrough" element={<QuantumComputingBreakthrough />} />
               <Route path="/autonomous-business-platform" element={<AutonomousBusinessPlatform />} />
+              <Route path="/innovative-content-showcase-2026" element={<InnovativeContentShowcase2026Page />} />
+              <Route path="/interactive-content-discovery-2026" element={<InteractiveContentDiscovery2026Page />} />
               
               {/* Hybrid App Demo */}
               
