@@ -976,6 +976,15 @@ function Header() {
                 <Link href="/revolutionary-content-showcase-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 Revolutionary Content Showcase 2025 (NEW)
                 </Link>
+                <Link href="/blog/ai-2025-revolutionary-autonomous-operations-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
+                  🚀 AI 2025 Autonomous Operations Breakthrough (10,000% ROI) (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-enterprise-autonomous-transformation-15000-roi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 Global Enterprise 15,000% ROI Success (NEW)
+                </Link>
+                <Link href="/resources/ai-2025-ultimate-autonomous-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
+                  📚 Ultimate Implementation Master Guide (NEW)
+                </Link>
                 <Link href="/blog/ai-2025-generative-ai-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 Generative AI Revolution (BREAKTHROUGH)
                 </Link>
