@@ -67,6 +67,10 @@ import NewContent2025UltimateTransformationBanner from '../components/NewContent
 import AI2025RevolutionaryContentShowcaseBanner from '../components/AI2025RevolutionaryContentShowcaseBanner';
 import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
 import AIToolsUltimateShowcase2025Banner from '../components/AIToolsUltimateShowcase2025Banner';
+
+// Import new 2025 promotional banners
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import AdvancedServices2025PromotionBanner from '../components/AdvancedServices2025PromotionBanner';
 import AIFuturePredictionsUltimate2025_2035Banner from '../components/AIFuturePredictionsUltimate2025_2035Banner';
 import NewContentShowcaseBanner2025 from '../components/NewContentShowcaseBanner2025';
 import NeuralConsensusRevolutionBanner from '../components/NeuralConsensusRevolutionBanner';
@@ -215,6 +219,9 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
+        
+        {/* ADVANCED SERVICES 2025 PROMOTION BANNER */}
+        <AdvancedServices2025PromotionBanner />
         
         {/* AI 2025 BREAKTHROUGH SHOWCASE */}
         <AI2025BreakthroughShowcase />
