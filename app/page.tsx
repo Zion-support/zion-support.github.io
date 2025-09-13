@@ -29,6 +29,11 @@ import NewContent2025RevolutionaryBanner from '../components/NewContent2025Revol
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
+// New 2026 promotional components
+import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
+import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
+import NewsletterSignup2026 from '../components/NewsletterSignup2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -40,6 +45,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
+        <AI2026QuantumNeuralFusionPromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2026 */}
+        <InteractiveContentDiscoveryWidget2026 />
+        
+        {/* NEWSLETTER SIGNUP 2026 */}
+        <NewsletterSignup2026 />
+        
         {/* NEW CONTENT 2025 REVOLUTIONARY BANNER */}
         <NewContent2025RevolutionaryBanner />
         
