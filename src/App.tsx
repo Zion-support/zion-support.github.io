@@ -7,6 +7,7 @@ import NewContentPromotionBanner from './components/NewContentPromotionBanner';
 import { RevolutionaryContentBanner } from './components/RevolutionaryContentBanner';
 import InnovativeContentShowcase2026 from './components/InnovativeContentShowcase2026';
 import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
+import EnhancedContentPromotionBanner from './components/EnhancedContentPromotionBanner';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -125,6 +126,7 @@ const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/AIQuan
 const AIRevolution2025 = React.lazy(() => import('./pages/AIRevolution2025'));
 const QuantumComputingBreakthrough = React.lazy(() => import('./pages/QuantumComputingBreakthrough'));
 const AutonomousBusinessPlatform = React.lazy(() => import('./pages/AutonomousBusinessPlatform'));
+const AutonomousBusinessPlatform2026 = React.lazy(() => import('./pages/AutonomousBusinessPlatform2026'));
 const InnovativeContentShowcase2026Page = () => <InnovativeContentShowcase2026 />;
 const InteractiveContentDiscovery2026Page = () => <InteractiveContentDiscovery2026 />;
 
@@ -188,6 +190,7 @@ function App() {
       <div className="min-h-screen bg-futuristic">
         <RevolutionaryContentBanner />
         <NewContentPromotionBanner />
+        <EnhancedContentPromotionBanner />
         <AppHeader />
         <main id="main-content" className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
@@ -321,6 +324,7 @@ function App() {
               <Route path="/ai-revolution-2025" element={<AIRevolution2025 />} />
               <Route path="/quantum-computing-breakthrough" element={<QuantumComputingBreakthrough />} />
               <Route path="/autonomous-business-platform" element={<AutonomousBusinessPlatform />} />
+              <Route path="/autonomous-business-platform-2026" element={<AutonomousBusinessPlatform2026 />} />
               <Route path="/innovative-content-showcase-2026" element={<InnovativeContentShowcase2026Page />} />
               <Route path="/interactive-content-discovery-2026" element={<InteractiveContentDiscovery2026Page />} />
               
@@ -337,6 +341,12 @@ function App() {
               
               {/* Content showcase hub */}
               <Route path="/content-showcase" element={<ContentShowcaseHub />} />
+              
+              {/* New Content Routes */}
+              <Route path="/blog/ai-2026-neural-computing-revolution" element={<InteractiveContentDiscovery2026Page />} />
+              <Route path="/blog/quantum-ai-autonomous-systems-2026" element={<InteractiveContentDiscovery2026Page />} />
+              <Route path="/case-studies/enterprise-quantum-ai-transformation-2026" element={<InteractiveContentDiscovery2026Page />} />
+              <Route path="/resources/quantum-ai-implementation-master-guide-2026" element={<InteractiveContentDiscovery2026Page />} />
               
               {/* Hybrid App Demo */}
               
