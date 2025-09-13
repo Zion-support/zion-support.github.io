@@ -47,11 +47,14 @@ import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner20
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 import SuccessStoriesShowcase2026 from '../components/SuccessStoriesShowcase2026';
 
-<<<<<<< HEAD
 // New promotional banners and showcases
 import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
 import AIToolsShowcase2026 from '../components/AIToolsShowcase2026';
 import AIToolsPromotionBanner2026 from '../components/AIToolsPromotionBanner2026';
+
+// New comprehensive content promotion banners
+import AISolutions2026ComprehensivePromotionBanner from '../components/AISolutions2026ComprehensivePromotionBanner';
+import BusinessAutomationMastery2026PromotionBanner from '../components/BusinessAutomationMastery2026PromotionBanner';
 
 // Additional 2026 content components
 import AdvancedTechTrends2026 from '../components/AdvancedTechTrends2026';
@@ -75,6 +78,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW COMPREHENSIVE AI SOLUTIONS 2026 PROMOTION BANNER */}
+        <AISolutions2026ComprehensivePromotionBanner />
+        
+        {/* NEW BUSINESS AUTOMATION MASTERY 2026 PROMOTION BANNER */}
+        <BusinessAutomationMastery2026PromotionBanner />
+        
         {/* NEW CONTENT SHOWCASE 2026 BANNER */}
         <NewContentShowcase2026Banner />
         
