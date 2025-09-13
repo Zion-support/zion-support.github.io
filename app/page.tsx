@@ -33,7 +33,6 @@ import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDis
 // Latest promotional banners for new content
 import AI2025UltimateBreakthroughContentBanner from '../components/AI2025UltimateBreakthroughContentBanner';
 import AITools2025ShowcasePromotionBanner from '../components/AITools2025ShowcasePromotionBanner';
-<<<<<<< HEAD
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
@@ -47,11 +46,16 @@ import FeaturedContentShowcase2025 from '../components/FeaturedContentShowcase20
 import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
 import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
 import NewsletterSignup2026 from '../components/NewsletterSignup2026';
-=======
 import QuantumNeuralFusion2026PromotionBanner from '../components/QuantumNeuralFusion2026PromotionBanner';
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
->>>>>>> cursor/create-and-deploy-new-content-b354
+
+// Import new 2025 content showcase components
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import TechnologyShowcase2025 from '../components/TechnologyShowcase2025';
+import SuccessStoriesShowcase2025 from '../components/SuccessStoriesShowcase2025';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
 
 // Import new promotional banners
 import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
@@ -154,23 +158,21 @@ export default function HomePage() {
         {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
-<<<<<<< HEAD
-=======
-      <div className='min-h-screen bg-white'>
-        {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
-        <AI2025UltimateBreakthroughRevolutionBanner />
+        {/* NEW 2025 CONTENT SHOWCASE */}
+        <NewContentShowcase2025 />
         
-        {/* NEW AI 2026-2030 FUTURE PREDICTIONS BREAKTHROUGH BANNER */}
-        <AI20262030FuturePredictionsBreakthroughBanner />
+        {/* NEW 2025 CONTENT PROMOTION BANNER */}
+        <NewContentPromotionBanner2025 />
         
-        {/* NEW QUANTUM COMPUTING SOLUTIONS 2025 BANNER */}
-        <QuantumComputingSolutions2025Banner />
+        {/* TECHNOLOGY SHOWCASE 2025 */}
+        <TechnologyShowcase2025 />
         
-        {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
-        <AI2025RevolutionaryBreakthroughPromotionBanner />
+        {/* SUCCESS STORIES SHOWCASE 2025 */}
+        <SuccessStoriesShowcase2025 />
         
-=======
->>>>>>> cursor/create-and-deploy-new-content-b354
+        {/* NEWSLETTER SIGNUP 2025 */}
+        <NewsletterSignup2025 />
+        
         {/* NEW AI 2026 ULTIMATE BREAKTHROUGH BANNER */}
         <AI2026UltimateBreakthroughPromotionBanner />
         
