@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Card } from './ui/Card';
+import { Card } from './ui/card';
 import { ArrowRight, Sparkles, Brain, Atom, Bot, Zap, Star } from 'lucide-react';
 import AIRevolutionPromotionBanner from './AIRevolutionPromotionBanner';
 import QuantumComputingPromotionBanner from './QuantumComputingPromotionBanner';

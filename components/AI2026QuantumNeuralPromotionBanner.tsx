@@ -1,77 +1,93 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Atom, Star, TrendingUp, Brain, Zap, Target } from 'lucide-react';
 
 export default function AI2026QuantumNeuralPromotionBanner() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(false);
+
+  useEffect(() => {
+    // Check if banner was previously dismissed
+    const dismissed = localStorage.getItem('ai2026-quantum-neural-banner-dismissed');
+    if (!dismissed) {
+      // Show banner after a short delay
+      const timer = setTimeout(() => setIsVisible(true), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    setIsDismissed(true);
+    localStorage.setItem('ai2026-quantum-neural-banner-dismissed', 'true');
+  };
+
+  if (!isVisible || isDismissed) return null;
+
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white py-6 px-4 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent transform -skew-y-1 animate-pulse"></div>
-        <div className="absolute top-4 left-1/4 w-3 h-3 bg-white rounded-full animate-bounce"></div>
-        <div className="absolute top-8 right-1/3 w-2 h-2 bg-white rounded-full animate-ping"></div>
-        <div className="absolute bottom-4 left-1/2 w-4 h-4 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-white rounded-full animate-ping"></div>
-      </div>
-      
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
-        <div className="flex-1 text-center md:text-left mb-4 md:mb-0">
-          <div className="flex items-center justify-center md:justify-start mb-3">
-            <Atom className="w-6 h-6 mr-2 text-yellow-300 animate-spin" />
-            <span className="text-sm font-bold bg-yellow-300 text-purple-800 px-4 py-2 rounded-full">
-              QUANTUM BREAKTHROUGH
-            </span>
+    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white shadow-lg animate-slide-down">
+      <div className="max-w-7xl mx-auto px-4 py-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <div className="flex-shrink-0">
+              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                <span className="text-lg">⚛️</span>
+              </div>
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-semibold">
+                <span className="bg-yellow-400 text-black px-2 py-1 rounded text-xs font-bold mr-2 animate-pulse">
+                  BREAKTHROUGH
+                </span>
+                AI 2026 Quantum-Neural Fusion: 15,000% ROI Achieved!
+              </p>
+              <p className="text-xs text-cyan-100 mt-1">
+                Discover the revolutionary technology that's transforming businesses worldwide
+              </p>
+            </div>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">
-            ⚛️ AI 2026 Quantum-Neural Fusion
-          </h2>
-          <p className="text-base md:text-lg text-purple-100 mb-4">
-            The ultimate breakthrough combining quantum computing with neural networks 
-            to achieve 15,000% ROI and transform entire industries.
-          </p>
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm">
-            <div className="flex items-center">
-              <Star className="w-4 h-4 mr-1 text-yellow-300" />
-              <span>15,000% ROI</span>
-            </div>
-            <div className="flex items-center">
-              <TrendingUp className="w-4 h-4 mr-1 text-green-300" />
-              <span>1000x Faster</span>
-            </div>
-            <div className="flex items-center">
-              <Brain className="w-4 h-4 mr-1 text-blue-300" />
-              <span>99.9% Accuracy</span>
-            </div>
-            <div className="flex items-center">
-              <Target className="w-4 h-4 mr-1 text-purple-300" />
-              <span>∞ Scalability</span>
-            </div>
+          
+          <div className="flex items-center space-x-3">
+            <Link
+              href="/ai-2026-quantum-neural-breakthrough"
+              className="bg-white/20 hover:bg-white/30 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Explore Now
+            </Link>
+            <Link
+              href="/case-studies/ai-2026-quantum-neural-fusion-success"
+              className="bg-white text-cyan-600 hover:bg-gray-100 text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              View Success Stories
+            </Link>
+            <button
+              onClick={handleDismiss}
+              className="text-white/80 hover:text-white p-1 transition-colors"
+              aria-label="Dismiss banner"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         </div>
+      </div>
+      
+      <style jsx>{`
+        @keyframes slide-down {
+          from {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
         
-        <div className="flex flex-col sm:flex-row gap-3">
-          <Link 
-            href="/blog/ai-2026-quantum-neural-fusion-breakthrough"
-            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center group"
-          >
-            <span>Read Full Article</span>
-            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <Link 
-            href="/case-studies/ai-2026-quantum-neural-fusion-success"
-            className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors flex items-center justify-center group"
-          >
-            <span>View Success Story</span>
-            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
-      </div>
-      
-      {/* Floating quantum elements */}
-      <div className="absolute top-2 right-4 text-2xl animate-bounce">⚛️</div>
-      <div className="absolute bottom-2 left-8 text-xl animate-pulse">🧠</div>
-      <div className="absolute top-1/2 right-8 text-lg animate-ping">⚡</div>
-      <div className="absolute top-1/4 left-1/4 text-sm animate-bounce">🔬</div>
+        .animate-slide-down {
+          animation: slide-down 0.5s ease-out;
+        }
+      `}</style>
     </div>
   );
 }

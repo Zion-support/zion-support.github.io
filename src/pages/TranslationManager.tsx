@@ -1,6 +1,5 @@
->>>>>>>> origin/content/blog-sept12:src/pages/TranslationManager.tsx
 import React, { useState, useEffect } from 'react';
-import { Header } from "@/components/Header";
+import Header from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

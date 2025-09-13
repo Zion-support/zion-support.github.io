@@ -1,21 +1,8 @@
+"use client";
 import React from 'react';
-import { Metadata } from 'next';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Users, Star, Play, ArrowRight, CheckCircle, Gift } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-export const metadata: Metadata = {
-  title: 'AI Transformation Masterclass: Free Live Training | Zion Tech Group',
-  description: 'Join our free AI transformation masterclass and learn proven strategies for enterprise AI implementation success from industry experts.',
-  keywords: 'AI masterclass, AI training, enterprise AI, transformation, free webinar, live training',
-  openGraph: {
-    title: 'AI Transformation Masterclass: Free Live Training',
-    description: 'Join our free AI transformation masterclass and learn proven strategies for enterprise AI implementation success from industry experts.',
-    type: 'event',
-    startTime: '2025-01-25T14:00:00.000Z',
-    endTime: '2025-01-25T16:00:00.000Z',
-  },
-};
 
 const MasterclassPage = () => {
   const agenda = [

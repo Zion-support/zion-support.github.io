@@ -7,9 +7,9 @@ import EmailVerificationBanner from '@/components/EmailVerificationBanner'; // A
 import { AppHeader } from "./AppHeader";
 import { Footer } from "@/components/Footer";
 import { SkipLink } from "@/components/SkipLink";
-import { useGlobalLoader } from '@/context/GlobalLoaderContext';
-import LoaderOverlay from '@/components/LoaderOverlay';
-import ErrorOverlay from '@/components/ErrorOverlay';
+// Removed GlobalLoaderContext import as it doesn't exist
+// import LoaderOverlay from '@/components/LoaderOverlay';
+// import ErrorOverlay from '@/components/ErrorOverlay';
 
 interface AppLayoutProps {
   children?: React.ReactNode; // Kept ReactNode for consistency
@@ -28,8 +28,10 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
   useNavigationGestures();
   const [isResendingEmail, setIsResendingEmail] = useState(false);
   const [resendStatusMessage, setResendStatusMessage] = useState('');
-  const { loading: rawLoading, error, setError } = useGlobalLoader();
-  const loading: boolean = Boolean(rawLoading);
+  // Removed useGlobalLoader usage as it doesn't exist
+  const loading: boolean = false;
+  const error = null;
+  const setError = () => {};
   const pathname = useSafePathname();
   const isAuthPage = /^\/auth|\/login|\/register|\/signup|\/forgot-password|\/reset-password|\/update-password/.test(pathname);
 

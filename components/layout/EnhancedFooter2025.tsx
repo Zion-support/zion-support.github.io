@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
+
+import React from 'react';
+import Link from 'next / link';
+
+
+import React from 'react';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Phone, Mail, MapPin, ArrowRight, Globe, Shield, Rocket, Brain, Atom, Cpu,
-  Facebook, Twitter, Linkedin, Instagram, Youtube, Github, Zap, Heart, Star,
-  Users, Lock, Cloud, Code, Server, Database, Network, Settings, Target, Play, FileText, ArrowUp, HelpCircle,
-  Home, Info, Briefcase, BookOpen, Calendar, MessageCircle, ShieldCheck, Building, Heart as HeartIcon,
-  Target as TargetIcon, Star as StarIcon, Lightbulb, Wrench, Cog, BarChart, PieChart, DollarSign, Monitor
+
+
+  Instagram,;} from 'lucide-react';import { ;
+
+
 } from 'lucide-react';
 
 const EnhancedFooter2025: React.FC = () => {
@@ -127,209 +134,139 @@ const EnhancedFooter2025: React.FC = () => {
     transition: { duration: 0.5 }
   };
 
-        {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center">
                 <Rocket className="w-7 h-7 text-white" />
-              </div>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                Pioneering the future of technology with revolutionary AI consciousness, 
-                quantum computing, and autonomous solutions that transform businesses worldwide.
-              </p>
               
-              {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-sm">
                   <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>{contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center space-x-3 text-sm">
                   <Mail className="w-4 h-4 text-cyan-400" />
-                  <span>{contactInfo.email}</span>
-                </div>
-                <div className="flex items-start space-x-3 text-sm">
                   <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
-                  <span>{contactInfo.address}</span>
-                </div>
-              </div>
-            </motion.div>
 
-            {/* Footer Sections */}
-            {footerSections.map((section, index) => (
-              <motion.div key={section.title} variants={fadeInUp}>
-                <h3 className="text-white font-semibold text-lg mb-6 flex items-center">
                   {section.title === 'Services' && <Rocket className="w-5 h-5 text-cyan-400 mr-2" />}
                   {section.title === 'Solutions' && <Target className="w-5 h-5 text-cyan-400 mr-2" />}
                   {section.title === 'Company' && <Building className="w-5 h-5 text-cyan-400 mr-2" />}
                   {section.title === 'Resources' && <BookOpen className="w-5 h-5 text-cyan-400 mr-2" />}
-                  {section.title}
-                </h3>
-                <ul className="space-y-3">
-                  {section.links.map((link) => (
-                    <li key={link.name}>
                       <Link
-                        href={link.href}
-                        className="flex items-center space-x-2 text-gray-400 hover:text-cyan-300 transition-colors duration-200 group"
-                      >
-                        {link.icon}
-                        <span className="group-hover:translate-x-1 transition-transform duration-200">
-                          {link.name}
-                        </span>
                       </Link>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </motion.div>
 
-          {/* Quick Links & Social */}
-          <motion.div 
-            className="mt-16 pt-8 border-t border-cyan-500/20"
-            variants={fadeInUp}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Quick Links */}
-              <div>
-                <div className="text-xl font-bold text-white">Zion Tech Group</div>
-                <div className="text-sm text-cyan-400">Pioneering the Future</div>
-              </div>
-            </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              We combine cutting-edge technology with proven expertise to deliver solutions that transform businesses and unlock human potential.
-            </p>
             
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-gray-300">
                 <Phone className="w-4 h-4 text-cyan-400" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300">
                 <Mail className="w-4 h-4 text-cyan-400" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300">
                 <Globe className="w-4 h-4 text-cyan-400" />
-                <span>https://ziontechgroup.com</span>
-              </div>
-            </div>
-          </div>
 
-          {/* Footer Sections */}
-          {footerSections.map((section, index) => (
-            <div key={index}>
-              <h3 className="text-white font-semibold mb-4">{section.title}</h3>
-              <ul className="space-y-3">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
                     <Link
-                      key={link.name}
-                      href={link.href}
-                      className="flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-300 transition-colors duration-200 group"
-                    >
-                      {link.icon}
-                      <span className="group-hover:translate-x-1 transition-transform duration-200">
-                        {link.name}
-                      </span>
                     </Link>
-                  ))}
-                </div>
-              </div>
 
-              {/* Social Links */}
-              <div>
-                <h4 className="text-white font-semibold text-lg mb-4 flex items-center">
                   <Globe className="w-5 h-5 text-cyan-400 mr-2" />
-                  Connect With Us
-                </h4>
-                <div className="flex space-x-4">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gray-800 hover:bg-cyan-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-300 transition-all duration-200 hover:scale-110"
-                      aria-label={social.name}
-                    >
-                      <social.icon className="w-5 h-5" />
-                    </a>
-                  ))}
-                </div>
-              </div>
 
-              {/* Newsletter Signup */}
-              <div>
-                <h4 className="text-white font-semibold text-lg mb-4 flex items-center">
                   <Mail className="w-5 h-5 text-cyan-400 mr-2" />
-                  Stay Updated
-                </h4>
-                <p className="text-gray-400 text-sm mb-4">
-                  Get the latest insights on technology trends and innovations.
-                </p>
-                <div className="flex space-x-2">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
-                  <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
                     <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
 
-        {/* Bottom Bar */}
-        <motion.div 
-          className="border-t border-cyan-500/20 bg-black/50 backdrop-blur-sm"
-          variants={fadeInUp}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-        >
-          <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with the Latest Tech Trends
-            </h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Get insights on AI, quantum computing, cybersecurity, and emerging technologies delivered to your inbox.
-            </p>
-            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                required
-                className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500/50 transition-all duration-200"
-                aria-label="Email address for newsletter"
-              />
-              <button
-                type="submit"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-medium flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                aria-label="Subscribe to newsletter"
-              >
-                <span className="text-sm">Back to top</span>
                 <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-200" />
-              </button>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </footer>
-  );
-};
 
 export default EnhancedFooter2025;
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+import {
+
+
+
+
+
+                    <Link
+
+
+                    <Link
+
+                  <Phone className='w - 4 h - 4 text - cyan - 400' />;
+                  <Mail className='w - 4 h - 4 text - purple - 400' />;
+                  <MapPin className='w - 4 h - 4 text - pink - 400' />;
+                  <Star className="w - 7 h - 7 text - white" />;
+                  <Phone className="w - 4 h - 4 text - cyan - 400" />;
+                  <Mail className="w - 4 h - 4 text - purple - 400" />;
+                  <MapPin className="w - 4 h - 4 text - pink - 400" />;
+                    <Link;
+                    <Link;
+
+
+
+
+
+
+
+
+
+
+
+                  <Link
+
+                  <Link
+                    </Link>))}
+                  <Link;
+                  <Link;
+
+
+
+
+
+
+
+
+
+
+                  <Link
+
+
+                  </Link>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </Link>))}
+                  <Link;
+                  <Link;
+                  </Link>))}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default EnhancedFooter2025;
+
+
+export default EnhancedFooter2025);
+export default EnhancedFooter2025;
+
+
+

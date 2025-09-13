@@ -1,3 +1,34 @@
+
+
+
+
+
+}className="relative"> <div className="relative"> <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" /> <input /> {
+}className="absolute right - 16 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 hover:text - white transition - colors" > <X className="w - 4 h - 4" /> </button>);
+
+}<AnimatePresence> {
+
+
+
+
+}className="relative"> <div className="relative"> <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> <input /> {;
+}className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"> <X className="w-4 h-4" /> </button>) ;
+}<AnimatePresence> {;
+
+
+
+
+
+
+
+  show_filters && (<div className="p - 4 border - b border - gray - 700"> <div className="flex items - center gap - 2 mb - 3"> <Filter className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Filter by Category</span> </div> <div className="flex flex - wrap gap - 2"> {
+
+
+
+  showFilters && (<div className="p-4 border-b border-gray-700"> <div className="flex items-center gap-2 mb-3"> <Filter className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Filter by Category</span> </div> <div className="flex flex-wrap gap-2"> {;
+}<AnimatePresence> {;
+
+
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
@@ -447,9 +478,15 @@ function debounce<T extends (...args: any[]) => any>(
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-}
 
+export default EnhancedSearch;
+
+}<AnimatePresence> {
+}</div> </div> <ArrowRight className="w - 4 h - 4 text - gray - 400" /> </button>) );
+}</AnimatePresence> </div>);
+}</div> </div> <div className="flex items - center gap - 1 text - cyan - 400"> <Star className="w - 4 h - 4 fill - current" /> <span className="text - xs"> {
+  search_history.length > 0 && (<div> <div className="flex items - center gap - 2 mb - 3"> <Clock className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Recent Searches</span> </div> <div className="flex flex - wrap gap - 2"> {
+}<div> <div className="flex items - center gap - 2 mb - 3"> <TrendingUp className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Popular Searches</span> </div> <div className="flex flex - wrap gap - 2"> {
+}</AnimatePresence> </div>);
+}export default EnhancedSearch;
 export default EnhancedSearch;

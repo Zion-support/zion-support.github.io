@@ -1,10 +1,3 @@
-const CACHE_NAME = 'zion-tech-v1';
-const STATIC_CACHE_NAME = 'zion-static-v1';
-const DYNAMIC_CACHE_NAME = 'zion-dynamic-v1';
-
-// Files to cache immediately
-const STATIC_FILES = [
-  '/',
   );
 });
 
