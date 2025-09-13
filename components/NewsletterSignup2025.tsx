@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
+import { 
+  Mail, 
+  Send, 
+  CheckCircle, 
+  Star, 
+  Zap, 
+  Globe, 
+  Shield,
+  ArrowRight,
+  Users,
+  TrendingUp
+} from 'lucide-react';
 
-export default function NewsletterSignup2025() {
+const NewsletterSignup2025 = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -10,103 +22,192 @@ export default function NewsletterSignup2025() {
     setIsLoading(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubscribed(true);
     setIsLoading(false);
-    setEmail('');
   };
+
+  const benefits = [
+    {
+      icon: <Zap className="w-6 h-6 text-blue-500" />,
+      title: "Exclusive AI Insights",
+      description: "Get early access to breakthrough AI research and applications"
+    },
+    {
+      icon: <Globe className="w-6 h-6 text-green-500" />,
+      title: "Global Case Studies",
+      description: "Real-world success stories from companies worldwide"
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-purple-500" />,
+      title: "Security Updates",
+      description: "Latest cybersecurity trends and protection strategies"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6 text-orange-500" />,
+      title: "Market Analysis",
+      description: "Expert analysis of emerging technology markets"
+    }
+  ];
+
+  const stats = [
+    { label: "Subscribers", value: "50,000+", icon: <Users className="w-5 h-5" /> },
+    { label: "Open Rate", value: "95%", icon: <Mail className="w-5 h-5" /> },
+    { label: "Countries", value: "150+", icon: <Globe className="w-5 h-5" /> },
+    { label: "Weekly Updates", value: "3x", icon: <Send className="w-5 h-5" /> }
+  ];
 
   if (isSubscribed) {
     return (
-      <div className="py-16 bg-gradient-to-r from-green-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="text-6xl mb-6">🎉</div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Welcome to the AI Revolution!
-          </h2>
-          <p className="text-xl text-green-100 mb-8">
-            You're now subscribed to our exclusive AI breakthrough newsletter. Get ready for revolutionary content delivered to your inbox.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-            <h3 className="text-lg font-semibold text-white mb-4">What you'll receive:</h3>
-            <ul className="text-green-100 space-y-2">
-              <li className="flex items-center">
-                <span className="text-green-400 mr-2">✓</span>
-                Weekly AI breakthrough updates
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-2">✓</span>
-                Exclusive case studies and success stories
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-2">✓</span>
-                Early access to new quantum computing solutions
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-2">✓</span>
-                ROI calculators and implementation guides
-              </li>
-            </ul>
+      <section className="py-20 bg-gradient-to-r from-green-500 to-blue-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-white rounded-2xl p-12 shadow-2xl">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-6">
+              <CheckCircle className="w-10 h-10 text-green-500" />
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Welcome to the Future!
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              You've successfully subscribed to our newsletter. Get ready for exclusive insights, breakthrough technologies, and industry-leading content delivered to your inbox.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-3">
+                    {stat.icon}
+                  </div>
+                  <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
+                  <div className="text-sm text-gray-600">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 
   return (
-    <div className="py-16 bg-gradient-to-r from-purple-600 to-blue-600">
-      <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <div className="text-6xl mb-6">📧</div>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          Stay Ahead of the AI Revolution
-        </h2>
-        <p className="text-xl text-purple-100 mb-8">
-          Get exclusive access to the latest AI breakthroughs, quantum computing solutions, and automation technologies. Join 10,000+ industry leaders.
-        </p>
+    <section className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="text-white">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white bg-opacity-20 text-white text-sm font-medium mb-6">
+              <Star className="w-4 h-4 mr-2" />
+              Join Our Community
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Stay Ahead of the
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
+                Technology Curve
+              </span>
+            </h2>
+            
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              Get exclusive access to breakthrough insights, cutting-edge research, and real-world case studies from the world's most innovative companies.
+            </p>
 
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-          <div className="flex flex-col sm:flex-row gap-4">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email address"
-              required
-              className="flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-white focus:outline-none"
-            />
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isLoading ? 'Subscribing...' : 'Subscribe Now'}
-            </button>
-          </div>
-        </form>
+            {/* Benefits */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="flex-shrink-0 mr-3">
+                    {benefit.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-1">{benefit.title}</h3>
+                    <p className="text-blue-200 text-sm">{benefit.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <div className="text-2xl mb-2">🚀</div>
-            <h3 className="text-lg font-semibold text-white mb-2">AI Breakthroughs</h3>
-            <p className="text-purple-100 text-sm">Latest revolutionary AI technologies</p>
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-2xl font-bold text-yellow-300">{stat.value}</div>
+                  <div className="text-sm text-blue-200">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <div className="text-2xl mb-2">⚛️</div>
-            <h3 className="text-lg font-semibold text-white mb-2">Quantum Solutions</h3>
-            <p className="text-purple-100 text-sm">Quantum computing breakthroughs</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <div className="text-2xl mb-2">🤖</div>
-            <h3 className="text-lg font-semibold text-white mb-2">Automation Tech</h3>
-            <p className="text-purple-100 text-sm">Advanced automation solutions</p>
+
+          {/* Right Content - Signup Form */}
+          <div className="bg-white rounded-2xl p-8 shadow-2xl">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                Get Started Today
+              </h3>
+              <p className="text-gray-600">
+                Join thousands of professionals staying ahead with our insights
+              </p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  Email Address
+                </label>
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <input
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your email address"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <input
+                  type="checkbox"
+                  id="terms"
+                  className="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  required
+                />
+                <label htmlFor="terms" className="ml-2 text-sm text-gray-600">
+                  I agree to receive weekly newsletters and understand that I can unsubscribe at any time.
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+              >
+                {isLoading ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                    Subscribing...
+                  </>
+                ) : (
+                  <>
+                    Subscribe Now
+                    <Send className="w-5 h-5 ml-2" />
+                  </>
+                )}
+              </button>
+            </form>
+
+            <div className="mt-6 text-center">
+              <p className="text-sm text-gray-500">
+                🔒 Your email is safe with us. We never spam.
+              </p>
+            </div>
           </div>
         </div>
-
-        <p className="text-purple-200 text-sm mt-6">
-          No spam, unsubscribe at any time. We respect your privacy.
-        </p>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default NewsletterSignup2025;

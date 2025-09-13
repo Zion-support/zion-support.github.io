@@ -1,149 +1,133 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Zap, Star, TrendingUp, Users, Award } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Users, Zap, Globe } from 'lucide-react';
 
 const NewContentPromotionBanner2025 = () => {
-  const features = [
-    {
-      icon: Zap,
-      title: "Lightning Fast",
-      description: "Get instant access to cutting-edge solutions"
-    },
-    {
-      icon: Star,
-      title: "Premium Quality",
-      description: "Curated by industry experts and thought leaders"
-    },
-    {
-      icon: Users,
-      title: "Community Driven",
-      description: "Join thousands of innovators and developers"
-    },
-    {
-      icon: TrendingUp,
-      title: "Always Updated",
-      description: "Fresh content added daily with latest trends"
-    }
-  ];
-
   return (
-    <div className="py-16 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-black opacity-10"></div>
-      
-      {/* Animated background elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-white/5 rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-32 w-24 h-24 bg-white/5 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-32 left-1/3 w-16 h-16 bg-white/5 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-20 right-1/4 w-20 h-20 bg-white/5 rounded-full animate-pulse delay-500"></div>
+    <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-black opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
-            <Sparkles className="w-5 h-5 mr-2" />
-            NEW CONTENT ALERT
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Discover Revolutionary
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-              New Content
-            </span>
-            & Solutions
-          </h2>
-          
-          <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Explore our latest breakthrough technologies, innovative solutions, and cutting-edge resources 
-            that are transforming industries and shaping the future of technology.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="#"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold text-lg rounded-xl hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg"
-            >
-              Explore New Content
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              href="#"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-200"
-            >
-              View All Solutions
-            </Link>
-          </div>
-        </div>
-
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {features.map((feature, index) => {
-            const IconComponent = feature.icon;
-            return (
-              <div key={index} className="text-center group">
-                <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-sm mb-4 group-hover:bg-white/20 transition-all duration-300">
-                  <IconComponent className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-white/80 text-sm">
-                  {feature.description}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Stats Section */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
-              <div className="text-white/80 font-medium">New Content Items</div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="text-white">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white bg-opacity-20 text-white text-sm font-medium mb-6">
+              <Star className="w-4 h-4 mr-2" />
+              New Content Available
             </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">50K+</div>
-              <div className="text-white/80 font-medium">Active Users</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-white/80 font-medium">Satisfaction Rate</div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl p-8 text-indigo-900">
-            <div className="flex items-center justify-center mb-4">
-              <Award className="w-8 h-8 mr-3" />
-              <h3 className="text-2xl font-bold">Limited Time Offer</h3>
-            </div>
-            <p className="text-lg mb-6">
-              Get exclusive access to premium content and early releases
+            
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Revolutionary Content
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
+                Just Released
+              </span>
+            </h2>
+            
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              Discover our latest breakthrough insights, AI solutions, and cutting-edge technologies that are transforming businesses worldwide. Get exclusive access to expert analysis, case studies, and implementation guides.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-300">50+</div>
+                <div className="text-sm text-blue-200">New Articles</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-300">100K+</div>
+                <div className="text-sm text-blue-200">Readers</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-300">95%</div>
+                <div className="text-sm text-blue-200">Success Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-300">24/7</div>
+                <div className="text-sm text-blue-200">Updates</div>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="#"
-                className="inline-flex items-center px-8 py-4 bg-indigo-600 text-white font-bold text-lg rounded-xl hover:bg-indigo-700 transition-all duration-200 transform hover:scale-105"
+                href="/content-hub"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors group"
               >
-                Claim Your Access
-                <ArrowRight className="w-5 h-5 ml-2" />
+                Explore Content
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="#"
-                className="inline-flex items-center px-8 py-4 border-2 border-indigo-600 text-indigo-600 font-semibold text-lg rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-200"
+                href="/newsletter"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Learn More
+                Subscribe Now
               </Link>
+            </div>
+          </div>
+
+          {/* Right Content - Feature Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="flex items-center mb-4">
+                <Zap className="w-8 h-8 text-yellow-300 mr-3" />
+                <h3 className="text-lg font-semibold text-white">AI Solutions</h3>
+              </div>
+              <p className="text-blue-100 text-sm mb-4">
+                Cutting-edge AI automation and machine learning solutions for modern businesses.
+              </p>
+              <div className="text-yellow-300 text-sm font-medium">15+ New Articles</div>
+            </div>
+
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="flex items-center mb-4">
+                <Globe className="w-8 h-8 text-green-300 mr-3" />
+                <h3 className="text-lg font-semibold text-white">Global Impact</h3>
+              </div>
+              <p className="text-blue-100 text-sm mb-4">
+                Real-world case studies and success stories from around the world.
+              </p>
+              <div className="text-green-300 text-sm font-medium">25+ Case Studies</div>
+            </div>
+
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="flex items-center mb-4">
+                <TrendingUp className="w-8 h-8 text-purple-300 mr-3" />
+                <h3 className="text-lg font-semibold text-white">Future Tech</h3>
+              </div>
+              <p className="text-blue-100 text-sm mb-4">
+                Insights into emerging technologies and future predictions.
+              </p>
+              <div className="text-purple-300 text-sm font-medium">10+ Predictions</div>
+            </div>
+
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="flex items-center mb-4">
+                <Users className="w-8 h-8 text-orange-300 mr-3" />
+                <h3 className="text-lg font-semibold text-white">Community</h3>
+              </div>
+              <p className="text-blue-100 text-sm mb-4">
+                Join our community of innovators and thought leaders.
+              </p>
+              <div className="text-orange-300 text-sm font-medium">50K+ Members</div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Bottom Wave */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg className="w-full h-12 text-white" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="currentColor"></path>
+          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="currentColor"></path>
+          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>
+        </svg>
+      </div>
+    </section>
   );
 };
 
