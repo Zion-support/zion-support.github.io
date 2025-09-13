@@ -1,111 +1,106 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { ArrowRight, Sparkles, Zap, Star, Users, Globe, Brain, Rocket } from 'lucide-react';
 
-export default function NewContent2025RevolutionaryShowcaseBanner() {
+const NewContent2025RevolutionaryShowcaseBanner = () => {
+  const highlights = [
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "Conscious AI",
+      description: "Self-aware artificial intelligence"
+    },
+    {
+      icon: <Rocket className="w-6 h-6" />,
+      title: "Quantum Leap",
+      description: "Breakthrough quantum computing"
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: "Global Impact",
+      description: "Worldwide transformation"
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Lightning Fast",
+      description: "Ultra-high performance"
+    }
+  ];
+
   return (
-    <section className="relative py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-black opacity-20"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 via-purple-600/50 to-pink-600/50"></div>
-      
-      {/* Animated background elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-white/10 rounded-full animate-pulse delay-500"></div>
+    <section className="py-16 bg-gradient-to-r from-violet-900 via-purple-900 to-fuchsia-900 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z" fill="%23ffffff" fill-opacity="0.1"/%3E%3C/svg%3E')] opacity-20 animate-pulse"></div>
       </div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm">
-            <span className="text-sm font-medium animate-pulse">🚀 REVOLUTIONARY CONTENT JUST DROPPED</span>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 text-black text-sm font-bold mb-6">
+            <Sparkles className="w-5 h-5 mr-2" />
+            REVOLUTIONARY SHOWCASE 2025
           </div>
-          
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Revolutionary Content Showcase 2025
-          </h1>
-          
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover our latest <span className="font-bold text-yellow-300">breakthrough AI content</span>, 
-            case studies with <span className="font-bold text-yellow-300">5,000% ROI</span>, and essential 
-            implementation resources. From automation revolution to enterprise transformation success stories.
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Witness the
+            <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent"> Revolution</span>
+          </h2>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            Experience groundbreaking innovations that will redefine what's possible in technology, business, and human potential.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              href="/revolutionary-content-showcase-2025"
-              className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              🔥 Explore Revolutionary Content
-            </Link>
-            <Link
-              href="/blog/ai-2025-ultimate-automation-revolution"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300 text-lg backdrop-blur-sm"
-            >
-              🚀 AI 2025 Ultimate Automation (5,000% ROI)
-            </Link>
-          </div>
-          
-          {/* Featured content preview */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-lg font-semibold mb-2">AI 2025 Ultimate Automation Revolution</h3>
-              <p className="text-sm opacity-90 mb-3">Revolutionary AI automation delivering 5,000% ROI</p>
-              <div className="flex items-center text-xs opacity-75">
-                <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold mr-2">BREAKTHROUGH</span>
-                <span>18 min read</span>
+        </div>
+
+        {/* Highlights Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {highlights.map((highlight, index) => (
+            <div key={index} className="group">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-pink-400 to-purple-500 text-black mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {highlight.icon}
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">{highlight.title}</h3>
+                <p className="text-gray-300 text-sm">{highlight.description}</p>
               </div>
             </div>
-            
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-              <div className="text-4xl mb-4">🏢</div>
-              <h3 className="text-lg font-semibold mb-2">Global Enterprise Transformation</h3>
-              <p className="text-sm opacity-90 mb-3">Fortune 500 achieved 1,200% ROI across 47 countries</p>
-              <div className="flex items-center text-xs opacity-75">
-                <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold mr-2">CASE STUDY</span>
-                <span>25 min read</span>
-              </div>
+          ))}
+        </div>
+
+        {/* Stats Section */}
+        <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 mb-12 border border-white/10">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl font-bold text-pink-400 mb-2">500M+</div>
+              <div className="text-gray-300">Lives Transformed</div>
             </div>
-            
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-              <div className="text-4xl mb-4">🛠️</div>
-              <h3 className="text-lg font-semibold mb-2">Ultimate Implementation Toolkit</h3>
-              <p className="text-sm opacity-90 mb-3">47 essential resources for AI transformation success</p>
-              <div className="flex items-center text-xs opacity-75">
-                <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold mr-2">TOOLKIT</span>
-                <span>47 resources</span>
-              </div>
+            <div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Success Rate</div>
             </div>
-          </div>
-          
-          <div className="mt-8 text-center">
-            <p className="text-sm opacity-75 mb-4">
-              Join 50,000+ professionals getting revolutionary AI insights weekly
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/blog"
-                className="text-white hover:text-yellow-300 transition-colors font-semibold"
-              >
-                📚 View All Blog Posts →
-              </Link>
-              <Link
-                href="/case-studies"
-                className="text-white hover:text-yellow-300 transition-colors font-semibold"
-              >
-                🏆 View All Case Studies →
-              </Link>
-              <Link
-                href="/resources"
-                className="text-white hover:text-yellow-300 transition-colors font-semibold"
-              >
-                📋 View All Resources →
-              </Link>
+            <div>
+              <div className="text-3xl font-bold text-violet-400 mb-2">200+</div>
+              <div className="text-gray-300">Countries</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-fuchsia-400 mb-2">24/7</div>
+              <div className="text-gray-300">Innovation</div>
             </div>
           </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <Link 
+            href="/revolutionary-showcase-2025" 
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+          >
+            <Star className="w-5 h-5 mr-2" />
+            Join the Revolution
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default NewContent2025RevolutionaryShowcaseBanner;
