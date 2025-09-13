@@ -1,162 +1,55 @@
 import React from 'react';
 import Link from 'next/link';
-import { 
-  Sparkles, 
-  Brain, 
-  Wrench, 
-  ArrowRight, 
-  Star,
-  Zap,
-  TrendingUp,
-  Users
-} from 'lucide-react';
 
-const NewContentShowcase2026Banner = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI Innovation Showcase',
-      description: 'Revolutionary breakthroughs and future technologies',
-      link: '/ai-innovation-showcase-2026',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Wrench,
-      title: 'Interactive AI Tools',
-      description: 'Advanced AI-powered solutions and applications',
-      link: '/ai-tools-interactive-showcase',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Future Predictions',
-      description: 'AI trends and predictions for 2026 and beyond',
-      link: '/ai-2026-future-predictions',
-      color: 'from-green-500 to-emerald-500'
-    }
-  ];
-
+const NewContentShowcase2026Banner: React.FC = () => {
   return (
-    <section className="relative py-16 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+    <div className="relative bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 py-6 px-4 overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-4 left-8 w-2 h-2 bg-white rounded-full animate-ping"></div>
+        <div className="absolute top-10 right-10 w-3 h-3 bg-white rounded-full animate-pulse"></div>
+        <div className="absolute bottom-6 left-1/4 w-2 h-2 bg-white rounded-full animate-bounce"></div>
+        <div className="absolute bottom-10 right-1/4 w-3 h-3 bg-white rounded-full animate-ping"></div>
       </div>
-
+      
       <div className="relative max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-white/10 mb-6">
-            <Sparkles className="w-5 h-5 mr-2 text-blue-400" />
-            <span className="text-white font-medium">New Content Available</span>
-            <Star className="w-4 h-4 ml-2 text-yellow-400 fill-current" />
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          {/* Left side - New Content */}
+          <div className="flex-1 text-center md:text-left">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white bg-opacity-20 text-white text-sm font-bold mb-2 animate-pulse">
+              🆕 NEW CONTENT - JUST RELEASED
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              Revolutionary AI Content 2026
+            </h2>
+            <p className="text-white text-opacity-90 text-sm md:text-base">
+              Discover breakthrough technologies: <strong>Quantum Neural Processing</strong>, <strong>Transcendent Intelligence</strong>, and <strong>Reality Synthesis</strong>
+            </p>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Discover the
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Future of AI</span>
-          </h2>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Explore revolutionary AI innovations, interactive tools, and breakthrough technologies that are shaping the future in 2026.
-          </p>
-        </div>
-
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {features.map((feature, index) => (
+          {/* Right side - CTA buttons */}
+          <div className="flex flex-col sm:flex-row gap-3">
             <Link 
-              key={index}
-              href={feature.link}
-              className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
+              href="/ai-2026-revolutionary-breakthrough-announcement"
+              className="bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg whitespace-nowrap"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
-              <div className="relative">
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
-                  {feature.title}
-                </h3>
-                
-                <p className="text-gray-300 mb-6">
-                  {feature.description}
-                </p>
-                
-                <div className="flex items-center text-blue-400 font-medium group-hover:text-blue-300 transition-colors">
-                  <span>Explore Now</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </div>
-              </div>
+              🔥 View New Content
             </Link>
-          ))}
-        </div>
-
-        {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mb-4">
-              <Zap className="w-8 h-8 text-white" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">50+</div>
-            <div className="text-gray-400">AI Tools</div>
-          </div>
-          
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4">
-              <Brain className="w-8 h-8 text-white" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">100+</div>
-            <div className="text-gray-400">Innovations</div>
-          </div>
-          
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 mb-4">
-              <Users className="w-8 h-8 text-white" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">10K+</div>
-            <div className="text-gray-400">Users</div>
-          </div>
-          
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-orange-500 to-red-500 mb-4">
-              <Star className="w-8 h-8 text-white" />
-            </div>
-            <div className="text-3xl font-bold text-white mb-2">4.9★</div>
-            <div className="text-gray-400">Rating</div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="inline-flex flex-col sm:flex-row gap-4">
             <Link 
-              href="/ai-innovation-showcase-2026"
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+              href="/ai-2030-transcendent-intelligence-showcase"
+              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-white hover:text-emerald-600 transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
             >
-              <Brain className="w-5 h-5 mr-2" />
-              Explore Innovations
-            </Link>
-            
-            <Link 
-              href="/ai-tools-interactive-showcase"
-              className="px-8 py-4 border-2 border-white/20 text-white rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Wrench className="w-5 h-5 mr-2" />
-              Try AI Tools
+              Explore Showcase
             </Link>
           </div>
-          
-          <p className="text-gray-400 text-sm mt-4">
-            Join thousands of users discovering the future of AI
-          </p>
         </div>
       </div>
-    </section>
+      
+      {/* Floating elements */}
+      <div className="absolute top-2 right-2 text-white text-2xl animate-bounce">🚀</div>
+      <div className="absolute bottom-2 left-2 text-white text-2xl animate-pulse">⚡</div>
+    </div>
   );
 };
 

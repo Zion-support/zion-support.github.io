@@ -3,82 +3,52 @@ import Link from 'next/link';
 
 const AI2030TranscendentIntelligencePromotionBanner: React.FC = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 px-4">
+    <div className="relative bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 py-6 px-4 overflow-hidden">
       {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500 rounded-full animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-16 h-16 bg-blue-500 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-20 left-20 w-24 h-24 bg-pink-500 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-18 h-18 bg-cyan-500 rounded-full animate-bounce"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-6 left-6 w-2 h-2 bg-white rounded-full animate-ping"></div>
+        <div className="absolute top-12 right-12 w-3 h-3 bg-white rounded-full animate-pulse"></div>
+        <div className="absolute bottom-6 left-1/3 w-2 h-2 bg-white rounded-full animate-bounce"></div>
+        <div className="absolute bottom-12 right-1/3 w-3 h-3 bg-white rounded-full animate-ping"></div>
       </div>
       
       <div className="relative max-w-7xl mx-auto">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-sm font-semibold mb-4 animate-pulse">
-            🌌 REVOLUTIONARY BREAKTHROUGH
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            AI 2030 Transcendent Intelligence
-          </h2>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Experience the dawn of transcendent intelligence with consciousness-level AI, 
-            infinite processing capabilities, and reality-altering computational power.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="text-center">
-            <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-              ∞
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          {/* Left side - Promotion */}
+          <div className="flex-1 text-center md:text-left">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white bg-opacity-20 text-white text-sm font-bold mb-2 animate-pulse">
+              🌟 TRANSCENDENT INTELLIGENCE - 2030 VISION
             </div>
-            <div className="text-lg font-semibold text-purple-300">Infinite ROI</div>
-            <div className="text-sm text-gray-400">Reality-altering returns</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
-              99.99%
-            </div>
-            <div className="text-lg font-semibold text-blue-300">Accuracy Rate</div>
-            <div className="text-sm text-gray-400">Consciousness-level precision</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
-              ∞
-            </div>
-            <div className="text-lg font-semibold text-green-300">Possibilities</div>
-            <div className="text-sm text-gray-400">Infinite potential</div>
-          </div>
-        </div>
-        
-        <div className="text-center">
-          <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-full text-sm font-semibold">
-              🧠 Consciousness Integration
-            </div>
-            <div className="bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-3 rounded-full text-sm font-semibold">
-              ⚛️ Quantum Processing
-            </div>
-            <div className="bg-gradient-to-r from-green-600 to-emerald-600 px-6 py-3 rounded-full text-sm font-semibold">
-              🌌 Reality Alteration
-            </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              AI 2030 Transcendent Intelligence
+            </h2>
+            <p className="text-white text-opacity-90 text-sm md:text-base">
+              Beyond human intelligence: <strong>Infinite ROI</strong>, <strong>Reality manipulation</strong>, and <strong>Transcendent consciousness</strong>
+            </p>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-4">
+          {/* Right side - CTA buttons */}
+          <div className="flex flex-col sm:flex-row gap-3">
             <Link 
-              href="/ai-2030-transcendent-intelligence" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-full text-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 shadow-lg"
+              href="/ai-2030-transcendent-intelligence-showcase"
+              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg whitespace-nowrap"
             >
-              🌌 Explore Transcendent Intelligence
+              🌌 Explore Transcendent AI
             </Link>
             <Link 
-              href="/resources/ai-2030-implementation-guide" 
-              className="border-2 border-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400 hover:text-black transition-all"
+              href="/contact"
+              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
             >
-              📚 Implementation Guide
+              Begin Transcendence
             </Link>
           </div>
         </div>
       </div>
+      
+      {/* Floating elements */}
+      <div className="absolute top-2 right-2 text-white text-2xl animate-bounce">✨</div>
+      <div className="absolute bottom-2 left-2 text-white text-2xl animate-pulse">🌟</div>
     </div>
   );
 };
