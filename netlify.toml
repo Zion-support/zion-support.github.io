@@ -16,9 +16,9 @@
   # Increase timeout for dependency installation
   NETLIFY_TIMEOUT = "600"
   # Force use of Yarn instead of pnpm
-  NPM_FLAGS = "--use-yarn"
+  NPM_CONFIG_PACKAGE_MANAGER = "yarn"
   # Disable pnpm
-  PNPM_FLAGS = ""
+  PNPM_VERSION = ""
 
 # Build settings
 [build.processing]
