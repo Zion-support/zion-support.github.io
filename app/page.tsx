@@ -97,6 +97,11 @@ import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDis
 import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromotionBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 
+// New 2026 Content Components
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
+import InteractiveContentWidget2026 from '../components/InteractiveContentWidget2026';
+
 // Import new breakthrough promotional components
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
@@ -3612,6 +3617,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New 2026 Content Promotion Banner */}
+      <NewContent2026PromotionBanner />
+
+      {/* New Content Showcase 2026 */}
+      <NewContentShowcase2026 />
       
       {/* Enhanced Management and Feedback Components */}
       <ContentManagementSystem />
