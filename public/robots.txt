@@ -1,4 +1,22 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zion.tech/sitemap.xml
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow certain paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /temp/
+
+# Allow important content
+Allow: /blog/
+Allow: /case-studies/
+Allow: /resources/
+Allow: /tools/
+Allow: /services/
