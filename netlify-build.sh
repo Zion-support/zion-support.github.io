@@ -35,7 +35,7 @@ for attempt in {1..3}; do
   case $attempt in
     1)
       echo "Attempt 1: Standard Yarn installation..."
-      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
+      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache --production=false --production=false; then
         echo "Dependencies installed successfully!"
         break
       fi
@@ -46,7 +46,7 @@ for attempt in {1..3}; do
       yarn add find-up@5.0.0 --exact --network-timeout 120000 --ignore-engines --no-cache
       yarn add glob-parent@6.0.2 --exact --network-timeout 120000 --ignore-engines --no-cache
       yarn add glob@10.4.5 --exact --network-timeout 120000 --ignore-engines --no-cache
-      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
+      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache --production=false; then
         echo "Dependencies installed successfully!"
         break
       fi
@@ -55,7 +55,7 @@ for attempt in {1..3}; do
       echo "Attempt 3: Last resort - clean install with fresh lockfile..."
       # Remove existing lockfile and do fresh install
       rm -f yarn.lock
-      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
+      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache --production=false; then
         echo "Dependencies installed successfully!"
         break
       else
@@ -79,6 +79,24 @@ fi
 
 # Build the project
 echo "Building project..."
-yarn run build
+
+# Set environment variables to help with SWC issues
+export NEXT_TELEMETRY_DISABLED=1
+export SWC_BINARY_PATH=""
+
+# Try building with fallback options
+if ! yarn run build; then
+  echo "Build failed, trying with SWC disabled..."
+  # Use the fallback build command
+  if ! yarn run build:fallback; then
+    echo "Build failed even with SWC disabled. Checking for specific issues..."
+    # Check if it's a memory issue
+    export NODE_OPTIONS="--max-old-space-size=8192 --openssl-legacy-provider"
+    if ! yarn run build:fallback; then
+      echo "All build attempts failed!"
+      exit 1
+    fi
+  fi
+fi
 
 echo "Build completed successfully!"
