@@ -24,6 +24,12 @@ import UltimateContentShowcase2028PromotionBanner from '../components/UltimateCo
 import BusinessTransformation2028Showcase from '../components/BusinessTransformation2028Showcase';
 import BusinessTransformation2028PromotionBanner from '../components/BusinessTransformation2028PromotionBanner';
 
+// Import new 2029 components
+import AdvancedTechShowcase2029 from '../components/AdvancedTechShowcase2029';
+import AdvancedTechShowcase2029PromotionBanner from '../components/AdvancedTechShowcase2029PromotionBanner';
+import PerformanceOptimization2029 from '../components/PerformanceOptimization2029';
+import SEOOptimization2029 from '../components/SEOOptimization2029';
+
 // Import new 2030 components
 import UltimateContentShowcase2030 from '../components/UltimateContentShowcase2030';
 import UltimateContentShowcase2030PromotionBanner from '../components/UltimateContentShowcase2030PromotionBanner';
@@ -407,6 +413,9 @@ export default function HomePage() {
         {/* NEW 2028 INTERACTIVE TECH DEMO PROMOTION BANNER */}
         <InteractiveTechDemo2028PromotionBanner />
         
+        {/* NEW 2029 ADVANCED TECH SHOWCASE PROMOTION BANNER */}
+        <AdvancedTechShowcase2029PromotionBanner />
+        
         {/* NEW: AI 2025 ULTIMATE CONTENT SHOWCASE BANNER */}
         <AI2025UltimateContentShowcaseBanner />
         
@@ -487,6 +496,15 @@ export default function HomePage() {
         
         {/* NEW 2028 INTERACTIVE TECH DEMO */}
         <InteractiveTechDemo2028 />
+        
+        {/* NEW 2029 ADVANCED TECH SHOWCASE */}
+        <AdvancedTechShowcase2029 />
+        
+        {/* NEW 2029 PERFORMANCE OPTIMIZATION */}
+        <PerformanceOptimization2029 />
+        
+        {/* NEW 2029 SEO OPTIMIZATION */}
+        <SEOOptimization2029 />
         
         {/* NEW CONTENT SHOWCASE 2026 */}
         <NewContentShowcase2026 />
