@@ -34,10 +34,14 @@ const EnhancedNavigation = () => {
       href: '/blog',
       dropdown: [
         { name: 'Latest Blog Posts', href: '/blog' },
+        { name: 'Neural Interface Revolution', href: '/blog/ai-2025-neural-interface-revolution' },
+        { name: 'Quantum AI Superintelligence', href: '/blog/quantum-ai-superintelligence-2025' },
         { name: 'AI 2025 Insights', href: '/blog/ai-2025-generative-ai-business-transformation' },
         { name: 'Quantum Computing Guide', href: '/blog/quantum-computing-2025-business-applications' },
         { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Implementation Guides', href: '/resources' }
+        { name: 'Global AI Transformation', href: '/case-studies/global-ai-transformation-2025-mega-success' },
+        { name: 'Implementation Guides', href: '/resources' },
+        { name: 'Autonomous Operations Guide', href: '/resources/ai-2025-autonomous-business-operations-guide' }
       ]
     },
     { name: 'Portfolio', href: '/portfolio' },
