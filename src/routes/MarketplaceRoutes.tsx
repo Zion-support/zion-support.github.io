@@ -8,7 +8,6 @@ import Featured from "@/pages/Featured";
 import ListingDetail from "@/pages/ListingDetail";
 import EquipmentPage from "@/pages/EquipmentPage";
 import EquipmentDetail from "@/pages/EquipmentDetail";
-import EquipmentRecommendations from "@/pages/EquipmentRecommendations";
 import PostJob from "@/pages/PostJob";
 import JobDetails from "@/pages/JobDetails";
 import PublishProduct from "@/pages/PublishProduct";
@@ -21,9 +20,8 @@ import SearchPage from "@/pages/SearchPage";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
 import Checkout from "@/pages/Checkout";
-import PaymentSuccess from "@/pages/payment-success";
 import NewProductsPage from "@/pages/NewProductsPage";
-import NewServicesPage from "@/pages/NewServicesPage";
+import MoreProductsPage from "@/pages/MoreProductsPage";
 
 const MarketplaceRoutes = () => {
   return (
@@ -38,10 +36,9 @@ const MarketplaceRoutes = () => {
       
       {/* Equipment Routes */}
       <Route path="/equipment" element={<EquipmentPage />} />
-      <Route path="/equipment/recommendations" element={<EquipmentRecommendations />} />
       <Route path="/equipment/:id" element={<EquipmentDetail />} />
       <Route path="/new-products" element={<NewProductsPage />} />
-      <Route path="/new-services" element={<NewServicesPage />} />
+      <Route path="/more-products" element={<MoreProductsPage />} />
       
       {/* Job Routes */}
       <Route
@@ -78,9 +75,15 @@ const MarketplaceRoutes = () => {
       {/* Search Route */}
       <Route path="/search" element={<SearchPage />} />
 
-      {/* Checkout Route - accessible to guests */}
-      <Route path="/checkout" element={<Checkout />} />
-      <Route path="/success" element={<PaymentSuccess />} />
+      {/* Checkout Route - accessible even in staging */}
+      <Route
+        path="/checkout"
+        element={
+          <ProtectedRoute>
+            <Checkout />
+          </ProtectedRoute>
+        }
+      />
       
       {/* Project Room Routes */}
       <Route 

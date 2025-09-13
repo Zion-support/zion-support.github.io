@@ -1,16 +1,22 @@
-const API_URL = import.meta.env.VITE_API_URL || '';
+import { apiClient } from '@/utils/apiClient';
 
 export async function loginUser(email: string, password: string) {
-  const res = await fetch(`${API_URL}/auth/login`, {
+  const res = await apiClient('/api/auth/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
+    credentials: 'include',
     body: JSON.stringify({ email, password }),
   });
   const data = await res.json().catch(() => ({}));
-  console.log('Login API Response Status:', res.status);
-  console.log('Login API Response Body:', data);
+  console.log('login response', res.status, data);
+  if (data?.accessToken) {
+    document.cookie = `authToken=${data.accessToken}; secure; samesite=strict`;
+    setAuthToken(data.accessToken);
+  } else {
+    console.warn('Token missing in login response', data);
+  }
   return { res, data };
 }
 
@@ -20,10 +26,16 @@ export async function registerUser(name: string, email: string, password: string
     headers: {
       'Content-Type': 'application/json',
     },
+    credentials: 'include',
     body: JSON.stringify({ name, email, password }),
   });
   const data = await res.json().catch(() => ({}));
-  console.log('Register API Response Status:', res.status);
-  console.log('Register API Response Body:', data);
+  console.log('signUp response', res.status, data);
+  if (data?.token) {
+    document.cookie = `authToken=${data.token}; secure; samesite=strict`;
+    setAuthToken(data.token);
+  } else {
+    console.warn('Token missing in signup response', data);
+  }
   return { res, data };
 }

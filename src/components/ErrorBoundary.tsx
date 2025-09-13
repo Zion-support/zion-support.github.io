@@ -1,48 +1,173 @@
-import { Component, ReactNode, ErrorInfo } from 'react';
-import { getEnqueueSnackbar } from '@/context/SnackbarContext';
+import React, { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+  onError?: (error: Error, errorInfo: any) => void;
 }
 
-interface State {
-  hasError: boolean;
+interface ErrorFallbackProps {
+  error?: Error;
+  resetError: () => void;
 }
 
-export class ErrorBoundary extends Component<Props, State> {
-  state: State = { hasError: false };
+function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
+  const navigate = useNavigate();
 
-  constructor(props: Props) {
-    super(props);
-    console.log("ErrorBoundary.tsx: Constructor");
-    // Note: While the instructions said to log near state initialization if no constructor,
-    // adding a constructor to log is a common practice and cleaner.
-    // If a constructor is explicitly forbidden, the alternative is:
-    // console.log("ErrorBoundary.tsx: Initializing state"); // (and place it before state declaration)
-    // However, state initialization like `state: State = { hasError: false };` happens after constructor.
-    // For this exercise, assuming adding a constructor for logging is acceptable.
-  }
+  return (
+    <div className="min-h-screen bg-zion-blue-dark flex items-center justify-center p-4">
+      <div className="max-w-md w-full text-center">
+        <div className="mb-6">
+          <div className="w-20 h-20 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <AlertTriangle className="w-10 h-10 text-zion-purple" />
+          </div>
+          <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>
+          <p className="text-zion-slate-light">
+            We encountered an unexpected error. Don't worry, our team has been notified.
+          </p>
+        </div>
 
-  static getDerivedStateFromError() {
-    console.log("ErrorBoundary.tsx: getDerivedStateFromError triggered");
-    return { hasError: true };
-  }
+        {error && process.env.NODE_ENV === 'development' && (
+          <details className="mb-6 text-left">
+            <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light mb-2">
+              Error Details (Development)
+            </summary>
+            <div className="bg-zion-slate-dark p-3 rounded text-xs text-zion-slate-light overflow-auto">
+              <pre>{error.stack}</pre>
+            </div>
+          </details>
+        )}
 
-  componentDidCatch(error: Error, info: ErrorInfo) {
-    console.log("ErrorBoundary.tsx: ComponentDidCatch triggered");
-    // Surface full error details in the console for easier debugging
-    console.error('ErrorBoundary caught', error, info);
-    const enqueueSnackbar = getEnqueueSnackbar();
-    enqueueSnackbar(error.message, { variant: 'error' });
-  }
+        <div className="space-y-3">
+          <Button
+            onClick={resetError}
+            className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white"
+          >
+            <RefreshCw className="w-4 h-4 mr-2" />
+            Try Again
+          </Button>
+          
+          <Button
+            variant="outline"
+            onClick={() => navigate(-1)}
+            className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Go Back
+          </Button>
+          
+          <Link
+            to="/"
+            className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-colors"
+          >
+            <Home className="w-4 h-4 inline mr-2" />
+            Go Home
+          </Link>
+        </div>
 
-  render() {
-    console.log("ErrorBoundary.tsx: Render");
-    if (this.state.hasError) {
-      if (this.props.fallback) return <>{this.props.fallback}</>;
-      return <div className="p-4 text-center">Something went wrong.</div>;
+        <div className="mt-6 text-xs text-zion-slate-light">
+          <p>If this problem persists, please contact our support team.</p>
+          <p className="mt-1">
+            Error ID: {error?.name || 'Unknown'} - {new Date().toISOString()}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function ErrorBoundary({ children, fallback, onError }: ErrorBoundaryProps) {
+  const [hasError, setHasError] = useState(false);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    const handleError = (event: ErrorEvent) => {
+      setHasError(true);
+      setError(event.error);
+      
+      if (onError) {
+        onError(event.error, { componentStack: event.error?.stack });
+      }
+      
+      // Log error to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.error('ErrorBoundary caught an error:', event.error);
+      }
+    };
+
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      setHasError(true);
+      setError(new Error(event.reason));
+      
+      if (onError) {
+        onError(new Error(event.reason), { componentStack: event.reason?.stack });
+      }
+      
+      // Log error to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
+      }
+    };
+
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+    return () => {
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+    };
+  }, [onError]);
+
+  const resetError = () => {
+    setHasError(false);
+    setError(null);
+  };
+
+  if (hasError) {
+    if (fallback) {
+      return fallback;
     }
-    return this.props.children;
+    
+    return (
+      <ErrorFallback
+        error={error || undefined}
+        resetError={resetError}
+      />
+    );
   }
+
+  return <>{children}</>;
+}
+
+// Hook for functional components to handle errors
+export function useErrorHandler() {
+  const [error, setError] = useState<Error | null>(null);
+
+  const handleError = React.useCallback((error: Error) => {
+    setError(error);
+    console.error('Error caught by useErrorHandler:', error);
+  }, []);
+
+  const clearError = React.useCallback(() => {
+    setError(null);
+  }, []);
+
+  return { error, handleError, clearError };
+}
+
+// Higher-order component for wrapping components with error handling
+export function withErrorBoundary<P extends object>(
+  Component: React.ComponentType<P>,
+  errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
+) {
+  return function WithErrorBoundary(props: P) {
+    return (
+      <ErrorBoundary {...errorBoundaryProps}>
+        <Component {...props} />
+      </ErrorBoundary>
+    );
+  };
 }

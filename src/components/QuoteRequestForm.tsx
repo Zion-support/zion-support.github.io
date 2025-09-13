@@ -1,7 +1,8 @@
 
 import { useState } from "react";
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useToast } from "@/hooks/use-toast";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from 'next/router';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -13,7 +14,7 @@ import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep";
 import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep";
 import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal";
 import { QuoteFormData } from "@/types/quotes";
-import { Sparkles, Loader2 } from "lucide-react";
+import { Sparkles, Loader2 } from 'lucide-react'
 import { z } from "zod";
 
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
@@ -24,7 +25,7 @@ const serviceStepSchema = z.object({
 });
 
 export function QuoteRequestForm() {
-  const navigate = useNavigate();
+  const router = useRouter();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -115,7 +116,7 @@ export function QuoteRequestForm() {
     
     try {
       // In a real application, you would send the data to your backend
-      console.log("Submitting form data:", formData);
+      logDebug("Submitting form data:", { data: formData });
       
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
@@ -126,7 +127,7 @@ export function QuoteRequestForm() {
       });
       
       // Redirect to confirmation page or homepage
-      navigate("/");
+      router.push("/");
     } catch (error) {
       toast({
         title: "Submission Failed",
@@ -161,7 +162,7 @@ export function QuoteRequestForm() {
       setCurrentStep("summary");
       setAutoFillOpen(false);
     } catch (err) {
-      console.error("auto fill error", err);
+      logErrorToProduction("Auto-fill API error", err as Error, { component: 'QuoteRequestForm', projectDescription: description });
       toast({
         title: "Auto-fill Failed",
         description: "We couldn't process your request. Please try again.",

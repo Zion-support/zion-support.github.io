@@ -1,27 +1,42 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
 import { useCart } from '@/context/CartContext';
-import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
+
+interface CartItem {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+}
 
 export default function CartPage() {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const { items, dispatch } = useCart();
-  const [hydrated, setHydrated] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setHydrated(true);
-  }, []);
-
-  if (!hydrated) return null;
+    if (!items.length) {
+      setLoading(true);
+      fetch('/api/cart')
+        .then(r => r.json())
+        .then(data => dispatch({ type: 'SET_ITEMS', payload: data }))
+        .finally(() => setLoading(false));
+    }
+  }, [items.length, dispatch]);
 
   const updateQuantity = (id: string, qty: number) => {
-    const updated = items.map(i => (i.id === id ? { ...i, quantity: qty } : i));
+    const updated = items.map(i =>
+      i.id === id ? { ...i, quantity: qty } : i
+    );
     dispatch({ type: 'SET_ITEMS', payload: updated });
   };
 
   const removeItem = (id: string) => {
-    dispatch({ type: 'REMOVE_ITEM', payload: id });
+    dispatch({ type: 'SET_ITEMS', payload: items.filter(i => i.id !== id) });
   };
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
@@ -29,35 +44,30 @@ export default function CartPage() {
   if (items.length === 0) {
     return (
       <div className="container py-10 text-center">
-        <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" />
-        <p>Your cart is empty</p>
-        <Button asChild className="mt-4">
-          <Link to="/marketplace">Browse Marketplace</Link>
-        </Button>
+        <p>Your cart is empty.</p>
       </div>
     );
   }
 
   return (
-    <div className="container max-w-2xl py-10">
-      <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>
-      <ul className="space-y-4">
-        {items.map(item => (
-          <CartItemComponent
-            key={item.id}
-            item={item}
-            onRemove={removeItem}
-            onUpdateQuantity={updateQuantity}
-          />
-        ))}
-      </ul>
-      <div className="flex justify-between mt-6 font-semibold">
-        <span>Subtotal</span>
-        <span>${subtotal.toFixed(2)}</span>
-      </div>
-      <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
-        Checkout
-      </Button>
+    <div className="min-h-screen p-6">
+      <h1 className="text-2xl font-bold mb-4">Cart</h1>
+      {items.length === 0 ? (
+        <p>Your cart is empty.</p>
+      ) : (
+        <>
+          <ul className="space-y-2 mb-4">
+            {items.map(item => (
+              <li key={item.id} className="flex justify-between">
+                <span>{item.name} x {item.quantity}</span>
+                <span>${(item.price * item.quantity).toFixed(2)}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="font-semibold mb-4">Total: ${total.toFixed(2)}</div>
+          <Link className="underline" to="/checkout">Proceed to Checkout</Link>
+        </>
+      )}
     </div>
   );
 }

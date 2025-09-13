@@ -198,21 +198,20 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     title: "Enterprise AI Transformation Package",
     description: "Comprehensive solution for businesses looking to integrate AI across operations. Includes AI readiness assessment, strategy development, implementation roadmap, and staff training.",
     category: "Business Solutions",
-    price: 15000,
+    price: 15999,
     currency: "$",
-    tags: ["Enterprise", "Digital Transformation", "AI Strategy"],
+    tags: ["Enterprise AI", "Digital Transformation", "Strategy"],
     author: {
-      name: "BusinessAI Consultants",
-      id: "businessai",
-      avatarUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&h=100",
+      name: "AI Enterprise Solutions",
+      id: "ai-enterprise",
     },
-    images: ["https://images.unsplash.com/photo-1664575602276-acd073f104c1?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-03-01T11:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 22,
-    location: "North America",
-    availability: "4-6 Weeks",
-    aiScore: 96
+    images: ["https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-01T08:30:00.000Z",
+    rating: 4.7,
+    reviewCount: 23,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 93
   },
   {
     id: "ai-research-11",
@@ -298,125 +297,308 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     location: "North America",
     availability: "2-4 Weeks"
   },
+  // New Micro SAAS Services
   {
-    id: "ai-storage-13",
-    title: "AI-Optimized Cloud Storage",
-    description: "Secure and high-speed cloud storage designed for AI workloads with automated backup and scalability.",
-    category: "Cloud Services",
-    price: 799,
+    id: "saas-automation-11",
+    title: "Workflow Automation Platform",
+    description: "No-code workflow automation platform that connects 500+ apps and services. Automate repetitive tasks, data synchronization, and business processes with drag-and-drop interface.",
+    category: "Business Automation",
+    price: 299,
     currency: "$",
-    tags: ["Cloud Storage", "Backup", "Scalable"],
+    tags: ["Workflow Automation", "No-Code", "Integration"],
     author: {
-      name: "CloudMatrix",
-      id: "cloudmatrix"
+      name: "ZionTech Group",
+      id: "ziontech",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
-    images: ["https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-03-18T10:00:00.000Z",
-    rating: 4.6,
-    reviewCount: 27,
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-15T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 156,
+    featured: true,
     location: "Global",
     availability: "Immediate",
-    aiScore: 87
+    aiScore: 96
   },
   {
-    id: "ai-edge-14",
-    title: "Edge AI Development Kit",
-    description: "Compact development kit with built-in AI acceleration for prototyping edge computing applications.",
-    category: "Hardware",
-    price: 1299,
+    id: "saas-analytics-12",
+    title: "Real-Time Business Intelligence Dashboard",
+    description: "Cloud-based BI platform with real-time data visualization, predictive analytics, and automated reporting. Connect to any data source and get instant insights.",
+    category: "Business Intelligence",
+    price: 199,
     currency: "$",
-    tags: ["Edge Computing", "Dev Kit", "AI Accelerator"],
+    tags: ["Business Intelligence", "Real-Time Analytics", "Dashboard"],
     author: {
-      name: "EdgeWorks",
-      id: "edgeworks"
+      name: "ZionTech Group",
+      id: "ziontech",
     },
-    images: ["https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-03-10T09:00:00.000Z",
-    rating: 4.7,
-    reviewCount: 15,
-    location: "Global",
-    availability: "1-2 Weeks",
-    aiScore: 90
-  },
-  {
-    id: "ai-labeling-15",
-    title: "Managed Data Labeling Service",
-    description: "Professional data labeling with quality assurance for training supervised machine learning models.",
-    category: "Services",
-    price: 1499,
-    currency: "$",
-    tags: ["Data Labeling", "Annotation", "Machine Learning"],
-    author: {
-      name: "LabelForce",
-      id: "labelforce"
-    },
-    images: ["https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-03-08T11:45:00.000Z",
-    rating: 4.5,
-    reviewCount: 23,
-    location: "Europe",
-    availability: "2-3 Weeks",
-    aiScore: 85
-  },
-  {
-    id: "ai-security-16",
-    title: "AI Security Monitoring Suite",
-    description: "Real-time threat detection powered by AI with automated incident response for cloud and on-premise systems.",
-    category: "Security",
-    price: 2999,
-    currency: "$",
-    tags: ["Security", "Threat Detection", "Monitoring"],
-    author: {
-      name: "SecureAI",
-      id: "secureai"
-    },
-    images: ["https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-03-02T08:40:00.000Z",
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-14T14:30:00.000Z",
     rating: 4.8,
-    reviewCount: 34,
-    location: "North America",
+    reviewCount: 89,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 94
+  },
+  {
+    id: "saas-crm-13",
+    title: "AI-Powered CRM System",
+    description: "Intelligent customer relationship management with AI-driven lead scoring, automated follow-ups, and predictive analytics. Boost sales by 40% with smart automation.",
+    category: "Customer Management",
+    price: 149,
+    currency: "$",
+    tags: ["CRM", "AI-Powered", "Sales Automation"],
+    author: {
+      name: "ZionTech Group",
+      id: "ziontech",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-13T11:15:00.000Z",
+    rating: 4.7,
+    reviewCount: 234,
+    location: "Global",
     availability: "Immediate",
     aiScore: 92
   },
   {
-    id: "ai-marketing-17",
-    title: "AI Marketing Automation Platform",
-    description: "Automate customer segmentation, campaign optimization, and analytics using machine learning.",
-    category: "Marketing",
-    price: 999,
+    id: "saas-project-14",
+    title: "Project Management Suite",
+    description: "Comprehensive project management platform with task tracking, team collaboration, resource allocation, and progress monitoring. Perfect for remote teams.",
+    category: "Project Management",
+    price: 99,
     currency: "$",
-    tags: ["Marketing", "Automation", "Analytics"],
+    tags: ["Project Management", "Team Collaboration", "Task Tracking"],
     author: {
-      name: "MarketMinds",
-      id: "marketminds"
+      name: "ZionTech Group",
+      id: "ziontech",
     },
-    images: ["https://images.unsplash.com/photo-1497493292307-31c376b6e479?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-03-14T12:00:00.000Z",
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-12T09:45:00.000Z",
     rating: 4.6,
-    reviewCount: 52,
+    reviewCount: 178,
     location: "Global",
     availability: "Immediate",
     aiScore: 89
   },
   {
-    id: "ai-cloudgpu-18",
-    title: "Cloud GPU Rental Service",
-    description: "On-demand high-performance GPUs for training and inference, billed hourly with flexible plans.",
-    category: "Cloud Services",
-    price: 4.99,
+    id: "saas-marketing-15",
+    title: "Marketing Automation Platform",
+    description: "All-in-one marketing automation tool with email campaigns, social media management, lead nurturing, and ROI tracking. Increase conversions by 60%.",
+    category: "Marketing",
+    price: 179,
     currency: "$",
-    tags: ["GPU", "Cloud", "Rental"],
+    tags: ["Marketing Automation", "Email Campaigns", "Lead Nurturing"],
     author: {
-      name: "GPUCloud",
-      id: "gpucloud"
+      name: "ZionTech Group",
+      id: "ziontech",
     },
-    images: ["https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-03-20T07:50:00.000Z",
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-11T16:20:00.000Z",
+    rating: 4.8,
+    reviewCount: 145,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 91
+  },
+  {
+    id: "saas-hr-16",
+    title: "HR Management System",
+    description: "Complete HR solution with employee onboarding, performance tracking, time management, and payroll integration. Streamline HR operations and improve employee satisfaction.",
+    category: "Human Resources",
+    price: 129,
+    currency: "$",
+    tags: ["HR Management", "Employee Onboarding", "Performance Tracking"],
+    author: {
+      name: "ZionTech Group",
+      id: "ziontech",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-10T13:10:00.000Z",
     rating: 4.7,
-    reviewCount: 48,
+    reviewCount: 98,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 88
+  },
+  {
+    id: "saas-inventory-17",
+    title: "Inventory Management System",
+    description: "Smart inventory tracking with barcode scanning, demand forecasting, and automated reordering. Reduce stockouts by 80% and optimize inventory costs.",
+    category: "Inventory Management",
+    price: 159,
+    currency: "$",
+    tags: ["Inventory Management", "Barcode Scanning", "Demand Forecasting"],
+    author: {
+      name: "ZionTech Group",
+      id: "ziontech",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-09T10:30:00.000Z",
+    rating: 4.6,
+    reviewCount: 67,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 87
+  },
+  {
+    id: "saas-accounting-18",
+    title: "Cloud Accounting Software",
+    description: "Professional accounting solution with automated bookkeeping, expense tracking, invoice management, and financial reporting. Perfect for small businesses and freelancers.",
+    category: "Accounting",
+    price: 79,
+    currency: "$",
+    tags: ["Cloud Accounting", "Bookkeeping", "Financial Reporting"],
+    author: {
+      name: "ZionTech Group",
+      id: "ziontech",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-08T15:45:00.000Z",
+    rating: 4.9,
+    reviewCount: 312,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 95
+  },
+  {
+    id: "saas-support-19",
+    title: "Customer Support Platform",
+    description: "Multi-channel customer support system with ticket management, live chat, knowledge base, and customer satisfaction tracking. Improve customer experience and reduce support costs.",
+    category: "Customer Support",
+    price: 119,
+    currency: "$",
+    tags: ["Customer Support", "Ticket Management", "Live Chat"],
+    author: {
+      name: "ZionTech Group",
+      id: "ziontech",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-07T12:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 189,
     location: "Global",
     availability: "Immediate",
     aiScore: 93
+  },
+  {
+    id: "saas-security-20",
+    title: "Cybersecurity Monitoring Service",
+    description: "24/7 cybersecurity monitoring with threat detection, vulnerability assessment, and incident response. Protect your business from cyber threats with enterprise-grade security.",
+    category: "Cybersecurity",
+    price: 399,
+    currency: "$",
+    tags: ["Cybersecurity", "Threat Detection", "24/7 Monitoring"],
+    author: {
+      name: "ZionTech Group",
+      id: "ziontech",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-06T08:15:00.000Z",
+    rating: 4.9,
+    reviewCount: 76,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 97
+  },
+  {
+    id: "saas-backup-21",
+    title: "Cloud Backup & Recovery",
+    description: "Automated cloud backup solution with version control, disaster recovery, and compliance features. Ensure business continuity with reliable data protection.",
+    category: "Data Protection",
+    price: 89,
+    currency: "$",
+    tags: ["Cloud Backup", "Disaster Recovery", "Data Protection"],
+    author: {
+      name: "ZionTech Group",
+      id: "ziontech",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-05T14:20:00.000Z",
+    rating: 4.7,
+    reviewCount: 134,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 90
+  },
+  {
+    id: "saas-api-22",
+    title: "API Management Platform",
+    description: "Complete API lifecycle management with design, testing, deployment, and monitoring tools. Build, secure, and scale your APIs efficiently.",
+    category: "API Development",
+    price: 249,
+    currency: "$",
+    tags: ["API Management", "API Design", "API Testing"],
+    author: {
+      name: "ZionTech Group",
+      id: "ziontech",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-04T11:30:00.000Z",
+    rating: 4.8,
+    reviewCount: 87,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 94
+  },
+  {
+    id: "saas-testing-23",
+    title: "Automated Testing Platform",
+    description: "AI-powered testing automation platform for web and mobile applications. Reduce testing time by 90% and improve software quality with intelligent test case generation.",
+    category: "Software Testing",
+    price: 199,
+    currency: "$",
+    tags: ["Automated Testing", "AI-Powered", "Quality Assurance"],
+    author: {
+      name: "ZionTech Group",
+      id: "ziontech",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-03T16:45:00.000Z",
+    rating: 4.7,
+    reviewCount: 156,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 92
+  },
+  {
+    id: "saas-monitoring-24",
+    title: "Application Performance Monitoring",
+    description: "Real-time application performance monitoring with alerting, root cause analysis, and performance optimization recommendations. Keep your applications running smoothly.",
+    category: "Performance Monitoring",
+    price: 179,
+    currency: "$",
+    tags: ["Performance Monitoring", "Real-Time", "Root Cause Analysis"],
+    author: {
+      name: "ZionTech Group",
+      id: "ziontech",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-02T09:15:00.000Z",
+    rating: 4.8,
+    reviewCount: 98,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 91
+  },
+  {
+    id: "saas-compliance-25",
+    title: "Compliance Management System",
+    description: "Automated compliance monitoring for GDPR, HIPAA, SOX, and other regulatory requirements. Stay compliant with automated audits and reporting.",
+    category: "Compliance",
+    price: 299,
+    currency: "$",
+    tags: ["Compliance", "GDPR", "HIPAA", "SOX"],
+    author: {
+      name: "ZionTech Group",
+      id: "ziontech",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-01T13:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 67,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 96
   }
 ];
 
@@ -459,10 +641,6 @@ export const generateFilterOptions = (
   const locations = [...new Set(listings.map(listing => listing.location).filter(Boolean))].sort();
   const availability = [...new Set(listings.map(listing => listing.availability).filter(Boolean))].sort();
   
-  const prices = listings.map(listing => listing.price || 0);
-  const minPrice = Math.min(...prices);
-  const maxPrice = Math.max(...prices);
-
   return {
     productTypes: productTypes.map(type => ({
       label: type,
@@ -476,12 +654,9 @@ export const generateFilterOptions = (
       label: item,
       value: item
     })),
-    ratingOptions: [1, 2, 3, 4, 5], // Add rating options
-    minPrice,
-    maxPrice
+    ratingOptions: [1, 2, 3, 4, 5] // Add rating options
   };
 };
 
-// These constants are still useful if needed elsewhere, but filterOptions now also provides them.
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));

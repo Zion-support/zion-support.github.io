@@ -1,6 +1,4 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import TalentProfilePage from '../pages/talent/[id]';
 
 const sampleTalent = {
@@ -15,25 +13,17 @@ const sampleTalent = {
 const meta: Meta<typeof TalentProfilePage> = {
   title: 'Pages/TalentProfilePage',
   component: TalentProfilePage,
+  parameters: {
+    nextjs: {
+      router: {
+        query: { id: 't-001' },
+      },
+    },
+    mockData: {
+      profile: sampleTalent,
+    },
+  },
 };
 
 export default meta;
-
-export const Default: StoryObj<typeof TalentProfilePage> = {
-  render: () => {
-    // Mock fetch to return the sample talent data
-    window.fetch = () =>
-      Promise.resolve({
-        ok: true,
-        json: () => Promise.resolve({ profile: sampleTalent }),
-      }) as any;
-
-    return (
-      <MemoryRouter initialEntries={[`/talent/${sampleTalent.id}`]}>
-        <Routes>
-          <Route path="/talent/:id" element={<TalentProfilePage />} />
-        </Routes>
-      </MemoryRouter>
-    );
-  },
-};
+export const Default: StoryObj<typeof TalentProfilePage> = {};

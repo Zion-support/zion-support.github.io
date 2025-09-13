@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useRouter } from 'next/router'; // Changed from useParams
 import { supabase } from '@/integrations/supabase/client';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel'; // Re-use the preview panel
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom'; // For a back button
+
+import Link from 'next/link'; // For a back button, changed from react-router-dom
+import {logErrorToProduction} from '@/utils/productionLogger';
+
 
 // Placeholder for user context/role checking
 // In a real app, this would come from an auth context
@@ -27,7 +30,7 @@ interface SharedWhitepaper {
 }
 
 const WhitepaperViewPage: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams() as { id?: string };
   const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -43,21 +46,26 @@ const WhitepaperViewPage: React.FC = () => {
       setLoading(true);
       setError(null);
       try {
-        const { data: responseData, error: funcError } = await supabase.functions.invoke('get-shared-whitepaper', {
+        if (!supabase) throw new Error('Supabase client not initialized');
+        const { data, error: funcError } = await (supabase!).functions.invoke('get-shared-whitepaper', {
           body: { id },
         });
 
         if (funcError) throw new Error(`Supabase function error: ${funcError.message}`);
-        if (responseData && responseData.error) throw new Error(responseData.error);
-        if (!responseData || !responseData.whitepaper_data) {
+        if (data && typeof data === 'object' && 'error' in data && (data as { error?: string }).error) throw new Error((data as { error?: string }).error!);
+        if (!data || typeof data !== 'object' || !('whitepaper_data' in data)) {
           throw new Error('Shared whitepaper not found or data is invalid.');
         }
 
-        setSharedData(responseData as SharedWhitepaper);
+        setSharedData(data as SharedWhitepaper);
 
-      } catch (e: any) {
-        console.error("Error fetching shared whitepaper:", e);
-        setError(e.message || 'An unexpected error occurred.');
+      } catch (e: unknown) {
+        logErrorToProduction('Error fetching shared whitepaper:', { data:  e });
+        setError(
+          typeof e === 'object' && e && 'message' in e
+            ? (e as { message?: string }).message || 'An unexpected error occurred.'
+            : 'An unexpected error occurred.'
+        );
       } finally {
         setLoading(false);
       }
@@ -74,7 +82,7 @@ const WhitepaperViewPage: React.FC = () => {
       <div className="flex flex-col justify-center items-center h-screen text-red-600">
         <p>Error: {error}</p>
         <Button asChild variant="link" className="mt-4">
-          <Link to="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
+          <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
         </Button>
       </div>
     );
@@ -85,7 +93,7 @@ const WhitepaperViewPage: React.FC = () => {
          <div className="flex flex-col justify-center items-center h-screen">
             <p>Whitepaper not found.</p> {/* This can be a generic message */}
             <Button asChild variant="link" className="mt-4">
-              <Link to="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
+              <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
             </Button>
         </div>
     );
@@ -98,7 +106,7 @@ const WhitepaperViewPage: React.FC = () => {
         <h2 className="text-2xl font-semibold mb-4">Access Denied</h2>
         <p className="mb-4">This whitepaper is not public and you do not have permission to view it.</p>
         <Button asChild variant="link">
-          <Link to="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
+          <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
         </Button>
       </div>
     );
@@ -110,7 +118,7 @@ const WhitepaperViewPage: React.FC = () => {
     <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">
         <div className="mb-6 flex justify-between items-center">
             <Button asChild variant="outline">
-                 <Link to={isAdmin ? "/admin/whitepaper-generator" : "/"}> {/* Sensible back link */}
+                 <Link href={isAdmin ? "/admin/whitepaper-generator" : "/"}> {/* Sensible back link */}
                     <ArrowLeft className="mr-2 h-4 w-4" /> Back
                  </Link>
             </Button>

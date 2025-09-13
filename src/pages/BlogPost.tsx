@@ -2,14 +2,18 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
-import JsonLd from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog";
 import { Separator } from "@/components/ui/separator";
+import ReactMarkdown from 'react-markdown';
+import {logErrorToProduction} from '@/utils/productionLogger';
 
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts";
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
 
 export default function BlogPost() {
   const { slug } = useParams() as { slug: string };
@@ -17,43 +21,31 @@ export default function BlogPost() {
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const timedOut = useSkeletonTimeout(20000);
   
   useEffect(() => {
-    const fetchPost = async () => {
-      try {
-        const res = await fetch(`/api/blog/${slug}`);
-        if (res.ok) {
-          const data = await res.json();
-          setPost(data);
-          const related = BLOG_POSTS.filter(
-            (p) =>
-              p.id !== data.id &&
-              (p.category === data.category ||
-                p.tags.some((tag) => data.tags.includes(tag)))
-          ).slice(0, 3);
-          setRelatedPosts(related);
-          return;
-        }
-      } catch (err) {
-        console.error('Failed to fetch blog post', err);
-      }
-
-      const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
-      if (currentPost) {
-        setPost(currentPost);
-        const related = BLOG_POSTS.filter(
-          (p) =>
-            p.id !== currentPost.id &&
-            (p.category === currentPost.category ||
-              p.tags.some((tag) => currentPost.tags.includes(tag)))
-        ).slice(0, 3);
-        setRelatedPosts(related);
-      } else {
-        navigate('/blog', { replace: true });
-      }
-    };
-
-    fetchPost();
+    // Find the current post by slug
+    const currentPost = BLOG_POSTS.find(p => p.slug === slug);
+    
+    if (currentPost) {
+      setPost(currentPost);
+      
+      // Find related posts (same category, excluding current post)
+      const related = BLOG_POSTS.filter(p => 
+        p.id !== currentPost.id && 
+        (p.category === currentPost.category || 
+         p.tags.some(tag => currentPost.tags.includes(tag)))
+      ).slice(0, 3);
+      
+      setRelatedPosts(related);
+    } else {
+      // Post not found
+      navigate("/blog", { replace: true });
+    }
+    
+    // Scroll to top when post changes
     window.scrollTo(0, 0);
   }, [slug, navigate]);
   
@@ -64,9 +56,11 @@ export default function BlogPost() {
       </div>
     );
   }
-
+  
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
+    if (!post) return '';
+    
     const url = encodeURIComponent(window.location.href);
     const title = encodeURIComponent(post.title);
     
@@ -81,30 +75,20 @@ export default function BlogPost() {
         return '#';
     }
   };
-
-  const articleLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    image: post.featuredImage,
-    datePublished: post.publishedDate,
-    author: {
-      "@type": "Person",
-      name: post.author.name,
-    },
-  };
   
   return (
     <>
-      <SEO
+      <SEO 
         title={post.title}
         description={post.excerpt}
-        keywords={post.tags.join(", ")}
-        ogImage={post.featuredImage}
-        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
+        keywords={post.tags?.join(', ') || ''}
+        image={post.featuredImage}
+        canonical={`${window.location.origin}/blog/${slug}`}
+        type="article"
+        author={post.author?.name || 'Zion Tech Group'}
+        publishedTime={post.publishedDate}
+        tags={post.tags}
       />
-      <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
           {/* Back to blog button */}
@@ -114,7 +98,7 @@ export default function BlogPost() {
               className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
               asChild
             >
-              <Link to="/blog">
+              <Link href="/blog">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to all articles
               </Link>
@@ -136,14 +120,11 @@ export default function BlogPost() {
             {/* Author and metadata */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
               <div className="flex items-center mb-4 sm:mb-0">
-                <img 
-                  src={post.author.avatarUrl} 
-                  alt={post.author.name} 
+                <ImageWithRetry
+                  src={post.author.avatarUrl}
+                  alt={post.author.name}
                   className="w-12 h-12 rounded-full mr-3"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = "/images/blog-placeholder.svg";
-                  }}
+                  fallbackSrc="/images/blog-placeholder.svg"
                 />
                 <div>
                   <p className="text-white font-medium">{post.author.name}</p>
@@ -216,24 +197,22 @@ export default function BlogPost() {
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
-              <img 
-                src={post.featuredImage} 
-                alt={post.title}
+              <ImageWithRetry
+                src={post.featuredImage}
+                alt={post.featuredImageAlt || post.title}
                 className="object-cover w-full h-full"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = "/images/blog-placeholder.svg";
-                }}
+                fallbackSrc="/images/blog-placeholder.svg"
               />
             </div>
           </div>
           
           {/* Article content */}
           <div className="max-w-4xl mx-auto">
-            <div 
-              className="prose prose-lg prose-invert max-w-none"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
+            <div className="prose prose-lg prose-invert max-w-none">
+              <ReactMarkdown>
+                {post.content}
+              </ReactMarkdown>
+            </div>
             
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-12">
@@ -257,18 +236,15 @@ export default function BlogPost() {
                   {relatedPosts.map(relatedPost => (
                     <Link 
                       key={relatedPost.id}
-                      to={`/blog/${relatedPost.slug}`}
+                      href={`/blog/${relatedPost.slug}`}
                       className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"
                     >
                       <div className="aspect-[16/9] relative">
-                        <img 
-                          src={relatedPost.featuredImage} 
-                          alt={relatedPost.title}
+                        <ImageWithRetry
+                          src={relatedPost.featuredImage}
+                          alt={relatedPost.featuredImageAlt || relatedPost.title}
                           className="object-cover w-full h-full"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.src = "/images/blog-placeholder.svg";
-                          }}
+                          fallbackSrc="/images/blog-placeholder.svg"
                         />
                       </div>
                       <div className="p-4">
@@ -280,16 +256,7 @@ export default function BlogPost() {
                 </div>
               </div>
             )}
-
-            <div className="mt-12 text-center">
-              <p className="text-zion-slate-light">
-                Ready to put these ideas into action? Explore our{' '}
-                <Link to="/services" className="text-zion-cyan underline">AI services</Link>{' '}
-                or browse expert{' '}
-                <Link to="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
-              </p>
-            </div>
-
+            
             {/* Navigation */}
             <div className="flex justify-between items-center mt-12">
               <Button
@@ -297,7 +264,7 @@ export default function BlogPost() {
                 className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
                 asChild
               >
-                <Link to="/blog">
+                <Link href="/blog">
                   <ChevronLeft className="mr-2 h-4 w-4" />
                   All Articles
                 </Link>

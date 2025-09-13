@@ -1,6 +1,4 @@
-const { withErrorLogging } = require('./withErrorLogging.cjs');
-
-async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
@@ -35,4 +33,3 @@ async function handler(req, res) {
     res.json({ error: err.message || 'Quote submission failed' });
   }
 }
-module.exports = withErrorLogging(handler);

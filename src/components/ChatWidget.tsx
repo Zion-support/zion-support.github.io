@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
+import { io } from 'socket.io-client';
 import { useAuth } from '@/hooks/useAuth';
 import { MessageBubble } from '@/components/messaging/MessageBubble';
 import { Button } from '@/components/ui/button';
-import type { Message } from '@/types/messaging';
+import type { Message as ChatMessage } from '@/types/messaging';
 
 interface ChatWidgetProps {
   /** Room identifier, typically order or service id */
@@ -15,24 +16,20 @@ interface ChatWidgetProps {
 
 export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetProps) {
   const { user } = useAuth();
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [text, setText] = useState('');
   const socketRef = useRef<any>();
 
   useEffect(() => {
     if (!isOpen) return;
 
-    async function setup() {
-      const { io } = await import('socket.io-client');
-      socketRef.current = io({ path: '/api/socket', transports: ['websocket'] });
-      socketRef.current.emit('join-room', roomId);
-      socketRef.current.on('receive-message', (msg: Message) => {
-        setMessages(prev => [...prev, msg]);
-        triggerNotification('New message', msg.content);
-      });
-    }
+    socketRef.current = io({ path: '/api/socket', transports: ['websocket'] });
+    socketRef.current.emit('join-room', roomId);
+    socketRef.current.on('receive-message', (msg: Message) => {
+      setMessages(prev => [...prev, msg]);
+      triggerNotification('New message', msg.content);
+    });
 
-    setup();
     return () => {
       socketRef.current?.disconnect();
     };
@@ -47,18 +44,19 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
   };
 
   const handleSend = () => {
-    if (!socketRef.current || !text.trim() || !user || typeof user === 'boolean') return; // Ensure user is not boolean false
-    const msg: Message = {
+    if (!socketRef.current || !text.trim() || !user) return;
+    const msg: ChatMessage = {
       id: Date.now().toString(),
-      sender_id: String(user.id), // user is now guaranteed to be UserDetails
+      sender_id: String(user.id),
       recipient_id: recipientId,
       content: text,
       created_at: new Date().toISOString(),
-      read: false
+      read: false,
     };
     socketRef.current.emit('send-message', { roomId, message: msg });
     setMessages(prev => [...prev, msg]);
     setText('');
+    // TODO: persist message via backend
   };
 
   if (!isOpen) return null;
@@ -67,13 +65,13 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
     <div className="fixed bottom-4 right-4 w-80 bg-zion-blue-dark rounded-lg shadow-xl border border-zion-purple/20 flex flex-col animate-slide-up">
       <div className="p-2 bg-zion-blue flex justify-between items-center">
         <span className="text-white font-medium">Chat</span>
-        <Button size="icon" variant="ghost" onClick={onClose} aria-label="Close chat widget">
+        <Button size="icon" variant="ghost" onClick={onClose}>
           ✕
         </Button>
       </div>
       <div className="flex-1 overflow-y-auto p-2 space-y-2">
         {messages.map(m => (
-          <MessageBubble key={m.id} message={m} isUserMessage={!!user && typeof user !== 'boolean' && m.sender_id === String(user.id)} />
+          <MessageBubble key={m.id} message={m} isUserMessage={m.sender_id === String(user?.id)} />
         ))}
       </div>
       <div className="p-2 border-t border-zion-purple/20">

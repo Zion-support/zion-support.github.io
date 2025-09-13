@@ -4,17 +4,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
 import { DollarSign } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
+import { RatingStars } from "./RatingStars";
 import { FavoriteButton } from "@/components/FavoriteButton";
 
 interface ProductListingCardProps {
   listing: ProductListing;
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
-  /**
-   * Base path for linking to the detail page. Defaults to
-   * `/marketplace/listing` to preserve existing behaviour.
-   */
   detailBasePath?: string;
 }
 
@@ -25,45 +21,83 @@ const ProductListingCardComponent = ({
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid';
-  const navigate = useNavigate();
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
-  
-  // Get the first image or use a placeholder
-  const imageUrl = listing.images && listing.images.length > 0 
+  const [imageSrc, setImageSrc] = useState(
+    listing.images && listing.images.length > 0 && listing.images[0]
     ? listing.images[0] 
-    : '/placeholder.svg';
+    : '/placeholder.svg'
+  );
+  const [imageError, setImageError] = useState(false);
+
+  const stockStatus =
+    listing.stock === undefined
+      ? 'In stock'
+      : listing.stock <= 0
+      ? 'Out of stock'
+      : listing.stock <= 5
+      ? 'Low stock'
+      : 'In stock';
+
+  const stockVariant =
+    listing.stock === undefined
+      ? 'success'
+      : listing.stock <= 0
+      ? 'destructive'
+      : listing.stock <= 5
+      ? 'warning'
+      : 'success';
     
-  // Format price display
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()}`;
+    return formatPrice(listing.price);
   };
 
-  // Handle image loading errors
-  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.src = '/placeholder.svg';
-  };
-  
-  // Handle navigating to listing detail
-  const handleViewListing = () => {
-    navigate(`${detailBasePath}/${listing.id}`);
-  };
-
-  const addToCart = async () => {
-    setLoading(true);
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      navigate(`${detailBasePath}/${listing.id}`);
-    } catch (error) {
-      console.error("Failed to add to cart:", error);
-      // Handle error (e.g., show a notification to the user)
-    } finally {
-      setLoading(false);
+  const handleImageError = () => {
+    if (!imageError) { // Prevent infinite loops if placeholder also fails
+      setImageSrc('/placeholder.svg');
+      setImageError(true);
     }
   };
   
-  // Handle request quote button click
+  const handleViewListing = () => {
+    // Debug logging for development
+    if (process.env.NODE_ENV === 'development') {
+      logDebug('[ProductCard] Navigating to:', { path: `${detailBasePath}/${listing.id}` });
+      logDebug('[ProductCard] Listing ID:', { id: listing.id });
+      logDebug('[ProductCard] Listing Title:', { title: listing.title });
+    }
+    
+    // Validate listing ID exists before navigation
+    if (!listing.id) {
+      logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component: 'ProductListingCard' });
+      toast({
+        title: "Navigation Error",
+        description: "Product information is incomplete",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    router.push(`${detailBasePath}/${listing.id}`);
+  };
+
+  const dispatch = useDispatch<AppDispatch>();
+
+  const addToCart = () => {
+    setLoading(true);
+    dispatch(
+      addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
+    );
+    toast.success(`1× ${listing.title} added`, {
+      action: {
+        label: 'View Cart',
+        onClick: () => router.push('/cart'),
+      },
+    });
+    setLoading(false);
+  };
+  
   const handleRequestQuote = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -71,13 +105,15 @@ const ProductListingCardComponent = ({
     if (onRequestQuote) {
       onRequestQuote(listing.id);
     } else {
-      // Default behavior if no handler provided
       navigate(`/request-quote?listing=${listing.id}`);
     }
   };
   
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
+
   return (
     <div
+      data-testid="equipment-link"
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
       tabIndex={0}
@@ -90,24 +126,14 @@ const ProductListingCardComponent = ({
       }}
     >
       {/* Image */}
-      <div
-        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-        onClick={handleViewListing}
-        role="button"
-        tabIndex={0}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            handleViewListing();
-          }
-        }}
-      >
+      <div className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'} onClick={handleViewListing}>
         <div className={`relative ${isGrid ? 'h-48' : 'h-32 w-48'}`}>
           <img
             src={imageUrl}
-            alt={listing.title}
+            alt={`Image of ${listing.title}`}
             className="w-full h-full object-cover"
             onError={handleImageError}
+            loading="lazy"
           />
           {listing.featured && (
             <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
@@ -127,7 +153,13 @@ const ProductListingCardComponent = ({
               {listing.category}
             </Badge>
             {listing.rating && (
-              <RatingStars value={listing.rating} count={listing.reviewCount} />
+              <div className="flex items-center text-zion-slate-light">
+                <RatingStars value={listing.rating} />
+                <span className="ml-1">{listing.rating.toFixed(1)}</span>
+                {listing.reviewCount && (
+                  <span className="text-xs ml-1">({listing.reviewCount})</span>
+                )}
+              </div>
             )}
           </div>
           
@@ -162,7 +194,7 @@ const ProductListingCardComponent = ({
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
-                {formatPrice()}
+                {getPrice()}
               </div>
             ) : (
               <span className="text-foreground/80">
@@ -181,9 +213,14 @@ const ProductListingCardComponent = ({
               }}
               disabled={loading}
             >
+              <Heart className="h-5 w-5" />
+            </Button>
+            <Link
+              to={`${detailBasePath}/${listing.id}`}
+              onClick={(e) => e.stopPropagation()}
+            >
               {loading ? (
                 <>
-                  {/* You can replace this with a spinner icon component if you have one */}
                   <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>

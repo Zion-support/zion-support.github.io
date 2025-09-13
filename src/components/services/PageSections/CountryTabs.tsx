@@ -7,7 +7,7 @@ import {
   Pagination,
   PaginationContent,
   PaginationItem,
-  PaginationButton,
+  PaginationLink,
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
@@ -117,11 +117,13 @@ export function CountryTabs({
                 </PaginationItem>
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                   <PaginationItem key={page}>
-                    <PaginationButton
-                      page={page}
+                    <PaginationLink
+                      href="#"
                       isActive={page === currentPage}
                       onClick={(e) => { e.preventDefault(); setCurrentPage(page); }}
-                    />
+                    >
+                      {page}
+                    </PaginationLink>
                   </PaginationItem>
                 ))}
                 <PaginationItem>
