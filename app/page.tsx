@@ -148,6 +148,12 @@ import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026Quantu
 // Import new promotional components
 import EdgeAIRevolutionPromotionBanner from '../components/EdgeAIRevolutionPromotionBanner';
 
+// Import new content showcase and interactive demo components
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import NewContentShowcase2025PromotionBanner from '../components/NewContentShowcase2025PromotionBanner';
+import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
+import InteractiveTechDemo2025PromotionBanner from '../components/InteractiveTechDemo2025PromotionBanner';
+
 // Import new content promotion banners
 import NewContent2025UltimateTransformationBanner from '../components/NewContent2025UltimateTransformationBanner';
 import AI2025RevolutionaryContentShowcaseBanner from '../components/AI2025RevolutionaryContentShowcaseBanner';
@@ -290,6 +296,12 @@ export default function HomePage() {
         <AITrendsPredictions2026PromotionBanner />
         <QuantumComputingSolutions2026PromotionBanner />
         
+        {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
+        <NewContentShowcase2025PromotionBanner />
+        
+        {/* INTERACTIVE TECH DEMO 2025 PROMOTION BANNER */}
+        <InteractiveTechDemo2025PromotionBanner />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
         
@@ -315,6 +327,12 @@ export default function HomePage() {
         <UltimateContentShowcase2026 />
         <AITrendsPredictions2026 />
         <QuantumComputingSolutions2026 />
+        
+        {/* NEW CONTENT SHOWCASE 2025 */}
+        <NewContentShowcase2025 />
+        
+        {/* INTERACTIVE TECH DEMO 2025 */}
+        <InteractiveTechDemo2025 />
         
         {/* REVOLUTIONARY TECH BANNER 2026 */}
         <RevolutionaryTechBanner2026 />
