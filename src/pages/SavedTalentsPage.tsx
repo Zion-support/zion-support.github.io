@@ -175,7 +175,7 @@ export default function SavedTalentsPage() {
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-4">Saved Talents</h1>
         <p className="text-muted-foreground">
-          Here are the talents you've saved for future reference.
+          Here are the talents you&apos;ve saved for future reference.
         </p>
         
         {isLoading ? (
