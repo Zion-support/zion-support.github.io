@@ -42,7 +42,7 @@ for attempt in {1..3}; do
   case $attempt in
     1)
       echo "Attempt 1: Standard Yarn installation..."
-      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
+      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional; then
         echo "Dependencies installed successfully!"
         break
       fi
@@ -50,12 +50,12 @@ for attempt in {1..3}; do
     2)
       echo "Attempt 2: Yarn installation with specific resolutions..."
       # Force specific versions for problematic packages
-      yarn add find-up@5.0.0 --exact --network-timeout 120000 --ignore-engines --no-cache
-      yarn add glob-parent@6.0.2 --exact --network-timeout 120000 --ignore-engines --no-cache
-      yarn add glob@10.4.5 --exact --network-timeout 120000 --ignore-engines --no-cache
+      yarn add find-up@5.0.0 --exact --network-timeout 120000 --ignore-engines
+      yarn add glob-parent@6.0.2 --exact --network-timeout 120000 --ignore-engines
+      yarn add glob@10.4.5 --exact --network-timeout 120000 --ignore-engines
       # Ensure we have the correct Next.js version
-      yarn add next@14.2.0 --exact --network-timeout 120000 --ignore-engines --no-cache
-      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
+      yarn add next@14.2.0 --exact --network-timeout 120000 --ignore-engines
+      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional; then
         echo "Dependencies installed successfully!"
         break
       fi
@@ -65,8 +65,8 @@ for attempt in {1..3}; do
       # Remove existing lockfile and do fresh install
       rm -f yarn.lock
       # Force Next.js version
-      yarn add next@14.2.0 --exact --network-timeout 120000 --ignore-engines --no-cache
-      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
+      yarn add next@14.2.0 --exact --network-timeout 120000 --ignore-engines
+      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional; then
         echo "Dependencies installed successfully!"
         break
       else
@@ -87,6 +87,10 @@ if [ ! -d "node_modules" ]; then
   echo "node_modules directory not found!"
   exit 1
 fi
+
+# Ensure TypeScript types are installed
+echo "Ensuring TypeScript types are installed..."
+yarn add --dev @types/node @types/react @types/react-dom typescript
 
 # Verify Next.js version
 echo "Verifying Next.js version..."
