@@ -45,6 +45,10 @@ import QuantumComputingBreakthroughs2030Banner from '../components/QuantumComput
 // Import new interactive widgets
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
+// Import new revolutionary content components
+import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
+import ContentDiscoveryWidget from '../components/ContentDiscoveryWidget';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -56,6 +60,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW: REVOLUTIONARY CONTENT BANNER */}
+        <RevolutionaryContentBanner />
+        
+        {/* NEW: CONTENT DISCOVERY WIDGET */}
+        <ContentDiscoveryWidget />
+        
         {/* NEW: AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
         <AI2025UltimateBreakthroughRevolutionBanner />
         
