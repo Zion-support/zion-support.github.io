@@ -10,47 +10,47 @@ const PromotionalBanner = () => {
   const promotions = [
     {
       id: 1,
-      title: "🚀 New AI Services Available!",
-      subtitle: "Transform your business with our latest AI-powered solutions",
-      description: "Get 20% off your first AI implementation project",
-      cta: "Explore AI Services",
-      link: "/services/ai-services",
+      title: "🚀 AI Autonomous Operations 2025!",
+      subtitle: "Transform your business with 500% revenue growth",
+      description: "Read our latest case study: Enterprise AI transformation success",
+      cta: "Read Case Study",
+      link: "/case-studies/enterprise-ai-transformation-2025-success",
       bgColor: "from-purple-500 to-indigo-600",
       icon: <Brain className="w-6 h-6" />,
-      badge: "Limited Time"
+      badge: "New Content"
     },
     {
       id: 2,
-      title: "⚡ Quantum Computing Solutions",
-      subtitle: "Prepare for the quantum revolution",
-      description: "Early access to our quantum computing research program",
+      title: "⚡ Quantum Neural Networks Breakthrough",
+      subtitle: "10,000x performance improvement over classical AI",
+      description: "Discover the 2025 quantum-AI fusion revolution",
       cta: "Learn More",
-      link: "/services/quantum-computing",
+      link: "/blog/quantum-neural-networks-2025-breakthrough",
       bgColor: "from-cyan-500 to-blue-600",
       icon: <Zap className="w-6 h-6" />,
-      badge: "Exclusive"
+      badge: "Breakthrough"
     },
     {
       id: 3,
-      title: "🔒 Enhanced Cybersecurity",
-      subtitle: "Protect your digital assets with AI-powered security",
-      description: "Free security assessment for new clients",
-      cta: "Get Assessment",
-      link: "/services/cybersecurity",
+      title: "🔒 AI Implementation Master Guide",
+      subtitle: "Complete roadmap to enterprise AI success",
+      description: "Free comprehensive guide with proven strategies",
+      cta: "Download Guide",
+      link: "/resources/ai-implementation-master-guide-2025",
       bgColor: "from-red-500 to-pink-600",
       icon: <Shield className="w-6 h-6" />,
-      badge: "Free"
+      badge: "Free Guide"
     },
     {
       id: 4,
-      title: "🌟 Green IT Solutions",
-      subtitle: "Make your technology sustainable",
-      description: "Reduce your carbon footprint with our Green IT services",
-      cta: "Go Green",
-      link: "/services/green-it",
+      title: "🌟 AI ROI Calculator 2025",
+      subtitle: "Measure your AI investment returns",
+      description: "Calculate ROI with our proven framework and formulas",
+      cta: "Calculate ROI",
+      link: "/resources/ai-roi-calculator-guide-2025",
       bgColor: "from-green-500 to-emerald-600",
       icon: <Sparkles className="w-6 h-6" />,
-      badge: "Eco-Friendly"
+      badge: "ROI Tool"
     }
   ];
 

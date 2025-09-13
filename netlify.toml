@@ -4,15 +4,23 @@
   status = 200
 
 [build]
-  command = "yarn install --frozen-lockfile && yarn build"
+  command = "./build.sh"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
-  NODE_VERSION = "24.0.0"
+  NODE_VERSION = "20.18.0"
   NODE_OPTIONS = "--max-old-space-size=4096"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
+  YARN_CACHE_FOLDER = ".yarn-cache"
+  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
+  YARN_NETWORK_TIMEOUT = "100000"
+  YARN_NETWORK_CONCURRENCY = "1"
+  YARN_IGNORE_ENGINES = "true"
+  YARN_IGNORE_PLATFORM = "true"
+  YARN_DISABLE_TELEMETRY = "1"
+  YARN_ENABLE_PROGRESS_BARS = "false"
 
 # Long-term caching for static assets
 [[headers]]
@@ -68,7 +76,13 @@
 [context.production.environment]
   NODE_ENV = "production"
   NPM_CONFIG_PRODUCTION = "false"
-  NODE_VERSION = "24"
+  NODE_VERSION = "20.18.0"
+  YARN_CACHE_FOLDER = ".yarn-cache"
+  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
+  YARN_NETWORK_TIMEOUT = "100000"
+  YARN_NETWORK_CONCURRENCY = "1"
+  YARN_IGNORE_ENGINES = "true"
+  YARN_IGNORE_PLATFORM = "true"
 
 [context.deploy-preview]
   command = "yarn build"

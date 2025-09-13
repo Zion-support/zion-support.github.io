@@ -15,6 +15,21 @@ export default function ClientDashboard() {
     load();
   }, []);
 
+
+export default function ClientDashboard() {;
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
+
+      <EnhancedCard>;
+
+      </EnhancedCard>;
+      <EnhancedCard>;
+
+                <EnhancedButton
+                </EnhancedButton>              )}
+
+
+
+
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-4">
       <div className="flex items-center justify-between">
@@ -37,7 +52,29 @@ export default function ClientDashboard() {
             )}
           </div>
         </div>
-      ))}
-    </div>
-  );
-}
+      </EnhancedCard>
+      <EnhancedCard>
+
+
+
+
+
+                <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
+                <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
+      </EnhancedCard>;
+
+
+import EnhancedCard from '../../components / ui / EnhancedCard';
+import EnhancedCard from '../../components / ui / EnhancedCard';
+import EnhancedButton from '../../components / ui / EnhancedButton';
+import EnhancedButton from '../../components / ui / EnhancedButton';
+import {useEffect, useState} from 'react';
+export default /**
+      <EnhancedCard>;
+      </EnhancedCard>;
+      <EnhancedCard>;
+                <EnhancedButton;
+                </EnhancedButton>              )}
+      </EnhancedCard>;
+
+
