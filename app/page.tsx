@@ -90,6 +90,9 @@ import AI2026UltimateBreakthroughPredictionsPromotionBanner from '../components/
 import AI2026EnterpriseTransformation50000ROIPromotionBanner from '../components/AI2026EnterpriseTransformation50000ROIPromotionBanner';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 
+// Import revolutionary content showcase promotion banner
+import RevolutionaryContentShowcase2025PromotionBanner from '../components/RevolutionaryContentShowcase2025PromotionBanner';
+
 // New Ultimate Content Revolution 2026 Components
 import UltimateContentRevolution2026 from '../components/UltimateContentRevolution2026';
 import UltimateContentRevolution2026PromotionBanner from '../components/UltimateContentRevolution2026PromotionBanner';
@@ -112,6 +115,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* REVOLUTIONARY CONTENT SHOWCASE PROMOTION BANNER */}
+        <RevolutionaryContentShowcase2025PromotionBanner />
+        
         {/* AI 2026 BREAKTHROUGH CONTENT PROMOTION BANNER */}
         <AI2026BreakthroughContentPromotionBanner />
         
