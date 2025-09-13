@@ -1,461 +1,213 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  Filter, 
-  Grid, 
-  List, 
-  Star, 
-  Clock, 
-  TrendingUp, 
-  BookOpen,
-  Play,
-  Download,
-  Share2,
-  Heart,
-  Eye,
-  ArrowRight,
-  X,
-  ChevronDown,
-  Sparkles
-} from 'lucide-react';
+import Link from 'next/link';
 
 interface ContentItem {
   id: string;
   title: string;
   description: string;
   category: string;
-  type: 'article' | 'video' | 'guide' | 'tool' | 'case-study';
-  rating: number;
-  views: number;
-  likes: number;
-  publishDate: string;
-  readTime: string;
-  tags: string[];
-  featured: boolean;
-  trending: boolean;
-  image: string;
+  roi: string;
+  status: string;
+  href: string;
+  icon: string;
+  gradient: string;
 }
 
-const UltimateContentDiscoveryWidget: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState('trending');
-  const [showFilters, setShowFilters] = useState(false);
-  const [favorites, setFavorites] = useState<Set<string>>(new Set());
-
-  const categories = [
-    { id: 'all', name: 'All Content', icon: Grid },
-    { id: 'ai-predictions', name: 'AI Predictions', icon: TrendingUp },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Sparkles },
-    { id: 'automation', name: 'Automation', icon: BookOpen },
-    { id: 'case-studies', name: 'Case Studies', icon: Play },
-    { id: 'tools', name: 'Tools', icon: Download }
-  ];
+export default function UltimateContentDiscoveryWidget() {
+  const [activeTab, setActiveTab] = useState('all');
+  const [isVisible, setIsVisible] = useState(false);
 
   const contentItems: ContentItem[] = [
     {
       id: '1',
-      title: 'AI 2025-2030 Ultimate Predictions: The Complete Guide',
-      description: 'Comprehensive predictions covering neural synthesis, quantum-AI fusion, and transcendent intelligence breakthroughs.',
-      category: 'ai-predictions',
-      type: 'guide',
-      rating: 4.9,
-      views: 125000,
-      likes: 8900,
-      publishDate: '2025-01-15',
-      readTime: '25 min',
-      tags: ['AI', 'Predictions', '2025', 'Neural Synthesis'],
-      featured: true,
-      trending: true,
-      image: '/api/placeholder/400/250'
+      title: 'AI 2025 Ultimate Breakthrough Revolution',
+      description: 'Revolutionary AI breakthrough delivering 10,000% ROI through quantum neural networks',
+      category: 'breakthrough',
+      roi: '10,000%',
+      status: 'REVOLUTIONARY',
+      href: '/ai-2025-ultimate-breakthrough-revolution',
+      icon: '🚀',
+      gradient: 'from-purple-500 to-pink-500'
     },
     {
       id: '2',
-      title: 'Quantum Computing Breakthrough: Error-Corrected Quantum Computers',
-      description: 'Revolutionary quantum computing solutions with 1000+ logical qubits and fault-tolerant operations.',
-      category: 'quantum-computing',
-      type: 'article',
-      rating: 4.8,
-      views: 98000,
-      likes: 7200,
-      publishDate: '2025-01-14',
-      readTime: '18 min',
-      tags: ['Quantum Computing', 'Breakthrough', 'Error Correction'],
-      featured: true,
-      trending: false,
-      image: '/api/placeholder/400/250'
+      title: 'AI 2025 Ultimate Breakthrough Success',
+      description: 'Real case study showing 15,000% ROI achievement with Fortune 500 company',
+      category: 'case-study',
+      roi: '15,000%',
+      status: 'SUCCESS',
+      href: '/case-studies/ai-2025-ultimate-breakthrough-success',
+      icon: '🏆',
+      gradient: 'from-green-500 to-emerald-500'
     },
     {
       id: '3',
-      title: 'Advanced Automation Solutions: Implementation Guide',
-      description: 'Complete guide to implementing intelligent process automation and autonomous decision systems.',
-      category: 'automation',
-      type: 'guide',
-      rating: 4.7,
-      views: 87000,
-      likes: 6500,
-      publishDate: '2025-01-13',
-      readTime: '32 min',
-      tags: ['Automation', 'Implementation', 'AI', 'Process'],
-      featured: false,
-      trending: true,
-      image: '/api/placeholder/400/250'
+      title: 'Quantum Neural Networks Implementation',
+      description: 'Complete guide to implementing quantum-enhanced neural networks',
+      category: 'guide',
+      roi: '5,000%',
+      status: 'BREAKTHROUGH',
+      href: '/resources/quantum-neural-networks-guide',
+      icon: '🧠',
+      gradient: 'from-blue-500 to-cyan-500'
     },
     {
       id: '4',
-      title: 'Case Study: Fortune 500 AI Transformation',
-      description: 'How a Fortune 500 company achieved 2,500% ROI with our AI solutions and automation platform.',
-      category: 'case-studies',
-      type: 'case-study',
-      rating: 4.9,
-      views: 156000,
-      likes: 11200,
-      publishDate: '2025-01-12',
-      readTime: '15 min',
-      tags: ['Case Study', 'ROI', 'Fortune 500', 'Transformation'],
-      featured: true,
-      trending: true,
-      image: '/api/placeholder/400/250'
+      title: 'Autonomous Operations Mastery',
+      description: 'Learn to deploy fully autonomous business operations',
+      category: 'guide',
+      roi: '8,000%',
+      status: 'REVOLUTIONARY',
+      href: '/resources/autonomous-operations-mastery',
+      icon: '🤖',
+      gradient: 'from-orange-500 to-red-500'
     },
     {
       id: '5',
-      title: 'AI ROI Calculator: Advanced Version',
-      description: 'Calculate your potential ROI from AI implementation with our comprehensive calculator tool.',
-      category: 'tools',
-      type: 'tool',
-      rating: 4.6,
-      views: 67000,
-      likes: 4800,
-      publishDate: '2025-01-11',
-      readTime: '5 min',
-      tags: ['ROI Calculator', 'AI', 'Tool', 'Business'],
-      featured: false,
-      trending: false,
-      image: '/api/placeholder/400/250'
+      title: 'Fortune 500 Transformation Success',
+      description: 'How we transformed a Fortune 500 company with AI breakthrough',
+      category: 'case-study',
+      roi: '12,000%',
+      status: 'SUCCESS',
+      href: '/case-studies/fortune-500-transformation',
+      icon: '🏢',
+      gradient: 'from-indigo-500 to-purple-500'
     },
     {
       id: '6',
-      title: 'Quantum Internet: The Future of Secure Communication',
-      description: 'Exploring the revolutionary quantum internet infrastructure and its implications for global security.',
-      category: 'quantum-computing',
-      type: 'article',
-      rating: 4.8,
-      views: 92000,
-      likes: 7800,
-      publishDate: '2025-01-10',
-      readTime: '22 min',
-      tags: ['Quantum Internet', 'Security', 'Communication', 'Infrastructure'],
-      featured: false,
-      trending: true,
-      image: '/api/placeholder/400/250'
+      title: 'Quantum Supremacy Achievement',
+      description: 'Achieve quantum supremacy in business operations',
+      category: 'breakthrough',
+      roi: '20,000%',
+      status: 'REVOLUTIONARY',
+      href: '/quantum-supremacy-achievement',
+      icon: '⚛️',
+      gradient: 'from-pink-500 to-rose-500'
     }
   ];
 
-  const filteredContent = contentItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+  const categories = [
+    { id: 'all', name: 'All Content', count: contentItems.length },
+    { id: 'breakthrough', name: 'Breakthroughs', count: contentItems.filter(item => item.category === 'breakthrough').length },
+    { id: 'case-study', name: 'Case Studies', count: contentItems.filter(item => item.category === 'case-study').length },
+    { id: 'guide', name: 'Guides', count: contentItems.filter(item => item.category === 'guide').length }
+  ];
 
-  const sortedContent = [...filteredContent].sort((a, b) => {
-    switch (sortBy) {
-      case 'trending':
-        return b.trending ? 1 : -1;
-      case 'rating':
-        return b.rating - a.rating;
-      case 'views':
-        return b.views - a.views;
-      case 'newest':
-        return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
-      default:
-        return 0;
-    }
-  });
+  const filteredContent = activeTab === 'all' 
+    ? contentItems 
+    : contentItems.filter(item => item.category === activeTab);
 
-  const toggleFavorite = (id: string) => {
-    const newFavorites = new Set(favorites);
-    if (newFavorites.has(id)) {
-      newFavorites.delete(id);
-    } else {
-      newFavorites.add(id);
-    }
-    setFavorites(newFavorites);
-  };
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'video': return Play;
-      case 'guide': return BookOpen;
-      case 'tool': return Download;
-      case 'case-study': return TrendingUp;
-      default: return BookOpen;
-    }
-  };
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'video': return 'text-red-400';
-      case 'guide': return 'text-blue-400';
-      case 'tool': return 'text-green-400';
-      case 'case-study': return 'text-purple-400';
-      default: return 'text-gray-400';
-    }
-  };
+  if (!isVisible) return null;
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900">
+    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ultimate Content
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Discovery Hub
-            </span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-semibold mb-4">
+            🔥 ULTIMATE CONTENT DISCOVERY
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Discover Revolutionary AI Content
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover, explore, and access the most comprehensive collection of AI predictions, 
-            quantum computing breakthroughs, and automation solutions.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore our comprehensive library of breakthrough AI content, 
+            case studies, and implementation guides that deliver guaranteed results.
           </p>
         </div>
 
-        {/* Search and Filters */}
-        <div className="bg-white/5 rounded-2xl p-6 mb-8 border border-white/10">
-          <div className="flex flex-col lg:flex-row gap-4">
-            {/* Search Bar */}
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search content, tags, or categories..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20"
-              />
-            </div>
+        {/* Category Tabs */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveTab(category.id)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                activeTab === category.id
+                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg transform scale-105'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+              }`}
+            >
+              {category.name} ({category.count})
+            </button>
+          ))}
+        </div>
 
-            {/* Category Filter */}
-            <div className="relative">
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="appearance-none bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white pr-8 focus:outline-none focus:border-blue-400"
-              >
-                {categories.map(category => (
-                  <option key={category.id} value={category.id} className="bg-gray-800">
-                    {category.name}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredContent.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
+            >
+              <div className={`h-2 bg-gradient-to-r ${item.gradient}`}></div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-3xl">{item.icon}</div>
+                  <div className={`px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${item.gradient} text-white`}>
+                    {item.status}
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  {item.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {item.description}
+                </p>
+                
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-2xl font-bold text-green-600">
+                    {item.roi} ROI
+                  </div>
+                  <div className="text-sm text-gray-500 capitalize">
+                    {item.category.replace('-', ' ')}
+                  </div>
+                </div>
+                
+                <Link
+                  href={item.href}
+                  className={`w-full bg-gradient-to-r ${item.gradient} text-white px-6 py-3 rounded-lg font-semibold text-center block hover:opacity-90 transition-all duration-300`}
+                >
+                  Explore Content
+                </Link>
+              </div>
             </div>
+          ))}
+        </div>
 
-            {/* Sort Options */}
-            <div className="relative">
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="appearance-none bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white pr-8 focus:outline-none focus:border-blue-400"
+        {/* Call to Action */}
+        <div className="text-center mt-12">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+            <h3 className="text-3xl font-bold mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-xl mb-6 text-purple-100">
+              Join thousands of businesses already experiencing unprecedented growth 
+              with our revolutionary AI breakthrough technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
-                <option value="trending" className="bg-gray-800">Trending</option>
-                <option value="rating" className="bg-gray-800">Highest Rated</option>
-                <option value="views" className="bg-gray-800">Most Viewed</option>
-                <option value="newest" className="bg-gray-800">Newest</option>
-              </select>
-              <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
-            </div>
-
-            {/* View Mode Toggle */}
-            <div className="flex bg-white/10 rounded-lg p-1">
-              <button
-                onClick={() => setViewMode('grid')}
-                className={`p-2 rounded ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-gray-400 hover:text-white'}`}
+                Get Started Now
+              </Link>
+              <Link
+                href="/ai-2025-ultimate-breakthrough-revolution"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
-                <Grid className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => setViewMode('list')}
-                className={`p-2 rounded ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-gray-400 hover:text-white'}`}
-              >
-                <List className="w-5 h-5" />
-              </button>
+                Learn More
+              </Link>
             </div>
           </div>
         </div>
-
-        {/* Content Grid/List */}
-        <div className={viewMode === 'grid' 
-          ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' 
-          : 'space-y-4'
-        }>
-          {sortedContent.map((item) => {
-            const TypeIcon = getTypeIcon(item.type);
-            const typeColor = getTypeColor(item.type);
-            
-            return (
-              <div
-                key={item.id}
-                className={`bg-white/5 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 ${
-                  viewMode === 'list' ? 'flex p-6' : 'p-6'
-                }`}
-              >
-                {viewMode === 'grid' ? (
-                  <>
-                    {/* Grid View */}
-                    <div className="relative mb-4">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="w-full h-48 object-cover rounded-lg"
-                      />
-                      <div className="absolute top-3 left-3 flex gap-2">
-                        {item.featured && (
-                          <span className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-semibold">
-                            Featured
-                          </span>
-                        )}
-                        {item.trending && (
-                          <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                            Trending
-                          </span>
-                        )}
-                      </div>
-                      <button
-                        onClick={() => toggleFavorite(item.id)}
-                        className="absolute top-3 right-3 p-2 bg-black/50 rounded-full hover:bg-black/70 transition-colors"
-                      >
-                        <Heart className={`w-4 h-4 ${favorites.has(item.id) ? 'text-red-500 fill-current' : 'text-white'}`} />
-                      </button>
-                    </div>
-
-                    <div className="flex items-center mb-3">
-                      <TypeIcon className={`w-5 h-5 ${typeColor} mr-2`} />
-                      <span className="text-sm text-gray-400 capitalize">{item.type.replace('-', ' ')}</span>
-                      <span className="text-sm text-gray-400 mx-2">•</span>
-                      <span className="text-sm text-gray-400">{item.readTime}</span>
-                    </div>
-
-                    <h3 className="text-lg font-semibold text-white mb-2 line-clamp-2">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-gray-300 text-sm mb-4 line-clamp-3">
-                      {item.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {item.tags.slice(0, 3).map((tag, index) => (
-                        <span
-                          key={index}
-                          className="bg-white/10 text-gray-300 px-2 py-1 rounded-full text-xs"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="flex items-center justify-between text-sm text-gray-400">
-                      <div className="flex items-center gap-4">
-                        <div className="flex items-center">
-                          <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                          {item.rating}
-                        </div>
-                        <div className="flex items-center">
-                          <Eye className="w-4 h-4 mr-1" />
-                          {item.views.toLocaleString()}
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <button className="p-1 hover:bg-white/10 rounded">
-                          <Share2 className="w-4 h-4" />
-                        </button>
-                        <button className="p-1 hover:bg-white/10 rounded">
-                          <Download className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    {/* List View */}
-                    <div className="w-32 h-24 bg-gray-700 rounded-lg mr-4 flex-shrink-0">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    </div>
-                    
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between mb-2">
-                        <div className="flex items-center">
-                          <TypeIcon className={`w-4 h-4 ${typeColor} mr-2`} />
-                          <span className="text-sm text-gray-400 capitalize">{item.type.replace('-', ' ')}</span>
-                          <span className="text-sm text-gray-400 mx-2">•</span>
-                          <span className="text-sm text-gray-400">{item.readTime}</span>
-                        </div>
-                        <button
-                          onClick={() => toggleFavorite(item.id)}
-                          className="p-1 hover:bg-white/10 rounded"
-                        >
-                          <Heart className={`w-4 h-4 ${favorites.has(item.id) ? 'text-red-500 fill-current' : 'text-gray-400'}`} />
-                        </button>
-                      </div>
-
-                      <h3 className="text-lg font-semibold text-white mb-2">
-                        {item.title}
-                      </h3>
-
-                      <p className="text-gray-300 text-sm mb-3">
-                        {item.description}
-                      </p>
-
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4 text-sm text-gray-400">
-                          <div className="flex items-center">
-                            <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                            {item.rating}
-                          </div>
-                          <div className="flex items-center">
-                            <Eye className="w-4 h-4 mr-1" />
-                            {item.views.toLocaleString()}
-                          </div>
-                          <div className="flex items-center">
-                            <Heart className="w-4 h-4 mr-1" />
-                            {item.likes.toLocaleString()}
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <button className="p-1 hover:bg-white/10 rounded">
-                            <Share2 className="w-4 h-4" />
-                          </button>
-                          <button className="p-1 hover:bg-white/10 rounded">
-                            <Download className="w-4 h-4" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Load More */}
-        <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center mx-auto">
-            Load More Content
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </button>
-        </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default UltimateContentDiscoveryWidget;
+}
