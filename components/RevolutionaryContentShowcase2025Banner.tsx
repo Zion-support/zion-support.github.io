@@ -1,137 +1,156 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, BookOpen, Users, TrendingUp, Zap, Brain, Target } from 'lucide-react';
+import { ArrowRight, BookOpen, Video, FileText, Users, TrendingUp, Play, Award } from 'lucide-react';
 
-const RevolutionaryContentShowcase2025Banner = () => {
-  const contentItems = [
-    {
-      title: "AI 2025-2026 Ultimate Trends",
-      description: "Revolutionary breakthrough predictions",
-      href: "/blog/ai-2025-2026-ultimate-trends-breakthrough",
-      icon: TrendingUp,
-      color: "text-blue-400"
-    },
-    {
-      title: "50,000% ROI Case Study",
-      description: "Revolutionary enterprise transformation",
-      href: "/case-studies/ai-2025-revolutionary-enterprise-transformation-50000-roi",
-      icon: Target,
-      color: "text-green-400"
-    },
-    {
-      title: "Ultimate Implementation Guide",
-      description: "Complete business transformation blueprint",
-      href: "/resources/ai-2025-ultimate-implementation-master-guide",
-      icon: BookOpen,
-      color: "text-purple-400"
-    }
+export default function RevolutionaryContentShowcase2025Banner() {
+  const contentTypes = [
+    { icon: BookOpen, name: "Articles", count: "150+", color: "blue" },
+    { icon: Video, name: "Videos", count: "75+", color: "purple" },
+    { icon: FileText, name: "Guides", count: "50+", color: "green" },
+    { icon: Users, name: "Community", count: "200+", color: "yellow" }
   ];
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 border border-blue-500/20 rounded-xl">
+    <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border border-purple-500/30 rounded-2xl p-8 mb-8">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M30 30c0-16.569-13.431-30-30-30v30h30z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
-      {/* Content */}
-      <div className="relative px-6 py-8 md:px-8 md:py-12">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 text-blue-400 text-sm font-medium rounded-full mb-4">
-              <Star className="h-4 w-4 mr-2" />
-              Revolutionary Content Showcase 2025
+      <div className="relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
+          <div className="flex-1 mb-6 lg:mb-0">
+            <div className="flex items-center mb-4">
+              <BookOpen className="h-8 w-8 text-purple-400 mr-3 animate-pulse" />
+              <span className="text-purple-400 font-semibold text-sm uppercase tracking-wider">
+                📚 REVOLUTIONARY CONTENT
+              </span>
             </div>
             
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              Discover the Ultimate
-              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                AI Content Revolution
-              </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Revolutionary Content Showcase 2025
             </h2>
             
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Explore breakthrough AI trends, revolutionary case studies, and comprehensive 
-              implementation guides that will transform your business with unprecedented ROI.
+            <p className="text-lg text-gray-300 mb-6 max-w-2xl">
+              Immerse yourself in 500+ pieces of premium AI content including breakthrough articles, 
+              video tutorials, implementation guides, and community insights from industry experts.
             </p>
-          </div>
-          
-          {/* Content Grid */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {contentItems.map((item, index) => (
-              <Link 
-                key={index}
-                href={item.href}
-                className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
-                    <item.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-300 text-sm mb-3">{item.description}</p>
-                    <div className="flex items-center text-sm text-blue-400 group-hover:text-blue-300">
-                      <span>Explore Now</span>
-                      <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+
+            {/* Content Types */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+              {contentTypes.map((type, index) => {
+                const IconComponent = type.icon;
+                const colorClasses = {
+                  blue: "text-blue-400 bg-blue-500/20",
+                  purple: "text-purple-400 bg-purple-500/20",
+                  green: "text-green-400 bg-green-500/20",
+                  yellow: "text-yellow-400 bg-yellow-500/20"
+                };
+                
+                return (
+                  <div key={index} className={`flex items-center justify-between p-3 rounded-lg ${colorClasses[type.color as keyof typeof colorClasses]}`}>
+                    <div className="flex items-center">
+                      <IconComponent className="h-5 w-5 mr-2" />
+                      <span className="text-sm font-medium">{type.name}</span>
                     </div>
+                    <span className="text-sm font-bold">{type.count}</span>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <Link 
+                href="/revolutionary-content-showcase-2025"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Explore Content Library
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+              
+              <Link 
+                href="/blog/ai-2025-revolutionary-breakthroughs"
+                className="inline-flex items-center px-6 py-3 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-300"
+              >
+                Latest Articles
+              </Link>
+            </div>
+          </div>
+
+          {/* Visual Element */}
+          <div className="flex-shrink-0 lg:ml-8">
+            <div className="relative">
+              <div className="w-64 h-64 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center">
+                <div className="w-48 h-48 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-full flex items-center justify-center">
+                  <div className="w-32 h-32 bg-gradient-to-br from-yellow-400/40 to-orange-400/40 rounded-full flex items-center justify-center">
+                    <BookOpen className="h-16 w-16 text-white animate-pulse" />
                   </div>
                 </div>
-              </Link>
-            ))}
-          </div>
-          
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-1">50,000%</div>
-              <div className="text-sm text-gray-400">Maximum ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-1">10,000x</div>
-              <div className="text-sm text-gray-400">Faster Processing</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-1">99.9%</div>
-              <div className="text-sm text-gray-400">Autonomous Operations</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-1">100%</div>
-              <div className="text-sm text-gray-400">Success Rate</div>
+              </div>
+              
+              {/* Floating Content Icons */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center animate-bounce">
+                <Video className="h-4 w-4 text-white" />
+              </div>
+              <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-green-400 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '0.5s' }}>
+                <FileText className="h-4 w-4 text-white" />
+              </div>
+              <div className="absolute top-1/2 -right-8 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '1s' }}>
+                <Users className="h-4 w-4 text-white" />
+              </div>
+              <div className="absolute top-1/4 -left-8 w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '1.5s' }}>
+                <TrendingUp className="h-4 w-4 text-white" />
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* Featured Content Preview */}
+        <div className="mt-8 pt-6 border-t border-white/20">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-semibold text-white">Featured This Week</h3>
+            <Link href="/revolutionary-content-showcase-2025" className="text-purple-400 hover:text-purple-300 text-sm font-medium">
+              View All Featured
+            </Link>
+          </div>
           
-          {/* CTA Section */}
-          <div className="text-center">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/blog"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                <BookOpen className="h-5 w-5 mr-2" />
-                Explore All Content
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link 
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
-                <Users className="h-5 w-5 mr-2" />
-                Get Expert Consultation
-              </Link>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+              <div className="flex items-center mb-2">
+                <Play className="h-4 w-4 text-purple-400 mr-2" />
+                <span className="text-purple-400 text-xs font-semibold">VIDEO</span>
+              </div>
+              <h4 className="text-sm font-semibold text-white mb-1">Quantum AI Masterclass</h4>
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-gray-400">2.5 hours</span>
+                <Award className="h-3 w-3 text-yellow-400" />
+              </div>
+            </div>
+            
+            <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+              <div className="flex items-center mb-2">
+                <FileText className="h-4 w-4 text-blue-400 mr-2" />
+                <span className="text-blue-400 text-xs font-semibold">GUIDE</span>
+              </div>
+              <h4 className="text-sm font-semibold text-white mb-1">AI Security Framework</h4>
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-gray-400">45 min read</span>
+                <TrendingUp className="h-3 w-3 text-green-400" />
+              </div>
+            </div>
+            
+            <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+              <div className="flex items-center mb-2">
+                <Users className="h-4 w-4 text-green-400 mr-2" />
+                <span className="text-green-400 text-xs font-semibold">EVENT</span>
+              </div>
+              <h4 className="text-sm font-semibold text-white mb-1">AI Practitioner Summit</h4>
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-gray-400">Live Event</span>
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      
-      {/* Animated Background Elements */}
-      <div className="absolute top-8 right-8 w-24 h-24 bg-blue-500/10 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-8 left-8 w-20 h-20 bg-purple-500/10 rounded-full animate-pulse delay-1000"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-green-500/10 rounded-full animate-pulse delay-500"></div>
     </div>
   );
-};
-
-export default RevolutionaryContentShowcase2025Banner;
+}

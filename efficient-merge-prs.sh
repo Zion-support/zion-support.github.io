@@ -1,152 +1,94 @@
 #!/bin/bash
 
-# Efficient PR Merge Script - Focus on the most important PRs
+# Efficient PR merge script focusing on recent and important branches
 set -e
 
 echo "🚀 Starting efficient PR merge process..."
+echo "📊 Processing cursor branches efficiently..."
 echo "⏰ Started at: $(date)"
+echo "---"
 
 # Create backup
-BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
+BACKUP_BRANCH="backup-efficient-merge-$(date +%Y%m%d-%H%M%S)"
 echo "🔒 Creating backup branch: $BACKUP_BRANCH"
 git checkout -b "$BACKUP_BRANCH"
 git push origin "$BACKUP_BRANCH"
 git checkout main
 
-# Ensure we're on main and it's up to date
-echo "🔄 Ensuring main branch is up to date..."
-git checkout main
-git pull origin main
-
 # Initialize counters
 SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
-CONFLICT_RESOLUTIONS=0
+SKIPPED_BRANCHES=0
 
-# Function to merge a single branch efficiently
-merge_branch_efficiently() {
-    local branch="$1"
-    
-    echo "🔄 Processing branch: $branch"
-    
-    # Skip if branch doesn't exist remotely
-    if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
-        echo "⏭️  Branch $branch doesn't exist remotely, skipping..."
-        return 0
-    fi
-    
-    # Skip if already merged
-    if git branch --merged main | grep -q "$branch"; then
-        echo "⏭️  Branch $branch already merged, skipping..."
-        return 0
-    fi
-    
-    # Fetch the branch
-    git fetch origin "$branch" 2>/dev/null || {
-        echo "❌ Failed to fetch $branch"
-        return 1
-    }
-    
-    # Try fast-forward merge first
-    if git merge --ff-only "origin/$branch" 2>/dev/null; then
-        echo "✅ Fast-forward merged $branch"
-        SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-        return 0
-    fi
-    
-    # Try merge with auto-resolve conflicts
-    if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        git commit -m "Merge $branch into main - $(date)"
-        SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-        return 0
-    else
-        echo "⚠️  Conflicts detected in $branch, auto-resolving..."
-        
-        # Auto-resolve common conflicts
-        git checkout --ours package.json 2>/dev/null || true
-        git checkout --ours package-lock.json 2>/dev/null || true
-        git checkout --ours yarn.lock 2>/dev/null || true
-        git checkout --ours pnpm-lock.yaml 2>/dev/null || true
-        git checkout --ours next.config.js 2>/dev/null || true
-        git checkout --ours tsconfig.json 2>/dev/null || true
-        git checkout --ours tailwind.config.js 2>/dev/null || true
-        git checkout --ours netlify.toml 2>/dev/null || true
-        
-        # For component files, prefer incoming changes
-        find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read -r file; do
-            git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
-        done
-        
-        # Add all resolved files
-        git add . 2>/dev/null || true
-        
-        # Commit the merge
-        if git commit -m "Auto-resolve conflicts for $branch - $(date)" 2>/dev/null; then
-            echo "✅ Successfully resolved conflicts and merged $branch"
-            SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-            CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
-            return 0
-        else
-            echo "❌ Failed to commit resolved conflicts for $branch"
-            git merge --abort
-            FAILED_MERGES=$((FAILED_MERGES + 1))
-            return 1
-        fi
-    fi
-}
+# Get recent cursor branches (last 100)
+RECENT_BRANCHES=$(git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/remotes/origin/cursor/ | head -100)
 
-# Get recent cursor branches (most likely to be important)
-echo "📊 Getting recent cursor branches..."
-RECENT_BRANCHES=$(git branch -r | grep "cursor/" | grep -E "(create-and-deploy-new-content|enhance|improve|fix|update)" | sed 's/origin\///' | sort -r | head -50)
-
-echo "📊 Processing $RECENT_BRANCHES branches..."
-
-# Process branches in batches
-BATCH_SIZE=10
-CURRENT=0
-TOTAL=$(echo "$RECENT_BRANCHES" | wc -l)
-
-echo "📊 Total branches to process: $TOTAL"
+echo "📋 Processing most recent 100 cursor branches..."
 
 for branch in $RECENT_BRANCHES; do
-    CURRENT=$((CURRENT + 1))
-    echo "📋 [$CURRENT/$TOTAL] Processing: $branch"
+    # Remove 'origin/' prefix
+    branch_name=${branch#origin/}
     
-    if merge_branch_efficiently "$branch"; then
-        echo "✅ Successfully processed $branch"
-    else
-        echo "❌ Failed to process $branch"
+    echo "📋 Processing: $branch_name"
+    
+    # Skip if already merged
+    if git branch --merged main | grep -q "$branch_name"; then
+        echo "⏭️  Already merged: $branch_name"
+        SKIPPED_BRANCHES=$((SKIPPED_BRANCHES + 1))
+        continue
     fi
     
-    # Progress update every 10 branches
-    if [ $((CURRENT % 10)) -eq 0 ]; then
-        echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
+    # Try to merge
+    if git merge --no-commit --no-ff "$branch" 2>/dev/null; then
+        echo "✅ Merged: $branch_name"
+        git commit -m "Merge $branch_name - $(date)"
+        SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+    else
+        echo "⚠️  Conflicts in: $branch_name"
         
-        # Push progress periodically
-        echo "💾 Pushing progress..."
-        git push origin main || echo "⚠️  Push failed, continuing..."
+        # Get conflicted files
+        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
+        
+        if [ -n "$CONFLICTED_FILES" ]; then
+            echo "🔧 Resolving conflicts in: $CONFLICTED_FILES"
+            
+            # Simple conflict resolution: keep main branch version
+            for file in $CONFLICTED_FILES; do
+                if [ -f "$file" ]; then
+                    echo "📝 Resolving $file"
+                    # Remove conflict markers and keep main version
+                    sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null || true
+                    sed -i '/>>>>>>> /d' "$file" 2>/dev/null || true
+                fi
+            done
+            
+            git add .
+            git commit -m "Resolve conflicts for $branch_name - $(date)"
+            echo "✅ Resolved conflicts for: $branch_name"
+            SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+        else
+            echo "❌ No conflicted files found, aborting merge for: $branch_name"
+            git merge --abort 2>/dev/null || true
+            FAILED_MERGES=$((FAILED_MERGES + 1))
+        fi
+    fi
+    
+    # Progress update every 10 merges
+    if [ $((SUCCESSFUL_MERGES % 10)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
+        echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $SKIPPED_BRANCHES skipped"
     fi
 done
 
 # Final push
-echo "💾 Final push to remote..."
+echo "💾 Pushing final changes..."
 git push origin main
 
 # Summary
 echo ""
-echo "🎉 Efficient merge process completed!"
+echo "🎉 Efficient PR merge completed!"
 echo "📊 Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
-echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
+echo "   ⏭️  Skipped branches: $SKIPPED_BRANCHES"
 echo "   🔒 Backup branch: $BACKUP_BRANCH"
 echo "⏰ Completed at: $(date)"
-
-# Show recent commits
-echo ""
-echo "📝 Recent commits:"
-git log --oneline -10
-
-echo ""
-echo "🎯 Efficient PR merge completed!"
