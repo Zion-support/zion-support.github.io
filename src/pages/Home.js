@@ -12,7 +12,7 @@ import { AdvertisingBanner, PromotionalSection } from "@/components/AdvertisingB
 import { FeaturedContentSection, ContentShowcase } from "@/components/FeaturedContentSection";
 import { EnhancedNewsletterSection, ContentPromotionBanner } from "@/components/EnhancedNewsletterSection";
 import { TestimonialsSection, SocialProofBanner } from "@/components/TestimonialsSection";
-import { NewContentShowcase } from "@/components/home/NewContentShowcase";
+import NewContentShowcase from "@/components/home/NewContentShowcase.jsx";
 export default function Home() {
     return (_jsxs("div", { className: "min-h-screen bg-background", children: [_jsx(SEO, { title: "Zion - The Tech & AI Marketplace", description: "Discover top AI and tech talent, services, and equipment in one place.", keywords: "AI, technology, marketplace, services, talent", canonical: "https://app.ziontechgroup.com/" }), _jsx(AdvertisingBanner, {}), _jsx(ITServiceRequestHero, {}), _jsx(HeroSection, {}), _jsx(NewContentShowcase, {}), _jsx(QuickAccess, {}), _jsx(FeatureCTAs, {}), _jsx(MicroSaasShowcase, {}), _jsx(PromotionalSection, {}), _jsx(FeaturedContentSection, {}), _jsx(ContentShowcase, {}), _jsx(ContentPromotionBanner, {}), _jsx(TestimonialsSection, {}), _jsx(SocialProofBanner, {}), _jsx(FeatureHighlights, {}), _jsx(CategoriesSection, {}), _jsx(BenefitsSection, {}), _jsx(HowItWorksSection, {}), _jsx(FeaturedListingsSection, {}), _jsx(EnhancedNewsletterSection, {})] }));
 }
