@@ -44,6 +44,7 @@ const EnhancedNavigation: React.FC = () => {
         { label: 'Quantum Machine Learning', href: '/blog/ai-2025-quantum-machine-learning', isNew: true, isHot: true },
         { label: 'Fintech Transformation Success', href: '/case-studies/ai-2025-fintech-transformation-breakthrough', isNew: true, isHot: true },
         { label: 'AI 2025 Ultimate Automation Platform', href: '/ai-2025-ultimate-automation-platform', isNew: true, isHot: true },
+        { label: 'Comprehensive AI Services Showcase', href: '/ai-services-comprehensive-showcase', isNew: true, isHot: true },
         { label: 'AI Implementation Mastery Guide 2026', href: '/resources/ai-implementation-mastery-2026', isNew: true, isHot: true },
         { label: 'Quantum-AI Breakthrough Case Study', href: '/case-studies/quantum-ai-breakthrough-enterprise-transformation', isNew: true, isHot: true },
         { label: 'AI ROI Calculator 2026', href: '/tools/ai-roi-calculator-2026', isNew: true, isHot: true },
@@ -71,6 +72,13 @@ const EnhancedNavigation: React.FC = () => {
       description: "Revolutionary platform for autonomous business operations",
       href: "/ai-2025-ultimate-automation-platform",
       icon: "🚀",
+      isNew: true
+    },
+    {
+      title: "Comprehensive AI Services Showcase",
+      description: "Complete suite of AI services from ML to quantum computing",
+      href: "/ai-services-comprehensive-showcase",
+      icon: "🎯",
       isNew: true
     },
     {
