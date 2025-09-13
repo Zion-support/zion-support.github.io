@@ -239,6 +239,12 @@ import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import NewContentShowcase2026Banner from '../components/NewContentShowcase2026Banner';
 import AI2026BreakthroughAnnouncementBanner from '../components/AI2026BreakthroughAnnouncementBanner';
 
+// Import new content promotion banner
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+
+// Import latest content navigation
+import LatestContentNavigation from '../components/LatestContentNavigation';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -260,6 +266,12 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
+        {/* LATEST CONTENT NAVIGATION */}
+        <LatestContentNavigation />
+        
         {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
         <NewContent2025UltimateBreakthroughBanner />
         
