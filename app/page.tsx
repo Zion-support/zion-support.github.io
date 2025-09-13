@@ -99,6 +99,11 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 
 // Import new breakthrough promotional components
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
+
+// Import new 2026 content components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import RevolutionaryTechShowcase2026Banner from '../components/RevolutionaryTechShowcase2026Banner';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
 
 // Import enhanced monitoring and management components
@@ -260,6 +265,15 @@ export default function HomePage() {
         
         {/* REVOLUTIONARY CONTENT SHOWCASE 2025 BANNER */}
         <RevolutionaryContentShowcase2025Banner />
+        
+        {/* REVOLUTIONARY TECH SHOWCASE 2026 BANNER */}
+        <RevolutionaryTechShowcase2026Banner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2026 */}
+        <UltimateContentShowcase2026 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
+        <InteractiveContentDiscovery2026 />
         
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 */}
         <UltimateContentDiscoveryWidget2025 />
