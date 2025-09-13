@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { NewContent2025PromotionBanner, NewContent2025ShowcaseSection } from '../components/NewContent2025PromotionBanner';
 
 const HomePage: React.FC = () => {
   return (
@@ -10,6 +11,9 @@ const HomePage: React.FC = () => {
       </Head>
       
       <div className="min-h-screen bg-white">
+        {/* New Content Promotion Banner */}
+        <NewContent2025PromotionBanner />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -29,6 +33,9 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* New Content Showcase Section */}
+        <NewContent2025ShowcaseSection />
       </div>
     </>
   );

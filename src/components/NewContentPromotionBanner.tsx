@@ -34,6 +34,45 @@ interface NewContentItem {
 
 const newContentItems: NewContentItem[] = [
   {
+    id: 'autonomous-systems-revolution',
+    type: 'blog',
+    title: 'AI 2025: The Next Generation Autonomous Systems Revolution',
+    description: 'Discover how next-generation autonomous systems are reshaping business operations with 300-500% ROI and unprecedented efficiency gains.',
+    ctaText: 'Read Revolution',
+    ctaLink: '/blog/ai-2025-next-generation-autonomous-systems-revolution',
+    badge: 'Revolutionary',
+    icon: Brain,
+    gradient: 'from-purple-500 to-indigo-600',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: 'global-enterprise-success',
+    type: 'case-study',
+    title: 'Global Enterprise AI Transformation: $2.8B Ultimate Success Story',
+    description: 'See how TechGlobal Corp achieved $2.8B in savings and 450% ROI through comprehensive AI transformation with Zion Tech Group.',
+    ctaText: 'View Case Study',
+    ctaLink: '/case-studies/global-enterprise-ai-transformation-2025-ultimate-success',
+    badge: 'Success Story',
+    icon: TrendingUp,
+    gradient: 'from-green-500 to-emerald-600',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: 'autonomous-systems-guide',
+    type: 'resource',
+    title: 'AI 2025 Autonomous Systems Implementation Master Guide',
+    description: 'Your complete roadmap to implementing next-generation autonomous systems with proven methodologies for 300-500% ROI.',
+    ctaText: 'Download Guide',
+    ctaLink: '/resources/ai-2025-autonomous-systems-implementation-master-guide',
+    badge: 'Expert Guide',
+    icon: BookOpen,
+    gradient: 'from-blue-500 to-cyan-600',
+    featured: true,
+    isNew: true
+  },
+  {
     id: 'neural-architecture-revolution',
     type: 'blog',
     title: 'AI 2026: The Neural Architecture Revolution Reshaping Enterprise Computing',
@@ -44,7 +83,7 @@ const newContentItems: NewContentItem[] = [
     icon: Brain,
     gradient: 'from-purple-500 to-indigo-600',
     featured: true,
-    isNew: true
+    isNew: false
   },
   {
     id: 'fortune-500-transformation',
@@ -53,45 +92,6 @@ const newContentItems: NewContentItem[] = [
     description: 'See how a global manufacturing giant achieved 380% ROI and $2.4B in business value with neural architecture implementation.',
     ctaText: 'View Case Study',
     ctaLink: '/case-studies/fortune-500-neural-architecture-transformation-2026',
-    badge: 'Success Story',
-    icon: TrendingUp,
-    gradient: 'from-green-500 to-emerald-600',
-    featured: true,
-    isNew: true
-  },
-  {
-    id: 'neural-architecture-guide',
-    type: 'resource',
-    title: 'Complete Neural Architecture Implementation Guide 2026',
-    description: 'Your comprehensive blueprint for implementing revolutionary neural architectures with proven methodologies and best practices.',
-    ctaText: 'Download Guide',
-    ctaLink: '/resources/ai-2026-neural-architecture-implementation-guide',
-    badge: 'Expert Guide',
-    icon: BookOpen,
-    gradient: 'from-blue-500 to-cyan-600',
-    featured: true,
-    isNew: true
-  },
-  {
-    id: 'quantum-ai-breakthrough',
-    type: 'blog',
-    title: 'Quantum-AI Fusion: The Breakthrough Revolutionizing Everything in 2025',
-    description: 'Discover how quantum-AI fusion is creating unprecedented processing power and solving problems 1 billion times faster.',
-    ctaText: 'Read Breakthrough',
-    ctaLink: '/blog/quantum-ai-breakthrough-2025',
-    badge: 'Revolutionary',
-    icon: Zap,
-    gradient: 'from-purple-500 to-indigo-600',
-    featured: true,
-    isNew: false
-  },
-  {
-    id: 'healthcare-ai-success',
-    type: 'case-study',
-    title: 'Healthcare AI Transformation: MedTech Solutions Achieves 400% ROI',
-    description: 'See how a regional healthcare network saved $13.2M annually and improved patient care quality dramatically.',
-    ctaText: 'View Success Story',
-    ctaLink: '/case-studies/healthcare-ai-transformation-success',
     badge: 'Success Story',
     icon: TrendingUp,
     gradient: 'from-green-500 to-emerald-600',
