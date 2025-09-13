@@ -32,6 +32,13 @@ import AI2026BreakthroughContentPromotionBanner from '../components/AI2026Breakt
 import AI2027FuturePredictionsPromotionBanner from '../components/AI2027FuturePredictionsPromotionBanner';
 import InteractiveContentDiscovery2027 from '../components/InteractiveContentDiscovery2027';
 
+// Import new breakthrough banners
+import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
+import AI2026BreakthroughRevolutionaryContentBanner from '../components/AI2026BreakthroughRevolutionaryContentBanner';
+
+// Import content discovery widget
+import NewContentDiscoveryWidget from '../components/NewContentDiscoveryWidget';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -48,6 +55,15 @@ export default function HomePage() {
         
         {/* NEW CONTENT NAVIGATION */}
         <NewContentNavigation />
+        
+        {/* NEW: AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
+        <AI2025UltimateBreakthroughRevolutionBanner />
+        
+        {/* NEW: AI 2026 BREAKTHROUGH REVOLUTIONARY CONTENT BANNER */}
+        <AI2026BreakthroughRevolutionaryContentBanner />
+        
+        {/* NEW CONTENT DISCOVERY WIDGET */}
+        <NewContentDiscoveryWidget />
         
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
