@@ -27,6 +27,18 @@ import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+import QuantumNeuralFusion2026PromotionBanner from '../components/QuantumNeuralFusion2026PromotionBanner';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
+import FeaturedContentBanner from '../components/FeaturedContentBanner';
+
+// Import new promotional banners
+import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
+import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2025GlobalTransformation15000ROIPromotionBanner';
+import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
+import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
+import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
+import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
 export default function HomePage() {
@@ -40,8 +52,14 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* FEATURED REVOLUTIONARY CONTENT BANNER */}
+        <FeaturedContentBanner />
+        
         {/* NEW CONTENT 2025 REVOLUTIONARY BANNER */}
         <NewContent2025RevolutionaryBanner />
+        
+        {/* QUANTUM-NEURAL FUSION 2026 BREAKTHROUGH BANNER */}
+        <QuantumNeuralFusion2026PromotionBanner />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
