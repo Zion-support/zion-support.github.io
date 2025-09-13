@@ -156,6 +156,10 @@ import QuantumComputingUltimateBreakthroughShowcase from '../components/QuantumC
 import AutomationSolutionsUltimatePromotionBanner from '../components/AutomationSolutionsUltimatePromotionBanner';
 import AutomationSolutionsUltimateShowcase from '../components/AutomationSolutionsUltimateShowcase';
 
+// New 2025 Enterprise Content Promotion Components
+import NewContent2025EnterprisePromotionBanner from '../components/NewContent2025EnterprisePromotionBanner';
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+
 // New Revolutionary Content Components 2035+
 import AI2035OmniversalConsciousnessBanner from '../components/AI2035OmniversalConsciousnessBanner';
 import AI2035OmniversalConsciousnessShowcase from '../components/AI2035OmniversalConsciousnessShowcase';
@@ -217,6 +221,16 @@ const HomePage: React.FC = () => {
               {/* Hero Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <HeroPromotionBanner />
+              </Suspense>
+
+              {/* New 2025 Enterprise Content Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewContent2025EnterprisePromotionBanner />
+              </Suspense>
+
+              {/* Revolutionary Content Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <RevolutionaryContentShowcase2025 />
               </Suspense>
 
               {/* Latest Content Promotion Banner */}
