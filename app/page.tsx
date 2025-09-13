@@ -6,6 +6,10 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import SEOEnhancer from '../components/SEOEnhancer';
+import MobileOptimizer from '../components/MobileOptimizer';
+import AnalyticsIntegration from '../components/AnalyticsIntegration';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -187,7 +191,35 @@ export default function HomePage() {
         url="/"
       />
       
-      <div className='min-h-screen bg-white'>
+      <SEOEnhancer
+        title="Zion Tech Group - AI & Technology Solutions"
+        description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
+        keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
+        canonicalUrl="https://zion.app"
+        ogImage="https://zion.app/images/og-image.jpg"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Zion Tech Group",
+          "url": "https://zion.app",
+          "description": "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://zion.app/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
+      
+      <AnalyticsIntegration
+        trackingId="G-XXXXXXXXXX"
+        enableHeatmaps={true}
+        enableUserTracking={true}
+        enablePerformanceTracking={true}
+      />
+      
+      <MobileOptimizer>
+        <div className='min-h-screen bg-white'>
         {/* AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2025UltimateBreakthroughAnnouncementBanner />
         
@@ -3477,6 +3509,11 @@ export default function HomePage() {
       {/* Enhanced Management and Feedback Components */}
       <ContentManagementSystem />
       <UserFeedbackSystem />
+      
+      {/* Performance and Accessibility Enhancements */}
+      <PerformanceOptimizer />
+      <AccessibilityEnhancer />
     </div>
+    </MobileOptimizer>
   );
 }
