@@ -185,6 +185,14 @@ import UltimateContentShowcase2026PromotionBanner from '../components/UltimateCo
 import InteractiveAIToolsDemo2026 from '../components/InteractiveAIToolsDemo2026';
 import InteractiveAIToolsDemo2026PromotionBanner from '../components/InteractiveAIToolsDemo2026PromotionBanner';
 
+// Import new 2026 showcase and demo components
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
+import NewContentShowcase2026PromotionBanner from '../components/NewContentShowcase2026PromotionBanner';
+import InteractiveTechDemo2026 from '../components/InteractiveTechDemo2026';
+import InteractiveTechDemo2026PromotionBanner from '../components/InteractiveTechDemo2026PromotionBanner';
+import UltimateContentHub2026 from '../components/UltimateContentHub2026';
+import UltimateContentHub2026PromotionBanner from '../components/UltimateContentHub2026PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -204,6 +212,15 @@ export default function HomePage() {
         
         {/* NEW: AI 2026 NEURAL INTERFACES PROMOTION BANNER */}
         <AI2026NeuralInterfacesPromotionBanner />
+        
+        {/* NEW: ULTIMATE CONTENT HUB 2026 PROMOTION BANNER */}
+        <UltimateContentHub2026PromotionBanner />
+        
+        {/* NEW: INTERACTIVE TECH DEMO 2026 PROMOTION BANNER */}
+        <InteractiveTechDemo2026PromotionBanner />
+        
+        {/* NEW: CONTENT SHOWCASE 2026 PROMOTION BANNER */}
+        <NewContentShowcase2026PromotionBanner />
         
         {/* NEW: REVOLUTIONARY CONTENT BANNER */}
         <RevolutionaryContentBanner />
@@ -228,6 +245,15 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
+        
+        {/* NEW CONTENT SHOWCASE 2026 */}
+        <NewContentShowcase2026 />
+        
+        {/* INTERACTIVE TECH DEMO 2026 */}
+        <InteractiveTechDemo2026 />
+        
+        {/* ULTIMATE CONTENT HUB 2026 */}
+        <UltimateContentHub2026 />
         
         {/* NEW INTERACTIVE TECH DEMO 2026 PROMOTION BANNER */}
         <InteractiveAIToolsDemo2026PromotionBanner />
