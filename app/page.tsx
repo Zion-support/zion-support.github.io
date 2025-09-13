@@ -15,12 +15,28 @@ import QuantumComputingRevolutionBanner from '../components/QuantumComputingRevo
 import AutomationSolutionsShowcase2025 from '../components/AutomationSolutionsShowcase2025';
 import InteractiveContentDiscoveryHub from '../components/InteractiveContentDiscoveryHub';
 
+// New Enhanced Content Components
+import AI2025_2030UltimateBreakthroughContentShowcase from '../components/AI2025_2030UltimateBreakthroughContentShowcase';
+import EnhancedInteractiveContentDiscoveryWidget from '../components/EnhancedInteractiveContentDiscoveryWidget';
+import QuantumComputingSolutionsShowcase2025 from '../components/QuantumComputingSolutionsShowcase2025';
+import AdvancedAutomationSolutionsPromotionBanner2025 from '../components/AdvancedAutomationSolutionsPromotionBanner2025';
+import SuccessStoriesShowcase2025 from '../components/SuccessStoriesShowcase2025';
+import InteractiveContentRecommendationEngine from '../components/InteractiveContentRecommendationEngine';
+
 // New Ultimate Content Revolution Components
 import AI2025_2030UltimateContentRevolutionBanner from '../components/AI2025_2030UltimateContentRevolutionBanner';
 import AI2025_2030UltimateContentRevolutionShowcase from '../components/AI2025_2030UltimateContentRevolutionShowcase';
 import QuantumComputingUltimateBreakthroughBanner from '../components/QuantumComputingUltimateBreakthroughBanner';
 import AdvancedAutomationSolutionsUltimateBanner from '../components/AdvancedAutomationSolutionsUltimateBanner';
 import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscoveryWidget';
+
+// NEW: AI 2026-2030 Ultimate Content Components
+import AI2026_2030UltimateContentPromotionBanner from '../components/AI2026_2030UltimateContentPromotionBanner';
+import AI2026_2030UltimateContentShowcase from '../components/AI2026_2030UltimateContentShowcase';
+import QuantumComputing2026UltimatePromotionBanner from '../components/QuantumComputing2026UltimatePromotionBanner';
+import QuantumComputing2026UltimateShowcase from '../components/QuantumComputing2026UltimateShowcase';
+import AdvancedAutomationSolutions2026UltimatePromotionBanner from '../components/AdvancedAutomationSolutions2026UltimatePromotionBanner';
+import AdvancedAutomationSolutions2026UltimateShowcase from '../components/AdvancedAutomationSolutions2026UltimateShowcase';
 
 // New Ultimate Content Showcase Components
 import AI2025_2030UltimatePredictionsPromotionBanner from '../components/AI2025_2030UltimatePredictionsPromotionBanner';
@@ -205,6 +221,15 @@ import AutomationSolutionsUltimateShowcase from '../components/AutomationSolutio
 // New 2025 Ultimate Content Revolution Components
 import AI2025_2030UltimateContentRevolutionBanner from '../components/AI2025_2030UltimateContentRevolutionBanner';
 import AI2025_2030UltimateContentRevolutionShowcase from '../components/AI2025_2030UltimateContentRevolutionShowcase';
+
+// New Ultimate Content Revolution 2025 Components
+import UltimateContentRevolution2025Banner from '../components/UltimateContentRevolution2025Banner';
+import UltimateContentRevolution2025Showcase from '../components/UltimateContentRevolution2025Showcase';
+import UltimateContentRevolution2025PromotionBanner from '../components/UltimateContentRevolution2025PromotionBanner';
+import InteractiveContentRecommendationEngine from '../components/InteractiveContentRecommendationEngine';
+import RevolutionaryTechShowcase2025 from '../components/RevolutionaryTechShowcase2025';
+import AI2025BreakthroughAnnouncementBanner from '../components/AI2025BreakthroughAnnouncementBanner';
+import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025';
 import QuantumComputing2025BreakthroughBanner from '../components/QuantumComputing2025BreakthroughBanner';
 import AdvancedAutomationSolutions2025Banner from '../components/AdvancedAutomationSolutions2025Banner';
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
@@ -218,6 +243,10 @@ import AI2035OmniversalConsciousnessBanner from '../components/AI2035OmniversalC
 import AI2035OmniversalConsciousnessShowcase from '../components/AI2035OmniversalConsciousnessShowcase';
 import NeuralInterfaceRevolutionBanner from '../components/NeuralInterfaceRevolutionBanner';
 import SpaceTechnologySolutionsBanner from '../components/SpaceTechnologySolutionsBanner';
+
+// New 2025 Revolutionary Content Components
+import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
+import QuantumAIContentShowcase from '../components/QuantumAIContentShowcase';
 
 // New Neural Synthesis and Quantum-AI Content Components
 import NeuralSynthesisContentPromotionBanner from '../components/NeuralSynthesisContentPromotionBanner';
@@ -259,6 +288,12 @@ import AI2025_2030UltimateBreakthroughContentBanner from '../components/AI2025_2
 import AI2025_2030UltimateBreakthroughContentShowcase from '../components/AI2025_2030UltimateBreakthroughContentShowcase';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 import QuantumComputingBreakthroughShowcase2025 from '../components/QuantumComputingBreakthroughShowcase2025';
+
+// New 2025 Content Components
+import QuantumComputingSolutions2025PromotionBanner from '../components/QuantumComputingSolutions2025PromotionBanner';
+import QuantumComputingSolutions2025Showcase from '../components/QuantumComputingSolutions2025Showcase';
+import AdvancedAutomationSolutions2025PromotionBanner from '../components/AdvancedAutomationSolutions2025PromotionBanner';
+import SuccessStoriesShowcase2025 from '../components/SuccessStoriesShowcase2025';
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -349,6 +384,36 @@ const HomePage: React.FC = () => {
                 <AI2025_2030UltimateContentRevolutionShowcase />
               </Suspense>
 
+              {/* NEW: AI 2025-2030 Ultimate Breakthrough Content Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025_2030UltimateBreakthroughContentShowcase />
+              </Suspense>
+
+              {/* NEW: Enhanced Interactive Content Discovery Widget */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <EnhancedInteractiveContentDiscoveryWidget />
+              </Suspense>
+
+              {/* NEW: Quantum Computing Solutions Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputingSolutionsShowcase2025 />
+              </Suspense>
+
+              {/* NEW: Advanced Automation Solutions Promotion Banner 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAutomationSolutionsPromotionBanner2025 />
+              </Suspense>
+
+              {/* NEW: Success Stories Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <SuccessStoriesShowcase2025 />
+              </Suspense>
+
+              {/* NEW: Interactive Content Recommendation Engine */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentRecommendationEngine />
+              </Suspense>
+
               {/* NEW: Quantum Computing Ultimate Breakthrough Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <QuantumComputingUltimateBreakthroughBanner />
@@ -364,7 +429,71 @@ const HomePage: React.FC = () => {
                 <UltimateContentDiscoveryWidget />
               </Suspense>
 
-<<<<<<< HEAD
+              {/* NEW: AI 2026-2030 Ultimate Content Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2026_2030UltimateContentPromotionBanner />
+              </Suspense>
+
+              {/* NEW: AI 2026-2030 Ultimate Content Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2026_2030UltimateContentShowcase />
+              </Suspense>
+
+              {/* NEW: Quantum Computing 2026 Ultimate Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputing2026UltimatePromotionBanner />
+              </Suspense>
+
+              {/* NEW: Quantum Computing 2026 Ultimate Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputing2026UltimateShowcase />
+              </Suspense>
+
+              {/* NEW: Advanced Automation Solutions 2026 Ultimate Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAutomationSolutions2026UltimatePromotionBanner />
+              </Suspense>
+
+              {/* NEW: Advanced Automation Solutions 2026 Ultimate Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAutomationSolutions2026UltimateShowcase />
+              </Suspense>
+
+              {/* NEW: Revolutionary Content 2025 Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewContent2025RevolutionaryBanner />
+              </Suspense>
+
+              {/* NEW: Quantum-AI Content Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumAIContentShowcase />
+              </Suspense>
+
+              {/* NEW: AI 2025-2030 Ultimate Content Revolution Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025_2030UltimateContentRevolutionBanner />
+              </Suspense>
+
+              {/* NEW: AI 2025-2030 Ultimate Content Revolution Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025_2030UltimateContentRevolutionShowcase />
+              </Suspense>
+
+              {/* NEW: Quantum Computing Ultimate Breakthrough Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputingUltimateBreakthroughBanner />
+              </Suspense>
+
+              {/* NEW: Advanced Automation Solutions Ultimate Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAutomationSolutionsUltimateBanner />
+              </Suspense>
+
+              {/* NEW: Ultimate Content Discovery Widget */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <UltimateContentDiscoveryWidget />
+              </Suspense>
+
               {/* AI 2025-2030 Ultimate Predictions Promotion Banner - NEW! */}
               <Suspense fallback={<LoadingSpinner />}>
                 <AI2025_2030UltimatePredictionsPromotionBanner />
