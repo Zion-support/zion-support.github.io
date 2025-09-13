@@ -235,6 +235,12 @@ import NewContent2026UltimateShowcase from '../components/NewContent2026Ultimate
 // New Revolutionary Content Promotion Components
 import RevolutionaryContentPromotionBanner2025 from '../components/RevolutionaryContentPromotionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+
+// New 2025 Enhanced Components
+import ComprehensiveContentShowcase2025 from '../components/ComprehensiveContentShowcase2025';
+import LatestContentPromotionBanner2025 from '../components/LatestContentPromotionBanner2025';
+import InteractiveServiceSelector2025 from '../components/InteractiveServiceSelector2025';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -250,6 +256,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* LATEST CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED CONTENT */}
+        <LatestContentPromotionBanner2025 />
+        
+        {/* COMPREHENSIVE CONTENT SHOWCASE 2025 - REVOLUTIONARY SOLUTIONS */}
+        <ComprehensiveContentShowcase2025 />
+        
+        {/* INTERACTIVE SERVICE SELECTOR 2025 - INTELLIGENT SOLUTION FINDER */}
+        <InteractiveServiceSelector2025 />
+        
         {/* AI 2025 ADVANCED AUTOMATION PROMOTION BANNER - NEWEST BREAKTHROUGH */}
         <AI2025AdvancedAutomationPromotionBanner />
         
