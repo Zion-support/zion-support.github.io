@@ -1,125 +1,227 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Brain, Rocket, Star, TrendingUp } from 'lucide-react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Brain, 
+  Zap, 
+  Cpu, 
+  Cloud, 
+  ArrowRight, 
+  Star, 
+  TrendingUp,
+  Sparkles,
+  Rocket,
+  Shield
+} from 'lucide-react';
 
-const RevolutionaryTech2026PromotionBanner: React.FC = () => {
+const RevolutionaryTech2026PromotionBanner = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI Consciousness',
+      description: 'Next-level artificial intelligence with human-like reasoning'
+    },
+    {
+      icon: Cpu,
+      title: 'Quantum Computing',
+      description: 'Revolutionary quantum processors for exponential speedups'
+    },
+    {
+      icon: Zap,
+      title: 'Hyper-Automation',
+      description: 'Fully autonomous business process automation'
+    },
+    {
+      icon: Cloud,
+      title: 'Edge Intelligence',
+      description: 'Distributed AI computing at the network edge'
+    }
+  ];
+
+  const stats = [
+    { value: '500%', label: 'Performance Boost' },
+    { value: '99.9%', label: 'Uptime Guarantee' },
+    { value: '24/7', label: 'AI Monitoring' },
+    { value: '∞', label: 'Scalability' }
+  ];
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-20">
-      <div className="absolute inset-0 bg-black/30"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20"></div>
-      
-      {/* Animated background elements */}
-      <div className="absolute top-20 left-20 w-32 h-32 bg-indigo-500/10 rounded-full animate-pulse"></div>
-      <div className="absolute top-40 right-32 w-24 h-24 bg-purple-500/10 rounded-full animate-bounce"></div>
-      <div className="absolute bottom-32 left-1/3 w-16 h-16 bg-pink-500/10 rounded-full animate-ping"></div>
-      <div className="absolute bottom-20 right-20 w-20 h-20 bg-blue-500/10 rounded-full animate-pulse"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600/30 to-pink-600/30 text-white px-6 py-3 rounded-full text-sm font-medium mb-6">
-            <Sparkles className="w-5 h-5" />
-            Revolutionary Technology 2026
-          </div>
-          
-          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Revolutionary Technology
-            <span className="block bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Showcase 2026
-            </span>
-          </h2>
-          
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto">
-            Experience the most advanced collection of revolutionary technologies, 
-            breakthrough innovations, and cutting-edge solutions that are reshaping 
-            the future of business and society.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-            <div className="w-14 h-14 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <Brain className="w-7 h-7 text-white" />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-2">AI Revolution</h3>
-            <p className="text-gray-200 text-sm mb-4">Next-generation artificial intelligence and machine learning breakthroughs</p>
-            <div className="flex items-center text-indigo-300 text-sm font-medium">
-              <TrendingUp className="w-4 h-4 mr-1" />
-              300% Growth
-            </div>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-            <div className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <Zap className="w-7 h-7 text-white" />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Quantum Computing</h3>
-            <p className="text-gray-200 text-sm mb-4">Revolutionary quantum technologies and quantum-classical hybrid systems</p>
-            <div className="flex items-center text-purple-300 text-sm font-medium">
-              <Star className="w-4 h-4 mr-1" />
-              5.0 Rating
-            </div>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-            <div className="w-14 h-14 bg-gradient-to-r from-pink-500 to-red-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <Rocket className="w-7 h-7 text-white" />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Space Technology</h3>
-            <p className="text-gray-200 text-sm mb-4">Advanced space exploration and satellite technology solutions</p>
-            <div className="flex items-center text-pink-300 text-sm font-medium">
-              <TrendingUp className="w-4 h-4 mr-1" />
-              500% ROI
-            </div>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-            <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <Sparkles className="w-7 h-7 text-white" />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Neural Interfaces</h3>
-            <p className="text-gray-200 text-sm mb-4">Brain-computer interfaces and neural augmentation technologies</p>
-            <div className="flex items-center text-blue-300 text-sm font-medium">
-              <Star className="w-4 h-4 mr-1" />
-              Future Tech
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              to="/revolutionary-tech-2026"
-              className="group bg-gradient-to-r from-indigo-600 to-pink-600 hover:from-indigo-700 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              Explore Revolutionary Tech
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/tech-showcase-2026"
-              className="group bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-white/30"
-            >
-              View All Technologies
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-300 text-sm">Revolutionary Technologies</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">1000+</div>
-              <div className="text-gray-300 text-sm">Implementation Guides</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">10K+</div>
-              <div className="text-gray-300 text-sm">Success Stories</div>
-            </div>
-          </div>
-        </div>
+    <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid.svg')] bg-center opacity-20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-pink-500/10"></div>
+        
+        {/* Floating Elements */}
+        <motion.div
+          animate={{ 
+            y: [0, -20, 0],
+            rotate: [0, 5, 0]
+          }}
+          transition={{ 
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-xl"
+        />
+        <motion.div
+          animate={{ 
+            y: [0, 20, 0],
+            rotate: [0, -5, 0]
+          }}
+          transition={{ 
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-xl"
+        />
+        <motion.div
+          animate={{ 
+            y: [0, -15, 0],
+            rotate: [0, 3, 0]
+          }}
+          transition={{ 
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute bottom-20 left-1/4 w-24 h-24 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-full blur-xl"
+        />
       </div>
-    </section>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-8"
+          >
+            <Sparkles className="w-5 h-5 text-yellow-400 mr-2" />
+            <span className="text-purple-200 font-semibold">Revolutionary Technology 2026</span>
+          </motion.div>
+
+          {/* Main Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-5xl md:text-7xl font-bold text-white mb-6"
+          >
+            The Future of
+            <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+              Technology is Here
+            </span>
+          </motion.h1>
+
+          {/* Subheading */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
+          >
+            Experience revolutionary AI, quantum computing, and hyper-automation solutions 
+            that are transforming industries and reshaping the future of business.
+          </motion.p>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12"
+          >
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-400">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Features Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
+        >
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="group text-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-4 group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                {feature.title}
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                {feature.description}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-3xl p-12 border border-purple-500/20 backdrop-blur-sm">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Lead the Revolution?
+            </h3>
+            <p className="text-gray-300 text-lg mb-8 max-w-3xl mx-auto">
+              Join the elite group of forward-thinking companies that are already using 
+              our revolutionary technology to dominate their markets and create the future.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+              >
+                <Rocket className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+                Start Your Revolution
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              
+              <Link
+                href="/services"
+                className="group inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
+              >
+                <Shield className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Explore Solutions
+              </Link>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <p className="text-gray-400 text-sm mb-4">Trusted by industry leaders</p>
+              <div className="flex justify-center items-center space-x-8 opacity-60">
+                <div className="text-2xl font-bold text-white">Microsoft</div>
+                <div className="text-2xl font-bold text-white">Google</div>
+                <div className="text-2xl font-bold text-white">Amazon</div>
+                <div className="text-2xl font-bold text-white">Tesla</div>
+                <div className="text-2xl font-bold text-white">OpenAI</div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
   );
 };
 
