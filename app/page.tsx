@@ -109,8 +109,9 @@ export default function HomePage() {
         url="/"
       />
       
-      <div className='min-h-screen bg-white'>
-        {/* LATEST BREAKTHROUGH CONTENT PROMOTION BANNER */}
+      <MobileOptimizer>
+        <div className='min-h-screen bg-white'>
+          {/* LATEST BREAKTHROUGH CONTENT PROMOTION BANNER */}
         <AI2025UltimateBreakthroughContentBanner />
         
         {/* AI TOOLS 2025 SHOWCASE PROMOTION BANNER */}
@@ -3054,6 +3055,8 @@ export default function HomePage() {
       <InteractiveEngagementWidget />
       <AdvancedAnalytics />
       <PerformanceMonitor />
+        </div>
+      </MobileOptimizer>
     </div>
   );
 }

@@ -40,8 +40,8 @@ export default function MobileOptimizer({ children }: MobileOptimizerProps) {
       document.body.style.touchAction = 'manipulation';
       
       // Optimize for mobile performance
-      document.body.style.webkitFontSmoothing = 'antialiased';
-      document.body.style.mozOsxFontSmoothing = 'grayscale';
+      (document.body.style as any).webkitFontSmoothing = 'antialiased';
+      (document.body.style as any).mozOsxFontSmoothing = 'grayscale';
     } else {
       // Reset for desktop
       const viewport = document.querySelector('meta[name="viewport"]');
