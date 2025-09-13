@@ -4,7 +4,7 @@
   status = 200
 
 [build]
-  command = "rm -rf node_modules .yarn-cache && yarn cache clean && yarn install --frozen-lockfile --network-timeout 100000 --no-cache && yarn build"
+  command = "rm -rf node_modules .yarn-cache && yarn cache clean && yarn install --frozen-lockfile --network-timeout 100000 --no-cache --ignore-engines --ignore-scripts && yarn build"
   publish = "dist"
   command_timeout = "30m"
 
@@ -17,6 +17,8 @@
   YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
   YARN_NETWORK_TIMEOUT = "100000"
   YARN_NETWORK_CONCURRENCY = "1"
+  YARN_ENABLE_NETWORK = "true"
+  YARN_ENABLE_SCRIPTS = "false"
 
 # Long-term caching for static assets
 [[headers]]
