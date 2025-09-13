@@ -98,6 +98,10 @@ import AI2026NeuralInterfaceRevolutionPromotionBanner from '../components/AI2026
 
 // Import new 2026 ultimate content components
 import NewContent2026UltimatePromotionBanner from '../components/NewContent2026UltimatePromotionBanner';
+
+// Import new 2026 promotional components
+import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
+import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
 import NewsletterSignup2026 from '../components/NewsletterSignup2026';
 
@@ -171,6 +175,12 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
+        
+        {/* ULTIMATE CONTENT PROMOTION BANNER 2026 */}
+        <UltimateContentPromotionBanner2026 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2026 */}
+        <InteractiveContentDiscoveryWidget2026 />
         
         {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
         <NewContent2025UltimateShowcase />

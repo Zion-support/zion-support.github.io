@@ -1,191 +1,146 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
+import { ArrowRight, Star, Zap, Brain, Globe, Rocket, TrendingUp, CheckCircle } from 'lucide-react';
 
 export default function UltimateContentPromotionBanner2026() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const contentItems = [
-    {
-      title: "AI 2026 Enterprise Automation Mastery",
-      description: "Complete implementation guide with 600% ROI strategies",
-      type: "Blog Post",
-      url: "/blog/ai-2026-enterprise-automation-mastery",
-      badge: "NEW",
-      color: "blue"
-    },
-    {
-      title: "Fortune 500 Transformation Breakthrough",
-      description: "Case study: 600% ROI achieved in 18 months",
-      type: "Case Study",
-      url: "/case-studies/ai-2026-fortune-500-transformation-breakthrough",
-      badge: "HOT",
-      color: "green"
-    },
-    {
-      title: "AI 2026 Implementation Toolkit Ultimate",
-      description: "Complete toolkit with 47 templates and frameworks",
-      type: "Resource",
-      url: "/resources/ai-2026-implementation-toolkit-ultimate",
-      badge: "ULTIMATE",
-      color: "purple"
-    },
-    {
-      title: "AI ROI Calculator 2026",
-      description: "Calculate your AI investment returns instantly",
-      type: "Tool",
-      url: "/tools/ai-roi-calculator-2026",
-      badge: "INTERACTIVE",
-      color: "orange"
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentItems.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [contentItems.length]);
-
-  const getBadgeColor = (color: string) => {
-    const colors = {
-      blue: "bg-blue-100 text-blue-800",
-      green: "bg-green-100 text-green-800",
-      purple: "bg-purple-100 text-purple-800",
-      orange: "bg-orange-100 text-orange-800"
-    };
-    return colors[color] || "bg-gray-100 text-gray-800";
-  };
-
-  const getTypeIcon = (type: string) => {
-    const icons = {
-      "Blog Post": "📝",
-      "Case Study": "📊",
-      "Resource": "📚",
-      "Tool": "🛠️"
-    };
-    return icons[type] || "📄";
-  };
-
-  if (!isVisible) return null;
-
   return (
-    <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-20"></div>
-      </div>
-
+    <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border border-purple-500/20 rounded-xl p-8 mb-8">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
       <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex-1">
-              <div className="flex items-center space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🚀</span>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h2 className="text-2xl font-bold mb-2">
-                    NEW: Ultimate AI 2026 Content Collection
-                  </h2>
-                  <p className="text-blue-100 text-lg">
-                    Discover our latest comprehensive resources for enterprise AI transformation
-                  </p>
-                </div>
+        <div className="flex flex-col lg:flex-row items-center justify-between">
+          <div className="flex-1 mb-6 lg:mb-0">
+            <div className="flex items-center mb-4">
+              <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mr-3">
+                <Star className="h-6 w-6 text-white" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white">
+                Revolutionary Content 2026
+              </h2>
+            </div>
+            <p className="text-gray-300 text-lg mb-6 max-w-2xl">
+              Discover the most groundbreaking AI innovations, quantum computing breakthroughs, and neural interface technologies that will reshape our future.
+            </p>
+            
+            {/* Feature Highlights */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <div className="flex items-center text-sm text-gray-300">
+                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                <span>AI Innovation Showcase 2025-2026</span>
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                <span>Quantum Computing Solutions</span>
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                <span>Neural Interface Revolution</span>
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                <span>Autonomous Systems 2026</span>
               </div>
             </div>
 
-            <button
-              onClick={() => setIsVisible(false)}
-              className="flex-shrink-0 ml-4 text-white/80 hover:text-white transition-colors"
-              aria-label="Close banner"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Content Carousel */}
-          <div className="mt-6">
-            <div className="relative">
-              <div className="overflow-hidden">
-                <div 
-                  className="flex transition-transform duration-500 ease-in-out"
-                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                >
-                  {contentItems.map((item, index) => (
-                    <div key={index} className="w-full flex-shrink-0">
-                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                        <div className="flex items-center justify-between">
-                          <div className="flex-1">
-                            <div className="flex items-center space-x-3 mb-3">
-                              <span className="text-2xl">{getTypeIcon(item.type)}</span>
-                              <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getBadgeColor(item.color)}`}>
-                                {item.badge}
-                              </span>
-                              <span className="text-white/80 text-sm">{item.type}</span>
-                            </div>
-                            <h3 className="text-xl font-bold text-white mb-2">
-                              {item.title}
-                            </h3>
-                            <p className="text-blue-100 mb-4">
-                              {item.description}
-                            </p>
-                            <Link
-                              href={item.url}
-                              className="inline-flex items-center px-6 py-2 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
-                            >
-                              Explore Now
-                              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                              </svg>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Slide indicators */}
-              <div className="flex justify-center space-x-2 mt-4">
-                {contentItems.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentSlide ? 'bg-white' : 'bg-white/40'
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link 
+                href="/ai-innovation-showcase-2025-2026"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Explore All Content
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+              <Link 
+                href="/quantum-computing-solutions-2026-ultimate"
+                className="inline-flex items-center px-6 py-3 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >
+                Quantum Solutions
+                <Zap className="ml-2 h-4 w-4" />
+              </Link>
             </div>
           </div>
 
-          {/* Quick access links */}
-          <div className="mt-6 pt-6 border-t border-white/20">
-            <div className="flex flex-wrap items-center justify-center space-x-6 text-sm">
-              <Link href="/mega-content-showcase-2026" className="text-white/90 hover:text-white transition-colors">
-                📚 View All Content
+          {/* Content Preview Cards */}
+          <div className="flex-shrink-0 lg:ml-8">
+            <div className="grid grid-cols-2 gap-4">
+              {/* AI Innovation Card */}
+              <Link 
+                href="/ai-innovation-showcase-2025-2026"
+                className="group bg-gradient-to-br from-blue-900/50 to-purple-900/50 backdrop-blur-sm rounded-lg p-4 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 transform hover:scale-105"
+              >
+                <div className="flex items-center mb-2">
+                  <Brain className="h-5 w-5 text-blue-400 mr-2" />
+                  <span className="text-sm font-semibold text-white">AI Innovation</span>
+                </div>
+                <p className="text-xs text-gray-400 group-hover:text-gray-300">
+                  Revolutionary breakthroughs
+                </p>
               </Link>
-              <Link href="/blog" className="text-white/90 hover:text-white transition-colors">
-                📝 Latest Blog Posts
+
+              {/* Quantum Computing Card */}
+              <Link 
+                href="/quantum-computing-solutions-2026-ultimate"
+                className="group bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-sm rounded-lg p-4 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 transform hover:scale-105"
+              >
+                <div className="flex items-center mb-2">
+                  <Zap className="h-5 w-5 text-cyan-400 mr-2" />
+                  <span className="text-sm font-semibold text-white">Quantum Computing</span>
+                </div>
+                <p className="text-xs text-gray-400 group-hover:text-gray-300">
+                  1000+ qubit processors
+                </p>
               </Link>
-              <Link href="/case-studies" className="text-white/90 hover:text-white transition-colors">
-                📊 Success Stories
+
+              {/* Neural Interface Card */}
+              <Link 
+                href="/neural-interface-revolution-2026"
+                className="group bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-lg p-4 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 transform hover:scale-105"
+              >
+                <div className="flex items-center mb-2">
+                  <Globe className="h-5 w-5 text-purple-400 mr-2" />
+                  <span className="text-sm font-semibold text-white">Neural Interface</span>
+                </div>
+                <p className="text-xs text-gray-400 group-hover:text-gray-300">
+                  Brain-computer interface
+                </p>
               </Link>
-              <Link href="/resources" className="text-white/90 hover:text-white transition-colors">
-                🛠️ Implementation Tools
+
+              {/* Future Tech Card */}
+              <Link 
+                href="/ai-2026-ultimate-breakthrough"
+                className="group bg-gradient-to-br from-green-900/50 to-teal-900/50 backdrop-blur-sm rounded-lg p-4 border border-green-500/20 hover:border-green-400/40 transition-all duration-300 transform hover:scale-105"
+              >
+                <div className="flex items-center mb-2">
+                  <Rocket className="h-5 w-5 text-green-400 mr-2" />
+                  <span className="text-sm font-semibold text-white">Future Tech</span>
+                </div>
+                <p className="text-xs text-gray-400 group-hover:text-gray-300">
+                  Next-gen solutions
+                </p>
               </Link>
-              <Link href="/tools" className="text-white/90 hover:text-white transition-colors">
-                🧮 Interactive Calculators
-              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Stats */}
+        <div className="mt-8 pt-6 border-t border-purple-500/20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="text-2xl font-bold text-white mb-1">50+</div>
+              <div className="text-sm text-gray-400">New Content Pages</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-white mb-1">1000+</div>
+              <div className="text-sm text-gray-400">Quantum Qubits</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-white mb-1">99.9%</div>
+              <div className="text-sm text-gray-400">Neural Accuracy</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-white mb-1">2026</div>
+              <div className="text-sm text-gray-400">Future Ready</div>
             </div>
           </div>
         </div>
