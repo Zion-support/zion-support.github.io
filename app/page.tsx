@@ -104,6 +104,11 @@ import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromo
 // Import new AI 2025 content showcase banner
 import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBanner';
 
+// Import new 2026 promotional components
+import UltimateContentRevolutionBanner2026 from '../components/UltimateContentRevolutionBanner2026';
+import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
+import RevolutionaryNewsletterSignup2026 from '../components/RevolutionaryNewsletterSignup2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -142,6 +147,15 @@ export default function HomePage() {
         
         {/* NEW 2026 ULTIMATE CONTENT PROMOTION BANNER */}
         <NewContent2026UltimatePromotionBanner />
+        
+        {/* ULTIMATE CONTENT REVOLUTION BANNER 2026 */}
+        <UltimateContentRevolutionBanner2026 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2026 */}
+        <InteractiveContentDiscoveryWidget2026 />
+        
+        {/* REVOLUTIONARY NEWSLETTER SIGNUP 2026 */}
+        <RevolutionaryNewsletterSignup2026 />
         
         {/* FEATURED CONTENT SHOWCASE 2025 */}
         <FeaturedContentShowcase2025 />
