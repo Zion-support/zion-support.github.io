@@ -44,6 +44,10 @@ import QuantumComputing2026PromotionBanner from '../components/QuantumComputing2
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
 
+// Import new 2025 promotional components
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -55,6 +59,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2025 CONTENT PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
+        {/* INTERACTIVE CONTENT SHOWCASE */}
+        <InteractiveContentShowcase />
+        
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
