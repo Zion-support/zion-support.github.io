@@ -13,5 +13,6 @@
   "dependencies": {},
   "engines": {
     "node": ">=14"
-  }
+  },
+  "netlify-plugin": true
 }
