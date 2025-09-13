@@ -4,6 +4,7 @@ import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
 import { NewContentPromotionBanner } from './components/NewContentPromotionBanner';
+import NewContentPromotionBanner2025 from './components/NewContentPromotionBanner2025';
 import { RevolutionaryContentBanner } from './components/RevolutionaryContentBanner';
 import InnovativeContentShowcase2026 from './components/InnovativeContentShowcase2026';
 import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
@@ -152,6 +153,7 @@ const ResourceROICalculator = React.lazy(() => import('./pages/ResourceROICalcul
 
 // Content showcase hub
 const ContentShowcaseHub = React.lazy(() => import('./pages/ContentShowcaseHub'));
+const ContentShowcase2025 = React.lazy(() => import('./pages/ContentShowcase2025'));
 
 // Comprehensive services showcase - commented out as they don't exist yet
 // const ComprehensiveServicesShowcase2025Page = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
@@ -199,6 +201,7 @@ function App() {
       <div className="min-h-screen bg-futuristic">
         <RevolutionaryContentBanner />
         <NewContentPromotionBanner />
+        <NewContentPromotionBanner2025 />
         <EnhancedContentPromotionBanner />
         <RevolutionaryContentPromotionBanner />
         <FutureTechnologyShowcaseBanner />
@@ -241,6 +244,7 @@ function App() {
               <Route path="/webinars" element={<Webinars />} />
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/content-showcase-2025" element={<ContentShowcase2025 />} />
+              <Route path="/content-showcase" element={<ContentShowcase2025 />} />
               
               {/* New sitemap routes */}
               
