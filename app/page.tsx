@@ -32,6 +32,7 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 // Import new 2025 promotional components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+import FeaturedContentShowcase2025 from '../components/FeaturedContentShowcase2025';
 
 export default function HomePage() {
   return (
@@ -44,6 +45,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
+        <AI2025UltimateBreakthroughPromotionBanner />
+        
+        {/* FEATURED CONTENT SHOWCASE 2025 */}
+        <FeaturedContentShowcase2025 />
+        
         {/* NEW 2025 CONTENT PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
