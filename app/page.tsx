@@ -21,7 +21,8 @@ const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../compo
 
 // New promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
-import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
@@ -174,6 +175,21 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTION BANNER */}
+        <NewContentPromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <InteractiveContentDiscovery />
+        </section>
+        
+        {/* NEWSLETTER SIGNUP */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+          <div className="max-w-4xl mx-auto">
+            <NewsletterSignup2025 />
+          </div>
+        </section>
+        
         {/* NEW: REVOLUTIONARY CONTENT BANNER */}
         <RevolutionaryContentBanner />
         

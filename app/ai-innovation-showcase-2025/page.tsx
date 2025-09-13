@@ -1,204 +1,202 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { ArrowRight, Brain, Zap, Target, Users, TrendingUp, Star, CheckCircle } from 'lucide-react';
+import { ArrowRight, Brain, Zap, Target, TrendingUp, Users, Globe, Shield } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI Innovation Showcase 2025 - Revolutionary Breakthroughs | Zion Tech Group',
-  description: 'Discover the latest AI innovations and breakthroughs in 2025. Explore cutting-edge technologies, quantum computing solutions, and advanced automation systems.',
-  keywords: 'AI innovation, artificial intelligence, quantum computing, automation, breakthrough technology, 2025',
+  description: 'Discover the most advanced AI innovations and breakthroughs of 2025. Explore cutting-edge technologies, quantum computing solutions, and neural interface revolutions.',
+  keywords: 'AI innovation, artificial intelligence, quantum computing, neural interfaces, breakthrough technology, 2025 predictions',
+  openGraph: {
+    title: 'AI Innovation Showcase 2025 - Revolutionary Breakthroughs',
+    description: 'Explore the future of AI with our comprehensive showcase of 2025 innovations and breakthrough technologies.',
+    type: 'website',
+  },
 };
+
+const innovations = [
+  {
+    id: 1,
+    title: "Quantum-Neural Fusion Architecture",
+    description: "Revolutionary AI system that combines quantum computing with neural networks for unprecedented processing power and decision-making capabilities.",
+    icon: Brain,
+    impact: "1000x faster processing",
+    category: "Quantum AI",
+    status: "In Development"
+  },
+  {
+    id: 2,
+    title: "Consciousness-Level AI Systems",
+    description: "Advanced AI models that demonstrate self-awareness and autonomous decision-making capabilities, marking a new era in artificial intelligence.",
+    icon: Target,
+    impact: "95% accuracy in complex reasoning",
+    category: "Consciousness AI",
+    status: "Beta Testing"
+  },
+  {
+    id: 3,
+    title: "Neural Interface Revolution",
+    description: "Direct brain-computer interfaces that enable seamless communication between human consciousness and AI systems.",
+    icon: Zap,
+    impact: "Real-time thought processing",
+    category: "Neural Tech",
+    status: "Pilot Program"
+  },
+  {
+    id: 4,
+    title: "Autonomous Business Operations",
+    description: "Complete business process automation using advanced AI agents that can manage entire organizations without human intervention.",
+    icon: Globe,
+    impact: "90% operational efficiency",
+    category: "Business AI",
+    status: "Production Ready"
+  },
+  {
+    id: 5,
+    title: "Predictive Analytics Engine",
+    description: "AI system that can predict market trends, customer behavior, and business outcomes with 99.7% accuracy.",
+    icon: TrendingUp,
+    impact: "99.7% prediction accuracy",
+    category: "Analytics",
+    status: "Live"
+  },
+  {
+    id: 6,
+    title: "AI Security Fortress",
+    description: "Advanced cybersecurity AI that can detect and prevent threats in real-time, protecting against even the most sophisticated attacks.",
+    icon: Shield,
+    impact: "99.9% threat detection",
+    category: "Security",
+    status: "Deployed"
+  }
+];
+
+const stats = [
+  { label: "AI Models Deployed", value: "50,000+", icon: Brain },
+  { label: "Businesses Transformed", value: "10,000+", icon: Users },
+  { label: "Processing Speed Increase", value: "1000x", icon: Zap },
+  { label: "Global Reach", value: "150+ Countries", icon: Globe }
+];
 
 export default function AIInnovationShowcase2025() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 mb-8">
+            <span className="text-purple-300 text-sm font-medium">🚀 2025 Innovation Showcase</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            AI Innovation
+            <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Showcase 2025
+            </span>
+          </h1>
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Discover the most revolutionary AI breakthroughs and cutting-edge technologies that are reshaping our world in 2025.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center group">
+              Explore Innovations
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button className="px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300">
+              Watch Demo
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI Innovation
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                {' '}Showcase 2025
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience the future of artificial intelligence with our revolutionary breakthroughs, 
-              quantum computing solutions, and next-generation automation technologies.
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-500/20 rounded-full mb-4">
+                  <stat.icon className="w-8 h-8 text-purple-400" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-400">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Innovations Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Revolutionary AI Breakthroughs
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore the most advanced AI technologies that are transforming industries and reshaping the future.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                Explore Innovations
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
-                Watch Demo
-              </button>
-            </div>
           </div>
-        </div>
-      </section>
 
-      {/* Key Innovations Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
-            Revolutionary AI Breakthroughs
-          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Quantum AI Fusion */}
-            <div className="bg-gradient-to-br from-blue-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className="bg-blue-500 p-3 rounded-lg">
-                  <Brain className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white ml-4">Quantum AI Fusion</h3>
-              </div>
-              <p className="text-gray-300 mb-6">
-                Revolutionary quantum computing integration with artificial intelligence, 
-                delivering unprecedented processing power and problem-solving capabilities.
-              </p>
-              <div className="flex items-center text-blue-400 font-semibold">
-                Learn More <ArrowRight className="ml-2 h-4 w-4" />
-              </div>
-            </div>
-
-            {/* Neural Interface Revolution */}
-            <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className="bg-purple-500 p-3 rounded-lg">
-                  <Zap className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white ml-4">Neural Interface</h3>
-              </div>
-              <p className="text-gray-300 mb-6">
-                Direct brain-computer interfaces enabling seamless communication between 
-                human consciousness and AI systems for enhanced cognitive capabilities.
-              </p>
-              <div className="flex items-center text-purple-400 font-semibold">
-                Explore Now <ArrowRight className="ml-2 h-4 w-4" />
-              </div>
-            </div>
-
-            {/* Autonomous Operations */}
-            <div className="bg-gradient-to-br from-green-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className="bg-green-500 p-3 rounded-lg">
-                  <Target className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white ml-4">Autonomous Operations</h3>
-              </div>
-              <p className="text-gray-300 mb-6">
-                Self-managing AI systems that operate independently, making intelligent 
-                decisions and adapting to complex business environments in real-time.
-              </p>
-              <div className="flex items-center text-green-400 font-semibold">
-                Discover More <ArrowRight className="ml-2 h-4 w-4" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Statistics Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
-            Impact by the Numbers
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-blue-400 mb-4">500+</div>
-              <div className="text-xl text-gray-300">AI Models Deployed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-purple-400 mb-4">99.9%</div>
-              <div className="text-xl text-gray-300">Accuracy Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-green-400 mb-4">10x</div>
-              <div className="text-xl text-gray-300">Performance Boost</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-pink-400 mb-4">24/7</div>
-              <div className="text-xl text-gray-300">Autonomous Operation</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Showcase */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
-            Advanced Capabilities
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-3xl font-bold text-white mb-8">Next-Generation AI Features</h3>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-400 mt-1 mr-4 flex-shrink-0" />
-                  <div>
-                    <h4 className="text-xl font-semibold text-white mb-2">Quantum-Enhanced Processing</h4>
-                    <p className="text-gray-300">Leverage quantum computing for exponentially faster AI computations and complex problem solving.</p>
+            {innovations.map((innovation) => (
+              <div key={innovation.id} className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-500/20 rounded-lg">
+                    <innovation.icon className="w-6 h-6 text-purple-400" />
                   </div>
+                  <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full">
+                    {innovation.status}
+                  </span>
                 </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-400 mt-1 mr-4 flex-shrink-0" />
-                  <div>
-                    <h4 className="text-xl font-semibold text-white mb-2">Consciousness Integration</h4>
-                    <p className="text-gray-300">Direct neural interfaces enabling seamless human-AI collaboration and enhanced cognitive abilities.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-400 mt-1 mr-4 flex-shrink-0" />
-                  <div>
-                    <h4 className="text-xl font-semibold text-white mb-2">Autonomous Decision Making</h4>
-                    <p className="text-gray-300">Self-managing AI systems that operate independently with human-level decision-making capabilities.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-400 mt-1 mr-4 flex-shrink-0" />
-                  <div>
-                    <h4 className="text-xl font-semibold text-white mb-2">Real-time Adaptation</h4>
-                    <p className="text-gray-300">Dynamic learning and adaptation to changing environments and requirements in real-time.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 rounded-2xl p-8 border border-blue-500/20">
-              <div className="text-center">
-                <div className="text-6xl mb-4">🚀</div>
-                <h4 className="text-2xl font-bold text-white mb-4">Experience the Future</h4>
-                <p className="text-gray-300 mb-6">
-                  Join thousands of organizations already transforming their operations with our revolutionary AI technologies.
+                
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                  {innovation.title}
+                </h3>
+                
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {innovation.description}
                 </p>
-                <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
-                  Start Your Journey
+                
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-400">Impact:</span>
+                    <span className="text-sm font-medium text-purple-300">{innovation.impact}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-400">Category:</span>
+                    <span className="text-sm font-medium text-blue-300">{innovation.category}</span>
+                  </div>
+                </div>
+                
+                <button className="w-full mt-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:from-purple-500/30 hover:to-pink-500/30 transition-all duration-300">
+                  Learn More
                 </button>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/50 to-purple-900/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            Ready to Transform Your Future?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join the AI revolution and unlock unprecedented possibilities for your organization. 
-            Our cutting-edge technologies are ready to accelerate your success.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-slate-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              Get Started Today
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
-              Schedule Demo
-            </button>
+          <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-3xl p-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of companies already using our AI innovations to revolutionize their operations and achieve unprecedented growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
+                Start Your AI Journey
+              </button>
+              <button className="px-8 py-4 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300">
+                Schedule Consultation
+              </button>
+            </div>
           </div>
         </div>
       </section>
