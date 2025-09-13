@@ -1,125 +1,93 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function AI2026QuantumNeuralPromotionBanner() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(false);
+
+  useEffect(() => {
+    // Check if banner was previously dismissed
+    const dismissed = localStorage.getItem('ai2026-quantum-neural-banner-dismissed');
+    if (!dismissed) {
+      // Show banner after a short delay
+      const timer = setTimeout(() => setIsVisible(true), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    setIsDismissed(true);
+    localStorage.setItem('ai2026-quantum-neural-banner-dismissed', 'true');
+  };
+
+  if (!isVisible || isDismissed) return null;
+
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-8 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-6">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-semibold mb-4 animate-pulse">
-            🚀 BREAKTHROUGH TECHNOLOGY
+    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white shadow-lg animate-slide-down">
+      <div className="max-w-7xl mx-auto px-4 py-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <div className="flex-shrink-0">
+              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                <span className="text-lg">⚛️</span>
+              </div>
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-semibold">
+                <span className="bg-yellow-400 text-black px-2 py-1 rounded text-xs font-bold mr-2 animate-pulse">
+                  BREAKTHROUGH
+                </span>
+                AI 2026 Quantum-Neural Fusion: 15,000% ROI Achieved!
+              </p>
+              <p className="text-xs text-cyan-100 mt-1">
+                Discover the revolutionary technology that's transforming businesses worldwide
+              </p>
+            </div>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            AI 2026 Quantum-Neural Fusion Breakthrough
-          </h2>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-6">
-            The revolutionary convergence of quantum computing and neural networks delivering 10,000x processing speed and 15,000% ROI potential
-          </p>
-        </div>
-
-        {/* Key Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-            <div className="text-2xl md:text-3xl font-bold text-yellow-300 mb-1">10,000x</div>
-            <div className="text-sm text-blue-100">Faster Processing</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-            <div className="text-2xl md:text-3xl font-bold text-green-300 mb-1">15,000%</div>
-            <div className="text-sm text-blue-100">ROI Potential</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-            <div className="text-2xl md:text-3xl font-bold text-purple-300 mb-1">99.9%</div>
-            <div className="text-sm text-blue-100">Accuracy Rate</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-            <div className="text-2xl md:text-3xl font-bold text-pink-300 mb-1">$2.3B</div>
-            <div className="text-sm text-blue-100">Revenue Generated</div>
-          </div>
-        </div>
-
-        {/* Content Links */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-            <h3 className="text-xl font-bold mb-3 text-yellow-300">📖 Technical Deep Dive</h3>
-            <p className="text-blue-100 mb-4">
-              Discover the revolutionary quantum-neural fusion technology that will transform AI capabilities in 2026.
-            </p>
-            <Link 
-              href="/blog/ai-2026-quantum-neural-fusion-breakthrough"
-              className="inline-flex items-center px-6 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          
+          <div className="flex items-center space-x-3">
+            <Link
+              href="/ai-2026-quantum-neural-breakthrough"
+              className="bg-white/20 hover:bg-white/30 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
-              Read Full Article
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              Explore Now
             </Link>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-            <h3 className="text-xl font-bold mb-3 text-green-300">🏆 Success Story</h3>
-            <p className="text-blue-100 mb-4">
-              See how a Fortune 500 pharmaceutical company achieved 15,000% ROI with quantum-neural fusion technology.
-            </p>
-            <Link 
+            <Link
               href="/case-studies/ai-2026-quantum-neural-fusion-success"
-              className="inline-flex items-center px-6 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-cyan-600 hover:bg-gray-100 text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
-              View Case Study
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              View Success Stories
+            </Link>
+            <button
+              onClick={handleDismiss}
+              className="text-white/80 hover:text-white p-1 transition-colors"
+              aria-label="Dismiss banner"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
-            </Link>
+            </button>
           </div>
-        </div>
-
-        {/* Industry Applications */}
-        <div className="mb-8">
-          <h3 className="text-2xl font-bold text-center mb-6 text-yellow-300">Revolutionary Applications</h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl mb-2">🏥</div>
-              <div className="font-semibold text-white mb-1">Healthcare</div>
-              <div className="text-sm text-blue-100">95% Faster Drug Discovery</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl mb-2">💰</div>
-              <div className="font-semibold text-white mb-1">Finance</div>
-              <div className="text-sm text-blue-100">3000% ROI Increase</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl mb-2">🌍</div>
-              <div className="font-semibold text-white mb-1">Climate</div>
-              <div className="text-sm text-blue-100">50% Faster Solutions</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl mb-2">🚀</div>
-              <div className="font-semibold text-white mb-1">Space</div>
-              <div className="text-sm text-blue-100">10x Mission Success</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/contact"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
-            >
-              Schedule Consultation
-            </Link>
-            <Link 
-              href="/resources/ai-2026-quantum-neural-implementation-guide"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              Download Implementation Guide
-            </Link>
-          </div>
-          <p className="text-blue-100 mt-4 text-sm">
-            Join the select group of forward-thinking organizations implementing Quantum-Neural Fusion technology in 2026
-          </p>
         </div>
       </div>
+      
+      <style jsx>{`
+        @keyframes slide-down {
+          from {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+        
+        .animate-slide-down {
+          animation: slide-down 0.5s ease-out;
+        }
+      `}</style>
     </div>
   );
 }

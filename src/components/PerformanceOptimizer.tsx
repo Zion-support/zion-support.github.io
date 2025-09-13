@@ -1,39 +1,13 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  Zap, 
-  Clock, 
-  TrendingUp, 
-  AlertTriangle, 
-  CheckCircle,
-  X,
-  Settings,
-  BarChart3,
-  Cpu,
-  Memory,
-  HardDrive,
-  Gauge,
-  Network
-} from 'lucide-react';
-
-interface PerformanceMetrics {
-  fps: number;
-  memoryUsage: number;
-  loadTime: number;
-  renderTime: number;
-  networkLatency: number;
-  bundleSize: number;
-  networkRequests: number;
-  coreWebVitals: {
-    lcp: number;
-    fid: number;
-    cls: number;
-  };
-}
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
+  enabled?: boolean;
+  showMetrics?: boolean;
+  autoOptimize?: boolean;
+  enableLazyLoading?: boolean;
+  enableIntersectionObserver?: boolean;
+  enablePerformanceMonitoring?: boolean;
 }
 
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -45,7 +19,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableIntersectionObserver = true,
   enablePerformanceMonitoring = true,
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState({
     fps: 60,
     memoryUsage: 0,
     loadTime: 0,
@@ -53,49 +27,26 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     networkLatency: 0,
     bundleSize: 0,
     networkRequests: 0,
-    coreWebVitals: {
-      lcp: 0,
-      fid: 0,
-      cls: 0
-    }
   });
   
   const [isVisible, setIsVisible] = useState(false);
   const [optimizations, setOptimizations] = useState<string[]>([]);
   const [isOptimizing, setIsOptimizing] = useState(false);
 
-  // Intersection Observer for lazy loading
-  useEffect(() => {
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const target = entry.target as HTMLElement;
-              if (target.dataset.src) {
-                target.src = target.dataset.src;
-                target.removeAttribute('data-src');
-                observer.unobserve(target);
-              }
-            }
-          });
-        },
-        {
-          rootMargin: '50px',
-          threshold: 0.1,
-        }
-      );
+  // Measure performance metrics
+  const measurePerformance = useCallback(() => {
+    if (!enabled) return;
 
-      // Observe all images with data-src
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach((img) => observer.observe(img));
-
-      return () => observer.disconnect();
-    }
-  }, []);
-
-  return <>{optimizedChildren}</>;
-};
+    // Measure FPS
+    let frameCount = 0;
+    const measureFPS = () => {
+      frameCount++;
+      if (frameCount % 60 === 0) {
+        setMetrics(prev => ({ ...prev, fps: frameCount }));
+        frameCount = 0;
+      }
+      requestAnimationFrame(measureFPS);
+    };
 
     // Measure render time
     const renderStartTime = performance.now();
@@ -130,19 +81,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         newOptimizations.push('Slow load time - Consider implementing lazy loading');
       }
 
-      // Check Core Web Vitals
-      if (metrics.coreWebVitals.lcp > 2500) {
-        newOptimizations.push('Poor LCP - Optimize largest contentful paint');
-      }
-
-      if (metrics.coreWebVitals.fid > 100) {
-        newOptimizations.push('Poor FID - Reduce input delay');
-      }
-
-      if (metrics.coreWebVitals.cls > 0.1) {
-        newOptimizations.push('Poor CLS - Reduce layout shifts');
-      }
-
       setOptimizations(newOptimizations);
     } catch (error) {
       console.warn('Optimization analysis failed:', error);
@@ -151,7 +89,37 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }, [metrics, isOptimizing]);
 
-  // Auto-optimization effect
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    if (enableLazyLoading && enableIntersectionObserver && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const target = entry.target as HTMLElement;
+              if (target.dataset.src) {
+                target.src = target.dataset.src;
+                target.removeAttribute('data-src');
+                observer.unobserve(target);
+              }
+            }
+          });
+        },
+        {
+          rootMargin: '50px',
+          threshold: 0.1,
+        }
+      );
+
+      // Observe all images with data-src
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach((img) => observer.observe(img));
+
+      return () => observer.disconnect();
+    }
+  }, [enableLazyLoading, enableIntersectionObserver]);
+
+  // Performance monitoring effect
   useEffect(() => {
     if (enabled && enablePerformanceMonitoring) {
       const interval = setInterval(measurePerformance, 5000);
@@ -161,11 +129,11 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   // Auto-optimization effect
   useEffect(() => {
-    if (enabled && enablePerformanceMonitoring) {
+    if (enabled && autoOptimize) {
       const interval = setInterval(performOptimizations, 10000);
       return () => clearInterval(interval);
     }
-  }, [enabled, enablePerformanceMonitoring, performOptimizations]);
+  }, [enabled, autoOptimize, performOptimizations]);
 
   if (!enabled) {
     return <>{children}</>;
@@ -173,11 +141,13 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   return (
     <>
+      {children}
       {/* Performance monitoring overlay for development */}
-      {process.env.NODE_ENV === 'development' && enablePerformanceMonitoring && (
+      {process.env.NODE_ENV === 'development' && enablePerformanceMonitoring && showMetrics && (
         <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded text-xs z-50">
           <div>Performance Monitor Active</div>
-          <div>Check console for metrics</div>
+          <div>FPS: {metrics.fps}</div>
+          <div>Render Time: {metrics.renderTime.toFixed(2)}ms</div>
         </div>
       )}
     </>

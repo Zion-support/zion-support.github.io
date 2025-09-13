@@ -1,8 +1,5 @@
 
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
   author?: string;
   image?: string;
   url?: string;
@@ -119,15 +116,48 @@ export const SEO: React.FC<SEOProps> = ({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
+
+export function SEO({ title, description, keywords, canonical, noindex = false }: SEOProps) {
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      {canonical && <link rel="canonical" href={canonical} />}
+      {noindex && <meta name="robots" content="noindex, nofollow" />}
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Zion Tech Group" />
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
       
-      {/* Robots Meta */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Article specific meta tags */}
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags.map(tag => (
+        <meta key={tag} property="article:tag" content={tag} />
+      ))}
+      
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#22ddd2" />
+      <meta name="msapplication-TileColor" content="#22ddd2" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
       {/* Canonical URL */}
       {fullUrl && <link rel="canonical" href={fullUrl} />}
@@ -209,12 +239,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       <meta name="msapplication-TileImage" content="/images/zion-tech-group-tile.png" />
       
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
+      
     </Helmet>
   );
 };

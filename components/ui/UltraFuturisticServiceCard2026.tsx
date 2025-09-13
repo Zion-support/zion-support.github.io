@@ -184,6 +184,5 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
       </div>
     </motion.div>
   );
->>>>>>> origin/content/blog-sept12
 };
 export default UltraFuturisticServiceCard2026;

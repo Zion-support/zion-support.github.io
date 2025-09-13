@@ -1,17 +1,23 @@
 import React, { useState } from 'react';
 import Layout from '../components/layout/Layout';
+import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-  Code, 
-  BookOpen, 
-  Zap, 
-  Shield, 
-  Database, 
-  Cloud, 
-  Brain, 
-  Atom, 
-  Rocket,
-  Copy,
+
+
+
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+
+
+import React from 'react';
+
+
+
+import {
+
   Check,
   ExternalLink,
   Search,
@@ -51,6 +57,7 @@ const APIPage: React.FC = () => {
     { id: 'cloud', name: 'Cloud & Edge', icon: Cloud, count: 9 }
   ];
 
+export default function APIPage() {
   const apiEndpoints = [
     {
       id: 'ai-consciousness',
@@ -170,6 +177,16 @@ const APIPage: React.FC = () => {
         }
       ]
     }
+
+import React from './react';
+import MainLayout from "../src / components / layout / MainLayout";
+import MainLayout from "../src / components / layout / MainLayout";
+import { motion  } from './framer-motion';
+import {
+export default function APIPage() {
+
+
+
   ];
 
   const filteredEndpoints = apiEndpoints.filter(endpoint => {
@@ -422,7 +439,11 @@ const APIPage: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
 
 export default APIPage;
+
+    </MainLayout>;
+
+
+
+    </MainLayout>);

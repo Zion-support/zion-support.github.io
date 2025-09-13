@@ -1,264 +1,550 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Card } from './ui/Card';
+import { Link } from 'react-router-dom';
 
-interface ContentItem {
-  id: string;
+interface Recommendation {
+  id: number;
   title: string;
   description: string;
-  href: string;
-  type: string;
   category: string;
-  difficulty: string;
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
   readTime: string;
-  roi: string;
-  icon: string;
   tags: string[];
-  views: number;
-  rating: number;
+  href: string;
+  matchScore: number;
+  reason: string;
+  roi: string;
+  lastUpdated: string;
 }
 
-export default function AI2026ContentRecommendationEngine() {
-  const [recommendations, setRecommendations] = useState<ContentItem[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [userProfile, setUserProfile] = useState({
-    interests: [] as string[],
-    experience: 'intermediate',
-    goals: [] as string[]
-  });
+interface UserProfile {
+  interests: string[];
+  skillLevel: string;
+  goals: string[];
+  industry: string;
+}
 
-  const allContent: ContentItem[] = [
+const AI2026ContentRecommendationEngine: React.FC = () => {
+  const [userProfile, setUserProfile] = useState<UserProfile>({
+    interests: [],
+    skillLevel: '',
+    goals: [],
+    industry: ''
+  });
+  const [recommendations, setRecommendations] = useState<Recommendation[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [showProfileForm, setShowProfileForm] = useState(true);
+
+  const contentLibrary: Recommendation[] = [
     {
-      id: '1',
-      title: 'AI 2026 Breakthrough Innovations',
-      description: 'Revolutionary AI technologies transforming industries',
-      href: '/blog/ai-2026-breakthrough-innovations',
-      type: 'Blog Post',
-      category: 'breakthroughs',
-      difficulty: 'Advanced',
-      readTime: '15 min',
-      roi: '5000%',
-      icon: '🚀',
-      tags: ['quantum-ai', 'neural-interfaces', 'breakthroughs'],
-      views: 15420,
-      rating: 4.9
+      id: 1,
+      title: "🧠 Neural Interface Revolution 2026",
+      description: "Breakthrough brain-computer interfaces achieving 95% accuracy with real-time processing capabilities",
+      category: "Neural Networks",
+      difficulty: "Expert",
+      readTime: "25 min",
+      tags: ["Neural Interfaces", "BCI", "2026", "Revolutionary", "Healthcare", "Technology"],
+      href: "/blog/ai-2026-neural-interface-revolution",
+      matchScore: 0,
+      reason: "",
+      roi: "15,000%",
+      lastUpdated: "2025-01-15"
     },
     {
-      id: '2',
-      title: 'Global Tech Transformation Case Study',
-      description: 'How a Fortune 500 company achieved 5000% ROI',
-      href: '/case-studies/ai-2026-global-tech-transformation-breakthrough',
-      type: 'Case Study',
-      category: 'case-studies',
-      difficulty: 'Intermediate',
-      readTime: '12 min',
-      roi: '5000%',
-      icon: '🏢',
-      tags: ['roi', 'transformation', 'enterprise'],
-      views: 12850,
-      rating: 4.8
+      id: 2,
+      title: "⚛️ Quantum-Neural Fusion Breakthrough",
+      description: "Quantum-enhanced neural networks with exponential computational speed improvements",
+      category: "Quantum Computing",
+      difficulty: "Expert",
+      readTime: "30 min",
+      tags: ["Quantum AI", "Neural Networks", "Fusion", "2026", "Computing", "Advanced"],
+      href: "/blog/ai-2026-quantum-neural-fusion",
+      matchScore: 0,
+      reason: "",
+      roi: "25,000%",
+      lastUpdated: "2025-01-14"
     },
     {
-      id: '3',
-      title: 'AI 2026 Ultimate Implementation Toolkit',
-      description: 'Complete guide for implementing breakthrough technologies',
-      href: '/resources/ai-2026-ultimate-implementation-toolkit',
-      type: 'Resource Guide',
-      category: 'resources',
-      difficulty: 'Expert',
-      readTime: '25 min',
-      roi: 'Complete',
-      icon: '🛠️',
-      tags: ['implementation', 'toolkit', 'guide'],
-      views: 9850,
-      rating: 4.9
+      id: 3,
+      title: "🎯 Advanced Deep Learning Architectures",
+      description: "Next-generation deep learning models with 99.8% accuracy rates and optimized performance",
+      category: "Deep Learning",
+      difficulty: "Advanced",
+      readTime: "20 min",
+      tags: ["Deep Learning", "Architecture", "2026", "Advanced", "Machine Learning"],
+      href: "/blog/ai-2026-deep-learning-architectures",
+      matchScore: 0,
+      reason: "",
+      roi: "8,500%",
+      lastUpdated: "2025-01-13"
     },
     {
-      id: '4',
-      title: 'Quantum AI ROI Calculator',
-      description: 'Calculate your potential return on quantum AI investments',
-      href: '/tools/ai-roi-calculator-2026',
-      type: 'Interactive Tool',
-      category: 'tools',
-      difficulty: 'Beginner',
-      readTime: '5 min',
-      roi: 'Calculator',
-      icon: '⚡',
-      tags: ['calculator', 'roi', 'quantum'],
-      views: 7500,
-      rating: 4.7
+      id: 4,
+      title: "🌐 Edge AI Optimization Mastery",
+      description: "Complete guide to deploying AI on edge devices with maximum efficiency and minimal latency",
+      category: "Edge Computing",
+      difficulty: "Advanced",
+      readTime: "18 min",
+      tags: ["Edge Computing", "Optimization", "Deployment", "2026", "IoT", "Performance"],
+      href: "/blog/ai-2026-edge-ai-optimization",
+      matchScore: 0,
+      reason: "",
+      roi: "6,200%",
+      lastUpdated: "2025-01-12"
     },
     {
-      id: '5',
-      title: 'Neural Interface Implementation Guide',
-      description: 'Step-by-step guide to neural interface technology',
-      href: '/resources/neural-interface-implementation-guide-2026',
-      type: 'Implementation Guide',
-      category: 'resources',
-      difficulty: 'Advanced',
-      readTime: '20 min',
-      roi: '300%',
-      icon: '🧠',
-      tags: ['neural-interfaces', 'implementation', 'guide'],
-      views: 6200,
-      rating: 4.6
+      id: 5,
+      title: "🔒 AI Security & Privacy Protocols 2026",
+      description: "Enterprise-grade security frameworks for next-generation AI systems and data protection",
+      category: "Security",
+      difficulty: "Advanced",
+      readTime: "22 min",
+      tags: ["Security", "Privacy", "Enterprise", "2026", "Compliance", "Data Protection"],
+      href: "/blog/ai-2026-security-protocols",
+      matchScore: 0,
+      reason: "",
+      roi: "4,800%",
+      lastUpdated: "2025-01-11"
     },
     {
-      id: '6',
-      title: 'Autonomous Agent Deployment Case Study',
-      description: 'Real-world success with self-organizing AI systems',
-      href: '/case-studies/autonomous-agent-deployment-success-2026',
-      type: 'Case Study',
-      category: 'case-studies',
-      difficulty: 'Intermediate',
-      readTime: '10 min',
-      roi: '2000%',
-      icon: '🤖',
-      tags: ['autonomous-agents', 'deployment', 'success'],
-      views: 5800,
-      rating: 4.5
+      id: 6,
+      title: "📊 Predictive Analytics Revolution",
+      description: "Advanced predictive analytics with 98.5% accuracy for business forecasting and decision making",
+      category: "Analytics",
+      difficulty: "Intermediate",
+      readTime: "16 min",
+      tags: ["Analytics", "Forecasting", "Business", "2026", "Data Science", "Predictions"],
+      href: "/blog/ai-2026-predictive-analytics",
+      matchScore: 0,
+      reason: "",
+      roi: "3,500%",
+      lastUpdated: "2025-01-10"
+    },
+    {
+      id: 7,
+      title: "🔄 AI Integration Framework 2026",
+      description: "Comprehensive framework for integrating multiple AI systems seamlessly across enterprise environments",
+      category: "Integration",
+      difficulty: "Advanced",
+      readTime: "24 min",
+      tags: ["Integration", "Framework", "Systems", "2026", "Enterprise", "Architecture"],
+      href: "/blog/ai-2026-integration-framework",
+      matchScore: 0,
+      reason: "",
+      roi: "7,200%",
+      lastUpdated: "2025-01-09"
+    },
+    {
+      id: 8,
+      title: "🤖 Autonomous Systems Mastery",
+      description: "Building fully autonomous AI systems with self-learning capabilities and adaptive intelligence",
+      category: "Automation",
+      difficulty: "Expert",
+      readTime: "28 min",
+      tags: ["Autonomous", "Self-Learning", "AI Systems", "2026", "Automation", "Intelligence"],
+      href: "/blog/ai-2026-autonomous-systems",
+      matchScore: 0,
+      reason: "",
+      roi: "12,000%",
+      lastUpdated: "2025-01-08"
     }
   ];
 
-  useEffect(() => {
-    // Simulate AI-powered recommendation algorithm
-    const generateRecommendations = () => {
-      setIsLoading(true);
-      
-      // Simulate API call delay
-      setTimeout(() => {
-        // Simple recommendation logic based on popularity and ratings
-        const sortedContent = allContent
-          .sort((a, b) => (b.views * b.rating) - (a.views * a.rating))
-          .slice(0, 4);
-        
-        setRecommendations(sortedContent);
-        setIsLoading(false);
-      }, 1000);
-    };
+  const interestOptions = [
+    "Neural Networks", "Quantum Computing", "Deep Learning", "Edge Computing", 
+    "Security", "Analytics", "Integration", "Automation", "Machine Learning",
+    "Healthcare", "Finance", "Manufacturing", "Technology", "Business"
+  ];
 
-    generateRecommendations();
-  }, []);
+  const goalOptions = [
+    "Learn Advanced AI", "Implement AI Solutions", "Optimize Business Processes",
+    "Stay Competitive", "Career Growth", "Innovation", "Cost Reduction", "Efficiency"
+  ];
+
+  const industryOptions = [
+    "Technology", "Healthcare", "Finance", "Manufacturing", "Retail", 
+    "Education", "Government", "Startup", "Enterprise", "Consulting"
+  ];
+
+  const calculateRecommendations = () => {
+    setIsLoading(true);
+    
+    // Simulate AI recommendation calculation
+    setTimeout(() => {
+      const scoredContent = contentLibrary.map(content => {
+        let score = 0;
+        let reasons: string[] = [];
+
+        // Interest matching
+        const interestMatches = userProfile.interests.filter(interest => 
+          content.tags.some(tag => tag.toLowerCase().includes(interest.toLowerCase()))
+        );
+        score += interestMatches.length * 20;
+        if (interestMatches.length > 0) {
+          reasons.push(`Matches your interests: ${interestMatches.join(', ')}`);
+        }
+
+        // Skill level matching
+        const difficultyScores = { 'Beginner': 1, 'Intermediate': 2, 'Advanced': 3, 'Expert': 4 };
+        const userSkillScore = difficultyScores[userProfile.skillLevel as keyof typeof difficultyScores] || 2;
+        const contentSkillScore = difficultyScores[content.difficulty];
+        
+        if (Math.abs(userSkillScore - contentSkillScore) <= 1) {
+          score += 15;
+          reasons.push(`Matches your ${userProfile.skillLevel} skill level`);
+        }
+
+        // Goal matching
+        const goalMatches = userProfile.goals.filter(goal => 
+          content.description.toLowerCase().includes(goal.toLowerCase()) ||
+          content.tags.some(tag => tag.toLowerCase().includes(goal.toLowerCase()))
+        );
+        score += goalMatches.length * 10;
+        if (goalMatches.length > 0) {
+          reasons.push(`Supports your goals: ${goalMatches.join(', ')}`);
+        }
+
+        // Industry relevance
+        if (userProfile.industry && content.tags.some(tag => 
+          tag.toLowerCase().includes(userProfile.industry.toLowerCase())
+        )) {
+          score += 25;
+          reasons.push(`Highly relevant to ${userProfile.industry} industry`);
+        }
+
+        // Recency bonus
+        const daysSinceUpdate = (new Date().getTime() - new Date(content.lastUpdated).getTime()) / (1000 * 60 * 60 * 24);
+        if (daysSinceUpdate <= 7) {
+          score += 10;
+          reasons.push('Recently updated content');
+        }
+
+        return {
+          ...content,
+          matchScore: score,
+          reason: reasons.join('. ')
+        };
+      });
+
+      // Sort by match score and return top 6
+      const topRecommendations = scoredContent
+        .sort((a, b) => b.matchScore - a.matchScore)
+        .slice(0, 6);
+
+      setRecommendations(topRecommendations);
+      setIsLoading(false);
+      setShowProfileForm(false);
+    }, 1500);
+  };
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Beginner': return 'bg-green-100 text-green-800';
-      case 'Intermediate': return 'bg-yellow-100 text-yellow-800';
+      case 'Intermediate': return 'bg-blue-100 text-blue-800';
       case 'Advanced': return 'bg-orange-100 text-orange-800';
       case 'Expert': return 'bg-red-100 text-red-800';
       default: return 'bg-gray-100 text-gray-800';
     }
   };
 
+  const getMatchScoreColor = (score: number) => {
+    if (score >= 80) return 'text-green-600';
+    if (score >= 60) return 'text-yellow-600';
+    if (score >= 40) return 'text-orange-600';
+    return 'text-red-600';
+  };
+
   return (
-    <section className="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
+    <section className="py-16 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            🤖 AI-Powered Content Recommendations
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-semibold mb-4">
+            <span className="mr-2">🤖</span>
+            AI-POWERED CONTENT RECOMMENDATION ENGINE
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Personalized AI Content Recommendations
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Our intelligent recommendation engine analyzes your interests and behavior 
-            to suggest the most relevant AI 2026 content for your transformation journey.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Our advanced AI analyzes your profile, interests, and goals to recommend the perfect content 
+            for your learning journey and business needs.
           </p>
         </div>
 
-        {isLoading ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[...Array(4)].map((_, index) => (
-              <Card key={index} className="p-6 animate-pulse">
-                <div className="bg-gray-200 h-8 w-8 rounded mb-4"></div>
-                <div className="bg-gray-200 h-4 w-3/4 rounded mb-2"></div>
-                <div className="bg-gray-200 h-3 w-full rounded mb-2"></div>
-                <div className="bg-gray-200 h-3 w-2/3 rounded"></div>
-              </Card>
-            ))}
-          </div>
-        ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {recommendations.map((item) => (
-              <Link key={item.id} href={item.href} className="group">
-                <Card className="p-6 group-hover:shadow-xl transition-all duration-300 bg-white">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="text-3xl">{item.icon}</div>
-                    <div className="text-right">
-                      <div className="text-sm font-bold text-purple-600">{item.roi}</div>
-                      <div className="text-xs text-gray-500">ROI</div>
-                    </div>
+        {showProfileForm ? (
+          /* Profile Setup Form */
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                Tell Us About Yourself
+              </h3>
+              
+              <div className="space-y-6">
+                {/* Interests */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">
+                    What AI topics interest you? (Select multiple)
+                  </label>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    {interestOptions.map(interest => (
+                      <label key={interest} className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={userProfile.interests.includes(interest)}
+                          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                            if (e.target.checked) {
+                              setUserProfile((prev: UserProfile) => ({
+                                ...prev,
+                                interests: [...prev.interests, interest]
+                              }));
+                            } else {
+                              setUserProfile((prev: UserProfile) => ({
+                                ...prev,
+                                interests: prev.interests.filter((i: string) => i !== interest)
+                              }));
+                            }
+                          }}
+                          className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                        />
+                        <span className="ml-2 text-sm text-gray-700">{interest}</span>
+                      </label>
+                    ))}
                   </div>
+                </div>
 
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600">
-                    {item.title}
-                  </h3>
-                  
-                  <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                    {item.description}
-                  </p>
-
-                  <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
-                    <span>{item.type}</span>
-                    <span>{item.readTime} read</span>
+                {/* Skill Level */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">
+                    What's your current AI skill level?
+                  </label>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    {['Beginner', 'Intermediate', 'Advanced', 'Expert'].map(level => (
+                      <label key={level} className="flex items-center">
+                        <input
+                          type="radio"
+                          name="skillLevel"
+                          value={level}
+                          checked={userProfile.skillLevel === level}
+                          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserProfile((prev: UserProfile) => ({
+                            ...prev,
+                            skillLevel: e.target.value
+                          }))}
+                          className="border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                        />
+                        <span className="ml-2 text-sm text-gray-700">{level}</span>
+                      </label>
+                    ))}
                   </div>
+                </div>
 
-                  <div className="flex items-center justify-between mb-3">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(item.difficulty)}`}>
-                      {item.difficulty}
-                    </span>
-                    <div className="flex items-center text-xs text-gray-500">
-                      <span className="mr-1">⭐</span>
-                      <span>{item.rating}</span>
-                    </div>
+                {/* Goals */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">
+                    What are your main goals? (Select multiple)
+                  </label>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {goalOptions.map(goal => (
+                      <label key={goal} className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={userProfile.goals.includes(goal)}
+                          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                            if (e.target.checked) {
+                              setUserProfile((prev: UserProfile) => ({
+                                ...prev,
+                                goals: [...prev.goals, goal]
+                              }));
+                            } else {
+                              setUserProfile((prev: UserProfile) => ({
+                                ...prev,
+                                goals: prev.goals.filter((g: string) => g !== goal)
+                              }));
+                            }
+                          }}
+                          className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                        />
+                        <span className="ml-2 text-sm text-gray-700">{goal}</span>
+                      </label>
+                    ))}
                   </div>
+                </div>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-500">
-                      {item.views.toLocaleString()} views
-                    </span>
-                    <svg className="w-4 h-4 text-gray-400 group-hover:text-purple-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        )}
+                {/* Industry */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">
+                    What industry do you work in?
+                  </label>
+                  <select
+                    value={userProfile.industry}
+                    onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setUserProfile((prev: UserProfile) => ({
+                      ...prev,
+                      industry: e.target.value
+                    }))}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  >
+                    <option value="">Select Industry</option>
+                    {industryOptions.map(industry => (
+                      <option key={industry} value={industry}>{industry}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
 
-        {/* Recommendation Stats */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <Card className="p-6 text-center bg-white">
-            <div className="text-3xl font-bold text-purple-600 mb-2">95%</div>
-            <div className="text-sm text-gray-600">Recommendation Accuracy</div>
-          </Card>
-          <Card className="p-6 text-center bg-white">
-            <div className="text-3xl font-bold text-green-600 mb-2">87%</div>
-            <div className="text-sm text-gray-600">User Engagement Rate</div>
-          </Card>
-          <Card className="p-6 text-center bg-white">
-            <div className="text-3xl font-bold text-blue-600 mb-2">4.8/5</div>
-            <div className="text-sm text-gray-600">Average Rating</div>
-          </Card>
-        </div>
-
-        {/* Personalization Options */}
-        <Card className="p-8 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">🎯 Personalize Your Experience</h3>
-            <p className="text-lg opacity-90 mb-6">
-              Get even better recommendations by telling us about your interests, 
-              experience level, and transformation goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors">
-                Customize Recommendations
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-colors">
-                View All Content
-              </button>
+              <div className="mt-8 text-center">
+                <button
+                  onClick={calculateRecommendations}
+                  disabled={userProfile.interests.length === 0 || !userProfile.skillLevel}
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                >
+                  🤖 Get AI Recommendations
+                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-        </Card>
+        ) : (
+          /* Recommendations Display */
+          <div>
+            {/* Recommendation Header */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 border border-gray-100">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    Your Personalized Recommendations
+                  </h3>
+                  <p className="text-gray-600">
+                    Based on your interests, skill level, and goals
+                  </p>
+                </div>
+                <button
+                  onClick={() => setShowProfileForm(true)}
+                  className="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+                >
+                  Edit Profile
+                </button>
+              </div>
+            </div>
+
+            {isLoading ? (
+              <div className="text-center py-12">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto mb-4"></div>
+                <p className="text-gray-600">Analyzing your profile and generating recommendations...</p>
+              </div>
+            ) : (
+              /* Recommendations Grid */
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {recommendations.map((rec, index) => (
+                  <div key={rec.id} className="group">
+                    <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+                      {/* Match Score Badge */}
+                      <div className="absolute top-4 right-4 z-10">
+                        <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-bold ${getMatchScoreColor(rec.matchScore)} bg-white shadow-lg`}>
+                          {rec.matchScore}% Match
+                        </div>
+                      </div>
+
+                      <div className="p-6">
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800">
+                            {rec.category}
+                          </span>
+                          <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold ${getDifficultyColor(rec.difficulty)}`}>
+                            {rec.difficulty}
+                          </span>
+                        </div>
+
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                          <Link to={rec.href} className="hover:underline">
+                            {rec.title}
+                          </Link>
+                        </h3>
+
+                        <p className="text-gray-600 mb-4 leading-relaxed">
+                          {rec.description}
+                        </p>
+
+                        {/* Match Reason */}
+                        <div className="bg-green-50 rounded-lg p-3 mb-4">
+                          <p className="text-sm text-green-800">
+                            <span className="font-semibold">Why recommended:</span> {rec.reason}
+                          </p>
+                        </div>
+
+                        {/* ROI and Read Time */}
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 text-sm font-semibold">
+                            💰 {rec.roi} ROI
+                          </div>
+                          <div className="text-sm text-gray-500">
+                            {rec.readTime} read
+                          </div>
+                        </div>
+
+                        {/* Tags */}
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {rec.tags.slice(0, 3).map((tag, tagIndex) => (
+                            <span key={tagIndex} className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-700">
+                              {tag}
+                            </span>
+                          ))}
+                          {rec.tags.length > 3 && (
+                            <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-700">
+                              +{rec.tags.length - 3} more
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Action Button */}
+                      <div className="px-6 pb-6">
+                        <Link
+                          to={rec.href}
+                          className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+                        >
+                          Explore Recommendation
+                          <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Additional Actions */}
+            <div className="mt-12 text-center">
+              <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Want More Recommendations?
+                </h3>
+                <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                  Our AI continuously learns and updates recommendations based on your reading patterns and feedback.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button
+                    onClick={calculateRecommendations}
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+                  >
+                    🔄 Refresh Recommendations
+                  </button>
+                  <Link
+                    to="/ai-2026-content-library"
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105"
+                  >
+                    📚 Browse All Content
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
-}
+};
+
+export default AI2026ContentRecommendationEngine;
