@@ -122,6 +122,11 @@ import AI2025TrendsPromotionBanner from '../components/AI2025TrendsPromotionBann
 import ComprehensiveResourcesShowcase from '../components/ComprehensiveResourcesShowcase';
 import ResourcesPromotionBanner from '../components/ResourcesPromotionBanner';
 
+// New 2025 Content Promotion Components
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import ContentROICalculator from '../components/ContentROICalculator';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -177,6 +182,16 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </section>
+
+              {/* New 2025 Content Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewContent2025PromotionBanner />
+              </Suspense>
+
+              {/* Content ROI Calculator */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <ContentROICalculator />
+              </Suspense>
 
               {/* New 2026 Content Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
@@ -314,6 +329,11 @@ const HomePage: React.FC = () => {
               {/* Interactive Content Discovery */}
               <Suspense fallback={<LoadingSpinner />}>
                 <InteractiveContentDiscovery />
+              </Suspense>
+
+              {/* Interactive Content Discovery Widget */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscoveryWidget />
               </Suspense>
 
               {/* New Content Discovery Widget 2026 */}

@@ -1,130 +1,131 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function NewContent2025PromotionBanner() {
+const NewContent2025PromotionBanner: React.FC = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 bg-black opacity-10"></div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-white opacity-5 rounded-full animate-pulse"></div>
-        <div className="absolute top-32 right-20 w-16 h-16 bg-white opacity-5 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white opacity-5 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-32 right-1/3 w-24 h-24 bg-white opacity-5 rounded-full animate-pulse delay-500"></div>
-      </div>
-      
+    <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 py-16">
+      <div className="absolute inset-0 bg-black/20"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🔥 FRESH CONTENT - JANUARY 2025</span>
-          </div>
-          
-          {/* Main heading */}
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            🚀 Revolutionary AI Content Just Dropped!
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            🚀 New Content Alert: AI 2025 Breakthroughs
           </h2>
-          
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-5xl mx-auto leading-relaxed">
-            Discover our latest breakthroughs in AI architecture, financial transformation, and cybersecurity defense. 
-            Expert insights, proven strategies, and actionable implementation guides.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Discover revolutionary AI content strategies and automation techniques delivering 300-400% higher engagement rates
           </p>
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
-              to="/content-showcase"
-              className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {/* Advanced Content Strategy */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 hover:bg-white/15 transition-all duration-300">
+            <div className="text-center mb-4">
+              <div className="text-4xl mb-4">📝</div>
+              <h3 className="text-xl font-bold text-white mb-3">Advanced Content Strategy</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Revolutionary AI content strategies delivering 300% higher engagement and 500% ROI improvements
+              </p>
+            </div>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center text-sm text-gray-300">
+                <span className="text-green-400 mr-2">✓</span>
+                AI-powered content creation
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <span className="text-green-400 mr-2">✓</span>
+                Predictive content strategy
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <span className="text-green-400 mr-2">✓</span>
+                Real-time optimization
+              </div>
+            </div>
+            <Link 
+              to="/blog/ai-2025-advanced-content-strategy"
+              className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all"
             >
-              🎯 Explore All New Content
+              Read Full Guide
             </Link>
-            <Link
-              to="/resources/ai-implementation-master-guide-2026"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300 text-lg backdrop-blur-sm"
+          </div>
+
+          {/* Content Personalization */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 hover:bg-white/15 transition-all duration-300">
+            <div className="text-center mb-4">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold text-white mb-3">Content Personalization</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Revolutionary AI technology delivering 400% higher engagement through real-time content personalization
+              </p>
+            </div>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center text-sm text-gray-300">
+                <span className="text-green-400 mr-2">✓</span>
+                Real-time behavioral analysis
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <span className="text-green-400 mr-2">✓</span>
+                Dynamic content morphing
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <span className="text-green-400 mr-2">✓</span>
+                Multi-modal intelligence
+              </div>
+            </div>
+            <Link 
+              to="/blog/ai-2025-content-personalization-breakthrough"
+              className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all"
             >
-              📚 Download Master Guide
+              Explore Breakthrough
             </Link>
           </div>
-          
-          {/* Featured Content Grid */}
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {/* Neural Networks Article */}
-            <Link to="/blog/ai-2025-advanced-neural-networks" className="group">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 hover:border-opacity-40">
-                <div className="text-4xl mb-4">🧠</div>
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-300 transition-colors">
-                  Advanced Neural Networks
-                </h3>
-                <p className="text-sm opacity-90 mb-4">
-                  Explore cutting-edge neural network architectures including transformers, GANs, and quantum-enhanced systems.
-                </p>
-                <div className="flex items-center text-xs opacity-75">
-                  <span>15 min read</span>
-                  <span className="mx-2">•</span>
-                  <span>Architecture</span>
-                </div>
+
+          {/* Automation Master Guide */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 hover:bg-white/15 transition-all duration-300">
+            <div className="text-center mb-4">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold text-white mb-3">Automation Master Guide</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Complete blueprint for implementing AI-powered content automation with 300% higher ROI
+              </p>
+            </div>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center text-sm text-gray-300">
+                <span className="text-green-400 mr-2">✓</span>
+                Step-by-step implementation
               </div>
-            </Link>
-            
-            {/* Financial Services Case Study */}
-            <Link to="/case-studies/ai-2025-financial-services-transformation" className="group">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 hover:border-opacity-40">
-                <div className="text-4xl mb-4">💰</div>
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-300 transition-colors">
-                  Financial Services Success
-                </h3>
-                <p className="text-sm opacity-90 mb-4">
-                  Discover how a Fortune 500 company achieved 1500% ROI through comprehensive AI transformation.
-                </p>
-                <div className="flex items-center text-xs opacity-75">
-                  <span>20 min read</span>
-                  <span className="mx-2">•</span>
-                  <span>Case Study</span>
-                </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <span className="text-green-400 mr-2">✓</span>
+                Tool recommendations
               </div>
-            </Link>
-            
-            {/* Cybersecurity Guide */}
-            <Link to="/resources/ai-2025-cybersecurity-defense-guide" className="group">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 hover:border-opacity-40">
-                <div className="text-4xl mb-4">🛡️</div>
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-yellow-300 transition-colors">
-                  Cybersecurity Defense Guide
-                </h3>
-                <p className="text-sm opacity-90 mb-4">
-                  Master AI-powered cybersecurity strategies, threat detection, and automated incident response.
-                </p>
-                <div className="flex items-center text-xs opacity-75">
-                  <span>25 min read</span>
-                  <span className="mx-2">•</span>
-                  <span>Security Guide</span>
-                </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <span className="text-green-400 mr-2">✓</span>
+                ROI optimization strategies
               </div>
+            </div>
+            <Link 
+              to="/resources/ai-content-automation-master-guide-2025"
+              className="block w-full bg-gradient-to-r from-green-600 to-blue-600 text-white text-center py-2 px-4 rounded-lg hover:from-green-700 hover:to-blue-700 transition-all"
+            >
+              Get Master Guide
             </Link>
           </div>
-          
-          {/* Additional highlights */}
-          <div className="mt-12 grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-yellow-300 mb-1">3</div>
-              <p className="text-sm opacity-75">New Articles</p>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-yellow-300 mb-1">1500%</div>
-              <p className="text-sm opacity-75">ROI Case Study</p>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-yellow-300 mb-1">95%</div>
-              <p className="text-sm opacity-75">AI Detection Rate</p>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-yellow-300 mb-1">2025</div>
-              <p className="text-sm opacity-75">Latest Strategies</p>
-            </div>
-          </div>
+        </div>
+
+        {/* Case Study Highlight */}
+        <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-lg p-8 text-center">
+          <h3 className="text-2xl font-bold text-white mb-4">🏆 Enterprise Success Story</h3>
+          <p className="text-gray-300 mb-6">
+            See how a Fortune 500 company achieved 300% higher engagement rates and 500% ROI improvement using our AI content strategies
+          </p>
+          <Link 
+            to="/case-studies/ai-content-strategy-enterprise-success-2025"
+            className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all"
+          >
+            View Success Story
+          </Link>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default NewContent2025PromotionBanner;
