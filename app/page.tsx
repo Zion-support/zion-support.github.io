@@ -51,6 +51,12 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 
+// Import Ultimate Content Revolution components
+import UltimateContentRevolution2025Banner from '../components/UltimateContentRevolution2025Banner';
+import UltimateContentRevolution2025 from '../components/UltimateContentRevolution2025';
+import AI2025UltimateContentRevolutionPromotionBanner from '../components/AI2025UltimateContentRevolutionPromotionBanner';
+import EnhancedContentDiscoveryWidget2025 from '../components/EnhancedContentDiscoveryWidget2025';
+
 // Import new promotional components
 import NewContentPromotionalBanner from '../components/NewContentPromotionalBanner';
 import EnhancedContentDiscoveryWidget from '../components/EnhancedContentDiscoveryWidget';
@@ -347,6 +353,12 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT REVOLUTION 2025 BANNER */}
+        <UltimateContentRevolution2025Banner />
+        
+        {/* AI 2025 ULTIMATE CONTENT REVOLUTION PROMOTION BANNER */}
+        <AI2025UltimateContentRevolutionPromotionBanner />
+        
         {/* NEW ULTIMATE CONTENT SHOWCASE 2025 BANNERS */}
         <UltimateContentShowcase2025Banner />
         <NewContent2025UltimatePromotionBanner />
@@ -3912,6 +3924,9 @@ export default function HomePage() {
       {/* New Revolutionary Content Sections */}
       <NewContentPromotionalBanner />
       
+      {/* Ultimate Content Revolution 2025 */}
+      <UltimateContentRevolution2025 />
+      
       <NewContentShowcase2025 />
       
       <InteractiveContentWidget />
@@ -3924,10 +3939,10 @@ export default function HomePage() {
       <ContentManagementSystem />
       <UserFeedbackSystem />
       
-      {/* Ultimate Content Discovery Widget */}
+      {/* Enhanced Content Discovery Widget */}
       <section className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <UltimateContentDiscoveryWidget2025 />
+          <EnhancedContentDiscoveryWidget2025 />
         </div>
       </section>
       
