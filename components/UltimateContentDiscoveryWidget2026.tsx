@@ -1,161 +1,140 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { Search, Filter, Sparkles, ArrowRight, Brain, Zap, Globe, Atom } from 'lucide-react';
-
-interface ContentItem {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  url: string;
-  icon: React.ReactNode;
-  featured: boolean;
-  tags: string[];
-}
 
 export default function UltimateContentDiscoveryWidget2026() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [filteredContent, setFilteredContent] = useState<ContentItem[]>([]);
 
-  const contentItems: ContentItem[] = [
+  const contentItems = [
     {
-      id: 'ai-2026-breakthrough',
-      title: 'AI 2026 Breakthrough Revolution',
-      description: 'Revolutionary AI technologies including synthetic consciousness and quantum neural networks.',
-      category: 'ai',
-      url: '/ai-2026-breakthrough-revolution',
-      icon: <Brain className="h-6 w-6" />,
-      featured: true,
-      tags: ['AI', 'Breakthrough', 'Revolution', '2026']
+      id: 1,
+      title: "AI 2025 Ultimate Breakthrough Revolution",
+      description: "5,000% ROI guaranteed with quantum computing and neural interfaces",
+      category: "breakthroughs",
+      href: "/ai-2025-ultimate-breakthrough-revolution",
+      badge: "BREAKTHROUGH",
+      badgeColor: "bg-red-500",
+      priority: "high"
     },
     {
-      id: 'quantum-2026-ultimate',
-      title: 'Quantum Computing 2026 Ultimate',
-      description: 'Ultimate quantum computing solutions that solve impossible problems with unprecedented speed.',
-      category: 'quantum',
-      url: '/quantum-computing-2026-ultimate',
-      icon: <Atom className="h-6 w-6" />,
-      featured: true,
-      tags: ['Quantum', 'Computing', 'Ultimate', '2026']
+      id: 2,
+      title: "AI 2026 Ultimate Breakthrough Predictions",
+      description: "Quantum-neural fusion, consciousness AI, and transcendent intelligence",
+      category: "predictions",
+      href: "/ai-2026-ultimate-breakthrough-predictions",
+      badge: "FUTURE",
+      badgeColor: "bg-cyan-500",
+      priority: "high"
     },
     {
-      id: 'neural-interface-2026',
-      title: 'Neural Interface Revolution 2026',
-      description: 'Direct brain-computer interfaces enabling thought-based control and data exchange.',
-      category: 'ai',
-      url: '/neural-interface-revolution-2026',
-      icon: <Zap className="h-6 w-6" />,
-      featured: false,
-      tags: ['Neural', 'Interface', 'Brain', 'Control']
+      id: 3,
+      title: "AI 2026 Quantum-Neural Fusion",
+      description: "Revolutionary quantum-neural fusion breakthrough technology",
+      category: "breakthroughs",
+      href: "/ai-2026-quantum-neural-fusion-breakthrough",
+      badge: "BREAKTHROUGH",
+      badgeColor: "bg-indigo-500",
+      priority: "high"
     },
     {
-      id: 'quantum-neural-fusion',
-      title: 'Quantum Neural Fusion 2030',
-      description: 'The convergence of quantum computing and neural networks for unprecedented AI capabilities.',
-      category: 'quantum',
-      url: '/quantum-neural-fusion-2030',
-      icon: <Globe className="h-6 w-6" />,
-      featured: true,
-      tags: ['Quantum', 'Neural', 'Fusion', '2030']
+      id: 4,
+      title: "Fortune 500 Success Story",
+      description: "1,500% ROI achieved by Fortune 500 company",
+      category: "case-studies",
+      href: "/case-studies/ai-2025-fortune-500-transformation-breakthrough",
+      badge: "SUCCESS",
+      badgeColor: "bg-orange-500",
+      priority: "medium"
     },
     {
-      id: 'ai-2030-transcendent',
-      title: 'AI 2030 Transcendent Intelligence',
-      description: 'The next evolution of AI with transcendent intelligence capabilities beyond human comprehension.',
-      category: 'ai',
-      url: '/ai-2030-transcendent-intelligence',
-      icon: <Sparkles className="h-6 w-6" />,
-      featured: false,
-      tags: ['AI', 'Transcendent', 'Intelligence', '2030']
+      id: 5,
+      title: "AI 2025 Implementation Guide",
+      description: "Complete guide to implementing AI 2025 breakthroughs",
+      category: "guides",
+      href: "/resources/ai-2025-ultimate-implementation-guide",
+      badge: "GUIDE",
+      badgeColor: "bg-green-500",
+      priority: "medium"
     },
     {
-      id: 'quantum-security-2026',
-      title: 'Quantum Security 2026',
-      description: 'Unbreakable quantum encryption and security protocols for ultimate data protection.',
-      category: 'quantum',
-      url: '/quantum-security-2026',
-      icon: <Atom className="h-6 w-6" />,
-      featured: false,
-      tags: ['Quantum', 'Security', 'Encryption', '2026']
+      id: 6,
+      title: "AI 2026 ROI Calculator",
+      description: "Calculate your potential ROI with AI 2026 solutions",
+      category: "tools",
+      href: "/tools/ai-2026-roi-calculator",
+      badge: "CALCULATOR",
+      badgeColor: "bg-yellow-500",
+      priority: "medium"
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: <Sparkles className="h-4 w-4" /> },
-    { id: 'ai', name: 'AI & Machine Learning', icon: <Brain className="h-4 w-4" /> },
-    { id: 'quantum', name: 'Quantum Computing', icon: <Atom className="h-4 w-4" /> },
-    { id: 'neural', name: 'Neural Interfaces', icon: <Zap className="h-4 w-4" /> }
+    { value: 'all', label: 'All Content', count: contentItems.length },
+    { value: 'breakthroughs', label: 'Breakthroughs', count: contentItems.filter(item => item.category === 'breakthroughs').length },
+    { value: 'predictions', label: 'Predictions', count: contentItems.filter(item => item.category === 'predictions').length },
+    { value: 'case-studies', label: 'Case Studies', count: contentItems.filter(item => item.category === 'case-studies').length },
+    { value: 'guides', label: 'Implementation Guides', count: contentItems.filter(item => item.category === 'guides').length },
+    { value: 'tools', label: 'Tools & Calculators', count: contentItems.filter(item => item.category === 'tools').length }
   ];
 
-  useEffect(() => {
-    let filtered = contentItems;
-
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(item =>
-        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
-    }
-
-    // Filter by category
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(item => item.category === selectedCategory);
-    }
-
-    setFilteredContent(filtered);
-  }, [searchTerm, selectedCategory]);
+  const filteredContent = contentItems.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         item.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-16">
+    <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ultimate Content Discovery
-            <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              2026 Edition
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Discover Revolutionary AI Content
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our comprehensive collection of cutting-edge AI and quantum computing content. 
-            Find exactly what you're looking for with our intelligent discovery system.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore our comprehensive collection of AI breakthroughs, predictions, 
+            case studies, and implementation guides.
           </p>
         </div>
 
         {/* Search and Filter */}
-        <div className="mb-12">
-          <div className="max-w-4xl mx-auto">
-            {/* Search Bar */}
-            <div className="relative mb-6">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search content, technologies, or topics..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-              />
+        <div className="bg-white rounded-2xl p-8 shadow-xl mb-12">
+          <div className="flex flex-col md:flex-row gap-6">
+            {/* Search Input */}
+            <div className="flex-1">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Search Content
+              </label>
+              <div className="relative">
+                <input
+                  type="text"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  placeholder="Search for AI breakthroughs, predictions, case studies..."
+                  className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+                <svg className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
             </div>
 
-            {/* Category Filters */}
-            <div className="flex flex-wrap gap-3 justify-center">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
-                      : 'bg-white/10 backdrop-blur-sm text-gray-300 hover:bg-white/20'
-                  }`}
-                >
-                  {category.icon}
-                  <span className="ml-2">{category.name}</span>
-                </button>
-              ))}
+            {/* Category Filter */}
+            <div className="md:w-64">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Filter by Category
+              </label>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
+                {categories.map((category) => (
+                  <option key={category.value} value={category.value}>
+                    {category.label} ({category.count})
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
         </div>
@@ -163,92 +142,71 @@ export default function UltimateContentDiscoveryWidget2026() {
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredContent.map((item) => (
-            <div
+            <Link
               key={item.id}
-              className={`bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 ${
-                item.featured ? 'ring-2 ring-cyan-400/50' : ''
+              href={item.href}
+              className={`group bg-white p-6 rounded-2xl border border-gray-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${
+                item.priority === 'high' ? 'ring-2 ring-blue-200' : ''
               }`}
             >
-              {/* Featured Badge */}
-              {item.featured && (
-                <div className="flex items-center mb-4">
-                  <Sparkles className="h-4 w-4 text-cyan-400 mr-2" />
-                  <span className="text-xs font-semibold text-cyan-400 bg-cyan-400/20 px-2 py-1 rounded-full">
-                    FEATURED
-                  </span>
+              <div className="flex items-start justify-between mb-4">
+                <div className={`px-3 py-1 rounded-full text-xs font-bold text-white ${item.badgeColor}`}>
+                  {item.badge}
                 </div>
-              )}
-
-              {/* Icon and Title */}
-              <div className="flex items-center mb-4">
-                <div className="text-cyan-400 mr-3">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                {item.priority === 'high' && (
+                  <div className="text-yellow-500 text-lg">⭐</div>
+                )}
               </div>
-
-              {/* Description */}
-              <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+              
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                {item.title}
+              </h3>
+              
+              <p className="text-gray-600 group-hover:text-gray-700 transition-colors mb-4">
                 {item.description}
               </p>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {item.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="text-xs bg-white/20 text-gray-300 px-2 py-1 rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              
+              <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">
+                Read More
+                <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
               </div>
-
-              {/* Link */}
-              <Link
-                href={item.url}
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
-              >
-                Explore Content
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
+            </Link>
           ))}
         </div>
 
         {/* No Results */}
         {filteredContent.length === 0 && (
           <div className="text-center py-12">
-            <Search className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-2">No Content Found</h3>
-            <p className="text-gray-300">
-              Try adjusting your search terms or category filters to find what you're looking for.
+            <div className="text-6xl mb-4">🔍</div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">No Content Found</h3>
+            <p className="text-gray-600 mb-6">
+              Try adjusting your search terms or category filter.
             </p>
+            <button
+              onClick={() => {
+                setSearchTerm('');
+                setSelectedCategory('all');
+              }}
+              className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors"
+            >
+              Clear Filters
+            </button>
           </div>
         )}
 
-        {/* Stats */}
-        <div className="mt-16 text-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">
-                {contentItems.length}+
-              </div>
-              <div className="text-gray-300">Content Items</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-purple-400 mb-2">
-                {contentItems.filter(item => item.featured).length}
-              </div>
-              <div className="text-gray-300">Featured Content</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-pink-400 mb-2">
-                {categories.length - 1}
-              </div>
-              <div className="text-gray-300">Categories</div>
-            </div>
-          </div>
+        {/* CTA */}
+        <div className="text-center mt-12">
+          <Link
+            href="/ultimate-content-showcase-2026"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+          >
+            View All Content
+            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </Link>
         </div>
       </div>
     </div>
