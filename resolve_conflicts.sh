@@ -3,6 +3,10 @@
 # Resolve merge conflicts and merge PRs
 echo "Starting conflict resolution..."
 
+cd /workspace
+
+echo "Resolving merge conflicts..."
+
 # Add all resolved files
 git add -A
 

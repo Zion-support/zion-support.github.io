@@ -1,382 +1,467 @@
-import Link from 'next/link';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import SEO from '../../components/SEO';
+import { Download, Search, Filter, Clock, Star, TrendingUp, FileText, BookOpen, Play, Zap, ArrowRight, Calendar, User } from 'lucide-react';
 
 export default function ResourcesPage() {
-  const resources = [
-    {
-      id: 'ai-implementation-guide',
-      title: 'Complete AI Implementation Guide 2025',
-      description:
-        'A comprehensive 50-page guide covering everything from AI strategy to implementation, including ROI calculations and best practices.',
-      type: 'Whitepaper',
-      downloadCount: '2,847',
-      size: '2.3 MB',
-      category: 'AI & Technology',
-      featured: true,
-      icon: '📊',
-    },
-    {
-      id: 'micro-saas-playbook',
-      title: 'Micro SaaS Success Playbook',
-      description:
-        'Step-by-step playbook for building and scaling micro SaaS businesses, including market research, development, and growth strategies.',
-      type: 'Playbook',
-      downloadCount: '1,923',
-      size: '1.8 MB',
-      category: 'Business Strategy',
-      featured: true,
-      icon: '🚀',
-    },
-    {
-      id: 'cloud-migration-checklist',
-      title: 'Cloud Migration Checklist & Templates',
-      description:
-        'Comprehensive checklist and templates for successful cloud migration projects, including risk assessment and timeline planning.',
-      type: 'Template',
-      downloadCount: '3,156',
-      size: '850 KB',
-      category: 'Cloud & DevOps',
-      featured: false,
-      icon: '☁️',
-    },
-    {
-      id: 'cybersecurity-framework',
-      title: 'Enterprise Cybersecurity Framework',
-      description:
-        'Detailed framework for implementing enterprise-grade cybersecurity measures, including policies, procedures, and monitoring.',
-      type: 'Framework',
-      downloadCount: '1,456',
-      size: '1.2 MB',
-      category: 'Security',
-      featured: false,
-      icon: '🔒',
-    },
-    {
-      id: 'data-analytics-roi-calculator',
-      title: 'Data Analytics ROI Calculator',
-      description:
-        'Interactive Excel calculator to measure the ROI of data analytics investments and justify budget allocations.',
-      type: 'Tool',
-      downloadCount: '2,134',
-      size: '650 KB',
-      category: 'Data & Analytics',
-      featured: false,
-      icon: '📈',
-    },
-    {
-      id: 'blockchain-business-cases',
-      title: 'Blockchain Business Use Cases',
-      description:
-        'Real-world examples and case studies of blockchain implementations across different industries and business functions.',
-      type: 'Case Study',
-      downloadCount: '987',
-      size: '1.5 MB',
-      category: 'Blockchain',
-      featured: false,
-      icon: '⛓️',
-    },
-    {
-      id: 'devops-best-practices',
-      title: 'DevOps Best Practices Guide',
-      description:
-        'Comprehensive guide covering CI/CD pipelines, infrastructure as code, monitoring, and team collaboration best practices.',
-      type: 'Guide',
-      downloadCount: '2,789',
-      size: '1.9 MB',
-      category: 'Cloud & DevOps',
-      featured: false,
-      icon: '⚙️',
-    },
-    {
-      id: 'mobile-app-development',
-      title: 'Mobile App Development Roadmap',
-      description:
-        'Complete roadmap for mobile app development, from planning and design to deployment and maintenance strategies.',
-      type: 'Roadmap',
-      downloadCount: '1,678',
-      size: '1.1 MB',
-      category: 'Mobile Development',
-      featured: false,
-      icon: '📱',
-    },
-  ];
-
-  const featuredResources = resources.filter(resource => resource.featured);
-  const regularResources = resources.filter(resource => !resource.featured);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedType, setSelectedType] = useState('all');
+  const [sortBy, setSortBy] = useState('popular');
 
   const categories = [
-    { name: 'All', count: resources.length },
-    {
-      name: 'AI & Technology',
-      count: resources.filter(r => r.category === 'AI & Technology').length,
-    },
-    {
-      name: 'Business Strategy',
-      count: resources.filter(r => r.category === 'Business Strategy').length,
-    },
-    {
-      name: 'Cloud & DevOps',
-      count: resources.filter(r => r.category === 'Cloud & DevOps').length,
-    },
-    {
-      name: 'Security',
-      count: resources.filter(r => r.category === 'Security').length,
-    },
-    {
-      name: 'Data & Analytics',
-      count: resources.filter(r => r.category === 'Data & Analytics').length,
-    },
-    {
-      name: 'Blockchain',
-      count: resources.filter(r => r.category === 'Blockchain').length,
-    },
-    {
-      name: 'Mobile Development',
-      count: resources.filter(r => r.category === 'Mobile Development').length,
-    },
+    { id: 'all', name: 'All Resources', count: 25 },
+    { id: 'guides', name: 'Implementation Guides', count: 8 },
+    { id: 'templates', name: 'Templates & Checklists', count: 6 },
+    { id: 'tools', name: 'Tools & Calculators', count: 4 },
+    { id: 'case-studies', name: 'Case Studies', count: 7 }
   ];
 
+  const types = [
+    { id: 'all', name: 'All Types' },
+    { id: 'pdf', name: 'PDF Guides' },
+    { id: 'template', name: 'Templates' },
+    { id: 'tool', name: 'Interactive Tools' },
+    { id: 'video', name: 'Video Tutorials' }
+  ];
+
+  const resources = [
+    {
+      id: 1,
+      title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide 2026. 200+ pages of step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
+      category: "guides",
+      type: "pdf",
+      fileSize: "15.2 MB",
+      pages: "200+ pages",
+      downloads: "15.2K",
+      rating: 4.9,
+      featured: true,
+      trending: true,
+      icon: "📚",
+      href: "/resources/ai-implementation-master-guide-2026",
+      tags: ["Master Guide", "Implementation", "Templates", "Free Download"]
+    },
+    {
+      id: 2,
+      title: "AI Cybersecurity Checklist 2025: 150+ Security Items",
+      description: "Download our comprehensive AI cybersecurity checklist with 150+ security items to ensure your AI systems are protected against emerging threats and vulnerabilities.",
+      category: "templates",
+      type: "template",
+      fileSize: "2.1 MB",
+      pages: "25 pages",
+      downloads: "8.7K",
+      rating: 4.8,
+      featured: true,
+      trending: true,
+      icon: "🛡️",
+      href: "/resources/ai-cybersecurity-checklist-2025",
+      tags: ["Checklist", "Security", "AI Safety", "Free Download"]
+    },
+    {
+      id: 3,
+      title: "AI Workforce Transformation Playbook 2025",
+      description: "Complete reskilling strategies and implementation guides for transforming your workforce for the AI era. Includes training programs, change management, and success metrics.",
+      category: "guides",
+      type: "pdf",
+      fileSize: "8.5 MB",
+      pages: "150+ pages",
+      downloads: "6.3K",
+      rating: 4.7,
+      featured: false,
+      trending: true,
+      icon: "👥",
+      href: "/resources/ai-workforce-transformation-playbook-2025",
+      tags: ["Workforce", "Transformation", "Training", "Free Download"]
+    },
+    {
+      id: 4,
+      title: "AI ROI Calculator Tool",
+      description: "Interactive tool to calculate potential return on investment for AI implementations. Includes cost analysis, benefit projections, and payback period calculations.",
+      category: "tools",
+      type: "tool",
+      fileSize: "Interactive",
+      pages: "Web Tool",
+      downloads: "12.1K",
+      rating: 4.8,
+      featured: true,
+      trending: false,
+      icon: "💰",
+      href: "/tools/ai-roi-calculator",
+      tags: ["Calculator", "ROI", "Interactive", "Free Tool"]
+    },
+    {
+      id: 5,
+      title: "AI Project Planning Template Suite",
+      description: "Complete set of project planning templates for AI implementations. Includes timeline templates, budget estimators, risk assessment matrices, and stakeholder management tools.",
+      category: "templates",
+      type: "template",
+      fileSize: "5.2 MB",
+      pages: "12 templates",
+      downloads: "9.4K",
+      rating: 4.6,
+      featured: false,
+      trending: true,
+      icon: "📋",
+      href: "/resources/ai-project-planning-templates",
+      tags: ["Templates", "Planning", "Project Management", "Free Download"]
+    },
+    {
+      id: 6,
+      title: "AI Ethics & Governance Framework",
+      description: "Comprehensive framework for implementing ethical AI practices and governance structures. Includes policy templates, compliance checklists, and audit procedures.",
+      category: "guides",
+      type: "pdf",
+      fileSize: "6.8 MB",
+      pages: "80 pages",
+      downloads: "4.2K",
+      rating: 4.9,
+      featured: true,
+      trending: false,
+      icon: "⚖️",
+      href: "/resources/ai-ethics-governance-framework",
+      tags: ["Ethics", "Governance", "Compliance", "Free Download"]
+    },
+    {
+      id: 7,
+      title: "AI Data Privacy Compliance Guide",
+      description: "Complete guide to AI data privacy regulations including GDPR, CCPA, and emerging AI-specific requirements. Includes compliance checklists and implementation strategies.",
+      category: "guides",
+      type: "pdf",
+      fileSize: "4.3 MB",
+      pages: "60 pages",
+      downloads: "7.8K",
+      rating: 4.7,
+      featured: false,
+      trending: true,
+      icon: "🔒",
+      href: "/resources/ai-data-privacy-compliance-guide",
+      tags: ["Privacy", "Compliance", "GDPR", "Free Download"]
+    },
+    {
+      id: 8,
+      title: "AI Model Performance Monitoring Dashboard",
+      description: "Interactive dashboard template for monitoring AI model performance, accuracy, and drift. Includes real-time metrics, alerts, and reporting capabilities.",
+      category: "tools",
+      type: "tool",
+      fileSize: "Interactive",
+      pages: "Dashboard",
+      downloads: "5.6K",
+      rating: 4.5,
+      featured: false,
+      trending: false,
+      icon: "📊",
+      href: "/tools/ai-model-monitoring-dashboard",
+      tags: ["Dashboard", "Monitoring", "Analytics", "Free Tool"]
+    },
+    {
+      id: 9,
+      title: "AI Vendor Evaluation Matrix",
+      description: "Comprehensive evaluation framework for selecting AI vendors and solutions. Includes scoring criteria, comparison templates, and decision-making frameworks.",
+      category: "templates",
+      type: "template",
+      fileSize: "1.8 MB",
+      pages: "8 templates",
+      downloads: "3.9K",
+      rating: 4.6,
+      featured: false,
+      trending: false,
+      icon: "🏢",
+      href: "/resources/ai-vendor-evaluation-matrix",
+      tags: ["Vendor Selection", "Evaluation", "Templates", "Free Download"]
+    },
+    {
+      id: 10,
+      title: "AI Implementation Video Series",
+      description: "10-part video series covering the complete AI implementation process. Includes expert interviews, case studies, and step-by-step tutorials.",
+      category: "guides",
+      type: "video",
+      fileSize: "2.5 GB",
+      pages: "10 videos",
+      downloads: "11.2K",
+      rating: 4.8,
+      featured: true,
+      trending: true,
+      icon: "🎥",
+      href: "/resources/ai-implementation-video-series",
+      tags: ["Video Series", "Tutorials", "Implementation", "Free Access"]
+    }
+  ];
+
+  const filteredResources = resources.filter(resource => {
+    const matchesSearch = resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         resource.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         resource.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || resource.category === selectedCategory;
+    const matchesType = selectedType === 'all' || resource.type === selectedType;
+    
+    return matchesSearch && matchesCategory && matchesType;
+  });
+
+  const sortedResources = [...filteredResources].sort((a, b) => {
+    switch (sortBy) {
+      case 'popular':
+        return parseInt(b.downloads.replace('K', '')) - parseInt(a.downloads.replace('K', ''));
+      case 'rating':
+        return b.rating - a.rating;
+      case 'newest':
+        return b.id - a.id;
+      case 'featured':
+        return b.featured ? 1 : -1;
+      default:
+        return 0;
+    }
+  });
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'pdf':
+        return <FileText className="w-4 h-4" />;
+      case 'template':
+        return <BookOpen className="w-4 h-4" />;
+      case 'tool':
+        return <Zap className="w-4 h-4" />;
+      case 'video':
+        return <Play className="w-4 h-4" />;
+      default:
+        return <FileText className="w-4 h-4" />;
+    }
+  };
+
   return (
-    <div className='min-h-screen bg-white'>
-      {/* Hero Section */}
-      <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center'>
-            <h1 className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
-              Resources & Insights
-            </h1>
-            <p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>
-              Access our comprehensive library of guides, templates, and tools
-              designed to help you succeed in your technology initiatives.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <a
-                href='#newsletter'
-                className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg'
+    <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Free AI Resources & Tools - Implementation Guides, Templates & Calculators"
+        description="Download our comprehensive library of free AI resources including implementation guides, templates, checklists, and interactive tools. Everything you need to succeed with AI."
+        keywords="AI resources, free AI guides, AI templates, AI tools, implementation guides, AI checklists, AI calculators, free downloads"
+        url="/resources"
+      />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            📚 Free AI Resources & Tools
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Download our comprehensive library of free AI resources including implementation guides, 
+            templates, checklists, and interactive tools. Everything you need to succeed with AI.
+          </p>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div className="text-3xl font-bold text-blue-600 mb-2">25</div>
+            <div className="text-gray-600">Free Resources</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div className="text-3xl font-bold text-green-600 mb-2">85K+</div>
+            <div className="text-gray-600">Downloads</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div className="text-3xl font-bold text-purple-600 mb-2">4.8</div>
+            <div className="text-gray-600">Average Rating</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div className="text-3xl font-bold text-orange-600 mb-2">100%</div>
+            <div className="text-gray-600">Free Access</div>
+          </div>
+        </div>
+
+        {/* Filters */}
+        <div className="bg-white rounded-xl p-6 mb-8 shadow-sm">
+          <div className="flex flex-col lg:flex-row gap-4">
+            {/* Search */}
+            <div className="flex-1">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search resources, guides, and tools..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+            </div>
+
+            {/* Category Filter */}
+            <div className="lg:w-64">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                Get Free Resources
-              </a>
-              <Link
-                href='/contact'
-                className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg'
+                {categories.map(category => (
+                  <option key={category.id} value={category.id}>
+                    {category.name} ({category.count})
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Type Filter */}
+            <div className="lg:w-48">
+              <select
+                value={selectedType}
+                onChange={(e) => setSelectedType(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                Request Custom Content
+                {types.map(type => (
+                  <option key={type.id} value={type.id}>
+                    {type.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Sort */}
+            <div className="lg:w-48">
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
+                <option value="popular">Most Popular</option>
+                <option value="rating">Highest Rated</option>
+                <option value="newest">Newest First</option>
+                <option value="featured">Featured</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        {/* Featured Resources */}
+        {selectedCategory === 'all' && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">⭐ Featured Resources</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {resources.filter(resource => resource.featured).map(resource => (
+                <Link key={resource.id} href={resource.href} className="group">
+                  <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="text-4xl">{resource.icon}</div>
+                      <div className="flex items-center gap-2">
+                        {resource.trending && <TrendingUp className="w-4 h-4 text-orange-500" />}
+                        {resource.featured && <Star className="w-4 h-4 text-yellow-500" />}
+                      </div>
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                      {resource.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                      {resource.description}
+                    </p>
+                    <div className="flex items-center justify-between text-sm text-gray-500">
+                      <div className="flex items-center gap-4">
+                        <span className="flex items-center gap-1">
+                          {getTypeIcon(resource.type)}
+                          {resource.type.toUpperCase()}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Download className="w-4 h-4" />
+                          {resource.downloads}
+                        </span>
+                      </div>
+                      <span className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-500" />
+                        {resource.rating}
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* All Resources */}
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            {selectedCategory === 'all' ? 'All Resources' : categories.find(c => c.id === selectedCategory)?.name}
+            <span className="text-gray-500 font-normal ml-2">({sortedResources.length})</span>
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sortedResources.map(resource => (
+              <Link key={resource.id} href={resource.href} className="group">
+                <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-blue-200">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="text-4xl">{resource.icon}</div>
+                    <div className="flex items-center gap-2">
+                      {resource.trending && <TrendingUp className="w-4 h-4 text-orange-500" />}
+                      {resource.featured && <Star className="w-4 h-4 text-yellow-500" />}
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+                    {resource.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                    {resource.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {resource.tags.slice(0, 3).map(tag => (
+                      <span key={tag} className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <div className="flex items-center gap-4">
+                      <span className="flex items-center gap-1">
+                        {getTypeIcon(resource.type)}
+                        {resource.type.toUpperCase()}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Download className="w-4 h-4" />
+                        {resource.downloads}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-500" />
+                        {resource.rating}
+                      </span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </div>
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className='py-16'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>
-            <div className='bg-white p-6 rounded-lg shadow-sm border border-gray-200'>
-              <div className='text-3xl font-bold text-blue-600 mb-2'>50+</div>
-              <div className='text-gray-600'>Free Resources</div>
-            </div>
-            <div className='bg-white p-6 rounded-lg shadow-sm border border-gray-200'>
-              <div className='text-3xl font-bold text-blue-600 mb-2'>25K+</div>
-              <div className='text-gray-600'>Downloads</div>
-            </div>
-            <div className='bg-white p-6 rounded-lg shadow-sm border border-gray-200'>
-              <div className='text-3xl font-bold text-blue-600 mb-2'>15+</div>
-              <div className='text-gray-600'>Industries Covered</div>
-            </div>
-            <div className='bg-white p-6 rounded-lg shadow-sm border border-gray-200'>
-              <div className='text-3xl font-bold text-blue-600 mb-2'>4.9/5</div>
-              <div className='text-gray-600'>User Rating</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Resources */}
-      <section className='py-16 bg-gray-50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
-              Featured Resources
-            </h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              Our most popular and valuable resources, downloaded by thousands
-              of professionals
-            </p>
-          </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            {featuredResources.map(resource => (
-              <FeaturedResourceCard key={resource.id} resource={resource} />
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Category Filter */}
-      <section className='py-8'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex flex-wrap gap-2 justify-center'>
-            {categories.map(category => (
-              <button
-                key={category.name}
-                className='px-4 py-2 rounded-full border border-gray-300 text-gray-700 hover:bg-blue-50 hover:border-blue-300 transition-colors'
-              >
-                {category.name} ({category.count})
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* All Resources */}
-      <section className='py-16'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
-              All Resources
-            </h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              Browse our complete library of guides, templates, and tools
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {regularResources.map(resource => (
-              <ResourceCard key={resource.id} resource={resource} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Signup */}
-      <section
-        id='newsletter'
-        className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'
-      >
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='bg-white rounded-xl p-8 text-center shadow-lg'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
-              Get Exclusive Resources & Updates
-            </h2>
-            <p className='text-gray-600 mb-6 max-w-2xl mx-auto'>
-              Join our newsletter to receive new resources, industry insights,
-              and exclusive content delivered directly to your inbox. Plus, get
-              early access to our latest guides and tools.
-            </p>
-            <div className='max-w-md mx-auto flex gap-4'>
-              <input
-                type='email'
-                placeholder='Enter your email'
-                className='flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-              />
-              <button className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
-                Subscribe
-              </button>
+          {sortedResources.length === 0 && (
+            <div className="text-center py-12">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">No resources found</h3>
+              <p className="text-gray-600">Try adjusting your search terms or filters</p>
             </div>
-            <p className='text-sm text-gray-500 mt-4'>
-              Join 15,000+ professionals. No spam. Unsubscribe anytime.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className='py-16'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-8 text-center text-white'>
-            <h2 className='text-3xl font-bold mb-4'>
-              Need Custom Resources for Your Organization?
-            </h2>
-            <p className='text-blue-100 mb-6 max-w-2xl mx-auto'>
-              We create tailored guides, templates, and frameworks specifically
-              designed for your industry, technology stack, and business
-              objectives.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/contact'
-                className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
-              >
-                Request Custom Content
-              </Link>
-              <a
-                href='tel:+13024640950'
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors'
-              >
-                Call +1 302 464 0950
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
-
-function FeaturedResourceCard({ resource }: { resource: any }) {
-  return (
-    <div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
-      <div className='p-8'>
-        <div className='flex items-center gap-4 mb-4'>
-          <div className='text-4xl'>{resource.icon}</div>
-          <div>
-            <span className='bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full'>
-              {resource.type}
-            </span>
-            <span className='ml-2 bg-gray-100 text-gray-800 text-sm font-medium px-3 py-1 rounded-full'>
-              {resource.category}
-            </span>
-          </div>
+          )}
         </div>
 
-        <h3 className='text-2xl font-bold text-gray-900 mb-4'>
-          {resource.title}
-        </h3>
-        <p className='text-gray-600 mb-6'>{resource.description}</p>
-
-        <div className='flex items-center justify-between mb-6'>
-          <div className='text-sm text-gray-500'>
-            <span className='font-medium'>{resource.downloadCount}</span>{' '}
-            downloads • {resource.size}
+        {/* Newsletter Signup */}
+        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white text-center">
+          <h2 className="text-2xl font-bold mb-4">Stay Updated with New Resources</h2>
+          <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+            Get notified when we release new AI resources, guides, and tools. Join 10,000+ 
+            professionals who trust our content.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+            />
+            <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Subscribe
+            </button>
           </div>
         </div>
-
-        <button className='w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
-          Download Free
-        </button>
-      </div>
-    </div>
-  );
-}
-
-function ResourceCard({ resource }: { resource: any }) {
-  return (
-    <div className='bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow'>
-      <div className='p-6'>
-        <div className='flex items-center gap-3 mb-4'>
-          <div className='text-2xl'>{resource.icon}</div>
-          <div>
-            <span className='bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full'>
-              {resource.type}
-            </span>
-            <span className='ml-1 bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full'>
-              {resource.category}
-            </span>
-          </div>
-        </div>
-
-        <h3 className='text-lg font-semibold text-gray-900 mb-3'>
-          {resource.title}
-        </h3>
-        <p className='text-gray-600 text-sm mb-4'>{resource.description}</p>
-
-        <div className='flex items-center justify-between mb-4'>
-          <div className='text-xs text-gray-500'>
-            <span className='font-medium'>{resource.downloadCount}</span>{' '}
-            downloads • {resource.size}
-          </div>
-        </div>
-
-        <button className='w-full bg-gray-100 text-gray-700 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors'>
-          Download
-        </button>
       </div>
     </div>
   );

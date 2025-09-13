@@ -34,9 +34,6 @@ const sidebarSections = [
       { name: 'AI Content Personalization', href: '/ai-content-personalization-engine', badge: 'New' },
       { name: 'AI Healthcare Diagnostics', href: '/healthcare-solutions' },
       { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
-<<<<<<< HEAD
-      { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' }
-=======
       { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform' },
       { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' },
       // Newly added
@@ -85,10 +82,6 @@ const sidebarSections = [
       { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform', badge: 'New' },
       { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform', badge: 'New' },
       { name: 'Zero Trust Security', href: '/zero-trust-security-platform' },
-<<<<<<< HEAD
-      { name: 'Browser Automation Cloud', href: '/browser-automation-cloud/' },
-      { name: 'Secrets Rotation Automation', href: '/secrets-rotation-automation/' }
-=======
       { name: 'Quantum Networking', href: '/quantum-services' },
       { name: 'Quantum Data Center', href: '/quantum-services' },
       { name: 'Quantum Cloud Migration', href: '/quantum-cloud-infrastructure' },

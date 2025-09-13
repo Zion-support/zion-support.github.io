@@ -6,6 +6,7 @@ import {
   Users, Rocket, Brain, Globe, Award, Zap, 
   Heart, Star, ArrowRight, CheckCircle, Briefcase
 } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
 export default function Careers() {
   const [selectedDepartment, setSelectedDepartment] = useState('all');
@@ -138,7 +139,7 @@ export default function Careers() {
     : jobOpenings.filter(job => job.department === selectedDepartment);
 
   return (
-    <UltraFuturisticBackground>
+    <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
         <Head>
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
@@ -325,7 +326,7 @@ export default function Careers() {
           </div>
         </motion.div>
       </div>
-    </Layout>
+    </UltraAdvancedFuturisticBackground>
   );
 };
 

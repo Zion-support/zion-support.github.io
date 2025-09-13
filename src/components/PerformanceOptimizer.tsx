@@ -1,302 +1,155 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { LoadingSpinner } from '@/components/ui/loading-spinner';
+import React, { useEffect, useState, useCallback } from 'react';
 
-// Lazy Image Component with Intersection Observer
-interface LazyImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: string;
-  threshold?: number;
-  rootMargin?: string;
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+  enabled?: boolean;
+  showMetrics?: boolean;
+  autoOptimize?: boolean;
+  enableLazyLoading?: boolean;
+  enableIntersectionObserver?: boolean;
+  enablePerformanceMonitoring?: boolean;
 }
 
-export function LazyImage({ 
-  src, 
-  alt, 
-  className = '', 
-  placeholder = '/images/placeholder.jpg',
-  threshold = 0.1,
-  rootMargin = '50px'
-}: LazyImageProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const [imageSrc, setImageSrc] = useState(placeholder);
-
-  const imageRef = useRef<HTMLImageElement>(null);
-
-  const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setIsInView(true);
-        setImageSrc(src);
-      }
-    });
-  }, [src]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold,
-      rootMargin,
-    });
-
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [handleIntersection, threshold, rootMargin]);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-  };
-
-  const handleError = () => {
-    // Fallback to placeholder on error
-    setImageSrc(placeholder);
-    setIsLoaded(true);
-  };
-
-  return (
-    <div className={`relative overflow-hidden ${className}`}>
-      <img
-        ref={imageRef}
-        src={imageSrc}
-        alt={alt}
-        onLoad={handleLoad}
-        onError={handleError}
-        className={`w-full h-full object-cover transition-opacity duration-500 ${
-          isLoaded ? 'opacity-100' : 'opacity-0'
-        }`}
-      />
-      
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-zion-blue-dark/20 flex items-center justify-center">
-          <LoadingSpinner size="md" variant="pulse" />
-        </div>
-      )}
-      
-      {/* Loading shimmer effect */}
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-blue-light/20 to-transparent animate-pulse" />
-      )}
-    </div>
-  );
-}
-
-// Virtual Scrolling Component for Large Lists
-interface VirtualListProps<T> {
-  items: T[];
-  renderItem: (item: T, index: number) => React.ReactNode;
-  itemHeight: number;
-  containerHeight: number;
-  overscan?: number;
-}
-
-export function VirtualList<T>({ 
-  items, 
-  renderItem, 
-  itemHeight, 
-  containerHeight, 
-  overscan = 5 
-}: VirtualListProps<T>) {
-  const [scrollTop, setScrollTop] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const totalHeight = items.length * itemHeight;
-  const startIndex = Math.max(0, Math.floor(scrollTop / itemHeight) - overscan);
-  const endIndex = Math.min(
-    items.length,
-    Math.ceil((scrollTop + containerHeight) / itemHeight) + overscan
-  );
-
-  const visibleItems = items.slice(startIndex, endIndex);
-  const offsetY = startIndex * itemHeight;
-
-  const handleScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
-    setScrollTop(e.currentTarget.scrollTop);
-  }, []);
-
-  return (
-    <div
-      ref={containerRef}
-      style={{ height: containerHeight, overflow: 'auto' }}
-      onScroll={handleScroll}
-    >
-      <div style={{ height: totalHeight, position: 'relative' }}>
-        <div style={{ transform: `translateY(${offsetY}px)` }}>
-          {visibleItems.map((item, index) => (
-            <div key={startIndex + index} style={{ height: itemHeight }}>
-              {renderItem(item, startIndex + index)}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// Performance Monitor Component
-export function PerformanceMonitor() {
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  children,
+  enabled = true,
+  showMetrics = false,
+  autoOptimize = true,
+  enableLazyLoading = true,
+  enableIntersectionObserver = true,
+  enablePerformanceMonitoring = true,
+}) => {
   const [metrics, setMetrics] = useState({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
+    fps: 60,
+    memoryUsage: 0,
+    loadTime: 0,
+    renderTime: 0,
+    networkLatency: 0,
+    bundleSize: 0,
+    networkRequests: 0,
   });
+  
+  const [isVisible, setIsVisible] = useState(false);
+  const [optimizations, setOptimizations] = useState<string[]>([]);
+  const [isOptimizing, setIsOptimizing] = useState(false);
 
-  useEffect(() => {
-    if ('PerformanceObserver' in window) {
-      // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcp = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+  // Measure performance metrics
+  const measurePerformance = useCallback(() => {
+    if (!enabled) return;
 
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lcp = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    // Measure FPS
+    let frameCount = 0;
+    const measureFPS = () => {
+      frameCount++;
+      if (frameCount % 60 === 0) {
+        setMetrics(prev => ({ ...prev, fps: frameCount }));
+        frameCount = 0;
+      }
+      requestAnimationFrame(measureFPS);
+    };
 
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fid = entries[entries.length - 1];
-        const fidEntry = fid as any;
-        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+    // Measure render time
+    const renderStartTime = performance.now();
+    requestAnimationFrame(() => {
+      const renderTime = performance.now() - renderStartTime;
+      setMetrics(prev => ({ ...prev, renderTime }));
+    });
 
-      // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        for (const entry of list.getEntries()) {
-          const layoutShiftEntry = entry as any;
-          if (!layoutShiftEntry.hadRecentInput) {
-            clsValue += layoutShiftEntry.value;
-          }
-        }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+    requestAnimationFrame(measureFPS);
+  }, [enabled]);
 
-      return () => {
-        fcpObserver.disconnect();
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
+  // Enhanced auto-optimization logic
+  const performOptimizations = useCallback(async () => {
+    if (isOptimizing) return;
+    
+    setIsOptimizing(true);
+    const newOptimizations: string[] = [];
+
+    try {
+      // Check FPS and suggest optimizations
+      if (metrics.fps < 30) {
+        newOptimizations.push('Low FPS detected - Consider reducing animations');
+      }
+
+      // Check memory usage
+      if (metrics.memoryUsage > 100) {
+        newOptimizations.push('High memory usage - Consider implementing memory cleanup');
+      }
+
+      // Check load time
+      if (metrics.loadTime > 3000) {
+        newOptimizations.push('Slow load time - Consider implementing lazy loading');
+      }
+
+      setOptimizations(newOptimizations);
+    } catch (error) {
+      console.warn('Optimization analysis failed:', error);
+    } finally {
+      setIsOptimizing(false);
     }
-  }, []);
+  }, [metrics, isOptimizing]);
 
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    if (enableLazyLoading && enableIntersectionObserver && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const target = entry.target as HTMLElement;
+              if (target.dataset.src) {
+                target.src = target.dataset.src;
+                target.removeAttribute('data-src');
+                observer.unobserve(target);
+              }
+            }
+          });
+        },
+        {
+          rootMargin: '50px',
+          threshold: 0.1,
+        }
+      );
+
+      // Observe all images with data-src
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach((img) => observer.observe(img));
+
+      return () => observer.disconnect();
+    }
+  }, [enableLazyLoading, enableIntersectionObserver]);
+
+  // Performance monitoring effect
+  useEffect(() => {
+    if (enabled && enablePerformanceMonitoring) {
+      const interval = setInterval(measurePerformance, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [enabled, enablePerformanceMonitoring, measurePerformance]);
+
+  // Auto-optimization effect
+  useEffect(() => {
+    if (enabled && autoOptimize) {
+      const interval = setInterval(performOptimizations, 10000);
+      return () => clearInterval(interval);
+    }
+  }, [enabled, autoOptimize, performOptimizations]);
+
+  if (!enabled) {
+    return <>{children}</>;
   }
 
   return (
-    <div className="fixed bottom-4 left-4 bg-zion-blue-dark/90 backdrop-blur-sm border border-zion-purple/30 rounded-lg p-3 text-xs text-white z-50">
-      <div className="font-mono space-y-1">
-        <div>FCP: {metrics.fcp.toFixed(0)}ms</div>
-        <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
-        <div>FID: {metrics.fid.toFixed(0)}ms</div>
-        <div>CLS: {metrics.cls.toFixed(3)}</div>
-      </div>
-    </div>
+    <>
+      {children}
+      {/* Performance monitoring overlay for development */}
+      {process.env.NODE_ENV === 'development' && enablePerformanceMonitoring && showMetrics && (
+        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded text-xs z-50">
+          <div>Performance Monitor Active</div>
+          <div>FPS: {metrics.fps}</div>
+          <div>Render Time: {metrics.renderTime.toFixed(2)}ms</div>
+        </div>
+      )}
+    </>
   );
-}
-
-// Debounced Search Hook
-export function useDebounce<T>(value: T, delay: number): T {
-  const [debouncedValue, setDebouncedValue] = useState<T>(value);
-
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
-
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [value, delay]);
-
-  return debouncedValue;
-}
-
-// Throttled Scroll Hook
-export function useThrottledScroll(callback: () => void, delay: number) {
-  const lastRun = useRef(Date.now());
-
-  useEffect(() => {
-    const handler = () => {
-      if (Date.now() - lastRun.current >= delay) {
-        callback();
-        lastRun.current = Date.now();
-      }
-    };
-
-    window.addEventListener('scroll', handler);
-    return () => window.removeEventListener('scroll', handler);
-  }, [callback, delay]);
-}
-
-// Preload Critical Resources
-export function PreloadCriticalResources() {
-  useEffect(() => {
-    // Preload critical CSS
-    const criticalCSS = document.createElement('link');
-    criticalCSS.rel = 'preload';
-    criticalCSS.as = 'style';
-    criticalCSS.href = '/src/index.css';
-    document.head.appendChild(criticalCSS);
-
-    // Preload critical fonts
-    const font = document.createElement('link');
-    font.rel = 'preload';
-    font.as = 'font';
-    font.href = '/fonts/orbitron.woff2';
-    font.crossOrigin = 'anonymous';
-    document.head.appendChild(font);
-
-    // Preload critical images
-    const criticalImages = [
-      '/images/zion-logo.png',
-      '/images/zion-homepage-og.jpg'
-    ];
-
-    criticalImages.forEach(src => {
-      const img = document.createElement('link');
-      img.rel = 'preload';
-      img.as = 'image';
-      img.href = src;
-      document.head.appendChild(img);
-    });
-  }, []);
-
-  return null;
-}
-
-// Service Worker Registration
-export function ServiceWorkerRegistration() {
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
-            console.log('SW registered: ', registration);
-          })
-          .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
-          });
-      });
-    }
-  }, []);
-
-  return null;
-}
+};

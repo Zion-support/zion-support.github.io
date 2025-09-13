@@ -1,137 +1,104 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Users, 
-  Globe, 
-  Shield, 
-  Zap, 
-  Award,
-  TrendingUp,
-  Clock
-} from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Badge } from '../ui/badge';
+import { CheckCircle, Star, Users, Shield, Zap, Globe } from 'lucide-react';
 
-const features = [
+const featureHighlights = [
   {
-    icon: Brain,
-    title: "AI-Powered Matching",
-    description: "Advanced algorithms connect you with the perfect tech talent and services",
-    color: "from-purple-500 to-pink-500"
+    title: "For Talent & Service Providers",
+    features: [
+      "Create a professional profile showcasing your skills and experience",
+      "Get matched with relevant projects that fit your expertise",
+      "Secure payment processing with on-time disbursements",
+      "Build your reputation through client reviews and ratings",
+      "Access to enterprise clients and high-value projects",
+      "Professional development resources and community support"
+    ]
   },
   {
-    icon: Users,
-    title: "Global Talent Network",
-    description: "Access to verified professionals from around the world",
-    color: "from-blue-500 to-cyan-500"
+    title: "For Enterprise Clients",
+    features: [
+      "White-labeled talent portal with your company branding",
+      "Dedicated account management and priority support",
+      "Custom talent pools and preferred provider networks",
+      "Advanced project management and collaboration tools",
+      "Compliance and security features for enterprise needs",
+      "Scalable solutions that grow with your business"
+    ]
   },
   {
-    icon: Globe,
-    title: "24/7 Global Services",
-    description: "Round-the-clock IT support and technical services worldwide",
-    color: "from-green-500 to-emerald-500"
-  },
-  {
-    icon: Shield,
-    title: "Verified & Secure",
-    description: "All providers are thoroughly vetted and background-checked",
-    color: "from-orange-500 to-red-500"
-  },
-  {
-    icon: Zap,
-    title: "Lightning Fast",
-    description: "Get matched with providers in under 60 seconds",
-    color: "from-yellow-500 to-orange-500"
-  },
-  {
-    icon: Award,
-    title: "Quality Guaranteed",
-    description: "Satisfaction guaranteed or your money back",
-    color: "from-indigo-500 to-purple-500"
-  },
-  {
-    icon: TrendingUp,
-    title: "Market Insights",
-    description: "Real-time pricing and market trend analysis",
-    color: "from-teal-500 to-blue-500"
-  },
-  {
-    icon: Clock,
-    title: "Instant Support",
-    description: "Live chat and emergency response available 24/7",
-    color: "from-pink-500 to-rose-500"
+    title: "For Product Sellers",
+    features: [
+      "Comprehensive product catalog management",
+      "Advanced analytics and performance tracking",
+      "Integrated payment and order management",
+      "Customer relationship management tools",
+      "Marketing and promotion features",
+      "Multi-channel selling capabilities"
+    ]
   }
 ];
 
-export function FeatureHighlights() {
+export const FeatureHighlights: React.FC = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light">
+    <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Why Choose Zion Tech Group?
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Built for Everyone
           </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Experience the future of tech services with our cutting-edge platform designed for businesses and individuals alike.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Our platform serves talent, enterprise clients, and product sellers with tailored solutions for every need.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="group"
-            >
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 h-full border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} p-3 mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-zion-slate-light text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {featureHighlights.map((highlight, index) => (
+            <Card key={index} className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-colors">
+              <CardHeader>
+                <CardTitle className="text-white text-xl mb-2">
+                  {highlight.title}
+                </CardTitle>
+                <CardDescription className="text-gray-300">
+                  Discover the features designed specifically for your role
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  {highlight.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h3>
-            <p className="text-zion-slate-light mb-6">
-              Join thousands of satisfied customers who trust Zion Tech Group for their technology needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
-                Start Your Project
-              </button>
-              <button className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
-                View Services
-              </button>
-            </div>
+        {/* Stats Section */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">10K+</div>
+            <div className="text-gray-400">Active Users</div>
           </div>
-        </motion.div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
+            <div className="text-gray-400">Projects Completed</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">99%</div>
+            <div className="text-gray-400">Satisfaction Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
+            <div className="text-gray-400">Support Available</div>
+          </div>
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default FeatureHighlights;

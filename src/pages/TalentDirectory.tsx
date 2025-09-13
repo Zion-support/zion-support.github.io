@@ -1,0 +1,170 @@
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'; // Changed from useNavigate
+import Link from 'next/link';
+import { useAuth } from '@/hooks/useAuth';
+import { FilterSidebar } from '@/components/talent/FilterSidebar';
+import { TalentResults } from '@/components/talent/TalentResults';
+import { TalentSkeleton } from '@/components/talent/TalentSkeleton';
+import { ErrorBanner } from '@/components/talent/ErrorBanner';
+import ErrorBoundary from '@/components/GlobalErrorBoundary'; // Import ErrorBoundary
+import { useTalentDirectory } from '@/hooks/useTalentDirectory';
+import { SORT_OPTIONS } from '@/data/sortOptions';
+import { X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { TalentProfile } from '@/types/talent';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationButton,
+  PaginationNext,
+  PaginationPrevious,
+} from '@/components/ui/pagination';
+
+export default function TalentDirectory() {
+  const router = useRouter(); // Changed from navigate
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
+  // Use our custom hook to manage state
+  const {
+    filteredTalents,
+    total,
+    isLoading,
+    searchTerm,
+    setSearchTerm,
+    selectedSkills,
+    selectedAvailability,
+    selectedRegions,
+    priceRange,
+    setPriceRange,
+    experienceRange,
+    setExperienceRange,
+    sortOption,
+    setSortOption,
+    isMobileFilterOpen,
+    setIsMobileFilterOpen,
+    isHireModalOpen,
+    setIsHireModalOpen,
+    selectedTalent,
+    setSelectedTalent,
+    expandedSections,
+    error,
+    isAuthenticated,
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters,
+    toggleSection,
+  } = useTalentDirectory(currentPage, itemsPerPage);
+
+  const { user } = useAuth();
+  const isAdmin = user?.userType === 'admin';
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filteredTalents, total]);
+
+  const totalPages = Math.ceil(total / itemsPerPage);
+  const paginatedTalents = filteredTalents;
+
+  const handleRequestHire = (talent: TalentProfile) => {
+    setSelectedTalent(talent);
+    setIsHireModalOpen(true);
+  };
+
+  const viewProfile = (id: string) => {
+    // Navigate to the talent profile page
+    router.push(`/talent/${id}`); // Changed to router.push
+  };
+
+  if (isLoading) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <TalentSkeleton />
+      </div>
+    );
+  }
+
+  // Error check should come before "no results" check
+  if (error) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <ErrorBanner msg={error.message || "Unable to load talent profiles."} />
+      </div>
+    );
+  }
+
+  // Condition for "Talent Directory Truly Empty"
+  if (
+    // !isLoading is implied as we passed the first check
+    filteredTalents.length === 0 &&
+    !searchTerm &&
+    selectedSkills.length === 0 &&
+    selectedAvailability.length === 0 &&
+    selectedRegions.length === 0 &&
+    priceRange[0] === 50 && // Assuming these are the correct initial default values
+    priceRange[1] === 200 && // from useFilterTalents
+    experienceRange[0] === 0 && // from useFilterTalents
+    experienceRange[1] === 15 // from useFilterTalents
+  ) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center py-16">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Talent Directory Currently Empty
+          </h2>
+          <p className="text-zion-slate-light max-w-md mx-auto">
+            No talent profiles are currently available. Please check back later.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // If none of the above, render the main content with results
+  return (
+    <>
+      <SEO 
+        title="Talent Directory - Zion Tech Group" 
+        description="Discover top AI experts, developers, and tech specialists in our comprehensive talent directory."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Talent Directory
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Connect with verified AI experts, developers, and tech specialists from around the world.
+              Find the perfect talent for your next project.
+            </p>
+          </div>
+          
+          <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-blue-light/30">
+            <div className="text-center">
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Coming Soon
+              </h2>
+              <p className="text-zion-slate-light mb-6">
+                Our comprehensive talent directory is currently under development. 
+                We're building a platform to connect you with the best tech talent worldwide.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <button className="px-6 py-3 bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark font-medium rounded-lg transition-colors">
+                  Get Notified
+                </button>
+                <button className="px-6 py-3 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 font-medium rounded-lg transition-colors">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TalentDirectory;
