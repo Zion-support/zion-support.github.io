@@ -52,6 +52,12 @@ import UltimateContentPromotionBanner2026 from '../components/UltimateContentPro
 import AIToolsShowcase2026 from '../components/AIToolsShowcase2026';
 import AIToolsPromotionBanner2026 from '../components/AIToolsPromotionBanner2026';
 
+// Additional 2026 content components
+import AdvancedTechTrends2026 from '../components/AdvancedTechTrends2026';
+import InteractiveTechDemo2026 from '../components/InteractiveTechDemo2026';
+import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
+import UltimateContentHub2026 from '../components/UltimateContentHub2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -277,6 +283,9 @@ export default function HomePage() {
         {/* REVOLUTIONARY AI CONTENT PROMOTION BANNER */}
         <RevolutionaryAIContentPromotionBanner />
         
+        {/* REVOLUTIONARY CONTENT BANNER 2026 */}
+        <RevolutionaryContentBanner2026 />
+        
         {/* ULTIMATE SERVICES SHOWCASE 2025 */}
         <UltimateServicesShowcase2025 />
         
@@ -306,6 +315,15 @@ export default function HomePage() {
         
         {/* SUCCESS STORIES SHOWCASE 2026 */}
         <SuccessStoriesShowcase2026 />
+        
+        {/* ADVANCED TECH TRENDS 2026 */}
+        <AdvancedTechTrends2026 />
+        
+        {/* INTERACTIVE TECH DEMO 2026 */}
+        <InteractiveTechDemo2026 />
+        
+        {/* ULTIMATE CONTENT HUB 2026 */}
+        <UltimateContentHub2026 />
         
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
