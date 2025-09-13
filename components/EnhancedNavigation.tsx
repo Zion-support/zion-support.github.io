@@ -17,6 +17,18 @@ const EnhancedNavigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const services = [
+    { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
+    { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },
+    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' },
+    { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },
+    { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },
+    { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6178
   const navigationItems = [
     { name: 'Home', href: '/' },
     { 
@@ -50,6 +62,10 @@ const EnhancedNavigation = () => {
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e336
+>>>>>>> cursor/create-and-deploy-new-content-6178
   ];
 
   return (
