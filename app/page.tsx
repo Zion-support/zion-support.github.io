@@ -120,6 +120,14 @@ import QuantumComputingAdvancedPromotionBanner from '../components/QuantumComput
 import QuantumAIContentPromotionBanner from '../components/QuantumAIContentPromotionBanner';
 import EnhancedQuantumContentShowcase from '../components/EnhancedQuantumContentShowcase';
 
+// AI 2027 Revolutionary Components
+import AI2027LatestBreakthroughsPromotionBanner from '../components/AI2027LatestBreakthroughsPromotionBanner';
+import AI2027NeuralSynthesisPromotionBanner from '../components/AI2027NeuralSynthesisPromotionBanner';
+import AI2027BreakthroughContentShowcase from '../components/AI2027BreakthroughContentShowcase';
+
+// AI 2028 Future Technology Components
+import AI2028FutureTechPromotionBanner from '../components/AI2028FutureTechPromotionBanner';
+
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -179,6 +187,21 @@ const HomePage: React.FC = () => {
               {/* New 2026 Content Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <NewContent2026PromotionBanner />
+              </Suspense>
+
+              {/* AI 2027 Latest Breakthroughs */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2027LatestBreakthroughsPromotionBanner />
+              </Suspense>
+
+              {/* AI 2027 Neural Synthesis */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2027NeuralSynthesisPromotionBanner />
+              </Suspense>
+
+              {/* AI 2027 Breakthrough Content Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2027BreakthroughContentShowcase />
               </Suspense>
 
               {/* New Quantum-AI Content Promotion Banner */}
@@ -262,6 +285,11 @@ const HomePage: React.FC = () => {
               {/* AI 2030 Transcendent Intelligence */}
               <Suspense fallback={<LoadingSpinner />}>
                 <AI2030TranscendentIntelligenceBanner />
+              </Suspense>
+
+              {/* AI 2028 Future Technology Preview */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2028FutureTechPromotionBanner />
               </Suspense>
 
               {/* Revolutionary Content Promotion */}
