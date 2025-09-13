@@ -26,6 +26,8 @@ import UltimateContentPromotionBanner from '../components/UltimateContentPromoti
 import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
 import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
+import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
 
 export default function HomePage() {
   return (
@@ -38,6 +40,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTION BANNER 2026 */}
+        <NewContentPromotionBanner2026 />
+        
+        {/* NEW CONTENT SHOWCASE 2026 */}
+        <NewContentShowcase2026 />
+        
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
         
