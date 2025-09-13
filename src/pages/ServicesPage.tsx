@@ -1,290 +1,319 @@
-import { Globe, Zap } from "lucide-react";
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-import { SEO } from "../components/SEOHead";
-import { SEO } from "../components/SEOHead";
-import { ALL_INNOVATIVE_SERVICES, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
-import React from 'react';
-import { Header } from '@/components/header/Header';
-import { Header } from '@/components/header/Header';
-import { Header } from '@/components/header/Header';
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { Footer } from '@/components/Footer';
-import { Footer } from '@/components/Footer';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { SEO } from '@/components/SEO';
-import { SEO } from '@/components/SEO';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { GradientHeading } from '@/components/GradientHeading';
-import { GradientHeading } from '@/components/GradientHeading';
-import { GradientHeading } from '@/components/GradientHeading';
+import { useRouter } from 'next/router';
+import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, Clock, Award } from 'lucide-react'
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { generateITServices, getServicesMarketStats, getRecommendedServices } from '@/utils/servicesAutoFeedAlgorithm';
+import { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { SERVICES } from '@/data/servicesData';
+import { useCurrency } from '@/hooks/useCurrency';
 
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { Button } from "@/components/ui/button";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Globe, Zap, Shield, Cloud, Database, Target, Smartphone, Link as LinkIcon } from "lucide-react";
-import { useEffect, useState } from "react";
-import { FEATURED_SERVICES } from "@/data/expandedServices";
+// Initial services from existing data
+const INITIAL_SERVICES: ProductListing[] = SERVICES;
 
+// Market insights component
+const ServicesMarketInsights = ({ stats }: { stats: any }) => (
+  <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
+    <CardContent className="p-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="text-center">
+          <div className="text-2xl font-bold text-green-400">${(stats.averagePrice / 1000).toFixed(1)}k</div>
+          <div className="text-sm text-muted-foreground">Avg Price</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-blue-400">{stats.averageRating}</div>
+          <div className="text-sm text-muted-foreground">Avg Rating</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-purple-400">{stats.totalServices}</div>
+          <div className="text-sm text-muted-foreground">Total Services</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-orange-400">{stats.availableServices}</div>
+          <div className="text-sm text-muted-foreground">Available Now</div>
+        </div>
+      </div>
+      <div className="mt-4 text-center text-sm text-muted-foreground">
+        Premium Services ({stats.premiumServices}) • AI Score Avg: {stats.averageAIScore}
+      </div>
+    </CardContent>
+  </Card>
+);
 
-function getRandomItem<T>(arr: T[]): T {
+// Filter controls
+const ServiceFilterControls = ({
+  sortBy,
+  setSortBy,
+  filterCategory,
+  setFilterCategory,
+  categories,
+  showRecommended,
+  setShowRecommended,
+  loading
+}: any) => (
+  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
+    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
+    <div className="flex items-center gap-2">
+      <Filter className="h-4 w-4 text-muted-foreground" />
+      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+        <option value="">All Categories</option>
+        {categories.map((cat: string) => <option key={cat} value={cat}>{cat}</option>)}
+      </select>
+    </div>
+    <div className="flex items-center gap-2">
+      <SortAsc className="h-4 w-4 text-muted-foreground" />
+      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+        <option value="newest">Newest First</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="rating">Highest Rated</option>
+        <option value="ai-score">AI Score</option>
+      </select>
+    </div>
+    <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
+      <Star className="h-4 w-4 mr-1" />
+      {showRecommended ? "All Services" : "Recommended"}
+    </Button>
+  </div>
+);
 
+// Service card
+const ServiceCard = ({ service, onViewDetails }: { service: ProductListing; onViewDetails: () => void }) => {
+  const { formatPrice } = useCurrency();
+  return (
+  <Card className="h-full hover:shadow-lg transition-shadow">
+    <CardHeader className="pb-3">
+      <div className="flex items-start justify-between">
+        <div className="flex-1 min-w-0">
+          <h3 className="font-semibold text-lg mb-1 line-clamp-1">{service.title}</h3>
+          <div className="flex items-center gap-2 mb-2">
+            <div className="flex items-center gap-1">
+              <Star className="h-4 w-4 text-yellow-500 fill-current" />
+              <span className="text-sm font-medium">{service.rating}</span>
+              <span className="text-xs text-muted-foreground">({service.reviewCount})</span>
+            </div>
+            {service.aiScore && service.aiScore > 85 && (
+              <Badge variant="secondary" className="text-xs bg-purple-100 text-purple-700">
+                AI Score: {service.aiScore}
+              </Badge>
+            )}
+          </div>
+          <div className="flex items-center gap-2 mt-2">
+            <Badge variant="secondary" className="text-xs">{service.author.name}</Badge>
+          </div>
+        </div>
+        <div className="text-right">
+          <div className="text-xl font-bold text-green-600">{formatPrice(service.price ?? 0)}</div>
+          <Badge variant={service.availability === "Available" ? "default" : "outline"} className="text-xs">
+            {service.availability}
+          </Badge>
+        </div>
+      </div>
+      <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{service.description}</p>
+      <div className="flex items-center justify-between">
+        <span className="text-sm font-medium">{service.category}</span>
+        <Button size="sm" onClick={onViewDetails}>
+          <ShoppingCart className="h-4 w-4 mr-1" />
+          Contact
+        </Button>
+      </div>
+    </CardHeader>
+  </Card>
+);
+};
 
+// Loading grid
+const ServicesLoadingGrid = ({ count = 8 }: { count?: number }) => (
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
+  </div>
+);
 
-
-
-
-
+// Main component
 export default function ServicesPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
+  const router = useRouter();
+  const [sortBy, setSortBy] = useState('newest');
+  const [filterCategory, setFilterCategory] = useState('');
+  const [showRecommended, setShowRecommended] = useState(false);
+  const [totalGenerated, setTotalGenerated] = useState(0);
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
-    { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'ai-finance', name: 'AI & Finance', icon: TrendingUp, color: 'from-zion-purple to-zion-blue' },
-    { id: 'ai-legal', name: 'AI & Legal', icon: Shield, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'ai-healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-zion-cyan to-zion-green' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'quantum-ml', name: 'Quantum ML', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
-    { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-    { id: 'autonomous-systems', name: 'Autonomous Systems', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
-    { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
-    { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
-    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
-    { id: 'ai-content-marketing', name: 'AI Content & Marketing', icon: Code, color: 'from-zion-orange to-zion-pink' },
-    { id: 'data-privacy-compliance', name: 'Data Privacy & Compliance', icon: Lock, color: 'from-zion-red to-zion-purple' },
-    { id: 'green-tech-sustainability', name: 'Green Tech & Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
-    { id: 'remote-work-collaboration', name: 'Remote Work & Collaboration', icon: Users, color: 'from-zion-blue to-zion-purple' },
-    { id: 'ecommerce-retail', name: 'E-commerce & Retail', icon: ShoppingCart, color: 'from-zion-green to-zion-orange' },
-    { id: 'healthcare-technology', name: 'Healthcare Technology', icon: Heart, color: 'from-zion-pink to-zion-red' },
-    { id: 'educational-technology', name: 'Educational Technology', icon: BookOpen, color: 'from-zion-blue to-zion-green' },
-    { id: 'real-estate-technology', name: 'Real Estate Technology', icon: Building, color: 'from-zion-orange to-zion-blue' },
-    { id: 'supply-chain-logistics', name: 'Supply Chain & Logistics', icon: Truck, color: 'from-zion-green to-zion-purple' },
-    { id: 'customer-support', name: 'Customer Support', icon: MessageCircle, color: 'from-zion-blue to-zion-pink' }
-  ];
+  const fetchServices = useCallback(async (page: number, limit: number) => {
+    await new Promise(resolve => setTimeout(resolve, 400));
 
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'budget', name: 'Budget', range: '$100 - $1,000' },
-    { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },
-    { id: 'enterprise', name: 'Enterprise', range: '$5,000+' }
-  ];
-
-  const sortOptions = [
-    { id: 'featured', name: 'Featured' },
-    { id: 'price-low', name: 'Price: Low to High' },
-    { id: 'price-high', name: 'Price: High to Low' },
-    { id: 'newest', name: 'Newest' },
-    { id: 'popular', name: 'Most Popular' },
-    { id: 'innovation', name: 'Innovation Level' }
-  ];
-
-  // Combine all services
-  const allServices = [
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
-    ...ADVANCED_ENTERPRISE_SOLUTIONS_2025,
-    ...NEXT_GEN_AI_SERVICES_2025,
-    ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025,
-    ...IOT_EDGE_COMPUTING_SERVICES_2025
-  ];
-
-  // Filter and sort services
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    let allServices: ProductListing[] = [];
     
-    const matchesCategory = selectedCategory === 'all' || 
-                           service.category.toLowerCase().includes(selectedCategory.replace('-', ' ')) ||
-                           service.subcategory.toLowerCase().includes(selectedCategory.replace('-', ' '));
-    
-    const matchesPrice = selectedPriceRange === 'all' || 
-                        (selectedPriceRange === 'budget' && service.price <= 1000) ||
-                        (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
-                        (selectedPriceRange === 'enterprise' && service.price > 5000);
-    
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
-
-  // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return a.price - b.price;
-      case 'price-high':
-        return b.price - a.price;
-      case 'newest':
-        return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime();
-      case 'innovation':
-        const innovationOrder = { 'Cutting-edge': 3, 'Advanced': 2, 'Standard': 1 };
-        return (innovationOrder[b.innovationLevel] || 0) - (innovationOrder[a.innovationLevel] || 0);
-      default:
-        return 0;
+    if (page === 1) {
+      allServices = [...INITIAL_SERVICES];
     }
-  });
-
-  const getCategoryIcon = (category: string) => {
-    const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
-    return cat ? cat.icon : Zap;
-  };
-
-  const getCategoryColor = (category: string) => {
-    const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
-    return cat ? cat.color : 'from-zion-cyan to-zion-blue';
-  };
-
-  // Get category statistics
-  const getCategoryStats = () => {
-    const stats: { [key: string]: number } = {};
-    INNOVATIVE_MICRO_SAAS_SERVICES_2025.forEach(service => {
-      const category = service.category.toLowerCase().replace(' ', '-');
-      stats[category] = (stats[category] || 0) + 1;
+    
+    const startId = INITIAL_SERVICES.length + (page - 1) * limit + totalGenerated;
+    const newServices = generateITServices(limit, startId);
+    setTotalGenerated(prev => prev + newServices.length);
+    allServices = [...allServices, ...newServices];
+    
+    let filteredServices = allServices;
+    
+    if (filterCategory) {
+      filteredServices = filteredServices.filter(s => s.category === filterCategory);
+    }
+    
+    if (showRecommended) {
+      filteredServices = getRecommendedServices(filteredServices);
+    }
+    
+    filteredServices.sort((a, b) => {
+      switch (sortBy) {
+        case 'price-low':
+          return (a.price || 0) - (b.price || 0);
+        case 'price-high':
+          return (b.price || 0) - (a.price || 0);
+        case 'rating':
+          return (b.rating || 0) - (a.rating || 0);
+        case 'ai-score':
+          return (b.aiScore || 0) - (a.aiScore || 0);
+        default:
+          return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
+      }
     });
-    return stats;
-  };
+    
+    const startIndex = (page - 1) * limit;
+    const endIndex = startIndex + limit;
+    const items = filteredServices.slice(startIndex, endIndex);
+    
+    return {
+      items,
+      hasMore: endIndex < filteredServices.length || page < 10,
+      total: filteredServices.length
+    };
+  }, [sortBy, filterCategory, showRecommended, totalGenerated]);
 
-  const categoryStats = getCategoryStats();
+  const {
+    items: services,
+    loading,
+    error,
+    hasMore,
+    isFetching,
+    lastElementRef,
+    scrollToTop,
+    refresh,
+    total
+  } = useInfiniteScrollPagination(fetchServices, 12);
+
+  useEffect(() => {
+    refresh();
+    setTotalGenerated(0);
+  }, [sortBy, filterCategory, showRecommended]);
+
+  const marketStats = useMemo(() => {
+    if (services.length === 0) return null;
+    return getServicesMarketStats(services);
+  }, [services]);
+
+  const categories = useMemo(() => {
+    return Array.from(new Set(services.map(s => s.category).filter(Boolean)));
+  }, [services]);
+
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  if (loading && services.length === 0) {
+    return (
+      <div className="container py-8">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
+          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+            IT & AI Services
+          </h1>
+          <p className="text-muted-foreground text-lg">Professional services for modern businesses and enterprises</p>
+        </motion.div>
+        <ServicesLoadingGrid />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="container py-8 text-center">
+        <h2 className="text-2xl font-bold mb-4">Error Loading Services</h2>
+        <p className="text-muted-foreground mb-4">Failed to load services. Please try again.</p>
+        <Button onClick={refresh}>Retry</Button>
+      </div>
+    );
+  }
 
   return (
-    <>
-      <SEOHead 
-      
+    <div className="container py-8">
+      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+          IT & AI Services
+        </h1>
+        <p className="text-muted-foreground text-lg">Professional services for digital transformation and technology innovation</p>
+      </motion.div>
 
-            
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+      {marketStats && (
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+          <ServicesMarketInsights stats={marketStats} />
+        </motion.div>
+      )}
 
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+        <ServiceFilterControls
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          filterCategory={filterCategory}
+          setFilterCategory={setFilterCategory}
+          categories={categories}
+          showRecommended={showRecommended}
+          setShowRecommended={setShowRecommended}
+          loading={isFetching}
+        />
+      </motion.div>
 
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+        <AnimatePresence mode="popLayout">
+          {services.map((item, index) => (
+            <motion.div
+              key={item.id} ref={index === services.length - 1 ? lastElementRef : null}
+              initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ delay: Math.min(index * 0.03, 0.5) }} whileHover={{ scale: 1.02 }}
+            >
+              <ServiceCard service={item} onViewDetails={() => router.push(`/services/${item.id}`)} />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
 
-                <Filter className="w-4 h-4 text-zion-cyan" />
+      {(isFetching || loading) && (
+        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <ServicesLoadingGrid count={4} />
+        </motion.div>
+      )}
 
-                <TrendingUp className="w-4 h-4 text-zion-cyan" />
+      {!hasMore && services.length > 0 && (
+        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <div className="text-muted-foreground text-lg mb-2">🚀 You've explored all available services!</div>
+          <div className="text-sm text-muted-foreground">Showing {services.length} IT & AI services</div>
+        </motion.div>
+      )}
 
-
-          <AnimatePresence mode="wait">
-                      
-                      
-
-
-                          <TrendingUp className="w-4 h-4" />
-
-                              <CheckCircle className="w-3 h-3 text-zion-cyan" />
-
-                          <Clock className="w-4 h-4" />
-                          <Star className="w-4 h-4 text-zion-cyan" />
-                      
-                      <Link
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
-          </AnimatePresence>
-
-
-                <Rocket className="w-10 h-10 text-white" />
-              
-              
-              
-
-                <Server className="w-10 h-10 text-white" />
-              
-              
-              
-
-                <Brain className="w-10 h-10 text-white" />
-              
-              
-              
-
-                <Globe className="w-10 h-10 text-white" />
-              
-              
-              
-
-                <Cpu className="w-10 h-10 text-white" />
-              
-              
-              
-
-                <Shield className="w-10 h-10 text-white" />
-              
-              
-              
-
-
-                  <Rocket className="w-8 h-8 text-white" />
-                
-                
-                
-                
-                <Link
-                </Link>
-
-          
-                <Brain className="w-8 h-8 text-white" />
-              
-              
-              <Link 
-                Explore Revolutionary Services <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-
-            
-              <Link
-                <MessageCircle className="w-5 h-5 mr-2" />
-              </Link>
-              
-                <Phone className="w-5 h-5 mr-2" />
-            
-            <Link to="/it-onsite-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2" />
-              </Button>
-            </Link>
-            <Link to="/expanded-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Zap className="h-4 w-4 mr-2" />
-              </Button>
-            </Link>
-            <Link to="/request-quote">
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-              </Button>
-            </Link>
-
-          
-                  {service.category === 'AI & Automation' && <Zap className="w-5 h-5 text-blue-500" />}
-                  {service.category === 'Cybersecurity' && <Shield className="w-5 h-5 text-red-500" />}
-                  {service.category === 'Cloud & DevOps' && <Cloud className="w-5 h-5 text-green-500" />}
-                  {service.category === 'Data & Analytics' && <Database className="w-5 h-5 text-purple-500" />}
-                  {service.category === 'Digital Transformation' && <Target className="w-5 h-5 text-indigo-500" />}
-                  {service.category === 'IoT & Edge Computing' && <Smartphone className="w-5 h-5 text-orange-500" />}
-                  {service.category === 'Blockchain & Web3' && <LinkIcon className="w-5 h-5 text-cyan-500" />}
-                
-                
-                
-                
-                <Button asChild className="w-full" size="sm">
-                  <Link to={`/service/${service.id}`}>
-                  </Link>
-                </Button>
-          
-            <Button asChild size="lg" variant="outline">
-              <Link to="/expanded-services">
-              </Link>
-            </Button>
-
-      <DynamicListingPage 
-      <TrustedBySection />
-    </>
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button onClick={scrollToTop} className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
+            initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }}
+            whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
+          >
+            <ArrowUp className="h-5 w-5 text-primary-foreground" />
+          </motion.button>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }

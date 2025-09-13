@@ -1,18 +1,16 @@
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from 'react-router-dom';
-// import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
-// import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-// import { generateSearchSuggestions } from "@/data/marketplaceData";
-// import { SearchSuggestion } from "@/types/search";
-// import {logErrorToProduction} from '@/utils/productionLogger';
-import { Loader2 } from 'lucide-react';
+import { useRouter } from 'next/router';
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+import { SearchSuggestion } from "@/types/search";
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Tabs,
   TabsContent,
   TabsList,
-  TabsTrigger
-} from "../components/ui/tabs";
-
+  TabsTrigger} from "@/components/ui/tabs";
+import { Loader2 } from 'lucide-react'
 
 interface SearchResult {
   id: string;
@@ -42,20 +40,17 @@ function highlight(text: string, term: string) {
 }
 
 export default function SearchPage() {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const searchParams = new URLSearchParams(location.search);
-  const initial = searchParams.get('q') || "";
-  const [query, setQuery] = useState(initial);
+  const router = useRouterReady(); // Use our custom hook
+  const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
-  // const suggestions: SearchSuggestion[] = generateSearchSuggestions();
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions();
 
   // Force re-render and reset state when route changes
-  useEffect(() => {
+  const routeKey = useRouteChange(() => {
     setResults([]);
     setLoading(false);
-  }, [location.pathname]);
+  });
 
   const productResults = results.filter(
     r => r.type === 'product' || r.type === 'service'
