@@ -22,6 +22,9 @@ const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../compo
 // Import new promotional banners
 import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
 import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2025GlobalTransformation15000ROIPromotionBanner';
+import AI2026BreakthroughContentPromotionBanner from '../components/AI2026BreakthroughContentPromotionBanner';
+import AI2027FuturePredictionsPromotionBanner from '../components/AI2027FuturePredictionsPromotionBanner';
+import InteractiveContentDiscovery2027 from '../components/InteractiveContentDiscovery2027';
 
 export default function HomePage() {
   return (
@@ -39,6 +42,12 @@ export default function HomePage() {
         
         {/* NEW: AI 2025 GLOBAL TRANSFORMATION 15000% ROI PROMOTION BANNER */}
         <AI2025GlobalTransformation15000ROIPromotionBanner />
+        
+        {/* NEW: AI 2026 BREAKTHROUGH CONTENT PROMOTION BANNER */}
+        <AI2026BreakthroughContentPromotionBanner />
+        
+        {/* NEW: AI 2027 FUTURE PREDICTIONS PROMOTION BANNER */}
+        <AI2027FuturePredictionsPromotionBanner />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
@@ -96,6 +105,9 @@ export default function HomePage() {
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI Recommendations..." />}>
           <RevolutionaryContentRecommendationEngine2026 />
         </Suspense>
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2027 */}
+        <InteractiveContentDiscovery2027 />
         
         {/* ADVANCED ANALYTICS DASHBOARD 2026 */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading Analytics Dashboard..." />}>

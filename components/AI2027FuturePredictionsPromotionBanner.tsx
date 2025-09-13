@@ -3,73 +3,97 @@ import Link from 'next/link';
 
 export default function AI2027FuturePredictionsPromotionBanner() {
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white py-4 px-4 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-4 left-4 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-          <div className="absolute top-8 right-8 w-1 h-1 bg-white rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute bottom-4 left-8 w-1.5 h-1.5 bg-white rounded-full animate-pulse delay-2000"></div>
-          <div className="absolute bottom-8 right-4 w-1 h-1 bg-white rounded-full animate-pulse delay-3000"></div>
-        </div>
-      </div>
-      
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-          <div className="flex-1">
-            <div className="flex items-center space-x-3 mb-2">
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
-                🔮 FUTURE PREDICTIONS
-              </span>
-              <span className="bg-yellow-400 text-purple-900 px-3 py-1 rounded-full text-sm font-bold">
-                NEW 2027
-              </span>
+    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-indigo-600 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center">
+          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-4">
+            <span className="text-sm font-semibold text-white animate-pulse">
+              🔮 FUTURE PREDICTIONS
+            </span>
+          </div>
+          
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            AI 2027{' '}
+            <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+              Future Predictions
+            </span>
+          </h2>
+          
+          <p className="text-xl md:text-2xl text-cyan-100 mb-8 max-w-4xl mx-auto">
+            Discover the revolutionary AI breakthroughs predicted for 2027. From neural synthesis 
+            to quantum-AI fusion - explore the future of artificial intelligence.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Link
+              href="/ai-2027-future-predictions-revolutionary"
+              className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            >
+              🔮 Explore Predictions
+            </Link>
+            <Link
+              href="/blog/ai-2027-neural-synthesis-breakthrough"
+              className="bg-transparent text-white px-8 py-4 rounded-lg font-bold text-lg border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300"
+            >
+              🧠 Neural Synthesis
+            </Link>
+          </div>
+          
+          {/* Key Predictions */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-3xl mb-3">🧠</div>
+              <h3 className="text-lg font-bold mb-2">Neural Synthesis</h3>
+              <p className="text-cyan-100 text-sm">
+                99.7% accuracy in neural synthesis with 8,000% ROI
+              </p>
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-2">
-              🔮 AI 2027 Future Predictions
-            </h2>
-            <p className="text-lg md:text-xl opacity-90 mb-4">
-              Revolutionary technology forecasts with <span className="font-bold text-yellow-300">5000% average ROI</span> and 
-              <span className="font-bold text-yellow-300"> 99.7% neural accuracy</span> predictions
-            </p>
-            <div className="flex flex-wrap items-center space-x-6 text-sm">
-              <div className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                <span>5000% Average ROI</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                <span>99.7% Neural Accuracy</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
-                <span>75% Industry Adoption</span>
-              </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-3xl mb-3">⚛️</div>
+              <h3 className="text-lg font-bold mb-2">Quantum-AI Fusion</h3>
+              <p className="text-cyan-100 text-sm">
+                10,000x faster processing with 15,000% ROI
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-3xl mb-3">🤖</div>
+              <h3 className="text-lg font-bold mb-2">Autonomous Systems</h3>
+              <p className="text-cyan-100 text-sm">
+                100% autonomous decision making with 5,000% ROI
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-3xl mb-3">🚀</div>
+              <h3 className="text-lg font-bold mb-2">Space AI</h3>
+              <p className="text-cyan-100 text-sm">
+                Autonomous space missions with 5,000% ROI
+              </p>
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Link 
-              href="/blog/ai-2027-future-predictions"
-              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              Explore Predictions
-            </Link>
-            <Link 
-              href="/resources/ai-2027-ultimate-implementation-master-guide"
-              className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold border-2 border-white/30 hover:bg-white/30 transition-all duration-200 text-center"
-            >
-              Get Implementation Guide
-            </Link>
+          {/* Probability Indicators */}
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">95%</div>
+              <div className="text-cyan-200 text-sm">Neural Synthesis Probability</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">88%</div>
+              <div className="text-cyan-200 text-sm">Quantum-AI Probability</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">92%</div>
+              <div className="text-cyan-200 text-sm">Autonomous Systems Probability</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">85%</div>
+              <div className="text-cyan-200 text-sm">Space AI Probability</div>
+            </div>
           </div>
         </div>
-      </div>
-      
-      {/* Floating prediction elements animation */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white/40 rounded-full animate-bounce delay-1000"></div>
-        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-white/40 rounded-full animate-bounce delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-white/40 rounded-full animate-bounce delay-3000"></div>
       </div>
     </div>
   );
