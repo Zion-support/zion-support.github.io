@@ -59,6 +59,10 @@ import InteractiveTechDemo2026 from '../components/InteractiveTechDemo2026';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
 import UltimateContentHub2026 from '../components/UltimateContentHub2026';
 
+// New interactive content components
+import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
+import ContentRecommendationEngine from '../components/ContentRecommendationEngine';
+
 // New promotional banners for latest content
 import AI2026RevolutionaryBreakthroughAnnouncementBanner from '../components/AI2026RevolutionaryBreakthroughAnnouncementBanner';
 import AI2030TranscendentIntelligencePromotionBanner from '../components/AI2030TranscendentIntelligencePromotionBanner';
@@ -104,6 +108,23 @@ export default function HomePage() {
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
         <InteractiveContentDiscoveryWidget />
+        
+        {/* NEW INTERACTIVE CONTENT DISCOVERY */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+              Discover Our Latest Solutions
+            </h2>
+            <div className="grid lg:grid-cols-2 gap-12">
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscovery />
+              </Suspense>
+              <Suspense fallback={<LoadingSpinner />}>
+                <ContentRecommendationEngine />
+              </Suspense>
+            </div>
+          </div>
+        </section>
         
         {/* NEW 2025-2026 ULTIMATE INNOVATION SHOWCASE */}
         <AI2025_2026UltimateInnovationShowcase />
