@@ -174,6 +174,10 @@ import AI2025_2026UltimateInnovationPromotionBanner from '../components/AI2025_2
 import BusinessTransformation2025Showcase from '../components/BusinessTransformation2025Showcase';
 import BusinessTransformation2025PromotionBanner from '../components/BusinessTransformation2025PromotionBanner';
 
+// Import new 2026 ultimate content promotion banners
+import NewContent2026UltimatePromotionBanner from '../components/NewContent2026UltimatePromotionBanner';
+import AI2025UltimateInnovationShowcaseBanner from '../components/AI2025UltimateInnovationShowcaseBanner';
+
 // Import new content promotion banners
 import NewContent2025UltimateTransformationBanner from '../components/NewContent2025UltimateTransformationBanner';
 import AI2025RevolutionaryContentShowcaseBanner from '../components/AI2025RevolutionaryContentShowcaseBanner';
@@ -349,6 +353,10 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
+
+        {/* NEW 2026 ULTIMATE CONTENT PROMOTION BANNERS */}
+        <NewContent2026UltimatePromotionBanner />
+        <AI2025UltimateInnovationShowcaseBanner />
         
         {/* NEW ULTIMATE TRANSFORMATION CONTENT BANNER */}
         <NewContent2025UltimateTransformationBanner />
