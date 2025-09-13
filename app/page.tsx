@@ -56,11 +56,14 @@ import UltimateContentShowcase2026PromotionBanner from '../components/UltimateCo
 import AIToolsUltimateShowcase2026 from '../components/AIToolsUltimateShowcase2026';
 import AIToolsUltimateShowcase2026PromotionBanner from '../components/AIToolsUltimateShowcase2026PromotionBanner';
 
-<<<<<<< HEAD
 // New promotional banners and showcases
 import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
 import AIToolsShowcase2026 from '../components/AIToolsShowcase2026';
 import AIToolsPromotionBanner2026 from '../components/AIToolsPromotionBanner2026';
+
+// New comprehensive content promotion banners
+import AISolutions2026ComprehensivePromotionBanner from '../components/AISolutions2026ComprehensivePromotionBanner';
+import BusinessAutomationMastery2026PromotionBanner from '../components/BusinessAutomationMastery2026PromotionBanner';
 
 // Additional 2026 content components
 import AdvancedTechTrends2026 from '../components/AdvancedTechTrends2026';
@@ -78,6 +81,10 @@ import AISolutions2025UltimatePromotionBanner from '../components/AISolutions202
 import TechTrends2025_2030PromotionBanner from '../components/TechTrends2025_2030PromotionBanner';
 import BusinessTransformationGuide2025PromotionBanner from '../components/BusinessTransformationGuide2025PromotionBanner';
 
+// New 2026 promotion banners
+import AISolutions2026ComprehensivePromotionBanner from '../components/AISolutions2026ComprehensivePromotionBanner';
+import BusinessAutomationMastery2026PromotionBanner from '../components/BusinessAutomationMastery2026PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -89,6 +96,7 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+<<<<<<< HEAD
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -107,6 +115,12 @@ export default function HomePage() {
         
         {/* NEW BUSINESS TRANSFORMATION GUIDE 2025 PROMOTION BANNER */}
         <BusinessTransformationGuide2025PromotionBanner />
+        
+        {/* NEW COMPREHENSIVE AI SOLUTIONS 2026 PROMOTION BANNER */}
+        <AISolutions2026ComprehensivePromotionBanner />
+        
+        {/* NEW BUSINESS AUTOMATION MASTERY 2026 PROMOTION BANNER */}
+        <BusinessAutomationMastery2026PromotionBanner />
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
         <UltimateContentShowcase2026PromotionBanner />
