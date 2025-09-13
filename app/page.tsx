@@ -498,6 +498,12 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
+        <AI2025UltimateBreakthroughPromotionBanner />
+        
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
         {/* ULTIMATE CONTENT REVOLUTION 2025 BANNER */}
         <UltimateContentRevolution2025Banner />
         
