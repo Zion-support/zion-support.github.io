@@ -127,6 +127,10 @@ import UltimateContentShowcase2026 from '../components/UltimateContentShowcase20
 import RevolutionaryTechShowcase2026Banner from '../components/RevolutionaryTechShowcase2026Banner';
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 
+// Import new ultimate content showcase banners
+import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
+import UltimateContentShowcase2025Banner from '../components/UltimateContentShowcase2025Banner';
+
 // Import new content showcase and promotion components
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
@@ -346,6 +350,10 @@ export default function HomePage() {
         
         {/* NEW CONTENT NAVIGATION */}
         <NewContentNavigation />
+        
+        {/* NEW ULTIMATE CONTENT SHOWCASE 2025 BANNERS */}
+        <UltimateContentShowcase2025Banner />
+        <NewContent2025UltimatePromotionBanner />
         
         {/* NEW 2026 PROMOTIONAL BANNERS */}
         <UltimateContentShowcase2026PromotionBanner />
