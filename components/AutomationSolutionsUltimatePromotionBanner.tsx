@@ -1,161 +1,147 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Bot, 
-  Zap, 
-  TrendingUp, 
-  Clock, 
-  Star,
-  Settings,
-  Target
-} from 'lucide-react';
 
 const AutomationSolutionsUltimatePromotionBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentSolution, setCurrentSolution] = useState(0);
-
-  const solutions = [
-    {
-      title: 'Autonomous Business Operations',
-      description: '99.9% Accuracy, 2,500% ROI',
-      icon: <Bot className="w-8 h-8" />,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'AI-Powered Workflow Automation',
-      description: '10,000x Faster Processing',
-      icon: <Settings className="w-8 h-8" />,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Predictive Maintenance Systems',
-      description: '95% Downtime Reduction',
-      icon: <Target className="w-8 h-8" />,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Customer Service Automation',
-      description: '24/7 Availability',
-      icon: <Zap className="w-8 h-8" />,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    const interval = setInterval(() => {
-      setCurrentSolution(prev => (prev + 1) % solutions.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  if (!isVisible) return null;
-
-  const current = solutions[currentSolution];
-
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-green-600 via-blue-600 to-purple-600">
-      {/* Animated Background */}
+    <section className="py-16 bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900 relative overflow-hidden">
+      {/* Animated Automation Elements */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/50 to-purple-600/50"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-          <div className="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
-          <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-white/10 rounded-full animate-pulse delay-3000"></div>
-        </div>
+        <div className="absolute top-16 left-20 w-24 h-24 bg-emerald-500/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-36 right-28 w-20 h-20 bg-teal-500/10 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-28 left-1/4 w-16 h-16 bg-cyan-500/10 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-36 right-1/3 w-32 h-32 bg-emerald-500/10 rounded-full animate-pulse delay-3000"></div>
+        
+        {/* Automation Grid Patterns */}
+        <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent animate-pulse"></div>
+        <div className="absolute top-1/3 left-0 w-full h-1 bg-gradient-to-r from-transparent via-teal-500/20 to-transparent animate-pulse delay-1000"></div>
+        <div className="absolute top-2/3 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent animate-pulse delay-2000"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            <Star className="w-4 h-4 text-yellow-300" />
-            AUTOMATION REVOLUTION
-            <Star className="w-4 h-4 text-yellow-300" />
+          <div className="inline-flex items-center bg-gradient-to-r from-emerald-500/20 to-teal-500/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+            <span className="text-emerald-400 font-medium text-sm">🤖 ULTIMATE AUTOMATION</span>
           </div>
-
-          {/* Rotating Solution Display */}
-          <div className="mb-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
-              <div className="flex items-center justify-center gap-4 mb-4">
-                <div className={`p-3 rounded-xl bg-gradient-to-r ${current.color}`}>
-                  {current.icon}
-                </div>
-                <div className="text-left">
-                  <h3 className="text-2xl md:text-3xl font-bold text-white">
-                    {current.title}
-                  </h3>
-                  <p className="text-lg text-green-100">{current.description}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Main Headline */}
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            🤖 Automation Solutions Ultimate Showcase
-          </h2>
           
-          <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-4xl mx-auto">
-            Revolutionary automation solutions that transform businesses with 2,500-5,000% ROI 
-            and 99.9% accuracy across all industries
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Automation Solutions Ultimate Showcase
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
+              Beyond Human Limits
+            </span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Discover the most advanced automation solutions that will revolutionize how we work, live, and interact 
+            with technology. From autonomous AI agents to omniversal automation systems.
           </p>
 
-          {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-8 mb-8">
-            <div className="flex items-center gap-2 text-white">
-              <TrendingUp className="w-5 h-5 text-green-400" />
-              <span className="text-lg font-semibold">2,500-5,000% ROI</span>
-            </div>
-            <div className="flex items-center gap-2 text-white">
-              <Target className="w-5 h-5 text-blue-400" />
-              <span className="text-lg font-semibold">99.9% Accuracy</span>
-            </div>
-            <div className="flex items-center gap-2 text-white">
-              <Zap className="w-5 h-5 text-yellow-400" />
-              <span className="text-lg font-semibold">10,000x Faster</span>
-            </div>
-          </div>
-
-          {/* Limited Time Offer */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Clock className="w-5 h-5 text-yellow-300" />
-              <span className="text-lg font-semibold text-white">Free Implementation Guide</span>
-            </div>
-            <p className="text-green-100">
-              Get our comprehensive automation implementation guide worth $5,000 absolutely free
-            </p>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
               to="/automation-solutions"
-              className="group bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+              className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              Explore Solutions
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              Explore Automation Solutions
             </Link>
             <Link
-              to="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-600 transition-all duration-300"
+              to="/automation-solutions/demo"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 border border-white/20"
             >
-              Get Free Consultation
+              Live Demo
             </Link>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="mt-8 text-green-200 text-sm">
-            <p>✓ Free Implementation Guide • ✓ Expert Support • ✓ 30-Day Money Back</p>
+          {/* Automation Capabilities */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-3xl mb-3">🤖</div>
+              <h3 className="text-lg font-semibold text-white mb-2">Autonomous AI Agents</h3>
+              <p className="text-gray-300 text-sm">Self-managing intelligent systems</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-3xl mb-3">⚡</div>
+              <h3 className="text-lg font-semibold text-white mb-2">Quantum Automation</h3>
+              <p className="text-gray-300 text-sm">Quantum-powered optimization</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-3xl mb-3">🧠</div>
+              <h3 className="text-lg font-semibold text-white mb-2">Neural Networks</h3>
+              <p className="text-gray-300 text-sm">Brain-inspired automation</p>
+            </div>
+          </div>
+
+          {/* Automation Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-12">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-emerald-400">95%</div>
+              <div className="text-gray-400 text-sm">Efficiency Increase</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-teal-400">24/7</div>
+              <div className="text-gray-400 text-sm">Continuous Operation</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-cyan-400">99.9%</div>
+              <div className="text-gray-400 text-sm">Accuracy Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-emerald-400">∞</div>
+              <div className="text-gray-400 text-sm">Scalability</div>
+            </div>
+          </div>
+
+          {/* Industry Applications */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="text-2xl mb-2">🏭</div>
+              <div className="text-white font-medium">Manufacturing</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="text-2xl mb-2">🏥</div>
+              <div className="text-white font-medium">Healthcare</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="text-2xl mb-2">🚗</div>
+              <div className="text-white font-medium">Transportation</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="text-2xl mb-2">🏦</div>
+              <div className="text-white font-medium">Finance</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="text-2xl mb-2">🌱</div>
+              <div className="text-white font-medium">Agriculture</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="text-2xl mb-2">🏠</div>
+              <div className="text-white font-medium">Smart Homes</div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="p-6 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 backdrop-blur-sm rounded-xl border border-white/20">
+            <p className="text-lg text-gray-300 mb-4">
+              <strong className="text-white">Exclusive Access:</strong> Get early access to our automation solutions research and implementation guides
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/automation-solutions/subscribe"
+                className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+              >
+                Subscribe for Updates
+              </Link>
+              <Link
+                to="/automation-solutions/contact"
+                className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 border border-white/20"
+              >
+                Contact Automation Experts
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

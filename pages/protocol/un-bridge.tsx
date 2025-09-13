@@ -3,13 +3,38 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import ProposalGenerator from '../../components/governance/ProposalGenerator';
 
 export default function UNBridgePage() {
-  return (
     <EnhancedLayout>
-      <div className="space-y-4">
-        <h1 className="text-2xl font-semibold">UN Bridge</h1>
-        <p className="text-gray-600">Draft, translate, and submit proposals to global institutions.</p>
         <ProposalGenerator />
-      </div>
     </EnhancedLayout>
-  );
-}
+  
+  
+  componentDidCatch(error, errorInfo) {
+  
+    
+import React, { useState } from 'react';
+
+
+
+
+
+
+  async function exportArtifacts() {
+      await fetch('/api/proposals/export', {
+
+export default function UNBridge(req, res) {
+
+
+
+
+
+
+
+
+
+                <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
+
+              on_click={export_artifacts}
+
+
+
+

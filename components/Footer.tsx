@@ -5,6 +5,21 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
+
+import React from './react';
+import Link from './next / link';
+import {
+export default /**
+
+
+
+
+
+
+
+
+
+
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Case Studies', href: '/case-studies' },
@@ -26,8 +41,25 @@ const Footer = () => {
     resources: [
       { name: 'Documentation', href: '/docs' },
       { name: 'API Reference', href: '/api' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Support Center', href: '/support' }
+
+export default function Footer() {;
+
+
+
+            <Link href="/" className="text-2xl font-bold text-white mb-4 block">;
+            </Link>;
+
+
+            
+
+
+
+
+
+
+
+
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from lucide-react';
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy-policy' },
@@ -73,9 +105,12 @@ const Footer = () => {
                 <span>✉️</span>
                 <span>kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <span>📍</span>
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <MapPin className=w-4 h-4 mr-2 text-blue-400" />
+
+
+
+
+
               </div>
             </div>
           </div>
@@ -97,8 +132,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services Links */}
-          <div>
+
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
@@ -110,19 +144,38 @@ const Footer = () => {
                     {link.name}
                   </Link>
                 </li>
+
+
+
+                        <Link
+                        </Link>
+
               ))}
             </ul>
           </div>
 
-          {/* Products Links */}
+
+
+
+                <Phone className="w-4 h-4 mr-3" />;
+                <Mail className="w-4 h-4 mr-3" />;
+                <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />;
+                  <Link
+                  </Link>;
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
               {footerLinks.products.map((link) => (
                 <li key={link.name}>
                   <Link 
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                  <Link
+
+                  <Link
+
+
+
+
                   >
                     {link.name}
                   </Link>
@@ -131,15 +184,58 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources Links */}
-          <div>
+
+                  </Link>;
+
+                  <Link
+
+                  <Link
+
+
+
+
+                  </Link>
+
+
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link 
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                  </Link>;
+                  <Link
+                  </Link>;
+
+            <Link href="/" className="text - 2xl font - bold text - white mb - 4 block">;
+            </Link>;
+                <Phone className="w - 4 h - 4 mr - 3" />;
+                <Mail className="w - 4 h - 4 mr - 3" />;
+                <MapPin className="w - 4 h - 4 mr - 3 mt - 1 flex - shrink - 0" />;
+                  <Link;
+                  </Link>;
+                  <Link;
+                  </Link>;
+                  <Link;
+                  </Link>;
+                  <Link;
+                  </Link>;
+
+
+                <ArrowRight className="w-4 h-4 ml-2" />;
+
+
+                <Linkedin className="w-5 h-5" />;
+                <Twitter className="w-5 h-5" />;
+                <Facebook className="w-5 h-5" />;
+
+
+
+              <Link
+
+
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+
+
                   >
                     {link.name}
                   </Link>
@@ -227,3 +323,17 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+              <Link
+
+
+              </Link>
+                <Instagram className="w-5 h-5" />;
+              <Link
+              </Link>;
+              <Link
+              </Link>;
+              <Link
+
+

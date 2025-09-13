@@ -1,106 +1,141 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Filter, TrendingUp, Clock, Star, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Search, Filter, Star, Clock, Users, TrendingUp, Brain, Zap, Atom, Bot, ChevronRight, X } from 'lucide-react';
 
 const InteractiveContentDiscoveryWidget2025: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('trending');
+  const [selectedYear, setSelectedYear] = useState('all');
+  const [showFilters, setShowFilters] = useState(false);
   const [filteredContent, setFilteredContent] = useState([]);
 
   const categories = [
-    { id: 'all', name: 'All Content', count: 156 },
-    { id: 'neural-networks', name: 'Neural Networks', count: 32 },
-    { id: 'quantum-computing', name: 'Quantum Computing', count: 28 },
-    { id: 'automation', name: 'Automation', count: 45 },
-    { id: 'content-creation', name: 'Content Creation', count: 23 },
-    { id: 'business-strategy', name: 'Business Strategy', count: 18 },
-    { id: 'future-tech', name: 'Future Tech', count: 10 }
+    { id: 'all', label: 'All Content', icon: Brain },
+    { id: 'ai', label: 'AI Breakthroughs', icon: Brain },
+    { id: 'quantum', label: 'Quantum Computing', icon: Atom },
+    { id: 'automation', label: 'Automation', icon: Bot },
+    { id: 'predictions', label: 'Predictions', icon: TrendingUp },
+    { id: 'technologies', label: 'Technologies', icon: Zap }
   ];
 
-  const contentItems = [
+  const years = [
+    { id: 'all', label: 'All Years' },
+    { id: '2025', label: '2025' },
+    { id: '2026', label: '2026' },
+    { id: '2027', label: '2027' },
+    { id: '2028', label: '2028' },
+    { id: '2029', label: '2029' },
+    { id: '2030', label: '2030' }
+  ];
+
+  const contentData = [
     {
       id: 1,
-      title: "AI 2025 Neural Architecture Revolution",
-      description: "Complete guide to implementing next-generation neural networks with 10,000x performance improvements.",
-      category: "neural-networks",
+      title: "AI 2025: Neural Synthesis Breakthrough",
+      description: "Revolutionary neural synthesis technologies that will enable AI systems to think and reason like humans.",
+      category: "ai",
+      year: "2025",
       readTime: "15 min",
-      views: 12500,
-      rating: 4.9,
+      views: "2.5M",
       trending: true,
-      featured: true,
-      tags: ["AI", "Neural Networks", "Performance", "Architecture"]
+      tags: ["Neural Networks", "AI 2025", "Breakthrough"],
+      image: "/api/placeholder/300/200"
     },
     {
       id: 2,
-      title: "Quantum-AI Fusion Implementation",
-      description: "Breakthrough techniques for combining quantum computing with AI for unprecedented processing power.",
-      category: "quantum-computing",
-      readTime: "20 min",
-      views: 8700,
-      rating: 4.8,
+      title: "Quantum Computing Solutions 2025",
+      description: "Comprehensive quantum computing solutions including error-corrected quantum computers and quantum machine learning.",
+      category: "quantum",
+      year: "2025",
+      readTime: "18 min",
+      views: "3.2M",
       trending: true,
-      featured: true,
-      tags: ["Quantum", "AI", "Fusion", "Computing"]
+      tags: ["Quantum Computing", "Solutions", "2025"],
+      image: "/api/placeholder/300/200"
     },
     {
       id: 3,
-      title: "Autonomous Business Systems 2025",
-      description: "Complete blueprint for building self-managing business systems with 99.9% accuracy.",
+      title: "Advanced Automation Systems 2025",
+      description: "Intelligent process automation and autonomous decision systems that will transform business operations.",
       category: "automation",
-      readTime: "25 min",
-      views: 15200,
-      rating: 4.9,
+      year: "2025",
+      readTime: "20 min",
+      views: "4.1M",
       trending: false,
-      featured: true,
-      tags: ["Automation", "Business", "Systems", "AI"]
+      tags: ["Automation", "Systems", "2025"],
+      image: "/api/placeholder/300/200"
     },
     {
       id: 4,
-      title: "AI-Powered Content Generation Mastery",
-      description: "Advanced techniques for creating high-quality content at scale with AI assistance.",
-      category: "content-creation",
-      readTime: "18 min",
-      views: 9300,
-      rating: 4.7,
-      trending: false,
-      featured: false,
-      tags: ["Content", "AI", "Generation", "Mastery"]
+      title: "AI 2026: Quantum-AI Fusion",
+      description: "Breakthrough quantum-AI fusion technologies that will enable unprecedented computational power.",
+      category: "ai",
+      year: "2026",
+      readTime: "22 min",
+      views: "5.7M",
+      trending: true,
+      tags: ["Quantum AI", "Fusion", "2026"],
+      image: "/api/placeholder/300/200"
     },
     {
       id: 5,
-      title: "Machine Learning ROI Optimization",
-      description: "Proven strategies for maximizing return on investment in ML implementations.",
-      category: "business-strategy",
-      readTime: "12 min",
-      views: 6800,
-      rating: 4.8,
-      trending: false,
-      featured: false,
-      tags: ["ML", "ROI", "Optimization", "Business"]
+      title: "Future Technology Predictions 2027-2030",
+      description: "Comprehensive predictions for technology development from 2027 to 2030, including AI, quantum, and space tech.",
+      category: "predictions",
+      year: "2027",
+      readTime: "25 min",
+      views: "6.8M",
+      trending: true,
+      tags: ["Predictions", "Future", "Technology"],
+      image: "/api/placeholder/300/200"
     },
     {
       id: 6,
-      title: "Future of AI: 2030 Predictions",
-      description: "Exclusive insights into AI development trends and future technological breakthroughs.",
-      category: "future-tech",
-      readTime: "22 min",
-      views: 11400,
-      rating: 4.9,
+      title: "Neural Interface Technologies 2028",
+      description: "Revolutionary neural interface technologies that will enable direct brain-computer communication.",
+      category: "technologies",
+      year: "2028",
+      readTime: "19 min",
+      views: "3.9M",
+      trending: false,
+      tags: ["Neural Interface", "Technology", "2028"],
+      image: "/api/placeholder/300/200"
+    },
+    {
+      id: 7,
+      title: "AI 2029: Transcendent Intelligence",
+      description: "The emergence of transcendent AI intelligence that surpasses human cognitive abilities in every domain.",
+      category: "ai",
+      year: "2029",
+      readTime: "28 min",
+      views: "7.2M",
       trending: true,
-      featured: false,
-      tags: ["Future", "AI", "Predictions", "2030"]
+      tags: ["Transcendent", "Intelligence", "2029"],
+      image: "/api/placeholder/300/200"
+    },
+    {
+      id: 8,
+      title: "Quantum Internet Infrastructure 2030",
+      description: "Next-generation quantum internet infrastructure enabling secure quantum communication globally.",
+      category: "quantum",
+      year: "2030",
+      readTime: "24 min",
+      views: "4.5M",
+      trending: true,
+      tags: ["Quantum Internet", "Infrastructure", "2030"],
+      image: "/api/placeholder/300/200"
     }
   ];
 
   useEffect(() => {
-    let filtered = contentItems;
+    let filtered = contentData;
 
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(item => 
-        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+    // Filter by search query
+    if (searchQuery) {
+      filtered = filtered.filter(item =>
+        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       );
     }
 
@@ -109,169 +144,247 @@ const InteractiveContentDiscoveryWidget2025: React.FC = () => {
       filtered = filtered.filter(item => item.category === selectedCategory);
     }
 
-    // Sort content
-    switch (sortBy) {
-      case 'trending':
-        filtered = filtered.sort((a, b) => b.trending - a.trending || b.views - a.views);
-        break;
-      case 'rating':
-        filtered = filtered.sort((a, b) => b.rating - a.rating);
-        break;
-      case 'views':
-        filtered = filtered.sort((a, b) => b.views - a.views);
-        break;
-      case 'newest':
-        filtered = filtered.sort((a, b) => b.id - a.id);
-        break;
+    // Filter by year
+    if (selectedYear !== 'all') {
+      filtered = filtered.filter(item => item.year === selectedYear);
     }
 
     setFilteredContent(filtered);
-  }, [searchTerm, selectedCategory, sortBy]);
+  }, [searchQuery, selectedCategory, selectedYear]);
+
+  const getCategoryIcon = (category: string) => {
+    const categoryObj = categories.find(cat => cat.id === category);
+    return categoryObj ? categoryObj.icon : Brain;
+  };
+
+  const getCategoryLabel = (category: string) => {
+    const categoryObj = categories.find(cat => cat.id === category);
+    return categoryObj ? categoryObj.label : 'AI Breakthroughs';
+  };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Discover Revolutionary Content
+            Interactive Content Discovery
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Use our advanced discovery engine to find the perfect AI content for your needs.
+            Discover the most relevant content for your interests. Use our intelligent search and filtering 
+            system to find exactly what you're looking for.
           </p>
         </div>
 
-        {/* Search and filters */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6 mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Search */}
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+        {/* Search and Filters */}
+        <div className="mb-12">
+          <div className="flex flex-col lg:flex-row gap-4 mb-6">
+            {/* Search Bar */}
+            <div className="flex-1 relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search content..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Search content, topics, or keywords..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:bg-white/20 transition-all duration-300"
               />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              )}
             </div>
 
-            {/* Category filter */}
-            <div>
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                {categories.map(category => (
-                  <option key={category.id} value={category.id} className="bg-gray-800">
-                    {category.name} ({category.count})
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Sort */}
-            <div>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="trending" className="bg-gray-800">Trending</option>
-                <option value="rating" className="bg-gray-800">Highest Rated</option>
-                <option value="views" className="bg-gray-800">Most Viewed</option>
-                <option value="newest" className="bg-gray-800">Newest</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        {/* Content grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((content) => (
-            <div 
-              key={content.id} 
-              className="group bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
+            {/* Filter Toggle */}
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              className="flex items-center px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white hover:bg-white/20 transition-all duration-300"
             >
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    {content.trending && (
-                      <span className="px-2 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-semibold rounded-full flex items-center">
-                        <TrendingUp className="w-3 h-3 mr-1" />
-                        Trending
-                      </span>
-                    )}
-                    {content.featured && (
-                      <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-semibold rounded-full">
-                        Featured
-                      </span>
-                    )}
-                  </div>
-                  <div className="flex items-center text-yellow-400">
-                    <Star className="w-4 h-4 mr-1" />
-                    {content.rating}
+              <Filter className="w-5 h-5 mr-2" />
+              Filters
+            </button>
+          </div>
+
+          {/* Filter Panel */}
+          {showFilters && (
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/20 p-6 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Category Filter */}
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-3">Category</h3>
+                  <div className="grid grid-cols-2 gap-2">
+                    {categories.map((category) => {
+                      const Icon = category.icon;
+                      return (
+                        <button
+                          key={category.id}
+                          onClick={() => setSelectedCategory(category.id)}
+                          className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                            selectedCategory === category.id
+                              ? 'bg-purple-600 text-white'
+                              : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                          }`}
+                        >
+                          <Icon className="w-4 h-4 mr-2" />
+                          {category.label}
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                  {content.title}
-                </h3>
-                <p className="text-gray-300 mb-4 line-clamp-3">
-                  {content.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {content.tags.slice(0, 3).map((tag, index) => (
-                    <span 
-                      key={index}
-                      className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex items-center justify-between text-sm text-gray-400">
-                  <div className="flex items-center space-x-4">
-                    <div className="flex items-center">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {content.readTime}
-                    </div>
-                    <div className="flex items-center">
-                      <span className="mr-1">👁</span>
-                      {content.views.toLocaleString()}
-                    </div>
+                {/* Year Filter */}
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-3">Year</h3>
+                  <div className="grid grid-cols-3 gap-2">
+                    {years.map((year) => (
+                      <button
+                        key={year.id}
+                        onClick={() => setSelectedYear(year.id)}
+                        className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                          selectedYear === year.id
+                            ? 'bg-purple-600 text-white'
+                            : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                        }`}
+                      >
+                        {year.label}
+                      </button>
+                    ))}
                   </div>
-                  <button className="flex items-center text-blue-400 hover:text-blue-300 font-semibold group-hover:translate-x-1 transition-all duration-300">
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
                 </div>
               </div>
             </div>
-          ))}
+          )}
         </div>
 
+        {/* Results Count */}
+        <div className="mb-8">
+          <p className="text-gray-300">
+            Showing {filteredContent.length} result{filteredContent.length !== 1 ? 's' : ''}
+            {searchQuery && ` for "${searchQuery}"`}
+            {selectedCategory !== 'all' && ` in ${getCategoryLabel(selectedCategory)}`}
+            {selectedYear !== 'all' && ` from ${selectedYear}`}
+          </p>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {filteredContent.map((item) => {
+            const CategoryIcon = getCategoryIcon(item.category);
+            return (
+              <div key={item.id} className="group bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden hover:transform hover:scale-105">
+                <div className="relative">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  {item.trending && (
+                    <div className="absolute top-4 left-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
+                      <Star className="w-4 h-4 mr-1" />
+                      Trending
+                    </div>
+                  )}
+                  <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm flex items-center">
+                    <CategoryIcon className="w-4 h-4 mr-1" />
+                    {item.year}
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 line-clamp-3">
+                    {item.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {item.tags.map((tag, index) => (
+                      <span key={index} className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {item.readTime}
+                    </div>
+                    <div className="flex items-center">
+                      <Users className="w-4 h-4 mr-1" />
+                      {item.views} views
+                    </div>
+                  </div>
+                  
+                  <Link 
+                    to={`/content/${item.id}`}
+                    className="group/link inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold transition-colors"
+                  >
+                    Read More
+                    <ChevronRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* No Results */}
         {filteredContent.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-gray-400 text-lg mb-4">No content found matching your criteria</div>
-            <button 
+          <div className="text-center py-16">
+            <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Search className="w-12 h-12 text-gray-400" />
+            </div>
+            <h3 className="text-2xl font-semibold text-white mb-4">No content found</h3>
+            <p className="text-gray-300 mb-8 max-w-md mx-auto">
+              Try adjusting your search terms or filters to find what you're looking for.
+            </p>
+            <button
               onClick={() => {
-                setSearchTerm('');
+                setSearchQuery('');
                 setSelectedCategory('all');
-                setSortBy('trending');
+                setSelectedYear('all');
               }}
-              className="text-blue-400 hover:text-blue-300 font-semibold"
+              className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
             >
-              Clear filters
+              Clear All Filters
             </button>
           </div>
         )}
 
-        {/* Results count */}
-        <div className="mt-8 text-center text-gray-400">
-          Showing {filteredContent.length} of {contentItems.length} content pieces
+        {/* CTA Section */}
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h3 className="text-3xl font-bold text-white mb-4">
+            Can't Find What You're Looking For?
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Our content library is constantly expanding. Request specific content or topics 
+            you'd like to see covered.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/content-request"
+              className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              <Brain className="w-6 h-6 mr-2" />
+              Request Content
+              <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link 
+              to="/newsletter"
+              className="group inline-flex items-center px-8 py-4 bg-transparent border-2 border-white/30 hover:border-white/60 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white/10"
+            >
+              <TrendingUp className="w-6 h-6 mr-2" />
+              Get Updates
+              <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

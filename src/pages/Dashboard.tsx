@@ -75,15 +75,22 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
 
-        {/* Recent Orders */}
-        <div className="mt-8">
-          <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
-            <h2 className="text-xl font-semibold text-white mb-4">Recent Orders</h2>
-            <div className="space-y-4">
-              <div className="flex items-center justify-between p-4 bg-slate-700/50 rounded-lg">
-                <div>
-                  <h3 className="text-white font-medium">AI Chatbot Development</h3>
-                  <p className="text-gray-400 text-sm">Order #12345</p>
+                <Link 
+                  <User className="w-5 h-5 text-zion-cyan" />
+                </Link>
+                <Link 
+                  <Settings className="w-5 h-5 text-zion-cyan" />
+                </Link>
+                <Link 
+                  <Globe className="w-5 h-5 text-zion-cyan" />
+                </Link>
+
+                
+                        <UserCheck size={24} className="text-white"/>
+                        <MessageSquare size={24} className="text-white"/>
+                        <Bell size={24} className="text-zion-slate-light"/>
+                
+                  <CommunityDiscussion />
                 </div>
                 <Badge variant="outline" className="border-green-500 text-green-500">
                   Completed
@@ -104,6 +111,8 @@ const Dashboard: React.FC = () => {
       </div>
     </div>
   );
-};
 
 export default Dashboard;
+      
+    export default Dashboard;
+}

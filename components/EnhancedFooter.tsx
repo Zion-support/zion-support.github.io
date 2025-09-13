@@ -1,3 +1,22 @@
+
+
+import React from 'react';
+
+import Link from 'next/link';
+
+import {
+
+
+
+} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+import React from 'react';
+
+
+  
+  
+  componentDidCatch(error, errorInfo) {
+  
+    
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -37,56 +56,49 @@ export default function EnhancedFooter() {
     { name: 'Whitepapers', href: '/whitepapers' }
   ];
 
-  const support = [
-    { name: 'Help Center', href: '/help' },
-    { name: 'Contact Support', href: '/support' },
-    { name: 'Status Page', href: '/status' },
-    { name: 'Community Forum', href: '/community' },
-    { name: 'Training', href: '/training' },
-    { name: 'FAQ', href: '/faq' }
-  ];
 
   const socialLinks = [
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
-  ];
 
-  return (
-    <footer className="bg-slate-950 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center">
                 <Brain className="w-7 h-7 text-white" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
             </Link>
-            <p className="text-white/70 text-lg leading-relaxed mb-6 max-w-md">
-              Leading-edge technology solutions and autonomous innovation platform. 
-              Empowering businesses with cutting-edge AI, quantum computing, and cybersecurity.
-            </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <motion.a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg flex items-center justify-center text-white/60 hover:text-white transition-all duration-300"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <social.icon className="w-5 h-5" />
-                </motion.a>
+
+
+                <Brain className='w-6 h-6 text-white' />;
+
+
+                <Mail className='w-4 h-4' />;
+                <Phone className='w-4 h-4' />;
+
+
+                <MapPin className='w-4 h-4' />                <span>Global Operations</span>              <div className="flex items-center space-x-3 text-white/70">;
+                <MapPin className="w-4 h-4" />;
+
+
+
+
+                    <Link
+import Link from 'next / link';
+import {
+import React from 'react';
+import Link from 'next/link';
+
+import {
+
+
+
+
+
+
+
+
+
+
+};export default EnhancedFooter;  );
+
               ))}
             </div>
           </div>
@@ -248,5 +260,93 @@ export default function EnhancedFooter() {
         </div>
       </div>
     </footer>
-  );
-}
+
+                    </Link>;
+}export default EnhancedFooter);
+export default EnhancedFooter;
+import React from './react';
+export default /**
+
+
+
+
+
+
+
+
+
+
+
+
+                <Phone className="w-4 h-4"  />";
+
+
+                <Mail className="w-4 h-4"  />";
+
+                <MapPin className="w-4 h-4"  />,;
+
+              <Globe className="w-5 h-5 mr-2 text-blue-400"  />;
+
+                <Phone className="w - 4 h - 4"  />";
+                <Mail className="w - 4 h - 4"  />";
+                <MapPin className="w - 4 h - 4"  />,
+              <Globe className="w - 5 h - 5 mr - 2 text - blue - 400"  />;
+
+                  <Link href="{link.href}
+
+                  <Link href="{link && link.href}
+
+
+                  </Link>;
+                  </Link>;
+
+              <Shield className="w - 5 h - 5 mr - 2 text - green - 400"  />;
+
+                  <Link href="{link.href}
+
+                  <Link href="{link && link.href}
+
+
+                  </Link>;
+                  </Link>;
+
+              <FileText className="w - 5 h - 5 mr - 2 text - purple - 400"  />;
+
+                  <Link href="{link.href}
+
+                  <Link href="{link && link.href}
+
+
+                  </Link>;
+                  </Link>;
+
+              <HelpCircle className="w - 5 h - 5 mr - 2 text - yellow - 400"  />;
+
+                  <Link href="{link.href}
+
+                  <Link href="{link && link.href}
+
+
+                  </Link>;
+
+                  <Link href="{link && link.href}
+
+
+                  </Link>;
+
+
+
+
+                  </Link>;
+                  <Link href="{link.href}
+                  </Link>;
+
+
+        <ArrowUp className="w-5 h-5"  />;
+
+
+        <ArrowUp className="w - 5 h - 5"  />;
+};export default EnhancedFooter;  )
+
+
+

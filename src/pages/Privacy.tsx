@@ -3,6 +3,82 @@ import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 
 export default function Privacy() {
+export default function Privacy() {
+  };
+
+  const dataCategories = [
+    {
+      title: 'Personal Information',
+      description: 'Name, email address, phone number, company information',
+      examples: ['Contact forms', 'Account registration', 'Newsletter signup']
+    },
+    {
+      title: 'Technical Data',
+      description: 'IP address, browser type, device information, usage analytics',
+      examples: ['Website analytics', 'Performance monitoring', 'Security logs']
+    },
+    {
+      title: 'Business Information',
+      description: 'Company details, project requirements, service preferences',
+      examples: ['Service inquiries', 'Project consultations', 'Client communications']
+    },
+    {
+      title: 'Communication Data',
+      description: 'Email correspondence, chat logs, support tickets',
+      examples: ['Customer support', 'Project updates', 'Marketing communications']
+    }
+  ];
+
+  const dataUses = [
+    {
+      purpose: 'Service Delivery',
+      description: 'To provide and maintain our technology services and solutions'
+    },
+    {
+      purpose: 'Communication',
+      description: 'To respond to inquiries and provide customer support'
+    },
+    {
+      purpose: 'Improvement',
+      description: 'To enhance our services and develop new features'
+    },
+    {
+      purpose: 'Security',
+      description: 'To protect against fraud and ensure system security'
+    },
+    {
+      purpose: 'Compliance',
+      description: 'To meet legal obligations and regulatory requirements'
+    },
+    {
+      purpose: 'Marketing',
+      description: 'To send relevant updates and promotional materials (with consent)'
+    }
+  ];
+
+  const dataSharing = [
+    {
+      category: 'Service Providers',
+      description: 'Trusted third-party vendors who assist in service delivery',
+      examples: ['Cloud hosting providers', 'Payment processors', 'Analytics services']
+    },
+    {
+      category: 'Legal Requirements',
+      description: 'When required by law or to protect our rights',
+      examples: ['Court orders', 'Government requests', 'Legal proceedings']
+    },
+    {
+      category: 'Business Transfers',
+      description: 'In connection with business mergers or acquisitions',
+      examples: ['Company sale', 'Asset transfer', 'Corporate restructuring']
+    },
+    {
+      category: 'Consent',
+      description: 'When you explicitly authorize us to share your information',
+      examples: ['Partner integrations', 'Case studies', 'Testimonials']
+    }
+  ];
+
   return (
     <>
       <SEO 
@@ -167,4 +243,21 @@ export default function Privacy() {
       </main>
     </>
   );
+			<SEO
+			<Header />
+						<GradientHeading>Privacy Policy</GradientHeading>
+						<GradientHeading>Privacy Policy</GradientHeading>
+							Your privacy is important to us. This page explains how we collect, use, and safeguard your information.
+					
+
+
+
+
+
+
+
+			<Footer />
 }
+};
+
+export default Privacy;

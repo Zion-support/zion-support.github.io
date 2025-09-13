@@ -8,7 +8,20 @@ import {
   Users, Building, Rocket, CheckCircle, Phone, Mail
 } from 'lucide-react';
 
-const Homepage2026: React.FC = () => {
+import {
+
+
+  
+  
+  componentDidCatch(error, errorInfo) {
+  
+    
+import React from 'react';
+import Layout from './layout / Layout';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+
+
   return (
     <Layout>
       {/* Main Content */}
@@ -26,11 +39,25 @@ const Homepage2026: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6"
-            >
-              {/* Company Badge */}
-              <motion.div
+
+
+import {
+
+
+  Mail,;} from 'lucide-react';import {
+
+
+    <Layout>;
+
+
+
+
+
+
+
+
+
+
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -69,29 +96,47 @@ const Homepage2026: React.FC = () => {
                 </a>
               </div>
               
+
+
+                <Star className='w-4 h-4' />;
+                <Link href='/comprehensive-2025-services-showcase'>;
+                      <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
+                </Link>;
+                <Link href='/services'>;
+                </Link>;
+                <Star className="w-4 h-4" />;
+                <Link href="/comprehensive-2025-services-showcase">;
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+                <Star className='w - 4 h - 4' />;
+                <Link href='/comprehensive - 2025 - services - showcase'>;
+                      <ArrowRight className='w - 5 h - 5 group - hover:translate - x-1 transition - transform' />;
+                </Link>;
+                <Link href='/services'>;
+                </Link>;
+                <Star className="w - 4 h - 4" />;
+                <Link href="/comprehensive - 2025 - services - showcase">;
+                      <ArrowRight className="w - 5 h - 5 group - hover:translate - x-1 transition - transform" />;
+                </Link>;
+                <Link href="/services">;
+
+                </Link>;
+
+
+
+              
+
+
+
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="flex items-center justify-center space-x-6 text-sm text-gray-400"
-              >
-                <div className="flex items-center space-x-2">
                   <Shield className="w-4 h-4 text-green-400" />
-                  <span>Enterprise Security</span>
-                </div>
-                <div className="flex items-center space-x-2">
                   <Globe className="w-4 h-4 text-blue-400" />
-                  <span>Global Reach</span>
-                </div>
-                <div className="flex items-center space-x-2">
                   <TrendingUp className="w-4 h-4 text-purple-400" />
-                  <span>Proven Results</span>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
+
+
+
 
         {/* Company Stats */}
         <section className="py-20 px-4 bg-black/30 relative">
@@ -165,8 +210,11 @@ const Homepage2026: React.FC = () => {
           </div>
         </section>
 
-        {/* Service Categories */}
-        <section className="py-20 px-4">
+
+
+
+
+
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -180,14 +228,21 @@ const Homepage2026: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {/* AI Automation Services */}
+
+
+
+
+
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300"
               >
+                    <CheckCircle className='w-4 h-4 text-green-400' />
+                    <CheckCircle className='w-4 h-4 text-green-400' />
+                    <CheckCircle className='w-4 h-4 text-green-400' />
+                <Link href='/comprehensive-2025-services-showcase'>
                 <div className="text-5xl mb-6">🤖</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Automation Services</h3>
                 <p className="text-gray-300 mb-6">
@@ -215,6 +270,18 @@ const Homepage2026: React.FC = () => {
                 </Link>
               </motion.div>
 
+
+                  <Shield className="w - 4 h - 4 text - green - 400" />;
+                  <Globe className="w - 4 h - 4 text - blue - 400" />;
+                  <Shield className='w - 4 h - 4 text - green - 400' />;
+                  <Globe className='w - 4 h - 4 text - blue - 400' />;
+                  <TrendingUp className='w - 4 h - 4 text - purple - 400' />                  <span > Proven Results</span>                <div className="flex items - center space - x-2">;
+                  <TrendingUp className="w - 4 h - 4 text - purple - 400" />;
+
+
+
+
+
               {/* IT Infrastructure Services */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -222,6 +289,10 @@ const Homepage2026: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300"
               >
+                    <CheckCircle className='w-4 h-4 text-green-400' />
+                    <CheckCircle className='w-4 h-4 text-green-400' />
+                    <CheckCircle className='w-4 h-4 text-green-400' />
+                <Link href='/comprehensive-2025-services-showcase'>
                 <div className="text-5xl mb-6">🏗️</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">IT Infrastructure Services</h3>
                 <p className="text-gray-300 mb-6">
@@ -249,6 +320,20 @@ const Homepage2026: React.FC = () => {
                 </Link>
               </motion.div>
 
+
+                    <CheckCircle className='w-4 h-4 text-green-400' />;
+                    <CheckCircle className='w-4 h-4 text-green-400' />;
+                    <CheckCircle className='w-4 h-4 text-green-400' />;
+                <Link href='/comprehensive-2025-services-showcase'>;
+                    <CheckCircle className="w-4 h-4 text-green-400" />;
+                    <CheckCircle className="w-4 h-4 text-green-400" />;
+                    <CheckCircle className="w-4 h-4 text-green-400" />;
+                <Link href="/comprehensive-2025-services-showcase">;
+                </Link>;
+
+
+
+
               {/* Micro SAAS Solutions */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -256,6 +341,10 @@ const Homepage2026: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300"
               >
+                    <CheckCircle className='w-4 h-4 text-green-400' />
+                    <CheckCircle className='w-4 h-4 text-green-400' />
+                    <CheckCircle className='w-4 h-4 text-green-400' />
+                <Link href='/comprehensive-2025-services-showcase'>
                 <div className="text-5xl mb-6">🚀</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 mb-6">
@@ -283,6 +372,30 @@ const Homepage2026: React.FC = () => {
                 </Link>
               </motion.div>
 
+
+                    <CheckCircle className='w - 4 h - 4 text - green - 400' />;
+                    <CheckCircle className='w - 4 h - 4 text - green - 400' />;
+                    <CheckCircle className='w - 4 h - 4 text - green - 400' />;
+                <Link href='/comprehensive - 2025 - services - showcase'>;
+                    <CheckCircle className="w - 4 h - 4 text - green - 400" />;
+                    <CheckCircle className="w - 4 h - 4 text - green - 400" />;
+                    <CheckCircle className="w - 4 h - 4 text - green - 400" />;
+                <Link href="/comprehensive - 2025 - services - showcase">;
+                </Link>;
+                    <CheckCircle className='w - 4 h - 4 text - green - 400' />;
+                    <CheckCircle className='w - 4 h - 4 text - green - 400' />;
+                    <CheckCircle className='w - 4 h - 4 text - green - 400' />;
+                <Link href='/comprehensive - 2025 - services - showcase'>;
+                    <CheckCircle className="w - 4 h - 4 text - green - 400" />;
+                    <CheckCircle className="w - 4 h - 4 text - green - 400" />;
+                    <CheckCircle className="w - 4 h - 4 text - green - 400" />;
+                <Link href="/comprehensive - 2025 - services - showcase">;
+                </Link>;
+
+
+
+
+
               {/* Cutting-Edge AI Services */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -290,6 +403,10 @@ const Homepage2026: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300"
               >
+                    <CheckCircle className='w-4 h-4 text-green-400' />
+                    <CheckCircle className='w-4 h-4 text-green-400' />
+                    <CheckCircle className='w-4 h-4 text-green-400' />
+                <Link href='/comprehensive-2025-services-showcase'>
                 <div className="text-5xl mb-6">🧠</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Cutting-Edge AI Services</h3>
                 <p className="text-gray-300 mb-6">
@@ -320,6 +437,22 @@ const Homepage2026: React.FC = () => {
           </div>
         </section>
 
+
+                    <CheckCircle className='w-4 h-4 text-green-400' />;
+                    <CheckCircle className='w-4 h-4 text-green-400' />;
+                    <CheckCircle className='w-4 h-4 text-green-400' />;
+                <Link href='/comprehensive-2025-services-showcase'>;
+                    <CheckCircle className="w-4 h-4 text-green-400" />;
+                    <CheckCircle className="w-4 h-4 text-green-400" />;
+                    <CheckCircle className="w-4 h-4 text-green-400" />;
+                <Link href="/comprehensive-2025-services-showcase">;
+                </Link>;
+
+
+
+                    <Globe className='w-5 h-5 text-blue-400' />;
+
+
         {/* Contact Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
           <div className="max-w-4xl mx-auto text-center">
@@ -327,80 +460,21 @@ const Homepage2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-6"
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Get in touch with our team to discuss how our innovative services can drive your success
-              </p>
               
-              {/* Contact Information */}
-              <div className="bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8">
-                <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Contact Information</h3>
-                <div className="grid md:grid-cols-2 gap-6 text-left">
-                  <div className="flex items-center space-x-3">
                     <Globe className="w-5 h-5 text-blue-400" />
-                    <div>
-                      <div className="text-sm text-gray-400">Website</div>
-                      <a href="https://ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">
-                        ziontechgroup.com
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
                     <Phone className="w-5 h-5 text-green-400" />
-                    <div>
-                      <div className="text-sm text-gray-400">Phone</div>
-                      <a href="tel:+13024640950" className="text-cyan-400 hover:underline font-medium">
-                        +1 302 464 0950
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
                     <Mail className="w-5 h-5 text-yellow-400" />
-                    <div>
-                      <div className="text-sm text-gray-400">Email</div>
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">
-                        kleber@ziontechgroup.com
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
                     <MapPin className="w-5 h-5 text-purple-400" />
-                    <div>
-                      <div className="text-sm text-gray-400">Address</div>
-                      <div className="text-white font-medium">
-                        364 E Main St STE 1008<br />
-                        Middletown DE 19709
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  <span>Get Started Today</span>
                   <ArrowRight className="w-5 h-5" />
-                </a>
-                <a
-                  href="tel:+13024640950"
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
-                >
-                  Call Now
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
     </Layout>
+                  <ArrowRight className='w - 5 h - 5' />;
+                  <ArrowRight className="w - 5 h - 5" />;
+    </Layout>);
+export default Homepage2026);
+export default Homepage2026;
   );
 };
 
 export default Homepage2026;
+
