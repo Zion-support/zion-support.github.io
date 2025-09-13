@@ -197,6 +197,7 @@
   },
   "resolutions": {
     "glob": "^10.4.5",
+    "glob-parent": "^6.0.2",
     "rimraf": "^5.0.5",
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0",
     "jsdom": "^24.0.0",
@@ -206,6 +207,7 @@
   "overrides": {
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0",
     "glob": "^10.3.10",
+    "glob-parent": "^6.0.2",
     "rimraf": "^5.0.5",
     "ansi-styles": "^5.2.0",
     "@testing-library/dom": "^9.3.4"
