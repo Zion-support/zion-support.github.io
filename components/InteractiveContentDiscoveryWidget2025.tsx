@@ -1,292 +1,277 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Filter, ArrowRight, Clock, Users, Star, TrendingUp, Zap, Brain, Target } from 'lucide-react';
+import { Search, Filter, TrendingUp, Clock, Star, ArrowRight, BookOpen, Video, FileText, Users } from 'lucide-react';
 
 const InteractiveContentDiscoveryWidget2025: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [filteredContent, setFilteredContent] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [sortBy, setSortBy] = useState('trending');
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: Search },
-    { id: 'ai-breakthroughs', name: 'AI Breakthroughs', icon: Brain },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap },
-    { id: 'automation', name: 'Automation', icon: Target },
-    { id: 'technology', name: 'Technology', icon: TrendingUp },
-    { id: 'case-studies', name: 'Case Studies', icon: Star }
+    { id: 'all', name: 'All Content', icon: BookOpen },
+    { id: 'ai-2025', name: 'AI 2025', icon: TrendingUp },
+    { id: 'quantum', name: 'Quantum Computing', icon: Star },
+    { id: 'automation', name: 'Automation', icon: Clock },
+    { id: 'case-studies', name: 'Case Studies', icon: FileText },
+    { id: 'tutorials', name: 'Tutorials', icon: Video },
+    { id: 'community', name: 'Community', icon: Users }
   ];
 
   const contentItems = [
     {
       id: 1,
-      title: "Neural Quantum Fusion: The Future of AI",
-      description: "Revolutionary AI system combining quantum computing with neural networks for unprecedented processing power.",
-      category: "ai-breakthroughs",
-      readTime: "15 min",
-      views: "12.5K",
+      title: "AI 2025: The Ultimate Breakthrough Guide",
+      description: "Comprehensive guide to AI technologies that will revolutionize your business in 2025",
+      category: 'ai-2025',
+      type: 'guide',
       rating: 4.9,
+      views: 12500,
+      readTime: '15 min',
+      trending: true,
       featured: true,
-      tags: ["Quantum AI", "Neural Networks", "Breakthrough"],
-      image: "/api/placeholder/300/200"
+      image: '/api/placeholder/400/250'
     },
     {
       id: 2,
-      title: "Autonomous Business Process Optimization",
-      description: "Self-evolving AI systems that continuously optimize business operations without human intervention.",
-      category: "automation",
-      readTime: "12 min",
-      views: "8.7K",
+      title: "Quantum Computing Solutions for Enterprise",
+      description: "How quantum computing can solve complex business problems with exponential speed",
+      category: 'quantum',
+      type: 'article',
       rating: 4.8,
-      featured: true,
-      tags: ["Automation", "Business Intelligence", "AI"],
-      image: "/api/placeholder/300/200"
+      views: 8900,
+      readTime: '12 min',
+      trending: true,
+      featured: false,
+      image: '/api/placeholder/400/250'
     },
     {
       id: 3,
-      title: "Quantum Error Correction Breakthrough",
-      description: "Advanced error correction algorithms enabling stable quantum computing at scale.",
-      category: "quantum-computing",
-      readTime: "18 min",
-      views: "15.2K",
+      title: "Automation Success Stories: 300% ROI Case Study",
+      description: "Real-world examples of companies achieving massive ROI through intelligent automation",
+      category: 'case-studies',
+      type: 'case-study',
       rating: 4.9,
+      views: 15600,
+      readTime: '8 min',
+      trending: false,
       featured: true,
-      tags: ["Quantum Computing", "Error Correction", "Breakthrough"],
-      image: "/api/placeholder/300/200"
+      image: '/api/placeholder/400/250'
     },
     {
       id: 4,
-      title: "Revolutionary Technology Showcase 2025",
-      description: "Discover the most groundbreaking technologies that will reshape industries in 2025.",
-      category: "technology",
-      readTime: "20 min",
-      views: "9.3K",
+      title: "Neural Network Implementation Tutorial",
+      description: "Step-by-step guide to implementing neural networks for business applications",
+      category: 'tutorials',
+      type: 'tutorial',
       rating: 4.7,
+      views: 6700,
+      readTime: '25 min',
+      trending: false,
       featured: false,
-      tags: ["Technology", "Innovation", "2025"],
-      image: "/api/placeholder/300/200"
+      image: '/api/placeholder/400/250'
     },
     {
       id: 5,
-      title: "Enterprise AI Transformation Success Story",
-      description: "How Fortune 500 companies achieved 2,500% ROI with our AI solutions.",
-      category: "case-studies",
-      readTime: "14 min",
-      views: "6.8K",
+      title: "Community Discussion: AI Ethics in Business",
+      description: "Join the conversation about ethical AI implementation in modern businesses",
+      category: 'community',
+      type: 'discussion',
       rating: 4.6,
+      views: 3200,
+      readTime: '5 min',
+      trending: false,
       featured: false,
-      tags: ["Case Study", "ROI", "Enterprise"],
-      image: "/api/placeholder/300/200"
+      image: '/api/placeholder/400/250'
     },
     {
       id: 6,
-      title: "Edge Quantum Computing Solutions",
-      description: "Distributed quantum computing infrastructure for real-time processing at the edge.",
-      category: "quantum-computing",
-      readTime: "16 min",
-      views: "11.4K",
+      title: "Advanced Automation Workflows",
+      description: "Complex automation patterns that can transform your business processes",
+      category: 'automation',
+      type: 'guide',
       rating: 4.8,
+      views: 9800,
+      readTime: '18 min',
+      trending: true,
       featured: false,
-      tags: ["Edge Computing", "Quantum", "Infrastructure"],
-      image: "/api/placeholder/300/200"
+      image: '/api/placeholder/400/250'
     }
   ];
 
-  useEffect(() => {
-    setIsLoading(true);
-    const timer = setTimeout(() => {
-      let filtered = contentItems;
-      
-      if (selectedCategory !== 'all') {
-        filtered = filtered.filter(item => item.category === selectedCategory);
-      }
-      
-      if (searchTerm) {
-        filtered = filtered.filter(item => 
-          item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-        );
-      }
-      
-      setFilteredContent(filtered);
-      setIsLoading(false);
-    }, 300);
+  const filteredContent = contentItems.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
-    return () => clearTimeout(timer);
-  }, [searchTerm, selectedCategory]);
+  const sortedContent = [...filteredContent].sort((a, b) => {
+    switch (sortBy) {
+      case 'trending':
+        return (b.trending ? 1 : 0) - (a.trending ? 1 : 0);
+      case 'rating':
+        return b.rating - a.rating;
+      case 'views':
+        return b.views - a.views;
+      case 'newest':
+        return b.id - a.id;
+      default:
+        return 0;
+    }
+  });
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'guide': return BookOpen;
+      case 'article': return FileText;
+      case 'case-study': return TrendingUp;
+      case 'tutorial': return Video;
+      case 'discussion': return Users;
+      default: return BookOpen;
+    }
+  };
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'guide': return 'from-blue-500 to-cyan-500';
+      case 'article': return 'from-green-500 to-emerald-500';
+      case 'case-study': return 'from-purple-500 to-pink-500';
+      case 'tutorial': return 'from-orange-500 to-red-500';
+      case 'discussion': return 'from-indigo-500 to-purple-500';
+      default: return 'from-gray-500 to-slate-500';
+    }
+  };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="py-16 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 mb-6">
-            <Search className="w-5 h-5 text-purple-400 mr-2" />
-            <span className="text-purple-300 font-semibold">Interactive Content Discovery</span>
-          </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Discover Revolutionary
-            <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              AI Content 2025
-            </span>
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Discover Revolutionary Content
           </h2>
-          
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Explore our comprehensive library of AI breakthroughs, quantum computing solutions, and automation technologies. Find exactly what you need with our intelligent discovery system.
+            Explore our comprehensive library of AI guides, case studies, tutorials, 
+            and community discussions to accelerate your business transformation.
           </p>
         </div>
 
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12">
-          <div className="flex flex-col lg:flex-row gap-6 mb-8">
-            <div className="flex-1">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search for AI breakthroughs, quantum solutions, automation..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:bg-white/15 transition-all duration-300"
-                />
-              </div>
+        {/* Search and Filters */}
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 mb-8">
+          <div className="flex flex-col lg:flex-row gap-4">
+            {/* Search Bar */}
+            <div className="flex-1 relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search content, guides, tutorials..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
             </div>
-            
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => {
-                const IconComponent = category.icon;
-                return (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`flex items-center px-4 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                    }`}
-                  >
-                    <IconComponent className="w-4 h-4 mr-2" />
-                    {category.name}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
 
-          <div className="flex items-center justify-between text-sm text-gray-400">
-            <div className="flex items-center">
-              <Filter className="w-4 h-4 mr-2" />
-              {filteredContent.length} results found
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    selectedCategory === category.id
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  }`}
+                >
+                  <category.icon className="w-4 h-4 mr-2" />
+                  {category.name}
+                </button>
+              ))}
             </div>
-            <div className="flex items-center">
-              <TrendingUp className="w-4 h-4 mr-2" />
-              Real-time content updates
-            </div>
+
+            {/* Sort Dropdown */}
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="trending">Trending</option>
+              <option value="rating">Highest Rated</option>
+              <option value="views">Most Viewed</option>
+              <option value="newest">Newest</option>
+            </select>
           </div>
         </div>
 
-        {isLoading ? (
-          <div className="text-center py-12">
-            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-purple-400"></div>
-            <p className="text-gray-300 mt-4">Discovering amazing content...</p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {filteredContent.map((content) => (
-              <div 
-                key={content.id} 
-                className={`group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border transition-all duration-300 hover:scale-105 ${
-                  content.featured 
-                    ? 'border-purple-400/50 hover:border-purple-400/80' 
-                    : 'border-white/20 hover:border-white/40'
-                }`}
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {sortedContent.map((item) => {
+            const TypeIcon = getTypeIcon(item.type);
+            const typeColor = getTypeColor(item.type);
+            
+            return (
+              <div
+                key={item.id}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
               >
-                {content.featured && (
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 text-center font-semibold">
-                    ⭐ Featured Content
+                {/* Content Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${typeColor} flex items-center justify-center`}>
+                    <TypeIcon className="w-6 h-6 text-white" />
                   </div>
-                )}
-                
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold">
-                      {categories.find(cat => cat.id === content.category)?.name}
-                    </span>
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 mr-1" />
-                      <span className="text-sm font-semibold">{content.rating}</span>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                    {content.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {content.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {content.tags.map((tag, index) => (
-                      <span 
-                        key={index}
-                        className="px-2 py-1 bg-white/10 text-gray-300 rounded-md text-xs"
-                      >
-                        {tag}
+                  <div className="flex items-center space-x-2">
+                    {item.trending && (
+                      <span className="px-2 py-1 bg-orange-500/20 text-orange-300 text-xs font-semibold rounded-full">
+                        Trending
                       </span>
-                    ))}
+                    )}
+                    {item.featured && (
+                      <span className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs font-semibold rounded-full">
+                        Featured
+                      </span>
+                    )}
                   </div>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <div className="flex items-center">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {content.readTime}
-                    </div>
-                    <div className="flex items-center">
-                      <Users className="w-4 h-4 mr-1" />
-                      {content.views}
-                    </div>
-                  </div>
-                  
-                  <Link 
-                    to={`/content/${content.id}`}
-                    className="group/link w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center"
-                  >
-                    <span>Explore Content</span>
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
                 </div>
+
+                {/* Content Info */}
+                <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+                  {item.description}
+                </p>
+
+                {/* Content Stats */}
+                <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                    {item.rating}
+                  </div>
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 mr-1" />
+                    {item.readTime}
+                  </div>
+                  <div>{item.views.toLocaleString()} views</div>
+                </div>
+
+                {/* Action Button */}
+                <Link
+                  to={`/content/${item.id}`}
+                  className="inline-flex items-center w-full justify-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200"
+                >
+                  Read More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </div>
-            ))}
-          </div>
-        )}
+            );
+          })}
+        </div>
 
-        {filteredContent.length === 0 && !isLoading && (
-          <div className="text-center py-12">
-            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-2">No content found</h3>
-            <p className="text-gray-300 mb-6">Try adjusting your search terms or category filters</p>
-            <button
-              onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-              }}
-              className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl font-semibold hover:opacity-90 transition-opacity"
-            >
-              Clear Filters
-            </button>
-          </div>
-        )}
-
+        {/* Load More */}
         <div className="text-center">
-          <Link 
-            to="/content-library"
-            className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl"
-          >
-            <Search className="w-5 h-5 mr-2" />
-            <span>Browse Full Content Library</span>
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          <button className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 border border-white/30">
+            Load More Content
+          </button>
         </div>
       </div>
     </section>
