@@ -210,6 +210,13 @@ import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDis
 import FeaturedBlogPost2025 from '../components/FeaturedBlogPost2025';
 import CaseStudyShowcase2025 from '../components/CaseStudyShowcase2025';
 
+// Import new content showcase components
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
+import AI2030FutureVisionPromotionBanner from '../components/AI2030FutureVisionPromotionBanner';
+import UltimateContentCarousel2025 from '../components/UltimateContentCarousel2025';
+import NewContent2025RevolutionaryShowcaseBanner from '../components/NewContent2025RevolutionaryShowcaseBanner';
+
 // Import new promotional banners for 2026
 import AI2026UltimateContentRevolutionPromotionBanner from '../components/AI2026UltimateContentRevolutionPromotionBanner';
 import AdvancedAutomationSolutions2026UltimatePromotionBanner from '../components/AdvancedAutomationSolutions2026UltimatePromotionBanner';
@@ -258,6 +265,12 @@ export default function HomePage() {
         {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
         <NewContent2025UltimateBreakthroughBanner />
         
+        {/* NEW CONTENT 2025 ULTIMATE SHOWCASE */}
+        <NewContent2025UltimateShowcase />
+        
+        {/* ULTIMATE CONTENT CAROUSEL 2025 */}
+        <UltimateContentCarousel2025 />
+        
         {/* REVOLUTIONARY CONTENT SHOWCASE 2025 BANNER */}
         <RevolutionaryContentShowcase2025Banner />
         
@@ -284,6 +297,12 @@ export default function HomePage() {
         
         {/* AI 2026 BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2026BreakthroughAnnouncementBanner />
+        
+        {/* REVOLUTIONARY TECH BANNER 2026 */}
+        <RevolutionaryTechBanner2026 />
+        
+        {/* AI 2030 FUTURE VISION PROMOTION BANNER */}
+        <AI2030FutureVisionPromotionBanner />
         
         {/* NEURAL CONSENSUS REVOLUTION BANNER */}
         <NeuralConsensusRevolutionBanner />

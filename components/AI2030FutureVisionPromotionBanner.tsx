@@ -1,304 +1,167 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Eye, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Brain, 
-  Rocket,
-  CheckCircle,
-  Clock,
-  Globe,
-  Infinity,
-  Heart,
-  Atom
-} from 'lucide-react';
+import { ArrowRight, Eye, Brain, Globe, Rocket, Star, Zap, Shield } from 'lucide-react';
 
-const AI2030FutureVisionPromotionBanner: React.FC = () => {
+const AI2030FutureVisionPromotionBanner = () => {
+  const visionFeatures = [
+    {
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      title: "Conscious AI",
+      description: "Self-aware artificial intelligence that understands context and emotion",
+      year: "2030"
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-emerald-400" />,
+      title: "Global Neural Network",
+      description: "Worldwide interconnected AI systems working in perfect harmony",
+      year: "2031"
+    },
+    {
+      icon: <Rocket className="w-8 h-8 text-purple-400" />,
+      title: "Space AI",
+      description: "AI systems designed for interplanetary exploration and colonization",
+      year: "2032"
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-blue-400" />,
+      title: "Quantum Security",
+      description: "Unbreakable quantum encryption protecting all digital assets",
+      year: "2033"
+    }
+  ];
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-blue-900 to-purple-900 rounded-2xl p-8 mb-12 border border-blue-500/30"
-    >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-400/20 to-purple-400/20"></div>
-        <div className="absolute top-4 right-4 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-4 left-4 w-24 h-24 bg-purple-400/10 rounded-full blur-2xl"></div>
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-cyan-500/20 rounded-full blur-2xl animate-pulse delay-500"></div>
       </div>
 
-      <div className="relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-          {/* Content */}
-          <div className="flex-1">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold mb-4"
-            >
-              <Eye className="w-4 h-4 mr-2" />
-              🔮 NEW: AI 2030 Future Vision
-            </motion.div>
-
-            <motion.h2
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-3xl md:text-4xl font-bold text-white mb-4"
-            >
-              The Future of{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Humanity
-              </span>
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-lg text-gray-200 mb-6 max-w-2xl"
-            >
-              Explore revolutionary AI technologies that will transform human civilization by 2030. 
-              From AGI to consciousness transfer, witness the future of human potential.
-            </motion.p>
-
-            {/* Features */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6"
-            >
-              <div className="flex items-center text-gray-200">
-                <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                <span className="text-sm">Artificial General Intelligence</span>
-              </div>
-              <div className="flex items-center text-gray-200">
-                <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                <span className="text-sm">Quantum-AI Integration</span>
-              </div>
-              <div className="flex items-center text-gray-200">
-                <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                <span className="text-sm">Consciousness Transfer</span>
-              </div>
-              <div className="flex items-center text-gray-200">
-                <CheckCircle className="w-5 h-5 mr-3 text-green-400" />
-                <span className="text-sm">Universal Translation</span>
-              </div>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="flex flex-wrap gap-6 mb-6"
-            >
-              <div className="flex items-center text-white">
-                <Infinity className="w-5 h-5 mr-2 text-blue-400" />
-                <span className="text-sm font-semibold">Infinite Possibilities</span>
-              </div>
-              <div className="flex items-center text-white">
-                <Brain className="w-5 h-5 mr-2 text-purple-400" />
-                <span className="text-sm font-semibold">100% Problem Solving</span>
-              </div>
-              <div className="flex items-center text-white">
-                <Globe className="w-5 h-5 mr-2 text-green-400" />
-                <span className="text-sm font-semibold">Global Transformation</span>
-              </div>
-            </motion.div>
-
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.7, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <Link
-                href="/ai-2030-future-vision"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                <Eye className="w-5 h-5 mr-2" />
-                Explore Future Visions
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-              
-              <Link
-                href="/ai-solutions"
-                className="inline-flex items-center px-6 py-3 bg-transparent border-2 border-white/30 hover:bg-white/10 text-white font-semibold rounded-lg transition-all duration-300"
-              >
-                View All Solutions
-              </Link>
-            </motion.div>
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-black text-sm font-bold mb-6">
+            <Eye className="w-5 h-5 mr-2" />
+            AI 2030 FUTURE VISION
           </div>
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            The Future is
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"> Closer Than You Think</span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Step into a world where artificial intelligence transcends human limitations, where technology and consciousness merge, 
+            and where the impossible becomes reality. This is the future we're building today.
+          </p>
+        </div>
 
-          {/* Visual Element */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="relative lg:w-80 lg:h-80 flex-shrink-0"
-          >
-            <div className="relative w-full h-full">
-              {/* Animated Icons */}
-              <motion.div
-                animate={{ 
-                  rotate: 360,
-                  scale: [1, 1.1, 1]
-                }}
-                transition={{ 
-                  rotate: { duration: 20, repeat: Infinity, ease: "linear" },
-                  scale: { duration: 3, repeat: Infinity, ease: "easeInOut" }
-                }}
-                className="absolute top-4 left-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center"
-              >
-                <Brain className="w-8 h-8 text-white" />
-              </motion.div>
-
-              <motion.div
-                animate={{ 
-                  y: [-10, 10, -10],
-                  rotate: [0, 5, 0]
-                }}
-                transition={{ 
-                  duration: 4, 
-                  repeat: Infinity, 
-                  ease: "easeInOut" 
-                }}
-                className="absolute top-16 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"
-              >
-                <Atom className="w-6 h-6 text-white" />
-              </motion.div>
-
-              <motion.div
-                animate={{ 
-                  x: [-5, 5, -5],
-                  scale: [1, 1.05, 1]
-                }}
-                transition={{ 
-                  duration: 3, 
-                  repeat: Infinity, 
-                  ease: "easeInOut",
-                  delay: 1
-                }}
-                className="absolute bottom-16 left-8 w-14 h-14 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center"
-              >
-                <Heart className="w-7 h-7 text-white" />
-              </motion.div>
-
-              <motion.div
-                animate={{ 
-                  rotate: [-5, 5, -5],
-                  scale: [1, 1.1, 1]
-                }}
-                transition={{ 
-                  duration: 5, 
-                  repeat: Infinity, 
-                  ease: "easeInOut",
-                  delay: 2
-                }}
-                className="absolute bottom-8 right-16 w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center"
-              >
-                <Globe className="w-5 h-5 text-white" />
-              </motion.div>
-
-              {/* Central Hub */}
-              <motion.div
-                animate={{ 
-                  scale: [1, 1.05, 1],
-                  boxShadow: [
-                    "0 0 20px rgba(59, 130, 246, 0.3)",
-                    "0 0 40px rgba(59, 130, 246, 0.6)",
-                    "0 0 20px rgba(59, 130, 246, 0.3)"
-                  ]
-                }}
-                transition={{ 
-                  duration: 2, 
-                  repeat: Infinity, 
-                  ease: "easeInOut" 
-                }}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center"
-              >
-                <Eye className="w-10 h-10 text-white" />
-              </motion.div>
-
-              {/* Connection Lines */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none">
-                <motion.line
-                  x1="32"
-                  y1="32"
-                  x2="160"
-                  y2="160"
-                  stroke="url(#gradient1)"
-                  strokeWidth="2"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 2, delay: 1 }}
-                />
-                <motion.line
-                  x1="288"
-                  y1="64"
-                  x2="160"
-                  y2="160"
-                  stroke="url(#gradient2)"
-                  strokeWidth="2"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 2, delay: 1.2 }}
-                />
-                <motion.line
-                  x1="32"
-                  y1="256"
-                  x2="160"
-                  y2="160"
-                  stroke="url(#gradient3)"
-                  strokeWidth="2"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 2, delay: 1.4 }}
-                />
-                <motion.line
-                  x1="256"
-                  y1="256"
-                  x2="160"
-                  y2="160"
-                  stroke="url(#gradient4)"
-                  strokeWidth="2"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 2, delay: 1.6 }}
-                />
-                
-                <defs>
-                  <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#3B82F6" />
-                    <stop offset="100%" stopColor="#06B6D4" />
-                  </linearGradient>
-                  <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#8B5CF6" />
-                    <stop offset="100%" stopColor="#EC4899" />
-                  </linearGradient>
-                  <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#10B981" />
-                    <stop offset="100%" stopColor="#059669" />
-                  </linearGradient>
-                  <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#F97316" />
-                    <stop offset="100%" stopColor="#EF4444" />
-                  </linearGradient>
-                </defs>
-              </svg>
+        {/* Vision Timeline */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+          {visionFeatures.map((feature, index) => (
+            <div key={index} className="group relative">
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 h-full border border-white/10 hover:bg-white/10 transition-all duration-500 hover:scale-105">
+                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {feature.icon}
+                </div>
+                <div className="text-sm font-bold text-cyan-400 mb-2">{feature.year}</div>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+              </div>
+              
+              {/* Connection Line */}
+              {index < visionFeatures.length - 1 && (
+                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 transform -translate-y-1/2"></div>
+              )}
             </div>
-          </motion.div>
+          ))}
+        </div>
+
+        {/* Revolutionary Stats */}
+        <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-3xl p-12 mb-20 border border-cyan-400/20">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">1B+</div>
+              <div className="text-gray-300">AI Interactions Daily</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>
+              <div className="text-gray-300">Prediction Accuracy</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+              <div className="text-gray-300">Countries Connected</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-emerald-400 mb-2">24/7</div>
+              <div className="text-gray-300">Continuous Learning</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Future Predictions */}
+        <div className="mb-20">
+          <h3 className="text-3xl font-bold text-white text-center mb-12">What the Future Holds</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <div className="flex items-center mb-4">
+                <Star className="w-6 h-6 text-yellow-400 mr-3" />
+                <h4 className="text-xl font-bold text-white">Conscious Machines</h4>
+              </div>
+              <p className="text-gray-300">
+                AI systems that not only think but feel, creating emotional connections and understanding human nuances like never before.
+              </p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <div className="flex items-center mb-4">
+                <Zap className="w-6 h-6 text-blue-400 mr-3" />
+                <h4 className="text-xl font-bold text-white">Instant Knowledge</h4>
+              </div>
+              <p className="text-gray-300">
+                Access to the sum of human knowledge instantly, with AI that can synthesize and explain any concept in real-time.
+              </p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <div className="flex items-center mb-4">
+                <Globe className="w-6 h-6 text-green-400 mr-3" />
+                <h4 className="text-xl font-bold text-white">Global Harmony</h4>
+              </div>
+              <p className="text-gray-300">
+                AI systems that bridge cultural and linguistic barriers, fostering global understanding and cooperation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl p-12">
+            <h3 className="text-3xl font-bold text-white mb-4">Be Part of the Future</h3>
+            <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
+              Join the revolution and help shape the future of artificial intelligence. The future starts with you.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/ai-2030-vision" 
+                className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-bold rounded-xl hover:bg-gray-100 transition-colors duration-300"
+              >
+                Explore the Vision
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link 
+                href="/join-future" 
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-cyan-600 transition-colors duration-300"
+              >
+                Join the Movement
+                <Rocket className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </section>
   );
 };
 
