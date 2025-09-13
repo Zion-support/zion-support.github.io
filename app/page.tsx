@@ -29,6 +29,11 @@ import UltimateContentShowcase2030 from '../components/UltimateContentShowcase20
 import UltimateContentShowcase2030PromotionBanner from '../components/UltimateContentShowcase2030PromotionBanner';
 import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDiscoveryWidget2030';
 
+// Import advanced optimization components
+import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';
+import AdvancedAccessibilityEnhancer from '../components/AdvancedAccessibilityEnhancer';
+import AdvancedContentOptimizer from '../components/AdvancedContentOptimizer';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -3834,6 +3839,11 @@ export default function HomePage() {
 
       {/* NEW COMPREHENSIVE AI SERVICES SHOWCASE 2025 */}
       <ComprehensiveAIServicesShowcase2025 />
+
+      {/* ADVANCED OPTIMIZATION COMPONENTS */}
+      <AdvancedPerformanceOptimizer />
+      <AdvancedAccessibilityEnhancer />
+      <AdvancedContentOptimizer />
         </div>
       </PerformanceOptimizer>
     </ErrorBoundary>
