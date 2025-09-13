@@ -102,6 +102,10 @@ import NewContentShowcase2025Banner from '../components/NewContentShowcase2025Ba
 import AI2025RevolutionaryContentPromotionBanner from '../components/AI2025RevolutionaryContentPromotionBanner';
 
 // Import new breakthrough promotional components
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import RevolutionaryTechBanner2025 from '../components/RevolutionaryTechBanner2025';
+import InnovationShowcase2025 from '../components/InnovationShowcase2025';
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
 
@@ -1221,6 +1225,18 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Content Promotion Banner 2025 */}
+      <NewContentPromotionBanner2025 />
+
+      {/* Revolutionary Tech Banner 2025 */}
+      <RevolutionaryTechBanner2025 />
+
+      {/* Innovation Showcase 2025 */}
+      <InnovationShowcase2025 />
+
+      {/* New Content Showcase 2025 */}
+      <NewContentShowcase2025 />
 
       {/* New Resources Section */}
       <section className='py-16 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white relative overflow-hidden'>
