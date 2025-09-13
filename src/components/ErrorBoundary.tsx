@@ -16,7 +16,6 @@ export function ErrorDisplay({
 }) {
   const errorMessage = typeof error === 'string' ? error : error.message;
 
-<<<<<<< HEAD
 type ErrorBoundaryState = { hasError: boolean };
 
 class ErrorBoundary extends React.Component<
@@ -64,7 +63,19 @@ class ErrorBoundary extends React.Component<
     }
     return this.props.children;
   }
-=======
+}
+
+export function ErrorDisplay({ 
+  error, 
+  onRetry, 
+  className 
+}: { 
+  error: string | Error;
+  onRetry?: () => void;
+  className?: string;
+}) {
+  const errorMessage = typeof error === 'string' ? error : error.message;
+
   return (
     <motion.div
       className={`bg-red-500/10 border border-red-500/20 rounded-lg p-4 text-center ${className || ''}`}
@@ -90,7 +101,6 @@ class ErrorBoundary extends React.Component<
       )}
     </motion.div>
   );
->>>>>>> 153b6ea3aa519a41202e547c8b83a96f4e32c7f1
 }
 
 // Hook for functional components to handle errors
