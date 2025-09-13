@@ -35,6 +35,9 @@ const EnhancedNavigation: React.FC = () => {
       isNew: true,
       badge: 'Revolutionary 2026',
       dropdown: [
+        { label: 'AI 2025-2030 Predictions', href: '/ai-2025-2030-predictions', isNew: true, isHot: true },
+        { label: 'Quantum Computing 2025', href: '/quantum-computing-2025', isNew: true, isHot: true },
+        { label: 'Automation Solutions 2025', href: '/automation-solutions-2025', isNew: true, isHot: true },
         { label: 'AI Innovation Hub 2026', href: '/ai-innovation-hub-2026', isNew: true, isHot: true },
         { label: 'Technology Showcase 2026', href: '/revolutionary-technology-showcase-2026', isNew: true, isHot: true },
         { label: 'AI Mastery Academy 2026', href: '/ai-mastery-academy-2026', isNew: true, isHot: true },
@@ -66,31 +69,31 @@ const EnhancedNavigation: React.FC = () => {
 
   const featuredContent = [
     {
+      title: "AI 2025-2030 Predictions",
+      description: "Complete roadmap of revolutionary AI breakthroughs",
+      href: "/ai-2025-2030-predictions",
+      icon: "🔮",
+      isNew: true
+    },
+    {
+      title: "Quantum Computing 2025",
+      description: "Revolutionary quantum technologies and breakthroughs",
+      href: "/quantum-computing-2025",
+      icon: "⚛️",
+      isNew: true
+    },
+    {
+      title: "Automation Solutions 2025",
+      description: "Advanced automation with 2,500%+ ROI",
+      href: "/automation-solutions-2025",
+      icon: "🤖",
+      isNew: true
+    },
+    {
       title: "AI Implementation Mastery Guide 2026",
       description: "Complete roadmap to 15,000x performance improvements",
       href: "/resources/ai-implementation-mastery-2026",
       icon: "📚",
-      isNew: true
-    },
-    {
-      title: "Quantum-AI Breakthrough Case Study",
-      description: "Fortune 500 company achieves $2.3B in savings",
-      href: "/case-studies/quantum-ai-breakthrough-enterprise-transformation",
-      icon: "💼",
-      isNew: true
-    },
-    {
-      title: "AI ROI Calculator 2026",
-      description: "Calculate your AI investment returns",
-      href: "/tools/ai-roi-calculator-2026",
-      icon: "📊",
-      isNew: true
-    },
-    {
-      title: "AI Innovation Hub 2026",
-      description: "Revolutionary AI breakthroughs and innovations",
-      href: "/ai-innovation-hub-2026",
-      icon: "🚀",
       isNew: true
     }
   ];
@@ -279,7 +282,7 @@ const EnhancedNavigation: React.FC = () => {
             <div className="flex items-center space-x-2">
               <Zap className="w-4 h-4 text-green-600" />
               <span className="text-sm font-medium text-gray-900">
-                🔥 New Content Drop: 25+ AI Resources Just Released!
+                🔥 Revolutionary Content: AI 2025-2030 Predictions, Quantum Computing & Automation Solutions!
               </span>
             </div>
             <Link
