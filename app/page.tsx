@@ -63,6 +63,12 @@ import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025
 
 // Import new promotional components
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+
+// Import new dashboard components
+import EnhancedPerformanceMonitor from '../components/EnhancedPerformanceMonitor';
+import AdvancedSecurityDashboard from '../components/AdvancedSecurityDashboard';
+import InteractiveAnalyticsWidget from '../components/InteractiveAnalyticsWidget';
+import DashboardShowcase from '../components/DashboardShowcase';
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
 import AI2025NewsletterSignup from '../components/AI2025NewsletterSignup';
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
@@ -3569,6 +3575,9 @@ export default function HomePage() {
       {/* Enhanced Management and Feedback Components */}
       <ContentManagementSystem />
       <UserFeedbackSystem />
+      
+      {/* ADVANCED DASHBOARD SHOWCASE */}
+      <DashboardShowcase />
     </div>
   );
 }
