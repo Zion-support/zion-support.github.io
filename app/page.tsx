@@ -10,6 +10,12 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import NewsletterSignup2025 from '../components/NewsletterSignup2025';
 
+// Import new 2025 components
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentShowcase2025PromotionBanner from '../components/UltimateContentShowcase2025PromotionBanner';
+import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
+import InteractiveTechDemo2025PromotionBanner from '../components/InteractiveTechDemo2025PromotionBanner';
+
 // Import new 2027 components
 import UltimateContentShowcase2027 from '../components/UltimateContentShowcase2027';
 import UltimateContentShowcase2027PromotionBanner from '../components/UltimateContentShowcase2027PromotionBanner';
@@ -246,6 +252,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2025 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
+        <UltimateContentShowcase2025PromotionBanner />
+        
+        {/* NEW 2025 INTERACTIVE TECH DEMO PROMOTION BANNER */}
+        <InteractiveTechDemo2025PromotionBanner />
+        
         {/* NEW 2029 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2029PromotionBanner />
         
@@ -326,6 +338,12 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
+        
+        {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
+        <UltimateContentShowcase2025 />
+        
+        {/* NEW 2025 INTERACTIVE TECH DEMO */}
+        <InteractiveTechDemo2025 />
         
         {/* NEW 2027 ULTIMATE CONTENT SHOWCASE */}
         <UltimateContentShowcase2027 />
