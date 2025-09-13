@@ -12,6 +12,9 @@ export NPM_CONFIG_PACKAGE_MANAGER=yarn
 export NEXT_TELEMETRY_DISABLED=1
 export SWC_BINARY_PATH=""
 export NEXT_SWC_BINARY_PATH=""
+# Force SWC to use JavaScript fallback
+export NEXT_FORCE_SWC=1
+export NEXT_SWC_DISABLE=1
 
 # Clear all caches and corrupted packages
 echo "Clearing all caches and corrupted packages..."
@@ -39,7 +42,7 @@ for attempt in {1..3}; do
   case $attempt in
     1)
       echo "Attempt 1: Standard Yarn installation..."
-      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
+      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional; then
         echo "Dependencies installed successfully!"
         break
       fi
@@ -47,10 +50,12 @@ for attempt in {1..3}; do
     2)
       echo "Attempt 2: Yarn installation with specific resolutions..."
       # Force specific versions for problematic packages
-      yarn add find-up@5.0.0 --exact --network-timeout 120000 --ignore-engines --no-cache
-      yarn add glob-parent@6.0.2 --exact --network-timeout 120000 --ignore-engines --no-cache
-      yarn add glob@10.4.5 --exact --network-timeout 120000 --ignore-engines --no-cache
-      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
+      yarn add find-up@5.0.0 --exact --network-timeout 120000 --ignore-engines
+      yarn add glob-parent@6.0.2 --exact --network-timeout 120000 --ignore-engines
+      yarn add glob@10.4.5 --exact --network-timeout 120000 --ignore-engines
+      # Ensure we have the correct Next.js version
+      yarn add next@14.2.0 --exact --network-timeout 120000 --ignore-engines
+      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional; then
         echo "Dependencies installed successfully!"
         break
       fi
@@ -59,7 +64,9 @@ for attempt in {1..3}; do
       echo "Attempt 3: Last resort - clean install with fresh lockfile..."
       # Remove existing lockfile and do fresh install
       rm -f yarn.lock
-      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
+      # Force Next.js version
+      yarn add next@14.2.0 --exact --network-timeout 120000 --ignore-engines
+      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional; then
         echo "Dependencies installed successfully!"
         break
       else
@@ -81,9 +88,24 @@ if [ ! -d "node_modules" ]; then
   exit 1
 fi
 
+# Ensure TypeScript types are installed
+echo "Ensuring TypeScript types are installed..."
+yarn add --dev @types/node @types/react @types/react-dom typescript
+
+# Verify Next.js version
+echo "Verifying Next.js version..."
+NEXT_VERSION=$(node -e "console.log(require('./node_modules/next/package.json').version)")
+echo "Installed Next.js version: $NEXT_VERSION"
+
+# Ensure we're using the correct version
+if [[ "$NEXT_VERSION" != "14.2.0" ]]; then
+  echo "Warning: Next.js version mismatch. Expected 14.2.0, got $NEXT_VERSION"
+  echo "Attempting to fix version..."
+  yarn add next@14.2.0 --exact --network-timeout 120000 --ignore-engines --no-cache
+fi
+
 # Build the project
 echo "Building project..."
-
 # Try different build approaches
 build_success=false
 
@@ -102,21 +124,31 @@ if [ "$build_success" = false ]; then
   export SWC_BINARY_PATH=""
   export NEXT_SWC_BINARY_PATH=""
   export NEXT_TELEMETRY_DISABLED=1
+  export NEXT_FORCE_SWC=1
+  export NEXT_SWC_DISABLE=1
+  export NEXT_PRIVATE_SKIP_SWC_DOWNLOAD=1
   
   if yarn run build; then
     echo "SWC fallback build successful!"
     build_success=true
   else
-    echo "SWC fallback build failed, trying with legacy provider..."
+    echo "SWC fallback build failed, trying with fallback command..."
+    # Use the fallback build command
+    if yarn run build:fallback; then
+      echo "Fallback build successful!"
+      build_success=true
+    else
+      echo "Fallback build failed, trying with legacy provider..."
+    fi
   fi
 fi
 
 # Approach 3: Build with legacy OpenSSL provider
 if [ "$build_success" = false ]; then
   echo "Attempting build with legacy OpenSSL provider..."
-  export NODE_OPTIONS="--max-old-space-size=6144 --openssl-legacy-provider"
+  export NODE_OPTIONS="--max-old-space-size=8192 --openssl-legacy-provider"
   
-  if yarn run build; then
+  if yarn run build:fallback; then
     echo "Legacy provider build successful!"
     build_success=true
   else
