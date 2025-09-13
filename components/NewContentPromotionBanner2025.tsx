@@ -1,114 +1,101 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
-export default function NewContentPromotionBanner2025() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentContent, setCurrentContent] = useState(0);
-
-  const newContent = [
-    {
-      title: "AI 2025 Breakthrough Content Showcase",
-      description: "Interactive demos, case studies, and revolutionary technologies",
-      link: "/ai-2025-breakthrough-content-showcase",
-      badge: "NEW",
-      color: "from-red-500 to-pink-500",
-      icon: "🚀"
-    },
-    {
-      title: "15,000% ROI Finance Transformation",
-      description: "Revolutionary success story with detailed metrics and implementation",
-      link: "/case-studies/ai-2025-global-finance-transformation-breakthrough",
-      badge: "BREAKTHROUGH",
-      color: "from-green-500 to-blue-500",
-      icon: "💰"
-    },
-    {
-      title: "AI 2026 Future Predictions Interactive",
-      description: "Explore revolutionary AI breakthroughs with interactive timeline",
-      link: "/ai-2026-future-predictions-interactive",
-      badge: "FUTURE",
-      color: "from-purple-500 to-cyan-500",
-      icon: "🔮"
-    },
-    {
-      title: "Quantum Computing Solutions Showcase",
-      description: "Interactive demos and revolutionary quantum AI technologies",
-      link: "/quantum-computing-solutions-showcase",
-      badge: "REVOLUTIONARY",
-      color: "from-indigo-500 to-purple-500",
-      icon: "⚛️"
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    const interval = setInterval(() => {
-      setCurrentContent((prev) => (prev + 1) % newContent.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [newContent.length]);
-
-  if (!isVisible) return null;
-
-  const current = newContent[currentContent];
-
+const NewContentPromotionBanner2025: React.FC = () => {
   return (
-    <div className="relative bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
-      
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <div className="text-2xl animate-bounce">{current.icon}</div>
-              <div>
-                <div className="flex items-center space-x-2 mb-1">
-                  <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${current.color} text-white animate-pulse`}>
-                    {current.badge}
-                  </span>
-                  <span className="text-sm text-blue-200">New Content Available</span>
-                </div>
-                <h3 className="text-lg font-bold text-white mb-1">
-                  {current.title}
-                </h3>
-                <p className="text-sm text-gray-300">
-                  {current.description}
-                </p>
-              </div>
+    <section className="py-16 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          {/* Main Headline */}
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            🚀 New Content Just Dropped!
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Discover our latest AI insights, success stories, and revolutionary technology showcases. 
+            Fresh content updated daily to keep you ahead of the curve.
+          </p>
+
+          {/* Content Highlights */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/30">
+              <TrendingUp className="w-8 h-8 text-yellow-400 mx-auto mb-3" />
+              <h3 className="text-lg font-semibold text-white mb-2">AI Insights & Trends</h3>
+              <p className="text-blue-100 text-sm">
+                Latest market insights, breakthrough discoveries, and emerging trends in AI technology
+              </p>
             </div>
-            
-            <div className="flex items-center space-x-4">
-              <Link
-                href={current.link}
-                className="px-6 py-2 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Explore Now
-              </Link>
-              
-              <button
-                onClick={() => setIsVisible(false)}
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Close banner"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/30">
+              <Users className="w-8 h-8 text-green-400 mx-auto mb-3" />
+              <h3 className="text-lg font-semibold text-white mb-2">Success Stories</h3>
+              <p className="text-blue-100 text-sm">
+                Real results from real companies achieving 2,500%+ ROI with our AI solutions
+              </p>
             </div>
+            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/30">
+              <Zap className="w-8 h-8 text-purple-400 mx-auto mb-3" />
+              <h3 className="text-lg font-semibold text-white mb-2">Technology Showcase</h3>
+              <p className="text-blue-100 text-sm">
+                Revolutionary tech stack powering the future of AI and digital transformation
+              </p>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="flex flex-wrap justify-center gap-8 mb-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white">50+</div>
+              <div className="text-blue-200">New Articles</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white">25+</div>
+              <div className="text-blue-200">Success Stories</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white">10+</div>
+              <div className="text-blue-200">Tech Showcases</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white">99%</div>
+              <div className="text-blue-200">User Satisfaction</div>
+            </div>
+          </div>
+
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/ai-insights" 
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+            >
+              Explore AI Insights
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link 
+              to="/success-stories" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
+            >
+              View Success Stories
+              <Star className="w-5 h-5 ml-2" />
+            </Link>
+            <Link 
+              to="/technologies" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
+            >
+              See Technologies
+              <Zap className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+
+          {/* Urgency Message */}
+          <div className="mt-8 text-center">
+            <p className="text-yellow-300 font-semibold">
+              ⚡ Content updated daily - Don't miss out on the latest insights!
+            </p>
           </div>
         </div>
       </div>
-      
-      {/* Progress indicator */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700">
-        <div 
-          className="h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-100 ease-linear"
-          style={{ width: `${((currentContent + 1) / newContent.length) * 100}%` }}
-        ></div>
-      </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default NewContentPromotionBanner2025;

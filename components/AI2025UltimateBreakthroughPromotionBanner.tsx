@@ -1,84 +1,123 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-const AI2025UltimateBreakthroughPromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    {
-      title: "🚀 AI 2025 Ultimate Breakthrough Revolution",
-      subtitle: "Experience 10,000% ROI with Revolutionary AI Technology",
-      link: "/ai-2025-ultimate-breakthrough-revolution",
-      bgColor: "from-purple-600 to-blue-600"
-    },
-    {
-      title: "🏆 Global Transformation Success Story",
-      subtitle: "Discover How Fortune 500 Achieved 10,000% ROI",
-      link: "/case-studies/ai-2025-global-transformation-breakthrough",
-      bgColor: "from-green-600 to-blue-600"
-    },
-    {
-      title: "🔮 Revolutionary AI Trends & Predictions",
-      subtitle: "Stay Ahead with 2025 AI Predictions & Insights",
-      link: "/blog/ai-2025-revolutionary-trends-predictions",
-      bgColor: "from-cyan-600 to-purple-600"
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [slides.length]);
-
-  if (!isVisible) return null;
-
+const AI2025UltimateBreakthroughPromotionBanner: React.FC = () => {
   return (
-    <div className="relative overflow-hidden">
-      <div className={`bg-gradient-to-r ${slides[currentSlide].bgColor} text-white py-4 px-4 animate-pulse`}>
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-          <div className="flex-1 text-center md:text-left mb-4 md:mb-0">
-            <h2 className="text-xl md:text-2xl font-bold mb-2">
-              {slides[currentSlide].title}
-            </h2>
-            <p className="text-sm md:text-base text-gray-200">
-              {slides[currentSlide].subtitle}
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Link
-              href={slides[currentSlide].link}
-              className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-full text-sm transition-colors whitespace-nowrap"
-            >
-              Explore Now
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-2 px-6 rounded-full text-sm transition-colors whitespace-nowrap"
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="relative py-16 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 overflow-hidden"
+    >
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+      <div className="absolute inset-0 opacity-30">
+        <div className="w-full h-full bg-gradient-to-br from-white/5 to-transparent"></div>
       </div>
       
-      {/* Slide indicators */}
-      <div className="absolute bottom-2 right-4 flex space-x-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-2 h-2 rounded-full transition-colors ${
-              index === currentSlide ? 'bg-white' : 'bg-white/50'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold rounded-full mb-6"
+            >
+              🚀 NEW BREAKTHROUGH
+            </motion.div>
+            
+            <motion.h2
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+            >
+              AI 2025 Ultimate Breakthrough
+            </motion.h2>
+            
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-xl text-gray-300 mb-8 leading-relaxed"
+            >
+              Revolutionary neural architectures and quantum-enhanced processing delivering unprecedented performance gains across all industries. Experience 10,000x faster processing with 99.9% accuracy.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <Link
+                to="/ai-2025-ultimate-breakthrough"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              >
+                Discover Breakthrough
+              </Link>
+              <Link
+                to="/contact"
+                className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 border border-white/20"
+              >
+                Get Early Access
+              </Link>
+            </motion.div>
+          </div>
+          
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="relative"
+          >
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Breakthrough Features</h3>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <div className="text-2xl mr-4">🧠</div>
+                  <div>
+                    <div className="text-white font-semibold">Neural Architecture Revolution</div>
+                    <div className="text-gray-300 text-sm">1000x processing power</div>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="text-2xl mr-4">⚡</div>
+                  <div>
+                    <div className="text-white font-semibold">Quantum-Enhanced Processing</div>
+                    <div className="text-gray-300 text-sm">Exponential speed improvements</div>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="text-2xl mr-4">🤖</div>
+                  <div>
+                    <div className="text-white font-semibold">Autonomous Operations</div>
+                    <div className="text-gray-300 text-sm">24/7 independent operation</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <div className="text-2xl font-bold text-blue-400">10,000x</div>
+                  <div className="text-white text-sm">Faster</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-green-400">99.9%</div>
+                  <div className="text-white text-sm">Accuracy</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-purple-400">5,000%</div>
+                  <div className="text-white text-sm">ROI</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 
