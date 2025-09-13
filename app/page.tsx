@@ -98,6 +98,14 @@ import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner20
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
 
 // Import new 2026 promotional and showcase components
+
+// Import new 2027 components
+import UltimateContentShowcase2027 from '../components/UltimateContentShowcase2027';
+import UltimateContentShowcase2027PromotionBanner from '../components/UltimateContentShowcase2027PromotionBanner';
+import InteractiveAIToolsDemo2027 from '../components/InteractiveAIToolsDemo2027';
+import InteractiveAIToolsDemo2027PromotionBanner from '../components/InteractiveAIToolsDemo2027PromotionBanner';
+import RevolutionaryCaseStudiesShowcase2027 from '../components/RevolutionaryCaseStudiesShowcase2027';
+import RevolutionaryCaseStudiesShowcase2027PromotionBanner from '../components/RevolutionaryCaseStudiesShowcase2027PromotionBanner';
 import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
 import InteractiveAIToolsDemo2026 from '../components/InteractiveAIToolsDemo2026';
 import InteractiveAIToolsDemo2026PromotionBanner from '../components/InteractiveAIToolsDemo2026PromotionBanner';
@@ -191,6 +199,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW: 2027 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
+        <UltimateContentShowcase2027PromotionBanner />
+        
+        {/* NEW: 2027 INTERACTIVE AI TOOLS DEMO PROMOTION BANNER */}
+        <InteractiveAIToolsDemo2027PromotionBanner />
+        
+        {/* NEW: 2027 REVOLUTIONARY CASE STUDIES PROMOTION BANNER */}
+        <RevolutionaryCaseStudiesShowcase2027PromotionBanner />
+        
         {/* NEW: AI 2026 FUTURE PREDICTIONS ULTIMATE PROMOTION BANNER */}
         <AI2026FuturePredictionsUltimatePromotionBanner />
         
@@ -223,6 +240,15 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
+        
+        {/* NEW: 2027 ULTIMATE CONTENT SHOWCASE */}
+        <UltimateContentShowcase2027 />
+        
+        {/* NEW: 2027 INTERACTIVE AI TOOLS DEMO */}
+        <InteractiveAIToolsDemo2027 />
+        
+        {/* NEW: 2027 REVOLUTIONARY CASE STUDIES SHOWCASE */}
+        <RevolutionaryCaseStudiesShowcase2027 />
         
         {/* NEW INTERACTIVE TECH DEMO 2026 PROMOTION BANNER */}
         <InteractiveAIToolsDemo2026PromotionBanner />
