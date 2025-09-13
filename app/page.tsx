@@ -104,6 +104,10 @@ import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromo
 // Import new AI 2025 content showcase banner
 import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBanner';
 
+// Import new promotional banners
+import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -115,21 +119,14 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* NEW AI 2025 CONTENT PROMOTION BANNER */}
-        <AI2025NewContentPromotionBanner />
-=======
-        {/* NEW AI 2025 CONTENT SHOWCASE BANNER */}
-        <AI2025ContentShowcaseBanner />
+        {/* NEW AI 2025 ULTIMATE CONTENT BANNER */}
+        <NewContent2025UltimateBanner />
         
-        {/* NEW ULTIMATE CONTENT SHOWCASE 2025 PROMOTION BANNER */}
-        <UltimateContentShowcase2025PromotionBanner />
->>>>>>> origin/cursor/create-and-deploy-new-content-07dc
-=======
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2025 */}
+        <RevolutionaryContentShowcase2025 />
+        
         {/* NEW AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2025UltimateBreakthroughAnnouncementBanner />
->>>>>>> a375e9ceec8bd937c056ad6761fbb8457e411d83
         
         {/* AI 2025 QUANTUM CONSCIOUSNESS BREAKTHROUGH BANNER */}
         <AI2025QuantumConsciousnessBreakthroughBanner />
