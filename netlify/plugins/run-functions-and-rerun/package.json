@@ -1,0 +1,12 @@
+{
+  "name": "run-functions-and-rerun",
+  "version": "1.0.0",
+  "description": "Netlify plugin to run functions and rerun build",
+  "main": "index.js",
+  "dependencies": {
+    "@netlify/build": "^35.1.6"
+  },
+  "keywords": ["netlify", "plugin", "functions"],
+  "author": "",
+  "license": "MIT"
+}
