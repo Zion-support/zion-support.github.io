@@ -1,33 +1,32 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useWhitelabel } from '@/context/WhitelabelContext';
+import { motion } from 'framer-motion';
 
-interface LogoProps {
-  customLogo?: string;
-  customColor?: string;
-}
-
-export function Logo({ customLogo, customColor }: LogoProps) {
-  const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel();
-  
-  // Use the white-label logo if available and no specific customLogo is provided
-  const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
-  // Use the white-label color if available and no specific customColor is provided
-  const colorToUse = customColor || (isWhitelabel ? primaryColor : undefined);
-  
-  if (logoToUse) {
-    return (
-      <Link to="/" className="flex items-center">
-        <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />
-      </Link>
-    );
-  }
-  
+export function Logo() {
   return (
-    <Link to="/" className="flex items-center">
-      <div className="text-2xl font-bold" style={colorToUse ? { color: colorToUse } : {}}>
-        {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>
+    <Link to="/" className="flex items-center space-x-3 group">
+      <motion.div
+        className="relative"
+        whileHover={{ scale: 1.05 }}
+        transition={{ type: "spring", stiffness: 400 }}
+      >
+        {/* Logo Icon */}
+        <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center shadow-lg">
+          <span className="text-white text-xl font-bold">Z</span>
+        </div>
+        
+        {/* Glow effect */}
+        <div className="absolute inset-0 bg-zion-cyan rounded-xl opacity-20 blur-md group-hover:opacity-40 transition-opacity duration-300" />
+      </motion.div>
+      
+      {/* Company Name */}
+      <div className="hidden sm:block">
+        <h1 className="text-xl font-bold text-white">
+          Zion Tech Group
+        </h1>
+        <p className="text-xs text-zion-cyan font-medium">
+          AI & Technology Solutions
+        </p>
       </div>
     </Link>
   );

@@ -1,265 +1,289 @@
+import { Globe, Zap } from "lucide-react";
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+import { SEO } from "../components/SEOHead";
+import { SEO } from "../components/SEOHead";
+import { ALL_INNOVATIVE_SERVICES, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import React from 'react';
+import { Header } from '@/components/header/Header';
+import { Header } from '@/components/header/Header';
+import { Header } from '@/components/header/Header';
+import { Header } from '@/components/header/Header';
+import { Footer } from '@/components/Footer';
+import { Footer } from '@/components/Footer';
+import { Footer } from '@/components/Footer';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { SEO } from '@/components/SEO';
+import { SEO } from '@/components/SEO';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { GradientHeading } from '@/components/GradientHeading';
+import { GradientHeading } from '@/components/GradientHeading';
+import { GradientHeading } from '@/components/GradientHeading';
 
+import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 import { TrustedBySection } from "@/components/TrustedBySection";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import { Button } from "@/components/ui/button";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Globe } from "lucide-react";
+import { Globe, Zap, Shield, Cloud, Database, Target, Smartphone, Link as LinkIcon } from "lucide-react";
 import { useEffect, useState } from "react";
+import { FEATURED_SERVICES } from "@/data/expandedServices";
 
-// Sample service listings
-const SERVICE_LISTINGS: ProductListing[] = [
-  {
-    id: "service-1",
-    title: "AI Development & Integration",
-    description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems.",
-    category: "Development",
-    price: 5000,
-    currency: "$",
-    tags: ["AI Integration", "Machine Learning", "Enterprise"],
-    author: {
-      name: "TechSolutions Inc.",
-      id: "tech-solutions",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-    },
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2023-12-10T14:48:00.000Z",
-    aiScore: 95,
-    rating: 4.9,
-    reviewCount: 124,
-  },
-  {
-    id: "service-2",
-    title: "Cloud Infrastructure Management",
-    description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",
-    category: "Management",
-    price: 3000,
-    currency: "$",
-    tags: ["Cloud", "DevOps", "Security"],
-    author: {
-      name: "CloudPro Experts",
-      id: "cloud-pro",
-    },
-    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2023-11-20T09:30:00.000Z",
-    aiScore: 88,
-    rating: 4.7,
-    reviewCount: 92,
-  },
-  {
-    id: "service-3",
-    title: "Big Data Analysis & Insights",
-    description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services.",
-    category: "Analytics",
-    price: 4500,
-    currency: "$",
-    tags: ["Big Data", "Analytics", "Business Intelligence"],
-    author: {
-      name: "DataMind Solutions",
-      id: "datamind",
-      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
-    },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-05T11:15:00.000Z",
-    aiScore: 92,
-    rating: 4.8,
-    reviewCount: 78,
-  },
-  {
-    id: "service-4",
-    title: "Cybersecurity Assessment & Protection",
-    description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.",
-    category: "Security",
-    price: 6000,
-    currency: "$",
-    tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
-    author: {
-      name: "SecureNet Team",
-      id: "secure-net",
-    },
-    images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2023-12-28T16:22:00.000Z",
-    aiScore: 89,
-    rating: 4.9,
-    reviewCount: 103,
-  },
-  {
-    id: "service-5",
-    title: "IT Infrastructure Modernization",
-    description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
-    category: "Consulting",
-    price: 8500,
-    currency: "$",
-    tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
-    author: {
-      name: "ModernizeIT Consulting",
-      id: "modernize-it",
-    },
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2023-11-10T08:45:00.000Z",
-    aiScore: 86,
-    rating: 4.6,
-    reviewCount: 67,
-  },
-  {
-    id: "service-6",
-    title: "AI Strategy & Implementation",
-    description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.",
-    category: "Strategy",
-    price: 7500,
-    currency: "$",
-    tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
-    author: {
-      name: "AI Future Consulting",
-      id: "ai-future",
-      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
-    },
-    images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-02-02T10:30:00.000Z",
-    aiScore: 94,
-    rating: 4.8,
-    reviewCount: 85,
-  },
-];
 
 function getRandomItem<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
 
-function generateRandomService(idNum: number): ProductListing {
-  const templates = [
-    {
-      title: "AI Automation Consulting",
-      category: "Consulting",
-      min: 4000,
-      max: 12000,
-      tags: ["Automation", "AI Strategy", "Optimization"],
-    },
-    {
-      title: "Cloud Migration & Support",
-      category: "Management",
-      min: 3000,
-      max: 9000,
-      tags: ["Cloud", "Migration", "DevOps"],
-    },
-    {
-      title: "Advanced Cybersecurity Suite",
-      category: "Security",
-      min: 5000,
-      max: 15000,
-      tags: ["Cybersecurity", "PenTesting", "Compliance"],
-    },
-    {
-      title: "Big Data Engineering",
-      category: "Analytics",
-      min: 3500,
-      max: 11000,
-      tags: ["Data Engineering", "Analytics", "ETL"],
-    },
-    {
-      title: "AI Model Training Service",
-      category: "Development",
-      min: 4500,
-      max: 13000,
-      tags: ["Machine Learning", "Model Training", "AI"],
-    },
-    {
-      title: "Digital Transformation Strategy",
-      category: "Strategy",
-      min: 6000,
-      max: 14000,
-      tags: ["Transformation", "Strategy", "Business"],
-    },
-  ];
 
-  const authors = [
-    "Global AI Experts",
-    "InnovateTech",
-    "SecureFuture",
-    "CloudOps Partners",
-    "DataVisor",
-    "NexGen Solutions",
-  ];
 
-  const images = [
-    "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500",
-    "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500",
-    "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
-    "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500",
-  ];
 
-  const template = getRandomItem(templates);
-  const author = getRandomItem(authors);
-  const price = Math.round(
-    Math.random() * (template.max - template.min) + template.min
-  );
 
-  return {
-    id: `auto-service-${idNum}`,
-    title: template.title,
-    description: `Professional ${template.title.toLowerCase()} with industry-standard practices and tailored solutions for your business.`,
-    category: template.category,
-    price,
-    currency: "$",
-    tags: template.tags,
-    author: { name: author, id: author.toLowerCase().replace(/\s+/g, "-") },
-    images: [getRandomItem(images)],
-    createdAt: new Date().toISOString(),
-    aiScore: Math.floor(90 + Math.random() * 10),
-    rating: parseFloat((4 + Math.random()).toFixed(1)),
-    reviewCount: Math.floor(50 + Math.random() * 150),
-  };
-}
 
-// Filter options specific to services
-const SERVICE_FILTERS = [
-  { label: 'Development', value: 'development' },
-  { label: 'Management', value: 'management' },
-  { label: 'Security', value: 'security' },
-  { label: 'Analytics', value: 'analytics' },
-  { label: 'Consulting', value: 'consulting' },
-  { label: 'Strategy', value: 'strategy' },
-];
 
 export default function ServicesPage() {
-  const [listings, setListings] = useState<ProductListing[]>(SERVICE_LISTINGS);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setListings(prev => [...prev, generateRandomService(prev.length + 1)]);
-    }, 120000);
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
+    { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'ai-finance', name: 'AI & Finance', icon: TrendingUp, color: 'from-zion-purple to-zion-blue' },
+    { id: 'ai-legal', name: 'AI & Legal', icon: Shield, color: 'from-zion-blue to-zion-cyan' },
+    { id: 'ai-healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-zion-cyan to-zion-green' },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
+    { id: 'quantum-ml', name: 'Quantum ML', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
+    { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
+    { id: 'autonomous-systems', name: 'Autonomous Systems', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
+    { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
+    { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
+    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
+    { id: 'ai-content-marketing', name: 'AI Content & Marketing', icon: Code, color: 'from-zion-orange to-zion-pink' },
+    { id: 'data-privacy-compliance', name: 'Data Privacy & Compliance', icon: Lock, color: 'from-zion-red to-zion-purple' },
+    { id: 'green-tech-sustainability', name: 'Green Tech & Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
+    { id: 'remote-work-collaboration', name: 'Remote Work & Collaboration', icon: Users, color: 'from-zion-blue to-zion-purple' },
+    { id: 'ecommerce-retail', name: 'E-commerce & Retail', icon: ShoppingCart, color: 'from-zion-green to-zion-orange' },
+    { id: 'healthcare-technology', name: 'Healthcare Technology', icon: Heart, color: 'from-zion-pink to-zion-red' },
+    { id: 'educational-technology', name: 'Educational Technology', icon: BookOpen, color: 'from-zion-blue to-zion-green' },
+    { id: 'real-estate-technology', name: 'Real Estate Technology', icon: Building, color: 'from-zion-orange to-zion-blue' },
+    { id: 'supply-chain-logistics', name: 'Supply Chain & Logistics', icon: Truck, color: 'from-zion-green to-zion-purple' },
+    { id: 'customer-support', name: 'Customer Support', icon: MessageCircle, color: 'from-zion-blue to-zion-pink' }
+  ];
 
-    return () => clearInterval(interval);
-  }, []);
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'budget', name: 'Budget', range: '$100 - $1,000' },
+    { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },
+    { id: 'enterprise', name: 'Enterprise', range: '$5,000+' }
+  ];
+
+  const sortOptions = [
+    { id: 'featured', name: 'Featured' },
+    { id: 'price-low', name: 'Price: Low to High' },
+    { id: 'price-high', name: 'Price: High to Low' },
+    { id: 'newest', name: 'Newest' },
+    { id: 'popular', name: 'Most Popular' },
+    { id: 'innovation', name: 'Innovation Level' }
+  ];
+
+  // Combine all services
+  const allServices = [
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+    ...ADVANCED_ENTERPRISE_SOLUTIONS_2025,
+    ...NEXT_GEN_AI_SERVICES_2025,
+    ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025,
+    ...IOT_EDGE_COMPUTING_SERVICES_2025
+  ];
+
+  // Filter and sort services
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const matchesCategory = selectedCategory === 'all' || 
+                           service.category.toLowerCase().includes(selectedCategory.replace('-', ' ')) ||
+                           service.subcategory.toLowerCase().includes(selectedCategory.replace('-', ' '));
+    
+    const matchesPrice = selectedPriceRange === 'all' || 
+                        (selectedPriceRange === 'budget' && service.price <= 1000) ||
+                        (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
+                        (selectedPriceRange === 'enterprise' && service.price > 5000);
+    
+    return matchesSearch && matchesCategory && matchesPrice;
+  });
+
+  // Sort services
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price-low':
+        return a.price - b.price;
+      case 'price-high':
+        return b.price - a.price;
+      case 'newest':
+        return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime();
+      case 'innovation':
+        const innovationOrder = { 'Cutting-edge': 3, 'Advanced': 2, 'Standard': 1 };
+        return (innovationOrder[b.innovationLevel] || 0) - (innovationOrder[a.innovationLevel] || 0);
+      default:
+        return 0;
+    }
+  });
+
+  const getCategoryIcon = (category: string) => {
+    const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
+    return cat ? cat.icon : Zap;
+  };
+
+  const getCategoryColor = (category: string) => {
+    const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
+    return cat ? cat.color : 'from-zion-cyan to-zion-blue';
+  };
+
+  // Get category statistics
+  const getCategoryStats = () => {
+    const stats: { [key: string]: number } = {};
+    INNOVATIVE_MICRO_SAAS_SERVICES_2025.forEach(service => {
+      const category = service.category.toLowerCase().replace(' ', '-');
+      stats[category] = (stats[category] || 0) + 1;
+    });
+    return stats;
+  };
+
+  const categoryStats = getCategoryStats();
 
   return (
     <>
-      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <h2 className="text-white text-lg font-medium">Featured Services</h2>
-          <div className="flex flex-wrap gap-2">
+      <SEOHead 
+      
+
+            
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+
+
+
+                <Filter className="w-4 h-4 text-zion-cyan" />
+
+                <TrendingUp className="w-4 h-4 text-zion-cyan" />
+
+
+          <AnimatePresence mode="wait">
+                      
+                      
+
+
+                          <TrendingUp className="w-4 h-4" />
+
+                              <CheckCircle className="w-3 h-3 text-zion-cyan" />
+
+                          <Clock className="w-4 h-4" />
+                          <Star className="w-4 h-4 text-zion-cyan" />
+                      
+                      <Link
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+          </AnimatePresence>
+
+
+                <Rocket className="w-10 h-10 text-white" />
+              
+              
+              
+
+                <Server className="w-10 h-10 text-white" />
+              
+              
+              
+
+                <Brain className="w-10 h-10 text-white" />
+              
+              
+              
+
+                <Globe className="w-10 h-10 text-white" />
+              
+              
+              
+
+                <Cpu className="w-10 h-10 text-white" />
+              
+              
+              
+
+                <Shield className="w-10 h-10 text-white" />
+              
+              
+              
+
+
+                  <Rocket className="w-8 h-8 text-white" />
+                
+                
+                
+                
+                <Link
+                </Link>
+
+          
+                <Brain className="w-8 h-8 text-white" />
+              
+              
+              <Link 
+                Explore Revolutionary Services <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+
+            
+              <Link
+                <MessageCircle className="w-5 h-5 mr-2" />
+              </Link>
+              
+                <Phone className="w-5 h-5 mr-2" />
+            
             <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
-                Global IT Onsite Services
+              </Button>
+            </Link>
+            <Link to="/expanded-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Zap className="h-4 w-4 mr-2" />
               </Button>
             </Link>
             <Link to="/request-quote">
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                Request a Quote
               </Button>
             </Link>
-          </div>
-        </div>
-      </div>
+
+          
+                  {service.category === 'AI & Automation' && <Zap className="w-5 h-5 text-blue-500" />}
+                  {service.category === 'Cybersecurity' && <Shield className="w-5 h-5 text-red-500" />}
+                  {service.category === 'Cloud & DevOps' && <Cloud className="w-5 h-5 text-green-500" />}
+                  {service.category === 'Data & Analytics' && <Database className="w-5 h-5 text-purple-500" />}
+                  {service.category === 'Digital Transformation' && <Target className="w-5 h-5 text-indigo-500" />}
+                  {service.category === 'IoT & Edge Computing' && <Smartphone className="w-5 h-5 text-orange-500" />}
+                  {service.category === 'Blockchain & Web3' && <LinkIcon className="w-5 h-5 text-cyan-500" />}
+                
+                
+                
+                
+                <Button asChild className="w-full" size="sm">
+                  <Link to={`/service/${service.id}`}>
+                  </Link>
+                </Button>
+          
+            <Button asChild size="lg" variant="outline">
+              <Link to="/expanded-services">
+              </Link>
+            </Button>
+
       <DynamicListingPage 
-        title="IT & AI Services"
-        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
-        categorySlug="services"
-        listings={listings}
-        categoryFilters={SERVICE_FILTERS}
-        initialPrice={{ min: 3000, max: 10000 }}
-      />
       <TrustedBySection />
     </>
   );

@@ -1,20 +1,22 @@
-export default async function handler(req: any, res: any) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
-  }
+import React from 'react';
+import Head from 'next/head';
 
-  try {
-    const event = req.body;
-    // Log test events for QA
-    console.log('Stripe webhook event:', event);
-    res.statusCode = 200;
-    res.json({ received: true });
-  } catch (err) {
-    console.error('Webhook error:', err);
-    res.statusCode = 400;
-    res.end('Webhook handler failed');
-  }
+export default function Webhook() {
+  return (
+    <>
+      <Head>
+        <title>Webhook - Zion Tech Group</title>
+        <meta name="description" content="Webhook page" />
+      </Head>
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">Webhook</h1>
+        <p className="text-lg mb-4">This page is under construction.</p>
+        <div className="mt-4">
+          <a href="/" className="text-blue-600 hover:underline">
+            ← Back to Home
+          </a>
+        </div>
+      </div>
+    </>
+  );
 }

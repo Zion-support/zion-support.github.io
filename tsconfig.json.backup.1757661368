@@ -1,0 +1,95 @@
+{
+  "compilerOptions": {
+<<<<<<< HEAD
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+=======
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es6"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+>>>>>>> origin/backup-main-20250909-144539
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+<<<<<<< HEAD
+    "baseUrl": ".",
+=======
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+>>>>>>> origin/backup-main-20250909-144539
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+<<<<<<< HEAD
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "src",
+    "pages",
+    "components",
+    "types",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+=======
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "build",
+    "automation",
+    "scripts",
+    "fix_*.js",
+    "fix_*.cjs",
+    "*.fix.js",
+    "*.fix.cjs"
+>>>>>>> origin/backup-main-20250909-144539
+  ]
+}

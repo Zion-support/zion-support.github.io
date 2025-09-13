@@ -32,6 +32,7 @@ describe('MarketplaceCard Buy Now', () => {
 
     fireEvent.click(screen.getByRole('button'));
     expect(navigateMock).toHaveBeenCalledWith('/login', { state: { from: '/' } });
+    expect(navigateMock).toHaveBeenCalledWith('/login', { state: { from: '/' } });
   });
 });
 

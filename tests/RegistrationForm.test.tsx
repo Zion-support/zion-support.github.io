@@ -1,9 +1,14 @@
 import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Signup from '@/pages/Signup';
 import * as toastHook from '@/hooks/use-toast';
 import * as router from 'react-router-dom';
 import { mockFetch } from './__mocks__/server';
+
+jest.mock('@/hooks/useAuth', () => ({
+  useAuth: () => ({
+>>>>>>> origin/content/blog-sept12:tests.disabled/RegistrationForm.test.tsx.backup.1755989866
 
 jest.mock('@/hooks/useAuth', () => ({
   useAuth: () => ({
@@ -15,6 +20,16 @@ jest.mock('@/hooks/useAuth', () => ({
   }),
 }));
 
+jest.mock('@/hooks/use-toast');
+
+jest.mock('react-router-dom', () => ({
+  ...(jest.requireActual('react-router-dom') as any),
+  useNavigate: jest.fn(),
+}));
+
+describe('RegistrationForm', () => {
+  beforeEach(() => {
+>>>>>>> origin/content/blog-sept12:tests.disabled/RegistrationForm.test.tsx.backup.1755989866
 jest.mock('@/hooks/use-toast');
 
 jest.mock('react-router-dom', () => ({
@@ -45,6 +60,9 @@ describe('RegistrationForm', () => {
     const navigateMock = jest.fn();
     (router.useNavigate as jest.Mock).mockReturnValue(navigateMock);
     (toastHook.toast.success as jest.Mock).mockImplementation(() => {});
+    const navigateMock = jest.fn();
+    (router.useNavigate as jest.Mock).mockReturnValue(navigateMock);
+    (toastHook.toast.success as jest.Mock).mockImplementation(() => {});
     mockFetch({ token: 'jwt' }, 201);
 
     render(
@@ -60,17 +78,22 @@ describe('RegistrationForm', () => {
     fireEvent.click(screen.getByLabelText(/i agree/i));
     fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
 
-    expect(global.fetch).toHaveBeenCalledWith(
-      expect.stringContaining('/auth/register'),
-      expect.objectContaining({ method: 'POST' })
-    );
+    expect(global.fetch).toHaveBeenCalledWith('/api/auth/register', expect.objectContaining({ method: 'POST' }));
     expect(toastHook.toast.success).toHaveBeenCalledWith('Account created');
     expect(navigateMock).toHaveBeenCalledWith('/dashboard');
   });
 
   it('shows error toast on server 400', async () => {
     (toastHook.toast.error as jest.Mock).mockImplementation(() => {});
-    mockFetch({ message: 'Bad' }, 400);
+    mockFetch({ error: 'Bad' }, 400);
+    expect(global.fetch).toHaveBeenCalledWith('/api/auth/register', expect.objectContaining({ method: 'POST' }));
+    expect(toastHook.toast.success).toHaveBeenCalledWith('Account created');
+    expect(navigateMock).toHaveBeenCalledWith('/dashboard');
+  });
+
+  it('shows error toast on server 400', async () => {
+    (toastHook.toast.error as jest.Mock).mockImplementation(() => {});
+    mockFetch({ error: 'Bad' }, 400);
 
     render(
       <MemoryRouter>
@@ -84,6 +107,10 @@ describe('RegistrationForm', () => {
     fireEvent.input(screen.getByLabelText(/confirm password/i), { target: { value: 'Password123' } });
     fireEvent.click(screen.getByLabelText(/i agree/i));
     fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
+
+    expect(toastHook.toast.error).toHaveBeenCalledWith('Bad');
+  });
+});
 
     expect(toastHook.toast.error).toHaveBeenCalledWith('Bad');
   });

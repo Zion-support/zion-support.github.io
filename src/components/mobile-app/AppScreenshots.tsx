@@ -36,11 +36,12 @@ export const AppScreenshots: React.FC = () => {
         </div>
         
         <div className="relative">
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
             onClick={() => scroll("left")}
+            aria-label="Scroll left"
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
@@ -55,20 +56,22 @@ export const AppScreenshots: React.FC = () => {
                 key={screenshot.id} 
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
               >
-                <img 
-                  src={screenshot.src} 
+                <img
+                  src={screenshot.src}
                   alt={screenshot.alt}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
             ))}
           </div>
           
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
             onClick={() => scroll("right")}
+            aria-label="Scroll right"
           >
             <ChevronRight className="h-6 w-6" />
           </Button>
