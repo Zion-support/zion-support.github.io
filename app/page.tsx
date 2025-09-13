@@ -43,6 +43,10 @@ import { BreakthroughBanner, QuantumBanner, ContentShowcaseBanner, SuccessStoryB
 import ContentPromotion from '../components/ContentPromotion';
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 
+// Import new content promotion banners
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import AutomationSolutionsPromotionBanner from '../components/AutomationSolutionsPromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -54,6 +58,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTION BANNER 2025 */}
+        <NewContentPromotionBanner2025 />
+        
+        {/* AUTOMATION SOLUTIONS PROMOTION BANNER */}
+        <AutomationSolutionsPromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
+        
         {/* QUANTUM-NEURAL FUSION 2026 BREAKTHROUGH BANNER */}
         <QuantumNeuralFusion2026PromotionBanner />
         
