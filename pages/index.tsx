@@ -93,6 +93,26 @@ export default function Home() {
       <ErrorBoundary level="page">
         <Suspense fallback={<LoadingSpinner fullScreen text="Loading Zion Tech Group..." />}>
           <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        {/* Promotional Banner */}
+        <section className="bg-gradient-to-r from-cyan-600 via-purple-600 to-cyan-600 py-3 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <span className="text-white font-semibold text-sm sm:text-base">
+                🚀 New: AI Automation Revolution Guide & $2.5B ROI Case Study
+              </span>
+              <Link 
+                href="/content-showcase" 
+                className="inline-flex items-center px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-white font-semibold text-sm transition-colors"
+              >
+                Explore Now
+                <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
+        
         {/* Hero Section */}
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
           <div className="max-w-4xl mx-auto">
@@ -214,6 +234,118 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* Latest Content Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Latest Insights & Resources
+              </h2>
+              <p className="text-lg text-slate-300 mb-8">
+                Stay ahead with our cutting-edge research, case studies, and implementation guides
+              </p>
+              <Link 
+                href="/content-showcase" 
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+              >
+                Explore All Content
+                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Featured Blog Post */}
+              <Link href="/blog/ai-automation-revolution-2025" className="group bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 overflow-hidden">
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-2xl">📝</span>
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500 text-white">Blog Post</span>
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-yellow-400 to-orange-500 text-black">Featured</span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+                    The AI Automation Revolution: How 2025 is Transforming Business Operations
+                  </h3>
+                  <p className="text-slate-300 mb-4 text-sm line-clamp-3">
+                    Discover how AI automation is revolutionizing business operations in 2025, with real-world case studies and implementation strategies.
+                  </p>
+                  <div className="flex items-center justify-between text-xs text-slate-400">
+                    <span>2025-01-17</span>
+                    <span>8 min read</span>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Featured Whitepaper */}
+              <Link href="/resources/quantum-computing-business-guide-2025" className="group bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105 overflow-hidden">
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-2xl">📄</span>
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500 text-white">Whitepaper</span>
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-yellow-400 to-orange-500 text-black">Featured</span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-purple-400 transition-colors">
+                    Quantum Computing for Business: A Complete Implementation Guide 2025
+                  </h3>
+                  <p className="text-slate-300 mb-4 text-sm line-clamp-3">
+                    Comprehensive guide to implementing quantum computing solutions in business operations, with practical examples and ROI analysis.
+                  </p>
+                  <div className="flex items-center justify-between text-xs text-slate-400">
+                    <span>2025-01-17</span>
+                    <span>12 min read</span>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Featured Case Study */}
+              <Link href="/case-studies/global-enterprise-ai-transformation-2025-ultimate-success" className="group bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 overflow-hidden">
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-2xl">📊</span>
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-green-500 text-white">Case Study</span>
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-yellow-400 to-orange-500 text-black">Featured</span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-green-400 transition-colors">
+                    Global Enterprise AI Transformation: $2.5 Billion ROI Success Story
+                  </h3>
+                  <p className="text-slate-300 mb-4 text-sm line-clamp-3">
+                    How a Fortune 500 company achieved $2.5 billion in ROI through comprehensive AI transformation, reducing costs by 60% while increasing revenue by 40%.
+                  </p>
+                  <div className="flex items-center justify-between text-xs text-slate-400">
+                    <span>2025-01-17</span>
+                    <span>10 min read</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
+            {/* Content Categories */}
+            <div className="mt-12 grid md:grid-cols-4 gap-6">
+              <Link href="/blog" className="group text-center p-6 bg-slate-900/40 rounded-lg border border-white/10 hover:border-cyan-500/40 transition-colors">
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">📝</div>
+                <h3 className="font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Blog Posts</h3>
+                <p className="text-sm text-slate-400">Latest insights and trends</p>
+              </Link>
+              <Link href="/resources" className="group text-center p-6 bg-slate-900/40 rounded-lg border border-white/10 hover:border-purple-500/40 transition-colors">
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">📄</div>
+                <h3 className="font-semibold mb-2 group-hover:text-purple-400 transition-colors">Resources</h3>
+                <p className="text-sm text-slate-400">Guides and whitepapers</p>
+              </Link>
+              <Link href="/case-studies" className="group text-center p-6 bg-slate-900/40 rounded-lg border border-white/10 hover:border-green-500/40 transition-colors">
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">📊</div>
+                <h3 className="font-semibold mb-2 group-hover:text-green-400 transition-colors">Case Studies</h3>
+                <p className="text-sm text-slate-400">Success stories and ROI</p>
+              </Link>
+              <Link href="/tools" className="group text-center p-6 bg-slate-900/40 rounded-lg border border-white/10 hover:border-orange-500/40 transition-colors">
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🛠️</div>
+                <h3 className="font-semibold mb-2 group-hover:text-orange-400 transition-colors">Tools</h3>
+                <p className="text-sm text-slate-400">Calculators and utilities</p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
