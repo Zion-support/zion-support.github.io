@@ -28,6 +28,8 @@ import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import NewContentShowcase2026 from '../components/NewContentShowcase2026';
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+import InteractiveContentShowcase2025 from '../components/InteractiveContentShowcase2025';
 
 // New revolutionary components
 import RevolutionaryAIContentPromotionBanner from '../components/RevolutionaryAIContentPromotionBanner';
@@ -93,6 +95,9 @@ export default function HomePage() {
 
       {/* New Content Banner */}
       <NewContentBanner variant="featured" />
+      
+      {/* New 2025 Content Promotion */}
+      <NewContentPromotionBanner2025 variant="hero" />
 
       {/* Featured Content Showcase */}
       <EnhancedContentShowcase
@@ -1844,6 +1849,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Interactive Content Showcase */}
+      <InteractiveContentShowcase2025 />
 
       {/* Call to Action */}
       <section className='py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white'>
