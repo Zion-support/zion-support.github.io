@@ -24,6 +24,14 @@ import UltimateContentShowcase2028PromotionBanner from '../components/UltimateCo
 import BusinessTransformation2028Showcase from '../components/BusinessTransformation2028Showcase';
 import BusinessTransformation2028PromotionBanner from '../components/BusinessTransformation2028PromotionBanner';
 
+// Import new 2025 content components
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import NewContentShowcase2025PromotionBanner from '../components/NewContentShowcase2025PromotionBanner';
+import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
+import InteractiveTechDemo2025PromotionBanner from '../components/InteractiveTechDemo2025PromotionBanner';
+import BusinessSolutionsShowcase2025 from '../components/BusinessSolutionsShowcase2025';
+import BusinessSolutionsShowcase2025PromotionBanner from '../components/BusinessSolutionsShowcase2025PromotionBanner';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -297,6 +305,24 @@ export default function HomePage() {
         
         {/* NEW 2025 INTERACTIVE TECH DEMO PROMOTION BANNER */}
         <InteractiveTechDemo2025PromotionBanner />
+        
+        {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
+        <NewContentShowcase2025PromotionBanner />
+        
+        {/* NEW CONTENT SHOWCASE 2025 */}
+        <NewContentShowcase2025 />
+        
+        {/* INTERACTIVE TECH DEMO 2025 PROMOTION BANNER */}
+        <InteractiveTechDemo2025PromotionBanner />
+        
+        {/* INTERACTIVE TECH DEMO 2025 */}
+        <InteractiveTechDemo2025 />
+        
+        {/* BUSINESS SOLUTIONS SHOWCASE 2025 PROMOTION BANNER */}
+        <BusinessSolutionsShowcase2025PromotionBanner />
+        
+        {/* BUSINESS SOLUTIONS SHOWCASE 2025 */}
+        <BusinessSolutionsShowcase2025 />
         
         {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
         <UltimateContentShowcase2025 />
