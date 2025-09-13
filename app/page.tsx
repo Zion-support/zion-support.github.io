@@ -59,6 +59,14 @@ import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025Ulti
 import AI2026BreakthroughRevolutionaryContentBanner from '../components/AI2026BreakthroughRevolutionaryContentBanner';
 import QuantumComputingBreakthroughs2030Banner from '../components/QuantumComputingBreakthroughs2030Banner';
 
+// Import new 2025 content showcase components
+import InteractiveContentShowcase2025 from '../components/InteractiveContentShowcase2025';
+import InteractiveContentShowcase2025PromotionBanner from '../components/InteractiveContentShowcase2025PromotionBanner';
+import SuccessStoriesShowcase2025 from '../components/SuccessStoriesShowcase2025';
+import SuccessStoriesShowcase2025PromotionBanner from '../components/SuccessStoriesShowcase2025PromotionBanner';
+import TechnologyTrendsShowcase2025 from '../components/TechnologyTrendsShowcase2025';
+import TechnologyTrendsShowcase2025PromotionBanner from '../components/TechnologyTrendsShowcase2025PromotionBanner';
+
 // Import new interactive widgets
 // Import new promotional components
 import EdgeAIRevolutionPromotionBanner from '../components/EdgeAIRevolutionPromotionBanner';
@@ -298,8 +306,26 @@ export default function HomePage() {
         {/* NEW 2025 INTERACTIVE TECH DEMO PROMOTION BANNER */}
         <InteractiveTechDemo2025PromotionBanner />
         
+        {/* NEW INTERACTIVE CONTENT SHOWCASE 2025 PROMOTION BANNER */}
+        <InteractiveContentShowcase2025PromotionBanner />
+        
+        {/* NEW SUCCESS STORIES SHOWCASE 2025 PROMOTION BANNER */}
+        <SuccessStoriesShowcase2025PromotionBanner />
+        
+        {/* NEW TECHNOLOGY TRENDS SHOWCASE 2025 PROMOTION BANNER */}
+        <TechnologyTrendsShowcase2025PromotionBanner />
+        
         {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
         <UltimateContentShowcase2025 />
+        
+        {/* NEW INTERACTIVE CONTENT SHOWCASE 2025 */}
+        <InteractiveContentShowcase2025 />
+        
+        {/* NEW SUCCESS STORIES SHOWCASE 2025 */}
+        <SuccessStoriesShowcase2025 />
+        
+        {/* NEW TECHNOLOGY TRENDS SHOWCASE 2025 */}
+        <TechnologyTrendsShowcase2025 />
         
         {/* NEW 2025 AI INNOVATION SHOWCASE PROMOTION BANNER */}
         <AIInnovationShowcase2025PromotionBanner />
