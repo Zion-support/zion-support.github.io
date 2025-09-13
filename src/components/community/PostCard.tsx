@@ -1,5 +1,7 @@
 
-const PostCard: React.FC = () => {
+import React from 'react';
+
+const PostCardComponent: React.FC = () => {
   return (
     <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-6 border border-zion-blue-light/30">
       <div className="text-center">

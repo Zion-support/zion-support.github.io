@@ -1,148 +1,255 @@
 #!/usr/bin/env python3
 
 import subprocess
-import os
+import json
 import sys
-from datetime import datetime
+import os
+import time
+import re
 
-def run_command(cmd, check=True):
-    """Run a git command and return the result"""
+def run_command(cmd, timeout=300):
+    """Run a command with timeout"""
     try:
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, check=check)
-        return result.stdout.strip()
-    except subprocess.CalledProcessError as e:
-        if check:
-            print(f"Error running command: {cmd}")
-            print(f"Error: {e}")
-            sys.exit(1)
-        return None
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=timeout)
+        return result.returncode, result.stdout, result.stderr
+    except subprocess.TimeoutExpired:
+        print(f"Command timed out: {cmd}")
+        return -1, "", "Timeout"
+    except Exception as e:
+        print(f"Error running command: {cmd}, Error: {e}")
+        return -1, "", str(e)
 
-def get_conflicted_files():
-    """Get list of files with merge conflicts"""
-    result = run_command("git diff --name-only --diff-filter=U", check=False)
-    if result:
-        return result.split('\n')
-    return []
-
-def resolve_conflict_strategy(file_path, strategy="theirs"):
-    """Resolve conflict using specified strategy"""
-    print(f"Resolving conflicts in {file_path} using {strategy} strategy...")
+def get_open_prs():
+    """Get list of open PRs from GitHub"""
+    print("Fetching open PRs from GitHub...")
     
-    if strategy == "theirs":
-        # Use their version (remote main)
-        run_command(f"git checkout --theirs {file_path}")
-    elif strategy == "ours":
-        # Use our version (local changes)
-        run_command(f"git checkout --ours {file_path}")
-    elif strategy == "both":
-        # Keep both versions (manual resolution needed)
-        print(f"⚠️  Manual resolution needed for {file_path}")
+    # Try to get PRs using GitHub CLI if available
+    returncode, stdout, stderr = run_command("gh pr list --state open --json number,title,headRefName,baseRefName")
+    
+    if returncode == 0:
+        try:
+            prs = json.loads(stdout)
+            print(f"Found {len(prs)} open PRs")
+            return prs
+        except json.JSONDecodeError:
+            print("Failed to parse PR list JSON")
+            return []
+    else:
+        print(f"Failed to get PRs: {stderr}")
+        # Fallback: try to get from git branches
+        return get_prs_from_branches()
+    
+def get_prs_from_branches():
+    """Fallback method to get PR branches"""
+    print("Getting PR branches from git...")
+    returncode, stdout, stderr = run_command("git branch -r | grep 'cursor/' | grep -v 'HEAD'")
+    
+    if returncode == 0:
+        branches = stdout.strip().split('\n')
+        prs = []
+        for i, branch in enumerate(branches):
+            if branch.strip():
+                branch_name = branch.strip().replace('origin/', '')
+                prs.append({
+                    'number': i + 1,
+                    'title': f'Branch: {branch_name}',
+                    'headRefName': branch_name,
+                    'baseRefName': 'main'
+                })
+        print(f"Found {len(prs)} cursor branches")
+        return prs
+    else:
+        print(f"Failed to get branches: {stderr}")
+        return []
+
+def resolve_merge_conflicts(branch_name):
+    """Resolve merge conflicts for a specific branch"""
+    print(f"\nResolving merge conflicts for branch: {branch_name}")
+    
+    # Switch to main branch
+    returncode, stdout, stderr = run_command("git checkout main")
+    if returncode != 0:
+        print(f"Failed to checkout main: {stderr}")
         return False
     
-    # Mark as resolved
-    run_command(f"git add {file_path}")
-    return True
+    # Pull latest changes
+    returncode, stdout, stderr = run_command("git pull origin main")
+    if returncode != 0:
+        print(f"Failed to pull main: {stderr}")
+    
+    # Fetch the branch
+    returncode, stdout, stderr = run_command(f"git fetch origin {branch_name}")
+    if returncode != 0:
+        print(f"Failed to fetch branch {branch_name}: {stderr}")
+        return False
+    
+    # Try to merge
+    print(f"Attempting to merge {branch_name} into main...")
+    returncode, stdout, stderr = run_command(f"git merge origin/{branch_name}")
+    
+    if returncode == 0:
+        print(f"Successfully merged {branch_name}")
+        return True
+    else:
+        print(f"Merge conflict detected for {branch_name}")
+        print(f"Conflict details: {stderr}")
+        
+        # Check for conflict markers
+        returncode, stdout, stderr = run_command("git status --porcelain")
+        if returncode == 0:
+            conflict_files = [line for line in stdout.split('\n') if line.startswith('UU') or '<<<<<<< HEAD' in line]
+            if conflict_files:
+                print(f"Conflict files: {conflict_files}")
+                return resolve_conflicts_automatically()
+        
+        return False
 
 def resolve_conflicts_automatically():
-    """Automatically resolve merge conflicts using intelligent strategies"""
-    print("Starting automatic conflict resolution...")
+    """Automatically resolve common merge conflicts"""
+    print("Attempting automatic conflict resolution...")
     
-    conflicted_files = get_conflicted_files()
-    if not conflicted_files:
-        print("No conflicted files found")
-        return True
+    # Find all files with conflict markers
+    returncode, stdout, stderr = run_command("grep -r '<<<<<<< HEAD' . --include='*.tsx' --include='*.ts' --include='*.js' --include='*.jsx' --include='*.json' | cut -d: -f1 | sort | uniq")
     
-    print(f"Found {len(conflicted_files)} conflicted files")
+    if returncode == 0:
+        conflict_files = stdout.strip().split('\n')
+        conflict_files = [f for f in conflict_files if f.strip()]
+        
+        for file_path in conflict_files:
+            print(f"Resolving conflicts in: {file_path}")
+            resolve_file_conflicts(file_path)
     
-    # Define resolution strategies for different file types
-    resolution_strategies = {
-        # Configuration files - prefer remote version
-        "tailwind.config.js": "theirs",
-        "next.config.js": "theirs",
-        "package.json": "theirs",
-        "tsconfig.json": "theirs",
-        
-        # Component files - prefer our version (merged PRs)
-        "components/": "ours",
-        "pages/": "ours",
-        "src/": "ours",
-        
-        # Data files - prefer our version
-        "data/": "ours",
-        
-        # Type definitions - prefer our version
-        "types/": "ours",
-        
-        # Styles - prefer our version
-        "styles/": "ours",
-        
-        # Scripts - prefer our version
-        "*.sh": "ours",
-        "*.py": "ours",
-        
-        # Documentation - prefer our version
-        "*.md": "ours",
-    }
-    
-    resolved_count = 0
-    manual_resolution_needed = []
-    
-    for file_path in conflicted_files:
-        if not file_path.strip():
-            continue
-            
-        print(f"\nProcessing: {file_path}")
-        
-        # Determine strategy based on file type
-        strategy = "theirs"  # Default to remote version
-        
-        for pattern, file_strategy in resolution_strategies.items():
-            if pattern in file_path or file_path.endswith(pattern.replace("*", "")):
-                strategy = file_strategy
-                break
-        
-        # Apply resolution strategy
-        if resolve_conflict_strategy(file_path, strategy):
-            resolved_count += 1
-            print(f"✓ Resolved {file_path}")
+    # Add resolved files
+    returncode, stdout, stderr = run_command("git add .")
+    if returncode == 0:
+        # Commit the merge
+        returncode, stdout, stderr = run_command('git commit -m "Resolve merge conflicts automatically"')
+        if returncode == 0:
+            print("Successfully resolved and committed conflicts")
+            return True
         else:
-            manual_resolution_needed.append(file_path)
+            print(f"Failed to commit resolved conflicts: {stderr}")
     
-    print(f"\n=== Conflict Resolution Summary ===")
-    print(f"Automatically resolved: {resolved_count}")
-    print(f"Manual resolution needed: {len(manual_resolution_needed)}")
-    
-    if manual_resolution_needed:
-        print("\nFiles requiring manual resolution:")
-        for file_path in manual_resolution_needed:
-            print(f"  - {file_path}")
-    
-    return len(manual_resolution_needed) == 0
+    return False
 
-def main():
-    print("Starting merge conflict resolution...")
+def resolve_file_conflicts(file_path):
+    """Resolve conflicts in a specific file"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Simple conflict resolution strategies
+        lines = content.split('\n')
+        resolved_lines = []
+        skip_until = None
+        
+        for line in lines:
+            if skip_until:
+                if line.strip().startswith(skip_until):
+                    skip_until = None
+                continue
+            
+            if line.strip().startswith('<<<<<<< HEAD'):
+                skip_until = '======='
+                continue
+            elif line.strip().startswith('======='):
+                skip_until = '>>>>>>>'
+                continue
+            elif line.strip().startswith('>>>>>>>'):
+                skip_until = None
+                continue
+            else:
+                resolved_lines.append(line)
+        
+        # Write resolved content
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(resolved_lines))
+        
+        print(f"Resolved conflicts in {file_path}")
+        
+    except Exception as e:
+        print(f"Error resolving conflicts in {file_path}: {e}")
+
+def merge_all_prs():
+    """Main function to merge all open PRs"""
+    print("Starting PR merge process...")
     
-    # Check if we're in a merge state
-    if not run_command("git status --porcelain", check=False):
-        print("No merge in progress")
+    # Get open PRs
+    prs = get_open_prs()
+    
+    if not prs:
+        print("No open PRs found")
         return
     
-    # Resolve conflicts automatically
-    if resolve_conflicts_automatically():
-        print("\nAll conflicts resolved automatically!")
+    print(f"Found {len(prs)} PRs to merge:")
+    for pr in prs:
+        print(f"  - {pr['title']} ({pr['headRefName']})")
+    
+    successful_merges = 0
+    failed_merges = 0
+    
+    for pr in prs:
+        branch_name = pr['headRefName']
+        print(f"\n{'='*50}")
+        print(f"Processing PR: {pr['title']}")
+        print(f"Branch: {branch_name}")
+        print(f"{'='*50}")
         
-        # Commit the merge
-        commit_message = f"Merge remote main with local changes - {datetime.now()}"
-        run_command(f"git commit -m '{commit_message}'")
+        if resolve_merge_conflicts(branch_name):
+            successful_merges += 1
+            print(f"✅ Successfully merged {branch_name}")
+        else:
+            failed_merges += 1
+            print(f"❌ Failed to merge {branch_name}")
+            
+            # Try to abort the merge
+            run_command("git merge --abort")
+    
+    print(f"\n{'='*50}")
+    print("MERGE SUMMARY")
+    print(f"{'='*50}")
+    print(f"✅ Successful merges: {successful_merges}")
+    print(f"❌ Failed merges: {failed_merges}")
+    print(f"📊 Total processed: {len(prs)}")
+    
+    if successful_merges > 0:
+        print("\nPushing merged changes to main...")
+        returncode, stdout, stderr = run_command("git push origin main")
+        if returncode == 0:
+            print("✅ Successfully pushed merged changes to main")
+        else:
+            print(f"❌ Failed to push changes: {stderr}")
+
+def cleanup_merged_branches():
+    """Clean up merged branches"""
+    print("\nCleaning up merged branches...")
+    
+    # Get list of merged branches
+    returncode, stdout, stderr = run_command("git branch -r --merged main | grep 'origin/cursor/' | grep -v 'HEAD'")
+    
+    if returncode == 0:
+        merged_branches = stdout.strip().split('\n')
+        merged_branches = [b.strip().replace('origin/', '') for b in merged_branches if b.strip()]
         
-        print("✓ Merge committed successfully!")
-        print("You can now push to main: git push origin main")
-    else:
-        print("\n⚠️  Some conflicts require manual resolution")
-        print("Please resolve the remaining conflicts manually and then:")
-        print("1. git add <resolved-files>")
-        print("2. git commit -m 'Resolve merge conflicts'")
-        print("3. git push origin main")
+        if merged_branches:
+            print(f"Found {len(merged_branches)} merged branches to cleanup:")
+            for branch in merged_branches:
+                print(f"  - {branch}")
+                # Delete remote branch
+                run_command(f"git push origin --delete {branch}")
+        else:
+            print("No merged branches found to cleanup")
 
 if __name__ == "__main__":
-    main()
+    print("🚀 Starting comprehensive PR merge process...")
+    
+    # Change to workspace directory
+    os.chdir('/workspace')
+    
+    # Merge all PRs
+    merge_all_prs()
+    
+    # Cleanup merged branches
+    cleanup_merged_branches()
+    
+    print("\n🎉 PR merge process completed!")

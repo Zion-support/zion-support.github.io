@@ -1,0 +1,46 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://zion.tech/sitemap.xml
+Sitemap: https://zion.tech/sitemap-enhanced.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /internal/
+
+# Allow important content
+Allow: /services/
+Allow: /case-studies/
+Allow: /resources/
+Allow: /tools/
+Allow: /blog/
+Allow: /ai-2025-consolidated/
+Allow: /ai-2026-consolidated/
+
+# Block duplicate content
+Disallow: /*?*
+Disallow: /*.backup
+Disallow: /*.old
+Disallow: /*.tmp
+
+# Allow specific file types
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+Allow: /*.ico
+Allow: /*.woff
+Allow: /*.woff2
+Allow: /*.ttf
+Allow: /*.eot

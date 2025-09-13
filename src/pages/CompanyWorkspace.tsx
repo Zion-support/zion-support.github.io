@@ -54,6 +54,8 @@ export default function CompanyWorkspace() {
       />
       <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>
         <CompanyDashboard company={company} />
+        <CompanyDashboard company={company}/>
+        <CompanyDashboard company={company} />
       </main>
       <Footer />
     </ProtectedRoute>

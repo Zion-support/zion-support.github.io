@@ -31,6 +31,10 @@ export default function TalentDashboard() {
     load();
   }, []);
 
+
+import { useEffect, useState } from 'react';
+
+
   const [showFeedback, setShowFeedback] = useState(false);
   const [lastContext, setLastContext] = useState<any>(null);
 
@@ -77,38 +81,29 @@ export default function TalentDashboard() {
                   Status: <span className="px-2 py-0.5 rounded bg-gray-100">{o.status}</span>
                 </div>
               </div>
-              <div className="flex gap-2 items-center">
-                <button onClick={() => setExpandedId(expandedId === o.id ? null : o.id)} className="px-2 py-1 text-xs rounded border">View Offer</button>
-                <button onClick={() => act(o.id, "accept")} className="px-3 py-1 rounded bg-emerald-600 text-white">Accept Offer</button>
-                <button onClick={() => act(o.id, "request_changes")} className="px-3 py-1 rounded border">Request Changes</button>
-                {o.projectId && (
                   <Link href={`/project/${o.projectId}`} className="px-3 py-1 rounded bg-indigo-600 text-white">Open Project</Link>
-                )}
-              </div>
-            </div>
-            {expandedId === o.id && (
-              <div className="mt-3 text-sm bg-gray-50 border rounded p-3">
-                <div className="font-medium mb-1">Project details</div>
-                <div><b>Start</b>: {new Date(o.startDateIso).toLocaleDateString()}</div>
-                <div className="mt-1"><b>Scope</b>: {o.scopeSummary}</div>
-                <div className="mt-1"><b>Terms</b>: {o.paymentTerms?.type}</div>
-                {o.paymentTerms?.type === 'hourly' && <div>Rate: ${o.paymentTerms.hourlyRateUsd}/hr</div>}
-                {o.paymentTerms?.type === 'fixed' && <div>Amount: ${o.paymentTerms.fixedAmountUsd}</div>}
-                {o.paymentTerms?.type === 'milestone' && (
-                  <ul className="list-disc pl-5">
-                    {(o.paymentTerms.milestones || []).map((m: any) => (
-                      <li key={m.id}>{m.title}</li>
-                    ))}
-                  </ul>
-                )}
-                {o.agreementUrl && (
-                  <div className="mt-1"><a href={o.agreementUrl} className="underline text-indigo-600" target="_blank" rel="noreferrer">View Agreement</a></div>
-                )}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+                  <Link href={`/project/${o.projectId}`} className="px-3 py-1 rounded bg-indigo-600 text-white">Open Project</Link>
+
+
+
+
+
+                <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
+                <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
+      </EnhancedCard>;
+
+
+import EnhancedCard from '../../components / ui / EnhancedCard';
+import EnhancedCard from '../../components / ui / EnhancedCard';
+import EnhancedButton from '../../components / ui / EnhancedButton';
+import EnhancedButton from '../../components / ui / EnhancedButton';
+import {useEffect, useState} from 'react';
+export default /**
+      <EnhancedCard>;
+      </EnhancedCard>;
+      <EnhancedCard>;
+                <EnhancedButton;
+                </EnhancedButton>              )}
+      </EnhancedCard>;
+
+

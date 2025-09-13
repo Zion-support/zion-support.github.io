@@ -1,197 +1,166 @@
 import React from 'react';
 import Link from 'next/link';
-import DynamicContentCarousel2026 from '../components/DynamicContentCarousel2026';
-import AI2026NewsletterSignup from '../components/AI2026NewsletterSignup';
-import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
-
-export const metadata = {
-  title: 'Zion Tech Group - AI & Technology Solutions',
-  description: 'Strategy, implementation, and measurable ROI from modern AI systems. Discover breakthrough AI content, case studies, and implementation guides.',
-  keywords: ['AI', 'Artificial Intelligence', 'Edge Computing', 'Autonomous Systems', 'Consulting', 'Case Studies', 'Implementation Guide'],
-};
+import { ArrowRight, Zap, Shield, Globe, Users, TrendingUp, Star, CheckCircle } from 'lucide-react';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold mb-6 animate-pulse">
-            🚀 AI 2026 BREAKTHROUGH CONTENT
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.1),transparent_50%)]" />
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Revolutionary
+              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                AI Technology
+              </span>
+              <span className="block text-3xl md:text-4xl text-gray-300 mt-4">
+                2025-2030
+              </span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Leading provider of revolutionary AI autonomous operations, quantum computing breakthroughs, 
+              and advanced automation solutions delivering unprecedented ROI and transformative results.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                href="/services"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
+              >
+                Explore Services
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+              >
+                Get Started
+              </Link>
+            </div>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">2,500%</div>
+                <div className="text-sm text-gray-300">Average ROI</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">99.9%</div>
+                <div className="text-sm text-gray-300">Accuracy Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">10,000x</div>
+                <div className="text-sm text-gray-300">Faster Processing</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">500+</div>
+                <div className="text-sm text-gray-300">Success Stories</div>
+              </div>
+            </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-            Transform Your Business with
-            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Revolutionary AI
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover breakthrough AI content, case studies, and implementation guides that are delivering 5000% ROI for businesses worldwide.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="#content-showcase" 
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Explore Breakthrough Content
-            </Link>
-            <Link 
-              href="/contact" 
-              className="px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
-            >
-              Get Implementation Help
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">5000%</div>
-              <div className="text-gray-600">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">150+</div>
-              <div className="text-gray-600">Case Studies</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">99.7%</div>
-              <div className="text-gray-600">Success Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
-              <div className="text-gray-600">Support</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Dynamic Content Carousel */}
-      <section id="content-showcase" className="py-20 px-4">
-        <DynamicContentCarousel2026 />
-      </section>
-
-      {/* Content Discovery Widget */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <AI2026ContentDiscoveryWidget />
-        </div>
-      </section>
-
-      {/* Newsletter Signup */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-purple-50">
-        <div className="max-w-4xl mx-auto">
-          <AI2026NewsletterSignup />
-        </div>
-      </section>
-
-      {/* Featured Content Grid */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
+      {/* Features Section */}
+      <section className="py-24 bg-black/20 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Featured Breakthrough Content
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Revolutionary Technology Solutions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Access our most popular and impactful AI content that's transforming businesses worldwide.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Cutting-edge AI, quantum computing, and automation solutions that transform businesses 
+              and drive unprecedented growth.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* AI 2026 Breakthrough Content Showcase */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
-                <span className="text-2xl">🧠</span>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <Zap className="w-8 h-8 text-blue-400" />,
+                title: "AI Autonomous Operations",
+                description: "Revolutionary AI systems that operate independently, making intelligent decisions and optimizing processes in real-time.",
+                features: ["Real-time Decision Making", "Predictive Analytics", "Autonomous Optimization"]
+              },
+              {
+                icon: <Shield className="w-8 h-8 text-purple-400" />,
+                title: "Quantum Computing",
+                description: "Breakthrough quantum computing solutions delivering exponential computational power and security.",
+                features: ["Quantum Supremacy", "Error-Corrected Quantum", "Quantum Internet"]
+              },
+              {
+                icon: <Globe className="w-8 h-8 text-cyan-400" />,
+                title: "Advanced Automation",
+                description: "Intelligent process automation that streamlines operations and eliminates manual tasks.",
+                features: ["Process Automation", "Smart Resource Management", "Predictive Maintenance"]
+              },
+              {
+                icon: <Users className="w-8 h-8 text-green-400" />,
+                title: "Enterprise Solutions",
+                description: "Comprehensive enterprise-grade solutions designed for scalability and reliability.",
+                features: ["Scalable Architecture", "Enterprise Security", "24/7 Support"]
+              },
+              {
+                icon: <TrendingUp className="w-8 h-8 text-yellow-400" />,
+                title: "Business Intelligence",
+                description: "Advanced analytics and insights that drive data-driven decision making and growth.",
+                features: ["Real-time Analytics", "Predictive Insights", "Performance Optimization"]
+              },
+              {
+                icon: <Star className="w-8 h-8 text-pink-400" />,
+                title: "Innovation Hub",
+                description: "Cutting-edge research and development in emerging technologies and future solutions.",
+                features: ["R&D Excellence", "Future Technologies", "Innovation Labs"]
+              }
+            ].map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="mb-6">
+                  {feature.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-6">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.features.map((item, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI 2026 Breakthrough Content Showcase</h3>
-              <p className="text-gray-600 mb-6">
-                Discover the latest neural interface technologies, quantum-AI fusion, and autonomous systems that are revolutionizing industries.
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
-                  BREAKTHROUGH
-                </span>
-                <Link 
-                  href="/ai-2026-breakthrough-content-showcase" 
-                  className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
-                >
-                  Explore →
-                </Link>
-              </div>
-            </div>
-
-            {/* Enterprise Transformation Case Study */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
-                <span className="text-2xl">🏢</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Transformation Success</h3>
-              <p className="text-gray-600 mb-6">
-                Learn how Fortune 500 companies achieved 5000% ROI through our AI implementation strategies and breakthrough technologies.
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-semibold text-green-600 bg-green-100 px-3 py-1 rounded-full">
-                  5000% ROI
-                </span>
-                <Link 
-                  href="/case-studies/ai-2026-global-enterprise-transformation-breakthrough" 
-                  className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
-                >
-                  View Case Study →
-                </Link>
-              </div>
-            </div>
-
-            {/* Ultimate Implementation Guide */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6">
-                <span className="text-2xl">📚</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Ultimate Implementation Guide</h3>
-              <p className="text-gray-600 mb-6">
-                Step-by-step implementation toolkit with proven strategies, templates, and best practices for AI transformation success.
-              </p>
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-semibold text-purple-600 bg-purple-100 px-3 py-1 rounded-full">
-                  ESSENTIAL
-                </span>
-                <Link 
-                  href="/resources/ai-2026-ultimate-implementation-master-guide" 
-                  className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
-                >
-                  Download Guide →
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+      <section className="py-24">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Join thousands of companies already achieving breakthrough results with our AI solutions.
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of companies already experiencing unprecedented growth with our 
+            revolutionary AI and automation solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
             >
-              Start Your AI Journey
+              Start Your Transformation
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link 
-              href="/ai-services-2025" 
-              className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
-              View Our Services
+              View Success Stories
             </Link>
           </div>
         </div>
