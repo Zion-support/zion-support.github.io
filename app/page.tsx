@@ -59,7 +59,6 @@ import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRe
 
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
-import AI2025InteractiveContentDiscoveryWidget from '../components/AI2025InteractiveContentDiscoveryWidget';
 
 // Import new content promotional banners
 import AI2025UltimateBreakthroughAnnouncementBanner from '../components/AI2025UltimateBreakthroughAnnouncementBanner';
@@ -76,42 +75,15 @@ import AnimatedContentShowcase from '../components/AnimatedContentShowcase';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 
-// Import new quantum consciousness and neural interface banners
-import AI2025QuantumConsciousnessPromotionBanner from '../components/AI2025QuantumConsciousnessPromotionBanner';
-import AI2026NeuralInterfaceRevolutionPromotionBanner from '../components/AI2026NeuralInterfaceRevolutionPromotionBanner';
-
-// New AI 2025 Content Promotion Banner
-import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
-// Import new promotional banners for 2025-2026
-import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
-import AI2026QuantumNeuralFusionBanner from '../components/AI2026QuantumNeuralFusionBanner';
-// Import new AI 2025 and 2026 breakthrough banners
-import AI2025SyntheticIntelligenceBreakthroughBanner from '../components/AI2025SyntheticIntelligenceBreakthroughBanner';
-import AI2026FuturePredictionsBreakthroughBanner from '../components/AI2026FuturePredictionsBreakthroughBanner';
-
 // Import new promotional banners for content advertising
+import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
 import AI20262030FuturePredictionsBanner from '../components/AI20262030FuturePredictionsBanner';
 
 // Import new ultimate content banners
 import UltimateContentRevolutionBanner from '../components/UltimateContentRevolutionBanner';
 import AI2026BreakthroughBanner from '../components/AI2026BreakthroughBanner';
-
-<<<<<<< HEAD
-// New 2030+ breakthrough components
-import AI2030TranscendentIntelligencePromotionBanner from '../components/AI2030TranscendentIntelligencePromotionBanner';
-import AI2035SingularityPromotionBanner from '../components/AI2035SingularityPromotionBanner';
-import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDiscoveryWidget2030';
-
-// AI 2026 new content components
-import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromotionBanner';
-
-// Import new AI 2025 content showcase banner
-import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBanner';
-
-// Import new promotional banners
-import AI2025UltimateBreakthroughAnnouncementBanner from '../components/AI2025UltimateBreakthroughAnnouncementBanner';
-import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
-import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import AI2025AutonomousSystemsBreakthroughBanner from '../components/AI2025AutonomousSystemsBreakthroughBanner';
+import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
 
 export default function HomePage() {
   return (
@@ -127,11 +99,8 @@ export default function HomePage() {
         {/* NEW AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2025UltimateBreakthroughAnnouncementBanner />
         
-        {/* NEW AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
-        <AI2026QuantumNeuralFusionPromotionBanner />
-        
-        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
-        <InteractiveContentDiscoveryWidget2025 />
+        {/* AI 2025 AUTONOMOUS SYSTEMS BREAKTHROUGH BANNER */}
+        <AI2025AutonomousSystemsBreakthroughBanner />
         
         {/* AI 2025 QUANTUM CONSCIOUSNESS BREAKTHROUGH BANNER */}
         <AI2025QuantumConsciousnessBreakthroughBanner />
@@ -147,6 +116,9 @@ export default function HomePage() {
         
         {/* FEATURED CONTENT SHOWCASE 2025 */}
         <FeaturedContentShowcase2025 />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2026 */}
+        <RevolutionaryContentShowcase2026 />
         
         {/* AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
