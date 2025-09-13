@@ -1,215 +1,210 @@
 import React from 'react';
 import Link from 'next/link';
-import { Card } from './ui/Card';
-import { Badge } from './ui/Badge';
 
 export default function RevolutionaryContentShowcase2025() {
-  const featuredContent = [
-    {
-      title: "AI 2025 Ultimate Breakthrough Trends",
-      description: "Discover the revolutionary AI trends that will reshape industries in 2025. From quantum computing to neural interfaces.",
-      href: "/blog/ai-2025-ultimate-breakthrough-trends",
-      category: "Blog",
-      type: "Trends",
-      icon: "🔮",
-      badge: "NEW",
-      badgeColor: "bg-yellow-500",
-      stats: "50K+ views"
-    },
-    {
-      title: "Global Finance Transformation: 1500% ROI",
-      description: "How a global financial services company achieved unprecedented success with comprehensive AI transformation.",
-      href: "/case-studies/ai-2025-global-finance-transformation-breakthrough",
-      category: "Case Study",
-      type: "Finance",
-      icon: "💰",
-      badge: "BREAKTHROUGH",
-      badgeColor: "bg-green-500",
-      stats: "1500% ROI"
-    },
-    {
-      title: "Enterprise Transformation Master Guide",
-      description: "The complete blueprint for enterprise AI transformation. Everything you need to achieve 1000%+ ROI.",
-      href: "/resources/ai-2025-enterprise-transformation-master-guide",
-      category: "Resource",
-      type: "Guide",
-      icon: "📚",
-      badge: "ESSENTIAL",
-      badgeColor: "bg-blue-500",
-      stats: "500+ companies"
-    },
-    {
-      title: "Quantum Machine Learning Revolution",
-      description: "Explore how quantum computing is revolutionizing machine learning with 1000x faster processing capabilities.",
-      href: "/blog/ai-2025-quantum-machine-learning-breakthrough",
-      category: "Blog",
-      type: "Technology",
-      icon: "⚛️",
-      badge: "REVOLUTIONARY",
-      badgeColor: "bg-purple-500",
-      stats: "1000x faster"
-    },
-    {
-      title: "Neural Interface Breakthroughs 2025",
-      description: "The convergence of neuroscience and AI is creating unprecedented opportunities for human-AI collaboration.",
-      href: "/blog/ai-2025-neural-interface-revolution",
-      category: "Blog",
-      type: "Innovation",
-      icon: "🧠",
-      badge: "BREAKTHROUGH",
-      badgeColor: "bg-pink-500",
-      stats: "95% accuracy"
-    },
-    {
-      title: "Manufacturing AI Success Story",
-      description: "How AI automation transformed manufacturing operations, achieving 40% efficiency gains and 60% cost reduction.",
-      href: "/case-studies/ai-2025-manufacturing-transformation-breakthrough",
-      category: "Case Study",
-      type: "Manufacturing",
-      icon: "🏭",
-      badge: "SUCCESS",
-      badgeColor: "bg-orange-500",
-      stats: "40% efficiency"
-    }
-  ];
-
-  const categories = [
-    { name: "All Content", count: "50+", active: true },
-    { name: "Blog Posts", count: "25+", active: false },
-    { name: "Case Studies", count: "15+", active: false },
-    { name: "Resources", count: "10+", active: false }
-  ];
-
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+    <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-900/50 to-purple-900/50"></div>
+        <div className="absolute top-10 left-10 w-4 h-4 bg-yellow-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-2 h-2 bg-yellow-400 rounded-full animate-pulse delay-100"></div>
+        <div className="absolute bottom-10 left-20 w-3 h-3 bg-yellow-400 rounded-full animate-pulse delay-200"></div>
+        <div className="absolute bottom-20 right-10 w-2 h-2 bg-yellow-400 rounded-full animate-pulse delay-300"></div>
+        <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-yellow-400 rounded-full animate-pulse delay-400"></div>
+        <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-yellow-400 rounded-full animate-pulse delay-500"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 REVOLUTIONARY CONTENT SHOWCASE</span>
+          {/* Badge */}
+          <div className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 text-sm font-bold rounded-full mb-6 shadow-lg animate-pulse">
+            🌟 REVOLUTIONARY CONTENT SHOWCASE 2025
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Discover the Future of AI
+
+          {/* Main Heading */}
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Breakthrough AI Content
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-400 mt-2">
+              Revolution 2025
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Explore our comprehensive collection of breakthrough AI content, featuring cutting-edge research, 
-            proven case studies, and practical implementation guides that will transform your business.
+
+          {/* Subheading */}
+          <p className="text-xl md:text-2xl mb-12 text-purple-100 max-w-4xl mx-auto leading-relaxed">
+            Explore our revolutionary AI content that's transforming industries and delivering 
+            unprecedented results. From quantum computing to consciousness AI - discover the future today.
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category, index) => (
-            <button
-              key={index}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                category.active
-                  ? 'bg-blue-600 text-white shadow-lg transform scale-105'
-                  : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
-              }`}
-            >
-              {category.name}
-              <span className="ml-2 text-xs bg-white bg-opacity-20 px-2 py-1 rounded-full">
-                {category.count}
-              </span>
-            </button>
-          ))}
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {/* Featured Content 1 */}
+          <Link 
+            href="/blog/ai-2025-ultimate-trends-breakthrough"
+            className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+          >
+            <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🔮</div>
+            <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">
+              AI 2025 Ultimate Trends
+            </h3>
+            <p className="text-purple-100 mb-4 text-sm leading-relaxed">
+              Revolutionary AI trends transforming every industry with quantum-neural fusion, 
+              consciousness AI, and breakthrough innovations.
+            </p>
+            <div className="flex items-center justify-between">
+              <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                BREAKTHROUGH
+              </div>
+              <div className="text-yellow-400 text-sm font-semibold group-hover:translate-x-1 transition-transform">
+                Read More →
+              </div>
+            </div>
+          </Link>
+
+          {/* Featured Content 2 */}
+          <Link 
+            href="/case-studies/ai-2025-global-transformation-breakthrough"
+            className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+          >
+            <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🏆</div>
+            <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">
+              15,000% ROI Success
+            </h3>
+            <p className="text-purple-100 mb-4 text-sm leading-relaxed">
+              Fortune 500 company achieved unprecedented ROI through revolutionary AI transformation 
+              in just 6 months with quantum-neural systems.
+            </p>
+            <div className="flex items-center justify-between">
+              <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                SUCCESS STORY
+              </div>
+              <div className="text-yellow-400 text-sm font-semibold group-hover:translate-x-1 transition-transform">
+                Read More →
+              </div>
+            </div>
+          </Link>
+
+          {/* Featured Content 3 */}
+          <Link 
+            href="/resources/ai-2025-ultimate-implementation-toolkit"
+            className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+          >
+            <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">📚</div>
+            <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">
+              Implementation Toolkit
+            </h3>
+            <p className="text-purple-100 mb-4 text-sm leading-relaxed">
+              Complete step-by-step guide with frameworks, templates, and proven strategies 
+              for achieving breakthrough AI transformation results.
+            </p>
+            <div className="flex items-center justify-between">
+              <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                ESSENTIAL
+              </div>
+              <div className="text-yellow-400 text-sm font-semibold group-hover:translate-x-1 transition-transform">
+                Read More →
+              </div>
+            </div>
+          </Link>
+
+          {/* Additional Content 4 */}
+          <Link 
+            href="/blog/ai-2025-quantum-computing-breakthrough"
+            className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+          >
+            <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">⚛️</div>
+            <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">
+              Quantum Computing Revolution
+            </h3>
+            <p className="text-purple-100 mb-4 text-sm leading-relaxed">
+              Breakthrough quantum computing solutions delivering 10,000x faster processing 
+              and infinite scalability for enterprise applications.
+            </p>
+            <div className="flex items-center justify-between">
+              <div className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                QUANTUM
+              </div>
+              <div className="text-yellow-400 text-sm font-semibold group-hover:translate-x-1 transition-transform">
+                Read More →
+              </div>
+            </div>
+          </Link>
+
+          {/* Additional Content 5 */}
+          <Link 
+            href="/blog/ai-2025-neural-interface-revolution"
+            className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+          >
+            <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🧠</div>
+            <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">
+              Neural Interface Revolution
+            </h3>
+            <p className="text-purple-100 mb-4 text-sm leading-relaxed">
+              Direct brain-computer interfaces achieving 99.7% accuracy in healthcare 
+              and enterprise decision making systems.
+            </p>
+            <div className="flex items-center justify-between">
+              <div className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                NEURAL
+              </div>
+              <div className="text-yellow-400 text-sm font-semibold group-hover:translate-x-1 transition-transform">
+                Read More →
+              </div>
+            </div>
+          </Link>
+
+          {/* Additional Content 6 */}
+          <Link 
+            href="/blog/ai-2025-autonomous-systems"
+            className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+          >
+            <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🤖</div>
+            <h3 className="text-xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">
+              Autonomous Business Systems
+            </h3>
+            <p className="text-purple-100 mb-4 text-sm leading-relaxed">
+              Fully autonomous business operations that operate 24/7 without human intervention, 
+              achieving 95% efficiency improvements.
+            </p>
+            <div className="flex items-center justify-between">
+              <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                AUTONOMOUS
+              </div>
+              <div className="text-yellow-400 text-sm font-semibold group-hover:translate-x-1 transition-transform">
+                Read More →
+              </div>
+            </div>
+          </Link>
         </div>
 
-        {/* Featured Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {featuredContent.map((content, index) => (
-            <Link key={index} href={content.href} className="group">
-              <Card className="p-6 h-full hover:shadow-2xl transition-all duration-300 transform group-hover:scale-105 border-0 bg-white/80 backdrop-blur-sm">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-4xl">{content.icon}</div>
-                  <Badge className={`${content.badgeColor} text-white text-xs font-semibold`}>
-                    {content.badge}
-                  </Badge>
-                </div>
-                
-                <div className="mb-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
-                      {content.category}
-                    </span>
-                    <span className="text-xs font-medium text-gray-500">
-                      {content.type}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    {content.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {content.description}
-                  </p>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold text-green-600">
-                    {content.stats}
-                  </span>
-                  <div className="flex items-center text-blue-600 text-sm font-semibold group-hover:translate-x-1 transition-transform">
-                    Read More
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </div>
-              </Card>
-            </Link>
-          ))}
-        </div>
-
-        {/* Stats Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-2">Content Impact by the Numbers</h3>
-            <p className="opacity-90">Real results from our comprehensive AI content library</p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-300 mb-2">2M+</div>
-              <div className="text-sm opacity-90">Total Views</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-300 mb-2">500+</div>
-              <div className="text-sm opacity-90">Companies Transformed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-300 mb-2">1500%</div>
-              <div className="text-sm opacity-90">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-300 mb-2">95%</div>
-              <div className="text-sm opacity-90">Success Rate</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
+        {/* CTA Section */}
         <div className="text-center">
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">
+          <h3 className="text-2xl md:text-3xl font-bold mb-6">
             Ready to Transform Your Business?
           </h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-            Join thousands of companies that have already achieved breakthrough results with our 
-            proven AI transformation methodologies and comprehensive content library.
+          <p className="text-lg text-purple-100 mb-8 max-w-2xl mx-auto">
+            Join thousands of companies already achieving breakthrough results with our 
+            revolutionary AI solutions and content.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/content-showcase"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              🎯 Explore All Content
-            </Link>
-            <Link
+            <Link 
               href="/contact"
-              className="border-2 border-blue-600 text-blue-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              💬 Get Expert Consultation
+              💬 Start Your Transformation
+            </Link>
+            <Link 
+              href="/resources/ai-2025-ultimate-implementation-toolkit"
+              className="bg-white text-indigo-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              📚 Get Implementation Guide
+            </Link>
+            <Link 
+              href="/blog"
+              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 hover:from-yellow-500 hover:to-orange-600 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              🚀 Explore All Content
             </Link>
           </div>
         </div>
