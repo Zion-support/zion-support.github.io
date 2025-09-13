@@ -20,6 +20,12 @@ import HeroPromotionBanner from '../components/HeroPromotionBanner';
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
 import InteractiveROICalculator from '../components/InteractiveROICalculator';
 
+// New Advanced Content Components
+import AdvancedContentShowcase2025 from '../components/AdvancedContentShowcase2025';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
+import LatestContentPromotionBanner2025 from '../components/LatestContentPromotionBanner2025';
+import ContentRecommendationWidget2025 from '../components/ContentRecommendationWidget2025';
+
 // 2025 Content Components
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import NewContent2025BreakthroughBanner from '../components/NewContent2025BreakthroughBanner';
@@ -202,6 +208,11 @@ const HomePage: React.FC = () => {
               {/* Hero Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <HeroPromotionBanner />
+              </Suspense>
+
+              {/* Latest Content Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <LatestContentPromotionBanner2025 />
               </Suspense>
 
               {/* New Content Banner */}
@@ -436,14 +447,29 @@ const HomePage: React.FC = () => {
                 <EnhancedContentShowcase />
               </Suspense>
 
+              {/* Advanced Content Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedContentShowcase2025 />
+              </Suspense>
+
               {/* Interactive Content Discovery Widget */}
               <Suspense fallback={<LoadingSpinner />}>
                 <InteractiveContentDiscoveryWidget />
               </Suspense>
 
+              {/* Interactive Content Discovery */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscovery2025 />
+              </Suspense>
+
               {/* Interactive ROI Calculator */}
               <Suspense fallback={<LoadingSpinner />}>
                 <InteractiveROICalculator />
+              </Suspense>
+
+              {/* Content Recommendation Widget */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <ContentRecommendationWidget2025 />
               </Suspense>
 
               {/* AI 2025 Revolutionary Breakthrough */}
