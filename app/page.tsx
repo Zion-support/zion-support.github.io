@@ -48,6 +48,11 @@ import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025
 
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
+
+// Import new promotional components
+import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+import AI2025NewsletterSignup from '../components/AI2025NewsletterSignup';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 
@@ -77,11 +82,24 @@ export default function HomePage() {
         {/* NEW 2025 CONTENT PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
+        {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
+        <AI2025UltimateBreakthroughPromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2025 */}
+        <RevolutionaryContentShowcase2025 />
+        
         {/* LATEST CONTENT SHOWCASE 2025 */}
         <LatestContentShowcase2025 />
         
         {/* CONTENT DISCOVERY WIDGET 2025 */}
         <ContentDiscoveryWidget2025 />
+        
+        {/* AI 2025 NEWSLETTER SIGNUP */}
+        <div className="py-20 px-4">
+          <div className="max-w-4xl mx-auto">
+            <AI2025NewsletterSignup />
+          </div>
+        </div>
         
         {/* AI 2030 TRANSCENDENT INTELLIGENCE PROMOTION BANNER */}
         <AI2030TranscendentIntelligencePromotionBanner />
