@@ -11,13 +11,20 @@ import {
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
-import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
+import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 
 export default function ServicesShowcase2027() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
+
+  // Sort options
+  const sortOptions = [
+    { value: 'name', label: 'Sort by Name' },
+    { value: 'price', label: 'Sort by Price' },
+    { value: 'roi', label: 'Sort by ROI' }
+  ];
 
   const allServices = [
     ...cuttingEdge2027Innovations,
@@ -83,13 +90,12 @@ export default function ServicesShowcase2027() {
   };
 
   return (
-    <UltraFuturisticBackground2029>
+    <UltraFuturisticMatrixBackground2027>
       <Head>
         <title>2027 Services Showcase - Zion Tech Group | Cutting-Edge Innovations & Micro SAAS</title>
         <meta name="description" content="Explore Zion Tech Group's revolutionary 2027 services showcase featuring cutting-edge AI consciousness evolution, quantum computing, autonomous AI civilizations, and practical micro SAAS solutions for businesses." />
         <meta name="keywords" content="2027 services, AI consciousness evolution, quantum computing, autonomous AI civilizations, micro SAAS, business automation, Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/2027-services-showcase" />
+        <link rel="canonical" href="https://ziontechgroup.com/2027-services-showcase/" />
         
         {/* Open Graph */}
         <meta property="og:title" content="2027 Services Showcase - Zion Tech Group" />
@@ -233,7 +239,8 @@ export default function ServicesShowcase2027() {
                 >
                   <option value="name">Name</option>
                   <option value="price">Price</option>
-                  <option value="roi">ROI</option>
+                  <option value="rating">Rating</option>
+                  <option value="popularity">Popularity</option>
                 </select>
               </div>
             </div>
@@ -258,7 +265,12 @@ export default function ServicesShowcase2027() {
                   <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/20">
                     {/* Service Header */}
                     <div className="flex items-start justify-between mb-4">
-                      <div className="text-4xl">🚀</div>
+                      <div className="text-4xl">{service.icon}</div>
+                      {service.popular && (
+                        <div className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                          Popular
+                        </div>
+                      )}
                     </div>
 
                     {/* Service Info */}
@@ -273,6 +285,7 @@ export default function ServicesShowcase2027() {
                     <div className="mb-4">
                       <div className="text-2xl font-bold text-white">
                         {service.price}
+                        <span className="text-cyan-400 text-lg">{service.period}</span>
                       </div>
                     </div>
 
@@ -294,10 +307,20 @@ export default function ServicesShowcase2027() {
                       </div>
                     </div>
 
-                    {/* ROI */}
-                    <div className="mb-6 text-center">
-                      <div className="text-green-400 font-semibold text-lg">ROI: {service.roi}</div>
-                      <div className="text-gray-400 text-xs">Return on Investment</div>
+                    {/* Stats */}
+                    <div className="grid grid-cols-3 gap-4 mb-6 text-center">
+                      <div>
+                        <div className="text-cyan-400 font-semibold">{service.rating}★</div>
+                        <div className="text-gray-400 text-xs">Rating</div>
+                      </div>
+                      <div>
+                        <div className="text-purple-400 font-semibold">{service.customers}+</div>
+                        <div className="text-gray-400 text-xs">Customers</div>
+                      </div>
+                      <div>
+                        <div className="text-pink-400 font-semibold">{service.trialDays}d</div>
+                        <div className="text-gray-400 text-xs">Trial</div>
+                      </div>
                     </div>
 
                     {/* Actions */}
@@ -422,6 +445,6 @@ export default function ServicesShowcase2027() {
           </div>
         </div>
       </footer>
-    </UltraFuturisticBackground2029>
+    </UltraFuturisticMatrixBackground2027>
   );
 }

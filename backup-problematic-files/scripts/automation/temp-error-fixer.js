@@ -1,4 +1,8 @@
+const originalLog = console.log;
         const originalLog = console.log;
+const originalLog = console.log;
+        const originalLog = console.log;
+const originalLog = console.log;
         let fixCount = 0;
         console && console.log = (...args) => {
           const message = args && args.join(' ');

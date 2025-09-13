@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,10 +23,36 @@ import React from 'react';
 interface OptimizedImageProps {;
   src: string, alt: string,;
 
+import Image from 'next / image';
+;
+interface OptimizedImageProps {
+  src: string, alt: string,
+  width?: number;
+  height?: number;
+  class_name?: string;
+  priority?: boolean;
+  sizes?: string;
+  quality?: number;
+  fill?: boolean;
+  style?: React && React.CSSProperties;
+}
 
-const OptimizedImage: React.FC < OptimizedImageProps> = ({=======
+const OptimizedImage: React.FC<OptimizedImageProps> = ({;
+  src,;
+  alt,;
+  width,;
+  height,;
+  className = '',;
+  priority = false,;
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',;
+  quality = 85,;
+  fill = false,;
+  style;
+}) => {;
+  if (fill) {;
 
-const OptimizedImage: React.FC < OptimizedImageProps> = ({  src,
+const OptimizedImage: React.FC < OptimizedImageProps> = ({
+  src,
   alt,
   width,
   height,
@@ -51,9 +78,28 @@ if ( {) {
         quality={quality}
         style={style}
 
+
     <Image;
 
+      src={src}
+      alt={alt}
+      width={width |800}
+      height={height |600}
+      className={className}
+      />);
+  }
+    <Image;
+      src={src}
+      alt={alt}
+      width={width || 800}
+      height={height || 600}
+      className={class_name}
+      priority={priority}
+      sizes={sizes}
 
+
+
+      quality={quality}
       style={style}
 
 
@@ -62,9 +108,12 @@ if ( {) {
   );
 };
 
+export default OptimizedImage;
+      quality={quality}
       style={style}
 
   );
 };
 
 export default OptimizedImage;
+;

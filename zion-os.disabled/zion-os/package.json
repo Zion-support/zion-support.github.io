@@ -1,6 +1,7 @@
 {
   "name": "zion-tech-group-website",
   "version": "1.0.0",
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:zion-os/package.json
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
@@ -21,6 +22,7 @@
     "lucide-react": "^0.263.1",
     "framer-motion": "^10.16.4",
     "@headlessui/react": "^1.7.17"
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:zion-os/package.json
   },
   "devDependencies": {
     "@types/node": "24.2.1",
@@ -29,6 +31,7 @@
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.5",
     "postcss": "8.4.40",
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:zion-os/package.json
     "tailwindcss": "3.4.7",
     "typescript": "5.4.5"
   }

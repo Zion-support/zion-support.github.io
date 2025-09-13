@@ -2,8 +2,6 @@ import React, { useEffect, useRef } from 'react';
 interface UltraFuturisticBackground2036Props {variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
 }
-:components/broken/UltraFuturisticBackground2036.tsx
-export default function UltraFuturisticBackground2036({variant = 'default';
 ;
 export default function UltraFuturisticBackground2036({;
   variant = 'default',;
@@ -211,10 +209,6 @@ export default function UltraFuturisticBackground2036({;
     animate();
     return () => {if (animationRef.current) {;
         cancelAnimationFrame(animationRef.current);
-      }
-      window.removeEventListener('resize', resizeCanvas);
-    }
-}, [variant, intensity])
 
 ;
 export default function UltraFuturisticBackground2036({;
@@ -689,8 +683,7 @@ const nebulaGradient = ctx.createRadialGradient(
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
-  }, [variant, intensity]),
-:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
+
 
       }
       window.removeEventListener('resize', resizeCanvas)
@@ -710,10 +703,11 @@ ref={canvasRef}
         {variant === 'cyber' && (
           <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)1px,transparent1px),linear-gradient(90deg,rgba(0,255,255,0.1)1px,transparent1px)] bg-[size:50px50px]&quot; />
         )}
-        ;
 
         ;
-:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
+
+;
+        ;
         {/* Quantum field lines */}
 {variant === 'quantum' && (
           <div className=&quot;absolute inset-0&quot;>
@@ -721,6 +715,8 @@ ref={canvasRef}
               <motion.div,
 key={i}
                 className=&quot;absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent&quot;
+
+
         {/* AI neural network overlay */}
 {variant === 'ai' && (
           <div className=&quot;absolute inset-0&quot;>
@@ -728,14 +724,14 @@ key={i}
               <motion.div,
 key={i}
                 className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent&quot;
+
                 style={{                  top: `${(i + 1) * 16.67}%`}}
                 animate={_{
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={_{
                   duration: 4, repeat: Infinity, delay: i * 0.8}}
               />
-:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
-:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
+
             ))}
           </div>;
         )}

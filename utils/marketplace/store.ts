@@ -1,8 +1,11 @@
+
 // Marketplace data store utilities
 
 export interface Project {
 
+
 // Marketplace data store utilitiesexport interface Project {;
+
   id: string;
   title: string;
   summary: string;
@@ -15,10 +18,16 @@ export interface Project {
     id: string;
     title: string;
     description: string;
+
     status: 'pending' | 'in_progress' | 'completed' | 'overdue'
 
     due_date: string;
-    status: 'pending' | 'in_progress' | 'completed' | 'overdue',    uploadedAtIso: string
+    status: 'pending' | 'in_progress' | 'completed' | 'overdue',
+  }>;
+  documents: Array<{
+    id: string;
+    name: string;
+    url: string;
 
     uploadedAtIso: string
 
@@ -26,17 +35,18 @@ export interface Project {
   budget?: {
     total: number;
     currency: string;
-    type: 'fixed' | 'hourly' | 'milestone'
 
     type: 'fixed' | 'hourly' | 'milestone'
   }
   createdAt: string;
   updatedAt: string
-export interface Offer {
+
+}
 }
 
 
 export interface Offer {;
+
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -58,6 +68,9 @@ export interface Offer {;
   agreementUrl?: string;
   status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
   expiresAt?: string;
+
+  notes?: string
+
       due_date: string,
     }>;
   }
@@ -77,10 +90,15 @@ export interface Application {;
   talentSlug: string;
   appliedAtIso: string;
   status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';
-  coverLetter?: string;
-  proposedRate?: number;
-  proposedTimeline?: string;
-  portfolioItems?: string[];
+
+  notes?: string
+
+  cover_letter?: string;
+  proposed_rate?: number;
+  proposed_timeline?: string;
+  portfolio_items?: string[];
+  notes?: string,
+}
   notes?: string
 }
 
@@ -98,6 +116,9 @@ export interface Message {;
   context?: string;
   sentAtIso: string;
   readAtIso?: string;
+
+  isRead: boolean
+
   is_read: boolean,
 }
   isRead: boolean
@@ -608,402 +629,7 @@ if (return false) {
     };
 
   }
-  createdAt: string;
-  updatedAt: string
-
 }
-export interface Offer {;
-
-export interface Offer {;
-}
-
-
-export interface Offer {;
-  id: string;
-  createdAtIso: string;
-  clientId: string;
-  talentSlug: string;
-  startDateIso: string;
-  scopeSummary: string;
-  paymentTerms: {
-    type: 'fixed' | 'hourly' | 'milestone';
-    amount?: number;
-    hourlyRate?: number;
-    milestones?: Array<{
-      title: string;
-      amount: number;
-      dueDate: string
-    }>;
-  }
-  agreementUrl?: string;
-  status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
-  expiresAt?: string;
-
-  notes?: string
-
-      due_date: string,
-    }>;
-  }
-  agreement_url?: string;
-  status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
-  expires_at?: string;
-  notes?: string,
-export interface Application {;
-export interface Application {
-
-export interface Application {;
-  cover_letter?: string;
-  proposed_rate?: number;
-  proposed_timeline?: string;
-  portfolio_items?: string[];
-  notes?: string,
-  }
-  async getAllProjects(): Promise<Project[]> {
-    return Array.from(this.projects.values());
-  }
-  // Offer methods
-  async createOffer(offer: Offer): Promise<Offer> {
-    this.offers.set(offer.id, offer);
-    return offer;
-  }
-  async getOffer(id: string): Promise<Offer | null> {
-    if (!offer) return null
-    const updatedOffer = { ...offer, ...updates }
-
-    return this.offers.get(id) |null
-  }
-  async updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
-    const offer = this.offers.get(id);
-    if (!offer) return null
-    const updatedOffer = { ...offer, ...updates }
-
-    return this.offers.get(id) |null
-
-    return this && this.offers.get(id) || null,  }
-  async updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
-
-    if (!offer) return null
-    const updatedOffer = { ...offer, ...updates }
-
-    this.offers.set(id, updatedOffer);
-    return updatedOffer;
-  }
-  async deleteOffer(id: string): Promise<boolean> {
-    return this.offers.delete(id)
-
-  }
-  async getOffersByClient(clientId: string): Promise<Offer[]> {
-
-    return Array.from(this.offers.values()).filter(o => o.clientId === clientId)
-
-    return Array && Array.from(this && this.offers.values()).filter(o => o && o.clientId === clientId),
-  }
-  async getOffersByTalent(talentSlug: string): Promise<Offer[]> {
-
-    return Array.from(this.offers.values()).filter(o => o.talentSlug === talentSlug)
-
-    return Array && Array.from(this && this.offers.values()).filter(o => o && o.talentSlug === talentSlug),
-    if (!application) return null
-    const updatedApplication = { ...application, ...updates }
-
-    return this.applications.get(id) |null
-  }
-  async updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
-    const application = this.applications.get(id);
-    if (!application) return null
-    const updatedApplication = { ...application, ...updates }
-
-    return this.applications.get(id) |null
-
-    return this && this.applications.get(id) || null,  }
-  async updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
-
-    if (!application) return null
-    const updatedApplication = { ...application, ...updates }
-
-    this.applications.set(id, updatedApplication);
-    return updatedApplication;
-  }
-  async deleteApplication(id: string): Promise<boolean> {
-    return this.applications.delete(id)
-
-  }
-  async getApplicationsByProject(projectId: string): Promise<Application[]> {
-
-    return Array.from(this.applications.values()).filter(a => a.projectId === projectId)
-
-    return Array && Array.from(this && this.applications.values()).filter(a => a && a.projectId === projectId),
-  }
-  async getApplicationsByTalent(talentSlug: string): Promise<Application[]> {
-
-    return Array.from(this.applications.values()).filter(a => a.talentSlug === talentSlug)
-
-    return Array && Array.from(this && this.applications.values()).filter(a => a && a.talentSlug === talentSlug),
-    if (!message) return null
-    const updatedMessage = { ...message, ...updates }
-
-    return this.messages.get(id) |null
-  }
-  async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
-    const message = this.messages.get(id);
-    if (!message) return null
-    const updatedMessage = { ...message, ...updates }
-
-    return this.messages.get(id) |null
-
-    return this && this.messages.get(id) || null,  }
-  async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
-
-    if (!message) return null
-    const updatedMessage = { ...message, ...updates }
-
-    this.messages.set(id, updatedMessage);
-    return updatedMessage;
-  }
-  async deleteMessage(id: string): Promise<boolean> {
-    return this.messages.delete(id)
-
-    return this && this.messages.delete(id),>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  }
-  async getMessagesByConversation(conversationId: string): Promise<Message[]> {
-    return Array.from(this.messages.values())
-      .filter(m => m.conversationId === conversationId)
-      .sort((a, b) => new Date(a.sentAtIso).getTime() - new Date(b.sentAtIso).getTime());
-  }
-  async getMessagesByUser(userId: string): Promise<Message[]> {
-    return Array && Array.from(this && this.messages.values())
-      .filter(m => m && m.senderId === userId || m && m.recipientId === userId)
-      .sort((a, b) => new Date(b && b.sentAtIso).getTime() - new Date(a && a.sentAtIso).getTime());
-  }
-  async getAllMessages(): Promise<Message[]> {
-    return Array.from(this.messages.values());
-  }
-  // Conversation methods
-  async createConversation(conversation: Conversation): Promise<Conversation> {
-    this.conversations.set(conversation.id, conversation);
-    return conversation;
-  }
-  async getConversation(id: string): Promise<Conversation | null> {
-    if (!conversation) return null
-    const updatedConversation = { ...conversation, ...updates }
-
-    return this.conversations.get(id) |null
-  }
-  async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
-    const conversation = this.conversations.get(id);
-    if (!conversation) return null
-    const updatedConversation = { ...conversation, ...updates }
-
-    return this.conversations.get(id) |null
-
-    return this && this.conversations.get(id) || null,  }
-  async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
-
-    if (!conversation) return null
-    const updatedConversation = { ...conversation, ...updates }
-
-    this.conversations.set(id, updatedConversation);
-    return updatedConversation;
-  }
-  async deleteConversation(id: string): Promise<boolean> {
-    return this.conversations.delete(id)
-
-    return this && this.conversations.delete(id),>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  }
-  async getConversationsByUser(userId: string): Promise<Conversation[]> {
-    return Array.from(this.conversations.values())
-      .filter(c => c.participants.includes(userId))
-      .sort((a, b) => new Date(b.lastMessageAtIso).getTime() - new Date(a.lastMessageAtIso).getTime());
-  }
-  async getAllConversations(): Promise<Conversation[]> {
-    return Array.from(this.conversations.values());
-  }
-  // Utility methods
-  async getOrCreateConversation(userId1: string, userId2: string): Promise<Conversation> {
-    // Find existing conversation between these two users
-        return conversation
-
-      if (conversation && conversation.participants.includes(userId1) && conversation && conversation.participants.includes(userId2)) {
-  is_archived: boolean;
-  createdAtIso: string,
-}
-class MarketplaceStore {
-  private projects: Map < string, Project> = new Map ();
-  private offers: Map < string, Offer> = new Map ();
-  private applications: Map < string, Application> = new Map ();
-  private messages: Map < string, Message> = new Map ();
-  private conversations: Map < string, Conversation> = new Map ();
-;
-export function readDb(): MarketplaceDb {;
-  ensureDataFile();
-  try {;
-    const raw = fs.readFileSync(DB_PATH, "utf-8");
-    const data = JSON.parse(raw) as MarketplaceDb;
-    if (!data.offers) data.offers = [];
-    if (!data.projects) data.projects = [];
-    return data;
-  } catch (err) {;
-    return { offers: [], projects: [] }
-  }
-}
-;
-export function writeDb(db: MarketplaceDb): void {;
-  ensureDataFile();
-  fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), "utf-8");
-}
-    const updated_offer = { ...offer, ...updates }
-    this.offers.set (id, updated_offer);
-    return updated_offer;
-  }
-  async delete_offer (id: string): Promise < boolean> {
-    return this.offers.delete (id),
-  }
-  async getOffersByClient (client_id: string): Promise < Offer[]> {
-    return Array.from (this.offers.values ()).filter (object => o.client_id === client_id),
-  }
-  async getOffersByTalent (talent_slug: string): Promise < Offer[]> {
-    return Array.from (this.offers.values ()).filter (object => o.talent_slug === talent_slug),
-  }
-  async getAllOffers (): Promise < Offer[]> {
-    return Array.from (this.offers.values ());
-  }
-  // Application methods;
-  async create_application (application: Application): Promise < Application> {
-    this.applications.set (application.id, application);
-    return application;
-  }
-  async get_application (id: string): Promise < Application | null> {
-    return this.applications.get (id) || null,
-  }
-  async update_application (id: string, updates: Partial < Application>): Promise < Application | null> {
-    const application = this.applications.get (id);
-    // Check condition
-if (return null, ) {
-  $2
-}
-    const updated_application = { ...application, ...updates }
-    this.applications.set (id, updated_application);
-    return updated_application;
-  }
-  async delete_application (id: string): Promise < boolean> {
-    return this.applications.delete (id),
-  }
-  async getApplicationsByProject (project_id: string): Promise < Application[]> {
-    return Array.from (this.applications.values ()).filter (array => a.project_id === project_id),
-  }
-  async getApplicationsByTalent (talent_slug: string): Promise < Application[]> {
-    return Array.from (this.applications.values ()).filter (array => a.talent_slug === talent_slug),
-  }
-  async getAllApplications (): Promise < Application[]> {
-    return Array.from (this.applications.values ());
-  }
-  // Message methods;
-  async create_message (message: Message): Promise < Message> {
-    this.messages.set (message.id, message);
-    return message;
-  }
-  async get_message (id: string): Promise < Message | null> {
-    return this.messages.get (id) || null,
-  }
-  async update_message (id: string, updates: Partial < Message>): Promise < Message | null> {
-    const message = this.messages.get (id);
-    // Check condition
-if (return null, ) {
-  $2
-}
-    const updated_message = { ...message, ...updates }
-    this.messages.set (id, updated_message);
-    return updated_message;
-  }
-  async delete_message (id: string): Promise < boolean> {
-    return this.messages.delete (id),
-  }
-  async getMessagesByConversation (conversation_id: string): Promise < Message[]> {
-    return Array.from (this.messages.values ());
-      .filter (m => m.conversation_id === conversation_id);
-      .sort ((a, b) => new Date (a.sentAtIso).get_time () - new Date (b.sentAtIso).get_time ());
-  }
-  async getMessagesByUser (user_id: string): Promise < Message[]> {
-    return Array.from (this.messages.values ());
-      .filter (m => m.sender_id === user_id || m.recipient_id === user_id);
-      .sort ((a, b) => new Date (b.sentAtIso).get_time () - new Date (a.sentAtIso).get_time ());
-  }
-  async getAllMessages (): Promise < Message[]> {
-    return Array.from (this.messages.values ());
-  }
-  // Conversation methods;
-  async create_conversation (conversation: Conversation): Promise < Conversation> {
-    this.conversations.set (conversation.id, conversation);
-    return conversation;
-  }
-  async get_conversation (id: string): Promise < Conversation | null> {
-    return this.conversations.get (id) || null,
-  }
-  async update_conversation (id: string, updates: Partial < Conversation>): Promise < Conversation | null> {
-    const conversation = this.conversations.get (id);
-    // Check condition
-if (return null, ) {
-  $2
-}
-    const updated_conversation = { ...conversation, ...updates }
-    this.conversations.set (id, updated_conversation);
-    return updated_conversation;
-  }
-  async delete_conversation (id: string): Promise < boolean> {
-    return this.conversations.delete (id),
-  }
-  async getConversationsByUser (user_id: string): Promise < Conversation[]> {
-    return Array.from (this.conversations.values ());
-      .filter (c => c.participants.includes (user_id));
-      .sort ((a, b) => new Date (b.lastMessageAtIso).get_time () - new Date (a.lastMessageAtIso).get_time ());
-  }
-  async getAllConversations (): Promise < Conversation[]> {
-    return Array.from (this.conversations.values ());
-  }
-  // Utility methods;
-  async getOrCreateConversation (userId1: string, userId2: string): Promise < Conversation> {
-    // Find existing conversation between these two users;
-    for (const conversation of this.conversations.values ()) {
-      if (&& conversation.participants.includes (userId2)) {) {
-  $2
-}
-        return conversation,
-      }
-    }
-
-      id: `conv_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
-      participants: [userId1, userId2],
-      lastMessageAtIso: new Date().toISOString(),
-      isArchived: false,
-      createdAtIso: new Date().toISOString()
-    };
-
-    return this && this.createConversation(conversation);
-
-    message.readAtIso = new Date().toISOString()
-    this.messages.set(messageId, message);
-    return true;
-  }
-  async getUnreadMessageCount(userId: string): Promise<number> {
-      .length
-
-      .filter(m => m && m.recipientId === userId && !m && m.isRead)
-    // Create new conversation;
-    const conversation: Conversation = {
-      id: `conv_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-      participants: [userId1, userId2],
-      lastMessageAtIso: new Date ().toISOString (),
-      is_archived: false,
-      createdAtIso: new Date ().toISOString ();
-    }
-;
-export function saveOffer(offer: Offer): Offer {;
-  const db = readDb();
-  const index = db.offers.findIndex((o) => o.id === offer.id);
-  if (index >= 0) {;
-    db.offers[index] = offer;
-  } else {;
-    db.offers.push(offer);
 // Singleton instance
 export const marketplaceStore = new MarketplaceStore();
 // Main functions for external use
@@ -1112,153 +738,9 @@ export async function deleteMessage(id: string): Promise<boolean> {
   return marketplaceStore && marketplaceStore.deleteMessage(id),
 }
 // Utility functions
-export function createProjectData(
-  title: string
-  summary: string
-  clientId: string
-  additionalData?: Partial<Project>
-): Omit<Project, 'id' | 'createdAt' | 'updatedAt'> {
-  return {
-    title,
-    summary,
-    clientId,
-    startDateIso: new Date().toISOString(),
-    status: 'DRAFT',
-    timeline: [],
-    documents: [],
-    ...additionalData;
-  };
-}
-export function createOfferData(
-  clientId: string
-  talentSlug: string
-  scopeSummary: string
-  paymentTerms: Offer['paymentTerms']
-  additionalData?: Partial<Offer>
-): Omit<Offer, 'id' | 'createdAtIso'> {
-  return {
-    clientId,
-    talentSlug,
-    startDateIso: new Date().toISOString(),
-    scopeSummary,
-    paymentTerms,
-    status: 'SENT',
-    ...additionalData;
-  };
-}
-export function createApplicationData(
-  projectId: string
-  talentSlug: string
-  additionalData?: Partial<Application>
-): Omit<Application, 'id' | 'appliedAtIso'> {
-  return {
-    projectId,
-    talentSlug,
-    status: 'PENDING',
-    ...additionalData;
-  };
-}
-export function createMessageData(
-  conversationId: string
-  senderId: string
-  recipientId: string
-  body: string
-  additionalData?: Partial<Message>
-): Omit<Message, 'id' | 'sentAtIso'> {
-  return {
 
 
 
-    conversationId,
-    senderId,
-    recipientId,
-    title,
-    summary,
-    client_id,
-    startDateIso: new Date ().toISOString (),
-    status: 'DRAFT',
-    timeline: [],
-    documents: [],
-    ...additional_data;
-  }
-}
-export function createOfferData (
-  client_id: string,
-  talent_slug: string,
-  scope_summary: string,
-  payment_terms: Offer['payment_terms'],
-  additional_data?: Partial < Offer>): Omit < Offer, 'id' | 'createdAtIso'> {
-  return {
-    client_id,
-    talent_slug,
-    startDateIso: new Date ().toISOString (),
-    scope_summary,
-    payment_terms,
-    status: 'SENT',
-    ...additional_data;
-  }
-}
-    )
-
-    const lowercaseQuery = query && query.toLowerCase();
-    return Array && Array.from(this && this.projects.values()).filter(project =>
-      project && project.title.toLowerCase().includes(lowercaseQuery) ||
-      project && project.summary.toLowerCase().includes(lowercaseQuery)
-    ),
-  }
-  async searchOffers(query: string): Promise<Offer[]> {
-
-    )
-
-    const lowercaseQuery = query && query.toLowerCase();
-    return Array && Array.from(this && this.offers.values()).filter(offer =>
-      offer && offer.scopeSummary.toLowerCase().includes(lowercaseQuery)
-    ),
-  }> {
-    return {
-
-      totalProjects: this && this.projects.size,
-      totalOffers: this && this.offers.size,
-      totalApplications: this && this.applications.size,
-      totalMessages: this && this.messages.size,
-      totalConversations: this && this.conversations.size
-    };
-  }
-}
-// Singleton instance
-export const marketplaceStore = new MarketplaceStore();
-// Main functions for external use
-export async function createProject(project: Project): Promise<Project> {
-  return marketplaceStore.createProject(project)
-
-}
-export async function getProject(id: string): Promise<Project | null> {
-
-  return marketplaceStore.getProject(id)
-
-  return marketplaceStore && marketplaceStore.getProject(id),
-
-export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
-
-  return marketplaceStore.updateProject(id, updates);
-}
-export async function deleteProject(id: string): Promise<boolean> {
-
-  return marketplaceStore.deleteProject(id)
-
-  return marketplaceStore && marketplaceStore.deleteProject(id),
-}
-export async function createOffer(offer: Offer): Promise<Offer> {
-
-  return marketplaceStore.createOffer(offer)
-
-  return marketplaceStore && marketplaceStore.createOffer(offer),
-}
-export async function getOffer(id: string): Promise<Offer | null> {
-
-  return marketplaceStore.getOffer(id)
-
-  return marketplaceStore && marketplaceStore.getOffer(id),
     conversationId,
     senderId,
     recipientId,
@@ -1267,32 +749,6 @@ export async function getOffer(id: string): Promise<Offer | null> {
     ...additionalData;
   };
 }
-}
-export function createApplicationData (
-  project_id: string,
-  talent_slug: string,
-  additional_data?: Partial < Application>): Omit < Application, 'id' | 'appliedAtIso'> {
-  return {
-    project_id,
-    talent_slug,
-    status: 'PENDING',
-    ...additional_data;
-  }
-}
-export function createMessageData (
-  conversation_id: string,
-  sender_id: string,
-  recipient_id: string,
-  body: string,
-  additional_data?: Partial < Message>): Omit < Message, 'id' | 'sentAtIso'> {
-  return {
-    conversation_id,
-    sender_id,
-    recipient_id,
-    body,
-    isRead: false,
-    ...additionalData;
-  };
-}export function generate_id (prefix: string = 'item'): string {
+export function generate_id (prefix: string = 'item'): string {
   return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }

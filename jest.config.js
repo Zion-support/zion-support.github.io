@@ -1,14 +1,20 @@
 module.exports = {
   preset: 'ts-jest',
-  testEnvironment: 'jest-environment-jsdom',
-  transform: {
-    '^.+\\.(ts|tsx)?$': ['ts-jest', {
-      babelConfig: true,
-    }],
-    "^.+\\.(js|jsx)$": "babel-jest",
-  },
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
   moduleNameMapper: {
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/pages/(.*)$': '<rootDir>/src/pages/$1',
+    '^vitest$': '<rootDir>/tests/vitest-mock.ts',
+    '^notistack$': '<rootDir>/src/stubs/notistack.tsx',
+    '^@sentry/browser$': '<rootDir>/src/stubs/sentry.ts',
   },
-  setupFilesAfterEnv: ['@testing-library/jest-dom'],
+  roots: ['<rootDir>/tests', '<rootDir>/__tests__'],
+  coverageThreshold: {
+    global: {
+      lines: 80,
+      functions: 80,
+    },
+  },
 };
+

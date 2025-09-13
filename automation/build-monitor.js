@@ -1,15 +1,6 @@
 #!/usr/bin/env node
-    if (level === 'error') {
-      console.error(logMessage);
-    } else if (level === 'warn') {
-      console.warn(logMessage);
-    } else {
-      console.log(logMessage);
-    }
-  }
-=======
-ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -17,14 +8,8 @@ const { promisify } = require('util');
 const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -43,62 +28,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       console.log(logMessage);
     }
   }
-ursor/fix-syntax-push-and-merge-to-main-40de
-    const report = {
-      ...results,
-      trends: {
-        consecutiveFailures: this.consecutiveFailures,
-        improvementSinceLastRun: previousReport ? 
-          (results.build.status === 'success' && previousReport.build.status === 'failed') : false,
-        degradationSinceLastRun: previousReport ?
-          (results.build.status === 'failed' && previousReport.build.status === 'success') : false
-      },
-      healthScore: this.calculateHealthScore(results),
-      recommendations: this.generateRecommendations(results)
-    };
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`Build health report updated: ${this.reportFile}`);
-    return report;
-  }
-  calculateHealthScore(results) {
-    let score = 100;
-    if (results.build.status === 'failed') score -= 40;
-    if (results.lint.status === 'failed') score -= 20;
-    if (results.typeCheck.status === 'failed') score -= 20;
-    if (results.dependencies.status === 'warning') score -= 10;
-    // Penalty for slow builds
-    if (results.build.duration > 120000) score -= 10; // 2 minutes
-    return Math.max(0, score);
-  }
-  generateRecommendations(results) {
-    const recommendations = [];
-    if (results.build.status === 'failed') {
-      recommendations.push('Fix build errors immediately');
-      recommendations.push('Run intelligent error fixer');
-    }
-    if (results.lint.status === 'failed') {
-      recommendations.push('Address linting issues');
-      recommendations.push('Consider running auto-formatter');
-    }
-    if (results.typeCheck.status === 'failed') {
-      recommendations.push('Fix TypeScript errors');
-      recommendations.push('Review type definitions');
-    }
-    if (results.build.duration > 180000) { // 3 minutes
-      recommendations.push('Optimize build performance');
-      recommendations.push('Consider build caching');
-    }
-    if (results.dependencies.outdated.length > 10) {
-      recommendations.push('Update outdated dependencies');
-      recommendations.push('Schedule dependency maintenance');
-    }
-    return recommendations;
-  }
-  async run() {
-    this.log('Starting build health check...');
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de  async checkBuildStatus() {
+
+
+  async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
       // Check if .next directory exists and is recent
@@ -117,14 +49,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de  async checkBuildStatus() {
         this.log('warn', 'No build found, triggering build...');
         await this.triggerBuild();
       }
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -325,10 +251,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 const monitor = new BuildMonitor();
 if (require.main === module) {
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de  const command = process.argv[2];
+
+  const command = process.argv[2];
   switch (command) {
     case 'start':
       monitor.start().catch(console.error);
@@ -355,10 +279,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de  const command = process.argv[2];
   }
 }
 
-=======
-=======
 
-=======
+
 const fs = require('fs);
 const path = require('path'),
   const { execSync } = require(child_process');
@@ -543,8 +465,6 @@ if (require.main === module) {
   const monitor = new BuildMonitor(),
   monitor.run().catch(console.error)}
 
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
 module.exports = BuildMonitor;

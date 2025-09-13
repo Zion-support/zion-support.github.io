@@ -1338,7 +1338,6 @@ export const getServicesByCategory = (category: string) => {
 // Helper functions;
 export const getServicesByCategory = (category: string) =>: any {
   return realMicroSaasServices.filter (service => service.category === category);    id: 'data - contracts - hub';
-=======
 export const getServicesByCategory = (category: string) => {;
   return realMicroSaasServices.filter(service => service.category === category);    id: 'data-contracts-hub';
     name: 'Data Contracts Hub';
@@ -1445,31 +1444,6 @@ reviews: 14
 
 
 export const serviceCategories = [
-  'Legal Technology'
-  'Customer Service & Support'
-  'Digital Marketing & SEO'
-  'Creative & Media'
-  'Data & Analytics'
-  'Human Resources'
-  'Sales & CRM'
-  'Market Research'
-  'Blockchain & Cryptocurrency'
-  'Cloud & DevOps'
-  'Database & Performance'
-  'Design & UI/UX'
-  'Development & DevOps'
-  'Business Intelligence'
-  'Quantum Computing'
-  'Cybersecurity'
-  'Metaverse & Virtual Reality'
-  'Web3 & DeFi'
-  'IoT & Edge Computing'
-  'Autonomous Vehicles & Robotics'
-  'Climate & Environmental'
-  'Biotechnology & Healthcare'
-  'Financial Technology'
-  'Education Technology'
-  'Enterprise IT'
   'Legal Technology',
   'Customer Service & Support',
   'Digital Marketing & SEO',
@@ -1498,29 +1472,55 @@ export const serviceCategories = [
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   return realMicroSaasServices.filter(service => service.category === category)
 };
-=======
-];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
-
-=======
-  return realMicroSaasServices.filter(service => service.category === category)
-};
-
 export const getServicesByPriceRange = (min: number, max: number) => {
   return realMicroSaasServices.filter(service => {
     const price = parseFloat(service.price.replace('$', '').replace(, ''));
     return price >= min && (max === Infinity || price <= max)
   })
 };
-
 export const getPopularServices = () => {
   return realMicroSaasServices.filter(service => service.popular)
 };
-
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
-=======
+reviews: 14;
+}
+;
+export const service_categories = [;
+  'Legal Technology',
+  'Customer Service & Support',
+  'Digital Marketing & SEO',
+  'Creative & Media',
+  'Data & Analytics',
+  'Human Resources',
+  'Sales & CRM',
+  'Market Research',
+  'Blockchain & Cryptocurrency',
+  'Cloud & DevOps',
+  'Database & Performance',
+  'Design & UI / UX',
+  'Development & DevOps',
+  'Business Intelligence',
+  'Quantum Computing',
+  'Cybersecurity',
+  'Metaverse & Virtual Reality',
+  'Web3 & DeFi',
+  'IoT & Edge Computing',
+  'Autonomous Vehicles & Robotics',
+  'Climate & Environmental',
+  'Biotechnology & Healthcare',
+  'Financial Technology',
+  'Education Technology',
+  'Enterprise IT',
+];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+  'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
+  'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
+  'Enterprise IT';
+];
+
+
   id: string,;
   name: string,;
   tagline: string,;
@@ -1554,50 +1554,6 @@ export const serviceCategories = [
   }
 }
 ;
-=======
-=======
-reviews: 14;
-}
-;
-export const service_categories = [;
-  'Legal Technology',
-  'Customer Service & Support',
-  'Digital Marketing & SEO',
-  'Creative & Media',
-  'Data & Analytics',
-  'Human Resources',
-  'Sales & CRM',
-  'Market Research',
-  'Blockchain & Cryptocurrency',
-  'Cloud & DevOps',
-  'Database & Performance',
-  'Design & UI / UX',
-  'Development & DevOps',
-  'Business Intelligence',
-  'Quantum Computing',
-  'Cybersecurity',
-  'Metaverse & Virtual Reality',
-  'Web3 & DeFi',
-  'IoT & Edge Computing',
-  'Autonomous Vehicles & Robotics',
-  'Climate & Environmental',
-  'Biotechnology & Healthcare',
-  'Financial Technology',
-  'Education Technology',
-  'Enterprise IT',
-];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
-  'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
-  'Enterprise IT';
-];
-
-
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface RealMicroSaasService {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

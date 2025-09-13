@@ -2,6 +2,7 @@
 export const supabase = {
   // Add supabase functionality here;
   auth: {
+
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
     signOut: () => Promise<any>;
@@ -48,9 +49,8 @@ const supabaseConfig: SupabaseConfig = {
   anonKey: process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'your-anon-key'
 };
 export const supabase = createSupabaseClient(supabaseConfig);
-==============
 
-=======    sign_in: (email: string, password: string) => null,
+    sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
   },
@@ -62,11 +62,7 @@ export const supabase = createSupabaseClient(supabaseConfig);
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
-        single: () => null;
-      });
-    });
-  });
+
   });
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

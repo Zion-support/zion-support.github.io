@@ -146,6 +146,16 @@ export default function DigitalTransformationPage() {;
       description="Transform your business with our comprehensive digital transformation services. AI, cloud, automation, and more."
       keywords="digital transformation, business transformation, AI implementation, cloud migration, process optimization"
     >
+:pages/solutions/digital-transformation.tsx
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
       <div className="min-h-screen bg-gray-50">
   return (
     <MainLayout
@@ -280,6 +290,23 @@ export default function DigitalTransformationPage() {;
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                     viewport={{ once: true }}
+:pages/solutions/digital-transformation.tsx
+                  >
+                    <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
+                      {step.step}
+                    </div>
+                    <div className="text-blue-600 mb-4">
+                      <IconComponent className="w-8 h-8 mx-auto" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
+                    <p className="text-gray-600 mb-4">{step.description}</p>
+                    <div className="text-sm text-blue-600 font-semibold mb-4">
+                      Duration: {step.duration}
+                    </div>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {step.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                   >,
 :pages/solutions/digital-transformation && transformation.tsx>;
                     <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">;
@@ -483,8 +510,3 @@ export default function DigitalTransformationPage() {;
         </section>;
       </div>;
     </Layout>;
-export default Digital-transformation;
-  );
-};
-
-export default Digital-transformation;

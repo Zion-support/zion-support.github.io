@@ -1,43 +1,20 @@
 
-
-
-}
-}
-}
-},
-
-,
-
-ursor/fix-lint-push-and-merge-to-main-28da
-},;
-,;
-ursor/automate-test-improve-and-merge-code-4094
-ursor/fix-syntax-push-and-merge-to-main-40de
 export const messageChannelHandler = {
-  sendMessage: (message: string) => {},
-  receiveMessage: (callback: (message: string) => void) => {},
-<<<<<<< HEAD
-=======
-  sendMessage: (message: any) => {},
-  receiveMessage: (callback: any) => {},
->>>>>>> main
+  sendMessage: (message: string) => {
+    // Implementation for sending messages
+    console.log('Sending message: ', message);
+
+    // Implementation for sending messages
+
+
+
+    // Implementation for receiving messages
+    // eslint-disable-next-line no-console'
+    console.log('Setting up message receiver')}
 };
-};
-};
-};
-,
 
 
 
-
-
-}}}};
-
-}}}};
-;
-
-},;
-,;
 
 
 

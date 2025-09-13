@@ -206,8 +206,3 @@ export default function CloudServicesPage() {
         </section>;
       </div>;
     </Layout>;
-export default Cloud;
-  );
-};
-
-export default Cloud;

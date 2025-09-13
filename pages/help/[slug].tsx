@@ -1,66 +1,58 @@
 
 
-=======
 
-=======
-
-=======
-
-=======
-
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {GetStaticPaths, GetStaticProps} from 'next';
 import {useState} from 'react';
 
 
 
 import type { HelpArticle } from '../../utils/support';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
 import {read_json} from '../../utils / fs_db';
 import type { HelpArticle } from '../../utils / support';
-;export const getStaticPaths: GetStaticPaths = async () => {
+;
+export const getStaticPaths: GetStaticPaths = async () => {
   const articles = read_json < HelpArticle[]>('help / articles.json', []);
   return {
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
     paths: articles.map((a) => ({ params: { slug: a.slug } })),
     fallback: false}
 };
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const slug = ctx.params?.slug as string;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   const article = articles.find((a) => a.slug === slug) || null;
   return { props: { article } }
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156export default function HelpArticlePage({ article }: { article: HelpArticle }) {
+export default function HelpArticlePage({ article }: { article: HelpArticle }) {
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+
 export const getStaticPaths: GetStaticPaths = async () => {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return {;
     paths: articles && articles.map(a => ({ params: { slug: a && a.slug } })),;
     fallback: false,;
+
     paths: articles.map(a => ({ params: { slug: a.slug } })),
     fallback: false,
 
   };
 };
+export const getStaticProps: GetStaticProps = async ctx => {;
+  const slug = ctx && ctx.params?.slug as string;
+  const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
+  const article = articles && articles.find(a => a && a.slug === slug) || null;
+  return { props: { article } };};
+
 
             className='enhanced-button enhanced-button-secondary';
-=======    paths: articles.map (array => ({ params: { slug: a.slug } })),
+    paths: articles.map (array => ({ params: { slug: a.slug } })),
     fallback: false,
   }
 }
@@ -109,24 +101,21 @@ function vote() {
             on_click={() => vote (false)}
             disabled={voted !== null}
             className='enhanced - button enhanced - button - secondary';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+
           >;
             No;
           </button>;
         </div>;
       </div>;
 
-==============
 
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ articleId: article.id, helpful })});
     setVoted(helpful)
   }
+export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
+
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
@@ -136,7 +125,6 @@ function vote() {
     });
 
 
-=======
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -171,20 +159,16 @@ export default function HelpArticlePage(req, res) {
       body: JSON.stringify({ articleId: article.id, helpful })});
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    setVoted(helpful);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
 export const getStaticPaths: GetStaticPaths = async () => {;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
-    paths: articles.map(a => ({ params: { slug: a.slug } }))
-    fallback: false
-  }
-}
-export const getStaticProps: GetStaticProps = async ctx => {
-  const slug = ctx.params?.slug as string;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  const article = articles.find(a => a.slug === slug) |null;
-  return { props: { article } };}
-export default function HelpArticlePage({ article }: { article: HelpArticle }) {
     paths: articles.map(a => ({ params: { slug: a.slug } })),
     fallback: false,
   };
@@ -204,10 +188,6 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ articleId: article.id, helpful })
     });
-
-    setVoted(helpful);
-
-  }
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -240,17 +220,12 @@ export default function HelpArticlePage(req, res) {
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' };
       body: JSON.stringify({ articleId: article.id, helpful })});
-
     setVoted(helpful);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
-
-}
-=======
   return (
     <article className="prose dark:prose-invert max-w-none">
       <h1>{article.title}</h1>
@@ -262,31 +237,11 @@ export default function HelpArticlePage(req, res) {
           <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>
           <button onClick={() => vote(false)} disabled={voted !== null} className="enhanced-button enhanced-button-secondary">No</button>
 
-}
-
-
-  )
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-        </div>
-      </div>
-    </article>
-
-
-
-}
-
-=======
-
   )
 }
 
     </article>);
 ;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

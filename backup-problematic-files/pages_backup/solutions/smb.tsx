@@ -211,8 +211,3 @@ export default function SMBSolutionsPage() {
         </section>;
       </div>;
     </Layout>;
-export default Smb;
-  );
-};
-
-export default Smb;

@@ -12,6 +12,36 @@ export const metadata = {
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   openGraph: {
+    title: "Zion Tech Group - Sovereign AI-Powered Digital Economies",
+    description: "Launch sovereign AI-powered digital economies with one click",
+    type: "website",
+    locale: "en_US",
+    url: "https://ziontechgroup.com",
+    siteName: "Zion OS",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zion OS - Sovereign AI-Powered Digital Economies"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zion OS - Sovereign AI-Powered Digital Economies",
+    description: "Launch sovereign AI-powered digital economies with one click",
+    images: ["/og-image.jpg"]
+  },
+  alternates: {
+    canonical: "https://ziontechgroup.com"
+  },
+  verification: {
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code"
+  }
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -132,7 +162,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             {/* Copyright */}
             <div className="border-t border-white/10 mt-6 pt-6 text-center text-sm text-gray-400">
               <p>&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
-            </div>          </div>
+            </div>
+          </div>
         </footer>
         <Analytics />
       </body>

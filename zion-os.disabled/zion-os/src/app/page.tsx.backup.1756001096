@@ -1,3 +1,14 @@
+import { 
+  Rocket, 
+  Settings, 
+  Globe, 
+  Users, 
+  Sparkles,
+  ArrowRight,
+  Zap,
+  Shield
+} from "lucide-react";
+
 export default function HomePage() {
   const featuredServices = services.slice(0, 6);
 
@@ -195,6 +206,7 @@ export default function HomePage() {
             <ArrowRight className="w-5 h-5" />
           </a>
         </div>
-      </div>    </div>
+      </div>
+    </div>
   );
 }

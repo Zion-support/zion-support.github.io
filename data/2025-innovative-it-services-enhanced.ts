@@ -1,5 +1,3 @@
-import { ServiceVariant } from '../types/service-variants';
-import { ServiceVariant } from '../types/service-variants';
 
 
   id: string;
@@ -34,7 +32,6 @@ import { ServiceVariant } from '../types/service-variants';
     address: string;
     website: string;
   }
-  {
 
   {
 
@@ -54,16 +51,42 @@ import { ServiceVariant } from '../types/service-variants';
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Cloud - based blockchain platform with multi - chain support and enterprise features.';
     launch_date: '2024 - 09 - 01';
+
     customers: 123;
 
     rating: 4 && 4.8,
 
     reviews: 52
+
+export interface InnovativeITService2025 {
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string[],
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: string,
+  contactInfo: {
+    mobile: string, email: string,
+    address: string,
+    website: string
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
 
 }
 export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
@@ -862,6 +885,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeITService2025 {;
   id: string,;
@@ -1923,24 +1948,3 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
 
 ;
 
-;
-    }
-    realImplementation: true
-    implementationDetails:
-      'Cloud-based blockchain platform with multi-chain support and enterprise features.'
-    launchDate: '2024-09-01'
-    customers: 123
-    rating: 4.8
-    reviews: 52
-  }
-      'Cloud-based blockchain platform with multi-chain support and enterprise features.',
-    launchDate: '2024-09-01',
-    customers: 123,
-    rating: 4.8,
-    reviews: 52,
-  },;
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }

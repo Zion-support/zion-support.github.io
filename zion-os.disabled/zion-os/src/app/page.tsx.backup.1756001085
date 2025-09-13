@@ -1,3 +1,5 @@
+import { services } from "@/data/services";
+
 export default function HomePage() {
   const featuredServices = services.slice(0, 6);
 
@@ -16,21 +18,13 @@ export default function HomePage() {
             <div className="font-semibold">Launch Wizard</div>
             <div className="text-sm opacity-80">Spin up a new instance with marketplace, governance, identity, and more.</div>
           </a>
-          <a className="p-4 rounded border border-white/10 hover:border-white/20 transition-colors" href="/admin/instances">            <div className="font-semibold">Admin Instances</div>
+          <a className="p-4 rounded border border-white/10 hover:border-white/20 transition-colors" href="/admin/instances">
+            <div className="font-semibold">Admin Instances</div>
             <div className="text-sm opacity-80">Manage deployed instances, API keys, and governance.</div>
           </a>
         </div>
       </div>
 
-      {/* Contact CTA */}
-      <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-6 border border-white/10 text-center">
-        <h3 className="text-xl font-semibold mb-2">Ready to Transform Your Business?</h3>
-        <p className="opacity-80 mb-4">Contact our team to discuss your requirements and get started with our solutions.</p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="mailto:kleber@ziontechgroup.com" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded font-semibold transition-colors">
-            Get Started
-          </a>
-          <a href="tel:+13024640950" className="px-4 py-2 border border-white/20 hover:border-white/40 rounded font-semibold transition-colors">
       {/* Featured Services */}
       <div className="space-y-6">
         <div className="flex items-center justify-between">
@@ -84,7 +78,8 @@ export default function HomePage() {
           <a
             href="tel:+13024640950"
             className="px-6 py-2 bg-zinc-700 hover:bg-zinc-600 rounded-lg transition-colors"
-          >            Call +1 302 464 0950
+          >
+            Call +1 302 464 0950
           </a>
         </div>
       </div>

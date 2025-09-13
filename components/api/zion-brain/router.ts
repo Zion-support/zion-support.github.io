@@ -1,4 +1,15 @@
 
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "POST");
+    return res.status(405).json({ error: "Method not allowed" });
+  if (!isAuthorized(req))
+    return res.status(401).json({ error: "Unauthorized" });
+  function isAuthorized(req: NextApiRequest): boolean {
+
     const token = req && req.headers["x-admin-token"] || req && req.query.token;
     const superToken = process && process.env.SUPERADMIN_TOKEN;
     return !superToken || token === superToken;
@@ -15,7 +26,8 @@
     if (!isAuthorized(req))
       return res && res.status(401).json({ error: "Unauthorized" });
     const started = Date && Date.now();
-    try {=======
+    try {
+
       const { text, payload } = req && req.body || {};
       const result = detectIntent(String(text || ""));
       const routed = await routeToChain(result && result.intent, payload || {});
@@ -58,12 +70,14 @@ function handler() {
       const latency_ms = Date.now () - started;
 ;
       append_log ({
+
         module: "router",
         type: result && result.intent,
         status: "ok",
         latency_ms,
         payload: { text_length: String (text || "").length, routed },
       });
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {

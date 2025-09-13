@@ -1,90 +1,13 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from "react";
-
-export default function EnhancedCard(): any ({;
-  children,;
-  className = "",;
-}: {;
-  children: React && React.ReactNode;
-  className?: string;
-}) {;
-  return (
-    <div className={["card-base p-4", className].join(" ")}>{children}</div>;
-  );
-  return (
-    <div className={["card-base p-4", className].join(" ")}>{children}</div>;
-  );
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
-export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
-  return (
-    <div className={["card-base p-4", className].join(' ')}>
-      {children}
-</div>
-  );
-=======import React from './react';
-;
-export default /**
- * EnhancedCard - Function description
- */
-function EnhancedCard() {
-=======  return (
-    <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
-  return (
-    <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
-    </div>
-  )
 
-}
-}
-
-import React from "react";
-
-import React from "react";
-export default function EnhancedCard({
-  children
-  className = ""
-}: {
-  children,
-  className = "",
-}: {;
-  children: React.ReactNode;
-  className?: string;
-}) {
-
+export default function EnhancedCard({ title, description, href }: { title: string; description: string; href?: string }) {
+  const Wrapper: React.ElementType = href ? 'a' : 'div';
+  const props = href ? { href } : {};
   return (
-    <div className={["card-base p-4", className].join(" ")}>{children}</div>
-  );
-  return (
-    <div className={["card-base p-4", className].join(" ")}>{children}</div>
+    <Wrapper {...props} className="group block p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur hover:-translate-y-0.5 hover:shadow transition transform">
+      <div className="text-lg font-semibold">{title}</div>
+      <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">{description}</div>
+      {href && <div className="mt-3 text-indigo-600 group-hover:underline">Learn more →</div>}
+    </Wrapper>
   );
 }
-}
-==============
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

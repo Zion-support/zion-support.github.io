@@ -1,2 +1,24 @@
-import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const GreenITPage = () => {; return (; <> <SEOHead title=\"Green IT - Zion Tech Group\" description=\"Our sustainability and green IT initiatives.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Green IT></div> <p className=\"text-gray-600\">We build sustainable,energy-efficient technology solutions to reduce environmental impact.></div> ></div> ></div> );}; export default GreenITPage;
-import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const GreenITPage = () => {; return (; <> <SEOHead title="Green IT - Zion Tech Group" description="Our sustainability and green IT initiatives." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Green IT></div> <p className="text-gray-600">We build sustainable,energy-efficient technology solutions to reduce environmental impact.></div> ></div> ></div> );}; export default GreenITPage;
+import React from 'react';
+import Head from 'next/head';
+  return (
+
+export default function Green-itPage() {
+  return (
+    <>
+              <Head>
+        <title>green-it - Zion App</title>
+        <meta name="description" content="green-it page" />
+              </Head>
+              <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">green-it</h1>
+        <p className="text-lg mb-4">This page is under construction.</p>
+        <div className="mt-4">
+        <a href="/" className="text-blue-600 hover:underline">
+            ← Back to Home</a>
+              </div>
+              </div>
+        </>
+  );
+
+  );
+}

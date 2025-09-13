@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 export default function AutomationHub() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -45,112 +47,52 @@ export default function AutomationHub() {
             <a className="text-cyan-300 underline" href="/.netlify/functions/marketing-and-features-promo" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Auto Scheduler</h2>
-            <p className="text-white/70">Smart time-based runner that chooses and executes the best tasks.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/auto-scheduler" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Broken Image Scanner</h2>
-            <p className="text-white/70">Finds broken images, optimizes assets, and syncs fixes.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/broken-image-scanner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">SEO Audit Runner</h2>
-            <p className="text-white/70">Analyzes pages for title/description issues and writes an HTML report.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/seo-audit-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">AI Trends Radar</h2>
-            <p className="text-white/70">Aggregates trending AI topics into a public report.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/ai-trends-radar-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Dependency Auto‑Upgrade</h2>
-            <p className="text-white/70">Safely bumps minor/patch deps with build verification.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/deps-auto-upgrade-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Fast Orchestrator</h2>
+            <p className="text-white/70">Runs every minute to refresh front and homepage content; commits and pushes to main.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/fast-orchestrator" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Component Props Docs</h2>
-            <p className="text-white/70">Scans components and publishes props documentation (Markdown + JSON).</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/component-props-docs-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Continuous Orchestrator</h2>
+            <p className="text-white/70">Runs every 5 minutes, including sitemap and UI futurizer steps.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/continuous-orchestrator" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Topics Map</h2>
-            <p className="text-white/70">Builds a live topics map from pages and docs; publishes JSON + Markdown.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/topics-map-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Features/Capabilities/Benefits Advertiser</h2>
+            <p className="text-white/70">Continuously advertises new features with deep links on the front pages.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/features-capabilities-benefits-advertiser" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Internal Link Orchestrator</h2>
-            <p className="text-white/70">Crawls internal routes, fixes missing pages, regenerates sitemap and SEO.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/link-scheduler" target="_blank" rel="noopener">Run on Netlify</a>
+            <h2 className="text-xl font-bold">Hyper Front Index Accelerator</h2>
+            <p className="text-white/70">Ultra-fast front index futurizer and directory builder.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/hyper-front-index-accelerator" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Maintenance Scheduler</h2>
-            <p className="text-white/70">SaaS, feature marketing, homepage promos, site links and promos.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/maintenance-scheduler" target="_blank" rel="noopener">Run on Netlify</a>
+            <h2 className="text-xl font-bold">Innovation Lab</h2>
+            <p className="text-white/70">Invents new automations; updates knowledge graph and metrics.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/innovation-lab" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Marketing Scheduler</h2>
-            <p className="text-white/70">LinkedIn and Instagram automations via Netlify scheduler.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/marketing-scheduler" target="_blank" rel="noopener">Run on Netlify</a>
-=======
-            <h2 className="text-xl font-bold">Hyper-Fast Orchestrator</h2>
-            <p className="text-white/70">Runs every 3 minutes to refresh homepage/front content and sync to main.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/hyper-fast-orchestrator" target="_blank" rel="noopener">Trigger / View</a>          </li>
+            <h2 className="text-xl font-bold">Guardian Orchestrator</h2>
+            <p className="text-white/70">Security audits, dead code, link and image guard with self-healing.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/guardian-orchestrator" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Media & Newsroom Runner</h2>
+            <p className="text-white/70">Auto media releases, OG images and newsroom updates.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/media-press-runner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Docs & SEO Optimizer</h2>
+            <p className="text-white/70">Docs index, changelog, sitemap and link health checks.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/docs-seo-optimizer" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Daily Deps Upgrade</h2>
+            <p className="text-white/70">Conservative dependency upgrades every night.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/deps-upgrade-daily" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
         </ul>
       </main>
     </div>
   );
 }
-=======
-
-==============
-
-},
-export default Index,
-
-=======},
-
-export default Index,
-
-=======const Index: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>Index - Zion Tech Solutions</title>
-        <meta name="description" content="Index page" />
-      </Head>
-      <main>
-        <h1>Index</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-  )
-},
-export default Index,
-},
-
-export default Index,;
-export default Index,
-=======>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
-
-},
-export default Index,
-
-=======
-},
-export default Index,
-},
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
->>>>>>> cursor/check-fix-push-and-merge-to-main-e7fd

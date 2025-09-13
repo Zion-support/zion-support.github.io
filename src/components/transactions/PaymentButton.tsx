@@ -1,93 +1,130 @@
-redirectUrl?: string
+
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { Loader2 } from "lucide-react";
+import { loadStripe } from "@stripe/stripe-js";
+import { useNavigate } from "react-router-dom";
+import { useAnalytics } from "@/context/AnalyticsContext";
+import { event as gtagEvent } from "@/lib/gtag";
+import { captureException } from "@/lib/sentry";
+
+const stripePromise = loadStripe(
+  import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || ""
+);
+
+interface PaymentButtonProps {
+  amount: number;
+  serviceId: string;
+  providerId: string;
+  buttonText?: string;
+  className?: string;
+  onPaymentInitiated?: () => void;
+  redirectUrl?: string;
 }
+
 export function PaymentButton({
-
-  amount
-  serviceId
-  providerId
-  buttonText = "Purchase"
-  className
-  onPaymentInitiated
-  redirectUrl}: PaymentButtonProps) {
-  const [isProcessing, setIsProcessing] = useState(false)
-  const { isAuthenticated, user } = useAuth()
-  const router = useRouter()
-  const handlePaymentClick = async () => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: "Authentication required",
-        description: "Please sign in to make a purchase."}),
-      const return_to = encodeURIComponent (`/checkout?sku=${service_id}`);
-      router.push (`/auth / login?return_to=${return_to}`);
-      return;
-
-      }
-
   amount,
   serviceId,
   providerId,
   buttonText = "Purchase",
   className,
   onPaymentInitiated,
-  redirectUrl}: PaymentButtonProps) {
-  const [isProcessing, setIsProcessing] = useState(false),
-  const { isAuthenticated, user } = useAuth(),
-  const router = useRouter(),
+  redirectUrl,
+  }: PaymentButtonProps) {
+    const [isProcessing, setIsProcessing] = useState(false);
+    const { isAuthenticated, user } = useAuth();
+    const navigate = useNavigate();
+    const { trackEvent } = useAnalytics();
   
-  const handlePaymentClick = async () => {
-    if (!isAuthenticated) {
-      toast({
-        title: "Authentication required",
-        description: "Please sign in to make a purchase."}),
+    const handlePaymentClick = async () => {
+      trackEvent('button_click', { elementId: 'buy_now', serviceId });
+      gtagEvent('buy_now_click', { serviceId });
+      if (!isAuthenticated) {
+        toast({
+          title: "Authentication required",
+        description: "Please sign in to make a purchase.",
+      });
 
+      if (serviceId) {
+        sessionStorage.setItem('intendedProduct', serviceId);
+      }
+
+      navigate('/login?next=/checkout');
+      return;
+    }
+    
+    if (!supabase) {
+      toast({
+        title: "Payment error",
+        description: "Supabase client not initialized.",
+        variant: "destructive",
+      });
+      return;
+    }
+    try {
+      setIsProcessing(true);
+      
+      if (onPaymentInitiated) {
+        onPaymentInitiated();
       }
       
-      // Call the create-checkout edge function
-      const { data, error } = await supabase.functions.invoke("create-checkout", {
-        body: {
+      // Create a Stripe checkout session via edge function
+      const { data, error } = await supabase.functions.invoke(
+        "checkout-sessions",
+        {
+          body: {
+            amount,
+            serviceId,
+            providerId,
+            userId: user?.id,
+            successUrl: redirectUrl || window.location.href,
+            cancelUrl: window.location.href,
+          },
+        }
+      );
 
-          providerId,
-          userId: user?.id,
-          successUrl: redirectUrl || window.location.href,
-          cancelUrl: window.location.href}}),
-      
       if (error) {
-        throw error
+        throw error;
       }
-      
-      // Type assertion needed for mock Supabase client compatibility
-      if ((data as any)?.url) {
-        // Open Stripe checkout in a new tab
-        window.open((data as any).url, '_blank')
+
+      const sessionId = data?.sessionId as string | undefined;
+      if (sessionId) {
+        const stripe = await stripePromise;
+        await stripe?.redirectToCheckout({ sessionId });
       } else {
-        throw new Error("No checkout URL returned")
+        throw new Error("No session ID returned");
       }
       
-    } catch (error) {
-      logErrorToProduction('Payment error:', { data: error })
-      toast({
-        title: "Payment error"
-        description: "There was a problem initiating your payment. Please try again."
-        variant: "destructive"})
+      } catch (error) {
+        console.error("Payment error:", error);
+        captureException(error);
+        toast({
+          title: "Payment error",
+        description: "There was a problem initiating your payment. Please try again.",
+        variant: "destructive",
+      });
     } finally {
       // Reset button state after a short delay
       setTimeout(() => {
-        setIsProcessing(false)
-    } catch (error) {;
-      logErrorToProduction('Payment error:', { data: error }),;
-      toast({;
-        title: "Payment error",;
-        description: "There was a problem initiating your payment. Please try again.",;
-        variant: "destructive"});
-    } finally {;
-      // Reset button state after a short delay;
         setIsProcessing(false);
       }, 1500);
     }
   };
+  
+  return (
+    <Button
+      onClick={handlePaymentClick}
+      disabled={isProcessing}
+      className={cn(
+        "relative min-w-[120px]",
+        className
+      )}
+    >
+      {isProcessing ? (
         <>
           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
           Processing...
@@ -95,57 +132,6 @@ if ( {) {
       ) : (
         buttonText
       )}
-    </Button>;
+    </Button>
   );
-
-}catch (error) {';
-  logErrorToProduction ('Payment error:', {;
-  data: error ;
-});
-toast ({;
-
-}finally {;
-  //Reset button state after a short delay setTimeout ( () => {;
-  setIsProcessing (false) ;
-}, 1500) ;
-
-};
-
-}> {";
-  isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText) ;
-}</Button>) ;
-}'"  );
-
 }
-
-}> {"
-  isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText)
-}</Button>)
-}'"  )
-}
-
-;
-
-    <Button;
-      on_click={handlePaymentClick}
-      disabled={is_processing}
-      className={cn (
-        "relative min - w-[120px]";        class_name), }
-    >;
-      {is_processing ? (
-        <>;
-          <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;
-          Processing...;
-        </>) : (
-        button_text)}
-    </Button>);
-}catch (error) {';
-  logErrorToProduction ('Payment error:', {
-  data: error;
-});
-toast ({
-}finally {
-  //Reset button state after a short delay set_timeout ( () => {
-  setIsProcessing (false);
-}, 1500);
-

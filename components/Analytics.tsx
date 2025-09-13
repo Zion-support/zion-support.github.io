@@ -1,72 +1,63 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 interface AnalyticsProps {
-  tracking_id?: string;
+  googleAnalyticsId?: string;
+  googleTagManagerId?: string;
 }
 
-class ErrorBoundary extends React.Component {
-  constructor(props: any) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error: any) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error: any, errorInfo: any) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if ((this.state as any).hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
+const Analytics: React.FC<AnalyticsProps> = ({
+  googleAnalyticsId = 'GA_MEASUREMENT_ID',
+  googleTagManagerId = 'GTM_ID'
+}) => {
+  const router = useRouter();
 
-const Analytics: React.FC<AnalyticsProps> = ({ tracking_id = 'G-XXXXXXXXXX' }) => {
   useEffect(() => {
-    // Google Analytics initialization
-    if (typeof window !== 'undefined' && tracking_id) {
+    // Google Analytics 4
+    if (googleAnalyticsId && googleAnalyticsId !== 'GA_MEASUREMENT_ID') {
       const script = document.createElement('script');
       script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${tracking_id}`;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
       document.head.appendChild(script);
 
-      const configScript = document.createElement('script');
-      configScript.innerHTML = `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${tracking_id}');
-      `;
-      document.head.appendChild(configScript);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: any[]) {
+        window.dataLayer.push(args);
+      }
+      gtag('js', new Date());
+      gtag('config', googleAnalyticsId);
+
+      // Track page views on route changes
+      const handleRouteChange = (url: string) => {
+        gtag('config', googleAnalyticsId, {
+          page_path: url,
+        });
+      };
+
+      router.events.on('routeChangeComplete', handleRouteChange);
+      return () => {
+        router.events.off('routeChangeComplete', handleRouteChange);
+      };
     }
-  }, [tracking_id]);
+  }, [googleAnalyticsId, router]);
 
   return (
-    <ErrorBoundary>
-      <Head>
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${tracking_id}`}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${tracking_id}');
-            `,
-          }}
-        />
-      </Head>
-    </ErrorBoundary>
+    <Head>
+    <Head>;
+
+
+
+
+
+    </Head>
   );
+};
+
+export const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', eventName, parameters);
+  }
 };
 
 export default Analytics;

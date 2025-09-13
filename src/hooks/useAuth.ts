@@ -1,114 +1,106 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
-export interface User {
+interface User {
   id: string;
   email: string;
-  name?: string;
-  avatar?: string;
+  name: string;
+  role: 'user' | 'admin' | 'moderator';
+  userType?: string;
+  displayName?: string;
+  avatarUrl?: string;
 }
 
-export interface AuthState {
+<<<<<<< HEAD
+interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 export function useAuth() {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+=======
+export const useAuth = () => {
   const [authState, setAuthState] = useState<AuthState>({
     user: null,
     isAuthenticated: false,
     isLoading: true,
   });
-
-  const login = useCallback(async (email: string, password: string) => {
-    try {
-      setAuthState(prev => ({ ...prev, isLoading: true }));
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      const user: User = {
-        id: '1',
-        email,
-        name: email.split('@')[0],
-      };
-      
-      setAuthState({
-        user,
-        isAuthenticated: true,
-        isLoading: false,
-      });
-      
-      return { success: true, user };
-    } catch (error) {
-      setAuthState(prev => ({ ...prev, isLoading: false }));
-      return { success: false, error };
-    }
-  }, []);
-
-  const logout = useCallback(() => {
-    setAuthState({
-      user: null,
-      isAuthenticated: false,
-      isLoading: false,
-    });
-  }, []);
-
-  const signup = useCallback(async (email: string, password: string, name?: string) => {
-    try {
-      setAuthState(prev => ({ ...prev, isLoading: true }));
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      const user: User = {
-        id: '1',
-        email,
-        name: name || email.split('@')[0],
-      };
-      
-      setAuthState({
-        user,
-        isAuthenticated: true,
-        isLoading: false,
-      });
-      
-      return { success: true, user };
-    } catch (error) {
-      setAuthState(prev => ({ ...prev, isLoading: false }));
-      return { success: false, error };
-    }
-  }, []);
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
 
   useEffect(() => {
-    // Check for existing session
-    const checkAuth = async () => {
-      try {
-        // Simulate checking for existing session
-        await new Promise(resolve => setTimeout(resolve, 500));
-        
-        // For now, no existing session
-        setAuthState({
-          user: null,
-          isAuthenticated: false,
-          isLoading: false,
-        });
-      } catch (error) {
-        setAuthState({
-          user: null,
-          isAuthenticated: false,
-          isLoading: false,
-        });
+    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+    const checkAuth = () => {
+      const storedUser = localStorage.getItem('zion_user');
+      if (storedUser) {
+        try {
+          setUser(JSON.parse(storedUser));
+        } catch (error) {
+          console.error('Error parsing stored user:', error);
+        }
       }
+      setLoading(false);
     };
 
     checkAuth();
   }, []);
 
+  const login = async (email: string, password: string) => {
+    // Implement actual login logic here
+    const mockUser: User = {
+      id: '1',
+      email,
+      name: 'User',
+      role: 'user'
+    };
+    
+<<<<<<< HEAD
+    setUser(mockUser);
+=======
+    setAuthState({
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false,
+    });
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    return mockUser;
+  };
+
+  const logout = () => {
+    setUser(null);
+    localStorage.removeItem('zion_user');
+  };
+
+  const register = async (email: string, password: string, name: string) => {
+    // Implement actual registration logic here
+    const mockUser: User = {
+      id: '1',
+      email,
+      name,
+      role: 'user'
+    };
+    
+    setUser(mockUser);
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    return mockUser;
+  };
+
   return {
-    ...authState,
+    user,
+    loading,
     login,
     logout,
-    signup,
+    register,
+    isAuthenticated: !!user,
+    isAdmin: user?.role === 'admin'
   };
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738

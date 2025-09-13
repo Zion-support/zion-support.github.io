@@ -15,30 +15,12 @@ import SEO from '../components/SEO';
 import Link from 'next/link';
 
 export default function ThankYouPage() {
-  const nextSteps = [
-    {
-      title: 'Confirmation Email',
-      description: 'You\'ll receive a confirmation email within the next few minutes.',
-      icon: <Mail className="w-6 h-6" />,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Team Review',
-      description: 'Our team will review your inquiry within 24 hours.',
-      icon: <Users className="w-6 h-6" />,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Follow-up Call',
-      description: 'We\'ll schedule a follow-up call to discuss your needs in detail.',
-      icon: <Phone className="w-6 h-6" />,
-      color: 'from-green-500 to-emerald-500'
-    }
-  ];
+	const pageTitle = 'Thank You — Zion Tech Group';
+	const pageDescription = 'Thanks for contacting Zion Tech Group. We will be in touch soon.';
 
 	return (
 		<>
-			<SEO title="Thank You" description="Thank you for your message" url="/thank-you" />
+			<SEO title={pageTitle} description={pageDescription} url="/thank-you" />
 			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
 				<div className="container mx-auto px-4 max-w-2xl text-center">
 					<h1 className="text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple">Thank you</h1>

@@ -1,3 +1,4 @@
+
       req && req.body || {};
 
     if (
@@ -20,10 +21,27 @@
       return res && res.status(201).json({
         partner: {
 
+          id: partner && partner.id,
+          name: partner && partner.name,
+          status: partner && partner.status,
+          entityType: partner && partner.entityType,
+          useCaseType: partner && partner.useCaseType,
+          createdAt: partner && partner.createdAt,
+        },
+        apiKey: apiKey && apiKey.key,
+        dashboardUrl: `/partners/dashboard?pid=${partner && partner.id}`,
+
+      });
+    } catch (e) {
+      return res && res.status(500).json({ error: "Failed to create partner" });
+    }
+
     return res && res.status(500).json({ error: "Failed to create partner" });
+
   }
 
 
+import type { NextApiRequest, NextApiResponse } from './next';
 import { create_partner  } from '../../../utils / api / partner_auth';
 ;
 export default async /**
@@ -41,9 +59,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-
-  }
-}}
+}
       return res.status (400).json ({ error: "Missing required fields" });
     }
     try {
@@ -106,6 +122,9 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
       dashboardUrl: `/partners/dashboard?pid=${_partner.id}`});
   } catch (e) {_return res.status(500).json({ error: "Failed to create partner"});
 
+import type { NextApiRequest, NextApiResponse } from "next";
+import { createPartner } from "../../../utils/api/partnerAuth";
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -150,9 +169,6 @@ export default async function handler(
     return res.status(500).json({ error: "Failed to create partner" });
 
   }
-}
 
-}
-}
 }
 

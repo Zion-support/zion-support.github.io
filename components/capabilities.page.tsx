@@ -1,8 +1,18 @@
 
 
+];
+export default function CapabilitiesPage() {;
+  return (
+
 
         ))}
 
+      </div>;
+    </EnhancedLayout>;
+  );
+}
+
+  );
 }
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 const CAPABILITIES = [;
@@ -36,8 +46,8 @@ function CapabilitiesPage() {
           </div>))}
       </div>;
     </EnhancedLayout>);
-
 import EnhancedLayout from '../components/layout/EnhancedLayout';
+
 const CAPABILITIES = [
   'Full‑stack Web'
   'Mobile (iOS/Android)'
@@ -66,10 +76,13 @@ export default function CapabilitiesPage() {
           </div>
         ))}
       </div>
-}=======
       </div>
 
   );
+}
+
+    </EnhancedLayout>;
+);
 }
 
 

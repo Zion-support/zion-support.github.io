@@ -1,8 +1,11 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
+
 export function EnterpriseHero() {
-    return (<section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80">
+  return (
+    <section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -23,16 +26,21 @@ export function EnterpriseHero() {
             <div className="mt-10 flex items-center gap-4">
               <p className="text-sm text-muted-foreground">Trusted by leading enterprises:</p>
               <div className="flex gap-6 opacity-70">
-                <img loading="lazy" src="/logos/placeholder-logo.svg" alt="Enterprise 1" className="h-8"/>
-                <img loading="lazy" src="/logos/placeholder-logo.svg" alt="Enterprise 2" className="h-8"/>
-                <img loading="lazy" src="/logos/placeholder-logo.svg" alt="Enterprise 3" className="h-8"/>
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 1" className="h-8" loading="lazy" />
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 2" className="h-8" loading="lazy" />
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 3" className="h-8" loading="lazy" />
               </div>
             </div>
           </div>
           <div className="relative">
             <div className="aspect-video rounded-lg bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 p-1">
               <div className="w-full h-full bg-card rounded-md flex items-center justify-center">
-                <img loading="lazy" src="/placeholder.svg" alt="Enterprise Dashboard" className="rounded max-w-full max-h-full object-cover"/>
+                <img
+                  src="/placeholder.svg"
+                  alt="Enterprise Dashboard"
+                  className="rounded max-w-full max-h-full object-cover"
+                  loading="eager"
+                />
               </div>
             </div>
             <div className="absolute -bottom-4 -right-4 bg-card p-4 rounded-lg shadow-lg border border-border">
@@ -41,5 +49,6 @@ export function EnterpriseHero() {
           </div>
         </div>
       </div>
-    </section>);
+    </section>
+  );
 }

@@ -3,227 +3,168 @@ module.exports = {
     {
       name: 'ziontechgroup-web',
       script: 'npm',
-      args: 'run start',
-      cwd: './',
+      args: 'start',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        PORT: 3000
+      },
+      env_development: {
+        NODE_ENV: 'development',
+        PORT: 3000
+      },
+      log_file: './logs/web.log',
+      out_file: './logs/web-out.log',
+      error_file: './logs/web-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+    {
+      name: 'automation-health-check',
+      script: 'node',
+      args: 'automation/health-check.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/5 * * * *', // Restart every 5 minutes
       env: {
         NODE_ENV: 'production'
       },
-      log_file: 'logs/pm2/preview.log',
-      error_file: 'logs/pm2/preview-error.log',
-      out_file: 'logs/pm2/preview-out.log',
+      log_file: './logs/health-check.log',
+      out_file: './logs/health-check-out.log',
+      error_file: './logs/health-check-error.log'
     },
     {
-      name: 'auto-fix',
+      name: 'automation-security-scanner',
       script: 'node',
-      args: 'scripts/pm2/auto-fix.cjs',
-      cron_restart: '0 */6 * * *',
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: { NODE_ENV: 'production' },
-      log_file: 'logs/pm2/auto-fix.log',
-      error_file: 'logs/pm2/auto-fix-error.log',
-      out_file: 'logs/pm2/auto-fix-out.log',
-    },
-    {
-      name: 'healthcheck',
-      script: 'node',
-      args: 'scripts/pm2/healthcheck.cjs',
-      cron_restart: '*/5 * * * *',
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '128M',
-      env: { NODE_ENV: 'production' },
-      log_file: 'logs/pm2/health.log',
-      error_file: 'logs/pm2/health-error.log',
-      out_file: 'logs/pm2/health-out.log',
-    },
-    {
-      name: 'code-quality-monitor',
-      script: 'scripts/pm2/code-quality-monitor.cjs',
+      args: 'automation/security-scanner.cjs',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'code-quality-monitor',
-        QUALITY_THRESHOLD: '80',
-        AUTO_FIX_CRITICAL: 'true',
-      },
       cron_restart: '0 */6 * * *', // Restart every 6 hours
-      log_file: 'logs/pm2/code-quality-monitor.log',
-      error_file: 'logs/pm2/code-quality-monitor-error.log',
-      out_file: 'logs/pm2/code-quality-monitor-out.log',
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/security-scanner.log',
+      out_file: './logs/security-scanner-out.log',
+      error_file: './logs/security-scanner-error.log'
     },
     {
-      name: 'auto-commit-fixes',
-      script: 'scripts/pm2/auto-commit-fixes.cjs',
+      name: 'automation-performance-monitor',
+      script: 'node',
+      args: 'scripts/performance-monitor.cjs',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'auto-commit-fixes',
-        COMMIT_FREQUENCY: 'hourly',
-        AUTO_PUSH: 'false',
-      },
       cron_restart: '0 */2 * * *', // Restart every 2 hours
-      log_file: 'logs/pm2/auto-commit-fixes.log',
-      error_file: 'logs/pm2/auto-commit-fixes-error.log',
-      out_file: 'logs/pm2/auto-commit-fixes-out.log',
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './logs/performance-monitor.log',
+      out_file: './logs/performance-monitor-out.log',
+      error_file: './logs/performance-monitor-error.log'
     },
     {
-      name: 'dependency-monitor',
-      script: 'scripts/pm2/dependency-monitor.cjs',
+      name: 'automation-ci-cd',
+      script: 'node',
+      args: 'scripts/automation-orchestrator.cjs',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      cron_restart: '0 */1 * * *', // Restart every hour
       env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'dependency-monitor',
-        AUTO_UPDATE_DEV: 'true',
-        SECURITY_ALERTS: 'true',
+        NODE_ENV: 'production'
       },
-      cron_restart: '0 0 * * 0', // Restart weekly on Sunday
-      log_file: 'logs/pm2/dependency-monitor.log',
-      error_file: 'logs/pm2/dependency-monitor-error.log',
-      out_file: 'logs/pm2/dependency-monitor-out.log',
+      log_file: './logs/ci-cd.log',
+      out_file: './logs/ci-cd-out.log',
+      error_file: './logs/ci-cd-error.log'
     },
     {
-      name: 'performance-monitor',
-      script: 'scripts/pm2/performance-monitor.cjs',
+      name: 'automation-continuous',
+      script: 'node',
+      args: 'scripts/master-automation-orchestrator.cjs',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
       env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'performance-monitor',
-        PERFORMANCE_THRESHOLD: '3000',
-        BUNDLE_SIZE_LIMIT: '2MB',
+        NODE_ENV: 'production'
       },
-      cron_restart: '0 */8 * * *', // Restart every 8 hours
-      log_file: 'logs/pm2/performance-monitor.log',
-      error_file: 'logs/pm2/performance-monitor-error.log',
-      out_file: 'logs/pm2/performance-monitor-out.log',
-    }
-  ],
-
-  // Intelligent AI-Powered Automation Processes
-  intelligentAutomation: [
-    // AI-Powered Code Quality Automation
-    {
-      name: 'ai-code-quality',
-      script: './scripts/automation/ai-code-quality-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      },
-      error_file: 'logs/ai-code-quality-error.log',
-      out_file: 'logs/ai-code-quality-out.log',
-      log_file: 'logs/ai-code-quality-combined.log',
-      time: true
+      log_file: './logs/continuous.log',
+      out_file: './logs/continuous-out.log',
+      error_file: './logs/continuous-error.log'
     },
-
-    // Intelligent Performance Automation
     {
-      name: 'intelligent-performance',
-      script: './scripts/automation/intelligent-performance-automation.cjs',
+      name: 'automation-dependency-updater',
+      script: 'node',
+      args: 'scripts/dependency-updater.cjs',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      cron_restart: '0 */12 * * *', // Restart every 12 hours
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
+        NODE_ENV: 'production'
       },
-      error_file: 'logs/intelligent-performance-error.log',
-      out_file: 'logs/intelligent-performance-out.log',
-      log_file: 'logs/intelligent-performance-combined.log',
-      time: true
+      log_file: './logs/dependency-updater.log',
+      out_file: './logs/dependency-updater-out.log',
+      error_file: './logs/dependency-updater-error.log'
     },
-
-    // Smart Dependency Automation
     {
-      name: 'smart-dependency',
-      script: './scripts/automation/smart-dependency-automation.cjs',
+      name: 'automation-code-quality',
+      script: 'node',
+      args: 'scripts/code-quality-monitor.cjs',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '14400000' // 4 hours
+        NODE_ENV: 'production'
       },
-      error_file: 'logs/smart-dependency-error.log',
-      out_file: 'logs/smart-dependency-out.log',
-      log_file: 'logs/smart-dependency-combined.log',
-      time: true
+      log_file: './logs/code-quality.log',
+      out_file: './logs/code-quality-out.log',
+      error_file: './logs/code-quality-error.log'
     },
-
-    // Error Prediction Automation
     {
-      name: 'error-prediction',
-      script: './scripts/automation/error-prediction-automation.cjs',
+      name: 'automation-build-test',
+      script: 'node',
+      args: 'scripts/comprehensive-test-runner.cjs',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+        NODE_ENV: 'production'
       },
-      error_file: 'logs/error-prediction-error.log',
-      out_file: 'logs/error-prediction-out.log',
-      log_file: 'logs/error-prediction-combined.log',
-      time: true
+      log_file: './logs/build-test.log',
+      out_file: './logs/build-test-out.log',
+      error_file: './logs/build-test-error.log'
     },
-
-    // Intelligent Build Automation
     {
-      name: 'intelligent-build',
-      script: './scripts/automation/intelligent-build-automation.cjs',
+      name: 'automation-sitemap',
+      script: 'node',
+      args: 'scripts/generate-sitemap.mjs',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
+        NODE_ENV: 'production'
       },
-      error_file: 'logs/intelligent-build-error.log',
-      out_file: 'logs/intelligent-build-out.log',
-      log_file: 'logs/intelligent-build-combined.log',
-      time: true
-    },
-
-    // Smart Testing Automation
-    {
-      name: 'smart-testing',
-      script: './scripts/automation/smart-testing-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '43200000' // 12 hours
-      },
-      error_file: 'logs/smart-testing-error.log',
-      out_file: 'logs/smart-testing-out.log',
-      log_file: 'logs/smart-testing-combined.log',
-      time: true
+      log_file: './logs/sitemap.log',
+      out_file: './logs/sitemap-out.log',
+      error_file: './logs/sitemap-error.log'
     }
   ]
 };

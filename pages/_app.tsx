@@ -1,168 +1,155 @@
 import React from 'react';
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
-// DYNAMIC IMPORTS - Load heavy providers only when needed
-// ===================================================================
-
-// Load non-critical providers dynamically to reduce initial bundle
-const WhitelabelProvider = dynamic(() => 
-  import('@/context/WhitelabelContext').then(mod => ({ default: mod.WhitelabelProvider })), {
-  ssr: true,
-  loading: () => null
-});
-
-const WalletProvider = dynamic(() => 
-  import('@/context/WalletContext').then(mod => ({ default: mod.WalletProvider })), {
-  ssr: false, // Wallet is client-side only
-  loading: () => null
-});
-
-const AnalyticsProvider = dynamic(() => 
-  import('@/context/AnalyticsContext').then(mod => ({ default: mod.AnalyticsProvider })), {
-  ssr: false, // Analytics is client-side only
-  loading: () => null
-});
-
-const CartProvider = dynamic(() => 
-  import('@/context/CartContext').then(mod => ({ default: mod.CartProvider })), {
-  ssr: true,
-  loading: () => null
-});
-
-const FeedbackProvider = dynamic(() => 
-  import('@/context/FeedbackContext').then(mod => ({ default: mod.FeedbackProvider })), {
-  ssr: false, // Feedback is client-side only
-  loading: () => null
-});
-
-const ThemeProvider = dynamic(() => 
-  import('@/components/ThemeProvider').then(mod => ({ default: mod.ThemeProvider })), {
-  ssr: true,
-  loading: () => null
-});
-
-const AppLayout = dynamic(() => 
-  import('@/layout/AppLayout').then(mod => ({ default: mod.AppLayout })), {
-  ssr: true,
-  loading: () => (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="animate-pulse text-lg">Loading layout...</div>
-    </div>
-  )
-});
-
-// Load utility components dynamically
-const ToastContainer = dynamic(() => 
-  import('@/components/ToastContainer').then(mod => ({ default: mod.ToastContainer })), {
-  ssr: false,
-  loading: () => null
-});
-
-const OfflineIndicator = dynamic(() => 
-  import('@/components/OfflineIndicator').then(mod => ({ default: mod.OfflineIndicator })), {
-  ssr: false,
-  loading: () => null
-});
-
-const RouteChangeHandler = dynamic(() => 
-  import('@/components/RouteChangeHandler').then(mod => ({ default: mod.RouteChangeHandler })), {
-  ssr: false,
-  loading: () => null
-});
-
-const RouteSEO = dynamic(() => 
-  import('@/components/RouteSEO'), {
-  ssr: true,
-  loading: () => null
-});
-
-// ===================================================================
-// FONT CONFIGURATION - Optimized loading
-// ===================================================================
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '600', '700'],
-  display: 'swap',
-  fallback: ['system-ui', 'arial'],
-  adjustFontFallback: true,
-  variable: '--font-inter',
-  preload: true,
-});
-
-const poppins = Poppins({
-  weight: ['400', '600', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  fallback: ['system-ui', 'arial'],
-  adjustFontFallback: true,
-  variable: '--font-poppins',
-  preload: true,
-});
-
-// ===================================================================
-// LIGHTWEIGHT LANGUAGE WRAPPER
-// ===================================================================
-
-const LanguageProviderWrapper: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
-  const { user, isAuthenticated } = useAuth();
-  const [isClient, setIsClient] = React.useState(false);
-
-  React.useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  const safeAuthState = React.useMemo(
-    () => ({
-      isAuthenticated: isClient ? !!isAuthenticated : false,
-      user: isClient ? user : null,
-    }),
-    [isClient, isAuthenticated, user],
-  );
-=======
-import { HelmetProvider } from 'react-helmet-async';
-import type { AppProps } from 'next/app';
+import { AuthProvider } from '@/context/auth/AuthProvider';
+import { Provider as ReduxProvider } from 'react-redux';
+import { store } from '@/store'; // Changed to named import
+import { useAuth } from '@/hooks/useAuth';
+import { ErrorProvider } from '@/context/ErrorContext';
+import ErrorResetOnRouteChange from '@/components/ErrorResetOnRouteChange';
+import ErrorResetOnRouteChange from '@/components/ErrorResetOnRouteChange';
+import { I18nextProvider } from 'react-i18next';
+import i18n from '@/i18n';
+import { LanguageProvider } from '@/context/LanguageContext';
+import GlobalErrorBoundary from '@/components/GlobalErrorBoundary';
+import GlobalErrorBoundary from '@/components/GlobalErrorBoundary';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
+import RootErrorBoundary from '@/components/RootErrorBoundary';
+import RootErrorBoundary from '@/components/RootErrorBoundary';
+import { ApiErrorBoundary } from '@/components/ApiErrorBoundary';
+import { ApiErrorBoundary } from '@/components/ApiErrorBoundary';
+import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
+import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
+import dynamic from 'next/dynamic';
+import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
+import { HydrationErrorBoundary } from '@/components/HydrationErrorBoundary';
+import { HydrationErrorBoundary } from '@/components/HydrationErrorBoundary';
+import { Inter, Poppins } from 'next/font/google';
 import Head from 'next/head';
-import ErrorBoundary from '../components/ErrorBoundary';
+import '../src/index.css';
+import * as Sentry from '@sentry/nextjs';
+import { initializeGlobalErrorHandlers } from '@/utils/globalAppErrors';
+import {
+
+import type { AppProps } from 'next/app';
 import '../styles/globals.css';
->>>>>>> main
+
+
+        <Link href="/" style={{ 
+        }}>Zion Tech Group</Link>
+        
+          <Link href="/" style={{ 
+          }}>Home</Link>
+          <Link href="/services" style={{ 
+          }}>All Services</Link>
+          <Link href="/micro-saas" style={{ 
+          }}>Micro SaaS</Link>
+          <Link href="/ai-services" style={{ 
+          }}>AI Services</Link>
+          <Link href="/it-services" style={{ 
+          }}>IT Services</Link>
+          <Link href="/services-catalog" style={{ 
+          }}>Catalog</Link>
+          <Link href="/services-overview" style={{ 
+          }}>Overview</Link>
+          <Link href="/services-comparison" style={{ 
+          }}>Compare</Link>
+          <Link href="/pricing" style={{ 
+          }}>Pricing</Link>
+          <Link href="/about" style={{ 
+          }}>About</Link>
+          <Link href="/contact" style={{ 
+          }}>Contact</Link>
+
+          <Link href="/contact" style={{ 
+          }}>Contact</Link>
+      
+          <Link href="/" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          <Link href="/services" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+          <Link href="/micro-saas" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
+          <Link href="/ai-services" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
+          <Link href="/it-services" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
+          <Link href="/services-catalog" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
+          <Link href="/services-overview" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>Overview</Link>
+          <Link href="/services-comparison" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>Compare</Link>
+          <Link href="/pricing" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+          <Link href="/about" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>About</Link>
+
+
+            <Link href="/solutions" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>All Solutions</Link>
+            <Link href="/solutions" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>All Solutions</Link>
+            <Link href="/solutions/enterprise" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Enterprise Solutions</Link>
+            <Link href="/solutions/enterprise" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Enterprise Solutions</Link>
+            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>All Services</Link>
+            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>All Services</Link>
+            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
+            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Micro SaaS Products</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Micro SaaS Products</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Services</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Services</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>IT Services</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>IT Services</Link>
+            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
+            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
+            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
+            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
+
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cloud Cost Optimization</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cloud Cost Optimization</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Automation</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Automation</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Digital Transformation</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Digital Transformation</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Process Automation</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Process Automation</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Predictive Analytics</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Predictive Analytics</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Content Creation</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Content Creation</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Customer Support</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Customer Support</Link>
+
+            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Home</Link>
+            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Home</Link>
+            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>About Us</Link>
+            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>About Us</Link>
+            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Contact Us</Link>
+            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Contact Us</Link>
+            <Link href="/careers" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Careers</Link>
+            <Link href="/careers" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Careers</Link>
+            <Link href="/docs" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Documentation</Link>
+            <Link href="/docs" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Documentation</Link>
+            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
+            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
+            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>FAQ</Link>
+            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>FAQ</Link>
+            <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Privacy Policy</Link>
+            <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Privacy Policy</Link>
+            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Terms of Service</Link>
+            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Terms of Service</Link>
+
+            <Link href="/contact" style={{ 
+            }}>Request Quote</Link>
+      
+          <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Privacy Policy</Link> | 
+          <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Privacy Policy</Link> | 
+          <Link href="/terms" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Terms of Service</Link>
+          <Link href="/terms" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Terms of Service</Link>
 
 export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <HelmetProvider>
-      <ErrorBoundary>
-        <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>Zion Tech Group — AI, IT & Micro SaaS</title>
-        </Head>
-        <div className="min-h-screen flex flex-col">
-          <main className="flex-grow">
-            <Component {...pageProps} />
-          </main>
-        </div>
-      </ErrorBoundary>
-    </HelmetProvider>
-  );
-<<<<<<< HEAD
-}
-
-if (process.env.NODE_ENV === 'development') {
-  console.log('[App] MyApp component initialized with loading fix');
-=======
-import '../styles/globals.css';
-import ErrorBoundary from '../components/ErrorBoundary';
-
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <ErrorBoundary>
-      <Component {...pageProps} />
-    </ErrorBoundary>
-  );
-}
-=======
-}
->>>>>>> main
+  return <Component {...pageProps} />;

@@ -2,6 +2,10 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Terms of Service - Zion Tech Group",
+  description: "Read the terms and conditions that govern your use of Zion Tech Group's services and website.",
+  keywords: "terms of service, terms and conditions, user agreement, Zion Tech Group",
+};
+
 export default function TermsPage() {
   return (
     <div className="min-h-screen">
@@ -294,6 +298,7 @@ export default function TermsPage() {
             </div>
           </div>
         </div>
-      </section>    </div>
+      </section>
+    </div>
   );
 }

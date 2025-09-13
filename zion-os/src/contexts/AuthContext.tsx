@@ -1,3 +1,4 @@
+
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
 import { use_session, sign_in, sign_out  } from './next - auth / react';,
@@ -8,7 +9,7 @@ interface User {
   email: string,
   role: string,
   onboarding_completed: boolean;
-  }
+
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 import { useSession, signIn, signOut } from "next-auth/react",;
@@ -127,6 +128,7 @@ export function useAuth() {;
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
   }
+
   return context;
 }
 ;
@@ -235,6 +237,6 @@ export function useAuth() {;
   const context = useContext(AuthContext);
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
-  }>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  }
   return context;
 }

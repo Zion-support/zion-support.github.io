@@ -1,333 +1,345 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
-import { ENHANCED_SERVICES } from '../data/enhancedServices';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedFuturisticServiceCard from '../components/ui/UltraAdvancedFuturisticServiceCard';
-import { EnhancedService } from '../data/enhancedServices';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  Star, 
+  Clock, 
+  TrendingUp, 
+  Shield, 
+  Zap,
+  Brain,
+  Database,
+  Cloud,
+  Lock,
+  BarChart3,
+  Network,
+  Smartphone,
+  CreditCard,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  ExternalLink
+} from 'lucide-react';
+import { ENHANCED_SERVICES, SERVICE_CATEGORIES, SERVICE_FEATURES, MARKET_PRICING } from '@/data/enhancedServices';
 
-export function EnhancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [sortBy, setSortBy] = useState<'price' | 'name' | 'category' | 'featured'>('featured');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [showNewServices, setShowNewServices] = useState(true);
-  const [showFeaturedServices, setShowFeaturedServices] = useState(true);
+export default function EnhancedServicesShowcase() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-  // Combine all services
-  const allServices = [...COMPREHENSIVE_SERVICES, ...ENHANCED_SERVICES];
-  
-  // Get unique categories
-  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-  
-  // Filter services based on search, category, and filters
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
-    const matchesNewFilter = !showNewServices || !('isNew' in service) || service.isNew;
-    const matchesFeaturedFilter = !showFeaturedServices || !('featured' in service) || service.featured;
-    
-    return matchesCategory && matchesSearch && matchesNewFilter && matchesFeaturedFilter;
-  });
-
-  // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
-        return a.price - b.price;
-      case 'name':
-        return a.title.localeCompare(b.title);
-      case 'category':
-        return a.category.localeCompare(b.category);
-      case 'featured':
-        const aFeatured = 'featured' in a && a.featured;
-        const bFeatured = 'featured' in b && b.featured;
-        if (aFeatured && !bFeatured) return -1;
-        if (!aFeatured && bFeatured) return 1;
-        return 0;
-      default:
-        return 0;
-    }
-  });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
+  const filteredServices = selectedCategory === 'all' 
+    ? ENHANCED_SERVICES 
+    : ENHANCED_SERVICES.filter(service => 
+        SERVICE_CATEGORIES.find(cat => cat.id === selectedCategory)?.services.includes(service)
+      );
 
   return (
-    <UltraAdvancedFuturisticBackground intensity="high" theme="quantum">
-      <div className="min-h-screen text-white relative overflow-hidden">
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+            Zion Tech Group
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-zion-cyan-light max-w-4xl mx-auto">
+            Premier IT Services & AI Solutions Provider - Transforming Businesses Through Innovation
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white px-8 py-3">
+              <Phone className="mr-2 h-5 w-5" />
+              +1 302 464 0950
+            </Button>
+            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
+              <Mail className="mr-2 h-5 w-5" />
+              kleber@ziontechgroup.com
+            </Button>
+          </div>
           
-          {/* Header Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent animate-pulse">
-              Enhanced Services Showcase
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover our comprehensive range of cutting-edge technology solutions, from AI-powered platforms to quantum computing services
-            </p>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 }}
-              >
-                <div className="text-3xl font-bold text-cyan-400">{allServices.length}</div>
-                <div className="text-gray-400">Total Services</div>
-              </motion.div>
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3 }}
-              >
-                <div className="text-3xl font-bold text-purple-400">{ENHANCED_SERVICES.length}</div>
-                <div className="text-gray-400">New Services</div>
-              </motion.div>
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.4 }}
-              >
-                <div className="text-3xl font-bold text-yellow-400">
-                  {ENHANCED_SERVICES.filter(s => s.featured).length}
-                </div>
-                <div className="text-gray-400">Featured Services</div>
-              </motion.div>
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.5 }}
-              >
-                <div className="text-3xl font-bold text-green-400">{categories.length - 1}</div>
-                <div className="text-gray-400">Categories</div>
-              </motion.div>
-            </div>
-          </motion.div>
-
-          {/* Search and Filters */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-12"
-          >
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-              
-              {/* Search Bar */}
-              <div className="mb-6">
-                <div className="relative max-w-2xl mx-auto">
-                  <input
-                    type="text"
-                    placeholder="Search services by name, description, or tags..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-6 py-4 bg-gray-800/50 border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 backdrop-blur-sm"
-                  />
-                  <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-cyan-400">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              {/* Filters Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                
-                {/* Category Filter */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full px-3 py-2 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                  >
-                    {categories.map(category => (
-                      <option key={category} value={category}>
-                        {category === 'all' ? 'All Categories' : category}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                {/* Sort By */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value as any)}
-                    className="w-full px-3 py-2 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                  >
-                    <option value="featured">Featured First</option>
-                    <option value="price">Price: Low to High</option>
-                    <option value="name">Name: A to Z</option>
-                    <option value="category">Category</option>
-                  </select>
-                </div>
-
-                {/* View Mode */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
-                  <div className="flex bg-gray-800/50 rounded-lg p-1">
-                    <button
-                      onClick={() => setViewMode('grid')}
-                      className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                        viewMode === 'grid' 
-                          ? 'bg-cyan-500 text-white' 
-                          : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      Grid
-                    </button>
-                    <button
-                      onClick={() => setViewMode('list')}
-                      className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                        viewMode === 'list' 
-                          ? 'bg-cyan-500 text-white' 
-                          : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      List
-                    </button>
-                  </div>
-                </div>
-
-                {/* Toggle Filters */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Filters</label>
-                  <div className="space-y-2">
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={showNewServices}
-                        onChange={(e) => setShowNewServices(e.target.checked)}
-                        className="mr-2 text-cyan-500 focus:ring-cyan-500"
-                      />
-                      <span className="text-sm text-gray-300">New Services</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={showFeaturedServices}
-                        onChange={(e) => setShowFeaturedServices(e.target.checked)}
-                        className="mr-2 text-cyan-500 focus:ring-cyan-500"
-                      />
-                      <span className="text-sm text-gray-300">Featured Only</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Services Grid */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="mb-12"
-          >
-            {sortedServices.length === 0 ? (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-center py-12"
-              >
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-semibold text-gray-300 mb-2">No services found</h3>
-                <p className="text-gray-400">Try adjusting your search criteria or filters</p>
-              </motion.div>
-            ) : (
-              <div className={`grid gap-6 ${
-                viewMode === 'grid' 
-                  ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
-                  : 'grid-cols-1'
-              }`}>
-                {sortedServices.map((service, index) => (
-                  <motion.div
-                    key={service.id}
-                    variants={itemVariants}
-                    className={viewMode === 'list' ? 'col-span-1' : ''}
-                  >
-                    <UltraAdvancedFuturisticServiceCard
-                      service={service as EnhancedService}
-                      onClick={() => {
-                        // Handle service click - could open modal, navigate to detail page, etc.
-                        console.log('Service clicked:', service.title);
-                      }}
-                      className={viewMode === 'list' ? 'h-auto' : ''}
-                    />
-                  </motion.div>
-                ))}
-              </div>
-            )}
-          </motion.div>
-
-          {/* Contact CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-center"
-          >
-            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
-                Contact our team to discuss how our cutting-edge services can drive innovation and growth for your organization.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <div className="flex items-center text-cyan-400">
-                  <span className="mr-2">📞</span>
-                  <span className="font-semibold">+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center text-purple-400">
-                  <span className="mr-2">✉️</span>
-                  <span className="font-semibold">kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center text-green-400">
-                  <span className="mr-2">🌐</span>
-                  <span className="font-semibold">ziontechgroup.com</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+          {/* Contact Info Cards */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
+              <CardContent className="p-6 text-center">
+                <Phone className="h-8 w-8 mx-auto mb-3 text-zion-cyan" />
+                <h3 className="font-semibold text-white mb-2">Call Us</h3>
+                <p className="text-zion-cyan-light">+1 302 464 0950</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
+              <CardContent className="p-6 text-center">
+                <Mail className="h-8 w-8 mx-auto mb-3 text-zion-cyan" />
+                <h3 className="font-semibold text-white mb-2">Email Us</h3>
+                <p className="text-zion-cyan-light">kleber@ziontechgroup.com</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
+              <CardContent className="p-6 text-center">
+                <MapPin className="h-8 w-8 mx-auto mb-3 text-zion-cyan" />
+                <h3 className="font-semibold text-white mb-2">Visit Us</h3>
+                <p className="text-zion-cyan-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
-    </UltraAdvancedFuturisticBackground>
+
+      {/* Services Overview */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Our Comprehensive Service Portfolio
+          </h2>
+          <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+            From AI-powered automation to enterprise cybersecurity, we deliver cutting-edge solutions that drive business growth and digital transformation.
+          </p>
+        </div>
+
+        {/* Category Navigation */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <Button
+            variant={selectedCategory === 'all' ? 'default' : 'outline'}
+            onClick={() => setSelectedCategory('all')}
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+          >
+            All Services
+          </Button>
+          {SERVICE_CATEGORIES.map((category) => (
+            <Button
+              key={category.id}
+              variant={selectedCategory === category.id ? 'default' : 'outline'}
+              onClick={() => setSelectedCategory(category.id)}
+              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+            >
+              <span className="mr-2">{category.icon}</span>
+              {category.name}
+            </Button>
+          ))}
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+          ))}
+        </div>
+      </div>
+
+      {/* Market Analysis Section */}
+      <div className="bg-white/5 backdrop-blur-sm py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Market Analysis & ROI
+            </h2>
+            <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+              Understand the market trends, competitive landscape, and expected returns on your technology investments.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {Object.entries(MARKET_PRICING).map(([key, data]) => (
+              <Card key={key} className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
+                <CardHeader>
+                  <CardTitle className="text-zion-cyan capitalize">{key.replace('-', ' ')}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <CreditCard className="h-4 w-4 text-zion-purple" />
+                    <span className="text-white">{data.averagePrice}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="h-4 w-4 text-green-400" />
+                    <span className="text-zion-cyan-light">{data.marketTrend}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Zap className="h-4 w-4 text-yellow-400" />
+                    <span className="text-zion-cyan-light">{data.roi}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Why Choose Us Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Why Choose Zion Tech Group?
+          </h2>
+          <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+            We combine cutting-edge technology with proven expertise to deliver exceptional results for our clients.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
+            <CardContent className="p-8">
+              <Brain className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+              <h3 className="text-2xl font-bold text-white mb-4">AI-First Approach</h3>
+              <p className="text-zion-cyan-light">
+                We leverage the latest AI technologies to create intelligent, scalable solutions that adapt to your business needs.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
+            <CardContent className="p-8">
+              <Shield className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
+              <p className="text-zion-cyan-light">
+                Our security-first approach ensures your data and systems are protected with industry-leading security measures.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
+            <CardContent className="p-8">
+              <Users className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+              <h3 className="text-2xl font-bold text-white mb-4">Expert Team</h3>
+              <p className="text-zion-cyan-light">
+                Our certified professionals bring years of experience in delivering successful technology solutions across industries.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">
+            Let's discuss how our innovative solutions can drive your digital transformation and business growth.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan px-8 py-3">
+              <Phone className="mr-2 h-5 w-5" />
+              Schedule a Consultation
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3">
+              <Mail className="mr-2 h-5 w-5" />
+              Request a Quote
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-zion-blue-dark py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">Zion Tech Group</h3>
+              <p className="text-zion-cyan-light">
+                Premier IT services and AI solutions provider helping businesses thrive in the digital age.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
+              <div className="space-y-2 text-zion-cyan-light">
+                <p>+1 302 464 0950</p>
+                <p>kleber@ziontechgroup.com</p>
+                <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
+              <div className="space-y-2 text-zion-cyan-light">
+                <p>AI & Automation</p>
+                <p>Cybersecurity</p>
+                <p>Cloud Services</p>
+                <p>Data Analytics</p>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
+              <div className="space-y-2">
+                <Link to="https://ziontechgroup.com" className="flex items-center text-zion-cyan hover:text-zion-cyan-light">
+                  <Globe className="h-4 w-4 mr-2" />
+                  Website
+                </Link>
+                <Button variant="outline" size="sm" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  View All Services
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-zion-blue-light mt-8 pt-8 text-center text-zion-cyan-light">
+            <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
 
-export default EnhancedServicesShowcase;
+// Service Card Component
+function ServiceCard({ service }: { service: any }) {
+  const [showDetails, setShowDetails] = useState(false);
+
+  return (
+    <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
+      <CardHeader>
+        <div className="flex items-start justify-between mb-2">
+          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
+            {service.category}
+          </Badge>
+          {service.featured && (
+            <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
+              Featured
+            </Badge>
+          )}
+        </div>
+        <CardTitle className="text-xl text-white mb-2">{service.title}</CardTitle>
+        <CardDescription className="text-zion-cyan-light">
+          {service.description}
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          {/* Price and Rating */}
+          <div className="flex items-center justify-between">
+            <div className="text-2xl font-bold text-zion-cyan">
+              {service.currency}{service.price?.toLocaleString()}
+            </div>
+            <div className="flex items-center gap-1">
+              <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+              <span className="text-white">{service.rating}</span>
+              <span className="text-zion-cyan-light">({service.reviewCount})</span>
+            </div>
+          </div>
+
+          {/* AI Score */}
+          <div className="flex items-center justify-between">
+            <span className="text-zion-cyan-light">AI Score:</span>
+            <div className="flex items-center gap-2">
+              <div className="w-16 bg-zion-blue-light rounded-full h-2">
+                <div 
+                  className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" 
+                  style={{ width: `${service.aiScore}%` }}
+                ></div>
+              </div>
+              <span className="text-zion-cyan font-semibold">{service.aiScore}%</span>
+            </div>
+          </div>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2">
+            {service.tags.slice(0, 3).map((tag: string) => (
+              <Badge key={tag} variant="outline" className="text-xs border-zion-cyan/30 text-zion-cyan-light">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+

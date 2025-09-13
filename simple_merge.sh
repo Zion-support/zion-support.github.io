@@ -1,41 +1,27 @@
 #!/bin/bash
 
-# Simple script to merge branches in batches
-set -e
+# Simple merge script to handle the current situation
+echo "Starting simple merge process..."
 
-echo "Starting simple branch merge process..."
+# Try to get current status
+echo "Current directory: $(pwd)"
+echo "Git status:"
+git status --short || echo "Git status failed"
 
-# Get first 10 branches
-branches=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | head -10)
+# Try to switch to main
+echo "Switching to main branch..."
+git checkout main || echo "Could not switch to main"
 
-echo "Processing first 10 branches:"
-echo "$branches"
+# Try to pull latest
+echo "Pulling latest changes..."
+git pull origin main || echo "Could not pull latest"
 
-# Function to merge a single branch
-merge_single_branch() {
-    local branch=$1
-    echo "Processing branch: $branch"
-    
-    # Switch to main and pull latest
-    git checkout main
-    git pull origin main
-    
-    # Try to merge the branch
-    if git merge origin/$branch -m "Merge $branch into main" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        git push origin main
-        echo "✅ Pushed to origin"
-    else
-        echo "❌ Conflict in $branch, skipping for now"
-        git merge --abort
-    fi
-    
-    echo "---"
-}
+# Try to merge the feature branch
+echo "Merging feature branch..."
+git merge cursor/create-and-deploy-new-content-7d26 || echo "Merge failed"
 
-# Process each branch
-for branch in $branches; do
-    merge_single_branch "$branch"
-done
+# Try to push changes
+echo "Pushing changes..."
+git push origin main || echo "Could not push"
 
-echo "First batch completed!"
+echo "Merge process completed!"

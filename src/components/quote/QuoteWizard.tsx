@@ -1,175 +1,145 @@
-import { useState, useMemo, useEffect } from 'react';
-import { useQuoteWizard } from '../../hooks/useQuoteWizard';
-import { useDelayedError } from '../../hooks/useDelayedError';
-import { Card } from '../../components/ui/card';
-import { Button } from '../../components/ui/button';
-import { Textarea } from '../../components/ui/textarea';
-import { Alert, AlertTitle, AlertDescription } from '../../components/ui/alert';
-import Skeleton from '../../components/ui/skeleton';
-import { useToast } from '../../hooks/use-toast';
-const WIZARD_STEPS = [1, 2, 3];
-function StepIndicator({ step }) {
-    const progress = (step / WIZARD_STEPS.length) * 100;
-    return (<div className="space-y-1">
-      <div data-testid="step-indicator" className="text-sm text-muted-foreground">
-        {step}/{WIZARD_STEPS.length}
-      </div>
-      <div className="h-1 bg-zion-blue-light rounded">
-        <div className="h-1 bg-zion-purple rounded" style={{ width: `${progress}%` }}/>
-      </div>
-    </div>);
+import { useState, useEffect } from 'react'
+import { useQuoteWizard } from '@/hooks/useQuoteWizard'
+import { Loader2 } from 'lucide-react';
+import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { captureException } from '@/utils/sentry';
+import { SAMPLE_SERVICES } from '@/data/sampleServices';
+
+interface ServiceItem {
+  id: string;
+  title: string;
 }
-export function QuoteWizard({ category }) {
-    const [step, setStep] = useState(1);
-    const [selectedItemId, setSelectedItemId] = useState(null);
-    const [message, setMessage] = useState('');
-    const [selectionError, setSelectionError] = useState('');
-    const { data, error, mutate, isLoading } = useQuoteWizard(category);
-    const delayedError = useDelayedError(error);
-    const { toast } = useToast();
-    useEffect(() => {
-        if (delayedError) {
-            toast({
-                title: 'Unable to load services',
-                variant: 'destructive'
-            });
-        }
-    }, [delayedError, toast]);
-    // Use isLoading from SWR for a more direct loading state
-    const loading = isLoading;
-    const selectedItem = useMemo(() => {
-        if (!data || !selectedItemId)
-            return null;
-        return data.find(item => item.id === selectedItemId);
-    }, [data, selectedItemId]);
-    const handleSelect = (id) => {
-        setSelectedItemId(id);
-        setStep(2);
-    };
-    const handleContinue = () => {
-        if (!selectedItemId) {
-            setSelectionError(`Please choose a ${category === 'services'
-                ? 'service'
-                : category === 'talent'
-                    ? 'talent'
-                    : 'item'} to continue.`);
-            return;
-        }
-        setSelectionError('');
-        setStep(2);
-    };
-    const handleSubmit = async () => {
-        if (!selectedItemId)
-            return;
-        let endpoint = '/api/quotes';
-        const payload = { user_message: message };
-        switch (category) {
-            case 'services':
-                endpoint = '/api/services/quotes';
-                payload.service_id = selectedItemId;
-                break;
-            case 'talent':
-                endpoint = '/api/talent/quotes';
-                payload.talent_id = selectedItemId;
-                break;
-            case 'equipment':
-                endpoint = '/api/equipment/quotes';
-                payload.item_id = selectedItemId;
-                break;
-            default:
-                payload.item_id = selectedItemId;
-                payload.category = category;
-        }
-        await fetch(endpoint, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-        });
-        setStep(3);
-    };
-    if (step === 1) {
-        return (<div className="space-y-6">
-        <StepIndicator step={step}/>
-        {loading && !delayedError && (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-testid="loading-indicator">
-            {Array.from({ length: 6 }).map((_, i) => (<Skeleton key={i} className="h-[120px] w-full"/>))}
-          </div>)}
 
+const fetcher = (url: string) => fetch(url).then(res => {
+  if (!res.ok) throw new Error('Failed');
+  return res.json();
+});
 
-        {delayedError && (<div className="space-y-2" data-testid="fetch-error-alert">
+export function QuoteWizard() {
+  const [step, setStep] = useState(1);
+  const [selectedItem, setSelectedItem] = useState<string | null>(null)
+  const [message, setMessage] = useState('')
+  const [selectionError, setSelectionError] = useState('')
 
-            <Alert variant="destructive">
-              <AlertTitle>Error Fetching {category}</AlertTitle>
-              <AlertDescription>
-                There was a problem fetching the {category}. Please check your internet connection and try again.
-              </AlertDescription>
-            </Alert>
-            <Button size="sm" onClick={() => mutate()} data-testid="retry-button">
-              Retry
-            </Button>
-          </div>)}
+  const [category, setCategory] = useState<'services' | 'talent' | 'equipment'>('services')
+  const [page, setPage] = useState(1)
+  const [search, setSearch] = useState('')
 
-        {!loading && !delayedError && data && data.length === 0 && (<div className="text-center text-muted-foreground py-12">
-            No {category} found.
-          </div>)}
+  const { data, error, mutate } = useQuoteWizard(category, page, search)
 
-        {!loading && !delayedError && data && data.length > 0 && (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {data.map((item) => (<Card data-testid={`item-card-${item.id}`} key={item.id} className={`p-4 space-y-2 cursor-pointer border-2 transition-colors rounded-lg shadow-sm ${selectedItemId === item.id ? 'border-zion-purple ring-2 ring-zion-purple' : 'hover:border-zion-purple/70'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`} onClick={() => setSelectedItemId(item.id)} tabIndex={0} onKeyDown={(e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault();
-                            setSelectedItemId(item.id);
-                        }
-                    }}>
-                <div className="font-semibold text-lg">{item.name}</div>
-                {/* Display other relevant info like price if available */}
-                {item.price !== undefined && (<div className="text-sm text-muted-foreground">
-                    Price: ${item.price.toFixed(2)}
-                  </div>)}
-                {/* item.slug might not be directly displayable but useful for links if needed later */}
-                <Button size="sm" variant="outline" data-testid={`select-item-${item.id}`} onClick={(e) => { e.stopPropagation(); handleSelect(item.id); }} className="w-full mt-2">
-                  Select this {category === 'services' ? 'Service' : category === 'talent' ? 'Talent' : 'Item'}
+  useEffect(() => {
+    setPage(1)
+  }, [category, search])
+
+  const loading = !data && !error;
+  const services = data && data.length > 0 ? data : error ? SAMPLE_SERVICES : [];
+
+  const handleSelect = (id: string) => {
+    setSelectedItem(id);
+    setStep((prev) => prev + 1);
+  };
+
+  const handleSubmit = async () => {
+    if (!selectedItem) return;
+    await fetch('/api/quotes', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ service_id: selectedItem, user_message: message })
+    });
+    setStep(3);
+  };
+
+  if (step === 1) {
+
+    return (
+      <div className="space-y-6">
+        <StepIndicator step={step} />
+        {loading && (
+          <div className="flex justify-center py-12">
+            <Loader2 className="h-6 w-6 animate-spin" />
+          </div>
+        )}
+
+        {error && (
+          <div className="text-center text-red-500">Service temporarily unavailable</div>
+        )}
+
+        {data && (
+          <>
+            <div className="flex gap-2">
+              {['services', 'talent', 'equipment'].map((cat) => (
+                <Button
+                  key={cat}
+                  size="sm"
+                  variant={cat === category ? 'secondary' : 'outline'}
+                  onClick={() => setCategory(cat as any)}
+                >
+                  {cat.charAt(0).toUpperCase() + cat.slice(1)}
                 </Button>
-              </Card>))}
-          </div>)}
+              ))}
+            </div>
+            <div className="mt-4">
+              <input
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder={`Search ${category}...`}
+                className="w-full px-3 py-2 rounded-md border bg-background text-sm"
+              />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              {data.items.map((item) => (
+                <Card
+                  data-testid={`service-card-${item.id}`}
+                  key={item.id}
+                className={`p-4 space-y-2 cursor-pointer border-2 transition-colors ${selectedItem === item.id ? 'border-zion-purple' : 'hover:border-zion-purple/50'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`}
+                onClick={() => setSelectedItem(item.id)}
+              >
+                <div>{item.title}</div>
+                <Button
+                  size="sm"
+                  data-testid={`request-quote-${item.id}`}
+                  onClick={(e) => { e.stopPropagation(); handleSelect(item.id); }}
+                  className="w-full"
+                >
+                  Request Quote
+                </Button>
+                </Card>
+              ))}
+            </div>
+            <div className="flex justify-between mt-4">
+              <Button
+                size="sm"
+                onClick={() => setPage((p) => Math.max(1, p - 1))}
+                disabled={page === 1}
+              >
+                Previous
+              </Button>
+              <Button
+                size="sm"
+                onClick={() => setPage((p) => p + 1)}
+                disabled={data && data.items.length === 0}
+              >
+                Next
+              </Button>
+            </div>
+          </>
+        )}
 
-        {selectionError && (<p className="text-red-500 text-sm mt-2" data-testid="selection-error">
-            {selectionError}
-          </p>)}
-        <Button onClick={handleContinue} disabled={loading || !!delayedError || !selectedItemId} className="mt-6">
+        <Button
+          onClick={() => selectedItem && handleSelect(selectedItem)}
+          disabled={!selectedItem || loading || !!error}
+        >
           Continue
         </Button>
-      </div>);
-    }
-    if (step === 2) {
-        return (<div data-testid="details-step" className="space-y-4">
-        <StepIndicator step={step}/>
-        {selectedItem && (<div data-testid="selected-item-name" className="text-lg font-semibold text-zion-slate-dark">
-            Selected {category === 'services' ? 'Service' : category === 'talent' ? 'Talent' : 'Item'}: {selectedItem.name}
-          </div>)}
-        {selectedItem && selectedItem.price !== undefined && (<div className="text-md text-muted-foreground">
-             Price: ${selectedItem.price.toFixed(2)}
-           </div>)}
-        <Textarea value={message} onChange={(e) => setMessage(e.target.value)} data-testid="message-input" placeholder={`Any specific details about your request for ${selectedItem?.name || 'the selected item'}?`} rows={4}/>
-        <div className="flex justify-between items-center">
-          <Button variant="outline" onClick={() => setStep(1)}>Back</Button>
-          <Button onClick={handleSubmit} disabled={!selectedItemId}>Submit Quote</Button>
-        </div>
-      </div>);
-    }
-    if (step === 3) {
-        return (<div data-testid="success-step" className="space-y-4 text-center py-12">
-        <StepIndicator step={step}/>
-        <div className="text-2xl font-semibold text-green-600">Quote Submitted Successfully!</div>
-        <p className="text-muted-foreground">
-          Thank you for your request regarding {selectedItem?.name || 'the selected item'}. We will get back to you shortly.
-        </p>
-        <Button onClick={() => {
-                setStep(1);
-                setSelectedItemId(null);
-                setMessage('');
-            }}>
-          Request Another Quote
-        </Button>
-      </div>);
-    }
-    return null;
+      </div>
+    );
+  }
+
+  if (step === 'Details') {
+    return <div data-testid="details-step">Step 2 Form</div>;
+  }
+
+  return null;
 }

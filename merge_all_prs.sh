@@ -1,119 +1,114 @@
 #!/bin/bash
+
+# Comprehensive PR merging script
 set -e
 
-echo "=== Starting PR merge process ==="
+echo "=== Starting comprehensive PR merge process ==="
 
-# Extract token and repo from git remote
-REMOTE_URL=$(git remote get-url origin)
-echo "Remote URL: $REMOTE_URL"
-
-# Extract token and repo
-TOKEN=$(echo "$REMOTE_URL" | sed -E 's#https://x-access-token:([^@]+)@github.com/.*#\1#')
-REPO=$(echo "$REMOTE_URL" | sed -E 's#.*github.com/([^/]+/[^/]+).*#\1#')
-
-echo "Repository: $REPO"
-echo "Token: ${TOKEN:0:8}..."
-
-# Function to make GitHub API calls
-github_api() {
-    local endpoint="$1"
-    local method="${2:-GET}"
-    local data="$3"
+# Function to safely merge a branch
+merge_branch() {
+    local branch_name="$1"
+    local branch_ref="origin/$branch_name"
     
-    curl -s -X "$method" \
-        -H "Authorization: token $TOKEN" \
-        -H "Accept: application/vnd.github+json" \
-        -H "User-Agent: cursor-bot" \
-        ${data:+-d "$data"} \
-        "https://api.github.com/repos/$REPO$endpoint"
-}
-
-# List all open PRs
-echo "=== Fetching open PRs ==="
-PRS_JSON=$(github_api "/pulls?state=open&per_page=100")
-
-# Extract PR numbers
-PR_NUMBERS=$(echo "$PRS_JSON" | grep -o '"number":[0-9]*' | grep -o '[0-9]*' | sort -n)
-
-if [ -z "$PR_NUMBERS" ]; then
-    echo "No open PRs found"
-    exit 0
-fi
-
-echo "Found PRs: $PR_NUMBERS"
-
-# Process each PR
-for PR_NUM in $PR_NUMBERS; do
-    echo ""
-    echo "=== Processing PR #$PR_NUM ==="
+    echo "Attempting to merge $branch_ref..."
     
-    # Get PR details
-    PR_DETAILS=$(github_api "/pulls/$PR_NUM")
-    PR_TITLE=$(echo "$PR_DETAILS" | grep -o '"title":"[^"]*"' | cut -d'"' -f4)
-    PR_MERGEABLE=$(echo "$PR_DETAILS" | grep -o '"mergeable":[^,]*' | cut -d':' -f2 | tr -d ' ')
+    # Create a temporary merge branch
+    local merge_branch="merge-$branch_name-$(date +%s)"
     
-    echo "Title: $PR_TITLE"
-    echo "Mergeable: $PR_MERGEABLE"
+    # Checkout main and ensure it's up to date
+    git checkout main
+    git pull origin main
     
-    if [ "$PR_MERGEABLE" = "false" ]; then
-        echo "PR #$PR_NUM has conflicts, attempting local resolution..."
-        
-        # Fetch PR branch
-        git fetch origin "pull/$PR_NUM/head:pr-$PR_NUM" || {
-            echo "Failed to fetch PR #$PR_NUM"
-            continue
-        }
-        
-        # Checkout main and update
-        git checkout main
-        git pull origin main
-        
-        # Create merge branch
-        git checkout -b "merge-pr-$PR_NUM" 2>/dev/null || git checkout "merge-pr-$PR_NUM"
-        
-        # Try to merge
-        if git merge "pr-$PR_NUM" --no-ff --no-edit; then
-            echo "✅ Successfully merged PR #$PR_NUM"
-        else
-            echo "Conflicts detected, trying with -X theirs strategy..."
-            git merge --abort
-            if git merge "pr-$PR_NUM" --no-ff --no-edit -X theirs; then
-                echo "✅ Successfully merged PR #$PR_NUM with theirs strategy"
-            else
-                echo "❌ Failed to merge PR #$PR_NUM even with theirs strategy"
-                git merge --abort
-                git checkout main
-                git branch -D "merge-pr-$PR_NUM" 2>/dev/null || true
-                continue
-            fi
-        fi
+    # Create merge branch
+    git checkout -b "$merge_branch"
+    
+    # Try to merge the branch
+    if git merge "$branch_ref" --no-ff --no-edit --allow-unrelated-histories; then
+        echo "✅ Successfully merged $branch_ref"
         
         # Merge back to main
         git checkout main
-        git merge "merge-pr-$PR_NUM" --no-ff --no-edit
+        git merge "$merge_branch" --no-ff --no-edit
         
         # Push to origin
         git push origin main
         
-        # Cleanup
-        git branch -D "merge-pr-$PR_NUM" 2>/dev/null || true
-        git branch -D "pr-$PR_NUM" 2>/dev/null || true
+        # Clean up merge branch
+        git branch -D "$merge_branch"
         
-        echo "✅ Successfully pushed merged PR #$PR_NUM to main"
-        
+        return 0
     else
-        # Try to merge via API
-        echo "Attempting API merge for PR #$PR_NUM..."
+        echo "❌ Merge conflict in $branch_ref, trying with -X theirs strategy..."
         
-        MERGE_RESPONSE=$(github_api "/pulls/$PR_NUM/merge" "PUT" "{\"merge_method\":\"squash\",\"commit_title\":\"chore: squash-merge PR #$PR_NUM - $PR_TITLE\"}")
+        # Abort current merge
+        git merge --abort
         
-        if echo "$MERGE_RESPONSE" | grep -q '"merged":true'; then
-            echo "✅ Successfully merged PR #$PR_NUM via API"
+        # Try with theirs strategy
+        if git merge "$branch_ref" --no-ff --no-edit -X theirs --allow-unrelated-histories; then
+            echo "✅ Successfully merged $branch_ref with theirs strategy"
+            
+            # Merge back to main
+            git checkout main
+            git merge "$merge_branch" --no-ff --no-edit
+            
+            # Push to origin
+            git push origin main
+            
+            # Clean up merge branch
+            git branch -D "$merge_branch"
+            
+            return 0
         else
-            echo "❌ Failed to merge PR #$PR_NUM via API: $MERGE_RESPONSE"
+            echo "❌ Failed to merge $branch_ref even with theirs strategy"
+            
+            # Clean up merge branch
+            git checkout main
+            git branch -D "$merge_branch"
+            
+            return 1
         fi
     fi
+}
+
+# Get list of unmerged branches (excluding backups)
+branches=$(git branch -r --no-merged origin/main | grep -v backup | sed 's/origin\///' | head -20)
+
+echo "Found unmerged branches:"
+echo "$branches"
+echo ""
+
+# Count total branches
+total_branches=$(echo "$branches" | wc -l)
+echo "Total branches to process: $total_branches"
+echo ""
+
+# Initialize counters
+merged=0
+failed=0
+
+# Process each branch
+for branch in $branches; do
+    echo "Processing branch: $branch"
+    
+    if merge_branch "$branch"; then
+        ((merged++))
+        echo "✅ Successfully merged $branch"
+    else
+        ((failed++))
+        echo "❌ Failed to merge $branch"
+    fi
+    
+    echo "Progress: $((merged + failed))/$total_branches"
+    echo "---"
 done
 
 echo ""
-echo "=== PR merge process completed ==="
+echo "=== Merge Summary ==="
+echo "✅ Successfully merged: $merged"
+echo "❌ Failed to merge: $failed"
+echo "Total processed: $((merged + failed))"
+
+# Final status check
+echo ""
+echo "=== Final Status ==="
+git status

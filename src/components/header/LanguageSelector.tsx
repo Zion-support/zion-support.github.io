@@ -1,41 +1,41 @@
-import React, { useState } from 'react';
-import { ChevronDown, Globe } from 'lucide-react';
-export const LanguageSelector = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [currentLanguage, setCurrentLanguage] = useState('EN');
-    const languages = [
-        { code: 'EN', name: 'English', flag: '🇺🇸' },
-        { code: 'ES', name: 'Español', flag: '🇪🇸' },
-        { code: 'FR', name: 'Français', flag: '🇫🇷' },
-        { code: 'DE', name: 'Deutsch', flag: '🇩🇪' },
-        { code: 'IT', name: 'Italiano', flag: '🇮🇹' },
-        { code: 'PT', name: 'Português', flag: '🇵🇹' },
-        { code: 'RU', name: 'Русский', flag: '🇷🇺' },
-        { code: 'ZH', name: '中文', flag: '🇨🇳' },
-        { code: 'JA', name: '日本語', flag: '🇯🇵' },
-        { code: 'KO', name: '한국어', flag: '🇰🇷' }
-    ];
-    const handleLanguageChange = (languageCode) => {
-        setCurrentLanguage(languageCode);
-        setIsOpen(false);
-        // Here you would typically implement language change logic
-    };
-    const currentLang = languages.find(lang => lang.code === currentLanguage);
-    return (<div className="relative">
-      <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer">
-        <Globe className="w-4 h-4"/>
-        <span className="text-sm font-medium">{currentLang?.code}</span>
-        <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`}/>
-      </button>
+import { Globe } from 'lucide-react';
 
-      {isOpen && (<div className="absolute top-full right-0 mt-2 w-48 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-800 z-50">
-          <div className="py-2">
-            {languages.map((language) => (<button key={language.code} onClick={() => handleLanguageChange(language.code)} className={`w-full flex items-center gap-3 px-4 py-2 text-sm transition-colors ${currentLanguage === language.code
-                    ? 'text-zion-cyan bg-gray-800/50'
-                    : 'text-white hover:text-zion-cyan hover:bg-gray-800/30'}`}>
-                <span className="text-lg">{language.flag}</span>
-                <span>{language.name}</span>
-              </button>))}
-          </div>
-        </div>)}
-    </div>)};
+  return (
+    <div className="relative">
+      <Button
+        variant="ghost"
+        size="sm"
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center space-x-2"
+      >
+        <Globe className="w-4 h-4" />
+        <span className="hidden md:block">{currentLanguage.flag}</span>
+        <span className="hidden lg:block">{currentLanguage.name}</span>
+        <ChevronDown className="w-4 h-4" />
+      </Button>
+
+      {isOpen && (
+        <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border">
+          {LANGUAGES.map((lang) => (
+            <button
+              key={lang.code}
+              onClick={() => {
+                setLanguage(lang.code as any);
+                setIsOpen(false);
+              }}
+              className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 flex items-center space-x-3 ${
+                language === lang.code ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+              }`}
+            >
+              <span className="text-lg">{lang.flag}</span>
+              <span>{lang.name}</span>
+              {language === lang.code && (
+                <span className="ml-auto text-blue-600">✓</span>
+              )}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};

@@ -46,22 +46,18 @@ import {
 const features = [
   {
     icon: DollarSign,
-    title: 'Financial Data Management',
-    description: 'Secure and efficient management of financial data and transactions',
-    benefits: ['Data encryption', 'Transaction processing', 'Audit trails', 'Compliance']
+    title: 'Financial Analytics',
+    description: 'Advanced analytics and reporting for financial institutions'
   },
   {
     icon: Shield,
     title: 'Security & Compliance',
-    description: 'Bank-level security with comprehensive compliance features',
-    icon: Shield,
-    benefits: ['PCI DSS compliance', 'Data encryption', 'Access control', 'Risk management']
+    description: 'Bank-grade security with regulatory compliance built-in'
   },
   {
     icon: TrendingUp,
-    title: 'Analytics & Reporting',
-    description: 'Advanced analytics and reporting for financial insights',
-    benefits: ['Real-time analytics', 'Custom reports', 'Risk assessment', 'Performance tracking']
+    title: 'Risk Management',
+    description: 'Comprehensive risk assessment and management tools'
   },
   {
     icon: Users,
@@ -384,47 +380,49 @@ export default function FinanceSolutions() {;
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Finance Solutions</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Secure and compliant finance technology solutions designed for financial institutions. 
-                From data management to analytics and reporting.
+        <section className="bg-gradient-to-r from-blue-600 to-green-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Finance Solutions
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Secure, compliant, and innovative financial technology solutions
+                designed for modern financial institutions and fintech companies.
               </p>
-            </motion.div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  View Case Studies
+                </button>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Finance Technology Features</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our finance solutions are built with security and compliance in mind.
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Financial Technology Features
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Built for financial institutions with security, compliance, and performance as top priorities.
               </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -620,43 +618,27 @@ export default function FinanceSolutions() {;
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready for Finance Solutions?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our finance solutions can support your organization.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Contact Sales
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/solutions"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                >
-                  View Solutions
-                </Link>
-              </div>
-            </motion.div>
+        <section className="py-20 bg-gray-900 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Financial Services?
+            </h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Contact our finance solutions team to discuss your specific requirements
+              and discover how we can help modernize your financial operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                Contact Finance Team
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
+                Download Finance Brochure
+              </button>
+            </div>
           </div>
         </section>
       </div>
-    </>
-    </>
-export default Finance;
     </Layout>
-  );
-};
-
-export default Finance;
+    </Layout>
+    </>
+    </>

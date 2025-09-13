@@ -1,38 +1,26 @@
+#!/usr/bin/env node
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
-// Security checks;
-const securityChecks = [{
 
-    "action": () => {"
-      try {
-  // TODO: Implement
-}"
+function run(cmd) {
+  try {
+    return execSync(cmd, { stdio: 'pipe', encoding: 'utf8' });
+  } catch (e) {
+    return e.stdout?.toString?.() || '';
+  }
+}
 
-      } catch (error) {
-      }
-    },
-  },
-  {
-    "name": 'Environment Variables Check',
-    "action": () => {"]"
-      const envFiles = ['.env', '.env.local', '.env.production'];
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
 
-      let foundEnvFiles = 0;
-      envFiles.forEach(envFile => {
-        if (fs.existsSync(envFile)) {
-          foundEnvFiles++;
-        }
-      });
-      >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-      >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-          ) {
-            securityIssues++;
-          }
-        });
-        if (content.includes('https') || content.includes('secure')) {
-        } else {
-        }
-      } else {
-      }
+(function main(){
+  const ts = new Date().toISOString().replace(/[:.]/g, '-');
+  const outDir = path.join(process.cwd(), 'data', 'reports', 'security');
+  ensureDir(outDir);
+  const file = path.join(outDir, `npm-audit-${ts}.json`);
+  const output = run('npm audit --json');
+  fs.writeFileSync(file, output, 'utf8');
+  console.log('Security audit saved to', file);
+})();

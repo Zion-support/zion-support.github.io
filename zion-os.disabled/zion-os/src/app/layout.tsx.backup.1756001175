@@ -3,6 +3,11 @@ import type { ReactNode } from "react";
 import { Metadata } from "next";
 
 export const metadata = {
+  title: "Zion OS - Sovereign AI-Powered Digital Economies",
+  description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems.",
+  keywords: "AI, digital economy, blockchain, DAO, marketplace, Zion, autonomous systems",
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
@@ -97,7 +102,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <div className="mt-8 pt-8 border-t border-white/10 text-center">
               <p className="text-white/40 text-sm">
                 © 2024 Zion OS. All rights reserved.
-              </p>            </div>
+              </p>
+            </div>
           </div>
         </footer>
       </body>

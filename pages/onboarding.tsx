@@ -1,43 +1,9 @@
-
-import OnboardingWizard from '../components / onboarding / OnboardingWizard';
-export default /**
- * OnboardingPage - Function description
- */
-function OnboardingPage() {
+import React from 'react';
+import Head from 'next/head';
   return (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-    <div>;
-      <OnboardingWizard />;
-    </div>);
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export default function OnboardingPage(req, res) {
-  try {
-export default function OnboardingPage() {;
-export default function OnboardingPage(req, res) {
-  try {
-export default function OnboardingPage(req, res) {
-  try {
-=======
-export default function OnboardingPage() {;
-=======
-export default function OnboardingPage(req, res) {
-  try {
-  return (;
-    <div>;
-      <OnboardingWizard />;
-    </div>;
+    <>
+      <Head><title>onboarding - Zion App</title><meta name="description" content="onboarding page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">onboarding</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
+            ← Back to Home</a></div></div></>;
   );
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+export default Onboarding;

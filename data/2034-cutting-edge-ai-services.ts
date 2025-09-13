@@ -1,6 +1,17 @@
+    id: 'ai - product - spec - writer',
+    name: 'AI Product Spec Writer',
+    description:;
+      'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
+    category: 'AI Business Management',
+    pricing: { starter: '$79 / mo' },
+    features: [;
 
-
-  {
+      'PRD templates',
+      'Story generation',
+      'Acceptance criteria',
+      'Analytics alignment',
+    ],
+    integrations: ['Jira', 'Linear'],
 
     use_cases: ['Faster planning', 'Better alignment'],
     link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
@@ -8,9 +19,7 @@
 
   },
   {
-=======
-=======
-=======
+
     id: 'ai - creative - studio',
     name: 'AI Creative Studio',
     description:;
@@ -19,14 +28,28 @@
     pricing: { starter: '$149 / mo' },
     features: [;
 
+      'Brand kit',
+      'Image & video gen',
+      'Review & approvals',
+      'Rights management',
+    ],
+    integrations: ['Canva', 'Figma'],
+
     use_cases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com / services / ai - creative - studio',
     real_service: true,
 
-  },];	id: string;
+  },
+];	id: string;
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    useCases: ['Marketing velocity', 'Cost savings'],
+    link: 'https://ziontechgroup.com/services/ai-creative-studio',
+    realService: true,
+  },;
+];	id: string;
+	id: string, name: string,
+	description: string,
+
 	category:
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
@@ -55,12 +78,9 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'];
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
-		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
-=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		realService: true
 	}
 	{
@@ -72,12 +92,9 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'];
 		integrations: ['JiraLinear'];
 		useCases: ['Faster planningBetter alignment'];
-		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
-=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		realService: true
 	}
 	{
@@ -91,14 +108,8 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		useCases: ['Marketing velocityCost savings'];
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
-=======
 
-		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
 		realService: true
-	}
-];
-
-=======
 name: string;
 description: string;
 category:;
@@ -157,34 +168,13 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
   link: 'https://ziontechgroup.com / services / ai - creative - studio',
   real_service: true;
 }
-=======export type CuttingEdgeAIService = {;
+export type CuttingEdgeAIService = {;
 
 	}
 ];
 ;
 
 export type CuttingEdgeAIService = {;
-=======
-
-		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
-
-		realService: true
-	}
-];
-
-export type CuttingEdgeAIService = {;
-
-	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-];
-;
-=======
-
-=======
-export type CuttingEdgeAIService = {;
-=======
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 	id: string,;
 	name: string,;
 	description: string,;

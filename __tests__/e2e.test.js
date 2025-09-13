@@ -1,7 +1,7 @@
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"E2E"'"
   test('"homepage"
@@ -15,8 +15,10 @@ test && test.describe('"E2E"'"
     "await"
     "await"
     "await"
+
     await page.fill('input[name="name"
     await page.fill('input[name="email"
+
 const { test, expect } = require('@playwright/test')';
 test.describe('"E2E": Tests', () => {';
   test('"homepage": loads correctly', async ({ page }) => {';
@@ -87,5 +89,5 @@ test.describe('"E2E": Tests', () => {';
     await page.setViewportSize({ "width": 1920, "height": 1080 });
     await page.waitForLoadState('networkidle')})})';
 
-=======
-    await page.fill('textarea[name="message">>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+    await page.fill('textarea[name="message"

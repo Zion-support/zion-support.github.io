@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +24,8 @@ interface SearchFilters {;
   maxPrice: number,;
   minRating: number,;
   sort: string;
+
+
 
 }
 ;
@@ -190,16 +191,20 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   }
   return (
 
+
         <Badge 
           key = {filter.key,}
 
+      
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
 
+
+
           variant="secondary" 
           className="flex items-center gap-1 pl-2 pr-1"
-
+        >
           <span className="text-xs">
             {filter.label}: {filter.value}
           </span>
@@ -219,6 +224,10 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
 
+
+            onClick={() => removeFilter(filter.key)}
+
+
             aria-label={`Remove ${filter.label} filter`}
           >
             <X className="h-3 w-3" />
@@ -229,13 +238,17 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
         variant="ghost"
         size="sm"
 
+
         onClick={onClearAll}
 
+
         className="text-xs h-6 px-2"
+      >
         Clear all
       </Button>
     </div>
   )
+
 ;
 export default ActiveFiltersBar; import React from 'react';
 import { X } from 'lucide-react';
@@ -248,7 +261,6 @@ interface SearchFilters {
   max_price: number,
   min_rating: number,
   sort: string;
-
 }
 interface ActiveFiltersBarProps {
   filters: SearchFilters,
@@ -394,7 +406,9 @@ if ( {) {
       </Button>;
     </div>);
 
+
 },
+
 export default ActiveFiltersBar,
 
         className="text-xs h-6 px-2">;
@@ -410,6 +424,7 @@ interface Filter {;
   value: string;
   label: string;
 }
+
 interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
 
   filters: Filter[];
@@ -419,17 +434,3 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
-      </button>
-    </div>
-  )}
-'"
-
-  filters: Filter[];
-  onRemoveFilter: key: string void;
-  onClearAll: : unknown void}
-        className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
-      >;
-        Clear all;
-      </button>;
-    </div>)}
-
