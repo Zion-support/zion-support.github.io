@@ -1,78 +1,107 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function NewContent2026PromotionBanner() {
+const NewContent2026PromotionBanner: React.FC = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 border border-purple-400/30 rounded-2xl p-6 mb-8">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 animate-pulse"></div>
-      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-xl"></div>
-      <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-cyan-500/20 to-blue-500/20 rounded-full blur-xl"></div>
-      
-      <div className="relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                🚀 NEW CONTENT 2026
-              </span>
-              <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                🔥 BREAKTHROUGH
-              </span>
-            </div>
-            
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-              Revolutionary AI & Quantum Computing Content
+    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 py-12 px-4">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto">
+        <div className="text-center">
+          {/* Main Headline */}
+          <div className="mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+              🚀 <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                NEW CONTENT 2026
+              </span> 🚀
             </h2>
-            
-            <p className="text-gray-300 text-lg mb-4">
-              Discover groundbreaking new content covering AI automation, quantum AI fusion, and next-generation business transformation technologies.
+            <p className="text-xl md:text-2xl text-blue-100 mb-6 max-w-4xl mx-auto">
+              Discover Revolutionary AI Insights, Quantum Breakthroughs & Neural Interface Technologies
             </p>
-            
-            <div className="flex flex-wrap gap-3">
-              <Link 
-                href="/ai-2026-next-generation-business-automation"
-                className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-              >
-                AI Automation 2026
-              </Link>
-              <Link 
-                href="/quantum-ai-fusion-2026-breakthrough"
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Quantum AI Fusion
-              </Link>
-              <Link 
-                href="/ai-2026-neural-architecture-revolution"
-                className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Neural Architecture
-              </Link>
-              <Link 
-                href="/resources"
-                className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-              >
-                All Resources
-              </Link>
+          </div>
+
+          {/* Feature Highlights */}
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="text-3xl mb-3">🤖</div>
+              <h3 className="text-lg font-bold text-white mb-2">AI Automation</h3>
+              <p className="text-blue-100 text-sm">
+                Latest strategies for business transformation and maximum ROI
+              </p>
+            </div>
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="text-3xl mb-3">⚛️</div>
+              <h3 className="text-lg font-bold text-white mb-2">Quantum Computing</h3>
+              <p className="text-blue-100 text-sm">
+                Enterprise breakthroughs in data processing and optimization
+              </p>
+            </div>
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="text-3xl mb-3">🧠</div>
+              <h3 className="text-lg font-bold text-white mb-2">Neural Interfaces</h3>
+              <p className="text-blue-100 text-sm">
+                Bridging human cognition with artificial intelligence
+              </p>
             </div>
           </div>
-          
-          <div className="flex-shrink-0">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <div className="text-center">
-                <div className="text-4xl mb-2">⚛️🤖</div>
-                <div className="text-white font-bold text-lg">Quantum AI</div>
-                <div className="text-gray-300 text-sm">Fusion Technology</div>
-              </div>
+
+          {/* Statistics */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-300 mb-1">6+</div>
+              <div className="text-blue-100 text-sm">New Articles</div>
             </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-300 mb-1">3</div>
+              <div className="text-blue-100 text-sm">Featured</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-300 mb-1">15+</div>
+              <div className="text-blue-100 text-sm">Topics Covered</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-300 mb-1">2026</div>
+              <div className="text-blue-100 text-sm">Future Ready</div>
+            </div>
+          </div>
+
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/content-showcase"
+              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              📖 Explore New Content
+            </Link>
+            <Link 
+              href="/newsletter"
+              className="bg-white bg-opacity-20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg border-2 border-white border-opacity-30 hover:bg-opacity-30 transform hover:scale-105 transition-all duration-300"
+            >
+              📧 Get Notifications
+            </Link>
+          </div>
+
+          {/* Bottom Text */}
+          <div className="mt-8">
+            <p className="text-blue-200 text-sm">
+              ⚡ Updated Weekly • 🔥 Trending Topics • 🎯 Expert Insights
+            </p>
           </div>
         </div>
       </div>
-      
-      {/* Animated Elements */}
-      <div className="absolute top-4 right-4 w-2 h-2 bg-pink-400 rounded-full animate-ping"></div>
-      <div className="absolute bottom-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-ping delay-1000"></div>
-      <div className="absolute top-1/2 right-8 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-500"></div>
+
+      {/* Floating Elements */}
+      <div className="absolute top-4 left-4 w-20 h-20 bg-yellow-300 bg-opacity-20 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-4 right-4 w-16 h-16 bg-orange-300 bg-opacity-20 rounded-full animate-pulse delay-1000"></div>
+      <div className="absolute top-1/2 left-8 w-12 h-12 bg-white bg-opacity-10 rounded-full animate-bounce delay-500"></div>
+      <div className="absolute top-1/3 right-8 w-14 h-14 bg-purple-300 bg-opacity-20 rounded-full animate-bounce delay-700"></div>
     </div>
   );
-}
+};
+
+export default NewContent2026PromotionBanner;
