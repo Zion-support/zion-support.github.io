@@ -198,6 +198,14 @@ import SuccessStories2025Showcase from '../components/SuccessStories2025Showcase
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
 
+// New Revolutionary Content Components 2025
+import AI2025UltimateBreakthroughContentBanner from '../components/AI2025UltimateBreakthroughContentBanner';
+import AI2025UltimateBreakthroughContentShowcase from '../components/AI2025UltimateBreakthroughContentShowcase';
+import QuantumComputingSolutions2025PromotionBanner from '../components/QuantumComputingSolutions2025PromotionBanner';
+import AdvancedAutomationSolutions2025PromotionBanner from '../components/AdvancedAutomationSolutions2025PromotionBanner';
+import RevolutionaryTechnologyShowcase2025 from '../components/RevolutionaryTechnologyShowcase2025';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+
 // New 2027 Content Components
 import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
 import AI2025UltimateContentRevolutionShowcase from '../components/AI2025UltimateContentRevolutionShowcase';
@@ -257,6 +265,36 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </section>
+
+              {/* AI 2025 Ultimate Breakthrough Content Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025UltimateBreakthroughContentBanner />
+              </Suspense>
+
+              {/* AI 2025 Ultimate Breakthrough Content Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025UltimateBreakthroughContentShowcase />
+              </Suspense>
+
+              {/* Quantum Computing Solutions 2025 Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputingSolutions2025PromotionBanner />
+              </Suspense>
+
+              {/* Advanced Automation Solutions 2025 Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAutomationSolutions2025PromotionBanner />
+              </Suspense>
+
+              {/* Revolutionary Technology Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <RevolutionaryTechnologyShowcase2025 />
+              </Suspense>
+
+              {/* Interactive Content Discovery Widget 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscoveryWidget2025 />
+              </Suspense>
 
               {/* New Content 2025 Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
