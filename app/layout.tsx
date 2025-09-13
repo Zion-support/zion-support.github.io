@@ -305,7 +305,6 @@ function Header() {
                 </Link>
                 <Link href="/case-studies/ai-2035-immortality-protocol" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🛡️ Immortality Protocol (INFINITE ROI)
->>>>>>> origin/cursor/create-and-deploy-new-content-57d1
                 </Link>
               </div>
             </div>
@@ -653,7 +652,6 @@ function Header() {
                 </Link>
                 <Link href="/resources/ai-2026-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   📚 Ultimate Implementation Guide (NEW)
->>>>>>> origin/main
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/blog/ai-2031-future-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
