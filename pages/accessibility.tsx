@@ -1,35 +1,21 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
+import Layout from '../components/layout/Layout';
+
+
+import Link from 'next/link';
+import MainLayout from '../components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
+import Link from 'next / link';
+import MainLayout from '../components / layout / MainLayout';
+import MainLayout from '../components / layout / MainLayout';
 import { motion } from 'framer-motion';
 import { Eye, Ear, Hand, Brain, CheckCircle, Users, Globe, Heart } from 'lucide-react';
 
-const AccessibilityPage: React.FC = () => {
-  const accessibilityFeatures = [
-    {
-      title: "Screen Reader Support",
-      description: "Full compatibility with screen readers and assistive technologies",
       icon: <Ear className="w-8 h-8" />,
-      features: ["ARIA labels", "Semantic HTML", "Screen reader navigation", "Alternative text"]
-    },
-    {
-      title: "Keyboard Navigation",
-      description: "Complete keyboard accessibility for all interactive elements",
       icon: <Hand className="w-8 h-8" />,
-      features: ["Tab navigation", "Keyboard shortcuts", "Focus indicators", "Skip links"]
-    },
-    {
-      title: "Visual Accessibility",
-      description: "High contrast and customizable visual options",
       icon: <Eye className="w-8 h-8" />,
-      features: ["High contrast mode", "Font size options", "Color customization", "Visual indicators"]
-    },
-    {
-      title: "Cognitive Support",
-      description: "Clear navigation and simplified user experience",
       icon: <Brain className="w-8 h-8" />,
-      features: ["Simple navigation", "Clear language", "Consistent layout", "Error prevention"]
-    }
-  ];
 
   const complianceStandards = [
     {
@@ -100,6 +86,25 @@ const AccessibilityPage: React.FC = () => {
     }
   ];
 
+
+
+import {;
+
+
+import Head from 'next/head';
+import Layout from '../components/Layout';
+import Layout from '../components/Layout';
+
+
+
+
+
+
+
+
+export default function AccessibilityPage() {
+
+const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -109,6 +114,8 @@ const AccessibilityPage: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+
+
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -126,7 +133,6 @@ const AccessibilityPage: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -167,15 +173,10 @@ const AccessibilityPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Compliance Standards */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
+
+
+
+    </MainLayout>
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Accessibility Compliance
@@ -313,3 +314,4 @@ const AccessibilityPage: React.FC = () => {
 };
 
 export default AccessibilityPage;
+export default Accessibility;

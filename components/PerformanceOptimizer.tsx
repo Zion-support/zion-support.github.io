@@ -3,10 +3,17 @@ import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
   componentCount: number;
-  bundleSize: number;
+
+
+
+
+
+
+
+import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
+
+
 }
 
 const PerformanceOptimizer: React.FC = () => {
@@ -20,42 +27,81 @@ const PerformanceOptimizer: React.FC = () => {
 
   const [isOptimized, setIsOptimized] = useState(false);
 
-  useEffect(() => {
-    const startTime = performance.now();
     
-    // Measure load time
-    const measureLoadTime = () => {
-      const loadTime = performance.now() - startTime;
-      setMetrics(prev => ({ ...prev, loadTime }));
-    };
 
-    // Measure memory usage
-    const measureMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        setMetrics(prev => ({ 
-          ...prev, 
-          memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
-        }));
-      }
-    };
 
     // Count components
-    const countComponents = () => {
       const components = document.querySelectorAll('[data-component]');
       setMetrics(prev => ({ ...prev, componentCount: components.length }));
-    };
 
-    // Measure bundle size (approximate)
-    const measureBundleSize = () => {
-      const scripts = document.querySelectorAll('script[src]');
-      let totalSize = 0;
-      scripts.forEach(script => {
-        const src = script.getAttribute('src');
-        if (src && src.includes('js')) {
-          // This is a rough estimate
-          totalSize += 100; // KB per script
-        }
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+import React, { useEffect } from 'react;
+import Head from 'next / head;
+
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
       });
       setMetrics(prev => ({ ...prev, bundleSize: totalSize }));
     };
@@ -94,9 +140,6 @@ const PerformanceOptimizer: React.FC = () => {
       recommendations.push('Consider lazy loading components');
     }
 
-    if (metrics.memoryUsage > 100) {
-      recommendations.push('Optimize memory usage with cleanup');
-    }
 
     if (metrics.componentCount > 50) {
       recommendations.push('Reduce component count or use virtualization');
@@ -106,7 +149,17 @@ const PerformanceOptimizer: React.FC = () => {
       recommendations.push('Split bundle into smaller chunks');
     }
 
-    return recommendations;
+
+    
+
+
+
+
+
+    
+
+
+
   };
 
   const recommendations = getRecommendations();
@@ -120,19 +173,10 @@ const PerformanceOptimizer: React.FC = () => {
         <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}></div>
       </div>
       
-      <div className="space-y-2 text-xs text-gray-600 dark:text-gray-300">
-        <div className="flex justify-between">
-          <span>Load Time:</span>
-          <span className={metrics.loadTime > 2000 ? 'text-red-500' : 'text-green-500'}>
-            {metrics.loadTime.toFixed(0)}ms
-          </span>
-        </div>
         
-        <div className="flex justify-between">
-          <span>Memory:</span>
-          <span className={metrics.memoryUsage > 100 ? 'text-red-500' : 'text-green-500'}>
-            {metrics.memoryUsage}MB
-          </span>
+
+
+
         </div>
         
         <div className="flex justify-between">
@@ -150,29 +194,79 @@ const PerformanceOptimizer: React.FC = () => {
         </div>
       </div>
 
-      {recommendations.length > 0 && (
-        <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-600">
-          <h4 className="text-xs font-semibold text-gray-900 dark:text-white mb-1">
-            Recommendations:
-          </h4>
-          <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-            {recommendations.map((rec, index) => (
-              <li key={index} className="flex items-start">
-                <span className="text-yellow-500 mr-1">•</span>
-                {rec}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
 
-      <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-600">
-        <div className="text-xs text-gray-500 dark:text-gray-400">
-          Status: {isOptimized ? 'Optimized' : 'Needs Attention'}
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export default PerformanceOptimizer;
+
+
+
+            <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
+            <Activity className='w-6 h-6 text-green-400 mx-auto mb-2' />
+            <TrendingUp className='w-6 h-6 text-purple-400 mx-auto mb-2' />
+            <Cpu className='w-6 h-6 text-yellow-400 mx-auto mb-2' />
+            <Database className='w-6 h-6 text-orange-400 mx-auto mb-2' />
+            <Network className='w-6 h-6 text-red-400 mx-auto mb-2' />
+            <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />
+
+            <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />;
+
+            <Activity className='w-6 h-6 text-green-400 mx-auto mb-2' />;
+
+            <TrendingUp className='w-6 h-6 text-purple-400 mx-auto mb-2' />;
+
+            <Cpu className='w-6 h-6 text-yellow-400 mx-auto mb-2' />;
+
+            <Database className='w-6 h-6 text-orange-400 mx-auto mb-2' />;
+
+            <Network className='w-6 h-6 text-red-400 mx-auto mb-2' />;
+            <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />;
+
+
+
+
+
+
+
+
+
+
+
+};export default PerformanceOptimizer;}
+
+
+    <Head>;
+
+
+
+
+
+    </Head>;
+
+
+
+
+
+
+
+
+
+
+
+
+          <Gauge className='w - 5 h - 5 text - cyan - 400' />          Performance Optimizer;
+          <Gauge className="w - 5 h - 5 text - cyan - 400" />;
+            <Clock className='w - 6 h - 6 text - blue - 400 mx - auto mb - 2' />;
+            <Activity className='w - 6 h - 6 text - green - 400 mx - auto mb - 2' />;
+            <TrendingUp className='w - 6 h - 6 text - purple - 400 mx - auto mb - 2' />;
+            <Cpu className='w - 6 h - 6 text - yellow - 400 mx - auto mb - 2' />;
+            <Database className='w - 6 h - 6 text - orange - 400 mx - auto mb - 2' />;
+            <Network className='w - 6 h - 6 text - red - 400 mx - auto mb - 2' />;
+            <Network className="w - 6 h - 6 text - red - 400 mx - auto mb - 2" />;
+              <Zap className='w - 4 h - 4' />              <span > Run All Optimizations</span>              <div className="w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded - full animate - spin" />;
+              <Zap className='w - 4 h - 4' />              <Zap className="w - 4 h - 4" />;
+}export default PerformanceOptimizer;}
+
+export default PerformanceOptimizer;
+
+
+

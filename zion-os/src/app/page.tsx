@@ -1,8 +1,15 @@
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
-  const features = [
-    {
+
+
+
+import FeatureCard from './components / FeatureCard',
+import FeatureCard from './components / FeatureCard',
+export default /**
+import FeatureCard from './components/FeatureCard'
+import FeatureCard from './components/FeatureCard'
+export default function HomePage() {
       icon: "🤖",
       title: "AI-Powered Intelligence",
       description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
@@ -77,24 +84,32 @@ export default function HomePage() {
   ];
 
   return (
+            
+            
+
+
+
+              </Link>
+              </Link>
+
+
+
+
+              <FeatureCard
+              </Link>;
+              </Link>;
+              <FeatureCard;
     <div className="min-h-screen">
       {/* Promo Banner */}
       <div className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
-          <span className="font-semibold">New on the blog:</span>
-          <div className="flex flex-col sm:flex-row gap-2 sm:items-center">
-            <a href="/blog/ai-governance-playbook" className="underline underline-offset-4 decoration-white/60 hover:decoration-white">AI Governance Playbook</a>
-            <span className="hidden sm:inline">•</span>
-            <a href="/blog/it-cost-optimization-quick-wins" className="underline underline-offset-4 decoration-white/60 hover:decoration-white">IT Cost Optimization</a>
-            <span className="hidden sm:inline">•</span>
-            <a href="/blog/token-rewards-growth-loops" className="underline underline-offset-4 decoration-white/60 hover:decoration-white">Token Reward Loops</a>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
+          <span className="font-semibold">New:</span>
+          <span className="opacity-90">3 fresh guides on AI deployment, services pricing, and Web3.</span>
           <a href="/blog" className="underline underline-offset-4 decoration-white/60 hover:decoration-white font-semibold">
-            Read all →
+            Read the blog →
           </a>
         </div>
       </div>
->>>>>>> origin/content/blog-sept12
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -116,7 +131,6 @@ export default function HomePage() {
               <a href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
               </a>
->>>>>>> origin/content/blog-sept12
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </a>
@@ -147,13 +161,15 @@ export default function HomePage() {
                 description={feature.description}
                 features={feature.features}
                 gradient={feature.gradient}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
+
+
+
+
+              </Link>
+              </Link>
+              </Link>;
+              </Link>;
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-effect rounded-2xl p-12 animate-slide-up">
@@ -170,12 +186,16 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
+              <a href="/blog" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 Read the Blog
+              </a>
             </div>
           </div>
         </div>
       </section>
 
->>>>>>> origin/content/blog-sept12
+
+
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -200,5 +220,3 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  );
-}

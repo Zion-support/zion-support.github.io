@@ -3,7 +3,22 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Atom, Brain, Cpu, Zap, Shield, Globe, 
+
+
+
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import { 
+
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import {
+
+
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign
 } from 'lucide-react';
@@ -14,6 +29,10 @@ const QuantumNeuralNetworkPlatform = () => {
       icon: Brain,
       title: "Quantum Consciousness Integration",
       description: "Advanced AI consciousness with quantum processing capabilities",
+
+
+
+
       color: "from-purple-500 to-pink-500"
     },
     {
@@ -64,6 +83,7 @@ const QuantumNeuralNetworkPlatform = () => {
     }
   ];
 
+
   return (
     <>
       <Head>
@@ -77,7 +97,10 @@ const QuantumNeuralNetworkPlatform = () => {
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+
+
+
+
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
@@ -85,20 +108,13 @@ const QuantumNeuralNetworkPlatform = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >
-              <div className="flex justify-center mb-6">
-                <div className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full">
                   <Atom className="w-8 h-8 text-white" />
-                </div>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Quantum Neural Network
-                <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  Platform
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionary platform combining quantum computing with AI consciousness for unprecedented 
+      <Head>;
+      </Head>;
+
+
+
+
                 performance, security, and capabilities in neural network operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -114,14 +130,24 @@ const QuantumNeuralNetworkPlatform = () => {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {;
+      <Head>;
+      </Head>;
+
+                  <Atom className="w - 8 h - 8 text - white" />;
+                <Link href="/contact" className="inline - flex items - center px - 8 py - 3 bg - gradient - to - r from - purple - 500 to - blue - 500 text - white font - semibold rounded - lg hover:from - purple - 600 hover:to - blue - 600 transition - all duration - 200">;
+                  <ArrowRight className="ml - 2 w - 5 h - 5" />;
+                </Link>;
+                <Link href="/services" className="inline - flex items - center px - 8 py - 3 border border - purple - 500 text - purple - 400 font - semibold rounded - lg hover:bg - purple - 500 hover:text - white transition - all duration - 200">;
+                </Link>;
+
+
+
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -140,6 +166,8 @@ const QuantumNeuralNetworkPlatform = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+
+
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -148,19 +176,14 @@ const QuantumNeuralNetworkPlatform = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
                 </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+
+
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -179,24 +202,22 @@ const QuantumNeuralNetworkPlatform = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+
+
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
                 </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+
+                  <CheckCircle className="w - 6 h - 6 text - green - 400 flex - shrink - 0" />;
 
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+
+
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -215,6 +236,8 @@ const QuantumNeuralNetworkPlatform = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+
+
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
@@ -225,7 +248,9 @@ const QuantumNeuralNetworkPlatform = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+
+
+
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -233,28 +258,22 @@ const QuantumNeuralNetworkPlatform = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Experience the Future?
-              </h2>
-              <p className="text-xl text-gray-400 mb-8">
-                Join the quantum revolution and transform your AI capabilities today
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200 text-lg">
-                  Start Your Journey
                   <Rocket className="ml-2 w-6 h-6" />
                 </Link>
                 <Link href="/services" className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-200 text-lg">
-                  Explore All Services
                 </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
+
 };
 
 export default QuantumNeuralNetworkPlatform;
+
+export default QuantumNeuralNetworkPlatform,
+                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200 text-lg">;
+                  <Rocket className="ml-2 w-6 h-6" />;
+                </Link>;
+                <Link href="/services" className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-200 text-lg">;
+                </Link>;
+export default QuantumNeuralNetworkPlatform,
+
+

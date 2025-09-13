@@ -1,259 +1,354 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Search, Filter, ArrowRight, Clock, TrendingUp, Star, Eye, Heart } from 'lucide-react';
 
-export default function InteractiveContentDiscoveryWidget2026() {
+const InteractiveContentDiscoveryWidget2026: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedROI, setSelectedROI] = useState('all');
   const [selectedYear, setSelectedYear] = useState('all');
+  const [filteredContent, setFilteredContent] = useState([]);
 
   const contentItems = [
     {
-      title: "AI 2025 Revolutionary Breakthroughs",
-      description: "Discover groundbreaking AI innovations transforming industries worldwide",
-      href: "/blog/ai-2025-revolutionary-breakthroughs",
-      category: "breakthrough",
-      roi: "2000%",
-      year: "2025",
-      icon: "🚀",
-      gradient: "from-red-50 to-pink-50",
-      borderColor: "border-red-200"
-    },
-    {
-      title: "AI 2026 Quantum-Neural Fusion",
-      description: "Revolutionary quantum-neural technology delivering 15,000% ROI",
-      href: "/blog/ai-2026-quantum-neural-fusion-breakthrough",
-      category: "breakthrough",
-      roi: "15000%",
+      id: 1,
+      title: "AI 2026: Quantum-Neural Fusion Breakthrough",
+      description: "Revolutionary integration of quantum computing with neural networks achieving 10,000x processing speed improvements.",
+      category: "AI Solutions",
       year: "2026",
-      icon: "⚛️",
-      gradient: "from-purple-50 to-blue-50",
-      borderColor: "border-purple-200"
+      type: "Breakthrough",
+      views: 12500,
+      likes: 890,
+      trending: true,
+      featured: true,
+      tags: ["Quantum AI", "Neural Networks", "Breakthrough", "2026"],
+      image: "/images/ai-2026-quantum.jpg",
+      readTime: "8 min read",
+      author: "Dr. Sarah Chen",
+      publishedDate: "2025-01-15"
     },
     {
-      title: "AI 2027 Future Predictions",
-      description: "Comprehensive forecasts for revolutionary AI technologies in 2027",
-      href: "/blog/ai-2027-future-predictions",
-      category: "predictions",
-      roi: "5000%",
+      id: 2,
+      title: "Advanced Quantum Computing Solutions 2026",
+      description: "Comprehensive guide to implementing quantum computing solutions with error-corrected quantum computers.",
+      category: "Quantum Computing",
+      year: "2026",
+      type: "Guide",
+      views: 8900,
+      likes: 650,
+      trending: true,
+      featured: false,
+      tags: ["Quantum Computing", "Error Correction", "Implementation", "2026"],
+      image: "/images/quantum-computing-2026.jpg",
+      readTime: "12 min read",
+      author: "Prof. Michael Rodriguez",
+      publishedDate: "2025-01-14"
+    },
+    {
+      id: 3,
+      title: "Revolutionary Automation Solutions 2026",
+      description: "Transform your business with intelligent process automation achieving 10x efficiency improvements.",
+      category: "Automation",
+      year: "2026",
+      type: "Solution",
+      views: 15600,
+      likes: 1200,
+      trending: true,
+      featured: true,
+      tags: ["Automation", "Process Optimization", "Efficiency", "2026"],
+      image: "/images/automation-2026.jpg",
+      readTime: "10 min read",
+      author: "Alex Thompson",
+      publishedDate: "2025-01-13"
+    },
+    {
+      id: 4,
+      title: "AI 2027: Autonomous Decision Systems",
+      description: "Self-evolving AI systems capable of making complex business decisions with human-level reasoning.",
+      category: "AI Solutions",
       year: "2027",
-      icon: "🔮",
-      gradient: "from-indigo-50 to-purple-50",
-      borderColor: "border-indigo-200"
+      type: "Breakthrough",
+      views: 7200,
+      likes: 480,
+      trending: false,
+      featured: false,
+      tags: ["Autonomous AI", "Decision Making", "2027", "Business Intelligence"],
+      image: "/images/ai-2027-autonomous.jpg",
+      readTime: "9 min read",
+      author: "Dr. Lisa Wang",
+      publishedDate: "2025-01-12"
     },
     {
-      title: "Global Enterprise Transformation",
-      description: "How we achieved 2000% ROI in Fortune 500 transformation",
-      href: "/case-studies/ai-2025-global-enterprise-transformation-breakthrough",
-      category: "case-study",
-      roi: "2000%",
-      year: "2025",
-      icon: "🏆",
-      gradient: "from-green-50 to-emerald-50",
-      borderColor: "border-green-200"
+      id: 5,
+      title: "Quantum Internet Infrastructure 2027",
+      description: "Global quantum internet enabling ultra-secure communication and distributed quantum computing.",
+      category: "Quantum Computing",
+      year: "2027",
+      type: "Infrastructure",
+      views: 5600,
+      likes: 320,
+      trending: false,
+      featured: false,
+      tags: ["Quantum Internet", "Security", "Infrastructure", "2027"],
+      image: "/images/quantum-internet-2027.jpg",
+      readTime: "11 min read",
+      author: "Dr. James Wilson",
+      publishedDate: "2025-01-11"
     },
     {
-      title: "Quantum-Neural Manufacturing Success",
-      description: "15,000% ROI achieved in Fortune 500 manufacturing",
-      href: "/case-studies/ai-2026-quantum-neural-fusion-success",
-      category: "case-study",
-      roi: "15000%",
+      id: 6,
+      title: "Predictive Maintenance Systems 2026",
+      description: "Advanced AI systems that predict equipment failures before they occur, reducing downtime by 95%.",
+      category: "Automation",
       year: "2026",
-      icon: "🏭",
-      gradient: "from-blue-50 to-cyan-50",
-      borderColor: "border-blue-200"
-    },
-    {
-      title: "Ultimate Implementation Guide",
-      description: "Complete guide to implementing AI 2026 breakthrough technologies",
-      href: "/resources/ai-2026-ultimate-implementation-master-guide",
-      category: "resource",
-      roi: "15000%",
-      year: "2026",
-      icon: "📚",
-      gradient: "from-orange-50 to-red-50",
-      borderColor: "border-orange-200"
+      type: "Solution",
+      views: 9800,
+      likes: 750,
+      trending: true,
+      featured: false,
+      tags: ["Predictive Maintenance", "IoT", "Equipment", "2026"],
+      image: "/images/predictive-maintenance-2026.jpg",
+      readTime: "7 min read",
+      author: "Maria Garcia",
+      publishedDate: "2025-01-10"
     }
   ];
 
-  const filteredContent = contentItems.filter(item => {
-    const categoryMatch = selectedCategory === 'all' || item.category === selectedCategory;
-    const roiMatch = selectedROI === 'all' || 
-      (selectedROI === 'high' && parseInt(item.roi) >= 10000) ||
-      (selectedROI === 'medium' && parseInt(item.roi) >= 2000 && parseInt(item.roi) < 10000) ||
-      (selectedROI === 'low' && parseInt(item.roi) < 2000);
-    const yearMatch = selectedYear === 'all' || item.year === selectedYear;
-    
-    return categoryMatch && roiMatch && yearMatch;
-  });
+  const categories = [
+    { value: 'all', label: 'All Categories' },
+    { value: 'AI Solutions', label: 'AI Solutions' },
+    { value: 'Quantum Computing', label: 'Quantum Computing' },
+    { value: 'Automation', label: 'Automation' },
+    { value: 'Case Studies', label: 'Case Studies' },
+    { value: 'Guides', label: 'Implementation Guides' }
+  ];
+
+  const years = [
+    { value: 'all', label: 'All Years' },
+    { value: '2026', label: '2026' },
+    { value: '2027', label: '2027' },
+    { value: '2028', label: '2028' },
+    { value: '2029', label: '2029' },
+    { value: '2030', label: '2030' }
+  ];
+
+  useEffect(() => {
+    let filtered = contentItems;
+
+    if (searchQuery) {
+      filtered = filtered.filter(item =>
+        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      );
+    }
+
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(item => item.category === selectedCategory);
+    }
+
+    if (selectedYear !== 'all') {
+      filtered = filtered.filter(item => item.year === selectedYear);
+    }
+
+    setFilteredContent(filtered);
+  }, [searchQuery, selectedCategory, selectedYear]);
 
   return (
-    <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            <span>🎯</span>
-            <span>INTERACTIVE DISCOVERY</span>
-          </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            🔍 Find Your Perfect AI Content
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Interactive Content Discovery
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Use our intelligent content discovery system to find exactly what you need. 
-            Filter by category, ROI level, or year to discover the perfect content for your needs.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Discover the latest AI breakthroughs, quantum computing solutions, and automation technologies with our intelligent content discovery system
           </p>
         </div>
 
-        {/* Filters */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
-          <div className="grid md:grid-cols-3 gap-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Content Category</label>
-              <select 
-                value={selectedCategory} 
+        {/* Search and Filters */}
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Search */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search content..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+              />
+            </div>
+
+            {/* Category Filter */}
+            <div className="relative">
+              <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <select
+                value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 appearance-none"
               >
-                <option value="all">All Categories</option>
-                <option value="breakthrough">Breakthrough Technology</option>
-                <option value="case-study">Case Studies</option>
-                <option value="predictions">Future Predictions</option>
-                <option value="resource">Resources & Guides</option>
+                {categories.map(category => (
+                  <option key={category.value} value={category.value} className="bg-gray-800 text-white">
+                    {category.label}
+                  </option>
+                ))}
               </select>
             </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">ROI Level</label>
-              <select 
-                value={selectedROI} 
-                onChange={(e) => setSelectedROI(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="all">All ROI Levels</option>
-                <option value="high">High ROI (10,000%+)</option>
-                <option value="medium">Medium ROI (2,000% - 9,999%)</option>
-                <option value="low">Lower ROI (< 2,000%)</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Year</label>
-              <select 
-                value={selectedYear} 
+
+            {/* Year Filter */}
+            <div className="relative">
+              <Clock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <select
+                value={selectedYear}
                 onChange={(e) => setSelectedYear(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 appearance-none"
               >
-                <option value="all">All Years</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-                <option value="2027">2027</option>
+                {years.map(year => (
+                  <option key={year.value} value={year.value} className="bg-gray-800 text-white">
+                    {year.label}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
-        </div>
-
-        {/* Results Count */}
-        <div className="mb-8">
-          <p className="text-lg text-gray-600">
-            Showing <span className="font-bold text-blue-600">{filteredContent.length}</span> content items
-            {selectedCategory !== 'all' && ` in ${selectedCategory.replace('-', ' ')}`}
-            {selectedROI !== 'all' && ` with ${selectedROI} ROI`}
-            {selectedYear !== 'all' && ` from ${selectedYear}`}
-          </p>
         </div>
 
         {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredContent.map((content, index) => (
-            <Link 
-              key={index}
-              href={content.href}
-              className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-200 hover:border-blue-300"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {filteredContent.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
             >
-              <div className={`p-6 rounded-xl bg-gradient-to-br ${content.gradient} border-2 ${content.borderColor}`}>
-                <div className="flex items-start space-x-4 mb-4">
-                  <div className="text-4xl group-hover:scale-110 transition-transform">{content.icon}</div>
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                        content.category === 'breakthrough' ? 'bg-red-100 text-red-800' :
-                        content.category === 'case-study' ? 'bg-green-100 text-green-800' :
-                        content.category === 'predictions' ? 'bg-purple-100 text-purple-800' :
-                        'bg-orange-100 text-orange-800'
-                      }`}>
-                        {content.category.replace('-', ' ').toUpperCase()}
-                      </span>
-                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">
-                        {content.roi} ROI
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                      {content.title}
-                    </h3>
-                    <p className="text-gray-700 text-sm mb-4">
-                      {content.description}
-                    </p>
-                    <div className="flex items-center justify-between text-sm text-gray-600">
-                      <span className="flex items-center space-x-1">
-                        <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                        <span>{content.year}</span>
-                      </span>
-                      <span className="text-blue-600 font-medium group-hover:underline">
-                        Learn More →
-                      </span>
-                    </div>
+              {/* Image */}
+              <div className="relative mb-6">
+                <div className="w-full h-48 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <div className="text-white text-4xl font-bold">
+                    {item.title.charAt(0)}
                   </div>
                 </div>
+                {item.featured && (
+                  <div className="absolute top-4 left-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
+                    Featured
+                  </div>
+                )}
+                {item.trending && (
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center">
+                    <TrendingUp className="w-3 h-3 mr-1" />
+                    Trending
+                  </div>
+                )}
               </div>
-            </Link>
+
+              {/* Content */}
+              <div className="mb-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    {item.category}
+                  </span>
+                  <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    {item.year}
+                  </span>
+                  <span className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    {item.type}
+                  </span>
+                </div>
+
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {item.description}
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {item.tags.slice(0, 3).map((tag, index) => (
+                    <span key={index} className="bg-white/10 text-white px-2 py-1 rounded text-xs">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Meta Info */}
+                <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 mr-1" />
+                    {item.readTime}
+                  </div>
+                  <div className="flex items-center">
+                    <Eye className="w-4 h-4 mr-1" />
+                    {item.views.toLocaleString()}
+                  </div>
+                </div>
+
+                {/* Author and Date */}
+                <div className="text-sm text-gray-400 mb-4">
+                  <div>By {item.author}</div>
+                  <div>{new Date(item.publishedDate).toLocaleDateString()}</div>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <Link
+                to={`/content/${item.id}`}
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group"
+              >
+                Read More
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
           ))}
         </div>
 
-        {/* No Results Message */}
+        {/* No Results */}
         {filteredContent.length === 0 && (
           <div className="text-center py-12">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">No Content Found</h3>
-            <p className="text-gray-600 mb-6">
-              Try adjusting your filters to find more content that matches your criteria.
-            </p>
-            <button 
+            <div className="text-gray-400 text-lg mb-4">No content found matching your criteria</div>
+            <button
               onClick={() => {
+                setSearchQuery('');
                 setSelectedCategory('all');
-                setSelectedROI('all');
                 setSelectedYear('all');
               }}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
             >
-              Reset Filters
+              Clear Filters
             </button>
           </div>
         )}
 
-        {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-xl shadow-xl">
-            <h3 className="text-3xl font-bold mb-4">
-              🚀 Can't Find What You're Looking For?
+        {/* Bottom CTA */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Stay Updated with Latest Content
             </h3>
-            <p className="text-xl mb-6 opacity-90">
-              Our AI experts can help you find the perfect content for your specific needs
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Get notified about new AI breakthroughs, quantum computing solutions, and automation technologies as they're published.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              <Link
+                to="/newsletter"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
               >
-                Get Expert Help
+                Subscribe to Newsletter
               </Link>
-              <Link 
-                href="/resources"
-                className="bg-white/20 text-white px-8 py-3 rounded-lg font-semibold border-2 border-white/30 hover:bg-white/30 transition-all duration-200"
+              <Link
+                to="/content-library"
+                className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 border border-white/30"
               >
-                Browse All Resources
+                Browse All Content
               </Link>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default InteractiveContentDiscoveryWidget2026;

@@ -1,3 +1,18 @@
+
+
+
+
+
+
+
+> <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center" > <CheckCircle className="w-10 h-10 text-green-400" /> </div> <h3 className="text-2xl font-bold text-white mb-4" >Message Sent Successfully!</h3> <p className="text-white/70 mb-6" > Thank you for reaching out. We'll get back to you within 24 hours. </p> <button
+}return (<div> <h3 className="text-2xl font-bold text-white mb-6" >Get in Touch</h3> <p className="text-white/70 leading-relaxed mb-8" > Ready to transform your business with cutting-edge technology? Let's discuss your project and explore how our solutions can drive innovation and growth. </p> </div> <div className="space-y-6" > <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-3 flex items-center justify-center" > <Mail className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Email</h4> <p className="text-white/70" >contact@ziontechgroup && ziontechgroup.com</p> </div> </div> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-3 flex items-center justify-center" > <Phone className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Phone</h4> <p className="text-white/70" >+1 (555) 123-4567</p> </div> </div> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 p-3 flex items-center justify-center" > <MapPin className="w-6 h-6 text-white" /> </div> <div> <h4 className="text-lg font-semibold text-white mb-1" >Location</h4> <p className="text-white/70" >San Francisco, CA</p> </div> </div> </div> </div> <div> <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2" > Full Name * </label> <input /> {;
+
+
+  isSubmitting ? (<> <Loader2 className="w-5 h-5 animate-spin" /> Sending Message... </>) : (<> <Send className="w-5 h-5" /> Send Message </>) ;
+
+export default EnhancedContactForm;
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -20,20 +35,32 @@ export default function EnhancedContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const services = [
-    { value: 'ai-business-intelligence', label: 'AI Business Intelligence', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { value: 'quantum-cybersecurity', label: 'Quantum Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
-    { value: 'space-technology', label: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500' },
-    { value: 'autonomous-devops', label: 'Autonomous DevOps', icon: Cpu, color: 'from-emerald-500 to-teal-500' },
-    { value: 'edge-computing', label: 'Edge Computing', icon: Database, color: 'from-yellow-500 to-orange-500' },
-    { value: 'neural-interfaces', label: 'Neural Interfaces', icon: Atom, color: 'from-pink-500 to-rose-500' }
-  ];
 
-  const budgets = [
-    { value: 'under-10k', label: 'Under $10K' },
-    { value: '10k-50k', label: '$10K - $50K' },
-    { value: '50k-100k', label: '$50K - $100K' },
-    { value: '100k-500k', label: '$100K - $500K' },
-    { value: '500k-plus', label: '$500K+' }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   ];
 
   const timelines = [
@@ -68,156 +95,29 @@ export default function EnhancedContactForm() {
         company: '',
         phone: '',
         service: '',
-        message: '',
-        budget: '',
-        timeline: ''
-      });
-    }, 5000);
-  };
 
-  if (isSubmitted) {
-    return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="max-w-2xl mx-auto text-center py-16"
-      >
-        <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
           <CheckCircle className="w-10 h-10 text-white" />
-        </div>
-        <h3 className="text-3xl font-bold text-white mb-4">Thank You!</h3>
-        <p className="text-white/70 text-lg mb-8">
-          Your message has been sent successfully. Our team will get back to you within 24 hours.
-        </p>
-        <motion.button
-          onClick={() => setIsSubmitted(false)}
-          className="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Send Another Message
-        </motion.button>
-      </motion.div>
-    );
-  }
 
-  return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
-          >
-            Let&apos;s Build the Future Together
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-white/70 max-w-3xl mx-auto"
-          >
-            Ready to transform your business with cutting-edge technology? 
-            Get in touch with our experts and discover how Zion Tech Group can help you achieve your goals.
-          </motion.p>
-        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Contact Information */}
-          <div className="lg:col-span-1">
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-fit">
-              <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
               
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold mb-1">Email</h4>
-                    <a 
-                      href="mailto:kleber@ziontechgroup.com" 
-                      className="text-white/70 hover:text-white transition-colors duration-200"
-                    >
-                      kleber@ziontechgroup.com
-                    </a>
-                  </div>
-                </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold mb-1">Phone</h4>
-                    <a 
-                      href="tel:+13024640950" 
-                      className="text-white/70 hover:text-white transition-colors duration-200"
-                    >
-                      +1 (302) 464-0950
-                    </a>
-                  </div>
-                </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold mb-1">Location</h4>
-                    <p className="text-white/70">Delaware, United States</p>
-                  </div>
-                </div>
-              </div>
 
-              <div className="mt-8 pt-8 border-t border-white/10">
-                <h4 className="text-white font-semibold mb-4">Why Choose Zion Tech?</h4>
-                <ul className="space-y-3 text-white/70">
-                  <li className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span>500+ Projects Delivered</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span>50+ Enterprise Clients</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span>99.9% Uptime Guarantee</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span>24/7 Expert Support</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
 
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-8">Send us a Message</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-white font-medium mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
+  isSubmitting ? (<> <Loader2 className="w-5 h-5 animate-spin" /> Sending Message... </>) : (<> <Send className="w-5 h-5" /> Send Message </>)
+export default EnhancedContactForm;
+
+
+
+                    <AlertCircle className="w-4 h-4" />;
 
                   <div>
                     <label htmlFor="email" className="block text-white font-medium mb-2">
@@ -310,26 +210,7 @@ export default function EnhancedContactForm() {
                     </select>
                   </div>
 
-                  <div>
-                    <label htmlFor="timeline" className="block text-white font-medium mb-2">
-                      Project Timeline
-                    </label>
-                    <select
-                      id="timeline"
-                      name="timeline"
-                      value={formData.timeline}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                    >
-                      <option value="">Select timeline</option>
-                      {timelines.map((timeline) => (
-                        <option key={timeline.value} value={timeline.value}>
-                          {timeline.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+                    <AlertCircle className="w-4 h-4" />;
 
                 <div>
                   <label htmlFor="message" className="block text-white font-medium mb-2">
@@ -347,30 +228,33 @@ export default function EnhancedContactForm() {
                   />
                 </div>
 
-                <motion.button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 disabled:from-gray-600 disabled:to-gray-700 rounded-xl font-semibold text-white text-lg transition-all duration-300 flex items-center justify-center space-x-2 disabled:cursor-not-allowed"
-                  whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                  whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      <span>Sending...</span>
-                    </>
-                  ) : (
-                    <>
                       <Send className="w-5 h-5" />
-                      <span>Send Message</span>
-                    </>
-                  )}
-                </motion.button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+
+
+
+
+
+
+
+
+                  <AlertCircle className="w-4 h-4" />;
+
+
+
+
+
+
+
+                  <Loader2 className="w-5 h-5 animate-spin" />;
+                  <Send className="w-5 h-5" />;
+
+                    <AlertCircle className="w - 4 h - 4" />;
+                    <AlertCircle className="w - 4 h - 4" />;
+                  <AlertCircle className="w - 4 h - 4" />;
+                  <Loader2 className="w - 5 h - 5 animate - spin" />;
+                  <Send className="w - 5 h - 5" />;
+
+
+
+export default EnhancedContactForm;
+

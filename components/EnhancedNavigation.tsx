@@ -30,20 +30,30 @@ const EnhancedNavigation: React.FC = () => {
     },
     {
       label: 'Content',
-      href: '/content-showcase',
+      href: '/ai-2025-content-hub',
       icon: '📚',
       isNew: true,
-      badge: 'Revolutionary 2026',
+      badge: 'Revolutionary 2025',
       dropdown: [
+        { label: 'Content Hub', href: '/ai-2025-content-hub', isNew: true, isHot: true },
+        { label: 'AI 2025-2030 Predictions', href: '/ai-2025-2030-predictions', isNew: true, isHot: true },
+        { label: 'Quantum Computing 2025', href: '/quantum-computing-2025', isNew: true, isHot: true },
+        { label: 'Automation Solutions 2025', href: '/automation-solutions-2025', isNew: true, isHot: true },
         { label: 'AI Innovation Hub 2026', href: '/ai-innovation-hub-2026', isNew: true, isHot: true },
         { label: 'Technology Showcase 2026', href: '/revolutionary-technology-showcase-2026', isNew: true, isHot: true },
         { label: 'AI Mastery Academy 2026', href: '/ai-mastery-academy-2026', isNew: true, isHot: true },
         { label: 'Revolutionary Resources 2026', href: '/revolutionary-resources-2026', isNew: true, isHot: true },
         { label: 'All Content', href: '/content-showcase', isNew: true },
         { label: 'Neural Architecture Revolution', href: '/blog/ai-2025-neural-architecture-revolution', isNew: true, isHot: true },
+        { label: 'Autonomous Business Systems', href: '/case-studies/autonomous-business-systems-2025', isNew: true, isHot: true },
         { label: 'Quantum Machine Learning', href: '/blog/ai-2025-quantum-machine-learning', isNew: true, isHot: true },
         { label: 'Fintech Transformation Success', href: '/case-studies/ai-2025-fintech-transformation-breakthrough', isNew: true, isHot: true },
+        { label: 'AI 2025 Ultimate Automation Platform', href: '/ai-2025-ultimate-automation-platform', isNew: true, isHot: true },
+        { label: 'Future Technologies 2030-2035 Showcase', href: '/future-technologies-2030-2035-showcase', isNew: true, isHot: true },
+        { label: 'AI Innovation Hub 2025', href: '/ai-innovation-hub-2025', isNew: true, isHot: true },
         { label: 'AI Implementation Mastery Guide 2026', href: '/resources/ai-implementation-mastery-2026', isNew: true, isHot: true },
+        { label: 'Enterprise Implementation Mastery', href: '/resources/ai-2025-enterprise-implementation-mastery', isNew: true, isHot: true },
+        { label: 'AI Automation Implementation Toolkit', href: '/resources/ai-automation-implementation-toolkit-2025', isNew: true, isHot: true },
         { label: 'Quantum-AI Breakthrough Case Study', href: '/case-studies/quantum-ai-breakthrough-enterprise-transformation', isNew: true, isHot: true },
         { label: 'AI ROI Calculator 2026', href: '/tools/ai-roi-calculator-2026', isNew: true, isHot: true },
         { label: 'Blog Articles', href: '/blog', isNew: true },
@@ -66,10 +76,66 @@ const EnhancedNavigation: React.FC = () => {
 
   const featuredContent = [
     {
+      title: "AI 2025 Ultimate Automation Platform",
+      description: "Revolutionary platform for autonomous business operations",
+      href: "/ai-2025-ultimate-automation-platform",
+      icon: "🚀",
+      isNew: true
+    },
+    {
+      title: "Future Technologies 2030-2035 Showcase",
+      description: "Revolutionary AI breakthroughs and singularity achievements",
+      href: "/future-technologies-2030-2035-showcase",
+      icon: "🔮",
+      isNew: true
+    },
+    {
+      title: "AI Innovation Hub 2025",
+      description: "Ultimate destination for revolutionary AI breakthroughs",
+      href: "/ai-innovation-hub-2025",
+      icon: "🚀",
+      isNew: true
+    },
+    {
+      title: "AI 2025-2030 Predictions",
+      description: "Complete roadmap of revolutionary AI breakthroughs",
+      href: "/ai-2025-2030-predictions",
+      icon: "🔮",
+      isNew: true
+    },
+    {
+      title: "Quantum Computing 2025",
+      description: "Revolutionary quantum technologies and breakthroughs",
+      href: "/quantum-computing-2025",
+      icon: "⚛️",
+      isNew: true
+    },
+    {
+      title: "Automation Solutions 2025",
+      description: "Advanced automation with 2,500%+ ROI",
+      href: "/automation-solutions-2025",
+      icon: "🤖",
+      isNew: true
+    },
+    {
       title: "AI Implementation Mastery Guide 2026",
       description: "Complete roadmap to 15,000x performance improvements",
       href: "/resources/ai-implementation-mastery-2026",
       icon: "📚",
+      isNew: true
+    },
+    {
+      title: "Enterprise Implementation Mastery",
+      description: "Complete guide to successful AI implementation in enterprise environments",
+      href: "/resources/ai-2025-enterprise-implementation-mastery",
+      icon: "🏢",
+      isNew: true
+    },
+    {
+      title: "AI Automation Implementation Toolkit",
+      description: "Everything you need to implement AI automation successfully",
+      href: "/resources/ai-automation-implementation-toolkit-2025",
+      icon: "🛠️",
       isNew: true
     },
     {
@@ -279,7 +345,7 @@ const EnhancedNavigation: React.FC = () => {
             <div className="flex items-center space-x-2">
               <Zap className="w-4 h-4 text-green-600" />
               <span className="text-sm font-medium text-gray-900">
-                🔥 New Content Drop: 25+ AI Resources Just Released!
+                🔥 Revolutionary Content: AI 2025-2030 Predictions, Quantum Computing & Automation Solutions!
               </span>
             </div>
             <Link
