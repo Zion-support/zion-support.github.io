@@ -42,6 +42,17 @@ const Navigation: React.FC = () => {
         { name: 'Research & Development', href: '/solutions/research-development' }
       ]
     },
+    { 
+      name: 'Resources', 
+      href: '#',
+      icon: Globe,
+      submenu: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Implementation Guides', href: '/resources' },
+        { name: 'AI ROI Calculator', href: '/tools/ai-2025-autonomy-calculator' }
+      ]
+    },
     { name: 'About', href: '/about', icon: Users },
     { name: 'Contact', href: '/contact', icon: Phone }
   ];
