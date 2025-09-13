@@ -151,7 +151,9 @@ import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner
 // Import new 2025-2026 innovation showcase components
 import AI2025_2026UltimateInnovationShowcase from '../components/AI2025_2026UltimateInnovationShowcase';
 import AI2025_2026UltimateInnovationPromotionBanner from '../components/AI2025_2026UltimateInnovationPromotionBanner';
-import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import ContentRecommendationEngine from '../components/ContentRecommendationEngine';
+import DynamicContentCarousel from '../components/DynamicContentCarousel';
 import ComprehensiveAIServicesShowcase2025 from '../components/ComprehensiveAIServicesShowcase2025';
 
 // Import new AI tools interactive demo components
@@ -268,6 +270,21 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2025-2026 ULTIMATE INNOVATION SHOWCASE PROMOTION BANNER */}
+        <AI2025_2026UltimateInnovationPromotionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <InteractiveContentDiscoveryWidget />
+        
+        {/* NEW 2025-2026 ULTIMATE INNOVATION SHOWCASE */}
+        <AI2025_2026UltimateInnovationShowcase />
+        
+        {/* CONTENT RECOMMENDATION ENGINE */}
+        <ContentRecommendationEngine />
+        
+        {/* DYNAMIC CONTENT CAROUSEL */}
+        <DynamicContentCarousel />
+        
         {/* NEW 2029 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2029PromotionBanner />
         
