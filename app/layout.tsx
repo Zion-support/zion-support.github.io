@@ -1138,12 +1138,21 @@ function Header() {
             Services
           </Link>
           <Link 
-            href="/revolutionary-content-showcase-2026" 
+            href="/revolutionary-content-showcase-2025" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
           >
             Content Showcase
             <span className="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
               NEW
+            </span>
+          </Link>
+          <Link 
+            href="/revolutionary-content-showcase-2026" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
+          >
+            Content Showcase 2026
+            <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+              FUTURE
             </span>
           </Link>
           <Link 
