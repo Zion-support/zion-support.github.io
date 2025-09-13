@@ -1,10 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Quantum Computing Solutions 2025 - Revolutionary Breakthrough Technology',
   description: 'Experience the future with our revolutionary quantum computing solutions. Achieve 15,000% ROI with quantum-enhanced AI, error-corrected quantum computers, and quantum supremacy.',
   keywords: ['Quantum Computing', 'Quantum AI', 'Quantum Supremacy', 'Error-Corrected Quantum', 'Quantum Machine Learning', '15,000% ROI', 'Revolutionary Technology'],
+  openGraph: {
+    title: 'Quantum Computing Solutions 2025 - Revolutionary Breakthrough Technology',
+    description: 'Experience the future with our revolutionary quantum computing solutions. Achieve 15,000% ROI with quantum-enhanced AI, error-corrected quantum computers, and quantum supremacy.',
+    type: 'article',
+  },
 };
 
 export default function QuantumComputingSolutions() {
@@ -240,6 +246,25 @@ export default function QuantumComputingSolutions() {
             Take our quantum readiness assessment to discover how quantum computing 
             can transform your business and calculate your potential ROI.
           </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 shadow-lg">
+              <div className="text-3xl mb-4">📚</div>
+              <h3 className="text-xl font-bold mb-2">Quantum Implementation Guide</h3>
+              <p className="text-gray-600">Step-by-step roadmap to quantum transformation</p>
+            </div>
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 shadow-lg">
+              <div className="text-3xl mb-4">🧮</div>
+              <h3 className="text-xl font-bold mb-2">Quantum ROI Calculator</h3>
+              <p className="text-gray-600">Calculate your quantum investment returns</p>
+            </div>
+            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 shadow-lg">
+              <div className="text-3xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold mb-2">Expert Consultation</h3>
+              <p className="text-gray-600">Personalized quantum strategy session</p>
+            </div>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/tools/quantum-readiness-assessment"
