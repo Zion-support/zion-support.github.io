@@ -148,6 +148,11 @@ import QuantumComputingSolutions2026UltimatePromotionBanner from '../components/
 import AI2025UltimateContentPromotionBanner from '../components/AI2025UltimateContentPromotionBanner';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
+// Import new 2025 content promotional banners
+import NewContent2025AdvancedAutomationBanner from '../components/NewContent2025AdvancedAutomationBanner';
+import NewContent2025EnterpriseSuccessBanner from '../components/NewContent2025EnterpriseSuccessBanner';
+import NewContent2025ImplementationToolkitBanner from '../components/NewContent2025ImplementationToolkitBanner';
+
 // Import new showcase banners
 import AI2025UltimateInnovationShowcaseBanner from '../components/AI2025UltimateInnovationShowcaseBanner';
 import AITools2025UltimateShowcaseBanner from '../components/AITools2025UltimateShowcaseBanner';
@@ -200,6 +205,15 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
+        
+        {/* NEW 2025 ADVANCED AUTOMATION MASTERY BANNER */}
+        <NewContent2025AdvancedAutomationBanner />
+        
+        {/* NEW 2025 ENTERPRISE SUCCESS BANNER */}
+        <NewContent2025EnterpriseSuccessBanner />
+        
+        {/* NEW 2025 IMPLEMENTATION TOOLKIT BANNER */}
+        <NewContent2025ImplementationToolkitBanner />
         
         {/* AI 2025 BREAKTHROUGH SHOWCASE BANNER */}
         <AI2025BreakthroughShowcaseBanner />
