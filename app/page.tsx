@@ -180,6 +180,13 @@ import UltimateContentShowcase2026PromotionBanner from '../components/UltimateCo
 import InteractiveAIToolsDemo2026 from '../components/InteractiveAIToolsDemo2026';
 import InteractiveAIToolsDemo2026PromotionBanner from '../components/InteractiveAIToolsDemo2026PromotionBanner';
 
+// New components for enhanced content
+import UltimateInteractiveContentShowcase2025 from '../components/UltimateInteractiveContentShowcase2025';
+import RevolutionaryTechInnovationBanner2025 from '../components/RevolutionaryTechInnovationBanner2025';
+import UltimateBusinessTransformationBanner2025 from '../components/UltimateBusinessTransformationBanner2025';
+import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
+import NextGenInnovationShowcase2025 from '../components/NextGenInnovationShowcase2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -191,6 +198,21 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW: REVOLUTIONARY TECH INNOVATION BANNER */}
+        <RevolutionaryTechInnovationBanner2025 />
+        
+        {/* NEW: ULTIMATE BUSINESS TRANSFORMATION BANNER */}
+        <UltimateBusinessTransformationBanner2025 />
+        
+        {/* NEW: INTERACTIVE TECH DEMO */}
+        <InteractiveTechDemo2025 />
+        
+        {/* NEW: ULTIMATE INTERACTIVE CONTENT SHOWCASE */}
+        <UltimateInteractiveContentShowcase2025 />
+        
+        {/* NEW: NEXT GEN INNOVATION SHOWCASE */}
+        <NextGenInnovationShowcase2025 />
+        
         {/* NEW: AI 2026 FUTURE PREDICTIONS ULTIMATE PROMOTION BANNER */}
         <AI2026FuturePredictionsUltimatePromotionBanner />
         
