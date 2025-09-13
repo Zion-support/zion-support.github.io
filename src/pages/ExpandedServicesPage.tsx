@@ -26,7 +26,7 @@ import {
   Users,
   Award
 } from "lucide-react";
-import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES, EXPANDED_SERVICE_SUBCATEGORIES } from "@/data/expandedServices";
+import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from "@/data/expandedServices";
 
 export default function ExpandedServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -57,7 +57,7 @@ export default function ExpandedServicesPage() {
 
   const getSubcategoryOptions = () => {
     if (selectedCategory === 'all') return [];
-    return EXPANDED_SERVICE_SUBCATEGORIES[selectedCategory as keyof typeof EXPANDED_SERVICE_SUBCATEGORIES] || [];
+    return [];
   };
 
   const formatPrice = (price: number) => {
@@ -161,7 +161,7 @@ export default function ExpandedServicesPage() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Categories</SelectItem>
-                {EXPANDED_SERVICE_CATEGORIES.map(category => (
+                {SERVICE_CATEGORIES.map(category => (
                   <SelectItem key={category.value} value={category.value}>
                     {category.label}
                   </SelectItem>

@@ -2,13 +2,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Public Pages -->
-  <url>
-    <loc>https://ziontechgroup.com/</loc>
-    <lastmod>2025-05-15</lastmod>
-=======
-<<<<<<< HEAD
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 =======
 <<<<<<< HEAD
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -57,13 +50,10 @@
     <lastmod>2025-08-17T21:20:02.875Z</lastmod>
 =======
     <lastmod>2025-08-17T21:21:02.250Z</lastmod>
->>>>>>> 8b13c47f5ac42b659a51e0b68814bcab5e74cc20
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-<<<<<<< HEAD
-=======
     <loc>https://ziontechgroup.com/404</loc>
     <lastmod>2025-08-17T21:21:02.250Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -57451,7 +57441,6 @@
     <loc>https://ziontechgroup.com/contact</loc>
     <lastmod>2025-01-17</lastmod>
 =======
->>>>>>> 8b13c47f5ac42b659a51e0b68814bcab5e74cc20
     <loc>https://ziontechgroup.com/about</loc>
     <lastmod>2025-05-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -57485,18 +57474,12 @@
     <loc>https://ziontechgroup.com/terms</loc>
     <lastmod>2025-05-15</lastmod>
     <changefreq>monthly</changefreq>
-<<<<<<< HEAD
-    <priority>0.5</priority>
-=======
     <priority>0.7</priority>
->>>>>>> 8b13c47f5ac42b659a51e0b68814bcab5e74cc20
   </url>
   <url>
     <loc>https://ziontechgroup.com/privacy</loc>
     <lastmod>2025-05-15</lastmod>
     <changefreq>monthly</changefreq>
-<<<<<<< HEAD
-=======
     <priority>0.8</priority>
   </url>
   <url>
@@ -107125,7 +107108,6 @@
     <loc>https://ziontechgroup.com/privacy</loc>
     <lastmod>2025-05-15</lastmod>
     <changefreq>monthly</changefreq>
->>>>>>> 8b13c47f5ac42b659a51e0b68814bcab5e74cc20
     <priority>0.5</priority>
   </url>
   <url>
@@ -107143,10 +107125,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 8b13c47f5ac42b659a51e0b68814bcab5e74cc20
     <loc>https://ziontechgroup.com/services</loc>
     <lastmod>2025-05-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -107168,15 +107147,10 @@
   <!-- Authentication Pages -->
   <url>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8b13c47f5ac42b659a51e0b68814bcab5e74cc20
     <loc>https://ziontechgroup.com/login</loc>
     <lastmod>2025-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
     <loc>https://zion.app/resources/ai-workforce-transformation-playbook-2025</loc>
@@ -107193,7 +107167,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
 >>>>>>> origin/content/blog-sept12
->>>>>>> 8b13c47f5ac42b659a51e0b68814bcab5e74cc20
   </url>
   <url>
     <loc>https://ziontechgroup.com/signup</loc>
@@ -107208,8 +107181,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
     <loc>https://ziontechgroup.com/tutorials/rapid-1755542893114-w4yicd</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
@@ -107450,7 +107421,6 @@
   </url>
 </urlset>
 =======
->>>>>>> 8b13c47f5ac42b659a51e0b68814bcab5e74cc20
     <loc>https://ziontechgroup.com/signup/client</loc>
     <lastmod>2025-05-15</lastmod>
 =======
@@ -108077,8 +108047,6 @@
   </url>
 
 </urlset>
-<<<<<<< HEAD
-=======
 =======
     <lastmod>2025-01-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -108105,4 +108073,3 @@
 </urlset>
 >>>>>>> cursor/create-and-deploy-new-content-d63f
 >>>>>>> origin/content/blog-sept12
->>>>>>> 8b13c47f5ac42b659a51e0b68814bcab5e74cc20

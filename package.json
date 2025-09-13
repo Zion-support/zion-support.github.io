@@ -7,18 +7,18 @@
     "node": ">=22.0.0"
   },
   "scripts": {
-    "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next dev",
-    "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
+    "dev": "vite",
+    "build": "vite build",
     "start": "next start",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint src --max-warnings 0",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "type-check": "tsc --noEmit",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "npm run lint -- --fix || true",
     "build:heal": "npm run build || (npm run fix:all && npm run build)",
-    "ci:heal": "npm run fix:all && (npm run type-check || true) && npm run build:heal",
-    "preview": "vite preview",
-    "test": "vitest run",
-    "test:watch": "vitest"
+    "ci:heal": "npm run fix:all && (npm run type-check || true) && npm run build:heal"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
