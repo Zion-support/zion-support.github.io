@@ -184,6 +184,15 @@ import AutomationSolutionsUltimateShowcase from '../components/AutomationSolutio
 // New 2025 Ultimate Content Revolution Components
 import AI2025_2030UltimateContentRevolutionBanner from '../components/AI2025_2030UltimateContentRevolutionBanner';
 import AI2025_2030UltimateContentRevolutionShowcase from '../components/AI2025_2030UltimateContentRevolutionShowcase';
+
+// New Ultimate Content Revolution 2025 Components
+import UltimateContentRevolution2025Banner from '../components/UltimateContentRevolution2025Banner';
+import UltimateContentRevolution2025Showcase from '../components/UltimateContentRevolution2025Showcase';
+import UltimateContentRevolution2025PromotionBanner from '../components/UltimateContentRevolution2025PromotionBanner';
+import InteractiveContentRecommendationEngine from '../components/InteractiveContentRecommendationEngine';
+import RevolutionaryTechShowcase2025 from '../components/RevolutionaryTechShowcase2025';
+import AI2025BreakthroughAnnouncementBanner from '../components/AI2025BreakthroughAnnouncementBanner';
+import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025';
 import QuantumComputing2025BreakthroughBanner from '../components/QuantumComputing2025BreakthroughBanner';
 import AdvancedAutomationSolutions2025Banner from '../components/AdvancedAutomationSolutions2025Banner';
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
@@ -317,6 +326,41 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </section>
+
+              {/* NEW: Ultimate Content Revolution 2025 Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <UltimateContentRevolution2025PromotionBanner />
+              </Suspense>
+
+              {/* NEW: Ultimate Content Revolution 2025 Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <UltimateContentRevolution2025Banner />
+              </Suspense>
+
+              {/* NEW: Ultimate Content Revolution 2025 Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <UltimateContentRevolution2025Showcase />
+              </Suspense>
+
+              {/* NEW: Interactive Content Recommendation Engine */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentRecommendationEngine />
+              </Suspense>
+
+              {/* NEW: Revolutionary Tech Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <RevolutionaryTechShowcase2025 />
+              </Suspense>
+
+              {/* NEW: AI 2025 Breakthrough Announcement Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025BreakthroughAnnouncementBanner />
+              </Suspense>
+
+              {/* NEW: Content Discovery Widget 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <ContentDiscoveryWidget2025 />
+              </Suspense>
 
               {/* NEW: AI 2026-2030 Breakthrough Content Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
