@@ -2,132 +2,113 @@ import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  componentCount: number;
+  bundleSize: number;
+  renderTime: number;
 }
 
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+export default function PerformanceOptimizer() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    componentCount: 0,
+    bundleSize: 0,
+    renderTime: 0
+  });
+
   const [isOptimized, setIsOptimized] = useState(false);
 
   useEffect(() => {
-    // Performance monitoring and optimization
-    if (typeof window !== 'undefined' && 'performance' in window) {
+    // Measure performance metrics
+    const measurePerformance = () => {
+      const startTime = performance.now();
+      
+      // Count components on page
+      const componentCount = document.querySelectorAll('[data-component]').length;
+      
+      // Estimate bundle size (this would be more accurate with webpack stats)
+      const bundleSize = document.querySelectorAll('script[src]').length * 50; // Rough estimate
+      
+      // Measure render time
+      const renderTime = performance.now() - startTime;
+      
+      // Measure page load time
+      const loadTime = performance.timing ? 
+        performance.timing.loadEventEnd - performance.timing.navigationStart : 0;
+
+      setMetrics({
+        loadTime: Math.round(loadTime),
+        componentCount,
+        bundleSize,
+        renderTime: Math.round(renderTime)
+      });
+
+      // Check if performance is optimized
+      const isOptimized = loadTime < 3000 && componentCount < 50 && renderTime < 100;
+      setIsOptimized(isOptimized);
+    };
+
+    // Measure after initial render
+    setTimeout(measurePerformance, 100);
+
+    // Set up performance observer
+    if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const navigationEntry = entries.find(
-          (entry) => entry.entryType === 'navigation'
-        ) as PerformanceNavigationTiming;
-
-        if (navigationEntry) {
-          const newMetrics: PerformanceMetrics = {
-            loadTime: navigationEntry.loadEventEnd - navigationEntry.fetchStart,
-            firstContentfulPaint: 0, // Would need FCP observer
-            largestContentfulPaint: 0, // Would need LCP observer
-            cumulativeLayoutShift: 0, // Would need CLS observer
-            firstInputDelay: 0, // Would need FID observer
-          };
-
-          setMetrics(newMetrics);
-          
-          // Check if performance is optimized
-          const isGoodPerformance = newMetrics.loadTime < 3000; // 3 seconds
-          setIsOptimized(isGoodPerformance);
-
-          // Log performance issues in development
-          if (process.env.NODE_ENV === 'development' && !isGoodPerformance) {
-            console.warn('Performance optimization needed:', newMetrics);
-          }
-        }
+        measurePerformance();
       });
-
-      observer.observe({ entryTypes: ['navigation'] });
-
-      // Image lazy loading optimization
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach((img) => imageObserver.observe(img));
-
-      // Preload critical resources
-      const preloadCriticalResources = () => {
-        const criticalCSS = document.createElement('link');
-        criticalCSS.rel = 'preload';
-        criticalCSS.href = '/styles/critical.css';
-        criticalCSS.as = 'style';
-        document.head.appendChild(criticalCSS);
-
-        const criticalFonts = document.createElement('link');
-        criticalFonts.rel = 'preload';
-        criticalFonts.href = '/fonts/inter.woff2';
-        criticalFonts.as = 'font';
-        criticalFonts.type = 'font/woff2';
-        criticalFonts.crossOrigin = 'anonymous';
-        document.head.appendChild(criticalFonts);
-      };
-
-      preloadCriticalResources();
-
-      return () => {
-        observer.disconnect();
-        imageObserver.disconnect();
-      };
+      
+      observer.observe({ entryTypes: ['measure', 'navigation'] });
+      
+      return () => observer.disconnect();
     }
   }, []);
 
-  // Service Worker registration for caching
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration);
-        })
-        .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
-        });
-    }
-  }, []);
-
-  // Bundle size optimization warning
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      const bundleSize = performance.getEntriesByType('resource')
-        .filter((entry) => entry.name.includes('.js'))
-        .reduce((total, entry) => total + (entry as PerformanceResourceTiming).transferSize, 0);
-
-      if (bundleSize > 500000) { // 500KB
-        console.warn('Bundle size is large:', `${(bundleSize / 1024).toFixed(2)}KB`);
-      }
-    }
-  }, []);
-
-  if (process.env.NODE_ENV === 'development' && metrics) {
-    return (
-      <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg text-sm">
-        <h3 className="font-bold mb-2">Performance Metrics</h3>
-        <div className="space-y-1">
-          <div>Load Time: {metrics.loadTime.toFixed(0)}ms</div>
-          <div className={`font-semibold ${isOptimized ? 'text-green-400' : 'text-red-400'}`}>
-            Status: {isOptimized ? 'Optimized' : 'Needs Optimization'}
-          </div>
-        </div>
-      </div>
-    );
+  // Don't render in production
+  if (process.env.NODE_ENV === 'production') {
+    return null;
   }
 
-  return null;
-};
-
-export default PerformanceOptimizer;
+  return (
+    <div className="fixed bottom-4 right-4 bg-black/90 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs">
+      <div className="text-sm font-semibold mb-2 flex items-center">
+        <div className={`w-2 h-2 rounded-full mr-2 ${isOptimized ? 'bg-green-400' : 'bg-yellow-400'}`}></div>
+        Performance Monitor
+      </div>
+      
+      <div className="space-y-1 text-xs">
+        <div className="flex justify-between">
+          <span>Load Time:</span>
+          <span className={metrics.loadTime < 3000 ? 'text-green-400' : 'text-yellow-400'}>
+            {metrics.loadTime}ms
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>Components:</span>
+          <span className={metrics.componentCount < 50 ? 'text-green-400' : 'text-yellow-400'}>
+            {metrics.componentCount}
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>Render Time:</span>
+          <span className={metrics.renderTime < 100 ? 'text-green-400' : 'text-yellow-400'}>
+            {metrics.renderTime}ms
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>Bundle Size:</span>
+          <span className={metrics.bundleSize < 2000 ? 'text-green-400' : 'text-yellow-400'}>
+            ~{metrics.bundleSize}KB
+          </span>
+        </div>
+      </div>
+      
+      <div className="mt-2 pt-2 border-t border-gray-600">
+        <div className={`text-xs font-semibold ${isOptimized ? 'text-green-400' : 'text-yellow-400'}`}>
+          {isOptimized ? '✅ Optimized' : '⚠️ Needs Optimization'}
+        </div>
+      </div>
+    </div>
+  );
+}
