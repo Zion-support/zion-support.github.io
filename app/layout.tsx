@@ -174,6 +174,16 @@ function Header() {
             </button>
             <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="py-2">
+                <Link href="/blog/ai-2025-year-ahead-predictions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-cyan-50 border-l-4 border-blue-500">
+                  🔮 AI 2025: The Year Ahead - 15 Predictions (NEW)
+                </Link>
+                <Link href="/case-studies/ai-2025-enterprise-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 Enterprise Transformation: 1,200% ROI (BREAKTHROUGH)
+                </Link>
+                <Link href="/resources/ai-2025-enterprise-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
+                  📚 AI 2025 Implementation Guide (ESSENTIAL)
+                </Link>
+                <div className="border-t border-gray-200 my-2"></div>
                 <Link href="/blog/ai-2025-synthetic-intelligence-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🧠 AI 2025 Synthetic Intelligence Revolution (BREAKTHROUGH)
                 </Link>
