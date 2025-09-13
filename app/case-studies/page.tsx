@@ -5,6 +5,23 @@ import { ArrowRight, TrendingUp, DollarSign, Clock, Users, Target, CheckCircle, 
 export default function CaseStudies() {
   const caseStudies = [
     {
+      id: 1,
+      title: "AI 2025 Global Enterprise Transformation",
+      company: "Fortune 100 Global Manufacturing",
+      industry: "Manufacturing & Technology",
+      challenge: "Legacy systems, operational inefficiencies, and competitive pressure",
+      solution: "AI 2025 Enterprise Automation Platform with quantum-neural hybrid architecture",
+      results: {
+        roi: "4,200%",
+        efficiency: "94%",
+        costReduction: "73%",
+        customerSatisfaction: "96%"
+      },
+      description: "Revolutionary transformation of Fortune 100 company achieving $42B revenue increase and unprecedented operational efficiency.",
+      technologies: ["AI 2025", "Quantum-Neural Hybrid", "Enterprise Automation", "Predictive Analytics"],
+      image: "/api/placeholder/600/400"
+    },
+    {
       id: 'manufacturing-giant',
       title: 'Global Manufacturing Transformation',
       company: 'Fortune 500 Manufacturing Company',
