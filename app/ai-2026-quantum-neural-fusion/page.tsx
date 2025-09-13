@@ -1,7 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { ArrowRight, Atom, Brain, Zap, Target, TrendingUp, Users, Award, CheckCircle, Cpu } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -12,7 +11,6 @@ export const metadata: Metadata = {
     title: 'AI 2026 Quantum-Neural Fusion - Zion Tech Group',
     description: 'Experience the revolutionary fusion of quantum computing and neural networks.',
     images: ['/og-ai-2026-quantum-neural.png'],
-=======
 import Card from '../../components/ui/Card';
 import { ArrowRight, Brain, Zap, Target, TrendingUp, Users, Award, Lightbulb, Atom, Cpu, Network } from 'lucide-react';
 
@@ -24,14 +22,12 @@ export const metadata: Metadata = {
     title: 'AI 2026 Quantum Neural Fusion - Zion Tech Group',
     description: 'Experience the revolutionary fusion of quantum computing and neural networks.',
     images: ['/og-ai-2026-quantum-neural.jpg'],
->>>>>>> cursor/create-and-deploy-new-content-1664
   },
 };
 
 const quantumFeatures = [
   {
     icon: Atom,
-<<<<<<< HEAD
     title: 'Quantum Processing Power',
     description: 'Leverage quantum computing to process complex data sets 10,000x faster than traditional systems.',
     impact: '15,000% ROI',
@@ -84,7 +80,6 @@ const quantumApplications = [
     description: 'Smart grid optimization and renewable energy forecasting',
     results: '28,000% ROI',
     icon: '⚡'
-=======
     title: 'Quantum Processing Units',
     description: 'Revolutionary quantum processors that process information at the speed of light, solving complex problems in milliseconds.',
     impact: '10,000x faster processing',
@@ -157,30 +152,24 @@ const industryApplications = [
       'Safety system enhancement'
     ],
     roi: '15,000% ROI'
->>>>>>> cursor/create-and-deploy-new-content-1664
   }
 ];
 
 const technicalSpecs = [
   {
     spec: 'Quantum Qubits',
-<<<<<<< HEAD
     value: '1,000+',
-=======
     value: '1,000,000+',
->>>>>>> cursor/create-and-deploy-new-content-1664
     description: 'Simultaneous quantum states for parallel processing'
   },
   {
     spec: 'Processing Speed',
-<<<<<<< HEAD
     value: '10,000x',
     description: 'Faster than traditional supercomputers'
   },
   {
     spec: 'Accuracy Rate',
     value: '99.7%',
-=======
     value: '10^18 ops/sec',
     description: 'Operations per second with quantum acceleration'
   },
@@ -192,15 +181,12 @@ const technicalSpecs = [
   {
     spec: 'Accuracy Rate',
     value: '99.9%',
->>>>>>> cursor/create-and-deploy-new-content-1664
     description: 'Neural network prediction accuracy'
   },
   {
     spec: 'Energy Efficiency',
-<<<<<<< HEAD
     value: '95%',
     description: 'Reduction in computational energy consumption'
-=======
     value: '95% reduction',
     description: 'Compared to traditional computing'
   },
@@ -208,13 +194,11 @@ const technicalSpecs = [
     spec: 'Learning Speed',
     value: '1000x faster',
     description: 'Neural network training acceleration'
->>>>>>> cursor/create-and-deploy-new-content-1664
   }
 ];
 
 export default function AI2026QuantumNeuralFusion() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -247,7 +231,6 @@ export default function AI2026QuantumNeuralFusion() {
             >
               View Quantum Success Stories
             </Link>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -307,7 +290,6 @@ export default function AI2026QuantumNeuralFusion() {
               <div className="text-3xl font-bold text-green-400 mb-2">$5B+</div>
               <div className="text-purple-200">Value Generated</div>
             </div>
->>>>>>> cursor/create-and-deploy-new-content-1664
           </div>
         </div>
       </section>
@@ -316,7 +298,6 @@ export default function AI2026QuantumNeuralFusion() {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Quantum-Neural Fusion Technology
             </h2>
@@ -336,7 +317,6 @@ export default function AI2026QuantumNeuralFusion() {
                   {feature.impact}
                 </div>
               </div>
-=======
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Revolutionary Quantum Features
             </h2>
@@ -391,14 +371,12 @@ export default function AI2026QuantumNeuralFusion() {
                   ))}
                 </ul>
               </Card>
->>>>>>> cursor/create-and-deploy-new-content-1664
             ))}
           </div>
         </div>
       </section>
 
       {/* Technical Specifications */}
-<<<<<<< HEAD
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -442,7 +420,6 @@ export default function AI2026QuantumNeuralFusion() {
                   {app.results}
                 </div>
               </div>
-=======
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -461,13 +438,11 @@ export default function AI2026QuantumNeuralFusion() {
                 <h3 className="text-lg font-semibold text-white mb-2">{spec.spec}</h3>
                 <p className="text-purple-200 text-sm">{spec.description}</p>
               </Card>
->>>>>>> cursor/create-and-deploy-new-content-1664
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Success Story Highlight */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-indigo-600">
         <div className="max-w-7xl mx-auto">
@@ -506,7 +481,6 @@ export default function AI2026QuantumNeuralFusion() {
                 - CEO, Global Manufacturing Corp
               </div>
             </div>
-=======
       {/* Success Stories */}
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -561,13 +535,11 @@ export default function AI2026QuantumNeuralFusion() {
                 "Transformed our entire operation" - COO
               </div>
             </Card>
->>>>>>> cursor/create-and-deploy-new-content-1664
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -587,7 +559,6 @@ export default function AI2026QuantumNeuralFusion() {
             <Link 
               href="/ai-2026-quantum-roi-calculator" 
               className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300"
-=======
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -607,7 +578,6 @@ export default function AI2026QuantumNeuralFusion() {
             <Link 
               href="/ai-2026-quantum-roi-calculator" 
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
->>>>>>> cursor/create-and-deploy-new-content-1664
             >
               Calculate Quantum ROI
             </Link>

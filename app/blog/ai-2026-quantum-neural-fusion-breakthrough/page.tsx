@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,8 +15,7 @@ export const metadata: Metadata = {
 
 export default function AI2026QuantumNeuralFusionBreakthrough() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50">
       {/* Hero Section */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-full text-sm font-semibold mb-4 animate-pulse">
@@ -90,7 +90,6 @@ export default function AI2026QuantumNeuralFusionBreakthrough() {
                 possibilities, solving problems that are impossible for classical computers.
               </p>
             </div>
-=======
       <article className="prose prose-lg max-w-none">
         <header className="mb-8">
           <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-800 mb-4">
@@ -107,7 +106,6 @@ export default function AI2026QuantumNeuralFusionBreakthrough() {
             <span>Published: January 2025</span>
             <span className="mx-2">•</span>
             <span>Reading time: 15 minutes</span>
->>>>>>> cursor/create-and-deploy-new-content-cd68
           </div>
         </header>
 
@@ -121,7 +119,6 @@ export default function AI2026QuantumNeuralFusionBreakthrough() {
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Revolutionary Capabilities */}
       <div className="mb-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
@@ -374,7 +371,6 @@ export default function AI2026QuantumNeuralFusionBreakthrough() {
           </Link>
         </div>
       </div>
-=======
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">🧠 Core Technologies</h2>
           
@@ -748,7 +744,6 @@ export default function AI2026QuantumNeuralFusionBreakthrough() {
           </div>
         </footer>
       </article>
->>>>>>> cursor/create-and-deploy-new-content-cd68
     </div>
   );
 }
