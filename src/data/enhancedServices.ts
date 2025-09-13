@@ -2,6 +2,66 @@ export interface EnhancedService {
   id: string;
   title: string;
   description: string;
+  category: string;
+<<<<<<< HEAD
+  pricing: string;
+  description: string;
+  price: number;
+  pricingModel: string;
+  userLimit: string;
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  tags: string[];
+  contactInfo: ServiceContact;
+  marketPrice: string;
+  competitors: string[];
+  roi: string;
+  setupTime: string;
+  integrations: string[];
+}
+
+export interface ITService {
+  id: number;
+  name: string;
+  category: string;
+  description: string;
+  hourlyRate: number;
+  projectRate: number;
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  tags: string[];
+  contactInfo: ServiceContact;
+  marketPrice: string;
+  responseTime: string;
+  sla: string;
+  certifications: string[];
+}
+
+export interface AIService {
+  id: number;
+  name: string;
+  category: string;
+  description: string;
+  pricing: string;
+  price: number;
+  pricingModel: string;
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  tags: string[];
+  contactInfo: ServiceContact;
+  marketPrice: string;
+  aiModels: string[];
+  accuracy: string;
+  trainingData: string;
+  compliance: string[];
+}
+
+// Enhanced Micro SAAS Services
+export const enhancedMicroSaasServices: MicroSaasService[] = [
+  {
       "Intelligent document processing with 99.9% accuracy",
       "Automated workflow orchestration",
       "Real-time analytics dashboard",
@@ -30,7 +90,6 @@ export interface EnhancedService {
       website: "https://ziontechgroup.com"
     },
     tags: ["AI", "Automation", "Process Optimization", "Machine Learning", "Workflow"],
-=======
     id: "ai-ml-1",
     title: "AI-Powered Customer Service Automation",
     description: "Implement intelligent chatbots and automated customer service solutions using advanced NLP and machine learning to handle 80% of customer inquiries automatically.",
@@ -123,14 +182,11 @@ export interface EnhancedService {
       name: "Zion Tech Group",
       id: "zion-tech-group"
     },
-=======
 import { ProductListing } from "@/types/listings";
 
-=======
 import { ProductListing } from "@/types/listings";
 
 // Enhanced Services with real market prices, features, and benefits
-=======
 import { ProductListing } from "@/types/listings";
 
 // Enhanced real micro SAAS services and solutions
@@ -139,10 +195,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
     id: "ai-automation-suite",
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-=======
     title: "AI Business Process Automation Suite",
     description: "Complete AI-powered automation solution for business processes including document processing, customer service, and workflow optimization. Features intelligent routing, predictive analytics, and 99.9% accuracy.",
-=======
     title: "AI Process Automation Suite",
     description: "Complete workflow automation solution using AI to streamline business processes, reduce manual tasks by 80%, and increase operational efficiency. Includes process mapping, RPA integration, and analytics dashboard.",
     category: "AI Automation",
@@ -161,7 +215,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     rating: 4.9,
     reviewCount: 156,
     featured: true,
-=======
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 96
@@ -171,7 +224,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   },
   {
     id: "ai-content-optimization",
-=======
     title: "AI Content Optimization & SEO Suite",
     description: "Comprehensive content optimization platform using AI to improve SEO rankings, readability, and engagement. Features keyword analysis, content scoring, A/B testing, and performance tracking.",
     category: "AI Marketing",
@@ -190,7 +242,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     rating: 4.7,
     reviewCount: 234,
     location: "Global",
-=======
     availability: "Immediate",
     aiScore: 91
   },
@@ -330,7 +381,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     price: 1299,
     currency: "$",
     tags: ["Business Analytics", "Predictive Analytics", "Dashboard", "Reporting"],
-=======
     id: "ai-customer-insights",
     title: "AI-Powered Customer Insights Platform",
     description: "Advanced customer behavior analysis using machine learning to predict churn, identify upsell opportunities, and personalize customer experiences. Integrates with CRM systems and provides actionable recommendations.",
@@ -386,7 +436,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 91
-=======
     createdAt: "2024-01-20T14:30:00.000Z",
     rating: 4.8,
     reviewCount: 89,
@@ -533,7 +582,48 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
     id: "devops-automation",
     title: "DevOps Automation & CI/CD Pipeline",
-=======
+    images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-05T13:20:00.000Z",
+    rating: 4.9,
+    reviewCount: 98,
+    location: "Middletown, DE",
+    availability: "2-3 Weeks",
+    aiScore: 95
+  },
+  {
+    id: "devops-automation",
+    title: "DevOps Automation & CI/CD Pipeline Setup",
+    description: "Automate your software development lifecycle with modern DevOps practices. Set up CI/CD pipelines, infrastructure as code, automated testing, and deployment automation for faster, more reliable releases.",
+    category: "IT Services",
+    subcategory: "DevOps",
+    price: 1899,
+    currency: "$",
+    tags: ["DevOps", "CI/CD", "Automation", "Infrastructure as Code"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech",
+      email: "kleber@ziontechgroup.com",
+    },
+    id: "serverless-architecture",
+    title: "Serverless Architecture Design & Implementation",
+    description: "Complete serverless solution design using AWS Lambda, Azure Functions, and Google Cloud Functions. Event-driven architecture with auto-scaling and pay-per-use pricing.",
+    category: "Cloud Services",
+    subcategory: "Serverless",
+    price: 6999,
+    currency: "$",
+    tags: ["Serverless", "Lambda", "Event-Driven", "Auto-scaling", "Cost Optimization"],
+    author: {
+      name: "ZionTech Cloud",
+      id: "ziontech-cloud",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-25T12:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 56,
+    location: "Global",
+    availability: "4-5 Weeks",
+    aiScore: 93
     images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-10T15:30:00.000Z",
     rating: 4.7,
@@ -680,7 +770,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Middletown, DE",
     availability: "2-3 Weeks",
     aiScore: 86
-=======
     description: "Complete DevOps automation solution with automated testing, deployment, and monitoring. Includes Docker containerization, Kubernetes orchestration, and infrastructure as code.",
     category: "DevOps",
     subcategory: "Automation",
@@ -1062,12 +1151,41 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "6-8 Weeks",
     aiScore: 96
+    images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-30T12:15:00.000Z",
+    rating: 4.7,
+    reviewCount: 89,
+    location: "Middletown, DE",
+    availability: "3-4 Weeks",
+    aiScore: 88
+  },
+
+  // IT Support & Managed Services
+  {
+    id: "managed-it-services",
+    title: "Managed IT Services & 24/7 Support",
+    description: "Comprehensive IT management including network monitoring, security updates, backup management, and help desk support. Proactive maintenance to prevent issues before they impact your business.",
+    category: "IT Services",
+    subcategory: "Managed Services",
+    price: 899,
+    currency: "$",
+    tags: ["Managed IT", "24/7 Support", "Network Monitoring", "Help Desk"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech",
+      email: "kleber@ziontechgroup.com",
+    },
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-04-01T08:30:00.000Z",
+    rating: 4.8,
+    reviewCount: 156,
+    location: "Middletown, DE",
+    availability: "Immediate",
+    aiScore: 89
   },
 
   // Blockchain & Web3 Services
   {
-    id: "blockchain-enterprise",
-    title: "Enterprise Blockchain Solutions",
     id: "blockchain-development",
     title: "Blockchain Development & Smart Contract Solutions",
     description: "Develop custom blockchain solutions, smart contracts, and decentralized applications (dApps). Includes DeFi protocols, NFT marketplaces, and enterprise blockchain integration.",
@@ -1267,7 +1385,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "20-24 Weeks",
     aiScore: 96
-=======
     id: "real-time-data-pipeline",
     title: "Real-Time Data Pipeline Platform",
     description: "Streaming data processing platform for real-time analytics, event processing, and data integration. Supports Apache Kafka, Apache Flink, and provides real-time dashboards and alerts.",
@@ -1499,7 +1616,6 @@ export const ENHANCED_SERVICE_CATEGORIES = [
   professional: { min: 5000, max: 14999, description: "Advanced solutions for growing companies" },
   enterprise: { min: 15000, max: 50000, description: "Custom enterprise-grade solutions" }
 };
-=======
     createdAt: "2024-04-05T14:45:00.000Z",
     rating: 4.9,
     reviewCount: 67,
@@ -1540,7 +1656,6 @@ export const SERVICE_CATEGORIES = [
     id: "ai-services",
     name: "AI & Machine Learning",
     description: "Cutting-edge artificial intelligence solutions",
-=======
     title: "Digital Transformation Strategy & Implementation",
     description: "Complete digital transformation roadmap including technology assessment, change management, staff training, and implementation support. Transforms traditional businesses into digital-first organizations.",
     category: "Digital Transformation",
@@ -1695,745 +1810,78 @@ export const SERVICE_CATEGORIES = [
   },
   {
   category: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Consulting' | 'Security' | 'Analytics' | 'Cloud' | 'Automation' | 'Integration';
+=======
+>>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
   subcategory: string;
-  price: {
-    min: number;
-    max: number;
-    currency: string;
-    pricingModel: 'hourly' | 'monthly' | 'project' | 'subscription';
-  };
+  price: number;
+  currency: string;
+  pricingModel: string;
   features: string[];
   benefits: string[];
   useCases: string[];
-  targetAudience: string;
-  averageMarketPrice: string;
-  contactLink: string;
-  demoLink?: string;
-  rating: number;
-  reviewCount: number;
-  deliveryTime: string;
+  targetAudience: string[];
   tags: string[];
-  image: string;
-  createdAt?: string;
-  isPopular?: boolean;
-  isNew?: boolean;
-  isPremium?: boolean;
+  estimatedDelivery: string;
+  supportLevel: string;
+  marketPrice: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  technology: string[];
+  integrations: string[];
+  compliance: string[];
+  roi: string;
+  competitors: string[];
 }
 
-export const ENHANCED_SERVICES: EnhancedService[] = [
-  // AI Services
+export const enhancedServices: EnhancedService[] = [
   {
-    id: 'ai-1',
-    title: 'AI-Powered Content Generation Suite',
-    description: 'Advanced AI content creation platform that generates high-quality articles, marketing copy, and creative content using GPT-4 and custom-trained models.',
-    category: 'AI',
-    subcategory: 'Content Generation',
-    price: {
-      min: 299,
-      max: 999,
-      currency: '$',
-      pricingModel: 'monthly'
-    },
+    id: "ai-powered-analytics",
+    title: "AI-Powered Business Analytics",
+    description: "Advanced analytics platform with machine learning capabilities for data-driven decision making.",
+    category: "Analytics",
+    subcategory: "Business Intelligence",
+    price: 299,
+    currency: "USD",
+    pricingModel: "per-month",
     features: [
-      'Multi-language content generation',
-      'SEO-optimized writing',
-      'Brand voice customization',
-      'Plagiarism-free content',
-      'Bulk content creation',
-      'API integration',
-      'Content analytics dashboard'
+      "Real-time data visualization",
+      "Predictive analytics",
+      "Natural language queries",
+      "Automated insights",
+      "Custom dashboards"
     ],
     benefits: [
-      '10x faster content creation',
-      'Consistent brand messaging',
-      'SEO performance improvement',
-      'Cost reduction by 60%',
-      '24/7 content availability'
+      "Make data-driven decisions",
+      "Identify trends and patterns",
+      "Improve operational efficiency",
+      "Reduce manual reporting"
     ],
     useCases: [
-      'Marketing agencies',
-      'E-commerce businesses',
-      'Blog publishers',
-      'Social media managers',
-      'Content marketing teams'
+      "Sales performance analysis",
+      "Customer behavior insights",
+      "Operational efficiency tracking",
+      "Financial forecasting"
     ],
-    targetAudience: 'Marketing professionals, content creators, businesses needing regular content',
-    averageMarketPrice: '$500-1500/month',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/ai-content',
-    rating: 4.8,
-    reviewCount: 156,
-    deliveryTime: 'Instant setup, 24 hours for customization',
-    tags: ['AI', 'Content Generation', 'Marketing', 'SEO', 'Automation'],
-    image: 'https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format',
-    createdAt: '2024-01-15T10:00:00.000Z',
-    isPopular: true
-  },
-  {
-    id: 'ai-2',
-    title: 'Intelligent Customer Support Bot',
-    description: 'AI-powered customer service chatbot that handles inquiries, provides instant responses, and escalates complex issues to human agents.',
-    category: 'AI',
-    subcategory: 'Customer Service',
-    price: {
-      min: 199,
-      max: 799,
-      currency: '$',
-      pricingModel: 'monthly'
+    targetAudience: ["Data analysts", "Business intelligence teams", "Executives", "Operations managers"],
+    tags: ["AI", "Analytics", "Business Intelligence", "Machine Learning"],
+    estimatedDelivery: "4-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$299-999/month",
+    contactInfo: {
+      phone: "+1-555-0126",
+      email: "analytics@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    features: [
-      'Natural language processing',
-      'Multi-language support',
-      'Integration with CRM systems',
-      'Analytics and reporting',
-      'Custom knowledge base',
-      'Human handoff capability',
-      'Voice and text support'
-    ],
-    benefits: [
-      '24/7 customer support',
-      '70% reduction in response time',
-      'Cost savings of 40-60%',
-      'Improved customer satisfaction',
-      'Scalable support operations'
-    ],
-    useCases: [
-      'E-commerce websites',
-      'SaaS platforms',
-      'Customer service centers',
-      'Online businesses',
-      'Support teams'
-    ],
-    targetAudience: 'Businesses with customer support needs, e-commerce platforms',
-    averageMarketPrice: '$300-1000/month',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/support-bot',
-    rating: 4.7,
-    reviewCount: 89,
-    deliveryTime: '1-2 weeks setup',
-    tags: ['AI', 'Customer Service', 'Chatbot', 'Automation', 'Support'],
-    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&auto=format',
-    createdAt: '2024-01-20T10:00:00.000Z',
-    isNew: true
-  },
-  {
-    id: 'ai-3',
-    title: 'Predictive Analytics Platform',
-    description: 'Machine learning platform that analyzes historical data to predict future trends, customer behavior, and business outcomes.',
-    category: 'AI',
-    subcategory: 'Analytics',
-    price: {
-      min: 499,
-      max: 1999,
-      currency: '$',
-      pricingModel: 'monthly'
-    },
-    features: [
-      'Advanced ML algorithms',
-      'Real-time data processing',
-      'Custom model training',
-      'Interactive dashboards',
-      'API access',
-      'Data visualization',
-      'Automated insights'
-    ],
-    benefits: [
-      'Data-driven decision making',
-      'Risk mitigation',
-      'Revenue optimization',
-      'Customer behavior insights',
-      'Competitive advantage'
-    ],
-    useCases: [
-      'Financial services',
-      'Retail analytics',
-      'Healthcare predictions',
-      'Supply chain optimization',
-      'Marketing campaigns'
-    ],
-    targetAudience: 'Data analysts, business intelligence teams, decision makers',
-    averageMarketPrice: '$800-2500/month',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/predictive-analytics',
-    rating: 4.9,
-    reviewCount: 203,
-    deliveryTime: '2-3 weeks implementation',
-    tags: ['AI', 'Analytics', 'Machine Learning', 'Predictions', 'Business Intelligence'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format',
-    createdAt: '2024-01-10T10:00:00.000Z',
-    isPremium: true
-  },
-
-  // IT Services
-  {
-    id: 'it-1',
-    title: 'Cloud Infrastructure Management',
-    description: 'Comprehensive cloud infrastructure management service including setup, monitoring, optimization, and security for AWS, Azure, and Google Cloud.',
-    category: 'IT',
-    subcategory: 'Cloud Services',
-    price: {
-      min: 1500,
-      max: 8000,
-      currency: '$',
-      pricingModel: 'monthly'
-    },
-    features: [
-      'Multi-cloud management',
-      '24/7 monitoring',
-      'Cost optimization',
-      'Security compliance',
-      'Backup and disaster recovery',
-      'Performance tuning',
-      'Automated scaling'
-    ],
-    benefits: [
-      'Reduced cloud costs by 30%',
-      'Improved uptime to 99.9%',
-      'Enhanced security posture',
-      'Faster deployment cycles',
-      'Expert cloud management'
-    ],
-    useCases: [
-      'Enterprise applications',
-      'Web applications',
-      'Data centers',
-      'DevOps teams',
-      'IT departments'
-    ],
-    targetAudience: 'IT managers, DevOps engineers, cloud architects',
-    averageMarketPrice: '$3000-10000/month',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/cloud-management',
-    rating: 4.8,
-    reviewCount: 134,
-    deliveryTime: '2-4 weeks setup',
-    tags: ['IT', 'Cloud', 'DevOps', 'Infrastructure', 'AWS', 'Azure'],
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&auto=format',
-    createdAt: '2024-01-05T10:00:00.000Z',
-    isPopular: true
-  },
-  {
-    id: 'it-2',
-    title: 'Cybersecurity Assessment & Protection',
-    description: 'Comprehensive cybersecurity services including vulnerability assessments, penetration testing, security audits, and protection implementation.',
-    category: 'IT',
-    subcategory: 'Security',
-    price: {
-      min: 3000,
-      max: 15000,
-      currency: '$',
-      pricingModel: 'project'
-    },
-    features: [
-      'Vulnerability scanning',
-      'Penetration testing',
-      'Security audits',
-      'Compliance assessments',
-      'Incident response planning',
-      'Security training',
-      'Ongoing monitoring'
-    ],
-    benefits: [
-      'Enhanced security posture',
-      'Compliance achievement',
-      'Risk mitigation',
-      'Customer trust building',
-      'Insurance premium reduction'
-    ],
-    useCases: [
-      'Financial institutions',
-      'Healthcare organizations',
-      'E-commerce platforms',
-      'Government agencies',
-      'Enterprise businesses'
-    ],
-    targetAudience: 'CISOs, IT security managers, compliance officers',
-    averageMarketPrice: '$5000-20000/project',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/cybersecurity',
-    rating: 4.9,
-    reviewCount: 178,
-    deliveryTime: '3-6 weeks',
-    tags: ['IT', 'Security', 'Cybersecurity', 'Compliance', 'Audit'],
-    image: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800&auto=format',
-    createdAt: '2024-01-08T10:00:00.000Z',
-    isPremium: true
-  },
-  {
-    id: 'it-3',
-    title: 'IT Infrastructure Modernization',
-    description: 'Transform legacy IT systems into modern, scalable infrastructure using cloud-native technologies and microservices architecture.',
-    category: 'IT',
-    subcategory: 'Infrastructure',
-    price: {
-      min: 10000,
-      max: 50000,
-      currency: '$',
-      pricingModel: 'project'
-    },
-    features: [
-      'Legacy system assessment',
-      'Cloud migration planning',
-      'Microservices architecture',
-      'Container orchestration',
-      'CI/CD pipeline setup',
-      'Performance optimization',
-      'Training and documentation'
-    ],
-    benefits: [
-      'Improved system performance',
-      'Reduced maintenance costs',
-      'Enhanced scalability',
-      'Better user experience',
-      'Future-proof technology'
-    ],
-    useCases: [
-      'Enterprise applications',
-      'Legacy system upgrades',
-      'Digital transformation',
-      'Performance optimization',
-      'Technology modernization'
-    ],
-    targetAudience: 'CTOs, IT directors, system architects',
-    averageMarketPrice: '$25000-75000/project',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/infrastructure-modernization',
-    rating: 4.7,
-    reviewCount: 92,
-    deliveryTime: '3-6 months',
-    tags: ['IT', 'Infrastructure', 'Modernization', 'Cloud', 'Microservices'],
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format',
-    createdAt: '2024-01-12T10:00:00.000Z'
-  },
-
-  // SAAS Services
-  {
-    id: 'saas-1',
-    title: 'Project Management Suite',
-    description: 'Comprehensive project management platform with task tracking, team collaboration, time management, and reporting capabilities.',
-    category: 'SAAS',
-    subcategory: 'Project Management',
-    price: {
-      min: 15,
-      max: 99,
-      currency: '$',
-      pricingModel: 'monthly'
-    },
-    features: [
-      'Task and project tracking',
-      'Team collaboration tools',
-      'Time tracking and reporting',
-      'Gantt charts and timelines',
-      'Resource management',
-      'Integration capabilities',
-      'Mobile applications'
-    ],
-    benefits: [
-      'Improved project delivery',
-      'Better team collaboration',
-      'Enhanced productivity',
-      'Real-time visibility',
-      'Cost and time savings'
-    ],
-    useCases: [
-      'Software development',
-      'Marketing campaigns',
-      'Construction projects',
-      'Event planning',
-      'Product launches'
-    ],
-    targetAudience: 'Project managers, team leaders, business owners',
-    averageMarketPrice: '$25-150/month per user',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/project-management',
-    rating: 4.6,
-    reviewCount: 445,
-    deliveryTime: 'Instant setup',
-    tags: ['SAAS', 'Project Management', 'Collaboration', 'Productivity', 'Team Management'],
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format',
-    createdAt: '2024-01-18T10:00:00.000Z',
-    isPopular: true
-  },
-  {
-    id: 'saas-2',
-    title: 'Customer Relationship Management (CRM)',
-    description: 'Advanced CRM platform for managing customer interactions, sales pipelines, marketing campaigns, and customer analytics.',
-    category: 'SAAS',
-    subcategory: 'CRM',
-    price: {
-      min: 25,
-      max: 199,
-      currency: '$',
-      pricingModel: 'monthly'
-    },
-    features: [
-      'Contact management',
-      'Sales pipeline tracking',
-      'Email marketing integration',
-      'Analytics and reporting',
-      'Mobile applications',
-      'API access',
-      'Custom dashboards'
-    ],
-    benefits: [
-      'Improved customer relationships',
-      'Increased sales efficiency',
-      'Better marketing ROI',
-      'Enhanced customer insights',
-      'Streamlined operations'
-    ],
-    useCases: [
-      'Sales teams',
-      'Marketing departments',
-      'Customer service',
-      'Small businesses',
-      'Enterprise organizations'
-    ],
-    targetAudience: 'Sales managers, marketing professionals, business owners',
-    averageMarketPrice: '$50-300/month per user',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/crm',
-    rating: 4.8,
-    reviewCount: 567,
-    deliveryTime: '1-2 weeks setup',
-    tags: ['SAAS', 'CRM', 'Sales', 'Marketing', 'Customer Management'],
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format',
-    createdAt: '2024-01-16T10:00:00.000Z'
-  },
-  {
-    id: 'saas-3',
-    title: 'Business Intelligence Dashboard',
-    description: 'Real-time business intelligence platform that transforms data into actionable insights with interactive dashboards and automated reporting.',
-    category: 'SAAS',
-    subcategory: 'Analytics',
-    price: {
-      min: 199,
-      max: 999,
-      currency: '$',
-      pricingModel: 'monthly'
-    },
-    features: [
-      'Real-time data visualization',
-      'Custom dashboard creation',
-      'Automated reporting',
-      'Data integration',
-      'Advanced analytics',
-      'Mobile access',
-      'White-label options'
-    ],
-    benefits: [
-      'Data-driven decisions',
-      'Improved operational efficiency',
-      'Real-time insights',
-      'Reduced reporting time',
-      'Better performance tracking'
-    ],
-    useCases: [
-      'Executive dashboards',
-      'Sales analytics',
-      'Marketing performance',
-      'Financial reporting',
-      'Operational metrics'
-    ],
-    targetAudience: 'Business analysts, executives, data scientists',
-    averageMarketPrice: '$300-1200/month',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/business-intelligence',
-    rating: 4.7,
-    reviewCount: 234,
-    deliveryTime: '2-3 weeks implementation',
-    tags: ['SAAS', 'Analytics', 'Business Intelligence', 'Data Visualization', 'Reporting'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format',
-    createdAt: '2024-01-22T10:00:00.000Z',
-    isNew: true
-  },
-
-  // Development Services
-  {
-    id: 'dev-1',
-    title: 'Custom Software Development',
-    description: 'End-to-end custom software development services from concept to deployment, including web applications, mobile apps, and enterprise solutions.',
-    category: 'Development',
-    subcategory: 'Custom Development',
-    price: {
-      min: 5000,
-      max: 100000,
-      currency: '$',
-      pricingModel: 'project'
-    },
-    features: [
-      'Requirements analysis',
-      'UI/UX design',
-      'Full-stack development',
-      'Testing and QA',
-      'Deployment and maintenance',
-      'Documentation',
-      'Training and support'
-    ],
-    benefits: [
-      'Tailored solutions',
-      'Competitive advantage',
-      'Scalable architecture',
-      'Long-term support',
-      'Technology expertise'
-    ],
-    useCases: [
-      'Business applications',
-      'E-commerce platforms',
-      'Mobile applications',
-      'Enterprise systems',
-      'Startup MVPs'
-    ],
-    targetAudience: 'Business owners, product managers, startup founders',
-    averageMarketPrice: '$15000-150000/project',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/custom-development',
-    rating: 4.9,
-    reviewCount: 312,
-    deliveryTime: '2-12 months',
-    tags: ['Development', 'Custom Software', 'Web Apps', 'Mobile Apps', 'Enterprise'],
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format',
-    createdAt: '2024-01-03T10:00:00.000Z',
-    isPremium: true
-  },
-  {
-    id: 'dev-2',
-    title: 'API Development & Integration',
-    description: 'Professional API development services including RESTful APIs, GraphQL, third-party integrations, and API management solutions.',
-    category: 'Development',
-    subcategory: 'API Services',
-    price: {
-      min: 3000,
-      max: 25000,
-      currency: '$',
-      pricingModel: 'project'
-    },
-    features: [
-      'API design and architecture',
-      'RESTful and GraphQL APIs',
-      'Third-party integrations',
-      'API documentation',
-      'Testing and validation',
-      'Performance optimization',
-      'Security implementation'
-    ],
-    benefits: [
-      'Improved system connectivity',
-      'Enhanced user experience',
-      'Reduced development time',
-      'Better scalability',
-      'Increased efficiency'
-    ],
-    useCases: [
-      'System integrations',
-      'Mobile app backends',
-      'E-commerce platforms',
-      'Data sharing',
-      'Third-party services'
-    ],
-    targetAudience: 'Developers, system architects, IT managers',
-    averageMarketPrice: '$8000-40000/project',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/api-development',
-    rating: 4.8,
-    reviewCount: 189,
-    deliveryTime: '3-8 weeks',
-    tags: ['Development', 'API', 'Integration', 'Backend', 'Microservices'],
-    image: 'https://images.unsplash.com/photo-1555066931-4365d11fb3a1?w=800&auto=format',
-    createdAt: '2024-01-14T10:00:00.000Z'
-  },
-
-  // Consulting Services
-  {
-    id: 'consulting-1',
-    title: 'Digital Transformation Consulting',
-    description: 'Strategic consulting services to help organizations navigate digital transformation, technology adoption, and process optimization.',
-    category: 'Consulting',
-    subcategory: 'Strategy',
-    price: {
-      min: 150,
-      max: 500,
-      currency: '$',
-      pricingModel: 'hourly'
-    },
-    features: [
-      'Technology assessment',
-      'Digital strategy development',
-      'Change management',
-      'Process optimization',
-      'Technology roadmap',
-      'Implementation planning',
-      'Training and support'
-    ],
-    benefits: [
-      'Clear digital strategy',
-      'Improved efficiency',
-      'Competitive advantage',
-      'Cost optimization',
-      'Risk mitigation'
-    ],
-    useCases: [
-      'Enterprise transformation',
-      'Technology adoption',
-      'Process improvement',
-      'Change management',
-      'Strategic planning'
-    ],
-    targetAudience: 'C-level executives, IT directors, business leaders',
-    averageMarketPrice: '$200-800/hour',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/digital-transformation',
-    rating: 4.9,
-    reviewCount: 156,
-    deliveryTime: 'Ongoing engagement',
-    tags: ['Consulting', 'Digital Transformation', 'Strategy', 'Change Management', 'Technology'],
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format',
-    createdAt: '2024-01-01T10:00:00.000Z',
-    isPopular: true
-  },
-  {
-    id: 'consulting-2',
-    title: 'AI Strategy & Implementation',
-    description: 'Expert consulting on AI strategy development, implementation planning, and technology selection for business transformation.',
-    category: 'Consulting',
-    subcategory: 'AI Strategy',
-    price: {
-      min: 200,
-      max: 600,
-      currency: '$',
-      pricingModel: 'hourly'
-    },
-    features: [
-      'AI readiness assessment',
-      'Strategy development',
-      'Technology selection',
-      'Implementation planning',
-      'ROI analysis',
-      'Change management',
-      'Ongoing support'
-    ],
-    benefits: [
-      'Clear AI roadmap',
-      'Risk mitigation',
-      'Cost optimization',
-      'Competitive advantage',
-      'Successful implementation'
-    ],
-    useCases: [
-      'AI adoption planning',
-      'Technology selection',
-      'Implementation strategy',
-      'ROI analysis',
-      'Change management'
-    ],
-    targetAudience: 'CTOs, AI directors, innovation leaders',
-    averageMarketPrice: '$300-1000/hour',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/ai-strategy',
-    rating: 4.8,
-    reviewCount: 98,
-    deliveryTime: 'Ongoing engagement',
-    tags: ['Consulting', 'AI Strategy', 'Implementation', 'Technology', 'Innovation'],
-    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format',
-    createdAt: '2024-01-06T10:00:00.000Z'
-  },
-
-  // Automation Services
-  {
-    id: 'automation-1',
-    title: 'Business Process Automation',
-    description: 'Comprehensive business process automation services using RPA, workflow automation, and intelligent process optimization.',
-    category: 'Automation',
-    subcategory: 'Process Automation',
-    price: {
-      min: 2500,
-      max: 15000,
-      currency: '$',
-      pricingModel: 'project'
-    },
-    features: [
-      'Process analysis and mapping',
-      'RPA implementation',
-      'Workflow automation',
-      'Integration development',
-      'Monitoring and analytics',
-      'Training and support',
-      'Continuous improvement'
-    ],
-    benefits: [
-      'Increased efficiency',
-      'Cost reduction',
-      'Error elimination',
-      'Improved compliance',
-      'Scalable operations'
-    ],
-    useCases: [
-      'Data entry automation',
-      'Invoice processing',
-      'Customer onboarding',
-      'Report generation',
-      'Compliance monitoring'
-    ],
-    targetAudience: 'Operations managers, process improvement teams, business analysts',
-    averageMarketPrice: '$8000-25000/project',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/process-automation',
-    rating: 4.7,
-    reviewCount: 167,
-    deliveryTime: '4-12 weeks',
-    tags: ['Automation', 'RPA', 'Process Improvement', 'Workflow', 'Efficiency'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format',
-    createdAt: '2024-01-25T10:00:00.000Z',
-    isNew: true
-  },
-
-  // Integration Services
-  {
-    id: 'integration-1',
-    title: 'Enterprise System Integration',
-    description: 'Professional integration services to connect disparate business systems, databases, and applications for seamless data flow.',
-    category: 'Integration',
-    subcategory: 'System Integration',
-    price: {
-      min: 5000,
-      max: 50000,
-      currency: '$',
-      pricingModel: 'project'
-    },
-    features: [
-      'System analysis and mapping',
-      'API development',
-      'Data transformation',
-      'Real-time synchronization',
-      'Error handling',
-      'Monitoring and logging',
-      'Documentation and training'
-    ],
-    benefits: [
-      'Unified data view',
-      'Improved efficiency',
-      'Reduced manual work',
-      'Better decision making',
-      'Cost savings'
-    ],
-    useCases: [
-      'ERP integrations',
-      'CRM connections',
-      'Database synchronization',
-      'Third-party services',
-      'Legacy system connections'
-    ],
-    targetAudience: 'IT managers, system administrators, business analysts',
-    averageMarketPrice: '$15000-75000/project',
-    contactLink: 'https://ziontechgroup.com/contact',
-    demoLink: 'https://ziontechgroup.com/demo/system-integration',
-    rating: 4.8,
-    reviewCount: 134,
-    deliveryTime: '6-16 weeks',
-    tags: ['Integration', 'Systems', 'APIs', 'Data', 'Enterprise'],
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format',
-    createdAt: '2024-01-09T10:00:00.000Z'
+    technology: ["Python", "TensorFlow", "React", "PostgreSQL"],
+    integrations: ["Salesforce", "HubSpot", "Google Analytics", "Microsoft Power BI"],
+    compliance: ["GDPR", "SOC 2", "HIPAA"],
+    roi: "250% ROI within 6 months",
+    competitors: ["Tableau", "Looker", "Microsoft Power BI", "Qlik"]
   }
+<<<<<<< HEAD
 ];
 
 export const getServicesByCategory = (category: string) => {
@@ -2460,7 +1908,6 @@ export const searchServices = (query: string) => {
     service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
   );
 };
-=======
     id: "cybersecurity",
     name: "Cybersecurity",
     description: "Advanced security solutions for modern digital threats",
@@ -2581,7 +2028,6 @@ export const MARKET_PRICING = {
     competitors: ["Tableau", "Power BI", "Looker"]
   }
 };
-=======
   { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' },
   { label: 'Cybersecurity', value: 'cybersecurity' },
   { label: 'Data & Analytics', value: 'data-analytics' },
@@ -2608,3 +2054,6 @@ export const CONTACT_INFO = {
   address: "364 E Main St STE 1008 Middletown DE 19709",
   website: "https://ziontechgroup.com"
 };
+=======
+];
+>>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445

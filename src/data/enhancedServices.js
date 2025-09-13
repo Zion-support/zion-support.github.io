@@ -1,58 +1,72 @@
 export const ENHANCED_SERVICES = [
-    // AI & Machine Learning Services
     {
-        id: "ai-automation-suite",
-        title: "AI-Powered Business Process Automation Suite",
-        description: "Complete automation solution that uses AI to streamline business processes, reduce manual work by 80%, and increase operational efficiency across departments.",
+        id: "ai-ml-consulting",
+        title: "AI & Machine Learning Consulting",
+        description: "Expert consultation on implementing AI and ML solutions for your business",
         category: "AI & Machine Learning",
-        subcategory: "Process Automation",
-        price: 2500,
-        currency: "$",
-        pricingModel: "subscription",
+        subcategory: "Consulting",
+        price: {
+            basic: 150,
+            professional: 250,
+            enterprise: 400
+        },
         features: [
-            "Intelligent document processing with 99.9% accuracy",
-            "Automated workflow orchestration",
-            "Real-time analytics dashboard",
-            "Custom AI model training",
-            "Multi-language support",
-            "API integration capabilities",
-            "24/7 monitoring and alerts"
+            "AI Strategy Development",
+            "Technology Assessment",
+            "Implementation Roadmap",
+            "ROI Analysis",
+            "Team Training",
+            "Ongoing Support"
         ],
-        benefits: [
-            "Reduce operational costs by 40-60%",
-            "Eliminate manual data entry errors",
-            "Scale operations without additional staff",
-            "Improve customer response times",
-            "Ensure compliance and audit trails"
+        tags: ["AI", "Machine Learning", "Consulting", "Strategy", "Digital Transformation"],
+        featured: true,
+        popular: true,
+        estimatedTime: "2-4 weeks",
+        included: [
+            "Initial Assessment",
+            "Strategy Document",
+            "Implementation Plan",
+            "Technology Recommendations",
+            "Cost Analysis"
         ],
-        useCases: [
-            "Invoice processing and accounts payable",
-            "Customer service ticket routing",
-            "HR onboarding automation",
-            "Sales lead qualification",
-            "Inventory management optimization"
+        notIncluded: [
+            "Actual Implementation",
+            "Hardware/Software",
+            "Ongoing Maintenance"
         ],
-        marketPrice: "$2,500/month - Industry standard: $3,000-5,000/month",
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/ai-automation"
-        },
-        tags: ["AI Automation", "Process Optimization", "Business Intelligence", "RPA", "Machine Learning"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        aiScore: 98,
+        requirements: [
+            "Business Requirements Document",
+            "Current Technology Stack",
+            "Budget Constraints",
+            "Timeline Expectations"
+        ],
+        deliverables: [
+            "AI Strategy Report",
+            "Implementation Roadmap",
+            "Technology Architecture",
+            "Cost-Benefit Analysis",
+            "Risk Assessment"
+        ],
+        technologies: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "AWS SageMaker"],
+        certifications: ["AWS ML Specialty", "Google Cloud ML Engineer", "Microsoft Azure AI Engineer"],
+        support: ["Email Support", "Phone Consultation", "Monthly Review Calls"],
+        warranty: "30-day satisfaction guarantee",
+        location: ["Remote", "On-site", "Hybrid"],
+        languages: ["English", "Spanish", "Portuguese"],
+        availability: "24/7",
         rating: 4.9,
-        reviewCount: 156,
-        availability: "within-week",
-        location: "Global",
-        certifications: ["ISO 27001", "SOC 2 Type II", "GDPR Compliant"],
-        languages: ["English", "Spanish", "French", "German", "Portuguese"]
+        reviews: 127,
+        provider: {
+            name: "AI Solutions Pro",
+            verified: true,
+            rating: 4.9,
+            completedProjects: 89,
+            responseTime: "<2 hours",
+            location: "United States",
+            languages: ["English", "Spanish"],
+            certifications: ["AWS ML Specialty", "Google Cloud ML Engineer"],
+            specialties: ["Computer Vision", "Natural Language Processing", "Predictive Analytics"]
+        }
     },
     // Cybersecurity Services
     {

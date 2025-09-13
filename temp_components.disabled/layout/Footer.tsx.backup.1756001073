@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+>>>>>>> origin/content/blog-sept12
 import { Mail, Smartphone, Building, Globe, Zap, Shield, Users } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -262,3 +265,14 @@ const Footer: React.FC = () => {
     </footer>
   );
 }
+<<<<<<< HEAD
+=======
+=======
+
+const Footer: React.FC = () => {
+  // Temporarily simplified to avoid build issues
+  return <div className="sr-only">Footer temporarily disabled</div>;
+};
+
+export default Footer;
+>>>>>>> origin/content/blog-sept12

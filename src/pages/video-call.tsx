@@ -422,7 +422,7 @@ export default function VideoCall() {
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our clients have to say 
+              Don&apos;t just take our word for it. Here&apos;s what our clients have to say 
               about our video calling solutions.
             </p>
           </div>
@@ -445,7 +445,7 @@ export default function VideoCall() {
                     <p className="text-gray-400 text-sm">{testimonial.role} at {testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 mb-4 leading-relaxed">"{testimonial.content}"</p>
+                <p className="text-gray-300 mb-4 leading-relaxed">&ldquo;{testimonial.content}&rdquo;</p>
                 <div className="flex items-center">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />

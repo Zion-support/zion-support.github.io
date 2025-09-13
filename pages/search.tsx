@@ -1,31 +1,331 @@
-import { useEffect, useMemo, useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import type { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
+import { Search, Filter, GridIcon, List, Loader2, SortAsc } from 'lucide-react';
 
-type ApiResponse = {
-  ok: boolean;
-  query: string;
-  parsed: any;
-  keywords: string[];
-  didYouMean?: string | null;
-  counts: { all: number; talent: number; jobs: number; projects: number };
-  results: {
-    all: any[];
-    talent: any[];
-    jobs: any[];
-    projects: any[];
-  };
+
+
+
+
+
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Slider } from '@/components/ui/slider';
+import { Separator } from '@/components/ui/separator';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { MARKETPLACE_LISTINGS } from '@/data/listingData';
+import { TALENT_PROFILES } from '@/data/talentData';
+import { BLOG_POSTS } from '@/data/blog-posts';
+import { DOCS_SEARCH_ITEMS } from '@/data/docsSearchData';
+import type { ProductListing } from '@/types/listings';
+import type { TalentProfile } from '@/types/talent';
+import type { BlogPost } from '@/types/blog';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+
+interface SearchResult {
+  id: string;
+  title: string;
+  description: string;
+  type: 'product' | 'talent' | 'blog' | 'service' | 'doc';
+  category?: string;
+  url?: string;
+  image?: string;
+  price?: number;
+  currency?: string;
+  rating?: number;
+  tags?: string[];
+  date?: string;
+}
+
+interface SearchFilters {
+  types: string[];
+  category: string;
+  minPrice: number;
+  maxPrice: number;
+  minRating: number;
+  sort: string;
+}
+
+import React, { useState } from 'react';
+
+// Highlight search terms in text
+const HighlightText: React.FC<{ text: string; searchTerm: string; className?: string }> = ({ 
+  text, 
+  searchTerm, 
+  className = '' 
+}) => {
+  if (!searchTerm.trim()) {
+    return <span className={className}>{text}</span>;
+  }
+
+  
+
+
+
+
+      
+              <HighlightText text={result.title} searchTerm={searchTerm} />
+            <Badge variant="secondary" className="text-xs">
+            </Badge>
+
+          <HighlightText text={result.description} searchTerm={searchTerm} />
+
+              <Badge variant="outline" className="text-xs">
+              </Badge>
+              <Badge key={index} variant="outline" className="text-xs">
+                <HighlightText text={tag} searchTerm={searchTerm} />
+              </Badge>
+          
+
+
+    
+
+
+              <Checkbox
+
+      <Separator />
+
+        <Select value={filters.category} onValueChange={(value) => 
+          <SelectTrigger>
+            <SelectValue placeholder="All Categories" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Categories</SelectItem>
+            <SelectItem value="all">All Categories</SelectItem>
+              <SelectItem key={category} value={category}>
+              </SelectItem>
+          </SelectContent>
+        </Select>
+
+      <Separator />
+
+          <Slider
+
+      <Separator />
+
+        <Select value={filters.minRating.toString()} onValueChange={(value) => 
+          <SelectTrigger>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="0">Any Rating</SelectItem>
+            <SelectItem value="0">Any Rating</SelectItem>
+            <SelectItem value="1">1+ Stars</SelectItem>
+            <SelectItem value="1">1+ Stars</SelectItem>
+            <SelectItem value="2">2+ Stars</SelectItem>
+            <SelectItem value="2">2+ Stars</SelectItem>
+            <SelectItem value="3">3+ Stars</SelectItem>
+            <SelectItem value="3">3+ Stars</SelectItem>
+            <SelectItem value="4">4+ Stars</SelectItem>
+            <SelectItem value="4">4+ Stars</SelectItem>
+            <SelectItem value="4.5">4.5+ Stars</SelectItem>
+            <SelectItem value="4.5">4.5+ Stars</SelectItem>
+          </SelectContent>
+        </Select>
+
+
+        <Search className="mx-auto h-16 w-16 text-muted-foreground mb-4" />
+
+              <Button
+              </Button>
+
+
+export const getServerSideProps: GetServerSideProps<SearchPageProps> = async ({ query }: { query: { q?: string } }) => {
+export const getServerSideProps: GetServerSideProps<SearchPageProps> = async ({ query }: { query: { q?: string } }) => {
+  
+
+
+
+
+  const [filters, setFilters] = useState<SearchFilters>({
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  logInfo('🔍 SearchPage component rendered with:', { 
+
+            <EnhancedSearchInput
+          <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
+            <Search className="h-4 w-4" />
+          </Button>
+
+
+            <Select value={filters.sort} onValueChange={(value) => 
+              <SelectTrigger className="w-40">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="relevance">Relevance</SelectItem>
+                <SelectItem value="relevance">Relevance</SelectItem>
+                <SelectItem value="price_asc">Price: Low to High</SelectItem>
+                <SelectItem value="price_asc">Price: Low to High</SelectItem>
+                <SelectItem value="price_desc">Price: High to Low</SelectItem>
+                <SelectItem value="price_desc">Price: High to Low</SelectItem>
+                <SelectItem value="rating">Highest Rated</SelectItem>
+                <SelectItem value="rating">Highest Rated</SelectItem>
+              </SelectContent>
+            </Select>
+
+              <Button
+                <GridIcon className="h-4 w-4" />
+              </Button>
+              <Button
+                <List className="h-4 w-4" />
+              </Button>
+
+            <Button variant="outline" className="lg:hidden" onClick={() => setShowFilters(true)}>
+              <Filter className="h-4 w-4 mr-2" />
+            </Button>
+
+                <Button
+                </Button>
+            <FilterSidebar
+
+            <NoResultsState 
+                <SearchResultCard
+
+export default function SearchPage() {
+
+
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+
+
+import { 
+import SmartHeader from '../components/SmartHeader';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+import SmartFooter from '../components/SmartFooter';
+export default function SearchPage() {
+
+
+
+export default function SearchPage() {
+
+
+
+export default function SearchPage() {;
+
+
+
+
+
+
+
+
+    <Layout>;
+      <Head>;
+      </Head>;
+
+
+
+
+
+
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+
+
+
+
+
+
+
+
+import Head from 'next / head';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+import Layout from './components / Layout';
+import Layout from './components / Layout';
+import {
+export default /**
+    <Layout>;
+      <Head>;
+      </Head>;
+                  <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
+                  <Filter className="w - 4 h - 4 mr - 2" />;
+                  {show_filters ? <ChevronUp className="w - 4 h - 4 ml - 2" /> : <ChevronDown className="w - 4 h - 4 ml - 2" />}
+
+
+
+
+                  <Grid className="w-5 h-5" />
+                  <List className="w-5 h-5" />
+
+                  <Sliders className="w-4 h-4" />
+
+
+
+                  <X className="w-4 h-4" />
+
+
+
+
+
+
+
+
+                <Search className="w-12 h-12 text-white/40" />
+            <AnimatePresence mode="wait">
+
+
+
+
+                <Search className='w-12 h-12 text-white/40' />
+            <AnimatePresence mode='wait'>
+
+
+
+                              <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0' />                              <span>{feature}</span>
+
+
+</Link>
+                      </Link>                    </div>
+
+
+                          <Link
+                          </Link>;
+                          <Clock className="w-4 h-4 mr-1" />;
+                            <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />;
+                      <Link
+                        <ArrowRight className="w-5 h-5" />;
+                      </Link>;
+
+
+
+
+            </AnimatePresence>
+                <Search className='w-12 h-12 text-white/40' />
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 };
 
-function Highlight({ text, keywords }: { text: string; keywords: string[] }) {
-  const spans = useMemo(() => {
-    if (!keywords?.length) return [text];
-    const pattern = new RegExp(`(${keywords.map(k => k.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')).join('|')})`, 'ig');
-    const parts = text.split(pattern);
-    return parts.map((part, i) =>
-      keywords.some(k => new RegExp(k, 'i').test(part)) ? <mark key={i} className="bg-yellow-200 dark:bg-yellow-700/50 rounded px-0.5">{part}</mark> : <span key={i}>{part}</span>
-    );
-  }, [text, keywords]);
-  return <>{spans}</>;
+
+
 }
 
 export default function SearchPage() {
@@ -50,64 +350,12 @@ export default function SearchPage() {
     return map[tab] || [];
   }, [data, tab]);
 
-  return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-end gap-3">
-        <h1 className="text-xl font-semibold">Search</h1>
-        <p className="text-sm text-gray-600 dark:text-gray-400">Find talent, jobs, and projects using natural language.</p>
-      </div>
-      <div className="flex items-center gap-3 border-b border-gray-200 dark:border-gray-800">
-        {(['all','talent','jobs','projects'] as const).map((t) => (
-          <button key={t} onClick={() => setTab(t)} className={`-mb-px px-3 py-2 text-sm border-b-2 ${tab===t?'border-indigo-600 text-indigo-600':'border-transparent text-gray-600 dark:text-gray-400'}`}>
-            {t[0].toUpperCase()+t.slice(1)}{data ? ` (${data.counts[t as keyof typeof data.counts]})` : ''}
-          </button>
-        ))}
-      </div>
 
       {loading && <div className="text-sm text-gray-500">Searching...</div>}
 
-      {data?.didYouMean && results.length === 0 && (
-        <div className="text-sm text-gray-600 dark:text-gray-400">Did you mean <button className="underline" onClick={() => router.push(`/search?q=${encodeURIComponent(data.didYouMean || '')}`)}>{data.didYouMean}</button>?</div>
-      )}
 
-      {data && (
-        <div className="rounded-md border border-gray-200 dark:border-gray-800 divide-y divide-gray-200 dark:divide-gray-800">
-          {results.map((r, i) => (
-            <div key={r.id || i} className="p-4 flex flex-col sm:flex-row sm:items-center gap-3">
-              <div className="flex-1 min-w-0">
-                <div className="font-medium">
                   <Highlight text={r.title} keywords={data.keywords} />
-                </div>
                 {r.subtitle && <div className="text-sm text-gray-600 dark:text-gray-400"><Highlight text={r.subtitle} keywords={data.keywords} /></div>}
                 {r.description && <div className="mt-1 text-sm text-gray-700 dark:text-gray-300 line-clamp-2"><Highlight text={r.description} keywords={data.keywords} /></div>}
-                <div className="mt-2 flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-400">
-                  {r.location && <span>📍 {r.location}</span>}
-                  {typeof r.hourlyRateUsd === 'number' && <span>💵 ${r.hourlyRateUsd}/hr</span>}
-                  {r.availability && <span>⏱ {r.availability}</span>}
-                </div>
-                <div className="mt-2 flex flex-wrap gap-1">
-                  {r.tags?.slice(0, 8).map((t: string, idx: number) => (
-                    <span key={idx} className="px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-700 dark:text-gray-300">{t}</span>
-                  ))}
-                </div>
-              </div>
-              <div className="flex items-center gap-2 text-xs text-gray-500">
-                {r.verified && <span className="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300">Verified</span>}
-              </div>
-            </div>
-          ))}
-          {results.length === 0 && !loading && (
-            <div className="p-6 text-sm text-gray-600 dark:text-gray-400">No results found.</div>
-          )}
-        </div>
-      )}
 
-      {data && (
-        <div className="rounded-md bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-900/40 p-3 text-sm text-indigo-900 dark:text-indigo-200">
-          <div className="font-medium">ZionGPT Tip</div>
-          <div className="mt-1">Try filtering by experience level, availability, or budget range. For example: "Senior React developers under $100/hr".</div>
-        </div>
-      )}
-    </div>
-  );
-}
+    </Layout>);

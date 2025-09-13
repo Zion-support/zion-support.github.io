@@ -39,7 +39,7 @@ export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({
   };
 
   return (
-    <WhitelabelContext.Provider value={value}>
+    <WhitelabelContext.Provider value={contextValue}>
       {children}
     </WhitelabelContext.Provider>
   );

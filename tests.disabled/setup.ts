@@ -1,20 +1,3 @@
-<<<<<<< HEAD:tests.disabled/setup.ts
-import @testing-library/jest-dom';
-import { cleanup } from @testing-library/react';
-import { vi, afterEach } from vitest';
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  observe() {
-    /* do nothing */
-  }
-  unobserve() {
-    /* do nothing */
-  }
-  disconnect() {
-    /* do nothing */
-  }
-=======
 import '@testing-library/jest-dom';
 import { cleanup } from '@testing-library/react';
 import { vi, afterEach } from 'vitest';
@@ -44,8 +27,6 @@ afterEach(() => {
 // (`vi`).  The shim only runs in the test environment and has no effect on
 // production bundles.
 
-<<<<<<< HEAD:tests.disabled/setup.ts
-=======
 // deliberately attaching to global for test environment setup
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment, @typescript-eslint/no-explicit-any
 >>>>>>> autobot/2025-08-24T03-49-38-332Z:tests/setup.ts
@@ -65,9 +46,6 @@ afterEach(() => {
   clearAllMocks: vi.clearAllMocks.bind(vi),
   // Snapshot placeholder (no-op) – Vitest has its own snapshot system.
   // We expose it so imports compile even if we don't use it.
-<<<<<<< HEAD:tests.disabled/setup.ts
-  _SnapshotSerializer: () => {}
-=======
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   SnapshotSerializer: () => {},
 >>>>>>> autobot/2025-08-24T03-49-38-332Z:tests/setup.ts

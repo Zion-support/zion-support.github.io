@@ -1,10 +1,10 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
+	static async getInitialProps(ctx: any) {
+		const initialProps = await Document.getInitialProps(ctx);
+		return { ...initialProps };
+	}
 
   render() {
     // Minimal client scripts
@@ -19,10 +19,22 @@ export default class MyDocument extends Document {
       } catch(e) {}
     })();`;
 
-    const loaderTimeoutScript = `setTimeout(function(){
-      var el = document.getElementById('initial-loader');
-      if (el) el.style.display = 'none';
-    }, 10000);`;
+  const themeScript = `(() => {
+    try {
+      const theme = localStorage.getItem('theme');
+      const isDark = theme === 'dark' || (theme === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      const className = isDark ? 'dark' : 'light';
+      const root = document.documentElement;
+      root.classList.add(className);
+      root.setAttribute('data-theme', className);
+    } catch(e) {}
+  })();`;
+  
+  // Simple loader timeout without complex error handling
+  const loaderTimeoutScript = `setTimeout(function(){
+    const el = document.getElementById('initial-loader');
+    if (el) el.style.display = 'none';
+  }, 10000);`;
 
     return (
       <Html lang="en">

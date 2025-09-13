@@ -50,28 +50,11 @@ export default function Cybersecurity() {
     }
   ];
 
-  const threats = [
-    {
-      name: 'Ransomware',
-      description: 'Advanced ransomware protection and recovery',
       icon: <AlertTriangle className="w-6 h-6" />
-    },
-    {
-      name: 'Phishing',
-      description: 'AI-powered phishing detection and prevention',
       icon: <Eye className="w-6 h-6" />
-    },
-    {
-      name: 'DDoS Attacks',
-      description: 'Distributed denial of service protection',
       icon: <Network className="w-6 h-6" />
-    },
-    {
-      name: 'Data Breaches',
-      description: 'Comprehensive data protection and encryption',
       icon: <Database className="w-6 h-6" />
-    }
-  ];
+export default function CybersecurityPage() {
 
   const benefits = [
     {
@@ -194,41 +177,12 @@ export default function Cybersecurity() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group"
-                >
-                  <div className="flex items-center mb-4">
-                    {service.icon}
-                    <h3 className="text-xl font-semibold text-white ml-3">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-sm text-gray-400">
                         <Star className="w-4 h-4 text-red-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={service.href}
-                    className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors duration-300"
-                  >
-                    Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
-                  </a>
-                </motion.div>
-              ))}
+              <a href="/contact" className="px-8 py-4">Security Assessment</Link>
+              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
+
+
             </div>
           </div>
         </section>
@@ -270,45 +224,40 @@ export default function Cybersecurity() {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Secure Your Digital Assets?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Don't wait for a security breach. Get comprehensive protection 
-                with our advanced cybersecurity solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Started
-                </a>
-                <a
-                  href="/services"
-                  className="px-8 py-4 border border-red-500 text-red-400 font-semibold rounded-xl hover:bg-red-500/10 transition-all duration-300"
-                >
-                  View Security Cases
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+
+
+                </Link>
+
+
       </div>
     </Layout>
   );
 };
 
 export default CybersecurityPage;
+
+import React from 'react',
+import Head from 'next / head',
+import Layout from '../components / layout / Layout',
+import Layout from '../components / layout / Layout',
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
+export default /**
+    <Layout>;
+      <Head>;
+      </Head>;
+              <Shield className="w - 8 h - 8 text - white" />;
+                  <CheckCircle className="w - 5 h - 5 text - emerald - 400 mt - 0.5" />;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import Layout from '../components/layout/Layout';
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
+export default function CybersecurityPage(req, res) {
+    <Layout>;
+      <Head>;
+      </Head>;
+              <Shield className="w-8 h-8 text-white" />;
+                  <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />;
+
+

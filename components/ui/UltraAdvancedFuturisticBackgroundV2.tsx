@@ -84,8 +84,6 @@ export default function UltraAdvancedFuturisticBackgroundV2({
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Enhanced particle system
-    const particles: Array<{
       x: number;
       y: number;
       vx: number;
@@ -93,23 +91,10 @@ export default function UltraAdvancedFuturisticBackgroundV2({
       size: number;
       color: string;
       life: number;
-      maxLife: number;
-      type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk';
-    }> = [];
 
-    // Initialize particles with enhanced variety
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 2 * animationSpeed * intensityMultiplier,
-        vy: (Math.random() - 0.5) * 2 * animationSpeed * intensityMultiplier,
-        size: Math.random() * 3 + 1,
-        color: currentScheme.particles[Math.floor(Math.random() * currentScheme.particles.length)],
-        life: Math.random() * 100,
-        maxLife: 100,
-        type: ['quantum', 'holographic', 'neural', 'cyberpunk'][Math.floor(Math.random() * 4)] as any
-      });
+
+
+
     }
 
     // Enhanced animation loop
@@ -164,152 +149,34 @@ export default function UltraAdvancedFuturisticBackgroundV2({
           ctx.fillStyle = particle.color;
           ctx.fill();
 
-          // Entanglement lines
-          if (Math.random() < 0.1) {
-            const partner = particles[Math.floor(Math.random() * particles.length)];
-            if (partner && partner !== particle) {
-              ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(partner.x, partner.y);
-              ctx.strokeStyle = particle.color;
-              ctx.lineWidth = 1 * alpha;
-              ctx.stroke();
-            }
-          }
-        }
 
-        // Holographic particles with matrix effects
-        if (particle.type === 'holographic' && enableHologram) {
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = 15 * alpha;
-          ctx.strokeStyle = particle.color;
-          ctx.lineWidth = 2 * alpha;
-          ctx.strokeRect(particle.x - size/2, particle.y - size/2, size, size);
 
-          // Matrix rain effect
-          if (Math.random() < 0.05) {
-            ctx.fillStyle = particle.color;
-            ctx.fillText('01', particle.x, particle.y + size);
-          }
-        }
 
-        // Neural particles with network effects
-        if (particle.type === 'neural') {
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = 25 * alpha;
-          ctx.beginPath();
-          ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
-          ctx.fillStyle = particle.color;
-          ctx.fill();
 
-          // Neural connections
-          if (Math.random() < 0.15) {
-            const nearby = particles.filter(p => 
-              Math.abs(p.x - particle.x) < 100 && 
-              Math.abs(p.y - particle.y) < 100
-            );
-            nearby.forEach(near => {
-              if (near !== particle) {
-                ctx.beginPath();
-                ctx.moveTo(particle.x, particle.y);
-                ctx.lineTo(near.x, near.y);
-                ctx.strokeStyle = particle.color;
-                ctx.lineWidth = 0.5 * alpha;
-                ctx.stroke();
-              }
-            });
-          }
-        }
 
-        // Cyberpunk particles with glitch effects
-        if (particle.type === 'cyberpunk') {
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = 30 * alpha;
           
-          // Glitch effect
-          if (enableGlitch && Math.random() < glitchIntensity) {
-            ctx.save();
-            ctx.translate(particle.x, particle.y);
-            ctx.rotate(Math.random() * Math.PI);
-            ctx.scale(1 + Math.random() * 0.5, 1);
-            ctx.fillStyle = particle.color;
-            ctx.fillRect(-size/2, -size/2, size, size);
-            ctx.restore();
-          } else {
-            ctx.fillStyle = particle.color;
-            ctx.fillRect(particle.x - size/2, particle.y - size/2, size, size);
-          }
-        }
 
-        ctx.restore();
-      });
 
-      // Enhanced background effects
-      if (enableQuantumEffects) {
-        // Quantum field ripples
-        ctx.save();
-        ctx.globalAlpha = 0.1;
-        ctx.strokeStyle = currentScheme.primary;
-        ctx.lineWidth = 2;
         
-        for (let i = 0; i < 3; i++) {
-          const time = Date.now() * 0.001 + i * 2;
-          const radius = (time * 50) % 400;
-          ctx.beginPath();
-          ctx.arc(canvas.width / 2, canvas.height / 2, radius, 0, Math.PI * 2);
-          ctx.stroke();
-        }
-        ctx.restore();
-      }
 
-      // Holographic grid overlay
-      if (enableHolographic) {
-        ctx.save();
-        ctx.globalAlpha = 0.05;
-        ctx.strokeStyle = currentScheme.secondary;
-        ctx.lineWidth = 1;
 
-        const gridSize = 100;
-        for (let x = 0; x < canvas.width; x += gridSize) {
-          ctx.beginPath();
-          ctx.moveTo(x, 0);
-          ctx.lineTo(x, canvas.height);
-          ctx.stroke();
-        }
-        for (let y = 0; y < canvas.height; y += gridSize) {
-          ctx.beginPath();
-          ctx.moveTo(0, y);
-          ctx.lineTo(canvas.width, y);
-          ctx.stroke();
-        }
-        ctx.restore();
-      }
 
-      animationId = requestAnimationFrame(animate);
-    };
 
-    animate();
 
-    // Handle resize
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
 
-    window.addEventListener('resize', handleResize);
 
-    return () => {
-      cancelAnimationFrame(animationId);
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [particleCount, animationSpeed, intensityMultiplier, currentScheme, enableGlitch, enableHologram, enableQuantum, enableHolographic, enableQuantumEffects]);
 
-  return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* Enhanced Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+
+
+
+
+
+
+
+
+
+
+
         style={{
           filter: `blur(${glitchIntensity}px)`,
           transform: `scale(${1 + glitchIntensity * 0.1})`
@@ -353,19 +220,24 @@ export default function UltraAdvancedFuturisticBackgroundV2({
           }}
         />
 
-        {/* Enhanced Content */}
         <AnimatePresence>
-          {isVisible && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="relative z-20"
-            >
-              {children}
-            </motion.div>
-          )}
         </AnimatePresence>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
 
       {/* Enhanced CSS Animations */}
@@ -380,19 +252,52 @@ export default function UltraAdvancedFuturisticBackgroundV2({
           100% { transform: translateY(50px); }
         }
 
-        @keyframes neural-pulse {
-          0%, 100% { opacity: 0.05; }
-          50% { opacity: 0.15; }
-        }
 
-        @keyframes cyberpunk-glitch {
-          0%, 100% { transform: translate(0); }
-          20% { transform: translate(-2px, 2px); }
-          40% { transform: translate(-2px, -2px); }
-          60% { transform: translate(2px, 2px); }
-          80% { transform: translate(2px, -2px); }
-        }
-      `}</style>
-    </div>
-  );
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default UltraAdvancedFuturisticBackgroundV2;
+export default UltraAdvancedFuturisticBackgroundV2;    </div>);
+export default UltraAdvancedFuturisticBackgroundV2;
+
+
+

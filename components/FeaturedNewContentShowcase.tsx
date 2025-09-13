@@ -1,302 +1,317 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Clock, Tag, Star, Zap, Globe, Leaf, Award, TrendingUp, Download, BookOpen, PlayCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, Clock, Eye, Download, TrendingUp, Award, Zap } from 'lucide-react';
 
-interface ContentItem {
-  title: string;
-  description: string;
-  href: string;
-  type: 'blog' | 'resource' | 'case-study' | 'video' | 'webinar';
-  readTime?: string;
-  isNew?: boolean;
-  icon?: string;
-  category?: string;
-  featured?: boolean;
-  isTrending?: boolean;
-  badge?: string;
-  badgeColor?: string;
-  metrics?: string;
-  author?: string;
-  publishDate?: string;
-  views?: string;
-  rating?: number;
-}
+const FeaturedNewContentShowcase: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('featured');
 
-interface FeaturedNewContentShowcaseProps {
-  title?: string;
-  subtitle?: string;
-  className?: string;
-  showViewAll?: boolean;
-  viewAllHref?: string;
-  viewAllText?: string;
-  columns?: 2 | 3 | 4;
-}
-
-const FeaturedNewContentShowcase: React.FC<FeaturedNewContentShowcaseProps> = ({
-  title = "Featured New Content",
-  subtitle = "Discover our latest AI insights, case studies, and resources",
-  className = '',
-  showViewAll = true,
-  viewAllHref = '/content-showcase',
-  viewAllText = 'View All Content',
-  columns = 3
-}) => {
-  const featuredContent: ContentItem[] = [
+  const featuredContent = [
     {
       title: "AI 2025 Revolutionary Breakthroughs: The Future is Here",
-      description: "Discover the most revolutionary AI breakthroughs of 2025 that are reshaping industries, transforming businesses, and creating unprecedented opportunities for innovation and growth.",
+      description: "Discover the most groundbreaking AI innovations of 2025 that are transforming industries worldwide. From quantum AI to autonomous systems, explore the future of artificial intelligence.",
       href: "/blog/ai-2025-revolutionary-breakthroughs",
-      type: "blog",
-      readTime: "15 min read",
-      isNew: true,
       icon: "🚀",
-      category: "AI Innovation",
+      category: "Featured Article",
+      readTime: "25 min read",
+      views: "12.5K",
       featured: true,
-      isTrending: true,
-      badge: "Trending",
-      badgeColor: "bg-red-500",
-      metrics: "2.5K views",
-      author: "Zion Tech Group",
-      publishDate: "Jan 17, 2025",
-      rating: 4.9
+      badge: "HOT",
+      badgeColor: "bg-red-100 text-red-800",
+      gradient: "from-purple-100 to-pink-100",
+      metrics: "300% Efficiency Gains"
     },
     {
-      title: "AI Healthcare Diagnosis Revolution: 95% Accuracy Breakthrough",
-      description: "Discover how a leading healthcare system achieved 95% diagnostic accuracy and 60% faster diagnosis times using revolutionary AI technology, saving lives and reducing costs by $2.3M annually.",
-      href: "/case-studies/ai-healthcare-diagnosis-revolution-2025",
-      type: "case-study",
-      readTime: "12 min read",
-      isNew: true,
-      icon: "🏥",
-      category: "Healthcare AI",
-      featured: true,
-      badge: "Featured",
-      badgeColor: "bg-green-500",
-      metrics: "$2.3M savings",
-      author: "Zion Tech Group",
-      publishDate: "Jan 17, 2025",
-      rating: 4.8
-    },
-    {
-      title: "AI 2025 Comprehensive Implementation Playbook: Complete Guide",
-      description: "The ultimate 200-page AI implementation playbook for 2025. Step-by-step framework, templates, checklists, and proven strategies to successfully implement AI in your organization with 95% success rate.",
-      href: "/resources/ai-2025-comprehensive-implementation-playbook",
-      type: "resource",
-      readTime: "200 pages",
-      isNew: true,
-      icon: "📚",
-      category: "Implementation",
-      featured: true,
-      isTrending: true,
-      badge: "Popular",
-      badgeColor: "bg-purple-500",
-      metrics: "50+ templates",
-      author: "Zion Tech Group",
-      publishDate: "Jan 17, 2025",
-      rating: 4.9
-    },
-    {
-      title: "AI Financial Services Transformation: $50M Cost Savings Case Study",
-      description: "Discover how a leading financial services company achieved $50M cost savings and 300% efficiency gains through comprehensive AI transformation.",
-      href: "/case-studies/ai-financial-services-transformation-2025",
-      type: "case-study",
+      title: "AI Space Exploration Breakthrough: $2.1B Mission Success",
+      description: "Discover how AI achieved 99.9% autonomous operation in a $2.1B space exploration mission, revolutionizing space technology and opening new frontiers.",
+      href: "/case-studies/ai-space-exploration-breakthrough-2025",
+      icon: "🚀",
+      category: "Case Study",
       readTime: "18 min read",
-      isNew: false,
-      icon: "🏦",
-      category: "Financial AI",
-      featured: false,
-      badge: "Success Story",
-      badgeColor: "bg-blue-500",
-      metrics: "$50M savings",
-      author: "Zion Tech Group",
-      publishDate: "Jan 15, 2025",
-      rating: 4.7
+      views: "8.7K",
+      featured: true,
+      badge: "BREAKTHROUGH",
+      badgeColor: "bg-blue-100 text-blue-800",
+      gradient: "from-blue-100 to-cyan-100",
+      metrics: "99.9% Autonomous"
     },
     {
-      title: "AI Manufacturing Automation: 300% Efficiency Gains",
-      description: "Learn how smart factory implementation achieved 300% efficiency gains through AI-powered automation and predictive maintenance.",
-      href: "/case-studies/ai-manufacturing-automation-2025",
-      type: "case-study",
-      readTime: "16 min read",
-      isNew: false,
-      icon: "🏭",
-      category: "Manufacturing AI",
-      featured: false,
-      badge: "Case Study",
-      badgeColor: "bg-orange-500",
-      metrics: "300% efficiency",
-      author: "Zion Tech Group",
-      publishDate: "Jan 14, 2025",
-      rating: 4.6
-    },
-    {
-      title: "AI Trends 2025: Comprehensive Market Analysis",
-      description: "Deep dive into the AI trends shaping 2025 and beyond, with market insights, investment opportunities, and strategic recommendations.",
-      href: "/resources/ai-2025-trends-report",
-      type: "resource",
-      readTime: "45 pages",
-      isNew: false,
-      icon: "📊",
-      category: "Market Analysis",
-      featured: false,
-      badge: "Report",
-      badgeColor: "bg-indigo-500",
-      metrics: "Market insights",
-      author: "Zion Tech Group",
-      publishDate: "Jan 12, 2025",
-      rating: 4.8
+      title: "AI Implementation Master Guide 2026: Complete 200+ Page Resource",
+      description: "Master AI implementation with our comprehensive 200+ page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
+      href: "/resources/ai-implementation-master-guide-2026",
+      icon: "📚",
+      category: "Free Download",
+      readTime: "200+ pages",
+      views: "15.2K",
+      featured: true,
+      badge: "MASTER",
+      badgeColor: "bg-green-100 text-green-800",
+      gradient: "from-green-100 to-teal-100",
+      metrics: "200+ Pages"
     }
   ];
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'blog': return <BookOpen className="w-4 h-4" />;
-      case 'case-study': return <Award className="w-4 h-4" />;
-      case 'resource': return <Download className="w-4 h-4" />;
-      case 'video': return <PlayCircle className="w-4 h-4" />;
-      case 'webinar': return <Globe className="w-4 h-4" />;
-      default: return <BookOpen className="w-4 h-4" />;
+  const trendingContent = [
+    {
+      title: "The Generative AI Revolution: Transforming Business in 2025",
+      description: "Explore how generative AI is revolutionizing business operations, from content creation to customer service automation with practical implementation strategies.",
+      href: "/blog/ai-2025-generative-ai-revolution",
+      icon: "🎨",
+      category: "Trending Now",
+      readTime: "22 min read",
+      views: "9.8K",
+      trending: true,
+      badge: "TRENDING",
+      badgeColor: "bg-orange-100 text-orange-800",
+      gradient: "from-orange-100 to-red-100",
+      metrics: "10x Content Output"
+    },
+    {
+      title: "AI Healthcare Diagnosis Success: 95% Accuracy and 80% Faster Processing",
+      description: "Discover how a leading healthcare provider achieved 95% diagnostic accuracy and 80% faster processing times using AI. Complete case study with implementation details.",
+      href: "/case-studies/ai-healthcare-diagnosis-success-2025",
+      icon: "🏥",
+      category: "Case Study",
+      readTime: "15 min read",
+      views: "7.3K",
+      trending: true,
+      badge: "SUCCESS",
+      badgeColor: "bg-green-100 text-green-800",
+      gradient: "from-green-100 to-blue-100",
+      metrics: "95% Accuracy"
+    },
+    {
+      title: "AI Startup Funding Guide 2025: From Seed to Series A with $47B Market Insights",
+      description: "Master AI startup funding in 2025 with our comprehensive guide. Learn from $47B market insights, pitch templates, and real success stories from seed to Series A.",
+      href: "/blog/ai-startup-funding-guide-2025",
+      icon: "💰",
+      category: "Startup Strategy",
+      readTime: "22 min read",
+      views: "11.2K",
+      trending: true,
+      badge: "HOT",
+      badgeColor: "bg-green-100 text-green-800",
+      gradient: "from-green-100 to-blue-100",
+      metrics: "$47B+ Funding"
+    }
+  ];
+
+  const latestContent = [
+    {
+      title: "Ethical AI Governance: Building Trust in the Age of Artificial Intelligence",
+      description: "Navigate the complex landscape of AI ethics and governance. Learn how to implement responsible AI practices and build trustworthy AI systems.",
+      href: "/blog/ai-2025-ethical-ai-governance",
+      icon: "⚖️",
+      category: "AI Ethics",
+      readTime: "25 min read",
+      views: "6.8K",
+      isNew: true,
+      badge: "NEW",
+      badgeColor: "bg-green-100 text-green-800",
+      gradient: "from-green-100 to-blue-100",
+      metrics: "95% Trust Score"
+    },
+    {
+      title: "Edge Computing Revolution: Bringing AI to the Edge in 2025",
+      description: "Discover how edge computing is revolutionizing AI deployment, enabling real-time processing and unlocking new possibilities for IoT and smart cities.",
+      href: "/blog/ai-2025-edge-computing-revolution",
+      icon: "⚡",
+      category: "Edge Computing",
+      readTime: "20 min read",
+      views: "5.4K",
+      isNew: true,
+      badge: "NEW",
+      badgeColor: "bg-orange-100 text-orange-800",
+      gradient: "from-orange-100 to-yellow-100",
+      metrics: "90% Latency Reduction"
+    },
+    {
+      title: "AI Go-To-Market Strategy 2025: From Zero to Traction",
+      description: "Positioning, pricing, and distribution playbook to launch and scale AI products. Learn proven strategies from successful AI companies.",
+      href: "/blog/ai-2025-ai-go-to-market-strategy",
+      icon: "📈",
+      category: "Growth & Marketing",
+      readTime: "12 min read",
+      views: "4.9K",
+      isNew: true,
+      badge: "NEW",
+      badgeColor: "bg-blue-100 text-blue-800",
+      gradient: "from-blue-100 to-purple-100",
+      metrics: "Faster Time-to-Value"
+    }
+  ];
+
+  const getContentByTab = () => {
+    switch (activeTab) {
+      case 'featured':
+        return featuredContent;
+      case 'trending':
+        return trendingContent;
+      case 'latest':
+        return latestContent;
+      default:
+        return featuredContent;
     }
   };
 
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog': return 'text-blue-600 bg-blue-100';
-      case 'case-study': return 'text-green-600 bg-green-100';
-      case 'resource': return 'text-purple-600 bg-purple-100';
-      case 'video': return 'text-red-600 bg-red-100';
-      case 'webinar': return 'text-indigo-600 bg-indigo-100';
-      default: return 'text-gray-600 bg-gray-100';
-    }
-  };
-
-  const getColumnClasses = () => {
-    switch (columns) {
-      case 2: return 'grid-cols-1 md:grid-cols-2';
-      case 3: return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
-      case 4: return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4';
-      default: return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
-    }
-  };
+  const tabs = [
+    { id: 'featured', label: 'Featured', icon: Star, count: featuredContent.length },
+    { id: 'trending', label: 'Trending', icon: TrendingUp, count: trendingContent.length },
+    { id: 'latest', label: 'Latest', icon: Zap, count: latestContent.length }
+  ];
 
   return (
-    <section className={`py-16 bg-white ${className}`}>
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 mb-4">
-            <Zap className="w-4 h-4 mr-2" />
-            <span className="text-sm font-semibold">Latest Content</span>
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🔥 ULTRA CONTENT SHOWCASE</span>
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">{title}</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Discover Our Latest AI Insights
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Stay ahead with our latest research, case studies, and technical guides. 
+            Fresh content published weekly with actionable insights for AI transformation.
+          </p>
         </div>
 
-        <div className={`grid ${getColumnClasses()} gap-8`}>
-          {featuredContent.map((content, index) => (
-            <Link key={index} href={content.href} className="group">
-              <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group-hover:border-blue-300">
-                {/* Header with badges */}
-                <div className="p-6 pb-4">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center space-x-2">
-                      {content.isNew && (
-                        <span className="px-2 py-1 text-xs font-semibold text-white bg-red-500 rounded-full">
-                          NEW
-                        </span>
-                      )}
-                      {content.badge && (
-                        <span className={`px-2 py-1 text-xs font-semibold text-white rounded-full ${content.badgeColor}`}>
-                          {content.badge}
-                        </span>
-                      )}
-                      {content.isTrending && (
-                        <span className="px-2 py-1 text-xs font-semibold text-white bg-orange-500 rounded-full flex items-center">
-                          <TrendingUp className="w-3 h-3 mr-1" />
-                          TRENDING
-                        </span>
-                      )}
-                    </div>
-                    <div className="text-3xl">{content.icon}</div>
-                  </div>
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? 'bg-indigo-600 text-white shadow-lg'
+                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                }`}
+              >
+                <Icon className="w-4 h-4" />
+                <span>{tab.label}</span>
+                <span className={`text-xs px-2 py-1 rounded-full ${
+                  activeTab === tab.id ? 'bg-white/20' : 'bg-gray-100'
+                }`}>
+                  {tab.count}
+                </span>
+              </button>
+            );
+          })}
+        </div>
 
-                  {/* Type and category */}
-                  <div className="flex items-center space-x-3 mb-3">
-                    <span className={`inline-flex items-center px-2 py-1 text-xs font-medium rounded-full ${getTypeColor(content.type)}`}>
-                      {getTypeIcon(content.type)}
-                      <span className="ml-1 capitalize">{content.type.replace('-', ' ')}</span>
-                    </span>
-                    {content.category && (
-                      <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
-                        {content.category}
+        {/* Content Grid */}
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+        >
+          {getContentByTab().map((item, index) => (
+            <motion.div
+              key={item.href}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Link href={item.href} className="group block">
+                <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full">
+                  <div className={`aspect-video bg-gradient-to-br ${item.gradient} flex items-center justify-center relative`}>
+                    <div className="text-6xl">{item.icon}</div>
+                    <div className="absolute top-4 left-4">
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${item.badgeColor}`}>
+                        {item.badge}
                       </span>
-                    )}
-                  </div>
-
-                  {/* Title and description */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
-                    {content.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
-                    {content.description}
-                  </p>
-
-                  {/* Metrics and metadata */}
-                  <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
-                    <div className="flex items-center space-x-4">
-                      {content.readTime && (
-                        <div className="flex items-center">
-                          <Clock className="w-3 h-3 mr-1" />
-                          {content.readTime}
-                        </div>
-                      )}
-                      {content.metrics && (
-                        <div className="flex items-center">
-                          <Star className="w-3 h-3 mr-1" />
-                          {content.metrics}
-                        </div>
-                      )}
                     </div>
-                    {content.rating && (
-                      <div className="flex items-center">
-                        <Star className="w-3 h-3 text-yellow-400 mr-1" />
-                        <span className="font-medium">{content.rating}</span>
+                    {item.featured && (
+                      <div className="absolute top-4 right-4">
+                        <Award className="w-5 h-5 text-yellow-500" />
                       </div>
                     )}
                   </div>
-
-                  {/* Author and date */}
-                  <div className="flex items-center justify-between text-xs text-gray-400">
-                    <span>{content.author}</span>
-                    <span>{content.publishDate}</span>
+                  
+                  <div className="p-8">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">
+                        {item.category}
+                      </span>
+                      <div className="flex items-center gap-1 text-gray-500 text-sm">
+                        <Clock className="w-3 h-3" />
+                        <span>{item.readTime}</span>
+                      </div>
+                      <div className="flex items-center gap-1 text-gray-500 text-sm">
+                        <Eye className="w-3 h-3" />
+                        <span>{item.views}</span>
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors line-clamp-2">
+                      {item.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-6 leading-relaxed line-clamp-3">
+                      {item.description}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center">
+                          <span className="text-indigo-600 font-bold text-sm">ZT</span>
+                        </div>
+                        <span className="text-sm text-gray-600">Zion Tech Group</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-indigo-600 font-medium group-hover:underline">
+                          Read More
+                        </span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                    
+                    {item.metrics && (
+                      <div className="mt-4 pt-4 border-t border-gray-100">
+                        <div className="text-sm font-semibold text-gray-900">
+                          Key Impact: {item.metrics}
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </div>
-
-                {/* Footer with CTA */}
-                <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-700">
-                      {content.type === 'resource' ? 'Download' : 'Read More'}
-                    </span>
-                    <ArrowRight className="w-4 h-4 text-blue-600 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-            </Link>
+                </article>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        {showViewAll && (
-          <div className="text-center mt-12">
-            <Link 
-              href={viewAllHref}
-              className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              <BookOpen className="w-5 h-5 mr-2" />
-              {viewAllText}
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-2xl">
+            <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business with AI?</h3>
+            <p className="text-indigo-100 mb-6 max-w-2xl mx-auto">
+              Join thousands of professionals who are already leveraging our AI insights 
+              to drive innovation and growth in their organizations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/content-showcase"
+                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg flex items-center justify-center gap-2"
+              >
+                <Eye className="w-5 h-5" />
+                View All Content
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
+              >
+                Get Expert Consultation
+              </Link>
+            </div>
           </div>
-        )}
+        </div>
       </div>
     </section>
   );

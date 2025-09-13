@@ -34,6 +34,18 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
 
   const promotions: PromotionItem[] = [
     {
+      id: 'ai-gtm-2025',
+      title: 'AI Go-To-Market Strategy 2025: From Zero to Traction',
+      description: 'Positioning, pricing, and distribution playbook to launch and scale AI products in 2025.',
+      type: 'blog',
+      href: '/blog/ai-2025-ai-go-to-market-strategy',
+      badge: 'JUST PUBLISHED',
+      badgeColor: 'bg-orange-100 text-orange-800',
+      icon: Star,
+      ctaText: 'Read Article',
+      isNew: true
+    },
+    {
       id: 'case-study-1',
       title: 'Manufacturing Giant Achieves 400% ROI',
       description: 'See how a Fortune 500 company saved $2.3B with AI transformation',

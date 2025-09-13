@@ -23,6 +23,25 @@ describe('LoginForm', () => {
       res: { status: 200 },
       data: { token: 'jwt' },
     });
+>>>>>>> origin/content/blog-sept12:tests.disabled/LoginForm.test.tsx.backup.1755989866
+jest.mock('@/hooks/useAuth', () => ({ useAuth: () => ({ isLoading: false }) }));
+jest.mock('@/hooks/use-toast');
+jest.mock('@/services/authService');
+jest.mock('react-router-dom', () => ({
+  ...(jest.requireActual('react-router-dom') as any),
+  useNavigate: jest.fn(),
+}));
+
+describe('LoginForm', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('valid credentials navigates to dashboard', async () => {
+    (authService.loginUser as jest.Mock).mockResolvedValue({
+      res: { status: 200 },
+      data: { token: 'jwt' },
+    });
     (toastMod.toast.error as jest.Mock).mockImplementation(() => {});
     const navigateMock = jest.fn();
     (router.useNavigate as jest.Mock).mockReturnValue(navigateMock);
@@ -48,6 +67,11 @@ describe('LoginForm', () => {
       data: { error: 'Invalid credentials' },
     });
     (toastMod.toast.error as jest.Mock).mockImplementation(() => {});
+    (authService.loginUser as jest.Mock).mockResolvedValue({
+      res: { status: 401 },
+      data: { error: 'Invalid credentials' },
+    });
+    (toastMod.toast.error as jest.Mock).mockImplementation(() => {});
 
     render(
       <MemoryRouter>
@@ -60,6 +84,7 @@ describe('LoginForm', () => {
     fireEvent.submit(screen.getByRole('button', { name: /login/i }));
 
     await screen.findByRole('button', { name: /login/i });
+    expect(toastMod.toast.error).toHaveBeenCalledWith('Invalid credentials');
     expect(toastMod.toast.error).toHaveBeenCalledWith('Invalid credentials');
   });
 });

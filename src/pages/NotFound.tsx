@@ -1,34 +1,31 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
 
-const NotFound: React.FC = memo(() => {
+const NotFound: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <div className="text-9xl font-bold text-white mb-4">404</div>
-        <h1 className="text-4xl font-bold text-white mb-4">Page Not Found</h1>
-        <p className="text-xl text-blue-200 mb-8 max-w-md mx-auto">
-          Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white flex items-center justify-center">
+      <SEO 
+        title="404 - Page Not Found | Zion Tech Group"
+        description="The page you are looking for could not be found."
+        keywords="404, page not found, error"
+      />
+      
+      <div className="text-center p-6">
+        <h1 className="text-6xl font-bold mb-4 text-zion-cyan">404</h1>
+        <h2 className="text-2xl font-semibold mb-4 text-white">Page Not Found</h2>
+        <p className="text-lg text-zion-slate-light mb-8">
+          The page you are looking for could not be found.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            to="/" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-          >
-            Go Home
-          </Link>
-          <Link 
-            to="/contact" 
-            className="border-2 border-blue-400 text-blue-300 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-          >
-            Contact Support
-          </Link>
-        </div>
+        <Link 
+          to="/" 
+          className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+        >
+          Return to Home
+        </Link>
       </div>
     </div>
   );
-});
-
-NotFound.displayName = 'NotFound';
+};
 
 export default NotFound;

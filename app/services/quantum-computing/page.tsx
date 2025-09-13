@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Zap, Target, Users, TrendingUp, Shield, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {

@@ -1,45 +1,52 @@
-[[redirects]]
-  from = "/api/*"
-  to = "https://backend.example.com/:splat"
-  status = 200
-=======
 [build]
-  command = "npm run build"
+  # Use our custom build script
+  command = "./netlify-build.sh"
+  # Publish the dist directory
   publish = "dist"
-
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
-=======
-[build]
-  # Use `npm ci` for deterministic installs
-  command = "npm ci && npm run build && (n=0; until [ $n -ge 3 ]; do curl -sf --connect-timeout 10 $DEPLOY_PRIME_URL/api/health | grep '\"status\":\"ok\"' && break; n=$((n+1)); echo "Health check attempt $n failed, retrying in 15s..."; sleep 15; done; if [ $n -ge 3 ]; then echo "Health check failed after 3 attempts." && exit 1; fi)"
-  publish = ".next"
-
-[build] # touch v4.57 to trigger Netlify rebuild
-  # Build the site with Vite and publish the dist folder
-  # Netlify runs dependency installation before build.command. Avoid redundant npm ci.
-  command = "npm run build:ci"
-  publish = "dist"
+  # Functions directory
   functions = "netlify/functions"
-  command_timeout = "30m"
-  # Skip TypeScript checking during build
 
-# API functions (if needed)
-# [functions]
-# directory = "netlify/functions"
-
-[context.production.environment]
+[build.environment]
+  # Set Node.js version
+  NODE_VERSION = "20.18.0"
+  # Set production environment
   NODE_ENV = "production"
-  # Ensure dev deps are available in prod builds on Netlify
-  NPM_CONFIG_PRODUCTION = "false"
+  # Increase timeout for dependency installation
+  NETLIFY_TIMEOUT = "600"
+  # Force use of Yarn instead of pnpm
+  NPM_CONFIG_PACKAGE_MANAGER = "yarn"
 
-[context.deploy-preview]
-  command = "npm run build:ci"
+# Build settings
+[build.processing]
+  skip_processing = false
 
-[context.branch-deploy]
-  command = "npm run build:ci"
+# Redirects and rewrites
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
-# Next.js configuration - no SPA fallback needed
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache settings
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Build plugins
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  [plugins.inputs]
+    output_path = "lighthouse-report.html"
+
+# Edge functions
+[functions]
+  directory = "netlify/functions"

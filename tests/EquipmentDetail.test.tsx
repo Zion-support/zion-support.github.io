@@ -15,6 +15,11 @@ describe('EquipmentDetail page', () => {
     const { asFragment, getByText } = render(<EquipmentDetail />);
     expect(getByText(/Pro Camera X1000/i)).toBeInTheDocument();
     expect(getByText(/Full-frame CMOS/i)).toBeInTheDocument();
+    (router.useParams as jest.Mock).mockReturnValue({ equipmentId: 'pro-camera-x1000' });
+
+    const { asFragment, getByText } = render(<EquipmentDetail />);
+    expect(getByText(/Pro Camera X1000/i)).toBeInTheDocument();
+    expect(getByText(/Full-frame CMOS/i)).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
   });
 });

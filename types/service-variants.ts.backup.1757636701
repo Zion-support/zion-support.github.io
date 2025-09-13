@@ -93,7 +93,10 @@ export type ServiceVariant =
   | 'biotech-futuristic'
   | 'simulation-futuristic'
   | 'space-futuristic'
+<<<<<<< HEAD:types/service-variants.ts.backup.1757636701
 <<<<<<< HEAD
+=======
+>>>>>>> origin/content/blog-sept12:types.disabled/service-variants.ts.backup.1755990302
   | 'ai-consensus'
   | 'quantum-security'
   | 'autonomous-logistics'
@@ -115,6 +118,7 @@ export type ServiceVariant =
   | 'project-management'
   | 'financial-automation'
   | 'ai-consciousness'
+<<<<<<< HEAD:types/service-variants.ts.backup.1757636701
   | 'quantum-reality'
   | 'temporal-analytics'
   | 'quantum-consciousness'
@@ -141,7 +145,21 @@ export type ServiceVariant =
   | 'autonomous-ai'
   | 'quantum-reality-fusion';
 =======
+  | 'quantum-teleportation'
+  | 'space-colony'
+  | 'neural-ecosystem'
+  | 'ai-corporation'
+  | 'quantum-materials'
+  | 'metaverse-economy'
+  | 'ai-research'
+  | 'quantum-neural'
+  | 'space-manufacturing';
+>>>>>>> origin/content/blog-sept12:types.disabled/service-variants.ts.backup.1755990302
+=======
   | 'infrastructure-futuristic'
   | 'support-futuristic'
   | 'transformation-futuristic';
+<<<<<<< HEAD:types/service-variants.ts.backup.1757636701
 >>>>>>> origin/backup-main-20250823-224952
+=======
+>>>>>>> origin/content/blog-sept12:types.disabled/service-variants.ts.backup.1755990302

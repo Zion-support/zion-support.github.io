@@ -194,7 +194,7 @@ export default function SupplyChain() {
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
                 Revolutionize your supply chain operations with AI-powered visibility, 
-                optimization, and risk management. From warehouse to delivery, we've got you covered.
+                optimization, and risk management. From warehouse to delivery, we&apos;ve got you covered.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300">

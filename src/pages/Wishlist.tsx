@@ -1,78 +1,38 @@
-import { useFavorites } from '@/hooks/useFavorites';
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
-import { TALENT_PROFILES } from '@/data/talentData';
-import { ProductListingCard } from '@/components/ProductListingCard';
-import { TalentCard } from '@/components/talent/TalentCard';
-import { Button } from '@/components/ui/button';
-import { useAuth } from '@/hooks/useAuth';
-import { useNavigate } from 'react-router-dom';
-import { useCart } from '@/context/CartContext';
+import React from 'react';
+import { SEO } from '@/components/SEO';
 
-export default function Wishlist() {
-  const dispatch = useAppDispatch();
-  const items = useAppSelector((s) => s.wishlist.items);
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const { dispatch } = useCart();
-
-  useEffect(() => {
-    if (!user) {
-      navigate(`/login?next=${encodeURIComponent(location.pathname)}`);
-      return;
-    }
-    dispatch(loadWishlistFromDB(user.id!));
-  }, [user, dispatch, navigate, location]);
-
-  const addToCart = async (item: { id: string; title?: string; price?: number }) => {
-    const res = await fetch('/api/cart/add', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        id: item.id,
-        name: item.title || 'Item',
-        price: item.price || 0,
-        quantity: 1,
-      }),
-    });
-    const items = await res.json();
-    dispatch({ type: 'SET_ITEMS', payload: items });
-  };
-
-  const pathForItem = (item: { id: string; type: string }) => {
-    switch (item.type) {
-      case 'product':
-        return `/marketplace/listing/${item.id}`;
-      case 'service':
-        return `/services/${item.id}`;
-      case 'talent':
-        return `/talent/${item.id}`;
-      default:
-        return '#';
-    }
-  };
-
+const WishlistPage: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-4">Your Wishlist</h1>
-      {items.length === 0 ? (
-        <p>No items saved.</p>
-      ) : (
-        <ul className="space-y-4">
-          {items.map((item) => (
-            <li key={`${item.type}-${item.id}`} className="border border-zion-blue-light p-4 rounded-lg flex justify-between items-center">
-              <div>{item.data?.title || item.data?.full_name || item.id}</div>
-              <div className="flex gap-2">
-                <Link to={pathForItem(item)} className="text-zion-cyan underline">
-                  Go to item
-                </Link>
-                <Button size="sm" variant="outline" onClick={() => handleRemove(item.id)}>
-                  Remove
-                </Button>
-              </div>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+    <>
+      <SEO 
+        title="Wishlist - Zion Tech Group" 
+        description="Manage your saved services and wishlist items."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Wishlist
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Manage your saved services and wishlist items.
+            </p>
+          </div>
+          
+          <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-blue-light/30">
+            <div className="text-center">
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Coming Soon
+              </h2>
+              <p className="text-zion-slate-light mb-6">
+                Our wishlist feature is currently under development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-}
+};
+
+export default WishlistPage;

@@ -220,7 +220,7 @@ export default function Webinars() {
                 Upcoming Webinars
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Don't miss these live sessions with industry experts. Register now to secure your spot.
+                Don&apos;t miss these live sessions with industry experts. Register now to secure your spot.
               </p>
             </div>
             

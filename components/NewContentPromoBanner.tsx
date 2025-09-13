@@ -1,147 +1,195 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, ArrowRight, Star, Clock, Sparkles, Rocket, Brain, Zap } from 'lucide-react';
 
 interface ContentItem {
-  id: string;
   title: string;
   description: string;
   href: string;
-  type: 'blog' | 'case-study' | 'service';
+  icon: any;
+  category: string;
+  readTime: string;
   featured: boolean;
+  gradient: string;
 }
 
-const NewContentPromoBanner: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+interface NewContentPromoBannerProps {
+  className?: string;
+}
+
+const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ className = '' }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentContent, setCurrentContent] = useState(0);
 
   const newContent: ContentItem[] = [
     {
-      id: '1',
-      title: 'AI Enterprise Automation Revolution 2025',
-      description: 'Discover how AI is transforming enterprise operations with 300% ROI and unprecedented efficiency gains.',
-      href: '/blog/ai-2025-enterprise-automation-revolution',
-      type: 'blog',
-      featured: true
+      title: "AI 2025 Revolutionary Breakthroughs",
+      description: "Discover groundbreaking AI innovations transforming industries worldwide",
+      href: "/blog/ai-2025-revolutionary-breakthroughs",
+      icon: Rocket,
+      category: "New Article",
+      readTime: "25 min read",
+      featured: true,
+      gradient: "from-purple-500 to-pink-500"
     },
     {
-      id: '2',
-      title: 'AI Healthcare Diagnosis Breakthrough 2025',
-      description: 'Revolutionary AI innovations achieving 98.7% accuracy in medical diagnosis, saving lives and reducing costs.',
-      href: '/blog/ai-healthcare-diagnosis-breakthrough-2025',
-      type: 'blog',
-      featured: true
+      title: "AI Space Exploration Breakthrough",
+      description: "$2.1B mission success with 99.9% autonomous operation",
+      href: "/case-studies/ai-space-exploration-breakthrough-2025",
+      icon: Brain,
+      category: "Case Study",
+      readTime: "18 min read",
+      featured: true,
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
-      id: '3',
-      title: 'AI Financial Services Transformation Success',
-      description: 'Complete case study: How a major bank achieved 300% ROI through strategic AI implementation.',
-      href: '/case-studies/ai-financial-services-transformation-2025',
-      type: 'case-study',
-      featured: true
+      title: "AI Implementation Master Guide 2026",
+      description: "Complete 200+ page resource with proven strategies and templates",
+      href: "/resources/ai-implementation-master-guide-2026",
+      icon: Zap,
+      category: "Free Download",
+      readTime: "200+ pages",
+      featured: true,
+      gradient: "from-green-500 to-teal-500"
     },
     {
-      id: '4',
-      title: 'AI Automation Services',
-      description: 'Transform your business with cutting-edge AI automation solutions. 90% faster processing, 60% cost reduction.',
-      href: '/services/ai-automation',
-      type: 'service',
-      featured: true
+      title: "AI 2025 Advanced Automation",
+      description: "The future of intelligent business operations with 300% efficiency gains",
+      href: "/blog/ai-2025-advanced-automation",
+      icon: Sparkles,
+      category: "Trending",
+      readTime: "32 min read",
+      featured: true,
+      gradient: "from-orange-500 to-red-500"
+    },
+    {
+      title: "AI Cybersecurity Revolution",
+      description: "Protecting the digital future with 99.9% threat detection accuracy",
+      href: "/blog/ai-2025-cybersecurity-revolution",
+      icon: Star,
+      category: "Critical",
+      readTime: "38 min read",
+      featured: true,
+      gradient: "from-red-500 to-pink-500"
     }
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % newContent.length);
-    }, 5000);
+    // Show banner after a short delay
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 2000);
 
-    return () => clearInterval(interval);
+    // Auto-rotate content every 8 seconds
+    const rotationTimer = setInterval(() => {
+      setCurrentContent((prev) => (prev + 1) % newContent.length);
+    }, 8000);
+
+    return () => {
+      clearTimeout(timer);
+      clearInterval(rotationTimer);
+    };
   }, [newContent.length]);
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return '📝';
-      case 'case-study':
-        return '📊';
-      case 'service':
-        return '🚀';
-      default:
-        return '✨';
-    }
+  const handleClose = () => {
+    setIsVisible(false);
   };
 
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return 'from-blue-500 to-cyan-500';
-      case 'case-study':
-        return 'from-green-500 to-emerald-500';
-      case 'service':
-        return 'from-purple-500 to-pink-500';
-      default:
-        return 'from-gray-500 to-gray-600';
-    }
-  };
+  const currentItem = newContent[currentContent];
 
   if (!isVisible) return null;
 
-  const currentContent = newContent[currentIndex];
-
   return (
-    <div className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
-      </div>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className={`fixed top-0 left-0 right-0 z-50 ${className}`}
+      >
+        <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden">
+          {/* Animated background */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[length:20px_20px] animate-pulse"></div>
+          </div>
 
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 py-8">
-          <div className="flex items-center justify-between">
-            {/* Content */}
-            <div className="flex-1 pr-8">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-3">{getTypeIcon(currentContent.type)}</span>
-                <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
-                  {currentContent.type === 'case-study' ? 'Case Study' : 
-                   currentContent.type === 'service' ? 'Service' : 'New Article'}
-                </span>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div className="flex items-center justify-between">
+              {/* Content */}
+              <div className="flex items-center space-x-4 flex-1">
+                <div className="flex items-center space-x-2">
+                  <motion.div
+                    key={currentContent}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center"
+                  >
+                    <currentItem.icon className="w-5 h-5 text-white" />
+                  </motion.div>
+                  
+                  <div className="flex items-center space-x-2">
+                    <Sparkles className="w-4 h-4 text-yellow-400" />
+                    <span className="text-sm font-semibold bg-yellow-400/20 px-2 py-1 rounded-full">
+                      {currentItem.category}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex-1 min-w-0">
+                  <motion.div
+                    key={currentContent}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <h3 className="text-sm font-bold truncate">
+                      {currentItem.title}
+                    </h3>
+                    <p className="text-xs text-white/80 truncate">
+                      {currentItem.description}
+                    </p>
+                  </motion.div>
+                </div>
+
+                <div className="flex items-center space-x-2 text-xs text-white/80">
+                  <Clock className="w-3 h-3" />
+                  <span>{currentItem.readTime}</span>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-2">
-                {currentContent.title}
-              </h3>
-              <p className="text-lg text-indigo-100 mb-4">
-                {currentContent.description}
-              </p>
-              <div className="flex items-center space-x-4">
-                <Link 
-                  href={currentContent.href}
-                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
+
+              {/* Actions */}
+              <div className="flex items-center space-x-3 ml-4">
+                <Link
+                  href={currentItem.href}
+                  className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors flex items-center space-x-2"
                 >
-                  Read More
+                  <span>Explore</span>
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link 
-                  href="/content-showcase"
-                  className="text-white hover:text-indigo-200 transition-colors"
+
+                <button
+                  onClick={handleClose}
+                  className="text-white/80 hover:text-white transition-colors p-1"
                 >
-                  View All Content →
-                </Link>
+                  <X className="w-5 h-5" />
+                </button>
               </div>
             </div>
 
-            {/* Navigation Dots */}
-            <div className="flex flex-col space-y-2">
-              {newContent.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentIndex 
-                      ? 'bg-white scale-125' 
-                      : 'bg-white/50 hover:bg-white/75'
-                  }`}
-                />
-              ))}
+            {/* Progress indicator */}
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
+              <motion.div
+                className="h-full bg-white/60"
+                initial={{ width: "0%" }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 8, ease: "linear" }}
+                key={currentContent}
+              />
             </div>
           </div>
         </div>
@@ -161,7 +209,7 @@ const NewContentPromoBanner: React.FC = () => {
       <div className="absolute bottom-0 left-0 h-1 bg-white/20 w-full">
         <div 
           className="h-full bg-white transition-all duration-5000 ease-linear"
-          style={{ width: `${((currentIndex + 1) / newContent.length) * 100}%` }}
+          style={{ width: `${((currentContent + 1) / newContent.length) * 100}%` }}
         />
       </div>
     </div>

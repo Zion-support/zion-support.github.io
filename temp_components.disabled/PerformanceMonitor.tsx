@@ -230,10 +230,3 @@ import React from 'react';
       </motion.div>
     </AnimatePresence>
   );
-=======
-const PerformanceMonitor: React.FC = () => {
-  // Temporarily simplified to avoid build issues
-  return <div className="sr-only">PerformanceMonitor temporarily disabled</div>;
-};
-
-export default PerformanceMonitor;

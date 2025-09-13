@@ -6,19 +6,11 @@ import React, { useState, useEffect } from 'react';
 
 const ScrollToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const scrollPosition = useScrollPosition();
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
+    setIsVisible(scrollPosition.y > threshold);
+  }, [scrollPosition.y, threshold]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -26,6 +18,10 @@ const ScrollToTop: React.FC = () => {
       behavior: 'smooth',
     });
   };
+
+  if (!isVisible) {
+    return null;
+  }
 
   return (
     <AnimatePresence>

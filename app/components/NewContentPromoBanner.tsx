@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 interface NewContentPromoBannerProps {
   variant?: 'default' | 'featured' | 'minimal';
@@ -8,13 +8,293 @@ interface NewContentPromoBannerProps {
 
 const newContentItems = [
   {
+    title: "Advanced AI Architecture 2025",
+    description: "Scalable, resilient AI systems with distributed computing patterns",
+    url: "/blog/ai-2025-advanced-ai-architecture",
+    type: "Blog Post",
+    category: "AI Engineering",
+    icon: "🏗️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Cybersecurity Revolution 2025",
+    description: "Next-gen defense strategies with AI-powered threat detection",
+    url: "/blog/ai-2025-cybersecurity-revolution",
+    type: "Blog Post",
+    category: "Cybersecurity",
+    icon: "🛡️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Quantum Computing Breakthrough 2025",
+    description: "AI's next frontier with quantum machine learning and algorithms",
+    url: "/blog/ai-2025-quantum-computing-breakthrough",
+    type: "Blog Post",
+    category: "Quantum Computing",
+    icon: "⚛️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Implementation Master Guide 2026",
+    description: "Complete enterprise playbook with 250+ pages of frameworks and case studies",
+    url: "/resources/ai-implementation-master-guide-2026",
+    type: "Resource",
+    category: "Implementation",
+    icon: "📚",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Automation Implementation Guide 2025",
+    description: "180+ page comprehensive playbook with frameworks and templates",
+    url: "/resources/ai-automation-implementation-guide-2025",
+    type: "Resource",
+    category: "Automation",
+    icon: "🤖",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Copilots for Engineering Teams",
+    description: "Secure, repo-aware copilots that reduce toil and speed reviews",
+    url: "/blog/ai-copilots-for-engineering",
+    type: "Blog Post",
+    category: "Engineering Productivity",
+    icon: "👩‍💻",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Benchmarking Best Practices 2025",
+    description: "Reliable evals for quality, latency, and cost across models and tasks",
+    url: "/resources/ai-benchmarking-best-practices-2025",
+    type: "Resource",
+    category: "Evaluation",
+    icon: "📏",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Customer Success Automation 2025",
+    description: "Playbooks to automate onboarding, QBRs, and proactive retention",
+    url: "/resources/ai-customer-success-automation-2025",
+    type: "Resource",
+    category: "Customer Success",
+    icon: "🤝",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Data Pipeline Automation 2025",
+    description: "Streaming, orchestration, and monitoring patterns for reliable AI dataflows",
+    url: "/blog/ai-2025-data-pipeline-automation",
+    type: "Blog Post",
+    category: "Data Engineering",
+    icon: "🛠️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Agentic Orchestration in the Enterprise",
+    description: "Workflow blueprints, safety gates, and cost controls for agent systems",
+    url: "/resources/agentic-orchestration-enterprise-2025",
+    type: "Resource",
+    category: "AI Engineering",
+    icon: "🧠",
+    featured: false,
+    new: true
+  },
+  {
+    title: "Retail Personalization Playbook 2025",
+    description: "200+ page guide to 1:1 experiences that drive 300% revenue growth",
+    url: "/resources/ai-retail-personalization-playbook-2025",
+    type: "Resource",
+    category: "Growth",
+    icon: "🛍️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Practical AI Agents for Small Businesses",
+    description: "Automate support, sales outreach, and back-office reliably",
+    url: "/blog/ai-agents-for-smbs",
+    type: "Blog Post",
+    category: "SMB Automation",
+    icon: "🏪",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI 2025 Breakthrough Innovations",
+    description: "Revolutionary AI technologies reshaping industries",
+    url: "/blog/ai-2025-breakthrough-innovations",
+    type: "Blog Post",
+    category: "AI Innovation",
+    icon: "🚀",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Real-Time Voice Agents in 2025",
+    description: "Low-latency architectures, guardrails, and ROI for production",
+    url: "/blog/ai-2025-realtime-voice-agents",
+    type: "Blog Post",
+    category: "Agents",
+    icon: "🎙️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Insurance Claims Automation: 55% OPEX Reduction",
+    description: "Tier-1 insurer automates FNOL, triage, and fraud checks",
+    url: "/case-studies/ai-insurance-claims-automation-success-2025",
+    type: "Case Study",
+    category: "Insurance",
+    icon: "📄",
+    featured: false,
+    new: true
+  },
+  {
+    title: "AI Evaluation Checklist 2025",
+    description: "Operational evals for safety, latency, cost, and reliability",
+    url: "/resources/ai-evaluation-checklist-2025",
+    type: "Resource",
+    category: "Evaluation",
+    icon: "✅",
+    featured: false,
+    new: true
+  },
+  {
+    title: "AI Model Evaluation Playbook 2025",
+    description: "Production-ready evals for LLM apps and agent systems",
+    url: "/blog/ai-2025-model-evaluation-playbook",
+    type: "Blog Post",
+    category: "Engineering",
+    icon: "✅",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Production Agent Patterns 2025",
+    description: "Reliable patterns for deploying AI agents in production",
+    url: "/blog/ai-2025-production-agent-patterns",
+    type: "Blog Post",
+    category: "AI Engineering",
+    icon: "🧭",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Edge AI Governance Blueprint 2025",
+    description: "Privacy-by-design controls for compliant edge intelligence",
+    url: "/blog/ai-2025-edge-governance-blueprint",
+    type: "Blog Post",
+    category: "Governance",
+    icon: "🛡️",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Sustainability & Green Tech 2025",
+    description: "Building eco-friendly AI systems for a sustainable future",
+    url: "/blog/ai-sustainability-green-tech-2025",
+    type: "Blog Post",
+    category: "Sustainability",
+    icon: "🌱",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Enterprise GenAI Blueprint 2025",
+    description: "Governance, cost, and performance optimization for GenAI at scale",
+    url: "/blog/ai-2025-enterprise-genai-blueprint",
+    type: "Blog Post",
+    category: "Enterprise AI",
+    icon: "🏢",
+    featured: true,
+    new: true
+  },
+  {
+    title: "AI Sustainability Transformation: 60% Energy Reduction",
+    description: "Fortune 500 company achieves carbon neutrality with AI",
+    url: "/case-studies/ai-sustainability-transformation-2025",
+    type: "Case Study",
+    category: "Sustainability",
+    icon: "🌱",
+    featured: true,
+    new: true
+  },
+  {
+    title: "Agentic Orchestration Blueprint 2025",
+    description: "Practical patterns for reliable, cost-efficient agent systems",
+    url: "/blog/ai-2025-agentic-orchestration-blueprint",
+    type: "Blog Post",
+    category: "AI Engineering",
+    icon: "🧩",
+    featured: false,
+    new: true
+  },
+  {
+    title: "Startup Distribution Playbook 2025",
+    description: "Channels, motions, and metrics that compound",
+    url: "/blog/startup-distribution-playbook-2025",
+    type: "Blog Post",
+    category: "Growth",
+    icon: "📈",
+    featured: false,
+    new: true
+  },
+  {
     title: "AI 2025: Breakthrough Innovations",
     description: "Discover revolutionary AI innovations transforming industries",
     url: "/blog/ai-2025-breakthrough-innovations",
     type: "Blog Post",
     category: "AI Trends",
     icon: "🚀",
-    featured: true,
+    featured: false,
+    new: true
+  },
+  {
+    title: "AI Ethical Governance Framework 2025",
+    description: "Comprehensive guide to implementing ethical AI governance frameworks",
+    url: "/blog/ai-2025-ethical-ai-governance",
+    type: "Blog Post",
+    category: "AI Governance",
+    icon: "⚖️",
+    featured: false,
+    new: true
+  },
+  {
+    title: "AI Automation Trends 2025",
+    description: "The future of intelligent automation and autonomous systems",
+    url: "/blog/ai-2025-automation-trends",
+    type: "Blog Post",
+    category: "AI Automation",
+    icon: "🤖",
+    featured: false,
+    new: true
+  },
+  {
+    title: "AI Supply Chain Optimization: $150M Success",
+    description: "Fortune 500 company achieves unprecedented cost savings",
+    url: "/case-studies/ai-supply-chain-optimization-success-2025",
+    type: "Case Study",
+    category: "Supply Chain",
+    icon: "📦",
+    featured: false,
+    new: true
+  },
+  {
+    title: "AI Automation Implementation Guide 2025",
+    description: "180+ page comprehensive playbook with frameworks and templates",
+    url: "/resources/ai-automation-implementation-guide-2025",
+    type: "Resource",
+    category: "Implementation",
+    icon: "📋",
+    featured: false,
     new: true
   },
   {
@@ -24,17 +304,17 @@ const newContentItems = [
     type: "Case Study",
     category: "Success Story",
     icon: "🏆",
-    featured: true,
+    featured: false,
     new: true
   },
   {
-    title: "AI 2025: Complete Implementation Playbook",
-    description: "250+ page guide with templates, frameworks & case studies",
-    url: "/resources/ai-2025-complete-implementation-playbook",
-    type: "Resource",
-    category: "Guide",
-    icon: "📋",
-    featured: true,
+    title: "GenAI Security Blueprint 2025",
+    description: "Enterprise-grade practices to secure GenAI systems in production",
+    url: "/blog/ai-2025-genai-security-blueprint",
+    type: "Blog Post",
+    category: "Security",
+    icon: "🛡️",
+    featured: false,
     new: true
   },
   {
@@ -54,6 +334,26 @@ const newContentItems = [
     type: "Case Study",
     category: "Manufacturing",
     icon: "🏭",
+    featured: false,
+    new: true
+  },
+  {
+    title: "Telecom Network Automation: 55% OPEX Reduction",
+    description: "Global operator automates incidents and changes with AI agents",
+    url: "/case-studies/ai-telecom-network-automation-success-2025",
+    type: "Case Study",
+    category: "Telecom",
+    icon: "📶",
+    featured: false,
+    new: true
+  },
+  {
+    title: "AI Governance Starter Kit 2025",
+    description: "Templates and policies to operationalize responsible AI",
+    url: "/resources/ai-governance-starter-kit-2025",
+    type: "Resource",
+    category: "Governance",
+    icon: "📋",
     featured: false,
     new: true
   }
