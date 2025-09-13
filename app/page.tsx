@@ -93,6 +93,13 @@ import AI2030TranscendentIntelligencePromotionBanner from '../components/AI2030T
 import AI2035SingularityPromotionBanner from '../components/AI2035SingularityPromotionBanner';
 import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDiscoveryWidget2030';
 
+// New 2025 content showcase components
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentShowcase2025PromotionBanner from '../components/UltimateContentShowcase2025PromotionBanner';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import RevolutionaryAIInnovations2025 from '../components/RevolutionaryAIInnovations2025';
+import RevolutionaryAIInnovations2025PromotionBanner from '../components/RevolutionaryAIInnovations2025PromotionBanner';
+
 // AI 2026 new content components
 import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromotionBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
@@ -344,6 +351,12 @@ export default function HomePage() {
         <UltimateContentShowcase2026PromotionBanner />
         <AITrendsPredictions2026PromotionBanner />
         <QuantumComputingSolutions2026PromotionBanner />
+        
+        {/* NEW 2025 REVOLUTIONARY INNOVATIONS PROMOTION BANNER */}
+        <RevolutionaryAIInnovations2025PromotionBanner />
+        
+        {/* NEW 2025 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
+        <UltimateContentShowcase2025PromotionBanner />
         
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
@@ -916,6 +929,15 @@ export default function HomePage() {
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Discovery..." />}>
           <UltimateContentDiscovery2026 />
         </Suspense>
+        
+        {/* REVOLUTIONARY AI INNOVATIONS 2025 */}
+        <RevolutionaryAIInnovations2025 />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
         
         {/* AI 2025 CONTENT DISCOVERY WIDGET */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
