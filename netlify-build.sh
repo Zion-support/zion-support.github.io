@@ -79,6 +79,9 @@ fi
 
 # Build the project
 echo "Building project..."
+# Set environment variables to handle SWC issues
+export NEXT_TELEMETRY_DISABLED=1
+export NEXT_PRIVATE_SKIP_SWC_DOWNLOAD=1
 yarn run build
 
 echo "Build completed successfully!"

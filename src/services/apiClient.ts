@@ -110,11 +110,6 @@ export function setAuthToken(token: string) {
   (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`;
 }
 
-apiClient.interceptors.response.use(
-  (response) => response,
-  async (error) => {
-    const status = error.response?.status;
-
 axiosRetry(apiClient, {
   retries: 3,
   retryCondition: (error) => {
