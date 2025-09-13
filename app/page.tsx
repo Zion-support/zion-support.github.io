@@ -141,6 +141,19 @@ import AI2027BreakthroughContentShowcase from '../components/AI2027BreakthroughC
 import AI2028_2030FuturePredictionsPromotionBanner from '../components/AI2028_2030FuturePredictionsPromotionBanner';
 import AI2028_2030FuturePredictionsShowcase from '../components/AI2028_2030FuturePredictionsShowcase';
 
+// AI 2029-2035 Future Predictions Components
+import AI2029_2035FuturePredictionsPromotionBanner from '../components/AI2029_2035FuturePredictionsPromotionBanner';
+import AI2029_2035FuturePredictionsShowcase from '../components/AI2029_2035FuturePredictionsShowcase';
+
+// Quantum Computing Breakthroughs 2030 Components
+import QuantumComputingBreakthroughs2030PromotionBanner from '../components/QuantumComputingBreakthroughs2030PromotionBanner';
+
+// Advanced Automation Solutions 2030 Components
+import AdvancedAutomationSolutions2030PromotionBanner from '../components/AdvancedAutomationSolutions2030PromotionBanner';
+
+// Ultimate Content Showcase 2030
+import UltimateContentShowcase2030 from '../components/UltimateContentShowcase2030';
+
 // Quantum Computing Breakthroughs 2028 Components
 import QuantumComputingBreakthroughs2028PromotionBanner from '../components/QuantumComputingBreakthroughs2028PromotionBanner';
 import QuantumComputingBreakthroughs2028Showcase from '../components/QuantumComputingBreakthroughs2028Showcase';
@@ -241,6 +254,31 @@ const HomePage: React.FC = () => {
               {/* AI 2028-2030 Future Predictions Showcase */}
               <Suspense fallback={<LoadingSpinner />}>
                 <AI2028_2030FuturePredictionsShowcase />
+              </Suspense>
+
+              {/* AI 2029-2035 Future Predictions Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2029_2035FuturePredictionsPromotionBanner />
+              </Suspense>
+
+              {/* AI 2029-2035 Future Predictions Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2029_2035FuturePredictionsShowcase />
+              </Suspense>
+
+              {/* Quantum Computing Breakthroughs 2030 Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumComputingBreakthroughs2030PromotionBanner />
+              </Suspense>
+
+              {/* Advanced Automation Solutions 2030 Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AdvancedAutomationSolutions2030PromotionBanner />
+              </Suspense>
+
+              {/* Ultimate Content Showcase 2030 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <UltimateContentShowcase2030 />
               </Suspense>
 
               {/* Quantum Computing Breakthroughs 2028 Promotion Banner */}
