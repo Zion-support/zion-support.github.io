@@ -34,11 +34,11 @@ const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const ExpandedServicesPage = React.lazy(() => import('./pages/ExpandedServicesPage'));
 const ServiceComparisonPage = React.lazy(() => import('./pages/ServiceComparisonPage'));
-const ServiceCalculatorPage = React.lazy(() => import('./pages/ServiceCalculatorPage'));
-const AllServicesOverviewPage = React.lazy(() => import('./pages/AllServicesOverviewPage'));
-const ServiceAnalyticsDashboard = React.lazy(() => import('./pages/ServiceAnalyticsDashboard'));
-const ServiceMarketplace = React.lazy(() => import('./pages/ServiceMarketplace'));
-const ServicesShowcase = React.lazy(() => import('./pages/ServicesShowcase'));
+// const ServiceCalculatorPage = React.lazy(() => import('./pages/ServiceCalculatorPage')); // Page doesn't exist
+// const AllServicesOverviewPage = React.lazy(() => import('./pages/AllServicesOverviewPage')); // Page doesn't exist
+// const ServiceAnalyticsDashboard = React.lazy(() => import('./pages/ServiceAnalyticsDashboard')); // Page doesn't exist
+// const ServiceMarketplace = React.lazy(() => import('./pages/ServiceMarketplace')); // Page doesn't exist
+const ServicesShowcase = React.lazy(() => import('./pages/ServicesShowcase.jsx'));
 const baseRoutes = [
     { path: '/', element: _jsx(Home, {}) },
     { path: '/match', element: _jsx(AIMatcherPage, {}) },
@@ -48,11 +48,11 @@ const baseRoutes = [
     { path: '/talents', element: _jsx(TalentsPage, {}) },
     { path: '/services', element: _jsx(ServicesPage, {}) },
     { path: '/expanded-services', element: _jsx(ExpandedServicesPage, {}) },
-    { path: '/all-services', element: _jsx(AllServicesOverviewPage, {}) },
+    // { path: '/all-services', element: _jsx(AllServicesOverviewPage, {}) }, // Page doesn't exist
     { path: '/service-comparison', element: _jsx(ServiceComparisonPage, {}) },
-    { path: '/service-calculator', element: _jsx(ServiceCalculatorPage, {}) },
-    { path: '/service-analytics', element: _jsx(ServiceAnalyticsDashboard, {}) },
-    { path: '/service-marketplace', element: _jsx(ServiceMarketplace, {}) },
+    // { path: '/service-calculator', element: _jsx(ServiceCalculatorPage, {}) }, // Page doesn't exist
+    // { path: '/service-analytics', element: _jsx(ServiceAnalyticsDashboard, {}) }, // Page doesn't exist
+    // { path: '/service-marketplace', element: _jsx(ServiceMarketplace, {}) }, // Page doesn't exist
     { path: '/services-showcase', element: _jsx(ServicesShowcase, {}) },
     { path: '/it-onsite-services', element: _jsx(ITOnsiteServicesPage, {}) },
     { path: '/categories', element: _jsx(Categories, {}) },
