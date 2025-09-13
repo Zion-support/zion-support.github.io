@@ -16,6 +16,7 @@ import {
   Award,
   Globe
 } from 'lucide-react';
+import NewContent2025PromotionBanner from '../src/components/NewContent2025PromotionBanner';
 
 // Testimonials data
 const testimonials = [
@@ -178,6 +179,13 @@ export default function HomePage() {
                 </div>
               ))}
             </motion.div>
+          </div>
+        </section>
+
+        {/* New Content Promotion Banner */}
+        <section className="px-6 py-8">
+          <div className="max-w-7xl mx-auto">
+            <NewContent2025PromotionBanner />
           </div>
         </section>
 
