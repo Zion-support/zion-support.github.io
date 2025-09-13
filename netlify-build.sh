@@ -8,6 +8,10 @@ export NODE_ENV=production
 export NETLIFY=true
 # Force use of Yarn
 export NPM_CONFIG_PACKAGE_MANAGER=yarn
+# Disable Next.js telemetry and force SWC fallback
+export NEXT_TELEMETRY_DISABLED=1
+export SWC_BINARY_PATH=""
+export NEXT_SWC_BINARY_PATH=""
 
 # Clear all caches and corrupted packages
 echo "Clearing all caches and corrupted packages..."
@@ -79,6 +83,46 @@ fi
 
 # Build the project
 echo "Building project..."
-yarn run build
+
+# Try different build approaches
+build_success=false
+
+# Approach 1: Standard build
+echo "Attempting standard build..."
+if yarn run build; then
+  echo "Standard build successful!"
+  build_success=true
+else
+  echo "Standard build failed, trying fallback approaches..."
+fi
+
+# Approach 2: Build with SWC fallback
+if [ "$build_success" = false ]; then
+  echo "Attempting build with SWC JavaScript fallback..."
+  export SWC_BINARY_PATH=""
+  export NEXT_SWC_BINARY_PATH=""
+  export NEXT_TELEMETRY_DISABLED=1
+  
+  if yarn run build; then
+    echo "SWC fallback build successful!"
+    build_success=true
+  else
+    echo "SWC fallback build failed, trying with legacy provider..."
+  fi
+fi
+
+# Approach 3: Build with legacy OpenSSL provider
+if [ "$build_success" = false ]; then
+  echo "Attempting build with legacy OpenSSL provider..."
+  export NODE_OPTIONS="--max-old-space-size=6144 --openssl-legacy-provider"
+  
+  if yarn run build; then
+    echo "Legacy provider build successful!"
+    build_success=true
+  else
+    echo "All build attempts failed!"
+    exit 1
+  fi
+fi
 
 echo "Build completed successfully!"

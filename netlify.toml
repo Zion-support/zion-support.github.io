@@ -15,6 +15,11 @@
   NETLIFY_TIMEOUT = "600"
   # Force use of Yarn instead of pnpm
   NPM_CONFIG_PACKAGE_MANAGER = "yarn"
+  # Disable Next.js telemetry
+  NEXT_TELEMETRY_DISABLED = "1"
+  # Force SWC to use JavaScript fallback
+  SWC_BINARY_PATH = ""
+  NEXT_SWC_BINARY_PATH = ""
 
 # Build settings
 [build.processing]
