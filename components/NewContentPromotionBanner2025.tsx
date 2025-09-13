@@ -1,131 +1,139 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Users, Zap, Globe } from 'lucide-react';
+'use client';
 
-const NewContentPromotionBanner2025 = () => {
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { ArrowRight, Star, Zap, Sparkles, TrendingUp, Users, Globe } from 'lucide-react';
+
+const NewContentPromotionBanner2025: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const features = [
+    "AI-Powered Automation",
+    "Quantum Computing",
+    "Neural Interfaces",
+    "Enterprise Solutions"
+  ];
+
+  const benefits = [
+    {
+      icon: <Zap className="w-6 h-6 text-yellow-500" />,
+      title: "Lightning Fast",
+      description: "Deploy solutions in minutes, not months"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6 text-green-500" />,
+      title: "Proven ROI",
+      description: "Average 300% return on investment"
+    },
+    {
+      icon: <Globe className="w-6 h-6 text-blue-500" />,
+      title: "Global Scale",
+      description: "Trusted by 10,000+ companies worldwide"
+    }
+  ];
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-black opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+    <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 py-16">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-x-12 animate-pulse"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-white">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white bg-opacity-20 text-white text-sm font-medium mb-6">
-              <Star className="w-4 h-4 mr-2" />
-              New Content Available
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          {/* Main Content */}
+          <div className={`transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <div className="flex items-center justify-center space-x-2 mb-6">
+              <Star className="w-6 h-6 text-yellow-400 fill-current" />
+              <span className="text-yellow-200 font-semibold text-lg">NEW CONTENT ALERT</span>
+              <Star className="w-6 h-6 text-yellow-400 fill-current" />
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Revolutionary Content
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
-                Just Released
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Revolutionary AI Solutions
+              <br />
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                2025 Edition
               </span>
-            </h2>
+            </h1>
             
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Discover our latest breakthrough insights, AI solutions, and cutting-edge technologies that are transforming businesses worldwide. Get exclusive access to expert analysis, case studies, and implementation guides.
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Discover the latest breakthrough technologies that are transforming industries worldwide. 
+              From quantum computing to neural interfaces, explore the future today.
             </p>
+          </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-300">50+</div>
-                <div className="text-sm text-blue-200">New Articles</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-300">100K+</div>
-                <div className="text-sm text-blue-200">Readers</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-300">95%</div>
-                <div className="text-sm text-blue-200">Success Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-300">24/7</div>
-                <div className="text-sm text-blue-200">Updates</div>
-              </div>
+          {/* Dynamic Feature Display */}
+          <div className={`transform transition-all duration-1000 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <div className="flex items-center justify-center space-x-4 mb-8">
+              <Sparkles className="w-8 h-8 text-yellow-400" />
+              <span className="text-2xl font-bold text-white">
+                Now Featuring: <span className="text-yellow-400">{features[currentFeature]}</span>
+              </span>
+              <Sparkles className="w-8 h-8 text-yellow-400" />
             </div>
+          </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/content-hub"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors group"
+          {/* Benefits Grid */}
+          <div className={`transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center justify-center mb-4">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-blue-100">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className={`transform transition-all duration-1000 delay-800 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <Link 
+                href="/new-content-2025"
+                className="group bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 hover:text-gray-900 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
               >
-                Explore Content
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <span>Explore New Content</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
-                href="/newsletter"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+              
+              <Link 
+                href="/ai-solutions"
+                className="group border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
               >
-                Subscribe Now
+                <span>View All Solutions</span>
+                <Users className="w-5 h-5" />
               </Link>
             </div>
           </div>
 
-          {/* Right Content - Feature Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="flex items-center mb-4">
-                <Zap className="w-8 h-8 text-yellow-300 mr-3" />
-                <h3 className="text-lg font-semibold text-white">AI Solutions</h3>
+          {/* Trust Indicators */}
+          <div className={`transform transition-all duration-1000 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <div className="mt-12 pt-8 border-t border-white/20">
+              <p className="text-blue-200 mb-4">Trusted by leading organizations worldwide</p>
+              <div className="flex items-center justify-center space-x-8 opacity-60">
+                <div className="text-white font-bold text-lg">Microsoft</div>
+                <div className="text-white font-bold text-lg">Google</div>
+                <div className="text-white font-bold text-lg">Amazon</div>
+                <div className="text-white font-bold text-lg">IBM</div>
+                <div className="text-white font-bold text-lg">Tesla</div>
               </div>
-              <p className="text-blue-100 text-sm mb-4">
-                Cutting-edge AI automation and machine learning solutions for modern businesses.
-              </p>
-              <div className="text-yellow-300 text-sm font-medium">15+ New Articles</div>
-            </div>
-
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="flex items-center mb-4">
-                <Globe className="w-8 h-8 text-green-300 mr-3" />
-                <h3 className="text-lg font-semibold text-white">Global Impact</h3>
-              </div>
-              <p className="text-blue-100 text-sm mb-4">
-                Real-world case studies and success stories from around the world.
-              </p>
-              <div className="text-green-300 text-sm font-medium">25+ Case Studies</div>
-            </div>
-
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="flex items-center mb-4">
-                <TrendingUp className="w-8 h-8 text-purple-300 mr-3" />
-                <h3 className="text-lg font-semibold text-white">Future Tech</h3>
-              </div>
-              <p className="text-blue-100 text-sm mb-4">
-                Insights into emerging technologies and future predictions.
-              </p>
-              <div className="text-purple-300 text-sm font-medium">10+ Predictions</div>
-            </div>
-
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="flex items-center mb-4">
-                <Users className="w-8 h-8 text-orange-300 mr-3" />
-                <h3 className="text-lg font-semibold text-white">Community</h3>
-              </div>
-              <p className="text-blue-100 text-sm mb-4">
-                Join our community of innovators and thought leaders.
-              </p>
-              <div className="text-orange-300 text-sm font-medium">50K+ Members</div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg className="w-full h-12 text-white" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="currentColor"></path>
-          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="currentColor"></path>
-          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>
-        </svg>
       </div>
     </section>
   );
