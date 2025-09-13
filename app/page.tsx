@@ -49,6 +49,12 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
 import ContentDiscoveryWidget from '../components/ContentDiscoveryWidget';
 
+// Import new content and advertising components
+import AIInnovationShowcase2025 from '../components/AIInnovationShowcase2025';
+import AISuccessStoriesShowcase from '../components/AISuccessStoriesShowcase';
+import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -101,6 +107,18 @@ export default function HomePage() {
         
         {/* NEW: AI 2025 REVOLUTIONARY CONTENT BANNER */}
         <AI2025RevolutionaryContentBanner />
+        
+        {/* NEW: ULTIMATE CONTENT PROMOTION BANNER 2025 */}
+        <UltimateContentPromotionBanner2025 />
+        
+        {/* NEW: AI INNOVATION SHOWCASE 2025 */}
+        <AIInnovationShowcase2025 />
+        
+        {/* NEW: AI SUCCESS STORIES SHOWCASE */}
+        <AISuccessStoriesShowcase />
+        
+        {/* NEW: INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
         
         {/* NEW: AI 2025 NEW CONTENT PROMOTION BANNER */}
         <AI2025NewContentPromotionBanner />
