@@ -1,69 +1,52 @@
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Activity, 
+  AlertTriangle, 
+  CheckCircle,
+  X,
+  RefreshCw,
+  BarChart3,
+  Gauge
+} from 'lucide-react';
 
-
-
- //FCP recommendations if (metrics.fcp > 2000) {
-//FCP recommendations if (metrics.fcp > 2000) {
- //FCP recommendations if (metrics.fcp > 2000) {
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  recs.push ({
-}return recs;
-}, []);
-//Wait for page to be fully loaded if (document.readyState !== 'complete') {
-  await new Promise (resolve => {
-}//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) );
-if (metrics.fcp > 2000) score -= 20;
-if (metrics.lcp > 2500) score -= 25;
-if (metrics.cls > 0.1) score -= 15;
-if (metrics.ttfb > 600) score -= 20;
-if (!performanceData) {
-}> <div className="animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>)
-//FCP recommendations if (metrics && metrics.fcp > 2000) {;
-  recs && recs.push ({;
-=======
-======= //FCP recommendations if (metrics && metrics.fcp > 2000) {;
-  recs && recs.push ({;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
- //FCP recommendations if (metrics && metrics.fcp > 2000) {;
-  recs && recs.push ({;
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-}return recs;
-}, []);
-//Wait for page to be fully loaded if (document && document.readyState !== 'complete') {;
-  await new Promise (resolve => {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-}//Wait a bit more for any async operations await new Promise (resolve => setTimeout (resolve, 1000) );
-if (metrics && metrics.fcp > 2000) score -= 20;
-if (metrics && metrics.lcp > 2500) score -= 25;
-if (metrics && metrics.cls > 0 && 0.1) score -= 15;
-if (metrics && metrics.ttfb > 600) score -= 20;
-if (!performanceData) {;
-}> <div className="animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>) ;}
-}> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCwclassName= {
-  `w-4 h-4 $ {
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  domLoad: number;
+  windowLoad: number;
+  memoryUsage?: {
+    usedJSHeapSize: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number;
+  };
+  networkInfo?: {
+    effectiveType: string;
+    downlink: number;
+    rtt: number;
+  };
+}
 
 interface PerformanceRecommendation {
-  id: string,
-  title: string,
-  description: string,
-  priority: 'high' | 'medium' | 'low',
-  impact: string,
-  solution: string,
-  category: 'performance' | 'accessibility' | 'seo' | 'user-experience'
+  id: string;
+  title: string;
+  description: string;
+  priority: 'high' | 'medium' | 'low';
+  impact: string;
+  solution: string;
+  category: 'performance' | 'accessibility' | 'seo' | 'user-experience';
 }
+
 const EnhancedPerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [recommendations, setRecommendations] = useState<PerformanceRecommendation[]>([]);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
+
   const generateRecommendations = useCallback((metrics: PerformanceMetrics): PerformanceRecommendation[] => {
     const recs: PerformanceRecommendation[] = [];
 
@@ -76,9 +59,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         priority: 'high',
         impact: 'High impact on user perception of site speed',
         solution: 'Optimize critical rendering path, reduce server response time, eliminate render-blocking resources',
-category: 'performance'
-      })
+        category: 'performance'
+      });
     }
+
     // LCP recommendations
     if (metrics.lcp > 2500) {
       recs.push({
@@ -88,9 +72,10 @@ category: 'performance'
         priority: 'high',
         impact: 'High impact on user experience and Core Web Vitals',
         solution: 'Optimize images, implement lazy loading, use CDN, optimize server response time',
-category: 'performance'
-      })
+        category: 'performance'
+      });
     }
+
     // CLS recommendations
     if (metrics.cls > 0.1) {
       recs.push({
@@ -100,9 +85,10 @@ category: 'performance'
         priority: 'medium',
         impact: 'Medium impact on user experience and visual stability',
         solution: 'Set explicit dimensions for images and videos, avoid inserting content above existing content',
-category: 'user-experience'
-      })
+        category: 'user-experience'
+      });
     }
+
     // Memory usage recommendations
     if (metrics.memoryUsage && metrics.memoryUsage.usedJSHeapSize > 50 * 1024 * 1024) {
       recs.push({
@@ -112,72 +98,63 @@ category: 'user-experience'
         priority: 'medium',
         impact: 'Medium impact on long-term performance and stability',
         solution: 'Implement memory cleanup, optimize component lifecycle, use React.memo and useMemo',
-category: 'performance'
-      })
+        category: 'performance'
+      });
     }
+
     // Network recommendations
     if (metrics.networkInfo && metrics.networkInfo.effectiveType === 'slow-2g') {
       recs.push({
         id: 'network-optimization',
         title: 'Network Performance Optimization',
         description: 'Network connection is slow, affecting user experience',
-priority: 'high',
+        priority: 'high',
         impact: 'High impact on all performance metrics',
         solution: 'Implement service workers, optimize bundle size, use progressive loading',
-    category: 'performance'
-      })
+        category: 'performance'
+      });
     }
-    return recs
+
+    return recs;
   }, []);
+
   const measurePerformance = useCallback(async () => {
     try {
       setIsMonitoring(true);
+      
       // Wait for page to be fully loaded
       if (document.readyState !== 'complete') {
         await new Promise(resolve => {
-          window.addEventListener('load', resolve, { once: true })
-        })
-}
+          window.addEventListener('load', resolve, { once: true });
+        });
+      }
+
       // Wait a bit more for any async operations
       await new Promise(resolve => setTimeout(resolve, 1000));
+
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
+      
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
       const lcp = await new Promise<number>((resolve) => {
         if ('PerformanceObserver' in window) {
           const observer = new PerformanceObserver((list) => {
             const entries = list.getEntries();
             const lastEntry = entries[entries.length - 1];
-            resolve(lastEntry.startTime)
+            resolve(lastEntry.startTime);
           });
-          observer.observe({ entryTypes: ['largest-contentful-paint'] }),
-      }
-
-      // Wait a bit more for any async operations
-      await new Promise(resolve => setTimeout(resolve, 1000)),
-
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      const paint = performance.getEntriesByType('paint')
-      
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
-      const lcp = await new Promise<number>((resolve) => {
-        if ('PerformanceObserver' in window) {
-          const observer = new PerformanceObserver((list) => {
-            const entries = list.getEntries()
-            const lastEntry = entries[entries.length - 1]
-            resolve(lastEntry.startTime)
-          }),
-          observer.observe({ entryTypes: ['largest-contentful-paint'] }),
-
+          observer.observe({ entryTypes: ['largest-contentful-paint'] });
+          
           // Fallback timeout
-          setTimeout(() => resolve(0), 5000)
+          setTimeout(() => resolve(0), 5000);
         } else {
-          resolve(0)
+          resolve(0);
         }
-});
+      });
+
       const metrics: PerformanceMetrics = {
-        fcp;
-        lcp;
+        fcp,
+        lcp,
         fid: 0, // Would need user interaction to measure
         cls: 0, // Would need PerformanceObserver for CLS
         ttfb: navigation.responseStart - navigation.requestStart,
@@ -185,34 +162,41 @@ priority: 'high',
         windowLoad: navigation.loadEventEnd - navigation.loadEventStart,
         memoryUsage: 'memory' in performance ? (performance as any).memory : undefined,
         networkInfo: 'connection' in navigator ? (navigator as any).connection : undefined
-};
+      };
+
       setMetrics(metrics);
       setRecommendations(generateRecommendations(metrics));
-      setLastUpdate(new Date())
+      setLastUpdate(new Date());
     } catch {
       // Performance measurement failed
     } finally {
-      setIsMonitoring(false)
+      setIsMonitoring(false);
     }
-}, [generateRecommendations]);
+  }, [generateRecommendations]);
+
   const getPerformanceScore = (metrics: PerformanceMetrics): number => {
     let score = 100;
+    
     if (metrics.fcp > 2000) score -= 20;
     if (metrics.lcp > 2500) score -= 25;
     if (metrics.cls > 0.1) score -= 15;
     if (metrics.ttfb > 600) score -= 20;
-    return Math.max(0, score)
+    
+    return Math.max(0, score);
   };
+
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
-    return 'text-red-400'
+    return 'text-red-400';
   };
+
   const getOverallScoreBg = (score: number) => {
     if (score >= 90) return 'bg-green-500/20';
     if (score >= 70) return 'bg-yellow-500/20';
-    return 'bg-red-500/20'
+    return 'bg-red-500/20';
   };
+
   if (!performanceData) {
     return (
       <div className={`p-4 bg-gray-900 rounded-lg border border-gray-700 ${className}`}>
@@ -222,50 +206,13 @@ priority: 'high',
             <div className="h-3 bg-gray-700 rounded"></div>
             <div className="h-3 bg-gray-700 rounded w-5/6"></div>
             <div className="h-3 bg-gray-700 rounded w-4/6"></div>
-    
-    if (metrics.fcp > 2000) score -= 20,
-    if (metrics.lcp > 2500) score -= 25,
-    if (metrics.cls > 0.1) score -= 15,
-    if (metrics.ttfb > 600) score -= 20,
-    
-    return Math.max(0, score)
-  },
-
-  const getScoreColor = (score: number): string => {
-    if (score >= 90) return 'text-green-400',
-    if (score >= 70) return 'text-yellow-400',
-    return 'text-red-400'
-  },
-
-  const getOverallScoreBg = (score: number) => {
-    if (score >= 90) return 'bg-green-500/20',
-    if (score >= 70) return 'bg-yellow-500/20',
-    return 'bg-red-500/20'
-  },
-
-  const _getScoreColor = (score: number): string => {_if (score >= 90) return 'text-green-400';
-    if (score >= 70) return 'text-yellow-400';
-    return 'text-red-400';};
-
-  const _getOverallScoreBg = (_score: number) => {_if (score >= 90) return 'bg-green-500/20';
-    if (score >= 70) return 'bg-yellow-500/20';
-    return 'bg-red-500/20';};
-
-  if (!performanceData) {_return (
-      <div className={`p-4 bg-gray-900 rounded-lg border border-gray-700 ${className}`}>
-        <div className=&quot;animate-pulse&quot;>
-          <div className=&quot;h-4 bg-gray-700 rounded w-1/3 mb-4&quot;></div>
-          <div className=&quot;space-y-3&quot;>
-            <div className=&quot;h-3 bg-gray-700 rounded&quot;></div>
-            <div className=&quot;h-3 bg-gray-700 rounded w-5/6&quot;></div>
-            <div className=&quot;h-3 bg-gray-700 rounded w-4/6&quot;></div>
-
           </div>
         </div>
       </div>
-    )
+    );
   }
-return (
+
+  return (
     <motion.div
       className={`bg-gray-900 rounded-lg border border-gray-700 overflow-hidden ${className}`}
       initial={{ opacity: 0, y: 20 }}
@@ -285,7 +232,7 @@ return (
               </p>
             </div>
           </div>
-<div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2">
             <button
               onClick={() => setShowDetails(!showDetails)}
               className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors"
@@ -296,7 +243,7 @@ return (
             <button
               onClick={updatePerformanceData}
               disabled={isLoading}
-className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors disabled:opacity-50"
+              className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors disabled:opacity-50"
               title="Refresh data"
             >
               <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
@@ -311,7 +258,8 @@ className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg tr
           </div>
         </div>
       </div>
-{/* Overall Score */}
+
+      {/* Overall Score */}
       <div className="p-4">
         <div className="text-center mb-6">
           <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full ${getOverallScoreBg(performanceData.overallScore)} mb-3`}>
@@ -319,13 +267,14 @@ className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg tr
               {performanceData.overallScore}
             </span>
           </div>
-<h4 className="text-white font-semibold mb-1">Performance Score</h4>
+          <h4 className="text-white font-semibold mb-1">Performance Score</h4>
           <p className="text-gray-400 text-sm">
             {performanceData.overallScore >= 90 ? 'Excellent' : 
              performanceData.overallScore >= 70 ? 'Good' : 'Needs Improvement'}
           </p>
         </div>
-{/* Metrics */}
+
+              {/* Metrics */}
               {metrics && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
                   <h3 className="text-lg font-semibold text-white mb-3">Core Web Vitals</h3>
@@ -342,13 +291,13 @@ className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg tr
                         {metrics.lcp.toFixed(0)}ms
                       </span>
                     </div>
-<div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center">
                       <span className="text-gray-300">CLS</span>
                       <span className={`font-mono ${metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}`}>
                         {metrics.cls.toFixed(3)}
                       </span>
                     </div>
-<div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center">
                       <span className="text-gray-300">TTFB</span>
                       <span className={`font-mono ${metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}`}>
                         {metrics.ttfb.toFixed(0)}ms
@@ -357,7 +306,8 @@ className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg tr
                   </div>
                 </div>
               )}
-{/* Memory Usage */}
+
+              {/* Memory Usage */}
               {metrics?.memoryUsage && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
                   <h3 className="text-lg font-semibold text-white mb-3">Memory Usage</h3>
@@ -385,7 +335,8 @@ className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg tr
                   </div>
                 </div>
               )}
-{/* Network Info */}
+
+              {/* Network Info */}
               {metrics?.networkInfo && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
                   <h3 className="text-lg font-semibold text-white mb-3">Network</h3>
@@ -411,7 +362,8 @@ className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg tr
                   </div>
                 </div>
               )}
-{/* Recommendations */}
+
+              {/* Recommendations */}
               {recommendations.length > 0 && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
                   <h3 className="text-lg font-semibold text-white mb-3">Recommendations</h3>
@@ -435,7 +387,8 @@ className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg tr
                   </div>
                 </div>
               )}
-{/* Action Buttons */}
+
+              {/* Action Buttons */}
               <div className="flex space-x-3">
                 <button
                   onClick={measurePerformance}
@@ -455,53 +408,7 @@ className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg tr
         )}
       </AnimatePresence>
     </>
-  )
+  );
 };
-=======
 
-==============
-
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-//FCP recommendations // Check condition
-if ( {) {
-  $2
-}
 export default EnhancedPerformanceMonitor;
-export default EnhancedPerformanceMonitor;
-
-=======>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-export default EnhancedPerformanceMonitor;
-
-
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-  metrics.fcp.toFixed (0)
-}ms </span> </div> </span> </div> </div> </div>)
-}</span> </div> <div className="w-full bg-gray-700 rounded-full h-2" > <div width: `$ {
-  (metrics.memoryUsage.usedJSHeapSize / metrics.memoryUsage.totalJSHeapSize) * 100
-}%`
-}/> </div> </div> </div>)
-}</span> </div> </div> </div>)
-}rec.priority === 'high'? 'bg-red-500/20 text-red-400': rec.priority === 'medium'? 'bg-yellow-500/20 text-yellow-400': 'bg-green-500/20 text-green-400'
-}`
-}> {
-  rec.priority
-}</span> </div> </div>) )
-}</div> </div>)
-}) : (<BarChart3 className="w-4 h-4" />)
-}<span> {
-  isMonitoring ? 'Measuring...': 'Measure Performance'
-}</span> </button> </div> </div> </motion.div>)
-}</AnimatePresence> </>)
-}
-export default EnhancedPerformanceMonitor;
-export default EnhancedPerformanceMonitor;
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

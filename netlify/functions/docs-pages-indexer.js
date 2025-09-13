@@ -1,33 +1,16 @@
+exports.handler = async function() {
+  const { execSync } = require('child_process');
+  try {
+    execSync('node automation/docs-pages-indexer.cjs || true', { stdio: 'inherit', shell: true });
+    execSync('node scripts/generate-sitemap.js || true', { stdio: 'inherit', shell: true });
+    execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(index): refresh docs/pages index and sitemap [ci skip]" || true) && (git push origin main || true)', { stdio: 'inherit', shell: true });
+    return { statusCode: 200, body: JSON.stringify({ ok: true, task: 'docs-pages-indexer' }) };
+  } catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
+  }
+};
 
-function runNode(relPath, args = []) {
-
-  const abs = path && path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe'
-    encoding: 'utf8'
-  });
-  return {
-    status: res && res.status || 0,
-    stdout: res && res.stdout || '',
-    stderr: res && res.stderr || '',
-  };
-exports && exports.config = { schedule: '0 */4 * * *' };
-exports && exports.handler = async () => {
-  const logs = [];
-  const step = (name, fn) => {
-    logs && logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();    if (stdout) logs && logs.push(stdout);
-    if (stderr) logs && logs.push(stderr);
-    logs && logs.push(`exit=${status}`);
-    return status;
-  };
-  step('docs:index', () => runNode('automation/docs-pages-indexer && indexer.cjs'));
-  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
-  return {
-    statusCode: 200,
-    headers: { 'content-type': 'text/plain' },
-    body: logs && logs.join('\n'),
-  };
-};function runNode(relPath, args = []) {
-  const abs = path && path.resolve(__dirname, '....', relPath),
-  const abs = path.resolve(__dirname, '....', relPath),
+exports.config = {
+  // Run every 4 hours
+  schedule: '0 */4 * * *',
+};

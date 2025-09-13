@@ -162,14 +162,12 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       `Formulated Codex prompt (ID: ${dbRecordId}, first 100 chars): ${formulatedPrompt.substring(0, 100)}...`
     );
 
-    res
-      .status(202)
-      .json({
-        success: true,
-        message: 'Error report received, analysis initiated.',
-        signature: errorSignature,
-        dbId: dbRecordId,
-      });
+    res.status(202).json({
+      success: true,
+      message: 'Error report received, analysis initiated.',
+      signature: errorSignature,
+      dbId: dbRecordId,
+    });
 
     console.log(`Executing Codex script for DB record ID: ${dbRecordId}`);
     // Ensure prompt is correctly escaped for command line, using base64 is a robust way

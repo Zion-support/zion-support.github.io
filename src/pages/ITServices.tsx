@@ -1,171 +1,208 @@
-import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {
-  Cloud,
-  Server,
-  Shield,
-  Cpu,
-  Cable,
-  LifeBuoy,
-  DollarSign,
-  ExternalLink,
-  Wrench,
-  Database,
-  Building,
-} from 'lucide-react';
+import { Shield, Cloud, Database, Code, Users, ArrowRight, Server, Globe, Zap } from 'lucide-react';
 
-const ITServices: React.FC = () => {
-  const offerings = [
-    {
-      icon: Cloud,
-      title: 'Cloud & DevOps',
-      desc: 'CI/CD, IaC, Kubernetes, cost optimization and SRE with 24/7 runbooks.',
-      price: '$6,000 - $80,000+',
-    },
-    {
-      icon: Server,
-      title: 'Migrations & Modernization',
-      desc: 'On-prem to cloud, containerization, monolith-to-microservices, and zero-downtime cutovers.',
-      price: '$10,000 - $120,000+',
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance',
-      desc: 'SOC2/ISO readiness, zero-trust, vulnerability management, and incident response plans.',
-      price: '$3,000 - $40,000+',
-    },
-    {
-      icon: Cpu,
-      title: 'Networking & Edge',
-      desc: 'SD-WAN, VPN, edge compute, IoT, and observability for distributed sites.',
-      price: '$5,000 - $50,000+',
-    },
-    {
-      icon: Cable,
-      title: 'IT Onsite & Managed Services',
-      desc: 'Hands-on deployment, device lifecycle, patching, help desk, and inventory.',
-      price: '$1,500 - $15,000/mo',
-    },
-    {
-      icon: LifeBuoy,
-      title: 'Business Continuity',
-      desc: 'Backups, DR plans, tabletop exercises, and RTO/RPO aligned architecture.',
-      price: '$2,500 - $30,000+',
-    },
-    // New items
-    {
-      icon: Wrench,
-      title: 'Platform Engineering',
-      desc: 'Golden paths, internal developer platforms, Backstage portals, and paved-road governance.',
-      price: '$8,000 - $90,000+',
-    },
-    {
-      icon: Database,
-      title: 'Data Platforms & MLOps',
-      desc: 'Lakehouse setups, ELT pipelines, feature stores, and ML deployment with observability.',
-      price: '$7,000 - $95,000+',
-    },
-    {
-      icon: Building,
-      title: 'Enterprise SaaS Rollouts',
-      desc: 'Okta SSO, RBAC, tenant provisioning, and SOC2-aligned configuration baselines at scale.',
-      price: '$5,000 - $70,000+',
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Landing Zones',
-      desc: 'Secure multi-account landing zones with guardrails, budgets, CI/CD and golden patterns.',
-      price: '$8,000 - $65,000+',
-    },
-    {
-      icon: Server,
-      title: 'Database Reliability Engineering',
-      desc: 'HA/DR, performance tuning, migrations and observability for Postgres, MySQL and SQL Server.',
-      price: '$4,000 - $45,000+',
-    },
-    {
-      icon: Shield,
-      title: 'Zero Trust Enablement',
-      desc: 'Network segmentation, identity-aware proxies, device posture and continuous verification.',
-      price: '$6,000 - $60,000+',
-    },
-  ];
-
+export default function ITServices() {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
-      <section className='mx-auto max-w-7xl px-6 py-20 lg:py-28'>
-        <h1 className='text-4xl font-bold sm:text-5xl'>
-          Enterprise-grade IT services, delivered with startup speed
-        </h1>
-        <p className='mt-4 max-w-2xl text-slate-300'>
-          From modernization to managed services, we design and operate robust,
-          secure and cost-efficient platforms.
-        </p>
-        <div className='mt-8 flex flex-wrap gap-3'>
-          <Link
-            to='/contact'
-            className='rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500'
-          >
-            Talk to an architect
-          </Link>
-          <Link
-            to='/request-quote'
-            className='rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5'
-          >
-            Request a quote
-          </Link>
-        </div>
-        <div className='mt-10 text-xs text-slate-400'>
-          Typical T&M: $110–$200/hr blended; fixed-scope engagements available.
-        </div>
+    <>
+      <Helmet>
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including infrastructure, cybersecurity, cloud solutions, and digital transformation. Zion Tech Group delivers enterprise-grade technology solutions." />
+        <meta name="keywords" content="IT services, infrastructure, cybersecurity, cloud solutions, digital transformation, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
+      </Helmet>
 
-        <div className='mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-          {offerings.map(o => (
-            <div
-              key={o.title}
-              className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition hover:border-cyan-400/30'
-            >
-              <div className='mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-blue-500/15 text-blue-300'>
-                <o.icon className='h-5 w-5' />
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 px-4">
+          <div className="container mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              IT <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Services</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+              Comprehensive technology solutions that drive business growth and digital transformation. 
+              From infrastructure to cybersecurity, we've got you covered.
+            </p>
+          </div>
+        </section>
+
+        {/* Services Overview */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Our IT Services</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-zion-blue-light/20 rounded-xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                <Server className="w-12 h-12 text-zion-cyan mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Infrastructure Management</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Complete infrastructure setup, monitoring, and maintenance for optimal performance.
+                </p>
+                <ul className="text-zion-slate-light text-sm mb-4 space-y-1">
+                  <li>• Network Design & Implementation</li>
+                  <li>• Server Management</li>
+                  <li>• Data Center Operations</li>
+                </ul>
+                <Link to="/services/infrastructure" className="text-zion-cyan hover:text-zion-cyan-light flex items-center group">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
-              <h3 className='text-lg font-semibold'>{o.title}</h3>
-              <p className='mt-2 text-sm text-slate-300'>{o.desc}</p>
-              <div className='mt-4 text-sm font-semibold text-cyan-300'>
-                {o.price}
+
+              <div className="bg-zion-blue-light/20 rounded-xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                <Shield className="w-12 h-12 text-zion-cyan mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Cybersecurity</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Comprehensive security solutions to protect your business from cyber threats.
+                </p>
+                <ul className="text-zion-slate-light text-sm mb-4 space-y-1">
+                  <li>• Security Audits & Assessments</li>
+                  <li>• Threat Detection & Response</li>
+                  <li>• Compliance Management</li>
+                </ul>
+                <Link to="/services/cybersecurity" className="text-zion-cyan hover:text-zion-cyan-light flex items-center group">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              <div className="bg-zion-blue-light/20 rounded-xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                <Cloud className="w-12 h-12 text-zion-cyan mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Cloud Solutions</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Cloud migration, optimization, and management for scalable business operations.
+                </p>
+                <ul className="text-zion-slate-light text-sm mb-4 space-y-1">
+                  <li>• Cloud Migration Strategy</li>
+                  <li>• Multi-Cloud Management</li>
+                  <li>• Cost Optimization</li>
+                </ul>
+                <Link to="/services/cloud" className="text-zion-cyan hover:text-zion-cyan-light flex items-center group">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              <div className="bg-zion-blue-light/20 rounded-xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                <Database className="w-12 h-12 text-zion-cyan mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Data Management</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Data strategy, governance, and analytics to unlock business insights.
+                </p>
+                <ul className="text-zion-slate-light text-sm mb-4 space-y-1">
+                  <li>• Data Strategy & Architecture</li>
+                  <li>• Business Intelligence</li>
+                  <li>• Data Governance</li>
+                </ul>
+                <Link to="/services/data-management" className="text-zion-cyan hover:text-zion-cyan-light flex items-center group">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              <div className="bg-zion-blue-light/20 rounded-xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                <Code className="w-12 h-12 text-zion-cyan mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Software Development</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Custom software solutions tailored to your business requirements.
+                </p>
+                <ul className="text-zion-slate-light text-sm mb-4 space-y-1">
+                  <li>• Custom Applications</li>
+                  <li>• API Development</li>
+                  <li>• System Integration</li>
+                </ul>
+                <Link to="/services/software-development" className="text-zion-cyan hover:text-zion-cyan-light flex items-center group">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              <div className="bg-zion-blue-light/20 rounded-xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                <Users className="w-12 h-12 text-zion-cyan mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">IT Consulting</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Strategic technology consulting to align IT with business objectives.
+                </p>
+                <ul className="text-zion-slate-light text-sm mb-4 space-y-1">
+                  <li>• Technology Strategy</li>
+                  <li>• Digital Transformation</li>
+                  <li>• Vendor Management</li>
+                </ul>
+                <Link to="/services/it-consulting" className="text-zion-cyan hover:text-zion-cyan-light flex items-center group">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
 
-        <div className='mt-12 rounded-xl border border-white/10 bg-white/5 p-6 text-sm text-slate-300'>
-          <div className='mb-2 font-semibold text-white'>Deliverables</div>
-          <ul className='grid gap-2 sm:grid-cols-2'>
-            <li>Architecture diagrams and IaC repositories</li>
-            <li>Security baselines, policies and runbooks</li>
-            <li>Monitoring and SLO dashboards</li>
-            <li>Knowledge transfer and training sessions</li>
-          </ul>
-          <div className='mt-4 flex items-center gap-2 text-xs'>
-            <DollarSign className='h-3 w-3' />
-            Avg project budgets: $10k–$120k depending on scope.
+        {/* Why Choose Us */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Why Choose Zion Tech Group?</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="bg-zion-cyan/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Global Expertise</h3>
+                <p className="text-zion-slate-light">
+                  Access to world-class IT professionals from around the globe.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-zion-cyan/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Proven Track Record</h3>
+                <p className="text-zion-slate-light">
+                  Successfully delivered IT solutions to businesses of all sizes.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-zion-cyan/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Innovation Focus</h3>
+                <p className="text-zion-slate-light">
+                  Cutting-edge solutions using the latest technologies and best practices.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-zion-cyan/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">24/7 Support</h3>
+                <p className="text-zion-slate-light">
+                  Round-the-clock support and monitoring for your IT infrastructure.
+                </p>
+              </div>
+            </div>
           </div>
-          <a
-            className='mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200'
-            href='https://ziontechgroup.com/it-services'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Explore IT services on our site{' '}
-            <ExternalLink className='ml-1 h-3 w-3' />
-          </a>
-          <div className='mt-6 text-xs text-slate-400'>
-            Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St
-            STE 1008 Middletown DE 19709
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto text-center">
+            <div className="bg-zion-blue-light/20 rounded-2xl p-12 border border-zion-purple/30 max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your IT Infrastructure?
+              </h2>
+              <p className="text-lg text-zion-slate-light mb-8">
+                Let our IT experts help you build a robust, scalable, and secure technology foundation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/request-quote"
+                  className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark font-bold py-3 px-8 rounded-lg transition-colors"
+                >
+                  Get IT Quote
+                </Link>
+                <Link
+                  to="/contact"
+                  className="bg-transparent hover:bg-zion-purple/20 text-zion-cyan border-2 border-zion-cyan font-bold py-3 px-8 rounded-lg transition-colors"
+                >
+                  Schedule Consultation
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
-};
-
-export default ITServices;
+}

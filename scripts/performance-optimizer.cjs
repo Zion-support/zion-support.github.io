@@ -36,7 +36,11 @@ class PerformanceOptimizer {
       bundleSize,
       imageOptimization,
       dependencies,
-      recommendations: this.generateRecommendations(bundleSize, imageOptimization, dependencies),
+      recommendations: this.generateRecommendations(
+        bundleSize,
+        imageOptimization,
+        dependencies
+      ),
     };
 
     this.saveReport(report);
@@ -70,9 +74,17 @@ class PerformanceOptimizer {
     if (!fs.existsSync(publicDir)) {
       return { error: 'Public directory not found' };
     }
-    const imageFiles = this.listFiles(publicDir).filter((f) => {
+    const imageFiles = this.listFiles(publicDir).filter(f => {
       const ext = path.extname(f).toLowerCase();
-      return ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.avif', '.svg'].includes(ext);
+      return [
+        '.jpg',
+        '.jpeg',
+        '.png',
+        '.gif',
+        '.webp',
+        '.avif',
+        '.svg',
+      ].includes(ext);
     });
     let totalBytes = 0;
     let optimizedCount = 0;
@@ -124,14 +136,18 @@ class PerformanceOptimizer {
   formatBytes(bytes) {
     if (!Number.isFinite(bytes) || bytes <= 0) return '0 Bytes';
     const units = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.min(Math.floor(Math.log(bytes) / Math.log(1024)), units.length - 1);
+    const i = Math.min(
+      Math.floor(Math.log(bytes) / Math.log(1024)),
+      units.length - 1
+    );
     const value = (bytes / Math.pow(1024, i)).toFixed(2);
     return `${value} ${units[i]}`;
   }
 
   getBundleRecommendations(totalBytes, fileCount) {
     const recs = [];
-    if (totalBytes > 1 * 1024 * 1024) recs.push('Consider code splitting to reduce initial bundle size');
+    if (totalBytes > 1 * 1024 * 1024)
+      recs.push('Consider code splitting to reduce initial bundle size');
     if (fileCount > 50) recs.push('Consider consolidating small files');
     recs.push('Enable gzip/brotli compression on your server');
     recs.push('Use a CDN for static assets');
@@ -140,8 +156,11 @@ class PerformanceOptimizer {
 
   getImageRecommendations(imageFiles) {
     const recs = [];
-    const unoptimized = imageFiles.filter((f) => !f.endsWith('.webp') && !f.endsWith('.avif'));
-    if (unoptimized.length > 0) recs.push(`Convert ${unoptimized.length} images to WebP/AVIF`);
+    const unoptimized = imageFiles.filter(
+      f => !f.endsWith('.webp') && !f.endsWith('.avif')
+    );
+    if (unoptimized.length > 0)
+      recs.push(`Convert ${unoptimized.length} images to WebP/AVIF`);
     recs.push('Use responsive images with srcset');
     recs.push('Implement lazy loading for images');
     return recs;
@@ -149,14 +168,20 @@ class PerformanceOptimizer {
 
   findPotentiallyUnused(deps) {
     const common = ['lodash', 'moment', 'jquery'];
-    return common.filter((d) => deps.includes(d));
+    return common.filter(d => deps.includes(d));
   }
 
   generateRecommendations(bundleSize, imageOptimization, dependencies) {
     const recs = [];
-    if (!bundleSize.error && bundleSize.totalBytes > 2 * 1024 * 1024) recs.push('Bundle is large; enable tree-shaking and split by routes');
-    if (!imageOptimization.error && imageOptimization.optimizedImages < imageOptimization.totalImages) recs.push('Convert heavy images to modern formats');
-    if (!dependencies.error && dependencies.totalDependencies > 50) recs.push('Review dependencies and remove unused packages');
+    if (!bundleSize.error && bundleSize.totalBytes > 2 * 1024 * 1024)
+      recs.push('Bundle is large; enable tree-shaking and split by routes');
+    if (
+      !imageOptimization.error &&
+      imageOptimization.optimizedImages < imageOptimization.totalImages
+    )
+      recs.push('Convert heavy images to modern formats');
+    if (!dependencies.error && dependencies.totalDependencies > 50)
+      recs.push('Review dependencies and remove unused packages');
     recs.push('Use React.lazy and Suspense for route-based code splitting');
     return recs;
   }
@@ -172,9 +197,15 @@ try {
   const optimizer = new PerformanceOptimizer();
   const report = optimizer.optimizePerformance();
   process.stdout.write('\nSummary\n');
-  process.stdout.write(`Bundle: ${report.bundleSize.totalSize || 'N/A'} (gz ~ ${report.bundleSize.gzippedSize || 'N/A'})\n`);
-  process.stdout.write(`Images: ${report.imageOptimization.totalImages || 0}, optimized: ${report.imageOptimization.optimizedImages || 0}\n`);
-  process.stdout.write(`Dependencies: ${report.dependencies.totalDependencies || 0}\n`);
+  process.stdout.write(
+    `Bundle: ${report.bundleSize.totalSize || 'N/A'} (gz ~ ${report.bundleSize.gzippedSize || 'N/A'})\n`
+  );
+  process.stdout.write(
+    `Images: ${report.imageOptimization.totalImages || 0}, optimized: ${report.imageOptimization.optimizedImages || 0}\n`
+  );
+  process.stdout.write(
+    `Dependencies: ${report.dependencies.totalDependencies || 0}\n`
+  );
 } catch (e) {
   console.error('Error running performance optimizer:', e.message);
   process.exit(1);

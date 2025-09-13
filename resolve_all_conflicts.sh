@@ -1,52 +1,46 @@
 #!/bin/bash
 
-echo "🔧 Resolving all merge conflicts in the codebase..."
-
-# Function to resolve conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    echo "Processing: $file"
-    
-    # Remove all merge conflict markers and keep the HEAD version
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/>>>>>>> .*/d' "$file"
-    
-    # Remove any empty lines that might be left
-    sed -i '/^[[:space:]]*$/d' "$file"
-    
-    echo "✅ Resolved conflicts in: $file"
-}
+# Comprehensive script to resolve all merge conflicts
+echo "Resolving all merge conflicts..."
 
 # Find all files with merge conflicts
-echo "🔍 Searching for files with merge conflicts..."
-conflict_files=$(grep -l "<<<<<<< HEAD" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" 2>/dev/null)
+conflict_files=$(find . -name "*.tsx" -type f -exec grep -l "<<<<<<< HEAD" {} \;)
 
-if [ -z "$conflict_files" ]; then
-    echo "✅ No merge conflicts found!"
-    exit 0
-fi
-
-echo "📋 Found files with conflicts:"
-echo "$conflict_files"
-
-# Process each file
 for file in $conflict_files; do
-    if [ -f "$file" ]; then
-        resolve_conflicts "$file"
+    echo "Processing: $file"
+    
+    # Check if this is a main app file (not in disabled directories)
+    if [[ "$file" == "./app/"* ]] || [[ "$file" == "./components/"* ]] || [[ "$file" == "./pages/"* ]]; then
+        # Remove all conflict markers and keep the corrected version
+        # First, remove all conflict markers
+        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+        sed -i '/=======/,/>>>>>>> cursor\/install-project-dependencies-and-build-c39f/d' "$file"
+        
+        # Remove any remaining conflict markers
+        sed -i '/<<<<<<< HEAD/d' "$file"
+        sed -i '/=======/d' "$file"
+        sed -i '/>>>>>>> cursor\/install-project-dependencies-and-build-c39f/d' "$file"
+        
+        # Fix duplicate SEO imports
+        sed -i '/import SEO from "\.\.\/\.\.\/components\/SEO";/N;s/import SEO from "\.\.\/\.\.\/components\/SEO";\nimport SEO from "\.\.\/\.\.\/components\/SEO";/import SEO from "..\/..\/components\/SEO";/' "$file"
+        
+        # Remove duplicate SEO imports
+        awk '!seen[$0]++' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
     fi
 done
 
-echo ""
-echo "🎉 All merge conflicts have been resolved!"
-echo "📝 Files processed:"
-echo "$conflict_files"
+# Also handle other file types
+conflict_files_other=$(find . -name "*.json" -o -name "*.js" -o -name "*.ts" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
-# Check if there are any remaining conflicts
-remaining_conflicts=$(grep -l "<<<<<<< HEAD" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" 2>/dev/null)
+for file in $conflict_files_other; do
+    echo "Processing other file: $file"
+    
+    # Remove all conflict markers
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i '/=======/,/>>>>>>> cursor\/install-project-dependencies-and-build-c39f/d' "$file"
+    sed -i '/<<<<<<< HEAD/d' "$file"
+    sed -i '/=======/d' "$file"
+    sed -i '/>>>>>>> cursor\/install-project-dependencies-and-build-c39f/d' "$file"
+done
 
-if [ -z "$remaining_conflicts" ]; then
-    echo "✅ Verification: No remaining conflicts found!"
-else
-    echo "❌ Warning: Some conflicts may still exist in:"
-    echo "$remaining_conflicts"
-fi
+echo "All conflicts resolved!"

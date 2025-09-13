@@ -1,12 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const GreenIT: React.FC = () => (
-  <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center'>
-    <div className='text-center text-white'>
-      <h1 className='text-4xl font-bold mb-4'>Green IT</h1>
-      <p className='text-xl text-gray-300'>Sustainable technology practices.</p>
-    </div>
-  </div>
-);
-
-export default GreenIT;
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Leaf, Server, Cloud } from 'lucide-react'
+import Link from "next/link";

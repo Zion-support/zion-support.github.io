@@ -1,18 +1,29 @@
+const path = require('path');
+const { spawnSync } = require('child_process');
 
 function runNode(relPath, args = []) {
+  const abs = path.resolve(__dirname, '..', '..', relPath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+}
+
+exports.config = { schedule: '0 3 * * *' };
 
 exports.handler = async () => {
-  const abs = path && path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe'
-    encoding: 'utf8'
-  });
-  return {
-    status: res && res.status || 0,
-    stdout: res && res.stdout || '',
-    stderr: res && res.stderr || '',
-  };
-exports && exports.config = {
-  // Attempt to sync changes back to main (best-effort)
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-  const abs = path.resolve(__dirname, '....', relPath),
+  const logs = [];
+  function step(name, rel, args = []) {
+    logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = runNode(rel, args);
+>>>>>>> origin/content/blog-sept12
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+    return status;
+  }
+
+  step('orphans:find', 'automation/orphan-pages-finder.cjs');
+  step('git:sync', 'automation/advanced-git-sync.cjs');
+>>>>>>> origin/content/blog-sept12
+
+  return { statusCode: 200, body: logs.join('\n') };
+};

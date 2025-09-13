@@ -1,7 +1,10 @@
-const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className, ...props }, ref) => {
-    return <textarea className={cn(className)} ref={ref} {...props} />;
-  }
-);
+import React from 'react';
 
-export { Textarea };
+type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+
+export function Textarea(props: TextareaProps) {
+  return <textarea {...props} />;
+}
+
+export default Textarea;
+

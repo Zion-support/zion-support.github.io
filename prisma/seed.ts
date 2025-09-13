@@ -87,10 +87,11 @@ async function main() {
   ];
 
   await prisma.talent.createMany({ data: talents, skipDuplicates: true });
+
 }
 
 main()
-  .catch(e => {
+  .catch((e) => {
     console.error(e);
     process.exit(1);
   })

@@ -1,199 +1,29 @@
 import React from 'react';
-import Head from 'next/head';
-import {
-  Brain,
-  Cpu,
-  Database,
-  Network,
-  Rocket,
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  FlaskConical,
-} from 'lucide-react';
-import Button from '../components/ui/Button';
+import SEO from '../components/SEO';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Link from 'next/link';
 
-const AIServicesPage: React.FC = () => {
-  const services = [
-    {
-      icon: Brain,
-      title: 'AI Development',
-      description: 'Custom AI solutions tailored to your business needs',
-      features: [
-        'Machine Learning Models',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics',
-      ],
-    },
-    {
-      icon: Cpu,
-      title: 'Automation',
-      description: 'Streamline your operations with intelligent automation',
-      features: [
-        'Process Automation',
-        'Workflow Optimization',
-        'Data Processing',
-        'System Integration',
-      ],
-    },
-    {
-      icon: Shield,
-      title: 'AI Security',
-      description: 'Protect your systems with AI-powered security solutions',
-      features: [
-        'Threat Detection',
-        'Anomaly Detection',
-        'Security Monitoring',
-        'Incident Response',
-      ],
-    },
-    {
-      icon: Users,
-      title: 'AI Consulting',
-      description: 'Expert guidance on AI strategy and implementation',
-      features: [
-        'AI Strategy',
-        'Technology Assessment',
-        'Implementation Planning',
-        'Training & Support',
-      ],
-    },
-  ];
-
-  const benefits = [
-    'Increased efficiency and productivity',
-    'Reduced operational costs',
-    'Enhanced decision-making capabilities',
-    'Improved customer experience',
-    'Competitive advantage in the market',
-  ];
-
+export default function AIServicesPage() {
   return (
-    <>
-      <Head>
-        <title>AI Services - Zion Tech Group</title>
-        <meta
-          name='description'
-          content='Comprehensive AI services including development, automation, security, and consulting. Transform your business with cutting-edge AI solutions.'
-        />
-        <meta
-          name='keywords'
-          content='AI services, artificial intelligence, machine learning, automation, AI consulting'
-        />
-        <link rel='canonical' href='https://ziontechgroup.com/ai-services' />
-      </Head>
-
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>
-        {/* Hero Section */}
-        <section className='py-20 px-4'>
-          <div className='max-w-7xl mx-auto text-center'>
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-              AI{' '}
-              <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600'>
-                Services
-              </span>
-            </h1>
-            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
-              Transform your business with cutting-edge AI solutions. From
-              development to deployment, we provide comprehensive AI services
-              that drive real results.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Button variant='primary' size='lg'>
-                Get Started
-              </Button>
-              <Button variant='outline' size='lg'>
-                Learn More
-              </Button>
-            </div>
+    <UltraAdvancedFuturisticBackground>
+      <SEO title="AI Services | Zion Tech Group" description="LLM apps, RAG, evaluation, guardrails, and automation with transparent pricing." canonical="https://ziontechgroup.com/ai-services/" />
+      <div className="container mx-auto px-4 py-24 text-white">
+        <div className="max-w-5xl mx-auto space-y-8">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI Services</h1>
+          <p className="text-gray-300 text-lg">Productized AI solutions: evaluation labs, safety & guardrails, chatbots, agents, search/RAG, and automation. See <Link className="text-cyan-400 underline" href="/market-pricing">Market Pricing</Link> for typical vendor benchmarks.</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { title: 'RAG & Vector Search', href: '/vector-search-starter' },
+              { title: 'AI Evaluation Lab', href: '/rag-evaluation-lab' },
+              { title: 'AI Guardrails', href: '/ai-powered-cybersecurity' },
+              { title: 'AI Content Generator', href: '/intelligent-content-automation-platform' },
+              { title: 'AI Customer Service', href: '/ai-customer-service' },
+              { title: 'AI Sales Intelligence', href: '/ai-sales-automation' },
+            ].map((c) => (
+              <Link key={c.href} href={c.href} className="p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors">
+                <div className="text-xl font-semibold">{c.title}</div>
+                <div className="text-sm text-gray-400 mt-2">Implementation‑ready with pricing and SLAs.</div>
+              </Link>
+            ))}
           </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className='py-16 px-4'>
-          <div className='max-w-7xl mx-auto'>
-            <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-12'>
-              Our AI Services
-            </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className='bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-colors'
-                >
-                  <div className='mb-4'>
-                    <service.icon className='h-12 w-12 text-blue-400' />
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-3'>
-                    {service.title}
-                  </h3>
-                  <p className='text-slate-400 mb-4'>{service.description}</p>
-                  <ul className='space-y-2'>
-                    {service.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className='flex items-center text-slate-300'
-                      >
-                        <Check className='w-4 h-4 text-green-500 mr-2' />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className='py-16 px-4'>
-          <div className='max-w-7xl mx-auto'>
-            <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-12'>
-              Why Choose Our AI Services?
-            </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className='bg-slate-800 rounded-xl p-6 border border-slate-700'
-                >
-                  <div className='flex items-center mb-4'>
-                    <Check className='h-6 w-6 text-green-500 mr-3' />
-                    <h3 className='text-lg font-semibold text-white'>
-                      {benefit}
-                    </h3>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className='py-16 px-4'>
-          <div className='max-w-4xl mx-auto text-center'>
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-              Ready to Transform Your Business with AI?
-            </h2>
-            <p className='text-xl text-slate-300 mb-8'>
-              Contact us today for a free consultation and discover how AI can
-              revolutionize your operations.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Button variant='primary' size='lg'>
-                Schedule Consultation
-              </Button>
-              <Button variant='outline' size='lg'>
-                View Portfolio
-              </Button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default AIServicesPage;
+          <div className="text-sm text-gray-400">Questions? <Link className="text-cyan-400 underline" href="/contact">Contact us</Link>.</div>

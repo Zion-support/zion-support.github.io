@@ -1,379 +1,261 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import {
-  Plus,
-  Minus,
-  Search,
-  HelpCircle,
-  MessageCircle,
-  Mail,
-  Phone,
-  Clock,
-  Users,
-  Shield,
-  Cloud,
-  Brain,
-  Zap,
-  CheckCircle,
-} from 'lucide-react';
-
-interface FAQItem {
-  id: string;
-  question: string;
-  answer: string;
-  category: string;
-  icon: any;
-  tags: string[];
-}
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card, CardContent } from "@/components/ui/card";
+import React from 'react';
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { HelpCircle, Users, ShoppingCart, Shield, Zap, Globe } from "lucide-react";
 
 export default function FAQ() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const faqCategories = [
+    {
+import React from 'react';
+import { AppHeader } from '@/layout/AppHeader';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Search } from 'lucide-react';
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Header } from "@/components/header/Header";
+import { Footer } from "@/components/Footer";
 
-  const toggleItem = (index: number) => {
-    setOpenItems(prev =>
-      prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]
-    );
-  };
-
+export default function FAQ() {
   const faqData = [
     {
-      category: 'General',
+      title: "Getting Started",
+      icon: Zap,
       questions: [
         {
-          question: 'What is Zion Tech Group?',
-          answer:
-            'Zion Tech Group is a leading technology company specializing in AI-powered solutions, cloud computing, cybersecurity, and digital transformation services. We help businesses leverage cutting-edge technology to drive innovation and growth.',
+          question: "How do I create an account on Zion?",
+          answer: "Creating an account is simple! Click the 'Sign Up' button in the top right corner and choose whether you're a client looking for services or talent offering your skills. Fill in your basic information and verify your email to get started."
         },
         {
-          question: 'Where is Zion Tech Group located?',
-          answer:
-            'Our headquarters is located at 364 E Main St STE 1008, Middletown DE 19709. We also have remote teams and serve clients globally.',
+          question: "What types of accounts can I create?",
+          answer: "Zion offers two main account types: Client accounts for businesses and individuals seeking AI and tech services, and Talent accounts for professionals offering their expertise in AI, development, design, and other tech fields."
         },
         {
-          question: 'What industries do you serve?',
-          answer:
-            'We serve a wide range of industries including healthcare, finance, manufacturing, retail, technology, and government sectors. Our solutions are designed to be industry-agnostic and customizable.',
-        },
-      ],
+          question: "Is Zion really free to use?",
+          answer: "Yes! Zion is completely free to use. We believe in democratizing access to AI and tech solutions, so there are no subscription fees or hidden costs for using our platform."
+        }
+      ]
     },
     {
-      category: 'Services',
+      category: "For Talent & Creators",
       questions: [
         {
-          question: 'What AI services do you offer?',
-          answer:
-            'We offer comprehensive AI services including machine learning models, natural language processing, computer vision, predictive analytics, AI workflow automation, and custom AI solution development tailored to your business needs.',
+          question: "How do I create a talent profile?",
+          answer: "After signing up, navigate to your dashboard and click 'Create Profile'. You can add your skills, experience, portfolio, and set your rates. Make sure to include relevant certifications and examples of your work."
         },
         {
-          question: 'Do you provide cloud migration services?',
-          answer:
-            'Yes, we offer end-to-end cloud migration services including assessment, planning, migration execution, and post-migration optimization. We work with AWS, Azure, and Google Cloud platforms.',
+          question: "What types of services can I offer?",
+          answer: "You can offer any tech-related service including AI development, software engineering, data science, IT consulting, cybersecurity, cloud services, and more. We support both technical and business services."
         },
         {
-          question: 'What cybersecurity solutions do you offer?',
-          answer:
-            'Our cybersecurity portfolio includes threat detection, vulnerability assessment, compliance automation, zero-trust architecture, security monitoring, and incident response services.',
-        },
-      ],
+          question: "How do I get hired?",
+          answer: "Optimize your profile with relevant keywords, showcase your best work, maintain a high rating, and respond promptly to client inquiries. You can also actively browse job postings and submit proposals."
+        }
+      ]
     },
     {
-      category: 'Pricing & Billing',
+      category: "For Clients & Employers",
       questions: [
         {
-          question: 'How do you price your services?',
-          answer:
-            'We offer flexible pricing models including project-based pricing, monthly subscriptions, and custom enterprise solutions. Pricing depends on the scope, complexity, and duration of the project.',
+          question: "How do I find the right talent?",
+          answer: "Use our advanced search and filtering system to find professionals based on skills, experience, location, and ratings. You can also post detailed job requirements and let qualified talent come to you."
         },
         {
-          question: 'Do you offer free consultations?',
-          answer:
-            'Yes, we provide free initial consultations to understand your needs and discuss potential solutions. This helps us provide accurate estimates and recommendations.',
+          question: "What payment methods are accepted?",
+          answer: "We support multiple payment methods including credit cards, bank transfers, and digital wallets. All payments are processed securely through our platform with escrow protection for your peace of mind."
         },
         {
-          question: 'What payment terms do you offer?',
-          answer:
-            'We offer flexible payment terms including upfront payments, milestone-based payments, and monthly billing for ongoing services. Enterprise clients may qualify for extended payment terms.',
+          question: "How do I ensure quality work?",
+          answer: "Review talent profiles, check ratings and reviews, request portfolios, and start with smaller projects to test the relationship. Our dispute resolution system also protects both parties."
+      title: "For Clients",
+      icon: Users,
+      questions: [
+        {
+          question: "How do I find the right talent for my project?",
+          answer: "You can search for talent using our AI-powered matching system, browse categories, or post a job listing. Our platform will suggest the best matches based on your requirements, budget, and timeline."
         },
-      ],
+        {
+          question: "What services can I find on Zion?",
+          answer: "Zion offers a wide range of services including AI development, web and mobile app development, data science, UI/UX design, IT consulting, equipment rentals, and specialized AI solutions for various industries."
+        },
+        {
+          question: "How do I ensure quality when hiring talent?",
+          answer: "All talent on Zion are verified professionals with portfolios, reviews, and ratings. You can review their work history, read client testimonials, and communicate directly before making a decision."
+        }
+      ]
     },
     {
-      category: 'Support & Maintenance',
+      title: "For Talent",
+      icon: Globe,
       questions: [
         {
-          question: 'What support do you provide after project completion?',
-          answer:
-            'We provide comprehensive post-project support including maintenance, updates, troubleshooting, and ongoing optimization. Support levels can be customized based on your needs.',
+          question: "How do I showcase my skills and experience?",
+          answer: "Create a comprehensive profile highlighting your expertise, upload portfolio pieces, list your skills, and set your rates. You can also add certifications, education, and work samples to stand out."
         },
         {
-          question: 'Do you offer 24/7 support?',
-          answer:
-            'Yes, we offer 24/7 support for critical systems and enterprise clients. Standard support hours are Monday-Friday 9 AM-6 PM EST, with emergency support available 24/7.',
+          question: "How do I get paid for my work?",
+          answer: "Zion offers secure payment processing with milestone-based payments. You can set up payment schedules, track project progress, and receive payments directly through our platform."
         },
         {
-          question: 'How quickly do you respond to support requests?',
-          answer:
-            'Response times vary by priority level: Critical issues (1 hour), High priority (4 hours), Medium priority (24 hours), Low priority (48 hours). Enterprise clients receive priority response times.',
-        },
-      ],
+          question: "Can I work with international clients?",
+          answer: "Absolutely! Zion is a global platform connecting talent and clients worldwide. You can work with clients from any country and expand your professional network internationally."
+        }
+      ]
     },
     {
-      category: 'Technology & Security',
+      category: "Marketplace & Services",
       questions: [
         {
-          question: 'What technologies do you use?',
-          answer:
-            'We use cutting-edge technologies including React, Node.js, Python, TensorFlow, PyTorch, AWS, Azure, Docker, Kubernetes, and many more. We choose the best technology stack for each project.',
+          question: "What can I buy in the marketplace?",
+          answer: "Our marketplace includes AI services, software development, IT consulting, equipment rentals, specialized hardware, and more. We're constantly expanding our categories to meet your needs."
         },
         {
-          question: 'How do you ensure data security?',
-          answer:
-            "We implement enterprise-grade security measures including encryption, access controls, regular security audits, compliance monitoring, and secure development practices. We're SOC2 compliant and follow industry best practices.",
+          question: "How do I request a quote?",
+          answer: "Navigate to the 'Request Quote' page, fill out the form with your project requirements, and we'll connect you with qualified professionals who can provide detailed proposals."
         },
         {
-          question: 'Do you comply with industry regulations?',
-          answer:
-            'Yes, we maintain compliance with various industry regulations including SOC2, GDPR, HIPAA, and others. We can help you achieve and maintain compliance for your specific industry requirements.',
+          question: "Are there any guarantees on services?",
+          answer: "Yes, we offer satisfaction guarantees and our dispute resolution system ensures fair outcomes. Most professionals also offer revisions and support to ensure your complete satisfaction."
+      title: "Platform Features",
+      icon: ShoppingCart,
+      questions: [
+        {
+          question: "What is the AI Matcher feature?",
+          answer: "Our AI Matcher uses advanced algorithms to connect clients with the perfect talent based on project requirements, skills, availability, and budget. It saves time and ensures better matches."
         },
-      ],
+        {
+          question: "How does the marketplace work?",
+          answer: "The marketplace allows you to browse and purchase pre-built AI solutions, equipment, and services. You can also request custom quotes for specific projects or needs."
+        },
+        {
+          question: "What community features are available?",
+          answer: "Join our community forums to connect with other professionals, share knowledge, ask questions, and stay updated on the latest AI and tech trends."
+        }
+      ]
     },
+    {
+      category: "Technical Support",
+      questions: [
+        {
+          question: "What if I encounter technical issues?",
+          answer: "Our support team is available 24/7. You can reach us through the contact form, email support@ziontechgroup.com, or use our live chat feature for immediate assistance."
+        },
+        {
+          question: "How secure is my data?",
+          answer: "We use enterprise-grade security measures including end-to-end encryption, secure payment processing, and strict data protection policies. Your privacy and security are our top priorities."
+        },
+        {
+          question: "Can I use Zion Tech Group on mobile devices?",
+          answer: "Absolutely! Our platform is fully responsive and works seamlessly on all devices. We also offer a dedicated mobile app for enhanced mobile experience."
+        }
+      ]
+    },
+    {
+      category: "Business & Enterprise",
+      questions: [
+        {
+          question: "Do you offer enterprise solutions?",
+          answer: "Yes! We provide customized enterprise solutions including dedicated account managers, bulk hiring, custom integrations, and enterprise-grade security features. Contact our sales team for details."
+        },
+        {
+          question: "Can I integrate Zion Tech Group with my existing systems?",
+          answer: "We offer comprehensive API access and integration options for enterprise clients. Our technical team can help you integrate our platform with your existing HR, project management, and billing systems."
+        },
+        {
+          question: "What about compliance and legal requirements?",
+          answer: "We maintain compliance with major regulations including GDPR, SOC 2, and industry-specific requirements. Our legal team ensures all contracts and terms meet your business needs."
+        }
+      ]
+      question: "What is Zion Tech Group?",
+      answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect businesses with top AI and tech talent, services, and equipment in one comprehensive platform."
+    },
+    {
+      question: "How does the AI talent matching work?",
+      answer: "Our AI-powered matching system analyzes your project requirements, budget, and timeline to connect you with the most suitable tech professionals. The system considers skills, experience, availability, and past performance to ensure optimal matches."
+    },
+    {
+      question: "What types of services do you offer?",
+      answer: "We offer a wide range of services including AI development, software engineering, IT consulting, equipment rental, green IT solutions, and specialized tech services. Our marketplace covers everything from individual freelancers to enterprise solutions."
+    },
+    {
+      question: "Is Zion Tech Group free to use?",
+      answer: "Yes! Our core marketplace platform is completely free to use. We believe in democratizing access to tech talent and services. Some premium features and enterprise solutions may have associated costs."
+    },
+    {
+      question: "How do I get started as a client?",
+      answer: "Simply create an account, post your project requirements, and our AI will match you with suitable talent. You can also browse our talent directory, equipment listings, and service categories to find what you need."
+    },
+    {
+      question: "How do I join as a tech professional?",
+      answer: "Create a profile highlighting your skills, experience, and portfolio. Our verification process ensures quality, and once approved, you'll start receiving project matches and can bid on opportunities."
+    },
+    {
+      question: "What makes Zion different from other platforms?",
+      answer: "Zion focuses exclusively on high-tech and AI, offering specialized matching algorithms, comprehensive equipment rentals, green IT solutions, and a community-driven approach that fosters innovation and collaboration."
+    },
+    {
+      question: "Do you offer enterprise solutions?",
+      answer: "Yes! We provide enterprise-grade solutions including team management, advanced analytics, custom integrations, and dedicated support for large organizations looking to scale their tech operations."
+    },
+    {
+      question: "How do you ensure quality and security?",
+      answer: "We implement rigorous verification processes, secure payment systems, dispute resolution mechanisms, and continuous monitoring to maintain high standards and protect all users."
+    },
+    {
+      question: "Can I rent equipment through Zion?",
+      answer: "Absolutely! Our equipment marketplace offers a wide range of tech equipment for rent, from development hardware to specialized AI computing resources, making it easier for businesses to access what they need without large capital investments."
+      title: "Security & Trust",
+      icon: Shield,
+      questions: [
+        {
+          question: "How does Zion protect my data and privacy?",
+          answer: "We implement enterprise-grade security measures including encryption, secure payment processing, and strict privacy policies. Your data is never shared with third parties without consent."
+        },
+        {
+          question: "What happens if there's a dispute with a client or talent?",
+          answer: "Zion provides dispute resolution services and mediation support. We have clear terms of service and can help resolve conflicts to ensure fair outcomes for all parties."
+        },
+        {
+          question: "Are payments secure on the platform?",
+          answer: "Yes, all payments are processed through secure, encrypted channels. We use industry-standard payment processors and never store your payment information on our servers."
+        }
+      ]
+    }
   ];
-
-  const filteredFAQ = faqData
-    .map(category => ({
-      ...category,
-      questions: category.questions.filter(
-        q =>
-          q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          q.answer.toLowerCase().includes(searchQuery.toLowerCase())
-      ),
-    }))
-    .filter(category => category.questions.length > 0);
 
   const contactMethods = [
     {
-      icon: Mail,
-      title: 'Email Support',
-      description: 'Get help via email',
-      contact: 'support@ziontechgroup.com',
-      response: 'Within 4 hours',
+      title: "Email Support",
+      description: "Get help via email",
+      contact: "support@ziontechgroup.com",
+      icon: HelpCircle
     },
     {
-      icon: Phone,
-      title: 'Phone Support',
-      description: 'Speak with our experts',
-      contact: '+1 (302) 464-0950',
-      response: 'Immediate response',
-    },
-    {
-      icon: MessageCircle,
-      title: 'Live Chat',
-      description: 'Chat with our team',
-      contact: 'Available on website',
-      response: 'Real-time support',
-    },
+      title: "Commercial Inquiries",
+      description: "For business partnerships",
+      contact: "commercial@ziontechgroup.com",
+      icon: Users
+    }
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-        <meta
-          name='description'
-          content="Find answers to common questions about Zion Tech Group's services, pricing, support, and technology solutions."
-        />
-        <meta
-          name='keywords'
-          content='FAQ, frequently asked questions, Zion Tech Group, support, help, technology services'
-        />
-      </Helmet>
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
-      <div className='min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50'>
-        {/* Hero Section */}
-        <section className='relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>
-          <div className='max-w-7xl mx-auto'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className='text-center'
-            >
-              <div className='w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6'>
-                <HelpCircle className='w-10 h-10 text-white' />
-              </div>
-
-              <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6'>
-                Frequently Asked Questions
-              </h1>
-
-              <p className='text-xl text-slate-600 max-w-3xl mx-auto mb-8'>
-                Find answers to common questions about our services, pricing,
-                and support. Can't find what you're looking for? Contact our
-                team directly.
-              </p>
-
-              {/* Search Bar */}
-              <div className='max-w-2xl mx-auto relative'>
-                <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5' />
-                <input
-                  type='text'
-                  placeholder='Search for questions or topics...'
-                  value={searchQuery}
-                  onChange={e => setSearchQuery(e.target.value)}
-                  className='w-full pl-12 pr-4 py-4 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg'
-                />
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className='py-16 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-4xl mx-auto'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              {filteredFAQ.map((category, categoryIndex) => (
-                <div key={category.category} className='mb-12'>
-                  <h2 className='text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3'>
-                    {category.category === 'General' && (
-                      <Users className='w-6 h-6 text-blue-600' />
-                    )}
-                    {category.category === 'Services' && (
-                      <Zap className='w-6 h-6 text-blue-600' />
-                    )}
-                    {category.category === 'Pricing & Billing' && (
-                      <CheckCircle className='w-6 h-6 text-blue-600' />
-                    )}
-                    {category.category === 'Support & Maintenance' && (
-                      <Clock className='w-6 h-6 text-blue-600' />
-                    )}
-                    {category.category === 'Technology & Security' && (
-                      <Shield className='w-6 h-6 text-blue-600' />
-                    )}
-                    {category.category}
-                  </h2>
-
-                  <div className='space-y-4'>
-                    {category.questions.map((item, questionIndex) => {
-                      const index = categoryIndex * 100 + questionIndex;
-                      const isOpen = openItems.includes(index);
-
-                      return (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.6, delay: 0.1 * index }}
-                          className='bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden'
-                        >
-                          <button
-                            onClick={() => toggleItem(index)}
-                            className='w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-50 transition-colors'
-                          >
-                            <span className='font-semibold text-slate-900 pr-4'>
-                              {item.question}
-                            </span>
-                            {isOpen ? (
-                              <Minus className='w-5 h-5 text-blue-600 flex-shrink-0' />
-                            ) : (
-                              <Plus className='w-5 h-5 text-slate-400 flex-shrink-0' />
-                            )}
-                          </button>
-
-                          {isOpen && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: 'auto' }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.3 }}
-                              className='px-6 pb-4'
-                            >
-                              <p className='text-slate-600 leading-relaxed'>
-                                {item.answer}
-                              </p>
-                            </motion.div>
-                          )}
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Contact Support Section */}
-        <section className='py-16 px-4 sm:px-6 lg:px-8 bg-white'>
-          <div className='max-w-7xl mx-auto'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <h2 className='text-3xl font-bold text-slate-900 text-center mb-12'>
-                Still Need Help?
-              </h2>
-
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-                {contactMethods.map((method, index) => (
-                  <motion.div
-                    key={method.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className='text-center p-6 bg-slate-50 rounded-xl'
-                  >
-                    <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                      <method.icon className='w-8 h-8 text-blue-600' />
-                    </div>
-                    <h3 className='text-xl font-semibold text-slate-900 mb-2'>
-                      {method.title}
-                    </h3>
-                    <p className='text-slate-600 mb-3'>{method.description}</p>
-                    <p className='font-medium text-slate-900 mb-2'>
-                      {method.contact}
-                    </p>
-                    <p className='text-sm text-slate-500'>{method.response}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-700'>
-          <div className='max-w-4xl mx-auto text-center'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-                Ready to Get Started?
-              </h2>
-              <p className='text-xl text-blue-100 mb-8'>
-                Contact our team to discuss your project requirements and get a
-                personalized solution.
-              </p>
-
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <button className='px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors'>
-                  Contact Sales
-                </button>
-                <button className='px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors'>
-                  Schedule Consultation
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
+interface FAQItem {
+  question: string;
+  answer: string;
+  category: string;
+import { FaqSection } from "@/components/FaqSection";

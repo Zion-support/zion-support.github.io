@@ -14,7 +14,7 @@ const steps = [
   { name: 'Type check', cmd: 'npm run type-check' },
   { name: 'Build', cmd: 'npm run build' },
   { name: 'Smoke tests', cmd: 'npm run test:smoke' },
-  { name: 'Performance monitor', cmd: 'npm run perf:monitor' }
+  { name: 'Performance monitor', cmd: 'npm run perf:monitor' },
 ];
 
 let failures = 0;
@@ -25,4 +25,3 @@ for (const step of steps) {
 }
 
 process.exit(failures === 0 ? 0 : 1);
-

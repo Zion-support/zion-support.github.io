@@ -1,5 +1,5 @@
-import { Toaster as HotToaster } from 'react-hot-toast';
+import * as React from "react";
 
-export function Toaster() {
-  return <HotToaster />;
-}
+export const Toaster: React.FC = () => {
+  return null; // Simple placeholder for now
+};

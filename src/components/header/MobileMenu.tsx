@@ -1,154 +1,146 @@
 
-export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) {
-  const router = useRouter(),
-  const { user } = useAuth(),
-  const isAuthenticated = !!user,
-  const { t } = useTranslation(),
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, ChevronRight } from 'lucide-react';
 
-  const baseItems = [
-    {
-      key: 'home',
-      href: '/',
-      icon: Home,
-      matches: (path: string) => path === '/'},
-    {
-      key: 'explore',
-      href: '/talent',
-      icon: Search,
-      matches: (path: string) =>
-        path.startsWith('/talent') ||
-        path.startsWith('/categories') ||
-        path.startsWith('/marketplace')},
-    {
-      key: 'community',
-      href: '/community',
-      icon: MessageCircle,
-      matches: (path: string) =>
-        path.startsWith('/community') || path.startsWith('/forum')},
-    {
-      key: 'post_job',
-      href: '/post-job',
-      icon: BriefcaseIcon,
-      matches: (path: string) => path.startsWith('/post-job'),
-      authRequired: true},
-    {
-      key: 'messages',
-      href: '/messages',
-      icon: MessageSquare,
-      matches: (path: string) =>
-        path.startsWith('/messages') || path.startsWith('/inbox'),
-      badge: unreadCount,
-      authRequired: true},
-    {
-      key: 'dashboard',
-      href: '/dashboard',
-      icon: User,
-      matches: (path: string) => path.startsWith('/dashboard'),
-      authRequired: true}],
+interface NavigationItem {
+  name: string;
+  href: string;
+}
 
-  const navItems = baseItems.map((item) => ({
-    ...item,
-    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)})),
+interface MobileMenuProps {
+  isOpen: boolean;
+  onClose: () => void;
+  navigationItems: NavigationItem[];
+}
 
-  // Filter items based on auth status
-  const visibleItems = navItems.filter(
-    (item) => !item.authRequired || (item.authRequired && isAuthenticated)),
+export function MobileMenu({ isOpen, onClose, navigationItems }: MobileMenuProps) {
+  const menuVariants = {
+    closed: {
+      opacity: 0,
+      x: '100%',
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut'
+      }
+    },
+    open: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut'
+      }
+    }
+  };
+
+  const backdropVariants = {
+    closed: { opacity: 0 },
+    open: { opacity: 1 }
+  };
 
   return (
-    <div className="py-6">
-      <div className="flex justify-between items-center px-6 mb-6">
-        <h2 className="text-xl font-bold text-foreground">Menu</h2>
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={onClose}
-          aria-label="Close menu"
-          title="Close menu"
-        >
-          <X className="h-5 w-5" />
-        </Button>
-      </div>
-
-      <nav className="space-y-1">
-        {visibleItems.map((item) => (
-          <Link
-            key={item.name}
-            href={item.href}
-            aria-label={item.name}
-            className={cn(;
-              'flex items-center px-6 py-3 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
-              item.matches(router.pathname);
-                ? 'bg-primary/20 text-primary border-l-4 border-primary';
-                : 'text-foreground hover:bg-primary/10 hover:text-primary')}
-            onClick={(e) => {;
-              const routeIsProtected = item.authRequired || isProtectedRoute(item.href),;
-              if (!isAuthenticated && routeIsProtected) {;
-                e.preventDefault(),;
-                // Update URL to include returnTo, then open modal;
-                router.push({ pathname: '/auth/login', query: { returnTo: item.href } }, undefined, { shallow: true });
-                openLoginModal(item.href);
-                // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.;
-                // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.;
-              }
-}
-ursor/expand-services-advertise-and-build-project-4b36
-              onClose(), // Close mobile menu on any click
-            }}
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          {/* Backdrop */}
+          <motion.div
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+            variants={backdropVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
+            onClick={onClose}
+          />
+          
+          {/* Menu */}
+          <motion.div
+            className="fixed right-0 top-0 h-full w-80 max-w-[85vw] bg-zion-blue-dark border-l border-zion-purple/20 z-50"
+            variants={menuVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
           >
-            <div className="relative mr-4">
-              <item.icon className="h-5 w-5" aria-hidden="true" />
-              {item.badge && item.badge > 0 && (
-                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>
-              )}
+            {/* Header */}
+            <div className="flex items-center justify-between p-6 border-b border-zion-purple/20">
+              <h2 className="text-xl font-semibold text-white">Menu</h2>
+              <button
+                onClick={onClose}
+                className="p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
+                aria-label="Close menu"
+              >
+                <X className="h-5 w-5" />
+              </button>
             </div>
-            {item.name}
-          </Link>
-        ))}
-      </nav>
-      <div className="mt-6 px-6">
-        <ModeToggle />
-      </div>
-    </div>
-  )
 
-            {/* User section */}
-            <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-zion-purple/20">
-              {isAuthenticated ? (<div className="space-y-3">
-                  <div className="flex items-center gap-3 px-4 py-2">
-                    <User className="h-5 w-5 text-zion-cyan"/>
-                    <span className="text-white font-medium">
-                      {user?.email || 'User'}
-                    </span>
-                  </div>
-                  <Link to="/messages" onClick={toggleMenu} className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors">
-                    <MessageSquare className="h-5 w-5"/>
-                    <span>Messages</span>
-                  </Link>
-                  <Link to="/profile" onClick={toggleMenu} className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors">
-                    <Settings className="h-5 w-5"/>
-                    <span>Profile</span>
-                  </Link>
-                </div>) : (<div className="space-y-3">
-                  <Link to="/login" onClick={toggleMenu} className="block w-full px-4 py-2 text-center bg-zion-purple text-white rounded-lg hover:bg-zion-purple-dark transition-colors">
-                    {t('auth.login')}
-                  </Link>
-                  <Link to="/signup" onClick={toggleMenu} className="block w-full px-4 py-2 text-center border border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-zion-blue-dark transition-colors">
-                    {t('auth.signup')}
-                  </Link>
-                </div>)}
-            </div>
-          </div>
-        </div>)}
-    </div>);
-}
-}
-;
+            {/* Navigation */}
+            <nav className="p-6">
+              <ul className="space-y-2">
+                {navigationItems.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      to={item.href}
+                      onClick={onClose}
+                      className="flex items-center justify-between p-3 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors group"
+                    >
+                      <span className="font-medium">{item.name}</span>
+                      <ChevronRight className="h-4 w-4 text-zion-cyan group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
 
-name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
-}
+              {/* Additional Links */}
+              <div className="mt-8 pt-6 border-t border-zion-purple/20">
+                <div className="space-y-2">
+                  <Link
+                    to="/pricing"
+                    onClick={onClose}
+                    className="flex items-center justify-between p-3 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors group"
+                  >
+                    <span className="font-medium">Pricing</span>
+                    <ChevronRight className="h-4 w-4 text-zion-cyan group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  
+                  <Link
+                    to="/careers"
+                    onClick={onClose}
+                    className="flex items-center justify-between p-3 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors group"
+                  >
+                    <span className="font-medium">Careers</span>
+                    <ChevronRight className="h-4 w-4 text-zion-cyan group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  
+                  <Link
+                    to="/faq"
+                    onClick={onClose}
+                    className="flex items-center justify-between p-3 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors group"
+                  >
+                    <span className="font-medium">FAQ</span>
+                    <ChevronRight className="h-4 w-4 text-zion-cyan group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* CTA Section */}
+              <div className="mt-8 p-4 bg-zion-purple/10 rounded-lg border border-zion-purple/20">
+                <h3 className="text-white font-semibold mb-2">Ready to get started?</h3>
+                <p className="text-zion-slate-light text-sm mb-4">
+                  Transform your business with our AI-powered solutions
+                </p>
+                <Link
+                  to="/contact"
+                  onClick={onClose}
+                  className="block w-full bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark text-center py-3 px-4 rounded-lg font-medium transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </nav>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
   );
-}
-
 }

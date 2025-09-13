@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
-function log(message, type = "INFO") {
-  const icons = { INFO: "ℹ️", SUCCESS: "✅", ERROR: "❌", WARNING: "⚠️" };
+function log(message, type = 'INFO') {
+  const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
   console.log(`[${new Date().toISOString()}] [${type}] ${message}`);
 }
 
@@ -28,28 +28,28 @@ function findFiles(dir, exts) {
 }
 
 function optimizeImages(publicDir, report) {
-  const images = findFiles(publicDir, [".png", ".jpg", ".jpeg"]);
+  const images = findFiles(publicDir, ['.png', '.jpg', '.jpeg']);
   if (images.length === 0) {
-    report.actions.push("No images found to optimize");
+    report.actions.push('No images found to optimize');
     return;
   }
-  
+
   let sharp;
   try {
-    sharp = require("sharp");
+    sharp = require('sharp');
   } catch {
-    report.actions.push("sharp not installed; skipping image optimization");
+    report.actions.push('sharp not installed; skipping image optimization');
     return;
   }
-  
+
   const optimized = [];
   for (const img of images) {
     const stat = fs.statSync(img);
     if (stat.size < 150 * 1024) continue; // skip small files
-    
+
     const ext = path.extname(img).toLowerCase();
-    const outPath = img.replace(new RegExp(`${ext}$`), ".webp");
-    
+    const outPath = img.replace(new RegExp(`${ext}$`), '.webp');
+
     try {
       sharp(img).webp({ quality: 80 }).toFile(outPath);
       optimized.push({ from: img, to: outPath });
@@ -57,7 +57,7 @@ function optimizeImages(publicDir, report) {
       report.errors.push(`Failed optimizing ${img}: ${e.message}`);
     }
   }
-  
+
   if (optimized.length > 0) {
     report.optimizedImages = optimized;
   }
@@ -72,28 +72,31 @@ function main() {
     actions: [],
     optimizedImages: [],
     modifiedFiles: [],
-    errors: []
+    errors: [],
   };
-  
-  log("Starting Performance Optimizer");
-  
-  ensureDir(path.join(root, "automation-reports"));
-  
+
+  log('Starting Performance Optimizer');
+
+  ensureDir(path.join(root, 'automation-reports'));
+
   // Image optimization in public/
-  optimizeImages(path.join(root, "public"), report);
-  
+  optimizeImages(path.join(root, 'public'), report);
+
   const outFile = path.join(
     root,
     `automation-reports/performance-optimizer-report-${timestamp}.json`
   );
   fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
-  
-  log(`Performance optimization complete. Report: ${path.basename(outFile)}`, "SUCCESS");
+
+  log(
+    `Performance optimization complete. Report: ${path.basename(outFile)}`,
+    'SUCCESS'
+  );
 }
 
 try {
   main();
 } catch (e) {
-  log(`Performance optimizer failed: ${e.message}`, "ERROR");
+  log(`Performance optimizer failed: ${e.message}`, 'ERROR');
   process.exit(1);
 }

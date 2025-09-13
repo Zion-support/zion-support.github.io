@@ -1,316 +1,236 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
+import { 
+  Zap, 
+  Shield, 
+  Cloud, 
+  BarChart3, 
+  Code, 
+  Globe, 
+  Heart, 
+  DollarSign, 
+  GraduationCap, 
+  Building,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  TrendingUp,
   Users,
-  Globe,
-  Cpu,
-  Lock,
-  ShoppingCart,
-  MessageCircle,
-  BookOpen,
-  DollarSign,
-  Gauge,
-  HelpCircle,
-} from 'lucide-react';
+  Clock,
+  MessageSquare
+} from "lucide-react";
+
+const serviceHighlights = [
+  {
+    icon: <Zap className="h-8 w-8" />,
+    title: "AI Process Automation",
+    description: "Reduce manual work by 80% with intelligent workflow automation",
+    benefits: ["Workflow Design", "RPA Integration", "Decision Making", "Process Optimization"],
+    price: "From $2,999",
+    category: "AI Automation",
+    color: "from-purple-500 to-indigo-600"
+  },
+  {
+    icon: <Shield className="h-8 w-8" />,
+    title: "AI Threat Detection",
+    description: "99.5% accuracy in detecting and preventing cyber threats",
+    benefits: ["Real-time Monitoring", "Behavioral Analysis", "Automated Response", "90% False Positive Reduction"],
+    price: "From $3,999",
+    category: "Cybersecurity",
+    color: "from-red-500 to-pink-600"
+  },
+  {
+    icon: <Cloud className="h-8 w-8" />,
+    title: "Multi-Cloud Orchestration",
+    description: "Reduce cloud costs by 25-40% with intelligent management",
+    benefits: ["Cost Optimization", "Automated Scaling", "Centralized Monitoring", "Multi-Platform Support"],
+    price: "From $1,999",
+    category: "Cloud Management",
+    color: "from-blue-500 to-indigo-600"
+  },
+  {
+    icon: <BarChart3 className="h-8 w-8" />,
+    title: "Real-Time Analytics Engine",
+    description: "Process millions of events per second with streaming analytics",
+    benefits: ["Apache Kafka Integration", "Real-time Dashboards", "Predictive Analytics", "High Performance"],
+    price: "From $3,499",
+    category: "Real-Time Analytics",
+    color: "from-green-500 to-blue-600"
+  },
+  {
+    icon: <Code className="h-8 w-8" />,
+    title: "AI Code Review Assistant",
+    description: "Improve code quality by 60% with intelligent analysis",
+    benefits: ["Security Scanning", "Best Practices", "GitHub Integration", "Automated Reviews"],
+    price: "From $599",
+    category: "Development Tools",
+    color: "from-yellow-500 to-orange-600"
+  },
+  {
+    icon: <Globe className="h-8 w-8" />,
+    title: "Enterprise IoT Platform",
+    description: "Support for 100,000+ devices with edge computing",
+    benefits: ["Device Management", "Edge AI Processing", "Real-time Monitoring", "Predictive Maintenance"],
+    price: "From $4,999",
+    category: "IoT",
+    color: "from-green-500 to-teal-600"
+  },
+  {
+    icon: <Heart className="h-8 w-8" />,
+    title: "Healthcare AI Platform",
+    description: "HIPAA-compliant AI solutions for healthcare",
+    benefits: ["Diagnostic Assistance", "Patient Monitoring", "Medical Imaging", "Predictive Analytics"],
+    price: "From $12,999",
+    category: "Healthcare Tech",
+    color: "from-red-500 to-pink-600"
+  },
+  {
+    icon: <DollarSign className="h-8 w-8" />,
+    title: "AI Trading Platform",
+    description: "Algorithmic trading with machine learning models",
+    benefits: ["Risk Management", "Backtesting", "Real-time Data", "Market Analysis"],
+    price: "From $8,999",
+    category: "FinTech",
+    color: "from-green-500 to-emerald-600"
+  },
+  {
+    icon: <GraduationCap className="h-8 w-8" />,
+    title: "Adaptive Learning Platform",
+    description: "Personalized education based on learning styles",
+    benefits: ["Adaptive Content", "Progress Tracking", "Performance Analytics", "Student Engagement"],
+    price: "From $3,999",
+    category: "EdTech",
+    color: "from-purple-500 to-blue-600"
+  },
+  {
+    icon: <Building className="h-8 w-8" />,
+    title: "Smart Building Management",
+    description: "AI-powered building automation and optimization",
+    benefits: ["Energy Optimization", "Security Monitoring", "Occupant Comfort", "Predictive Maintenance"],
+    price: "From $7,999",
+    category: "Smart Buildings",
+    color: "from-indigo-500 to-purple-600"
+  }
+];
+
+const stats = [
+  { label: "Services Available", value: "25+", icon: <Zap className="h-6 w-6" /> },
+  { label: "AI Score Average", value: "94.5", icon: <Star className="h-6 w-6" /> },
+  { label: "Customer Satisfaction", value: "98%", icon: <CheckCircle className="h-6 w-6" /> },
+  { label: "Cost Reduction", value: "25-80%", icon: <TrendingUp className="h-6 w-6" /> },
+  { label: "Global Coverage", value: "150+", icon: <Globe className="h-6 w-6" /> },
+  { label: "Response Time", value: "<2hrs", icon: <Clock className="h-6 w-6" /> }
+];
 
 export function ServicesShowcase() {
-  const services = [
-    {
-      icon: Brain,
-      title: 'AI & Analytics',
-      description: 'Machine Learning & Data Science solutions',
-      href: '/services/ai-business-intelligence',
-      category: 'AI',
-      color: 'from-purple-500 to-pink-600',
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud & DevOps',
-      description: 'Infrastructure & Automation',
-      href: '/services/cloud-devops',
-      category: 'Infrastructure',
-      color: 'from-blue-500 to-cyan-600',
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'AI-Powered Security solutions',
-      href: '/services',
-      category: 'Security',
-      color: 'from-red-500 to-orange-600',
-    },
-    {
-      icon: Cpu,
-      title: 'IoT & Edge',
-      description: 'Smart Devices & Networks',
-      href: '/services',
-      category: 'IoT',
-      color: 'from-green-500 to-emerald-600',
-    },
-    {
-      icon: Lock,
-      title: 'Blockchain',
-      description: 'DeFi & Smart Contracts',
-      href: '/services',
-      category: 'Blockchain',
-      color: 'from-yellow-500 to-orange-600',
-    },
-    {
-      icon: Users,
-      title: 'Healthcare Tech',
-      description: 'AI Medicine & Diagnostics',
-      href: '/services',
-      category: 'Healthcare',
-      color: 'from-pink-500 to-rose-600',
-    },
-    {
-      icon: Globe,
-      title: 'Sustainability',
-      description: 'Green IT Solutions',
-      href: '/services',
-      category: 'Green IT',
-      color: 'from-emerald-500 to-teal-600',
-    },
-    {
-      icon: ShoppingCart,
-      title: 'Micro SaaS',
-      description: 'Productized SaaS for niches',
-      href: '/services/micro-saas-solutions',
-      category: 'SaaS',
-      color: 'from-indigo-500 to-purple-600',
-    },
-    {
-      icon: MessageCircle,
-      title: 'AI Auto Email',
-      description: 'Faster replies, CRM logging',
-      href: '/services/ai-auto-email-responder',
-      category: 'Automation',
-      color: 'from-cyan-500 to-blue-600',
-    },
-    {
-      icon: Users,
-      title: 'Mobile Surveys',
-      description: 'NPS/CSAT with AI insights',
-      href: '/services/mobile-survey',
-      category: 'Analytics',
-      color: 'from-teal-500 to-green-600',
-    },
-    {
-      icon: Shield,
-      title: 'Compliance Copilot',
-      description: 'SOC2/ISO evidence automation',
-      href: '/services/ai-compliance-copilot',
-      category: 'Compliance',
-      color: 'from-orange-500 to-red-600',
-    },
-    {
-      icon: BookOpen,
-      title: 'LLM Content Studio',
-      description: 'On-brand AI content',
-      href: '/services/llm-content-studio',
-      category: 'Content',
-      color: 'from-violet-500 to-purple-600',
-    },
-    {
-      icon: DollarSign,
-      title: 'FinOps Advisor',
-      description: 'Cloud cost optimization',
-      href: '/services/finops-advisor',
-      category: 'Finance',
-      color: 'from-emerald-500 to-green-600',
-    },
-    {
-      icon: ShoppingCart,
-      title: 'Returns Management',
-      description: 'E-commerce RMA automation',
-      href: '/services/returns-management',
-      category: 'E-commerce',
-      color: 'from-rose-500 to-pink-600',
-    },
-    {
-      icon: MessageCircle,
-      title: 'Email Sequencer',
-      description: 'Automated follow-ups',
-      href: '/services/email-sequencer',
-      category: 'Marketing',
-      color: 'from-blue-500 to-indigo-600',
-    },
-    {
-      icon: BookOpen,
-      title: 'Podcast Transcription',
-      description: 'Transcripts & show notes',
-      href: '/services/podcast-transcription',
-      category: 'Media',
-      color: 'from-purple-500 to-violet-600',
-    },
-    {
-      icon: Users,
-      title: 'Micro CRM',
-      description: 'Local business CRM',
-      href: '/services/micro-crm',
-      category: 'CRM',
-      color: 'from-cyan-500 to-teal-600',
-    },
-    {
-      icon: Gauge,
-      title: 'Website Analytics',
-      description: 'Privacy-first SMB analytics',
-      href: '/services/website-analytics',
-      category: 'Analytics',
-      color: 'from-blue-500 to-cyan-600',
-    },
-    {
-      icon: HelpCircle,
-      title: 'IT Helpdesk',
-      description: 'Tickets, SLAs, portals',
-      href: '/services/it-helpdesk',
-      category: 'Support',
-      color: 'from-orange-500 to-yellow-600',
-    },
-    {
-      icon: ShoppingCart,
-      title: 'Affiliate Tracking',
-      description: 'Partner revenue platform',
-      href: '/services/affiliate-tracking',
-      category: 'Marketing',
-      color: 'from-green-500 to-emerald-600',
-    },
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
   return (
-    <section className='py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
-      <div className='container mx-auto px-6'>
+    <section className="py-20 bg-zion-slate">
+      <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className='text-center mb-16'
-        >
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-            Our Comprehensive
-            <span className='bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent'>
-              {' '}
-              Services
-            </span>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-zion-blue mb-4">
+            Comprehensive Tech & AI Services
           </h2>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-            From AI-powered solutions to enterprise infrastructure, we provide
-            end-to-end technology services that drive business transformation
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover our innovative micro SAAS solutions designed to transform your business operations, 
+            enhance security, and drive growth through cutting-edge technology
           </p>
-        </motion.div>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="flex justify-center mb-2">
+                <div className="p-3 rounded-full bg-zion-blue-light text-zion-cyan">
+                  {stat.icon}
+                </div>
+              </div>
+              <div className="text-2xl font-bold text-zion-blue">{stat.value}</div>
+              <div className="text-sm text-gray-600">{stat.label}</div>
+            </div>
+          ))}
+        </div>
 
         {/* Services Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true, margin: '-50px' }}
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'
-        >
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              whileHover={{ y: -8, scale: 1.02 }}
-              className='group relative'
-            >
-              <Link to={service.href}>
-                <div className='relative overflow-hidden bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10'>
-                  {/* Background Gradient */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
-                  />
-
-                  {/* Icon */}
-                  <div
-                    className={`relative z-10 w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <service.icon className='w-8 h-8 text-white' />
-                  </div>
-
-                  {/* Content */}
-                  <div className='relative z-10'>
-                    <div className='flex items-center justify-between mb-2'>
-                      <h3 className='text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300'>
-                        {service.title}
-                      </h3>
-                      <span className='text-xs px-2 py-1 bg-white/10 text-gray-400 rounded-full'>
-                        {service.category}
-                      </span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {serviceHighlights.map((service, index) => (
+            <Card key={index} className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <CardHeader>
+                <div className="flex items-center justify-between mb-4">
+                  <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${service.color} flex items-center justify-center`}>
+                    <div className="text-white">
+                      {service.icon}
                     </div>
-                    <p className='text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300'>
-                      {service.description}
-                    </p>
                   </div>
-
-                  {/* Hover Effect */}
-                  <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+                  <Badge variant="outline" className="border-zion-blue text-zion-blue">
+                    {service.category}
+                  </Badge>
                 </div>
-              </Link>
-            </motion.div>
+                <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
+                <CardDescription className="text-sm text-gray-600">
+                  {service.description}
+                </CardDescription>
+              </CardHeader>
+              
+              <CardContent>
+                <div className="mb-4">
+                  <h4 className="font-semibold text-zion-blue mb-2">Key Benefits:</h4>
+                  <ul className="space-y-1">
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-sm">
+                        <CheckCircle className="h-4 w-4 text-green-500" />
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="text-2xl font-bold text-zion-blue mb-4">
+                  {service.price}
+                </div>
+              </CardContent>
+              
+              <CardContent className="pt-0">
+                <Link to="/comprehensive-services">
+                  <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
+                    Learn More
+                    <ArrowRight className="h-4 w-4 ml-2" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
           ))}
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className='text-center mt-16'
-        >
-          <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/20'>
-            <h3 className='text-2xl font-bold text-white mb-4'>
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-zion-blue to-zion-purple rounded-2xl p-12 text-white">
+            <h3 className="text-3xl font-bold mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
-              Let's discuss how our technology solutions can drive innovation,
-              efficiency, and growth for your organization.
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Join thousands of businesses that have already transformed their operations with our innovative solutions
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                to='/contact'
-                className='px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'
-              >
-                Get Started Today
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/comprehensive-services">
+                <Button size="lg" className="bg-white text-zion-blue hover:bg-zion-slate-light">
+                  <Users className="h-5 w-5 mr-2" />
+                  Explore All Services
+                </Button>
               </Link>
-              <Link
-                to='/services'
-                className='px-8 py-3 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'
-              >
-                View All Services
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">
+                  <MessageSquare className="h-5 w-5 mr-2" />
+                  Get Free Consultation
+                </Button>
               </Link>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

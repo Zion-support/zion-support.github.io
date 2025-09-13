@@ -1,422 +1,263 @@
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {;
-  Menu,;
-  X,;
-  ChevronDown,;
-  Search,;
-  User,;
-  Settings,;
-  LogOut,;
-  Bell,;
-  Globe,;
-  Zap,;
-  Brain,;
-  Rocket,;
-  Dna,;
-  DollarSign,;
-  Lock,;
-  Wifi,;
-  Truck,;
-  Gamepad2,;
-  Bot,;
-  Factory,;
-  Car,;
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Menu, X, ChevronDown, Search, User, 
-  Settings, LogOut, Bell, Globe, Zap
+  Menu, 
+  X, 
+  Search, 
+  ChevronDown, 
+  Phone, 
+  Linkedin, 
+  Twitter, 
+  Github, 
+  Youtube,
+  Home,
+  Briefcase,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cloud,
+  Target,
+  Building,
+  Users,
+  BookOpen,
+  FileText,
+  Video,
+  Code,
+  Sparkles,
+  Zap,
+  Star,
+  Award,
+  ChevronRight,
+  ExternalLink
 } from 'lucide-react';
 import Link from 'next/link';
-
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  User,
-  Settings,
-  LogOut,
-  Bell,
-  Globe,
-  Zap,
-  Brain,
-  Rocket,
-  Dna,
-  DollarSign,
-  Lock,
-  Wifi,
-  Truck,
-  Gamepad2,
-  Bot,
-  Factory,
-  Car,;
-
-} from "lucide-react";
-import Link from "next/link";
-interface EnhancedNavigationProps {;
-
-interface EnhancedNavigationProps {
-
-  className?: string;
+import dynamic from 'next/dynamic';
+// Define Node type for DOM event handling
+type Node = HTMLElement | null;
+interface NavigationItem {
+  label: string;
+  href: string;
+  icon: React.ReactNode;
+  description?: string;
+  children?: NavigationItem[];
+  badge?: string;
+  featured?: boolean;
+  neonColor?: string;
+  category?: string;
 }
-
+// Enhanced navigation items with better organization and accessibility
 const navigationItems: NavigationItem[] = [
   {
-    name: 'AI Services',
-    href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
-    description: 'Advanced AI and machine learning solutions',
-    children: [
-      { name: 'AI Business Intelligence', href: '/ai-business-intelligence-platform' },
-      { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
-      { name: 'AI Legal Analysis', href: '/ai-legal-document-analysis' },
-      { name: 'AI Healthcare Analytics', href: '/ai-healthcare-analytics' },
-      { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization' }
-    ]
+    label: 'Home',
+    href: '/',
+    icon: <Home className="w-4 h-4" />,
+    neonColor: 'shadow-cyan-400/50',
+    description: 'Return to homepage'
   },
-  {
-    name: 'Quantum Computing',
-    href: '/quantum-cloud-infrastructure',
-    icon: <Atom className="w-5 h-5" />,
-    description: 'Quantum computing and quantum AI solutions',
+    label: 'Services',
+    href: '/services',
+    icon: <Briefcase className="w-4 h-4" />,
+    description: 'Explore our comprehensive technology solutions',
+    badge: 'New',
+    neonColor: 'shadow-blue-400/50',
     children: [
-      { name: 'Quantum AI Drug Discovery', href: '/quantum-ai-drug-discovery' },
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
-      { name: 'Quantum AI Supercomputer', href: '/quantum-ai-supercomputer' }
+      {
+        label: 'AI & Machine Learning',
+        href: '/services?category=ai-ml',
+        icon: <Brain className="w-4 h-4" />,
+        description: 'Advanced AI solutions for enterprise',
+        featured: true,
+        neonColor: 'shadow-purple-400/50',
+        category: 'AI Services'
+      },
+        label: 'Quantum Computing',
+        href: '/services?category=quantum',
+        icon: <Atom className="w-4 h-4" />,
+        description: 'Next-generation quantum solutions',
+        neonColor: 'shadow-blue-400/50',
+        category: 'Quantum Technology'
+        label: 'Space Technology',
+        href: '/services?category=space-tech',
+        icon: <Rocket className="w-4 h-4" />,
+        description: 'Innovative space tech applications',
+        neonColor: 'shadow-pink-400/50',
+        category: 'Space Technology'
+        label: 'Cybersecurity',
+        href: '/services?category=cybersecurity',
+        icon: <Shield className="w-4 h-4" />,
+        description: 'Advanced security solutions',
+        neonColor: 'shadow-red-400/50',
+        category: 'Security'
+        label: 'Cloud & DevOps',
+        href: '/services?category=cloud-devops',
+        icon: <Cloud className="w-4 h-4" />,
+        description: 'Cloud infrastructure and automation',
+        neonColor: 'shadow-green-400/50',
+        category: 'Infrastructure'
+        label: 'Business Solutions',
+        href: '/services?category=business',
+        icon: <Target className="w-4 h-4" />,
+        description: 'Business optimization and automation',
+        neonColor: 'shadow-emerald-400/50',
+        category: 'Business'
+      }
     ]
-  },
-  {
-    name: 'Emerging Tech',
-    href: '/emerging-tech-services',
-    icon: <Rocket className="w-5 h-5" />,
-    description: 'Blockchain, IoT, and cutting-edge technologies',
-    children: [
-      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
-      { name: 'IoT Edge Computing', href: '/iot-edge-computing-orchestration' },
-      { name: '5G Private Networks', href: '/5g-private-network-solutions' },
-      { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }
-    ]
-  },
-  {
-    name: 'Cybersecurity',
-    href: '/security',
-    icon: <Shield className="w-5 h-5" />,
-    description: 'Advanced security and compliance solutions',
-    children: [
-      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
-      { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' }
-    ]
-  },
-  {
-    name: 'Space Technology',
-    href: '/space-technology',
-    icon: <Globe className="w-5 h-5" />,
-    description: 'Space mission control and satellite operations',
-    children: [
-      { name: 'Space Mission Control', href: '/space-mission-control' },
-      { name: 'Satellite Operations', href: '/satellite-operations' }
-    ]
-  },
-  {
-    name: 'Enterprise IT',
-    href: '/it-services',
-    icon: <Database className="w-5 h-5" />,
-    description: 'Enterprise infrastructure and solutions',
-    children: [
-      { name: 'Cloud Migration', href: '/cloud-migration' },
-      { name: 'DevOps Automation', href: '/devops-automation' },
-      { name: 'Data Analytics', href: '/data-analytics' }
-    ]
+    label: 'About',
+    href: '/about',
+    icon: <Building className="w-4 h-4" />,
+    description: 'Learn about our company and mission',
+        label: 'Our Story',
+        href: '/about#story',
+        icon: <BookOpen className="w-4 h-4" />,
+        description: 'Company history and vision'
+        label: 'Team',
+        href: '/team',
+        icon: <Users className="w-4 h-4" />,
+        description: 'Meet our expert team'
+        label: 'Careers',
+        href: '/careers',
+        icon: <Award className="w-4 h-4" />,
+        description: 'Join our team'
+    label: 'Resources',
+    href: '/resources',
+    icon: <FileText className="w-4 h-4" />,
+    description: 'Educational content and tools',
+        label: 'Blog',
+        href: '/blog',
+        description: 'Latest insights and updates'
+        label: 'Documentation',
+        href: '/docs',
+        icon: <Code className="w-4 h-4" />,
+        description: 'Technical documentation'
+        label: 'Webinars',
+        href: '/webinars',
+        icon: <Video className="w-4 h-4" />,
+        description: 'Educational webinars'
+        label: 'White Papers',
+        href: '/white-papers',
+        icon: <FileText className="w-4 h-4" />,
+        description: 'In-depth research papers'
+        label: 'Case Studies',
+        href: '/case-studies',
+        description: 'Success stories and implementations'
+        label: 'Training',
+        href: '/training',
+        description: 'Professional development courses'
+    label: 'Contact',
+    href: '/contact',
+    icon: <Phone className="w-4 h-4" />,
+    description: 'Get in touch with our team'
   }
 ];
-
-const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
-  className = ""
-}) => {
+// Enhanced social links
+const socialLinks = [
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/zion-tech-group',
+    icon: <Linkedin className="w-5 h-5" />,
+    description: 'Follow us on LinkedIn'
+    name: 'Twitter',
+    href: 'https://twitter.com/ziontechgroup',
+    icon: <Twitter className="w-5 h-5" />,
+    description: 'Follow us on Twitter'
+    name: 'GitHub',
+    href: 'https://github.com/Zion-Holdings',
+    icon: <Github className="w-5 h-5" />,
+    description: 'View our open source projects'
+    name: 'YouTube',
+    href: 'https://youtube.com/@ziontechgroup',
+    icon: <Youtube className="w-5 h-5" />,
+    description: 'Watch our videos'
+// Performance-optimized animations
+const navigationAnimations = {
+  slideDown: {
+    initial: { opacity: 0, y: -20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
+    transition: { duration: 0.2, ease: "easeOut" }
+  fadeIn: {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+    transition: { duration: 0.15 }
+};
+const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false);
-
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  
+  const router = useRouter();
+  const navRef = useRef<HTMLElement>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
+  // Check for reduced motion preference
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setIsReducedMotion(mediaQuery.matches);
+  }, []);
+  // Handle scroll effect
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  // Close mobile menu on route change
+    setIsOpen(false);
+    setActiveDropdown(null);
+  }, [router.asPath]);
+  // Handle search focus
+    if (isSearchOpen && searchRef.current) {
+      searchRef.current.focus();
+    }
+  }, [isSearchOpen]);
+  // Close dropdowns when clicking outside
+    const handleClickOutside = (event: MouseEvent) => {
+              const target = event.target as any;
+      if (!target.closest('.navigation-dropdown')) {
+        closeDropdown();
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  // Optimized event handlers
+  const toggleMenu = useCallback(() => {
+    setIsOpen(!isOpen);
+  }, [isOpen]);
+  const toggleDropdown = useCallback((label: string) => {
+    setActiveDropdown(activeDropdown === label ? null : label);
+  }, [activeDropdown]);
+  const closeDropdown = useCallback(() => {
+  const handleSearch = useCallback((e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      setSearchQuery('');
+      setIsSearchOpen(false);
+  }, [searchQuery, router]);
+  const toggleSearch = useCallback(() => {
+    setIsSearchOpen(!isSearchOpen);
+    if (!isSearchOpen) {
+  // Get animation props based on user preference
+  const getAnimationProps = (animationType: keyof typeof navigationAnimations) => {
+    if (isReducedMotion) {
+      return { initial: {}, animate: {}, exit: {}, transition: {} };
+    return navigationAnimations[animationType];
+  };
+export default function EnhancedNavigation() {
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <div className="text-xl font-bold text-gray-800">Zion Tech Group</div>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Home
-            </Link>
-            
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button 
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                Services
-                <ChevronDown className="ml-1 w-4 h-4" />
-              </button>
-              <div 
-                className={`absolute top-full left-0 w-80 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`}
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                <Link href="/services/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Services
-                </Link>
-                <Link href="/services/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  IT Services
-                </Link>
-                <Link href="/services/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Micro SaaS
-                </Link>
-                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">AI Products</div>
-                <Link href="/services/ai-email-responder" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Email Responder
-                </Link>
-                <Link href="/services/ai-content-studio" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Content Studio
-                </Link>
-                <Link href="/services/ai-support-desk" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Support Desk
-                </Link>
-                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">IT & Cloud</div>
-                <Link href="/services/ai-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Development
-                </Link>
-                <Link href="/services/cloud-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Cloud Services
-                </Link>
-                <Link href="/services/web-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Web Development
-                </Link>
-                <Link href="/services/mobile-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Mobile Development
-                </Link>
-                <Link href="/services/blockchain-solutions" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Blockchain Solutions
-                </Link>
-                <Link href="/services/iot-platforms" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  IoT Platforms
-                </Link>
-                <Link href="/services/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Cybersecurity
-                </Link>
-              </div>
-            </div>
-
-            {/* Solutions Dropdown */}
-            <div className="relative group">
-              <button 
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
-                onMouseEnter={() => setSolutionsOpen(true)}
-                onMouseLeave={() => setSolutionsOpen(false)}
-              >
-                Solutions
-                <ChevronDown className="ml-1 w-4 h-4" />
-              </button>
-              <div 
-                className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${solutionsOpen ? 'block' : 'hidden'}`}
-                onMouseEnter={() => setSolutionsOpen(true)}
-                onMouseLeave={() => setSolutionsOpen(false)}
-              >
-                <Link href="/solutions/enterprise" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Enterprise Solutions
-                </Link>
-                <Link href="/solutions/small-business" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Small Business
-                </Link>
-                <Link href="/solutions/startups" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Startups
-                </Link>
-                <Link href="/solutions/healthcare" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Healthcare
-                </Link>
-                <Link href="/solutions/finance" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Finance
-                </Link>
-                <Link href="/case-studies" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Case Studies
-                </Link>
-              </div>
-            </div>
-
-            <Link href="/products" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Products
-            </Link>
-            <Link href="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Services
-            </Link>
-            <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
-              About
-            </Link>
-            <Link href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Blog
-            </Link>
-            <Link href="/careers" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Careers
-            </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Contact
-            </Link>
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block">
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            className="lg:hidden text-gray-600 hover:text-gray-900"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+    <nav className="border-b border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 backdrop-blur supports-backdrop-blur:bg-white/50 sticky top-0 z-40">
+      <div className="container mx-auto px-4 h-14 flex items-center justify-between">
+        <Link href="/">
+          <a className="font-semibold">Zion</a>
+        </Link>
+        <div className="flex items-center gap-4 text-sm">
+          <Link href="/about"><a>About</a></Link>
+          <Link href="/blog"><a>Blog</a></Link>
+          <Link href="/contact"><a>Contact</a></Link>
+          <Link href="/settings/account"><a>Account</a></Link>
+          <Web3LoginButton />
         </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">
-            <div className="space-y-2">
-              <Link href="/" className="block py-2 text-gray-600 hover:text-blue-600">
-                Home
-              </Link>
-              <div className="py-2">
-                <div className="text-gray-600 font-semibold mb-2">Services</div>
-                <div className="pl-4 space-y-2">
-                  <Link href="/services/ai-services" className="block py-1 text-gray-500 hover:text-blue-600">
-                    AI Services
-                  </Link>
-                  <Link href="/services/it-services" className="block py-1 text-gray-500 hover:text-blue-600">
-                    IT Services
-                  </Link>
-                  <Link href="/services/micro-saas" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Micro SaaS
-                  </Link>
-                  <div className="text-xs uppercase text-gray-400 mt-2">AI Products</div>
-                  <Link href="/services/ai-email-responder" className="block py-1 text-gray-500 hover:text-blue-600">
-                    AI Email Responder
-                  </Link>
-                  <Link href="/services/ai-content-studio" className="block py-1 text-gray-500 hover:text-blue-600">
-                    AI Content Studio
-                  </Link>
-                  <Link href="/services/ai-support-desk" className="block py-1 text-gray-500 hover:text-blue-600">
-                    AI Support Desk
-                  </Link>
-                  <Link href="/services/ai-development" className="block py-1 text-gray-500 hover:text-blue-600">
-                    AI Development
-                  </Link>
-                  <Link href="/services/cloud-services" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Cloud Services
-                  </Link>
-                  <Link href="/services/web-development" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Web Development
-                  </Link>
-                  <Link href="/services/mobile-development" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Mobile Development
-                  </Link>
-                  <Link href="/services/blockchain-solutions" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Blockchain Solutions
-                  </Link>
-                  <Link href="/services/iot-platforms" className="block py-1 text-gray-500 hover:text-blue-600">
-                    IoT Platforms
-                  </Link>
-                  <Link href="/services/cybersecurity" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Cybersecurity
-                  </Link>
-                </div>
-              </div>
-              <div className="py-2">
-                <div className="text-gray-600 font-semibold mb-2">Solutions</div>
-                <div className="pl-4 space-y-2">
-                  <Link href="/solutions/enterprise" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Enterprise Solutions
-                  </Link>
-                  <Link href="/solutions/small-business" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Small Business
-                  </Link>
-                  <Link href="/solutions/startups" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Startups
-                  </Link>
-                  <Link href="/solutions/healthcare" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Healthcare
-                  </Link>
-                  <Link href="/solutions/finance" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Finance
-                  </Link>
-                </div>
-              </div>
-              <Link href="/products" className="block py-2 text-gray-600 hover:text-blue-600">
-                Products
-              </Link>
-              <Link href="/about" className="block py-2 text-gray-600 hover:text-blue-600">
-                About
-              </Link>
-              <Link href="/blog" className="block py-2 text-gray-600 hover:text-blue-600">
-                Blog
-              </Link>
-              <Link href="/careers" className="block py-2 text-gray-600 hover:text-blue-600">
-                Careers
-              </Link>
-              <Link href="/contact" className="block py-2 text-gray-600 hover:text-blue-600">
-                Contact
-              </Link>
-              <div className="pt-4">
-                <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block w-full text-center">
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   );
-};
-
-export default EnhancedNavigation;

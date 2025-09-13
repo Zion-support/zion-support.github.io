@@ -1,103 +1,104 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Badge } from '../ui/badge';
+import { CheckCircle, Star, Users, Shield, Zap, Globe } from 'lucide-react';
 
-const features = [
+const featureHighlights = [
   {
-    icon: '🚀',
-    title: 'Cutting-Edge Technology',
-    description:
-      'Leverage the latest advancements in AI, quantum computing, and blockchain technology',
+    title: "For Talent & Service Providers",
+    features: [
+      "Create a professional profile showcasing your skills and experience",
+      "Get matched with relevant projects that fit your expertise",
+      "Secure payment processing with on-time disbursements",
+      "Build your reputation through client reviews and ratings",
+      "Access to enterprise clients and high-value projects",
+      "Professional development resources and community support"
+    ]
   },
   {
-    icon: '⚡',
-    title: 'Lightning Fast Performance',
-    description:
-      'Optimized solutions that deliver exceptional speed and efficiency for your business needs',
+    title: "For Enterprise Clients",
+    features: [
+      "White-labeled talent portal with your company branding",
+      "Dedicated account management and priority support",
+      "Custom talent pools and preferred provider networks",
+      "Advanced project management and collaboration tools",
+      "Compliance and security features for enterprise needs",
+      "Scalable solutions that grow with your business"
+    ]
   },
   {
-    icon: '🔒',
-    title: 'Enterprise Security',
-    description:
-      'Bank-level security protocols and compliance standards to protect your valuable data',
-  },
-  {
-    icon: '🌐',
-    title: 'Global Scalability',
-    description:
-      'Solutions that scale seamlessly from startup to enterprise across multiple regions',
-  },
-  {
-    icon: '🤖',
-    title: 'AI-Powered Intelligence',
-    description:
-      'Smart automation and predictive analytics that adapt to your business requirements',
-  },
-  {
-    icon: '📊',
-    title: 'Real-Time Analytics',
-    description:
-      'Comprehensive insights and reporting to make data-driven decisions instantly',
-  },
+    title: "For Product Sellers",
+    features: [
+      "Comprehensive product catalog management",
+      "Advanced analytics and performance tracking",
+      "Integrated payment and order management",
+      "Customer relationship management tools",
+      "Marketing and promotion features",
+      "Multi-channel selling capabilities"
+    ]
+  }
 ];
 
-export function FeatureHighlights() {
+export const FeatureHighlights: React.FC = () => {
   return (
-    <section className='py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
-      <div className='max-w-7xl mx-auto px-6'>
-        <motion.div
-          className='text-center mb-16'
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
-            Why Choose Zion Tech Group?
+    <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Built for Everyone
           </h2>
-          <p className='text-gray-300 text-lg max-w-3xl mx-auto'>
-            Our innovative solutions combine cutting-edge technology with proven
-            business value to deliver exceptional results
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Our platform serves talent, enterprise clients, and product sellers with tailored solutions for every need.
           </p>
-        </motion.div>
+        </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              className='text-center group'
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <div className='w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
-                <span className='text-3xl'>{feature.icon}</span>
-              </div>
-
-              <h3 className='text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200'>
-                {feature.title}
-              </h3>
-
-              <p className='text-gray-400 text-sm leading-relaxed'>
-                {feature.description}
-              </p>
-            </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {featureHighlights.map((highlight, index) => (
+            <Card key={index} className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-colors">
+              <CardHeader>
+                <CardTitle className="text-white text-xl mb-2">
+                  {highlight.title}
+                </CardTitle>
+                <CardDescription className="text-gray-300">
+                  Discover the features designed specifically for your role
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  {highlight.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
-        <motion.div
-          className='mt-16 text-center'
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <div className='inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold'>
-            <span>Experience the difference</span>
-            <span className='text-2xl'>→</span>
+        {/* Stats Section */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">10K+</div>
+            <div className="text-gray-400">Active Users</div>
           </div>
-        </motion.div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
+            <div className="text-gray-400">Projects Completed</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">99%</div>
+            <div className="text-gray-400">Satisfaction Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
+            <div className="text-gray-400">Support Available</div>
+          </div>
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default FeatureHighlights;

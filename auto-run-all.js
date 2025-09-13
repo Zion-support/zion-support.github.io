@@ -12,18 +12,18 @@ const WATCH_DIRS = [
   path.join(__dirname, 'components'),
   path.join(__dirname, 'automation'),
   path.join(__dirname, 'backend'),
-  path.join(__dirname, 'scripts'),
+  path.join(__dirname, 'scripts')
 ];
 // File types and their interpreters
 const FILE_TYPES = {
-  '.ts': 'ts-node',
-  '.tsx': 'ts-node',
-  '.js': 'node',
-  '.sh': 'bash',
-  '.py': 'python3',
+  .ts': ts-node',
+  .tsx': ts-node',
+  .js': node',
+  .sh': bash',
+  .py': python3
 };
 // Glob pattern for all supported file types
-const FILE_GLOB = '**/*.{ts,tsx,js,sh,py}';
+const FILE_GLOB = **/*.{ts,tsx,js,sh,py};
 
 // Helper to get file extension
 function getFileExt(filePath) {
@@ -33,7 +33,7 @@ function getFileExt(filePath) {
 // Helper to create a unique PM2 process name for each file
 function getProcessName(filePath) {
   // Replace slashes with dashes for PM2 process name
-  return 'auto-' + filePath.replace(/\//g, '-').replace(/\\/g, '-');
+  return auto-' + filePath.replace(/\//g, -').replace(/\\/g, -');
 }
 
 // Start or restart a file with PM2 using the correct interpreter
@@ -48,13 +48,13 @@ function startOrRestartFile(filePath) {
     return;
   }
   // For .sh files, ensure executable
-  if (ext === '.sh') {
+  if (ext === .sh') {
     try {
       fs.chmodSync(absPath, 0o755);
     } catch (e) {
       console.warn(
         `[auto-run-all] Could not chmod +x for ${filePath}:`,
-        e.message
+        e.message,
       );
     }
   }
@@ -64,16 +64,16 @@ function startOrRestartFile(filePath) {
       script: absPath,
       interpreter,
       watch: false,
-      autorestart: true,
+      autorestart: true
     },
-    err => {
+    (err) => {
       if (err) {
         // If already exists, restart
-        pm2.restart(procName, restartErr => {
+        pm2.restart(procName, (restartErr) => {
           if (restartErr) {
             console.error(
               `[auto-run-all] Failed to start/restart ${filePath}:`,
-              restartErr.message
+              restartErr.message,
             );
           } else {
             console.log(`[auto-run-all] Restarted: ${filePath}`);
@@ -82,7 +82,7 @@ function startOrRestartFile(filePath) {
       } else {
         console.log(`[auto-run-all] Started: ${filePath}`);
       }
-    }
+    },
   );
 }
 
@@ -91,7 +91,7 @@ function stopFile(filePath) {
   const absPath = path.resolve(filePath);
   const relPath = path.relative(__dirname, absPath);
   const procName = getProcessName(relPath);
-  pm2.delete(procName, err => {
+  pm2.delete(procName, (err) => {
     if (
       err &&
       !String(err.message).includes('process or namespace not found')
@@ -104,14 +104,14 @@ function stopFile(filePath) {
 }
 
 // Main logic
-pm2.connect(err => {
+pm2.connect((err) => {
   if (err) {
     console.error('[auto-run-all] PM2 connect error:', err);
     process.exit(2);
   }
 
   // Initial scan: start all files in all directories
-  WATCH_DIRS.forEach(dir => {
+  WATCH_DIRS.forEach((dir) => {
     glob(path.join(dir, FILE_GLOB), (err, files) => {
       if (err) {
         console.error(`[auto-run-all] Glob error in ${dir}:`, err);
@@ -123,25 +123,25 @@ pm2.connect(err => {
 
   // Watch for changes in all directories
   const watcher = chokidar.watch(
-    WATCH_DIRS.map(dir => path.join(dir, FILE_GLOB)),
+    WATCH_DIRS.map((dir) => path.join(dir, FILE_GLOB)),
     {
       ignoreInitial: true,
-      awaitWriteFinish: true,
-    }
+      awaitWriteFinish: true
+    },
   );
 
   watcher
     .on('add', startOrRestartFile)
     .on('change', startOrRestartFile)
     .on('unlink', stopFile)
-    .on('error', error => {
+    .on('error', (error) => {
       console.error('[auto-run-all] Watcher error:', error);
     });
 
   console.log(
-    `[auto-run-all] Watching directories for .ts, .tsx, .js, .sh, .py files...`
+    `[auto-run-all] Watching directories for .ts, .tsx, .js, .sh, .py files...`,
   );
-  WATCH_DIRS.forEach(dir => console.log(`[auto-run-all]  - ${dir}`));
+  WATCH_DIRS.forEach((dir) => console.log(`[auto-run-all]  - ${dir}`));
 });
 
 // === END OF SCRIPT ===

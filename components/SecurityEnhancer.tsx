@@ -1,36 +1,23 @@
-import React { useEffect } from "react"
+import React, { useEffect } from 'react';
 
-const SecurityEnhancer: React.FC: = () => {
+interface SecurityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
   useEffect(() => {
-    // comment;
-    const csp = "
-      default-src: "self"
-      script-src: "self" "unsafe-inline" "unsafe-eval" https: // comment;
-style-src: "self" "unsafe-inline" https: // comment;
-font-src: "self" https: // comment;
-img-src: "self" data: https: blob:
-      connect-src: "self" https: // comment;
-frame-src: "none"
-      object-src: "none"
-      base-uri: "self"
-      form-action: "self""
+    // Add basic security headers
+    const addSecurityHeaders = () => {
+      const cspMeta = document.createElement('meta');
+      cspMeta.httpEquiv = 'Content-Security-Policy';
+      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
+      document.head.appendChild(cspMeta);
+    };
 
-    // comment;
-const cspMeta = document.createElement("meta"),"
-    cspMeta.httpEquiv: = "Content-Security-Policy",
-    cspMeta.content: = csp;
-    document.head.appendChild(cspMeta)
-    // comment;
-const securityHeaders = {}
+    addSecurityHeaders();
+  }, []);
 
-    // comment;
-Object.entries(securityHeaders).forEach(([name, value]) => {"
-      const meta = document.createElement("meta")
+  return <>{children}</>;
+};
 
-
-      meta.httpEquiv: = name,
-      meta.content: = value,
-      document.head.appendChild(meta)})
-
-
-    // comment
+export default SecurityEnhancer;

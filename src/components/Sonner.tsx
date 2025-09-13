@@ -1,29 +1,25 @@
-export function Sonner({
-  position = 'bottom-right',
-  richColors = true,
-  closeButton = true,
-}) {
+import { Toaster as Sonner } from "sonner";
+
+type ToasterProps = React.ComponentProps<typeof Sonner>;
+
+const SonnerComponent = ({ ...props }: ToasterProps) => {
   return (
-    <div
-      className={`fixed ${
-        position === 'top-left'
-          ? 'top-4 left-4'
-          : position === 'top-right'
-            ? 'top-4 right-4'
-            : position === 'bottom-left'
-              ? 'bottom-4 left-4'
-              : 'bottom-4 right-4'
-      } z-50`}
-    >
-      {/* Sonner toast container */}
-    </div>
+    <Sonner
+      className="toaster group"
+      toastOptions={{
+        classNames: {
+          toast:
+            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",
+          description: "group-[.toast]:text-muted-foreground",
+          actionButton:
+            "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
+          cancelButton:
+            "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",
+        },
+      }}
+      {...props}
+    />
   );
-}
-export const toast = {
-  success: message => console.log('Success:', message),
-  error: message => console.log('Error:', message),
-  info: message => console.log('Info:', message),
-  warning: message => console.log('Warning:', message),
-  loading: message => console.log('Loading:', message),
-  dismiss: toastId => console.log('Dismiss:', toastId),
 };
+
+export { SonnerComponent as Sonner };

@@ -1,131 +1,218 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from "react";
-import Head from "next/head";
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import Head from "next/head";
-import { useRouter } from "next/router";
-import React from "react";
-import Head from "next/head";
-import React from "react";
-import Head from "next/head";
-import React from './react';
-import Head from './next / head';
-;
-import React from "react";
-import Head from "next/head";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import React from './react';
-import Head from './next / head';
-;
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import React from "react";
-import Head from "next/head";
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import Head from "next/head";
-import { useRouter } from "next/router";
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-import React from "react";
-import Head from "next/head";
-origin/main
-origin/automation-improvements-final
-import React from "react";
-import Head from "next/head";
-import React from './react';
-import Head from './next / head';
-;import React from "react";
-import Head from "next/head";
-import { useRouter } from "next/router";
+import { useEffect } from 'react';
+
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  noIndex?: boolean;
-  structuredData?: any;
-}
-}) => {
-const SEO: React.FC<SEOProps> = ({;
-  title = "Zion Tech Group - Technology Solutions",;
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",;
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
-}) => {;
-  return (
-    <Head>;
-      <title>{title}</title>;
-      <meta name="description" content={description} />;
-      <meta name="keywords" content={keywords} />;
-      <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
-    </Head>;
-  );
-};
-export default SEO;
-}
+  title: string;
+  description: string;
+  keywords: string;
+  url: string;
   image?: string;
-  url?: string;
   type?: string;
 }
-const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services, Zion Tech Group",
-  image = "https://ziontechgroup.com/og-image.png",
-  url = "https://ziontechgroup.com",
-  type = "website"
-}) => {
-  const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content={type} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={canonicalUrl} />
-    </Head>
-  );
-};
+
+export default function SEO({ 
+  title, 
+  description, 
+  keywords, 
+  url, 
+  image = '/og-image.jpg',
+  type = 'website'
+}: SEOProps) {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  
+  useEffect(() => {
+    // Update document title
+    document.title = fullTitle;
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = description;
+      document.head.appendChild(meta);
+    }
+    
+    // Update meta keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywords);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'keywords';
+      meta.content = keywords;
+      document.head.appendChild(meta);
+    }
+    
+    // Update canonical URL
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', `https://zion.app${url}`);
+    } else {
+      const link = document.createElement('link');
+      link.rel = 'canonical';
+      link.href = `https://zion.app${url}`;
+      document.head.appendChild(link);
+    }
+    
+    // Update Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', fullTitle);
+    } else {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:title');
+      meta.content = fullTitle;
+      document.head.appendChild(meta);
+    }
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:description');
+      meta.content = description;
+      document.head.appendChild(meta);
+    }
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) {
+      ogUrl.setAttribute('content', `https://zion.app${url}`);
+    } else {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:url');
+      meta.content = `https://zion.app${url}`;
+      document.head.appendChild(meta);
+    }
+    
+    const ogType = document.querySelector('meta[property="og:type"]');
+    if (ogType) {
+      ogType.setAttribute('content', type);
+    } else {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:type');
+      meta.content = type;
+      document.head.appendChild(meta);
+    }
+    
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    if (ogImage) {
+      ogImage.setAttribute('content', `https://zion.app${image}`);
+    } else {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:image');
+      meta.content = `https://zion.app${image}`;
+      document.head.appendChild(meta);
+    }
+    
+    const ogSiteName = document.querySelector('meta[property="og:site_name"]');
+    if (ogSiteName) {
+      ogSiteName.setAttribute('content', 'Zion Tech Group');
+    } else {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:site_name');
+      meta.content = 'Zion Tech Group';
+      document.head.appendChild(meta);
+    }
+    
+    // Update Twitter tags
+    const twitterCard = document.querySelector('meta[name="twitter:card"]');
+    if (twitterCard) {
+      twitterCard.setAttribute('content', 'summary_large_image');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'twitter:card';
+      meta.content = 'summary_large_image';
+      document.head.appendChild(meta);
+    }
+    
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) {
+      twitterTitle.setAttribute('content', fullTitle);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'twitter:title';
+      meta.content = fullTitle;
+      document.head.appendChild(meta);
+    }
+    
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDescription) {
+      twitterDescription.setAttribute('content', description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'twitter:description';
+      meta.content = description;
+      document.head.appendChild(meta);
+    }
+    
+    const twitterImage = document.querySelector('meta[name="twitter:image"]');
+    if (twitterImage) {
+      twitterImage.setAttribute('content', `https://zion.app${image}`);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'twitter:image';
+      meta.content = `https://zion.app${image}`;
+      document.head.appendChild(meta);
+    }
+    
+    // Update robots meta
+    const robots = document.querySelector('meta[name="robots"]');
+    if (robots) {
+      robots.setAttribute('content', 'index, follow');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'robots';
+      meta.content = 'index, follow';
+      document.head.appendChild(meta);
+    }
+    
+    // Update author meta
+    const author = document.querySelector('meta[name="author"]');
+    if (author) {
+      author.setAttribute('content', 'Zion Tech Group');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'author';
+      meta.content = 'Zion Tech Group';
+      document.head.appendChild(meta);
+    }
+    
+    // Update theme color
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) {
+      themeColor.setAttribute('content', '#4f46e5');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'theme-color';
+      meta.content = '#4f46e5';
+      document.head.appendChild(meta);
+    }
+    
+    // Add structured data
+    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    if (existingScript) {
+      existingScript.remove();
+    }
+    
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://zion.app",
+      "logo": "https://zion.app/logo.png",
+      "description": "AI and technology solutions company",
+      "sameAs": [
+        "https://twitter.com/ziontechgroup",
+        "https://linkedin.com/company/zion-tech-group"
+      ]
+    });
+    document.head.appendChild(script);
+  }, [title, description, keywords, url, image, type, fullTitle]);
+  
+  return null;
 }
-export default SEO;
-}
-export default SEO;
-    <Head>;
-      <title>{title}</title>;
-      <meta name="description" content={description} />;
-      <meta name="keywords" content={keywords} />;
-      <meta name="viewport" content="width = device - width, initial - scale = 1.0" />;
-    </Head>);
-}
-;
-export default SEO;
-;

@@ -1,23 +1,41 @@
-export const loginUser = async (email: string, password: string) => {
-  // Mock login service
-  console.log('Login service called with:', email);
-  // In a real app, this would make an API call to your backend
-  return {
-    user: { id: '1', email, name: 'User' },
-    token: 'mock-token',
-  };
-};
+import { apiClient } from '@/utils/apiClient';
 
-export const registerUser = async (
-  email: string,
-  password: string,
-  name?: string
-) => {
-  // Mock register service
-  console.log('Register service called with:', email, name);
-  // In a real app, this would make an API call to your backend
-  return {
-    user: { id: '1', email, name: name || 'User' },
-    token: 'mock-token',
-  };
-};
+export async function loginUser(email: string, password: string) {
+  const res = await apiClient('/api/auth/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+    body: JSON.stringify({ email, password }),
+  });
+  const data = await res.json().catch(() => ({}));
+  console.log('login response', res.status, data);
+  if (data?.accessToken) {
+    document.cookie = `authToken=${data.accessToken}; secure; samesite=strict`;
+    setAuthToken(data.accessToken);
+  } else {
+    console.warn('Token missing in login response', data);
+  }
+  return { res, data };
+}
+
+export async function registerUser(name: string, email: string, password: string) {
+  const res = await fetch(`${API_URL}/auth/register`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+    body: JSON.stringify({ name, email, password }),
+  });
+  const data = await res.json().catch(() => ({}));
+  console.log('signUp response', res.status, data);
+  if (data?.token) {
+    document.cookie = `authToken=${data.token}; secure; samesite=strict`;
+    setAuthToken(data.token);
+  } else {
+    console.warn('Token missing in signup response', data);
+  }
+  return { res, data };
+}

@@ -1,25 +1,3 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-const NetworkSecurityChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-      </Head>;
-
-
-=======
-export default NetworkSecurityChat
-
-
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -29,21 +7,16 @@ const NetworkSecurityChat: NextPage = () => {
     <div>
       <Head>
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
-        <meta name="description" content="NetworkSecurityChat service" />{" "}
+        <meta name="description" content="NetworkSecurityChat service" />
       </Head>
+      
       <main>
         <h1>NetworkSecurityChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
+        <Link href="/services"><a>Back to Services</a></Link>
       </main>
     </div>
   );
-}
-export default NetworkSecurityChat;
+};
 
-        <title>NetworkSecurityChat - Zion Tech Solutions</title>
-        <title>NetworkSecurityChat - Zion Tech Solutions</title>
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+export default NetworkSecurityChat;

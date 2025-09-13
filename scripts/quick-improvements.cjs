@@ -5,14 +5,14 @@ const fs = require('fs');
 const path = require('path');
 
 function ensureDirSync(dirPath) {
-	if (!fs.existsSync(dirPath)) {
-		fs.mkdirSync(dirPath, { recursive: true });
-	}
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+  }
 }
 
 function writeFileSyncSafe(filePath, content) {
-	ensureDirSync(path.dirname(filePath));
-	fs.writeFileSync(filePath, content, 'utf8');
+  ensureDirSync(path.dirname(filePath));
+  fs.writeFileSync(filePath, content, 'utf8');
 }
 
 console.log('Creating quick improvements...');
@@ -76,7 +76,13 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ text = 'Loading…' }) 
 export default LoadingSpinner;
 `;
 
-writeFileSyncSafe(path.join('src', 'components', 'ErrorBoundary.tsx'), errorBoundaryTsx);
-writeFileSyncSafe(path.join('src', 'components', 'LoadingSpinner.tsx'), loadingSpinnerTsx);
+writeFileSyncSafe(
+  path.join('src', 'components', 'ErrorBoundary.tsx'),
+  errorBoundaryTsx
+);
+writeFileSyncSafe(
+  path.join('src', 'components', 'LoadingSpinner.tsx'),
+  loadingSpinnerTsx
+);
 
 console.log('Quick improvements completed.');

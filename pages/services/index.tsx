@@ -1,236 +1,339 @@
-import Head from 'next/head';
+import type { NextPage } from 'next';
+import MainLayout from '../../components/layout/MainLayout';
 import Link from 'next/link';
+import { Brain, Cloud, Code, Shield, Smartphone, Database, Zap, Globe, Lock, BarChart3, Settings, Users } from 'lucide-react';
 
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { extraServices } from '../../data/extra-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { realMarketServices } from '../../data/real-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { realOperationalServices } from '../../data/real-operational-services';
-import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025'
-import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
-import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
-import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
-import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
-import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
-import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-import { realQ4Services2025 } from '../../data/real-2025-q4-additions';
-import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
-import { realMarketServicesExtended } from '../../data/real-market-services-extended';
-import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
-import { added2026Q2Services } from '../../data/added-2026-q2-services';
-import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
-import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
-import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
-import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
-import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
-import { real2028ServiceExpansions } from '../../data/real-2028-service-expansions';
-import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
-import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
-import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
-import { real2030Q1Additions } from '../../data/real-2030-q1-additions';
-import { real2031MicroSaasAdditions } from '../../data/real-2031-micro-saas-additions';
-import { real2031ITServicesAdditions } from '../../data/real-2031-it-services-additions';
-import { real2031AIServicesAdditions } from '../../data/real-2031-ai-services-additions';
-import { real2030Q2Additions } from '../../data/real-2030-q2-additions';
-import { real2025Q4AugmentedBatch } from '../../data/real-2025-q4-augmented-batch';
-import { real2031Q1Additions } from '../../data/real-2031-q1-additions';
-import { verifiedRealServices2025Batch3 } from '../../data/verified-real-services-2025-batch3';
-import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
-import { professionalServices } from '../../data/professional-services';
-import { real2032ServiceExpansions } from '../../data/real-2032-service-expansions';
-import { real2035Q1Additions } from '../../data/real-2035-q1-additions';
-import { realMarketServicesBatchQ4B2025 } from '../../data/real-market-services-batch-q4b-2025';
+const Services: NextPage = () => {
+  const services = [
+    {
+      icon: Brain,
+      title: 'AI Development',
+      description: 'Custom artificial intelligence solutions and machine learning models tailored to your business needs.',
+      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Chatbots', 'Automation Systems'],
+      color: 'blue'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and migration services to optimize your operations and reduce costs.',
+      features: ['Cloud Migration', 'Infrastructure Design', 'DevOps Automation', 'Serverless Architecture', 'Multi-Cloud Strategy', 'Performance Optimization'],
+      color: 'purple'
+    },
+    {
+      icon: Code,
+      title: 'Web Development',
+      description: 'Modern, responsive web applications built with cutting-edge technologies and best practices.',
+      features: ['Frontend Development', 'Backend Systems', 'API Development', 'E-commerce Solutions', 'Progressive Web Apps', 'Performance Optimization'],
+      color: 'green'
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile Applications',
+      description: 'Native and cross-platform mobile applications for iOS and Android platforms.',
+      features: ['iOS Development', 'Android Development', 'Cross-Platform Apps', 'App Store Optimization', 'Mobile UI/UX', 'App Maintenance'],
+      color: 'indigo'
+    },
+    {
+      icon: Shield,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
+      features: ['Security Audits', 'Penetration Testing', 'Compliance Management', 'Incident Response', 'Security Training', 'Threat Monitoring'],
+      color: 'red'
+    },
+    {
+      icon: Database,
+      title: 'Blockchain Solutions',
+      description: 'Innovative blockchain technology solutions for secure, transparent, and decentralized applications.',
+      features: ['Smart Contracts', 'DeFi Applications', 'NFT Platforms', 'Supply Chain Solutions', 'Cryptocurrency Integration', 'Blockchain Consulting'],
+      color: 'yellow'
+    },
+    {
+      icon: Zap,
+      title: 'Digital Transformation',
+      description: 'End-to-end digital transformation services to modernize your business processes and technology stack.',
+      features: ['Process Automation', 'Legacy System Migration', 'Digital Strategy', 'Change Management', 'Technology Assessment', 'Implementation Support'],
+      color: 'pink'
+    },
+    {
+      icon: BarChart3,
+      title: 'Data Analytics',
+      description: 'Advanced data analytics and business intelligence solutions to drive informed decision-making.',
+      features: ['Data Warehousing', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization', 'Predictive Modeling', 'Data Governance'],
+      color: 'teal'
+    }
+  ];
 
-function toSlug(value: string) {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-}
-
-const categories = [
-  'AI & Data',
-  'Developer Tools',
-  'Cloud & FinOps',
-  'Observability',
-  'Quality & Monitoring',
-];
-
-export default function ServicesIndexPage() {
-  const all = (enhancedRealMicroSaasServices as unknown[])
-    .concat(
-      extraServices as unknown[],
-      additionalEnhancedServices as unknown[],
-      newlyAddedServices as unknown[],
-      curatedMarketServices as unknown[],
-      realMarketServices as unknown[],
-      realMarketServicesExtended as unknown[],
-      new2025Services as unknown[],
-      marketValidatedServices as unknown[],
-      moreRealServices2025 as unknown[],
-      realOperationalServices as unknown[],
-      verified2025Additions as unknown[],
-      realServicesQ12025 as unknown[],
-      realEnterpriseServices2025 as unknown[],
-      realMarketAugmentations2025 as unknown[],
-      verifiedRealServices2025Batch2 as unknown[],
-      additionalLiveServices2025 as unknown[],
-      real2025Q2Additions as unknown[],
-      augmentedServicesBatch3 as unknown[],
-      realServicesQ22025 as unknown[],
-      realServicesQ32025 as unknown[],
-      realQ4Services2025 as unknown[],
-      real2025Q4Additions as unknown[],
-      real2025Q4AugmentedBatch as unknown[],
-      realMarketServicesBatchQ4B2025 as unknown[],
-      real2026Q1Additions as unknown[],
-      added2026Q2Services as unknown[],
-      real2026Q3Additions as unknown[],
-      real2026Q4Additions as unknown[],
-      real2026Q4NewServices as unknown[],
-      real2027Q1Additions as unknown[],
-      real2027Q2Additions as unknown[],
-      real2028ServiceExpansions as unknown[],
-      real2029Q1Additions as unknown[],
-      real2029Q2Additions as unknown[],
-      real2029Q3Additions as unknown[],
-      real2030Q1Additions as unknown[],
-      real2030Q2Additions as unknown[],
-      real2031MicroSaasAdditions as unknown[],
-      real2031ITServicesAdditions as unknown[],
-      real2031AIServicesAdditions as unknown[],
-      real2031Q1Additions as unknown[],
-
-      extraServices as any[],
-      additionalEnhancedServices as any[],
-      newlyAddedServices as any[],
-      curatedMarketServices as any[],
-      realMarketServices as any[],
-      new2025Services as any[],
-      marketValidatedServices as any[],
-      moreRealServices2025 as any[],
-      realOperationalServices as any[],
-      verified2025Additions as any[],
-      realServicesQ12025 as any[],
-      realEnterpriseServices2025 as any[],
-      verifiedRealServices2025Batch3 as any[]
-    );
-  const byCategory: Record<string, unknown[]> = {};
-  for (const c of categories) byCategory[c] = [];
-  // Normalize various category labels into our main buckets
-  const categoryAliases: Record<string, string> = {
-    'AI & Data': 'AI & Data',
-    'AI & Machine Learning': 'AI & Data',
-    'GenAI': 'AI & Data',
-    'Cloud & FinOps': 'Cloud & FinOps',
-    'Cloud & Data': 'Cloud & FinOps',
-    'Platform Engineering': 'Cloud & FinOps',
-    'Observability': 'Observability',
-    'Observability & Telemetry': 'Observability',
-    'Quality & Monitoring': 'Quality & Monitoring',
-    'Security & Reliability': 'Quality & Monitoring',
-    'Security & Compliance': 'Quality & Monitoring',
-    'Developer Tools': 'Developer Tools',
-    'Growth & Marketing': 'Developer Tools'
-  };
-  for (const s of all) {
-    const service = s as { category?: string };
-    const rawCat = (service.category || '').trim();
-    const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools');
-    byCategory[mapped].push(s);
-  }
-
-  const anchorMap: Record<string, string> = {
-    'AI & Data': 'ai',
-    'Developer Tools': 'developer-tools',
-    'Cloud & FinOps': 'cloud',
-    'Observability': 'observability',
-    'Quality & Monitoring': 'quality',
+  const getColorClasses = (color: string) => {
+    const colorMap: { [key: string]: string } = {
+      blue: 'bg-blue-50 border-blue-200 text-blue-600',
+      purple: 'bg-purple-50 border-purple-200 text-purple-600',
+      green: 'bg-green-50 border-green-200 text-green-600',
+      indigo: 'bg-indigo-50 border-indigo-200 text-indigo-600',
+      red: 'bg-red-50 border-red-200 text-red-600',
+      yellow: 'bg-yellow-50 border-yellow-200 text-yellow-600',
+      pink: 'bg-pink-50 border-pink-200 text-pink-600',
+      teal: 'bg-teal-50 border-teal-200 text-teal-600'
+    };
+    return colorMap[color] || 'bg-gray-50 border-gray-200 text-gray-600';
   };
 
-  const [shownCounts, setShownCounts] = React.useState<Record<string, number>>(() => Object.fromEntries(categories.map(c => [c, 12])));
+  const getIconColorClasses = (color: string) => {
+    const colorMap: { [key: string]: string } = {
+      blue: 'bg-blue-600',
+      purple: 'bg-purple-600',
+      green: 'bg-green-600',
+      indigo: 'bg-indigo-600',
+      red: 'bg-red-600',
+      yellow: 'bg-yellow-600',
+      pink: 'bg-pink-600',
+      teal: 'bg-teal-600'
+    };
+    return colorMap[color] || 'bg-gray-600';
+  };
 
-export default function ServicesIndex() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
-      <Head>
-        <title>Services — Zion</title>
-        <meta name="description" content="Futuristic, autonomous services to accelerate your roadmap." />
-      </Head>
-
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
-        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />
-        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast" />
-        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid" />
-        <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]"><div className="twinkle-field absolute inset-0" /></div>
-        <div className="absolute inset-0 beams opacity-[0.06]" />
-      </div>
-
-      <header className="relative z-10">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-          <div className="text-2xl font-bold tracking-wide">
-            <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
+    <MainLayout 
+      title="Our Services - Zion Tech Group"
+      description="Explore Zion Tech Group's comprehensive technology services including AI development, cloud solutions, web development, mobile apps, cybersecurity, and digital transformation."
+    >
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Services</h1>
+            <p className="text-xl md:text-2xl text-gray-200">
+              Comprehensive technology solutions designed to transform your business and drive innovation across all digital touchpoints.
+            </p>
           </div>
-          <div className="hidden gap-6 md:flex text-white/80">
-            <Link href="/"><a>Home</a></Link>
-            <Link href="/automation"><a>Automations</a></Link>
-            <Link href="/products"><a>Products</a></Link>
-            <Link href="/contact"><a>Contact</a></Link>
-          </div>
-        </nav>
-      </header>
+        </div>
+      </section>
 
-      <main className="relative z-10">
-        <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center">
-          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
-            Autonomous delivery with safety guardrails
+      {/* Services Overview */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Technology Solutions That Drive Growth</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From concept to deployment, we provide end-to-end technology services that help businesses innovate, scale, and succeed in the digital age.
+            </p>
           </div>
-          <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl"><span className="gradient-text">Services</span></h1>
-          <p className="mx-auto mt-5 max-w-3xl text-lg text-white/80">Choose from specialized agents and blueprints to ship value faster.</p>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-6 pb-16">
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { href: '/services/ai-seo-auditor', title: 'AI SEO Auditor', desc: 'Automate on-site SEO audits and fixes.' },
-              { href: '/services/customer-support-chatbot', title: 'Customer Support Chatbot', desc: 'Deflect tickets with high-quality automated replies.' },
-              { href: '/services/landing-page-generator', title: 'Landing Page Generator', desc: 'Spin up optimized pages with one prompt.' },
-              { href: '/services/price-intelligence-service', title: 'Price Intelligence', desc: 'Continuously monitor and adapt pricing.' },
-              { href: '/services/developer-productivity-copilot', title: 'Developer Productivity Copilot', desc: 'AI PR reviews, test gen, CI insights.' },
-              { href: '/services/ai-sales-assistant', title: 'AI Sales Assistant', desc: 'Qualify leads and personalize outreach.' },
-              { href: '/services/security-posture-guardian', title: 'Security Posture Guardian', desc: 'Misconfig and secret scanning with fixes.' },
-              { href: '/services/ai-data-pipeline-optimizer', title: 'AI Data Pipeline Optimizer', desc: 'Optimize ETL/ELT and RAG pipelines.' },
-              { href: '/services/ai-contract-risk-analyzer', title: 'AI Contract Risk Analyzer', desc: 'Flag risky clauses and missing terms in seconds.' },
-            ].map((s) => (
-              <Link key={s.href} href={s.href}>
-                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <h3 className="text-lg font-semibold">{s.title}</h3>
-                  <p className="mt-1 text-sm text-white/75">{s.desc}</p>
-                </a>
-              </Link>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="p-8">
+                  <div className={`w-16 h-16 ${getIconColorClasses(service.color)} rounded-lg flex items-center justify-center mb-6`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-gray-900">Key Features:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                          <div className={`w-2 h-2 ${getIconColorClasses(service.color)} rounded-full mr-3`}></div>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="mt-8">
+                    <Link href="/contact">
+                      <span className={`inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-md text-white ${getIconColorClasses(service.color)} hover:opacity-90 transition-opacity cursor-pointer`}>
+                        Get Started
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mx-auto max-w-7xl px-6 pb-24">
-          <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">
-            <h3 className="text-2xl font-bold">Need something custom?</h3>
-            <p className="mx-auto mt-2 max-w-2xl text-white/80">We can assemble domain-specific agent factories to match your goals.</p>
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Contact Us</a></Link>
-              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Explore Automations</a></Link>
+      {/* Process Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Development Process</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We follow a proven methodology that ensures successful project delivery and maximum value for our clients.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-2xl">1</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Discovery</h3>
+              <p className="text-gray-600">
+                We start by understanding your business needs, goals, and technical requirements through comprehensive consultation.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-2xl">2</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Planning</h3>
+              <p className="text-gray-600">
+                Our team creates detailed project plans, architecture designs, and development roadmaps tailored to your objectives.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-2xl">3</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Development</h3>
+              <p className="text-gray-600">
+                We build your solution using agile methodologies, ensuring quality, security, and performance at every stage.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-2xl">4</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Deployment</h3>
+              <p className="text-gray-600">
+                We deploy your solution with comprehensive testing, monitoring, and ongoing support to ensure success.
+              </p>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Technologies We Use</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We leverage cutting-edge technologies and frameworks to deliver robust, scalable, and future-proof solutions.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Frontend</h3>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p>React.js</p>
+                <p>Vue.js</p>
+                <p>Angular</p>
+                <p>Next.js</p>
+                <p>TypeScript</p>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Backend</h3>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p>Node.js</p>
+                <p>Python</p>
+                <p>Java</p>
+                <p>.NET</p>
+                <p>Go</p>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Cloud & DevOps</h3>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p>AWS</p>
+                <p>Azure</p>
+                <p>Google Cloud</p>
+                <p>Docker</p>
+                <p>Kubernetes</p>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">AI & ML</h3>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p>TensorFlow</p>
+                <p>PyTorch</p>
+                <p>OpenAI</p>
+                <p>Hugging Face</p>
+                <p>Scikit-learn</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We combine technical expertise with business acumen to deliver solutions that drive real results.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Expert Team</h3>
+              <p className="text-gray-600">
+                Our team consists of experienced developers, designers, and consultants with deep expertise in their respective domains.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Settings className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Proven Process</h3>
+              <p className="text-gray-600">
+                We follow industry best practices and proven methodologies to ensure successful project delivery and client satisfaction.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Global Perspective</h3>
+              <p className="text-gray-600">
+                We bring international best practices and diverse perspectives to every project, ensuring solutions that work globally.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Let's discuss your project requirements and how our services can help you achieve your technology goals.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/contact">
+              <span className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-flex items-center">
+                Start Your Project
+              </span>
+            </Link>
+            <Link href="/about">
+              <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-flex items-center">
+                Learn More About Us
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </MainLayout>
   );
-}
+};
+
+export default Services;
