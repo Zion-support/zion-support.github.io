@@ -98,6 +98,13 @@ import AI2028FutureTechPromotionBanner from '../components/AI2028FutureTechPromo
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import ContentROICalculator from '../components/ContentROICalculator';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+
+// New Ultimate Content Components 2025
+import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import RevolutionaryServicesPromotionBanner from '../components/RevolutionaryServicesPromotionBanner';
+import RevolutionaryServicesShowcase2025 from '../components/RevolutionaryServicesShowcase2025';
+import TechnologyBreakthroughBanner2025 from '../components/TechnologyBreakthroughBanner2025';
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -154,6 +161,16 @@ const HomePage: React.FC = () => {
               {/* New Content Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <NewContentBanner />
+              </Suspense>
+
+              {/* Ultimate Content Promotion Banner 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <UltimateContentPromotionBanner2025 />
+              </Suspense>
+
+              {/* Revolutionary Services Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <RevolutionaryServicesPromotionBanner />
               </Suspense>
 
               {/* AI 2025 Content Showcase Banner */}
@@ -384,6 +401,21 @@ const HomePage: React.FC = () => {
               {/* Technology Stack */}
               <Suspense fallback={<LoadingSpinner />}>
                 <TechnologyStack />
+              </Suspense>
+
+              {/* Ultimate Content Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <UltimateContentShowcase2025 />
+              </Suspense>
+
+              {/* Revolutionary Services Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <RevolutionaryServicesShowcase2025 />
+              </Suspense>
+
+              {/* Technology Breakthrough Banner 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <TechnologyBreakthroughBanner2025 />
               </Suspense>
 
               {/* Newsletter Signup */}
