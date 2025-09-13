@@ -102,6 +102,12 @@ import AI2030FutureVisionPromotionBanner from '../components/AI2030FutureVisionP
 // New Quantum AI Revolution 2035 Components
 import QuantumAIRevolution2035PromotionBanner from '../components/QuantumAIRevolution2035PromotionBanner';
 
+// New Content Showcase 2025
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+
+// New Content Promotion Banner 2025
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -113,7 +119,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
+        {/* NEW CONTENT SHOWCASE 2025 - FEATURED */}
+        <NewContentShowcase2025 />
+        
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -123,9 +131,6 @@ export default function HomePage() {
 
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
-        
-        {/* NEW CONTENT SHOWCASE 2025 */}
-        <NewContentShowcase2025 />
         
         {/* BUSINESS SUCCESS STORIES 2025 PROMOTION BANNER */}
         <BusinessSuccessStories2025PromotionBanner />
