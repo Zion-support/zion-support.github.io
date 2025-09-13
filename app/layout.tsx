@@ -198,8 +198,17 @@ function Header() {
                 <Link href="/case-studies/ai-2025-synthetic-intelligence-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Synthetic Intelligence Transformation (50,000% ROI) (BREAKTHROUGH)
                 </Link>
-                <Link href="/case-studies/ai-2025-global-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
-                  🏆 Global Transformation Breakthrough (10,000% ROI) (NEW)
+                <Link href="/blog/ai-2025-quantum-neural-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-500">
+                  ⚛️ Quantum-Neural Breakthrough (REVOLUTIONARY)
+                </Link>
+                <Link href="/blog/ai-2025-autonomous-business-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
+                  🚀 Autonomous Business Revolution (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-automation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 Global Automation Breakthrough (15,000% ROI) (REVOLUTIONARY)
+                </Link>
+                <Link href="/case-studies/ai-2025-financial-services-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-cyan-50 border-l-4 border-blue-500">
+                  💰 Financial Services Revolution (25,000% ROI) (BREAKTHROUGH)
                 </Link>
                 <Link href="/case-studies/ai-2025-quantum-consciousness-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-blue-50 border-l-4 border-purple-500">
                   🏆 Quantum Consciousness Success (15,000% ROI) (BREAKTHROUGH)
@@ -217,8 +226,8 @@ function Header() {
                   🏢 Fortune 500 Transformation (1500% ROI)
                 </Link>
                 <div className="border-t border-gray-200 my-2"></div>
-                <Link href="/resources/ai-2025-revolutionary-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
-                  📚 Revolutionary Implementation Guide (BREAKTHROUGH)
+                <Link href="/resources/ai-2025-ultimate-implementation-master-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
+                  📚 Ultimate Implementation Master Guide (REVOLUTIONARY)
                 </Link>
                 <Link href="/resources/ai-2025-quantum-consciousness-implementation-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-blue-50 border-l-4 border-purple-500">
                   📚 Quantum Consciousness Implementation Guide (BREAKTHROUGH)
