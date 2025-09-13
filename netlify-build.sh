@@ -79,6 +79,24 @@ fi
 
 # Build the project
 echo "Building project..."
-yarn run build
+
+# Set environment variables to help with SWC issues
+export NEXT_TELEMETRY_DISABLED=1
+export SWC_BINARY_PATH=""
+
+# Try building with fallback options
+if ! yarn run build; then
+  echo "Build failed, trying with SWC disabled..."
+  # Use the fallback build command
+  if ! yarn run build:fallback; then
+    echo "Build failed even with SWC disabled. Checking for specific issues..."
+    # Check if it's a memory issue
+    export NODE_OPTIONS="--max-old-space-size=8192 --openssl-legacy-provider"
+    if ! yarn run build:fallback; then
+      echo "All build attempts failed!"
+      exit 1
+    fi
+  fi
+fi
 
 echo "Build completed successfully!"
