@@ -1,104 +1,98 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, Target, Award, TrendingUp } from 'lucide-react';
 
 export default function AI2025RevolutionaryBreakthroughPromotionBanner() {
   return (
-    <div className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-600 text-white py-4 px-4 relative overflow-hidden">
+    <section className="relative overflow-hidden bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 py-16">
       {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12 animate-pulse"></div>
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-l from-transparent via-white to-transparent transform skew-x-12 animate-pulse delay-1000"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-ping"></div>
+        <div className="absolute bottom-32 right-1/3 w-24 h-24 bg-white/10 rounded-full animate-pulse"></div>
       </div>
       
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
-          {/* Left content */}
-          <div className="flex-1 text-center lg:text-left">
-            <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
-              <div className="flex items-center gap-1 bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
-                <Star className="w-4 h-4" />
-                BREAKTHROUGH ANNOUNCEMENT
-              </div>
-              <div className="flex items-center gap-1 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold animate-pulse">
-                <Zap className="w-4 h-4" />
-                NEW
-              </div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-6 animate-pulse">
+            🚀 BREAKTHROUGH ANNOUNCEMENT
+          </div>
+          
+          {/* Main heading */}
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI 2025 Revolutionary Breakthrough
+          </h2>
+          
+          {/* Subheading */}
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto">
+            The most significant AI advancement of 2025 is here. Discover how this breakthrough is delivering 
+            <span className="font-bold text-yellow-300"> 2,500-5,000% ROI</span> for businesses worldwide.
+          </p>
+          
+          {/* Stats */}
+          <div className="flex flex-wrap justify-center gap-6 mb-10">
+            <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg px-6 py-3">
+              <div className="text-white font-bold text-2xl">99.9%</div>
+              <div className="text-white/80 text-sm">Accuracy Rate</div>
             </div>
-            
-            <h2 className="text-2xl lg:text-3xl font-bold mb-2">
-              AI 2025 Revolutionary Breakthrough
-            </h2>
-            
-            <p className="text-lg lg:text-xl mb-4 opacity-90">
-              Neural interfaces, quantum computing, and autonomous systems delivering 
-              <span className="font-bold text-yellow-300"> 2,000%+ ROI</span>
-            </p>
-            
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm">
-              <div className="flex items-center gap-1">
-                <Target className="w-4 h-4 text-green-300" />
-                <span>95% Accuracy</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Award className="w-4 h-4 text-blue-300" />
-                <span>10,000x Performance</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <TrendingUp className="w-4 h-4 text-yellow-300" />
-                <span>99.8% Autonomy</span>
-              </div>
+            <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg px-6 py-3">
+              <div className="text-white font-bold text-2xl">10,000x</div>
+              <div className="text-white/80 text-sm">Faster Processing</div>
+            </div>
+            <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg px-6 py-3">
+              <div className="text-white font-bold text-2xl">Autonomous</div>
+              <div className="text-white/80 text-sm">Operations</div>
             </div>
           </div>
           
-          {/* Right content - CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-3">
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap justify-center gap-4">
             <Link 
               href="/blog/ai-2025-revolutionary-breakthrough-announcement"
-              className="inline-flex items-center px-6 py-3 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              <Star className="w-5 h-5 mr-2" />
-              Read Announcement
-              <ArrowRight className="w-4 h-4 ml-2" />
+              🚀 Discover the Breakthrough
             </Link>
-            
             <Link 
-              href="/case-studies/ai-2025-revolutionary-breakthrough-success"
-              className="inline-flex items-center px-6 py-3 bg-white/20 text-white font-semibold rounded-lg hover:bg-white/30 transition-colors border border-white/30"
+              href="/case-studies/ai-2025-global-transformation-breakthrough"
+              className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all duration-300 transform hover:scale-105"
             >
-              <Award className="w-5 h-5 mr-2" />
-              See 2,000% ROI Case Study
+              📊 See 10,000% ROI Case Study
             </Link>
           </div>
-        </div>
-        
-        {/* Additional content links */}
-        <div className="mt-4 pt-4 border-t border-white/20">
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
+          
+          {/* Additional links */}
+          <div className="mt-8 flex flex-wrap justify-center gap-6 text-white/80">
             <Link 
-              href="/resources/ai-2025-revolutionary-breakthrough-implementation-guide"
-              className="flex items-center gap-2 hover:text-yellow-300 transition-colors"
+              href="/resources/ai-2025-revolutionary-implementation-guide" 
+              className="hover:text-white transition-colors underline"
             >
-              <Zap className="w-4 h-4" />
-              Implementation Guide
+              📚 Implementation Guide
             </Link>
             <Link 
-              href="/ai-implementation-guide-2025"
-              className="flex items-center gap-2 hover:text-yellow-300 transition-colors"
+              href="/webinars/ai-2025-revolutionary-breakthroughs" 
+              className="hover:text-white transition-colors underline"
             >
-              <Target className="w-4 h-4" />
-              AI 2025 Master Guide
+              🔥 Join Webinar
             </Link>
             <Link 
-              href="/contact"
-              className="flex items-center gap-2 hover:text-yellow-300 transition-colors"
+              href="/contact" 
+              className="hover:text-white transition-colors underline"
             >
-              <ArrowRight className="w-4 h-4" />
-              Get Started Today
+              💬 Schedule Consultation
             </Link>
           </div>
         </div>
       </div>
-    </div>
+      
+      {/* Floating elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/30 rounded-full animate-ping"></div>
+        <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-white/20 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-white/40 rounded-full animate-ping"></div>
+      </div>
+    </section>
   );
 }
