@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 export default function AI2026BreakthroughRevolutionaryContentBanner() {
   return (
-<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white">
       {/* Animated background elements */}
       <div className="absolute inset-0">
@@ -11,31 +10,16 @@ export default function AI2026BreakthroughRevolutionaryContentBanner() {
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl animate-pulse delay-500"></div>
-=======
-    <div className="relative overflow-hidden bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 py-16">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-16 left-16 w-24 h-24 bg-cyan-400/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-24 w-20 h-20 bg-purple-400/20 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-24 left-1/3 w-16 h-16 bg-blue-400/20 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-40 right-1/4 w-12 h-12 bg-pink-400/20 rounded-full animate-bounce"></div>
->>>>>>> cursor/create-and-deploy-new-content-bcb9
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
-<<<<<<< HEAD
           {/* Main heading with gradient text */}
           <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse">
-=======
-          {/* Main heading */}
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
->>>>>>> cursor/create-and-deploy-new-content-bcb9
             🌌 AI 2026 Breakthrough Revolutionary Content
           </h2>
           
           {/* Subheading */}
-<<<<<<< HEAD
           <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the next generation of AI breakthroughs with quantum-neural fusion, transcendent intelligence, and revolutionary autonomous systems that redefine what's possible.
           </p>
