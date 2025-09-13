@@ -1,224 +1,77 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Search, Globe, Target, BarChart3 } from 'lucide-react';
 
-interface SEOEnhancerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-}
-
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = "Zion Tech Group - AI & Automation Solutions",
-  description = "Leading provider of AI automation solutions, quantum computing, and enterprise transformation services. Achieve 2000%+ ROI with our cutting-edge technology implementations.",
-  keywords = [
-    "AI automation",
-    "artificial intelligence",
-    "machine learning",
-    "quantum computing",
-    "enterprise AI",
-    "automation solutions",
-    "AI consulting",
-    "digital transformation",
-    "AI implementation",
-    "business automation",
-    "AI strategy",
-    "quantum AI",
-    "neural networks",
-    "deep learning",
-    "AI governance",
-    "AI safety",
-    "AI procurement",
-    "AI roadmap"
-  ],
-  image = "https://zion.app/images/og-image.jpg",
-  url = "https://zion.app",
-  type = "website",
-  author = "Zion Tech Group",
-  publishedTime,
-  modifiedTime,
-  section = "Technology",
-  tags = []
-}) => {
-  const fullTitle = title.includes("Zion") ? title : `${title} | Zion Tech Group`;
-  const fullKeywords = [...keywords, ...tags].join(", ");
-
-  // Structured data for organization
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://zion.app",
-    "logo": "https://zion.app/images/logo.png",
-    "description": "Leading provider of AI automation solutions and enterprise transformation services",
-    "foundingDate": "2020",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-ZION-TECH",
-      "contactType": "customer service",
-      "availableLanguage": ["English"]
+const SEOEnhancer = () => {
+  const seoFeatures = [
+    {
+      icon: Search,
+      title: "Advanced Keyword Optimization",
+      description: "Strategic keyword placement and density optimization",
+      impact: "High"
     },
-    "sameAs": [
-      "https://twitter.com/ziontech",
-      "https://linkedin.com/company/zion-tech-group",
-      "https://github.com/zion-holdings"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US",
-      "addressLocality": "San Francisco",
-      "addressRegion": "CA"
-    }
-  };
-
-  // Structured data for services
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "AI Automation Solutions",
-    "description": "Comprehensive AI automation services for enterprise transformation",
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group"
+    {
+      icon: Globe,
+      title: "Meta Tags & Schema",
+      description: "Comprehensive meta tags and structured data markup",
+      impact: "High"
     },
-    "serviceType": "AI Consulting",
-    "areaServed": "Worldwide",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "AI Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "AI Strategy Consulting"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "AI Implementation"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Quantum Computing Solutions"
-          }
-        }
-      ]
+    {
+      icon: Target,
+      title: "Content Optimization",
+      description: "SEO-optimized content structure and readability",
+      impact: "Medium"
+    },
+    {
+      icon: BarChart3,
+      title: "Analytics Integration",
+      description: "Advanced tracking and performance monitoring",
+      impact: "Medium"
     }
-  };
-
-  // Structured data for breadcrumbs
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://zion.app"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": section,
-        "item": `https://zion.app/${section.toLowerCase()}`
-      }
-    ]
-  };
+  ];
 
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={fullKeywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@ziontech" />
-      <meta name="twitter:creator" content="@ziontech" />
-      
-      {/* Article specific meta tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {author && <meta property="article:author" content={author} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
-      ))}
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-      
-      {/* Alternate language versions */}
-      <link rel="alternate" hrefLang="en" href={url} />
-      <link rel="alternate" hrefLang="x-default" href={url} />
-      
-      {/* Favicon and app icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      
-      {/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(organizationSchema)}
-      </script>
-      <script type="application/ld+json">
-        {JSON.stringify(serviceSchema)}
-      </script>
-      <script type="application/ld+json">
-        {JSON.stringify(breadcrumbSchema)}
-      </script>
-      
-      {/* Additional SEO meta tags */}
-      <meta name="theme-color" content="#1e40af" />
-      <meta name="msapplication-TileColor" content="#1e40af" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-      
-      {/* Performance hints */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="preload" href="/images/hero-bg.jpg" as="image" />
-    </Helmet>
+    <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-blue-500 text-white text-sm font-medium mb-6">
+            <Search className="w-4 h-4 mr-2" />
+            Advanced SEO Optimization
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Dominate Search
+            <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent"> Rankings</span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Our comprehensive SEO strategy ensures maximum visibility and organic traffic growth
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {seoFeatures.map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300">
+              <div className="flex items-center justify-between mb-4">
+                <div className="p-3 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                  feature.impact === 'High' ? 'bg-red-500' : 'bg-yellow-500'
+                } text-white`}>
+                  {feature.impact} Impact
+                </span>
+              </div>
+              
+              <h3 className="text-lg font-semibold text-white mb-2">
+                {feature.title}
+              </h3>
+              
+              <p className="text-gray-300 text-sm">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 

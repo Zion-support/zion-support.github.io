@@ -169,6 +169,11 @@ import AITools2025UltimateShowcaseBanner from '../components/AITools2025Ultimate
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 
+// Import improvement components
+import PerformanceMetrics from '../components/PerformanceMetrics';
+import SEOEnhancer from '../components/SEOEnhancer';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -3463,6 +3468,11 @@ export default function HomePage() {
       {/* Enhanced Management and Feedback Components */}
       <ContentManagementSystem />
       <UserFeedbackSystem />
+      
+      {/* Performance and SEO Improvements */}
+      <PerformanceMetrics />
+      <SEOEnhancer />
+      <AccessibilityEnhancer />
     </div>
   );
 }
