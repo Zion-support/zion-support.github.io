@@ -23,6 +23,12 @@ const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../compo
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 
+// Import new promotional banners
+import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
+import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2025GlobalTransformation15000ROIPromotionBanner';
+import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
+import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -36,6 +42,9 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
+        
+        {/* NEW: AI 2025 NEW CONTENT PROMOTION BANNER */}
+        <AI2025NewContentPromotionBanner />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
@@ -89,10 +98,19 @@ export default function HomePage() {
           <UltimateContentDiscovery2026 />
         </Suspense>
         
-        {/* NEW INTERACTIVE CONTENT DISCOVERY WIDGET */}
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <InteractiveContentDiscoveryWidget />
+        {/* AI 2025 CONTENT DISCOVERY WIDGET */}
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <AI2025ContentDiscoveryWidget />
+          </div>
+        </section>
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Suspense fallback={<LoadingSpinner size="lg" text="Loading Interactive Discovery..." />}>
+              <InteractiveContentDiscoveryWidget />
+            </Suspense>
           </div>
         </section>
         
