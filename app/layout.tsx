@@ -177,6 +177,9 @@ function Header() {
                 <Link href="/ai-2025-ultimate-content-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 AI 2025 Ultimate Content Revolution (REVOLUTIONARY)
                 </Link>
+                <Link href="/ai-2025-ultimate-automation-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
+                  🚀 AI 2025 Ultimate Automation Revolution (10,000% ROI) (BREAKTHROUGH)
+                </Link>
                 <Link href="/ai-2025-ultimate-breakthrough-revolution" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🚀 AI 2025 Ultimate Breakthrough Revolution (NEW)
                 </Link>
@@ -188,6 +191,9 @@ function Header() {
                 </Link>
                 <Link href="/case-studies/ai-2025-synthetic-intelligence-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Synthetic Intelligence Transformation (50,000% ROI) (BREAKTHROUGH)
+                </Link>
+                <Link href="/case-studies/ai-2025-global-transformation-50000-roi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 Global Transformation 50,000% ROI (BREAKTHROUGH)
                 </Link>
                 <Link href="/case-studies/ai-2025-global-transformation-breakthrough" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
                   🏆 Global Transformation Breakthrough (10,000% ROI) (NEW)
