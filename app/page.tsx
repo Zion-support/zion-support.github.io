@@ -18,6 +18,12 @@ import BusinessSolutionsShowcase2027PromotionBanner from '../components/Business
 import InteractiveTechDemo2027 from '../components/InteractiveTechDemo2027';
 import InteractiveTechDemo2027PromotionBanner from '../components/InteractiveTechDemo2027PromotionBanner';
 
+// Import new 2028 components
+import UltimateContentShowcase2028 from '../components/UltimateContentShowcase2028';
+import UltimateContentShowcase2028PromotionBanner from '../components/UltimateContentShowcase2028PromotionBanner';
+import BusinessTransformation2028Showcase from '../components/BusinessTransformation2028Showcase';
+import BusinessTransformation2028PromotionBanner from '../components/BusinessTransformation2028PromotionBanner';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -3619,6 +3625,18 @@ export default function HomePage() {
 
       {/* NEW NEWSLETTER SIGNUP 2025 */}
       <NewsletterSignup2025 />
+
+      {/* NEW ULTIMATE CONTENT SHOWCASE 2028 PROMOTION BANNER */}
+      <UltimateContentShowcase2028PromotionBanner />
+
+      {/* NEW ULTIMATE CONTENT SHOWCASE 2028 */}
+      <UltimateContentShowcase2028 />
+
+      {/* NEW BUSINESS TRANSFORMATION 2028 PROMOTION BANNER */}
+      <BusinessTransformation2028PromotionBanner />
+
+      {/* NEW BUSINESS TRANSFORMATION 2028 SHOWCASE */}
+      <BusinessTransformation2028Showcase />
         </div>
       </PerformanceOptimizer>
     </ErrorBoundary>
