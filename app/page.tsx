@@ -24,6 +24,22 @@ import UltimateContentShowcase2028PromotionBanner from '../components/UltimateCo
 import BusinessTransformation2028Showcase from '../components/BusinessTransformation2028Showcase';
 import BusinessTransformation2028PromotionBanner from '../components/BusinessTransformation2028PromotionBanner';
 
+// Import new 2026 AI services components
+import AI2026UltimateServicesShowcase from '../components/AI2026UltimateServicesShowcase';
+import AI2026UltimateServicesPromotionBanner from '../components/AI2026UltimateServicesPromotionBanner';
+
+// Import new 2026 breakthrough components
+import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
+import AI2026NeuralInterfaceRevolutionPromotionBanner from '../components/AI2026NeuralInterfaceRevolutionPromotionBanner';
+import AI2026AdvancedAutomationMasteryPromotionBanner from '../components/AI2026AdvancedAutomationMasteryPromotionBanner';
+
+// Import new 2030 predictions components
+import AI2030FuturePredictionsUltimatePromotionBanner from '../components/AI2030FuturePredictionsUltimatePromotionBanner';
+
+// Import new interactive demo components
+import InteractiveTechDemo2026 from '../components/InteractiveTechDemo2026';
+import InteractiveTechDemo2026PromotionBanner from '../components/InteractiveTechDemo2026PromotionBanner';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -254,6 +270,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW AI 2026 ULTIMATE SERVICES PROMOTION BANNER */}
+        <AI2026UltimateServicesPromotionBanner />
+        
+        {/* NEW AI 2030 FUTURE PREDICTIONS ULTIMATE PROMOTION BANNER */}
+        <AI2030FuturePredictionsUltimatePromotionBanner />
+        
+        {/* NEW INTERACTIVE TECH DEMO 2026 PROMOTION BANNER */}
+        <InteractiveTechDemo2026PromotionBanner />
+        
         {/* NEW 2029 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2029PromotionBanner />
         
@@ -3659,6 +3684,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* NEW AI 2026 ULTIMATE SERVICES SHOWCASE */}
+      <AI2026UltimateServicesShowcase />
+
+      {/* NEW INTERACTIVE TECH DEMO 2026 */}
+      <InteractiveTechDemo2026 />
 
       {/* NEW ULTIMATE CONTENT SHOWCASE 2025 */}
       <UltimateContentShowcase2025 />
