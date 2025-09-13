@@ -33,6 +33,7 @@ import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDis
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 
 // Import new 2025 promotional components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
@@ -105,6 +106,9 @@ export default function HomePage() {
         
         {/* NEW AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
         <AI2025UltimateBreakthroughRevolutionBanner />
+        
+        {/* REVOLUTIONARY CONTENT 2025 BANNER */}
+        <RevolutionaryContent2025Banner />
         
         {/* NEW 2026 ULTIMATE CONTENT PROMOTION BANNER */}
         <NewContent2026UltimatePromotionBanner />
