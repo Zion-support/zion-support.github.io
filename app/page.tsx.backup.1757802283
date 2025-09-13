@@ -36,6 +36,55 @@ import NewContentPromotionBanner2026 from '../components/NewContentPromotionBann
 
 // New 2025 content promotion components
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+<<<<<<< HEAD
+
+// New 2025 content showcase components
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import NewContentShowcase2025PromotionBanner from '../components/NewContentShowcase2025PromotionBanner';
+import BusinessSuccessStories2025 from '../components/BusinessSuccessStories2025';
+import BusinessSuccessStories2025PromotionBanner from '../components/BusinessSuccessStories2025PromotionBanner';
+import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
+import InteractiveTechDemo2025PromotionBanner from '../components/InteractiveTechDemo2025PromotionBanner';
+
+// New revolutionary components
+import RevolutionaryAIContentPromotionBanner from '../components/RevolutionaryAIContentPromotionBanner';
+import RevolutionaryCaseStudiesShowcase from '../components/RevolutionaryCaseStudiesShowcase';
+import InteractiveROICalculator from '../components/InteractiveROICalculator';
+import RevolutionaryTestimonialsShowcase from '../components/RevolutionaryTestimonialsShowcase';
+import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
+import UltimatePromotionalBanner from '../components/UltimatePromotionalBanner';
+import InteractiveDemoRequest from '../components/InteractiveDemoRequest';
+
+// Neural Consensus 2026 Components
+import NeuralConsensus2026PromotionBanner from '../components/NeuralConsensus2026PromotionBanner';
+import NeuralConsensus2026Showcase from '../components/NeuralConsensus2026Showcase';
+
+// New 2026 content components
+import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+import SuccessStoriesShowcase2026 from '../components/SuccessStoriesShowcase2026';
+
+// Ultimate Content Showcase 2026 Components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import AIToolsUltimateShowcase2026 from '../components/AIToolsUltimateShowcase2026';
+import AIToolsUltimateShowcase2026PromotionBanner from '../components/AIToolsUltimateShowcase2026PromotionBanner';
+
+// New promotional banners and showcases
+import UltimateContentPromotionBanner2026 from '../components/UltimateContentPromotionBanner2026';
+import AIToolsShowcase2026 from '../components/AIToolsShowcase2026';
+import AIToolsPromotionBanner2026 from '../components/AIToolsPromotionBanner2026';
+
+// New comprehensive content promotion banners
+import AISolutions2026ComprehensivePromotionBanner from '../components/AISolutions2026ComprehensivePromotionBanner';
+import BusinessAutomationMastery2026PromotionBanner from '../components/BusinessAutomationMastery2026PromotionBanner';
+
+// Additional 2026 content components
+import AdvancedTechTrends2026 from '../components/AdvancedTechTrends2026';
+import InteractiveTechDemo2026 from '../components/InteractiveTechDemo2026';
+import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
+import UltimateContentHub2026 from '../components/UltimateContentHub2026';
+=======
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
@@ -46,6 +95,7 @@ import QuantumNeuralFusion2026PromotionBanner from '../components/QuantumNeuralF
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
 import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromotionBanner';
+>>>>>>> origin/backup-main-20250913-171651
 
 // New promotional banners for latest content
 import AI2026RevolutionaryBreakthroughAnnouncementBanner from '../components/AI2026RevolutionaryBreakthroughAnnouncementBanner';
@@ -61,6 +111,9 @@ import BusinessTransformationGuide2025PromotionBanner from '../components/Busine
 import AISolutions2026ComprehensivePromotionBanner from '../components/AISolutions2026ComprehensivePromotionBanner';
 import BusinessAutomationMastery2026PromotionBanner from '../components/BusinessAutomationMastery2026PromotionBanner';
 
+<<<<<<< HEAD
+    <div className="min-h-screen bg-white">
+=======
 // Import new content showcase and recommendation components
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
@@ -133,6 +186,7 @@ export default function HomePage() {
         
         {/* REVOLUTIONARY CONTENT DISCOVERY WIDGET 2026 */}
         <RevolutionaryContentDiscoveryWidget2026 />
+>>>>>>> 4ae52b20131b3926821e8d8792f95afc32ca805b
         
         {/* AI 2026 QUANTUM NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
@@ -495,6 +549,7 @@ export default function HomePage() {
             }} 
           />
         </Suspense>
+>>>>>>> origin/backup-main-20250913-171651
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2453,6 +2508,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      
+      {/* Interactive Demo Request */}
+      <InteractiveDemoRequest />
+=======
 
       {/* Enhanced Content Showcase */}
       <EnhancedContentShowcase />
@@ -2462,6 +2522,7 @@ export default function HomePage() {
 
       {/* Advanced SEO Analytics */}
       <AdvancedSEOAnalytics />
+>>>>>>> origin/backup-main-20250913-171651
     </div>
   );
 }
