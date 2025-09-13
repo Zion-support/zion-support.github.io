@@ -62,6 +62,12 @@ import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryC
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
+// New 2026 promotional banners
+import AI2026AdvancedAutomationPromotionBanner from '../components/AI2026AdvancedAutomationPromotionBanner';
+import NeuralConsensusAIPromotionBanner from '../components/NeuralConsensusAIPromotionBanner';
+import QuantumAIBreakthroughPromotionBanner from '../components/QuantumAIBreakthroughPromotionBanner';
+import NewContent2026Showcase from '../components/NewContent2026Showcase';
+
 // New Ultimate Content Revolution 2026 Components
 import UltimateContentRevolution2026 from '../components/UltimateContentRevolution2026';
 import UltimateContentRevolution2026PromotionBanner from '../components/UltimateContentRevolution2026PromotionBanner';
@@ -70,9 +76,12 @@ import UltimateContentRevolution2026PromotionBanner from '../components/Ultimate
 import AIInnovationShowcase2026 from '../components/AIInnovationShowcase2026';
 import AIInnovationShowcase2026PromotionBanner from '../components/AIInnovationShowcase2026PromotionBanner';
 
+// New 2026 Content Promotion Banners
+import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
+import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
+
 export default function HomePage() {
   return (
-<<<<<<< HEAD
     <ErrorBoundary>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
@@ -82,6 +91,24 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2026 CONTENT PROMOTION BANNER */}
+        <NewContentPromotionBanner2026 />
+        
+        {/* NEW 2026 CONTENT SHOWCASE */}
+        <NewContent2026Showcase />
+        
+        {/* AI 2026 ADVANCED AUTOMATION PROMOTION BANNER */}
+        <AI2026AdvancedAutomationPromotionBanner />
+        
+        {/* NEURAL CONSENSUS AI PROMOTION BANNER */}
+        <NeuralConsensusAIPromotionBanner />
+        
+        {/* QUANTUM AI BREAKTHROUGH PROMOTION BANNER */}
+        <QuantumAIBreakthroughPromotionBanner />
+        
+        {/* AI 2026 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
+        <AI2026RevolutionaryBreakthroughPromotionBanner />
+        
         {/* AI 2026 NEW CONTENT PROMOTION BANNER */}
         <AI2026NewContentPromotionBanner />
         
