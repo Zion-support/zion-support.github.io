@@ -160,6 +160,12 @@ import AI2035OmniversalConsciousnessBanner from '../components/AI2035OmniversalC
 import AI2035OmniversalConsciousnessShowcase from '../components/AI2035OmniversalConsciousnessShowcase';
 import NeuralInterfaceRevolutionBanner from '../components/NeuralInterfaceRevolutionBanner';
 import SpaceTechnologySolutionsBanner from '../components/SpaceTechnologySolutionsBanner';
+
+// New Content Promotion Components
+import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import QuantumAIFusion2030PromotionBanner from '../components/QuantumAIFusion2030PromotionBanner';
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import NewsletterCTABanner from '../components/NewsletterCTABanner';
 // Metrics and Analytics
 import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
 import PerformanceMetrics from '../components/PerformanceMetrics';
@@ -216,6 +222,21 @@ const HomePage: React.FC = () => {
               {/* Hero Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
                 <HeroPromotionBanner />
+              </Suspense>
+
+              {/* AI 2025 Ultimate Breakthrough Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025UltimateBreakthroughPromotionBanner />
+              </Suspense>
+
+              {/* Quantum AI Fusion 2030 Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumAIFusion2030PromotionBanner />
+              </Suspense>
+
+              {/* New Content Showcase 2025 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewContentShowcase2025 />
               </Suspense>
 
               {/* Latest Content Promotion Banner */}
@@ -646,6 +667,11 @@ const HomePage: React.FC = () => {
               {/* Enhanced Newsletter Signup */}
               <Suspense fallback={<LoadingSpinner />}>
                 <EnhancedNewsletterSignup />
+              </Suspense>
+
+              {/* Newsletter CTA Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <NewsletterCTABanner />
               </Suspense>
 
               {/* Lazy loaded advanced components */}
