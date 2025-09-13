@@ -4,10 +4,12 @@ import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
 import NewContentPromotionBanner from './components/NewContentPromotionBanner';
+import NewContent2025PromotionBanner from './components/NewContent2025PromotionBanner';
 import { RevolutionaryContentBanner } from './components/RevolutionaryContentBanner';
 import InnovativeContentShowcase2026 from './components/InnovativeContentShowcase2026';
 import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
 import EnhancedContentPromotionBanner from './components/EnhancedContentPromotionBanner';
+import FeaturedContentShowcase2025 from './components/FeaturedContentShowcase2025';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -190,6 +192,7 @@ function App() {
       <div className="min-h-screen bg-futuristic">
         <RevolutionaryContentBanner />
         <NewContentPromotionBanner />
+        <NewContent2025PromotionBanner />
         <EnhancedContentPromotionBanner />
         <AppHeader />
         <main id="main-content" className="flex-1">
@@ -347,6 +350,11 @@ function App() {
               <Route path="/blog/quantum-ai-autonomous-systems-2026" element={<InteractiveContentDiscovery2026Page />} />
               <Route path="/case-studies/enterprise-quantum-ai-transformation-2026" element={<InteractiveContentDiscovery2026Page />} />
               <Route path="/resources/quantum-ai-implementation-master-guide-2026" element={<InteractiveContentDiscovery2026Page />} />
+              
+              {/* New 2025 Content Routes */}
+              <Route path="/blog/ai-2025-autonomous-business-operations-complete-guide" element={<InteractiveContentDiscovery2026Page />} />
+              <Route path="/case-studies/enterprise-ai-transformation-2025-complete-success" element={<InteractiveContentDiscovery2026Page />} />
+              <Route path="/resources/ai-implementation-master-guide-2025-complete" element={<InteractiveContentDiscovery2026Page />} />
               
               {/* Hybrid App Demo */}
               
