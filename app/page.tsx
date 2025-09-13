@@ -288,6 +288,10 @@ import AIInnovationShowcase2025PromotionBanner from '../components/AIInnovationS
 import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
 import InteractiveTechDemo2025PromotionBanner from '../components/InteractiveTechDemo2025PromotionBanner';
 
+// Import new content showcase components
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import NewContentShowcase2025PromotionBanner from '../components/NewContentShowcase2025PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -3820,9 +3824,24 @@ export default function HomePage() {
 
       {/* NEW CONTENT SHOWCASE 2025 */}
       <NewContentShowcase2025 />
+      
+      {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
+      <NewContentShowcase2025PromotionBanner />
 
       {/* INTERACTIVE TECH DEMO 2025 */}
       <InteractiveTechDemo2025 />
+      
+      {/* INTERACTIVE AI TOOLS SHOWCASE 2025 PROMOTION BANNER */}
+      <InteractiveAIToolsShowcase2025PromotionBanner />
+      
+      {/* INTERACTIVE AI TOOLS SHOWCASE 2025 */}
+      <InteractiveAIToolsShowcase2025 />
+      
+      {/* BUSINESS SUCCESS STORIES SHOWCASE 2025 PROMOTION BANNER */}
+      <BusinessSuccessStoriesShowcase2025PromotionBanner />
+      
+      {/* BUSINESS SUCCESS STORIES SHOWCASE 2025 */}
+      <BusinessSuccessStoriesShowcase2025 />
 
       {/* BUSINESS SOLUTIONS SHOWCASE 2025 */}
       <BusinessSolutionsShowcase2025 />
