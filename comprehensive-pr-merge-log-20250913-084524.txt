@@ -1213,3 +1213,7 @@
 2025-09-13 08:51:36 - [0;31m❌ Failed to process branch   cursor/add-new-services-and-advertise-them-9651[0m
 2025-09-13 08:51:36 - [0;34m📊 Progress: 232/6688, ✅ 0, ❌ 232[0m
 2025-09-13 08:51:37 - [0;34m📋 Processing branch 233/6688:   cursor/add-new-services-and-advertise-them-971c[0m
+2025-09-13 08:51:38 - [0;34m🔄 Attempting to merge   cursor/add-new-services-and-advertise-them-971c...[0m
+2025-09-13 08:51:38 - [0;31m❌ Failed to fetch branch   cursor/add-new-services-and-advertise-them-971c[0m
+2025-09-13 08:51:38 - [0;31m❌ Failed to process branch   cursor/add-new-services-and-advertise-them-971c[0m
+2025-09-13 08:51:38 - [0;34m📊 Progress: 233/6688, ✅ 0, ❌ 233[0m
