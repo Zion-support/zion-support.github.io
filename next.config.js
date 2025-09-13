@@ -22,6 +22,8 @@ const nextConfig = {
 	// Bundle optimization
 	experimental: {
 		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+		optimizeCss: true,
+		forceSwcTransforms: true,
 	},
 	
 	// SWC configuration
