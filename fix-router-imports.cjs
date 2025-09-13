@@ -1,7 +1,6 @@
-#!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
+const _path = require('path');
 const { execSync } = require('child_process');
 
 // Get all files that still use React Router
@@ -12,12 +11,12 @@ const files = execSync(
   .split('\n')
   .filter((f) => f.trim());
 
-console.log(`Found ${files.length} files to fix`);
+console.warn(`Found ${files.length} files to fix`);
 
 files.forEach((file) => {
   if (!file.trim()) return;
 
-  console.log(`Fixing ${file}...`);
+  console.warn(`Fixing ${file}...`);
 
   try {
     let content = fs.readFileSync(file, 'utf8');
@@ -46,10 +45,10 @@ files.forEach((file) => {
     content = content.replace(/navigate\(/g, 'router.push(');
 
     fs.writeFileSync(file, content);
-    console.log(`✅ Fixed ${file}`);
+    console.warn(`✅ Fixed ${file}`);
   } catch (error) {
-    console.log(`❌ Error fixing ${file}:`, error.message);
+    console.warn(`❌ Error fixing ${file}:`, error.message);
   }
 });
 
-console.log('Done!');
+console.warn('Done!');

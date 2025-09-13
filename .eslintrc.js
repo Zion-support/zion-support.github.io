@@ -1,60 +1,72 @@
-/* eslint-env node */
 module.exports = {
-<<<<<<< HEAD
-  extends: ['next/core-web-vitals'],
-  rules: {
-    'react/no-unescaped-entities': 'off',
-    'no-unused-vars': 'warn',
-    '@next/next/no-img-element': 'warn'
-  }
-};
-=======
   extends: [
-    'next/core-web-vitals',
-    '@typescript-eslint/recommended'
+    "next/core-web-vitals"
   ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  parser: "@typescript-eslint/parser",
+  plugins: [
+    "@typescript-eslint",
+    "react",
+    "react-hooks"
+  ],
   rules: {
-    'no-unused-vars': 'warn',
-    'no-undef': 'error',
-    'no-console': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
-    'no-useless-escape': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'react/react-in-jsx-scope': 'off',
-    'react/no-unescaped-entities': 'off',
-    '@next/next/no-html-link-for-pages': 'off',
-    '@next/next/no-img-element': 'off'
-  },
-  env: {
-    browser: true,
-    node: true,
-    es2021: true
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+    ],
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-empty-object-type': 'warn',
+    '@next/next/no-html-link-for-pages': 'warn'
   },
   ignorePatterns: [
-    'pages._archive_corrupted/**',
-    'pages.disabled.full/**',
-    'pages.disabled_auto/**',
-    'pages_api.disabled/**',
-    'pages_backup_conflict/**',
-    'pages.blog.disabled/**',
-    'pages.corrupted.*/**',
-    'pages.broken/**',
-    'pages.bak/**',
-    'pages-quarantine/**',
-    'pages-disabled/**',
-    'pages.__backup/**',
-    'temp_backup/**',
-    'temp_broken_files/**',
-    'temp_working/**',
-    'tests.disabled/**',
-    'lib_backup/**',
-    'node_modules/**',
-    '.next/**',
-    'out/**',
-    'dist/**',
-    'build/**'
+    'node_modules/',
+    '.next/',
+    'out/',
+    'build/',
+    'dist/',
+    '*.config.js',
+    '*.config.ts',
+    'scripts/',
+    'automation/',
+    'netlify/',
+    '**/*.disabled/**',
+    '**/disabled/**',
+    '**/components.disabled/**',
+    '**/pages.disabled/**',
+    '**/types.disabled/**',
+    '**/utils.disabled/**',
+    '**/zion-os.disabled/**',
+    '**/tests.disabled/**',
+    '**/typechain-types.disabled/**',
+    '**/services.disabled.temp/**',
+    '**/src.broken/**',
+    '**/zion_academy/**',
+    '**/start-all-automations.js',
+    '**/test-*.js',
+    '**/simple-*.js',
+    '**/workbox-config.js',
+    '**/components_backup/**',
+    '**/pages_disabled/**',
+    '**/src_disabled/**',
+    '**/comprehensive-*.js',
+    '**/debug-*.js',
+    '**/extract*.js',
+    '**/fix-*.js',
+    '**/jest.setup.js',
+    '**/mcp-*.js',
+    '**/next-env.d.ts',
+    '**/public/*.js',
+    '**/run-*.js',
+    '**/script.js',
+    '**/seed.js',
+    '**/data/2025-*.ts',
+    '**/backup/**',
+    '**/auto-*.js',
+    'zion-website-analysis.json',
+    '*.backup.*',
+    '*.log',
+    '*.txt',
+    '*.md'
   ]
 };
->>>>>>> main

@@ -1,5 +1,10 @@
 import "./globals.css";
 import type { ReactNode } from "react";
+import { SessionProvider } from "next-auth/react";
+import { AuthProvider } from "@/contexts/AuthContext";
+import { OnboardingWalkthrough } from "@/components/OnboardingWalkthrough";
+import { LayoutWrapper } from "@/components/LayoutWrapper";
+
 export const metadata = {
   title: "Zion Tech Group - AI-Powered Enterprise Solutions & Autonomous Systems",
   description: "Leading provider of AI-powered enterprise solutions, autonomous business systems, quantum computing, and next-generation technology services. Transform your business with cutting-edge AI technology.",
@@ -36,7 +41,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </LayoutWrapper>
             <OnboardingWalkthrough />
           </AuthProvider>
-        </SessionProvider>      </body>
+        </SessionProvider>
+      </body>
     </html>
   );
 }

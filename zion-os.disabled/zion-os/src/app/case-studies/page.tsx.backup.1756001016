@@ -1,6 +1,11 @@
 import Link from "next/link";
 
 export const metadata = {
+  title: "Case Studies - Zion Tech Group | Success Stories & Client Results",
+  description: "Explore real-world case studies and success stories from Zion Tech Group's AI, quantum computing, and autonomous technology implementations.",
+  keywords: "case studies, success stories, client results, AI implementation, quantum computing projects, Zion Tech Group",
+};
+
 export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
@@ -238,32 +243,11 @@ export default function CaseStudiesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="card p-6">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mr-3">                  <span className="text-blue-400 font-bold">JD</span>
+                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-blue-400 font-bold">JD</span>
                 </div>
                 <div>
                   <h4 className="font-semibold">John Davis</h4>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Create Your Success Story?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how Zion Tech Group can help transform your business 
-              and deliver measurable results like these.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-                Get Started
-              </Link>
-              <Link href="/services" className="btn-secondary text-lg px-8 py-4">
-                Explore Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
                   <p className="text-sm text-gray-400">CTO, Global Manufacturing Co.</p>
                 </div>
               </div>
@@ -327,6 +311,7 @@ export default function CaseStudiesPage() {
             </div>
           </div>
         </section>
-      </div>    </div>
+      </div>
+    </div>
   );
 }

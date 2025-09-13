@@ -7,8 +7,8 @@ const path = require('path');
 
 const ROOT = process.cwd();
 const FRONT_PAGE = path.join(ROOT, 'pages', 'main', 'front', 'index.tsx');
-const START_MARKER = '/* AUTO-GENERATED: FRONT_AD_START */';
-const END_MARKER = '/* AUTO-GENERATED: FRONT_AD_END */';
+const START_MARKER = '/* AUTO-GENERATED: FRONT_ADS_START */';
+const END_MARKER = '/* AUTO-GENERATED: FRONT_ADS_END */';
 
 function titleCase(slug) {
   return slug
@@ -28,11 +28,13 @@ function discoverInternalPages() {
     results.push({ type: 'internal', href, label, tagline });
   }
 
+  // Priority pages
   const priority = [
     { href: '/automation', label: 'Automation Hub', tagline: 'Live agents & workflows' },
     { href: '/site-health', label: 'Site Health', tagline: 'A11y, performance, links' },
     { href: '/reports/seo', label: 'SEO Audit', tagline: 'Continuous improvements' },
     { href: '/reports/ai-trends', label: 'AI Trends', tagline: 'Intelligence signals' },
+    { href: '/reports/freshness', label: 'Freshness Report', tagline: 'Stale pages & docs insights' },
     { href: '/newsroom', label: 'Newsroom', tagline: 'Latest autonomous updates' },
   ];
   for (const p of priority) {
@@ -44,6 +46,7 @@ function discoverInternalPages() {
     if (fs.existsSync(check)) push(p.href, p.label, p.tagline);
   }
 
+  // Fallback discovery of other top-level pages
   try {
     const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
     for (const entry of entries) {
@@ -62,6 +65,7 @@ function discoverInternalPages() {
     }
   } catch {}
 
+  // Unique by href, limit
   const seen = new Set();
   const unique = [];
   for (const r of results) {
@@ -95,7 +99,7 @@ function generateSection(items) {
   return [
     '<section id="auto-promoted" className="mx-auto max-w-7xl px-6 pb-14">',
     '  <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Auto‑Promoted Features</h2>',
-    '  <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Continuously curated promos linking to live hubs, reports, and docs.</p>',
+    '  <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Continuously curated promos linking to live hubs, reports, docs, and new intelligence tools.</p>',
     '  <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">',
     items.map(buildCard).join('\n'),
     '  </div>',

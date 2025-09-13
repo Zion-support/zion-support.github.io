@@ -5,7 +5,6 @@ const { execSync } = require('child_process');
 
 // Extract token and repo from git remote
 const remoteUrl = execSync('git remote get-url origin', { encoding: 'utf8' }).trim();
-
 const tokenMatch = remoteUrl.match(/x-access-token:([^@]+)@/);
 const repoMatch = remoteUrl.match(/github\.com\/([^\/]+\/[^\/]+)/);
 
@@ -60,7 +59,6 @@ function githubRequest(path, options = {}) {
 async function listOpenPRs() {
   console.log('\n=== Fetching open PRs ===');
   const response = await githubRequest(`/repos/${repo}/pulls?state=open&per_page=100`);
-
   
   if (response.status !== 200) {
     console.error('Failed to fetch PRs:', response.data);

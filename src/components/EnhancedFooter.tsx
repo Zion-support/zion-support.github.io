@@ -1,313 +1,273 @@
-import React from 'react',;',';';';';
-    ';';';';';';
-import { _Link  } from 'react-router-dom'; import { _motion  } from 'framer-motion',;',';';';';
-    ';';';';';';
-import { _Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users  } from 'lucide-react'; const EnhancedFooter: Reac t.FC = () => { const _currentYear = new Date().getFullYear(); const _footerSections = [{ title: 'Services', links: [ { name: 'AI Solutions', href: '/services/ai-services' } { name: 'IT & Security', href: '/services/it-services' } { name: 'Blockchain & Web3', href: '/services/blockchain-services' } { name: 'Sustainability', href: '/services/sustainability' } { name: 'Healthcare Tech', href: '/services/healthcare-tech' } { name: 'Edge Computing', href: '/services/edge-computing' } ] } { title: 'Solutions', links: [{ name: 'Enterprise', href: '/solutions/enterprise' } { name: 'Startups', href: '/solutions/startups' } { name: 'Healthcare', href: '/solutions/healthcare' } { name: 'Financial Services', href: '/solutions/financial' } { name: 'Manufacturing', href: '/solutions/manufacturing' } { name: 'Education', href: '/solutions/education' } ] } { title: 'Company', links: [{ name: 'About Us', href: '/about' } { name: 'Our Team', href: '/about/team' } { name: 'Careers', href: '/careers' } { name: 'Partners', href: '/partners' } { name: 'Press', href: '/press' } { name: 'Case Studies', href: '/case-studies' } ] } { title: 'Resources', links: [{ name: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Developer Tools', href: '/developer' } { name: 'Training', href: '/training' } { name: 'Support', href: '/support' } ] } ]; const _socialLinks = [ { name: 'LinkedIn', href: 'https:';';';';';
-import React from,',;';';';';
-    ';';';';';
-  react';';';';';';
-import { _Link } from;',',';';';';
-    'react-router-dom'; import { _motion } from';',';';';';
-    'framer-motion';';';';';';
-import { _Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users } from;',',';';';';
-    'lucide-react'; const EnhancedFooter: Reac t.FC = () => { const _currentYear = new Date().getFullYear(); const _footerSections = [ { title:';',';';';';
-    'Services, links: [ { name:,';';';';';';
-  AI Solutions', href: '/services/ai-services } { name:,',';';';';
-    ';';';';';
-  IT & Security', href: '/services/it-services } { name:,',';';';';
-    ';';';';';
-  Blockchain & Web3', href: '/services/blockchain-services } { name:,',';';';';
-    ';';';';';
-  Sustainability', href: '/services/sustainability } { name:,',';';';';
-    ';';';';';
-  Healthcare Tech', href: '/services/healthcare-tech } { name:,',';';';';
-    ';';';';';
-  Edge Computing', href: '/services/edge-computing } ] } { title:,',';';';';
-    ';';';';';
-  Solutions', links: [ { name:',',';';';';
-    'Enterprise, href:,';';';';';';
-  /solutions/enterprise' } { name: 'Startups, href:,',';';';';
-    ';';';';';
-  /solutions/startups' } { name: 'Healthcare, href:,',';';';';
-    ';';';';';
-  /solutions/healthcare' } { name: 'Financial Services, href:,',';';';';
-    ';';';';';
-  /solutions/financial' } { name: 'Manufacturing, href:,',';';';';
-    ';';';';';
-  /solutions/manufacturing' } { name: 'Education, href:,',';';';';
-    ';';';';';
-  /solutions/education' } ] } { title: 'Company, links: [ { name:,',';';';';
-    ';';';';';
-  About Us', href: '/about } { name:,',';';';';
-    ';';';';';
-  Our Team', href: '/about/team } { name:,',';';';';
-    ';';';';';
-  Careers', href: '/careers } { name:,',';';';';
-    ';';';';';
-  Partners', href: '/partners } { name:,',';';';';
-    ';';';';';
-  Press', href: '/press } { name:,',';';';';
-    ';';';';';
-  Case Studies', href: '/case-studies } ] } { title:,',';';';';
-    ';';';';';
-  Resources', links: [ { name:',',';';';';
-    'Blog, href:,';';';';';';
-  /blog' } { name: 'Documentation, href:,',';';';';
-    ';';';';';
-  /docs' } { name: 'API Reference, href:,',';';';';
-    ';';';';';
-  /api' } { name: 'Developer Tools, href:,',';';';';
-    ';';';';';
-  /developer' } { name: 'Training, href:,',';';';';
-    ';';';';';
-  /training' } { name: 'Support, href:,',';';';';
-    ';';';';';
-  /support' } ] } ]; const _socialLinks = [ { name: 'LinkedIn, href:,',';';';';
-    ';';';';';
-  https: ''',';';';';
-    ';';';';';
-import React from 'react';';';import React from 'react',;',';';
-    ';';';';
-import { _Link  } from 'react-router-dom'; import { _motion  } from 'framer-motion',;',';';
-    ';';';';
-import { _Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users  } from 'lucide-react'; const EnhancedFooter: React.FC = () => { const _currentYear = new Date().getFullYear(); const _footerSections = [{ title: 'Services', links: [ { name: 'AI Solutions', href: '/services/ai-services' } { name: 'IT & Security', href: '/services/it-services' } { name: 'Blockchain & Web3', href: '/services/blockchain-services' } { name: 'Sustainability', href: '/services/sustainability' } { name: 'Healthcare Tech', href: '/services/healthcare-tech' } { name: 'Edge Computing', href: '/services/edge-computing' } ] } { title: 'Solutions', links: [{ name: 'Enterprise', href: '/solutions/enterprise' } { name: 'Startups', href: '/solutions/startups' } { name: 'Healthcare', href: '/solutions/healthcare' } { name: 'Financial Services', href: '/solutions/financial' } { name: 'Manufacturing', href: '/solutions/manufacturing' } { name: 'Education', href: '/solutions/education' } ] } { title: 'Company', links: [{ name: 'About Us', href: '/about' } { name: 'Our Team', href: '/about/team' } { name: 'Careers', href: '/careers' } { name: 'Partners', href: '/partners' } { name: 'Press', href: '/press' } { name: 'Case Studies', href: '/case-studies' } ] } { title: 'Resources', links: [{ name: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Developer Tools', href: '/developer' } { name: 'Training', href: '/training' } { name: 'Support', href: '/support' } ] } ]; const _socialLinks = [ { name: 'LinkedIn', href: 'https:';';';
-import React from,',;';';
-    ';';';
-  react';';';';
-import { _Link } from;',',';';
-    'react-router-dom'; import { _motion } from';',';';
-    'framer-motion';';';';
-import { _Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users } from;',',';';
-    'lucide-react'; const EnhancedFooter: React.FC = () => { const _currentYear = new Date().getFullYear(); const _footerSections = [ { title:';',';';
-    'Services, links: [ { name:,';';';';
-  AI Solutions', href: '/services/ai-services } { name:,',';';
-    ';';';
-  IT & Security', href: '/services/it-services } { name:,',';';
-    ';';';
-  Blockchain & Web3', href: '/services/blockchain-services } { name:,',';';
-    ';';';
-  Sustainability', href: '/services/sustainability } { name:,',';';
-    ';';';
-  Healthcare Tech', href: '/services/healthcare-tech } { name:,',';';
-    ';';';
-  Edge Computing', href: '/services/edge-computing } ] } { title:,',';';
-    ';';';
-  Solutions', links: [ { name:',',';';
-    'Enterprise, href:,';';';';
-  /solutions/enterprise' } { name: 'Startups, href:,',';';
-    ';';';
-  /solutions/startups' } { name: 'Healthcare, href:,',';';
-    ';';';
-  /solutions/healthcare' } { name: 'Financial Services, href:,',';';
-    ';';';
-  /solutions/financial' } { name: 'Manufacturing, href:,',';';
-    ';';';
-  /solutions/manufacturing' } { name: 'Education, href:,',';';
-    ';';';
-  /solutions/education' } ] } { title: 'Company, links: [ { name:,',';';
-    ';';';
-  About Us', href: '/about } { name:,',';';
-    ';';';
-  Our Team', href: '/about/team } { name:,',';';
-    ';';';
-  Careers', href: '/careers } { name:,',';';
-    ';';';
-  Partners', href: '/partners } { name:,',';';
-    ';';';
-  Press', href: '/press } { name:,',';';
-    ';';';
-  Case Studies', href: '/case-studies } ] } { title:,',';';
-    ';';';
-  Resources', links: [ { name:',',';';
-    'Blog, href:,';';';';
-  /blog' } { name: 'Documentation, href:,',';';
-    ';';';
-  /docs' } { name: 'API Reference, href:,',';';
-    ';';';
-  /api' } { name: 'Developer Tools, href:,',';';
-    ';';';
-  /developer' } { name: 'Training, href:,',';';
-    ';';';
-  /training' } { name: 'Support, href:,',';';
-    ';';';
-  /support' } ] } ]; const _socialLinks = [ { name: 'LinkedIn, href:,',';';
-    ';';';
-  https: ''',';';
-    ';';';
-import React from 'react';
-import { _Link } from 'react-router-dom';
-import {;
-
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { CheckCircle } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-import { Package } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Heart } from 'lucide-react';
-import { Building2 } from 'lucide-react';
-import { ShoppingCart } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { ShieldCheck } from 'lucide-react';
-import { Check } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Icon } from 'lucide-react';
-const services = [];
-const solutions = [];
-  Mail,;
-  Smartphone,;
-  Building,;
-  MapPin,;
-  Globe,;
-  Facebook,;
-  Twitter,;
-  Linkedin,;
-  Instagram,;
-  Youtube,;
-  ArrowRight,;
-  CheckCircle,;
-  Shield,;
-  Award,;
-  Users,;
-  Clock,;
-  Heart,;
-  Brain,;
-  Cloud,;
-  ShoppingCart,;
-  Factory,;
-  CreditCard,;
-  GraduationCap,;
-  ShoppingBag,;
-  Building2,;
-  Zap,;
-  Target,;
-  TrendingUp,;
-  Star,;
-  Lock,;
-  Eye,;
-  Code,;
-  Database,;
-  Network,;
-  Cpu,;
-  Atom,;
-  Rocket,;
-  BarChart3,;
-  MessageSquare,;
-  FileText,;
-  Settings,;
-  Gauge,;
-  Workflow,;
-  Calendar,;
-  Package,;
-  Headphones,;
-  Search,;
-  Lightbulb,;
-  Award as AwardIcon,;
-  ShieldCheck,;
-  Globe2,;
-  Leaf,;
-  Satellite,;
-  Microscope,;
-  Beaker,;
-  TestTube,;
-  Truck,;
-  Factory as FactoryIcon,;
-  Leaf as LeafIcon,;
-  Satellite as SatelliteIcon,;
-  Building as BuildingIcon,;
-  Gauge as GaugeIcon,;
-  MessageCircle,;
-  Calendar as CalendarIcon,;
-  Package as PackageIcon,;
-  CreditCard as CreditCardIcon,;
-  Globe2 as Globe2Icon,;
-  ShieldCheck as ShieldCheckIcon;
-  Globe2 as Globe2Icon, 
-  ShieldCheck as ShieldCheckIcon 
+import { Link } from 'react-router-dom';
+import { 
+  Twitter, 
+  Linkedin, 
+  Github, 
+  Mail, 
+  Phone, 
+  MapPin,
+  ArrowUp,
+  Globe,
+  Shield,
+  Users,
+  Zap
 } from 'lucide-react';
-;
-export const "EnhancedFooter": "React.FC = () => {;
-  return (<footer className="bg-gray-900 text-white">;
-      <div className="max-w-7xl mx-auto px-4 "sm": p x-6 "lg": p x-8 py-12">;
-        <div className="grid "md": gri d-cols-4 gap-8">;
-          <div>;
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group;
-            <p className="text-gray-400">;
-              Leading technology solutions provider specializing in AI", cybersecurity,;
-              cloud infrastructure, and digital transformation services.</p>;
-          </div>;
-          {/* Services */}
-          <div>;
-            <h4 className="text-md font-semibold mb-4">Services</h4>;
-            <ul className="space-y-2 text-gray-400">;
-              <li><a href="/services/ai" className=""hover": "tex t-white">AI Solutions</a></li>;
-              <li><a href="/services/cybersecurity" className=""hover": tex t-white">Cybersecurity</a></li>;
-              <li><a href="/services/cloud" className=""hover": tex t-white">Cloud Services</a></li>;
-              <li><a href="/services/transformation" className=""hover": tex t-white">Digital Transformation</a></li>;
-            </ul>;
-          </div>;
-          {/* Solutions */"}
-          <div>;
-            <h4 className="text-md font-semibold mb-4">Company</h4>;
-            <ul className="space-y-2 text-gray-400">;
-              <li><a href="/about" className=""hover": "tex t-white">About</a></li>;
-              <li><a href="/careers" className=""hover": tex t-white">Careers</a></li>;
-              <li><a href="/news" className=""hover": tex t-white">News</a></li>;
-              <li><a href="/case-studies" className=""hover": tex t-white">Case Studies</a></li>;
-            </ul>;
-          </div>;
-          {/* Quick Links */"}
-          <div>;
-            <h4 className="text-md font-semibold mb-4">Legal</h4>;
-            <ul className="space-y-2 text-gray-400">;
-              <li><a href="/privacy" className=""hover": "tex t-white">Privacy Policy</a></li>;
-              <li><a href="/terms" className=""hover": tex t-white">Terms of Service</a></li>;
-              <li><a href="/contact" className=""hover": tex t-white">Contact</a></li>;
-            </ul>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Newsletter Signup */"}
-      <div className="border-t border-gray-800">;
-        <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8 py-8">;
-          <div className="flex flex-col "md":flex-row items-center justify-between">;
-            <div className="mb-4 "md":mb-0">;
-              <h4 className="text-lg font-semibold mb-2">Stay Updated</h4>;
-              <p className="text-gray-300 text-sm">Get the latest news and updates about our services and solutions.</p>;
-            </div>;
-            <div className="flex w-full "md":w-auto">;
-              <input type="email";
-                placeholder="Enter your email";
-                className="flex-1 "md":w-64 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg "focus":outline-none "focus":border-cyan-500 text-white placeholder-gray-400";
-               />;
-              <button className="px-6 py-2 bg-cyan-600 "hover":bg-cyan-700 rounded-r-lg transition-colors font-semibold">;
-                Subscribe;
-              </button>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Bottom Bar */"}
-      <div className="border-t border-gray-800">;
-        <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8 py-6">;
-          <div className="flex flex-col "md":flex-row items-center justify-between">;
-            <div className="text-gray-400 text-sm mb-4 "md":mb-0">;
-              © 2024 Zion Tech Group. All rights reserved.;
-            </div>;
-            <div className="flex flex-wrap items-center space-x-6">;
-              {legalLinks.map((link", index) => (;
-                <Link;
+
+export function EnhancedFooter() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const footerSections = [
+    {
+      title: 'Platform',
+      links: [
+        { name: 'Services', href: '/services' },
+        { name: 'Marketplace', href: '/marketplace' },
+        { name: 'Talent Network', href: '/talent' },
+        { name: 'AI Matching', href: '/match' },
+        { name: 'Community', href: '/community' },
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Press', href: '/press' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Contact', href: '/contact' },
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Help Center', href: '/help' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Status', href: '/status' },
+      ]
+    },
+    {
+      title: 'Legal',
+      links: [
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Cookie Policy', href: '/cookies' },
+        { name: 'GDPR', href: '/gdpr' },
+        { name: 'Security', href: '/security' },
+      ]
+    }
+  ];
+
+  const socialLinks = [
+    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'hover:text-blue-400' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'hover:text-blue-600' },
+    { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'hover:text-gray-400' },
+    { name: 'Email', icon: Mail, href: 'mailto:contact@ziontechgroup.com', color: 'hover:text-red-400' },
+  ];
+
+  const features = [
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level encryption and compliance'
+    },
+    {
+      icon: Users,
+      title: 'Global Network',
+      description: '150+ countries, 24/7 support'
+    },
+    {
+      icon: Zap,
+      title: 'AI-Powered',
+      description: 'Smart matching and automation'
+    }
+  ];
+
+  return (
+    <footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple border-t border-zion-purple/20 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+          backgroundSize: '30px 30px'
+        }}></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Main Footer Content */}
+        <div className="py-16">
+          {/* Top Section with Logo and Description */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Link to="/" className="inline-flex items-center space-x-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-xl flex items-center justify-center">
+                  <span className="text-white font-bold text-2xl">Z</span>
+                </div>
+                <span className="text-3xl font-bold bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent">
+                  Zion
+                </span>
+              </Link>
+              
+              <p className="text-zion-slate-light text-lg mb-8 max-w-md leading-relaxed">
+                The future of technology is here. Connect with top AI talent, access cutting-edge services, 
+                and build the next generation of digital solutions.
+              </p>
+
+              {/* Social Links */}
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <motion.a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    className={`w-10 h-10 bg-zion-purple/20 border border-zion-purple/30 rounded-lg flex items-center justify-center text-zion-slate-light ${social.color} transition-all duration-300`}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </motion.a>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Features Grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            >
+              {features.map((feature, index) => (
+                <motion.div
                   key={index}
-                  to={link.href}
-                  className="text-gray-400 "hover": "text-cyan-400 transition-colors text-sm";
-                >;
-                  {link.name"}
-                </Link>;export const EnhancedFooter: React.FC = () => {
-  return (<footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
-        <div className="grid md: gri d-cols-4 gap-8">
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="w-12 h-12 bg-zion-purple/20 rounded-xl flex items-center justify-center mx-auto mb-4 text-zion-purple">
+                    <feature.icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-zion-slate-light text-sm">{feature.description}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Navigation Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12"
+          >
+            {footerSections.map((section) => (
+              <div key={section.title}>
+                <h3 className="text-lg font-semibold text-white mb-4">{section.title}</h3>
+                <ul className="space-y-3">
+                  {section.links.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        to={link.href}
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8 border-t border-zion-purple/20"
+          >
+            <div className="flex items-center space-x-3">
+              <Mail className="w-5 h-5 text-zion-purple" />
+              <div>
+                <p className="text-white font-medium">Email</p>
+                <p className="text-zion-slate-light text-sm">contact@ziontechgroup.com</p>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-3">
+              <Phone className="w-5 h-5 text-zion-purple" />
+              <div>
+                <p className="text-white font-medium">Phone</p>
+                <p className="text-zion-slate-light text-sm">+1 (555) 123-4567</p>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-3">
+              <MapPin className="w-5 h-5 text-zion-purple" />
+              <div>
+                <p className="text-white font-medium">Location</p>
+                <p className="text-zion-slate-light text-sm">Global Network</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Bottom Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="py-8 border-t border-zion-purple/20"
+        >
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            <div className="flex items-center space-x-6 text-sm text-zion-slate-light">
+              <span>&copy; 2025 Zion Tech Group. All rights reserved.</span>
+              <div className="flex items-center space-x-2">
+                <Globe className="w-4 h-4" />
+                <span>English</span>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-6">
+              <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm">
+                Privacy
+              </Link>
+              <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm">
+                Terms
+              </Link>
+              <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm">
+                Cookies
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Scroll to Top Button */}
+      <motion.button
+        onClick={scrollToTop}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-full shadow-2xl shadow-zion-purple/25 flex items-center justify-center text-white hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300 z-40"
+      >
+        <ArrowUp className="w-6 h-6" />
+      </motion.button>
+    </footer>
+  );
+}

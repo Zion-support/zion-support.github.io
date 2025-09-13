@@ -1,3 +1,4 @@
+
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -8,8 +9,7 @@ interface CTAButtonProps {
   children: ReactNode,
   class_name?: string,
   on_click?: () => void;
-    <Link;
-      href={href}
+
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -45,10 +45,11 @@ export function CTAButton({;
   return (;
     <Link;
       href={href} ;
+
       className={classes}
-      onClick={onClick}
+      on_click={on_click}
       role="button";
-      tabIndex={0}
+      tab_index={0}
     >;
       {children}
     </Link>);

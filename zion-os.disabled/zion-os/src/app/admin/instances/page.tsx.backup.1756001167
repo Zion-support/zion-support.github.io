@@ -1,3 +1,5 @@
+// import { prisma } from "@/lib/prisma";
+
 export default async function InstancesPage() {
   // Temporarily commented out for build
   // const instances = await prisma.instance.findMany({
@@ -9,6 +11,7 @@ export default async function InstancesPage() {
   // });
 
   const instances: any[] = []; // Temporary empty array
+
 export default function InstancesPage() {
   return (
     <div className="space-y-6">

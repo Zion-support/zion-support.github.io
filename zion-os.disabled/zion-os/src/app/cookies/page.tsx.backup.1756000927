@@ -2,6 +2,10 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Cookie Policy - Zion Tech Group",
+  description: "Learn how Zion Tech Group uses cookies and tracking technologies to improve your experience on our website.",
+  keywords: "cookie policy, cookies, tracking, privacy, Zion Tech Group",
+};
+
 export default function CookiesPage() {
   return (
     <div className="min-h-screen">
@@ -307,6 +311,7 @@ export default function CookiesPage() {
             </div>
           </div>
         </div>
-      </section>    </div>
+      </section>
+    </div>
   );
 }

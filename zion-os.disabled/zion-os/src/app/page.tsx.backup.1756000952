@@ -1,8 +1,6 @@
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import { FeatureShowcase } from "@/components/FeatureShowcase";
 import Link from 'next/link';
 import { ArrowRight, Brain, Rocket, Shield, Globe, Zap, Users, Target } from 'lucide-react';
+
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
@@ -96,31 +94,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      {/* Services Overview */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Comprehensive Technology Solutions
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From AI-powered business automation to quantum computing infrastructure, 
-              we provide end-to-end solutions for the modern enterprise
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="card group">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
-                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">AI & Machine Learning</h3>
-              <p className="text-gray-400">
-                Autonomous business operations, intelligent decision-making, and AI-powered content generation.
-              </p>
-              <Link href="/ai-services" className="text-blue-400 hover:text-blue-300 text-sm font-medium mt-3 inline-block">
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -167,7 +140,21 @@ export default function HomePage() {
               <p className="text-gray-600 mb-4">
                 Self-managing AI systems that operate independently across your business operations
               </p>
-              <Link href="/services/ai-autonomous-systems" className="text-blue-600 hover:text-blue-700 font-medium">                Learn More →
+              <Link href="/services/ai-autonomous-systems" className="text-blue-600 hover:text-blue-700 font-medium">
+                Learn More →
+              </Link>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <Rocket className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Business Intelligence</h3>
+              <p className="text-gray-600 mb-4">
+                Advanced analytics and insights powered by machine learning and AI
+              </p>
+              <Link href="/services/business-intelligence" className="text-purple-600 hover:text-purple-700 font-medium">
+                Learn More →
               </Link>
             </div>
 
@@ -179,38 +166,11 @@ export default function HomePage() {
               <p className="text-gray-600 mb-4">
                 AI-powered security solutions protecting your digital assets and infrastructure
               </p>
-              <Link href="/services/enterprise-security" className="text-green-600 hover:text-green-700 font-medium">                Learn More →
-              </Link>
-            </div>
-
-            <div className="card group">
-              <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-yellow-500/30 transition-colors">
-                <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Space Technology</h3>
-              <p className="text-gray-400">
-                Satellite systems, space infrastructure, and advanced aerospace solutions.
-              </p>
-              <Link href="/space-tech" className="text-yellow-400 hover:text-yellow-300 text-sm font-medium mt-3 inline-block">
+              <Link href="/services/enterprise-security" className="text-green-600 hover:text-green-700 font-medium">
                 Learn More →
               </Link>
             </div>
 
-            <div className="card group">
-              <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-500/30 transition-colors">
-                <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Zion OS Platform</h3>
-              <p className="text-gray-400">
-                Launch sovereign AI-powered digital economies with our unified deployment protocol.
-              </p>
-              <Link href="/zion-os" className="text-indigo-400 hover:text-indigo-300 text-sm font-medium mt-3 inline-block">
-                Learn More →
-              </Link>
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                 <Globe className="w-8 h-8 text-orange-600" />
@@ -299,33 +259,12 @@ export default function HomePage() {
                   <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                   <span className="text-gray-700">Future-proof technology stack</span>
                 </li>
-              </ul>            </div>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Feature Showcase */}
-      <FeatureShowcase />
-
-      {/* Enhanced CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 transform hover:scale-105 transition-all duration-300">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join hundreds of enterprises worldwide that trust Zion Tech Group 
-              to deliver cutting-edge technology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-                Get Started Today
-              </Link>
-              <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
-                View Case Studies
-              </Link>
-            </div>
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -345,7 +284,8 @@ export default function HomePage() {
               className="border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               View All Services
-            </Link>          </div>
+            </Link>
+          </div>
         </div>
       </section>
     </div>

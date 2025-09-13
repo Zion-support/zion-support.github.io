@@ -1,103 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 
-interface FeaturedListing {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  price: string;
-  featured: boolean;
-  image?: string;
-}
-
-const featuredListings: FeaturedListing[] = [
-  {
-    id: '1',
-    title: 'AI-Powered Content Generation Suite',
-    description: 'Advanced AI tools for creating high-quality content across multiple formats.',
-    category: 'AI Services',
-    price: '$299/month',
-    featured: true,
-  },
-  {
-    id: '2',
-    title: 'Cybersecurity Monitoring Platform',
-    description: 'Real-time threat detection and security monitoring for businesses.',
-    category: 'IT Services',
-    price: '$199/month',
-    featured: true,
-  },
-  {
-    id: '3',
-    title: 'Cloud Cost Optimization Tool',
-    description: 'Intelligent cloud resource management and cost optimization.',
-    category: 'Micro SAAS',
-    price: '$99/month',
-    featured: true,
-  },
-];
-
-export function FeaturedListingsSection() {
+export const FeaturedListingsSection: React.FC = () => {
   return (
-    <section className="py-16 bg-background">
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
-            Featured Services
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Featured Listings
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Discover our most popular and innovative solutions that are transforming businesses worldwide.
+          <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+            Discover our handpicked selection of top services and solutions.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredListings.map((listing) => (
-            <Card key={listing.id} className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div>
-                    <CardTitle className="text-lg">{listing.title}</CardTitle>
-                    <CardDescription className="mt-2">
-                      {listing.description}
-                    </CardDescription>
-                  </div>
-                  {listing.featured && (
-                    <Badge className="bg-primary text-primary-foreground">
-                      Featured
-                    </Badge>
-                  )}
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center justify-between mb-4">
-                  <Badge variant="secondary">{listing.category}</Badge>
-                  <span className="text-lg font-semibold text-primary">
-                    {listing.price}
-                  </span>
-                </div>
-                <Link
-                  to={`/services/${listing.id}`}
-                  className="w-full inline-flex items-center justify-center px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
-                >
-                  Learn More
-                </Link>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        <div className="text-center mt-8">
-          <Link
-            to="/services"
-            className="inline-flex items-center px-6 py-3 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/80 transition-colors"
-          >
-            View All Services
-          </Link>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Placeholder for featured listings */}
+          <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-6 border border-zion-blue-light/30">
+            <div className="text-center">
+              <h3 className="text-xl font-semibold text-white mb-4">
+                Coming Soon
+              </h3>
+              <p className="text-zion-slate-light">
+                Featured listings will be displayed here.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};

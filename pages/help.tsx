@@ -1,3 +1,5 @@
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -16,29 +18,36 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-origin/automation-improvements-finalimport {
-  Search
-  HelpCircle
-  BookOpen
-  MessageCircle
-  Phone
-  Mail
-  FileText
-  Video
-  Download
-  ExternalLink
-  ChevronDown
-  Cloud
 
 import {
 
+
+import {
+
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
+  Video,
+  Download,
+  ExternalLink,
+  ChevronDown,
+  Cloud,;
+
+} from "lucide-react";
 const helpArticles = [
   {
     id: "overview"
@@ -66,34 +75,38 @@ const helpArticles = [
         readTime: "8 min read"
         type: "Technical"
       }
-      {
-    id: "cloud-services",
-    title: "Cloud Services",
-    description: "Cloud infrastructure and deployment solutions.",
-        title: 'AI Best Practices',
-        description: 'Tips and best practices for AI development',
-        readTime: '6 min read',
-        type: 'Best Practice'
-      }
-    ]
-  },
+
+import React, { useState } from './react';
+import Head from './next / head';
+import Link from './next / link';
+import { motion, AnimatePresence  } from './framer-motion';
+import {
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
+  Video,
+  Download,
+  ExternalLink,
+  ChevronDown,
+  Cloud,
+} from './lucide-react';
+;
+const help_articles = [;
   {
-    id: 'cloud-services',
-    title: 'Cloud Services',
-    description: 'Cloud infrastructure and deployment solutions.',
-origin/automation-improvements-final
-    icon: Cloud,
-    color: "blue",
-
-    icon: Cloud,
-    color: "blue",
-
+    id: "overview",
+    title: "Understanding Our Services",
+    description: "Overview of all available services and solutions",
+    read_time: "7 min read",
+    type: "Overview",
+      {
       {
 
 
-origin/automation-improvements-final
-    icon: Cloud,
-    color: "blue",
+
         title: "AI Best Practices"
         description: "Tips and best practices for AI development"
         readTime: "6 min read"
@@ -108,9 +121,22 @@ origin/automation-improvements-final
     icon: Cloud
     color: "blue"
 
+
+
+
+    articles: [
+      {
+        title: "Cloud Migration Guide"
+        description: "Step-by-step guide to migrating to the cloud"
+        readTime: "12 min read"
+        type: "Guide"
+      }
+
     articles: [;
       {
-origin/automation-improvements-final
+      {
+
+
         title: "Cloud Security"
         description: "Best practices for securing your cloud infrastructure"
         readTime: "9 min read"
@@ -125,13 +151,23 @@ const help_categories = [;
 
   {
 
+
+
+    title: "Getting Started"
+    description: "New to our platform? Start here."
+    icon: BookOpen
+    color: "blue"
+    articles: helpArticles
+  }
+
 ];
-export default function HelpPage() {
-  const [searchTerm, setSearchTerm] = useState("");
 
 
 
-export default function HelpPage() {;>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    color: 'blue',
+    articles: helpArticles
+  }
+];
 
 import {;
   Search,;
@@ -146,7 +182,8 @@ import {;
   ExternalLink,;
   ChevronDown,;
   Cloud,;
-} from "lucide-react";const helpArticles = [;
+} from "lucide-react";
+const helpArticles = [;
   {;
     id: "overview",;
     title: "Understanding Our Services",;
@@ -203,28 +240,30 @@ import {;
     ],;
   },;
 ];
-export default function HelpPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-
-
+const helpCategories = [;
+  {;
+    title: "Getting Started",;
+    description: "New to our platform? Start here.",;
+    icon: BookOpen,;
+    color: "blue",;
+    articles: helpArticles,;
+  },;
+];
 export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
-  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+
   const toggleCategory = (index: number) => {;
 
     setExpandedCategory(expandedCategory === index ? null : index);
 
+
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const toggleCategory = (index: number) => {
     setExpandedCategory(expandedCategory === index ? null : index);
 
+
+
   }
-export default function HelpPage() {
-  const [searchTerm, setSearchTerm] = useState('');origin/automation-improvements-final
-  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
-  const toggleCategory = (index: number) => {
-    setExpandedCategory(expandedCategory === index ? null : index);
-  };
   const filteredCategories = helpCategories
     .map((category) => ({
       ...category
@@ -235,16 +274,14 @@ export default function HelpPage() {
       )
     }))
     .filter((category) => category.articles.length > 0);
+
+  const filteredCategories = helpCategories.map(category => ({
     ...category,
     articles: category.articles.filter(article =>
       article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       article.description.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.articles.length > 0);
-
-
-origin/automation-improvements-final
-
 
   const filteredCategories = helpCategories;
     .map((category) => ({;
@@ -258,7 +295,6 @@ origin/automation-improvements-final
     .filter((category) => category && category.articles.length > 0);
 
 
-origin/automation-improvements-final
 
   return (
     <>;
@@ -271,13 +307,9 @@ origin/automation-improvements-final
         <meta
           name="keywords"
           content="help, support, documentation, FAQ, tutorials, guides"
-        />;
-      </Head>;
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
 
         />;
       </Head>;
-
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
 
         {/* Hero Section */}

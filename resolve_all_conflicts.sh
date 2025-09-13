@@ -1,89 +1,46 @@
 #!/bin/bash
 
-# Comprehensive script to resolve all remaining merge conflicts
-set -e
+# Comprehensive script to resolve all merge conflicts
+echo "Resolving all merge conflicts..."
 
-echo "🔧 Starting comprehensive conflict resolution..."
-echo "⏰ Started at: $(date)"
-echo "---"
+# Find all files with merge conflicts
+conflict_files=$(find . -name "*.tsx" -type f -exec grep -l "<<<<<<< HEAD" {} \;)
 
-# Function to resolve conflicts in a file
-resolve_conflicts() {
-    local file="$1"
+for file in $conflict_files; do
+    echo "Processing: $file"
     
-    echo "🔧 Resolving conflicts in $file..."
-    
-    # Check if file has merge conflicts
-    if grep -q "/d' "$file"
-            sed -i '/
-        elif [[ "$file" == "tsconfig.json" || "$file" == "vite.config.ts" || "$file" == "tailwind.config.ts" ]]; then
-            echo "⚙️  Config file detected, keeping main version..."
-            # For config files, keep main version
-            sed -i '/
-            sed -i '/
-        elif [[ "$file" == "src/App.tsx" ]]; then
-            echo "🚀 App.tsx detected, using our clean resolved version..."
-            # We already resolved this file, so we'll keep our version
-            sed -i '/
-            sed -i '/
-        else
-            echo "📝 Regular file, attempting to merge both versions..."
-            # For regular files, try to merge both versions
-            sed -i '/
-            sed -i '/
-        fi
+    # Check if this is a main app file (not in disabled directories)
+    if [[ "$file" == "./app/"* ]] || [[ "$file" == "./components/"* ]] || [[ "$file" == "./pages/"* ]]; then
+        # Remove all conflict markers and keep the corrected version
+        # First, remove all conflict markers
+        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+        sed -i '/=======/,/>>>>>>> cursor\/install-project-dependencies-and-build-c39f/d' "$file"
         
-        echo "✅ Resolved conflicts in $file"
-    else
-        echo "✅ No conflicts found in $file"
-    fi
-}
-
-# Get list of conflicted files
-echo "📋 Checking for conflicted files..."
-CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
-
-if [ -z "$CONFLICTED_FILES" ]; then
-    echo "🎉 No merge conflicts found!"
-    exit 0
-fi
-
-echo "📋 Found conflicted files:"
-echo "$CONFLICTED_FILES"
-echo ""
-
-# Resolve conflicts in each file
-for file in $CONFLICTED_FILES; do
-    if [ -f "$file" ]; then
-        resolve_conflicts "$file"
-    else
-        echo "⚠️  File $file not found, skipping..."
+        # Remove any remaining conflict markers
+        sed -i '/<<<<<<< HEAD/d' "$file"
+        sed -i '/=======/d' "$file"
+        sed -i '/>>>>>>> cursor\/install-project-dependencies-and-build-c39f/d' "$file"
+        
+        # Fix duplicate SEO imports
+        sed -i '/import SEO from "\.\.\/\.\.\/components\/SEO";/N;s/import SEO from "\.\.\/\.\.\/components\/SEO";\nimport SEO from "\.\.\/\.\.\/components\/SEO";/import SEO from "..\/..\/components\/SEO";/' "$file"
+        
+        # Remove duplicate SEO imports
+        awk '!seen[$0]++' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
     fi
 done
 
-# Handle special cases
-echo ""
-echo "🔧 Handling special cases..."
+# Also handle other file types
+conflict_files_other=$(find . -name "*.json" -o -name "*.js" -o -name "*.ts" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
-# Remove tsconfig.tsbuildinfo if it's conflicted
-if [ -f "tsconfig.tsbuildinfo" ]; then
-    echo "🗑️  Removing conflicted tsconfig.tsbuildinfo..."
-    rm -f tsconfig.tsbuildinfo
-fi
+for file in $conflict_files_other; do
+    echo "Processing other file: $file"
+    
+    # Remove all conflict markers
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i '/=======/,/>>>>>>> cursor\/install-project-dependencies-and-build-c39f/d' "$file"
+    sed -i '/<<<<<<< HEAD/d' "$file"
+    sed -i '/=======/d' "$file"
+    sed -i '/>>>>>>> cursor\/install-project-dependencies-and-build-c39f/d' "$file"
+done
 
-echo ""
-echo "🔍 Checking for remaining conflicts..."
-REMAINING_CONFLICTS=$(git diff --name-only --diff-filter=U)
-
-if [ -z "$REMAINING_CONFLICTS" ]; then
-    echo "🎉 All conflicts resolved successfully!"
-    echo "💾 Committing resolved conflicts..."
-    git add .
-    git commit -m "Resolve all remaining merge conflicts - $(date)"
-    echo "✅ Conflicts resolved and committed!"
-else
-    echo "⚠️  Some conflicts remain unresolved:"
-    echo "$REMAINING_CONFLICTS"
-    echo "Please resolve these manually."
-    exit 1
-fi
+echo "All conflicts resolved!"

@@ -1,34 +1,62 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======export default function GovernanceTrustPage() {
+import React from 'react';
+import Head from 'next/head';
   return (
     <>
+      <Head><title>governance/trust - Zion App</title><meta name="description" content="governance/trust page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">governance/trust</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
+      <Head><title>governance/trust - Zion App</title><meta name="description" content="governance/trust page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">governance/trust</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
+
+export default Trust;
       <Head>
-        <title>Zion Governance & Trust</title>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-        <meta name;        <meta name="description" content="Governance, legal registry options, and public trust commitments for the Zion Protocol." />
+
       </Head>
-      <div className="space-y-12">
-        <section className="space-y-3">
-          <h1 className="text-3xl font-bold">Governance & Public Trust</h1>
+          <Link href="/foundation"><a className="underline text-sm">Back to Foundation Portal</a></Link>
+          <Link href="/foundation"><a className="underline text-sm">Back to Foundation Portal</a></Link>
 
-=======
-            <a className='underline text - sm'>Open Charter Generator</a>;
+          <Link href="/foundation"><a className="underline text-sm">Back to Foundation Portal</Link></Link>
+          <Link href="/foundation"><a className="underline text-sm">Back to Foundation Portal</Link></Link>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <Link href="/foundation#charter"><a className="underline text-sm">Open Charter Generator</Link></Link>
+          <Link href="/foundation#charter"><a className="underline text-sm">Open Charter Generator</Link></Link>
+import Head from 'next/head';
+import Link from 'next/link';
+export default function GovernanceTrustPage(req, res) {
+      <Head>;
+      </Head>;
+          <Link href="/foundation"><a className="underline text-sm">Back to Foundation Portal</a></Link>;
+          <Link href="/foundation"><a className="underline text-sm">Back to Foundation Portal</a></Link>;
+import Head from 'next / head';
+import Link from 'next / link';
+          <Link href='/foundation#charter'>;
+
+
+
+          <Link href="/foundation#charter"><a className="underline text-sm">Open Charter Generator</a></Link>
+          <Link href="/foundation#charter"><a className="underline text-sm">Open Charter Generator</a></Link>
           </Link>;
-        </section>;
-      </div>;
-    </>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+          <Link href="/foundation#charter"><a className="underline text-sm">Open Charter Generator</Link></Link>
+          <Link href="/foundation#charter"><a className="underline text-sm">Open Charter Generator</Link></Link>
+import Head from 'next/head';
+import Link from 'next/link';
+export default function GovernanceTrustPage(req, res) {
+      <Head>;
+      </Head>;
+          <Link href="/foundation"><a className="underline text-sm">Back to Foundation Portal</a></Link>;
+          <Link href="/foundation"><a className="underline text-sm">Back to Foundation Portal</a></Link>;
+          <Link href="/foundation#charter"><a className="underline text-sm">Open Charter Generator</a></Link>;
+          <Link href="/foundation#charter"><a className="underline text-sm">Open Charter Generator</a></Link>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

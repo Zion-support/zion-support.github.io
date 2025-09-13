@@ -1,21 +1,11 @@
+
+
 interface AccessibilityContextType {;
 
 
-interface AccessibilityContextType {
-interface AccessibilityContextType {;
-import React, { createContext, useContext, useState, ReactNode } from "react";
+
 
 interface AccessibilityContextType {
-=======
-=======
-
-
-
-interface AccessibilityContextType {>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-import React, { createContext, useContext, useState, ReactNode } from "react";
-
-interface AccessibilityContextType {>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -31,7 +21,10 @@ interface AccessibilityContextType {
 }
 
 
+
 export const useAccessibility = () => {;
+
+
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
     throw new Error(
@@ -44,7 +37,8 @@ interface AccessibilityProviderProps {
   children: React.ReactNode;
 }
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
-=======
+
+
 const AccessibilityContext = createContext<;
   AccessibilityContextType | undefined;
 >(undefined);
@@ -65,22 +59,14 @@ interface AccessibilityProviderProps {;
   children,
 }) => {;
 
-  children,
-}) => {;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const toggleHighContrast = () => setHighContrast(!highContrast);
   const toggleLargeText = () => setLargeText(!largeText);
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const value = {;
     highContrast,;
     largeText,;
@@ -89,10 +75,8 @@ interface AccessibilityProviderProps {;
     toggleLargeText,;
     toggleReducedMotion,;
   };
-=======
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <AccessibilityContext && AccessibilityContext.Provider value={value}>;
       <div
@@ -101,20 +85,62 @@ interface AccessibilityProviderProps {;
       </div>;
     </AccessibilityContext && AccessibilityContext.Provider>;
   );
-=======
-};
 
-export default AccessibilityProvider;
-
-export default AccessibilityProvider;
+const AccessibilityContext = create_context<;
+  AccessibilityContextType | undefined;
+>(undefined);
+;
+export const use_accessibility = () =>: any {
+  const context = useContext (AccessibilityContext);
+  // Check condition
+if ( {) {
+  $2
 }
+    throw new Error (
+      "use_accessibility must be used within an AccessibilityProvider",
+    );
+  }
+  return context;
+}
+;
+interface AccessibilityProviderProps {
+  children: React.ReactNode;
+}
+export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
+  children,
+}) => {
+  const [high_contrast, setHighContrast] = useState (false);
+  const [large_text, setLargeText] = useState (false);
+  const [reduced_motion, setReducedMotion] = useState (false);
+;
+  const toggleHighContrast = () =>: any setHighContrast (!high_contrast);
+  const toggleLargeText = () =>: any setLargeText (!large_text);
+  const toggleReducedMotion = () =>: any setReducedMotion (!reduced_motion);
+;
+  const value = {
+    high_contrast,
+    large_text,
+    reduced_motion,
+    toggleHighContrast,
+    toggleLargeText,
+    toggleReducedMotion,
+  }
+;
+  return (
+    <AccessibilityContext.Provider value={value}>;
+      <div;
+        className={`${high_contrast ? "high - contrast" : ""} ${large_text ? "large - text" : ""} ${reduced_motion ? "reduced - motion" : ""}`}
+      >;
+        {children}
+      </div>;
+    </AccessibilityContext.Provider>);
+}
+;
 export default AccessibilityProvider;
+;
+
+
 };
 
 export default AccessibilityProvider;
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-};
 
-export default AccessibilityProvider;
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

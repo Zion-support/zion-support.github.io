@@ -1,43 +1,157 @@
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { FileText, Code, BookOpen, Search, ArrowRight, Download, ExternalLink } from 'lucide-react';
-import Link from 'next/link';
-const DocsPage: NextPage = () => {;
-  const docCategories = [;
-    {;
+import Head from 'next/head';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
+export default function DocsPage() {
+  const contact = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
+  const sections = [
+    {
       title: 'Getting Started',
-      description: 'Quick start guides and setup instructions',
-      icon: <BookOpen className="w-6 h-6" />,
-      docs: [;
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', type: 'Guide' },
-        { title: 'Quick Start Tutorial', description: 'Get up and running in 5 minutes', type: 'Tutorial' },
-        { title: 'Configuration', description: 'Basic configuration options', type: 'Reference' }
-      ];
-},
-    {;
-      title: 'API Reference',
-      description: 'Complete API documentation and examples',
-      icon: <Code className="w-6 h-6" />,
-      docs: [;
-        { title: 'REST API', description: 'Complete REST API documentation', type: 'API' },
-        { title: 'GraphQL API', description: 'GraphQL schema and queries', type: 'API' },
-        { title: 'Webhooks', description: 'Webhook configuration and events', type: 'Reference' }
-      ];
-},
-    {;
-      title: 'SDKs & Libraries',
-      description: 'Client libraries and SDKs for various languages',
-      icon: <FileText className="w-6 h-6" />,
-      docs: [;
-        { title: 'JavaScript SDK', description: 'Node.js and browser SDK', type: 'SDK' },
-        { title: 'Python SDK', description: 'Python client library', type: 'SDK' },
-        { title: 'React Components', description: 'Ready-to-use React components', type: 'Library' }
-      ];
-},
-    {;
-      title: 'Guides & Tutorials',
-      description: 'In-depth guides and best practices',
-      icon: <BookOpen className="w-6 h-6" />,
-      docs: [;
-        { title: 'Authentication', description: 'User authentication and authorization', type: 'Guide' },
-        { title: 'Data Management', description: 'Working with data and databases', type: 'Tutorial' },
+      links: [
+        { name: 'Overview', href: '/enhanced-services-showcase' },
+        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
+        { name: 'Contact Sales', href: '/contact' },
+      ]
+    },
+    {
+      title: 'AI Services Docs',
+      links: [
+        { name: 'AI Guardrails', href: '/ai-guardrails' },
+        { name: 'AI Evals', href: '/ai-evals' },
+        { name: 'Agentic RAG', href: '/agentic-rag' },
+      ]
+    },
+    {
+      title: 'IT & Platform Docs',
+      links: [
+        { name: 'API Observability', href: '/api-observability' },
+        { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
+        { name: 'Status Pages & SLO', href: '/status-pages-slo' },
+      ]
+    },
+  ];
+
+  const external = [
+    { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' },
+    { name: 'Anthropic pricing', url: 'https://www.anthropic.com/pricing' },
+    { name: 'Pinecone pricing', url: 'https://www.pinecone.io/pricing/' },
+    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-202e
+  ];
+
+  const quickLinks = [
+    {
+      title: 'API Status',
+      description: 'Check service availability and performance',
+      icon: <CheckCircle className="w-6 h-6" />,
+      href: '/status',
+      color: 'text-green-400'
+    },
+    {
+      title: 'SDK Downloads',
+      description: 'Get the latest SDKs and client libraries',
+      icon: <Download className="w-6 h-6" />,
+      href: '/downloads',
+      color: 'text-blue-400'
+    },
+    {
+      title: 'Support Portal',
+      description: 'Get help from our technical support team',
+      icon: <ExternalLink className="w-6 h-6" />,
+      href: '/support',
+      color: 'text-purple-400'
+    },
+    {
+      title: 'Community Forum',
+      description: 'Connect with other developers and users',
+      icon: <ExternalLink className="w-6 h-6" />,
+      href: '/community',
+      color: 'text-yellow-400'
+    }
+  ];
+
+  const filteredDocs = documentationItems.filter(doc => {
+    const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         doc.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const getDifficultyColor = (difficulty: string) => {
+    switch (difficulty) {
+      case 'Beginner': return 'bg-green-500/20 text-green-400';
+      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
+      case 'Advanced': return 'bg-red-500/20 text-red-400';
+      default: return 'bg-gray-500/20 text-gray-400';
+    }
+  };
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
+  };
+
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>Documentation | Zion Tech Group</title>
+        <meta name="description" content="Guides and references for Zion Tech Group AI, platform, and IT services." />
+        <link rel="canonical" href="https://ziontechgroup.com/docs" />
+      </Head>
+
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-10">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Documentation</h1>
+            <p className="text-slate-300 mt-4">Quick links, references, and integration guides for our services.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {sections.map((s) => (
+              <Card key={s.title} className="p-6 bg-black/40 border border-gray-700/50">
+                <h2 className="text-xl font-semibold mb-4 text-white">{s.title}</h2>
+                <ul className="space-y-2">
+                  {s.links.map((l) => (
+                    <li key={l.name}>
+                      <a href={l.href} className="text-cyan-400 hover:underline">{l.name}</a>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
+
+          <Card className="p-6 bg-black/40 border border-gray-700/50">
+            <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
+              {external.map((e) => (
+                <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
+              ))}
+            </ul>
+          </Card>
+
+          <Card className="p-6 bg-black/40 border border-gray-700/50">
+            <h2 className="text-xl font-semibold mb-4 text-white">Need help?</h2>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">Contact Support</Button>
+              <Button href={contact.website} variant="outline" className="border-gray-600 text-gray-200">Visit Website</Button>
+              <a className="text-cyan-400" href={`tel:${contact.mobile.replace(/[^+\\d]/g, '')}`}>{contact.mobile}</a>
+              <a className="text-purple-400" href={`mailto:${contact.email}`}>{contact.email}</a>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-202e
+  );
+}

@@ -1,143 +1,92 @@
 
-#!/usr / bin / env node;
-import fs from './fs';
-import path from './path';
-import { glob  } from './glob';
-;
-// Find all TypeScript and JavaScript files;
-const files = glob.sync ("src/**/*.{ts, tsx, js, jsx}", { cwd: process.cwd () });
-;
-let total_fixed = 0;
-;
-files.for_each ((file) => {
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+// Function to fix common syntax errors
+function fixSyntaxErrors(content, filePath) {
+  let fixed = content;
+  
+  // Fix import statements without quotes
+  fixed = fixed.replace(/import\s+(\w+)\s+from\s+(\w+);/g, "import $1 from $2';");
+  fixed = fixed.replace(/import\s+(\w+)\s+from\s+(\w+);/g, "import $1 from $2';");
+  
+  // Fix export statements
+  fixed = fixed.replace(/export\s*;/g, );
+  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)/g, export default function $1');
+  
+  // Fix React imports specifically
+  fixed = fixed.replace(/import\s+React\s+from\s+react;/g, "import React from react';");
+  
+  // Fix any remaining unquoted imports
+  fixed = fixed.replace(/from\s+([a-zA-Z][a-zA-Z0-9]*);/g, "from $1';");
+  
+  // Remove any trailing semicolons after export
+  fixed = fixed.replace(/export\s*;\s*\n/g, \n');
+  
+  return fixed;
+}
+
+// Function to process a file
+function processFile(filePath) {
   try {
-    const file_path = path.join (process.cwd (), file);
-    let content = fs.readFileSync (file_path, "utf8");
-    let modified = false;
-;
-    // Fix import statements with double punctuation (comma + semicolon);
-    const original_content = content;
-    content = content.replace (
-      /import\s+.*?from\s+['"][^'"]+['"], \s*;/g,
-      (match) => {
-        modified = true;
-        return match.replace (",", ";");
-      },
-    );
-;
-    // Fix import statements missing semicolons;
-    content = content.replace (
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm,
-      (match) => {
-        // Check condition
-if (.ends_with (") {
-  $2
-}")) {
-          modified = true;
-          return match.trim () + ";";
-
-        }
-        return match;
-      },
-    );
-
-;
-    // Fix other common syntax issues;
-    // Fix missing semicolons after variable declarations;
-    content = content.replace (
-      /(\w+)\s*=\s*[^;]+(?!)\s*$/gm,
-      (match, var_name) => {
-        // Check condition
-if (&&) {
-  $2
-}
-          !match.includes ("if") &&;
-          !match.includes ("for") &&;
-          !match.includes ("while") &&;
-          !match.includes ("switch") &&;
-          !match.includes ("try") &&;
-          !match.includes ("catch") &&;
-          !match.includes ("finally") &&;
-          !match.includes ("return") &&;
-          !match.includes ("throw") &&;
-          !match.includes ("break") &&;
-          !match.includes ("continue") &&;
-          !match.includes ("debugger") &&;
-          !match.includes ("export") &&;
-          !match.includes ("import")) {
-
-          modified = true;
-          return match + ";";
-        }
-        return match;
-      },
-    );
-
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      fs.writeFileSync (file_path, content, "utf8");
-      console.log (`Fixed: ${file}`);
-      total_fixed++;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content, filePath);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed);
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
+    return false;
   } catch (error) {
-    console.error (`Error processing ${file}:`, error.message);
-
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
+}
 
-});
-
-=======
-});
-
-console.log(`\nTotal files fixed: ${totalFixed}`);
+// Function to find and process all JS/TS/TSX files
+function processDirectory(dir) {
+  const extensions = ['.js', .ts', .tsx', .jsx'];
+  let fixedCount = 0;
+  
+  function walkDir(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other build directories
+        if (!['node_modules', .next', dist', build', coverage'].includes(item)) {
+          walkDir(fullPath);
+        }
+      } else if (extensions.some(ext => item.endsWith(ext))) {
+        if (processFile(fullPath)) {
+          fixedCount++;
+        }
+      }
+    }
   }
+  
+  walkDir(dir);
+  return fixedCount;
+}
 
-}},
-,
-// Run all fixes,
-fixFooter();
-fixAccessibility();
-fixAiServices();
-fixApiDocs();
-fixCareers();
-,
-console.log('🎉 Syntax error fixes completed');
-// Run all fixes,
-fixFooter(),
-fixAccessibility(),
-fixAiServices(),
-fixApiDocs(),
-fixCareers(),
-// // // console.log('🎉 Syntax error fixes completed'),
-}},;
-// Run all fixes,;
-fixFooter(),;
-fixAccessibility(),;
-fixAiServices(),;
-fixApiDocs(),;
-fixCareers(),;
-// // // console.log('🎉 Syntax error fixes completed'),;
+// Main execution
+console.log('🔧 Starting syntax error fixes...');
 
-console.log(`\nTotal files fixed: ${totalFixed}`);
-  }
-}},
-// Run all fixes,
-fixFooter(),
-fixAccessibility(),
-fixAiServices(),
-fixApiDocs(),
-fixCareers(),
-// // // console.log('🎉 Syntax error fixes completed'),
-}},;
-// Run all fixes,;
-fixFooter(),;
-fixAccessibility(),;
-fixAiServices(),;
-fixApiDocs(),;
-fixCareers(),;
-// // // console.log('🎉 Syntax error fixes completed'),;=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+const startTime = Date.now();
+const fixedCount = processDirectory('.');
+
+console.log(`✅ Fixed ${fixedCount} files in ${Date.now() - startTime}ms`);
+
+// Run ESLint to check if issues are resolved
+console.log('🔍 Running ESLint to verify fixes...');
+try {
+  execSync('npx eslint . --ext .js,.ts,.tsx --max-warnings 100', { stdio: 'inherit' });
+  console.log('✅ ESLint passed!');
+} catch (error) {
+  console.log('⚠️  Some ESLint issues remain, but syntax errors should be fixed.');
+} 

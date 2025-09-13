@@ -2,6 +2,10 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Privacy Policy - Zion Tech Group",
+  description: "Learn how Zion Tech Group collects, uses, and protects your personal information in accordance with privacy laws and regulations.",
+  keywords: "privacy policy, data protection, GDPR, CCPA, Zion Tech Group",
+};
+
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen">
@@ -280,6 +284,7 @@ export default function PrivacyPage() {
             </div>
           </div>
         </div>
-      </section>    </div>
+      </section>
+    </div>
   );
 }

@@ -1,3 +1,5 @@
+
+
   }
   return default_value;
 }
@@ -14,16 +16,8 @@ export function writeJsonFile<T>(fileName: string, data: T): void {;
   fs && fs.renameSync(tmpPath, filePath);
 
 
-export function writeJsonFile<T>(fileName: string, data: T): void {;
-
-
-  const filePath = getFilePath(fileName);
-  const tmpPath = `${filePath}.tmp`;
-  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
-  fs.renameSync(tmpPath, filePath);
-}
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
-  const items = readJsonFile<T[]>(fileName, []);=======
+  const items = readJsonFile<T[]>(fileName, []);
   items && items.push(item);
   writeJsonFile<T[]>(fileName, items);
 
@@ -90,7 +84,7 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
   const items = readJsonFile < T[]>(file_name, []);
   items.push (item);
   writeJsonFile < T[]>(file_name, items);
-}=======
+}
 
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
@@ -98,11 +92,7 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
 }
-import fs from 'fs';
-import path from 'path';
 
-}
-}
 import fs from 'fs';
 import path from 'path';
 

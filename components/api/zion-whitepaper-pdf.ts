@@ -2,7 +2,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
 
 
+
 import {
+
 
   getWhitepaperSections,;
   OPERATOR_PROMPT,;
@@ -11,22 +13,7 @@ import {
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
 
-import {
-  getWhitepaperSections
-  OPERATOR_PROMPT;
-  getWhitepaperSections,;
-  OPERATOR_PROMPT,;
-} from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
-function writeSection(doc: PDFDocument, title: string, content: string) {
-  doc.addPage()
-  doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
-  doc.moveDown();
-  doc.fontSize(11).fillColor('#222222').text(content, {
-    width: 480
-    align: 'left'
-  });
-=======
-=======  doc && doc.addPage(),
+  doc && doc.addPage(),
   doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
   doc && doc.moveDown();
   doc && doc.fontSize(11).fillColor('#222222').text(content, {
@@ -41,6 +28,7 @@ function write_section() {
   doc.font_size (20).fill_color ('#111111').text (title, { underline: true });
   doc.move_down ();
   doc.font_size (11).fill_color ('#222222').text (content, {
+
     width: 480,
 
 
@@ -49,35 +37,37 @@ function write_section() {
   try {
   const editionParam = (req && req.query.edition as string) || 'full';
 
+
+) {;
+  const editionParam = (req.query.edition as string) || 'full';
+
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
       : 'full';
+
     align: 'left'})
 }
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const editionParam = (req.query.edition as string) || 'full';
+  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
+
+
   const editionParam = (req.query.edition as string) |'full';
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
   res.setHeader('Content-Typeapplication/pdf');
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
 
-=======
 
 
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
   doc.pipe(res);
-=======
-  // End
-  doc && doc.addPage();
-  doc && doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
-
 
 
 
@@ -183,18 +173,9 @@ function handler() {
   doc.end()
 
 }
-  doc.end()
-}
-
-}
-}
-=======
 
 
-==============
-
-
-=======  sections.forEach(s => writeSection(doc, s.title, s.contentMd));
+  sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
   doc.moveDown(0.5);
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
@@ -202,7 +183,4 @@ function handler() {
   const sections = getWhitepaperSections(edition as any);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

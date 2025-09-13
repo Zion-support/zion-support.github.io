@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+
 ;
   try {;
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
@@ -131,12 +132,3 @@ export default async function handler(req, res) {
         { role: 'user', content: prompt }];
       temperature: 0.4;
       max_tokens: 400});
-  }
-
-
-  }
-}
-
-  }
-
-

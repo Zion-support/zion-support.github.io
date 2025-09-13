@@ -1,5 +1,4 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
 type Theme = "dark" | "light" | "system",
@@ -28,22 +27,8 @@ function ThemeProvider() {
     // Check condition
 if ( {) {
   $2
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    <ThemeProviderContext.Provider {...props} value={value}>;
-      {children}
-    </ThemeProviderContext.Provider>);
-}
-export const use_theme = () =>: any {
-  const context = useContext (ThemeProviderContext),
-  if (
-    throw new Error ("use_theme must be used within a ThemeProvider")) {
-  $2
-}
 
-  return context;
-}
-=======
-======="use client",;
+"use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
 type ThemeProviderProps = {;
@@ -118,6 +103,4 @@ export const useTheme = () => {;
     throw new Error("useTheme must be used within a ThemeProvider");
   return context;
 };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
+

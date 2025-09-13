@@ -18,15 +18,52 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
+
 export type ProposalType =;
   | 'Workforce Dev';
   | 'AI Ethics';
   | 'Digital ID';
   | 'Education';
 
-export type ProposalForm = {;
 
 export type ProposalForm = {;
+
+
+
+export type ProposalForm = {;
+
+  targetInstitution: string;
+;
+export type ProposalForm = {
+  target_institution: string;
+  type: ProposalType;
+  regional_scope: string;
+  budgetOrGoals: string;
+  supporting_multiverses: string;
+  language?: string;
+
+  customPrompt?: string;};export type ProposalForm = {
+
+  targetInstitution: string,
+  type: ProposalType,
+  regionalScope: string,
+  budgetOrGoals: string,
+  supportingMultiverses: string,;
+
+
+  language?: string;
+  customPrompt?: string
+}
+export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
+export type ProposalForm = {
+  targetInstitution: string,
+  custom_prompt?: string;}export type ProposalForm = {
+  target_institution: string,
+  type: ProposalType,
+  regional_scope: string,
+  budgetOrGoals: string,
+  supporting_multiverses: string,
+  language?: string;
 
   customPrompt?: string;};export type ProposalForm = {;
   targetInstitution: string,;
@@ -48,58 +85,20 @@ export default function ProposalGenerator() {;
     customPrompt:;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
 
-import EnhancedLayout from '../layout/EnhancedLayout';
-
-export type ProposalType =
-  | 'Workforce Dev'
-  | 'AI Ethics'
-  | 'Digital ID';
-  | 'Education';
-export type ProposalForm = {
-
-export type ProposalForm = {;
-  targetInstitution: string;
-  type: ProposalType;
-  regionalScope: string;
-  budgetOrGoals: string;
-  supportingMultiverses: string;
-  language?: string;
-  customPrompt?: string;};export type ProposalForm = {
-  targetInstitution: string
-  type: ProposalType
-  regionalScope: string
-  budgetOrGoals: string
-  supportingMultiverses: string
-  targetInstitution: string,
-  type: ProposalType,
-  regionalScope: string,
-  budgetOrGoals: string,
-  supportingMultiverses: string,;
-  language?: string;
-  customPrompt?: string
-}
-export default function ProposalGenerator() {
-  const [form, setForm] = useState<ProposalForm>({
-    targetInstitution: 'UNDP'
-    type: 'Workforce Dev'
-    regionalScope: 'Global'
-    budgetOrGoals: ''
-    supportingMultiverses: ''
-    language: 'English'
-    customPrompt:
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
 
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
 
-    setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'});
+  });
   const [isGenerating, setIsGenerating] = useState(false);
-  function handleChange<K extends keyof ProposalForm>(
-    key: K
-    value: ProposalForm[K]
-  ) {
-    setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
+  const [draftMarkdown, setDraftMarkdown] = useState('');
+  const [draftJson, setDraftJson] = useState<any>(null);
+  const [exportLinks, setExportLinks] = useState<{
+    pdfUrl?: string;
+    jsonUrl?: string;
+    mdUrl?: string;
+  } | null>(null);
+  const [statusMessage, setStatusMessage] = useState('');
+
 
   function handleChange<K extends keyof ProposalForm>(;
     key: K,;
@@ -111,12 +110,74 @@ export default function ProposalGenerator() {
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'});
   const [isGenerating, setIsGenerating] = useState(false);
 
+  const [draftMarkdown, setDraftMarkdown] = useState('');
+  const [draftJson, setDraftJson] = useState<any>(null);
+  const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
+  const [statusMessage, setStatusMessage] = useState('');
+
+
+      setStatusMessage('Draft ready. You can edit and export.');
+    } catch (e: any) {;
+      console && console.error(e);
+      setStatusMessage('Failed to generate. You can edit manually and export.');
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)}),
+      const data = await res.json();
+      setDraftMarkdown(data.markdown || '');
+      setDraftJson(data.json || null);
+
+      setStatusMessage('Draft ready. You can edit and export.')
+    } catch (e: any) {
+      console.error(e);
+      setStatusMessage('Failed to generate. You can edit manually and export.')
+    } finally {
+      setIsGenerating(false)
+    } finally {
+
+      setIsGenerating(false);    }
+
+
+    }
+  }
+
+
+
+  async function handleExport() {
+    setStatusMessage('Exporting to PDF/Markdown/JSON...');
+    try {
+      const res = await fetch('/api/proposals/export', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+
+          markdown: draftMarkdown,
+          json: draftJson,
+          meta: form})}),
+      const data = await res.json();
+      setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl }),
+
+      setStatusMessage('Exported. Files saved.')
+    } catch (e) {
+      console.error(e);
+      setStatusMessage('Export failed')
+    }
+
+
+      setStatusMessage('Export failed');    }
+
+    }
+
+
+
   }
 
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
       const res = await fetch('/api/proposals/submit', {
+
     } finally {;
       setIsGenerating(false);    }      const data = await res && res.json();
       setDraftMarkdown(data && data.markdown || '');
@@ -130,14 +191,76 @@ export default function ProposalGenerator() {
 
     }
   }
+  async function handleExport() {;
+    setStatusMessage('Exporting to PDF/Markdown/JSON...');
+    try {;
+      const res = await fetch('/api/proposals/export', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({;
+          markdown: draftMarkdown,;
+          json: draftJson,;
+          meta: form,;
+        }),;
+      });
+      const data = await res && res.json();
+      setExportLinks({;
+        pdfUrl: data && data.pdfUrl,;
+        jsonUrl: data && data.jsonUrl,;
+        mdUrl: data && data.mdUrl,;
+      });
+      setStatusMessage('Exported. Files saved.');
+    } catch (e) {;
+      console && console.error(e);
+      setStatusMessage('Export failed');    }      const data = await res && res.json();
+      setExportLinks({ pdfUrl: data && data.pdfUrl, jsonUrl: data && data.jsonUrl, mdUrl: data && data.mdUrl }),;
+      setStatusMessage('Exported. Files saved.');
+    } catch (e) {;
+      console && console.error(e);
+      setStatusMessage('Export failed');
+    }
+  }
+  async function handleSubmitBridge() {;
+    setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
+    try {;
+      const res = await fetch('/api/proposals/submit', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({;
+          markdown: draftMarkdown,;
+          json: draftJson,;
+          meta: form,;
+        }),;
+      });
+      const data = await res && res.json();
+      setStatusMessage(;
+        `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
+      );
+    } catch (e) {;
+      console && console.error(e);
+      setStatusMessage('Submission failed');    }
+  }
   return (
-    <div className='space-y-6'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-        <div className='space-y-4'>
-          <div>
-            <label className='block text-sm font-medium'>
-              Target institution
-            </label>            <input
+
+    <div className='space-y-6'>;
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+        <div className='space-y-4'>      const data = await res && res.json();
+      setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`);
+    } catch (e) {;
+      console && console.error(e);
+      setStatusMessage('Submission failed');
+
+    }
+  }
+  return (
+    <div className='space-y-6'>;
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+        <div className='space-y-4'>;
+          <div>;
+            <label className='block text-sm font-medium'>;
+              Target institution;
+            </label>;
+            <input
               className='w-full border rounded px-3 py-2'
               value={form && form.targetInstitution}
               onChange={e => handleChange('targetInstitution', e && e.target.value)}
@@ -231,6 +354,7 @@ export default function ProposalGenerator() {
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
 
+    <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-4">
           <div>
@@ -246,71 +370,7 @@ export default function ProposalGenerator() {
             <label className="block text-sm font-medium" htmlFor="input-Type">Type</label>
             <select
               className="w-full border rounded px-3 py-2"
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          markdown: draftMarkdown
-          json: draftJson
-          meta: form
-        })
-      });
-      const data = await res.json();
-      setStatusMessage(
-        `Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`
-      );
-    } catch (e) {
-      console.error(e);
-      setStatusMessage('Submission failed');    }
-  }
-  return (
-    <div className='space-y-6'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-        <div className='space-y-4'>      const data = await res.json();
-      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
-    } catch (e) {
-      console.error(e);
-
-      setStatusMessage('Submission failed')
-      setStatusMessage('Submission failed')
-        <div className='space-y-4'>
-
-    }
-  }
-  return (
-    <div className='space-y-6'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-        <div className='space-y-4'>
-          <div>
-            <label className='block text-sm font-medium'>
-              Target institution
-            </label>
-            <input
-              className='w-full border rounded px-3 py-2'
-              value={form.targetInstitution}
-              onChange={e => handleChange('targetInstitution', e.target.value)}
-              placeholder='UNDP / World Bank / ILO'
-            />
-          </div>
-          <div>
-            <label className='block text-sm font-medium'>Type</label>
-            <select
-              className='w-full border rounded px-3 py-2'
               value={form.type}
-              onChange={e =>
-                handleChange('type', e.target.value as ProposalType)
-              }            >          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Target institution">Target institution</label>
-            <input
-              className="w-full border rounded px-3 py-2"
-              value={form.targetInstitution}
-              onChange={(e) => handleChange('targetInstitution', e.target.value)}
-              placeholder="UNDP / World Bank / ILO"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Type">Type</label>
-            <select
-              className="w-full border rounded px-3 py-2"
               onChange={(e) => handleChange('type', e.target.value as ProposalType)}
 
 
@@ -322,8 +382,14 @@ export default function ProposalGenerator() {
         <div className='space-y-4'>
 
 
+    }
+  }
+
   return (
 
+
+
+            >
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
               <option>Digital ID</option>
@@ -333,6 +399,7 @@ export default function ProposalGenerator() {
           <div>
             <label className="block text-sm font-medium" htmlFor="input-Regional scope">Regional scope</label>
             <input
+
               className='w-full border rounded px-3 py-2'
               value={form.regionalScope}
               onChange={e => handleChange('regionalScope', e.target.value)}
@@ -386,7 +453,10 @@ export default function ProposalGenerator() {
           </div>
           <div className='flex gap-2'>
             <button
+
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
+
+
 
               onClick={handleGenerate}
               disabled={isGenerating}
@@ -394,47 +464,36 @@ export default function ProposalGenerator() {
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>
             <button
+
+
               onClick={handleExport}
               disabled={!draftMarkdown}
             >
               Export (PDF/JSON/MD)
             </button>
             <button
-              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
-
-
-
-
-              onClick={handleGenerate}
-              disabled={isGenerating}>;
-              {isGenerating ? 'Generating...' : 'Generate Draft'}
-            </button>;
-            <button
-
-
-              onClick={handleExport}
-              disabled={!draftMarkdown}>;
-              Export (PDF/JSON/MD);
-            </button>;
-            <button
 
 
               )}
             </div>;
           )}
+
+        </div>
+        <div className="space-y-2">
+          <label className="block text-sm font-medium" htmlFor="input-Draft (Markdown)">Draft (Markdown)</label>
+          <textarea
 
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
 
 
-              )}
-            </div>;
-          )}
-        </div>
+            onChange={(e) => setDraftMarkdown(e && e.target.value)}
           />;
         </div>;
       </div>;
     </div>;
+  );
+
   );
 
 }
@@ -802,23 +861,4 @@ function handleSubmitBridge() {
         </div>;
       </div>;
     </div>);
-}
-        <div className='space-y-2'>
-          <label className='block text-sm font-medium'>Draft (Markdown)</label>
-          <textarea
-            className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
-            value={draftMarkdown}
-            onChange={e => setDraftMarkdown(e.target.value)}          />          <textarea
-            className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
-            value={draftMarkdown}
-            onChange={(e) => setDraftMarkdown(e.target.value)}
-          />
-        </div>
-      </div>
-    </div>
-);
-  );
-}
-}
-  );
 }

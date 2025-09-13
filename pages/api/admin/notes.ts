@@ -1,3 +1,4 @@
+
   id: string;
   targetType: string;
   targetId: string;
@@ -8,11 +9,4 @@
 
 const notesStore: Note[] = [];
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const isAdmin = req.headers['x-admin'] === 'true'
-  if (!isAdmin) return res.status(403).json({ error: 'Admin only' })
-  if (req.method === 'GET') {
-
-  }
-  if (req.method === 'POST') {
 

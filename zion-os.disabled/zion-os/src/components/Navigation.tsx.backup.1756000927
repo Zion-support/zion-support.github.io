@@ -1,21 +1,5 @@
 "use client";
 
-export function Navigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
 import { useState } from "react";
 import Link from "next/link";
 
@@ -23,6 +7,7 @@ export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -33,6 +18,14 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Z</span>
+              </div>
+              <span className="text-xl font-bold gradient-text">Zion Tech Group</span>
+            </Link>
+          </div>
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {/* Services Dropdown */}
@@ -114,10 +107,23 @@ export function Navigation() {
             >
               Zion OS
             </Link>
-            <Link               href="/docs" 
+            <Link 
+              href="/docs" 
               className="text-gray-300 hover:text-white transition-all duration-200 font-medium relative group"
             >
               Docs
+            </Link>
+            <Link 
+              href="/contact" 
+              className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+            >
+              Contact
+            </Link>
+            <Link href="/multiverse/launch" className="btn-primary text-sm">
+              Get Started
+            </Link>
+          </div>
+
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
@@ -241,7 +247,8 @@ export function Navigation() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Get Started
-              </Link>            </div>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

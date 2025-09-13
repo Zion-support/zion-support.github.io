@@ -1,0 +1,281 @@
+{
+  "name": "Zion Tech Group",
+  "short_name": "Zion Tech",
+<<<<<<< HEAD
+  "description": "Comprehensive technology solutions and AI services",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2e73ea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+=======
+  "description": "Leading provider of AI, quantum computing, and space technology solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00d4ff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "productivity", "technology"],
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+>>>>>>> origin/backup-main-20250823-225540
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+<<<<<<< HEAD
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+=======
+      "src": "/logo.png",
+>>>>>>> origin/backup-main-20250823-225540
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/zion-logo-72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-desktop.png",
+      "sizes": "1280x720",
+<<<<<<< HEAD
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Zion Tech Group Desktop View"
+    },
+    {
+      "src": "/images/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Zion Tech Group Mobile View"
+=======
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/og-image.jpg",
+      "sizes": "750x1334",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+>>>>>>> origin/backup-main-20250823-225540
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Find Talent",
+      "short_name": "Talent",
+      "description": "Browse and find tech talent",
+      "url": "/talent",
+      "icons": [
+        {
+          "src": "/images/talent-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Browse Services",
+      "short_name": "Services",
+      "description": "Explore tech services",
+      "url": "/services",
+      "icons": [
+        {
+<<<<<<< HEAD
+          "src": "/images/services-icon.png",
+=======
+          "src": "/logo.png",
+>>>>>>> origin/backup-main-20250823-225540
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "AI Matcher",
+      "short_name": "AI Match",
+      "description": "AI-powered talent matching",
+      "url": "/match",
+      "icons": [
+        {
+<<<<<<< HEAD
+          "src": "/images/ai-icon.png",
+=======
+          "src": "/logo.png",
+>>>>>>> origin/backup-main-20250823-225540
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Equipment",
+      "short_name": "Equipment",
+      "description": "Browse tech equipment",
+      "url": "/equipment",
+      "icons": [
+        {
+<<<<<<< HEAD
+          "src": "/images/equipment-icon.png",
+=======
+          "src": "/logo.png",
+>>>>>>> origin/backup-main-20250823-225540
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+<<<<<<< HEAD
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://ziontechgroup.com"
+    }
+  ],
+=======
+  "related_applications": [],
+>>>>>>> origin/backup-main-20250823-225540
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+<<<<<<< HEAD
+  },
+  "handle_links": "preferred",
+  "protocol_handlers": [
+    {
+      "protocol": "web+zion",
+      "url": "/?protocol=%s"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/upload",
+      "accept": {
+        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"],
+        "application/pdf": [".pdf"],
+        "text/*": [".txt", ".md", ".json"]
+      }
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "files",
+          "accept": ["image/*", "text/*", "application/pdf"]
+        }
+      ]
+    }
+  },
+  "permissions": [
+    "notifications",
+    "background-sync",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "/sw.js",
+    "type": "module"
+  },
+  "features": [
+    "Cross Platform",
+    "fast",
+    "simple",
+    "ai-powered",
+    "offline-capable"
+  ],
+  "developer": {
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com"
+  }
+}
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
+=======
+  }
+}
+>>>>>>> origin/backup-main-20250823-225540

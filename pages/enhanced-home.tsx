@@ -1,50 +1,8 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-const EnhancedHome: NextPage = () => {
+export default function EnhancedHome() {
   return (
     <div>
-      <Head>
-        <title>EnhancedHome - Zion Tech Solutions</title>
-        <meta name="description" content="EnhancedHome page" />
-      </Head>
-
-
-
-      <main>
-        <h1>EnhancedHome</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <h1 className="text-2xl font-semibold">Enhanced Home</h1>
+      <p className="text-sm text-gray-600">This is an enhanced home experience.</p>
     </div>
-
-
-
-
-export default EnhancedHome;
-
-
-import Head from 'next / head';
-      <main>;
-        <h1 > EnhancedHome</h1>;
-        <p > This page is under construction.</p>;
-      </main>;
-    </div>),
+  );
 }
-;
-export default EnhancedHome;
-;
-
-
-export default EnhancedHome
-
-  ),
-};
-
-export default EnhancedHome;
-  )
-}
-export default EnhancedHome;
-
-},
-export default EnhancedHome,
-
-

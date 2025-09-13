@@ -2,6 +2,12 @@ import "./globals.css";
 import type { ReactNode } from "react";
 import { Metadata } from "next";
 
+export const metadata = {
+  title: "Zion Tech Group - AI-Powered Technology Solutions",
+  description: "Leading provider of AI-powered technology solutions, cybersecurity, quantum computing, and autonomous business operations. Transform your business with cutting-edge technology.",
+  keywords: "AI, artificial intelligence, cybersecurity, quantum computing, autonomous business, technology solutions",
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
@@ -36,7 +42,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   Get Started
                 </a>
               </div>
-            </div>          </div>
+            </div>
+          </div>
         </header>
 
         {/* Main Content */}

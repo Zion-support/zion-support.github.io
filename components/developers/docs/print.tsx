@@ -1,4 +1,5 @@
 
+
   return {
     props: {
       docs: content as DocsContent,
@@ -19,20 +20,12 @@ type DocsContent = {
 }
 ;
 type PageProps = {
+
   docs: DocsContent;
 }
 ;
 export const getStaticProps: GetStaticProps < PageProps> = async () => {
-type DocsContent = {
-  title: string,
-  sections: Section[]
-};
 
-type PageProps = {
-  docs: DocsContent
-};
-
-export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent
@@ -60,9 +53,12 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
 
 
 
+
+
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -111,6 +107,29 @@ export default function PrintDocs(): any ({ docs }: PageProps) {;
     const id = setTimeout(() => window && window.print(), 500);
 
 export default function PrintDocs({ docs }: PageProps) {
+  useEffect(() => {;
+    const id = setTimeout(() => window.print(), 500);
+    return () => clearTimeout(id);
+  }, []);
+  return (
+    <div className='p-8 max-w-4xl mx-auto'>;
+      <h1 className='text-3xl font-bold mb-6'>{docs && docs.title}</h1>;
+      <div className='space-y-8'>;
+        {docs && docs.sections.map(s => (;
+          <section key={s && s.id}>;
+            <h2 className='text-2xl font-semibold mb-2'>{s && s.title}</h2>;
+            {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} />}
+            {s && s.code &&;
+              s && s.code.map((c, i) => (;
+                <pre
+                  key={i}
+                  className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'>;
+                  {c && c.content}
+                </pre>;
+              ))}          </section>  }, []);
+
+};
+export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
     return () => clearTimeout(id)
@@ -129,11 +148,15 @@ export default function PrintDocs({ docs }: PageProps) {
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
 
+
         ))}
+
       </div>;
     </div>;
   );
 }
+
+  );
 }
 export default /**
  * PrintDocs - Function description
@@ -195,32 +218,12 @@ export default function PrintDocs({ docs }: PageProps) {
             <h2 className=&quot;text-2xl font-semibold mb-2&quot;>{s.title}</h2>
             {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
             {s.code && s.code.map((c, i) => (
-
-
-        ))}
-      </div>
-    </div>
-);
-}
-  );
-}
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c.content}</pre>
             ))}
           </section>
         ))}
       </div>
     </div>
-
-  );
-}
-
-
-);
-}
-  );
-}
-
-}
 
   );
 }

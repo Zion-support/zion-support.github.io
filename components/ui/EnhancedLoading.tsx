@@ -1,59 +1,11 @@
+import React from 'react';
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
-import React from "react";
-type EnhancedLoadingProps = {;
-  lines?: number;
-}
-export default function EnhancedLoading(): any ({ lines = 3 }: EnhancedLoadingProps) {;
+export default function EnhancedLoading({ rows = 6 }: { rows?: number }) {
   return (
-    <div className="space-y-2">;
-      {Array && Array.from({ length: lines }).map((_, idx) => (;
-        <div key={idx} className="skeleton h-4 rounded" />;
+    <div className="space-y-3 animate-pulse">
+      {Array.from({ length: rows }).map((_, idx) => (
+        <div key={idx} className="h-20 w-full rounded-lg bg-gray-200 dark:bg-gray-800" />
       ))}
-
-import React from './react';
-type EnhancedLoadingProps = {
-  lines?: number;
-}
-;
-export default /**
- * EnhancedLoading - Function description
- */
-function EnhancedLoading() {
-  return (
-    <div className="space - y-2">;
-      {Array.from ({ length: lines }).map ((_, idx) => (
-        <div key={idx} className="skeleton h - 4 rounded" />))}
-    </div>);
-
-    </div>
-
-  );
-
-}
-
-      ))}
-    </div>;
     </div>
   );
-}
 }

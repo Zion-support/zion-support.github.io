@@ -1,10 +1,13 @@
+
 import { useState, useEffect  } from './react';
 ;
+
 interface User {
   id: string;
   email: string;
   name: string;
 }
+
 
 export const useAuth = () => {;
 
@@ -34,6 +37,7 @@ export const useAuth = () => {;
     user
     loading
     login: (email: string, password: string) => {
+
       // Simulate login;
       set_user ({ id: "1", email, name: "User" });
     },
@@ -43,3 +47,4 @@ export const useAuth = () => {;
   }
 }
 ;
+

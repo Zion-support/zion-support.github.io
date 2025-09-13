@@ -1,5 +1,9 @@
 import "./globals.css";
 import type { ReactNode } from "react";
+import { Navigation } from "@/components/Navigation";
+import { Analytics } from "@/components/Analytics";
+import { StructuredData } from "@/components/StructuredData";
+
 export const metadata = {
   title: "Zion OS - Sovereign AI-Powered Digital Economies",
   description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",
@@ -13,15 +17,12 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://ziontechgroup.com",
-    siteName: "Zion OS",    images: [
+    siteName: "Zion OS",
+    images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  themeColor: '#000000',
         alt: "Zion OS - Sovereign AI-Powered Digital Economies"
       }
     ]
@@ -38,7 +39,8 @@ export const viewport = {
   verification: {
     google: "your-google-verification-code",
     yandex: "your-yandex-verification-code"
-  }};
+  }
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

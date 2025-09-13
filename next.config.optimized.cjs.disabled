@@ -1,4 +1,0 @@
-// Build caching configuration
-module.exports = {
-  // Enable build caching
-  experimental: {

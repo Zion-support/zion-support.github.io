@@ -2,16 +2,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req && req.method !== 'POST') {
     res && res.status(405).json({ error: 'Method Not Allowed' });
+
     return;
   }
   if (!isInternalAgentRequest(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return;
-  }=======
+  }
+
   const body = req && req.body || {};
   const dataDir = path && path.join(process && process.cwd(), 'data', 'admin');
   if (!fs && fs.existsSync(dataDir)) fs && fs.mkdirSync(dataDir, { recursive: true });
@@ -19,8 +22,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const existing = fs && fs.existsSync(statusPath)
     ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8'))
     : { agents: [] };
+
   const merged = {
-  const merged = {
+
 
   const merged = {
     ...existing;
@@ -30,10 +34,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ ok: true })
 }
 
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { isInternalAgentRequest } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -102,25 +103,4 @@ if ( {) {
 
 
 
-  res.status(200).json({ ok: true })
-}
-}
 
-}
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  res.status(200).json({ ok: true })
-}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

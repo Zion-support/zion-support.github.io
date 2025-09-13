@@ -1,8 +1,17 @@
-import: React from 'react';';
-import: Head from 'next/head';';
-import: EnhancedNavigation from './layout/EnhancedNavigation';';
-import: EnhancedFooter from './layout/EnhancedFooter';';
+import React, { ReactNode } from 'react';
+import Sidebar from './Sidebar';
 
-interface: LayoutProps {
-  children: React.ReactNode;
+interface LayoutProps {
+  children: ReactNode;
+}
 
+export default function Layout({ children }: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Sidebar />
+      <div className="ml-72 min-h-screen">
+        {children}
+      </div>
+    </div>
+  );
+}

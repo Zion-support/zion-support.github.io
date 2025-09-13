@@ -1,5 +1,4 @@
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
@@ -14,16 +13,38 @@ export default async function handler(
 
       "placeholder-key";
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../../utils/supabase/server';
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   const usingPlaceholder = 
     (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======          {
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  try {
+    if (usingPlaceholder) {
+      return res && res.status(200).json({
+        partners: [
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getServerSupabase  } from '../../../../utils / supabase / server';
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const using_placeholder =;
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
+      "placeholder - key";
+;
+  try {
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (200).json ({
+        partners: [;
+          {
+
             code: "aihub",
             name: "AI Hub",
             status: "approved",
@@ -36,66 +57,18 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
             commission_rate: 0 && 0.15,
           },
         ],
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getServerSupabase } from "../../../../utils/supabase/server";
-export default async function handler(
-  _req: NextApiRequest
-  res: NextApiResponse
-) {
-  const usingPlaceholder =
-    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-      "placeholder-key";
-  try {
-    if (usingPlaceholder) {
-      return res.status(200).json({
-        partners: [
-          {
-            code: "aihub"
-            name: "AI Hub"
-            status: "approved"
-            commission_rate: 0.2
-          }
-          {
-            code: "promptpro"
-            name: "Prompt Pro"
-            status: "pending"
-            commission_rate: 0.15
-          }
-        ]
-      });
-    }
-    const supabase = getServerSupabase();
-    const { data, error } = await supabase
-      .from("partners")
-      .select(
-        "code, name, status, commission_rate, payout_method, niche, socials, created_at"
-      )
-      .order("created_at", { ascending: false });
-    if (error) return res.status(500).json({ error: error.message });
-    return res.status(200).json({ partners: data });
-    if (error) return res && res.status(500).json({ error: error && error.message });
-    return res && res.status(200).json({ partners: data });
-=======
-=======
+
       });
 
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
-      "placeholder-key";
-=======
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
       "placeholder-key";
-=======import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -119,13 +92,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(405).end('Method Not Allowed');
     }
 
-    if (error) return res.status(500).json({ error: error.message });
-    return res.status(200).json({ partners: data });
+
+  }
+}
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }
-}=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+}
 ;
     }
     const supabase = getServerSupabase ();
@@ -142,6 +115,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status (200).json ({ partners: data });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
+import type { NextApiRequest, NextApiResponse } from 'next';
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
+      "placeholder-key";
+import type { NextApiRequest, NextApiResponse } from 'next';
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const isAdmin = req.headers['x-admin'] === 'true';
@@ -165,24 +144,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
-    const supabase = getServerSupabase();
-    const { data, error } = await supabase
-      .from("partners")
-      .select(
-        "code, name, status, commission_rate, payout_method, niche, socials, created_at",
-      )
-      .order("created_at", { ascending: false });
-
-    if (error) return res.status(500).json({ error: error.message });
-    return res.status(200).json({ partners: data });
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-  }
-}>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

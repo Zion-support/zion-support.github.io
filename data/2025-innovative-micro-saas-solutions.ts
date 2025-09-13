@@ -8,6 +8,40 @@ export const innovativeMicroSaasSolutions2025 = [
 
     pricing: {
       starter: {
+
+        price: 49,
+        period: 'month',
+        features: [;
+          'Up to 1, 000 feedback items / month',
+          'Basic sentiment analysis',
+          'Email support',
+          'Standard reports',
+        ],
+      },
+      professional: {
+        price: 149,
+        period: 'month',
+        features: [;
+          'Up to 10, 000 feedback items / month',
+          'Advanced AI analysis',
+          'Priority support',
+          'Custom dashboards',
+        ],
+      },
+      enterprise: {
+        price: 399,
+        period: 'month',
+        features: [;
+          'Unlimited feedback items',
+          'Custom AI training',
+          'Dedicated support',
+          'White - label solution',
+        ],
+      },
+    },
+    category: 'Customer Experience',
+    tags: [;
+
       'AI',
       'Customer Feedback',
       'Sentiment Analysis',
@@ -17,46 +51,7 @@ export const innovativeMicroSaasSolutions2025 = [
 
     website: 'https://ziontechgroup.com / ai - powered - customer - feedback - analyzer',
 
-=======
-        price: 49
-        period: 'month'
-        features: [
-          'Up to 1,000 feedback items/month'
-          'Basic sentiment analysis'
-          'Email support'
-          'Standard reports'
-        ]
-      }
-      professional: {
-        price: 149
-        period: 'month'
-        features: [
-          'Up to 10,000 feedback items/month'
-          'Advanced AI analysis'
-          'Priority support'
-          'Custom dashboards'
-        ]
-      }
-      enterprise: {
-        price: 399
-        period: 'month'
-        features: [
-          'Unlimited feedback items'
-          'Custom AI training'
-          'Dedicated support'
-          'White-label solution'
-        ]
-      }
-    }
-    category: 'Customer Experience'
-    tags: [
-      'AI'
-      'Customer Feedback'
-      'Sentiment Analysis'
-      'Customer Experience'
-      'Business Intelligence'
-    ]
-    website: 'https://ziontechgroup.com/ai-powered-customer-feedback-analyzer'    contact: {
+    contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -104,6 +99,39 @@ export const innovativeMicroSaasSolutions2025 = [
     ],
     pricing: {
       starter: {
+
+        price: 79,
+        period: 'month',
+        features: [;
+          'Up to 1, 000 SKUs',
+          'Basic forecasting',
+          'Email support',
+          'Standard reports',
+        ],
+      },
+      professional: {
+        price: 199,
+        period: 'month',
+        features: [;
+          'Up to 10, 000 SKUs',
+          'Advanced AI forecasting',
+          'Priority support',
+          'Custom analytics',
+        ],
+      },
+      enterprise: {
+        price: 499,
+        period: 'month',
+        features: [;
+          'Unlimited SKUs',
+          'Custom AI training',
+          'Dedicated support',
+          'White - label solution',
+        ],
+      },
+    },
+    category: 'Supply Chain',
+    tags: [;
 
       'Inventory Management',
       'AI',
@@ -163,15 +191,53 @@ export const innovativeMicroSaasSolutions2025 = [
     pricing: {
       starter: {
 
+        price: 39,
+        period: 'month',
+        features: [;
+          'Up to 10 users',
+          'Basic automation',
+          'Email support',
+          'Standard reports',
+        ],
+      },
+      professional: {
+        price: 99,
+        period: 'month',
+        features: [;
+          'Up to 50 users',
+          'Advanced AI automation',
+          'Priority support',
+          'Custom workflows',
+        ],
+      },
+      enterprise: {
+        price: 249,
+        period: 'month',
+        features: [;
+          'Unlimited users',
+          'Custom AI training',
+          'Dedicated support',
+          'White - label solution',
+        ],
+      },
+    },
+    category: 'Financial Management',
+    tags: [;
+
+      'Expense Management',
+      'AI Automation',
+      'Financial Reporting',
+      'Workflow Automation',
+      'Compliance',
+    ],
+
     website: 'https://ziontechgroup.com / smart - expense - management - automation',
+
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     market_size: '$6.7B',
     target_audience:;
       'Small to medium businesses, enterprise companies, accounting firms, financial departments',
@@ -249,26 +315,21 @@ export const innovativeMicroSaasSolutions2025 = [
     },
     category: 'Marketing & Social Media',
     tags: [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+
       'Social Media',
       'AI',
       'Content Marketing',
       'Social Media Management',
       'Engagement Optimization',
     ],
-    website: 'https://ziontechgroup.com / ai - powered - social - media - scheduler',
-=======
 
     website: 'https://ziontechgroup.com / ai - powered - social - media - scheduler',
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+
       'AI-powered personalization and segmentation',
       'Optimal send time prediction with 94 && 94.7% accuracy',
     market_size: '$15.8B',
@@ -304,8 +365,7 @@ export const innovativeMicroSaasSolutions2025 = [
     features: [;
       'AI - powered personalization and segmentation',
       'Optimal send time prediction with 94.7% accuracy',
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+
       'Automated email sequence optimization',
       'A / B testing and performance optimization',
       'Advanced subscriber behavior analytics',
@@ -317,10 +377,7 @@ export const innovativeMicroSaasSolutions2025 = [
     ],
     pricing: {
       starter: {
-==============
 
-=======
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         price: 59,
         period: 'month',
         features: [;
@@ -353,28 +410,24 @@ export const innovativeMicroSaasSolutions2025 = [
     },
     category: 'Marketing & Email',
     tags: [;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+
       'Email Marketing',
       'AI',
       'Marketing Automation',
       'Personalization',
       'Conversion Optimization',
     ],
-    website: 'https://ziontechgroup.com / intelligent - email - marketing - automation',
-=======
 
     website: 'https://ziontechgroup.com / intelligent - email - marketing - automation',
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
+
     id: 'ai-powered-customer-feedback-analyzer', name: 'AI-Powered Customer Feedback Analyzer',
     description: 'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
     features: [
-==============
     market_size: '$22.1B',
     target_audience:;
       'E - commerce businesses, marketing agencies, SaaS companies, retail companies, service providers',
@@ -388,10 +441,10 @@ export const innovativeMicroSaasSolutions2025 = [
       'Marketing ROI optimization',
     ],
     integrations: [;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
       'CRM systems',
       'E - commerce platforms',
-=======      'AI-powered demand forecasting with 92.4% accuracy'
+      'AI-powered demand forecasting with 92.4% accuracy'
       'Real-time inventory tracking and monitoring'
       'Automated reorder point calculations'
       'Seasonal trend analysis and prediction'
@@ -718,12 +771,15 @@ export const innovativeMicroSaasSolutions2025 = [
       'Marketing ROI optimization'
     ]
     integrations: [
-];      'Email campaign automation_customer segmentation and personalization_conversion rate optimization_subscriber engagement improvement_marketing ROI optimization';
-=======
+      'CRM systems',
+      'E-commerce platforms',
+      'Analytics tools',
+      'Social media platforms',
+      'Marketing tools',
+    ],
 
 ];      'Email campaign automation_customer segmentation and personalization_conversion rate optimization_subscriber engagement improvement_marketing ROI optimization';
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ];
     integrations: ['CRM systems_e - commerce platforms_analytics tools_social media platforms_marketing tools'];
     compliance: ['CAN - SPAMGDPRCCPAEmail marketing regulations'];
@@ -731,19 +787,17 @@ export const innovativeMicroSaasSolutions2025 = [
 ];
 
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
+  },;
+
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
     ];
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
 
 
-=======
-==============
-=======export const innovativeMicroSaasSolutions2025 = [;
+export const innovativeMicroSaasSolutions2025 = [;
   {;
     id: 'ai-powered-customer-feedback-analyzer',;
     name: 'AI-Powered Customer Feedback Analyzer',;
@@ -949,12 +1003,6 @@ export const innovativeMicroSaasSolutions2025 = [
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'],;
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations'];
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }
-];>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
 
   }
 ];
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

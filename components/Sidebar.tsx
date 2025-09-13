@@ -1,115 +1,95 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
+import Link from 'next/link';
+import { useMemo } from 'react';
+
+interface NavLink {
+  href: string;
+  label: string;
 }
-import React, { useState } from 'react';
-import Link from 'next / link';
-import { motion, AnimatePresence } from 'framer-motion';
+
+export default function Sidebar() {
 
 import { 
-  X, 
-  Building2, 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Shield, 
-  Zap,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Factory,
-  Truck,
-  CreditCard,
-  Phone,
-  Mail,
-  ExternalLink;
 
 
-} from 'lucide-react';
-interface SidebarProps {
-  isOpen: boolean, onClose: () => void
-}
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
-  const handleDropdownToggle = (title: string) => {
-    setOpenDropdowns(prev =>
-      prev.includes(title)
-        ? prev.filter(item => item !== title)
-=======
-
-  const navigation = {;
-    'Services': [;
-      { name: 'Web Development', href: '/services/web-development', icon: Code },;
-      { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone },;
-      { name: 'Cloud Solutions', href: '/services/cloud-solutions', icon: Cloud },;
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },;
-      { name: 'Performance Optimization', href: '/services/performance', icon: Zap },;
-    ],;
-    'Solutions': [;
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 },;
-      { name: 'E-commerce Platforms', href: '/solutions/ecommerce', icon: ShoppingCart },;
-      { name: 'Healthcare Technology', href: '/solutions/healthcare', icon: Heart },;
-      { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap },;
-    ],;
-    'Industries': [;
-      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },;
-      { name: 'Logistics', href: '/industries/logistics', icon: Truck },;
-      { name: 'Finance', href: '/industries/finance', icon: CreditCard },;
-      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },;
-      { name: 'Education', href: '/industries/education', icon: GraduationCap },;
-    ],;
-  };
-  const quickLinks = [;
-    { name: 'About Us', href: '/about' },;
-    { name: 'Our Team', href: '/team' },;
-    { name: 'Case Studies', href: '/case-studies' },;
-    { name: 'Blog', href: '/blog' },;
-    { name: 'Careers', href: '/careers' },;
-    { name: 'Contact', href: '/contact' },;
-  ];
-=======
+import { ;
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
 
 
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  ];
-  return (
+
+
     <AnimatePresence>;
-      {isOpen && (;
-        <>;
-          {/* Backdrop */}
-          <motion&& motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 z-40"
-            onClick={onClose}
-          />;
-          <motion&& motion.div
-
-            <div className="p-6">;
 
 
-};
 
-export default Sidebar;
 
-export default Sidebar;
 
-}
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+                    <Building2 className="w-8 h-8 text-white" />;
+
+                  <X className="w-6 h-6" />;
+
+
+
+
+                    <Link
+                    </Link>;
+
+
+
+                    <Phone className="w-4 h-4" />;
+                    <Mail className="w-4 h-4" />;
+                  <Link
+                    <ExternalLink className="w-4 h-4" />;
+                  </Link>;
+    </AnimatePresence>;
+  );
+
+  const featureLinks: NavLink[] = useMemo(
+    () => [
+      { href: '/#features', label: 'Self‑Improving' },
+      { href: '/#features', label: 'Repo Sync' },
+      { href: '/#features', label: 'Zero Ops' },
+      { href: '/#features', label: 'Safety‑First' },
+      { href: '/#features', label: 'Scalable' },
+      { href: '/#features', label: 'Observability' },
+      { href: '/#features', label: 'Futuristic UI' },
+      { href: '/#features', label: 'Cloud Automations' },
+      { href: '/#features', label: 'Edge‑Optimized' },
+    ],
+
+    <AnimatePresence>;
+                    <Building2 className="w - 8 h - 8 text - white" />;
+                  <X className="w - 6 h - 6" />;
+                    <Link;
+                    </Link>))}
+                    <Phone className="w - 4 h - 4" />;
+                    <Mail className="w - 4 h - 4" />;
+                  <Link;
+                    <ExternalLink className="w - 4 h - 4" />;
+                  </Link>;
+    </AnimatePresence>);
+                    <Phone className="w-4 h-4" />
+                    <Mail className="w-4 h-4" />
+                  <Link
+                    <ExternalLink className="w-4 h-4" />
+                  </Link>
+    </AnimatePresence>
+
+  const serviceLinks: NavLink[] = useMemo(
+    () => serviceNames.map((name) => ({ href: `/.netlify/functions/${name}`, label: name })),
+    [serviceNames]
+  );
+
+  return (
+    <aside className="fixed left-0 top-0 z-40 h-screen w-72 overflow-y-auto border-r border-white/10 bg-slate-950/90 px-4 py-6 backdrop-blur-md">
+      <div className="mb-4 px-2 text-lg font-bold tracking-wide">
+        <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">Zion</span>
+        <span className="ml-2 text-white/60">Navigation</span>
+      </div>
+
+                <Link href={link.href}>
+                </Link>
+
+                <Link href={link.href}>
+                </Link>
+
