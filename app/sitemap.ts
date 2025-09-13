@@ -42,6 +42,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		'/content-showcase',
 		'/mega-content-showcase-2026',
 		'/ai-2025-ultimate-content-revolution',
+		'/ai-trends-2025-ultimate-predictions',
+		'/ai-success-stories-2025',
 		'/revolutionary-tech-2025',
 		'/services',
 		'/contact',
