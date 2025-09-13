@@ -17,22 +17,35 @@ if [ "$NETLIFY" = "true" ]; then
   echo "Clearing Yarn cache..."
   yarn cache clean --all
   
+  # Clear specific problematic cache entries
+  echo "Clearing specific problematic cache entries..."
+  rm -rf ~/.yarn/cache/v6/npm-find-up-*
+  rm -rf ~/.yarn/cache/v6/npm-eslint-*
+  
   # For Netlify, use a more conservative approach with cache clearing
   echo "Installing dependencies with Netlify-optimized settings..."
   
   # Try installation with retry logic for Netlify
   for i in {1..3}; do
     echo "Installation attempt $i of 3..."
-    if yarn install --frozen-lockfile --network-timeout 60000 --prefer-offline --no-cache --ignore-engines; then
+    if yarn install --frozen-lockfile --network-timeout 60000 --prefer-offline --no-cache --ignore-engines --ignore-optional; then
       echo "Dependencies installed successfully!"
       break
     else
       echo "Installation failed, cleaning and retrying..."
       rm -rf node_modules
       yarn cache clean --all
+      rm -rf ~/.yarn/cache/v6/npm-find-up-*
+      rm -rf ~/.yarn/cache/v6/npm-eslint-*
       if [ $i -eq 3 ]; then
         echo "All installation attempts failed! Trying without frozen lockfile..."
-        yarn install --network-timeout 60000 --prefer-offline --no-cache --ignore-engines
+        if ! yarn install --network-timeout 60000 --prefer-offline --no-cache --ignore-engines --ignore-optional; then
+          echo "Yarn installation still failing. Trying with npm as fallback..."
+          rm -rf node_modules
+          rm -rf yarn.lock
+          npm cache clean --force
+          npm install --legacy-peer-deps --no-optional
+        fi
       fi
     fi
   done
@@ -101,6 +114,12 @@ fi
 
 # Build the project
 echo "Building project..."
-yarn build
+if command -v yarn &> /dev/null && [ -f yarn.lock ]; then
+  echo "Using Yarn to build..."
+  yarn build
+else
+  echo "Using npm to build..."
+  npm run build
+fi
 
 echo "Build completed successfully!"
