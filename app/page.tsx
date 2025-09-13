@@ -143,6 +143,11 @@ import AI2027LatestBreakthroughsPromotionBanner from '../components/AI2027Latest
 import AI2027NeuralSynthesisPromotionBanner from '../components/AI2027NeuralSynthesisPromotionBanner';
 import AI2027BreakthroughContentShowcase from '../components/AI2027BreakthroughContentShowcase';
 
+// New AI 2030+ Components
+import AI2030AdvancedNeuralSynthesisPromotionBanner from '../components/AI2030AdvancedNeuralSynthesisPromotionBanner';
+import QuantumAIFusion2029PromotionBanner from '../components/QuantumAIFusion2029PromotionBanner';
+import AI2035SingularityBreakthroughPromotionBanner from '../components/AI2035SingularityBreakthroughPromotionBanner';
+
 // AI 2028-2030 Future Predictions Components
 import AI2028_2030FuturePredictionsPromotionBanner from '../components/AI2028_2030FuturePredictionsPromotionBanner';
 import AI2028_2030FuturePredictionsShowcase from '../components/AI2028_2030FuturePredictionsShowcase';
@@ -292,6 +297,21 @@ const HomePage: React.FC = () => {
               {/* AI 2027 Breakthrough Content Showcase */}
               <Suspense fallback={<LoadingSpinner />}>
                 <AI2027BreakthroughContentShowcase />
+              </Suspense>
+
+              {/* AI 2030 Advanced Neural Synthesis */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2030AdvancedNeuralSynthesisPromotionBanner />
+              </Suspense>
+
+              {/* Quantum AI Fusion 2029 */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <QuantumAIFusion2029PromotionBanner />
+              </Suspense>
+
+              {/* AI 2035 Singularity Breakthrough */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2035SingularityBreakthroughPromotionBanner />
               </Suspense>
 
               {/* New Quantum-AI Content Promotion Banner */}
