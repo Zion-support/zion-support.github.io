@@ -21,9 +21,6 @@ interface EnhancedFuturisticCardProps {
     website: string;
   };
   className?: string;
-<<<<<<< HEAD
-  variant?: 'holographic' | 'cyberpunk' | 'quantum' | 'neural' | 'matrix' | 'holographic-matrix' | 'quantum-cyberpunk';
-=======
   variant?: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-advanced' | 'holographic-advanced' | 'quantum-holographic-advanced';
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-bcf6
   intensity?: 'low' | 'medium' | 'high';
@@ -119,16 +116,6 @@ export default function EnhancedFuturisticCard({
     return baseStyles[variant] || baseStyles.holographic;
   };
 
-<<<<<<< HEAD
-  const getBackgroundStyle = () => {
-    switch (background) {
-      case 'glass':
-        return 'backdrop-blur-md bg-white/5';
-      case 'solid':
-        return 'bg-gray-900/80';
-      case 'gradient':
-        return 'bg-gradient-to-br from-gray-900/80 to-black/80';
-=======
     let time = 0;
     const particles: Array<{
       x: number;

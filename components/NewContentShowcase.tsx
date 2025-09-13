@@ -1,133 +1,142 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function NewContentShowcase() {
-  const newContent = [
-    {
-      title: "AI Cybersecurity Threats 2025",
-      description: "Protecting your business from emerging AI security risks",
-      href: "/blog/ai-cybersecurity-threats-2025",
-      type: "Article",
-      readTime: "15 min read",
-      icon: "🔒",
-      category: "Cybersecurity",
-      isNew: true
-    },
-    {
-      title: "AI Productivity Automation 2025",
-      description: "Transform your workflow with intelligent automation",
-      href: "/blog/ai-productivity-automation-2025",
-      type: "Article",
-      readTime: "18 min read",
-      icon: "⚡",
-      category: "Productivity",
-      isNew: true
-    },
-    {
-      title: "AI Customer Support Automation",
-      description: "Resolve faster, cut costs with intelligent support",
-      href: "/blog/ai-customer-support-automation-2025",
-      type: "Article",
-      readTime: "12 min read",
-      icon: "🎧",
-      category: "Customer Support",
-      isNew: true
-    },
-    {
-      title: "AI Manufacturing Success Story",
-      description: "40% cost reduction, 60% faster processing case study",
-      href: "/case-studies/ai-manufacturing-automation-success-2025",
-      type: "Case Study",
-      readTime: "15 min read",
-      icon: "🏭",
-      category: "Manufacturing",
-      isNew: true
-    },
-    {
-      title: "AI Implementation Checklist 2025",
-      description: "150+ actionable items for successful AI deployment",
-      href: "/resources/ai-implementation-checklist-2025",
-      type: "Resource",
-      readTime: "45 min to complete",
-      icon: "📋",
-      category: "Implementation",
-      isNew: true
-    },
-    {
-      title: "AI Enterprise Transformation 2025",
-      description: "Complete implementation guide with 340% ROI",
-      href: "/blog/ai-enterprise-transformation-2025",
-      type: "Article",
-      readTime: "18 min read",
-      icon: "🏢",
-      category: "Enterprise",
-      isNew: false
+const newContent = [
+  {
+    id: 1,
+    title: "AI 2025: Generative AI Enterprise Revolution",
+    description: "Discover how generative AI is revolutionizing enterprise operations with 340% ROI and 75% productivity gains.",
+    type: "Blog Post",
+    category: "Enterprise AI",
+    readTime: "25 min read",
+    image: "🤖",
+    href: "/blog/ai-2025-generative-ai-enterprise-revolution",
+    featured: true,
+    stats: {
+      roi: "340%",
+      productivity: "75%",
+      savings: "$2.3M"
     }
-  ];
+  },
+  {
+    id: 2,
+    title: "AI 2025: Autonomous Vehicles Revolution",
+    description: "Complete analysis of self-driving technology, market trends, and business opportunities in 2025.",
+    type: "Blog Post",
+    category: "Mobility Tech",
+    readTime: "22 min read",
+    image: "🚗",
+    href: "/blog/ai-2025-autonomous-vehicles-transportation",
+    featured: true,
+    stats: {
+      market: "$127B",
+      vehicles: "2.3M",
+      safety: "95%"
+    }
+  },
+  {
+    id: 3,
+    title: "AI 2025 Comprehensive Implementation Playbook",
+    description: "300-page complete guide with frameworks, templates, and actionable strategies for AI success.",
+    type: "Resource Guide",
+    category: "Implementation",
+    readTime: "300 pages",
+    image: "📚",
+    href: "/resources/ai-2025-comprehensive-implementation-playbook",
+    featured: true,
+    stats: {
+      pages: "300+",
+      templates: "30+",
+      enterprises: "500+"
+    }
+  },
+  {
+    id: 4,
+    title: "AI Transformation: Global Retail Giant Success",
+    description: "How a Fortune 100 retailer achieved 400% ROI and 60% cost reduction in just 8 months.",
+    type: "Case Study",
+    category: "Retail AI",
+    readTime: "15 min read",
+    image: "🏪",
+    href: "/case-studies/ai-transformation-global-retail-giant-2025",
+    featured: true,
+    stats: {
+      roi: "400%",
+      savings: "60%",
+      satisfaction: "85%"
+    }
+  }
+];
 
+export default function NewContentShowcase() {
   return (
-    <div className="py-16">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-red-100 text-red-800 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium">🔥 JUST PUBLISHED</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Fresh AI & Business Content
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            🆕 Fresh AI Content Just Released
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Discover our latest expert insights, case studies, and resources. 
-            Fresh content published weekly to keep you ahead of the curve.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Stay ahead of the AI revolution with our latest insights, guides, and success stories
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {newContent.map((item, index) => (
-            <Link key={index} href={item.href} className="group">
-              <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 p-6 h-full">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-3xl">{item.icon}</div>
-                  <div className="flex items-center gap-2">
-                    {item.isNew && (
-                      <span className="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">
-                        NEW
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {newContent.map((content) => (
+            <Link key={content.id} href={content.href} className="group">
+              <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-4xl">{content.image}</div>
+                    <div className="flex items-center gap-2">
+                      <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">
+                        {content.type}
                       </span>
-                    )}
-                    <span className="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded-full">
-                      {item.type}
-                    </span>
+                      {content.featured && (
+                        <span className="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded-full">
+                          Featured
+                        </span>
+                      )}
+                    </div>
                   </div>
-                </div>
-                
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                  {item.title}
-                </h3>
-                
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                  {item.description}
-                </p>
-                
-                <div className="flex items-center justify-between text-xs text-gray-500">
-                  <span className="bg-blue-50 text-blue-700 px-2 py-1 rounded">
-                    {item.category}
-                  </span>
-                  <span>{item.readTime}</span>
+                  
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2 line-clamp-2">
+                    {content.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                    {content.description}
+                  </p>
+                  
+                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span className="bg-gray-100 px-2 py-1 rounded">{content.category}</span>
+                    <span>{content.readTime}</span>
+                  </div>
+                  
+                  <div className="grid grid-cols-3 gap-2 text-xs">
+                    {Object.entries(content.stats).map(([key, value]) => (
+                      <div key={key} className="text-center">
+                        <div className="font-bold text-blue-600">{value}</div>
+                        <div className="text-gray-500 capitalize">{key}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </Link>
           ))}
         </div>
 
-        <div className="text-center">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
+        <div className="text-center mt-12">
+          <Link 
+            href="/content-showcase" 
+            className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
           >
-            View All Content
-            <span>→</span>
+            View All New Content
+            <span className="text-lg">→</span>
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

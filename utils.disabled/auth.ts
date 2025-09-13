@@ -1,12 +1,4 @@
 import type { NextApiRequest } from 'next';
-import { getTenantByApiKey, getTenantById } from './tenant';
-
-export interface AuthResult {
-  ok: boolean;
-  error?: string;
-  tenantId?: string;
-}
-
 export function authenticateRequest(req: NextApiRequest, allowPublicGet: boolean = true): AuthResult {
   const method = (req.method || 'GET').toUpperCase();
   const apiKey = (req.headers['x-api-key'] || req.headers['authorization']) as string | undefined;
@@ -24,4 +16,16 @@ export function authenticateRequest(req: NextApiRequest, allowPublicGet: boolean
   if (!tenant) return { ok: false, error: 'Invalid API key' };
 
   return { ok: true, tenantId: tenant.id };
+=======
+
+export function getRequestUserEmail(req: NextApiRequest): string | null {
+  const emailHeader = req.headers['x-user-email'];
+  if (Array.isArray(emailHeader)) return emailHeader[0] || null;
+  return (emailHeader as string) || null;
+}
+
+export function isAdminEmail(email: string | null | undefined): boolean {
+  if (!email) return false;
+  const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter(Boolean);
+  return admins.includes(email.toLowerCase());
 }

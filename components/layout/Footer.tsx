@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { Mail, Smartphone, Building, Globe, Zap, Shield, Users } from 'lucide-react';
 
@@ -160,3 +161,5 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+=======
+>>>>>>> 4deb4077f3a1485ea1fb5dfd5993e906c62afdfa

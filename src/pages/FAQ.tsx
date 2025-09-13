@@ -1,0 +1,261 @@
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card, CardContent } from "@/components/ui/card";
+import React from 'react';
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { HelpCircle, Users, ShoppingCart, Shield, Zap, Globe } from "lucide-react";
+
+export default function FAQ() {
+  const faqCategories = [
+    {
+import React from 'react';
+import { AppHeader } from '@/layout/AppHeader';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Search } from 'lucide-react';
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Header } from "@/components/header/Header";
+import { Footer } from "@/components/Footer";
+
+export default function FAQ() {
+  const faqData = [
+    {
+      title: "Getting Started",
+      icon: Zap,
+      questions: [
+        {
+          question: "How do I create an account on Zion?",
+          answer: "Creating an account is simple! Click the 'Sign Up' button in the top right corner and choose whether you're a client looking for services or talent offering your skills. Fill in your basic information and verify your email to get started."
+        },
+        {
+          question: "What types of accounts can I create?",
+          answer: "Zion offers two main account types: Client accounts for businesses and individuals seeking AI and tech services, and Talent accounts for professionals offering their expertise in AI, development, design, and other tech fields."
+        },
+        {
+          question: "Is Zion really free to use?",
+          answer: "Yes! Zion is completely free to use. We believe in democratizing access to AI and tech solutions, so there are no subscription fees or hidden costs for using our platform."
+        }
+      ]
+    },
+    {
+      category: "For Talent & Creators",
+      questions: [
+        {
+          question: "How do I create a talent profile?",
+          answer: "After signing up, navigate to your dashboard and click 'Create Profile'. You can add your skills, experience, portfolio, and set your rates. Make sure to include relevant certifications and examples of your work."
+        },
+        {
+          question: "What types of services can I offer?",
+          answer: "You can offer any tech-related service including AI development, software engineering, data science, IT consulting, cybersecurity, cloud services, and more. We support both technical and business services."
+        },
+        {
+          question: "How do I get hired?",
+          answer: "Optimize your profile with relevant keywords, showcase your best work, maintain a high rating, and respond promptly to client inquiries. You can also actively browse job postings and submit proposals."
+        }
+      ]
+    },
+    {
+      category: "For Clients & Employers",
+      questions: [
+        {
+          question: "How do I find the right talent?",
+          answer: "Use our advanced search and filtering system to find professionals based on skills, experience, location, and ratings. You can also post detailed job requirements and let qualified talent come to you."
+        },
+        {
+          question: "What payment methods are accepted?",
+          answer: "We support multiple payment methods including credit cards, bank transfers, and digital wallets. All payments are processed securely through our platform with escrow protection for your peace of mind."
+        },
+        {
+          question: "How do I ensure quality work?",
+          answer: "Review talent profiles, check ratings and reviews, request portfolios, and start with smaller projects to test the relationship. Our dispute resolution system also protects both parties."
+      title: "For Clients",
+      icon: Users,
+      questions: [
+        {
+          question: "How do I find the right talent for my project?",
+          answer: "You can search for talent using our AI-powered matching system, browse categories, or post a job listing. Our platform will suggest the best matches based on your requirements, budget, and timeline."
+        },
+        {
+          question: "What services can I find on Zion?",
+          answer: "Zion offers a wide range of services including AI development, web and mobile app development, data science, UI/UX design, IT consulting, equipment rentals, and specialized AI solutions for various industries."
+        },
+        {
+          question: "How do I ensure quality when hiring talent?",
+          answer: "All talent on Zion are verified professionals with portfolios, reviews, and ratings. You can review their work history, read client testimonials, and communicate directly before making a decision."
+        }
+      ]
+    },
+    {
+      title: "For Talent",
+      icon: Globe,
+      questions: [
+        {
+          question: "How do I showcase my skills and experience?",
+          answer: "Create a comprehensive profile highlighting your expertise, upload portfolio pieces, list your skills, and set your rates. You can also add certifications, education, and work samples to stand out."
+        },
+        {
+          question: "How do I get paid for my work?",
+          answer: "Zion offers secure payment processing with milestone-based payments. You can set up payment schedules, track project progress, and receive payments directly through our platform."
+        },
+        {
+          question: "Can I work with international clients?",
+          answer: "Absolutely! Zion is a global platform connecting talent and clients worldwide. You can work with clients from any country and expand your professional network internationally."
+        }
+      ]
+    },
+    {
+      category: "Marketplace & Services",
+      questions: [
+        {
+          question: "What can I buy in the marketplace?",
+          answer: "Our marketplace includes AI services, software development, IT consulting, equipment rentals, specialized hardware, and more. We're constantly expanding our categories to meet your needs."
+        },
+        {
+          question: "How do I request a quote?",
+          answer: "Navigate to the 'Request Quote' page, fill out the form with your project requirements, and we'll connect you with qualified professionals who can provide detailed proposals."
+        },
+        {
+          question: "Are there any guarantees on services?",
+          answer: "Yes, we offer satisfaction guarantees and our dispute resolution system ensures fair outcomes. Most professionals also offer revisions and support to ensure your complete satisfaction."
+      title: "Platform Features",
+      icon: ShoppingCart,
+      questions: [
+        {
+          question: "What is the AI Matcher feature?",
+          answer: "Our AI Matcher uses advanced algorithms to connect clients with the perfect talent based on project requirements, skills, availability, and budget. It saves time and ensures better matches."
+        },
+        {
+          question: "How does the marketplace work?",
+          answer: "The marketplace allows you to browse and purchase pre-built AI solutions, equipment, and services. You can also request custom quotes for specific projects or needs."
+        },
+        {
+          question: "What community features are available?",
+          answer: "Join our community forums to connect with other professionals, share knowledge, ask questions, and stay updated on the latest AI and tech trends."
+        }
+      ]
+    },
+    {
+      category: "Technical Support",
+      questions: [
+        {
+          question: "What if I encounter technical issues?",
+          answer: "Our support team is available 24/7. You can reach us through the contact form, email support@ziontechgroup.com, or use our live chat feature for immediate assistance."
+        },
+        {
+          question: "How secure is my data?",
+          answer: "We use enterprise-grade security measures including end-to-end encryption, secure payment processing, and strict data protection policies. Your privacy and security are our top priorities."
+        },
+        {
+          question: "Can I use Zion Tech Group on mobile devices?",
+          answer: "Absolutely! Our platform is fully responsive and works seamlessly on all devices. We also offer a dedicated mobile app for enhanced mobile experience."
+        }
+      ]
+    },
+    {
+      category: "Business & Enterprise",
+      questions: [
+        {
+          question: "Do you offer enterprise solutions?",
+          answer: "Yes! We provide customized enterprise solutions including dedicated account managers, bulk hiring, custom integrations, and enterprise-grade security features. Contact our sales team for details."
+        },
+        {
+          question: "Can I integrate Zion Tech Group with my existing systems?",
+          answer: "We offer comprehensive API access and integration options for enterprise clients. Our technical team can help you integrate our platform with your existing HR, project management, and billing systems."
+        },
+        {
+          question: "What about compliance and legal requirements?",
+          answer: "We maintain compliance with major regulations including GDPR, SOC 2, and industry-specific requirements. Our legal team ensures all contracts and terms meet your business needs."
+        }
+      ]
+      question: "What is Zion Tech Group?",
+      answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect businesses with top AI and tech talent, services, and equipment in one comprehensive platform."
+    },
+    {
+      question: "How does the AI talent matching work?",
+      answer: "Our AI-powered matching system analyzes your project requirements, budget, and timeline to connect you with the most suitable tech professionals. The system considers skills, experience, availability, and past performance to ensure optimal matches."
+    },
+    {
+      question: "What types of services do you offer?",
+      answer: "We offer a wide range of services including AI development, software engineering, IT consulting, equipment rental, green IT solutions, and specialized tech services. Our marketplace covers everything from individual freelancers to enterprise solutions."
+    },
+    {
+      question: "Is Zion Tech Group free to use?",
+      answer: "Yes! Our core marketplace platform is completely free to use. We believe in democratizing access to tech talent and services. Some premium features and enterprise solutions may have associated costs."
+    },
+    {
+      question: "How do I get started as a client?",
+      answer: "Simply create an account, post your project requirements, and our AI will match you with suitable talent. You can also browse our talent directory, equipment listings, and service categories to find what you need."
+    },
+    {
+      question: "How do I join as a tech professional?",
+      answer: "Create a profile highlighting your skills, experience, and portfolio. Our verification process ensures quality, and once approved, you'll start receiving project matches and can bid on opportunities."
+    },
+    {
+      question: "What makes Zion different from other platforms?",
+      answer: "Zion focuses exclusively on high-tech and AI, offering specialized matching algorithms, comprehensive equipment rentals, green IT solutions, and a community-driven approach that fosters innovation and collaboration."
+    },
+    {
+      question: "Do you offer enterprise solutions?",
+      answer: "Yes! We provide enterprise-grade solutions including team management, advanced analytics, custom integrations, and dedicated support for large organizations looking to scale their tech operations."
+    },
+    {
+      question: "How do you ensure quality and security?",
+      answer: "We implement rigorous verification processes, secure payment systems, dispute resolution mechanisms, and continuous monitoring to maintain high standards and protect all users."
+    },
+    {
+      question: "Can I rent equipment through Zion?",
+      answer: "Absolutely! Our equipment marketplace offers a wide range of tech equipment for rent, from development hardware to specialized AI computing resources, making it easier for businesses to access what they need without large capital investments."
+      title: "Security & Trust",
+      icon: Shield,
+      questions: [
+        {
+          question: "How does Zion protect my data and privacy?",
+          answer: "We implement enterprise-grade security measures including encryption, secure payment processing, and strict privacy policies. Your data is never shared with third parties without consent."
+        },
+        {
+          question: "What happens if there's a dispute with a client or talent?",
+          answer: "Zion provides dispute resolution services and mediation support. We have clear terms of service and can help resolve conflicts to ensure fair outcomes for all parties."
+        },
+        {
+          question: "Are payments secure on the platform?",
+          answer: "Yes, all payments are processed through secure, encrypted channels. We use industry-standard payment processors and never store your payment information on our servers."
+        }
+      ]
+    }
+  ];
+
+  const contactMethods = [
+    {
+      title: "Email Support",
+      description: "Get help via email",
+      contact: "support@ziontechgroup.com",
+      icon: HelpCircle
+    },
+    {
+      title: "Commercial Inquiries",
+      description: "For business partnerships",
+      contact: "commercial@ziontechgroup.com",
+      icon: Users
+    }
+  ];
+
+  return (
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+
+interface FAQItem {
+  question: string;
+  answer: string;
+  category: string;
+import { FaqSection } from "@/components/FaqSection";

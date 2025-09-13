@@ -1,199 +1,227 @@
 
+import React, { useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
-import { 
-  ArrowRight, 
-  Play, 
-  Star, 
-  Users, 
-  Globe,
-  Zap,
-  Shield,
-  CheckCircle
-} from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { NeonGlow, GradientBorder } from "@/components/ui/AnimatedBackground";
+import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield, Brain } from "lucide-react";
 
 export function HeroSection() {
   const { t } = useTranslation();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
   
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const floatingVariants = {
+    animate: {
+      y: [-15, 15, -15],
+      rotate: [0, 5, 0],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const particleVariants = {
+    animate: {
+      y: [0, -20, 0],
+      opacity: [0.3, 0.6, 0.3],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const pulseVariants = {
+    animate: {
+      scale: [1, 1.1, 1],
+      opacity: [0.5, 0.8, 0.5],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
   return (
-    <section className="relative overflow-hidden py-20 md:py-32">
-      {/* Background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-90"></div>
+    <section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
+      {/* Enhanced background with parallax effect */}
+      <motion.div 
+        className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"
+        style={{ y, opacity }}
+      />
       
-      {/* Animated floating particles */}
+      {/* Animated floating particles with better positioning and variety */}
       <div className="absolute inset-0">
         <motion.div 
-          animate={{ 
-            y: [0, -20, 0],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-purple-light"
+          className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-zion-purple-light opacity-60"
+          variants={floatingVariants}
+          animate="animate"
         />
         <motion.div 
-          animate={{ 
-            y: [0, 15, 0],
-            opacity: [0.2, 0.5, 0.2]
-          }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute top-1/3 right-1/3 w-4 h-4 rounded-full bg-zion-cyan"
+          className="absolute top-1/3 right-1/3 w-6 h-6 rounded-full bg-zion-cyan opacity-50"
+          variants={floatingVariants}
+          animate="animate"
+          style={{ animationDelay: "1s" }}
         />
         <motion.div 
-          animate={{ 
-            y: [0, -10, 0],
-            opacity: [0.4, 0.7, 0.4]
-          }}
-          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple"
+          className="absolute bottom-1/4 left-1/3 w-3 h-3 rounded-full bg-zion-blue-light opacity-70"
+          variants={particleVariants}
+          animate="animate"
+          style={{ animationDelay: "2s" }}
         />
         <motion.div 
-          animate={{ 
-            y: [0, 20, 0],
-            opacity: [0.1, 0.4, 0.1]
-          }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-          className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light"
+          className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-40"
+          variants={floatingVariants}
+          animate="animate"
+          style={{ animationDelay: "0.5s" }}
         />
       </div>
-      
-      <div className="container relative z-10 px-4 mx-auto">
-        <div className="text-center max-w-5xl mx-auto">
+
+      {/* Content Container */}
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div 
+          className="text-center max-w-4xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {/* Main Heading */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <GradientHeading className="mb-6 text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-              {t('home.hero_title') || "The Future of Tech Services"}
+          <motion.div variants={itemVariants} className="mb-8">
+            <GradientHeading className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              Transform Your Business with
+              <span className="block text-zion-cyan">AI-Powered Solutions</span>
             </GradientHeading>
-          </motion.div>
-
-          {/* Subtitle */}
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-10 max-w-4xl mx-auto leading-relaxed"
-          >
-            {t('home.hero_subtitle') || "Discover top AI and tech talent, services, and equipment in one place. Connect with verified professionals worldwide."}
-          </motion.p>
-
-          {/* Trust Indicators */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-wrap justify-center items-center gap-6 mb-12 text-zion-slate-light"
-          >
-            <div className="flex items-center gap-2">
-              <Users className="w-5 h-5 text-zion-purple" />
-              <span className="text-sm font-medium">10K+ Verified Providers</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Globe className="w-5 h-5 text-zion-cyan" />
-              <span className="text-sm font-medium">50+ Countries</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Star className="w-5 h-5 text-yellow-400" />
-              <span className="text-sm font-medium">4.9/5 Rating</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-green-400" />
-              <span className="text-sm font-medium">24/7 Support</span>
-            </div>
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
+              Leading-edge technology services, expert talent, and innovative solutions 
+              to drive your business into the future
+            </p>
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
-          >
-            <Button
-              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 group transition-all duration-300 hover:scale-105 shadow-2xl"
-              size="lg"
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Button 
               asChild
+              size="lg"
+              className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
             >
-              <Link
-                to="/signup"
-                role="button"
-                aria-label={t('auth.signup') || "Get Started"}
-                tabIndex={0}
-                data-testid="hero-signup-btn"
-                className="flex items-center gap-2"
-              >
-                {t('auth.signup') || "Get Started Free"}
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <Link to="/services">
+                Explore Services
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            
-            <Link
-              id="browse-marketplace"
-              to="/marketplace"
-              className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-lg inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 group"
+            <Button 
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
             >
-              <Play className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-              {t('home.browse_marketplace') || "Explore Marketplace"}
-            </Link>
+              <Link to="/contact">
+                Get Started
+                <Sparkles className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </motion.div>
 
-          {/* Demo Video or Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="relative max-w-4xl mx-auto"
-          >
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="aspect-video bg-gradient-to-br from-zion-blue-dark to-zion-purple-dark rounded-xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Play className="w-10 h-10 text-white ml-1" />
-                  </div>
-                  <p className="text-zion-slate-light text-lg font-medium">
-                    Watch How It Works
-                  </p>
-                  <p className="text-zion-slate-light text-sm mt-2">
-                    2 min demo • See Zion in action
-                  </p>
-                </div>
+          {/* Feature Highlights */}
+          <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center mb-4">
+                <Brain className="h-8 w-8 text-white" />
               </div>
+              <h3 className="text-lg font-semibold text-white mb-2">AI-Powered</h3>
+              <p className="text-zion-slate-light text-center">Cutting-edge artificial intelligence solutions</p>
+            </div>
+            
+            <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-2xl flex items-center justify-center mb-4">
+                <Shield className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Enterprise Security</h3>
+              <p className="text-zion-slate-light text-center">Zero-trust architecture & compliance</p>
+            </div>
+            
+            <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-blue to-zion-purple rounded-2xl flex items-center justify-center mb-4">
+                <TrendingUp className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Global Reach</h3>
+              <p className="text-zion-slate-light text-center">Worldwide services with local expertise</p>
             </div>
           </motion.div>
 
-          {/* Bottom Trust Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="mt-12 flex flex-wrap justify-center items-center gap-6 text-zion-slate-light text-sm"
-          >
-            <div className="flex items-center gap-2">
-              <Shield className="w-4 h-4 text-green-400" />
-              <span>SSL Secured</span>
+          {/* Stats Section */}
+          <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">15+</div>
+              <div className="text-zion-slate-light">Years Experience</div>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-blue-400" />
-              <span>GDPR Compliant</span>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">500+</div>
+              <div className="text-zion-slate-light">Projects Delivered</div>
             </div>
-            <div className="flex items-center gap-2">
-              <Star className="w-4 h-4 text-yellow-400" />
-              <span>Trusted by Fortune 500</span>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">50+</div>
+              <div className="text-zion-slate-light">Countries Served</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">99%</div>
+              <div className="text-zion-slate-light">Client Satisfaction</div>
             </div>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.div 
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2, duration: 1 }}
+      >
+        <div className="w-6 h-10 border-2 border-zion-cyan rounded-full flex justify-center">
+          <motion.div 
+            className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+        </div>
+      </motion.div>
     </section>
   );
 }

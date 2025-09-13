@@ -1,0 +1,83 @@
+<<<<<<< HEAD
+name: Lighthouse Live
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+=======
+name: lighthouse-live
+'on':
+  schedule:
+    - cron: 0 2 * * *
+  workflow_dispatch: null
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: lighthouse-live-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Lighthouse on production URLs (non-blocking on schedule)
+        if: ${{ github.event_name == 'schedule' }}
+        uses: treosh/lighthouse-ci-action@v12
+        continue-on-error: true
+        with:
+          urls: |
+            https://ziontechgroup.com/
+            https://ziontechgroup.com/explore
+            https://ziontechgroup.com/front
+            https://ziontechgroup.com/newsroom
+            https://ziontechgroup.com/reports
+            https://ziontechgroup.com/site-health
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          runs: 3
+          configPath: lighthouserc.json
+
+      - name: Run Lighthouse on production URLs (strict)
+        if: ${{ github.event_name != 'schedule' }}
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7
+    runs_on: ubuntu-latest
+>>>>>>> origin/backup-main-20250909-144539

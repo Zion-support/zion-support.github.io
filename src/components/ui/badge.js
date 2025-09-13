@@ -10,16 +10,16 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-const baseClass = 'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium';
-const variantClasses = {
-    default: 'bg-zion-purple text-white',
-    outline: 'border border-current text-zion-slate-light',
-    secondary: 'bg-zion-blue-light/20 text-zion-slate-light',
-    destructive: 'bg-red-600 text-white',
-};
-export function Badge(_a) {
-    var { variant = 'default', className = '', children } = _a, rest = __rest(_a, ["variant", "className", "children"]);
-    const classes = `${baseClass} ${variantClasses[variant]} ${className}`.trim();
-    return (_jsx("span", Object.assign({ className: classes }, rest, { children: children })));
+import { cn } from "@/lib/utils";
+function Badge(_a) {
+    var { className, variant = 'default', children } = _a, props = __rest(_a, ["className", "variant", "children"]);
+    const baseClasses = "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2";
+    const variantClasses = {
+        default: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
+        secondary: "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
+        outline: "text-foreground",
+    };
+    return (_jsx("div", Object.assign({ className: cn(baseClasses, variantClasses[variant], className) }, props, { children: children })));
 }
-export default Badge;
+export { Badge };

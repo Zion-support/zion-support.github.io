@@ -15,9 +15,6 @@ export default function QuantumAICognitivePage() {
   const contactInfo = service.contactInfo;
 
   return (
-<<<<<<< HEAD
-    <UltraAdvancedFuturisticBackground>
-=======
     <UltraAdvancedFuturisticBackground intensity="high">
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-afd8
       <Head>

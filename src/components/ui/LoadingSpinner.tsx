@@ -1,77 +1,129 @@
 import React from 'react';
+import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 
-interface PageLoaderProps {
-  text?: string;
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'primary' | 'secondary' | 'white' | 'custom';
+  customColor?: string;
   className?: string;
+  text?: string;
+  showText?: boolean;
 }
 
-export function PageLoader({ text = "Loading...", className = "" }: PageLoaderProps) {
+export function LoadingSpinner({
+  size = 'md',
+  color = 'primary',
+  customColor,
+  className,
+  text = 'Loading...',
+  showText = false
+}: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+    xl: 'w-12 h-12'
+  };
+
+  const colorClasses = {
+    primary: 'border-zion-purple',
+    secondary: 'border-zion-cyan',
+    white: 'border-white',
+    custom: ''
+  };
+
+  const borderColor = customColor || colorClasses[color];
+
   return (
-    <div className={`min-h-screen flex items-center justify-center ${className}`}>
-      <div className="text-center">
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-          className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full mx-auto mb-4"
-        />
+    <div className={cn('flex flex-col items-center justify-center', className)}>
+      <motion.div
+        className={cn(
+          'border-2 border-t-transparent rounded-full animate-spin',
+          sizeClasses[size],
+          borderColor
+        )}
+        animate={{ rotate: 360 }}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+        role="status"
+        aria-label="Loading"
+      />
+      
+      {showText && (
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-          className="text-zion-cyan text-lg font-medium"
+          className="mt-3 text-sm text-zion-slate-light text-center"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
         >
           {text}
         </motion.p>
-      </div>
+      )}
     </div>
   );
 }
 
-export function LoadingSpinner({ className = "" }: { className?: string }) {
+// Skeleton loading component for content
+export function SkeletonLoader({
+  className,
+  lines = 3,
+  height = 'h-4'
+}: {
+  className?: string;
+  lines?: number;
+  height?: string;
+}) {
   return (
-    <motion.div
-      animate={{ rotate: 360 }}
-      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-      className={`w-6 h-6 border-2 border-zion-cyan border-t-transparent rounded-full ${className}`}
-    />
-  );
-}
-
-export function LoadingDots({ className = "" }: { className?: string }) {
-  return (
-    <div className={`flex space-x-1 ${className}`}>
-      {[0, 1, 2].map((i) => (
+    <div className={cn('space-y-3', className)}>
+      {Array.from({ length: lines }).map((_, index) => (
         <motion.div
-          key={i}
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 0.6, repeat: Infinity, delay: i * 0.2 }}
-          className="w-2 h-2 bg-zion-cyan rounded-full"
+          key={index}
+          className={cn(
+            'bg-zion-slate-light/20 rounded animate-pulse',
+            height
+          )}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: index * 0.1 }}
         />
       ))}
     </div>
   );
 }
 
-export function LoadingBar({ className = "" }: { className?: string }) {
+// Page loading component
+export function PageLoader({
+  text = 'Loading page...',
+  className
+}: {
+  text?: string;
+  className?: string;
+}) {
   return (
-    <div className={`w-full bg-zion-blue-dark rounded-full h-2 ${className}`}>
-      <motion.div
-        className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full"
-        initial={{ width: "0%" }}
-        animate={{ width: "100%" }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-      />
+    <div className={cn('min-h-screen flex items-center justify-center', className)}>
+      <div className="text-center">
+        <LoadingSpinner size="xl" color="primary" showText text={text} />
+      </div>
     </div>
   );
 }
 
-export function LoadingPulse({ className = "" }: { className?: string }) {
+// Button loading state
+export function ButtonLoader({
+  size = 'sm',
+  className
+}: {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}) {
   return (
-    <motion.div
-      animate={{ scale: [1, 1.1, 1] }}
-      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-      className={`w-8 h-8 bg-zion-cyan rounded-full ${className}`}
-    />
+    <div className={cn('inline-flex items-center', className)}>
+      <LoadingSpinner size={size} color="white" />
+      <span className="ml-2">Loading...</span>
+    </div>
   );
 }

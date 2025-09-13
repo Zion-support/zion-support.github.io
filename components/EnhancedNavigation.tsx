@@ -1,272 +1,355 @@
-import React, { useState, useEffect } from 'react';
+'use client';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Menu, X, ChevronDown, Brain, Shield, Rocket, 
-  Cpu, Users, Award, Phone, Mail, MapPin
+  Menu, X, ChevronDown, Star, Zap, BookOpen, 
+  FileText, Award, TrendingUp, Download
 } from 'lucide-react';
 
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const services = [
-    { name: 'AI Development', href: '/services/ai-development', icon: Brain },
-    { name: 'Cloud Services', href: '/services/cloud-services', icon: Shield },
-    { name: 'Web Development', href: '/services/web-development', icon: Cpu },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-    { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
-    { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Users }
+  const navigationItems = [
+    {
+      label: 'Home',
+      href: '/',
+      icon: '🏠'
+    },
+    {
+      label: 'Services',
+      href: '/services',
+      icon: '🚀',
+      dropdown: [
+        { label: 'AI Services', href: '/services/ai-services', isNew: true },
+        { label: 'Micro SaaS', href: '/services/micro-saas' },
+        { label: 'Edge Computing', href: '/services/edge-computing' },
+        { label: 'IT Services', href: '/services/it-services' }
+      ]
+    },
+    {
+      label: 'Content',
+      href: '/ai-2025-content-hub',
+      icon: '📚',
+      isNew: true,
+      badge: 'Revolutionary 2025',
+      dropdown: [
+        { label: 'Content Hub', href: '/ai-2025-content-hub', isNew: true, isHot: true },
+        { label: 'AI 2025-2030 Predictions', href: '/ai-2025-2030-predictions', isNew: true, isHot: true },
+        { label: 'Quantum Computing 2025', href: '/quantum-computing-2025', isNew: true, isHot: true },
+        { label: 'Automation Solutions 2025', href: '/automation-solutions-2025', isNew: true, isHot: true },
+        { label: 'AI Innovation Hub 2026', href: '/ai-innovation-hub-2026', isNew: true, isHot: true },
+        { label: 'Technology Showcase 2026', href: '/revolutionary-technology-showcase-2026', isNew: true, isHot: true },
+        { label: 'AI Mastery Academy 2026', href: '/ai-mastery-academy-2026', isNew: true, isHot: true },
+        { label: 'Revolutionary Resources 2026', href: '/revolutionary-resources-2026', isNew: true, isHot: true },
+        { label: 'All Content', href: '/content-showcase', isNew: true },
+        { label: 'Neural Architecture Revolution', href: '/blog/ai-2025-neural-architecture-revolution', isNew: true, isHot: true },
+        { label: 'Autonomous Business Systems', href: '/case-studies/autonomous-business-systems-2025', isNew: true, isHot: true },
+        { label: 'Quantum Machine Learning', href: '/blog/ai-2025-quantum-machine-learning', isNew: true, isHot: true },
+        { label: 'Fintech Transformation Success', href: '/case-studies/ai-2025-fintech-transformation-breakthrough', isNew: true, isHot: true },
+        { label: 'AI 2025 Ultimate Automation Platform', href: '/ai-2025-ultimate-automation-platform', isNew: true, isHot: true },
+        { label: 'Future Technologies 2030-2035 Showcase', href: '/future-technologies-2030-2035-showcase', isNew: true, isHot: true },
+        { label: 'AI Implementation Mastery Guide 2026', href: '/resources/ai-implementation-mastery-2026', isNew: true, isHot: true },
+        { label: 'Enterprise Implementation Mastery', href: '/resources/ai-2025-enterprise-implementation-mastery', isNew: true, isHot: true },
+        { label: 'AI Automation Implementation Toolkit', href: '/resources/ai-automation-implementation-toolkit-2025', isNew: true, isHot: true },
+        { label: 'Quantum-AI Breakthrough Case Study', href: '/case-studies/quantum-ai-breakthrough-enterprise-transformation', isNew: true, isHot: true },
+        { label: 'AI ROI Calculator 2026', href: '/tools/ai-roi-calculator-2026', isNew: true, isHot: true },
+        { label: 'Blog Articles', href: '/blog', isNew: true },
+        { label: 'Case Studies', href: '/case-studies', isNew: true },
+        { label: 'Resources', href: '/resources', isNew: true },
+        { label: 'Tools', href: '/tools' }
+      ]
+    },
+    {
+      label: 'About',
+      href: '/about',
+      icon: '👥'
+    },
+    {
+      label: 'Contact',
+      href: '/contact',
+      icon: '📞'
+    }
   ];
 
-  const company = [
-    { name: 'About Us', href: '/about', icon: Users },
-    { name: 'Our Work', href: '/portfolio', icon: Award },
-    { name: 'Blog', href: '/blog', icon: Award },
-    { name: 'Contact', href: '/contact', icon: Phone }
+  const featuredContent = [
+    {
+      title: "AI 2025 Ultimate Automation Platform",
+      description: "Revolutionary platform for autonomous business operations",
+      href: "/ai-2025-ultimate-automation-platform",
+      icon: "🚀",
+      isNew: true
+    },
+    {
+      title: "Future Technologies 2030-2035 Showcase",
+      description: "Revolutionary AI breakthroughs and singularity achievements",
+      href: "/future-technologies-2030-2035-showcase",
+      icon: "🔮",
+      isNew: true
+    },
+    {
+      title: "AI 2025-2030 Predictions",
+      description: "Complete roadmap of revolutionary AI breakthroughs",
+      href: "/ai-2025-2030-predictions",
+      icon: "🔮",
+      isNew: true
+    },
+    {
+      title: "Quantum Computing 2025",
+      description: "Revolutionary quantum technologies and breakthroughs",
+      href: "/quantum-computing-2025",
+      icon: "⚛️",
+      isNew: true
+    },
+    {
+      title: "Automation Solutions 2025",
+      description: "Advanced automation with 2,500%+ ROI",
+      href: "/automation-solutions-2025",
+      icon: "🤖",
+      isNew: true
+    },
+    {
+      title: "AI Implementation Mastery Guide 2026",
+      description: "Complete roadmap to 15,000x performance improvements",
+      href: "/resources/ai-implementation-mastery-2026",
+      icon: "📚",
+      isNew: true
+    },
+    {
+      title: "Enterprise Implementation Mastery",
+      description: "Complete guide to successful AI implementation in enterprise environments",
+      href: "/resources/ai-2025-enterprise-implementation-mastery",
+      icon: "🏢",
+      isNew: true
+    },
+    {
+      title: "AI Automation Implementation Toolkit",
+      description: "Everything you need to implement AI automation successfully",
+      href: "/resources/ai-automation-implementation-toolkit-2025",
+      icon: "🛠️",
+      isNew: true
+    },
+    {
+      title: "Quantum-AI Breakthrough Case Study",
+      description: "Fortune 500 company achieves $2.3B in savings",
+      href: "/case-studies/quantum-ai-breakthrough-enterprise-transformation",
+      icon: "💼",
+      isNew: true
+    },
+    {
+      title: "AI ROI Calculator 2026",
+      description: "Calculate your AI investment returns",
+      href: "/tools/ai-roi-calculator-2026",
+      icon: "📊",
+      isNew: true
+    },
+    {
+      title: "AI Innovation Hub 2026",
+      description: "Revolutionary AI breakthroughs and innovations",
+      href: "/ai-innovation-hub-2026",
+      icon: "🚀",
+      isNew: true
+    }
   ];
-
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
-  const closeAllDropdowns = () => {
-    setActiveDropdown(null);
-    setIsOpen(false);
-  };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
-        : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3" onClick={closeAllDropdowns}>
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
-              <Brain className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Zion Tech Group
-            </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('services')}
-                className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200 py-2"
-              >
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                  activeDropdown === 'services' ? 'rotate-180' : ''
-                }`} />
-              </button>
-              
-              <AnimatePresence>
-                {activeDropdown === 'services' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden"
-                  >
-                    <div className="p-4">
-                      <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                        Our Services
-                      </h3>
-                      <div className="grid grid-cols-1 gap-2">
-                        {services.map((service) => (
+          <div className="hidden md:flex items-center space-x-8">
+            {navigationItems.map((item) => (
+              <div key={item.label} className="relative group">
+                <Link
+                  href={item.href}
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                  onMouseEnter={() => setActiveDropdown(item.label)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
+                  <span>{item.icon}</span>
+                  <span>{item.label}</span>
+                  {item.isNew && (
+                    <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full ml-1">
+                      NEW
+                    </span>
+                  )}
+                  {item.badge && (
+                    <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full ml-1">
+                      {item.badge}
+                    </span>
+                  )}
+                  {item.dropdown && (
+                    <ChevronDown className="w-4 h-4" />
+                  )}
+                </Link>
+
+                {/* Dropdown Menu */}
+                {item.dropdown && (
+                  <AnimatePresence>
+                    {activeDropdown === item.label && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
+                        onMouseEnter={() => setActiveDropdown(item.label)}
+                        onMouseLeave={() => setActiveDropdown(null)}
+                      >
+                        {item.dropdown.map((dropdownItem) => (
                           <Link
-                            key={service.name}
-                            href={service.href}
-                            onClick={closeAllDropdowns}
-                            className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group"
+                            key={dropdownItem.label}
+                            href={dropdownItem.href}
+                            className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
                           >
-                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-2 flex items-center justify-center">
-                              <service.icon className="w-4 h-4 text-cyan-400" />
+                            <div className="flex items-center space-x-2">
+                              <span>{dropdownItem.label}</span>
+                              {dropdownItem.isNew && (
+                                <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+                                  NEW
+                                </span>
+                              )}
                             </div>
-                            <div className="flex-1 min-w-0">
-                              <div className="text-white font-medium group-hover:text-cyan-300 transition-colors duration-200">
-                                {service.name}
-                              </div>
-                            </div>
+                            {dropdownItem.isNew && (
+                              <Star className="w-4 h-4 text-yellow-500" />
+                            )}
                           </Link>
                         ))}
-                      </div>
-                    </div>
-                  </motion.div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 )}
-              </AnimatePresence>
-            </div>
-
-            {/* Company Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('company')}
-                className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200 py-2"
-              >
-                <span>Company</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                  activeDropdown === 'company' ? 'rotate-180' : ''
-                }`} />
-              </button>
-              
-              <AnimatePresence>
-                {activeDropdown === 'company' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden"
-                  >
-                    <div className="p-4">
-                      <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                        About Zion Tech
-                      </h3>
-                      <div className="space-y-2">
-                        {company.map((item) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            onClick={closeAllDropdowns}
-                            className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group"
-                          >
-                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 p-2 flex items-center justify-center">
-                              <item.icon className="w-4 h-4 text-purple-400" />
-                            </div>
-                            <div>
-                              <div className="text-white font-medium group-hover:text-purple-300 transition-colors duration-200">
-                                {item.name}
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            <Link href="/blog" className="text-white/80 hover:text-white transition-colors duration-200">
-              Blog
-            </Link>
-            <Link href="/contact" className="text-white/80 hover:text-white transition-colors duration-200">
-              Contact
-            </Link>
+              </div>
+            ))}
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
-            <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-              Get Started
-            </button>
+          <div className="hidden md:flex items-center space-x-4">
+            <Link
+              href="/mega-content-showcase"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              <span className="flex items-center space-x-2">
+                <span>🔥 New Content</span>
+                <TrendingUp className="w-4 h-4" />
+              </span>
+            </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-white/80 hover:text-white transition-colors duration-200"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden border-t border-gray-200"
+            >
+              <div className="py-4 space-y-2">
+                {navigationItems.map((item) => (
+                  <div key={item.label}>
+                    <Link
+                      href={item.href}
+                      className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors rounded-lg"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <div className="flex items-center space-x-2">
+                        <span>{item.icon}</span>
+                        <span>{item.label}</span>
+                        {item.isNew && (
+                          <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+                            NEW
+                          </span>
+                        )}
+                        {item.badge && (
+                          <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full">
+                            {item.badge}
+                          </span>
+                        )}
+                      </div>
+                      {item.dropdown && (
+                        <ChevronDown className="w-4 h-4" />
+                      )}
+                    </Link>
+                    
+                    {/* Mobile Dropdown */}
+                    {item.dropdown && (
+                      <div className="ml-4 space-y-1">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.label}
+                            href={dropdownItem.href}
+                            className="flex items-center justify-between px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors rounded-lg"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <span>{dropdownItem.label}</span>
+                            {dropdownItem.isNew && (
+                              <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+                                NEW
+                              </span>
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+                
+                {/* Mobile CTA */}
+                <div className="pt-4 border-t border-gray-200">
+                  <Link
+                    href="/mega-content-showcase"
+                    className="flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <span>🔥 New Content</span>
+                    <TrendingUp className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-slate-900/95 backdrop-blur-xl border-t border-white/10"
-          >
-            <div className="px-6 py-6 space-y-6">
-              {/* Services Section */}
-              <div>
-                <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                  Services
-                </h3>
-                <div className="space-y-2">
-                  {services.map((service) => (
-                    <Link
-                      key={service.name}
-                      href={service.href}
-                      onClick={closeAllDropdowns}
-                      className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200"
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-2 flex items-center justify-center">
-                        <service.icon className="w-4 h-4 text-cyan-400" />
-                      </div>
-                      <div>
-                        <div className="text-white font-medium">{service.name}</div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Company Section */}
-              <div>
-                <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                  Company
-                </h3>
-                <div className="space-y-2">
-                  {company.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      onClick={closeAllDropdowns}
-                      className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200"
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 p-2 flex items-center justify-center">
-                        <item.icon className="w-4 h-4 text-purple-400" />
-                      </div>
-                      <div>
-                        <div className="text-white font-medium">{item.name}</div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <div className="pt-4">
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300">
-                  Get Started
-                </button>
-              </div>
+      {/* Featured Content Banner */}
+      <div className="bg-gradient-to-r from-green-50 to-blue-50 border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <Zap className="w-4 h-4 text-green-600" />
+              <span className="text-sm font-medium text-gray-900">
+                🔥 Revolutionary Content: AI 2025-2030 Predictions, Quantum Computing & Automation Solutions!
+              </span>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Backdrop for dropdowns */}
-      {activeDropdown && (
-        <div
-          className="fixed inset-0 z-40"
-          onClick={() => setActiveDropdown(null)}
-        />
-      )}
+            <Link
+              href="/mega-content-showcase"
+              className="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center space-x-1"
+            >
+              <span>Explore Now</span>
+              <ChevronDown className="w-3 h-3 rotate-[-90deg]" />
+            </Link>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 };

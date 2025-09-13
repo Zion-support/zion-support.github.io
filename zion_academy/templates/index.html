@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }}</title>
+	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+	<header class="bg-white border-b">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
+			<h1 class="text-2xl md:text-3xl font-bold text-gray-900">Zion Academy</h1>
+			<nav class="space-x-4">
+				<a href="/courses" class="text-gray-700 hover:text-gray-900">All Courses</a>
+				<a href="/admin/dashboard" class="text-gray-700 hover:text-gray-900">Admin</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+		<section class="mb-12">
+			<div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-8 text-white">
+				<h2 class="text-2xl md:text-3xl font-bold mb-3">Level up with new content</h2>
+				<p class="text-indigo-100 mb-6">Explore our latest courses on AI Agents, founder launch playbooks, and decentralized governance.</p>
+				<div class="flex flex-wrap gap-3">
+					<a href="/courses" class="bg-white text-indigo-700 font-semibold px-5 py-2 rounded-lg hover:bg-indigo-50">Browse Courses</a>
+					<a href="/academy/founder-course" class="bg-indigo-900 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-800">Start Founder Launch</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="mb-10">
+			<h3 class="text-xl font-semibold text-gray-900 mb-4">Featured</h3>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				{% for course in featured_courses %}
+				<a href="/course/{{ course.id }}" class="block bg-white rounded-xl border hover:shadow-md transition">
+					<div class="p-5">
+						<h4 class="font-semibold text-gray-900 mb-1">{{ course.title }}</h4>
+						<p class="text-sm text-gray-600 line-clamp-3">{{ course.description }}</p>
+					</div>
+				</a>
+				{% else %}
+				<p class="text-gray-600">No featured courses yet.</p>
+				{% endfor %}
+			</div>
+		</section>
+
+		<section>
+			<h3 class="text-xl font-semibold text-gray-900 mb-4">Latest</h3>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				{% for course in latest_courses %}
+				<a href="/course/{{ course.id }}" class="block bg-white rounded-xl border hover:shadow-md transition">
+					<div class="p-5">
+						<h4 class="font-semibold text-gray-900 mb-1">{{ course.title }}</h4>
+						<p class="text-sm text-gray-600 line-clamp-3">{{ course.description }}</p>
+					</div>
+				</a>
+				{% else %}
+				<p class="text-gray-600">No courses found. Check back soon.</p>
+				{% endfor %}
+			</div>
+		</section>
+	</main>
+
+	<footer class="py-10 text-center text-sm text-gray-500">
+		<p>© {{ ("now" | date("%Y")) if false else '' }} Zion Academy</p>
+	</footer>
+</body>
+</html>
+

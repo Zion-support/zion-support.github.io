@@ -1,74 +1,59 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { motion } from 'framer-motion';
-import { Star, Quote, CheckCircle } from 'lucide-react';
-const testimonials = [
-    {
-        id: 1,
-        name: "Sarah Chen",
-        role: "CTO at TechFlow Inc.",
-        company: "TechFlow Inc.",
-        avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-        content: "Zion Tech Group transformed our IT infrastructure. Their 24/7 support and certified technicians saved us countless hours and prevented major downtime.",
-        rating: 5,
-        category: "IT Services"
-    },
-    {
-        id: 2,
-        name: "Marcus Rodriguez",
-        role: "Founder & CEO",
-        company: "InnovateLab",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-        content: "Finding the right AI talent was a game-changer for our startup. Zion's matching algorithm connected us with experts who perfectly fit our needs.",
-        rating: 5,
-        category: "AI Talent"
-    },
-    {
-        id: 3,
-        name: "Dr. Emily Watson",
-        role: "Research Director",
-        company: "Quantum Research Institute",
-        avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-        content: "The quality of equipment and services we've sourced through Zion has accelerated our research by months. Highly recommended for any tech needs.",
-        rating: 5,
-        category: "Equipment & Services"
-    },
-    {
-        id: 4,
-        name: "David Kim",
-        role: "Operations Manager",
-        company: "Global Solutions Corp",
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-        content: "We operate in 12 countries and Zion's global network has been invaluable. Same quality service everywhere, anytime we need it.",
-        rating: 5,
-        category: "Global Services"
-    },
-    {
-        id: 5,
-        name: "Lisa Thompson",
-        role: "VP of Engineering",
-        company: "CloudScale Technologies",
-        avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face",
-        content: "The marketplace is incredibly intuitive and the vetting process gives us confidence. We've built long-term partnerships through Zion.",
-        rating: 5,
-        category: "Marketplace"
-    },
-    {
-        id: 6,
-        name: "James Wilson",
-        role: "IT Director",
-        company: "Healthcare Plus",
-        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-        content: "Critical IT support when we need it most. Zion's emergency response team has been our lifeline during system outages.",
-        rating: 5,
-        category: "Emergency Support"
-    }
-];
-const stats = [
-    { number: "99.2%", label: "Customer Satisfaction" },
-    { number: "4.9/5", label: "Average Rating" },
-    { number: "50K+", label: "Projects Completed" },
-    { number: "150+", label: "Countries Served" }
-];
+import { motion } from "framer-motion";
+import { Star, Quote, CheckCircle, Shield, Users, Globe } from "lucide-react";
 export function TestimonialsSection() {
-    return (_jsx("section", { className: "py-20 bg-gradient-to-b from-zion-blue-light to-zion-blue-dark", children: _jsxs("div", { className: "container mx-auto px-4", children: [_jsxs(motion.div, { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 }, className: "text-center mb-16", children: [_jsx("h2", { className: "text-4xl md:text-5xl font-bold text-white mb-6", children: "Trusted by Industry Leaders" }), _jsx("p", { className: "text-xl text-zion-slate-light max-w-3xl mx-auto", children: "Join thousands of satisfied customers who have transformed their businesses with Zion Tech Group" })] }), _jsx(motion.div, { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6, delay: 0.2 }, className: "grid grid-cols-2 md:grid-cols-4 gap-8 mb-16", children: stats.map((stat, index) => (_jsxs("div", { className: "text-center", children: [_jsx("div", { className: "text-3xl md:text-4xl font-bold text-white mb-2", children: stat.number }), _jsx("div", { className: "text-zion-slate-light text-sm md:text-base", children: stat.label })] }, stat.label))) }), _jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16", children: testimonials.map((testimonial, index) => (_jsx(motion.div, { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6, delay: index * 0.1 }, whileHover: { y: -5, scale: 1.02 }, className: "group", children: _jsxs("div", { className: "bg-white/10 backdrop-blur-sm rounded-xl p-6 h-full border border-white/20 hover:border-white/40 transition-all duration-300", children: [_jsx("div", { className: "mb-4", children: _jsx(Quote, { className: "w-8 h-8 text-zion-purple opacity-60" }) }), _jsxs("p", { className: "text-zion-slate-light mb-6 leading-relaxed", children: ["\"", testimonial.content, "\""] }), _jsx("div", { className: "flex items-center gap-1 mb-4", children: [...Array(testimonial.rating)].map((_, i) => (_jsx(Star, { className: "w-4 h-4 text-yellow-400 fill-current" }, i))) }), _jsx("div", { className: "inline-block bg-zion-purple/20 text-zion-purple text-xs px-3 py-1 rounded-full mb-4", children: testimonial.category }), _jsxs("div", { className: "flex items-center gap-3", children: [_jsx("div", { className: "w-12 h-12 rounded-full overflow-hidden bg-zion-blue-light", children: _jsx("img", { src: testimonial.avatar, alt: testimonial.name, className: "w-full h-full object-cover" }) }), _jsxs("div", { children: [_jsx("div", { className: "font-semibold text-white text-sm", children: testimonial.name }), _jsx("div", { className: "text-zion-slate-light text-xs", children: testimonial.role }), _jsx("div", { className: "text-zion-slate-light text-xs", children: testimonial.company })] })] })] }) }, testimonial.id))) }), _jsx(motion.div, { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6, delay: 0.8 }, className: "text-center", children: _jsxs("div", { className: "bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20", children: [_jsx("h3", { className: "text-2xl font-bold text-white mb-6", children: "Why Companies Choose Zion" }), _jsxs("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-6", children: [_jsxs("div", { className: "flex items-center gap-3", children: [_jsx(CheckCircle, { className: "w-6 h-6 text-green-400" }), _jsx("span", { className: "text-zion-slate-light", children: "Verified & Background-Checked Providers" })] }), _jsxs("div", { className: "flex items-center gap-3", children: [_jsx(CheckCircle, { className: "w-6 h-6 text-green-400" }), _jsx("span", { className: "text-zion-slate-light", children: "24/7 Global Support & Emergency Response" })] }), _jsxs("div", { className: "flex items-center gap-3", children: [_jsx(CheckCircle, { className: "w-6 h-6 text-green-400" }), _jsx("span", { className: "text-zion-slate-light", children: "AI-Powered Matching & Quality Guarantee" })] })] }), _jsx("div", { className: "mt-8", children: _jsx("button", { className: "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105", children: "Join Our Success Stories" }) })] }) })] }) }));
+    const testimonials = [
+        {
+            name: "Sarah Chen",
+            role: "CTO at TechFlow",
+            company: "TechFlow Inc.",
+            content: "Zion transformed our hiring process. We found 3 senior AI engineers in just 2 weeks. The AI matching is incredibly accurate!",
+            rating: 5,
+            avatar: "SC",
+            verified: true
+        },
+        {
+            name: "Marcus Rodriguez",
+            role: "Head of Engineering",
+            company: "InnovateCorp",
+            content: "The quality of talent on Zion is unmatched. Every developer we've hired has exceeded our expectations. Highly recommended!",
+            rating: 5,
+            avatar: "MR",
+            verified: true
+        },
+        {
+            name: "Dr. Emily Watson",
+            role: "AI Research Lead",
+            company: "FutureTech Labs",
+            content: "Zion's equipment marketplace saved us months of procurement time. We got cutting-edge AI hardware delivered in days.",
+            rating: 5,
+            avatar: "EW",
+            verified: true
+        }
+    ];
+    const stats = [
+        { icon: _jsx(Users, { className: "h-6 w-6" }), value: "50,000+", label: "Active Users" },
+        { icon: _jsx(Globe, { className: "h-6 w-6" }), value: "150+", label: "Countries" },
+        { icon: _jsx(CheckCircle, { className: "h-6 w-6" }), value: "99.8%", label: "Success Rate" },
+        { icon: _jsx(Shield, { className: "h-6 w-6" }), value: "100%", label: "Secure" }
+    ];
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.1
+            }
+        }
+    };
+    const itemVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, ease: "easeOut" }
+        }
+    };
+    return (_jsxs("section", { className: "relative py-24 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark overflow-hidden", children: [_jsxs("div", { className: "absolute inset-0", children: [_jsx("div", { className: "absolute top-20 left-20 w-64 h-64 bg-zion-purple/5 rounded-full blur-3xl" }), _jsx("div", { className: "absolute bottom-20 right-20 w-80 h-80 bg-zion-cyan/5 rounded-full blur-3xl" })] }), _jsxs("div", { className: "container mx-auto px-4 relative z-10", children: [_jsxs(motion.div, { className: "text-center mb-20", initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.8 }, children: [_jsxs("div", { className: "inline-flex items-center gap-2 mb-4 px-4 py-2 bg-zion-purple/20 border border-zion-purple/30 rounded-full backdrop-blur-sm", children: [_jsx(Star, { className: "h-4 w-4 text-zion-purple" }), _jsx("span", { className: "text-zion-purple text-sm font-medium", children: "Trusted by Thousands" })] }), _jsx("h2", { className: "text-4xl md:text-5xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-6", children: "What Our Users Say" }), _jsx("p", { className: "text-zion-slate-light text-lg md:text-xl max-w-3xl mx-auto", children: "Join thousands of satisfied users who have transformed their businesses with Zion's AI-powered marketplace" })] }), _jsx(motion.div, { className: "grid grid-cols-2 md:grid-cols-4 gap-8 mb-20", variants: containerVariants, initial: "hidden", whileInView: "visible", viewport: { once: true }, children: stats.map((stat, index) => (_jsxs(motion.div, { variants: itemVariants, className: "text-center group", children: [_jsx("div", { className: "inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-cyan-light rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300", children: _jsx("div", { className: "text-white", children: stat.icon }) }), _jsx("div", { className: "text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300", children: stat.value }), _jsx("div", { className: "text-zion-slate-light text-sm font-medium", children: stat.label })] }, index))) }), _jsx(motion.div, { className: "grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto", variants: containerVariants, initial: "hidden", whileInView: "visible", viewport: { once: true }, children: testimonials.map((testimonial, index) => (_jsx(motion.div, { variants: itemVariants, className: "group relative", children: _jsxs("div", { className: "relative bg-zion-blue/10 border border-zion-blue/20 rounded-2xl p-8 h-full backdrop-blur-sm hover:border-zion-purple/30 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/10", children: [_jsx("div", { className: "absolute top-6 right-6 text-zion-purple/20 group-hover:text-zion-purple/40 transition-colors duration-300", children: _jsx(Quote, { className: "h-8 w-8" }) }), _jsx("div", { className: "flex items-center gap-1 mb-4", children: [...Array(testimonial.rating)].map((_, i) => (_jsx(Star, { className: "h-5 w-5 fill-zion-purple text-zion-purple" }, i))) }), _jsxs("blockquote", { className: "text-zion-slate-light mb-6 leading-relaxed group-hover:text-white transition-colors duration-300", children: ["\"", testimonial.content, "\""] }), _jsxs("div", { className: "flex items-center gap-4", children: [_jsx("div", { className: "w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-purple-light rounded-full flex items-center justify-center text-white font-semibold text-lg", children: testimonial.avatar }), _jsxs("div", { className: "flex-1", children: [_jsxs("div", { className: "flex items-center gap-2 mb-1", children: [_jsx("h4", { className: "font-semibold text-white", children: testimonial.name }), testimonial.verified && (_jsx(CheckCircle, { className: "h-4 w-4 text-zion-cyan" }))] }), _jsx("p", { className: "text-zion-slate-light text-sm", children: testimonial.role }), _jsx("p", { className: "text-zion-purple text-sm font-medium", children: testimonial.company })] })] }), _jsx("div", { className: "absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-zion-purple/20 transition-all duration-300" })] }) }, index))) }), _jsx(motion.div, { className: "text-center mt-20", initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.8, delay: 0.4 }, children: _jsxs("div", { className: "inline-flex items-center gap-8 px-8 py-6 bg-zion-blue/10 border border-zion-blue/20 rounded-2xl backdrop-blur-sm", children: [_jsxs("div", { className: "flex items-center gap-3", children: [_jsx(Shield, { className: "h-6 w-6 text-zion-cyan" }), _jsx("span", { className: "text-zion-slate-light font-medium", children: "SOC 2 Certified" })] }), _jsxs("div", { className: "flex items-center gap-3", children: [_jsx(CheckCircle, { className: "h-6 w-6 text-zion-purple" }), _jsx("span", { className: "text-zion-slate-light font-medium", children: "GDPR Compliant" })] }), _jsxs("div", { className: "flex items-center gap-3", children: [_jsx(Globe, { className: "h-6 w-6 text-zion-blue" }), _jsx("span", { className: "text-zion-slate-light font-medium", children: "Global Coverage" })] })] }) })] })] }));
 }

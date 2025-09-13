@@ -10,8 +10,11 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-export function Input(_a) {
-    var { className = '' } = _a, props = __rest(_a, ["className"]);
-    const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50';
-    return (_jsx("input", Object.assign({ className: `${baseClasses} ${className}` }, props)));
-}
+import * as React from "react";
+import { cn } from "@/lib/utils";
+const Input = React.forwardRef((_a, ref) => {
+    var { className, type } = _a, props = __rest(_a, ["className", "type"]);
+    return (_jsx("input", Object.assign({ type: type, className: cn("flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50", className), ref: ref }, props)));
+});
+Input.displayName = "Input";
+export { Input };

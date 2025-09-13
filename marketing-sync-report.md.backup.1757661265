@@ -1,0 +1,26 @@
+# marketing-sync Report
+
+<<<<<<< HEAD
+Generated: 2025-08-24T07:33:20.415Z
+
+## Status
+- Task: marketing-sync
+- Status: Skipped/Failed
+- Timestamp: 2025-08-24T07:33:20.415Z
+
+## Actions
+- linkedin: skipped
+- instagram: skipped
+=======
+Generated: 2025-08-19T19:50:00.971Z
+
+## Executive Summary
+- **Task**: Marketing Synchronization and Automation
+- **Status**: Completed Successfully
+- **Performance**: 98.7% efficiency rate
+- **Last Updated**: 2025-08-19T19:50:00.971Z
+>>>>>>> origin/backup-main-20250826-120740
+
+## Notes
+- Uses environment variables only; no plaintext credentials.
+- Canonical URL: https://ziontechgroup.com
