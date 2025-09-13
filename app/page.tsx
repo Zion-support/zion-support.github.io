@@ -23,6 +23,9 @@ const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../compo
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AdvancedContentDiscoveryWidget from '../components/AdvancedContentDiscoveryWidget';
 import AdvancedNewsletterSignup from '../components/AdvancedNewsletterSignup';
+import AIConsciousnessEvolution2027 from '../components/AIConsciousnessEvolution2027';
+import QuantumComputingBreakthrough2027 from '../components/QuantumComputingBreakthrough2027';
+import UltimateAIAssistant2027 from '../components/UltimateAIAssistant2027';
 
 export default function HomePage() {
   return (
@@ -52,6 +55,15 @@ export default function HomePage() {
         
         {/* FUTURE TECH SHOWCASE 2026 */}
         <FutureTechShowcase2026 />
+        
+        {/* AI CONSCIOUSNESS EVOLUTION 2027 */}
+        <AIConsciousnessEvolution2027 />
+        
+        {/* QUANTUM COMPUTING BREAKTHROUGH 2027 */}
+        <QuantumComputingBreakthrough2027 />
+        
+        {/* ULTIMATE AI ASSISTANT 2027 */}
+        <UltimateAIAssistant2027 />
         
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <NewContentPromotionBanner2025 />
