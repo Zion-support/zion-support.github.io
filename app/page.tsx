@@ -174,6 +174,12 @@ import AI2026FuturePredictionsUltimatePromotionBanner from '../components/AI2026
 import AI2026QuantumBreakthroughPromotionBanner from '../components/AI2026QuantumBreakthroughPromotionBanner';
 import AI2026NeuralInterfacesPromotionBanner from '../components/AI2026NeuralInterfacesPromotionBanner';
 
+// Import new 2026 content showcase and interactive demo components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import InteractiveAIToolsDemo2026 from '../components/InteractiveAIToolsDemo2026';
+import InteractiveAIToolsDemo2026PromotionBanner from '../components/InteractiveAIToolsDemo2026PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
