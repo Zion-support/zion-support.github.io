@@ -93,6 +93,7 @@ import BusinessTransformationGuide2025PromotionBanner from '../components/Busine
 import AISolutions2026ComprehensivePromotionBanner from '../components/AISolutions2026ComprehensivePromotionBanner';
 import BusinessAutomationMastery2026PromotionBanner from '../components/BusinessAutomationMastery2026PromotionBanner';
 
+<<<<<<< HEAD
 // New 2025 Ultimate Innovation Showcase Components
 import AI2025UltimateInnovationShowcasePromotionBanner from '../components/AI2025UltimateInnovationShowcasePromotionBanner';
 
@@ -101,6 +102,11 @@ import AI2030FutureVisionPromotionBanner from '../components/AI2030FutureVisionP
 
 // New Quantum AI Revolution 2035 Components
 import QuantumAIRevolution2035PromotionBanner from '../components/QuantumAIRevolution2035PromotionBanner';
+
+// New 2026 content components
+import AIInnovationShowcase2026PromotionBanner from '../components/AIInnovationShowcase2026PromotionBanner';
+import InteractiveTechDemo2026PromotionBanner from '../components/InteractiveTechDemo2026PromotionBanner';
+import SuccessStoriesShowcase2026PromotionBanner from '../components/SuccessStoriesShowcase2026PromotionBanner';
 
 export default function HomePage() {
   return (
@@ -113,13 +119,21 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <NewContentPromotionBanner2025 />
           </div>
         </div>
+
+        {/* NEW AI INNOVATION SHOWCASE 2026 PROMOTION BANNER */}
+        <AIInnovationShowcase2026PromotionBanner />
+        
+        {/* NEW INTERACTIVE TECH DEMO 2026 PROMOTION BANNER */}
+        <InteractiveTechDemo2026PromotionBanner />
+        
+        {/* NEW SUCCESS STORIES 2026 PROMOTION BANNER */}
+        <SuccessStoriesShowcase2026PromotionBanner />
 
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
