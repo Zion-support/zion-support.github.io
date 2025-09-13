@@ -23,6 +23,14 @@ import AdvancedAutomationSolutionsPromotionBanner2025 from '../components/Advanc
 import SuccessStoriesShowcase2025 from '../components/SuccessStoriesShowcase2025';
 import InteractiveContentRecommendationEngine from '../components/InteractiveContentRecommendationEngine';
 
+// Enhanced Case Studies and Content Showcase
+import EnhancedCaseStudiesShowcase from '../components/EnhancedCaseStudiesShowcase';
+import ComprehensiveContentShowcase from '../components/ComprehensiveContentShowcase';
+
+// Performance and SEO Optimization
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import SEOEnhancer from '../components/SEOEnhancer';
+
 // New Ultimate Content Revolution Components
 import AI2025_2030UltimateContentRevolutionBanner from '../components/AI2025_2030UltimateContentRevolutionBanner';
 import AI2025_2030UltimateContentRevolutionShowcase from '../components/AI2025_2030UltimateContentRevolutionShowcase';
@@ -344,13 +352,23 @@ const HomePage: React.FC = () => {
       <EnhancedErrorBoundary>
         <PerformanceMonitor>
           <AccessibilityEnhancer>
-            <SEO 
-              title="Zion Tech Group - Revolutionary AI Solutions & Technology Services"
-              description="Discover cutting-edge AI solutions, quantum computing breakthroughs, and revolutionary technology services. Leading the future of artificial intelligence and digital transformation."
-              keywords="AI solutions, quantum computing, technology services, artificial intelligence, digital transformation, machine learning, neural networks"
-            />
-            
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <PerformanceOptimizer>
+              <SEOEnhancer 
+                title="Zion Tech Group - Revolutionary AI Solutions & Technology Services"
+                description="Discover cutting-edge AI solutions, quantum computing breakthroughs, and revolutionary technology services. Leading the future of artificial intelligence and digital transformation."
+                keywords={[
+                  "AI solutions", "quantum computing", "technology services", 
+                  "artificial intelligence", "digital transformation", "machine learning", 
+                  "neural networks", "AI automation", "enterprise AI", "AI consulting"
+                ]}
+              />
+              <SEO 
+                title="Zion Tech Group - Revolutionary AI Solutions & Technology Services"
+                description="Discover cutting-edge AI solutions, quantum computing breakthroughs, and revolutionary technology services. Leading the future of artificial intelligence and digital transformation."
+                keywords="AI solutions, quantum computing, technology services, artificial intelligence, digital transformation, machine learning, neural networks"
+              />
+              
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
               {/* Hero Section */}
               <section className="relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -1354,6 +1372,16 @@ const HomePage: React.FC = () => {
                 <NewsletterSignupAndSocialSharing2025 />
               </Suspense>
 
+              {/* Enhanced Case Studies Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <EnhancedCaseStudiesShowcase />
+              </Suspense>
+
+              {/* Comprehensive Content Showcase */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <ComprehensiveContentShowcase />
+              </Suspense>
+
               {/* Comprehensive Content Discovery 2025 */}
               <Suspense fallback={<LoadingSpinner />}>
                 <ComprehensiveContentDiscovery2025 />
@@ -1394,7 +1422,8 @@ const HomePage: React.FC = () => {
               <Suspense fallback={<LoadingSpinner />}>
                 <LazyAdvancedComponents />
               </Suspense>
-            </div>
+              </div>
+            </PerformanceOptimizer>
           </AccessibilityEnhancer>
         </PerformanceMonitor>
       </EnhancedErrorBoundary>

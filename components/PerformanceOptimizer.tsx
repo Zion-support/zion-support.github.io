@@ -1,178 +1,147 @@
-// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  componentCount: number;
-  bundleSize: number;
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    componentCount: 0,
-    bundleSize: 0
-  });
-
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   const [isOptimized, setIsOptimized] = useState(false);
 
   useEffect(() => {
-    const startTime = performance.now();
-    
-    // Measure load time
-    const measureLoadTime = () => {
-      const loadTime = performance.now() - startTime;
-      setMetrics(prev => ({ ...prev, loadTime }));
-    };
+    // Preload critical resources
+    const preloadResources = () => {
+      // Preload critical fonts
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'preload';
+      fontLink.href = '/fonts/inter-var.woff2';
+      fontLink.as = 'font';
+      fontLink.type = 'font/woff2';
+      fontLink.crossOrigin = 'anonymous';
+      document.head.appendChild(fontLink);
 
-    // Measure memory usage
-    const measureMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        setMetrics(prev => ({ 
-          ...prev, 
-          memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
-        }));
+      // Preload critical images
+      const criticalImages = [
+        '/images/hero-bg.jpg',
+        '/images/logo.svg',
+        '/images/icons/ai-icon.svg'
+      ];
+
+      criticalImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+
+      // Enable service worker for caching
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('Service Worker registered:', registration);
+          })
+          .catch(error => {
+            console.log('Service Worker registration failed:', error);
+          });
       }
     };
 
-    // Count components
-    const countComponents = () => {
-      const components = document.querySelectorAll('[data-component]');
-      setMetrics(prev => ({ ...prev, componentCount: components.length }));
-    };
-
-    // Measure bundle size (approximate)
-    const measureBundleSize = () => {
-      const scripts = document.querySelectorAll('script[src]');
-      let totalSize = 0;
-      scripts.forEach(script => {
-        const src = script.getAttribute('src');
-        if (src && src.includes('js')) {
-          // This is a rough estimate
-          totalSize += 100; // KB per script
-        }
+    // Optimize images with lazy loading
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            observer.unobserve(img);
+          }
+        });
       });
-      setMetrics(prev => ({ ...prev, bundleSize: totalSize }));
+
+      images.forEach(img => imageObserver.observe(img));
     };
 
-    // Run measurements
-    measureLoadTime();
-    measureMemory();
-    countComponents();
-    measureBundleSize();
+    // Optimize CSS delivery
+    const optimizeCSS = () => {
+      // Add critical CSS inline
+      const criticalCSS = `
+        .hero-section { 
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .loading-spinner {
+          border: 4px solid #f3f3f3;
+          border-top: 4px solid #3498db;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      `;
 
-    // Check if performance is optimized
-    const checkOptimization = () => {
-      const optimized = 
-        metrics.loadTime < 2000 && // Less than 2 seconds
-        metrics.memoryUsage < 100 && // Less than 100MB
-        metrics.componentCount < 50 && // Less than 50 components
-        metrics.bundleSize < 500; // Less than 500KB
-
-      setIsOptimized(optimized);
+      const style = document.createElement('style');
+      style.textContent = criticalCSS;
+      document.head.appendChild(style);
     };
 
-    // Run optimization check after a delay
-    setTimeout(checkOptimization, 1000);
+    // Defer non-critical JavaScript
+    const deferNonCriticalJS = () => {
+      const scripts = document.querySelectorAll('script[data-defer]');
+      scripts.forEach(script => {
+        const newScript = document.createElement('script');
+        newScript.src = script.getAttribute('src') || '';
+        newScript.async = true;
+        newScript.defer = true;
+        document.head.appendChild(newScript);
+      });
+    };
+
+    // Initialize optimizations
+    preloadResources();
+    optimizeImages();
+    optimizeCSS();
+    deferNonCriticalJS();
+
+    setIsOptimized(true);
+
+    // Performance monitoring
+    if ('performance' in window) {
+      window.addEventListener('load', () => {
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        console.log('Page Load Performance:', {
+          domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+          loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
+          firstPaint: performance.getEntriesByType('paint').find(entry => entry.name === 'first-contentful-paint')?.startTime,
+          largestContentfulPaint: performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
+        });
+      });
+    }
 
     // Cleanup
     return () => {
-      // Cleanup if needed
+      // Remove event listeners and observers
     };
   }, []);
 
-  // Performance recommendations
-  const getRecommendations = () => {
-    const recommendations = [];
-
-    if (metrics.loadTime > 2000) {
-      recommendations.push('Consider lazy loading components');
-    }
-
-    if (metrics.memoryUsage > 100) {
-      recommendations.push('Optimize memory usage with cleanup');
-    }
-
-    if (metrics.componentCount > 50) {
-      recommendations.push('Reduce component count or use virtualization');
-    }
-
-    if (metrics.bundleSize > 500) {
-      recommendations.push('Split bundle into smaller chunks');
-    }
-
-    return recommendations;
-  };
-
-  const recommendations = getRecommendations();
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 max-w-sm z-50">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
-          Performance Monitor
-        </h3>
-        <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}></div>
-      </div>
-      
-      <div className="space-y-2 text-xs text-gray-600 dark:text-gray-300">
-        <div className="flex justify-between">
-          <span>Load Time:</span>
-          <span className={metrics.loadTime > 2000 ? 'text-red-500' : 'text-green-500'}>
-            {metrics.loadTime.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>Memory:</span>
-          <span className={metrics.memoryUsage > 100 ? 'text-red-500' : 'text-green-500'}>
-            {metrics.memoryUsage}MB
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>Components:</span>
-          <span className={metrics.componentCount > 50 ? 'text-red-500' : 'text-green-500'}>
-            {metrics.componentCount}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>Bundle Size:</span>
-          <span className={metrics.bundleSize > 500 ? 'text-red-500' : 'text-green-500'}>
-            {metrics.bundleSize}KB
-          </span>
+  // Render loading state while optimizing
+  if (!isOptimized) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-900">
+        <div className="text-center">
+          <div className="loading-spinner mx-auto mb-4"></div>
+          <p className="text-white text-lg">Optimizing performance...</p>
         </div>
       </div>
+    );
+  }
 
-      {recommendations.length > 0 && (
-        <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-600">
-          <h4 className="text-xs font-semibold text-gray-900 dark:text-white mb-1">
-            Recommendations:
-          </h4>
-          <ul className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
-            {recommendations.map((rec, index) => (
-              <li key={index} className="flex items-start">
-                <span className="text-yellow-500 mr-1">•</span>
-                {rec}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-600">
-        <div className="text-xs text-gray-500 dark:text-gray-400">
-          Status: {isOptimized ? 'Optimized' : 'Needs Attention'}
-        </div>
-      </div>
-    </div>
-  );
+  return <>{children}</>;
 };
 
 export default PerformanceOptimizer;
