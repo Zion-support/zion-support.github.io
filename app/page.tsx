@@ -29,6 +29,9 @@ import UltimateContentShowcase2026 from '../components/UltimateContentShowcase20
 import NewContentShowcase2026 from '../components/NewContentShowcase2026';
 import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
 
+// New 2025 content promotion components
+import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
+
 // New revolutionary components
 import RevolutionaryAIContentPromotionBanner from '../components/RevolutionaryAIContentPromotionBanner';
 import RevolutionaryCaseStudiesShowcase from '../components/RevolutionaryCaseStudiesShowcase';
@@ -58,6 +61,11 @@ import InteractiveTechDemo2026 from '../components/InteractiveTechDemo2026';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
 import UltimateContentHub2026 from '../components/UltimateContentHub2026';
 
+// New content promotion banners
+import AISolutions2025UltimatePromotionBanner from '../components/AISolutions2025UltimatePromotionBanner';
+import TechTrends2025_2030PromotionBanner from '../components/TechTrends2025_2030PromotionBanner';
+import BusinessTransformationGuide2025PromotionBanner from '../components/BusinessTransformationGuide2025PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -69,6 +77,25 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTION BANNER 2025 */}
+        <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <NewContentPromotionBanner2025 />
+          </div>
+        </div>
+        
+        {/* ULTIMATE SERVICES SHOWCASE 2025 */}
+        <UltimateServicesShowcase2025 />
+        
+        {/* NEW AI SOLUTIONS 2025 ULTIMATE PROMOTION BANNER */}
+        <AISolutions2025UltimatePromotionBanner />
+        
+        {/* NEW TECH TRENDS 2025-2030 PROMOTION BANNER */}
+        <TechTrends2025_2030PromotionBanner />
+        
+        {/* NEW BUSINESS TRANSFORMATION GUIDE 2025 PROMOTION BANNER */}
+        <BusinessTransformationGuide2025PromotionBanner />
+        
         {/* NEURAL CONSENSUS 2026 PROMOTION BANNER */}
         <NeuralConsensus2026PromotionBanner />
         
