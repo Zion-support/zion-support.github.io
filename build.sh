@@ -17,7 +17,7 @@ yarn cache clean
 echo "Installing dependencies..."
 for i in {1..3}; do
   echo "Attempt $i of 3..."
-  if yarn install --frozen-lockfile --network-timeout 100000 --no-cache --ignore-engines --ignore-platform; then
+  if yarn install --network-timeout 100000 --no-cache --ignore-engines --ignore-platform; then
     echo "Dependencies installed successfully!"
     break
   else
