@@ -27,9 +27,16 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
+        run: npm ci
+      - name: Run self healing build
+        run: 
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        uses: peter-evans/create-pull-request@v7
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7
+    runs_on: ubuntu-latest

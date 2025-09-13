@@ -1,6 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -10,109 +8,44 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-  showDetails: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: '',
-      showDetails: false
-    };
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      showDetails: false
-    };
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
 
-    // Log error to monitoring service in production
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      // Log error in development mode
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
     // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
+    this.props.onError?.(error, errorInfo);
 
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+    // Log to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send the error to a logging service
+      // like Sentry, LogRocket, or your own error tracking service
+      console.error('Production error:', error, errorInfo);
     }
-
-    // Send error to error reporting service (if configured)
-    this.reportError(error, errorInfo);
   }
 
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to your error reporting service
-    // For now, we'll just log it
-    console.error('Error Report:', {
-      errorId: this.state.errorId,
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString()
-    });
-  };
-
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: '',
-      showDetails: false
-    });
-  };
-
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  private handleGoBack = () => {
-    window.history.back();
-  };
-
-  private handleReportBug = () => {
-    const errorDetails = {
-      errorId: this.state.errorId,
-      message: this.state.error?.message,
-      stack: this.state.error?.stack,
-      componentStack: this.state.errorInfo?.componentStack,
-      url: window.location.href,
-      userAgent: navigator.userAgent,
-      timestamp: new Date().toISOString()
-    };
-
-    // In a real application, you would send this to your bug reporting system
-    console.log('Bug Report:', errorDetails);
-    
-    // For now, we'll open the contact page
-    window.location.href = '/contact';
-  };
-
-  private toggleDetails = () => {
-    this.setState(prev => ({ showDetails: !prev.showDetails }));
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
   render() {
@@ -122,126 +55,81 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
+      // Default error UI
       return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center p-4">
-          <motion.div
-            className="max-w-2xl mx-auto text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            {/* Error Icon */}
-            <motion.div
-              className="w-24 h-24 mx-auto mb-8 bg-red-500/20 rounded-full flex items-center justify-center"
-              animate={{ 
-                scale: [1, 1.1, 1],
-                rotate: [0, 5, -5, 0]
-              }}
-              transition={{ 
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
-              <AlertTriangle className="w-12 h-12 text-red-400" />
-            </motion.div>
-
-            {/* Error Message */}
-            <h1 className="text-4xl font-bold text-red-400 mb-4">
-              Oops! Something went wrong
-            </h1>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
+            <div className="w-16 h-16 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center">
+              <svg
+                className="w-8 h-8 text-red-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                />
+              </svg>
+            </div>
             
-            <p className="text-xl text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified.
+            <h2 className="text-xl font-semibold text-gray-900 mb-2">
+              Something went wrong
+            </h2>
+            
+            <p className="text-gray-600 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
 
-            {/* Error Details (Development Only) */}
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <motion.div
-                className="bg-gray-900/50 border border-gray-700 rounded-lg p-4 mb-6 text-left"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                transition={{ delay: 0.3 }}
-              >
-                <h3 className="text-lg font-semibold text-red-400 mb-2">Error Details:</h3>
-                <p className="text-sm text-gray-400 mb-2">
-                  <strong>Message:</strong> {this.state.error.message}
-                </p>
-                <p className="text-sm text-gray-400 mb-2">
-                  <strong>Error ID:</strong> {this.state.errorId}
-                </p>
-                {this.state.error.stack && (
-                  <details className="text-sm text-gray-400">
-                    <summary className="cursor-pointer hover:text-gray-300">Stack Trace</summary>
-                    <pre className="mt-2 text-xs bg-gray-800 p-2 rounded overflow-x-auto">
-                      {this.state.error.stack}
-                    </pre>
-                  </details>
-                )}
-              </motion.div>
+              <details className="mb-6 text-left">
+                <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">
+                  Error Details (Development)
+                </summary>
+                <div className="bg-gray-100 p-3 rounded text-xs font-mono text-gray-800 overflow-auto">
+                  <div className="mb-2">
+                    <strong>Error:</strong> {this.state.error.message}
+                  </div>
+                  {this.state.errorInfo && (
+                    <div>
+                      <strong>Component Stack:</strong>
+                      <pre className="mt-1 whitespace-pre-wrap">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
+                    </div>
+                  )}
+                </div>
+              </details>
             )}
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
                 onClick={this.handleRetry}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
               >
-                <RefreshCw className="w-5 h-5" />
                 Try Again
-              </motion.button>
-
-              <motion.button
-                className="px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
-                onClick={this.handleGoBack}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              </button>
+              <button
+                onClick={() => window.location.reload()}
+                className="flex-1 border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-50 transition-colors"
               >
-                <ArrowLeft className="w-5 h-5" />
-                Go Back
-              </motion.button>
-
-              <motion.button
-                className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
-                onClick={this.handleGoHome}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Home className="w-5 h-5" />
-                Go Home
-              </motion.button>
-
-              <motion.button
-                className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
-                onClick={this.handleReportBug}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Bug className="w-5 h-5" />
-                Report Bug
-              </motion.button>
+                Refresh Page
+              </button>
             </div>
 
-            {/* Contact Information */}
-            <div className="mt-8 text-gray-400">
-              <p>Need help? Contact our support team at</p>
-              <a 
-                href="mailto:support@ziontechgroup.com" 
-                className="text-cyan-400 hover:text-cyan-300 underline"
+            <div className="mt-4 text-sm text-gray-500">
+              If the problem persists, please{' '}
+              <a
+                href="/contact"
+                className="text-blue-600 hover:text-blue-700 underline"
               >
-                support@ziontechgroup.com
+                contact support
               </a>
             </div>
-
-            {/* Footer */}
-            <div className="mt-8 text-center">
-              <p className="text-gray-500 text-sm">
-                Zion Tech Group - Revolutionary Technology Solutions
-              </p>
-            </div>
-          </motion.div>
+          </div>
         </div>
       );
     }

@@ -1,0 +1,41 @@
+import React from 'react';
+<<<<<<< HEAD
+export function App() {
+=======
+<<<<<<< HEAD
+import Link from 'next/link';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+
+const NotFound: React.FC = () => {
+  const router = useRouter();
+  const path = router.asPath || '';
+  const title = path && path !== '/' ? `404 – ${path} not found` : '404 – Page Not Found';
+  const description = `The page at ${path || 'this URL'} could not be found.`;
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || '';
+  const canonical = baseUrl && path ? `${baseUrl}${path}` : undefined;
+
+>>>>>>> origin/backup-critical-fixes-20250824-224408
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
+<<<<<<< HEAD
+}
+=======
+};
+
+export default NotFound;
+=======
+export function App() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-63e3
+>>>>>>> origin/backup-critical-fixes-20250824-224408

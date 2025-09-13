@@ -35,15 +35,13 @@ const Navigation = () => {
 
   const navigationItems = [
     { name: 'Home', href: '/', icon: '🏠' },
-    { name: 'About', href: '/about', icon: 'ℹ️' },
+    { name: 'Latest Content', href: '/blog/ai-2025-future-of-work-revolution', icon: '✨', isNew: true, isHot: true },
+    { name: 'Case Studies', href: '/case-studies/ai-transformation-global-tech-giant-2025', icon: '📈', isNew: true },
+    { name: 'Free Resources', href: '/resources/ai-2025-complete-implementation-master-guide', icon: '📚', isNew: true },
+    { name: 'Blog', href: '/blog', icon: '📝', isTrending: true },
+    { name: 'All Case Studies', href: '/case-studies', icon: '📊' },
     { name: 'Services', href: '/services', icon: '🚀' },
-    { name: 'Products', href: '/products', icon: '💎' },
-    { name: 'Content', href: '/content-showcase', icon: '📚', new: true },
-    { name: 'Case Studies', href: '/case-studies', icon: '📊', new: true },
-    { name: 'Blog', href: '/blog', icon: '📝', new: true },
-    { name: 'Resources', href: '/resources', icon: '📋' },
-    { name: 'Testimonials', href: '/testimonials', icon: '⭐' },
-    { name: 'Careers', href: '/careers', icon: '💼' },
+    { name: 'About', href: '/about', icon: 'ℹ️' },
     { name: 'Contact', href: '/contact', icon: '📞' }
   ];
 
@@ -86,9 +84,14 @@ const Navigation = () => {
               >
                 <span className="text-sm">{item.icon}</span>
                 <span className="font-medium">{item.name}</span>
-                {item.new && (
-                  <span className="absolute -top-1 -right-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full font-bold animate-pulse">
+                {item.isNew && (
+                  <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full font-bold">
                     NEW
+                  </span>
+                )}
+                {item.isTrending && (
+                  <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-xs px-2 py-0.5 rounded-full font-bold">
+                    🔥
                   </span>
                 )}
               </Link>
@@ -150,9 +153,14 @@ const Navigation = () => {
               >
                 <span className="text-lg">{item.icon}</span>
                 <span className="font-medium">{item.name}</span>
-                {item.new && (
-                  <span className="ml-auto bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                {item.isNew && (
+                  <span className="bg-green-500 text-white text-xs px-2 py-0.5 rounded-full font-bold ml-auto">
                     NEW
+                  </span>
+                )}
+                {item.isTrending && (
+                  <span className="bg-orange-500 text-white text-xs px-2 py-0.5 rounded-full font-bold ml-auto">
+                    🔥
                   </span>
                 )}
               </Link>
