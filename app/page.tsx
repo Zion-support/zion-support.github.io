@@ -264,6 +264,10 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 // Import latest content navigation
 import LatestContentNavigation from '../components/LatestContentNavigation';
 
+// Import new transformation and showcase components
+import NewContent2025UltimateTransformationBanner from '../components/NewContent2025UltimateTransformationBanner';
+import AI2025RevolutionaryContentShowcaseBanner from '../components/AI2025RevolutionaryContentShowcaseBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -289,6 +293,18 @@ export default function HomePage() {
         <UltimateContentShowcase2026PromotionBanner />
         <AITrendsPredictions2026PromotionBanner />
         <QuantumComputingSolutions2026PromotionBanner />
+        
+        {/* NEW CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
+        
+        {/* NEW ULTIMATE TRANSFORMATION CONTENT BANNER */}
+        <NewContent2025UltimateTransformationBanner />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE BANNER */}
+        <AI2025RevolutionaryContentShowcaseBanner />
+        
+        {/* LATEST CONTENT NAVIGATION */}
+        <LatestContentNavigation />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
@@ -324,6 +340,9 @@ export default function HomePage() {
         
         {/* INTERACTIVE TECH DEMO 2025 */}
         <InteractiveTechDemo2025 />
+        
+        {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
+        <NewContent2025UltimateBreakthroughBanner />
         
         {/* ULTIMATE CONTENT CAROUSEL 2025 */}
         <UltimateContentCarousel2025 />
