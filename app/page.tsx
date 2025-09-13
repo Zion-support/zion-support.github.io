@@ -48,6 +48,10 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 // Import new 2025 content promotion components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
+
+// Import new revolutionary content components
+import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025';
 
 // Import new content showcase components
@@ -202,6 +206,12 @@ export default function HomePage() {
         
         {/* REVOLUTIONARY TECH 2026 PROMOTION BANNER */}
         <RevolutionaryTech2026PromotionBanner />
+        
+        {/* NEW REVOLUTIONARY CONTENT BANNER 2025 */}
+        <RevolutionaryContentBanner2025 />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
