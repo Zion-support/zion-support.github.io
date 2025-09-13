@@ -1,117 +1,160 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function AI2025UltimateBreakthroughPromotionBanner() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % 3);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const slides = [
+    {
+      title: "🚀 AI 2025 Ultimate Breakthrough Revolution",
+      subtitle: "15,000% ROI Guaranteed",
+      description: "Revolutionary AI technology delivering unprecedented results",
+      link: "/ai-2025-ultimate-breakthrough-revolution",
+      bgColor: "from-purple-600 to-pink-600",
+      textColor: "text-white"
+    },
+    {
+      title: "🏆 15,000% ROI Success Story",
+      subtitle: "Fortune 500 Transformation",
+      description: "See how Global Manufacturing Corp achieved incredible results",
+      link: "/case-studies/ai-2025-global-transformation-15000-roi",
+      bgColor: "from-green-600 to-blue-600",
+      textColor: "text-white"
+    },
+    {
+      title: "⚛️ Quantum-Neural Fusion Technology",
+      subtitle: "10,000x Faster Processing",
+      description: "Experience the most advanced AI breakthrough in history",
+      link: "/ai-2025-ultimate-breakthrough-revolution",
+      bgColor: "from-cyan-600 to-indigo-600",
+      textColor: "text-white"
+    }
+  ];
+
+  if (!isVisible) return null;
+
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-red-500 via-purple-600 to-blue-600 py-16 px-4">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-black/10"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 via-purple-600/20 to-blue-600/20"></div>
-      
-      {/* Animated Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-10 right-1/3 w-24 h-24 bg-white/10 rounded-full animate-pulse delay-500"></div>
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-blue-500/10 to-transparent"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-semibold mb-6 animate-bounce">
-            🚀 BREAKTHROUGH ANNOUNCEMENT - LIMITED TIME
+          {/* Main Banner */}
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 border border-red-500/30 mb-4 animate-pulse">
+              <span className="text-red-400 font-semibold text-sm">🔥 REVOLUTIONARY BREAKTHROUGH</span>
+            </div>
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+              AI 2025 Ultimate Breakthrough Revolution
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-4xl mx-auto">
+              Experience the most revolutionary AI breakthrough in human history. 
+              <span className="text-green-400 font-bold"> 15,000% ROI guaranteed</span> through 
+              autonomous operations, quantum-neural fusion, and transcendent intelligence.
+            </p>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI 2025 Ultimate
-            <span className="block bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
-              Breakthrough Revolution
-            </span>
-          </h1>
-
-          {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Experience the most revolutionary AI breakthrough in history, delivering unprecedented 
-            <span className="font-bold text-yellow-300"> 10,000% ROI</span> with 
-            <span className="font-bold text-pink-300"> 99.9% accuracy</span> and 
-            <span className="font-bold text-cyan-300"> 10,000x faster processing</span>.
-          </p>
-
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">10,000%</div>
-              <div className="text-lg text-white/90">Average ROI</div>
-              <div className="text-sm text-white/70">Proven across 500+ enterprises</div>
+          {/* Carousel */}
+          <div className="relative mb-8">
+            <div className="overflow-hidden rounded-xl">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {slides.map((slide, index) => (
+                  <div key={index} className="w-full flex-shrink-0">
+                    <div className={`bg-gradient-to-r ${slide.bgColor} rounded-xl p-8 mx-2`}>
+                      <div className="text-center">
+                        <h2 className="text-2xl md:text-3xl font-bold mb-2">{slide.title}</h2>
+                        <p className="text-xl font-semibold mb-4 text-yellow-300">{slide.subtitle}</p>
+                        <p className="text-lg mb-6 text-gray-200">{slide.description}</p>
+                        <Link 
+                          href={slide.link}
+                          className="inline-block px-6 py-3 bg-white/20 hover:bg-white/30 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
+                        >
+                          Learn More →
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl md:text-4xl font-bold text-pink-300 mb-2">99.9%</div>
-              <div className="text-lg text-white/90">Accuracy Rate</div>
-              <div className="text-sm text-white/70">Industry-leading precision</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-300 mb-2">10,000x</div>
-              <div className="text-lg text-white/90">Faster Processing</div>
-              <div className="text-sm text-white/70">Revolutionary speed improvement</div>
+            
+            {/* Carousel Indicators */}
+            <div className="flex justify-center space-x-2 mt-4">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? 'bg-white' : 'bg-white/30'
+                  }`}
+                />
+              ))}
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          {/* Key Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 rounded-lg p-6 border border-purple-500/30">
+              <div className="text-3xl mb-3">🧠</div>
+              <h3 className="text-xl font-bold mb-2 text-purple-400">Transcendent Intelligence</h3>
+              <p className="text-gray-300 text-sm">99.9% accuracy in all decision-making processes</p>
+            </div>
+            <div className="bg-gradient-to-br from-blue-800/30 to-cyan-800/30 rounded-lg p-6 border border-blue-500/30">
+              <div className="text-3xl mb-3">⚛️</div>
+              <h3 className="text-xl font-bold mb-2 text-blue-400">Quantum-Neural Fusion</h3>
+              <p className="text-gray-300 text-sm">10,000x faster data processing than traditional systems</p>
+            </div>
+            <div className="bg-gradient-to-br from-green-800/30 to-emerald-800/30 rounded-lg p-6 border border-green-500/30">
+              <div className="text-3xl mb-3">🤖</div>
+              <h3 className="text-xl font-bold mb-2 text-green-400">Autonomous Operations</h3>
+              <p className="text-gray-300 text-sm">24/7 fully autonomous business operations</p>
+            </div>
+          </div>
+
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/ai-2025-ultimate-breakthrough-revolution" 
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              🚀 Explore the Revolution
+              Explore Revolutionary Features
             </Link>
             <Link 
-              href="/case-studies/ai-2025-global-transformation-breakthrough" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
+              href="/case-studies/ai-2025-global-transformation-15000-roi" 
+              className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              📊 View Success Stories
+              View Success Stories
             </Link>
             <Link 
               href="/contact" 
-              className="bg-gradient-to-r from-yellow-400 to-pink-400 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-yellow-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              💬 Get Free Consultation
+              Get Exclusive Access
             </Link>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-white/80 text-sm">
-            <div className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              <span>500+ Successful Implementations</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              <span>Fortune 500 Trusted</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              <span>30-Day Money-Back Guarantee</span>
-            </div>
-          </div>
-
-          {/* Urgency Timer */}
-          <div className="mt-8 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 max-w-md mx-auto">
-            <div className="text-white/90 text-sm mb-2">Limited Time Offer Ends In:</div>
-            <div className="flex justify-center gap-4 text-2xl font-bold text-white">
-              <div className="text-center">
-                <div className="bg-white/20 rounded-lg px-3 py-2">07</div>
-                <div className="text-xs text-white/70 mt-1">Days</div>
-              </div>
-              <div className="text-center">
-                <div className="bg-white/20 rounded-lg px-3 py-2">23</div>
-                <div className="text-xs text-white/70 mt-1">Hours</div>
-              </div>
-              <div className="text-center">
-                <div className="bg-white/20 rounded-lg px-3 py-2">45</div>
-                <div className="text-xs text-white/70 mt-1">Minutes</div>
-              </div>
+          {/* ROI Highlight */}
+          <div className="mt-8 p-6 bg-gradient-to-r from-green-800/30 to-blue-800/30 rounded-xl border border-green-500/30">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-400 mb-2">15,000% ROI</div>
+              <p className="text-lg text-gray-300">Guaranteed minimum return on investment</p>
+              <p className="text-sm text-gray-400 mt-2">*Based on real client results from Fortune 500 companies</p>
             </div>
           </div>
         </div>

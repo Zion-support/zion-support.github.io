@@ -39,6 +39,18 @@ import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWi
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+import QuantumNeuralFusion2026PromotionBanner from '../components/QuantumNeuralFusion2026PromotionBanner';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
+import FeaturedContentBanner from '../components/FeaturedContentBanner';
+
+// Import new promotional banners
+import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
+import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2025GlobalTransformation15000ROIPromotionBanner';
+import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
+import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
+import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
+import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 import AI2025ROICalculator from '../components/AI2025ROICalculator';
 
@@ -63,6 +75,10 @@ import ContentPromotion from '../components/ContentPromotion';
 import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
 >>>>>>> 7ce8391380b998b490824bfd2d0324a06f0c8cea
 
+// Import new breakthrough promotional components
+import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -74,6 +90,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* FEATURED REVOLUTIONARY CONTENT BANNER */}
+        <FeaturedContentBanner />
+        
+        {/* AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
+        <AI2025UltimateBreakthroughPromotionBanner />
+        
         {/* NEW 2025 CONTENT PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
         
@@ -98,17 +120,10 @@ export default function HomePage() {
         {/* CONTENT SHOWCASE 2025 */}
         <ContentShowcase2025 />
         
-=======
->>>>>>> 7ce8391380b998b490824bfd2d0324a06f0c8cea
         {/* QUANTUM-NEURAL FUSION 2026 BREAKTHROUGH BANNER */}
         <QuantumNeuralFusion2026PromotionBanner />
         
-        {/* ULTIMATE CONTENT REVOLUTION BANNER 2025 */}
-        <UltimateContentRevolutionBanner2025 />
-        
-        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
-        <AI2025RevolutionaryBreakthroughPromotionBanner />
-        
+>>>>>>> cursor/create-and-deploy-new-content-7282
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
         
@@ -132,9 +147,6 @@ export default function HomePage() {
         
         {/* REVOLUTIONARY CONTENT BANNER 2026 */}
         <RevolutionaryContentBanner2026 />
-<<<<<<< HEAD
->>>>>>> 8a32472f4c63f8c1f00e9a2ed50b576a716afb42
-=======
         
         {/* NEW PROMOTIONAL BANNERS */}
         <div className="max-w-7xl mx-auto px-4 py-8">
@@ -148,7 +160,6 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <ContentPromotion />
         </div>
->>>>>>> 7ce8391380b998b490824bfd2d0324a06f0c8cea
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
