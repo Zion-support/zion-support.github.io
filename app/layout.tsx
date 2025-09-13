@@ -6,6 +6,7 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import ErrorBoundary from '../components/ErrorBoundary';
 import NewContentBanner from '../components/NewContentBanner';
+import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedSEO from '../components/EnhancedSEO';
 import AdvancedPerformanceMonitor2026 from '../components/AdvancedPerformanceMonitor2026';
@@ -1428,6 +1429,9 @@ export default function RootLayout({
               
               {/* New Content Banner */}
               <NewContentBanner />
+              
+              {/* Ultimate Breakthrough Banner */}
+              <UltimateBreakthroughBanner />
               
               {/* Main Content */}
               <main id="main-content" className="min-h-screen">
