@@ -24,6 +24,11 @@ import UltimateContentShowcase2028PromotionBanner from '../components/UltimateCo
 import BusinessTransformation2028Showcase from '../components/BusinessTransformation2028Showcase';
 import BusinessTransformation2028PromotionBanner from '../components/BusinessTransformation2028PromotionBanner';
 
+// Import new 2030 components
+import UltimateContentShowcase2030 from '../components/UltimateContentShowcase2030';
+import UltimateContentShowcase2030PromotionBanner from '../components/UltimateContentShowcase2030PromotionBanner';
+import UltimateContentDiscoveryWidget2030 from '../components/UltimateContentDiscoveryWidget2030';
+
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
@@ -299,6 +304,9 @@ export default function HomePage() {
         
         {/* DYNAMIC CONTENT CAROUSEL */}
         <DynamicContentCarousel />
+        
+        {/* NEW 2030 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
+        <UltimateContentShowcase2030PromotionBanner />
         
         {/* NEW 2029 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2029PromotionBanner />
@@ -3606,6 +3614,22 @@ export default function HomePage() {
       <Suspense fallback={<LoadingSpinner size="lg" text="Loading featured content..." />}>
         <FeaturedContentShowcase />
       </Suspense>
+
+      {/* Ultimate Content Discovery Widget 2030 */}
+      <section className='py-16 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900'>
+        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-8'>
+            <h2 className='text-4xl font-bold text-white mb-4'>
+              Discover Transcendent Content
+            </h2>
+            <p className='text-lg text-gray-300 max-w-2xl mx-auto'>
+              Explore the most advanced AI breakthroughs, quantum computing innovations, 
+              and transcendent technologies that are reshaping our reality.
+            </p>
+          </div>
+          <UltimateContentDiscoveryWidget2030 />
+        </div>
+      </section>
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'>

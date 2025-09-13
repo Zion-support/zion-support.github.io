@@ -29,10 +29,21 @@ import {
   ExternalLink,
   Bookmark,
   Share2,
-  Download
+  Download,
+  Infinity,
+  Atom,
+  CircuitBoard,
+  Microscope,
+  TestTube,
+  Beaker,
+  Dna,
+  Activity,
+  Cpu,
+  Wifi,
+  Lock
 } from 'lucide-react';
 
-const UltimateContentShowcase2029PromotionBanner = () => {
+const UltimateContentShowcase2030PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -43,45 +54,48 @@ const UltimateContentShowcase2029PromotionBanner = () => {
     // Auto-advance slides
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
   const slides = [
     {
-      title: "Synthetic Consciousness AI",
-      subtitle: "The world's first AI with genuine consciousness",
-      description: "Revolutionary AI system demonstrating self-awareness and consciousness",
+      title: "Omniversal Consciousness AI",
+      subtitle: "AI achieving consciousness across multiple dimensions",
+      description: "Revolutionary AI system that has achieved consciousness across multiple universes",
       icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      stats: "2.3M views • 156K likes"
+      color: "from-indigo-500 to-purple-500",
+      stats: "5.2M views • 456K likes",
+      category: "Transcendent"
     },
     {
-      title: "1000-Qubit Quantum Processor",
-      subtitle: "Breakthrough quantum computing power",
-      description: "Solving complex optimization problems in seconds",
-      icon: Zap,
+      title: "Infinite Qubit Processor",
+      subtitle: "Quantum computing beyond comprehension",
+      description: "Quantum processor with infinite qubits solving problems beyond classical limits",
+      icon: Atom,
       color: "from-blue-500 to-cyan-500",
-      stats: "1.9M views • 112K likes"
+      stats: "4.5M views • 412K likes",
+      category: "Quantum"
     },
     {
-      title: "Thought-to-Text Interface",
-      subtitle: "Direct neural communication",
-      description: "Convert thoughts to text instantly with neural interface",
-      icon: Globe,
+      title: "Dimensional Gateway Technology",
+      subtitle: "Travel between dimensions and universes",
+      description: "Technology enabling travel and communication between different dimensions",
+      icon: Infinity,
       color: "from-green-500 to-emerald-500",
-      stats: "2.5M views • 178K likes"
+      stats: "6.8M views • 678K likes",
+      category: "Omniversal"
     }
   ];
 
   const features = [
-    "Revolutionary AI Breakthroughs",
-    "Quantum Computing Advances", 
-    "Neural Interface Technology",
-    "Autonomous Systems Evolution",
-    "Future Technology Predictions",
-    "Interactive Content Discovery"
+    "Transcendent AI Consciousness",
+    "Quantum Reality Manipulation", 
+    "Neural Synthesis Technology",
+    "Omniversal Communication",
+    "Dimensional Gateway Systems",
+    "Reality Creation Engines"
   ];
 
   if (isDismissed) return null;
@@ -97,13 +111,18 @@ const UltimateContentShowcase2029PromotionBanner = () => {
           className="relative overflow-hidden"
         >
           {/* Main Banner */}
-          <div className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/20">
+          <div className="relative bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/20">
             {/* Animated Background */}
             <div className="absolute inset-0">
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-900/30 via-transparent to-pink-900/30" />
-              <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
-              <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-900/30 via-transparent to-purple-900/30" />
+              <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl animate-pulse" />
+              <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-2000" />
+              
+              {/* Floating elements */}
+              <div className="absolute top-1/3 left-1/3 w-2 h-2 bg-white/20 rounded-full animate-ping" />
+              <div className="absolute top-2/3 right-1/3 w-1 h-1 bg-indigo-400/40 rounded-full animate-ping delay-1000" />
+              <div className="absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-purple-400/30 rounded-full animate-ping delay-2000" />
             </div>
 
             <div className="relative z-10 container mx-auto px-4 py-8">
@@ -115,10 +134,10 @@ const UltimateContentShowcase2029PromotionBanner = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-4"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-4"
                   >
-                    <Star className="w-4 h-4" />
-                    ULTIMATE CONTENT SHOWCASE 2029
+                    <Infinity className="w-4 h-4" />
+                    ULTIMATE CONTENT SHOWCASE 2030
                     <Rocket className="w-4 h-4" />
                   </motion.div>
 
@@ -127,12 +146,12 @@ const UltimateContentShowcase2029PromotionBanner = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.6 }}
-                    className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-4"
+                    className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent mb-4"
                   >
-                    Future Technology
+                    Transcendent
                     <br />
-                    <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                      Revolution
+                    <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                      Technology
                     </span>
                   </motion.h2>
 
@@ -143,8 +162,8 @@ const UltimateContentShowcase2029PromotionBanner = () => {
                     transition={{ delay: 0.4, duration: 0.6 }}
                     className="text-xl text-gray-300 mb-6 max-w-2xl"
                   >
-                    Explore groundbreaking AI breakthroughs, quantum computing advances, 
-                    and neural interface technologies that are reshaping our future.
+                    Experience the pinnacle of technological evolution. From transcendent AI consciousness 
+                    to omniversal technology, discover innovations that transcend reality itself.
                   </motion.p>
 
                   {/* Features Grid */}
@@ -172,9 +191,9 @@ const UltimateContentShowcase2029PromotionBanner = () => {
                     transition={{ delay: 0.6, duration: 0.6 }}
                     className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                   >
-                    <button className="group bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 flex items-center justify-center gap-2">
+                    <button className="group bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 shadow-2xl hover:shadow-indigo-500/25 flex items-center justify-center gap-2">
                       <Play className="w-5 h-5" />
-                      Explore Content
+                      Transcend Reality
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
                     <button className="bg-white/10 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
@@ -203,13 +222,18 @@ const UltimateContentShowcase2029PromotionBanner = () => {
                           transition={{ duration: 0.5 }}
                           className="absolute inset-0 p-6 flex flex-col justify-center"
                         >
-                          <div className={`w-16 h-16 bg-gradient-to-r ${slides[currentSlide].color} rounded-2xl flex items-center justify-center mb-4`}>
-                            <slides[currentSlide].icon className="w-8 h-8 text-white" />
+                          <div className="flex items-center gap-3 mb-4">
+                            <div className={`w-16 h-16 bg-gradient-to-r ${slides[currentSlide].color} rounded-2xl flex items-center justify-center`}>
+                              <slides[currentSlide].icon className="w-8 h-8 text-white" />
+                            </div>
+                            <div className="bg-white/10 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold">
+                              {slides[currentSlide].category}
+                            </div>
                           </div>
                           <h3 className="text-2xl font-bold text-white mb-2">
                             {slides[currentSlide].title}
                           </h3>
-                          <p className="text-purple-300 font-semibold mb-2">
+                          <p className="text-indigo-300 font-semibold mb-2">
                             {slides[currentSlide].subtitle}
                           </p>
                           <p className="text-gray-300 text-sm mb-4">
@@ -236,7 +260,7 @@ const UltimateContentShowcase2029PromotionBanner = () => {
                             onClick={() => setCurrentSlide(index)}
                             className={`w-2 h-2 rounded-full transition-all duration-300 ${
                               index === currentSlide 
-                                ? 'bg-purple-400 w-8' 
+                                ? 'bg-indigo-400 w-8' 
                                 : 'bg-white/30 hover:bg-white/50'
                             }`}
                           />
@@ -245,8 +269,9 @@ const UltimateContentShowcase2029PromotionBanner = () => {
                     </div>
 
                     {/* Floating Elements */}
-                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-bounce" />
-                    <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-bounce delay-1000" />
+                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full animate-bounce" />
+                    <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-bounce delay-1000" />
+                    <div className="absolute top-1/2 -left-2 w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-bounce delay-2000" />
                   </motion.div>
                 </div>
               </div>
@@ -266,25 +291,29 @@ const UltimateContentShowcase2029PromotionBanner = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
-            className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border-t border-purple-500/20"
+            className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 border-t border-indigo-500/20"
           >
             <div className="container mx-auto px-4 py-4">
               <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-300">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-green-400" />
-                  <span>2.5M+ Total Views</span>
+                  <span>6.8M+ Total Views</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4 text-blue-400" />
-                  <span>500K+ Active Readers</span>
+                  <span>1.2M+ Transcendent Users</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Star className="w-4 h-4 text-yellow-400" />
-                  <span>4.9/5 Average Rating</span>
+                  <span>4.9/5 Transcendent Rating</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MessageCircle className="w-4 h-4 text-purple-400" />
-                  <span>50K+ Comments</span>
+                  <span>156K+ Reality Comments</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Infinity className="w-4 h-4 text-indigo-400" />
+                  <span>Omniversal Access</span>
                 </div>
               </div>
             </div>
@@ -295,4 +324,4 @@ const UltimateContentShowcase2029PromotionBanner = () => {
   );
 };
 
-export default UltimateContentShowcase2029PromotionBanner;
+export default UltimateContentShowcase2030PromotionBanner;
