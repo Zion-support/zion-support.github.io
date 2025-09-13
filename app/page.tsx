@@ -489,6 +489,10 @@ import AI2025RevolutionaryContentShowcaseBanner from '../components/AI2025Revolu
 import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
 import AI2026QuantumNeuralFusionRevolutionaryBreakthroughBanner from '../components/AI2026QuantumNeuralFusionRevolutionaryBreakthroughBanner';
 
+// Import new 2025 promotional components
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import AI2025BreakthroughShowcase from '../components/AI2025BreakthroughShowcase';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -518,6 +522,9 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
+        
+        {/* AI 2025 BREAKTHROUGH SHOWCASE */}
+        <AI2025BreakthroughShowcase />
         
         {/* REVOLUTIONARY CONTENT SHOWCASE */}
         <RevolutionaryContentShowcase />
