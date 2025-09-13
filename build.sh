@@ -23,7 +23,7 @@ fi
 echo "Installing dependencies..."
 for i in {1..3}; do
   echo "Attempt $i of 3..."
-  if yarn install --frozen-lockfile --network-timeout 100000 --ignore-engines --ignore-platform --force; then
+  if yarn install --network-timeout 100000 --ignore-engines --ignore-platform --force; then
     echo "Dependencies installed successfully!"
     break
   else
