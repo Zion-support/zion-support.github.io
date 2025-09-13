@@ -44,6 +44,7 @@ import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveCont
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+import SyntheticIntelligenceRevolutionBanner from '../components/SyntheticIntelligenceRevolutionBanner';
 
 export default function HomePage() {
   return (
@@ -56,6 +57,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* SYNTHETIC INTELLIGENCE REVOLUTION BANNER */}
+        <SyntheticIntelligenceRevolutionBanner />
+        
         {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
