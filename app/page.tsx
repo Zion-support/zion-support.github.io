@@ -93,6 +93,14 @@ import BusinessTransformationGuide2025PromotionBanner from '../components/Busine
 import AISolutions2026ComprehensivePromotionBanner from '../components/AISolutions2026ComprehensivePromotionBanner';
 import BusinessAutomationMastery2026PromotionBanner from '../components/BusinessAutomationMastery2026PromotionBanner';
 
+// New 2026 content showcase components
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+import InteractiveContentDiscovery2026PromotionBanner from '../components/InteractiveContentDiscovery2026PromotionBanner';
+import BusinessSuccessStoriesShowcase2026 from '../components/BusinessSuccessStoriesShowcase2026';
+import BusinessSuccessStoriesShowcase2026PromotionBanner from '../components/BusinessSuccessStoriesShowcase2026PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -147,6 +155,18 @@ export default function HomePage() {
         
         {/* NEW BUSINESS AUTOMATION MASTERY 2026 PROMOTION BANNER */}
         <BusinessAutomationMastery2026PromotionBanner />
+        
+        {/* NEW INTERACTIVE CONTENT DISCOVERY 2026 PROMOTION BANNER */}
+        <InteractiveContentDiscovery2026PromotionBanner />
+        
+        {/* NEW INTERACTIVE CONTENT DISCOVERY 2026 */}
+        <InteractiveContentDiscovery2026 />
+        
+        {/* NEW BUSINESS SUCCESS STORIES SHOWCASE 2026 PROMOTION BANNER */}
+        <BusinessSuccessStoriesShowcase2026PromotionBanner />
+        
+        {/* NEW BUSINESS SUCCESS STORIES SHOWCASE 2026 */}
+        <BusinessSuccessStoriesShowcase2026 />
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
         <UltimateContentShowcase2026PromotionBanner />
