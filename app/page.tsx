@@ -32,6 +32,13 @@ import AI2026BreakthroughContentPromotionBanner from '../components/AI2026Breakt
 import AI2027FuturePredictionsPromotionBanner from '../components/AI2027FuturePredictionsPromotionBanner';
 import InteractiveContentDiscovery2027 from '../components/InteractiveContentDiscovery2027';
 
+// Import new breakthrough promotional banners
+import AI2025UltimateBreakthroughRevolutionPromotionBanner from '../components/AI2025UltimateBreakthroughRevolutionPromotionBanner';
+import AI2026QuantumNeuralRevolutionPromotionBanner from '../components/AI2026QuantumNeuralRevolutionPromotionBanner';
+
+// Import content discovery widget
+import RevolutionaryContentDiscoveryWidget2026 from '../components/RevolutionaryContentDiscoveryWidget2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -60,6 +67,15 @@ export default function HomePage() {
         
         {/* NEW: AI 2027 FUTURE PREDICTIONS PROMOTION BANNER */}
         <AI2027FuturePredictionsPromotionBanner />
+        
+        {/* NEW: AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION PROMOTION BANNER */}
+        <AI2025UltimateBreakthroughRevolutionPromotionBanner />
+        
+        {/* NEW: AI 2026 QUANTUM-NEURAL REVOLUTION PROMOTION BANNER */}
+        <AI2026QuantumNeuralRevolutionPromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT DISCOVERY WIDGET 2026 */}
+        <RevolutionaryContentDiscoveryWidget2026 />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
