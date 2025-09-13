@@ -19,7 +19,12 @@ const UltimateAIAssistant2026 = lazy(() => import('../components/UltimateAIAssis
 const AdvancedAnalyticsDashboard2026 = lazy(() => import('../components/AdvancedAnalyticsDashboard2026'));
 const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../components/RevolutionaryContentRecommendationEngine2026'));
 
-// New promotional components
+// Import new promotional banners
+import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
+import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2025GlobalTransformation15000ROIPromotionBanner';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
+import QuantumNeuralFusionBanner from '../components/QuantumNeuralFusionBanner';
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 
@@ -36,6 +41,15 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
+        
+        {/* NEW: AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
+        <AI2025RevolutionaryBreakthroughBanner />
+        
+        {/* NEW: QUANTUM-NEURAL FUSION BANNER */}
+        <QuantumNeuralFusionBanner />
+        
+        {/* NEW: CONTENT 2025 PROMOTION BANNER */}
+        <NewContent2025PromotionBanner />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER */}
         <UltimateContentPromotionBanner />
