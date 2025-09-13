@@ -48,6 +48,12 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025';
 
+// Import new content showcase components
+import NewContentShowcase2025PromotionBanner from '../components/NewContentShowcase2025PromotionBanner';
+import NewContent2025Showcase from '../components/NewContent2025Showcase';
+import TechnologyTrends2025Banner from '../components/TechnologyTrends2025Banner';
+import AIInnovationShowcase2025 from '../components/AIInnovationShowcase2025';
+
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 
@@ -161,6 +167,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
+        <NewContentShowcase2025PromotionBanner />
+        
         {/* NEW 2025 ULTIMATE CONTENT SHOWCASE */}
         <NewContent2025UltimateShowcase />
         
@@ -320,6 +329,15 @@ export default function HomePage() {
         
         {/* CONTENT DISCOVERY WIDGET 2025 */}
         <ContentDiscoveryWidget2025 />
+        
+        {/* NEW CONTENT 2025 SHOWCASE */}
+        <NewContent2025Showcase />
+        
+        {/* TECHNOLOGY TRENDS 2025 BANNER */}
+        <TechnologyTrends2025Banner />
+        
+        {/* AI INNOVATION SHOWCASE 2025 */}
+        <AIInnovationShowcase2025 />
         
         {/* AI 2025 NEWSLETTER SIGNUP */}
         <div className="py-20 px-4">
