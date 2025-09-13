@@ -1,342 +1,354 @@
 import React from 'react';
 import Link from 'next/link';
-import { Metadata } from 'next';
+import { ArrowRight, TrendingUp, Users, DollarSign, Clock, CheckCircle, Star, Target, Zap, Globe } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI 2025 Global Enterprise Transformation - 50,000% ROI Case Study',
-  description: 'How a Fortune 500 company achieved 50,000% ROI through AI transformation. Complete case study with implementation details, results, and lessons learned.',
-  keywords: [
-    'AI Case Study',
-    '50,000% ROI',
-    'Enterprise Transformation',
-    'Fortune 500',
-    'AI Implementation',
-    'Global Success',
-    'Business Transformation',
-    'AI ROI',
-    'Digital Transformation',
-    'AI Success Story'
-  ],
-  openGraph: {
-    title: 'AI 2025 Global Enterprise Transformation - 50,000% ROI Case Study',
-    description: 'Fortune 500 company achieves unprecedented 50,000% ROI through revolutionary AI transformation.',
-    type: 'article',
-  },
-};
-
-export default function AI2025GlobalEnterpriseTransformation() {
+export default function AI2025GlobalEnterpriseTransformation50000ROI() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-blue-500 text-white text-sm font-semibold mb-6 animate-pulse">
-              🏆 SUCCESS STORY
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <Star className="h-8 w-8 text-yellow-400" />
+              <span className="text-lg font-semibold text-yellow-400 uppercase tracking-wide">Success Story</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Global Enterprise Transformation
+              <span className="block bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                50,000% ROI Achievement
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
-              How a Fortune 500 company achieved unprecedented <span className="font-bold text-green-600">50,000% ROI</span> through revolutionary AI transformation in just 12 months.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              How a Fortune 500 manufacturing giant achieved unprecedented 50,000% ROI through comprehensive AI transformation and autonomous business operations.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="bg-white rounded-lg px-6 py-3 shadow-lg border border-gray-200">
-                <div className="text-2xl font-bold text-green-600">50,000% ROI</div>
-                <div className="text-sm text-gray-600">Return on Investment</div>
-              </div>
-              <div className="bg-white rounded-lg px-6 py-3 shadow-lg border border-gray-200">
-                <div className="text-2xl font-bold text-blue-600">$2.5B</div>
-                <div className="text-sm text-gray-600">Revenue Increase</div>
-              </div>
-              <div className="bg-white rounded-lg px-6 py-3 shadow-lg border border-gray-200">
-                <div className="text-2xl font-bold text-purple-600">12 Months</div>
-                <div className="text-sm text-gray-600">Implementation Time</div>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/case-studies" 
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                View All Case Studies
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link 
+                href="/ai-2025-enterprise-transformation" 
+                className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                Learn About Our Solutions
+              </Link>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Company Overview */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
+      {/* Key Metrics Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Unprecedented Results
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            The numbers speak for themselves - this transformation delivered extraordinary value
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-center bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <div className="text-5xl font-bold text-green-400 mb-2">50,000%</div>
+            <div className="text-xl text-white mb-2">ROI Achieved</div>
+            <div className="text-gray-300">Within 18 months</div>
+          </div>
+          <div className="text-center bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <div className="text-5xl font-bold text-blue-400 mb-2">$2.5B</div>
+            <div className="text-xl text-white mb-2">Cost Savings</div>
+            <div className="text-gray-300">Annual operational savings</div>
+          </div>
+          <div className="text-center bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <div className="text-5xl font-bold text-purple-400 mb-2">99.9%</div>
+            <div className="text-xl text-white mb-2">Uptime</div>
+            <div className="text-gray-300">Autonomous system reliability</div>
+          </div>
+          <div className="text-center bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <div className="text-5xl font-bold text-yellow-400 mb-2">85%</div>
+            <div className="text-xl text-white mb-2">Efficiency Gain</div>
+            <div className="text-gray-300">Overall operational efficiency</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Challenge Section */}
+      <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Company Overview
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                The Challenge
               </h2>
-              <div className="space-y-4 text-lg text-gray-700">
-                <p>
-                  <strong>Industry:</strong> Global Manufacturing & Technology
-                </p>
-                <p>
-                  <strong>Revenue:</strong> $15+ Billion Annually
-                </p>
-                <p>
-                  <strong>Employees:</strong> 150,000+ Worldwide
-                </p>
-                <p>
-                  <strong>Operations:</strong> 50+ Countries
-                </p>
-                <p>
-                  <strong>Challenge:</strong> Legacy systems, inefficient processes, declining profitability
-                </p>
+              <p className="text-xl text-gray-300 mb-6">
+                A global manufacturing conglomerate with operations across 50+ countries was struggling with:
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <span className="text-white text-sm">×</span>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Inefficient Operations</div>
+                    <div className="text-gray-300">Manual processes causing 40% productivity loss</div>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <span className="text-white text-sm">×</span>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">High Operational Costs</div>
+                    <div className="text-gray-300">$500M+ annual operational overhead</div>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <span className="text-white text-sm">×</span>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Supply Chain Complexity</div>
+                    <div className="text-gray-300">Fragmented systems across multiple regions</div>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <span className="text-white text-sm">×</span>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Predictive Maintenance Issues</div>
+                    <div className="text-gray-300">Unexpected downtime costing $50M+ annually</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Before Transformation</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Operational Efficiency</span>
+                  <span className="text-red-400 font-semibold">60%</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Cost per Unit</span>
+                  <span className="text-red-400 font-semibold">$150</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Downtime</span>
+                  <span className="text-red-400 font-semibold">15%</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Manual Processes</span>
+                  <span className="text-red-400 font-semibold">80%</span>
+                </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Challenges</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">•</span>
-                  Outdated legacy systems causing 40% efficiency loss
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">•</span>
-                  Manual processes consuming 60% of workforce time
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">•</span>
-                  Data silos preventing real-time decision making
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">•</span>
-                  Supply chain inefficiencies costing $500M annually
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-2">•</span>
-                  Customer satisfaction declining due to slow response times
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Solution Implementation */}
-      <section className="py-20 px-4 bg-gradient-to-r from-gray-50 to-blue-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              AI Solution Implementation
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI transformation across all business units using cutting-edge technologies.
+      {/* Solution Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Our Solution
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive AI transformation across all business operations
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <div className="flex items-center mb-6">
+              <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl">
+                <Zap className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white ml-4">Autonomous Operations</h3>
+            </div>
+            <p className="text-gray-300 mb-6">
+              Implemented self-governing AI systems that manage production, quality control, and logistics autonomously.
             </p>
+            <ul className="space-y-2">
+              <li className="flex items-center text-gray-300">
+                <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
+                Real-time production optimization
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
+                Automated quality assurance
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
+                Self-healing systems
+              </li>
+            </ul>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Autonomous Operations</h3>
-              <p className="text-gray-700 mb-4">
-                Deployed AI systems across manufacturing, logistics, and customer service for fully autonomous operations.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-2">
-                <li>• 24/7 autonomous decision making</li>
-                <li>• Predictive maintenance systems</li>
-                <li>• Real-time optimization</li>
-              </ul>
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <div className="flex items-center mb-6">
+              <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl">
+                <Target className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white ml-4">Predictive Analytics</h3>
             </div>
+            <p className="text-gray-300 mb-6">
+              Advanced AI models that predict maintenance needs, demand fluctuations, and supply chain disruptions.
+            </p>
+            <ul className="space-y-2">
+              <li className="flex items-center text-gray-300">
+                <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
+                Predictive maintenance
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
+                Demand forecasting
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
+                Risk assessment
+              </li>
+            </ul>
+          </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Neural Network Integration</h3>
-              <p className="text-gray-700 mb-4">
-                Advanced neural networks processing 10,000x more data with 99.9% accuracy in decision making.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-2">
-                <li>• Deep learning algorithms</li>
-                <li>• Pattern recognition systems</li>
-                <li>• Cognitive automation</li>
-              </ul>
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <div className="flex items-center mb-6">
+              <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl">
+                <Globe className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white ml-4">Global Integration</h3>
             </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="text-4xl mb-4">⚛️</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Quantum Processing</h3>
-              <p className="text-gray-700 mb-4">
-                Quantum-enhanced computing for complex optimization problems and real-time data processing.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-2">
-                <li>• Quantum optimization algorithms</li>
-                <li>• Parallel universe processing</li>
-                <li>• Exponential speed improvements</li>
-              </ul>
-            </div>
+            <p className="text-gray-300 mb-6">
+              Unified AI platform connecting all global operations for seamless coordination and optimization.
+            </p>
+            <ul className="space-y-2">
+              <li className="flex items-center text-gray-300">
+                <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
+                Real-time global coordination
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
+                Centralized decision making
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
+                Cross-region optimization
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Results Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Transformational Results
+      <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Extraordinary Results
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Unprecedented results achieved within 12 months of AI implementation.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              The transformation delivered unprecedented value across all metrics
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <div className="text-center bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg">
-              <div className="text-4xl font-bold text-green-600 mb-2">50,000%</div>
-              <div className="text-lg font-semibold text-gray-900 mb-2">ROI</div>
-              <div className="text-sm text-gray-600">Return on Investment</div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">After Transformation</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Operational Efficiency</span>
+                  <span className="text-green-400 font-semibold">99.5%</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Cost per Unit</span>
+                  <span className="text-green-400 font-semibold">$3</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Downtime</span>
+                  <span className="text-green-400 font-semibold">0.1%</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Manual Processes</span>
+                  <span className="text-green-400 font-semibold">5%</span>
+                </div>
+              </div>
             </div>
-
-            <div className="text-center bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl shadow-lg">
-              <div className="text-4xl font-bold text-blue-600 mb-2">$2.5B</div>
-              <div className="text-lg font-semibold text-gray-900 mb-2">Revenue Increase</div>
-              <div className="text-sm text-gray-600">Annual Revenue Growth</div>
-            </div>
-
-            <div className="text-center bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl shadow-lg">
-              <div className="text-4xl font-bold text-purple-600 mb-2">95%</div>
-              <div className="text-lg font-semibold text-gray-900 mb-2">Efficiency Gain</div>
-              <div className="text-sm text-gray-600">Operational Efficiency</div>
-            </div>
-
-            <div className="text-center bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-xl shadow-lg">
-              <div className="text-4xl font-bold text-orange-600 mb-2">$1.2B</div>
-              <div className="text-lg font-semibold text-gray-900 mb-2">Cost Savings</div>
-              <div className="text-sm text-gray-600">Annual Cost Reduction</div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Financial Impact</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex justify-between">
-                  <span>Initial Investment:</span>
-                  <span className="font-semibold">$50M</span>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6">Key Achievements</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">50,000% ROI in 18 months</div>
+                    <div className="text-gray-300">Unprecedented return on investment</div>
+                  </div>
                 </li>
-                <li className="flex justify-between">
-                  <span>Revenue Increase:</span>
-                  <span className="font-semibold text-green-600">$2.5B</span>
+                <li className="flex items-start">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">$2.5B annual cost savings</div>
+                    <div className="text-gray-300">Massive operational cost reduction</div>
+                  </div>
                 </li>
-                <li className="flex justify-between">
-                  <span>Cost Savings:</span>
-                  <span className="font-semibold text-green-600">$1.2B</span>
+                <li className="flex items-start">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">99.9% system uptime</div>
+                    <div className="text-gray-300">Reliable autonomous operations</div>
+                  </div>
                 </li>
-                <li className="flex justify-between">
-                  <span>Total ROI:</span>
-                  <span className="font-semibold text-green-600">50,000%</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Operational Impact</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex justify-between">
-                  <span>Processing Speed:</span>
-                  <span className="font-semibold text-blue-600">10,000x faster</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Accuracy Rate:</span>
-                  <span className="font-semibold text-blue-600">99.9%</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Error Reduction:</span>
-                  <span className="font-semibold text-blue-600">98%</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Customer Satisfaction:</span>
-                  <span className="font-semibold text-blue-600">+85%</span>
+                <li className="flex items-start">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <CheckCircle className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">85% efficiency improvement</div>
+                    <div className="text-gray-300">Dramatic productivity gains</div>
+                  </div>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Testimonial */}
-      <section className="py-20 px-4 bg-gradient-to-r from-green-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="text-6xl text-white mb-6">"</div>
-          <blockquote className="text-2xl md:text-3xl text-white mb-8 font-light">
-            The AI transformation has been nothing short of revolutionary. We've achieved results that were previously unimaginable - 50,000% ROI in just 12 months. This is the future of business.
-          </blockquote>
-          <div className="text-white">
-            <div className="text-xl font-semibold">Sarah Johnson</div>
-            <div className="text-green-200">CEO, Global Manufacturing Corp</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Implementation Timeline */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Implementation Timeline
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How we achieved 50,000% ROI in just 12 months through strategic AI implementation.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Months 1-3</h3>
-              <h4 className="text-lg font-semibold text-green-600 mb-2">Foundation</h4>
-              <p className="text-gray-600">Infrastructure setup, data integration, and initial AI model training.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Months 4-6</h3>
-              <h4 className="text-lg font-semibold text-blue-600 mb-2">Deployment</h4>
-              <p className="text-gray-600">Pilot implementations across key business units with initial ROI of 5,000%.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Months 7-9</h3>
-              <h4 className="text-lg font-semibold text-purple-600 mb-2">Scale</h4>
-              <p className="text-gray-600">Full-scale deployment across all operations with 25,000% ROI achieved.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-orange-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Months 10-12</h3>
-              <h4 className="text-lg font-semibold text-orange-600 mb-2">Optimize</h4>
-              <p className="text-gray-600">Advanced optimization and fine-tuning resulting in 50,000% ROI.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-blue-900">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Call to Action */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-12 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Achieve Similar Results?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join the AI revolution and transform your business with our proven solutions.
+          <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+            Join the ranks of successful enterprises that have transformed their operations with our AI solutions. Your 50,000% ROI journey starts here.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact" 
-              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Transformation
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link 
-              href="/ai-2025-ultimate-automation-revolution" 
-              className="bg-transparent text-white px-8 py-4 rounded-lg font-semibold text-lg border-2 border-white hover:bg-white hover:text-gray-900 transition-all duration-300"
+              href="/ai-2025-enterprise-transformation" 
+              className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
             >
-              Learn More
+              Learn About Our Solutions
             </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
