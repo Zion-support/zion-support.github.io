@@ -26,10 +26,10 @@ if [ -f yarn.lock ]; then
   cp yarn.lock yarn.lock.backup
 fi
 
-# Install dependencies with specific fixes for find-up issue
-echo "Installing dependencies with find-up fix..."
-for attempt in {1..5}; do
-  echo "Installation attempt $attempt of 5..."
+# Install dependencies with Yarn (no pnpm)
+echo "Installing dependencies with Yarn..."
+for attempt in {1..3}; do
+  echo "Installation attempt $attempt of 3..."
   
   # Clear node_modules before each attempt
   rm -rf node_modules
@@ -37,44 +37,27 @@ for attempt in {1..5}; do
   # Try different installation strategies
   case $attempt in
     1)
-      echo "Attempt 1: Standard installation with frozen lockfile..."
-      if yarn install --frozen-lockfile --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
+      echo "Attempt 1: Standard Yarn installation..."
+      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
         echo "Dependencies installed successfully!"
         break
       fi
       ;;
     2)
-      echo "Attempt 2: Installation without frozen lockfile..."
+      echo "Attempt 2: Yarn installation with specific resolutions..."
+      # Force specific versions for problematic packages
+      yarn add find-up@5.0.0 --exact --network-timeout 120000 --ignore-engines --no-cache
+      yarn add glob-parent@6.0.2 --exact --network-timeout 120000 --ignore-engines --no-cache
+      yarn add glob@10.4.5 --exact --network-timeout 120000 --ignore-engines --no-cache
       if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
         echo "Dependencies installed successfully!"
         break
       fi
       ;;
     3)
-      echo "Attempt 3: Installation with specific find-up resolution..."
-      # Force reinstall of find-up package
-      yarn add find-up@^5.0.0 --exact --network-timeout 120000 --ignore-engines --no-cache
-      if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
-        echo "Dependencies installed successfully!"
-        break
-      fi
-      ;;
-    4)
-      echo "Attempt 4: Installation with npm as fallback..."
-      # Try npm as fallback
-      rm -rf node_modules
-      rm -rf yarn.lock
-      if npm install --legacy-peer-deps --no-optional; then
-        echo "Dependencies installed successfully with npm!"
-        break
-      fi
-      ;;
-    5)
-      echo "Attempt 5: Last resort - manual package installation..."
-      # Manual installation of critical packages
-      yarn add find-up@5.0.0 --exact --network-timeout 120000 --ignore-engines --no-cache
-      yarn add glob-parent@6.0.2 --exact --network-timeout 120000 --ignore-engines --no-cache
-      yarn add glob@10.4.5 --exact --network-timeout 120000 --ignore-engines --no-cache
+      echo "Attempt 3: Last resort - clean install with fresh lockfile..."
+      # Remove existing lockfile and do fresh install
+      rm -f yarn.lock
       if yarn install --network-timeout 120000 --ignore-engines --ignore-optional --no-cache; then
         echo "Dependencies installed successfully!"
         break
