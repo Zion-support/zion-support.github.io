@@ -148,6 +148,10 @@ import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025Ult
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner';
 
+// Import new revolutionary content promotional components
+import RevolutionaryContent2025PromotionBanner from '../components/RevolutionaryContent2025PromotionBanner';
+import NewContentShowcase2025Banner from '../components/NewContentShowcase2025Banner';
+
 // Import new 2026 content components
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
@@ -253,6 +257,12 @@ export default function HomePage() {
         
         {/* NEW 2027 BUSINESS SOLUTIONS SHOWCASE PROMOTION BANNER */}
         <BusinessSolutionsShowcase2027PromotionBanner />
+        
+        {/* REVOLUTIONARY CONTENT 2025 PROMOTION BANNER */}
+        <RevolutionaryContent2025PromotionBanner />
+        
+        {/* NEW CONTENT SHOWCASE 2025 BANNER */}
+        <NewContentShowcase2025Banner />
         
         {/* NEW 2027 INTERACTIVE TECH DEMO PROMOTION BANNER */}
         <InteractiveTechDemo2027PromotionBanner />
