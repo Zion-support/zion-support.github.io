@@ -160,6 +160,11 @@ import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import TechnologyInsights2025 from '../components/TechnologyInsights2025';
 import NewContentAnnouncementBanner2025 from '../components/NewContentAnnouncementBanner2025';
 
+// Import new promotional banners
+import AI2025InnovationShowcasePromotionBanner from '../components/AI2025InnovationShowcasePromotionBanner';
+import AdvancedAutomationMastery2025PromotionBanner from '../components/AdvancedAutomationMastery2025PromotionBanner';
+import QuantumComputingBreakthrough2025PromotionBanner from '../components/QuantumComputingBreakthrough2025PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -173,6 +178,15 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT ANNOUNCEMENT BANNER 2025 */}
         <NewContentAnnouncementBanner2025 />
+        
+        {/* AI 2025 INNOVATION SHOWCASE PROMOTION BANNER */}
+        <AI2025InnovationShowcasePromotionBanner />
+        
+        {/* ADVANCED AUTOMATION MASTERY 2025 PROMOTION BANNER */}
+        <AdvancedAutomationMastery2025PromotionBanner />
+        
+        {/* QUANTUM COMPUTING BREAKTHROUGH 2025 PROMOTION BANNER */}
+        <QuantumComputingBreakthrough2025PromotionBanner />
         
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
