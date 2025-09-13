@@ -49,6 +49,12 @@ import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025
 // Import new breakthrough promotional banners
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 
+// Import new 2026 promotional components
+import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
+import UltimateBreakthroughBanner2026 from '../components/UltimateBreakthroughBanner2026';
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
+import RevolutionaryTechShowcase2026 from '../components/RevolutionaryTechShowcase2026';
+
 // Import new promotional components
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
@@ -160,6 +166,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2026 REVOLUTIONARY CONTENT PROMOTION BANNER */}
+        <UltimateBreakthroughBanner2026 />
+        
         {/* LATEST CONTENT 2025 PROMOTION BANNER */}
         <LatestContent2025PromotionBanner />
         
@@ -3341,6 +3350,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* NEW 2026 REVOLUTIONARY CONTENT SHOWCASE */}
+      <NewContentShowcase2026 />
+      
+      {/* NEW 2026 TECHNOLOGY SHOWCASE */}
+      <RevolutionaryTechShowcase2026 />
     </div>
   );
 }
