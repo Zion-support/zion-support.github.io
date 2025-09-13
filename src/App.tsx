@@ -117,6 +117,7 @@ const NewServicesShowcase2025 = React.lazy(() => import('./components/NewService
 const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
+const AI2026AutomationPlatform = React.lazy(() => import('./pages/services/AI2026AutomationPlatform'));
 // const AIContentMarketingSuite = React.lazy(() => import('./pages/services/AIContentMarketingSuite'));
 // const AICybersecurityPlatform = React.lazy(() => import('./pages/services/AICybersecurityPlatform'));
 // const AIHealthcarePlatform = React.lazy(() => import('./pages/services/AIHealthcarePlatform'));
@@ -280,6 +281,7 @@ function App() {
               <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
               <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
               <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+              <Route path="/services/ai-2026-automation-platform" element={<AI2026AutomationPlatform />} />
               {/* <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} /> */}
               {/* <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} /> */}
               {/* <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} /> */}
@@ -343,17 +345,20 @@ function App() {
               <Route path="/blog/quantum-ai-breakthrough-2025" element={<BlogPostQuantumAI />} />
               <Route path="/blog/ai-automation-enterprise-guide-2025" element={<BlogPostAutomationGuide />} />
               <Route path="/blog/ai-2025-next-generation-business-automation" element={<BlogPostAIAutomation2025 />} />
+              <Route path="/blog/ai-2026-next-generation-business-automation" element={<BlogPostAIAutomation2025 />} />
               <Route path="/blog/quantum-computing-business-applications-2025" element={<BlogPostAIAutomation2025 />} />
               <Route path="/blog/ai-2026-neural-computing-revolution" element={<InteractiveContentDiscovery2026Page />} />
               <Route path="/blog/quantum-ai-autonomous-systems-2026" element={<InteractiveContentDiscovery2026Page />} />
               
               {/* New case study routes */}
               <Route path="/case-studies/healthcare-ai-transformation-success" element={<CaseStudyHealthcareAI />} />
+              <Route path="/case-studies/ai-2026-global-automation-transformation" element={<CaseStudyHealthcareAI />} />
               <Route path="/case-studies/enterprise-quantum-ai-transformation-2026" element={<InteractiveContentDiscovery2026Page />} />
               
               {/* New resource routes */}
               <Route path="/resources/ai-implementation-checklist-2025" element={<ResourceImplementationChecklist />} />
               <Route path="/resources/ai-roi-calculator-guide-2025" element={<ResourceROICalculator />} />
+              <Route path="/resources/ai-2026-automation-implementation-roadmap" element={<ResourceROICalculator />} />
               <Route path="/resources/quantum-ai-implementation-master-guide-2026" element={<InteractiveContentDiscovery2026Page />} />
               
               {/* Content showcase hub */}
