@@ -52,6 +52,10 @@ import AI2026FuturePredictionsBanner from '../components/AI2026FuturePredictions
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import ContentDiscoveryWidget2026 from '../components/ContentDiscoveryWidget2026';
 
+// AI 2025 New Content Promotion Components
+import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
+import AI2025ContentShowcaseBanner from '../components/AI2025ContentShowcaseBanner';
+
 // 2027+ Content Components
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
@@ -125,9 +129,9 @@ const HomePage: React.FC = () => {
         <PerformanceMonitor>
           <AccessibilityEnhancer>
             <SEO 
-              title="Zion Tech Group - Revolutionary Quantum-AI Fusion Solutions & Technology Services"
-              description="Discover cutting-edge quantum-AI fusion solutions delivering 10,000x faster processing and 99.9% accuracy. Leading the future of quantum computing, artificial intelligence, and digital transformation with 2,500-5,000% ROI."
-              keywords="quantum-AI fusion, quantum computing, AI solutions, artificial intelligence, digital transformation, machine learning, neural networks, 10,000x faster processing, 99.9% accuracy, ROI"
+              title="Zion Tech Group - Revolutionary AI 2025 Autonomous Operations & Quantum-AI Solutions"
+              description="Discover cutting-edge AI 2025 autonomous operations delivering 2,500-5,000% ROI, 99.9% accuracy, and 10,000x faster processing. New content: implementation guides, case studies, and breakthrough insights for business transformation."
+              keywords="AI 2025, autonomous operations, AI implementation guide, business automation, ROI 2500%, 99.9% accuracy, 10,000x faster processing, quantum-AI fusion, artificial intelligence, digital transformation, machine learning, neural networks, case studies"
             />
             
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -159,6 +163,16 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </section>
+
+              {/* AI 2025 New Content Promotion Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025NewContentPromotionBanner />
+              </Suspense>
+
+              {/* AI 2025 Content Showcase Banner */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AI2025ContentShowcaseBanner />
+              </Suspense>
 
               {/* New 2026 Content Promotion Banner */}
               <Suspense fallback={<LoadingSpinner />}>
