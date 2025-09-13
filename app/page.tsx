@@ -22,6 +22,7 @@ const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../compo
 // New promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import QuantumNeuralFusion2026PromotionBanner from '../components/QuantumNeuralFusion2026PromotionBanner';
 
 export default function HomePage() {
   return (
@@ -34,6 +35,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* QUANTUM-NEURAL FUSION 2026 BREAKTHROUGH BANNER */}
+        <QuantumNeuralFusion2026PromotionBanner />
+        
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
         
