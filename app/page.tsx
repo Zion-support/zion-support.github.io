@@ -18,6 +18,8 @@ const AdvancedPerformanceMonitor2026 = lazy(() => import('../components/Advanced
 const UltimateAIAssistant2026 = lazy(() => import('../components/UltimateAIAssistant2026'));
 const AdvancedAnalyticsDashboard2026 = lazy(() => import('../components/AdvancedAnalyticsDashboard2026'));
 const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../components/RevolutionaryContentRecommendationEngine2026'));
+const AI2025NewContentPromotionBanner = lazy(() => import('../components/AI2025NewContentPromotionBanner'));
+const ComprehensiveContentShowcase = lazy(() => import('../components/ComprehensiveContentShowcase'));
 
 // New promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
@@ -1716,6 +1718,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* AI 2025 New Content Promotion Banner */}
+      <Suspense fallback={<LoadingSpinner size="lg" text="Loading new content..." />}>
+        <AI2025NewContentPromotionBanner />
+      </Suspense>
+
+      {/* Comprehensive Content Showcase */}
+      <Suspense fallback={<LoadingSpinner size="lg" text="Loading content showcase..." />}>
+        <ComprehensiveContentShowcase />
+      </Suspense>
 
       {/* New Resources Promotion Banner */}
       <section className='py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden'>
