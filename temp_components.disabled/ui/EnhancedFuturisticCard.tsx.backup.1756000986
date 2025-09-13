@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -580,6 +581,13 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       `}</style>
     </motion.div>
   );
+=======
+import React from 'react';
+
+const EnhancedFuturisticCard: React.FC = () => {
+  // Temporarily simplified to avoid build issues
+  return <div className="sr-only">EnhancedFuturisticCard temporarily disabled</div>;
+>>>>>>> origin/content/blog-sept12
 };
 
 export default EnhancedFuturisticCard;

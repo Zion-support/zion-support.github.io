@@ -7,7 +7,24 @@ Allow: /
 Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap
 
+<<<<<<< HEAD
 # Specific rules for major crawlers
+=======
+# Allow all crawlers
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /blog
+Allow: /careers
+Allow: /faq
+Allow: /privacy
+Allow: /terms
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+>>>>>>> origin/content/blog-sept12
 =======
 # Allow all major search engines
 User-agent: Googlebot
@@ -16,20 +33,33 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+<<<<<<< HEAD
 User-agent: Yandexbot
 Allow: /
 
 User-agent: Twitterbot
+=======
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+>>>>>>> origin/content/blog-sept12
 Allow: /
 
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
+<<<<<<< HEAD
+=======
+Disallow: /private/
+Disallow: /_next/
+>>>>>>> origin/content/blog-sept12
 Disallow: /private/
 Disallow: /_next/
 Disallow: /node_modules/
 Disallow: /.git/
 
+<<<<<<< HEAD
 # Allow access to static assets
 Allow: /css/
 Allow: /js/
@@ -44,7 +74,22 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap.json
 
 # Crawl-delay for respectful crawling
+=======
+<<<<<<< HEAD
+# Allow important pages
+Allow: /
+Allow: /content-showcase
+Allow: /resources
+Allow: /blog/
+Allow: /case-studies/
+=======
+# Crawl delay (optional)
+>>>>>>> origin/content/blog-sept12
 Crawl-delay: 1
 
 # Host directive
 Host: https://ziontechgroup.com
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d63f
+>>>>>>> origin/content/blog-sept12

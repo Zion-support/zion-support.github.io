@@ -28,30 +28,30 @@ function InteractiveContentDiscovery() {
 
   const contentItems: ContentItem[] = [
     {
-      id: '60',
-      title: 'AI Governance Maturity Model (2025)',
-      description: 'Assess your governance level and implement pragmatic controls without slowing delivery.',
-      href: '/blog/ai-2025-governance-maturity-model',
+      id: '54',
+      title: 'Secure Multi‑Tenant RAG in 2025: Architectures and Controls',
+      description: 'Design multi‑tenant RAG with strong isolation, policy‑as‑code, and observability without sacrificing performance.',
+      href: '/blog/ai-2025-secure-multi-tenant-rag',
       type: 'blog',
-      category: 'Governance',
-      readTime: '16 min read',
+      category: 'RAG',
+      readTime: '20 min read',
       date: 'Sep 12, 2025',
-      tags: ['Governance', 'Risk', 'Policy-as-code'],
+      tags: ['RAG', 'Security', 'Isolation', 'Governance'],
       featured: true,
-      difficulty: 'beginner'
+      difficulty: 'intermediate'
     },
     {
-      id: '61',
-      title: 'Governance Maturity Rollout: 60% Faster Reviews',
-      description: 'Case study: Policy‑as‑code and evaluation gates cut AI review times by 60% and boosted coverage.',
-      href: '/case-studies/ai-2025-governance-maturity-rollout',
-      type: 'case-study',
-      category: 'Case Study',
-      readTime: '10 min read',
+      id: '55',
+      title: 'End‑to‑End Evaluation Playbooks for AI Systems (2025)',
+      description: 'Offline tests, canary releases, runtime scoring, and guardrails to ship reliable AI.',
+      href: '/blog/ai-2025-e2e-evaluation-playbooks',
+      type: 'blog',
+      category: 'Evaluation',
+      readTime: '22 min read',
       date: 'Sep 12, 2025',
-      tags: ['Governance', 'Compliance', 'Evaluations'],
+      tags: ['Evaluation', 'Canary', 'Guardrails', 'SLOs'],
       featured: true,
-      difficulty: 'beginner'
+      difficulty: 'intermediate'
     },
     {
       id: '50',
@@ -209,6 +209,7 @@ function InteractiveContentDiscovery() {
       featured: true,
       difficulty: 'beginner'
     },
+    {
       id: '13',
       title: 'LLM Observability 2025: Metrics, Traces, and Guardrails',
       description: 'End-to-end LLM observability: metrics, traces, evaluations, and runtime guardrails for reliable AI.',

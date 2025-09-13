@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Atom, Zap, Shield, Rocket, CheckCircle, ArrowRight, Star, Users, Clock } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const AIQuantumConsciousnessPlatform: React.FC = () => {
   return (

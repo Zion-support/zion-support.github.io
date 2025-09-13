@@ -1,6 +1,6 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import SEO from "../../components/SEO";
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Enterprise AI Transformation: $50M Revenue Growth in 18 Months | Zion Tech Group',

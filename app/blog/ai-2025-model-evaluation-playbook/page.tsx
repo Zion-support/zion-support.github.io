@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+import SEO from "../../components/SEO";
 
 export const metadata = {
   title: 'AI Model Evaluation Playbook 2025 | Zion Tech Group',
@@ -42,7 +42,7 @@ export default function Page() {
 }
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Model Evaluation Playbook 2025 | Zion Tech Group',

@@ -143,6 +143,186 @@ export default function CaseStudies() {
   return (
     <Layout>
       <Head>
+        <title>Case Studies | Zion Tech Group</title>
+        <meta name="description" content="Explore real-world success stories and case studies showcasing how Zion Tech Group has transformed businesses with autonomous technology." />
+        <meta property="og:title" content="Case Studies | Zion Tech Group" />
+        <meta property="og:description" content="Real-world success stories and case studies." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="py-20 sm:py-24 lg:py-32 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100">
+        <Container>
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+              Success Stories
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Real-world examples of how we&apos;ve transformed businesses with autonomous technology
+            </p>
+            <Button href="/contact" size="lg">
+              Start Your Success Story
+            </Button>
+          </div>
+        </Container>
+      </section>
+
+      {/* Industry Overview */}
+      <section className="py-16 lg:py-24 bg-white">
+        <Container>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Industries We Serve
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transforming businesses across diverse sectors with innovative technology solutions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {industries.map((industry, index) => (
+              <Card key={index} className="text-center">
+                <div className="text-3xl mb-3">{industry.icon}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">{industry.name}</h3>
+                <p className="text-blue-600 font-medium">{industry.count} projects</p>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Case Studies Grid */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <Container>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Featured Case Studies
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Detailed insights into our most impactful projects
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {caseStudies.map((study, index) => (
+              <Card key={index} className="overflow-hidden">
+                <div className={`w-full h-48 ${study.color} flex items-center justify-center mb-6`}>
+                  <span className="text-6xl">{study.image}</span>
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-2xl font-bold text-gray-900">{study.title}</h3>
+                    <span className="text-sm text-gray-500">{study.company}</span>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {study.description}
+                  </p>
+
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Results:</h4>
+                    <ul className="space-y-2">
+                      {study.results.map((result, resultIndex) => (
+                        <li key={resultIndex} className="flex items-center text-sm text-gray-600">
+                          <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Technologies Used:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {study.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <Button href="/contact" variant="outline" className="w-full">
+                    Learn More
+                  </Button>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 lg:py-24 bg-white">
+        <Container>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Hear directly from the organizations we&apos;ve helped transform
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="text-center">
+              <div className="text-4xl mb-4">⭐</div>
+              <p className="text-gray-600 mb-4 italic">
+                &quot;Zion Tech Group transformed our entire business operations. The AI-powered automation increased our efficiency by 300%.&quot;
+              </p>
+              <div className="font-semibold text-gray-900">Sarah Johnson</div>
+              <div className="text-sm text-gray-500">CEO, TechCorp International</div>
+            </Card>
+
+            <Card className="text-center">
+              <div className="text-4xl mb-4">⭐</div>
+              <p className="text-gray-600 mb-4 italic">
+                &quot;Their autonomous systems have revolutionized our healthcare platform. Diagnostic accuracy improved dramatically.&quot;
+              </p>
+              <div className="font-semibold text-gray-900">Dr. Michael Chen</div>
+              <div className="text-sm text-gray-500">CTO, MedTech Solutions</div>
+            </Card>
+
+            <Card className="text-center">
+              <div className="text-4xl mb-4">⭐</div>
+              <p className="text-gray-600 mb-4 italic">
+                &quot;Zero downtime for 12 months straight. Their redundancy systems are truly revolutionary.&quot;
+              </p>
+              <div className="font-semibold text-gray-900">David Rodriguez</div>
+              <div className="text-sm text-gray-500">VP Engineering, FinTech Innovations</div>
+            </Card>
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 lg:py-24 bg-gradient-to-r from-blue-600 to-purple-600">
+        <Container>
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Ready to Write Your Success Story?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Join the growing list of organizations that have transformed their business with our autonomous technology
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button href="/contact" variant="secondary" size="lg">
+                Start Your Project
+              </Button>
+              <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
+                Explore Services
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+    </>
+  );
+>>>>>>> origin/content/blog-sept12
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -154,244 +334,3 @@ export default function CaseStudiesPage() {
       <div className="container mx-auto px-4 py-16 text-white">
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Case Studies</h1>
         <p className="mt-4 text-gray-300 max-w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p>
-=======
-        <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Discover how Zion Tech Group's revolutionary AI and quantum computing solutions have transformed businesses across industries. Real success stories with measurable results." />
-        <meta name="keywords" content="case studies, success stories, client results, AI transformation, quantum computing success, business transformation" />
-        <link rel="canonical" href="https://ziontechgroup.com/case-studies" />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 text-green-300 text-sm font-medium mb-6">
-                <Star className="w-4 h-4 mr-2" />
-                Success Stories
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent mb-6">
-                Case Studies
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Discover how our revolutionary AI and quantum computing solutions have transformed 
-                businesses across industries. Real success stories with measurable results.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Featured Case Study */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-16"
-            >
-              <h2 className="text-3xl font-bold text-white mb-8">Featured Success Story</h2>
-              
-              {caseStudies.filter(study => study.featured).map((study, index) => (
-                <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div>
-                      <div className="flex items-center space-x-4 mb-4">
-                        <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm font-medium rounded-full">
-                          {study.industry}
-                        </span>
-                        <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium rounded-full">
-                          Featured
-                        </span>
-                      </div>
-                      
-                      <h3 className="text-3xl font-bold text-white mb-4">{study.title}</h3>
-                      <p className="text-gray-400 text-lg mb-4">{study.company}</p>
-                      
-                      <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-white mb-2">Challenge:</h4>
-                        <p className="text-gray-300">{study.challenge}</p>
-                      </div>
-                      
-                      <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-white mb-2">Solution:</h4>
-                        <p className="text-gray-300">{study.solution}</p>
-                      </div>
-                      
-                      <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-white mb-2">Results:</h4>
-                        <ul className="space-y-2">
-                          {study.results.map((result, resultIndex) => (
-                            <li key={resultIndex} className="flex items-start space-x-3">
-                              <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                              <span className="text-gray-300">{result}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      <Link 
-                        href={`/case-studies/${study.slug}`}
-                        className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200"
-                      >
-                        Read Full Case Study
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
-                    </div>
-                    
-                    <div className="space-y-6">
-                      <div className="bg-gradient-to-br from-gray-700/50 to-gray-800/50 rounded-xl p-6">
-                        <h4 className="text-lg font-semibold text-white mb-4">Key Metrics</h4>
-                        <div className="grid grid-cols-1 gap-4">
-                          <div className="text-center">
-                            <div className="text-3xl font-bold text-green-400">{study.metrics.customers}</div>
-                            <div className="text-gray-400 text-sm">Customers Served</div>
-                          </div>
-                          <div className="text-center">
-                            <div className="text-3xl font-bold text-blue-400">{study.metrics.improvement}</div>
-                            <div className="text-gray-400 text-sm">Performance Improvement</div>
-                          </div>
-                          <div className="text-center">
-                            <div className="text-3xl font-bold text-purple-400">{study.metrics.timeframe}</div>
-                            <div className="text-gray-400 text-sm">Implementation Time</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Industry Filter */}
-        <section className="py-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
-              {industries.map((industry, index) => (
-                <button
-                  key={index}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
-                    industry.active
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
-                  }`}
-                >
-                  {industry.name} ({industry.count})
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Case Studies Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-16"
-            >
-              <h2 className="text-3xl font-bold text-white mb-8">More Success Stories</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                {caseStudies.filter(study => !study.featured).map((study, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
-                  >
-                    <div className="mb-4">
-                      <span className="px-3 py-1 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 text-green-300 text-xs font-medium rounded-full">
-                        {study.industry}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">{study.title}</h3>
-                    <p className="text-gray-400 text-sm mb-4">{study.company}</p>
-                    
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-white mb-2">Challenge:</h4>
-                      <p className="text-gray-300 text-sm line-clamp-3">{study.challenge}</p>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-white mb-2">Key Results:</h4>
-                      <ul className="space-y-1">
-                        {study.results.slice(0, 2).map((result, resultIndex) => (
-                          <li key={resultIndex} className="flex items-start space-x-2">
-                            <CheckCircle className="w-3 h-3 text-green-500 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-300 text-xs">{result}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-center">
-                        <div className="text-lg font-bold text-green-400">{study.metrics.improvement}</div>
-                        <div className="text-gray-400 text-xs">Improvement</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-lg font-bold text-blue-400">{study.metrics.timeframe}</div>
-                        <div className="text-gray-400 text-xs">Timeframe</div>
-                      </div>
-                    </div>
-                    
-                    <Link 
-                      href={`/case-studies/${study.slug}`}
-                      className="inline-flex items-center text-green-400 hover:text-green-300 text-sm font-medium transition-colors duration-200"
-                    >
-                      Read Full Case Study
-                      <ArrowRight className="w-3 h-3 ml-1" />
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Write Your Success Story?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join the companies that have already transformed their business with our 
-                revolutionary AI and quantum computing technology.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200 transform hover:scale-105">
-                  Start Your Transformation
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <Link href="/contact" className="inline-flex items-center px-8 py-4 border border-green-500/30 text-green-300 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-200">
-                  Schedule Consultation
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraFuturisticBackground>
-  );
-}

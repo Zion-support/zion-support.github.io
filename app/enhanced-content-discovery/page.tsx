@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from '../../components/SEO';
 import InteractiveContentDiscovery from '../../components/InteractiveContentDiscovery';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function EnhancedContentDiscovery() {
   return (

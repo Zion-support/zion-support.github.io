@@ -21,26 +21,13 @@ export default function WishlistPage() {
     if (!isAuthLoading && !user) {
       router.push('/login');
     }
-  }, [user, isAuthLoading, router]);
+    dispatch(loadWishlistFromDB(user.id!));
+  }, [user, dispatch, navigate, location]);
 
-  if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
-    return null; // Or a loading spinner
-  }
-
-  const { items, dispatch } = useCart();
-
-  const addToCart = (item: { id: string; title?: string; price?: number }) => {
-    if (items.some(i => i.id === item.id)) return;
-    dispatch({
-      type: 'ADD_ITEM',
-      payload: {
-        id: item.id,
-        name: item.title || 'Item',
-        price: item.price || 0,
-        quantity: 1
-      }
-    });
-    toast.success(`1× ${item.title || 'Item'} added`);
+  const handleRemove = (id: string) => {
+    dispatch(removeFromWishlist({ id }));
+    fetch(`${getApiUrl()}/wishlist/${id}`, { method: 'DELETE' }).catch(() => {});
+>>>>>>> origin/content/blog-sept12
   };
 
   const productMap = MARKETPLACE_LISTINGS.reduce<Record<string, any>>((acc, p) => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import SEO from "../../components/SEO";
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Benchmarking Best Practices 2025 (Free Resource)',
@@ -39,7 +39,7 @@ export default function Page() {
 }
 
 import React from 'react';
-import SEO from '../../../components/SEO';
+import SEO from "../../components/SEO";
 
 export default function AIBenchmarkingBestPractices2025() {
   return (

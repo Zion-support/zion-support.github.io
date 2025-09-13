@@ -1,195 +1,196 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
-import FeatureCard from '../../components/FeatureCard';
+import { ArrowRight, Zap, Shield, Globe, Users, TrendingUp, Star, CheckCircle, Brain, Cpu, Database, Cloud } from 'lucide-react';
 
 export default function ServicesPage() {
   const services = [
     {
-      title: "AI Automation",
-      description: "Streamline operations with intelligent automation solutions that reduce manual work and increase efficiency.",
-      icon: "🤖",
-      href: "/services/ai-automation",
-      features: ["Process Automation", "Workflow Optimization", "Intelligent Document Processing"]
+      icon: <Brain className="w-12 h-12 text-blue-400" />,
+      title: "AI Autonomous Operations",
+      description: "Revolutionary AI systems that operate independently, making intelligent decisions and optimizing processes in real-time.",
+      features: [
+        "Real-time Decision Making",
+        "Predictive Analytics", 
+        "Autonomous Optimization",
+        "Machine Learning Models",
+        "Neural Network Processing"
+      ],
+      pricing: "Starting at $10,000/month",
+      roi: "2,500% average ROI"
     },
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable, secure, and cost-effective cloud solutions tailored to your business needs.",
-      icon: "☁️",
-      href: "/services/cloud-infrastructure",
-      features: ["AWS/Azure/GCP Migration", "Container Orchestration", "DevOps Implementation"]
+      icon: <Shield className="w-12 h-12 text-purple-400" />,
+      title: "Quantum Computing Solutions",
+      description: "Breakthrough quantum computing solutions delivering exponential computational power and security.",
+      features: [
+        "Quantum Supremacy",
+        "Error-Corrected Quantum",
+        "Quantum Internet",
+        "Quantum Machine Learning",
+        "Quantum Cryptography"
+      ],
+      pricing: "Starting at $25,000/month",
+      roi: "5,000% average ROI"
     },
     {
-      title: "Micro SaaS Development",
-      description: "Custom SaaS platforms for niche markets with rapid development and deployment.",
-      icon: "💼",
-      href: "/services/micro-saas",
-      features: ["Rapid Prototyping", "Scalable Architecture", "Revenue Optimization"]
+      icon: <Globe className="w-12 h-12 text-cyan-400" />,
+      title: "Advanced Automation",
+      description: "Intelligent process automation that streamlines operations and eliminates manual tasks.",
+      features: [
+        "Process Automation",
+        "Smart Resource Management",
+        "Predictive Maintenance",
+        "Workflow Optimization",
+        "Intelligent Monitoring"
+      ],
+      pricing: "Starting at $5,000/month",
+      roi: "1,800% average ROI"
     },
     {
-      title: "AI Consulting",
-      description: "Strategic guidance for AI implementation and digital transformation initiatives.",
-      icon: "🧠",
-      href: "/services/ai-consulting",
-      features: ["AI Strategy", "Technology Assessment", "Implementation Planning"]
+      icon: <Users className="w-12 h-12 text-green-400" />,
+      title: "Enterprise Solutions",
+      description: "Comprehensive enterprise-grade solutions designed for scalability and reliability.",
+      features: [
+        "Scalable Architecture",
+        "Enterprise Security",
+        "24/7 Support",
+        "Custom Development",
+        "Integration Services"
+      ],
+      pricing: "Custom pricing",
+      roi: "3,200% average ROI"
     },
     {
-      title: "Edge Computing",
-      description: "Deploy AI at the edge for real-time processing and reduced latency.",
-      icon: "⚡",
-      href: "/services/edge-computing",
-      features: ["Edge AI Deployment", "IoT Integration", "Real-time Processing"]
+      icon: <TrendingUp className="w-12 h-12 text-yellow-400" />,
+      title: "Business Intelligence",
+      description: "Advanced analytics and insights that drive data-driven decision making and growth.",
+      features: [
+        "Real-time Analytics",
+        "Predictive Insights",
+        "Performance Optimization",
+        "Data Visualization",
+        "Custom Dashboards"
+      ],
+      pricing: "Starting at $3,000/month",
+      roi: "1,500% average ROI"
     },
     {
-      title: "Quantum Computing",
-      description: "Next-generation computing solutions for complex optimization problems.",
-      icon: "⚛️",
-      href: "/services/quantum-computing",
-      features: ["Quantum Algorithms", "Optimization Problems", "Research & Development"]
+      icon: <Star className="w-12 h-12 text-pink-400" />,
+      title: "Innovation Hub",
+      description: "Cutting-edge research and development in emerging technologies and future solutions.",
+      features: [
+        "R&D Excellence",
+        "Future Technologies",
+        "Innovation Labs",
+        "Prototype Development",
+        "Technology Consulting"
+      ],
+      pricing: "Project-based",
+      roi: "Variable ROI"
     }
   ];
 
   return (
-    <ErrorBoundary>
-      <SEO
-        title="Our Services - AI & Technology Solutions"
-        description="Comprehensive AI and technology services including automation, cloud infrastructure, micro SaaS development, and consulting."
-        keywords="AI services, cloud computing, micro SaaS, technology consulting, automation, edge computing, quantum computing"
-        url="/services"
-      />
-      
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <div className="text-center">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-indigo-200 bg-clip-text text-transparent">
-                Our Services
-              </h1>
-              <p className="text-xl md:text-2xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-                Comprehensive AI and technology solutions designed to transform your business and drive innovation.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-8">
-                  <div className="text-center mb-6">
-                    <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 group-hover:text-gray-700 transition-colors mb-6">
-                      {service.description}
-                    </p>
-                  </div>
-                  
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Link
-                    href={service.href}
-                    className="block w-full bg-indigo-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Process Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Our Process
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We follow a proven methodology to deliver exceptional results
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  1
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Discovery</h3>
-                <p className="text-gray-600">We analyze your business needs and challenges to understand your requirements.</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  2
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Strategy</h3>
-                <p className="text-gray-600">We develop a comprehensive strategy tailored to your specific goals.</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  3
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Implementation</h3>
-                <p className="text-gray-600">We execute the solution with precision and attention to detail.</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  4
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Optimization</h3>
-                <p className="text-gray-600">We continuously monitor and optimize for maximum performance.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-indigo-200 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our services can transform your business
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.1),transparent_50%)]" />
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Revolutionary
+              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                AI Services
+              </span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Transform your business with our cutting-edge AI, quantum computing, and automation solutions. 
+              Experience unprecedented growth and efficiency.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-semibold hover:bg-indigo-50 transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
               >
-                Contact Us
-              </Link>
-              <Link
-                href="/content-showcase"
-                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
-              >
-                View Resources
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </div>
           </div>
-        </section>
-      </div>
-    </ErrorBoundary>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
+                <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {service.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                
+                <ul className="space-y-3 mb-6">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="border-t border-white/10 pt-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-lg font-semibold text-white">{service.pricing}</span>
+                    <span className="text-sm text-green-400 font-medium">{service.roi}</span>
+                  </div>
+                  <Link
+                    href="/contact"
+                    className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-black/20 backdrop-blur-sm">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of companies already experiencing unprecedented growth with our 
+            revolutionary AI and automation solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
+            >
+              Start Your Transformation
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+            >
+              View Success Stories
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

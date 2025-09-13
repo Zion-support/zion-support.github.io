@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
 import Card from '../../components/ui/Card';
 import FeatureCard from '../../components/FeatureCard';

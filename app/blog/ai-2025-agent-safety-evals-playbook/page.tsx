@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import SEO from "../../components/SEO";
+import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Download, Shield, AlertTriangle, CheckCircle } from 'lucide-react';
 
 export default function AgentSafetyEvalsPlaybook2025() {

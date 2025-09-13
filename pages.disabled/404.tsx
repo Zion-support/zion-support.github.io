@@ -1,6 +1,14 @@
-import React from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
-export default function NotFoundPage() {
+export default function Custom404() {
+  const router = useRouter();
+  const path = router.asPath || '';
+  const title = path && path !== '/' ? `404 – ${path} not found` : '404 – Page Not Found';
+  const description = `The page at ${path || 'this URL'} could not be found.`;
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || '';
+  const canonical = baseUrl && path ? `${baseUrl}${path}` : undefined;
+
   return (
     <div className="container mx-auto px-4 py-20 text-center">
       <h1 className="text-3xl font-semibold">404 - Page Not Found</h1>

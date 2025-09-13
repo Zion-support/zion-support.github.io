@@ -1,7 +1,7 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+import SEO from "../../components/SEO";
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Bot, Cpu, Zap, Target, TrendingUp, Award, Clock, 
   CheckCircle, ArrowRight, ArrowUpRight, Users, DollarSign,

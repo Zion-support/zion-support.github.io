@@ -2,6 +2,27 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function AISalesAutomation2025Page() {
+
+
+
+
+
+								<Link href='/contact' className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'>
+								</Link>
+								<Link href='/services/ai-automation' className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors'>
+								</Link>
+
+						<Link href='/blog/startup-sales-playbook-2025' className='group'>
+						</Link>
+						<Link href='/blog/ai-go-to-market-2025' className='group'>
+						</Link>
+						<Link href='/blog/ai-productivity-automation-2025' className='group'>
+						</Link>
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+export default function AISalesAutomation2025Page() {
 	return (
 		<div className='min-h-screen bg-white'>
 			{/* Hero Section */}

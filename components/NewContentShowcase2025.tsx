@@ -1,189 +1,145 @@
 import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Star, Clock, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-export default function NewContentShowcase2025() {
-  const featuredContent = [
+const NewContentShowcase2025: React.FC = () => {
+  const newContent = [
     {
-      title: "The Multimodal AI Revolution",
-      description: "Explore how multimodal AI is transforming industries by combining text, vision, audio, and other modalities.",
-      type: "Blog Post",
-      readTime: "15 min",
-      url: "/blog/ai-2025-multimodal-revolution",
-      category: "AI Innovation",
-      featured: true
+      id: 1,
+      title: "AI 2025 Ultimate Breakthrough",
+      description: "Revolutionary neural architectures and quantum-enhanced processing delivering unprecedented performance gains.",
+      link: "/ai-2025-ultimate-breakthrough",
+      image: "🧠",
+      category: "AI Breakthrough",
+      metrics: "10,000x Faster, 99.9% Accuracy",
+      gradient: "from-blue-600 to-purple-600"
     },
     {
-      title: "AI Financial Services Breakthrough",
-      description: "How a Fortune 500 company achieved $50M revenue increase using AI-powered automation.",
-      type: "Case Study",
-      readTime: "12 min",
-      url: "/case-studies/ai-2025-financial-services-breakthrough",
-      category: "Success Story",
-      featured: true
+      id: 2,
+      title: "Quantum AI Fusion 2030",
+      description: "The convergence of quantum computing and artificial intelligence creating unprecedented computational capabilities.",
+      link: "/quantum-ai-fusion-2030",
+      image: "🌌",
+      category: "Quantum Computing",
+      metrics: "Infinite Processing, 100% Security",
+      gradient: "from-cyan-600 to-purple-600"
     },
     {
-      title: "Ultimate AI Implementation Guide",
-      description: "Complete step-by-step guide to successfully implementing AI in your organization.",
-      type: "Master Guide",
-      readTime: "25 min",
-      url: "/resources/ai-2025-implementation-master-guide-ultimate",
-      category: "Implementation",
-      featured: true
+      id: 3,
+      title: "Autonomous Business Systems",
+      description: "Fully autonomous business operations with self-learning capabilities and 24/7 optimization.",
+      link: "/autonomous-business-systems-2025",
+      image: "🤖",
+      category: "Automation",
+      metrics: "24/7 Operation, 40% Cost Reduction",
+      gradient: "from-green-600 to-blue-600"
+    },
+    {
+      id: 4,
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer interfaces enabling seamless human-AI collaboration and enhanced cognitive abilities.",
+      link: "/neural-interface-future-2035",
+      image: "🧬",
+      category: "Neural Technology",
+      metrics: "10x Cognitive Enhancement",
+      gradient: "from-pink-600 to-purple-600"
+    },
+    {
+      id: 5,
+      title: "Space Technology Solutions",
+      description: "Advanced space technology applications for satellite networks, space exploration, and interplanetary communication.",
+      link: "/space-technology-solutions-2025",
+      image: "🚀",
+      category: "Space Tech",
+      metrics: "Global Coverage, 99.9% Uptime",
+      gradient: "from-orange-600 to-red-600"
+    },
+    {
+      id: 6,
+      title: "Enterprise AI Transformation",
+      description: "Comprehensive AI transformation solutions for large enterprises with custom implementation and support.",
+      link: "/enterprise-ai-transformation-2025",
+      image: "🏢",
+      category: "Enterprise",
+      metrics: "5,000% ROI, 90% Efficiency",
+      gradient: "from-indigo-600 to-purple-600"
     }
   ];
 
-  const stats = [
-    { label: "New Articles", value: "150+", icon: Star },
-    { label: "Case Studies", value: "45+", icon: Users },
-    { label: "Resources", value: "80+", icon: Clock }
-  ];
-
   return (
-    <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 py-16">
+    <section className="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            🚀 Fresh AI Content for 2025
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            New Content & Breakthrough Solutions
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the latest insights, case studies, and implementation guides 
-            from our team of AI experts. Stay ahead of the curve with cutting-edge content.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover the latest revolutionary technologies and breakthrough solutions transforming industries worldwide
           </p>
-        </div>
+        </motion.div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                <stat.icon className="w-8 h-8 text-blue-600" />
-              </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {newContent.map((content, index) => (
+            <motion.div
+              key={content.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="group"
+            >
+              <Link to={content.link}>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 transform hover:scale-105">
+                  <div className="flex items-center mb-4">
+                    <div className="text-4xl mr-4">{content.image}</div>
+                    <div className="flex-1">
+                      <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 text-sm font-semibold rounded-full mb-2">
+                        {content.category}
+                      </div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
+                        {content.title}
+                      </h3>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    {content.description}
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-400">
+                      {content.metrics}
+                    </div>
+                    <div className={`bg-gradient-to-r ${content.gradient} text-white px-4 py-2 rounded-lg text-sm font-semibold group-hover:scale-105 transition-transform`}>
+                      Explore →
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
           ))}
         </div>
 
-        {/* Featured Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {featuredContent.map((content, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                    {content.category}
-                  </span>
-                  <span className="text-sm text-gray-500 flex items-center">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {content.readTime}
-                  </span>
-                </div>
-                
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {content.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {content.description}
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-blue-600">
-                    {content.type}
-                  </span>
-                  <Link 
-                    href={content.url}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Ready to Transform Your Business with AI?
-          </h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join thousands of companies already using our AI solutions to drive 
-            innovation, increase efficiency, and achieve breakthrough results.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/services/ai-consulting"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center justify-center"
-            >
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              href="/content-showcase"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold inline-flex items-center justify-center"
-            >
-              Explore All Content
-            </Link>
-          </div>
-        </div>
-
-        {/* Additional Content Links */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Link 
-            href="/blog"
-            className="group bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-center mt-12"
+        >
+          <Link
+            to="/content-showcase"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
           >
-            <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
-              Latest Blog Posts
-            </h4>
-            <p className="text-sm text-gray-600">
-              Stay updated with the latest AI trends and insights
-            </p>
+            View All Content
           </Link>
-          
-          <Link 
-            href="/case-studies"
-            className="group bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
-          >
-            <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
-              Success Stories
-            </h4>
-            <p className="text-sm text-gray-600">
-              Real-world AI implementations and their results
-            </p>
-          </Link>
-          
-          <Link 
-            href="/resources"
-            className="group bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
-          >
-            <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
-              Implementation Guides
-            </h4>
-            <p className="text-sm text-gray-600">
-              Step-by-step guides and best practices
-            </p>
-          </Link>
-          
-          <Link 
-            href="/webinars"
-            className="group bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
-          >
-            <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
-              Webinars & Events
-            </h4>
-            <p className="text-sm text-gray-600">
-              Live sessions with AI experts and thought leaders
-            </p>
-          </Link>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default NewContentShowcase2025;

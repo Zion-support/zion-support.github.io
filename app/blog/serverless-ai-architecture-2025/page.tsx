@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import { Link } from 'react-router-dom';
+import SEO from "../../components/SEO";
 import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {

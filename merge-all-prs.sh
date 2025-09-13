@@ -1,98 +1,126 @@
 #!/bin/bash
 
-# Script to merge all open PRs systematically
-# This script will attempt to merge branches one by one, resolving conflicts
-# and skipping problematic ones that would break the build
+# Merge All PRs Script
+# This script will resolve all merge conflicts and merge all open PRs into main
 
 set -e
 
-echo "🚀 Starting systematic merge of all open PRs..."
+echo "🚀 Starting merge process for all PRs..."
 
-# Get all remote branches
-BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///')
+# Function to log with timestamp
+log() {
+    echo "[$(date '+%H:%M:%S')] $1"
+}
 
-# Counter for successful merges
-SUCCESS_COUNT=0
-FAILED_COUNT=0
-SKIPPED_COUNT=0
+# Function to check git status
+check_status() {
+    log "Checking git status..."
+    git status --porcelain
+    git branch -a
+}
 
-# Create a log file
-LOG_FILE="merge-log-$(date +%Y%m%d-%H%M%S).txt"
-echo "Merge log started at $(date)" > "$LOG_FILE"
-
-for branch in $BRANCHES; do
-    echo "📋 Processing branch: $branch"
-    echo "📋 Processing branch: $branch" >> "$LOG_FILE"
+# Function to fetch and update
+fetch_update() {
+    log "Fetching latest changes..."
+    git fetch origin --all
     
-    # Skip if we're already on this branch or if it's main
-    if [[ "$branch" == "main" ]]; then
-        echo "⏭️  Skipping main branch"
-        continue
-    fi
+    log "Updating main branch..."
+    git checkout main
+    git pull origin main
+}
+
+# Function to resolve conflicts
+resolve_conflicts() {
+    local branch=$1
+    log "Resolving conflicts for $branch"
     
-    # Try to merge the branch
-    echo "🔄 Attempting to merge $branch..."
-    echo "🔄 Attempting to merge $branch..." >> "$LOG_FILE"
+    # Checkout branch
+    git checkout "$branch"
     
-    if git merge "origin/$branch" --no-edit; then
-        echo "✅ Successfully merged $branch"
-        echo "✅ Successfully merged $branch" >> "$LOG_FILE"
-        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+    # Try merge
+    if git merge main --no-commit 2>/dev/null; then
+        log "No conflicts for $branch"
+        git commit -m "Merge main into $branch"
     else
-        echo "⚠️  Merge conflicts detected in $branch, attempting to resolve..."
-        echo "⚠️  Merge conflicts detected in $branch, attempting to resolve..." >> "$LOG_FILE"
+        log "Conflicts detected, auto-resolving..."
         
-        # Check if there are conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "🔧 Resolving conflicts in $branch..."
-            echo "🔧 Resolving conflicts in $branch..." >> "$LOG_FILE"
-            
-            # Try to resolve conflicts automatically by taking incoming changes for most files
-            # but preserving our critical Vite configuration
-            if [[ -f "netlify.toml" ]]; then
-                # Preserve our Vite configuration
-                git checkout --ours netlify.toml
-                echo "🔒 Preserved Vite configuration in netlify.toml"
-            fi
-            
-            # For other conflicts, try to take incoming changes
-            git status --porcelain | grep "^UU\|^AA" | while read -r line; do
-                file=$(echo "$line" | awk '{print $2}')
-                if [[ "$file" != "netlify.toml" ]]; then
-                    echo "📝 Taking incoming changes for $file"
-                    git checkout --theirs "$file" 2>/dev/null || echo "⚠️  Could not resolve $file automatically"
-                fi
-            done
-            
-            # Try to commit the merge
-            if git add . && git commit -m "Merge $branch: Auto-resolve conflicts"; then
-                echo "✅ Successfully resolved conflicts and merged $branch"
-                echo "✅ Successfully resolved conflicts and merged $branch" >> "$LOG_FILE"
-                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
-            else
-                echo "❌ Failed to resolve conflicts in $branch, aborting merge"
-                echo "❌ Failed to resolve conflicts in $branch, aborting merge" >> "$LOG_FILE"
-                git merge --abort
-                FAILED_COUNT=$((FAILED_COUNT + 1))
-            fi
-        else
-            echo "❌ Merge failed for $branch (unknown reason)"
-            echo "❌ Merge failed for $branch (unknown reason)" >> "$LOG_FILE"
-            git merge --abort
-            FAILED_COUNT=$((FAILED_COUNT + 1))
-        fi
+        # Auto-resolve conflicts
+        git checkout --ours package.json 2>/dev/null || true
+        git checkout --ours package-lock.json 2>/dev/null || true
+        git rm "*.backup*" 2>/dev/null || true
+        git checkout --ours app/page.tsx 2>/dev/null || true
+        git checkout --ours app/layout.tsx 2>/dev/null || true
+        git checkout --ours components/ 2>/dev/null || true
+        git add .
+        git commit -m "Auto-resolve conflicts in $branch"
+    fi
+}
+
+# Function to merge PR
+merge_pr() {
+    local branch=$1
+    log "Merging $branch into main"
+    
+    git checkout main
+    if git merge "$branch" --no-ff -m "Merge $branch into main"; then
+        log "Successfully merged $branch"
+        git push origin main
+        git branch -d "$branch" 2>/dev/null || true
+        git push origin --delete "$branch" 2>/dev/null || true
+    else
+        log "Failed to merge $branch"
+    fi
+}
+
+# Function to clean up
+cleanup() {
+    log "Cleaning up..."
+    find . -name "*.backup*" -type f -delete 2>/dev/null || true
+    find . -name "*.bak" -type f -delete 2>/dev/null || true
+    find . -name "*~" -type f -delete 2>/dev/null || true
+}
+
+# Function to update dependencies
+update_deps() {
+    log "Updating dependencies..."
+    if [ -f "package.json" ]; then
+        npm install --silent 2>/dev/null || true
+    fi
+}
+
+# Main execution
+main() {
+    log "Starting merge process..."
+    
+    # Check status
+    check_status
+    
+    # Fetch and update
+    fetch_update
+    
+    # Get PR branches
+    pr_branches=$(git branch -r | grep -E "(pull|pr|feature|bugfix|cursor)" | sed 's/origin\///' | tr -d ' ')
+    
+    if [ -z "$pr_branches" ]; then
+        log "No PR branches found"
+        exit 0
     fi
     
-    echo "---" >> "$LOG_FILE"
-done
+    log "Found PR branches: $pr_branches"
+    
+    # Process each PR
+    for branch in $pr_branches; do
+        log "Processing $branch"
+        resolve_conflicts "$branch"
+        merge_pr "$branch"
+    done
+    
+    # Clean up
+    cleanup
+    update_deps
+    
+    log "Merge process completed!"
+}
 
-echo "🎉 Merge process completed!"
-echo "✅ Successful merges: $SUCCESS_COUNT"
-echo "❌ Failed merges: $FAILED_COUNT"
-echo "⏭️  Skipped branches: $SKIPPED_COUNT"
-echo "📋 Log saved to: $LOG_FILE"
-
-echo "🎉 Merge process completed!" >> "$LOG_FILE"
-echo "✅ Successful merges: $SUCCESS_COUNT" >> "$LOG_FILE"
-echo "❌ Failed merges: $FAILED_COUNT" >> "$LOG_FILE"
-echo "⏭️  Skipped branches: $SKIPPED_COUNT" >> "$LOG_FILE"
+# Run main function
+main "$@"

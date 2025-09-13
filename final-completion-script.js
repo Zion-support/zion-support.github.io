@@ -4,7 +4,6 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 
 console.log('🚀 Final Completion Script - Ensuring All Tasks Are Complete');
-console.log('===========================================================');
 
 // Function to run git commands safely
 function runGitCommand(command, description) {
@@ -253,7 +252,6 @@ async function main() {
     
     // Summary
     console.log('\n🎉 FINAL COMPLETION SUMMARY:');
-    console.log('============================');
     console.log(`📋 Branches processed: ${branchResults.processed}`);
     console.log(`✅ Successfully merged: ${branchResults.merged}`);
     console.log(`❌ Failed to merge: ${branchResults.failed}`);
