@@ -7,9 +7,33 @@ echo "Starting Netlify build process..."
 if [ "$NETLIFY" = "true" ]; then
   echo "Detected Netlify environment - using optimized build process..."
   
-  # For Netlify, use a more conservative approach
+  # Clear any corrupted caches that might cause ENOENT errors
+  echo "Clearing potentially corrupted caches..."
+  rm -rf .yarn-cache
+  rm -rf node_modules/.cache
+  
+  # Clean yarn cache to prevent corrupted cache issues
+  echo "Cleaning yarn cache..."
+  yarn cache clean --all || true
+  
+  # For Netlify, use a more conservative approach with retry logic
   echo "Installing dependencies with Netlify-optimized settings..."
-  yarn install --frozen-lockfile --network-timeout 60000
+  for i in {1..3}; do
+    echo "Installation attempt $i of 3..."
+    if yarn install --frozen-lockfile --network-timeout 60000 --ignore-engines; then
+      echo "Dependencies installed successfully!"
+      break
+    else
+      echo "Installation failed, cleaning and retrying..."
+      rm -rf node_modules
+      rm -rf .yarn-cache
+      yarn cache clean --all || true
+      if [ $i -eq 3 ]; then
+        echo "All installation attempts failed!"
+        exit 1
+      fi
+    fi
+  done
   
 else
   echo "Local development environment detected - using full cleanup process..."

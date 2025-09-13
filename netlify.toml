@@ -19,6 +19,8 @@
   YARN_NETWORK_CONCURRENCY = "1"
   YARN_DISABLE_TELEMETRY = "1"
   YARN_ENABLE_PROGRESS_BARS = "false"
+  YARN_IGNORE_ENGINES = "true"
+  YARN_IGNORE_PLATFORM = "true"
   NETLIFY = "true"
 
 # Long-term caching for static assets
@@ -81,6 +83,8 @@
   YARN_NETWORK_TIMEOUT = "60000"
   YARN_NETWORK_CONCURRENCY = "1"
   YARN_DISABLE_TELEMETRY = "1"
+  YARN_IGNORE_ENGINES = "true"
+  YARN_IGNORE_PLATFORM = "true"
   NETLIFY = "true"
 
 [context.deploy-preview]
