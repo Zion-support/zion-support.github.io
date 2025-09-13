@@ -22,6 +22,8 @@ const RevolutionaryContentRecommendationEngine2026 = lazy(() => import('../compo
 // New promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import RevolutionaryContentPromotionBanner2025 from '../components/RevolutionaryContentPromotionBanner2025';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
 export default function HomePage() {
   return (
@@ -34,6 +36,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* REVOLUTIONARY CONTENT PROMOTION BANNER 2025 */}
+        <RevolutionaryContentPromotionBanner2025 />
+        
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
         
@@ -95,6 +100,9 @@ export default function HomePage() {
             <InteractiveContentDiscoveryWidget />
           </div>
         </section>
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
         
         {/* REVOLUTIONARY CONTENT RECOMMENDATION ENGINE 2026 */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading AI Recommendations..." />}>
