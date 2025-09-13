@@ -3,104 +3,94 @@ import Link from 'next/link';
 
 export default function AI2025UltimateBreakthroughRevolutionBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
-
+    <div className="relative overflow-hidden bg-gradient-to-r from-red-900 via-purple-900 to-blue-900 py-16">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23FF6B6B" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white text-sm font-bold mb-8 animate-bounce">
-            🚀 BREAKTHROUGH ANNOUNCEMENT - NEW CONTENT
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-yellow-500/20 border border-red-500/30 mb-8">
+            <span className="text-red-400 font-semibold text-sm flex items-center">
+              <span className="w-2 h-2 bg-red-400 rounded-full mr-2 animate-pulse"></span>
+              REVOLUTIONARY BREAKTHROUGH
+            </span>
           </div>
 
-          {/* Main heading */}
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-            AI 2025 Ultimate Breakthrough Revolution
+          {/* Main Content */}
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            AI 2025 Ultimate
+            <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              Breakthrough Revolution
+            </span>
           </h2>
-
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Experience the most revolutionary AI breakthrough in human history. 
-            Quantum-AI fusion delivering <span className="text-yellow-400 font-bold">10,000% ROI</span> with 
-            <span className="text-green-400 font-bold"> 99.9% accuracy</span> across all industries.
+          
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Witness the most revolutionary AI breakthroughs of 2025 delivering 
+            <span className="text-yellow-400 font-bold"> 10,000% ROI</span> and 
+            <span className="text-green-400 font-bold"> 99.9% accuracy</span> 
+            across industries worldwide.
           </p>
 
-          {/* Key metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-red-800/30 to-pink-800/30 p-6 rounded-xl border border-red-500/30">
-              <div className="text-3xl font-bold text-red-400 mb-2">10,000%</div>
-              <div className="text-gray-300 font-semibold">ROI Achievement</div>
+          {/* Key Metrics */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-r from-yellow-800/30 to-orange-800/30 rounded-lg p-4 border border-yellow-500/20">
+              <div className="text-2xl font-bold text-yellow-400 mb-1">10,000%</div>
+              <div className="text-sm text-gray-300">Average ROI</div>
             </div>
-            <div className="bg-gradient-to-br from-green-800/30 to-emerald-800/30 p-6 rounded-xl border border-green-500/30">
-              <div className="text-3xl font-bold text-green-400 mb-2">99.9%</div>
-              <div className="text-gray-300 font-semibold">Accuracy Rate</div>
+            <div className="bg-gradient-to-r from-green-800/30 to-emerald-800/30 rounded-lg p-4 border border-green-500/20">
+              <div className="text-2xl font-bold text-green-400 mb-1">99.9%</div>
+              <div className="text-sm text-gray-300">Accuracy Rate</div>
             </div>
-            <div className="bg-gradient-to-br from-blue-800/30 to-cyan-800/30 p-6 rounded-xl border border-blue-500/30">
-              <div className="text-3xl font-bold text-blue-400 mb-2">10,000x</div>
-              <div className="text-gray-300 font-semibold">Faster Processing</div>
+            <div className="bg-gradient-to-r from-blue-800/30 to-cyan-800/30 rounded-lg p-4 border border-blue-500/20">
+              <div className="text-2xl font-bold text-blue-400 mb-1">10,000x</div>
+              <div className="text-sm text-gray-300">Faster Processing</div>
+            </div>
+            <div className="bg-gradient-to-r from-purple-800/30 to-pink-800/30 rounded-lg p-4 border border-purple-500/20">
+              <div className="text-2xl font-bold text-purple-400 mb-1">500+</div>
+              <div className="text-sm text-gray-300">Enterprise Clients</div>
             </div>
           </div>
 
-          {/* CTA buttons */}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link
               href="/ai-2025-ultimate-breakthrough-revolution"
-              className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold rounded-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-500/25"
             >
-              🚀 Explore Breakthrough Content
+              <span className="mr-2">🚀</span>
+              Explore Breakthroughs
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
             </Link>
-            <Link 
+            <Link
               href="/case-studies/ai-2025-global-transformation-breakthrough"
-              className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-black transition-all duration-300"
             >
-              🏆 View 10,000% ROI Success Story
+              <span className="mr-2">🏆</span>
+              View Success Stories
             </Link>
-            <Link 
-              href="/resources/ai-2025-revolutionary-implementation-guide"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-lg"
+            <Link
+              href="/resources/ai-2025-ultimate-implementation-guide"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-teal-500 text-white font-bold rounded-lg hover:from-green-400 hover:to-teal-400 transition-all duration-300"
             >
-              📚 Get Implementation Guide
+              <span className="mr-2">📚</span>
+              Implementation Guide
             </Link>
           </div>
 
-          {/* Additional content links */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            <Link 
-              href="/blog/ai-2025-revolutionary-trends-predictions"
-              className="bg-gradient-to-r from-purple-800/50 to-pink-800/50 p-4 rounded-lg border border-purple-500/30 hover:border-purple-400/60 transition-all text-center"
-            >
-              <div className="text-2xl mb-2">🔮</div>
-              <div className="text-sm font-semibold text-white">Revolutionary Trends</div>
-            </Link>
-            <Link 
-              href="/case-studies/ai-2025-fortune-500-transformation-breakthrough"
-              className="bg-gradient-to-r from-green-800/50 to-emerald-800/50 p-4 rounded-lg border border-green-500/30 hover:border-green-400/60 transition-all text-center"
-            >
-              <div className="text-2xl mb-2">🏢</div>
-              <div className="text-sm font-semibold text-white">Fortune 500 Success</div>
-            </Link>
-            <Link 
-              href="/tools/ai-2025-roi-calculator"
-              className="bg-gradient-to-r from-blue-800/50 to-cyan-800/50 p-4 rounded-lg border border-blue-500/30 hover:border-blue-400/60 transition-all text-center"
-            >
-              <div className="text-2xl mb-2">🧮</div>
-              <div className="text-sm font-semibold text-white">ROI Calculator</div>
-            </Link>
-            <Link 
-              href="/webinars/ai-2025-revolutionary-breakthroughs"
-              className="bg-gradient-to-r from-orange-800/50 to-red-800/50 p-4 rounded-lg border border-orange-500/30 hover:border-orange-400/60 transition-all text-center"
-            >
-              <div className="text-2xl mb-2">🔥</div>
-              <div className="text-sm font-semibold text-white">Revolutionary Webinar</div>
-            </Link>
+          {/* Additional Info */}
+          <div className="mt-8 text-sm text-gray-400">
+            <p>✅ 500+ enterprise clients • ✅ 99.9% accuracy guarantee • ✅ 24/7 expert support</p>
           </div>
         </div>
       </div>
+
+      {/* Floating Elements */}
+      <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-500/10 rounded-full blur-xl animate-pulse"></div>
+      <div className="absolute bottom-10 right-10 w-32 h-32 bg-red-500/10 rounded-full blur-xl animate-pulse delay-1000"></div>
+      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-orange-500/10 rounded-full blur-xl animate-pulse delay-500"></div>
     </div>
   );
 }
