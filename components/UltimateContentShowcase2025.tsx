@@ -1,218 +1,326 @@
-import React from 'react';
-import Link from 'next/link';
+'use client';
 
-export default function UltimateContentShowcase2025() {
-  const featuredContent = [
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Sparkles, 
+  Zap, 
+  Brain, 
+  Rocket, 
+  TrendingUp, 
+  Users, 
+  Award,
+  ChevronRight,
+  Play,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  Globe,
+  Shield,
+  Target
+} from 'lucide-react';
+
+const UltimateContentShowcase2025 = () => {
+  const [activeTab, setActiveTab] = useState('ai-innovations');
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const contentSections = {
+    'ai-innovations': {
+      title: 'Revolutionary AI Innovations 2025',
+      subtitle: 'Discover the future of artificial intelligence',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
+      features: [
+        {
+          title: 'Neural Interface Technology',
+          description: 'Direct brain-computer interfaces for seamless human-AI interaction',
+          icon: Brain,
+          stats: '95% accuracy rate'
+        },
+        {
+          title: 'Quantum AI Processing',
+          description: 'Quantum-enhanced machine learning algorithms',
+          icon: Zap,
+          stats: '1000x faster processing'
+        },
+        {
+          title: 'Emotional Intelligence AI',
+          description: 'AI systems that understand and respond to human emotions',
+          icon: Users,
+          stats: '99.7% emotion recognition'
+        }
+      ]
+    },
+    'automation': {
+      title: 'Advanced Automation Solutions',
+      subtitle: 'Transform your business operations',
+      icon: Rocket,
+      color: 'from-blue-600 to-cyan-600',
+      features: [
+        {
+          title: 'Autonomous Business Processes',
+          description: 'Self-managing workflows that adapt and optimize automatically',
+          icon: Target,
+          stats: '85% efficiency increase'
+        },
+        {
+          title: 'Intelligent Document Processing',
+          description: 'AI-powered document analysis and data extraction',
+          icon: Shield,
+          stats: '99.9% accuracy'
+        },
+        {
+          title: 'Predictive Maintenance',
+          description: 'Anticipate and prevent equipment failures before they happen',
+          icon: TrendingUp,
+          stats: '60% cost reduction'
+        }
+      ]
+    },
+    'quantum': {
+      title: 'Quantum Computing Breakthroughs',
+      subtitle: 'The next frontier of computing power',
+      icon: Zap,
+      color: 'from-indigo-600 to-purple-600',
+      features: [
+        {
+          title: 'Quantum Supremacy Achieved',
+          description: 'Solving complex problems in seconds that would take years',
+          icon: Globe,
+          stats: '10^15 operations/second'
+        },
+        {
+          title: 'Quantum Cryptography',
+          description: 'Unbreakable encryption for ultimate security',
+          icon: Shield,
+          stats: '100% secure'
+        },
+        {
+          title: 'Quantum Machine Learning',
+          description: 'Revolutionary algorithms that learn exponentially faster',
+          icon: Brain,
+          stats: 'Exponential speedup'
+        }
+      ]
+    }
+  };
+
+  const testimonials = [
     {
-      title: "AI 2025 Advanced Automation Mastery",
-      description: "Master the most advanced AI automation techniques of 2025. Learn from Fortune 500 implementations and achieve unprecedented efficiency gains.",
-      href: "/blog/ai-2025-advanced-automation-mastery",
-      category: "Mastery Guide",
-      badge: "BREAKTHROUGH",
-      badgeColor: "bg-red-500",
-      stats: "2000%+ ROI",
-      icon: "🤖"
+      name: 'Sarah Chen',
+      role: 'CTO, TechCorp',
+      content: 'The AI solutions transformed our entire operation. We saw 300% ROI in just 6 months.',
+      rating: 5,
+      avatar: 'SC'
     },
     {
-      title: "Fortune 500 Achieves 800% ROI Success",
-      description: "Discover how a global manufacturing company transformed their operations, saving $120M annually with AI automation.",
-      href: "/case-studies/ai-2025-global-enterprise-automation-success",
-      category: "Case Study",
-      badge: "SUCCESS STORY",
-      badgeColor: "bg-green-500",
-      stats: "$120M Savings",
-      icon: "🏆"
+      name: 'Michael Rodriguez',
+      role: 'CEO, InnovateLabs',
+      content: 'Quantum computing capabilities gave us an unprecedented competitive advantage.',
+      rating: 5,
+      avatar: 'MR'
     },
     {
-      title: "AI 2025 Revolutionary Breakthrough Guide",
-      description: "Comprehensive guide to the latest AI breakthroughs and how to implement them in your organization.",
-      href: "/blog/ai-2025-revolutionary-breakthrough-guide",
-      category: "Implementation",
-      badge: "NEW",
-      badgeColor: "bg-blue-500",
-      stats: "15+ Strategies",
-      icon: "🚀"
-    },
-    {
-      title: "Quantum Computing Solutions 2025",
-      description: "Explore cutting-edge quantum computing applications and their real-world business implementations.",
-      href: "/quantum-computing-solutions-2025",
-      category: "Technology",
-      badge: "REVOLUTIONARY",
-      badgeColor: "bg-purple-500",
-      stats: "10x Performance",
-      icon: "⚛️"
-    },
-    {
-      title: "Enterprise AI Transformation Blueprint",
-      description: "Step-by-step blueprint for transforming your enterprise with AI, based on 100+ successful implementations.",
-      href: "/resources/enterprise-ai-transformation-blueprint",
-      category: "Blueprint",
-      badge: "ESSENTIAL",
-      badgeColor: "bg-orange-500",
-      stats: "100+ Companies",
-      icon: "📋"
-    },
-    {
-      title: "AI ROI Calculator & Assessment Tool",
-      description: "Calculate your potential AI ROI and assess your organization's readiness for AI implementation.",
-      href: "/tools/ai-roi-calculator-2025",
-      category: "Tool",
-      badge: "FREE",
-      badgeColor: "bg-teal-500",
-      stats: "Instant Results",
-      icon: "🧮"
+      name: 'Dr. Emily Watson',
+      role: 'Research Director, FutureTech',
+      content: 'The neural interface technology is truly revolutionary. It changed everything.',
+      rating: 5,
+      avatar: 'EW'
     }
   ];
 
-  const categories = [
-    { name: "All Content", count: "50+", active: true },
-    { name: "Mastery Guides", count: "12", active: false },
-    { name: "Case Studies", count: "18", active: false },
-    { name: "Tools & Calculators", count: "8", active: false },
-    { name: "Implementation", count: "15", active: false }
+  const stats = [
+    { label: 'AI Models Deployed', value: '10,000+', icon: Brain },
+    { label: 'Businesses Transformed', value: '5,000+', icon: Users },
+    { label: 'Cost Savings Generated', value: '$2.5B+', icon: TrendingUp },
+    { label: 'Success Rate', value: '99.8%', icon: Award }
   ];
 
+  if (!isVisible) return null;
+
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-blue-100 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium text-blue-800">🎯 FEATURED CONTENT</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Ultimate Content Showcase 2025
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Discover our most valuable AI resources, case studies, and implementation guides. 
-            Everything you need to master AI in 2025 and beyond.
-          </p>
-          
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search content, guides, case studies..."
-                className="w-full px-6 py-4 pl-12 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-              />
-              <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category, index) => (
-            <button
-              key={index}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                category.active
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
-              }`}
-            >
-              {category.name} ({category.count})
-            </button>
-          ))}
-        </div>
-
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {featuredContent.map((content, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
-            >
-              <div className="p-8">
-                {/* Badge and Category */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-medium text-gray-500">{content.category}</span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${content.badgeColor}`}>
-                    {content.badge}
-                  </span>
-                </div>
-
-                {/* Icon and Title */}
-                <div className="flex items-start space-x-4 mb-4">
-                  <div className="text-4xl">{content.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                      {content.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {content.description}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Stats */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="text-sm font-semibold text-green-600">
-                    {content.stats}
-                  </div>
-                  <div className="text-sm text-gray-500">
-                    Read more →
-                  </div>
-                </div>
-
-                {/* CTA Button */}
-                <Link
-                  href={content.href}
-                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform group-hover:scale-105"
-                >
-                  Explore Content
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* View All Button */}
-        <div className="text-center">
-          <Link
-            href="/content-showcase"
-            className="inline-flex items-center bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300 border border-gray-200 shadow-lg hover:shadow-xl"
-          >
-            <span>View All Content</span>
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-        </div>
-
-        {/* Stats Section */}
-        <div className="mt-20 bg-white rounded-2xl shadow-xl p-8">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Content Impact Statistics</h3>
-            <p className="text-gray-600">Real results from our content library</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
-              <div className="text-gray-600">Premium Resources</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">100K+</div>
-              <div className="text-gray-600">Downloads</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">500+</div>
-              <div className="text-gray-600">Success Stories</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">95%</div>
-              <div className="text-gray-600">User Satisfaction</div>
-            </div>
-          </div>
-        </div>
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-blue-600/20 animate-pulse"></div>
       </div>
-    </section>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
+            <Sparkles className="w-4 h-4 mr-2" />
+            Revolutionary Technology Showcase 2025
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            The Future is
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Here</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Experience the most advanced AI, automation, and quantum computing solutions that are reshaping industries and transforming the way we work.
+          </p>
+        </motion.div>
+
+        {/* Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+        >
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 mb-4">
+                <stat.icon className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-gray-300">{stat.label}</div>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Content Tabs */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-16"
+        >
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {Object.entries(contentSections).map(([key, section]) => (
+              <button
+                key={key}
+                onClick={() => setActiveTab(key)}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  activeTab === key
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                <section.icon className="w-5 h-5 inline mr-2" />
+                {section.title}
+              </button>
+            ))}
+          </div>
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold text-white mb-4">
+                  {contentSections[activeTab as keyof typeof contentSections].title}
+                </h3>
+                <p className="text-gray-300 text-lg">
+                  {contentSections[activeTab as keyof typeof contentSections].subtitle}
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                {contentSections[activeTab as keyof typeof contentSections].features.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300"
+                  >
+                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r ${contentSections[activeTab as keyof typeof contentSections].color} mb-4`}>
+                      <feature.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>
+                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <div className="text-purple-400 font-medium">{feature.stats}</div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </motion.div>
+
+        {/* Testimonials */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            What Industry Leaders Are Saying
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center text-white font-bold mr-3">
+                    {testimonial.avatar}
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">{testimonial.name}</div>
+                    <div className="text-gray-400 text-sm">{testimonial.role}</div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+              Join thousands of forward-thinking companies already using our revolutionary technology solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-white text-purple-600 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Play className="w-5 h-5 mr-2" />
+                Watch Demo
+              </button>
+              <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
   );
-}
+};
+
+export default UltimateContentShowcase2025;

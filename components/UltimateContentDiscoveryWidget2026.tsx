@@ -1,187 +1,231 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
+'use client';
 
-export default function UltimateContentDiscoveryWidget2026() {
-  const [activeCategory, setActiveCategory] = useState('all');
-  
-  const contentCategories = [
-    { id: 'all', name: 'All Content', icon: '🚀' },
-    { id: 'ai-2025', name: 'AI 2025', icon: '🧠' },
-    { id: 'ai-2026', name: 'AI 2026', icon: '⚛️' },
-    { id: 'case-studies', name: 'Case Studies', icon: '🏆' },
-    { id: 'predictions', name: 'Predictions', icon: '🔮' },
-    { id: 'tools', name: 'Tools', icon: '🛠️' },
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Filter, Star, Clock, TrendingUp, BookOpen, Video, FileText, Users, Zap } from 'lucide-react';
+
+const UltimateContentDiscoveryWidget2026 = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [isSearching, setIsSearching] = useState(false);
+
+  const categories = [
+    { id: 'all', name: 'All Content', icon: <BookOpen className="w-4 h-4" /> },
+    { id: 'ai', name: 'AI Solutions', icon: <Zap className="w-4 h-4" /> },
+    { id: 'quantum', name: 'Quantum Computing', icon: <TrendingUp className="w-4 h-4" /> },
+    { id: 'automation', name: 'Automation', icon: <Users className="w-4 h-4" /> },
+    { id: 'tutorials', name: 'Tutorials', icon: <Video className="w-4 h-4" /> },
+    { id: 'case-studies', name: 'Case Studies', icon: <FileText className="w-4 h-4" /> }
   ];
 
-  const featuredContent = [
+  const contentItems = [
     {
       id: 1,
-      title: 'AI 2025 Ultimate Breakthrough Revolution',
-      description: 'The most revolutionary AI breakthrough of 2025 delivering 10,000% ROI with autonomous operations.',
-      category: 'ai-2025',
-      type: 'breakthrough',
-      roi: '10,000%',
-      link: '/ai-2025-ultimate-breakthrough-revolution',
+      title: "AI-Powered Business Transformation Guide 2026",
+      category: 'ai',
+      type: 'guide',
+      rating: 4.9,
+      duration: '15 min read',
+      views: '12.5k',
       featured: true,
+      description: "Complete guide to implementing AI solutions in your business for maximum ROI."
     },
     {
       id: 2,
-      title: 'AI 2026 Breakthrough Revolutionary Content',
-      description: 'Quantum-neural fusion and consciousness-level intelligence delivering 15,000% ROI.',
-      category: 'ai-2026',
-      type: 'breakthrough',
-      roi: '15,000%',
-      link: '/ai-2026-breakthrough-revolutionary-content',
-      featured: true,
+      title: "Quantum Computing Breakthrough: Real-World Applications",
+      category: 'quantum',
+      type: 'case-study',
+      rating: 4.8,
+      duration: '8 min read',
+      views: '8.2k',
+      featured: false,
+      description: "How leading companies are leveraging quantum computing for competitive advantage."
     },
     {
       id: 3,
-      title: 'Global Transformation Breakthrough Case Study',
-      description: 'How a Fortune 500 company achieved 10,000% ROI with our AI 2025 breakthrough.',
-      category: 'case-studies',
-      type: 'case-study',
-      roi: '10,000%',
-      link: '/case-studies/ai-2025-global-transformation-breakthrough',
+      title: "Advanced Automation Workflows Tutorial",
+      category: 'automation',
+      type: 'tutorial',
+      rating: 4.7,
+      duration: '25 min video',
+      views: '15.3k',
       featured: true,
+      description: "Step-by-step tutorial on building sophisticated automation workflows."
     },
     {
       id: 4,
-      title: 'AI 2027 Future Predictions',
-      description: 'Revolutionary predictions for AI 2027 with neural synthesis and quantum-AI fusion.',
-      category: 'predictions',
-      type: 'prediction',
-      roi: '8,000%',
-      link: '/blog/ai-2027-future-predictions',
+      title: "Enterprise AI Implementation Case Study",
+      category: 'case-studies',
+      type: 'case-study',
+      rating: 4.9,
+      duration: '12 min read',
+      views: '6.8k',
       featured: false,
+      description: "Real-world case study of successful AI implementation in Fortune 500 company."
     },
     {
       id: 5,
-      title: 'AI 2028 Quantum Neural Breakthroughs',
-      description: 'Advanced quantum-neural fusion breakthroughs for 2028 with 20,000% ROI potential.',
-      category: 'ai-2026',
-      type: 'breakthrough',
-      roi: '20,000%',
-      link: '/ai-2028-2030-quantum-neural-breakthroughs',
-      featured: false,
+      title: "Neural Network Architecture Deep Dive",
+      category: 'ai',
+      type: 'guide',
+      rating: 4.6,
+      duration: '20 min read',
+      views: '9.1k',
+      featured: true,
+      description: "Comprehensive guide to understanding and implementing neural networks."
     },
     {
       id: 6,
-      title: 'Ultimate Implementation Toolkit 2026',
-      description: 'Complete toolkit for implementing AI 2026 breakthrough in your organization.',
-      category: 'tools',
-      type: 'toolkit',
-      roi: '5,000%',
-      link: '/resources/ai-2026-ultimate-implementation-master-guide',
+      title: "Quantum Security Protocols Explained",
+      category: 'quantum',
+      type: 'tutorial',
+      rating: 4.8,
+      duration: '18 min video',
+      views: '7.4k',
       featured: false,
-    },
+      description: "Understanding quantum encryption and security protocols for modern applications."
+    }
   ];
 
-  const filteredContent = activeCategory === 'all' 
-    ? featuredContent 
-    : featuredContent.filter(content => content.category === activeCategory);
+  const filteredContent = contentItems.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const handleSearch = async (query: string) => {
+    setSearchQuery(query);
+    setIsSearching(true);
+    // Simulate search delay
+    setTimeout(() => setIsSearching(false), 1000);
+  };
 
   return (
-    <div className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+    <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-semibold mb-6 animate-pulse">
-            🌌 ULTIMATE CONTENT DISCOVERY
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Discover Revolutionary AI Content
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ultimate Content Discovery
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Powered by AI 2026
+            </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our comprehensive library of AI breakthroughs, case studies, predictions, and tools 
-            delivering unprecedented ROI and transformative results.
+            Find the most relevant content, tutorials, and resources tailored to your needs using our advanced AI-powered discovery engine.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {contentCategories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
-                activeCategory === category.id
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'
-                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/30'
-              }`}
-            >
-              <span className="mr-2">{category.icon}</span>
-              {category.name}
+        {/* Search and Filter Interface */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20">
+          <div className="flex flex-col lg:flex-row gap-4 mb-6">
+            {/* Search Bar */}
+            <div className="flex-1 relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search for content, tutorials, guides..."
+                value={searchQuery}
+                onChange={(e) => handleSearch(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              {isSearching && (
+                <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-400"></div>
+                </div>
+              )}
+            </div>
+
+            {/* Filter Button */}
+            <button className="flex items-center px-6 py-4 bg-white/20 border border-white/30 rounded-xl text-white hover:bg-white/30 transition-colors">
+              <Filter className="w-5 h-5 mr-2" />
+              Filters
             </button>
-          ))}
+          </div>
+
+          {/* Category Filters */}
+          <div className="flex flex-wrap gap-2">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white/20 text-gray-300 hover:bg-white/30'
+                }`}
+              >
+                {category.icon}
+                <span className="ml-2">{category.name}</span>
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((content) => (
-            <div
-              key={content.id}
-              className={`relative group bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl border border-gray-600/30 p-6 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105 ${
-                content.featured ? 'ring-2 ring-cyan-500/30' : ''
-              }`}
-            >
-              {/* Featured Badge */}
-              {content.featured && (
-                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
-                  FEATURED
-                </div>
-              )}
-
-              {/* Type Badge */}
-              <div className="absolute top-4 left-4">
-                <span className="text-xs font-semibold px-2 py-1 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white">
-                  {content.type.toUpperCase()}
-                </span>
-              </div>
-
-              {/* ROI Badge */}
-              <div className="absolute top-4 right-4">
-                <span className="text-xs font-bold px-2 py-1 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white">
-                  {content.roi} ROI
-                </span>
-              </div>
-
-              {/* Content */}
-              <div className="pt-8">
-                <h3 className="text-xl font-bold mb-3 text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                  {content.title}
+        <AnimatePresence>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredContent.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+              >
+                {item.featured && (
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium mb-4">
+                    <Star className="w-3 h-3 mr-1" />
+                    Featured
+                  </div>
+                )}
+                
+                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  {item.title}
                 </h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                  {content.description}
+                
+                <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+                  {item.description}
                 </p>
                 
-                {/* Action Button */}
-                <Link
-                  href={content.link}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold text-sm group-hover:translate-x-1 transition-all duration-300"
-                >
-                  Explore Content
-                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
+                <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                    <span>{item.rating}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 mr-1" />
+                    <span>{item.duration}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <TrendingUp className="w-4 h-4 mr-1" />
+                    <span>{item.views}</span>
+                  </div>
+                </div>
+                
+                <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group-hover:scale-105 transform">
+                  View Content
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </AnimatePresence>
 
-        {/* View All CTA */}
+        {/* Load More Button */}
         <div className="text-center mt-12">
-          <Link
-            href="/content-showcase"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-          >
-            View All Content
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
+          <button className="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-xl font-medium transition-colors duration-300">
+            Load More Content
+          </button>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default UltimateContentDiscoveryWidget2026;
