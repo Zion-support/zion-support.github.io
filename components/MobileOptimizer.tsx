@@ -6,10 +6,10 @@ interface MobileOptimizerProps {
   children: React.ReactNode;
 }
 
-export default function MobileOptimizer({ children }: MobileOptimizerProps) {
+const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait');
 
   useEffect(() => {
     const checkDevice = () => {
@@ -18,202 +18,293 @@ export default function MobileOptimizer({ children }: MobileOptimizerProps) {
       
       setIsMobile(width < 768);
       setIsTablet(width >= 768 && width < 1024);
-      setIsDesktop(width >= 1024);
+      setOrientation(height > width ? 'portrait' : 'landscape');
     };
 
     checkDevice();
     window.addEventListener('resize', checkDevice);
+    window.addEventListener('orientationchange', checkDevice);
 
-    return () => window.removeEventListener('resize', checkDevice);
-  }, []);
-
-  useEffect(() => {
     // Add mobile-specific optimizations
-    if (isMobile) {
-      // Prevent zoom on input focus
+    const optimizeForMobile = () => {
+      // Prevent zoom on input focus (iOS)
       const viewport = document.querySelector('meta[name="viewport"]');
       if (viewport) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+        viewport.setAttribute('content', 
+          'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+        );
       }
 
       // Add touch-friendly styles
-      document.body.style.touchAction = 'manipulation';
-      
-      // Optimize for mobile performance
-      (document.body.style as any).webkitFontSmoothing = 'antialiased';
-      (document.body.style as any).mozOsxFontSmoothing = 'grayscale';
-    } else {
-      // Reset for desktop
-      const viewport = document.querySelector('meta[name="viewport"]');
-      if (viewport) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0');
-      }
-      
-      document.body.style.touchAction = 'auto';
-    }
-  }, [isMobile]);
-
-  return (
-    <div 
-      className={`
-        ${isMobile ? 'mobile-optimized' : ''}
-        ${isTablet ? 'tablet-optimized' : ''}
-        ${isDesktop ? 'desktop-optimized' : ''}
-      `}
-      style={{
-        // Mobile-specific optimizations
-        ...(isMobile && {
-          fontSize: '16px', // Prevent zoom on iOS
-          lineHeight: '1.5',
-          letterSpacing: '0.01em'
-        })
-      }}
-    >
-      {children}
-      
-      {/* Mobile-specific enhancements */}
-      {isMobile && (
-        <style jsx global>{`
-          /* Mobile-specific styles */
-          .mobile-optimized {
-            -webkit-tap-highlight-color: transparent;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-          }
-          
-          .mobile-optimized input,
-          .mobile-optimized textarea,
-          .mobile-optimized select {
-            -webkit-user-select: text;
-            -khtml-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
-            user-select: text;
-          }
-          
-          /* Improve touch targets */
-          .mobile-optimized button,
-          .mobile-optimized a,
-          .mobile-optimized [role="button"] {
+      const style = document.createElement('style');
+      style.textContent = `
+        /* Mobile-optimized touch targets */
+        @media (max-width: 767px) {
+          button, a, input, select, textarea {
             min-height: 44px;
             min-width: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
           }
           
-          /* Optimize scrolling */
-          .mobile-optimized {
+          /* Improve touch scrolling */
+          * {
             -webkit-overflow-scrolling: touch;
-            overflow-scrolling: touch;
           }
           
-          /* Prevent horizontal scroll */
-          .mobile-optimized body {
-            overflow-x: hidden;
-          }
-          
-          /* Optimize images for mobile */
-          .mobile-optimized img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-          }
-          
-          /* Improve form inputs */
-          .mobile-optimized input[type="text"],
-          .mobile-optimized input[type="email"],
-          .mobile-optimized input[type="tel"],
-          .mobile-optimized textarea {
-            font-size: 16px; /* Prevent zoom on iOS */
-            border-radius: 8px;
-            padding: 12px;
-            border: 1px solid #d1d5db;
-          }
-          
-          /* Improve button styles */
-          .mobile-optimized button {
-            border-radius: 8px;
-            padding: 12px 24px;
+          /* Optimize text size for mobile */
+          body {
             font-size: 16px;
-            font-weight: 600;
+            line-height: 1.5;
           }
           
-          /* Optimize text readability */
-          .mobile-optimized p,
-          .mobile-optimized span,
-          .mobile-optimized div {
-            line-height: 1.6;
+          /* Stack elements vertically on mobile */
+          .mobile-stack {
+            flex-direction: column !important;
           }
           
-          /* Improve navigation */
-          .mobile-optimized nav {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            background: white;
-            border-bottom: 1px solid #e5e7eb;
+          /* Hide non-essential elements on mobile */
+          .mobile-hide {
+            display: none !important;
           }
           
-          /* Optimize cards and containers */
-          .mobile-optimized .card,
-          .mobile-optimized .container {
-            margin: 8px;
-            padding: 16px;
-            border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          /* Show mobile-specific elements */
+          .mobile-show {
+            display: block !important;
           }
-        `}</style>
-      )}
+          
+          /* Optimize spacing for mobile */
+          .mobile-padding {
+            padding: 1rem !important;
+          }
+          
+          .mobile-margin {
+            margin: 0.5rem !important;
+          }
+        }
+        
+        /* Tablet optimizations */
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .tablet-optimize {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+          }
+          
+          .tablet-half {
+            flex: 1 1 calc(50% - 0.5rem);
+          }
+        }
+        
+        /* Orientation-specific styles */
+        @media (orientation: landscape) and (max-height: 500px) {
+          .landscape-compact {
+            padding: 0.5rem !important;
+            margin: 0.25rem !important;
+          }
+          
+          .landscape-hide {
+            display: none !important;
+          }
+        }
+        
+        /* High DPI display optimizations */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          .high-dpi-optimize {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Add mobile-specific event listeners
+      const addMobileEventListeners = () => {
+        // Prevent double-tap zoom
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', (e) => {
+          const now = new Date().getTime();
+          if (now - lastTouchEnd <= 300) {
+            e.preventDefault();
+          }
+          lastTouchEnd = now;
+        }, false);
+
+        // Add swipe gestures
+        let startX = 0;
+        let startY = 0;
+        
+        document.addEventListener('touchstart', (e) => {
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+        });
+
+        document.addEventListener('touchend', (e) => {
+          if (!startX || !startY) return;
+          
+          const endX = e.changedTouches[0].clientX;
+          const endY = e.changedTouches[0].clientY;
+          
+          const diffX = startX - endX;
+          const diffY = startY - endY;
+          
+          // Horizontal swipe
+          if (Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX > 50) {
+              // Swipe left
+              document.dispatchEvent(new CustomEvent('swipeLeft'));
+            } else if (diffX < -50) {
+              // Swipe right
+              document.dispatchEvent(new CustomEvent('swipeRight'));
+            }
+          }
+          
+          // Vertical swipe
+          if (Math.abs(diffY) > Math.abs(diffX)) {
+            if (diffY > 50) {
+              // Swipe up
+              document.dispatchEvent(new CustomEvent('swipeUp'));
+            } else if (diffY < -50) {
+              // Swipe down
+              document.dispatchEvent(new CustomEvent('swipeDown'));
+            }
+          }
+          
+          startX = 0;
+          startY = 0;
+        });
+
+        // Add pull-to-refresh prevention
+        document.addEventListener('touchstart', (e) => {
+          if (window.scrollY === 0) {
+            e.preventDefault();
+          }
+        }, { passive: false });
+      };
+
+      addMobileEventListeners();
+
+      // Optimize images for mobile
+      const optimizeImages = () => {
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+          // Add loading="lazy" for better performance
+          if (!img.loading) {
+            img.loading = 'lazy';
+          }
+          
+          // Add responsive image attributes
+          if (!img.sizes) {
+            img.sizes = '(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw';
+          }
+          
+          // Add alt text if missing
+          if (!img.alt) {
+            img.alt = 'Image';
+          }
+        });
+      };
+
+      optimizeImages();
+
+      // Add mobile navigation enhancements
+      const enhanceMobileNavigation = () => {
+        // Add hamburger menu if not present
+        const nav = document.querySelector('nav');
+        if (nav && !nav.querySelector('.mobile-menu-toggle')) {
+          const toggle = document.createElement('button');
+          toggle.className = 'mobile-menu-toggle';
+          toggle.innerHTML = '☰';
+          toggle.setAttribute('aria-label', 'Toggle mobile menu');
+          toggle.style.cssText = `
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+          `;
+          
+          if (isMobile) {
+            toggle.style.display = 'block';
+          }
+          
+          nav.insertBefore(toggle, nav.firstChild);
+          
+          // Add mobile menu functionality
+          toggle.addEventListener('click', () => {
+            const menu = nav.querySelector('ul');
+            if (menu) {
+              menu.classList.toggle('mobile-menu-open');
+            }
+          });
+        }
+      };
+
+      enhanceMobileNavigation();
+    };
+
+    optimizeForMobile();
+
+    return () => {
+      window.removeEventListener('resize', checkDevice);
+      window.removeEventListener('orientationchange', checkDevice);
+    };
+  }, [isMobile, isTablet, orientation]);
+
+  return (
+    <div className={`mobile-optimizer ${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} ${orientation}`}>
+      {children}
       
-      {/* Tablet-specific enhancements */}
-      {isTablet && (
-        <style jsx global>{`
-          .tablet-optimized {
-            /* Tablet-specific optimizations */
+      <style jsx>{`
+        .mobile-optimizer {
+          width: 100%;
+          min-height: 100vh;
+        }
+        
+        .mobile-optimizer.mobile {
+          /* Mobile-specific styles */
+        }
+        
+        .mobile-optimizer.tablet {
+          /* Tablet-specific styles */
+        }
+        
+        .mobile-optimizer.portrait {
+          /* Portrait orientation styles */
+        }
+        
+        .mobile-optimizer.landscape {
+          /* Landscape orientation styles */
+        }
+        
+        /* Mobile menu styles */
+        :global(.mobile-menu-open) {
+          display: flex !important;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: white;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          z-index: 1000;
+        }
+        
+        @media (max-width: 767px) {
+          :global(.mobile-menu-toggle) {
+            display: block !important;
           }
           
-          .tablet-optimized .container {
-            max-width: 768px;
-            margin: 0 auto;
-            padding: 0 24px;
+          :global(nav ul) {
+            display: none;
           }
           
-          .tablet-optimized .grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
+          :global(.mobile-menu-open) {
+            display: flex !important;
           }
-        `}</style>
-      )}
-      
-      {/* Desktop-specific enhancements */}
-      {isDesktop && (
-        <style jsx global>{`
-          .desktop-optimized {
-            /* Desktop-specific optimizations */
-          }
-          
-          .desktop-optimized .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 32px;
-          }
-          
-          .desktop-optimized .grid {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-          }
-          
-          .desktop-optimized .hover\:scale-105:hover {
-            transform: scale(1.05);
-            transition: transform 0.2s ease-in-out;
-          }
-        `}</style>
-      )}
+        }
+      `}</style>
     </div>
   );
-}
+};
+
+export default MobileOptimizer;
