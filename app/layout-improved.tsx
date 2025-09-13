@@ -7,7 +7,6 @@ import AdvancedAccessibilityEnhancer from '../components/AdvancedAccessibilityEn
 import AnalyticsIntegration from '../components/AnalyticsIntegration';
 import ErrorBoundary from '../components/ErrorBoundary';
 import AdvancedSEO from '../components/AdvancedSEO';
-import ServiceWorkerRegistration from '../components/ServiceWorkerRegistration';
 
 export const metadata = {
   title: {
@@ -361,7 +360,7 @@ export const metadata = {
     'Cycle Time',
     'Throughput',
     'Work in Progress',
-    'Little\'s Law',
+    'Little's Law',
     'Theory of Constraints',
     'Lean',
     'Six Sigma',
@@ -983,16 +982,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#2563eb" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
-      </head>
       <body className="antialiased">
-        <ServiceWorkerRegistration />
         <PerformanceOptimizations>
           <AdvancedAccessibilityEnhancer>
             <AnalyticsIntegration>

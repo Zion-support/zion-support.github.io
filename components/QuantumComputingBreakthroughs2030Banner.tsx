@@ -3,96 +3,86 @@ import Link from 'next/link';
 
 export default function QuantumComputingBreakthroughs2030Banner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-12 left-12 w-28 h-28 bg-indigo-400/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-36 right-20 w-20 h-20 bg-purple-400/20 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-pink-400/20 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-36 right-1/3 w-14 h-14 bg-cyan-400/20 rounded-full animate-bounce"></div>
-      </div>
-
+    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-cyan-900 text-white py-16">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 animate-pulse"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Main heading */}
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent animate-pulse">
             ⚛️ Quantum Computing Breakthroughs 2030
           </h2>
           
           {/* Subheading */}
           <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
-            Experience the quantum revolution with error-corrected quantum computers, quantum internet, and quantum-AI fusion delivering unprecedented 15,000% ROI.
+            Experience the revolutionary quantum computing breakthroughs that will reshape the future. 
+            <span className="text-cyan-400 font-bold">Error-corrected quantum computers</span>, quantum internet, and quantum-AI fusion await.
           </p>
-
-          {/* Key features grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <div className="bg-gradient-to-br from-indigo-800/30 to-purple-800/30 backdrop-blur-sm border border-indigo-500/30 rounded-xl p-6">
-              <div className="text-3xl mb-3">⚛️</div>
-              <h3 className="text-lg font-bold text-indigo-400 mb-2">Error-Corrected Quantum</h3>
-              <p className="text-sm text-gray-300">15,000x faster processing with infinite computational possibilities</p>
+          
+          {/* Key features */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 p-6 rounded-xl border border-cyan-500/30">
+              <div className="text-3xl mb-2">⚛️</div>
+              <h3 className="text-lg font-bold text-cyan-400 mb-2">Error-Corrected Quantum</h3>
+              <p className="text-sm text-gray-300">1,000,000x faster processing</p>
             </div>
-            
-            <div className="bg-gradient-to-br from-cyan-800/30 to-blue-800/30 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-6">
-              <div className="text-3xl mb-3">🌐</div>
-              <h3 className="text-lg font-bold text-cyan-400 mb-2">Quantum Internet</h3>
-              <p className="text-sm text-gray-300">100% secure, unhackable communication across unlimited distances</p>
+            <div className="bg-gradient-to-br from-purple-800/50 to-indigo-800/50 p-6 rounded-xl border border-purple-500/30">
+              <div className="text-3xl mb-2">🌐</div>
+              <h3 className="text-lg font-bold text-purple-400 mb-2">Quantum Internet</h3>
+              <p className="text-sm text-gray-300">100% secure communication</p>
             </div>
-            
-            <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6">
-              <div className="text-3xl mb-3">⚛️🧠</div>
-              <h3 className="text-lg font-bold text-purple-400 mb-2">Quantum-AI Fusion</h3>
-              <p className="text-sm text-gray-300">Consciousness-level intelligence with infinite problem-solving capabilities</p>
+            <div className="bg-gradient-to-br from-green-800/50 to-emerald-800/50 p-6 rounded-xl border border-green-500/30">
+              <div className="text-3xl mb-2">🧠⚛️</div>
+              <h3 className="text-lg font-bold text-green-400 mb-2">Quantum-AI Fusion</h3>
+              <p className="text-sm text-gray-300">50,000% ROI improvements</p>
             </div>
           </div>
-
-          {/* ROI showcase */}
-          <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-xl p-8 mb-10">
-            <div className="text-5xl font-bold text-green-400 mb-2">15,000% ROI</div>
-            <div className="text-lg text-gray-300 mb-4">Average across all quantum computing implementations</div>
-            <div className="text-sm text-gray-400">Based on 200+ successful quantum breakthrough projects</div>
-          </div>
-
+          
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/quantum-computing-breakthroughs-2030"
-              className="bg-gradient-to-r from-cyan-500 to-pink-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              ⚛️ Explore Quantum Breakthroughs
+              ⚛️ Explore Quantum
             </Link>
             <Link 
-              href="/case-studies/quantum-computing-2030-breakthrough"
-              className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all duration-300 shadow-lg"
+              href="/quantum-ai-fusion-technology"
+              className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-400 hover:to-indigo-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              📊 View 15,000% ROI Success
+              🧠 Quantum-AI Fusion
             </Link>
           </div>
-
-          {/* Additional links */}
-          <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
-            <Link 
-              href="/resources/quantum-implementation-guide"
-              className="text-cyan-400 hover:text-cyan-300 transition-colors"
-            >
-              📚 Quantum Implementation Guide
-            </Link>
-            <span className="text-gray-500">•</span>
-            <Link 
-              href="/tools/quantum-readiness-assessment"
-              className="text-cyan-400 hover:text-cyan-300 transition-colors"
-            >
-              🎯 Quantum Readiness Assessment
-            </Link>
-            <span className="text-gray-500">•</span>
-            <Link 
-              href="/webinars/quantum-computing-revolution"
-              className="text-cyan-400 hover:text-cyan-300 transition-colors"
-            >
-              🔥 Quantum Revolution Webinar
-            </Link>
+          
+          {/* Success metrics */}
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400">1Mx</div>
+              <div className="text-sm text-gray-300">Faster Processing</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400">100%</div>
+              <div className="text-sm text-gray-300">Secure</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400">50,000%</div>
+              <div className="text-sm text-gray-300">ROI</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-indigo-400">2030</div>
+              <div className="text-sm text-gray-300">Future Ready</div>
+            </div>
           </div>
         </div>
       </div>
+      
+      {/* Floating elements */}
+      <div className="absolute top-10 left-10 text-2xl animate-bounce">⚛️</div>
+      <div className="absolute top-20 right-20 text-3xl animate-pulse">🌐</div>
+      <div className="absolute bottom-10 left-20 text-2xl animate-bounce delay-1000">🧠</div>
+      <div className="absolute bottom-20 right-10 text-3xl animate-pulse delay-500">🚀</div>
     </div>
   );
 }
