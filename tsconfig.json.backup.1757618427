@@ -1,0 +1,153 @@
+{
+  "compilerOptions": {
+<<<<<<< HEAD
+=======
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "axios": ["./src/lib/axios.ts"],
+      "notistack": ["./src/stubs/notistack.ts"],
+      "@sentry/browser": ["./src/stubs/sentry.ts"]
+    },
+    "typeRoots": ["./src/types"],
+
+    /* Bundler mode */
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/pages/*": ["./src/pages/*", "./pages/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/api/*": ["./src/api/*"],
+      "@/types/*": ["./src/types/*", "./types/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/context/*": ["./src/context/*"],
+      "@/services/*": ["./src/services/*"],
+      "react-router-dom": ["./src/stubs/react-router-dom.tsx"],
+      "react-router": ["./src/stubs/react-router-dom.tsx"],
+      "next-cloudinary": ["./types/next-cloudinary.d.ts"],
+      "types/*": ["./types/*"]
+    },
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "allowJs": true,
+    "incremental": true,
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["node"],
+    "jsx": "preserve",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+>>>>>>> origin/backup-main-20250826-120740
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+<<<<<<< HEAD
+    "src/pages/FAQ.tsx",
+    "src/pages/RequestQuote.tsx",
+    "src/pages/ServicesPricingPage.tsx",
+    "src/pages/Sitemap.tsx",
+    "src/components/conflicted/**/*",
+    "src/components/disabled/**/*",
+    "src/components/Advanced*",
+    "src/components/CategoriesSection.tsx",
+    "src/components/FeaturedListingsSection.tsx",
+    "src/components/home/Enhanced*",
+    "src/components/home/FeatureCTAs.tsx",
+    "src/components/home/HomePageSkeleton.tsx",
+    "src/components/ui/data-visualization.tsx",
+    "src/data/enhancedServicesData.ts",
+    "src/data/microSaasServices.ts",
+    "src/hooks/useBlockchainWeb3.ts",
+    "src/pages/HomePage.tsx"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+=======
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es6"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+=======
+    "zion.app/recovered-content/**",
+    "contracts/**",
+    "dao/**",
+    "zion-os/**",
+    "zion_academy/**",
+    "cypress/**",
+    "data/2025-innovative-ai-automation-services.ts",
+    "data/2025-innovative-ai-services-enhanced.ts",
+    "data/2025-innovative-ai-services-expansion-v2.ts"
+>>>>>>> origin/backup-main-20250826-120740
+  ]
+}

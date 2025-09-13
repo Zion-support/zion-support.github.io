@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   Menu, X, Search, ChevronDown, Zap, Globe, Lock, 
   Phone, ArrowRight, Star, Users, Bell, User
 } from 'lucide-react';
@@ -371,6 +373,7 @@ const UltraFuturisticNavigation2040: React.FC<UltraFuturisticNavigation2040Props
   const searchRef = useRef<HTMLDivElement>(null);
   const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 =======
+>>>>>>> origin/content/blog-sept12
   Menu, X, ChevronDown, ChevronRight, Search, User, ShoppingCart, 
   Brain, Atom, Shield, Rocket, Cpu, Database, Target, Sparkles,
   Home, Briefcase, Users, FileText, Phone, Mail, MapPin, Globe,
@@ -383,7 +386,10 @@ const UltraFuturisticNavigation2040: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
 
   // Handle scroll effect with throttling for better performance
   useEffect(() => {
@@ -416,6 +422,8 @@ const UltraFuturisticNavigation2040: React.FC = () => {
   }, []);
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   // Handle keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -443,6 +451,7 @@ const UltraFuturisticNavigation2040: React.FC = () => {
       setSearchResults([]);
       return;
 =======
+>>>>>>> origin/content/blog-sept12
   const navigationItems = [
     {
       name: 'Home',
@@ -618,7 +627,10 @@ const UltraFuturisticNavigation2040: React.FC = () => {
       href: '/contact',
       icon: Phone,
       description: 'Get in touch with our experts'
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
     }
 
     const results: NavigationItem[] = [];
@@ -638,6 +650,8 @@ const UltraFuturisticNavigation2040: React.FC = () => {
     setSearchResults(results.slice(0, 8)); // Limit results
   };
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const handleSearchResultClick = (item: NavigationItem) => {
     if (item.href) {
@@ -805,6 +819,7 @@ const UltraFuturisticNavigation2040: React.FC = () => {
             
             {/* Mobile Navigation Toggle */}
 =======
+>>>>>>> origin/content/blog-sept12
   return (
     <>
       {/* Desktop Navigation */}
@@ -934,7 +949,10 @@ const UltraFuturisticNavigation2040: React.FC = () => {
             </Link>
 
             {/* Mobile Menu Button */}
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-white hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black"
@@ -948,6 +966,8 @@ const UltraFuturisticNavigation2040: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -1115,6 +1135,7 @@ const UltraFuturisticNavigation2040: React.FC = () => {
       </AnimatePresence>
     </motion.nav>
 =======
+>>>>>>> origin/content/blog-sept12
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -1228,7 +1249,10 @@ const UltraFuturisticNavigation2040: React.FC = () => {
       {/* Spacer for fixed navigation */}
       <div className="h-20 lg:h-20" />
     </>
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
   );
 };
 

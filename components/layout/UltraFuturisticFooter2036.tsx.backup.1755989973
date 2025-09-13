@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -27,6 +29,7 @@ import {
   Building,
   BookOpen
 =======
+>>>>>>> origin/content/blog-sept12
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -48,6 +51,10 @@ import {
   MessageCircle,
   Heart,
   Globe
+<<<<<<< HEAD
+} from 'lucide-react';
+
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 } from 'lucide-react';
 
@@ -300,6 +307,7 @@ const UltraFuturisticFooter2036: React.FC = () => {
                 viewport={{ once: true }}
               >
 =======
+>>>>>>> origin/content/blog-sept12
 
 
 const footerSections = [
@@ -500,7 +508,10 @@ export default function UltraFuturisticFooter2036() {
             <div className="lg:col-span-1">
               <h4 className="text-lg font-semibold text-white mb-6">Connect With Us</h4>
               <div className="grid grid-cols-3 gap-4">
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
@@ -508,15 +519,21 @@ export default function UltraFuturisticFooter2036() {
                     target="_blank"
                     rel="noopener noreferrer"
 <<<<<<< HEAD
+                    className={`flex items-center justify-center p-3 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-200 ${social.color}`}
+=======
+<<<<<<< HEAD
                     className="w-10 h-10 bg-gray-800/50 border border-gray-700/50 rounded-xl flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:border-cyan-500/50 hover:bg-gray-800 transition-all duration-200 hover:transform hover:scale-110"
 =======
                     className={`flex items-center justify-center p-3 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-200 ${social.color}`}
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
                     aria-label={`Follow us on ${social.name}`}
                   >
                     {social.icon}
                   </a>
                 ))}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               </motion.div>
 
@@ -550,6 +567,7 @@ export default function UltraFuturisticFooter2036() {
         </div>
       </div>
 =======
+>>>>>>> origin/content/blog-sept12
               </div>
             </div>
           </div>
@@ -642,7 +660,10 @@ export default function UltraFuturisticFooter2036() {
           <MessageCircle className="w-6 h-6 text-white" aria-hidden="true" />
         </motion.button>
       </div>
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
     </footer>
   );
 };

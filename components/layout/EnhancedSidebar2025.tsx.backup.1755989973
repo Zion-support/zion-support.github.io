@@ -4,6 +4,8 @@ import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   ChevronRight, Home, Star, Users, 
   HelpCircle, Mail, Phone, MapPin,
   Brain, Atom, Shield, Rocket, DollarSign,
@@ -12,11 +14,15 @@ import {
   Search, X as CloseIcon,
   Target, BookOpen, Calendar, Video, FileText, Building
 =======
+>>>>>>> origin/content/blog-sept12
   Menu, X, ChevronDown, ChevronRight, Home, Rocket, Target, Building, BookOpen, MessageCircle,
   Brain, Atom, Shield, Cloud, BarChart, Code, Rocket as RocketIcon, Users, Info, Briefcase,
   Heart, DollarSign, Cog, FileText, Calendar, Lightbulb, HelpCircle, Monitor, Zap, Star,
   Settings, Globe, Lock, Server, Database, Network, Palette, Cpu, Layers, Globe2, Truck, Accessibility
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -208,6 +214,8 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
   }, [router.pathname]);
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const sidebarSections = [
     {
       id: 'ai-services',
@@ -354,6 +362,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
       })).filter(section => section.items.length > 0)
     : sidebarSections;
 =======
+>>>>>>> origin/content/blog-sept12
   const toggleExpanded = (itemName: string) => {
     const newExpandedItems = new Set(expandedItems);
     if (newExpandedItems.has(itemName)) {
@@ -382,7 +391,10 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
     router.push(href);
     onClose();
   };
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
 
   return (
     <AnimatePresence>
@@ -409,6 +421,8 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
             <div className="sticky top-0 bg-black/80 backdrop-blur-xl border-b border-white/10 p-4">
               <div className="flex items-center justify-between mb-4">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center">
                     <Brain className="w-5 h-5 text-white" />
@@ -419,6 +433,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
                   onClick={onClose}
                   className="p-2 text-white/70 hover:text-white transition-colors duration-300"
 =======
+>>>>>>> origin/content/blog-sept12
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
                     <Zap className="w-5 h-5 text-white" />
@@ -430,7 +445,10 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
                 <button
                   onClick={onClose}
                   className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -439,23 +457,32 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
               {/* Search */}
               <div className="relative">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50" />
 =======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
                 <input
                   type="text"
                   placeholder="Search navigation..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
 <<<<<<< HEAD
+                  className="w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
+=======
+<<<<<<< HEAD
                   className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400"
 =======
                   className="w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
                 />
               </div>
             </div>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             {/* Content */}
             <div className="p-4 space-y-6">
@@ -563,6 +590,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
                     <span className="text-xs">Middletown, DE 19709</span>
                   </div>
 =======
+>>>>>>> origin/content/blog-sept12
             {/* Navigation Items */}
             <div className="p-4 space-y-2">
               {filteredItems.map((item) => (
@@ -673,7 +701,10 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
                   >
                     Privacy
                   </Link>
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
                 </div>
               </div>
             </div>

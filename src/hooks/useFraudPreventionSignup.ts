@@ -6,17 +6,15 @@ import { toast } from '@/hooks/use-toast';
 import api from '@/lib/api';
 
 export function useFraudPreventionSignup() {
-
   const [isCheckingFraud, setIsCheckingFraud] = useState(false);
   
   // Get the user's IP address (in a real app, you'd do this server-side)
   const getIP = async (): Promise<string | undefined> => {
     try {
-      const response = await apiClient('https://api.ipify.org?format=json');
-      const data = await response.json();
-      return data.ip;
+      const response = await api.get('https://api.ipify.org?format=json');
+      return response.data.ip;
     } catch (error) {
-      logErrorToProduction('Error getting IP:', { data: error });
+      console.error('Error getting IP:', error);
       return undefined;
     }
   };
@@ -31,7 +29,7 @@ export function useFraudPreventionSignup() {
       const fraudCheck = await checkSignupPatterns(email, ipAddress);
       
       if (fraudCheck.isSuspicious) {
-        logInfo('Suspicious signup detected:', { data:  { data: fraudCheck.reasons } });
+        console.log('Suspicious signup detected:', fraudCheck.reasons);
         
         // Create a fraud flag for admin review
         if (!supabase) throw new Error('Supabase client not initialized');
@@ -48,7 +46,7 @@ export function useFraudPreventionSignup() {
         });
         
         if (error) {
-          logErrorToProduction('Error creating fraud flag:', { data: error });
+          console.error('Error creating fraud flag:', error);
         }
         
         // Depending on how strict we want to be, we could block the signup
@@ -72,7 +70,7 @@ export function useFraudPreventionSignup() {
       // No suspicious patterns found
       return true;
     } catch (error) {
-      logErrorToProduction('Error in fraud check:', { data: error });
+      console.error('Error in fraud check:', error);
       // On error, allow the signup but log the error
       return true;
     } finally {

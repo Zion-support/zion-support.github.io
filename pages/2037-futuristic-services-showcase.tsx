@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
+import React from 'react';
+import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
   Star, TrendingUp, Zap, Brain, Rocket, Shield, 
@@ -184,46 +184,76 @@ export default function FuturisticServicesShowcase2037() {
           </div>
         </motion.div>
 
-        {/* Stats Section */}
-        <section className="py-16 bg-gradient-to-r from-gray-900/50 to-black/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-center"
-              >
-                <div className="text-4xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
-                <div className="text-white/60">Innovative Services</div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-center"
-              >
-                <div className="text-4xl font-bold text-purple-400 mb-2">4.8+</div>
-                <div className="text-white/60">Average Rating</div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-center"
-              >
-                <div className="text-4xl font-bold text-pink-400 mb-2">95%</div>
-                <div className="text-white/60">Success Rate</div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-center"
-              >
-                <div className="text-4xl font-bold text-emerald-400 mb-2">24/7</div>
-                <div className="text-white/60">Support Available</div>
-              </motion.div>
+        {/* Featured Services */}
+        <motion.section 
+          id="featured"
+          className="relative z-10 py-16 px-4 sm:px-6 lg:px-8"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
+          <div className="max-w-7xl mx-auto">
+            <motion.h2 
+              className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+              variants={itemVariants}
+            >
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Featured Services
+              </span>
+            </motion.h2>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {featuredServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="group"
+                >
+                  <div className={`bg-gradient-to-br ${service.color} p-8 rounded-2xl border border-gray-700 hover:border-gray-500 transition-all duration-300 transform hover:scale-105`}>
+                    <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                    <p className="text-gray-200 mb-6">{service.description}</p>
+                    
+                    <div className="space-y-4 mb-6">
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-300">Price:</span>
+                        <span className="text-white font-semibold text-lg">{service.price}</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-300">Market:</span>
+                        <span className="text-white font-semibold">{service.marketData}</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-white/50 text-sm">Starting Price:</span>
+                        <span className="text-cyan-400 font-semibold">{service.price}</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-300">ROI:</span>
+                        <span className="text-white font-semibold">{service.savings}</span>
+                      </div>
+                    </div>
+
+                    <div className="mb-6">
+                      <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                      <div className="grid grid-cols-1 gap-2">
+                        {service.features.map((feature, idx) => (
+                          <div key={idx} className="flex items-center gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                            <span className="text-gray-200 text-sm">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <a 
+                      href={service.link}
+                      className="inline-flex items-center gap-2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 w-full justify-center"
+                    >
+                      Learn More
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </motion.section>

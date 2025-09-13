@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from 'react';
-=======
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
->>>>>>> origin/backup-main-20250823-225952
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, ChevronDown, ChevronUp, 

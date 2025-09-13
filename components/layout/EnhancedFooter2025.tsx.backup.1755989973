@@ -322,6 +322,13 @@ const EnhancedFooter2025: React.FC = () => {
                 <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-200" />
               </button>
 <<<<<<< HEAD
+            </div>
+          </div>
+        </motion.div>
+<<<<<<<< HEAD:components/layout/EnhancedFooter2025.tsx.backup.1755989973
+========
+=======
+<<<<<<< HEAD
             </form>
           </div>
         </motion.div>
@@ -391,11 +398,16 @@ const EnhancedFooter2025: React.FC = () => {
             </div>
           </div>
         </motion.div>
+>>>>>>> origin/content/blog-sept12
 =======
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
+>>>>>>>> origin/content/blog-sept12:temp_components.disabled/layout/EnhancedFooter2025.tsx.backup.1755989928
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
       </div>
     </footer>
   );

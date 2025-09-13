@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Header } from '@/components/Header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -12,13 +11,11 @@ import { useToast } from '@/hooks/use-toast';
 import api from '@/lib/api';
 
 export default function TokenManager() {
-
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]);
   const [userId, setUserId] = useState('');
   const [amount, setAmount] = useState(0);
-  const [processing, setProcessing] = useState(false);
 
   const isAdmin = user?.userType === 'admin';
 
@@ -52,18 +49,16 @@ export default function TokenManager() {
       const err = res.data;
       toast({
         title: 'Error',
-        description: (typeof err === 'object' && err && 'message' in err ? (err as { message?: string }).message : 'Failed') || 'Unknown error occurred',
+        description: err.error || 'Failed',
         variant: 'destructive'
       });
-    } finally {
-      setProcessing(false);
     }
   };
 
   return (
     <ProtectedRoute adminOnly>
       <div>
-        <Header />
+        
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <h1 className="text-3xl font-bold text-white mb-6">Token Manager</h1>
@@ -75,12 +70,8 @@ export default function TokenManager() {
                 <Input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)} />
                 <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e.target.value))} />
                 <div className="flex gap-2">
-                  <Button onClick={() => handleIssue('earn')} disabled={processing}>
-                    {processing ? 'Processing...' : 'Issue'}
-                  </Button>
-                  <Button variant="destructive" onClick={() => handleIssue('burn')} disabled={processing}>
-                    {processing ? 'Processing...' : 'Revoke'}
-                  </Button>
+                  <Button onClick={() => handleIssue('earn')}>Issue</Button>
+                  <Button variant="destructive" onClick={() => handleIssue('burn')}>Revoke</Button>
                 </div>
               </CardContent>
             </Card>
@@ -102,6 +93,7 @@ export default function TokenManager() {
             </Tabs>
           </div>
         </div>
+        
       </div>
     </ProtectedRoute>
   );

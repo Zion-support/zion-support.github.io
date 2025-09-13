@@ -1,0 +1,10 @@
+module.exports = {
+  plugins: {
+<<<<<<< HEAD
+    '@tailwindcss/postcss': {},
+=======
+    "@tailwindcss/postcss": {},
+>>>>>>> origin/backup-main-20250909-144539
+    autoprefixer: {},
+  },
+};

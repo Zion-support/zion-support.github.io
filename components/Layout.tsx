@@ -1,17 +1,61 @@
-import React, { ReactNode } from 'react';
-import Sidebar from './Sidebar';
+import React from 'react';
+import Head from 'next/head';
+import Navigation from './Navigation';
+
+
+  componentDidCatch(error, errorInfo) {
+
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
+
+
+
+
+
+
 
 interface LayoutProps {
-  children: ReactNode;
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
 }
 
-export default function Layout({ children }: LayoutProps) {
+const Layout: React.FC<LayoutProps> = ({ 
+  children, 
+  title = 'Zion Tech Solutions',
+  description = 'Leading technology solutions for modern businesses'
+}) => {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <Sidebar />
-      <div className="ml-72 min-h-screen">
-        {children}
-      </div>
-    </div>
-  );
-}
+      <Head>
+      </Head>
+      <Navigation />
+
+export default Layout;
+      <Head>;
+
+
+
+import React, { ReactNode } from "react";
+      </Head>
+      <Header />
+      <Footer />
+import React, { ReactNode } from "react";
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+
+
+
+
+
+export default Layout;
+      </Head>;
+      <Header />;
+      <Footer />;
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+
+
+
+export default Layout;

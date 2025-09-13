@@ -13,6 +13,7 @@ export default function AIEnterpriseTransformation2025() {
       />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+>>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-enterprise-transformation-2025/page.tsx
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
@@ -31,6 +32,7 @@ export default function AIEnterpriseTransformation2025() {
           <p className="text-xl text-gray-600 leading-relaxed mb-8">
             Transform your enterprise with AI in 2025. This comprehensive guide covers strategy, 
             implementation, governance, and achieving 340% ROI with real case studies from Fortune 500 companies.
+>>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-enterprise-transformation-2025/page.tsx
           </p>
           
           <div className="flex items-center gap-4">
@@ -298,6 +300,7 @@ export default function AIEnterpriseTransformation2025() {
                 </p>
               </div>
             </Link>
+>>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-enterprise-transformation-2025/page.tsx
           </div>
         </div>
       </div>

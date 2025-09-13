@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -52,13 +54,17 @@ import {
   MapPin,
   ExternalLink
 =======
+>>>>>>> origin/content/blog-sept12
 import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, Shield, Menu, X, ChevronDown, ChevronRight, ExternalLink, 
   Building, Users, Brain, Cpu, Database, Atom, Rocket, Target, Zap, Globe
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -97,6 +103,11 @@ const navigationItems: NavigationItem[] = [
     category: 'main',
     children: [
 <<<<<<< HEAD
+      {
+        label: 'AI & Machine Learning',
+        href: '/services?category=ai-ml',
+=======
+<<<<<<< HEAD
       { 
         name: 'All Services', 
         href: '/services', 
@@ -121,6 +132,7 @@ const navigationItems: NavigationItem[] = [
         label: 'AI & Machine Learning',
         href: '/services?category=ai-ml',
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
         icon: <Brain className="w-4 h-4" />,
         description: 'Advanced AI solutions for enterprise',
         featured: true,
@@ -146,6 +158,8 @@ const navigationItems: NavigationItem[] = [
       },
       {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         label: 'Space Technology',
         href: '/services?category=space',
         icon: <Rocket className="w-4 h-4" />,
@@ -161,6 +175,7 @@ const navigationItems: NavigationItem[] = [
         neonColor: 'shadow-green-400/50',
         category: 'enterprise'
 =======
+>>>>>>> origin/content/blog-sept12
         label: 'Cloud Infrastructure',
         href: '/services?category=cloud',
         icon: <Cpu className="w-4 h-4" />,
@@ -184,7 +199,10 @@ const navigationItems: NavigationItem[] = [
         featured: true,
         neonColor: 'shadow-orange-400/50',
         category: 'saas'
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
       }
     ]
   },
@@ -333,6 +351,8 @@ const navigationItems: NavigationItem[] = [
 ];
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 // Contact information
 const contactInfo = [
   { icon: Phone, label: 'Call Us', value: '+1 302 464 0950', href: 'tel:+13024640950' },
@@ -361,6 +381,7 @@ const UltraFuturisticNavigation2045: React.FC = () => {
   const navRef = useRef<HTMLElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
 =======
+>>>>>>> origin/content/blog-sept12
 const UltraFuturisticNavigation2045: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -370,7 +391,10 @@ const UltraFuturisticNavigation2045: React.FC = () => {
   const router = useRouter();
   const searchRef = React.useRef<HTMLDivElement>(null);
   const mobileMenuRef = React.useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
 
   // Responsive design detection
   useEffect(() => {
@@ -396,6 +420,10 @@ const UltraFuturisticNavigation2045: React.FC = () => {
   }, []);
 
 <<<<<<< HEAD
+  // Handle click outside search
+  React.useEffect(() => {
+=======
+<<<<<<< HEAD
   // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -414,6 +442,7 @@ const UltraFuturisticNavigation2045: React.FC = () => {
   // Handle click outside search
   React.useEffect(() => {
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsSearchOpen(false);
@@ -424,6 +453,8 @@ const UltraFuturisticNavigation2045: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   // Close mobile menu when route changes
   useEffect(() => {
@@ -448,6 +479,7 @@ const UltraFuturisticNavigation2045: React.FC = () => {
 
   const handleSearch = useCallback((e: React.FormEvent) => {
 =======
+>>>>>>> origin/content/blog-sept12
   // Handle click outside mobile menu
   React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -481,7 +513,10 @@ const UltraFuturisticNavigation2045: React.FC = () => {
   }, [isSearchOpen]);
 
   const handleSearchSubmit = useCallback((e: React.FormEvent) => {
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
     e.preventDefault();
     if (searchQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
@@ -501,9 +536,12 @@ const UltraFuturisticNavigation2045: React.FC = () => {
   }, [isSearchOpen]);
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   // Memoize navigation items to prevent unnecessary re-renders
   const memoizedNavigationItems = useMemo(() => navigationItems, []);
 =======
+>>>>>>> origin/content/blog-sept12
   const renderDropdown = useCallback((item: NavigationItem) => {
     if (!item.children) return null;
 
@@ -572,7 +610,10 @@ const UltraFuturisticNavigation2045: React.FC = () => {
       </AnimatePresence>
     );
   }, [activeDropdown, isActiveRoute]);
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
 
   return (
     <>

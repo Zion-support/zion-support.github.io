@@ -235,6 +235,10 @@ const EnhancedNavigation2025: React.FC = () => {
                 {item.children ? (
                   <button
 <<<<<<< HEAD
+                    onClick={() => toggleDropdown(item.name)}
+                    className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 group"
+=======
+<<<<<<< HEAD
                     onClick={() => toggleDropdown(item.label)}
                     className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-lg px-3 py-2"
                     aria-expanded={activeDropdown === item.label}
@@ -243,6 +247,7 @@ const EnhancedNavigation2025: React.FC = () => {
                     onClick={() => toggleDropdown(item.name)}
                     className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 group"
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
                   >
                     {item.icon}
                     <span>{item.name}</span>
@@ -338,6 +343,8 @@ const EnhancedNavigation2025: React.FC = () => {
           </div>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           {/* Search and Mobile Menu */}
           <div className="flex items-center space-x-4">
             {/* Search */}
@@ -354,6 +361,7 @@ const EnhancedNavigation2025: React.FC = () => {
               </div>
             </form>
 =======
+>>>>>>> origin/content/blog-sept12
           {/* CTA Buttons */}
           <div className="hidden lg:flex lg:items-center lg:space-x-4">
             <Link
@@ -369,7 +377,10 @@ const EnhancedNavigation2025: React.FC = () => {
               Get Started
             </Link>
           </div>
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
@@ -391,6 +402,8 @@ const EnhancedNavigation2025: React.FC = () => {
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           <>
             {/* Backdrop */}
@@ -488,6 +501,7 @@ const EnhancedNavigation2025: React.FC = () => {
                         onClick={closeMobileMenu}
                         className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:text-white transition-colors duration-200 font-medium"
 =======
+>>>>>>> origin/content/blog-sept12
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
@@ -503,7 +517,10 @@ const EnhancedNavigation2025: React.FC = () => {
                       <button
                         onClick={() => toggleDropdown(item.name)}
                         className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-300 hover:text-white transition-colors duration-200"
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
                       >
                         <div className="flex items-center space-x-2">
                           {item.icon}
@@ -527,6 +544,8 @@ const EnhancedNavigation2025: React.FC = () => {
                           ))}
                         </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                       ) : (
                         <Link
                           href={item.href}
@@ -537,6 +556,7 @@ const EnhancedNavigation2025: React.FC = () => {
                         </Link>
 =======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
                       )}
                     </div>
                   ) : (

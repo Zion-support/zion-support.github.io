@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { ReactNode } from 'react';
 import EnhancedNavigation2025 from './EnhancedNavigation2025';
 import EnhancedFooter2025 from './EnhancedFooter2025';
 import LiveChatWidget from '../LiveChatWidget';
 =======
+>>>>>>> origin/content/blog-sept12
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { Sun, Moon } from 'lucide-react';
@@ -19,7 +22,10 @@ import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
 import ThemeToggle from '../ThemeToggle';
 import LoadingSpinner from '../LoadingSpinner';
 import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -31,6 +37,8 @@ interface LayoutProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export default function Layout({ children }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -41,6 +49,7 @@ export default function Layout({ children }: LayoutProps) {
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
 =======
+>>>>>>> origin/content/blog-sept12
 export default function Layout({ 
   children, 
   title = "Zion Tech Group - Revolutionary 2045 Technology",
@@ -53,11 +62,16 @@ export default function Layout({
   const [isOnline, setIsOnline] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
 
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     // Set initial loading state
     const timer = setTimeout(() => {
@@ -193,6 +207,7 @@ export default function Layout({
       </motion.button>
     </div>
 =======
+>>>>>>> origin/content/blog-sept12
     // Simulate loading time for better UX
     const timer = setTimeout(() => setIsLoading(false), 1000);
 
@@ -390,6 +405,9 @@ export default function Layout({
         )}
       </div>
     </>
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
   );
 };

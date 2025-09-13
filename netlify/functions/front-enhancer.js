@@ -7,29 +7,23 @@ function runNode(relPath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-exports.config = {
-  schedule: '*/10 * * * *', // every 10 minutes
-};
+exports.config = { schedule: '0 3 * * *' };
 
 exports.handler = async () => {
   const logs = [];
-  function logStep(name, fn) {
+  function step(name, rel, args = []) {
     logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
+    const { status, stdout, stderr } = runNode(rel, args);
+>>>>>>> origin/content/blog-sept12
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
     return status;
   }
 
-  // Update the front page auto-generated section
-  logStep('front-index:advertise', () => runNode('automation/front-index-advertiser.cjs'));
-
-  // Optional: feature marketing refresh
-  logStep('feature-marketing:once', () => runNode('automation/feature-marketing-orchestrator.cjs', ['once']));
-
-  // Attempt to sync changes back to main (best-effort)
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+  step('orphans:find', 'automation/orphan-pages-finder.cjs');
+  step('git:sync', 'automation/advanced-git-sync.cjs');
+>>>>>>> origin/content/blog-sept12
 
   return { statusCode: 200, body: logs.join('\n') };
 };

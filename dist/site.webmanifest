@@ -1,14 +1,14 @@
 {
   "name": "Zion Tech Group",
   "short_name": "Zion Tech",
-  "description": "Leading provider of AI-powered technology solutions and digital transformation services",
+  "description": "Revolutionary AI, Quantum Computing & Space Technology Solutions",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#22ddd2",
+  "background_color": "#000000",
+  "theme_color": "#000000",
   "orientation": "portrait-primary",
   "scope": "/",
-  "lang": "en-US",
+  "lang": "en",
   "categories": ["business", "productivity", "technology"],
   "icons": [
     {
@@ -24,6 +24,11 @@
       "purpose": "any maskable"
     },
     {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
       "src": "/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
@@ -32,6 +37,22 @@
       "src": "/favicon-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Zion Tech Group Homepage"
+    },
+    {
+      "src": "/screenshots/mobile-1.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Zion Tech Group Mobile View"
     }
   ],
   "shortcuts": [
@@ -60,32 +81,16 @@
       ]
     },
     {
-      "name": "AI Services",
-      "short_name": "AI",
-      "description": "Explore AI solutions",
-      "url": "/ai-services",
+      "name": "About",
+      "short_name": "About",
+      "description": "Learn about Zion Tech Group",
+      "url": "/mission",
       "icons": [
         {
-          "src": "/icons/ai-icon.png",
+          "src": "/icons/about-icon.png",
           "sizes": "96x96"
         }
       ]
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshots/desktop-home.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Homepage on desktop"
-    },
-    {
-      "src": "/screenshots/mobile-home.png",
-      "sizes": "390x844",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Homepage on mobile"
     }
   ],
   "related_applications": [
@@ -100,5 +105,63 @@
   },
   "launch_handler": {
     "client_mode": "navigate-existing"
-  }
-} 
+  },
+  "handle_links": "preferred",
+  "protocol_handlers": [
+    {
+      "protocol": "web+zion",
+      "url": "/protocol-handler?protocol=%s"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/file-handler",
+      "accept": {
+        "text/*": [".txt", ".md", ".html"],
+        "application/pdf": [".pdf"]
+      }
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshots/mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our technology services",
+      "url": "/services",
+      "icons": [
+        {
+          "src": "/icons/services.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/icons/contact.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

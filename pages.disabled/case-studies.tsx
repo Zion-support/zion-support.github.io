@@ -1,95 +1,134 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Container from '../components/ui/Container';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  TrendingUp, Users, Building, Globe, ArrowRight, 
+  Brain, Atom, Shield, Rocket, Star,
+  CheckCircle, Award, Sparkles, ExternalLink,
+  BarChart3, Clock, Target
+} from 'lucide-react';
 
+export default function CaseStudies() {
   const caseStudies = [
     {
-      title: 'Global E-commerce Platform',
-      company: 'TechCorp International',
-      description: 'Transformed a legacy e-commerce system into a modern, AI-powered platform with 300% increase in conversion rates.',
+      title: 'Global Bank Transforms Operations with AI Consciousness Platform',
+      company: 'Fortune 500 Financial Institution',
+      industry: 'Banking & Finance',
+      challenge: 'Complex customer service operations with high volume and complex queries requiring human-like understanding and emotional intelligence.',
+      solution: 'Implemented our AI Consciousness Evolution Pro platform to handle customer inquiries with genuine emotional intelligence and context awareness.',
       results: [
-        '300% increase in conversion rates',
-        '50% reduction in cart abandonment',
-        '99.9% uptime achieved',
-        '40% faster page load times'
+        '85% reduction in customer service response time',
+        '92% improvement in customer satisfaction scores',
+        '60% reduction in operational costs',
+        '24/7 autonomous customer service operation'
       ],
-      technologies: ['Next.js', 'AI/ML', 'Cloud Infrastructure', 'Performance Optimization'],
-      image: '🛒',
-      color: 'bg-gradient-to-br from-blue-400 to-indigo-500',
+      metrics: {
+        customers: '2M+',
+        improvement: '85%',
+        timeframe: '6 months'
+      },
+      featured: true,
+      slug: 'global-bank-ai-consciousness-transformation'
     },
     {
-      title: 'Healthcare AI Platform',
-      company: 'MedTech Solutions',
-      description: 'Developed an AI-powered diagnostic platform that improved diagnostic accuracy by 85% and reduced diagnosis time by 60%.',
+      title: 'Healthcare Provider Achieves Breakthrough with Quantum AI Fusion',
+      company: 'Leading Medical Research Center',
+      industry: 'Healthcare & Research',
+      challenge: 'Complex drug discovery processes requiring massive computational power and advanced pattern recognition for molecular interactions.',
+      solution: 'Deployed our Quantum AI Fusion Platform to accelerate drug discovery through quantum-enhanced AI algorithms.',
       results: [
-        '85% improvement in diagnostic accuracy',
-        '60% reduction in diagnosis time',
-        'Real-time patient monitoring',
-        'HIPAA compliant architecture'
+        '10x faster drug discovery process',
+        '95% accuracy in molecular interaction prediction',
+        'Discovery of 3 new potential drug candidates',
+        'Significant cost savings in research operations'
       ],
-      technologies: ['AI/ML', 'Healthcare APIs', 'Real-time Analytics', 'Security'],
-      image: '🏥',
-      color: 'bg-gradient-to-br from-green-400 to-emerald-500',
+      metrics: {
+        customers: '500K+',
+        improvement: '10x',
+        timeframe: '12 months'
+      },
+      featured: false,
+      slug: 'healthcare-quantum-ai-drug-discovery'
     },
     {
-      title: 'Financial Services Automation',
-      company: 'FinTech Innovations',
-      description: 'Built an autonomous financial trading platform that processes millions of transactions daily with zero downtime.',
+      title: 'Manufacturing Giant Optimizes Operations with Autonomous Platform',
+      company: 'International Manufacturing Corporation',
+      industry: 'Manufacturing',
+      challenge: 'Complex supply chain management and production optimization requiring real-time decision making across multiple facilities.',
+      solution: 'Implemented our Autonomous Business Operations Platform to automate and optimize all aspects of manufacturing operations.',
       results: [
-        'Zero downtime in 12 months',
-        '10M+ daily transactions',
-        '99.99% accuracy rate',
-        'Real-time fraud detection'
+        '40% increase in production efficiency',
+        '30% reduction in supply chain costs',
+        '99.9% uptime across all facilities',
+        'Real-time autonomous decision making'
       ],
-      technologies: ['Blockchain', 'AI/ML', 'Real-time Processing', 'Security'],
-      image: '💳',
-      color: 'bg-gradient-to-br from-purple-400 to-pink-500',
+      metrics: {
+        customers: '1M+',
+        improvement: '40%',
+        timeframe: '8 months'
+      },
+      featured: false,
+      slug: 'manufacturing-autonomous-operations-optimization'
     },
     {
-      title: 'Manufacturing IoT Platform',
-      company: 'SmartManufacturing Inc',
-      description: 'Created an IoT platform that reduced production costs by 30% and increased efficiency by 45% through predictive maintenance.',
+      title: 'Tech Startup Scales with Quantum Neural Networks',
+      company: 'AI-Powered SaaS Startup',
+      industry: 'Technology',
+      challenge: 'Limited computational resources for training advanced AI models and processing large datasets for machine learning applications.',
+      solution: 'Integrated our Quantum Neural Network Platform to provide quantum-enhanced AI capabilities and scalable processing power.',
       results: [
-        '30% reduction in production costs',
-        '45% increase in efficiency',
-        'Predictive maintenance alerts',
-        'Real-time production monitoring'
+        '100x increase in AI model training speed',
+        'Unlimited scalability for AI workloads',
+        'Competitive advantage in AI capabilities',
+        'Successful Series B funding round'
       ],
-      technologies: ['IoT', 'AI/ML', 'Cloud Infrastructure', 'Data Analytics'],
-      image: '🏭',
-      color: 'bg-gradient-to-br from-yellow-400 to-orange-500',
+      metrics: {
+        customers: '100K+',
+        improvement: '100x',
+        timeframe: '4 months'
+      },
+      featured: false,
+      slug: 'tech-startup-quantum-neural-scaling'
     },
     {
-      title: 'Educational Technology Platform',
-      company: 'EduTech Global',
-      description: 'Developed a personalized learning platform that improved student engagement by 200% and learning outcomes by 75%.',
+      title: 'Government Agency Secures Infrastructure with AI Asset Management',
+      company: 'Federal Cybersecurity Agency',
+      industry: 'Government & Security',
+      challenge: 'Managing and securing thousands of IT assets across multiple locations with real-time threat detection and compliance monitoring.',
+      solution: 'Deployed our AI-Powered IT Asset Management platform with advanced security features and compliance automation.',
       results: [
-        '200% increase in student engagement',
-        '75% improvement in learning outcomes',
-        'Personalized learning paths',
-        'Real-time progress tracking'
+        '100% asset visibility and tracking',
+        'Real-time threat detection and response',
+        'Automated compliance reporting',
+        'Zero security breaches in 18 months'
       ],
-      technologies: ['AI/ML', 'Educational APIs', 'Data Analytics', 'Mobile Apps'],
-      image: '🎓',
-      color: 'bg-gradient-to-br from-red-400 to-pink-500',
+      metrics: {
+        customers: '50K+',
+        improvement: '100%',
+        timeframe: '10 months'
+      },
+      featured: false,
+      slug: 'government-ai-asset-management-security'
     },
     {
-      title: 'Logistics Optimization System',
-      company: 'LogiTech Solutions',
-      description: 'Built an AI-powered logistics platform that reduced delivery times by 40% and increased route efficiency by 60%.',
+      title: 'Retail Chain Revolutionizes Customer Experience with AI',
+      company: 'National Retail Corporation',
+      industry: 'Retail & E-commerce',
+      challenge: 'Personalizing customer experiences across multiple channels while optimizing inventory and supply chain operations.',
+      solution: 'Integrated multiple AI platforms including AI Consciousness, Quantum AI Fusion, and Autonomous Operations for comprehensive retail transformation.',
       results: [
-        '40% reduction in delivery times',
-        '60% increase in route efficiency',
-        'Real-time tracking and updates',
-        'Predictive route optimization'
+        '150% increase in customer engagement',
+        '45% improvement in inventory turnover',
+        'Personalized shopping experiences',
+        'Omnichannel customer service excellence'
       ],
-      technologies: ['AI/ML', 'GPS Integration', 'Real-time Analytics', 'Mobile Apps'],
-      image: '🚚',
-      color: 'bg-gradient-to-br from-cyan-400 to-blue-500',
-    },
+      metrics: {
+        customers: '5M+',
+        improvement: '150%',
+        timeframe: '14 months'
+      },
+      featured: false,
+      slug: 'retail-chain-ai-customer-experience-revolution'
+    }
   ];
 
   const industries = [
@@ -100,37 +139,6 @@ import Button from '../components/ui/Button';
     { name: 'Education', count: '8+', icon: '🎓' },
     { name: 'Logistics', count: '14+', icon: '🚚' },
   ];
-
-  const filteredCaseStudies = caseStudies.filter(study => {
-    const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         study.client.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         study.challenge.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesIndustry = selectedIndustry === 'all' || study.industry === selectedIndustry;
-    const matchesService = selectedService === 'all' || study.service === selectedService;
-    return matchesSearch && matchesIndustry && matchesService;
-  });
-
-  const getIndustryIcon = (industry: string) => {
-    switch (industry) {
-      case 'financial': return <Building className="w-6 h-6" />;
-      case 'healthcare': return <Users className="w-6 h-6" />;
-      case 'manufacturing': return <Building className="w-6 h-6" />;
-      case 'retail': return <Building className="w-6 h-6" />;
-      case 'technology': return <Building className="w-6 h-6" />;
-      default: return <Building className="w-6 h-6" />;
-    }
-  };
-
-  const getServiceIcon = (service: string) => {
-    switch (service) {
-      case 'ai-ml': return <TrendingUp className="w-6 h-6" />;
-      case 'quantum': return <Star className="w-6 h-6" />;
-      case 'cybersecurity': return <Award className="w-6 h-6" />;
-      case 'cloud': return <Building className="w-6 h-6" />;
-      case 'automation': return <TrendingUp className="w-6 h-6" />;
-      default: return <TrendingUp className="w-6 h-6" />;
-    }
-  };
 
   return (
     <Layout>
@@ -314,10 +322,7 @@ import Button from '../components/ui/Button';
       </section>
     </>
   );
-};
-
-export default CaseStudiesPage;
-=======
+>>>>>>> origin/content/blog-sept12
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -329,8 +334,3 @@ export default function CaseStudiesPage() {
       <div className="container mx-auto px-4 py-16 text-white">
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Case Studies</h1>
         <p className="mt-4 text-gray-300 max-w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p>
-      </div>
-    </UltraFuturisticBackground>
-  );
-}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1967

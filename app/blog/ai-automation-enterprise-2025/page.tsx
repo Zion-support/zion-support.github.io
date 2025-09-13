@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, TrendingUp, Brain, Zap, Shield, Target, BarChart3 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -977,10 +977,9 @@ export default function AIAutomationEnterprise2025() {
             </div>
           </div>
         </article>
-      </div>
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
-          <div className="grid md:grid-cols-2 gap-6">
+      <div className="border-t border-gray-200 pt-8 mt-12">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
+        <div className="grid md:grid-cols-2 gap-6">
             <Link href="/blog/ai-2025-breakthrough-innovations" className="group">
               <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
                 <h4 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600">
@@ -1010,7 +1009,35 @@ export default function AIAutomationEnterprise2025() {
             </Link>
           </div>
         </div>
-      </article>
-    </div>
+      </div>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Implement AI Automation?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let our experts help you develop and implement a comprehensive AI automation strategy that delivers real results.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+            >
+              Get AI Automation Consultation
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              href="/case-studies"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
+            >
+              View More Case Studies
+            </Link>
+          </div>
+        </div>
+      </section>
+      </div>
+    </ErrorBoundary>
   );
 }

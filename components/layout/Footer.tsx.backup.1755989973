@@ -14,6 +14,8 @@ const Footer: React.FC = () => {
 
   const services = [
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     { name: 'AI & Machine Learning', href: '/ai-services' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
     { name: 'Space Technology', href: '/space-technology' },
@@ -30,17 +32,23 @@ const Footer: React.FC = () => {
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Pricing Plans', href: '/pricing' }
 =======
+>>>>>>> origin/content/blog-sept12
     { name: 'AI & Consciousness', href: '/ai-services', icon: Brain },
     { name: 'Quantum Technology', href: '/quantum-services', icon: Atom },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
     { name: 'Business Solutions', href: '/business-solutions', icon: Target },
     { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cpu },
     { name: 'Space Technology', href: '/space-tech', icon: Rocket }
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
   ];
 
   const company = [
     { name: 'About Us', href: '/about' },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     { name: 'Mission', href: '/mission' },
     { name: 'Values', href: '/values' },
@@ -63,6 +71,7 @@ const Footer: React.FC = () => {
     { name: 'Training', href: '/training' },
     { name: 'White Papers', href: '/white-papers' }
 =======
+>>>>>>> origin/content/blog-sept12
     { name: 'Leadership', href: '/leadership' },
     { name: 'Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
@@ -77,7 +86,10 @@ const Footer: React.FC = () => {
     { name: 'Webinars', href: '/webinars' },
     { name: 'Documentation', href: '/docs' },
     { name: 'Support', href: '/support' }
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
   ];
 
   const legal = [
@@ -88,6 +100,8 @@ const Footer: React.FC = () => {
   ];
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
@@ -96,6 +110,7 @@ const Footer: React.FC = () => {
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
 =======
+>>>>>>> origin/content/blog-sept12
   const social = [
     { name: 'Twitter', href: '#', icon: Twitter },
     { name: 'LinkedIn', href: '#', icon: Linkedin },
@@ -103,7 +118,10 @@ const Footer: React.FC = () => {
     { name: 'YouTube', href: '#', icon: Youtube },
     { name: 'Instagram', href: '#', icon: Instagram },
     { name: 'Facebook', href: '#', icon: Facebook }
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
   ];
 
   return (

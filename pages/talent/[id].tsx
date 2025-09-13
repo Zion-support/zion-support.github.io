@@ -1,28 +1,19 @@
 import React from 'react';
-import { NextSeo } from '@/components/NextSeo';
 import { useRouter } from 'next/router';
-// Loader2 removed as TalentProfileSkeleton will be used
-import TalentProfileSkeleton from '@/components/talent/TalentProfileSkeleton';
-import NotFound from '@/components/NotFound';
-import useSWR from 'swr';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import type { TalentProfile } from '@/types/talent';
+import { SEO } from "@/components/SEO";
 
-// API returns `{ profile: TalentProfile }`; swr will store just the profile
-type TalentProfileResponse = { profile: TalentProfile | null };
+const TalentDetail: React.FC = () => {
+  const router = useRouter();
+  const { id } = router.query;
 
 // fetcher-like function for handling API responses
 const handleApiResponse = async (res: Response) => {
   if (!res.ok) {
     const error = new Error('An error occurred while fetching the data.');
-    // Read response body once and attempt to parse JSON
-    const raw = await res.text();
     try {
-      (error as any).info = JSON.parse(raw);
-    } catch {
-      (error as any).info = { message: raw };
+      (error as any).info = await res.json();
+    } catch (e) {
+      (error as any).info = { message: await res.text() };
     }
     (error as any).status = res.status;
     throw error;
@@ -31,18 +22,15 @@ const handleApiResponse = async (res: Response) => {
 };
 
 const TalentPage: React.FC = () => {
-  const router = useRouter();
-  const { id } = router.query as { id?: string };
+  const params = useParams();
+  const id = params.id as string;
 
-  const { data, error, isLoading } = useSWR<TalentProfile | null>(
+  const { data, error, isLoading } = useSWR<TalentProfileBasic>(
     id ? `/api/talent/${id}` : null,
-    async (url: string) => {
-      const result: TalentProfileResponse = await fetch(url).then(handleApiResponse);
-      return result.profile;
-    }
+    (url: string) => fetch(url).then(handleApiResponse)
   );
 
-  if (isLoading || !router.isReady || !id) {
+  if (isLoading || !id) {
     return <TalentProfileSkeleton />;
   }
 
@@ -51,9 +39,9 @@ const TalentPage: React.FC = () => {
     return <NotFound />;
   }
 
-  // Next.js router typing in this project doesn't include `isFallback`.
-  // Cast to any to access the property during static builds.
-  if ((router as any).isFallback) {
+  // Other errors (non-404)
+  if (error) {
+    const err: any = error;
     return (
       <div className="flex flex-col items-center justify-center py-20 text-center">
         <h2 className="text-2xl font-semibold mb-2">Error</h2>
@@ -72,58 +60,53 @@ const TalentPage: React.FC = () => {
 
   // If we reach here, talent data is available
   return (
-    <>
-      <NextSeo
-        title={data?.full_name}
-        description={data?.bio ?? ''}
-        openGraph={{
-          title: data?.full_name,
-          description: data?.bio ?? ''
-        }}
+    <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark to-zion-blue-darker">
+      <SEO 
+        title={`Talent Profile - ${id}`}
+        description="View detailed talent profile and professional information."
+        keywords="talent, profile, professional, skills"
       />
-      <main className="min-h-screen bg-zion-blue py-8 text-white" data-testid="talent-details">
-        <div className="container mx-auto px-4 space-y-6">
-          <div className="flex items-center gap-4">
-            <Avatar className="h-20 w-20">
-              <AvatarFallback>{data?.full_name?.charAt(0)}</AvatarFallback>
-            </Avatar>
-            <div>
-              <h1 className="text-3xl font-bold" data-testid="profile-name">
-                {data?.full_name}
-              </h1>
-              {data.bio && <p className="text-zion-slate-light">{data.bio}</p>}
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Talent Profile
+          </h1>
+          <p className="text-xl text-zion-gray-light max-w-3xl mx-auto">
+            Professional talent information and portfolio details.
+          </p>
+        </div>
+
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+          <div className="text-center">
+            <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center">
+              <span className="text-white text-2xl font-bold">T</span>
+            </div>
+            <h2 className="text-2xl font-bold text-white mb-4">Talent ID: {id}</h2>
+            <p className="text-zion-gray-light mb-8">
+              This is a placeholder talent profile page. In a real application, 
+              this would display detailed information about the talent.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              <div className="bg-white/5 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-white mb-2">Skills</h3>
+                <p className="text-zion-gray-light">Professional skills and expertise</p>
+              </div>
+              <div className="bg-white/5 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                <p className="text-zion-gray-light">Years of professional experience</p>
+              </div>
+              <div className="bg-white/5 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-white mb-2">Portfolio</h3>
+                <p className="text-zion-gray-light">Previous work and projects</p>
+              </div>
             </div>
           </div>
-
-          {data.skills && data.skills.length > 0 && (
-            <div className="flex flex-wrap gap-2" data-testid="skills">
-              {data.skills.map((skill) => (
-                <Badge key={skill} variant="secondary">
-                  {skill}
-                </Badge>
-              ))}
-            </div>
-          )}
-
-          {data.key_projects && data.key_projects.length > 0 && (
-            <div>
-              <h2 className="text-xl font-semibold mb-2">Key Projects</h2>
-              <ul className="space-y-2">
-                {data.key_projects.map((project, index) => (
-                  <li key={index} className="border-l-2 border-zion-purple pl-4">
-                    <h3 className="font-medium">{project.title}</h3>
-                    <p className="text-zion-slate-light text-sm">{project.description}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          <Button className="bg-zion-purple text-white">Hire</Button>
         </div>
-      </main>
-    </>
+      </div>
+    </div>
   );
 };
 
-export default TalentPage;
+export default TalentDetail;

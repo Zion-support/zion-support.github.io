@@ -1,23 +1,65 @@
+import React from 'react';
 import Link from 'next/link';
-import AnimatedBackground from './AnimatedBackground';
 
 export default function FuturisticHero() {
-  return (
-    <section className="relative overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-800 bg-cyber text-high-contrast p-8 md:p-12">
+
+export default function FuturisticHero() {
+      <AnimatedBackground />;
+          <Link href='/partners'>;
+export default /**
+      <AnimatedBackground />;
+          <Link href='/partners'>;
+          </Link>;
+          <Link href='/services'>;
+
+
+          </Link>;
+
+export default function FuturisticHero() {
       <AnimatedBackground />
-      <div className="relative z-10">
-        <div className="inline-block rounded-full border border-white/20 px-3 py-1 text-xs tracking-wider uppercase mb-4 bg-white/5 backdrop-blur">Autonomous • Cloud • AI</div>
-        <h1 className="text-3xl md:text-5xl font-semibold leading-tight animate-fade-in">
-          Build With The Future: <span className="text-neon-blue drop-shadow-[0_0_15px_rgba(0,212,255,0.6)]">Autonomous</span> Automations
         </h1>
-        <p className="mt-3 md:mt-4 max-w-2xl opacity-90">
-          Zero‑touch, always‑on agents that analyze, optimize, and publish. Experience seamless insights with a neon‑infused, futuristic UI.
+        <p className="mt-6 text-gray-300/90 md:text-lg">
+          Hire world-class AI talent, rent compute, and run cloud automations. All in one futuristic platform.
         </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Link href="/automation"><a className="px-5 py-2.5 rounded-md bg-neon-blue text-black font-medium shadow-neon-blue hover:brightness-110">Automation Dashboard</a></Link>
-          <Link href="/services"><a className="px-5 py-2.5 rounded-md bg-white/10 border border-white/20 hover:bg-white/15">Explore Services</a></Link>
+        <div className="mt-8 flex items-center justify-center gap-3">
+          <Link href="/services"><a className="btn-primary">Explore Services</a></Link>
+          <Link href="/services"><a className="btn-primary">Explore Services</a></Link>
+          <Link href="/seo"><a className="btn-secondary">Localized Pages</a></Link>
+          <Link href="/seo"><a className="btn-secondary">Localized Pages</a></Link>
+          <Link href="/project/demo/room"><a className="btn-ghost">Start a Call</a></Link>
+          <Link href="/project/demo/room"><a className="btn-ghost">Start a Call</a></Link>
+          <Link href="/partners"><a className="px-5 py-3 rounded-lg bg-indigo-600 text-white shadow hover: bg-indigo-500">Become a Partner</a></Link>
+          <Link href="/partners"><a className="px-5 py-3 rounded-lg bg-indigo-600 text-white shadow hover: bg-indigo-500">Become a Partner</a></Link>
+          <Link href="/services"><a className="px-5 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-900">Explore Services</a></Link>
+          <Link href="/services"><a className="px-5 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-900">Explore Services</a></Link>
+        </div>
+      </div>
+      <div className="mt-12 max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-left px-6">
+        <div className="stat-card">
+          <div className="stat-value">24/7</div>
+          <div className="stat-label">Cloud automations</div>
+        </div>
+        <div className="stat-card">
+          <div className="stat-value">150ms</div>
+          <div className="stat-label">Realtime media</div>
+        </div>
+        <div className="stat-card">
+          <div className="stat-value">+SEO</div>
+          <div className="stat-label">Long-tail landing pages</div>
+        </div>
+        <div className="stat-card">
+          <div className="stat-value">Autoheal</div>
+          <div className="stat-label">Self-fixing builds</div>
         </div>
       </div>
     </section>
   );
-}
+
+            Integrated AI toolchain          </p > export default /**
+      <AnimatedBackground />;
+          <Link href="/partners"><a className="px - 5 py - 3 rounded - lg bg - indigo - 600 text - white shadow hover: bg - indigo - 500">Become a Partner</a></Link>;
+          <Link href="/partners"><a className="px - 5 py - 3 rounded - lg bg - indigo - 600 text - white shadow hover: bg - indigo - 500">Become a Partner</a></Link>;
+          <Link href="/services"><a className="px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900">Explore Services</a></Link>;
+          <Link href="/services"><a className="px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900">Explore Services</a></Link>;
+
+

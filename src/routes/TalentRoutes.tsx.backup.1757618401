@@ -1,0 +1,31 @@
+<<<<<<< HEAD
+import { Suspense, lazy } from "react";
+import { Route, Routes } from "react-router-dom";
+import { ProtectedRoute } from "../components/ProtectedRoute";
+import ErrorBoundary from "@/components/ErrorBoundary";
+import TalentDirectory from "../pages/TalentDirectory";
+import TalentsPage from "../pages/TalentsPage";
+import SavedTalentsPage from "../pages/SavedTalentsPage";
+import CreateTalentProfile from "../pages/CreateTalentProfile";
+import ProfilePage from "../pages/ProfilePage";
+
+const TalentProfilePage = lazy(() => import("../pages/TalentProfilePage"));
+
+const TalentRoutes = () => {
+=======
+import React from 'react';
+// Next.js routing - no need for react-router-dom
+import TalentDirectory from '@/pages/TalentDirectory';
+import TalentsPage from '@/pages/TalentsPage';
+
+export default function TalentRoutes() {
+>>>>>>> origin/backup-main-20250826-120505
+  return (
+    <>
+      <Route path="directory" element={<TalentDirectory />} />
+      <Route path="list" element={<TalentsPage />} />
+    </>
+  );
+};
+
+export default TalentRoutes;

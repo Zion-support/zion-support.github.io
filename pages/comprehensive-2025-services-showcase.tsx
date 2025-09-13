@@ -1,68 +1,35 @@
 import React, { useState } from 'react';
-import SEO from '../components/SEO';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { motion, AnimatePresence } from 'framer-motion';
+import {
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+
+import React, { useState, useEffect } from 'react',;
+import Head from 'next/head',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
-  Search, Grid, List,
-  ArrowRight, Check,
-  Building, Globe, Zap, Users
+  ArrowRight, CheckCircle, ExternalLink,
+  Search, Grid, List, Star as StarIcon
 } from 'lucide-react';
 
-// Import our new service data
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
 import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 
-// Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
 
-// Unified service interface for showcase display
-interface UnifiedService {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  icon?: string;
-  popular?: boolean;
-  link?: string;
-  price?: string | number;
-  pricing?: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-    custom: string;
-  };
-  price_monthly?: number;
-  price_yearly?: number;
-  trialDays?: number;
-  setupTime?: string;
-  features?: string[];
-  benefits?: string[];
-  rating?: number;
-  reviews?: number;
-}
 
-const Comprehensive2025ServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('popularity');
-  const [viewMode, setViewMode] = useState('grid');
 
-  // Combine all services
-  const allServices: UnifiedService[] = [
-    ...advancedAIAutomationServices2025.map(normalizeService),
-    ...innovative2025ITInfrastructureServices.map(normalizeService),
-    ...innovativeMicroSaasSolutions2025.map(normalizeService),
-    ...cuttingEdgeAIServices2025.map(normalizeService),
-    ...realMicroSaasServices.map(normalizeService),
-    ...innovativeAIServices.map(normalizeService),
-    ...enterpriseITServices.map(normalizeService)
-  ];
 
-  // Categories
+export default function Comprehensive2025ServicesShowcase() {
   const categories = [
     { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices.length },
     { id: 'ai', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },
@@ -86,32 +53,17 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-        case 'price-low':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-        case 'price-high':
-          return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
-        case 'name':
-          return a.name.localeCompare(b.name);
-        default:
-          return 0;
-      }
-    });
 
-  const getServiceIcon = (service: UnifiedService) => {
-    if (service.icon) return service.icon;
-    switch (service.category) {
-      case 'AI Automation':
-        return '🤖';
-      case 'IT Infrastructure':
-        return '🏗️';
-      case 'Micro SAAS':
-        return '💻';
-      case 'AI Services':
-        return '🧠';
-      default:
-        return '⚡';
-    }
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import {;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+export default function Comprehensive2025ServicesShowcase(req, res) {
   };
 
 
@@ -130,16 +82,14 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               2025 Services Showcase
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Discover our comprehensive portfolio of innovative AI automation, IT infrastructure, micro SAAS solutions, and cutting-edge AI services designed to transform your business.
+
+
+
+
             </p>
             
             {/* Contact Information */}
@@ -169,18 +119,20 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
       </section>
 
       {/* Search and Filter Section */}
-      <section className="py-8 px-4 bg-black/20">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
-            {/* Search */}
+
+
+
+
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+
+              <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
+
+
+
               />
             </div>
 
@@ -222,97 +174,62 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
                   <Grid className="w-4 h-4" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-500 text-black' : 'text-gray-400 hover:text-white'}`}
                 >
                   <List className="w-4 h-4" />
                 </button>
               </div>
+
+              <select
+
+
+
+
+                className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              >
+                <option value="popularity">Most Popular</option>
+                <option value="price">Price: Low to High</option>
+                <option value="rating">Highest Rated</option>
+                <option value="newest">Newest First</option>
+              </select>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-center mb-4">
-              {filteredServices.length} Services Available
-            </h2>
-            <p className="text-gray-400 text-center">
-              Discover innovative solutions across AI automation, IT infrastructure, micro SAAS, and cutting-edge AI services
-            </p>
-          </div>
 
-          {viewMode === 'grid' ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 ${
-                    viewMode === 'list' ? 'flex items-center gap-6' : ''
-                  }`}
-                >
-                  {viewMode === 'list' ? (
-                    // List View
-                    <>
-                      <div className="flex-shrink-0">
-                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}>
-                          {service.icon}
-                        </div>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-2">
-                          <h3 className="text-xl font-bold text-white truncate">{service.name}</h3>
-                          {service.popular && (
-                            <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-xs px-2 py-1 rounded-full font-semibold">
-                              Popular
-                            </span>
-                          )}
-                        </div>
-                        <p className="text-gray-300 text-sm mb-3 line-clamp-2">{service.tagline}</p>
-                        <div className="flex items-center gap-4 text-sm text-gray-400">
-                          <span className="flex items-center gap-1">
+
+
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+
+
+
+
+
+
+
+                  </div>
+                )}
+
                             <DollarSign className="w-4 h-4" />
-                            {service.price}{service.period}
-                          </span>
-                          <span className="flex items-center gap-1">
                             <Clock className="w-4 h-4" />
-                            {service.setupTime}
-                          </span>
-                          <span className="flex items-center gap-1">
                             <Star className="w-4 h-4 text-yellow-400" />
-                            {service.rating} ({service.reviews})
-                          </span>
-                        </div>
-                      </div>
-                      <div className="flex-shrink-0">
-                        <a
-                          href={service.link}
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200"
-                        >
-                          Learn More
                           <ArrowRight className="w-4 h-4" />
-                        </a>
-                      </div>
-                    </>
-                  ) : (
-                    // Grid View
-                    <>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}>
-                          {service.icon}
-                        </div>
-                        {service.popular && (
-                          <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-xs px-2 py-1 rounded-full font-semibold">
-                            Popular
-                          </span>
-                        )}
-                      </div>
+
+
+
+                    <StarIcon className="w-5 h-5 text-yellow-400 fill-current" />
+
+                    <StarIcon className="w - 5 h - 5 text - yellow - 400 fill - current" />;
+
+                        <CheckCircle className="w - 4 h - 4 text - cyan - 400 flex - shrink - 0" />;
+
+
+                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
 
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.tagline}</p>
@@ -352,10 +269,6 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
                         </ul>
                       </div>
 
-                      <div className="space-y-3 mb-6">
-                        <h4 className="text-sm font-semibold text-gray-300">ROI:</h4>
-                        <p className="text-xs text-gray-400">{service.roi}</p>
-                      </div>
 
                       <a
                         href={service.link}
@@ -371,11 +284,35 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
             </motion.div>
           </AnimatePresence>
 
-          {filteredServices.length === 0 && (
-            <div className="text-center py-20">
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-gray-300 mb-2">No services found</h3>
-              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
+
+
+
+
+
+
+
+
+                    <ExternalLink className="w-4 h-4" />
+
+
+                  </Link>
+
+
+
+
+
+
+
+
+                    </Link>
+                    </Link>
+
+
+
+
+
+
+
             </div>
           )}
         </div>
@@ -390,6 +327,10 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+
+
+
+
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
@@ -405,7 +346,12 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 <Phone className="w-5 h-5" />
-                Call {contactInfo.mobile}
+                <ArrowRight className="w-5 h-5" />
+
+
+              </Link>
+
+
               </a>
               <a
                 href={`mailto:${contactInfo.email}`}
@@ -428,3 +374,28 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
 };
 
 export default Comprehensive2025ServicesShowcase;
+
+                <ArrowRight className="w - 5 h - 5" />;
+      <EnhancedFooter />;
+
+
+
+
+      <Head>
+      
+        <script type=&quot;application/ld+json&quot;>{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;WebPage&quot;,&quot;headline&quot;:&quot;Comprehensive 2025 Innovative Services Showcase — Zion Tech Group&quot;,&quot;url&quot;:&quot;https://ziontechgroup.com/comprehensive-2025-services-showcase&quot;,&quot;isPartOf&quot;:{&quot;@type&quot;:&quot;WebSite&quot;,&quot;name&quot;:&quot;Zion Tech Group&quot;,&quot;url&quot;:&quot;https://ziontechgroup.com&quot;}}</script></Head>
+
+      <EnhancedNavigation />
+
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import {;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+export default function Comprehensive2025ServicesShowcase(req, res) {
+
+

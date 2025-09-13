@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   Menu, ChevronDown, X, Phone, Mail, MapPin,
   Rocket, BookOpen,
   DollarSign, BarChart3, Star, 
@@ -14,11 +16,15 @@ import {
   HelpCircle,
   BookOpenCheck
 =======
+>>>>>>> origin/content/blog-sept12
   Menu, ChevronDown, X, ArrowRight,
   BookOpen, DollarSign, BarChart3, Users, Star, 
   Building, Play, Calculator,
   Grid, FileText, Code, Video
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -81,20 +87,28 @@ const navigationItems: NavigationItem[] = [
         href: '/ai-services', 
         description: 'Advanced AI solutions',
 <<<<<<< HEAD
+        icon: <Play className="w-4 h-4" />
+=======
+<<<<<<< HEAD
         icon: <Cpu className="w-4 h-4" />
 =======
         icon: <Play className="w-4 h-4" />
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
       },
       { 
         name: 'Quantum Technology', 
         href: '/quantum-services', 
         description: 'Quantum computing solutions',
 <<<<<<< HEAD
+        icon: <Play className="w-4 h-4" />
+=======
+<<<<<<< HEAD
         icon: <Cpu className="w-4 h-4" />
 =======
         icon: <Play className="w-4 h-4" />
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
       },
       { 
         name: 'Space Technology', 
@@ -113,8 +127,11 @@ const navigationItems: NavigationItem[] = [
         href: '/solutions', 
         description: 'Industry-specific solutions',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         icon: <Star className="w-4 h-4" />
 =======
+>>>>>>> origin/content/blog-sept12
         icon: <Play className="w-4 h-4" />
       },
       { 
@@ -124,7 +141,10 @@ const navigationItems: NavigationItem[] = [
         icon: <Star className="w-4 h-4" />,
         featured: true,
         badge: 'New'
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
       }
     ]
   },
@@ -168,6 +188,11 @@ const navigationItems: NavigationItem[] = [
         name: 'About Us', 
         href: '/about', 
 <<<<<<< HEAD
+        description: 'Our story and mission',
+        icon: <Users className="w-4 h-4" />,
+        featured: true
+=======
+<<<<<<< HEAD
         description: 'Company information',
         icon: <Star className="w-4 h-4" />
       },
@@ -187,6 +212,7 @@ const navigationItems: NavigationItem[] = [
         icon: <Users className="w-4 h-4" />,
         featured: true
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
       },
       {
         name: 'Leadership',
@@ -198,6 +224,8 @@ const navigationItems: NavigationItem[] = [
         name: 'Careers',
         href: '/careers',
         description: 'Join our team',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         icon: <Star className="w-4 h-4" />
       }
@@ -234,6 +262,7 @@ const navigationItems: NavigationItem[] = [
         description: 'Live events',
 =======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
         icon: <Play className="w-4 h-4" />
       }
     ]
@@ -244,6 +273,11 @@ const UltraFuturisticNavigation2036: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 <<<<<<< HEAD
+  const [isScrolled, setIsScrolled] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
+  const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+=======
+<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
@@ -253,6 +287,7 @@ const UltraFuturisticNavigation2036: React.FC = () => {
   const navRef = useRef<HTMLElement>(null);
   const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -266,6 +301,8 @@ const UltraFuturisticNavigation2036: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   // Close search when clicking outside
   useEffect(() => {
@@ -309,6 +346,7 @@ const UltraFuturisticNavigation2036: React.FC = () => {
     <nav 
       className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-400/20"
 =======
+>>>>>>> origin/content/blog-sept12
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
@@ -340,20 +378,29 @@ const UltraFuturisticNavigation2036: React.FC = () => {
           ? 'bg-black/90 backdrop-blur-md border-b border-white/10' 
           : 'bg-transparent'
       }`}
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
       role="navigation"
       aria-label="Main navigation"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <<<<<<< HEAD
+        <div className="flex justify-between items-center h-16 lg:h-20">
+=======
+<<<<<<< HEAD
         <div className="flex justify-between items-center h-16">
 =======
         <div className="flex justify-between items-center h-16 lg:h-20">
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link 
               href="/" 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
               aria-label="Zion Tech Group Home"
@@ -363,6 +410,7 @@ const UltraFuturisticNavigation2036: React.FC = () => {
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
 =======
+>>>>>>> origin/content/blog-sept12
               className="flex items-center space-x-2 group"
               aria-label="Zion Tech Group - Home"
             >
@@ -372,11 +420,16 @@ const UltraFuturisticNavigation2036: React.FC = () => {
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
             </Link>
           </div>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -400,6 +453,7 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                   )}
                   <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
 =======
+>>>>>>> origin/content/blog-sept12
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navigationItems.map((item) => (
               <div key={item.name} className="relative" ref={(el) => {
@@ -535,11 +589,16 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                   aria-label="Close mobile menu"
                 >
                   <X className="w-6 h-6" />
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
                 </button>
               </div>
 
               {/* Mobile Search */}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               <div className="p-4 border-b border-white/10">
                 <div className="relative">
@@ -567,6 +626,7 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                       <div className="p-4">
                         <div className="grid gap-3">
 =======
+>>>>>>> origin/content/blog-sept12
               <div className="mb-6">
                 <EnhancedSearch />
               </div>
@@ -601,11 +661,16 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                           exit={{ opacity: 0, height: 0 }}
                           className="ml-4 mt-2 space-y-2 overflow-hidden"
                         >
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
                           {item.children?.map((child) => (
                             <Link
                               key={child.name}
                               href={normalizeHref(child.href)}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                               className={`flex items-start space-x-3 p-3 rounded-lg transition-all duration-200 ${
                                 child.featured 
@@ -631,6 +696,7 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                                 </p>
                               </div>
 =======
+>>>>>>> origin/content/blog-sept12
                               className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
                               onClick={() => setMobileMenuOpen(false)}
                             >
@@ -641,7 +707,10 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                                   Featured
                                 </span>
                               )}
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
                             </Link>
                           ))}
                         </motion.div>
@@ -653,6 +722,8 @@ const UltraFuturisticNavigation2036: React.FC = () => {
             ))}
           </div>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
@@ -853,6 +924,7 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                   </a>
                 </div>
 =======
+>>>>>>> origin/content/blog-sept12
               {/* Mobile CTA */}
               <div className="mt-8 pt-6 border-t border-white/10">
                 <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
@@ -865,7 +937,10 @@ const UltraFuturisticNavigation2036: React.FC = () => {
                     Get Started
                   </button>
                 </Link>
+<<<<<<< HEAD
+=======
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
+>>>>>>> origin/content/blog-sept12
               </div>
             </div>
           </motion.div>

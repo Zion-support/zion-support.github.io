@@ -228,4 +228,5 @@ export const cuttingEdgeAIServices: EnhancedRealMicroSaasService[] = [
 		rating: 4.9,
 		reviews: 4
 	}
+>>>>>>> origin/content/blog-sept12
 ];

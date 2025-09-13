@@ -1,0 +1,48 @@
+<<<<<<< HEAD
+area/automation:
+  - 'automation/**'
+area/frontend:
+=======
+area:automation:
+  - 'automation/**'
+area:pages:
+>>>>>>> origin/backup-20250824-222848
+  - 'pages/**'
+area:components:
+  - 'components/**'
+area:styles:
+  - 'styles/**'
+area:docs:
+  - 'docs/**'
+area:data:
+  - 'data/**'
+area:workflows:
+  - '.github/**'
+<<<<<<< HEAD
+  - 'netlify.toml'
+
+type/test:
+  - '__tests__/**'
+
+type/security:
+  - 'automation/security-**'
+
+type/performance:
+  - 'automation/**performance**'
+  - 'automation/**optimizer**'
+
+type/dependencies:
+  - 'package.json'
+  - 'package-lock.json'
+
+type/chore:
+  - '*.config.*'
+  - '.editorconfig'
+  - '.eslintrc.*'
+  - 'tsconfig.*'
+  - 'postcss.config.js'
+  - 'tailwind.config.js'
+=======
+type:security:
+  - 'automation/security-*.cjs'
+>>>>>>> origin/backup-20250824-222848

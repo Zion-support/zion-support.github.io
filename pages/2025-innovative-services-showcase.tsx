@@ -45,111 +45,43 @@ const contact = {
   website: 'https://ziontechgroup.com'
 };
 
-const categories = [
-  {
-    id: 'all',
-    name: 'All Services',
-    icon: <Grid className="w-6 h-6" />,
-    color: 'from-gray-500 to-slate-500',
-    description: 'Complete portfolio of 2025 innovative services'
-  },
-  {
-    id: 'ai-automation',
-    name: 'AI Automation',
-    icon: <Brain className="w-6 h-6" />,
-    color: 'from-purple-500 to-pink-500',
-    description: 'Advanced AI automation and intelligence services'
-  },
-  {
-    id: 'it-infrastructure',
-    name: 'IT Infrastructure',
-    icon: <Building className="w-6 h-6" />,
-    color: 'from-blue-500 to-indigo-500',
-    description: 'Cutting-edge IT infrastructure solutions'
-  },
-  {
-    id: 'micro-saas',
-    name: 'Micro SAAS',
-    icon: <Target className="w-6 h-6" />,
-    color: 'from-green-500 to-emerald-500',
-    description: 'Innovative business solutions and automation'
-  },
-  {
-    id: 'emerging-tech',
-    name: 'Emerging Tech',
-    icon: <Rocket className="w-6 h-6" />,
-    color: 'from-orange-500 to-red-500',
-    description: 'Future technology and innovation services'
-  }
+const allServices = [
+  ...innovativeNewServices,
+  ...emergingTechBreakthroughs,
+  ...specializedEnterpriseServices
 ];
 
-// Normalize services to unified format
-const normalizeService = (service: any): UnifiedService => {
-  if (service.pricing) {
-    // IT Infrastructure service format
-    return {
-      id: service.id,
-      name: service.name,
-      tagline: service.description || '',
-      description: service.description || '',
-      category: service.category || service.type || '',
-      icon: '⚡',
-      popular: false,
-      link: service.website || `https://ziontechgroup.com${service.slug}`,
-      pricing: service.pricing,
-      price_monthly: 0,
-      price_yearly: 0,
-      trialDays: 14,
-      setupTime: '1-2 weeks',
-      features: service.features || [],
-      benefits: service.benefits || []
-    };
-  } else if (service.price && typeof service.price === 'object') {
-    // Emerging technology service format
-    return {
-      id: service.id,
-      name: service.name,
-      tagline: service.tagline || '',
-      description: service.description || '',
-      category: service.category || '',
-      icon: service.icon || '🚀',
-      popular: service.popular || false,
-      link: service.link || `https://ziontechgroup.com/${service.id}`,
-      price_monthly: service.price.monthly,
-      price_yearly: service.price.yearly,
-      trialDays: service.price.trialDays || 14,
-      setupTime: service.price.setupTime || '1-2 weeks',
-      features: service.features || [],
-      benefits: service.benefits || []
-    };
-  } else {
-    // AI Automation and Micro SAAS format
-    return {
-      id: service.id,
-      name: service.name,
-      tagline: service.tagline || '',
-      description: service.description || '',
-      category: service.category || '',
-      icon: service.icon || '🤖',
-      popular: service.popular || false,
-      link: service.link || `https://ziontechgroup.com/${service.id}`,
-      price: service.price,
-      price_monthly: typeof service.price === 'string' ? 0 : 0,
-      price_yearly: typeof service.price === 'string' ? 0 : 0,
-      trialDays: service.trialDays || 14,
-      setupTime: service.setupTime || '1-2 weeks',
-      features: service.features || [],
-      benefits: service.benefits || []
-    };
-  }
-};
+const categories = [
+  'All Services',
+  'AI & Analytics',
+  'Quantum Computing',
+  'Cybersecurity',
+  'DevOps & Automation',
+  'Edge Computing',
+  'Blockchain & Web3',
+  'Content & Marketing',
+  'Healthcare AI',
+  'Financial AI',
+  'Industrial AI',
+  'Retail AI',
+  'Energy AI',
+  'Transportation AI',
+  'Education AI',
+  'Real Estate AI',
+  'Neuromorphic Computing',
+  'Bio-Computing',
+  'Space Computing',
+  'Holographic Computing',
+  'Neural Interfaces',
+  'Fusion Energy'
+];
 
-// Combine all services
-const allServices: UnifiedService[] = [
-  ...advancedAIAutomationServices.map(normalizeService),
-  ...innovative2025ITInfrastructureServices.map(normalizeService),
-  ...innovativeMicroSaasSolutions2025.map(normalizeService),
-  ...emergingTechnologyServices.map(normalizeService)
+const priceRanges = [
+  'All Prices',
+  'Under $500',
+  '$500 - $1,000',
+  '$1,000 - $2,000',
+  '$2,000+'
 ];
 
 export default function InnovativeServicesShowcase2025() {
@@ -390,12 +322,8 @@ export default function InnovativeServicesShowcase2025() {
             key={`${selectedCategory}-${searchTerm}-${viewMode}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className={viewMode === 'grid' 
-              ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-              : 'space-y-6'
-            }
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
           >
             {filteredServices.map((service, index) => (
               <motion.div
@@ -539,49 +467,38 @@ export default function InnovativeServicesShowcase2025() {
                     </div>
                   </>
                 )}
-              </motion.div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
 
-        {/* No Results */}
-        {filteredServices.length === 0 && (
-          <div className="text-center py-16">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-            <p className="text-gray-400">Try adjusting your search terms or category filters.</p>
-          </div>
-        )}
-      </div>
+                {/* Service Icon and Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-4xl">{service.icon}</div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-white">{service.price}</div>
+                    <div className="text-sm text-gray-400">{service.period}</div>
+                  </div>
+                </div>
 
-      {/* Call to Action */}
-      <div className="bg-gradient-to-r from-cyan-600 to-blue-600 py-16">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business with Innovation?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            Join hundreds of companies already leveraging our cutting-edge services 
-            to drive growth, efficiency, and competitive advantage.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://ziontechgroup.com/contact"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
-            >
-              Get Started Today
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors duration-200"
-            >
-              Call +1 302 464 0950
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+                {/* Service Name and Tagline */}
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  {service.name}
+                </h3>
+                <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+                  {service.tagline}
+                </p>
 
-export default InnovativeServicesShowcase2025;
+                {/* Features */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-400 mb-3">Key Features</h4>
+                  <div className="space-y-2">
+                    {service.features.slice(0, 3).map((feature, index) => (
+                      <div key={index} className="flex items-center gap-2 text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <span className="line-clamp-1">{feature}</span>
+                      </div>
+                    ))}
+                    {service.features.length > 3 && (
+                      <div className="text-xs text-gray-500">
+                        +{service.features.length - 3} more features
+                      </div>
+                    )}
+                  </div>
+                </div>

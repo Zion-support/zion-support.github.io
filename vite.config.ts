@@ -1,31 +1,67 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+// @ts-nocheck
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
-// https://vitejs.dev/config/
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+function resolve(dir: string, ...paths: string[]) {
+  return path.resolve(__dirname, dir, ...paths)
+}
+
+function splitVendorChunkPlugin() {
+  return {
+    name: 'split-vendor-chunk',
+    config(config: any) {
+      config.build = config.build || {}
+      config.build.rollupOptions = config.build.rollupOptions || {}
+      config.build.rollupOptions.output = config.build.rollupOptions.output || {}
+      config.build.rollupOptions.output.manualChunks = config.build.rollupOptions.output.manualChunks || {}
+      
+      config.build.rollupOptions.output.manualChunks = {
+        'react-vendor': ['react', 'react-dom'],
+        'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-avatar'],
+        'utils-vendor': ['clsx', 'tailwind-merge', 'framer-motion']
+      }
+    }
+  }
+}
+
 export default defineConfig({
   plugins: [
     react({
       include: '**/*.{jsx,js,ts,tsx}',
       fastRefresh: true,
     }),
+    splitVendorChunkPlugin(),
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@pages': resolve(__dirname, 'src/pages'),
-      '@layout': resolve(__dirname, 'src/layout'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@types': resolve(__dirname, 'src/types'),
-      '@assets': resolve(__dirname, 'src/assets'),
-      '@styles': resolve(__dirname, 'src/styles'),
-      '@data': resolve(__dirname, 'src/data'),
-      '@services': resolve(__dirname, 'src/services'),
-      '@context': resolve(__dirname, 'src/context'),
-      '@constants': resolve(__dirname, 'src/constants')
+      '@': resolve('src'),
+      '@components': resolve('src/components'),
+      '@pages': resolve('src/pages'),
+      '@layout': resolve('src/layout'),
+      '@utils': resolve('src/utils'),
+      '@hooks': resolve('src/hooks'),
+      '@types': resolve('src/types'),
+      '@assets': resolve('src/assets'),
+      '@styles': resolve('src/styles'),
+      '@data': resolve('src/data'),
+      '@services': resolve('src/services'),
+      '@context': resolve('src/context'),
+      '@constants': resolve('src/constants')
     }
+  },
+  css: {
+    postcss: './postcss.config.cjs',
+    devSourcemap: true,
+  },
+  esbuild: {
+    loader: 'tsx',
+    include: /src\/.*\.[jt]sx?$/,
+    exclude: [],
+    jsx: 'automatic',
   },
   build: {
     target: 'esnext',
@@ -57,18 +93,7 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true,
-        passes: 2,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true,
-      },
-      mangle: {
-        safari10: true,
-        properties: {}
+        drop_debugger: true
       }
     }
   },
@@ -85,7 +110,6 @@ export default defineConfig({
       '@radix-ui/react-alert-dialog',
       '@radix-ui/react-avatar',
       '@radix-ui/react-checkbox',
-      '@radix-ui/react-collapsible',
       '@radix-ui/react-dialog',
       '@radix-ui/react-dropdown-menu',
       '@radix-ui/react-label',
@@ -105,9 +129,9 @@ export default defineConfig({
     exclude: ['@radix-ui/react-icons']
   },
   server: {
-    port: Number(process.env.PORT) || 3000,
+    port: 3000,
     host: true,
-    open: false,
+    open: true,
     cors: true,
     hmr: {
       overlay: false,
@@ -118,10 +142,7 @@ export default defineConfig({
     host: true,
     open: true
   },
-  css: {
-    devSourcemap: true,
-    postcss: './postcss.config.cjs'
-  },
+  
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),

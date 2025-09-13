@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import { useRouter } from 'next/router';
+import { useNavigate, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
-import { Star, DollarSign, Heart } from "lucide-react";
-import { useAppDispatch } from "@/store/hooks";
-import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
-import { useAuth } from "@/hooks/useAuth";
-import { useLocation } from "react-router-dom";
-import { toast } from "sonner";
+import { DollarSign } from "lucide-react";
+import { RatingStars } from "./RatingStars";
+import { FavoriteButton } from "@/components/FavoriteButton";
 
 interface ProductListingCardProps {
   listing: ProductListing;
@@ -25,13 +21,10 @@ const ProductListingCardComponent = ({
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid';
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { user } = useAuth();
-  const dispatch = useAppDispatch();
-  
-  // Get the first image or use a placeholder
-  const imageUrl = listing.images && listing.images.length > 0 
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [imageSrc, setImageSrc] = useState(
+    listing.images && listing.images.length > 0 && listing.images[0]
     ? listing.images[0] 
     : '/placeholder.svg'
   );
@@ -55,9 +48,7 @@ const ProductListingCardComponent = ({
       ? 'warning'
       : 'success';
     
-  const { formatPrice } = useCurrency();
-
-  const getPrice = () => {
+  const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
     return formatPrice(listing.price);
   };
@@ -72,9 +63,9 @@ const ProductListingCardComponent = ({
   const handleViewListing = () => {
     // Debug logging for development
     if (process.env.NODE_ENV === 'development') {
-      logDebug('[ProductCard] Navigating to:', { data:  { path: `${detailBasePath}/${listing.id}` } });
-      logDebug('[ProductCard] Listing ID:', { data:  { id: listing.id } });
-      logDebug('[ProductCard] Listing Title:', { data:  { title: listing.title } });
+      logDebug('[ProductCard] Navigating to:', { path: `${detailBasePath}/${listing.id}` });
+      logDebug('[ProductCard] Listing ID:', { id: listing.id });
+      logDebug('[ProductCard] Listing Title:', { title: listing.title });
     }
     
     // Validate listing ID exists before navigation
@@ -98,11 +89,9 @@ const ProductListingCardComponent = ({
     dispatch(
       addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
     );
-    toast({
-      title: "Added to Cart",
-      description: `1× ${listing.title} added`,
+    toast.success(`1× ${listing.title} added`, {
       action: {
-        label: "View Cart",
+        label: 'View Cart',
         onClick: () => router.push('/cart'),
       },
     });
@@ -116,40 +105,8 @@ const ProductListingCardComponent = ({
     if (onRequestQuote) {
       onRequestQuote(listing.id);
     } else {
-      router.push(`/request-quote?listing=${listing.id}`);
+      navigate(`/request-quote?listing=${listing.id}`);
     }
-  };
-
-  const handleSave = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (!user) {
-      toast.info('Log in to save favorites');
-      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
-      return;
-    }
-    dispatch(addToWishlist({ id: listing.id, type: 'product', data: listing }));
-    fetch(`${getApiUrl()}/wishlist`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: listing.id, type: 'product' }),
-    }).catch(() => {});
-  };
-
-  const handleSave = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (!user) {
-      toast.info('Log in to save favorites');
-      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
-      return;
-    }
-    dispatch(addToWishlist({ id: listing.id, type: 'product', data: listing }));
-    fetch(`${getApiUrl()}/wishlist`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: listing.id, type: 'product' }),
-    }).catch(() => {});
   };
   
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
@@ -169,42 +126,21 @@ const ProductListingCardComponent = ({
       }}
     >
       {/* Image */}
-      <div
-        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-        onClick={handleViewListing} // Keep existing onClick for navigation
-        role="button"
-        tabIndex={-1} // Remove from tab order as parent is focusable
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            handleViewListing();
-          }
-        }}
-      >
-        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
-          <Image
-            src={imageSrc}
-            alt={listing.title}
-            fill={true}
-            style={{ objectFit: 'cover' }}
+      <div className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'} onClick={handleViewListing}>
+        <div className={`relative ${isGrid ? 'h-48' : 'h-32 w-48'}`}>
+          <img
+            src={imageUrl}
+            alt={`Image of ${listing.title}`}
+            className="w-full h-full object-cover"
             onError={handleImageError}
-            priority={false} // Assuming these are not LCP images
-            sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
+            loading="lazy"
           />
           {listing.featured && (
             <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
               Featured
             </Badge>
           )}
-          {stockStatus && (
-            <Badge
-              variant={stockVariant as any}
-              className="absolute top-2 left-2"
-            >
-              {stockStatus}
-            </Badge>
-          )}
-           <FavoriteButton itemId={listing.id} />
+          <FavoriteButton itemId={listing.id} itemType="product" />
         </div>
       </div>
       
@@ -217,17 +153,18 @@ const ProductListingCardComponent = ({
               {listing.category}
             </Badge>
             {listing.rating && (
-              <RatingStars value={listing.rating} count={listing.reviewCount ?? 0} />
+              <div className="flex items-center text-zion-slate-light">
+                <RatingStars value={listing.rating} />
+                <span className="ml-1">{listing.rating.toFixed(1)}</span>
+                {listing.reviewCount && (
+                  <span className="text-xs ml-1">({listing.reviewCount})</span>
+                )}
+              </div>
             )}
           </div>
           
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
-            {listing.uspHeadline && (
-              <p className="text-primary font-semibold text-sm mb-1">
-                {listing.uspHeadline}
-              </p>
-            )}
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
             </h3>
@@ -237,11 +174,11 @@ const ProductListingCardComponent = ({
           </p>
           
           {/* Tags */}
-          {Array.isArray(listing.tags) && listing.tags.length > 0 && (
+          {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
               {listing.tags.map((tag, idx) => (
-                <span
-                  key={idx}
+                <span 
+                  key={idx} 
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
                   {tag}
@@ -261,18 +198,20 @@ const ProductListingCardComponent = ({
               </div>
             ) : (
               <span className="text-foreground/80">
-                {getPrice()}
+                {formatPrice()}
               </span>
             )}
           </div>
           
           <div className="flex gap-2">
             <Button
-              variant="ghost"
-              size="icon"
-              onClick={handleSave}
-              aria-label="save-to-wishlist"
-              className="text-zion-slate-light hover:text-zion-cyan"
+              size="sm"
+              className="bg-primary hover:bg-primary/80 text-primary-foreground"
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent card click event
+                addToCart();
+              }}
+              disabled={loading}
             >
               <Heart className="h-5 w-5" />
             </Button>
@@ -292,24 +231,6 @@ const ProductListingCardComponent = ({
                 "Add to Cart"
               )}
             </Button>
-            
-            <Button
-              size="sm"
-              variant="default"
-              className="bg-green-600 hover:bg-green-700 text-white"
-              onClick={(e) => {
-                e.stopPropagation(); // Prevent card click event
-                // Add to cart first, then redirect to checkout
-                dispatch(
-                  addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
-                );
-                router.push('/checkout');
-              }}
-              disabled={loading}
-            >
-              Buy Now
-            </Button>
-            
             {onRequestQuote && (
               <Button 
                 size="sm"

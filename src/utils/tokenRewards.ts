@@ -1,6 +1,8 @@
 
 import { apiClient } from './apiClient';
 
+import api from '@/lib/api';
+
 export async function rewardOnboarding(userId: string) {
   await api.post('/functions/v1/token-manager/earn', {
     userId,
@@ -10,17 +12,17 @@ export async function rewardOnboarding(userId: string) {
 }
 
 export async function rewardReferral(userId: string) {
-  await apiClient('/functions/v1/token-manager/earn', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId, amount: 20, reason: 'Referral' }),
+  await api.post('/functions/v1/token-manager/earn', {
+    userId,
+    amount: 20,
+    reason: 'Referral',
   });
 }
 
 export async function rewardFiveStarReview(userId: string) {
-  await apiClient('/functions/v1/token-manager/earn', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' }),
+  await api.post('/functions/v1/token-manager/earn', {
+    userId,
+    amount: 10,
+    reason: '5-star review',
   });
 }

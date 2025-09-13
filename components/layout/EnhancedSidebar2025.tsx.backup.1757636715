@@ -3,21 +3,10 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Menu, X, ChevronDown, ChevronRight,
-  Home, Zap, Brain, Atom, Shield, Rocket,
-  Users, FileText, HelpCircle, Settings,
-  TrendingUp, Award, CheckCircle, Clock,
-  Globe, Cpu, Database, Lock, Star,
-  Mail, Phone, MapPin, Search, ArrowRight,
-  Heart, Palette, GraduationCap, Hospital, Coins, Leaf, Scale,
-  BarChart3, Layers, Code, Terminal, Cloud, Server, Network, DollarSign
-=======
   Menu, X, ChevronDown, ChevronRight, Home, Rocket, Target, Building, BookOpen, MessageCircle,
   Brain, Atom, Shield, Cloud, BarChart, Code, Rocket as RocketIcon, Users, Info, Briefcase,
   Heart, DollarSign, Cog, FileText, Calendar, Lightbulb, HelpCircle, Monitor, Zap, Star,
   Settings, Globe, Lock, Server, Database, Network, Palette, Cpu, Layers, Globe2, Truck, Accessibility
->>>>>>> origin/backup-main-20250823-225952
 } from 'lucide-react';
 
 const contactInfo = {
@@ -212,13 +201,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
 
-<<<<<<< HEAD
-  const toggleCategory = (categoryTitle: string) => {
-    setExpandedCategories(prev => 
-      prev.includes(categoryTitle) 
-        ? prev.filter(cat => cat !== categoryTitle)
-        : [...prev, categoryTitle]
-=======
   // Auto-expand current section
   useEffect(() => {
     const currentPath = router.pathname;
@@ -258,19 +240,8 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
     const matchesDescription = item.description?.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesChildren = item.children?.some(child => 
       child.name.toLowerCase().includes(searchQuery.toLowerCase())
->>>>>>> origin/backup-main-20250823-225952
     );
   };
-<<<<<<< HEAD
-
-  // Search functionality can be implemented here if needed
-  // const filteredServices = sidebarSections.flatMap(section =>
-  //   section.items.filter(item =>
-  //     item.name.toLowerCase().includes(searchQuery.toLowerCase())
-  //   )
-  // );
-=======
->>>>>>> origin/backup-main-20250823-225952
 
   return (
     <AnimatePresence>
@@ -296,20 +267,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
             {/* Header */}
             <div className="p-6 border-b border-gray-800">
               <div className="flex items-center justify-between mb-4">
-<<<<<<< HEAD
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                    <Rocket className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-lg font-bold text-white">Zion Tech</div>
-                    <div className="text-xs text-cyan-400">Tech Solutions</div>
-                  </div>
-                </div>
-                <button
-                  onClick={onClose}
-                  className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors duration-200"
-=======
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
                     <Zap className="w-5 h-5 text-white" />
@@ -321,7 +278,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                 <button
                   onClick={onClose}
                   className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
->>>>>>> origin/backup-main-20250823-225952
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -334,58 +290,17 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                   placeholder="Search navigation..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500/50"
-=======
                   className="w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
->>>>>>> origin/backup-main-20250823-225952
                 />
               </div>
             </div>
 
-<<<<<<< HEAD
-            {/* Main Navigation */}
-            <div className="p-6">
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                  Main Navigation
-                </h3>
-                <div className="space-y-2">
-                  {mainNavigation.map((item) => (
-                    <Link
-                      key={item.title}
-                      href={item.href}
-                      onClick={onClose}
-                      className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 group"
-                    >
-                      <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
-                        {item.icon}
-                      </div>
-                      <div className="flex-1">
-                        <div className="font-medium">{item.title}</div>
-                        <div className="text-xs text-gray-500">{item.description}</div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Service Categories */}
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                  Service Categories
-                </h3>
-                <div className="space-y-2">
-                  {serviceCategories.map((category) => (
-                    <div key={category.title} className="border border-gray-800 rounded-lg overflow-hidden">
-=======
             {/* Navigation Items */}
             <div className="p-4 space-y-2">
               {filteredItems.map((item) => (
                 <div key={item.name}>
                   {item.children ? (
                     <div>
->>>>>>> origin/backup-main-20250823-225952
                       <button
                         onClick={() => toggleCategory(category.title)}
                         className="w-full flex items-center justify-between p-3 text-left text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-200"
@@ -431,9 +346,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                         )}
                       </AnimatePresence>
                     </div>
-<<<<<<< HEAD
-                  ))}
-=======
                   ) : (
                     <button
                       onClick={() => handleItemClick(item.href)}
@@ -481,7 +393,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                   >
                     Privacy
                   </Link>
->>>>>>> origin/backup-main-20250823-225952
                 </div>
               </div>
 

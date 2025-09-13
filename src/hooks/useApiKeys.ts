@@ -1,6 +1,6 @@
+
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
-import {logErrorToProduction} from "@/utils/productionLogger";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import api from '@/lib/api';
@@ -80,7 +80,7 @@ export function useApiKeys() {
 
       setKeys(response.data.keys || []);
     } catch (err) {
-      logErrorToProduction('Error fetching API keys:', { data: err });
+      console.error('Error fetching API keys:', err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive",
@@ -133,6 +133,7 @@ export function useApiKeys() {
 
       // Store the actual key value temporarily so it can be displayed once
       setNewApiKey(result.key);
+      safeStorage.setItem('zion_api_key', result.key);
       
       toast({
         title: "API Key Created",
@@ -141,7 +142,7 @@ export function useApiKeys() {
       
       return result;
     } catch (err) {
-      logErrorToProduction('Error creating API key:', { data: err });
+      console.error('Error creating API key:', err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive",
@@ -193,6 +194,7 @@ export function useApiKeys() {
       
       // Store the new key value
       setNewApiKey(result.key);
+      safeStorage.setItem('zion_api_key', result.key);
       
       toast({
         title: "API Key Regenerated",
@@ -201,7 +203,7 @@ export function useApiKeys() {
       
       return result;
     } catch (err) {
-      logErrorToProduction('Error regenerating API key:', { data: err });
+      console.error('Error regenerating API key:', err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive",
@@ -257,7 +259,7 @@ export function useApiKeys() {
       
       return result;
     } catch (err) {
-      logErrorToProduction('Error revoking API key:', { data: err });
+      console.error('Error revoking API key:', err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive",
@@ -305,7 +307,7 @@ export function useApiKeys() {
       
       return result;
     } catch (err) {
-      logErrorToProduction('Error fetching API logs:', { data: err });
+      console.error('Error fetching API logs:', err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive",

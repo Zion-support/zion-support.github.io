@@ -1,12 +1,11 @@
+
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
-import { apiClient } from "@/utils/apiClient";
+import api from '@/lib/api';
 
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
-
-import {logErrorToProduction} from "@/utils/productionLogger";
 
 export interface Webhook {
   id: string;
@@ -36,10 +35,8 @@ export function useWebhooks() {
     // import.meta may be undefined when this hook is executed in a Node
     // environment (e.g. during server side rendering or tests). Using optional
     // chaining avoids a TypeError in those cases and falls back to process.env.
-    // For Next.js, process.env is the primary source.
-    const url =
-      process.env.NEXT_PUBLIC_SUPABASE_URL ||
-      process.env.SUPABASE_URL; // Fallback if NEXT_PUBLIC_ is not set but SUPABASE_URL is
+    const env = (import.meta as any)?.env ?? process.env;
+    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL;
     return `${url}/functions/v1/webhook-manager`;
   };
 
@@ -58,8 +55,7 @@ export function useWebhooks() {
         return;
       }
 
-      const response = await apiClient(`${getWebhookUrl()}/webhooks`, {
-        method: 'GET',
+      const response = await api.get(`${getWebhookUrl()}/webhooks`, {
         headers: {
           Authorization: `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
@@ -72,7 +68,7 @@ export function useWebhooks() {
 
       setWebhooks(response.data.webhooks || []);
     } catch (err) {
-      logErrorToProduction('Error fetching webhooks:', { data: err });
+      console.error('Error fetching webhooks:', err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive",
@@ -126,7 +122,7 @@ export function useWebhooks() {
       
       return result.webhook;
     } catch (err) {
-      logErrorToProduction('Error creating webhook:', { data: err });
+      console.error('Error creating webhook:', err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive",
@@ -182,7 +178,7 @@ export function useWebhooks() {
       
       return result;
     } catch (err) {
-      logErrorToProduction('Error toggling webhook:', { data: err });
+      console.error('Error toggling webhook:', err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive",
@@ -236,7 +232,7 @@ export function useWebhooks() {
       
       return result;
     } catch (err) {
-      logErrorToProduction('Error deleting webhook:', { data: err });
+      console.error('Error deleting webhook:', err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive",
@@ -300,7 +296,7 @@ export function useWebhooks() {
       
       return result;
     } catch (err) {
-      logErrorToProduction('Error testing webhook:', { data: err });
+      console.error('Error testing webhook:', err);
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive",

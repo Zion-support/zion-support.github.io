@@ -1,230 +1,155 @@
-// CRITICAL: Runtime check - polyfills should be loaded from document script and webpack banner
-if (process.env.NODE_ENV === 'development') {
-  console.log('🚨 APP.TSX RUNTIME CHECK - Polyfills should be active');
-  console.log('- globalThis.__extends:', !!(globalThis as any).__extends);
-  console.log('- globalThis.__assign:', !!(globalThis as any).__assign);
-  console.log('- globalThis.process:', !!(globalThis as any).process);
-}
-
-// CRITICAL: Runtime check - polyfills should be loaded from document script and webpack banner
-if (typeof process !== 'undefined' && process.env?.NODE_ENV === 'development') {
-  // console.log('🚨 APP.TSX RUNTIME CHECK - Polyfills should be active');
-}
-
-// Enhanced error logging - import early for comprehensive coverage
-import enhancedErrorLogger from '../src/utils/enhanced-error-logger';
-
-// Add global error handling for undefined components
-if (typeof window !== 'undefined') {
-  window.addEventListener('unhandledrejection', (event) => {
-    if (event.reason?.message?.includes('getInitialProps')) {
-      console.error('Component loading error caught:', event.reason);
-      event.preventDefault(); // Prevent the error from crashing the app
-    }
-  });
-  
-  // Additional error handling for process.env errors
-  window.addEventListener('error', (event) => {
-    if (event.message?.includes('Cannot read properties of undefined')) {
-      console.error('Runtime error caught:', event.error);
-      event.preventDefault();
-    }
-  });
-  
-  // Enhanced error handling for getInitialProps and http errors
-  window.addEventListener('error', (event) => {
-    const errorMessage = event.message || '';
-    const errorSource = event.filename || '';
-    
-    // Handle getInitialProps errors
-    if (errorMessage.includes('getInitialProps') || errorMessage.includes('Cannot read properties of undefined (reading \'getInitialProps\')')) {
-      console.error('getInitialProps error caught:', event.error);
-      event.preventDefault();
-      return;
-    }
-    
-    // Handle http/https errors
-    if (errorMessage.includes('http is not defined') || errorMessage.includes('https is not defined')) {
-      console.error('HTTP/HTTPS error caught:', event.error);
-      event.preventDefault();
-      return;
-    }
-    
-    // Handle TypeScript helper errors
-    if (errorMessage.includes('__extends') || errorMessage.includes('__assign') || errorMessage.includes('Cannot destructure property')) {
-      console.error('TypeScript helper error caught:', event.error);
-      event.preventDefault();
-      return;
-    }
-  });
-  
-  // Enhanced unhandled rejection handling
-  window.addEventListener('unhandledrejection', (event) => {
-    const reason = event.reason;
-    const message = reason?.message || '';
-    
-    // Handle getInitialProps promise rejections
-    if (message.includes('getInitialProps') || message.includes('Cannot read properties of undefined (reading \'getInitialProps\')')) {
-      console.error('getInitialProps promise rejection caught:', reason);
-      event.preventDefault();
-      return;
-    }
-    
-    // Handle component loading errors
-    if (message.includes('Failed to load component') || message.includes('Invalid component')) {
-      console.error('Component loading promise rejection caught:', reason);
-      event.preventDefault();
-      return;
-    }
-  });
-  
-  // Add blank screen detection
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      const root = document.getElementById('__next');
-      if (root) {
-        const hasVisible = Array.from(root.children || []).some(
-          (el) => !['SCRIPT', 'STYLE', 'LINK'].includes(el.tagName)
-        );
-        if (!hasVisible && root.innerText.trim() === '') {
-          console.error('Blank screen detected - attempting recovery');
-          // Show a basic fallback with additional instructions
-          root.innerHTML = `
-          <div style="padding: 2rem; text-align: center; font-family: sans-serif; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-            <h1 style="color: #333; margin-bottom: 1rem;">Zion Tech Marketplace</h1>
-            <p style="color: #666; margin-bottom: 1rem;">Loading application...</p>
-            <p style="color: #666; margin-bottom: 1rem;">If refreshing doesn't work, visit <a href='/offline.html'>offline mode</a> for troubleshooting steps.</p>
-            <button onclick="window.location.reload()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
-              Reload Page
-            </button>
-          </div>
-        `;
-        }
-      }
-    }, 3000);
-  });
-}
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useRouter } from 'next/router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
-import { useRouter } from 'next/router';
-import { Provider } from 'react-redux';
-import { store } from '@/store';
+import { AuthProvider } from '@/context/auth/AuthProvider';
+import { Provider as ReduxProvider } from 'react-redux';
+import { store } from '@/store'; // Changed to named import
+import { useAuth } from '@/hooks/useAuth';
+import { ErrorProvider } from '@/context/ErrorContext';
+import ErrorResetOnRouteChange from '@/components/ErrorResetOnRouteChange';
+import ErrorResetOnRouteChange from '@/components/ErrorResetOnRouteChange';
 import { I18nextProvider } from 'react-i18next';
 import i18n from '@/i18n';
-import { AuthProvider } from '@/context/auth/AuthProvider';
-import { CartProvider } from '@/context/CartContext';
-
+import { LanguageProvider } from '@/context/LanguageContext';
+import GlobalErrorBoundary from '@/components/GlobalErrorBoundary';
+import GlobalErrorBoundary from '@/components/GlobalErrorBoundary';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
+import RootErrorBoundary from '@/components/RootErrorBoundary';
+import RootErrorBoundary from '@/components/RootErrorBoundary';
+import { ApiErrorBoundary } from '@/components/ApiErrorBoundary';
+import { ApiErrorBoundary } from '@/components/ApiErrorBoundary';
+import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
+import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
 import dynamic from 'next/dynamic';
+import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
+import { HydrationErrorBoundary } from '@/components/HydrationErrorBoundary';
+import { HydrationErrorBoundary } from '@/components/HydrationErrorBoundary';
+import { Inter, Poppins } from 'next/font/google';
 import Head from 'next/head';
-import '../src/index.css'; // Restored main CSS import
+import '../src/index.css';
+import * as Sentry from '@sentry/nextjs';
+import { initializeGlobalErrorHandlers } from '@/utils/globalAppErrors';
+import {
 
-// Dynamically import the Toaster component from sonner for client-side rendering only
-const Toaster = dynamic(
-  async () => {
-    try {
-      const mod = await import('sonner');
-      return mod.Toaster;
-    } catch (err) {
-      console.warn('Toaster dependency missing:', err);
-      return () => null;
-    }
-  },
-  { ssr: false }
-);
+import type { AppProps } from 'next/app';
+import '../styles/globals.css';
 
-// Simple loading component
-const SimpleLoading = () => (
-  <div style={{
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100vh',
-    fontFamily: 'sans-serif',
-    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    color: 'white'
-  }}>
-    <div style={{ textAlign: 'center' }}>
-      <h1>Zion Tech Marketplace</h1>
-      <p>Loading...</p>
-    </div>
-  </div>
-);
 
-// Enhanced error boundary with detailed logging
-const ErrorBoundary: React.FC<{ children: React.ReactNode; name: string }> = ({ children, name }) => {
-  const [hasError, setHasError] = React.useState(false);
-  const [error, setError] = React.useState<Error | null>(null);
+        <Link href="/" style={{ 
+        }}>Zion Tech Group</Link>
+        
+          <Link href="/" style={{ 
+          }}>Home</Link>
+          <Link href="/services" style={{ 
+          }}>All Services</Link>
+          <Link href="/micro-saas" style={{ 
+          }}>Micro SaaS</Link>
+          <Link href="/ai-services" style={{ 
+          }}>AI Services</Link>
+          <Link href="/it-services" style={{ 
+          }}>IT Services</Link>
+          <Link href="/services-catalog" style={{ 
+          }}>Catalog</Link>
+          <Link href="/services-overview" style={{ 
+          }}>Overview</Link>
+          <Link href="/services-comparison" style={{ 
+          }}>Compare</Link>
+          <Link href="/pricing" style={{ 
+          }}>Pricing</Link>
+          <Link href="/about" style={{ 
+          }}>About</Link>
+          <Link href="/contact" style={{ 
+          }}>Contact</Link>
 
-  React.useEffect(() => {
-    const handleError = (event: ErrorEvent) => {
-      console.error(`Error in ${name}:`, event.error);
-      setError(event.error);
-      setHasError(true);
-    };
+          <Link href="/contact" style={{ 
+          }}>Contact</Link>
+      
+          <Link href="/" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          <Link href="/services" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+          <Link href="/micro-saas" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
+          <Link href="/ai-services" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
+          <Link href="/it-services" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
+          <Link href="/services-catalog" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
+          <Link href="/services-overview" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>Overview</Link>
+          <Link href="/services-comparison" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>Compare</Link>
+          <Link href="/pricing" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+          <Link href="/about" style={{ 
+          }} onClick={() => setMobileMenuOpen(false)}>About</Link>
 
-    window.addEventListener('error', handleError);
-    return () => window.removeEventListener('error', handleError);
-  }, [name]);
 
-  if (hasError) {
-    return (
-      <div style={{
-        padding: '1rem',
-        border: '2px solid #ff4444',
-        borderRadius: '8px',
-        backgroundColor: '#fff5f5',
-        color: '#cc0000',
-        margin: '1rem'
-      }}>
-        <h3>Error in {name}</h3>
-        <p>{error?.message || 'Unknown error occurred'}</p>
-        <button 
-          onClick={() => window.location.reload()}
-          style={{
-            backgroundColor: '#ff4444',
-            color: 'white',
-            border: 'none',
-            padding: '0.5rem 1rem',
-            borderRadius: '4px',
-            cursor: 'pointer'
-          }}
-        >
-          Reload Page
-        </button>
-      </div>
-    );
-  }
+            <Link href="/solutions" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>All Solutions</Link>
+            <Link href="/solutions" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>All Solutions</Link>
+            <Link href="/solutions/enterprise" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Enterprise Solutions</Link>
+            <Link href="/solutions/enterprise" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Enterprise Solutions</Link>
+            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>All Services</Link>
+            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>All Services</Link>
+            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
+            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Micro SaaS Products</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Micro SaaS Products</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Services</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Services</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>IT Services</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>IT Services</Link>
+            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
+            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
+            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
+            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
 
-  return <>{children}</>;
-};
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cloud Cost Optimization</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cloud Cost Optimization</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Automation</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Automation</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Digital Transformation</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Digital Transformation</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Process Automation</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Process Automation</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Predictive Analytics</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Predictive Analytics</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Content Creation</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Content Creation</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Customer Support</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Customer Support</Link>
 
-// Provider wrapper with Redux, React Query, i18n, Auth, and Cart
-const ProviderWrapper: React.FC<{ children: React.ReactNode; queryClient: QueryClient }> = ({ children, queryClient }) => {
-  return (
-    <ErrorBoundary name="BasicWrapper">
-      <ErrorBoundary name="QueryClientProvider">
-        <QueryClientProvider client={queryClient}>
-          <ErrorBoundary name="ReduxProvider">
-            <Provider store={store}>
-              <ErrorBoundary name="I18nextProvider">
-                <I18nextProvider i18n={i18n}>
-                  <ErrorBoundary name="AuthProvider">
-                    <AuthProvider>
-                      <ErrorBoundary name="CartProvider">
-                        <CartProvider>
-                                                  {children}
-                        </CartProvider>
-                      </ErrorBoundary>
-                    </AuthProvider>
-                  </ErrorBoundary>
-                </I18nextProvider>
-              </ErrorBoundary>
-            </Provider>
-          </ErrorBoundary>
-        </QueryClientProvider>
-      </ErrorBoundary>
-    </ErrorBoundary>
-  );
-}
+            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Home</Link>
+            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Home</Link>
+            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>About Us</Link>
+            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>About Us</Link>
+            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Contact Us</Link>
+            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Contact Us</Link>
+            <Link href="/careers" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Careers</Link>
+            <Link href="/careers" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Careers</Link>
+            <Link href="/docs" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Documentation</Link>
+            <Link href="/docs" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Documentation</Link>
+            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
+            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
+            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>FAQ</Link>
+            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>FAQ</Link>
+            <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Privacy Policy</Link>
+            <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Privacy Policy</Link>
+            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Terms of Service</Link>
+            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Terms of Service</Link>
+
+            <Link href="/contact" style={{ 
+            }}>Request Quote</Link>
+      
+          <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Privacy Policy</Link> | 
+          <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Privacy Policy</Link> | 
+          <Link href="/terms" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Terms of Service</Link>
+          <Link href="/terms" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Terms of Service</Link>
+
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
