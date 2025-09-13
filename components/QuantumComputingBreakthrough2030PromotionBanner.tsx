@@ -3,48 +3,73 @@ import Link from 'next/link';
 
 export default function QuantumComputingBreakthrough2030PromotionBanner() {
   return (
-    <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className="flex-1 text-center lg:text-left mb-6 lg:mb-0">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/20 text-sm font-semibold mb-3 animate-pulse">
-              ⚛️ QUANTUM REVOLUTION
+    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-8 left-8 w-24 h-24 bg-cyan-500/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-24 right-16 w-18 h-18 bg-purple-500/20 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-16 left-1/3 w-16 h-16 bg-blue-500/20 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-24 right-1/4 w-20 h-20 bg-pink-500/20 rounded-full animate-pulse delay-500"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-semibold mb-6 animate-pulse">
+            ⚛️ QUANTUM SUPREMACY ACHIEVED
+          </div>
+
+          {/* Main heading */}
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Quantum Computing
+            <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Breakthrough 2030
+            </span>
+          </h2>
+
+          {/* Description */}
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Revolutionary quantum computing breakthroughs featuring error-corrected quantum computers, 
+            quantum internet, and 50,000% processing improvements that will transform everything.
+          </p>
+
+          {/* Key highlights */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">50,000%</div>
+              <p className="text-white font-semibold">Speed Improvement</p>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">
-              Quantum Computing Breakthroughs 2030
-            </h2>
-            <p className="text-lg text-indigo-100 mb-4 max-w-2xl">
-              Witness the most revolutionary quantum computing breakthroughs predicted for 2030. 
-              Error-corrected quantum computers, quantum internet, and quantum supremacy 
-              delivering infinite computational power.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-              <Link 
-                href="/quantum-computing-breakthrough-2030" 
-                className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105"
-              >
-                Explore Quantum Breakthroughs
-              </Link>
-              <Link 
-                href="/tools/quantum-readiness-assessment" 
-                className="bg-transparent text-white px-6 py-3 rounded-lg font-semibold border-2 border-white hover:bg-white hover:text-indigo-600 transition-all duration-300"
-              >
-                Assess Readiness
-              </Link>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-3xl font-bold text-purple-400 mb-2">1M+</div>
+              <p className="text-white font-semibold">Qubits</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-3xl font-bold text-pink-400 mb-2">99.99%</div>
+              <p className="text-white font-semibold">Accuracy</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-3xl font-bold text-indigo-400 mb-2">∞</div>
+              <p className="text-white font-semibold">Scalability</p>
             </div>
           </div>
-          <div className="flex-shrink-0">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold">1M+</div>
-                <div className="text-sm text-indigo-200">Qubits</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold">∞</div>
-                <div className="text-sm text-indigo-200">Computational Power</div>
-              </div>
-            </div>
+
+          {/* CTA buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/quantum-computing-breakthrough-2030"
+              className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Access Quantum Tech
+            </Link>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-900 transition-all duration-300">
+              Watch Demo
+            </button>
           </div>
+
+          {/* Additional info */}
+          <p className="text-sm text-gray-400 mt-6">
+            Error-corrected quantum computers with 1,000,000+ qubits
+          </p>
         </div>
       </div>
     </div>
