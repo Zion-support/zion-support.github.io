@@ -8,6 +8,13 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
+// New Ultimate Content Components
+import UltimateContentRevolutionBanner from '../components/UltimateContentRevolutionBanner';
+import AI2025UltimateBreakthroughContentBanner from '../components/AI2025UltimateBreakthroughContentBanner';
+import QuantumComputingRevolutionBanner from '../components/QuantumComputingRevolutionBanner';
+import AutomationSolutionsShowcase2025 from '../components/AutomationSolutionsShowcase2025';
+import InteractiveContentDiscoveryHub from '../components/InteractiveContentDiscoveryHub';
+
 // Core Content Components
 import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
@@ -285,7 +292,17 @@ const HomePage: React.FC = () => {
                 </div>
               </section>
 
-              {/* AI 2025 Ultimate Breakthrough Content Banner */}
+              {/* Ultimate Content Revolution Banner - NEW! */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <UltimateContentRevolutionBanner />
+              </Suspense>
+
+              {/* Interactive Content Discovery Hub - NEW! */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <InteractiveContentDiscoveryHub />
+              </Suspense>
+
+              {/* AI 2025 Ultimate Breakthrough Content Banner - NEW! */}
               <Suspense fallback={<LoadingSpinner />}>
                 <AI2025UltimateBreakthroughContentBanner />
               </Suspense>
@@ -325,9 +342,14 @@ const HomePage: React.FC = () => {
                 <InteractiveContentDiscoveryWidget2025 />
               </Suspense>
 
-              {/* New Content 2025 Promotion Banner */}
+              {/* Quantum Computing Revolution Banner - NEW! */}
               <Suspense fallback={<LoadingSpinner />}>
-                <NewContent2025PromotionBanner />
+                <QuantumComputingRevolutionBanner />
+              </Suspense>
+
+              {/* Automation Solutions Showcase 2025 - NEW! */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <AutomationSolutionsShowcase2025 />
               </Suspense>
 
               {/* New Content 2025 Promotion Banner */}
