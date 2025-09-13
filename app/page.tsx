@@ -54,9 +54,15 @@ import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRe
 import AI2025RevolutionaryBreakthroughPromotionBanner from '../components/AI2025RevolutionaryBreakthroughPromotionBanner';
 import AI2026UltimateBreakthroughPromotionBanner from '../components/AI2026UltimateBreakthroughPromotionBanner';
 
+<<<<<<< HEAD
 // Import new ultimate content banners
 import UltimateContentRevolutionBanner from '../components/UltimateContentRevolutionBanner';
 import AI2026BreakthroughBanner from '../components/AI2026BreakthroughBanner';
+=======
+// Import new promotional banners
+import AI2025UltimateAutomationRevolutionBanner from '../components/AI2025UltimateAutomationRevolutionBanner';
+import AI2026QuantumNeuralFusionBanner from '../components/AI2026QuantumNeuralFusionBanner';
+>>>>>>> cursor/create-and-deploy-new-content-ac9b
 
 export default function HomePage() {
   return (
@@ -97,10 +103,11 @@ export default function HomePage() {
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH PROMOTION BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
-=======
-      <div className='min-h-screen bg-white'>
-        {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
-        <AI2025RevolutionaryBreakthroughPromotionBanner />
+        {/* NEW AI 2025 ULTIMATE AUTOMATION REVOLUTION BANNER */}
+        <AI2025UltimateAutomationRevolutionBanner />
+        
+        {/* NEW AI 2026 QUANTUM NEURAL FUSION BANNER */}
+        <AI2026QuantumNeuralFusionBanner />
         
         {/* NEW AI 2026 ULTIMATE BREAKTHROUGH BANNER */}
         <AI2026UltimateBreakthroughPromotionBanner />
