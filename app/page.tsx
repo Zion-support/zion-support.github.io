@@ -25,8 +25,8 @@ import InteractiveContentDiscoveryWidget from '../components/InteractiveContentD
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
-import { BreakthroughBanner, QuantumBanner, ContentShowcaseBanner, SuccessStoryBanner } from '../components/PromotionalBanner';
-import ContentPromotion from '../components/ContentPromotion';
+import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
 
 export default function HomePage() {
   return (
@@ -39,18 +39,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* NEW PROMOTIONAL BANNERS */}
-        <div className="max-w-7xl mx-auto px-4 py-8">
-          <BreakthroughBanner />
-          <QuantumBanner />
-          <ContentShowcaseBanner />
-          <SuccessStoryBanner />
-        </div>
+        {/* NEW CONTENT 2025 REVOLUTIONARY BANNER */}
+        <NewContent2025RevolutionaryBanner />
         
-        {/* CONTENT PROMOTION SECTION */}
-        <div className="max-w-7xl mx-auto px-4">
-          <ContentPromotion />
-        </div>
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <InteractiveContentDiscoveryWidget2025 />
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
