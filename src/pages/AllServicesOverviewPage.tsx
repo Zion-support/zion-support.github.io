@@ -1,15 +1,15 @@
 import React from 'react';
 
-const ServicesShowcase: React.FC = () => {
+const AllServicesOverviewPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-foreground mb-6">
-          Services Showcase
+          All Services Overview
         </h1>
         <div className="bg-card p-6 rounded-lg shadow-sm">
           <p className="text-muted-foreground">
-            Services showcase coming soon. This page is under development.
+            Comprehensive overview of all our services coming soon. This page is under development.
           </p>
         </div>
       </div>
@@ -17,4 +17,4 @@ const ServicesShowcase: React.FC = () => {
   );
 };
 
-export default ServicesShowcase;
+export default AllServicesOverviewPage;

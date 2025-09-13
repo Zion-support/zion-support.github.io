@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 const PostCard: React.FC = () => {
   return (
     <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-6 border border-zion-blue-light/30">
@@ -13,8 +15,5 @@ const PostCard: React.FC = () => {
     </div>
   );
 };
-
-export const PostCard = React.memo(PostCardComponent);
-PostCard.displayName = 'PostCard';
 
 export default PostCard;
