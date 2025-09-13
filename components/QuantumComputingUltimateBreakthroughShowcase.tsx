@@ -1,197 +1,175 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Atom, 
-  Cpu, 
-  Zap, 
-  Shield, 
-  Target, 
-  TrendingUp, 
-  Lock, 
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Star
-} from 'lucide-react';
 
 const QuantumComputingUltimateBreakthroughShowcase: React.FC = () => {
   const breakthroughs = [
     {
-      title: 'Quantum Supremacy Achieved',
-      description: 'Breakthrough quantum processors with 1M+ qubits, solving problems impossible for classical computers',
-      icon: <Atom className="w-8 h-8 text-cyan-500" />,
-      metrics: '1M+ Qubits',
-      color: 'from-cyan-500 to-blue-500',
-      status: 'Available Now'
+      id: 1,
+      title: "Quantum Supremacy Achieved",
+      year: "2025",
+      description: "Quantum computers solve problems that would take classical computers millions of years in mere minutes.",
+      impact: "Revolutionary",
+      category: "Computing Power",
+      image: "/images/quantum-supremacy-2025.jpg",
+      link: "/quantum-computing-breakthroughs/supremacy-achieved",
+      applications: ["Cryptography", "Optimization", "Simulation"]
     },
     {
-      title: 'Quantum-Neural Integration',
-      description: 'Revolutionary fusion of quantum computing with neural networks for unprecedented AI capabilities',
-      icon: <Cpu className="w-8 h-8 text-purple-500" />,
-      metrics: '10,000x Faster',
-      color: 'from-purple-500 to-pink-500',
-      status: '2025 Q2'
+      id: 2,
+      title: "Fault-Tolerant Quantum Systems",
+      year: "2026",
+      description: "Error-corrected quantum computers become commercially viable, enabling practical quantum applications.",
+      impact: "Game-Changing",
+      category: "Reliability",
+      image: "/images/fault-tolerant-2026.jpg",
+      link: "/quantum-computing-breakthroughs/fault-tolerant-systems",
+      applications: ["Drug Discovery", "Financial Modeling", "Climate Simulation"]
     },
     {
-      title: 'Quantum Cryptography',
-      description: 'Unbreakable encryption using quantum principles, securing data for the next century',
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      metrics: '100% Secure',
-      color: 'from-green-500 to-emerald-500',
-      status: 'Available Now'
+      id: 3,
+      title: "Quantum Internet Launch",
+      year: "2027",
+      description: "First quantum internet network enables ultra-secure communication and distributed quantum computing.",
+      impact: "Transformative",
+      category: "Networking",
+      image: "/images/quantum-internet-2027.jpg",
+      link: "/quantum-computing-breakthroughs/quantum-internet",
+      applications: ["Secure Communication", "Distributed Computing", "Quantum Sensing"]
     },
     {
-      title: 'Quantum Machine Learning',
-      description: 'AI systems that leverage quantum computing for exponential speed improvements in learning',
-      icon: <Target className="w-8 h-8 text-orange-500" />,
-      metrics: 'Exponential Speed',
-      color: 'from-orange-500 to-red-500',
-      status: '2025 Q3'
+      id: 4,
+      title: "Quantum AI Integration",
+      year: "2028",
+      description: "Quantum algorithms enhance AI capabilities, creating quantum neural networks with unprecedented processing power.",
+      impact: "Paradigm Shift",
+      category: "AI Integration",
+      image: "/images/quantum-ai-2028.jpg",
+      link: "/quantum-computing-breakthroughs/quantum-ai-integration",
+      applications: ["Machine Learning", "Pattern Recognition", "Decision Making"]
     },
     {
-      title: 'Quantum Internet',
-      description: 'Global quantum communication network enabling instant, secure data transmission worldwide',
-      icon: <Globe className="w-8 h-8 text-indigo-500" />,
-      metrics: 'Global Scale',
-      color: 'from-indigo-500 to-purple-500',
-      status: '2026 Q1'
+      id: 5,
+      title: "Quantum Chemistry Revolution",
+      year: "2029",
+      description: "Quantum computers simulate complex molecular systems, revolutionizing drug discovery and materials science.",
+      impact: "Scientific Breakthrough",
+      category: "Chemistry",
+      image: "/images/quantum-chemistry-2029.jpg",
+      link: "/quantum-computing-breakthroughs/quantum-chemistry",
+      applications: ["Drug Development", "Materials Design", "Catalyst Optimization"]
     },
     {
-      title: 'Quantum AI Consciousness',
-      description: 'First quantum-enhanced AI systems with consciousness-like capabilities and decision making',
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      metrics: 'Conscious AI',
-      color: 'from-yellow-500 to-orange-500',
-      status: '2027 Q2'
-    }
-  ];
-
-  const applications = [
-    'Drug Discovery & Medical Research',
-    'Financial Modeling & Risk Analysis',
-    'Climate Change Solutions',
-    'Space Exploration & Astronomy',
-    'Cybersecurity & Data Protection',
-    'Artificial Intelligence Enhancement',
-    'Supply Chain Optimization',
-    'Energy Grid Management'
-  ];
-
-  const benefits = [
-    {
-      title: 'Exponential Processing Power',
-      description: 'Solve complex problems in seconds that would take classical computers centuries',
-      icon: <TrendingUp className="w-6 h-6 text-green-400" />
-    },
-    {
-      title: 'Unbreakable Security',
-      description: 'Quantum encryption that cannot be cracked by any known or future technology',
-      icon: <Lock className="w-6 h-6 text-blue-400" />
-    },
-    {
-      title: 'Revolutionary AI',
-      description: 'AI systems with quantum-enhanced capabilities for unprecedented intelligence',
-      icon: <Cpu className="w-6 h-6 text-purple-400" />
-    },
-    {
-      title: 'Global Impact',
-      description: 'Transform every industry from healthcare to finance with quantum solutions',
-      icon: <Globe className="w-6 h-6 text-orange-400" />
+      id: 6,
+      title: "Quantum Consciousness Research",
+      year: "2030",
+      description: "Quantum computing enables breakthrough research into consciousness, consciousness transfer, and digital immortality.",
+      impact: "Existential",
+      category: "Consciousness",
+      image: "/images/quantum-consciousness-2030.jpg",
+      link: "/quantum-computing-breakthroughs/quantum-consciousness",
+      applications: ["Consciousness Transfer", "Digital Immortality", "Brain Simulation"]
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
+    <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-full font-semibold mb-6">
-            <Star className="w-5 h-5" />
-            QUANTUM BREAKTHROUGH
-            <Star className="w-5 h-5" />
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Quantum Computing Ultimate Breakthrough
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Quantum Computing Ultimate Breakthroughs
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Revolutionary quantum computing technologies that will transform every industry 
-            and solve humanity's greatest challenges
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Witness the most revolutionary breakthroughs in quantum computing that will reshape our understanding 
+            of computation, consciousness, and the very fabric of reality.
           </p>
         </div>
 
-        {/* Breakthroughs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {breakthroughs.map((breakthrough, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {breakthroughs.map((breakthrough) => (
             <div
-              key={index}
-              className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+              key={breakthrough.id}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group border border-white/20"
             >
-              <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${breakthrough.color} mb-6`}>
-                {breakthrough.icon}
+              <div className="relative overflow-hidden rounded-lg mb-4">
+                <div className="w-full h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                  <span className="text-white text-lg font-semibold">
+                    {breakthrough.year}
+                  </span>
+                </div>
+                <div className="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  {breakthrough.category}
+                </div>
+                <div className="absolute bottom-4 left-4 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  {breakthrough.impact}
+                </div>
               </div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="text-sm font-semibold text-cyan-400">{breakthrough.status}</div>
-                <div className="text-lg font-bold text-green-400">{breakthrough.metrics}</div>
+
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                {breakthrough.title}
+              </h3>
+              
+              <p className="text-gray-300 mb-4 line-clamp-3">
+                {breakthrough.description}
+              </p>
+
+              {/* Applications */}
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Applications:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {breakthrough.applications.map((app, index) => (
+                    <span
+                      key={index}
+                      className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full text-xs"
+                    >
+                      {app}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{breakthrough.title}</h3>
-              <p className="text-gray-300">{breakthrough.description}</p>
+
+              <Link
+                to={breakthrough.link}
+                className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:translate-x-1 transition-all duration-200"
+              >
+                Explore Breakthrough
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
           ))}
         </div>
 
-        {/* Applications Section */}
-        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 mb-12">
-          <h3 className="text-3xl font-bold text-white text-center mb-8">
-            Revolutionary Applications
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {applications.map((application, index) => (
-              <div key={index} className="flex items-center gap-3 text-white">
-                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                <span className="text-lg">{application}</span>
-              </div>
-            ))}
+        {/* Quantum Computing Stats */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-3xl font-bold text-purple-400 mb-2">1000x</div>
+            <div className="text-gray-300">Faster Processing</div>
+          </div>
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-3xl font-bold text-blue-400 mb-2">99.9%</div>
+            <div className="text-gray-300">Error Reduction</div>
+          </div>
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-3xl font-bold text-indigo-400 mb-2">∞</div>
+            <div className="text-gray-300">Possible Solutions</div>
+          </div>
+          <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
+            <div className="text-gray-300">Continuous Operation</div>
           </div>
         </div>
 
-        {/* Benefits Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="text-center">
-              <div className="inline-flex p-4 rounded-full bg-white/10 mb-4">
-                {benefit.icon}
-              </div>
-              <h4 className="text-xl font-bold text-white mb-3">{benefit.title}</h4>
-              <p className="text-gray-300">{benefit.description}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-8">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Join the Quantum Revolution
-            </h3>
-            <p className="text-xl text-cyan-100 mb-8">
-              Get exclusive access to quantum computing breakthroughs and implementation guides
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/quantum-computing-breakthroughs"
-                className="group bg-white text-cyan-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
-              >
-                Access Quantum Solutions
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/contact"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-cyan-600 transition-all duration-300"
-              >
-                Schedule Demo
-              </Link>
-            </div>
-          </div>
+        <div className="text-center mt-12">
+          <Link
+            to="/quantum-computing-breakthroughs"
+            className="inline-flex items-center bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+          >
+            Explore All Breakthroughs
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>
