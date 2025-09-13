@@ -57,6 +57,11 @@ import ContentShowcase2025 from '../components/ContentShowcase2025';
 // Import new 2025 promotional components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import InteractiveContentShowcase from '../components/InteractiveContentShowcase';
+=======
+import { BreakthroughBanner, QuantumBanner, ContentShowcaseBanner, SuccessStoryBanner } from '../components/PromotionalBanner';
+import ContentPromotion from '../components/ContentPromotion';
+import NewContent2025RevolutionaryBanner from '../components/NewContent2025RevolutionaryBanner';
+>>>>>>> 7ce8391380b998b490824bfd2d0324a06f0c8cea
 
 export default function HomePage() {
   return (
@@ -78,7 +83,6 @@ export default function HomePage() {
         {/* NEW CONTENT 2025 REVOLUTIONARY BANNER */}
         <NewContent2025RevolutionaryBanner />
         
-<<<<<<< HEAD
         {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
@@ -94,6 +98,8 @@ export default function HomePage() {
         {/* CONTENT SHOWCASE 2025 */}
         <ContentShowcase2025 />
         
+=======
+>>>>>>> 7ce8391380b998b490824bfd2d0324a06f0c8cea
         {/* QUANTUM-NEURAL FUSION 2026 BREAKTHROUGH BANNER */}
         <QuantumNeuralFusion2026PromotionBanner />
         
@@ -105,6 +111,9 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 */}
         <UltimateContentPromotionBanner2025 />
+        
+        {/* NEW CONTENT 2025 REVOLUTIONARY BANNER */}
+        <NewContent2025RevolutionaryBanner />
         
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
@@ -123,7 +132,23 @@ export default function HomePage() {
         
         {/* REVOLUTIONARY CONTENT BANNER 2026 */}
         <RevolutionaryContentBanner2026 />
+<<<<<<< HEAD
 >>>>>>> 8a32472f4c63f8c1f00e9a2ed50b576a716afb42
+=======
+        
+        {/* NEW PROMOTIONAL BANNERS */}
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <BreakthroughBanner />
+          <QuantumBanner />
+          <ContentShowcaseBanner />
+          <SuccessStoryBanner />
+        </div>
+        
+        {/* CONTENT PROMOTION SECTION */}
+        <div className="max-w-7xl mx-auto px-4">
+          <ContentPromotion />
+        </div>
+>>>>>>> 7ce8391380b998b490824bfd2d0324a06f0c8cea
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
