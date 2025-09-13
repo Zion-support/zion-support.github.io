@@ -1,205 +1,227 @@
-'use client';
-
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-interface ContentItem {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  roi: string;
-  href: string;
-  featured?: boolean;
-}
-
-const contentItems: ContentItem[] = [
-  {
-    id: 'ai-2025-breakthrough',
-    title: 'AI 2025 Ultimate Breakthrough Revolution',
-    description: 'Revolutionary AI breakthrough delivering 10,000% ROI with quantum-powered intelligence.',
-    category: 'Breakthrough',
-    roi: '10,000% ROI',
-    href: '/ai-2025-ultimate-breakthrough-revolution',
-    featured: true
-  },
-  {
-    id: 'quantum-computing-2025',
-    title: 'Quantum Computing Solutions 2025',
-    description: 'Revolutionary quantum computing solutions with 50,000% ROI and quantum supremacy.',
-    category: 'Quantum',
-    roi: '50,000% ROI',
-    href: '/quantum-computing-solutions-2025',
-    featured: true
-  },
-  {
-    id: 'ai-2026-quantum-neural',
-    title: 'AI 2026 Quantum Neural Revolution',
-    description: 'Transcendent intelligence through quantum neural networks and consciousness AI.',
-    category: 'Revolution',
-    roi: '25,000% ROI',
-    href: '/ai-2026-quantum-neural-revolution',
-    featured: true
-  },
-  {
-    id: 'global-transformation',
-    title: 'Global Transformation Breakthrough',
-    description: 'Fortune 500 companies achieving 10,000% ROI with AI transformation.',
-    category: 'Case Study',
-    roi: '10,000% ROI',
-    href: '/case-studies/ai-2025-global-transformation-breakthrough'
-  },
-  {
-    id: 'quantum-neural-fusion',
-    title: 'Quantum Neural Fusion Technology',
-    description: 'Revolutionary fusion of quantum computing and neural networks.',
-    category: 'Technology',
-    roi: '15,000% ROI',
-    href: '/quantum-ai-fusion-2030'
-  },
-  {
-    id: 'consciousness-ai',
-    title: 'Consciousness AI Breakthrough',
-    description: 'First truly conscious AI systems with self-awareness and creativity.',
-    category: 'AI',
-    roi: '20,000% ROI',
-    href: '/ai-2025-consciousness-breakthrough'
-  }
-];
-
-const categories = ['All', 'Breakthrough', 'Quantum', 'Revolution', 'Case Study', 'Technology', 'AI'];
-
 export default function InteractiveContentDiscoveryWidget2025() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [activeTab, setActiveTab] = useState('trends');
 
-  const filteredItems = contentItems.filter(item => {
-    const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
-    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  const content = {
+    trends: {
+      title: "AI 2025 Revolutionary Breakthrough Trends",
+      description: "Comprehensive analysis of breakthrough AI trends transforming industries worldwide",
+      link: "/blog/ai-2025-revolutionary-breakthrough-trends",
+      icon: "🔮",
+      color: "from-purple-500 to-pink-500",
+      bgColor: "from-purple-50 to-pink-50",
+      borderColor: "border-purple-200",
+      stats: ["5000% Average ROI", "99.9% Accuracy", "10,000x Faster Processing"]
+    },
+    finance: {
+      title: "Global Finance Transformation - 1500% ROI",
+      description: "Real-world case study of revolutionary AI implementation in finance",
+      link: "/case-studies/ai-2025-global-finance-transformation-breakthrough",
+      icon: "💰",
+      color: "from-green-500 to-blue-500",
+      bgColor: "from-green-50 to-blue-50",
+      borderColor: "border-green-200",
+      stats: ["1500% ROI", "99.8% Trading Accuracy", "$2.5B Revenue Increase"]
+    },
+    toolkit: {
+      title: "Ultimate Implementation Toolkit",
+      description: "Complete guide with proven frameworks and templates for AI implementation",
+      link: "/resources/ai-2025-ultimate-implementation-toolkit",
+      icon: "🛠️",
+      color: "from-blue-500 to-indigo-500",
+      bgColor: "from-blue-50 to-indigo-50",
+      borderColor: "border-blue-200",
+      stats: ["Proven Frameworks", "Step-by-Step Guides", "ROI Calculators"]
+    }
+  };
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">
+    <div className="bg-gradient-to-br from-gray-50 via-white to-blue-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Discover Revolutionary Content
+        
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 text-sm font-semibold mb-6">
+            🚀 NEW REVOLUTIONARY CONTENT 2025
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Discover Revolutionary
+            <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              AI Breakthrough Content
+            </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our breakthrough technologies, case studies, and revolutionary solutions that are transforming industries worldwide.
+            Explore our latest revolutionary content covering AI 2025 trends, real-world success stories, 
+            and implementation toolkits that are transforming businesses worldwide.
           </p>
         </div>
 
-        {/* Search and Filter Controls */}
-        <div className="mb-8">
-          <div className="flex flex-col md:flex-row gap-4 mb-6">
-            <div className="flex-1">
-              <input
-                type="text"
-                placeholder="Search content..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
-                    selectedCategory === category
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-blue-50 border border-gray-300'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
+        {/* Interactive Tabs */}
+        <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+          
+          {/* Tab Navigation */}
+          <div className="flex flex-col sm:flex-row border-b border-gray-200">
+            {Object.entries(content).map(([key, item]) => (
+              <button
+                key={key}
+                onClick={() => setActiveTab(key)}
+                className={`flex-1 px-6 py-4 text-left transition-all duration-300 ${
+                  activeTab === key
+                    ? `bg-gradient-to-r ${item.color} text-white`
+                    : 'text-gray-600 hover:bg-gray-50'
+                }`}
+              >
+                <div className="flex items-center space-x-3">
+                  <span className="text-2xl">{item.icon}</span>
+                  <div>
+                    <div className="font-semibold">{item.title.split(' - ')[0]}</div>
+                    <div className={`text-sm ${activeTab === key ? 'text-white/80' : 'text-gray-500'}`}>
+                      {key === 'trends' && 'Revolutionary Trends'}
+                      {key === 'finance' && '1500% ROI Success'}
+                      {key === 'toolkit' && 'Implementation Ready'}
+                    </div>
+                  </div>
+                </div>
+              </button>
+            ))}
           </div>
-        </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item) => (
-            <div
-              key={item.id}
-              className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${
-                item.featured ? 'ring-2 ring-blue-500' : ''
-              }`}
-            >
-              {item.featured && (
-                <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-t-xl text-center">
-                  ⭐ FEATURED
-                </div>
-              )}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
-                    {item.category}
-                  </span>
-                  <span className="text-sm font-bold text-green-600">
-                    {item.roi}
-                  </span>
+          {/* Tab Content */}
+          <div className="p-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              
+              {/* Content Preview */}
+              <div className="space-y-6">
+                <div className="flex items-center space-x-3">
+                  <span className="text-4xl">{content[activeTab].icon}</span>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-800">{content[activeTab].title}</h3>
+                    <div className="flex items-center space-x-2 mt-1">
+                      <span className={`px-2 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${content[activeTab].color} text-white`}>
+                        {activeTab === 'trends' && 'BREAKTHROUGH'}
+                        {activeTab === 'finance' && 'SUCCESS STORY'}
+                        {activeTab === 'toolkit' && 'IMPLEMENTATION'}
+                      </span>
+                    </div>
+                  </div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                  {item.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {item.description}
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  {content[activeTab].description}
                 </p>
                 
-                <Link
-                  href={item.href}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors"
+                <div className="space-y-3">
+                  {content[activeTab].stats.map((stat, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${content[activeTab].color}`}></div>
+                      <span className="text-gray-700 font-medium">{stat}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <Link 
+                  href={content[activeTab].link}
+                  className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${content[activeTab].color} text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
                 >
-                  Learn More
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  {activeTab === 'trends' && '🔮 Read Revolutionary Trends'}
+                  {activeTab === 'finance' && '💰 View Success Story'}
+                  {activeTab === 'toolkit' && '🛠️ Download Toolkit'}
                 </Link>
               </div>
+              
+              {/* Visual Preview */}
+              <div className={`bg-gradient-to-br ${content[activeTab].bgColor} rounded-xl p-8 border ${content[activeTab].borderColor}`}>
+                <div className="text-center">
+                  <div className="text-6xl mb-4">{content[activeTab].icon}</div>
+                  <h4 className="text-xl font-bold text-gray-800 mb-4">
+                    {activeTab === 'trends' && 'Revolutionary AI Trends'}
+                    {activeTab === 'finance' && 'Finance Transformation'}
+                    {activeTab === 'toolkit' && 'Implementation Framework'}
+                  </h4>
+                  <div className="space-y-3">
+                    {activeTab === 'trends' && (
+                      <>
+                        <div className="bg-white/50 rounded-lg p-3">
+                          <div className="text-sm font-semibold text-gray-700">Quantum-AI Fusion</div>
+                          <div className="text-xs text-gray-600">10,000x faster processing</div>
+                        </div>
+                        <div className="bg-white/50 rounded-lg p-3">
+                          <div className="text-sm font-semibold text-gray-700">Autonomous Systems</div>
+                          <div className="text-xs text-gray-600">99.9% accuracy rate</div>
+                        </div>
+                        <div className="bg-white/50 rounded-lg p-3">
+                          <div className="text-sm font-semibold text-gray-700">Transcendent Intelligence</div>
+                          <div className="text-xs text-gray-600">Infinite scalability</div>
+                        </div>
+                      </>
+                    )}
+                    {activeTab === 'finance' && (
+                      <>
+                        <div className="bg-white/50 rounded-lg p-3">
+                          <div className="text-sm font-semibold text-gray-700">Trading Accuracy</div>
+                          <div className="text-xs text-gray-600">99.8% success rate</div>
+                        </div>
+                        <div className="bg-white/50 rounded-lg p-3">
+                          <div className="text-sm font-semibold text-gray-700">Revenue Increase</div>
+                          <div className="text-xs text-gray-600">$2.5B growth</div>
+                        </div>
+                        <div className="bg-white/50 rounded-lg p-3">
+                          <div className="text-sm font-semibold text-gray-700">ROI Achievement</div>
+                          <div className="text-xs text-gray-600">1500% return</div>
+                        </div>
+                      </>
+                    )}
+                    {activeTab === 'toolkit' && (
+                      <>
+                        <div className="bg-white/50 rounded-lg p-3">
+                          <div className="text-sm font-semibold text-gray-700">Assessment Framework</div>
+                          <div className="text-xs text-gray-600">Comprehensive analysis tools</div>
+                        </div>
+                        <div className="bg-white/50 rounded-lg p-3">
+                          <div className="text-sm font-semibold text-gray-700">Implementation Guide</div>
+                          <div className="text-xs text-gray-600">Step-by-step roadmap</div>
+                        </div>
+                        <div className="bg-white/50 rounded-lg p-3">
+                          <div className="text-sm font-semibold text-gray-700">ROI Calculator</div>
+                          <div className="text-xs text-gray-600">Proven metrics & formulas</div>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
 
-        {filteredItems.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-gray-400 text-6xl mb-4">🔍</div>
-            <h3 className="text-xl font-semibold text-gray-600 mb-2">No content found</h3>
-            <p className="text-gray-500">Try adjusting your search or filter criteria.</p>
-          </div>
-        )}
-
-        {/* Call to Action */}
-        <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-lg mb-6 opacity-90">
-              Join thousands of companies already achieving breakthrough results with our revolutionary solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
-              >
-                Get Started Today
-              </Link>
-              <Link
-                href="/resources"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                View All Resources
-              </Link>
+        {/* Quick Links */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Link href="/blog" className="group">
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group-hover:border-purple-300">
+              <div className="text-4xl mb-4">📚</div>
+              <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600">All Blog Posts</h3>
+              <p className="text-gray-600 mb-4">Explore our complete library of AI insights and breakthrough analysis.</p>
+              <div className="text-purple-600 font-semibold group-hover:text-purple-700">Browse All Posts →</div>
             </div>
-          </div>
+          </Link>
+          <Link href="/case-studies" className="group">
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group-hover:border-green-300">
+              <div className="text-4xl mb-4">🏆</div>
+              <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-green-600">Success Stories</h3>
+              <p className="text-gray-600 mb-4">Real-world case studies showcasing revolutionary AI implementations.</p>
+              <div className="text-green-600 font-semibold group-hover:text-green-700">View Case Studies →</div>
+            </div>
+          </Link>
+          <Link href="/resources" className="group">
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group-hover:border-blue-300">
+              <div className="text-4xl mb-4">🛠️</div>
+              <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600">Implementation Resources</h3>
+              <p className="text-gray-600 mb-4">Toolkits, guides, and frameworks for successful AI implementation.</p>
+              <div className="text-blue-600 font-semibold group-hover:text-blue-700">Access Resources →</div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

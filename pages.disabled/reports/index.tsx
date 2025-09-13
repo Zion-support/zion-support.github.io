@@ -21,7 +21,7 @@ export default function ReportsIndex() {
             <li key={it.title} className="rounded-lg bg-white/5 border border-white/10 p-4">
               <div className="font-semibold">{it.title}</div>
               <div className="text-sm text-white/70">{it.desc}</div>
-              <a className="text-cyan-300 underline" href={it.href} target="_blank" rel="noopener">Open</a>
+              <a className="text-cyan-300 underline" href={it.href} target="_blank" rel="noopener noreferrer">Open</a>
             </li>
           ))}
         </ul>
