@@ -48,6 +48,12 @@ import RevolutionarySuccessStoryBanner from '../components/RevolutionarySuccessS
 import AI2025GlobalTransformation15000ROIPromotionBanner from '../components/AI2025GlobalTransformation15000ROIPromotionBanner';
 import AI2025NewContentPromotionBanner from '../components/AI2025NewContentPromotionBanner';
 import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWidget';
+
+// Import new content showcase components
+import UltimateContentShowcaseBanner2025 from '../components/UltimateContentShowcaseBanner2025';
+import UltimateAIToolsShowcase2025 from '../components/UltimateAIToolsShowcase2025';
+import InteractiveCaseStudiesShowcase2025 from '../components/InteractiveCaseStudiesShowcase2025';
+import InteractiveAILearningHub2025 from '../components/InteractiveAILearningHub2025';
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
@@ -510,6 +516,9 @@ export default function HomePage() {
       }} />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT SHOWCASE BANNER 2025 */}
+        <UltimateContentShowcaseBanner2025 />
+        
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
         
@@ -518,6 +527,15 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2025 PROMOTION BANNER */}
         <NewContent2025PromotionBanner />
+        
+        {/* ULTIMATE AI TOOLS SHOWCASE 2025 */}
+        <UltimateAIToolsShowcase2025 />
+        
+        {/* INTERACTIVE CASE STUDIES SHOWCASE 2025 */}
+        <InteractiveCaseStudiesShowcase2025 />
+        
+        {/* INTERACTIVE AI LEARNING HUB 2025 */}
+        <InteractiveAILearningHub2025 />
         
         {/* REVOLUTIONARY CONTENT SHOWCASE */}
         <RevolutionaryContentShowcase />
