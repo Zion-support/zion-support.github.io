@@ -85,6 +85,9 @@ import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWi
 import UltimateContentRevolution2026 from '../components/UltimateContentRevolution2026';
 import UltimateContentRevolution2026PromotionBanner from '../components/UltimateContentRevolution2026PromotionBanner';
 
+// New Content 2026 Promotion Banner
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+
 // New AI Innovation Showcase 2026 Components
 import AIInnovationShowcase2026 from '../components/AIInnovationShowcase2026';
 import AIInnovationShowcase2026PromotionBanner from '../components/AIInnovationShowcase2026PromotionBanner';
@@ -110,6 +113,7 @@ export default function HomePage() {
         <AI2026ContentDiscoveryWidget />
         
         {/* NEW BREAKTHROUGH CONTENT PROMOTION BANNERS */}
+        <NewContent2026PromotionBanner />
         <NewContentPromotionBanner2026 />
         
         <AI2025UltimateBreakthroughPromotionBanner />
@@ -745,10 +749,6 @@ export default function HomePage() {
             }} 
           />
         </Suspense>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-e336
->>>>>>> cursor/create-and-deploy-new-content-6178
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
