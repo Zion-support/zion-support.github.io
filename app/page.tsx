@@ -147,6 +147,14 @@ import FeaturedBlogPost2025 from '../components/FeaturedBlogPost2025';
 import CaseStudyShowcase2025 from '../components/CaseStudyShowcase2025';
 
 // Import new promotional banners for 2026
+
+// Import new 2025 content showcase components
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentShowcase2025PromotionBanner from '../components/UltimateContentShowcase2025PromotionBanner';
+import InteractiveTechDemo2025 from '../components/InteractiveTechDemo2025';
+import InteractiveTechDemo2025PromotionBanner from '../components/InteractiveTechDemo2025PromotionBanner';
+import BusinessTransformation2025Showcase from '../components/BusinessTransformation2025Showcase';
+import BusinessTransformation2025PromotionBanner from '../components/BusinessTransformation2025PromotionBanner';
 import AI2026UltimateContentRevolutionPromotionBanner from '../components/AI2026UltimateContentRevolutionPromotionBanner';
 import AdvancedAutomationSolutions2026UltimatePromotionBanner from '../components/AdvancedAutomationSolutions2026UltimatePromotionBanner';
 import QuantumComputingSolutions2026UltimatePromotionBanner from '../components/QuantumComputingSolutions2026UltimatePromotionBanner';
@@ -185,6 +193,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW: ULTIMATE CONTENT SHOWCASE 2025 PROMOTION BANNER */}
+        <UltimateContentShowcase2025PromotionBanner />
+        
+        {/* NEW: INTERACTIVE TECH DEMO 2025 PROMOTION BANNER */}
+        <InteractiveTechDemo2025PromotionBanner />
+        
+        {/* NEW: BUSINESS TRANSFORMATION 2025 PROMOTION BANNER */}
+        <BusinessTransformation2025PromotionBanner />
+        
         {/* NEW: AI 2026 FUTURE PREDICTIONS ULTIMATE PROMOTION BANNER */}
         <AI2026FuturePredictionsUltimatePromotionBanner />
         
@@ -202,6 +219,15 @@ export default function HomePage() {
         
         {/* REVOLUTIONARY TECH BANNER 2025 */}
         <RevolutionaryTechBanner2025 />
+        
+        {/* NEW: ULTIMATE CONTENT SHOWCASE 2025 */}
+        <UltimateContentShowcase2025 />
+        
+        {/* NEW: INTERACTIVE TECH DEMO 2025 */}
+        <InteractiveTechDemo2025 />
+        
+        {/* NEW: BUSINESS TRANSFORMATION 2025 SHOWCASE */}
+        <BusinessTransformation2025Showcase />
         
         {/* NEW CONTENT SHOWCASE 2025 */}
         <NewContentShowcase2025 />
