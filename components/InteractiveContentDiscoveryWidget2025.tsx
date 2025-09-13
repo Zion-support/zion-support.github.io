@@ -1,291 +1,456 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Filter, ArrowRight, Clock, Users, Star, TrendingUp, Zap, Brain, Target } from 'lucide-react';
+import { 
+  Search, 
+  Filter, 
+  TrendingUp, 
+  Clock, 
+  Star, 
+  ArrowRight,
+  Brain,
+  Cpu,
+  Zap,
+  Sparkles,
+  BookOpen,
+  Video,
+  FileText,
+  BarChart3,
+  X,
+  ChevronDown
+} from 'lucide-react';
+
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  type: 'article' | 'video' | 'guide' | 'case-study' | 'whitepaper';
+  readTime: string;
+  rating: number;
+  trending: boolean;
+  featured: boolean;
+  tags: string[];
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  lastUpdated: string;
+}
+
+const contentItems: ContentItem[] = [
+  {
+    id: '1',
+    title: 'AI 2025 Neural Synthesis: Complete Implementation Guide',
+    description: 'Master the art of neural synthesis with our comprehensive guide covering everything from basics to advanced implementations.',
+    category: 'AI Implementation',
+    type: 'guide',
+    readTime: '45 min',
+    rating: 4.9,
+    trending: true,
+    featured: true,
+    tags: ['AI 2025', 'Neural Networks', 'Implementation', 'ROI'],
+    difficulty: 'advanced',
+    lastUpdated: '2025-01-15'
+  },
+  {
+    id: '2',
+    title: 'Quantum Computing Breakthroughs: Error-Corrected Systems',
+    description: 'Explore the latest quantum computing innovations that are revolutionizing cryptography and optimization.',
+    category: 'Quantum Computing',
+    type: 'whitepaper',
+    readTime: '32 min',
+    rating: 4.8,
+    trending: true,
+    featured: false,
+    tags: ['Quantum Computing', 'Cryptography', 'Optimization'],
+    difficulty: 'intermediate',
+    lastUpdated: '2025-01-14'
+  },
+  {
+    id: '3',
+    title: 'Autonomous Business Systems: 2,500% ROI Case Study',
+    description: 'Real-world implementation achieving unprecedented ROI with autonomous AI systems.',
+    category: 'Case Study',
+    type: 'case-study',
+    readTime: '28 min',
+    rating: 4.9,
+    trending: false,
+    featured: true,
+    tags: ['ROI', 'Automation', 'Business Systems'],
+    difficulty: 'intermediate',
+    lastUpdated: '2025-01-13'
+  },
+  {
+    id: '4',
+    title: 'Future Technology Predictions 2025-2030',
+    description: 'Expert predictions and analysis of emerging technologies shaping the next decade.',
+    category: 'Future Tech',
+    type: 'article',
+    readTime: '38 min',
+    rating: 4.7,
+    trending: true,
+    featured: false,
+    tags: ['Predictions', 'Future Tech', 'Innovation'],
+    difficulty: 'beginner',
+    lastUpdated: '2025-01-12'
+  },
+  {
+    id: '5',
+    title: 'Neural Interface Solutions: Human-AI Interaction',
+    description: 'Cutting-edge neural interface technologies for seamless human-AI communication.',
+    category: 'Neural Interfaces',
+    type: 'video',
+    readTime: '41 min',
+    rating: 4.8,
+    trending: false,
+    featured: false,
+    tags: ['Neural Interfaces', 'Human-AI', 'Interaction'],
+    difficulty: 'advanced',
+    lastUpdated: '2025-01-11'
+  },
+  {
+    id: '6',
+    title: 'Space Technology Solutions: AI-Powered Exploration',
+    description: 'Revolutionary AI applications in space technology and autonomous mission planning.',
+    category: 'Space Tech',
+    type: 'article',
+    readTime: '35 min',
+    rating: 4.6,
+    trending: true,
+    featured: false,
+    tags: ['Space Technology', 'AI Applications', 'Exploration'],
+    difficulty: 'intermediate',
+    lastUpdated: '2025-01-10'
+  }
+];
+
+const categories = [
+  { id: 'all', name: 'All Categories', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'AI Implementation', name: 'AI Implementation', icon: <Brain className="w-4 h-4" /> },
+  { id: 'Quantum Computing', name: 'Quantum Computing', icon: <Cpu className="w-4 h-4" /> },
+  { id: 'Case Study', name: 'Case Study', icon: <BarChart3 className="w-4 h-4" /> },
+  { id: 'Future Tech', name: 'Future Tech', icon: <Sparkles className="w-4 h-4" /> },
+  { id: 'Neural Interfaces', name: 'Neural Interfaces', icon: <Zap className="w-4 h-4" /> },
+  { id: 'Space Tech', name: 'Space Tech', icon: <Sparkles className="w-4 h-4" /> }
+];
+
+const types = [
+  { id: 'all', name: 'All Types', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'article', name: 'Articles', icon: <FileText className="w-4 h-4" /> },
+  { id: 'video', name: 'Videos', icon: <Video className="w-4 h-4" /> },
+  { id: 'guide', name: 'Guides', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'case-study', name: 'Case Studies', icon: <BarChart3 className="w-4 h-4" /> },
+  { id: 'whitepaper', name: 'Whitepapers', icon: <FileText className="w-4 h-4" /> }
+];
+
+const difficulties = [
+  { id: 'all', name: 'All Levels' },
+  { id: 'beginner', name: 'Beginner' },
+  { id: 'intermediate', name: 'Intermediate' },
+  { id: 'advanced', name: 'Advanced' }
+];
 
 const InteractiveContentDiscoveryWidget2025: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [filteredContent, setFilteredContent] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const categories = [
-    { id: 'all', name: 'All Content', icon: Search },
-    { id: 'ai-breakthroughs', name: 'AI Breakthroughs', icon: Brain },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap },
-    { id: 'automation', name: 'Automation', icon: Target },
-    { id: 'technology', name: 'Technology', icon: TrendingUp },
-    { id: 'case-studies', name: 'Case Studies', icon: Star }
-  ];
-
-  const contentItems = [
-    {
-      id: 1,
-      title: "Neural Quantum Fusion: The Future of AI",
-      description: "Revolutionary AI system combining quantum computing with neural networks for unprecedented processing power.",
-      category: "ai-breakthroughs",
-      readTime: "15 min",
-      views: "12.5K",
-      rating: 4.9,
-      featured: true,
-      tags: ["Quantum AI", "Neural Networks", "Breakthrough"],
-      image: "/api/placeholder/300/200"
-    },
-    {
-      id: 2,
-      title: "Autonomous Business Process Optimization",
-      description: "Self-evolving AI systems that continuously optimize business operations without human intervention.",
-      category: "automation",
-      readTime: "12 min",
-      views: "8.7K",
-      rating: 4.8,
-      featured: true,
-      tags: ["Automation", "Business Intelligence", "AI"],
-      image: "/api/placeholder/300/200"
-    },
-    {
-      id: 3,
-      title: "Quantum Error Correction Breakthrough",
-      description: "Advanced error correction algorithms enabling stable quantum computing at scale.",
-      category: "quantum-computing",
-      readTime: "18 min",
-      views: "15.2K",
-      rating: 4.9,
-      featured: true,
-      tags: ["Quantum Computing", "Error Correction", "Breakthrough"],
-      image: "/api/placeholder/300/200"
-    },
-    {
-      id: 4,
-      title: "Revolutionary Technology Showcase 2025",
-      description: "Discover the most groundbreaking technologies that will reshape industries in 2025.",
-      category: "technology",
-      readTime: "20 min",
-      views: "9.3K",
-      rating: 4.7,
-      featured: false,
-      tags: ["Technology", "Innovation", "2025"],
-      image: "/api/placeholder/300/200"
-    },
-    {
-      id: 5,
-      title: "Enterprise AI Transformation Success Story",
-      description: "How Fortune 500 companies achieved 2,500% ROI with our AI solutions.",
-      category: "case-studies",
-      readTime: "14 min",
-      views: "6.8K",
-      rating: 4.6,
-      featured: false,
-      tags: ["Case Study", "ROI", "Enterprise"],
-      image: "/api/placeholder/300/200"
-    },
-    {
-      id: 6,
-      title: "Edge Quantum Computing Solutions",
-      description: "Distributed quantum computing infrastructure for real-time processing at the edge.",
-      category: "quantum-computing",
-      readTime: "16 min",
-      views: "11.4K",
-      rating: 4.8,
-      featured: false,
-      tags: ["Edge Computing", "Quantum", "Infrastructure"],
-      image: "/api/placeholder/300/200"
-    }
-  ];
+  const [selectedType, setSelectedType] = useState('all');
+  const [selectedDifficulty, setSelectedDifficulty] = useState('all');
+  const [showFilters, setShowFilters] = useState(false);
+  const [filteredContent, setFilteredContent] = useState(contentItems);
 
   useEffect(() => {
-    setIsLoading(true);
-    const timer = setTimeout(() => {
-      let filtered = contentItems;
-      
-      if (selectedCategory !== 'all') {
-        filtered = filtered.filter(item => item.category === selectedCategory);
-      }
-      
-      if (searchTerm) {
-        filtered = filtered.filter(item => 
-          item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-        );
-      }
-      
-      setFilteredContent(filtered);
-      setIsLoading(false);
-    }, 300);
+    let filtered = contentItems;
 
-    return () => clearTimeout(timer);
-  }, [searchTerm, selectedCategory]);
+    // Search filter
+    if (searchQuery) {
+      filtered = filtered.filter(item =>
+        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      );
+    }
+
+    // Category filter
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(item => item.category === selectedCategory);
+    }
+
+    // Type filter
+    if (selectedType !== 'all') {
+      filtered = filtered.filter(item => item.type === selectedType);
+    }
+
+    // Difficulty filter
+    if (selectedDifficulty !== 'all') {
+      filtered = filtered.filter(item => item.difficulty === selectedDifficulty);
+    }
+
+    setFilteredContent(filtered);
+  }, [searchQuery, selectedCategory, selectedType, selectedDifficulty]);
+
+  const getTypeIcon = (type: string) => {
+    const typeConfig = types.find(t => t.id === type);
+    return typeConfig ? typeConfig.icon : <BookOpen className="w-4 h-4" />;
+  };
+
+  const getDifficultyColor = (difficulty: string) => {
+    switch (difficulty) {
+      case 'beginner':
+        return 'bg-green-100 text-green-800';
+      case 'intermediate':
+        return 'bg-yellow-100 text-yellow-800';
+      case 'advanced':
+        return 'bg-red-100 text-red-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const clearFilters = () => {
+    setSearchQuery('');
+    setSelectedCategory('all');
+    setSelectedType('all');
+    setSelectedDifficulty('all');
+  };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 mb-6">
-            <Search className="w-5 h-5 text-purple-400 mr-2" />
-            <span className="text-purple-300 font-semibold">Interactive Content Discovery</span>
-          </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Discover Revolutionary
-            <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              AI Content 2025
-            </span>
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Interactive Content Discovery
+            <span className="block text-blue-400">2025</span>
           </h2>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Explore our comprehensive library of AI breakthroughs, quantum computing solutions, and automation technologies. Find exactly what you need with our intelligent discovery system.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Find the perfect content for your needs with our intelligent discovery system. 
+            Filter by category, type, difficulty, and more.
           </p>
         </div>
 
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12">
-          <div className="flex flex-col lg:flex-row gap-6 mb-8">
-            <div className="flex-1">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search for AI breakthroughs, quantum solutions, automation..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:bg-white/15 transition-all duration-300"
-                />
-              </div>
-            </div>
-            
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => {
-                const IconComponent = category.icon;
-                return (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`flex items-center px-4 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                    }`}
-                  >
-                    <IconComponent className="w-4 h-4 mr-2" />
-                    {category.name}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between text-sm text-gray-400">
-            <div className="flex items-center">
-              <Filter className="w-4 h-4 mr-2" />
-              {filteredContent.length} results found
-            </div>
-            <div className="flex items-center">
-              <TrendingUp className="w-4 h-4 mr-2" />
-              Real-time content updates
-            </div>
-          </div>
-        </div>
-
-        {isLoading ? (
-          <div className="text-center py-12">
-            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-purple-400"></div>
-            <p className="text-gray-300 mt-4">Discovering amazing content...</p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {filteredContent.map((content) => (
-              <div 
-                key={content.id} 
-                className={`group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border transition-all duration-300 hover:scale-105 ${
-                  content.featured 
-                    ? 'border-purple-400/50 hover:border-purple-400/80' 
-                    : 'border-white/20 hover:border-white/40'
-                }`}
+        {/* Search and Filters */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-white/20">
+          {/* Search Bar */}
+          <div className="relative mb-6">
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <input
+              type="text"
+              placeholder="Search content, tags, or keywords..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-12 pr-4 py-4 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
               >
-                {content.featured && (
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 text-center font-semibold">
-                    ⭐ Featured Content
-                  </div>
-                )}
-                
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold">
-                      {categories.find(cat => cat.id === content.category)?.name}
-                    </span>
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 mr-1" />
-                      <span className="text-sm font-semibold">{content.rating}</span>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                    {content.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {content.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {content.tags.map((tag, index) => (
-                      <span 
-                        key={index}
-                        className="px-2 py-1 bg-white/10 text-gray-300 rounded-md text-xs"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <div className="flex items-center">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {content.readTime}
-                    </div>
-                    <div className="flex items-center">
-                      <Users className="w-4 h-4 mr-1" />
-                      {content.views}
-                    </div>
-                  </div>
-                  
-                  <Link 
-                    to={`/content/${content.id}`}
-                    className="group/link w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center"
-                  >
-                    <span>Explore Content</span>
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
+                <X className="w-5 h-5" />
+              </button>
+            )}
+          </div>
+
+          {/* Filter Toggle */}
+          <div className="flex items-center justify-between mb-6">
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              className="flex items-center gap-2 px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors"
+            >
+              <Filter className="w-4 h-4" />
+              Filters
+              <ChevronDown className={`w-4 h-4 transition-transform ${showFilters ? 'rotate-180' : ''}`} />
+            </button>
+            
+            <div className="flex items-center gap-4">
+              <span className="text-gray-300 text-sm">
+                {filteredContent.length} results found
+              </span>
+              {(searchQuery || selectedCategory !== 'all' || selectedType !== 'all' || selectedDifficulty !== 'all') && (
+                <button
+                  onClick={clearFilters}
+                  className="text-blue-400 hover:text-blue-300 text-sm font-medium"
+                >
+                  Clear all filters
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* Filters */}
+          {showFilters && (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Category Filter */}
+              <div>
+                <label className="block text-white font-medium mb-3">Category</label>
+                <div className="space-y-2">
+                  {categories.map((category) => (
+                    <button
+                      key={category.id}
+                      onClick={() => setSelectedCategory(category.id)}
+                      className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg text-left transition-colors ${
+                        selectedCategory === category.id
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                      }`}
+                    >
+                      {category.icon}
+                      {category.name}
+                    </button>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
-        )}
 
-        {filteredContent.length === 0 && !isLoading && (
-          <div className="text-center py-12">
-            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-2">No content found</h3>
-            <p className="text-gray-300 mb-6">Try adjusting your search terms or category filters</p>
-            <button
-              onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-              }}
-              className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl font-semibold hover:opacity-90 transition-opacity"
+              {/* Type Filter */}
+              <div>
+                <label className="block text-white font-medium mb-3">Content Type</label>
+                <div className="space-y-2">
+                  {types.map((type) => (
+                    <button
+                      key={type.id}
+                      onClick={() => setSelectedType(type.id)}
+                      className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg text-left transition-colors ${
+                        selectedType === type.id
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                      }`}
+                    >
+                      {type.icon}
+                      {type.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Difficulty Filter */}
+              <div>
+                <label className="block text-white font-medium mb-3">Difficulty Level</label>
+                <div className="space-y-2">
+                  {difficulties.map((difficulty) => (
+                    <button
+                      key={difficulty.id}
+                      onClick={() => setSelectedDifficulty(difficulty.id)}
+                      className={`w-full px-4 py-2 rounded-lg text-left transition-colors ${
+                        selectedDifficulty === difficulty.id
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                      }`}
+                    >
+                      {difficulty.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredContent.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
             >
-              Clear Filters
+              {/* Header */}
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-2">
+                  {getTypeIcon(item.type)}
+                  <span className="text-sm text-gray-300 capitalize">{item.type}</span>
+                </div>
+                <div className="flex gap-2">
+                  {item.featured && (
+                    <span className="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded-full text-xs font-semibold">
+                      Featured
+                    </span>
+                  )}
+                  {item.trending && (
+                    <span className="bg-red-500/20 text-red-400 px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                      <TrendingUp className="w-3 h-3" />
+                      Trending
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              {/* Title and Description */}
+              <h3 className="text-xl font-bold text-white mb-3 line-clamp-2 group-hover:text-blue-400 transition-colors">
+                {item.title}
+              </h3>
+              <p className="text-gray-300 mb-4 line-clamp-3">
+                {item.description}
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {item.tags.slice(0, 3).map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Meta Info */}
+              <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-1">
+                    <Clock className="w-4 h-4" />
+                    <span>{item.readTime}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 text-yellow-400" />
+                    <span>{item.rating}</span>
+                  </div>
+                </div>
+                <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(item.difficulty)}`}>
+                  {item.difficulty}
+                </span>
+              </div>
+
+              {/* Action Button */}
+              <Link
+                to={`/content/${item.id}`}
+                className="group/link flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold transition-colors"
+              >
+                Read More
+                <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        {/* No Results */}
+        {filteredContent.length === 0 && (
+          <div className="text-center py-12">
+            <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Search className="w-12 h-12 text-gray-400" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">No content found</h3>
+            <p className="text-gray-300 mb-6">
+              Try adjusting your search terms or filters to find what you're looking for.
+            </p>
+            <button
+              onClick={clearFilters}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Clear all filters
             </button>
           </div>
         )}
 
-        <div className="text-center">
-          <Link 
-            to="/content-library"
-            className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl"
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <h3 className="text-3xl font-bold text-white mb-4">
+            Can't find what you're looking for?
+          </h3>
+          <p className="text-xl text-gray-300 mb-8">
+            Our AI-powered recommendation system can suggest personalized content based on your interests.
+          </p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center"
           >
-            <Search className="w-5 h-5 mr-2" />
-            <span>Browse Full Content Library</span>
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            Get Personalized Recommendations
+            <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
