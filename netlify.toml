@@ -80,12 +80,6 @@
   command = "corepack enable && pnpm build"
 
 [[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
-
-[[plugins]]
   package = "netlify-plugin-cloudinary"
 
 # [[plugins]]
