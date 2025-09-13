@@ -1137,15 +1137,21 @@ function Header() {
           </div>
           <Link 
             href="/blog" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus relative"
           >
             Blog
+            <span className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+              NEW
+            </span>
           </Link>
           <Link 
             href="/case-studies" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus relative"
           >
             Case Studies
+            <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+              NEW
+            </span>
           </Link>
           <Link 
             href="/resources" 
@@ -1153,6 +1159,15 @@ function Header() {
           >
             Resources
             <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+              NEW
+            </span>
+          </Link>
+          <Link 
+            href="/content-showcase" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus relative"
+          >
+            Content Showcase
+            <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
               NEW
             </span>
           </Link>
