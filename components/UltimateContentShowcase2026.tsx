@@ -1,282 +1,187 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
+  Sparkles, 
   Zap, 
-  Globe, 
-  Shield, 
+  Brain, 
   Rocket, 
-  Star,
+  Star, 
+  TrendingUp, 
+  Users, 
+  Globe,
   ArrowRight,
   Play,
   BookOpen,
-  Users,
-  TrendingUp,
-  CheckCircle,
-  Sparkles,
-  Target,
   Lightbulb,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  BarChart3,
-  Code,
-  Wrench,
-  Eye,
-  Heart
+  Target,
+  Award,
+  ChevronRight
 } from 'lucide-react';
 
 const UltimateContentShowcase2026 = () => {
-  const [activeTab, setActiveTab] = useState('ai-breakthroughs');
+  const [activeTab, setActiveTab] = useState('ai-innovations');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const contentCategories = {
-    'ai-breakthroughs': {
-      title: 'AI Breakthroughs 2026',
+  const contentCategories = [
+    {
+      id: 'ai-innovations',
+      title: 'AI Innovations 2026',
       icon: Brain,
-      color: 'from-purple-600 to-pink-600',
+      color: 'from-purple-500 to-pink-500',
       content: [
         {
-          title: 'Quantum-Neural Fusion Technology',
-          description: 'Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power.',
-          features: ['10,000x faster processing', 'Quantum consciousness simulation', 'Real-time decision making'],
-          image: '/api/placeholder/400/300',
-          category: 'Breakthrough Technology',
-          readTime: '8 min read',
-          difficulty: 'Advanced',
+          title: 'Neural Interface Revolution',
+          description: 'Breakthrough brain-computer interfaces enabling direct neural communication',
+          type: 'Video',
+          duration: '15 min',
+          views: '2.3M',
           rating: 4.9
         },
         {
-          title: 'Synthetic Intelligence Evolution',
-          description: 'Next-generation AI systems that can learn, adapt, and evolve autonomously.',
-          features: ['Autonomous learning', 'Self-improvement algorithms', 'Emotional intelligence'],
-          image: '/api/placeholder/400/300',
-          category: 'AI Research',
-          readTime: '12 min read',
-          difficulty: 'Expert',
+          title: 'Quantum AI Fusion',
+          description: 'Revolutionary quantum computing integration with artificial intelligence',
+          type: 'Article',
+          duration: '8 min read',
+          views: '1.8M',
           rating: 4.8
         },
         {
-          title: 'Neural Interface Revolution',
-          description: 'Direct brain-computer interfaces that enable seamless human-AI collaboration.',
-          features: ['Thought-to-text conversion', 'Neural pattern recognition', 'Enhanced cognitive abilities'],
-          image: '/api/placeholder/400/300',
-          category: 'Neural Technology',
-          readTime: '15 min read',
-          difficulty: 'Expert',
+          title: 'Consciousness AI Systems',
+          description: 'Next-generation AI with self-awareness and emotional intelligence',
+          type: 'Interactive',
+          duration: '25 min',
+          views: '3.1M',
           rating: 4.9
         }
       ]
     },
-    'automation-solutions': {
+    {
+      id: 'automation-solutions',
       title: 'Automation Solutions',
       icon: Zap,
-      color: 'from-blue-600 to-cyan-600',
+      color: 'from-blue-500 to-cyan-500',
       content: [
         {
           title: 'Autonomous Business Operations',
-          description: 'Complete business process automation with AI-powered decision making.',
-          features: ['End-to-end automation', 'Intelligent workflow optimization', 'Predictive maintenance'],
-          image: '/api/placeholder/400/300',
-          category: 'Business Automation',
-          readTime: '10 min read',
-          difficulty: 'Intermediate',
+          description: 'Complete business process automation with zero human intervention',
+          type: 'Case Study',
+          duration: '12 min read',
+          views: '1.5M',
           rating: 4.7
         },
         {
-          title: 'Smart Manufacturing Systems',
-          description: 'AI-driven manufacturing with real-time optimization and quality control.',
-          features: ['Predictive quality control', 'Dynamic production scheduling', 'IoT integration'],
-          image: '/api/placeholder/400/300',
-          category: 'Manufacturing',
-          readTime: '14 min read',
-          difficulty: 'Advanced',
+          title: 'Smart Manufacturing 4.0',
+          description: 'AI-powered manufacturing with predictive maintenance and optimization',
+          type: 'Video',
+          duration: '20 min',
+          views: '2.1M',
           rating: 4.8
         },
         {
-          title: 'Intelligent Customer Service',
-          description: 'Advanced AI chatbots and virtual assistants for superior customer experience.',
-          features: ['Natural language processing', 'Emotional intelligence', 'Multi-language support'],
-          image: '/api/placeholder/400/300',
-          category: 'Customer Service',
-          readTime: '6 min read',
-          difficulty: 'Beginner',
+          title: 'Intelligent Workflow Automation',
+          description: 'Dynamic workflow optimization using machine learning algorithms',
+          type: 'Tutorial',
+          duration: '30 min',
+          views: '1.9M',
           rating: 4.6
         }
       ]
     },
-    'quantum-computing': {
-      title: 'Quantum Computing',
-      icon: Cpu,
-      color: 'from-indigo-600 to-purple-600',
+    {
+      id: 'future-tech',
+      title: 'Future Technologies',
+      icon: Rocket,
+      color: 'from-green-500 to-emerald-500',
       content: [
         {
-          title: 'Quantum Supremacy Applications',
-          description: 'Practical applications of quantum computing in real-world scenarios.',
-          features: ['Cryptography breakthroughs', 'Drug discovery acceleration', 'Financial modeling'],
-          image: '/api/placeholder/400/300',
-          category: 'Quantum Technology',
-          readTime: '18 min read',
-          difficulty: 'Expert',
+          title: 'Quantum Computing Breakthroughs',
+          description: 'Revolutionary quantum algorithms solving previously impossible problems',
+          type: 'Research',
+          duration: '45 min read',
+          views: '1.2M',
           rating: 4.9
         },
         {
-          title: 'Quantum Machine Learning',
-          description: 'Machine learning algorithms optimized for quantum computing systems.',
-          features: ['Quantum neural networks', 'Exponential speedup', 'Pattern recognition'],
-          image: '/api/placeholder/400/300',
-          category: 'Quantum AI',
-          readTime: '16 min read',
-          difficulty: 'Expert',
+          title: 'Space Technology Integration',
+          description: 'AI systems for space exploration and interplanetary communication',
+          type: 'Documentary',
+          duration: '60 min',
+          views: '2.8M',
           rating: 4.8
         },
         {
-          title: 'Quantum Security Solutions',
-          description: 'Unbreakable encryption and security systems powered by quantum mechanics.',
-          features: ['Quantum key distribution', 'Post-quantum cryptography', 'Secure communications'],
-          image: '/api/placeholder/400/300',
-          category: 'Cybersecurity',
-          readTime: '12 min read',
-          difficulty: 'Advanced',
+          title: 'Biotech AI Convergence',
+          description: 'Artificial intelligence revolutionizing biotechnology and medicine',
+          type: 'Interactive',
+          duration: '35 min',
+          views: '1.7M',
           rating: 4.7
         }
       ]
-    },
-    'future-predictions': {
-      title: 'Future Predictions',
-      icon: Eye,
-      color: 'from-emerald-600 to-teal-600',
-      content: [
-        {
-          title: 'AI Singularity Timeline 2030-2035',
-          description: 'Comprehensive analysis of when and how AI will achieve technological singularity.',
-          features: ['Timeline predictions', 'Impact assessment', 'Preparation strategies'],
-          image: '/api/placeholder/400/300',
-          category: 'Future Studies',
-          readTime: '20 min read',
-          difficulty: 'Advanced',
-          rating: 4.9
-        },
-        {
-          title: 'Human-AI Collaboration Future',
-          description: 'How humans and AI will work together in the next decade.',
-          features: ['Collaborative intelligence', 'Augmented human capabilities', 'Ethical considerations'],
-          image: '/api/placeholder/400/300',
-          category: 'Societal Impact',
-          readTime: '14 min read',
-          difficulty: 'Intermediate',
-          rating: 4.6
-        },
-        {
-          title: 'Technology Convergence 2030',
-          description: 'How AI, quantum computing, and biotechnology will converge.',
-          features: ['Convergence analysis', 'Emerging technologies', 'Market implications'],
-          image: '/api/placeholder/400/300',
-          category: 'Technology Trends',
-          readTime: '16 min read',
-          difficulty: 'Advanced',
-          rating: 4.8
-        }
-      ]
     }
-  };
+  ];
 
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'Beginner': return 'bg-green-100 text-green-800';
-      case 'Intermediate': return 'bg-yellow-100 text-yellow-800';
-      case 'Advanced': return 'bg-orange-100 text-orange-800';
-      case 'Expert': return 'bg-red-100 text-red-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  if (!isVisible) return null;
+  const activeCategory = contentCategories.find(cat => cat.id === activeTab);
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10" />
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
-      
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-purple-400 rounded-full opacity-20"
-            animate={{
-              x: [0, Math.random() * 1000],
-              y: [0, Math.random() * 1000],
-              scale: [0, 1, 0],
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              delay: Math.random() * 5,
-            }}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-          />
-        ))}
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
-            <Sparkles className="w-4 h-4 mr-2" />
-            ULTIMATE CONTENT SHOWCASE 2026
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <Sparkles className="w-4 h-4" />
+            Ultimate Content Showcase 2026
           </div>
-          
-          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Revolutionary
-            <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Content Hub
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              {' '}Content Hub
             </span>
-          </h2>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover the most advanced AI breakthroughs, automation solutions, and future predictions 
-            that will shape the next decade of technological innovation.
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover the most advanced AI innovations, automation solutions, and future technologies 
+            that are reshaping our world in 2026 and beyond.
           </p>
         </motion.div>
 
-        {/* Category Tabs */}
+        {/* Navigation Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {Object.entries(contentCategories).map(([key, category]) => {
+          {contentCategories.map((category) => {
             const Icon = category.icon;
             return (
               <button
-                key={key}
-                onClick={() => setActiveTab(key)}
-                className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  activeTab === key
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-105`
+                key={category.id}
+                onClick={() => setActiveTab(category.id)}
+                className={`flex items-center gap-3 px-6 py-4 rounded-2xl font-medium transition-all duration-300 ${
+                  activeTab === category.id
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-2xl scale-105`
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
               >
-                <Icon className="w-5 h-5 mr-2" />
+                <Icon className="w-5 h-5" />
                 {category.title}
               </button>
             );
@@ -293,124 +198,89 @@ const UltimateContentShowcase2026 = () => {
             transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {contentCategories[activeTab as keyof typeof contentCategories].content.map((item, index) => (
+            {activeCategory?.content.map((item, index) => (
               <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               >
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  
-                  {/* Category Badge */}
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-purple-600 text-white text-xs font-medium rounded-full">
-                      {item.category}
-                    </span>
-                  </div>
-                  
-                  {/* Play Button */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                      <Play className="w-6 h-6 text-white ml-1" />
-                    </div>
+                {/* Content Type Badge */}
+                <div className="flex items-center justify-between mb-4">
+                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                    {item.type}
+                  </span>
+                  <div className="flex items-center gap-1 text-yellow-400">
+                    <Star className="w-4 h-4 fill-current" />
+                    <span className="text-sm font-medium">{item.rating}</span>
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className={`px-2 py-1 text-xs font-medium rounded-full ${getDifficultyColor(item.difficulty)}`}>
-                      {item.difficulty}
-                    </span>
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm font-medium">{item.rating}</span>
-                    </div>
+                {/* Content Preview */}
+                <div className="relative mb-4">
+                  <div className="w-full h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center">
+                    <Play className="w-12 h-12 text-white/60" />
                   </div>
-
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                    {item.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                    {item.description}
-                  </p>
-
-                  {/* Features */}
-                  <div className="space-y-2 mb-4">
-                    {item.features.slice(0, 2).map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
+                  <div className="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded text-xs">
+                    {item.duration}
                   </div>
-
-                  {/* Meta Info */}
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <div className="flex items-center">
-                      <BookOpen className="w-4 h-4 mr-1" />
-                      {item.readTime}
-                    </div>
-                    <div className="flex items-center">
-                      <Users className="w-4 h-4 mr-1" />
-                      {Math.floor(Math.random() * 1000) + 100} views
-                    </div>
-                  </div>
-
-                  {/* CTA Button */}
-                  <Link
-                    href={`/content/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-4 rounded-lg font-medium flex items-center justify-center group-hover:from-purple-500 group-hover:to-pink-500 transition-all duration-300"
-                  >
-                    Explore Content
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
                 </div>
+
+                {/* Content Info */}
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+                  {item.description}
+                </p>
+
+                {/* Stats */}
+                <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                  <div className="flex items-center gap-1">
+                    <Users className="w-4 h-4" />
+                    <span>{item.views} views</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <TrendingUp className="w-4 h-4" />
+                    <span>Trending</span>
+                  </div>
+                </div>
+
+                {/* Action Button */}
+                <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2 group">
+                  Explore Content
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
               </motion.div>
             ))}
           </motion.div>
         </AnimatePresence>
 
-        {/* Bottom CTA */}
+        {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Explore the Future?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of innovators, researchers, and technology leaders who are already 
-              shaping the future with our cutting-edge content and insights.
+          <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Future?
+            </h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of innovators, entrepreneurs, and visionaries who are already 
+              leveraging these revolutionary technologies to build the future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/newsletter"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-medium hover:from-purple-500 hover:to-pink-500 transition-all duration-300 flex items-center justify-center"
-              >
-                <Heart className="w-5 h-5 mr-2" />
-                Subscribe to Newsletter
-              </Link>
-              <Link
-                href="/content-library"
-                className="bg-white/10 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center"
-              >
-                <BookOpen className="w-5 h-5 mr-2" />
-                Browse All Content
-              </Link>
+              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-bold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2">
+                <Rocket className="w-5 h-5" />
+                Start Your Journey
+              </button>
+              <button className="bg-white/10 text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
+                <BookOpen className="w-5 h-5" />
+                Learn More
+              </button>
             </div>
           </div>
         </motion.div>
