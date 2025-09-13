@@ -126,6 +126,10 @@ import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBa
 import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
 import EnhancedNewsletterSignup2026 from '../components/EnhancedNewsletterSignup2026';
 
+// Import new 2025 ultimate content promotion banner
+import AI2025UltimateContentPromotionBanner from '../components/AI2025UltimateContentPromotionBanner';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -137,11 +141,23 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2025 ULTIMATE CONTENT PROMOTION BANNER */}
+        <AI2025UltimateContentPromotionBanner />
+        
         {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
         <UltimateContentShowcase2026PromotionBanner />
         
         {/* NEW 2025 ULTIMATE CONTENT REVOLUTION BANNER */}
         <AI2025UltimateContentRevolutionBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+        <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Suspense fallback={<LoadingSpinner size="lg" text="Loading Content Discovery..." />}>
+              <InteractiveContentDiscoveryWidget2025 />
+            </Suspense>
+          </div>
+        </section>
         
         {/* REVOLUTIONARY CONTENT BANNER 2026 */}
         <RevolutionaryContentBanner2026 />
