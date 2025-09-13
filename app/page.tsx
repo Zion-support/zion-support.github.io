@@ -76,6 +76,10 @@ import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveCont
 import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
 import QuantumComputingBreakthrough2030PromotionBanner from '../components/QuantumComputingBreakthrough2030PromotionBanner';
 
+// Import new 2026 content promotion components
+import NewContentPromotionBanner2026 from '../components/NewContentPromotionBanner2026';
+import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
+
 // New Ultimate Content Revolution 2026 Components
 import UltimateContentRevolution2026 from '../components/UltimateContentRevolution2026';
 import UltimateContentRevolution2026PromotionBanner from '../components/UltimateContentRevolution2026PromotionBanner';
@@ -735,10 +739,6 @@ export default function HomePage() {
             }} 
           />
         </Suspense>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-e336
->>>>>>> cursor/create-and-deploy-new-content-6178
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -766,6 +766,20 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* New Revolutionary Content 2026 Banner */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <NewContentPromotionBanner2026 />
+        </div>
+      </section>
+
+      {/* Revolutionary Content Showcase */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <RevolutionaryContentShowcase2026 />
         </div>
       </section>
 
