@@ -148,6 +148,12 @@ import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025Ult
 import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
 import AISuccessStories2025Banner from '../components/AISuccessStories2025Banner';
 
+// Import new 2025-2030 future tech revolution components
+import AI2025_2030FutureTechRevolutionShowcase from '../components/AI2025_2030FutureTechRevolutionShowcase';
+import AI2025_2030FutureTechRevolutionPromotionBanner from '../components/AI2025_2030FutureTechRevolutionPromotionBanner';
+import QuantumComputingBreakthrough2025_2030Showcase from '../components/QuantumComputingBreakthrough2025_2030Showcase';
+import QuantumComputingBreakthroughPromotionBanner from '../components/QuantumComputingBreakthroughPromotionBanner';
+
 // Import new AI tools interactive demo components
 import AIToolsInteractiveDemo2025 from '../components/AIToolsInteractiveDemo2025';
 import AIToolsInteractiveDemo2025PromotionBanner from '../components/AIToolsInteractiveDemo2025PromotionBanner';
@@ -254,6 +260,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2025-2030 FUTURE TECH REVOLUTION PROMOTION BANNER */}
+        <AI2025_2030FutureTechRevolutionPromotionBanner />
+        
+        {/* NEW QUANTUM COMPUTING BREAKTHROUGH PROMOTION BANNER */}
+        <QuantumComputingBreakthroughPromotionBanner />
+        
         {/* NEW 2029 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2029PromotionBanner />
         
