@@ -206,6 +206,12 @@ import UltimateContentHub2026PromotionBanner from '../components/UltimateContent
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import AI2025UltimateContentShowcaseBanner from '../components/AI2025UltimateContentShowcaseBanner';
 
+// Import new advanced content management and AI recommendation components
+import AdvancedContentManagementSystem from '../components/AdvancedContentManagementSystem';
+import AdvancedContentManagementSystemPromotionBanner from '../components/AdvancedContentManagementSystemPromotionBanner';
+import AIPoweredContentRecommendationSystem from '../components/AIPoweredContentRecommendationSystem';
+import AIPoweredContentRecommendationSystemPromotionBanner from '../components/AIPoweredContentRecommendationSystemPromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -303,6 +309,18 @@ export default function HomePage() {
         
         {/* REVOLUTIONARY CASE STUDIES SHOWCASE 2026 */}
         <RevolutionaryCaseStudiesShowcase2026 />
+        
+        {/* ADVANCED CONTENT MANAGEMENT SYSTEM PROMOTION BANNER */}
+        <AdvancedContentManagementSystemPromotionBanner />
+        
+        {/* ADVANCED CONTENT MANAGEMENT SYSTEM */}
+        <AdvancedContentManagementSystem />
+        
+        {/* AI-POWERED CONTENT RECOMMENDATION SYSTEM PROMOTION BANNER */}
+        <AIPoweredContentRecommendationSystemPromotionBanner />
+        
+        {/* AI-POWERED CONTENT RECOMMENDATION SYSTEM */}
+        <AIPoweredContentRecommendationSystem />
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
