@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { NewContentPromotionBanner, FeaturedNewContentSection, SuccessMetricsPromotionBanner } from "@/components/NewContentPromotionBanner";
+import { AI2026ContentPromotionBanner, FeaturedAI2026ContentSection } from "@/components/AI2026ContentPromotionBanner";
 import { 
   ArrowRight, 
   Brain, 
@@ -217,6 +218,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* AI 2026 Content Promotion Banner */}
+      <AI2026ContentPromotionBanner />
+
+      {/* Featured AI 2026 Content Section */}
+      <FeaturedAI2026ContentSection />
 
       {/* New Content Promotion Banner */}
       <NewContentPromotionBanner />
