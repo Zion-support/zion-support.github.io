@@ -85,6 +85,14 @@ import BusinessTransformationGuide2025PromotionBanner from '../components/Busine
 import AISolutions2026ComprehensivePromotionBanner from '../components/AISolutions2026ComprehensivePromotionBanner';
 import BusinessAutomationMastery2026PromotionBanner from '../components/BusinessAutomationMastery2026PromotionBanner';
 
+// New 2026 Content Components
+import UltimateContentRevolution2026Banner from '../components/UltimateContentRevolution2026Banner';
+import UltimateContentRevolution2026 from '../components/UltimateContentRevolution2026';
+import RevolutionarySuccessStories2026Banner from '../components/RevolutionarySuccessStories2026Banner';
+import RevolutionarySuccessStories2026 from '../components/RevolutionarySuccessStories2026';
+import InteractiveTechShowcase2026Banner from '../components/InteractiveTechShowcase2026Banner';
+import InteractiveTechShowcase2026 from '../components/InteractiveTechShowcase2026';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -96,7 +104,6 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -136,6 +143,15 @@ export default function HomePage() {
         
         {/* AI 2030 TRANSCENDENT INTELLIGENCE PROMOTION BANNER */}
         <AI2030TranscendentIntelligencePromotionBanner />
+        
+        {/* ULTIMATE CONTENT REVOLUTION 2026 BANNER */}
+        <UltimateContentRevolution2026Banner />
+        
+        {/* REVOLUTIONARY SUCCESS STORIES 2026 BANNER */}
+        <RevolutionarySuccessStories2026Banner />
+        
+        {/* INTERACTIVE TECH SHOWCASE 2026 BANNER */}
+        <InteractiveTechShowcase2026Banner />
         
         {/* NEURAL CONSENSUS 2026 PROMOTION BANNER */}
         <NeuralConsensus2026PromotionBanner />
@@ -254,6 +270,15 @@ export default function HomePage() {
         {/* AI TOOLS ULTIMATE SHOWCASE 2026 */}
         <AIToolsUltimateShowcase2026 />
         
+        {/* ULTIMATE CONTENT REVOLUTION 2026 */}
+        <UltimateContentRevolution2026 />
+        
+        {/* REVOLUTIONARY SUCCESS STORIES 2026 */}
+        <RevolutionarySuccessStories2026 />
+        
+        {/* INTERACTIVE TECH SHOWCASE 2026 */}
+        <InteractiveTechShowcase2026 />
+        
         {/* NEW 2028 ULTIMATE CONTENT SHOWCASE PROMOTION BANNER */}
         <UltimateContentShowcase2028PromotionBanner />
         
@@ -343,7 +368,6 @@ export default function HomePage() {
         
         {/* NEW 2028 INTERACTIVE TECH DEMO */}
         <InteractiveTechDemo2028 />
->>>>>>> c6dc1de5686a3a067733e3c32b5736dfae0a575c
         
         {/* NEW CONTENT PROMOTION BANNER 2026 */}
         <NewContentPromotionBanner2026 />
