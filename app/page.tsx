@@ -10,6 +10,12 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import NewsletterSignup2025 from '../components/NewsletterSignup2025';
 
+// Import new performance and SEO components
+import SEOOptimizedContentHub from '../components/SEOOptimizedContentHub';
+import PerformanceOptimizedBanner from '../components/PerformanceOptimizedBanner';
+import AdvancedSEOStructuredData from '../components/AdvancedSEOStructuredData';
+import ContentAnalyticsDashboard from '../components/ContentAnalyticsDashboard';
+
 // Import new 2027 components
 import UltimateContentShowcase2027 from '../components/UltimateContentShowcase2027';
 import UltimateContentShowcase2027PromotionBanner from '../components/UltimateContentShowcase2027PromotionBanner';
@@ -58,6 +64,9 @@ import AI2025ContentDiscoveryWidget from '../components/AI2025ContentDiscoveryWi
 import AI2025RevolutionaryContentBanner from '../components/AI2025RevolutionaryContentBanner';
 import UltimateContentRevolutionBanner2025 from '../components/UltimateContentRevolutionBanner2025';
 import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+
+// Import new autonomous workforce promotional banner
+import AutonomousWorkforceRevolutionPromotionBanner from '../components/AutonomousWorkforceRevolutionPromotionBanner';
 
 // Import new breakthrough banners
 import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
@@ -947,6 +956,9 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT REVOLUTION BANNER 2025 */}
         <UltimateContentRevolutionBanner2025 />
+        
+        {/* NEW: AUTONOMOUS WORKFORCE REVOLUTION PROMOTION BANNER */}
+        <AutonomousWorkforceRevolutionPromotionBanner />
         
         {/* NEW CONTENT 2026 PROMOTION BANNER */}
         <NewContent2026PromotionBanner />
@@ -3828,6 +3840,18 @@ export default function HomePage() {
 
       {/* NEW COMPREHENSIVE AI SERVICES SHOWCASE 2025 */}
       <ComprehensiveAIServicesShowcase2025 />
+      
+      {/* PERFORMANCE OPTIMIZED BANNER */}
+      <PerformanceOptimizedBanner />
+      
+      {/* SEO OPTIMIZED CONTENT HUB */}
+      <SEOOptimizedContentHub />
+      
+      {/* CONTENT ANALYTICS DASHBOARD */}
+      <ContentAnalyticsDashboard />
+      
+      {/* ADVANCED SEO STRUCTURED DATA */}
+      <AdvancedSEOStructuredData />
         </div>
       </PerformanceOptimizer>
     </ErrorBoundary>
