@@ -72,6 +72,10 @@ import NewContentPromotionBanner2026 from '../components/NewContentPromotionBann
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
 
+// Import new revolutionary content components
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+import RevolutionaryContentPromotionBanner2025 from '../components/RevolutionaryContentPromotionBanner2025';
+
 // Import new promotional banners for 2026 content
 import UltimateContentShowcase2026PromotionBanner from '../components/UltimateContentShowcase2026PromotionBanner';
 import QuantumComputingBreakthrough2030PromotionBanner from '../components/QuantumComputingBreakthrough2030PromotionBanner';
@@ -80,6 +84,11 @@ import QuantumComputingBreakthrough2030PromotionBanner from '../components/Quant
 import AI2026BreakthroughContentPromotionBanner from '../components/AI2026BreakthroughContentPromotionBanner';
 import AI2026UltimateBreakthroughShowcase from '../components/AI2026UltimateBreakthroughShowcase';
 import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
+
+// Import new ultimate content components
+import AI2026UltimateBreakthroughPredictionsPromotionBanner from '../components/AI2026UltimateBreakthroughPredictionsPromotionBanner';
+import AI2026EnterpriseTransformation50000ROIPromotionBanner from '../components/AI2026EnterpriseTransformation50000ROIPromotionBanner';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 
 // New Ultimate Content Revolution 2026 Components
 import UltimateContentRevolution2026 from '../components/UltimateContentRevolution2026';
@@ -112,6 +121,15 @@ export default function HomePage() {
         {/* AI 2026 CONTENT DISCOVERY WIDGET */}
         <AI2026ContentDiscoveryWidget />
         
+        {/* NEW ULTIMATE CONTENT PROMOTION BANNERS */}
+        <AI2026UltimateBreakthroughPredictionsPromotionBanner />
+        
+        <QuantumComputingBreakthrough2030PromotionBanner />
+        
+        <AI2026EnterpriseTransformation50000ROIPromotionBanner />
+        
+        <UltimateContentShowcase2026 />
+        
         {/* NEW BREAKTHROUGH CONTENT PROMOTION BANNERS */}
         <NewContent2026PromotionBanner />
         <NewContentPromotionBanner2026 />
@@ -119,6 +137,12 @@ export default function HomePage() {
         <AI2025UltimateBreakthroughPromotionBanner />
         
         <InteractiveContentDiscoveryWidget2026 />
+        
+        {/* REVOLUTIONARY CONTENT PROMOTION BANNER 2025 */}
+        <RevolutionaryContentPromotionBanner2025 />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2025 */}
+        <RevolutionaryContentShowcase2025 />
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
         <UltimateContentShowcase2026PromotionBanner />
