@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -15,16 +14,6 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 * {
@@ -49,7 +38,7 @@ a {
     color-scheme: dark;
   }
 }
-=======
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -61,6 +50,13 @@ a {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+      )
+      rgb(var(--background-start-rgb));
   }
 }
 
@@ -87,4 +83,3 @@ a {
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 }
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
