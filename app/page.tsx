@@ -148,6 +148,10 @@ import NeuralConsensusRevolutionBanner from '../components/NeuralConsensusRevolu
 // Import new content promotion banners
 import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
 
+// Import new 2026 innovation showcase and 2030 future vision banners
+import AI2026UltimateInnovationShowcasePromotionBanner from '../components/AI2026UltimateInnovationShowcasePromotionBanner';
+import AI2030FutureVisionPromotionBanner from '../components/AI2030FutureVisionPromotionBanner';
+
 // Import new ultimate innovations promotional components
 import NewContent2025UltimateInnovationsPromotionBanner from '../components/NewContent2025UltimateInnovationsPromotionBanner';
 import AITrends2025UltimatePredictionsPromotionBanner from '../components/AITrends2025UltimatePredictionsPromotionBanner';
@@ -228,6 +232,12 @@ export default function HomePage() {
         
         {/* AI 2026 QUANTUM-NEURAL FUSION PROMOTION BANNER */}
         <AI2026QuantumNeuralFusionPromotionBanner />
+        
+        {/* AI 2026 ULTIMATE INNOVATION SHOWCASE PROMOTION BANNER */}
+        <AI2026UltimateInnovationShowcasePromotionBanner />
+        
+        {/* AI 2030 FUTURE VISION PROMOTION BANNER */}
+        <AI2030FutureVisionPromotionBanner />
         
         {/* AI 2025 ULTIMATE TECHNOLOGY SHOWCASE BANNER */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
