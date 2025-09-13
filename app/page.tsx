@@ -148,6 +148,11 @@ import NeuralConsensusRevolutionBanner from '../components/NeuralConsensusRevolu
 // Import new content promotion banners
 import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
 
+// Import new 2026-2030 content components
+import AI2026_2030UltimatePredictionsShowcase from '../components/AI2026_2030UltimatePredictionsShowcase';
+import AI2026_2030UltimatePredictionsPromotionBanner from '../components/AI2026_2030UltimatePredictionsPromotionBanner';
+import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
+
 // Import new 2026 content components
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
@@ -230,6 +235,9 @@ export default function HomePage() {
         {/* NEW 2026 REVOLUTIONARY TECH BANNER */}
         <RevolutionaryTechBanner2026 />
         
+        {/* AI 2026-2030 ULTIMATE PREDICTIONS PROMOTION BANNER - FEATURED */}
+        <AI2026_2030UltimatePredictionsPromotionBanner />
+        
         {/* NEW CONTENT PROMOTION BANNER 2026 */}
         <NewContentPromotionBanner2026 />
         
@@ -278,6 +286,12 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2026 - FEATURED */}
+        <RevolutionaryContentShowcase2026 />
+        
+        {/* AI 2026-2030 ULTIMATE PREDICTIONS SHOWCASE - FEATURED */}
+        <AI2026_2030UltimatePredictionsShowcase />
         
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2026 */}
         <UltimateContentDiscoveryWidget2026 />
