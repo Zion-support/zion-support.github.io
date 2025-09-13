@@ -70,6 +70,10 @@ import AI2026RevolutionaryBreakthroughAnnouncementBanner from '../components/AI2
 import AI2030TranscendentIntelligencePromotionBanner from '../components/AI2030TranscendentIntelligencePromotionBanner';
 import NewContentShowcase2026Banner from '../components/NewContentShowcase2026Banner';
 
+// Latest 2025 Content Promotion Components
+import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -81,6 +85,14 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* LATEST 2025 CONTENT PROMOTION BANNER */}
+        <UltimateContentPromotionBanner2025 />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY WIDGET */}
+        <div className="container mx-auto px-4 py-8">
+          <InteractiveContentDiscoveryWidget2025 />
+        </div>
+        
         {/* ULTIMATE CONTENT SHOWCASE 2026 PROMOTION BANNER */}
         <UltimateContentShowcase2026PromotionBanner />
         
