@@ -4,7 +4,7 @@
   status = 200
 
 [build]
-  command = "yarn install --frozen-lockfile && yarn build"
+  command = "corepack enable && pnpm install --frozen-lockfile && pnpm build"
   publish = "dist"
   command_timeout = "30m"
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- ."
@@ -74,10 +74,10 @@
   NODE_VERSION = "22"
 
 [context.deploy-preview]
-  command = "yarn build"
+  command = "corepack enable && pnpm build"
 
 [context.branch-deploy]
-  command = "yarn build"
+  command = "corepack enable && pnpm build"
 
 [[plugins]]
   package = "netlify-plugin-compress"
