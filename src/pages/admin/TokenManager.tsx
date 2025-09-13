@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
-import { TokenTransaction } from '@/types/tokens';
+import type { TokenTransaction } from '@/types/tokens';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
+import api from '@/lib/api';
 
 export default function TokenManager() {
   const { user } = useAuth();
@@ -25,6 +24,7 @@ export default function TokenManager() {
   }, [isAdmin]);
 
   const fetchTransactions = async () => {
+    if (!supabase) throw new Error('Supabase client not initialized');
     const { data, error } = await supabase
       .from('token_transactions')
       .select('*')
@@ -35,19 +35,18 @@ export default function TokenManager() {
 
   const handleIssue = async (type: 'earn' | 'burn') => {
     if (!userId || amount <= 0) return;
-    const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, amount }),
-    });
-    if (res.ok) {
+    const res = await api.post(
+      `/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`,
+      { userId, amount }
+    );
+    if (res.status >= 200 && res.status < 300) {
       toast({
         title: 'Success',
         description: 'Transaction processed'
       });
       fetchTransactions();
     } else {
-      const err = await res.json();
+      const err = res.data;
       toast({
         title: 'Error',
         description: err.error || 'Failed',
@@ -59,7 +58,7 @@ export default function TokenManager() {
   return (
     <ProtectedRoute adminOnly>
       <div>
-        <Header />
+        
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <h1 className="text-3xl font-bold text-white mb-6">Token Manager</h1>
@@ -94,7 +93,7 @@ export default function TokenManager() {
             </Tabs>
           </div>
         </div>
-        <Footer />
+        
       </div>
     </ProtectedRoute>
   );

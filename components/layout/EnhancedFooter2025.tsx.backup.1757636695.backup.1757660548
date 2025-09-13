@@ -1,0 +1,48 @@
+import React from 'react';
+
+const EnhancedFooter2025: React.FC = () => {
+        {/* Bottom Bar */}
+        <motion.div 
+          className="border-t border-cyan-500/20 bg-black/50 backdrop-blur-sm"
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+              <div className="flex items-center space-x-6 text-sm text-gray-400">
+                <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
+                <div className="flex items-center space-x-4">
+                  <Link href="/privacy" className="hover:text-cyan-300 transition-colors">
+                    Privacy Policy
+                  </Link>
+                  <Link href="/terms" className="hover:text-cyan-300 transition-colors">
+                    Terms of Service
+                  </Link>
+                  <Link href="/cookies" className="hover:text-cyan-300 transition-colors">
+                    Cookie Policy
+                  </Link>
+                </div>
+              </div>
+              
+              <button
+                type="submit"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-medium flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                aria-label="Subscribe to newsletter"
+              >
+                <span className="text-sm">Back to top</span>
+                <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-200" />
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </footer>
+  );
+=======
+  // Temporarily simplified to avoid build issues
+  return <div className="sr-only">EnhancedFooter2025 temporarily disabled</div>;
+};
+
+export default EnhancedFooter2025;

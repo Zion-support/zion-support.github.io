@@ -35,7 +35,7 @@ const testimonials = [
 
 export function EnterpriseTestimonials() {
   return (
-    <section className="py-20 px-4 md:px-6">
+    <section id="testimonials" className="py-20 px-4 md:px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -57,10 +57,11 @@ export function EnterpriseTestimonials() {
                   </blockquote>
                   <div className="flex items-center gap-4">
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">
-                      <img
+                      <img loading="lazy"
                         src={testimonial.image}
                         alt={testimonial.author}
                         className="h-full w-full object-cover"
+                        loading="lazy"
                       />
                     </div>
                     <div>

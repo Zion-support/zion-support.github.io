@@ -1,0 +1,36 @@
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+<<<<<<< HEAD
+=======
+Sitemap: https://ziontechgroup.com/sitemap.xml
+=======
+>>>>>>> origin/backup-main-20250826-120200
+# Sitemap location
+Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap
+
+# Specific rules for major crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yandexbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Disallow admin and authentication pages
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /signup/
+Disallow: /forgot-password/
+Disallow: /onboarding/

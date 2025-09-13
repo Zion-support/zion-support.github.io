@@ -1,0 +1,35 @@
+<<<<<<< HEAD
+area:automation:
+  - 'automation/**'
+area:pages:
+  - 'pages/**'
+area:components:
+  - 'components/**'
+area:styles:
+  - 'styles/**'
+area:docs:
+  - 'docs/**'
+area:data:
+  - 'data/**'
+area:workflows:
+  - '.github/**'
+type:security:
+  - 'automation/security-*.cjs'
+=======
+docs:
+  - '**/*.md'
+
+frontend:
+  - 'pages/**'
+  - 'components/**'
+  - 'styles/**'
+
+automation:
+  - 'automation/**'
+  - '.github/workflows/**'
+  - 'scripts/**'
+
+backend:
+  - 'pages/api/**'
+  - 'utils/**'
+>>>>>>> origin/backup-critical-fixes-20250824-224408

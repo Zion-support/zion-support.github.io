@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { StarIcon } from "lucide-react";
+import { RatingStars } from "./RatingStars";
 
 interface ListingScoreCardProps {
   title: string;
@@ -38,10 +38,11 @@ export function ListingScoreCard({
     )}>
       {image && (
         <div className="h-48 w-full overflow-hidden">
-          <img 
-            src={image} 
-            alt={title} 
+          <img
+            src={image}
+            alt={title}
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            loading="lazy"
           />
         </div>
       )}
@@ -63,19 +64,7 @@ export function ListingScoreCard({
         {/* Rating */}
         {rating > 0 && (
           <div className="flex items-center gap-1 mb-4">
-            <div className="flex">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <StarIcon 
-                  key={star}
-                  className={cn(
-                    "h-4 w-4", 
-                    star <= Math.round(rating) 
-                      ? "text-zion-cyan fill-zion-cyan" 
-                      : "text-zion-slate-light"
-                  )}
-                />
-              ))}
-            </div>
+            <RatingStars value={rating} />
             <span className="text-sm text-zion-slate-light ml-1">
               ({reviewCount})
             </span>
@@ -99,7 +88,7 @@ export function ListingScoreCard({
         {author && (
           <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">
             {authorImage ? (
-              <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />
+              <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" loading="lazy" />
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
                 {author.charAt(0)}
