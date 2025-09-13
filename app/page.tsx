@@ -129,6 +129,10 @@ import UltimateContentShowcase2025Banner from '../components/UltimateContentShow
 import AI2025UltimateBreakthroughRevolutionBanner from '../components/AI2025UltimateBreakthroughRevolutionBanner';
 import AI2026QuantumNeuralFusionPromotionBanner from '../components/AI2026QuantumNeuralFusionPromotionBanner';
 
+// Import new Edge AI promotional components
+import EdgeAIRevolutionPromotionBanner from '../src/components/EdgeAIRevolutionPromotionBanner';
+import NewContentShowcaseBanner2025 from '../src/components/NewContentShowcaseBanner2025';
+
 // Import new content promotion banners
 import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
 import AITrends2025UltimatePredictionsBanner from '../components/AITrends2025UltimatePredictionsBanner';
@@ -189,6 +193,15 @@ export default function HomePage() {
         {/* ULTIMATE BREAKTHROUGH 2025 PROMOTION BANNER - FEATURED */}
         <UltimateBreakthrough2025PromotionBanner />
         
+        {/* EDGE AI REVOLUTION PROMOTION BANNER */}
+        <EdgeAIRevolutionPromotionBanner />
+        
+        {/* NEW CONTENT SHOWCASE BANNER 2025 */}
+        <NewContentShowcaseBanner2025 />
+        
+        {/* AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
+        <AI2025UltimateBreakthroughAnnouncementBanner />
+        
         {/* QUANTUM AI FUSION 2025 PROMOTION BANNER - FEATURED */}
         <QuantumAIFusion2025PromotionBanner />
         
@@ -247,8 +260,6 @@ export default function HomePage() {
         
         {/* AI Tools Showcase */}
         <AIToolsShowcase2025 />
-=======
->>>>>>> ec300a4bbd4485744cd710414bd7a8fcdc583987
         {/* NEW CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <NewContentShowcase2025PromotionBanner />
         
