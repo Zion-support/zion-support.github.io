@@ -1,129 +1,260 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
+  Star, 
   ArrowRight, 
-  Sparkles, 
   Zap, 
-  TrendingUp, 
-  Award, 
+  Brain, 
+  Rocket, 
+  Globe,
+  X,
+  Play,
+  BookOpen,
   Users,
-  Clock,
-  Star
+  TrendingUp,
+  Lightbulb
 } from 'lucide-react';
 
 const UltimateContentPromotionBanner2025 = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentFeature, setCurrentFeature] = useState(0);
+
+  const features = [
+    {
+      title: "AI Innovation Showcase",
+      description: "Explore cutting-edge AI technologies",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Success Stories",
+      description: "Real results from AI implementation",
+      icon: TrendingUp,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Future Predictions",
+      description: "AI trends for 2025 and beyond",
+      icon: Lightbulb,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Interactive Tools",
+      description: "Hands-on AI demonstrations",
+      icon: Zap,
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  const stats = [
+    { number: "500+", label: "AI Innovations" },
+    { number: "100+", label: "Success Stories" },
+    { number: "50+", label: "Interactive Tools" },
+    { number: "10K+", label: "Happy Users" }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [features.length]);
+
+  if (!isVisible) return null;
+
   return (
-    <section className="relative py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent"></div>
-        <div className="absolute top-10 right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/20 rounded-full blur-2xl"></div>
-      </div>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.5 }}
+        className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white overflow-hidden"
+      >
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-black/10">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white mb-8">
-            <Sparkles className="w-5 h-5 mr-2" />
-            <span className="font-semibold">Limited Time Offer</span>
-          </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6"
+              >
+                <Star className="w-4 h-4 mr-2" />
+                New Content Available
+              </motion.div>
 
-          {/* Main Heading */}
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Unlock the Ultimate
-            <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-              Content Experience
-            </span>
-          </h2>
+              <motion.h2
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-4xl md:text-6xl font-bold mb-6"
+              >
+                Ultimate AI Content
+                <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                  Revolution 2025
+                </span>
+              </motion.h2>
 
-          {/* Subheading */}
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Get exclusive access to our premium content library, advanced AI tools, and personalized learning paths. 
-            <span className="font-semibold"> Save 50% for the first 3 months!</span>
-          </p>
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-xl mb-8 opacity-90 leading-relaxed"
+              >
+                Discover the most comprehensive collection of AI innovations, success stories, and future predictions. 
+                Interactive tools, detailed case studies, and expert insights await you.
+              </motion.p>
 
-          {/* Features */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm text-white mb-4">
-                <Zap className="w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Instant Access</h3>
-              <p className="text-white/80">Get immediate access to 500+ premium resources</p>
+              {/* Rotating Features */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="mb-8"
+              >
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentFeature}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="flex items-center space-x-4"
+                  >
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${features[currentFeature].color} flex items-center justify-center`}>
+                      <features[currentFeature].icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="text-lg font-semibold">{features[currentFeature].title}</div>
+                      <div className="text-sm opacity-80">{features[currentFeature].description}</div>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </motion.div>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="flex flex-col sm:flex-row gap-4"
+              >
+                <Link
+                  href="/ai-innovations"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-colors duration-300 flex items-center justify-center group"
+                >
+                  <Play className="w-5 h-5 mr-2" />
+                  Explore Now
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+                <Link
+                  href="/ai-solutions"
+                  className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300 flex items-center justify-center"
+                >
+                  <BookOpen className="w-5 h-5 mr-2" />
+                  Learn More
+                </Link>
+              </motion.div>
             </div>
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm text-white mb-4">
-                <Award className="w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Expert Content</h3>
-              <p className="text-white/80">Curated by industry experts and thought leaders</p>
-            </div>
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm text-white mb-4">
-                <TrendingUp className="w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Proven Results</h3>
-              <p className="text-white/80">Join 25,000+ successful learners worldwide</p>
-            </div>
-          </div>
 
-          {/* Pricing */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center mb-4">
-              <span className="text-5xl font-bold text-white">$29</span>
-              <span className="text-xl text-white/70 ml-2">/month</span>
-              <span className="ml-4 px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full">
-                -50% OFF
-              </span>
-            </div>
-            <p className="text-white/80 mb-6">Regular price: $58/month</p>
-            <div className="flex items-center justify-center text-white/90">
-              <Clock className="w-4 h-4 mr-2" />
-              <span>Offer expires in 7 days</span>
-            </div>
-          </div>
+            {/* Stats and Visual */}
+            <div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white/10 backdrop-blur-sm rounded-3xl p-8"
+              >
+                <h3 className="text-2xl font-bold mb-6 text-center">Content Statistics</h3>
+                <div className="grid grid-cols-2 gap-6">
+                  {stats.map((stat, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                      className="text-center"
+                    >
+                      <div className="text-3xl font-bold mb-2">{stat.number}</div>
+                      <div className="text-sm opacity-80">{stat.label}</div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Link 
-              href="/subscribe"
-              className="group inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl"
-            >
-              <Zap className="w-6 h-6 mr-3" />
-              Start Your Free Trial
-              <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
-            <Link 
-              href="/pricing"
-              className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white rounded-full font-bold text-lg hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
-            >
-              View All Plans
-            </Link>
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="mt-12 pt-8 border-t border-white/20">
-            <div className="flex flex-wrap justify-center items-center gap-8 text-white/70">
-              <div className="flex items-center">
-                <Star className="w-5 h-5 text-yellow-400 mr-2" />
-                <span>4.9/5 rating</span>
-              </div>
-              <div className="flex items-center">
-                <Users className="w-5 h-5 mr-2" />
-                <span>25,000+ users</span>
-              </div>
-              <div className="flex items-center">
-                <Award className="w-5 h-5 mr-2" />
-                <span>Industry leader</span>
+              {/* Floating Elements */}
+              <div className="relative mt-8">
+                <motion.div
+                  animate={{ 
+                    y: [0, -10, 0],
+                    rotate: [0, 5, 0]
+                  }}
+                  transition={{ 
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl flex items-center justify-center"
+                >
+                  <Rocket className="w-8 h-8 text-white" />
+                </motion.div>
+                
+                <motion.div
+                  animate={{ 
+                    y: [0, 10, 0],
+                    rotate: [0, -5, 0]
+                  }}
+                  transition={{ 
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1
+                  }}
+                  className="absolute top-8 right-0 w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-400 rounded-xl flex items-center justify-center"
+                >
+                  <Globe className="w-6 h-6 text-white" />
+                </motion.div>
+                
+                <motion.div
+                  animate={{ 
+                    y: [0, -15, 0],
+                    rotate: [0, 10, 0]
+                  }}
+                  transition={{ 
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 2
+                  }}
+                  className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg flex items-center justify-center"
+                >
+                  <Brain className="w-5 h-5 text-white" />
+                </motion.div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+
+        {/* Close Button */}
+        <button
+          onClick={() => setIsVisible(false)}
+          className="absolute top-4 right-4 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors duration-300"
+        >
+          <X className="w-5 h-5 text-white" />
+        </button>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
