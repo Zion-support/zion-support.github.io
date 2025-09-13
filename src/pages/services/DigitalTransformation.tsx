@@ -223,7 +223,7 @@ const DigitalTransformation: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how digital transformation can drive your business forward
+              Let&apos;s discuss how digital transformation can drive your business forward
             </p>
             <Link
               to="/contact"

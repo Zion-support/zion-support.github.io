@@ -86,7 +86,7 @@ export default function Terms() {
               Please read these terms carefully before using our services
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              These Terms of Service govern your use of Zion Tech Group's services and website. 
+              These Terms of Service govern your use of Zion Tech Group&apos;s services and website. 
               By using our services, you agree to be bound by these terms.
             </p>
           </motion.div>
@@ -211,7 +211,7 @@ export default function Terms() {
                     <h3 className="text-lg font-bold text-white mb-2">Service Availability</h3>
                     <p className="text-gray-300 text-sm">
                       We strive to provide reliable services but cannot guarantee 100% uptime. 
-                      Services are provided "as-is" without warranties of any kind.
+                      Services are provided &ldquo;as-is&rdquo; without warranties of any kind.
                     </p>
                   </div>
                 </div>
@@ -221,7 +221,7 @@ export default function Terms() {
                   <div>
                     <h3 className="text-lg font-bold text-white mb-2">Limitation of Liability</h3>
                     <p className="text-gray-300 text-sm">
-                      Zion Tech Group's liability is limited to the amount paid for services. 
+                      Zion Tech Group&apos;s liability is limited to the amount paid for services. 
                       We are not liable for indirect, incidental, or consequential damages.
                     </p>
                   </div>
@@ -251,7 +251,7 @@ export default function Terms() {
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             If you have any questions about these terms or need clarification, 
-            please don't hesitate to contact our legal team.
+            please don&apos;t hesitate to contact our legal team.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

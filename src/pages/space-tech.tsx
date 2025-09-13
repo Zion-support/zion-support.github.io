@@ -155,7 +155,7 @@ export default function SpaceTech() {
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
                 Revolutionizing space exploration with cutting-edge AI, quantum computing, and edge technologies. 
-                From Earth observation to deep space missions, we're pushing the boundaries of what's possible.
+                From Earth observation to deep space missions, we&apos;re pushing the boundaries of what&apos;s possible.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
@@ -387,7 +387,7 @@ export default function SpaceTech() {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join us in revolutionizing space technology and advancing human exploration. 
-              Let's build the future of space together.
+              Let&apos;s build the future of space together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
