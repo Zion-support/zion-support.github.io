@@ -3,26 +3,25 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Cpu, 
+  Sparkles, 
   Zap, 
+  Brain, 
+  Rocket, 
   ArrowRight, 
   X,
   Play,
   Star,
   TrendingUp,
   Users,
-  Award,
-  Lightbulb,
-  Target
+  Award
 } from 'lucide-react';
 
-const AIInnovationShowcase2026PromotionBanner = () => {
+const UltimateContentRevolution2026PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 2000);
+    const timer = setTimeout(() => setIsVisible(true), 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -32,13 +31,6 @@ const AIInnovationShowcase2026PromotionBanner = () => {
 
   if (isDismissed) return null;
 
-  const innovations = [
-    { icon: Brain, label: 'Neural Interfaces', color: 'text-purple-400' },
-    { icon: Cpu, label: 'Quantum AI', color: 'text-blue-400' },
-    { icon: Zap, label: 'Emotional AI', color: 'text-pink-400' },
-    { icon: Target, label: 'Predictive 2.0', color: 'text-green-400' }
-  ];
-
   return (
     <AnimatePresence>
       {isVisible && (
@@ -47,7 +39,7 @@ const AIInnovationShowcase2026PromotionBanner = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 border-b border-blue-500/30 shadow-2xl"
+          className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-900 via-pink-900 to-purple-900 border-b border-purple-500/30 shadow-2xl"
         >
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
@@ -55,25 +47,25 @@ const AIInnovationShowcase2026PromotionBanner = () => {
               <div className="flex items-center gap-4">
                 <motion.div
                   animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
                   className="flex-shrink-0"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                    <Brain className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                    <Sparkles className="w-6 h-6 text-white" />
                   </div>
                 </motion.div>
                 
                 <div className="hidden md:block">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="bg-gradient-to-r from-cyan-400 to-blue-400 text-black px-3 py-1 rounded-full text-xs font-bold">
-                      INNOVATION
+                    <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-xs font-bold">
+                      NEW
                     </span>
-                    <span className="text-blue-300 text-sm font-medium">
-                      AI Innovation Showcase 2026
+                    <span className="text-purple-300 text-sm font-medium">
+                      Ultimate Content Revolution 2026
                     </span>
                   </div>
                   <h3 className="text-white font-bold text-lg">
-                    Revolutionary AI Technologies
+                    Experience the Future of Technology
                   </h3>
                 </div>
               </div>
@@ -81,35 +73,16 @@ const AIInnovationShowcase2026PromotionBanner = () => {
               {/* Center Content - Mobile */}
               <div className="md:hidden text-center">
                 <div className="flex items-center justify-center gap-2 mb-1">
-                  <span className="bg-gradient-to-r from-cyan-400 to-blue-400 text-black px-2 py-1 rounded-full text-xs font-bold">
-                    INNOVATION
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-2 py-1 rounded-full text-xs font-bold">
+                    NEW
                   </span>
-                  <span className="text-blue-300 text-xs font-medium">
-                    AI Innovation 2026
+                  <span className="text-purple-300 text-xs font-medium">
+                    Ultimate Content Revolution 2026
                   </span>
                 </div>
                 <h3 className="text-white font-bold text-sm">
-                  Revolutionary AI
+                  Experience the Future
                 </h3>
-              </div>
-
-              {/* Innovation Icons */}
-              <div className="hidden lg:flex items-center gap-3">
-                {innovations.map((innovation, index) => {
-                  const Icon = innovation.icon;
-                  return (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="flex items-center gap-1 text-xs"
-                    >
-                      <Icon className={`w-4 h-4 ${innovation.color}`} />
-                      <span className="text-gray-300">{innovation.label}</span>
-                    </motion.div>
-                  );
-                })}
               </div>
 
               {/* Right Content */}
@@ -118,11 +91,11 @@ const AIInnovationShowcase2026PromotionBanner = () => {
                 <div className="hidden lg:flex items-center gap-4 text-sm">
                   <div className="flex items-center gap-1 text-green-400">
                     <TrendingUp className="w-4 h-4" />
-                    <span>500% ROI</span>
+                    <span>340% ROI</span>
                   </div>
                   <div className="flex items-center gap-1 text-blue-400">
                     <Users className="w-4 h-4" />
-                    <span>25K+ Users</span>
+                    <span>10K+ Users</span>
                   </div>
                   <div className="flex items-center gap-1 text-yellow-400">
                     <Award className="w-4 h-4" />
@@ -135,10 +108,10 @@ const AIInnovationShowcase2026PromotionBanner = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-lg transition-all duration-300"
+                    className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:shadow-lg transition-all duration-300"
                   >
                     <Play className="w-4 h-4" />
-                    <span className="hidden sm:inline">Explore Innovations</span>
+                    <span className="hidden sm:inline">Explore Now</span>
                     <span className="sm:hidden">Explore</span>
                   </motion.button>
                   
@@ -164,37 +137,16 @@ const AIInnovationShowcase2026PromotionBanner = () => {
               </div>
             </div>
 
-            {/* Mobile Innovation Icons */}
-            <div className="lg:hidden mt-3 pt-3 border-t border-blue-500/30">
-              <div className="flex justify-center gap-4">
-                {innovations.map((innovation, index) => {
-                  const Icon = innovation.icon;
-                  return (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="flex items-center gap-1 text-xs"
-                    >
-                      <Icon className={`w-3 h-3 ${innovation.color}`} />
-                      <span className="text-gray-300">{innovation.label}</span>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </div>
-
             {/* Mobile Stats */}
-            <div className="lg:hidden mt-3 pt-3 border-t border-blue-500/30">
+            <div className="lg:hidden mt-3 pt-3 border-t border-purple-500/30">
               <div className="flex justify-center gap-6 text-xs">
                 <div className="flex items-center gap-1 text-green-400">
                   <TrendingUp className="w-3 h-3" />
-                  <span>500% ROI</span>
+                  <span>340% ROI</span>
                 </div>
                 <div className="flex items-center gap-1 text-blue-400">
                   <Users className="w-3 h-3" />
-                  <span>25K+ Users</span>
+                  <span>10K+ Users</span>
                 </div>
                 <div className="flex items-center gap-1 text-yellow-400">
                   <Award className="w-3 h-3" />
@@ -207,7 +159,7 @@ const AIInnovationShowcase2026PromotionBanner = () => {
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <motion.div
-              className="absolute top-2 left-4 w-2 h-2 bg-cyan-400 rounded-full"
+              className="absolute top-2 left-4 w-2 h-2 bg-yellow-400 rounded-full"
               animate={{
                 y: [0, -10, 0],
                 opacity: [0.5, 1, 0.5],
@@ -219,7 +171,7 @@ const AIInnovationShowcase2026PromotionBanner = () => {
               }}
             />
             <motion.div
-              className="absolute top-3 right-8 w-1 h-1 bg-purple-400 rounded-full"
+              className="absolute top-3 right-8 w-1 h-1 bg-pink-400 rounded-full"
               animate={{
                 y: [0, -8, 0],
                 opacity: [0.3, 0.8, 0.3],
@@ -232,7 +184,7 @@ const AIInnovationShowcase2026PromotionBanner = () => {
               }}
             />
             <motion.div
-              className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-blue-400 rounded-full"
+              className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full"
               animate={{
                 y: [0, -6, 0],
                 opacity: [0.4, 0.9, 0.4],
@@ -244,19 +196,6 @@ const AIInnovationShowcase2026PromotionBanner = () => {
                 delay: 1
               }}
             />
-            <motion.div
-              className="absolute top-1/2 right-1/4 w-1 h-1 bg-pink-400 rounded-full"
-              animate={{
-                y: [0, -5, 0],
-                opacity: [0.2, 0.7, 0.2],
-              }}
-              transition={{
-                duration: 1.8,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 0.8
-              }}
-            />
           </div>
         </motion.div>
       )}
@@ -264,4 +203,4 @@ const AIInnovationShowcase2026PromotionBanner = () => {
   );
 };
 
-export default AIInnovationShowcase2026PromotionBanner;
+export default UltimateContentRevolution2026PromotionBanner;
