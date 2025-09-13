@@ -1,108 +1,123 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-const AI2025UltimateBreakthroughPromotionBanner = () => {
+const AI2025UltimateBreakthroughPromotionBanner: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-8 px-4 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-4 -left-4 w-8 h-8 bg-yellow-400 rounded-full animate-ping opacity-75"></div>
-        <div className="absolute top-1/2 left-1/4 w-6 h-6 bg-pink-400 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/4 right-1/4 w-4 h-4 bg-green-400 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-4 right-8 w-10 h-10 bg-blue-400 rounded-full animate-ping opacity-50"></div>
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="relative py-16 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 overflow-hidden"
+    >
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+      <div className="absolute inset-0 opacity-30">
+        <div className="w-full h-full bg-gradient-to-br from-white/5 to-transparent"></div>
       </div>
-
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center">
-          <div className="flex flex-wrap justify-center items-center gap-4 mb-4">
-            <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">
-              🚀 BREAKTHROUGH
-            </span>
-            <span className="bg-yellow-500 text-black px-4 py-2 rounded-full text-sm font-bold">
-              ⚡ ULTIMATE
-            </span>
-            <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">
-              🌟 REVOLUTIONARY
-            </span>
-            <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold">
-              🔥 NEW
-            </span>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold rounded-full mb-6"
+            >
+              🚀 NEW BREAKTHROUGH
+            </motion.div>
+            
+            <motion.h2
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+            >
+              AI 2025 Ultimate Breakthrough
+            </motion.h2>
+            
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-xl text-gray-300 mb-8 leading-relaxed"
+            >
+              Revolutionary neural architectures and quantum-enhanced processing delivering unprecedented performance gains across all industries. Experience 10,000x faster processing with 99.9% accuracy.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <Link
+                to="/ai-2025-ultimate-breakthrough"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              >
+                Discover Breakthrough
+              </Link>
+              <Link
+                to="/contact"
+                className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 border border-white/20"
+              >
+                Get Early Access
+              </Link>
+            </motion.div>
           </div>
           
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-            AI 2025 ULTIMATE BREAKTHROUGH REVOLUTION
-          </h2>
-          
-          <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-4xl mx-auto">
-            Experience the most revolutionary AI breakthroughs that will transform your business reality forever. 
-            Join thousands of enterprises achieving infinite ROI with our cutting-edge AI technologies.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <Link 
-              href="/ai-2025-ultimate-breakthrough-revolution"
-              className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              🚀 Start Your Revolution
-            </Link>
-            <Link 
-              href="/tools/ai-2025-ultimate-roi-calculator"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              🧮 Calculate Infinite ROI
-            </Link>
-          </div>
-
-          {/* Success metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-yellow-400 mb-1">∞</div>
-              <div className="text-sm text-gray-300">Average ROI</div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="relative"
+          >
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Breakthrough Features</h3>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <div className="text-2xl mr-4">🧠</div>
+                  <div>
+                    <div className="text-white font-semibold">Neural Architecture Revolution</div>
+                    <div className="text-gray-300 text-sm">1000x processing power</div>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="text-2xl mr-4">⚡</div>
+                  <div>
+                    <div className="text-white font-semibold">Quantum-Enhanced Processing</div>
+                    <div className="text-gray-300 text-sm">Exponential speed improvements</div>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="text-2xl mr-4">🤖</div>
+                  <div>
+                    <div className="text-white font-semibold">Autonomous Operations</div>
+                    <div className="text-gray-300 text-sm">24/7 independent operation</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <div className="text-2xl font-bold text-blue-400">10,000x</div>
+                  <div className="text-white text-sm">Faster</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-green-400">99.9%</div>
+                  <div className="text-white text-sm">Accuracy</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-purple-400">5,000%</div>
+                  <div className="text-white text-sm">ROI</div>
+                </div>
+              </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-green-400 mb-1">99.9%</div>
-              <div className="text-sm text-gray-300">Success Rate</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-blue-400 mb-1">∞</div>
-              <div className="text-sm text-gray-300">Reality Transformations</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-purple-400 mb-1">∞</div>
-              <div className="text-sm text-gray-300">Universe Expansions</div>
-            </div>
-          </div>
-
-          {/* Featured content links */}
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link 
-              href="/blog/ai-2025-neural-quantum-fusion-breakthrough"
-              className="text-yellow-300 hover:text-yellow-200 text-sm font-semibold underline"
-            >
-              🧠 Neural Quantum Fusion
-            </Link>
-            <Link 
-              href="/blog/ai-2025-quantum-consciousness-breakthrough"
-              className="text-blue-300 hover:text-blue-200 text-sm font-semibold underline"
-            >
-              ⚛️ Quantum Consciousness
-            </Link>
-            <Link 
-              href="/blog/ai-2025-reality-manipulation-breakthrough"
-              className="text-green-300 hover:text-green-200 text-sm font-semibold underline"
-            >
-              🌌 Reality Manipulation
-            </Link>
-            <Link 
-              href="/blog/ai-2025-time-space-breakthrough"
-              className="text-purple-300 hover:text-purple-200 text-sm font-semibold underline"
-            >
-              🚀 Time-Space AI
-            </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

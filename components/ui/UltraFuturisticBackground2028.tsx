@@ -1,8 +1,117 @@
 import React from 'react';
 
-const UltraFuturisticBackground2028: React.FC = () => {
-  // Temporarily simplified to avoid build issues
-  return <div className="sr-only">UltraFuturisticBackground2028 temporarily disabled</div>;
-};
 
 export default UltraFuturisticBackground2028;
+
+
+  componentDidCatch(error, errorInfo) {
+import React, { useEffect, useRef } from 'react';
+
+
+}: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+}: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+
+
+import { motion } from 'framer-motion';
+export default function UltraFuturisticBackground2028({ children }: UltraFuturisticBackground2028Props) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

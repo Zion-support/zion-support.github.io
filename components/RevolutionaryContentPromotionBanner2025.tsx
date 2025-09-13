@@ -1,162 +1,139 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Sparkles, TrendingUp, Star, Users, Clock, Zap, Brain } from 'lucide-react';
 
-const RevolutionaryContentPromotionBanner2025 = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentContent, setCurrentContent] = useState(0);
-
-  const revolutionaryContent = [
-    {
-      title: "AI 2025 Breakthrough Revolution",
-      description: "Discover the most revolutionary AI breakthroughs of 2025",
-      link: "/ai-2025-breakthrough-revolution",
-      badge: "🚀 BREAKTHROUGH",
-      color: "from-red-500 to-pink-500",
-      bgColor: "from-red-50 to-pink-50",
-      borderColor: "border-red-200"
-    },
-    {
-      title: "AI 2026 Revolutionary Showcase",
-      description: "Explore cutting-edge AI technologies of 2026",
-      link: "/ai-2026-revolutionary-showcase",
-      badge: "🌟 REVOLUTIONARY",
-      color: "from-purple-500 to-indigo-500",
-      bgColor: "from-purple-50 to-indigo-50",
-      borderColor: "border-purple-200"
-    },
-    {
-      title: "AI 2027-2030 Future Predictions",
-      description: "Peer into the future of AI with comprehensive predictions",
-      link: "/ai-2027-2030-future-predictions",
-      badge: "🔮 FUTURE",
-      color: "from-indigo-500 to-purple-500",
-      bgColor: "from-indigo-50 to-purple-50",
-      borderColor: "border-indigo-200"
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentContent((prev) => (prev + 1) % revolutionaryContent.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  if (!isVisible) return null;
-
-  const current = revolutionaryContent[currentContent];
-
+const RevolutionaryContentPromotionBanner2025: React.FC = () => {
   return (
-    <div className="relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 animate-pulse"></div>
-      
-      {/* Main Banner */}
-      <div className={`relative bg-gradient-to-r ${current.bgColor} border-t border-b ${current.borderColor} py-6 px-4`}>
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            {/* Left Content */}
-            <div className="flex-1 text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
-                <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold text-white bg-gradient-to-r ${current.color} animate-pulse`}>
-                  {current.badge}
-                </span>
-                <span className="text-sm text-gray-600 font-medium">NEW CONTENT</span>
-              </div>
-              
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                {current.title}
-              </h2>
-              
-              <p className="text-gray-700 text-lg mb-4 max-w-2xl">
-                {current.description}
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                <Link 
-                  href={current.link}
-                  className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${current.color} hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg`}
-                >
-                  Explore Now
-                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-                
-                <Link 
-                  href="/content-showcase"
-                  className="inline-flex items-center px-6 py-3 rounded-lg font-semibold text-gray-700 bg-white border-2 border-gray-300 hover:border-gray-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                >
-                  View All Content
-                </Link>
-              </div>
-            </div>
+    <section className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-20">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-blue-500/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-32 w-24 h-24 bg-purple-500/10 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-32 left-1/3 w-20 h-20 bg-pink-500/10 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-16 h-16 bg-cyan-500/10 rounded-full animate-bounce"></div>
+      </div>
 
-            {/* Right Content - Content Carousel */}
-            <div className="flex-1 max-w-md">
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">
-                  Revolutionary Content Library
-                </h3>
-                
-                <div className="space-y-3">
-                  {revolutionaryContent.map((content, index) => (
-                    <div 
-                      key={index}
-                      className={`p-3 rounded-lg border-2 transition-all duration-300 cursor-pointer ${
-                        index === currentContent 
-                          ? `${current.bgColor} ${current.borderColor} border-2` 
-                          : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
-                      }`}
-                      onClick={() => setCurrentContent(index)}
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className={`w-3 h-3 rounded-full ${
-                          index === currentContent ? 'bg-blue-500' : 'bg-gray-300'
-                        }`}></div>
-                        <div className="flex-1">
-                          <h4 className="font-semibold text-gray-900 text-sm">
-                            {content.title}
-                          </h4>
-                          <p className="text-xs text-gray-600">
-                            {content.description}
-                          </p>
-                        </div>
-                        <div className={`text-xs px-2 py-1 rounded-full text-white bg-gradient-to-r ${content.color}`}>
-                          {content.badge.split(' ')[0]}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="mt-4 text-center">
-                  <Link 
-                    href="/content-showcase"
-                    className="text-sm text-blue-600 hover:text-blue-800 font-semibold"
-                  >
-                    Explore All Revolutionary Content →
-                  </Link>
-                </div>
-              </div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-400/30 mb-8">
+            <Sparkles className="w-6 h-6 text-yellow-400 mr-3" />
+            <span className="text-yellow-400 font-bold text-lg">REVOLUTIONARY CONTENT 2025</span>
+          </div>
+          
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            The Ultimate Content
+            <span className="block bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+              Revolution
+            </span>
+          </h2>
+          
+          <p className="text-2xl md:text-3xl text-gray-200 mb-12 max-w-5xl mx-auto leading-relaxed">
+            Discover the most comprehensive collection of AI breakthroughs, quantum computing innovations, 
+            and revolutionary technology content that will transform your business and accelerate your success.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <Link 
+              to="/ai-2025-2030-ultimate-content-revolution" 
+              className="group bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black px-10 py-5 rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-2xl"
+            >
+              Explore Revolutionary Content
+              <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" />
+            </Link>
+            <Link 
+              to="/ai-2025-2030-predictions" 
+              className="group bg-transparent border-3 border-white/40 hover:border-white/70 text-white px-10 py-5 rounded-2xl font-bold text-xl transition-all duration-300 hover:bg-white/10 flex items-center justify-center backdrop-blur-sm"
+            >
+              View Future Predictions
+              <TrendingUp className="w-6 h-6 ml-3 group-hover:translate-y-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Feature highlights with enhanced design */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="text-center group">
+            <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+              <Brain className="w-10 h-10 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">Neural Synthesis</h3>
+            <p className="text-gray-300 text-lg">Advanced AI neural networks with 99.9% accuracy and 10,000x processing speed</p>
+          </div>
+
+          <div className="text-center group">
+            <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+              <Zap className="w-10 h-10 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">Quantum Computing</h3>
+            <p className="text-gray-300 text-lg">Error-corrected quantum systems for exponential speed and unbreakable security</p>
+          </div>
+
+          <div className="text-center group">
+            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+              <TrendingUp className="w-10 h-10 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">Autonomous Systems</h3>
+            <p className="text-gray-300 text-lg">Self-managing AI agents delivering 2,500% ROI and 95% efficiency gains</p>
+          </div>
+
+          <div className="text-center group">
+            <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+              <Sparkles className="w-10 h-10 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">Revolutionary Tech</h3>
+            <p className="text-gray-300 text-lg">Breakthrough innovations transforming industries and reshaping the future</p>
+          </div>
+        </div>
+
+        {/* Enhanced stats section */}
+        <div className="bg-white/15 backdrop-blur-lg rounded-3xl p-12 border border-white/30 shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div className="group">
+              <div className="text-6xl font-bold text-white mb-4 group-hover:scale-110 transition-transform duration-300">2,500%</div>
+              <div className="text-gray-300 text-xl font-semibold">Average ROI</div>
+              <div className="text-gray-400 text-sm mt-2">Proven results across industries</div>
+            </div>
+            <div className="group">
+              <div className="text-6xl font-bold text-white mb-4 group-hover:scale-110 transition-transform duration-300">99.9%</div>
+              <div className="text-gray-300 text-xl font-semibold">Accuracy Rate</div>
+              <div className="text-gray-400 text-sm mt-2">Industry-leading precision</div>
+            </div>
+            <div className="group">
+              <div className="text-6xl font-bold text-white mb-4 group-hover:scale-110 transition-transform duration-300">10,000x</div>
+              <div className="text-gray-300 text-xl font-semibold">Faster Processing</div>
+              <div className="text-gray-400 text-sm mt-2">Revolutionary speed improvements</div>
+            </div>
+            <div className="group">
+              <div className="text-6xl font-bold text-white mb-4 group-hover:scale-110 transition-transform duration-300">50,000+</div>
+              <div className="text-gray-300 text-xl font-semibold">Active Users</div>
+              <div className="text-gray-400 text-sm mt-2">Trusted by leading companies</div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Progress Indicator */}
-      <div className="flex justify-center space-x-2 py-2 bg-gray-100">
-        {revolutionaryContent.map((_, index) => (
-          <div
-            key={index}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentContent ? 'bg-blue-500 w-8' : 'bg-gray-300'
-            }`}
-          />
-        ))}
+        {/* Call to action */}
+        <div className="text-center mt-16">
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already transforming with our revolutionary content
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+            >
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              to="/case-studies"
+              className="border-2 border-white/40 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-colors"
+            >
+              View Success Stories
+            </Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

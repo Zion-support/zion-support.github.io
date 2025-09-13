@@ -5,28 +5,64 @@ import SEOHead from '../components/SEOHead';
 
 const OfflinePage: React.FC = () => {
   const handleRetry = () => {
-    window.location.reload();
-  };
 
-  const handleGoHome = () => {
-    window.location.href = '/';
-  };
 
-          {/* Main Content */}
-          <div className="space-y-4">
-            <h1 className="text-3xl font-bold text-white">
-              You're Offline
-            </h1>
-            <p className="text-gray-300 leading-relaxed">
-              It looks like you've lost your internet connection. Don't worry - some of our content is available offline.
+
+export default function OfflinePage() {;
+
+import {logErrorToProduction} from '@/utils / production_logger';
+export default /**
+
+
+
+
+
+
+import { motion } from 'framer-motion';
+import { WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export default function OfflinePage(req, res) {
+
+
+      </Head>;
+
+
+import { motion } from 'framer-motion';
+import { WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export default function OfflinePage(req, res) {
+      <Head>
+      </Head>
+              <Badge
+
+
+
+
             </p>
           </div>
 
           {/* Action Buttons */}
-          <div className="space-y-4">
-            <button
-              onClick={handleRefresh}
-              className="w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 flex items-center justify-center space-x-2"
+            <Button
+
+                <Clock className="w-4 h-4" />
+            <Button
+
             >
               <RefreshCw className="w-5 h-5" />
               <span>Try Again</span>
@@ -42,46 +78,100 @@ const OfflinePage: React.FC = () => {
               </Link>
 
               <Link
-                href="/contact"
-                className="px-4 py-3 border-2 border-gray-600 text-gray-300 font-medium rounded-xl hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 flex items-center justify-center space-x-2"
-              >
                 <Phone className="w-4 h-4" />
-                <span>Contact</span>
               </Link>
-            </div>
-          </div>
 
-          {/* Contact Information */}
-          <div className="pt-6 border-t border-gray-700">
-            <p className="text-sm text-gray-400 mb-3">
-              Need immediate assistance?
-            </p>
-            <div className="space-y-2 text-sm">
-              <div className="text-cyan-400">
-                <strong>Phone:</strong> +1 302 464 0950
-              </div>
-              <div className="text-blue-400">
-                <strong>Email:</strong> kleber@ziontechgroup.com
-              </div>
-            </div>
-          </div>
 
-          {/* Offline Features Info */}
-          <div className="bg-gray-800/50 rounded-xl p-4 border border-gray-700/50">
-            <h3 className="text-sm font-semibold text-white mb-2">
-              Available Offline
-            </h3>
-            <ul className="text-xs text-gray-400 space-y-1 text-left">
-              <li>• Basic service information</li>
-              <li>• Contact details</li>
-              <li>• Company overview</li>
-              <li>• Cached pages</li>
-            </ul>
-          </div>
-        </motion.div>
-      </div>
-    </div>
+                  <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
+                    <CardHeader className="text-center">
+                      <CardTitle className="text-lg">{action.title}</CardTitle>
+                      <CardTitle className="text-lg">{action.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-center">
+                        <Button asChild variant="outline" size="sm" className="w-full">
+                          <Link href={action.href}>
+                          </Link>
+                        </Button>
+                        <Button disabled size="sm" className="w-full">
+                        </Button>
+
+                    </CardContent>;
+                  </Card>;
+
+
+
+                  <Card;
+                    <CardHeader className='text - center'>;
+                      <CardTitle className='text - lg'>{action.title}</CardTitle>;
+                      <CardTitle className='text - lg'>{action.title}</CardTitle>;
+                    </CardHeader>;
+                    <CardContent className='text - center'>;
+                        <Button;
+                          <Link href={action.href}>Access</Link>;
+                          <Link href={action.href}>Access</Link>;
+                        </Button>) : (
+                        <Button disabled size='sm' className='w - full'>;
+                        </Button>)}
+                    </CardContent>;
+                  </Card>;
+
+
+
+            <Card className='max-w-2xl mx-auto'>
+              <CardHeader>
+                <CardTitle className='text-center'>💡 Offline Tips</CardTitle>
+                <CardTitle className='text-center'>💡 Offline Tips</CardTitle>
+              </CardHeader>
+              <CardContent>
+              </CardContent>
+            </Card>
+
+            <Card className='max-w-2xl mx-auto'>;
+              <CardHeader>;
+                <CardTitle className='text-center'>💡 Offline Tips</CardTitle>;
+                <CardTitle className='text-center'>💡 Offline Tips</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+            <Card className='max - w-2xl mx - auto'>;
+              <CardHeader>;
+                <CardTitle className='text - center'>💡 Offline Tips</CardTitle>;
+                <CardTitle className='text - center'>💡 Offline Tips</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+
+
+
+
+
+
+
+              </CardContent>;
+            </Card>;
+
+              <Card className='bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green - 800'>;
+                <CardContent className='p - 4'>;
+                    <Button;
+
+                    </Button>;
+                </CardContent>;
+              </Card>;
+
+
+
+
+              <Card className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800">
+                <CardContent className="p-4">
+                    <Button
+                    </Button>
+                </CardContent>
+              </Card>
+
+
+
   );
 };
 
 export default OfflinePage;
+
+
+
