@@ -47,3 +47,4 @@ echo "Building project..."
 pnpm run build
 
 echo "Build completed successfully!"
+fi
