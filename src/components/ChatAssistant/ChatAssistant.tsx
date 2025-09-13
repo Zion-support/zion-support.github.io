@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import { ChatMessage } from './ChatMessage';
 import { ChatInput } from './ChatInput';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 
@@ -79,12 +79,9 @@ export function ChatAssistant({
         {/* Header */}
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
           <div className="flex items-center space-x-3">
-            <Avatar className="h-10 w-10 border border-zion-purple/20">
-              <AvatarImage src={recipient.avatarUrl} alt={recipient.name} />
-              <AvatarFallback className="bg-zion-purple/20 text-white">
-                {recipient.name.charAt(0).toUpperCase()}
-              </AvatarFallback>
-            </Avatar>
+            <div className="h-10 w-10 border border-zion-purple/20 rounded-full bg-zion-purple/20 flex items-center justify-center text-white">
+              {recipient.name.charAt(0).toUpperCase()}
+            </div>
             <div>
               <div className="font-medium text-white">{recipient.name}</div>
               {recipient.role && (
@@ -120,7 +117,7 @@ export function ChatAssistant({
               <ChatMessage
                 key={msg.id} 
                 role={msg.role}
-                message={msg.message}
+                message={msg}
               />
             ))
           )}
