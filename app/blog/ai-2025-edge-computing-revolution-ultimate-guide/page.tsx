@@ -5,7 +5,9 @@ import SEO from '../../../components/SEO';
 import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
-  },
+  title: 'AI 2025: Edge Computing Revolution Ultimate Guide',
+  description: 'Discover how edge computing is revolutionizing AI in 2025. Complete guide to implementation, benefits, and enterprise transformation.',
+  keywords: 'edge computing, AI, 2025, enterprise, transformation, guide'
 };
 
 export default function EdgeComputingGuidePage() {
