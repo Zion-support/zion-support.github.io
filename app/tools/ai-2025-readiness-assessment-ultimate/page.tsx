@@ -1,11 +1,18 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, XCircle, AlertCircle, TrendingUp, Zap, ArrowRight } from 'lucide-react';
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../../components/ui/card';
+import { Button } from '../../../components/ui/button';
+import { Badge } from '../../../components/ui/badge';
+import { CheckCircle, XCircle, AlertCircle, TrendingUp, Target, Zap } from 'lucide-react';
+>>>>>>> b57990bbef189939aa68e799cdd591a161de203f
 
 interface AssessmentQuestion {
   id: string;
@@ -357,7 +364,12 @@ export default function AI2025ReadinessAssessment() {
                 <div className={`text-6xl font-bold mb-4 ${getScoreColor(result.overallScore)}`}>
                   {result.overallScore}%
                 </div>
-                <Progress value={result.overallScore} className="h-4 mb-4" />
+                <div className="w-full bg-gray-200 rounded-full h-4 mb-4">
+                  <div 
+                    className="bg-gradient-to-r from-blue-500 to-purple-600 h-4 rounded-full transition-all duration-500" 
+                    style={{width: `${result.overallScore}%`}}
+                  ></div>
+                </div>
                 <p className="text-gray-600">
                   {result.overallScore >= 80 
                     ? "Excellent! You're well-prepared for AI transformation."
@@ -388,7 +400,12 @@ export default function AI2025ReadinessAssessment() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Progress value={score} className="h-3" />
+                  <div className="w-full bg-gray-200 rounded-full h-3">
+                    <div 
+                      className="bg-gradient-to-r from-green-400 to-blue-500 h-3 rounded-full transition-all duration-300" 
+                      style={{width: `${score}%`}}
+                    ></div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
