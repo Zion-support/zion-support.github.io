@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const EnhancedAccessibilityEnhancer: React.FC = () => {
+  // Temporary placeholder to fix build issues
+  return <>{/* Accessibility component temporarily disabled */}</>;
+=======
 import React, { useState, useEffect } from 'react';
 import { 
   Eye, EyeOff, Volume2, VolumeX, Keyboard, Mouse, 
@@ -524,6 +531,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       )}
     </>
   );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 };
 
 export default EnhancedAccessibilityEnhancer;

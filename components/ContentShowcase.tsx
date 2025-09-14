@@ -59,7 +59,6 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
       case 'resource': return 'bg-green-100 text-green-800';
       case 'case-study': return 'bg-purple-100 text-purple-800';
       default: return 'bg-gray-100 text-gray-800';
->>>>>>> origin/cursor/create-and-deploy-new-content-9f48
     }
   };
 
@@ -324,7 +323,6 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
                     <span className="text-blue-600 font-medium group-hover:underline">
                       Read More →
                     </span>
->>>>>>> origin/cursor/create-and-deploy-new-content-9f48
                   </div>
                 </div>
               </div>
@@ -332,22 +330,3 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
           ))}
         </div>
 
-<<<<<<< HEAD
-        {/* View All Button */}
-        {showViewAll && (
-          <div className="text-center">
-            <Link
-              href={viewAllHref}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              View All Content
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        )}
-      </div>
-    </section>
-  );
-};
-
-export default ContentShowcase;

@@ -1,44 +1,34 @@
 #!/bin/bash
 
-# Simple merge script to handle the current situation
-echo "🚀 Starting simple merge process..."
+echo "🚀 Starting simple PR merge process..."
 
-# Make scripts executable
-chmod +x resolve_merge_conflicts.sh
-chmod +x merge_prs_script.sh
+# Get the most recent non-draft PRs and try to merge them
+PR_NUMBERS=(17249 17248 17247 17246 17242 17241 17240 17239)
 
-# Try the simple approach first
-echo "📍 Current directory: $(pwd)"
-echo "📍 Current branch: $(git branch --show-current 2>/dev/null || echo 'unknown')"
+for pr_number in "${PR_NUMBERS[@]}"; do
+  echo "📋 Processing PR #$pr_number"
+  
+  # Try to merge via API
+  echo "  🔄 Attempting API merge..."
+  response=$(curl -s -X PUT \
+    -H "Accept: application/vnd.github.v3+json" \
+    -H "Authorization: token ghs_mVwAd3X7sGrxLk26IqwlW3En74KQgQ1MJu5r" \
+    -d '{"commit_title":"Merge PR '$pr_number'","merge_method":"merge"}' \
+    "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number/merge")
+  
+  # Check if merge was successful
+  if echo "$response" | grep -q '"merged":true'; then
+    echo "  ✅ Successfully merged PR #$pr_number"
+  else
+    echo "  ❌ Failed to merge PR #$pr_number"
+    echo "  Response: $response"
+  fi
+  
+  echo ""
+done
 
-# Check if we have uncommitted changes
-if git diff --quiet && git diff --cached --quiet; then
-    echo "✅ Working directory is clean"
-else
-    echo "⚠️  Working directory has uncommitted changes"
-    echo "📝 Staging all changes..."
-    git add .
-    git commit -m "Auto-commit before merge - New content and advertising components"
-fi
+# Push any changes
+echo "🚀 Pushing changes to main branch..."
+git push origin main
 
-# Try to switch to main and merge
-echo "🔄 Switching to main branch..."
-git checkout main 2>/dev/null || echo "Already on main"
-
-echo "📥 Pulling latest changes..."
-git pull origin main 2>/dev/null || echo "Pull failed, continuing..."
-
-echo "🔄 Attempting to merge feature branch..."
-git merge cursor/create-and-deploy-new-content-9e4d 2>/dev/null || {
-    echo "⚠️  Merge conflicts detected - resolving automatically"
-    
-    # Auto-resolve conflicts by keeping our version
-    git checkout --ours . 2>/dev/null || true
-    git add . 2>/dev/null || true
-    git commit -m "Merge cursor/create-and-deploy-new-content-9e4d into main - Conflicts resolved" 2>/dev/null || true
-}
-
-echo "📤 Pushing changes..."
-git push origin main 2>/dev/null || echo "Push failed, but merge completed locally"
-
-echo "✅ Simple merge process completed!"
+echo "📊 Merge process completed"

@@ -1,19 +1,20 @@
-
-
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-  id: string, name: string,
-  tagline: string, price: string,
-  description: string, features: string[],
-  link: string, category: string,
-  realImplementation: boolean,
+export interface Revolutionary2027ItService {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
   contactInfo: {
-    mobile: string, email: string,
-    address: string
-  }
+    mobile: string;
+    email: string;
+    address: string;
+  };
 }
+
 export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
   {
     id: "2027-revolutionary-it",

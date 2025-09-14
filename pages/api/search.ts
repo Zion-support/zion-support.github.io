@@ -23,10 +23,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         all: results.all.length,
         talent: results.talent.length,
         jobs: results.jobs.length,
-        projects: results.projects.length,
-      },
-      results,
-    });
+        projects: results.projects.length},
+      results});
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message || 'Search failed' });
   }

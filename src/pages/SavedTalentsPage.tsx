@@ -73,8 +73,7 @@ export default function SavedTalentsPage() {
         toast({
           title: "Error",
           description: "Failed to load saved talents. Please try again later.",
-          variant: "destructive",
-        });
+          variant: "destructive"});
       } finally {
         setIsLoading(false);
       }
@@ -91,8 +90,7 @@ export default function SavedTalentsPage() {
     logInfo('Request to hire:', { data: talent });
     toast({
       title: "Hire Request Sent",
-      description: `A hire request has been sent to ${talent.full_name}.`,
-    });
+      description: `A hire request has been sent to ${talent.full_name}.`});
   };
 
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
@@ -119,8 +117,7 @@ export default function SavedTalentsPage() {
         );
         toast({
           title: "Talent Removed",
-          description: "Talent removed from saved list.",
-        });
+          description: "Talent removed from saved list."});
       } else {
         // Add to saved talents
         const { error } = await supabase
@@ -143,8 +140,7 @@ export default function SavedTalentsPage() {
           toast({
             title: "Error",
             description: "Failed to update saved talents. Please try again later.",
-            variant: "destructive",
-          });
+            variant: "destructive"});
           return;
         }
   
@@ -152,8 +148,7 @@ export default function SavedTalentsPage() {
           setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]);
           toast({
             title: "Talent Saved",
-            description: "Talent saved to your list.",
-          });
+            description: "Talent saved to your list."});
         }
       }
     } catch (error) {
@@ -161,8 +156,7 @@ export default function SavedTalentsPage() {
       toast({
         title: "Error",
         description: "Failed to update saved talents. Please try again later.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     }
   };
 

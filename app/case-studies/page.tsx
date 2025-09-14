@@ -6,6 +6,9 @@ export default function CaseStudies() {
   const caseStudies = [
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
       id: 1,
       title: "AI 2025 Global Enterprise Transformation",
       company: "Fortune 100 Global Manufacturing",
@@ -23,20 +26,14 @@ export default function CaseStudies() {
       image: "/api/placeholder/600/400"
     },
     {
-      id: 2,
-      title: "AI-Powered E-commerce Optimization",
-      company: "TechRetail Corp",
-      industry: "E-commerce",
-      challenge: "Manual inventory management and customer service inefficiencies",
-      solution: "Implemented AI autonomous operations with predictive analytics",
-=======
+>>>>>>> cursor/create-and-deploy-new-content-e336
+>>>>>>> cursor/create-and-deploy-new-content-6178
       id: 'manufacturing-giant',
       title: 'Global Manufacturing Transformation',
       company: 'Fortune 500 Manufacturing Company',
       industry: 'Manufacturing',
       challenge: 'Manual quality control processes were causing 15% defect rates and $2M+ annual losses',
       solution: 'Implemented AI-powered autonomous quality control systems with computer vision and predictive maintenance',
->>>>>>> origin/cursor/create-and-deploy-new-content-ccac
       results: {
         defectReduction: '99.8%',
         costSavings: '$5.2M',

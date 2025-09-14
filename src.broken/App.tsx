@@ -57,8 +57,7 @@ const baseRoutes = [
   { path: '/mobile-launch', element: <MobileLaunchPage /> },
   { path: '/open-app', element: <OpenAppRedirect /> },
   { path: '/community', element: <CommunityPage /> },
-  { path: '/contact', element: <ContactPage /> },
-];
+  { path: '/contact', element: <ContactPage /> }];
 
 const App = () => {
   return (

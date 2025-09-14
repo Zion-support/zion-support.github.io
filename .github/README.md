@@ -1,168 +1,130 @@
-# GitHub Actions Workflows
+# GitHub Actions Workflows - DEPRECATED
 
-This directory contains all GitHub Actions workflows for the Zion Tech Group application.
+⚠️ **IMPORTANT: This directory is deprecated. All automation has been migrated to PM2.**
 
-## Workflow Overview
+## Migration Status
 
-### 🚀 **Deploy** (`deploy.yml`)
-**Main deployment workflow** - Handles building, testing, and deploying the application.
+All GitHub Actions workflows have been replaced with PM2-based automation processes that run continuously on the server. This provides better performance, reliability, and real-time monitoring compared to GitHub Actions.
 
-- **Triggers**: Push to main/develop, PRs, manual dispatch
-- **Jobs**: 
-  - `build-and-test`: Builds app, runs tests, security scans
-  - `deploy-preview`: Deploys PR previews
-  - `deploy-production`: Deploys to production (main branch only)
-- **Node.js**: 18.x
-- **Artifacts**: Build outputs, test results
+## What Was Replaced
 
-### 🔄 **CI** (`ci.yml`)
-**Continuous Integration** - Runs on every push and PR.
+The following GitHub Actions workflows have been replaced by PM2 processes:
 
-- **Triggers**: Push to main/develop/cursor branches, PRs
-- **Jobs**:
-  - `build`: Lint, type-check, build
-  - `test`: Run test suite
-- **Node.js**: 18.x
-- **Features**: Error handling, non-blocking failures
+### 🔄 CI (Continuous Integration) → PM2: `daily-build-test`
 
-### 🧪 **Test** (`test.yml`)
-**Dedicated testing workflow** - Comprehensive testing with coverage.
+- **PM2 Process**: Runs every hour
+- **Purpose**: Build verification, linting, and type checking
+- **Status**: ✅ Migrated to PM2
 
-- **Triggers**: Push to main/develop/cursor branches, PRs
-- **Jobs**:
-  - `test`: Build, verify, test, upload artifacts
-- **Node.js**: 18.x
-- **Features**: Build verification, test results upload
+### 🧪 Test → PM2: `daily-build-test`
 
-### 🔍 **CodeQL** (`codeql.yml`)
-**Security analysis** - Automated security scanning.
+- **PM2 Process**: Runs every hour
+- **Purpose**: Comprehensive testing and build verification
+- **Status**: ✅ Migrated to PM2
 
-- **Triggers**: Push/PR to main/develop/cursor branches, weekly schedule
-- **Jobs**:
-  - `analyze`: JavaScript/TypeScript security analysis
-- **Features**: Language-specific security scanning
+### 🔒 CodeQL Security Analysis → PM2: `security-audit`
 
-### 🤖 **Agent Factory** (`agent-factory.yml`)
-**Link crawler automation** - Monitors and reports broken links.
+- **PM2 Process**: Runs every 4 hours
+- **Purpose**: Security vulnerability scanning and dependency analysis
+- **Status**: ✅ Migrated to PM2
 
-- **Triggers**: Every 30 minutes, manual dispatch
-- **Jobs**:
-  - `generate-matrix`: Creates parallel processing matrix
-  - `agent`: Parallel link crawling
-  - `aggregate`: Merges results, creates issues
-- **Features**: Parallel processing, broken link reporting
+### 📦 NPM Package Check → PM2: `dependency-updates`
 
-### 📈 **Continuous Improvement** (`continuous-improvement.yml`)
-**Automated improvements** - Runs automation scripts and creates PRs.
+- **PM2 Process**: Runs every 6 hours
+- **Purpose**: Package verification and dependency updates
+- **Status**: ✅ Migrated to PM2
 
-- **Triggers**: Every 4 hours, manual dispatch
-- **Jobs**:
-  - `improve`: Runs automation, creates auto-merge PRs
-- **Features**: Auto-PR creation, auto-merge
+### 🚀 Deploy to Production → PM2: `zion-app` & `zion-backend`
 
-### 📊 **Health Check** (`health-check.yml`)
-**Workflow monitoring** - Monitors health of all other workflows.
+- **PM2 Process**: Continuous deployment with auto-restart
+- **Purpose**: Production deployment with build verification
+- **Status**: ✅ Migrated to PM2
 
-- **Triggers**: Every 6 hours, manual dispatch
-- **Jobs**:
-  - `health-check`: Analyzes workflow success rates
-- **Features**: Health reporting, issue creation for failures
+### 🔍 Dependency Review → PM2: `dependency-updates`
 
-### 📦 **NPM Publish** (`npm-publish.yml`)
-**Package publishing** - Publishes npm packages on main branch.
+- **PM2 Process**: Runs every 6 hours
+- **Purpose**: Security vulnerability checking in dependencies
+- **Status**: ✅ Migrated to PM2
 
-- **Triggers**: Push to main (excluding markdown files)
-- **Jobs**:
-  - `publish`: Test, build, publish to npm
-- **Node.js**: 18.x
+### ✅ Quality Check → PM2: `quality-checks`
+
+- **PM2 Process**: Runs every 3 hours
+- **Purpose**: Code quality, linting, and security audits
+- **Status**: ✅ Migrated to PM2
+
+### 🔄 Continuous Improvement → PM2: `continuous-improvement`
+
+- **PM2 Process**: Runs every 2 hours
+- **Purpose**: Automated improvement suggestions and optimization
+- **Status**: ✅ Migrated to PM2
+
+### 🕷️ Link Crawler Factory → PM2: `link-checker` & `link-integrity`
+
+- **PM2 Process**: Runs every 30 minutes and 2 hours respectively
+- **Purpose**: Automated link checking and broken link detection
+- **Status**: ✅ Migrated to PM2
+
+## PM2 Automation Benefits
+
+### 🚀 Performance Improvements
+
+- **Real-time execution**: No waiting for GitHub Actions queue
+- **Faster feedback**: Immediate error detection and fixing
+- **Resource optimization**: Better memory and CPU utilization
+
+### 🔧 Enhanced Monitoring
+
+- **Live process monitoring**: Real-time status and metrics
+- **Automatic restart**: Self-healing on failures
+- **Memory management**: Automatic restart on memory issues
+
+### 📊 Continuous Operations
+
+- **24/7 automation**: No dependency on external services
+- **Scheduled execution**: Configurable intervals for each task
+- **Parallel processing**: Multiple automation tasks run simultaneously
+
+## Current PM2 Status
+
+All automation processes are running continuously:
+
+```bash
+# Check PM2 status
+pm2 status
+
+# View logs for specific process
+pm2 logs [process-name]
+
+# Restart all processes
+pm2 restart all
+```
 
 ## Configuration
 
-### Node.js Version
-All workflows use **Node.js 18.x** for compatibility with Next.js and dependencies.
+PM2 configuration is in `ecosystem.config.cjs` at the project root, which includes:
 
-### Permissions
-- `contents: read` - Repository access
-- `actions: read` - Workflow status access
-- `security-events: write` - CodeQL results
-- `pull-requests: write` - PR creation (continuous improvement)
-- `issues: write` - Issue creation (health check, agent factory)
+- **Main Application**: `zion-app` and `zion-backend`
+- **Automation Processes**: 12 continuous automation tasks
+- **Resource Management**: Memory limits and auto-restart policies
+- **Environment Variables**: Production-optimized settings
 
-### Concurrency
-- Most workflows use concurrency groups to prevent parallel runs
-- Agent factory allows parallel processing for scalability
+## Why This Migration?
 
-## Troubleshooting
-
-### Common Issues
-
-1. **Build Failures**
-   - Check Node.js version compatibility
-   - Verify all dependencies are installed
-   - Check for TypeScript errors
-
-2. **Test Failures**
-   - Ensure Jest configuration is correct
-   - Check for missing test dependencies
-   - Verify test environment variables
-
-3. **Permission Errors**
-   - Verify workflow permissions in repository settings
-   - Check if secrets are properly configured
-   - Ensure workflow has access to required resources
-
-4. **Node.js Compatibility**
-   - All workflows use Node 18.x
-   - Update local development to match
-   - Check package.json engines field
-
-### Debugging Steps
-
-1. **Check Workflow Logs**
-   - Go to Actions tab in GitHub
-   - Click on failed workflow run
-   - Review step-by-step logs
-
-2. **Verify Dependencies**
-   - Check package.json for missing scripts
-   - Ensure all required packages are installed
-   - Verify Node.js version compatibility
-
-3. **Test Locally**
-   - Run `npm run build` locally
-   - Run `npm test` locally
-   - Check for environment-specific issues
-
-4. **Review Configuration**
-   - Verify workflow YAML syntax
-   - Check trigger conditions
-   - Review job dependencies
-
-## Maintenance
-
-### Regular Tasks
-- Monitor workflow success rates
-- Update Node.js versions when needed
-- Review and update dependencies
-- Check for security vulnerabilities
-
-### Updates
-- Keep actions up to date (check for updates monthly)
-- Review workflow performance metrics
-- Optimize build and test times
-- Add new workflows as needed
+1. **Cost Efficiency**: No GitHub Actions minutes consumption
+2. **Performance**: Faster execution and real-time monitoring
+3. **Reliability**: No external service dependencies
+4. **Control**: Full control over execution environment
+5. **Scalability**: Easy to add new automation tasks
 
 ## Support
 
-For workflow issues:
-1. Check the health check workflow for alerts
-2. Review recent workflow runs
-3. Check GitHub Actions documentation
-4. Create an issue with workflow logs
+For automation issues, check:
 
-## Security
+1. PM2 process status: `pm2 status`
+2. Process logs: `pm2 logs [process-name]`
+3. Ecosystem configuration: `ecosystem.config.cjs`
+4. Individual automation scripts in `scripts/automation/`
 
-- All workflows use minimal required permissions
-- Secrets are stored in GitHub repository secrets
-- CodeQL provides automated security scanning
-- Regular security audits are performed
+---
+
+**Note**: This directory is kept for reference only. All active automation is now handled by PM2 processes running on the server.
