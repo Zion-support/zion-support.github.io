@@ -1,12 +1,12 @@
 ---
-<<<<<<< HEAD
-title: "AI 2025 Enterprise Transformation: Complete Implementation Guide"
-description: "Discover the comprehensive roadmap for enterprise AI transformation in 2025. Learn implementation strategies, best practices, and real-world case studies."
+title: "AI 2025 Enterprise Transformation: Complete Guide to Digital Revolution"
+description: "Discover how AI is revolutionizing enterprise operations in 2025. Complete guide to implementation, ROI, and success strategies."
 date: "2025-01-15"
 author: "Zion Tech Group"
-tags: ["AI", "Enterprise", "Transformation", "2025", "Implementation"]
-category: "AI Solutions"
+category: "AI & Automation"
+tags: ["AI", "Enterprise", "Digital Transformation", "Automation", "ROI"]
 featured: true
+image: "/images/ai-enterprise-transformation-2025.jpg"
 ---
 
 # AI 2025 Enterprise Transformation: Complete Implementation Guide

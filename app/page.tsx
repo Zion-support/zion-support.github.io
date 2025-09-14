@@ -47,18 +47,15 @@ import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase20
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
-<<<<<<< HEAD
 import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
 
 // Import new AI 2026 promotional components
 import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
 import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
 import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
-=======
 import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
 import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
->>>>>>> cursor/create-and-deploy-new-content-4254
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -77,17 +74,14 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
         {/* AI 2026 Ultimate Showcase Banner */}
         <AI2026UltimateShowcaseBanner />
-=======
+        
         {/* Quantum AI 2026 Breakthrough Banner */}
         <QuantumAI2026BreakthroughBanner />
         
-<<<<<<< HEAD
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
->>>>>>> cursor/create-and-deploy-new-content-4254
         
         {/* AI 2026 Quantum Revolution Banner */}
         <AI2026QuantumRevolutionBanner />
@@ -107,13 +101,11 @@ export default function HomePage() {
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
         
-<<<<<<< HEAD
         {/* Revolutionary AI Content Banner */}
         <RevolutionaryAIContentBanner />
-=======
+        
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
->>>>>>> cursor/create-and-deploy-new-content-a121
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
