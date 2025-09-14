@@ -24,7 +24,7 @@ const syncLogs = [
     id: "2",
     integration: "Greenhouse",
     event: "applicant_created",
-    status: "success", 
+    status: "success"
     timestamp: "2024-05-20T10:15:22Z",
     details: "New applicant created in Greenhouse from Zion application"
   },
@@ -86,7 +86,7 @@ export function IntegrationsSyncLog() {
               <TableRow key={log.id}>
                 <TableCell className="font-medium">{log.integration}</TableCell>
                 <TableCell>
-                  {log.event.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                  {log.event.replace(/_/g' ').replace(/\b\w/gl => l.toUpperCase())}
                 </TableCell>
                 <TableCell>{getStatusBadge(log.status)}</TableCell>
                 <TableCell>{new Date(log.timestamp).toLocaleString()}</TableCell>

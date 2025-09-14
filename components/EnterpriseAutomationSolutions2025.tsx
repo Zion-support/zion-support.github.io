@@ -1,16 +1,16 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Building2, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  Shield, 
-  TrendingUp, 
+  Building2
+  Zap
+  BarChart3
+  Users
+  Clock
+  Shield
+  TrendingUp
   CheckCircle,
   ArrowRight,
   Play,
@@ -68,17 +68,17 @@ interface AutomationSolution {
 }
 
 const EnterpriseAutomationSolutions2025: React.FC = () => {
-  const [selectedSolution, setSelectedSolution] = useState<string | null>(null);
-  const [activeCategory, setActiveCategory] = useState<string>('all');
-  const [isDemoRunning, setIsDemoRunning] = useState(false);
-  const [demoStep, setDemoStep] = useState(0);
+  const [selectedSolutionsetSelectedSolution] = useState<string | null>(null);
+  const [activeCategorysetActiveCategory] = useState<string>('all');
+  const [isDemoRunningsetIsDemoRunning] = useState(false);
+  const [demoStepsetDemoStep] = useState(0);
 
   const categories = [
-    { id: 'all', name: 'All Solutions', count: 12 },
-    { id: 'workflow', name: 'Workflow Automation', count: 4 },
-    { id: 'data', name: 'Data Processing', count: 3 },
-    { id: 'communication', name: 'Communication', count: 2 },
-    { id: 'analytics', name: 'Analytics & Reporting', count: 3 }
+    { id: 'all'name: 'All Solutions'count: 12 },
+    { id: 'workflow'name: 'Workflow Automation'count: 4 },
+    { id: 'data'name: 'Data Processing'count: 3 },
+    { id: 'communication'name: 'Communication'count: 2 },
+    { id: 'analytics'name: 'Analytics & Reporting'count: 3 }
   ];
 
   const solutions: AutomationSolution[] = [
@@ -114,7 +114,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
     {
       id: 'data-pipeline',
       name: 'Data Pipeline Automation',
-      description: 'Automated data collection, processing, and analysis across all systems',
+      description: 'Automated data collectionprocessingand analysis across all systems',
       category: 'data',
       icon: <Database className="w-8 h-8" />,
       features: [
@@ -171,7 +171,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
     {
       id: 'financial-automation',
       name: 'Financial Process Automation',
-      description: 'Automated accounting, invoicing, and financial reporting',
+      description: 'Automated accountinginvoicingand financial reporting',
       category: 'workflow',
       icon: <CreditCard className="w-8 h-8" />,
       features: [
@@ -284,9 +284,9 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
         setTimeout(() => {
           setIsDemoRunning(false);
           setDemoStep(0);
-        }, 2000);
+        }2000);
       }
-    }, 1500);
+    }1500);
   };
 
   return (
@@ -294,8 +294,8 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -307,15 +307,15 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Transform your enterprise with AI-powered automation solutions. 
-            Streamline processes, reduce costs, and accelerate growth.
+            Streamline processesreduce costsand accelerate growth.
           </p>
         </motion.div>
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
@@ -339,15 +339,15 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6delay: 0.4 }}
               className="grid gap-6"
             >
-              {filteredSolutions.map((solution, index) => (
+              {filteredSolutions.map((solutionindex) => (
                 <motion.div
                   key={solution.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group ${
                     selectedSolution === solution.id ? 'ring-2 ring-blue-500' : ''
                   }`}
@@ -393,7 +393,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                     <div>
                       <h4 className="text-white font-medium mb-3">Key Features</h4>
                       <div className="space-y-2">
-                        {solution.features.slice(0, 3).map((feature, idx) => (
+                        {solution.features.slice(03).map((featureidx) => (
                           <div key={idx} className="flex items-center space-x-2">
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span className="text-gray-300 text-sm">{feature}</span>
@@ -410,7 +410,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                     <div>
                       <h4 className="text-white font-medium mb-3">Benefits</h4>
                       <div className="space-y-2">
-                        {solution.benefits.slice(0, 2).map((benefit, idx) => (
+                        {solution.benefits.slice(02).map((benefitidx) => (
                           <div key={idx} className="flex items-center space-x-2">
                             <Target className="w-4 h-4 text-blue-400 flex-shrink-0" />
                             <span className="text-gray-300 text-sm">{benefit}</span>
@@ -423,7 +423,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                   <div className="mt-6 pt-6 border-t border-white/10">
                     <div className="flex items-center justify-between">
                       <div className="flex space-x-4">
-                        {Object.entries(solution.pricing).map(([tier, price]) => (
+                        {Object.entries(solution.pricing).map(([tierprice]) => (
                           <div key={tier} className="text-center">
                             <div className="text-xs text-gray-400 capitalize">{tier}</div>
                             <div className="text-white font-medium">{price}</div>
@@ -444,9 +444,9 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
           {/* Demo Panel */}
           <div className="lg:col-span-1">
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial={{ opacity: 0x: 20 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.6 }}
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 sticky top-8"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Live Demo</h3>
@@ -455,9 +455,9 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                 {selectedSolutionData ? (
                   <motion.div
                     key={selectedSolutionData.id}
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
+                    initial={{ opacity: 0scale: 0.95 }}
+                    animate={{ opacity: 1scale: 1 }}
+                    exit={{ opacity: 0scale: 0.95 }}
                     transition={{ duration: 0.3 }}
                   >
                     <div className="text-center mb-6">
@@ -497,7 +497,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                             'Testing automation processes...',
                             'Monitoring performance metrics...',
                             'Demo completed successfully!'
-                          ].map((step, index) => (
+                          ].map((stepindex) => (
                             <div key={index} className={`flex items-center space-x-2 text-sm ${
                               index <= demoStep ? 'text-green-400' : 'text-gray-500'
                             }`}>
@@ -521,7 +521,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                         
                         <div className="space-y-3">
                           <h5 className="text-white font-medium">Key Benefits:</h5>
-                          {selectedSolutionData.benefits.map((benefit, index) => (
+                          {selectedSolutionData.benefits.map((benefitindex) => (
                             <div key={index} className="flex items-center space-x-2">
                               <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                               <span className="text-gray-300 text-sm">{benefit}</span>
@@ -572,17 +572,17 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
 
         {/* Enterprise Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.8 }}
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { icon: <Building2 className="w-8 h-8" />, label: 'Enterprise Clients', value: '500+' },
-            { icon: <TrendingUp className="w-8 h-8" />, label: 'Average ROI', value: '300%' },
-            { icon: <Clock className="w-8 h-8" />, label: 'Time Saved', value: '80%' },
-            { icon: <Shield className="w-8 h-8" />, label: 'Uptime', value: '99.9%' }
-          ].map((stat, index) => (
+            { icon: <Building2 className="w-8 h-8" />label: 'Enterprise Clients'value: '500+' },
+            { icon: <TrendingUp className="w-8 h-8" />label: 'Average ROI'value: '300%' },
+            { icon: <Clock className="w-8 h-8" />label: 'Time Saved'value: '80%' },
+            { icon: <Shield className="w-8 h-8" />label: 'Uptime'value: '99.9%' }
+          ].map((statindex) => (
             <div key={index} className="text-center">
               <div className="p-4 bg-blue-500/20 rounded-lg text-blue-400 mb-4 inline-block">
                 {stat.icon}

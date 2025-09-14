@@ -46,7 +46,7 @@ const NewContent2025FutureTrendsShowcase = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
-          {trendItems.map((item, index) => (
+          {trendItems.map((itemindex) => (
             <div key={index} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-8 border border-gray-200 hover:shadow-lg transition-shadow duration-300">
               <div className="flex items-start justify-between mb-4">
                 <span className="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">

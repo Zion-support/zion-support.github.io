@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../ui/Card';
-import { Zap } from 'lucide-react';
+Zap
 
 interface Feature {
   icon: React.ReactNode;
@@ -48,7 +48,7 @@ const Features: React.FC<FeaturesProps> = ({
 
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>
-          {features.map((feature, index) => (
+          {features.map((featureindex) => (
             <Card
               key={index}
               className="text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"

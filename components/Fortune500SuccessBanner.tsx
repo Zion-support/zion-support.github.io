@@ -115,7 +115,7 @@ const Fortune500SuccessBanner: React.FC = () => {
             "Working with Zion Tech Group transformed our business beyond our expectations. 
             The 340% ROI we achieved in just 18 months exceeded all projections."
             <footer className="mt-2 text-sm not-italic opacity-75">
-              — Chief Technology Officer, Fortune 500 Manufacturing Company
+              — Chief Technology OfficerFortune 500 Manufacturing Company
             </footer>
           </blockquote>
         </div>

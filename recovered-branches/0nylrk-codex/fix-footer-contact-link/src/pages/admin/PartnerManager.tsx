@@ -1,17 +1,17 @@
 
-import { useState, useEffect } from "react";
+import { useStateuseEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { TableBodyTableCellTableHeaderTableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { DialogContentDialogDescriptionDialogFooterDialogHeaderDialogTitleDialogTrigger } from "@/components/ui/dialog";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
+import { AlertDescriptionAlertTitle } from "@/components/ui/alert";
 import { toast } from "@/hooks/use-toast";
-import { Check, Flag, Search, Settings, X } from "lucide-react";
+import { CheckFlagSearchSettingsX } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 interface PartnerProfile {
@@ -22,7 +22,7 @@ interface PartnerProfile {
   created_at: string;
   niche: string;
   audience_size: string;
-  social_media?: Record<string, string>;
+  social_media?: Record<string>;
   website?: string;
   bio?: string;
   payout_method?: string;
@@ -31,16 +31,16 @@ interface PartnerProfile {
 }
 
 export default function PartnerManager() {
-  const [partners, setPartners] = useState<PartnerProfile[]>([]);
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("pending");
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [commissionRate, setCommissionRate] = useState(25);
-  const { user, isAuthenticated } = useAuth();
+  const [partnersetPartners] = useState<PartnerProfile[]>([]);
+  const [filteredPartnersetFilteredPartners] = useState<PartnerProfile[]>([]);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [searchQuerysetSearchQuery] = useState("");
+  const [activeTabsetActiveTab] = useState("pending");
+  const [selectedPartnersetSelectedPartner] = useState<PartnerProfile | null>(null);
+  const [isDetailsOpensetIsDetailsOpen] = useState(false);
+  const [isSettingsOpensetIsSettingsOpen] = useState(false);
+  const [commissionRatesetCommissionRate] = useState(25);
+  const { userisAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -50,21 +50,21 @@ export default function PartnerManager() {
     }
 
     fetchPartners();
-  }, [isAuthenticated, navigate]);
+  }[isAuthenticatednavigate]);
 
   const fetchPartners = async () => {
     try {
       setIsLoading(true);
-      // In a real application, check admin permissions here
+      // In a real applicationcheck admin permissions here
       
-      const { data, error } = await supabase
+      const { dataerror } = await supabase
         .from('partner_profiles')
         .select('*')
-        .order('created_at', { ascending: false });
+        .order('created_at'{ ascending: false });
         
       if (error) throw error;
       
-      // If no data is returned, use mock data
+      // If no data is returneduse mock data
       if (!data || data.length === 0) {
         const mockData: PartnerProfile[] = [
           {
@@ -75,7 +75,7 @@ export default function PartnerManager() {
             created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
             niche: 'AI Tutorials',
             audience_size: '10k-50k',
-            social_media: { twitter: '@aibytes', youtube: 'AI Bytes' },
+            social_media: { twitter: '@aibytes'youtube: 'AI Bytes' },
             website: 'aibytes.com',
             bio: 'We create AI tutorials and insights for developers.',
             payout_method: 'paypal',
@@ -90,7 +90,7 @@ export default function PartnerManager() {
             created_at: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString(),
             niche: 'Machine Learning Education',
             audience_size: 'over100k',
-            social_media: { twitter: '@mlacademy', youtube: 'ML Academy' },
+            social_media: { twitter: '@mlacademy'youtube: 'ML Academy' },
             website: 'mlacademy.edu',
             bio: 'Premiere online academy for machine learning enthusiasts.',
             payout_method: 'bank',
@@ -120,7 +120,7 @@ export default function PartnerManager() {
             created_at: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(),
             niche: 'Coding Tutorials',
             audience_size: '50k-100k',
-            social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' },
+            social_media: { youtube: 'CodeMaster'linkedin: 'codemaster' },
             website: 'codemaster.dev',
             bio: 'Learn to code with our expert tutorials.',
             payout_method: 'paypal',
@@ -135,7 +135,7 @@ export default function PartnerManager() {
             created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),
             niche: 'AI News',
             audience_size: '10k-50k',
-            social_media: { twitter: '@aidaily', instagram: '@aidailynews' },
+            social_media: { twitter: '@aidaily'instagram: '@aidailynews' },
             website: 'aidaily.news',
             bio: 'Daily updates on the world of artificial intelligence.',
             payout_method: 'platform_credit',
@@ -145,13 +145,13 @@ export default function PartnerManager() {
         ];
         
         setPartners(mockData);
-        filterPartners(mockData, activeTab, searchQuery);
+        filterPartners(mockDatactiveTabsearchQuery);
       } else {
         setPartners(data as PartnerProfile[]);
-        filterPartners(data as PartnerProfile[], activeTab, searchQuery);
+        filterPartners(data as PartnerProfile[]activeTabsearchQuery);
       }
     } catch (error) {
-      console.error("Error fetching partners:", error);
+      console.error("Error fetching partners:"error);
       toast({
         title: "Error",
         description: "Failed to load partner data",
@@ -161,7 +161,7 @@ export default function PartnerManager() {
     }
   };
 
-  const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
+  const filterPartners = (partners: PartnerProfile[]status: stringquery: string) => {
     let filtered = partners;
     
     // Filter by status
@@ -185,12 +185,12 @@ export default function PartnerManager() {
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
-    filterPartners(partners, activeTab, e.target.value);
+    filterPartners(partnersactiveTabe.target.value);
   };
 
   const handleTabChange = (value: string) => {
     setActiveTab(value);
-    filterPartners(partners, value, searchQuery);
+    filterPartners(partnersvaluesearchQuery);
   };
 
   const handleViewDetails = (partner: PartnerProfile) => {
@@ -204,15 +204,15 @@ export default function PartnerManager() {
     setIsSettingsOpen(true);
   };
 
-  const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
+  const handleUpdateStatus = async (partnerId: stringstatus: 'approved' | 'rejected') => {
     try {
-      // In a real app, this would update the database
+      // In a real appthis would update the database
       setPartners(partners.map(p => 
-        p.id === partnerId ? { ...p, status } : p
+        p.id === partnerId ? { ...pstatus } : p
       ));
       
       filterPartners(
-        partners.map(p => p.id === partnerId ? { ...p, status } : p),
+        partners.map(p => p.id === partnerId ? { ...pstatus } : p),
         activeTab,
         searchQuery
       );
@@ -227,7 +227,7 @@ export default function PartnerManager() {
         setIsDetailsOpen(false);
       }
     } catch (error) {
-      console.error("Error updating partner status:", error);
+      console.error("Error updating partner status:"error);
       toast({
         title: "Error",
         description: "Failed to update partner status",
@@ -241,11 +241,11 @@ export default function PartnerManager() {
     try {
       // Update commission rate
       setPartners(partners.map(p => 
-        p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
+        p.id === selectedPartner.id ? { ...pcommission_rate: commissionRate } : p
       ));
       
       filterPartners(
-        partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),
+        partners.map(p => p.id === selectedPartner.id ? { ...pcommission_rate: commissionRate } : p),
         activeTab,
         searchQuery
       );
@@ -257,7 +257,7 @@ export default function PartnerManager() {
       
       setIsSettingsOpen(false);
     } catch (error) {
-      console.error("Error updating partner settings:", error);
+      console.error("Error updating partner settings:"error);
       toast({
         title: "Error",
         description: "Failed to update partner settings",
@@ -353,7 +353,7 @@ export default function PartnerManager() {
                   Fraud Flags
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
-                  {partners.reduce((total, p) => total + (p.fraud_flags || 0), 0)}
+                  {partners.reduce((totalp) => total + (p.fraud_flags || 0)}
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -494,7 +494,7 @@ export default function PartnerManager() {
                 <div>
                   <p className="text-xs text-zion-slate-light">Social Media</p>
                   <div className="grid grid-cols-2 gap-2">
-                    {Object.entries(selectedPartner.social_media).map(([platform, handle]) => (
+                    {Object.entries(selectedPartner.social_media).map(([platformhandle]) => (
                       <p key={platform} className="text-white">
                         <span className="font-medium">{platform}: </span>
                         {handle}
@@ -531,14 +531,14 @@ export default function PartnerManager() {
                 <div className="flex justify-end gap-2 mt-4">
                   <Button 
                     variant="destructive" 
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
+                    onClick={() => handleUpdateStatus(selectedPartner.id'rejected')}
                   >
                     <X className="h-4 w-4 mr-1" />
                     Reject
                   </Button>
                   <Button 
                     className="bg-green-600 hover:bg-green-700"
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
+                    onClick={() => handleUpdateStatus(selectedPartner.id'approved')}
                   >
                     <Check className="h-4 w-4 mr-1" />
                     Approve
@@ -604,16 +604,16 @@ interface PartnerTableProps {
   partners: PartnerProfile[];
   isLoading: boolean;
   onViewDetails: (partner: PartnerProfile) => void;
-  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void;
+  onUpdateStatus: (partnerId: stringstatus: 'approved' | 'rejected') => void;
   onOpenSettings: (partner: PartnerProfile) => void;
   getStatusBadge: (status: string) => JSX.Element;
   getFraudFlagBadge: (flags?: number) => JSX.Element | null;
 }
 
 function PartnerTable({ 
-  partners, 
-  isLoading, 
-  onViewDetails, 
+  partners
+  isLoading
+  onViewDetails
   onUpdateStatus,
   onOpenSettings,
   getStatusBadge,
@@ -658,7 +658,7 @@ function PartnerTable({
             </TableCell>
             <TableCell>{partner.niche}</TableCell>
             <TableCell>
-              {partner.audience_size.replace('k', ',000').replace('-', ' - ').replace('over', 'Over ')}
+              {partner.audience_size.replace('k',000').replace('-' - ').replace('over'Over ')}
             </TableCell>
             <TableCell>{getStatusBadge(partner.status)}</TableCell>
             <TableCell>
@@ -671,7 +671,7 @@ function PartnerTable({
                     <Button 
                       variant="ghost"
                       size="sm"
-                      onClick={() => onUpdateStatus(partner.id, 'rejected')}
+                      onClick={() => onUpdateStatus(partner.id'rejected')}
                       className="text-red-500 hover:text-red-600 hover:bg-red-900/20"
                     >
                       <X className="h-4 w-4" />
@@ -680,7 +680,7 @@ function PartnerTable({
                     <Button 
                       variant="ghost"
                       size="sm"
-                      onClick={() => onUpdateStatus(partner.id, 'approved')}
+                      onClick={() => onUpdateStatus(partner.id'approved')}
                       className="text-green-500 hover:text-green-600 hover:bg-green-900/20"
                     >
                       <Check className="h-4 w-4" />

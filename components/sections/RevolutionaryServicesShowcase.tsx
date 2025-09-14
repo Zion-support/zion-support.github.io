@@ -1,25 +1,25 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react';
+ArrowRightStarTrendingUpUsersShieldZap
 import { revolutionary2025MicroSaasServices } from '../../data/revolutionary-2025-micro-saas';
 import { emergingTech2025Services } from '../../data/emerging-tech-2025-services';
 import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
 
 const RevolutionaryServicesShowcase: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [visibleServices, setVisibleServices] = useState(12);
+  const [activeCategorysetActiveCategory] = useState('all');
+  const [visibleServicesetVisibleServices] = useState(12);
 
   const categories = [
-    { id: 'all', name: 'All Services', count: revolutionary2025MicroSaasServices.length + emergingTech2025Services.length + enterpriseIT2025Services.length },
-    { id: 'ai', name: 'AI & ML', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('AI')).length },
-    { id: 'quantum', name: 'Quantum Tech', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('Quantum')).length },
-    { id: 'emerging', name: 'Emerging Tech', count: emergingTech2025Services.length },
-    { id: 'enterprise', name: 'Enterprise IT', count: enterpriseIT2025Services.length },
-    { id: 'revolutionary', name: 'Revolutionary', count: revolutionary2025MicroSaasServices.length }
+    { id: 'all'name: 'All Services'count: revolutionary2025MicroSaasServices.length + emergingTech2025Services.length + enterpriseIT2025Services.length },
+    { id: 'ai'name: 'AI & ML'count: [...revolutionary2025MicroSaasServices...emergingTech2025Services...enterpriseIT2025Services].filter(s => s.category.includes('AI')).length },
+    { id: 'quantum'name: 'Quantum Tech'count: [...revolutionary2025MicroSaasServices...emergingTech2025Services...enterpriseIT2025Services].filter(s => s.category.includes('Quantum')).length },
+    { id: 'emerging'name: 'Emerging Tech'count: emergingTech2025Services.length },
+    { id: 'enterprise'name: 'Enterprise IT'count: enterpriseIT2025Services.length },
+    { id: 'revolutionary'name: 'Revolutionary'count: revolutionary2025MicroSaasServices.length }
   ];
 
-  const allServices = [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services];
+  const allServices = [...revolutionary2025MicroSaasServices...emergingTech2025Services...enterpriseIT2025Services];
 
   const filteredServices = activeCategory === 'all' 
     ? allServices 
@@ -33,7 +33,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
       });
 
   const loadMore = () => {
-    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length));
+    setVisibleServices(prev => Math.min(prev + 12filteredServices.length));
   };
 
   const containerVariants = {
@@ -47,7 +47,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -63,8 +63,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
@@ -76,7 +76,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             <span className="text-white">Services</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the future with our cutting-edge AI, quantum computing, and emerging technology solutions. 
+            Experience the future with our cutting-edge AIquantum computingand emerging technology solutions. 
             Transform your business with services that were once science fiction.
           </p>
         </motion.div>
@@ -84,8 +84,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         {/* Category Filter */}
         <motion.div 
           className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
@@ -118,7 +118,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {filteredServices.slice(0, visibleServices).map((service, index) => (
+          {filteredServices.slice(0visibleServices).map((serviceindex) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -201,11 +201,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {
 
                 {/* Floating Particles */}
                 <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '20%', top: '30%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '35%', top: '40%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '50%', top: '50%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '65%', top: '60%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '80%', top: '70%' }}></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '20%'top: '30%' }}></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '35%'top: '40%' }}></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '50%'top: '50%' }}></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '65%'top: '60%' }}></div>
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '80%'top: '70%' }}></div>
                 </div>
               </div>
             </motion.div>
@@ -233,8 +233,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         {/* Call to Action */}
         <motion.div 
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
@@ -242,7 +242,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             Ready to Experience the Future?
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join the revolution with our cutting-edge AI, quantum, and emerging technology services. 
+            Join the revolution with our cutting-edge AIquantumand emerging technology services. 
             Transform your business and stay ahead of the competition.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

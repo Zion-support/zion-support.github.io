@@ -1,16 +1,16 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../utils/i18n';
-import { supportedLocales, isRtl } from '../../utils/i18n';
+import { supportedLocalesisRtl } from '../../utils/i18n';
 
-const localeToFlag: Record<string, string> = {
+const localeToFlag: Record<string> = {
   en: 'us',
   pt: 'br',
   es: 'es',
   ar: 'sa'};
 
-const localeLabelKey: Record<string, string> = {
+const localeLabelKey: Record<string> = {
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
@@ -18,14 +18,14 @@ const localeLabelKey: Record<string, string> = {
 
 export default function LanguageSwitcher() {
   const { t } = useTranslation();
-  const [open, setOpen] = useState(false);
+  const [opensetOpen] = useState(false);
   const current = i18n.resolvedLanguage || i18n.language || 'en';
 
   const changeLanguage = async (lng: string) => {
     await i18n.changeLanguage(lng);
-    localStorage.setItem('preferredLanguage', lng);
-    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
-    document.documentElement.setAttribute('lang', lng);
+    localStorage.setItem('preferredLanguage'lng);
+    document.documentElement.setAttribute('dir'isRtl(lng) ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang'lng);
     setOpen(false);
   };
 

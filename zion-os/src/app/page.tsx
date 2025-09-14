@@ -5,10 +5,10 @@ export default function HomePage() {
     {
       icon: "🤖",
       title: "AI-Powered Intelligence",
-      description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
+      description: "ZionGPT CoreResume AIand autonomous decision engines power your economy with cutting-edge intelligence.",
       features: [
         "ZionGPT Core Integration",
-        "Resume Builder + Proposal AI", 
+        "Resume Builder + Proposal AI"
         "Autonomous Decision Engine",
         "AI Moderation System"
       ],
@@ -17,7 +17,7 @@ export default function HomePage() {
     {
       icon: "🏪",
       title: "Complete Marketplace",
-      description: "Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.",
+      description: "Jobstalentprojectsand token systems create a thriving digital economy ecosystem.",
       features: [
         "Job & Talent Marketplace",
         "Token System + Rewards",
@@ -41,7 +41,7 @@ export default function HomePage() {
     {
       icon: "⚡",
       title: "Enterprise Infrastructure",
-      description: "Built for scale with regional dashboards, partner APIs, and white-label solutions.",
+      description: "Built for scale with regional dashboardspartner APIsand white-label solutions.",
       features: [
         "Regional Dashboards",
         "Partner API Access",
@@ -53,7 +53,7 @@ export default function HomePage() {
     {
       icon: "🎓",
       title: "Education & Growth",
-      description: "Zion Academy, incubator programs, and grants foster innovation and community growth.",
+      description: "Zion Academyincubator programsand grants foster innovation and community growth.",
       features: [
         "Zion Academy",
         "Incubator + Grants",
@@ -91,7 +91,7 @@ export default function HomePage() {
             </h1>
             
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+              Deploy complete AI-powered marketplacesgovernance systemsand digital economies with one click. 
               Built for the future of decentralized business.
             </p>
             
@@ -118,13 +118,13 @@ export default function HomePage() {
               Everything You Need to Build the Future
             </h2>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
+              From AI-powered marketplaces to decentralized governanceZion OS provides the complete toolkit 
               for launching sovereign digital economies.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <FeatureCard
                 key={index}
                 icon={feature.icon}

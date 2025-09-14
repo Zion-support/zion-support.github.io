@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Calculator, ArrowRight, Zap, DollarSign, Clock, Target } from 'lucide-react';
+CalculatorArrowRightZapDollarSignClockTarget
 
 export default function AutomationSolutionsPromotionBanner() {
   return (

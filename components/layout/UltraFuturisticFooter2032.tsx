@@ -2,14 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
-  Rocket, Shield, Cpu, Target, Microscope, Users,
-  Facebook, Twitter, Linkedin, Instagram, Youtube,
-  Github, ArrowRight, Heart, Star, Award, CheckCircle,
-  Home, Briefcase, BookOpen, MessageCircle, DollarSign,
-  TrendingUp, Target as TargetIcon, Users as UsersIcon,
-  Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon,
-  MessageCircle as MessageCircleIcon, Star as StarIcon
+  PhoneMailMapPinGlobeZapBrainAtom
+  RocketShieldCpuTargetMicroscopeUsers,
+  FacebookTwitterLinkedinInstagramYoutube,
+  GithubArrowRightHeartStarAwardCheckCircle,
+  HomeBriefcaseBookOpenMessageCircleDollarSign,
+  TrendingUpTarget as TargetUsers as UsersIcon,
+  Briefcase as BriefcaseIconBookOpen as BookOpenIcon,
+  MessageCircle as MessageCircleIconStar as StarIcon
 } from 'lucide-react';
 
 const contactInfo = {
@@ -20,104 +20,104 @@ const contactInfo = {
 };
 
 const mainNavigationRoutes = [
-  { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
-  { name: 'Services', href: '/services', icon: Briefcase, description: 'Our comprehensive service portfolio' },
-  { name: 'Solutions', href: '/solutions', icon: TargetIcon, description: 'Tailored solutions for your business' },
-  { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent pricing and packages' },
-  { name: 'Resources', href: '/resources', icon: BookOpen, description: 'Knowledge base and documentation' },
-  { name: 'Case Studies', href: '/case-studies', icon: Users, description: 'Success stories and implementations' },
-  { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },
-  { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
+  { name: 'Home'href: '/'icon: Homedescription: 'Welcome to Zion Tech Group' },
+  { name: 'Services'href: '/services'icon: Briefcasedescription: 'Our comprehensive service portfolio' },
+  { name: 'Solutions'href: '/solutions'icon: Targetdescription: 'Tailored solutions for your business' },
+  { name: 'Pricing'href: '/pricing'icon: DollarSigndescription: 'Transparent pricing and packages' },
+  { name: 'Resources'href: '/resources'icon: BookOpendescription: 'Knowledge base and documentation' },
+  { name: 'Case Studies'href: '/case-studies'icon: Usersdescription: 'Success stories and implementations' },
+  { name: 'Blog'href: '/blog'icon: MessageCircledescription: 'Latest insights and updates' },
+  { name: 'Contact'href: '/contact'icon: MessageCircledescription: 'Get in touch with our team' }
 ];
 
 const serviceCategories = [
   {
     title: '🚀 2032 Revolutionary AI Services',
     services: [
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform' },
-      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' },
-      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator' },
-      { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager' }
+      { name: 'AI Consciousness Evolution'href: '/ai-consciousness-evolution-platform' },
+      { name: 'AI Emotional Intelligence'href: '/ai-emotional-intelligence-platform' },
+      { name: 'AI Creativity Orchestrator'href: '/ai-creativity-orchestrator' },
+      { name: 'AI Autonomous Business Manager'href: '/ai-autonomous-business-manager' }
     ]
   },
   {
     title: '⚛️ 2032 Quantum & Emerging Tech',
     services: [
-      { name: 'Quantum DNA Computing', href: '/quantum-dna-computing-platform' },
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway' },
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' },
-      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' }
+      { name: 'Quantum DNA Computing'href: '/quantum-dna-computing-platform' },
+      { name: 'Quantum Internet Security'href: '/quantum-internet-security-gateway' },
+      { name: 'Quantum Financial Trading'href: '/quantum-financial-trading-platform' },
+      { name: 'Quantum Creativity Studio'href: '/quantum-creativity-studio' }
     ]
   },
   {
     title: '🏙️ 2032 Enterprise IT Solutions',
     services: [
-      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },
-      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
-      { name: 'AI IT Operations Center', href: '/ai-powered-it-operations-center' }
+      { name: 'Autonomous DevOps'href: '/autonomous-devops-platform' },
+      { name: 'Zero Trust Architecture'href: '/zero-trust-network-architecture' },
+      { name: 'Edge Computing Orchestration'href: '/edge-computing-orchestration' },
+      { name: 'AI IT Operations Center'href: '/ai-powered-it-operations-center' }
     ]
   },
   {
     title: '🌌 2032 Space & Metaverse Tech',
     services: [
-      { name: 'Space Mining Automation', href: '/space-mining-automation-platform' },
-      { name: 'Metaverse Development', href: '/metaverse-development-platform' },
-      { name: 'AI Predictive Health', href: '/ai-predictive-health-analytics' },
-      { name: 'AI Autonomous Business', href: '/ai-autonomous-business-manager' }
+      { name: 'Space Mining Automation'href: '/space-mining-automation-platform' },
+      { name: 'Metaverse Development'href: '/metaverse-development-platform' },
+      { name: 'AI Predictive Health'href: '/ai-predictive-health-analytics' },
+      { name: 'AI Autonomous Business'href: '/ai-autonomous-business-manager' }
     ]
   },
   {
     title: '🎯 2032 Innovative Micro SAAS',
     services: [
-      { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite' },
-      { name: 'Quantum-Secure Communication', href: '/quantum-secure-communication-platform' },
-      { name: 'AI Customer Success', href: '/ai-customer-success-automation' },
-      { name: 'Blockchain Supply Chain', href: '/blockchain-supply-chain-transparency' }
+      { name: 'AI Business Intelligence'href: '/ai-business-intelligence-suite' },
+      { name: 'Quantum-Secure Communication'href: '/quantum-secure-communication-platform' },
+      { name: 'AI Customer Success'href: '/ai-customer-success-automation' },
+      { name: 'Blockchain Supply Chain'href: '/blockchain-supply-chain-transparency' }
     ]
   },
   {
     title: '🔬 2032 Research & Development',
     services: [
-      { name: 'Neuromorphic Computing', href: '/neuromorphic-computing-platform' },
-      { name: 'DNA Computing Platform', href: '/dna-computing-platform' },
-      { name: 'Photonic Computing', href: '/photonic-computing-infrastructure' },
-      { name: 'Swarm Robotics', href: '/swarm-robotics-orchestration' }
+      { name: 'Neuromorphic Computing'href: '/neuromorphic-computing-platform' },
+      { name: 'DNA Computing Platform'href: '/dna-computing-platform' },
+      { name: 'Photonic Computing'href: '/photonic-computing-infrastructure' },
+      { name: 'Swarm Robotics'href: '/swarm-robotics-orchestration' }
     ]
   }
 ];
 
 const quickLinks = [
-  { name: '2032 Services', href: '/2032-futuristic-services-showcase', icon: Star, description: 'Revolutionary 2032 services' },
-  { name: 'Enhanced Pricing', href: '/enhanced-market-pricing-2032', icon: DollarSign, description: 'Comprehensive pricing analysis' },
-  { name: 'Market Pricing', href: '/market-pricing', icon: DollarSign, description: 'Competitive pricing references' },
-  { name: 'Enhanced Services', href: '/enhanced-services-showcase', icon: Star, description: 'Premium service showcase' },
-  { name: 'Revolutionary 2026', href: '/revolutionary-2026-services', icon: TrendingUp, description: '2026 breakthrough services' },
-  { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Target, description: 'Ultimate service portfolio' },
-  { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' },
-  { name: 'Support', href: '/support', icon: Users, description: 'Technical support and help' }
+  { name: '2032 Services'href: '/2032-futuristic-services-showcase'icon: Stardescription: 'Revolutionary 2032 services' },
+  { name: 'Enhanced Pricing'href: '/enhanced-market-pricing-2032'icon: DollarSigndescription: 'Comprehensive pricing analysis' },
+  { name: 'Market Pricing'href: '/market-pricing'icon: DollarSigndescription: 'Competitive pricing references' },
+  { name: 'Enhanced Services'href: '/enhanced-services-showcase'icon: Stardescription: 'Premium service showcase' },
+  { name: 'Revolutionary 2026'href: '/revolutionary-2026-services'icon: TrendingUpdescription: '2026 breakthrough services' },
+  { name: 'Ultimate 2026'href: '/ultimate-2026-services-showcase'icon: Targetdescription: 'Ultimate service portfolio' },
+  { name: 'News & Updates'href: '/news'icon: MessageCircledescription: 'Latest company news' },
+  { name: 'Support'href: '/support'icon: Usersdescription: 'Technical support and help' }
 ];
 
 const companyInfo = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'Press', href: '/press' },
-  { name: 'Partners', href: '/partners' },
-  { name: 'Support', href: '/support' },
-  { name: 'Status', href: '/status' }
+  { name: 'About Us'href: '/about' },
+  { name: 'Careers'href: '/careers' },
+  { name: 'Press'href: '/press' },
+  { name: 'Partners'href: '/partners' },
+  { name: 'Support'href: '/support' },
+  { name: 'Status'href: '/status' }
 ];
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+  { name: 'LinkedIn'href: 'https://linkedin.com/company/ziontechgroup'icon: Linkedin },
+  { name: 'Twitter'href: 'https://twitter.com/ziontechgroup'icon: Twitter },
+  { name: 'Facebook'href: 'https://facebook.com/ziontechgroup'icon: Facebook },
+  { name: 'Instagram'href: 'https://instagram.com/ziontechgroup'icon: Instagram },
+  { name: 'YouTube'href: 'https://youtube.com/ziontechgroup'icon: Youtube },
+  { name: 'GitHub'href: 'https://github.com/Zion-Holdings'icon: Github }
 ];
 
 const footerVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0y: 50 },
   visible: {
     opacity: 1,
     y: 0,
@@ -129,8 +129,8 @@ const footerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
+  hidden: { opacity: 0y: 20 },
+  visible: { opacity: 1y: 0 }
 };
 
 export default function UltraFuturisticFooter2032() {
@@ -168,7 +168,7 @@ export default function UltraFuturisticFooter2032() {
               </div>
               
               <p className="text-slate-300 mb-6 leading-relaxed">
-                Leading the future of technology with revolutionary AI, quantum computing, space technology, and autonomous systems. 
+                Leading the future of technology with revolutionary AIquantum computingspace technologyand autonomous systems. 
                 Empowering businesses with cutting-edge solutions for tomorrow's challenges.
               </p>
 
@@ -205,11 +205,11 @@ export default function UltraFuturisticFooter2032() {
                 Our Revolutionary Services
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {serviceCategories.map((category, index) => (
+                {serviceCategories.map((categoryindex) => (
                   <div key={index} className="space-y-4">
                     <h4 className="text-lg font-medium text-white">{category.title}</h4>
                     <ul className="space-y-2">
-                      {category.services.map((service, serviceIndex) => (
+                      {category.services.map((serviceIndex) => (
                         <li key={serviceIndex}>
                           <Link
                             href={service.href}
@@ -235,7 +235,7 @@ export default function UltraFuturisticFooter2032() {
               <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>
                 <ul className="space-y-2">
-                  {quickLinks.map((link, index) => (
+                  {quickLinks.map((linkindex) => (
                     <li key={index}>
                       <Link
                         href={link.href}
@@ -253,7 +253,7 @@ export default function UltraFuturisticFooter2032() {
               <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Company</h4>
                 <ul className="space-y-2">
-                  {companyInfo.map((item, index) => (
+                  {companyInfo.map((itemindex) => (
                     <li key={index}>
                       <Link
                         href={item.href}
@@ -270,7 +270,7 @@ export default function UltraFuturisticFooter2032() {
               <div>
                 <h4 className="text-lg font-medium text-white mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
-                  {socialLinks.map((social, index) => (
+                  {socialLinks.map((socialindex) => (
                     <a
                       key={index}
                       href={social.href}
@@ -293,7 +293,7 @@ export default function UltraFuturisticFooter2032() {
                 Stay Ahead with Future Technology
               </h3>
               <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-                Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, 
+                Get the latest insights on AI breakthroughsquantum computing advancespace technology innovations
                 and autonomous systems development. Join our community of future technology pioneers.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -340,7 +340,7 @@ export default function UltraFuturisticFooter2032() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => window.scrollTo({ top: 0behavior: 'smooth' })}
         >
           <ArrowRight className="w-6 h-6 transform rotate-[-90deg]" />
         </motion.button>

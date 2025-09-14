@@ -14,7 +14,7 @@ export default function NewContent2025_2026ComprehensiveShowcase() {
             Revolutionary AI Content Collection
           </h2>
           <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-            Explore our comprehensive collection of cutting-edge AI content, breakthrough technologies, 
+            Explore our comprehensive collection of cutting-edge AI contentbreakthrough technologies
             and revolutionary solutions that will transform your business in 2025-2026.
           </p>
         </div>
@@ -26,8 +26,8 @@ export default function NewContent2025_2026ComprehensiveShowcase() {
             <div className="text-4xl mb-4">🧠</div>
             <h3 className="text-2xl font-bold mb-4">AI 2025-2026 Ultimate Breakthrough</h3>
             <p className="text-gray-200 mb-6">
-              Discover the most revolutionary AI technologies including neural superintelligence, 
-              quantum AI fusion, and autonomous systems that will reshape the future.
+              Discover the most revolutionary AI technologies including neural superintelligence
+              quantum AI fusionand autonomous systems that will reshape the future.
             </p>
             <div className="space-y-2 mb-6 text-sm">
               <div className="flex items-center gap-2">
@@ -87,7 +87,7 @@ export default function NewContent2025_2026ComprehensiveShowcase() {
             <h3 className="text-2xl font-bold mb-4">Advanced Neural Architectures 2026</h3>
             <p className="text-gray-200 mb-6">
               Explore next-generation neural network architectures that achieve unprecedented 
-              performance in pattern recognition, natural language processing, and decision making.
+              performance in pattern recognitionatural language processingand decision making.
             </p>
             <div className="space-y-2 mb-6 text-sm">
               <div className="flex items-center gap-2">
@@ -117,7 +117,7 @@ export default function NewContent2025_2026ComprehensiveShowcase() {
             <h3 className="text-2xl font-bold mb-4">AI 2025 Enterprise Automation</h3>
             <p className="text-gray-200 mb-6">
               Transform your enterprise with intelligent automation solutions that streamline 
-              operations, reduce costs, and boost productivity across all departments.
+              operationsreduce costsand boost productivity across all departments.
             </p>
             <div className="space-y-2 mb-6 text-sm">
               <div className="flex items-center gap-2">
@@ -177,7 +177,7 @@ export default function NewContent2025_2026ComprehensiveShowcase() {
             <h3 className="text-2xl font-bold mb-4">AI 2025 Cybersecurity Revolution</h3>
             <p className="text-gray-200 mb-6">
               Protect your business with next-generation AI-powered cybersecurity solutions 
-              that provide real-time threat detection, prevention, and response capabilities.
+              that provide real-time threat detectionpreventionand response capabilities.
             </p>
             <div className="space-y-2 mb-6 text-sm">
               <div className="flex items-center gap-2">

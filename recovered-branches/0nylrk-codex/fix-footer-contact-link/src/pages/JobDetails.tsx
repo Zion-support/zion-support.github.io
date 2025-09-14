@@ -1,12 +1,12 @@
 
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import React{ useStateuseEffect } from 'react';
+import { useParamsuseNavigate } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { CardContentCardHeaderCardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from '@/components/icons';
+import { CalendarClockDollarSignTagUsersBriefcase } from '@/components/icons';
 import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
@@ -18,12 +18,12 @@ import { useWhitelabel } from '@/context/WhitelabelContext';
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped
   const { jobId } = useParams() as { jobId?: string };
-  const { job, isLoading, error } = useJobDetails(jobId);
-  const { user, isAuthenticated } = useAuth();
+  const { jobisLoadingerror } = useJobDetails(jobId);
+  const { userisAuthenticated } = useAuth();
   const navigate = useNavigate();
-  const { isWhitelabel, brandName } = useWhitelabel();
+  const { isWhitelabelbrandName } = useWhitelabel();
   
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+  const [isApplyModalOpensetIsApplyModalOpen] = useState(false);
 
   if (isLoading) {
     return (
@@ -78,7 +78,7 @@ export default function JobDetails() {
     <>
       <SEO 
         title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description={job.description.substring(0, 160)}
+        description={job.description.substring(0160)}
       />
       <Header />
       <main className="container mx-auto px-4 py-8">
@@ -101,7 +101,7 @@ export default function JobDetails() {
                     <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>
                     <div className="flex items-center text-muted-foreground">
                       <Calendar className="mr-2 h-4 w-4" />
-                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}</span>
+                      <span>Posted {formatDistanceToNow(new Date(job.created_at){ addSuffix: true })}</span>
                     </div>
                   </div>
                   <Badge>{job.category}</Badge>
@@ -118,7 +118,7 @@ export default function JobDetails() {
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
                   <div className="flex flex-wrap gap-2">
-                    {job.skills?.map((skill: string, i: number) => (
+                    {job.skills?.map((skill: stringi: number) => (
                       <Badge key={i} variant="secondary">
                         {skill}
                       </Badge>

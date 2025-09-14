@@ -3,7 +3,7 @@ import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { User, Mail, AtSign, GraduationCap } from "lucide-react";
+import { UserMailAtSignGraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,9 +16,9 @@ import {
   FormMessage} from "@/components/ui/form";
 
 const profileSchema = z.object({
-  displayName: z.string().min(2, "Name must be at least 2 characters"),
-  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),
-  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
+  displayName: z.string().min(2"Name must be at least 2 characters"),
+  bio: z.string().min(10"Bio must be at least 10 characters").max(500"Bio must be less than 500 characters"),
+  headline: z.string().min(5"Headline must be at least 5 characters").max(100"Headline must be less than 100 characters")});
 
 type ProfileFormValues = z.infer<typeof profileSchema>;
 
@@ -27,7 +27,7 @@ interface ProfileSetupProps {
   userType: string;
 }
 
-export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
+export function ProfileSetup({ onCompleteuserType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema),
     defaultValues: {
@@ -89,7 +89,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                 <FormControl>
                   <div className="relative">
                     <Input
-                      placeholder={`e.g., ${
+                      placeholder={`e.g.${
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"

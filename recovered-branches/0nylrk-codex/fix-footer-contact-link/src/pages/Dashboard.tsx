@@ -4,14 +4,14 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CommunityDiscussion } from "@/components/CommunityDiscussion";
 import { Badge } from "@/components/ui/badge";
-import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react";
-import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications";
+import { UserCheckBellMessageSquareLogOutSendSettings } from "lucide-react";
+import { createTestNotificationcreateOnboardingNotificationcreateSystemNotification } from "@/utils/notifications";
 import { NotificationCenter } from "@/components/NotificationCenter";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 
 export default function Dashboard() {
-  const { user, logout } = useAuth();
+  const { userlogout } = useAuth();
   const { toast } = useToast();
 
   if (!user) return null;
@@ -181,7 +181,7 @@ export default function Dashboard() {
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
                   <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">
-                    <h3 className="text-lg font-medium text-white">Welcome, {user.displayName.split(' ')[0]}</h3>
+                    <h3 className="text-lg font-medium text-white">Welcome{user.displayName.split(' ')[0]}</h3>
                     <p className="text-zion-slate-light mt-1">Your journey on Zion has just begun!</p>
                   </div>
                   <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light">

@@ -8,19 +8,19 @@ interface TalentCardSaveButtonProps {
   profileId: string;
   profileName: string;
   isSaved: boolean;
-  onToggleSave?: (id: string, isSaved: boolean) => void;
+  onToggleSave?: (id: stringisSaved: boolean) => void;
   isAuthenticated: boolean;
 }
 
 export function TalentCardSaveButton({ 
-  profileId, 
+  profileId
   profileName,
-  isSaved, 
+  isSaved
   onToggleSave,
   isAuthenticated 
 }: TalentCardSaveButtonProps) {
   const { toast } = useToast();
-  const [localIsSaved, setLocalIsSaved] = React.useState(isSaved);
+  const [localIsSavedsetLocalIsSaved] = React.useState(isSaved);
   
   // Handle save toggle
   const handleSaveToggle = (e: React.MouseEvent) => {
@@ -37,7 +37,7 @@ export function TalentCardSaveButton({
     
     setLocalIsSaved(!localIsSaved);
     if (onToggleSave) {
-      onToggleSave(profileId, !localIsSaved);
+      onToggleSave(profileId!localIsSaved);
     }
     
     toast({
@@ -57,7 +57,7 @@ export function TalentCardSaveButton({
     >
       <Heart 
         className={cn(
-          "h-4 w-4 transition-colors", 
+          "h-4 w-4 transition-colors"
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
         )} 
       />

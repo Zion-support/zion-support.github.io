@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Button } from "@/components/ui/button";
 import { 
   Dialog,
@@ -22,13 +22,13 @@ interface RaiseDisputeButtonProps {
 }
 
 export function RaiseDisputeButton({ 
-  projectId, 
-  milestoneId, 
-  variant = "outline", 
+  projectId
+  milestoneId
+  variant = "outline"
   size,
   className 
 }: RaiseDisputeButtonProps) {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isDialogOpensetIsDialogOpen] = useState(false);
   const navigate = useNavigate();
   
   const handleDisputeCreated = (disputeId: string) => {

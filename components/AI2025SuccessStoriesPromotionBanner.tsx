@@ -1,12 +1,12 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Award, 
-  TrendingUp, 
-  Users, 
+  Award
+  TrendingUp
+  Users
   Star,
   CheckCircle,
   ArrowRight,
@@ -16,16 +16,16 @@ import {
 } from 'lucide-react';
 
 const AI2025SuccessStoriesPromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentTestimonialsetCurrentTestimonial] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const testimonials = [
     {
@@ -37,7 +37,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {
     {
       quote: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses.",
       company: "FinanceFlow Inc",
-      industry: "Financial Services", 
+      industry: "Financial Services"
       result: "99.8% accuracy rate"
     },
     {
@@ -49,10 +49,10 @@ const AI2025SuccessStoriesPromotionBanner = () => {
   ];
 
   const stats = [
-    { icon: TrendingUp, value: "340%", label: "Average ROI" },
-    { icon: Users, value: "850+", label: "Companies Served" },
-    { icon: Star, value: "98%", label: "Success Rate" },
-    { icon: Target, value: "55%", label: "Cost Reduction" }
+    { icon: TrendingUpvalue: "340%"label: "Average ROI" },
+    { icon: Usersvalue: "850+"label: "Companies Served" },
+    { icon: Starvalue: "98%"label: "Success Rate" },
+    { icon: Targetvalue: "55%"label: "Cost Reduction" }
   ];
 
   return (
@@ -68,8 +68,8 @@ const AI2025SuccessStoriesPromotionBanner = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0x: -50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
@@ -136,9 +136,9 @@ const AI2025SuccessStoriesPromotionBanner = () => {
 
           {/* Right Content - Testimonial & Stats */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="space-y-8"
           >
             {/* Testimonial Card */}
@@ -152,8 +152,8 @@ const AI2025SuccessStoriesPromotionBanner = () => {
                 <div className="flex-1">
                   <motion.p
                     key={currentTestimonial}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0y: 20 }}
+                    animate={{ opacity: 1y: 0 }}
                     transition={{ duration: 0.5 }}
                     className="text-gray-300 text-lg italic mb-4"
                   >
@@ -173,7 +173,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {
               
               {/* Testimonial Indicators */}
               <div className="flex justify-center space-x-2">
-                {testimonials.map((_, index) => (
+                {testimonials.map((_index) => (
                   <div
                     key={index}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
@@ -186,12 +186,12 @@ const AI2025SuccessStoriesPromotionBanner = () => {
 
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isVisible ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                  transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
                   className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-4 border border-white/20 text-center"
                 >
                   <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 mb-3">
@@ -207,9 +207,9 @@ const AI2025SuccessStoriesPromotionBanner = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-500/20">

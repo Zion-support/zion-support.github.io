@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Brain, 
-  Rocket, 
+  ArrowRight
+  Star
+  Zap
+  Brain
+  Rocket
   Target,
   X,
   PlayCircle,
@@ -17,9 +17,9 @@ import {
 } from 'lucide-react';
 
 const UltimateContentShowcase2028PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -27,10 +27,10 @@ const UltimateContentShowcase2028PromotionBanner = () => {
     // Auto-rotate features
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
+    }3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const features = [
     {
@@ -65,10 +65,10 @@ const UltimateContentShowcase2028PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0y: -100 }}
+          animate={{ opacity: 1y: 0 }}
+          exit={{ opacity: 0y: -100 }}
+          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/20"
         >
           {/* Background Effects */}
@@ -88,7 +88,7 @@ const UltimateContentShowcase2028PromotionBanner = () => {
                   </div>
                   
                   <div className="flex items-center gap-1 text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
+                    {[...Array(5)].map((_i) => (
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
@@ -99,7 +99,7 @@ const UltimateContentShowcase2028PromotionBanner = () => {
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-4 max-w-2xl">
-                  Discover revolutionary AI, quantum computing, neural interfaces, and future predictions 
+                  Discover revolutionary AIquantum computingneural interfacesand future predictions 
                   that will reshape our world in the coming decade.
                 </p>
 
@@ -113,9 +113,9 @@ const UltimateContentShowcase2028PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentFeature}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      exit={{ opacity: 0x: -20 }}
                       transition={{ duration: 0.3 }}
                       className="flex items-center gap-2"
                     >

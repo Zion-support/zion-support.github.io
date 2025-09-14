@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, BookOpen, Target, Users, Zap, Clock, ExternalLink } from 'lucide-react';
+ArrowRightStarTrendingUpBookOpenTargetUsersZapClockExternalLink
 
 const LatestContentShowcase2025: React.FC = () => {
   const featuredContent = [
@@ -12,9 +12,9 @@ const LatestContentShowcase2025: React.FC = () => {
       readTime: '12 min read',
       featured: true,
       url: '/blog/ai-2025-generative-ai-business-transformation',
-      excerpt: 'Explore how generative AI is revolutionizing business operations in 2025, from content creation to customer service automation.',
+      excerpt: 'Explore how generative AI is revolutionizing business operations in 2025from content creation to customer service automation.',
       image: '/images/ai-content.jpg',
-      stats: { views: '12.5K', likes: '890', shares: '234' }
+      stats: { views: '12.5K'likes: '890'shares: '234' }
     },
     {
       id: 2,
@@ -24,9 +24,9 @@ const LatestContentShowcase2025: React.FC = () => {
       readTime: '20 min read',
       featured: true,
       url: '/case-studies/ai-automation-manufacturing-success-2025',
-      excerpt: 'How a leading manufacturing company achieved 500% productivity increase through comprehensive AI automation, reducing costs by $75M annually.',
+      excerpt: 'How a leading manufacturing company achieved 500% productivity increase through comprehensive AI automationreducing costs by $75M annually.',
       image: '/images/manufacturing-ai.jpg',
-      stats: { views: '8.2K', likes: '567', shares: '189' }
+      stats: { views: '8.2K'likes: '567'shares: '189' }
     },
     {
       id: 3,
@@ -36,9 +36,9 @@ const LatestContentShowcase2025: React.FC = () => {
       readTime: '15 min read',
       featured: true,
       url: '/blog/quantum-computing-2025-business-applications',
-      excerpt: 'Discover how quantum computing is revolutionizing business operations in 2025, from optimization problems to advanced cryptography.',
+      excerpt: 'Discover how quantum computing is revolutionizing business operations in 2025from optimization problems to advanced cryptography.',
       image: '/images/quantum-computing.jpg',
-      stats: { views: '15.3K', likes: '1.2K', shares: '456' }
+      stats: { views: '15.3K'likes: '1.2K'shares: '456' }
     },
     {
       id: 4,
@@ -48,9 +48,9 @@ const LatestContentShowcase2025: React.FC = () => {
       readTime: '25 min read',
       featured: true,
       url: '/resources/ai-implementation-checklist-2025',
-      excerpt: 'Comprehensive checklist for successful AI implementation in 2025, covering strategy, technology, and change management.',
+      excerpt: 'Comprehensive checklist for successful AI implementation in 2025covering strategytechnologyand change management.',
       image: '/images/ai-implementation.jpg',
-      stats: { views: '9.7K', likes: '743', shares: '312' }
+      stats: { views: '9.7K'likes: '743'shares: '312' }
     }
   ];
 
@@ -99,14 +99,14 @@ const LatestContentShowcase2025: React.FC = () => {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover cutting-edge AI research, real-world success stories, and actionable implementation guides 
+            Discover cutting-edge AI researchreal-world success storiesand actionable implementation guides 
             from industry experts and thought leaders.
           </p>
         </div>
 
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {featuredContent.map((item, index) => (
+          {featuredContent.map((itemindex) => (
             <Link
               key={item.id}
               href={item.url}
@@ -118,7 +118,7 @@ const LatestContentShowcase2025: React.FC = () => {
                 <div className="absolute top-4 left-4 flex items-center space-x-2">
                   <div className={`flex items-center space-x-2 px-3 py-1 rounded-full bg-gradient-to-r ${getTypeColor(item.type)} text-white text-sm font-medium`}>
                     {getTypeIcon(item.type)}
-                    <span className="capitalize">{item.type.replace('-', ' ')}</span>
+                    <span className="capitalize">{item.type.replace('-' ')}</span>
                   </div>
                   {item.featured && (
                     <div className="flex items-center space-x-1 bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-semibold">

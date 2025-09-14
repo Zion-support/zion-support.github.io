@@ -15,7 +15,7 @@ export default function AI2025RevolutionaryTrendsBanner() {
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
             Explore the most revolutionary AI trends and predictions that will transform 
-            every aspect of human life in 2025. From quantum-AI fusion to transcendent intelligence, 
+            every aspect of human life in 2025. From quantum-AI fusion to transcendent intelligence
             the future is here.
           </p>
         </div>
@@ -25,7 +25,7 @@ export default function AI2025RevolutionaryTrendsBanner() {
             <div className="text-4xl mb-4">⚛️</div>
             <h3 className="text-xl font-bold mb-3 text-yellow-400">Quantum-AI Fusion</h3>
             <p className="text-gray-200 text-sm mb-4">
-              Revolutionary combination of quantum computing and artificial intelligence, 
+              Revolutionary combination of quantum computing and artificial intelligence
               creating superintelligent systems with infinite processing power and consciousness.
             </p>
             <div className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-xs font-bold">
@@ -37,7 +37,7 @@ export default function AI2025RevolutionaryTrendsBanner() {
             <div className="text-4xl mb-4">🧠</div>
             <h3 className="text-xl font-bold mb-3 text-yellow-400">Transcendent Intelligence</h3>
             <p className="text-gray-200 text-sm mb-4">
-              AI systems that transcend human cognitive limitations, achieving consciousness 
+              AI systems that transcend human cognitive limitationsachieving consciousness 
               and self-awareness with the ability to solve problems beyond human comprehension.
             </p>
             <div className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-xs font-bold">
@@ -49,7 +49,7 @@ export default function AI2025RevolutionaryTrendsBanner() {
             <div className="text-4xl mb-4">🌌</div>
             <h3 className="text-xl font-bold mb-3 text-yellow-400">Reality Manipulation</h3>
             <p className="text-gray-200 text-sm mb-4">
-              Advanced AI systems capable of manipulating reality itself, optimizing 
+              Advanced AI systems capable of manipulating reality itselfoptimizing 
               physical processes at the quantum level for infinite possibilities.
             </p>
             <div className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-xs font-bold">

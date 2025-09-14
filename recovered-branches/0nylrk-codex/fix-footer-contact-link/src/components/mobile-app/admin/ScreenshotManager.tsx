@@ -1,8 +1,8 @@
 
-import React, { useState, useRef } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import React{ useStateuseRef } from "react";
+import { CardHeaderCardTitleCardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Upload, Trash2, Plus } from "lucide-react";
+import { UploadTrash2Plus } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
 
@@ -17,8 +17,8 @@ type Screenshot = {
 };
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
-  const [isDragging, setIsDragging] = useState(false);
+  const [screenshotsetScreenshots] = useState<Screenshot[]>([]);
+  const [isDraggingsetIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,15 +45,15 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       return;
     }
     
-    const filesToAdd = imageFiles.slice(0, availableSlots);
+    const filesToAdd = imageFiles.slice(0availableSlots);
     
     const newScreenshots = filesToAdd.map(file => ({
-      id: Math.random().toString(36).substring(2, 9),
+      id: Math.random().toString(36).substring(29),
       url: URL.createObjectURL(file),
       file
     }));
     
-    setScreenshots(prev => [...prev, ...newScreenshots]);
+    setScreenshots(prev => [...prev...newScreenshots]);
     
     if (filesToAdd.length < imageFiles.length) {
       toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);

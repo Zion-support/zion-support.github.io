@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React{ Suspense } from 'react';
+import { RoutesRoute } from 'react-router-dom';
 import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
@@ -40,24 +40,24 @@ const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
 
 const baseRoutes = [
-  { path: '/', element: <Home /> },
-  { path: '/match', element: <AIMatcherPage /> },
-  { path: '/login', element: <Login /> },
-  { path: '/signup', element: <Signup /> },
-  { path: '/talent', element: <TalentDirectory /> },
-  { path: '/talents', element: <TalentsPage /> },
-  { path: '/services', element: <ServicesPage /> },
-  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
-  { path: '/ai-services', element: <AIServicesPage /> },
-  { path: '/it-services', element: <ITServicesPage /> },
-  { path: '/micro-saas-services', element: <MicroSAASServicesPage /> },
-  { path: '/categories', element: <Categories /> },
-  { path: '/equipment', element: <EquipmentPage /> },
-  { path: '/analytics', element: <Analytics /> },
-  { path: '/mobile-launch', element: <MobileLaunchPage /> },
-  { path: '/open-app', element: <OpenAppRedirect /> },
-  { path: '/community', element: <CommunityPage /> },
-  { path: '/contact', element: <ContactPage /> }];
+  { path: '/'element: <Home /> },
+  { path: '/match'element: <AIMatcherPage /> },
+  { path: '/login'element: <Login /> },
+  { path: '/signup'element: <Signup /> },
+  { path: '/talent'element: <TalentDirectory /> },
+  { path: '/talents'element: <TalentsPage /> },
+  { path: '/services'element: <ServicesPage /> },
+  { path: '/it-onsite-services'element: <ITOnsiteServicesPage /> },
+  { path: '/ai-services'element: <AIServicesPage /> },
+  { path: '/it-services'element: <ITServicesPage /> },
+  { path: '/micro-saas-services'element: <MicroSAASServicesPage /> },
+  { path: '/categories'element: <Categories /> },
+  { path: '/equipment'element: <EquipmentPage /> },
+  { path: '/analytics'element: <Analytics /> },
+  { path: '/mobile-launch'element: <MobileLaunchPage /> },
+  { path: '/open-app'element: <OpenAppRedirect /> },
+  { path: '/community'element: <CommunityPage /> },
+  { path: '/contact'element: <ContactPage /> }];
 
 const App = () => {
   return (
@@ -65,7 +65,7 @@ const App = () => {
       <ThemeProvider>
         <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <Routes>
-            {baseRoutes.map(({ path, element }) => (
+            {baseRoutes.map(({ pathelement }) => (
               <Route key={path} path={path} element={element} />
             ))}
             <Route path="/auth/*" element={<AuthRoutes />} />

@@ -5,12 +5,12 @@ const UltimateContentShowcase2030: React.FC = () => {
   const featuredContent = [
     {
       title: "AI 2030: Next-Generation Autonomous Enterprise Revolution",
-      description: "Explore revolutionary AI technologies that will transform enterprises by 2030, featuring autonomous decision-making systems and self-healing infrastructure.",
+      description: "Explore revolutionary AI technologies that will transform enterprises by 2030featuring autonomous decision-making systems and self-healing infrastructure.",
       category: "AI Innovation",
       readTime: "8 min read",
       link: "/blog/ai-2030-next-generation-autonomous-enterprise-revolution",
       featured: true,
-      stats: "95% cost reduction, 500% faster decisions"
+      stats: "95% cost reduction500% faster decisions"
     },
     {
       title: "Quantum AI 2030: Business Transformation Ultimate Guide",
@@ -19,7 +19,7 @@ const UltimateContentShowcase2030: React.FC = () => {
       readTime: "12 min read",
       link: "/blog/quantum-ai-2030-business-transformation-ultimate-guide",
       featured: true,
-      stats: "1000x computational speedup, 5000% ROI"
+      stats: "1000x computational speedup5000% ROI"
     },
     {
       title: "AI 2030 Autonomous Enterprise: 10,000% ROI Success Story",
@@ -28,7 +28,7 @@ const UltimateContentShowcase2030: React.FC = () => {
       readTime: "10 min read",
       link: "/case-studies/ai-2030-autonomous-enterprise-transformation-10000-roi-success-story",
       featured: true,
-      stats: "10,000% ROI, $2.3B savings"
+      stats: "10,000% ROI$2.3B savings"
     }
   ];
 
@@ -44,12 +44,12 @@ const UltimateContentShowcase2030: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Discover the revolutionary AI and quantum technologies that will transform businesses by 2030. 
-            Featuring autonomous enterprises, quantum AI, and unprecedented ROI success stories.
+            Featuring autonomous enterprisesquantum AIand unprecedented ROI success stories.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {featuredContent.map((content, index) => (
+          {featuredContent.map((contentindex) => (
             <div
               key={index}
               className={`bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${

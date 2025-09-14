@@ -7,9 +7,9 @@ import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 
 export default function TalentOnboarding() {
-  const { user, isLoading } = useAuth();
+  const { userisLoading } = useAuth();
 
-  // If not authenticated, redirect to login
+  // If not authenticatedredirect to login
   if (!isLoading && !user) {
     return <Navigate to="/login" replace />;
   }

@@ -1,18 +1,18 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Search, 
-  Filter, 
-  Grid, 
-  List, 
-  Star, 
-  TrendingUp, 
-  Clock, 
-  Users, 
+  Search
+  Filter
+  Grid
+  List
+  Star
+  TrendingUp
+  Clock
+  Users
   Eye,
   Heart,
   Share2,
@@ -33,21 +33,21 @@ import {
 } from 'lucide-react';
 
 const InteractiveContentDiscovery2026 = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState('grid');
-  const [sortBy, setSortBy] = useState('trending');
-  const [filteredContent, setFilteredContent] = useState([]);
-  const [selectedContent, setSelectedContent] = useState(null);
+  const [searchQuerysetSearchQuery] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [viewModesetViewMode] = useState('grid');
+  const [sortBysetSortBy] = useState('trending');
+  const [filteredContentsetFilteredContent] = useState([]);
+  const [selectedContentsetSelectedContent] = useState(null);
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: Grid, color: 'from-slate-500 to-slate-600' },
-    { id: 'ai-solutions', name: 'AI Solutions', icon: Brain, color: 'from-purple-500 to-blue-500' },
-    { id: 'automation', name: 'Automation', icon: Zap, color: 'from-orange-500 to-red-500' },
-    { id: 'security', name: 'Security', icon: Shield, color: 'from-green-500 to-teal-500' },
-    { id: 'analytics', name: 'Analytics', icon: TrendingUp, color: 'from-blue-500 to-indigo-500' },
-    { id: 'case-studies', name: 'Case Studies', icon: Target, color: 'from-pink-500 to-rose-500' },
-    { id: 'tutorials', name: 'Tutorials', icon: Play, color: 'from-yellow-500 to-orange-500' }
+    { id: 'all'name: 'All Content'icon: Gridcolor: 'from-slate-500 to-slate-600' },
+    { id: 'ai-solutions'name: 'AI Solutions'icon: Braincolor: 'from-purple-500 to-blue-500' },
+    { id: 'automation'name: 'Automation'icon: Zapcolor: 'from-orange-500 to-red-500' },
+    { id: 'security'name: 'Security'icon: Shieldcolor: 'from-green-500 to-teal-500' },
+    { id: 'analytics'name: 'Analytics'icon: TrendingUpcolor: 'from-blue-500 to-indigo-500' },
+    { id: 'case-studies'name: 'Case Studies'icon: Targetcolor: 'from-pink-500 to-rose-500' },
+    { id: 'tutorials'name: 'Tutorials'icon: Playcolor: 'from-yellow-500 to-orange-500' }
   ];
 
   const contentItems = [
@@ -63,7 +63,7 @@ const InteractiveContentDiscovery2026 = () => {
       duration: '15 min read',
       author: 'Dr. Sarah Chen',
       publishedAt: '2026-01-15',
-      tags: ['AI', 'Neural Networks', 'Implementation', 'Business'],
+      tags: ['AI'Neural Networks'Implementation'Business'],
       image: '/api/placeholder/400/250',
       featured: true,
       trending: true
@@ -80,7 +80,7 @@ const InteractiveContentDiscovery2026 = () => {
       duration: '12 min read',
       author: 'Michael Rodriguez',
       publishedAt: '2026-01-14',
-      tags: ['Security', 'Encryption', 'Quantum', 'Enterprise'],
+      tags: ['Security'Encryption'Quantum'Enterprise'],
       image: '/api/placeholder/400/250',
       featured: false,
       trending: true
@@ -97,7 +97,7 @@ const InteractiveContentDiscovery2026 = () => {
       duration: '8 min read',
       author: 'Alex Thompson',
       publishedAt: '2026-01-13',
-      tags: ['Automation', 'Case Study', 'Efficiency', 'ROI'],
+      tags: ['Automation'Case Study'Efficiency'ROI'],
       image: '/api/placeholder/400/250',
       featured: true,
       trending: false
@@ -114,7 +114,7 @@ const InteractiveContentDiscovery2026 = () => {
       duration: '20 min read',
       author: 'Emma Wilson',
       publishedAt: '2026-01-12',
-      tags: ['Analytics', 'Dashboard', 'Tutorial', 'Data'],
+      tags: ['Analytics'Dashboard'Tutorial'Data'],
       image: '/api/placeholder/400/250',
       featured: false,
       trending: false
@@ -131,7 +131,7 @@ const InteractiveContentDiscovery2026 = () => {
       duration: '18 min read',
       author: 'David Kim',
       publishedAt: '2026-01-11',
-      tags: ['Security', 'AI', 'Threat Detection', 'Cybersecurity'],
+      tags: ['Security'AI'Threat Detection'Cybersecurity'],
       image: '/api/placeholder/400/250',
       featured: false,
       trending: true
@@ -148,7 +148,7 @@ const InteractiveContentDiscovery2026 = () => {
       duration: '45 min course',
       author: 'Lisa Anderson',
       publishedAt: '2026-01-10',
-      tags: ['Automation', 'Business Process', 'Masterclass', 'Framework'],
+      tags: ['Automation'Business Process'Masterclass'Framework'],
       image: '/api/placeholder/400/250',
       featured: true,
       trending: false
@@ -175,21 +175,21 @@ const InteractiveContentDiscovery2026 = () => {
     // Sort by selected criteria
     switch (sortBy) {
       case 'trending':
-        filtered = filtered.sort((a, b) => b.views - a.views);
+        filtered = filtered.sort((ab) => b.views - a.views);
         break;
       case 'rating':
-        filtered = filtered.sort((a, b) => b.rating - a.rating);
+        filtered = filtered.sort((ab) => b.rating - a.rating);
         break;
       case 'newest':
-        filtered = filtered.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+        filtered = filtered.sort((ab) => new Date(b.publishedAt) - new Date(a.publishedAt));
         break;
       case 'popular':
-        filtered = filtered.sort((a, b) => b.likes - a.likes);
+        filtered = filtered.sort((ab) => b.likes - a.likes);
         break;
     }
 
     setFilteredContent(filtered);
-  }, [searchQuery, selectedCategory, sortBy]);
+  }[searchQueryselectedCategorysortBy]);
 
   const getCategoryInfo = (categoryId) => {
     return categories.find(cat => cat.id === categoryId) || categories[0];
@@ -210,8 +210,8 @@ const InteractiveContentDiscovery2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
@@ -223,16 +223,16 @@ const InteractiveContentDiscovery2026 = () => {
             Discover Amazing Content
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Explore our comprehensive library of AI solutions, tutorials, case studies, and more. 
+            Explore our comprehensive library of AI solutionstutorialscase studiesand more. 
             Find exactly what you need to transform your business.
           </p>
         </motion.div>
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="bg-white rounded-2xl shadow-lg p-6 mb-8"
         >
           <div className="flex flex-col lg:flex-row gap-4">
@@ -241,7 +241,7 @@ const InteractiveContentDiscovery2026 = () => {
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search content, tags, or authors..."
+                placeholder="Search contentagsor authors..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
@@ -302,9 +302,9 @@ const InteractiveContentDiscovery2026 = () => {
 
         {/* Content Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           className={`grid gap-6 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
@@ -312,7 +312,7 @@ const InteractiveContentDiscovery2026 = () => {
           }`}
         >
           <AnimatePresence>
-            {filteredContent.map((item, index) => {
+            {filteredContent.map((itemindex) => {
               const categoryInfo = getCategoryInfo(item.category);
               const TypeIcon = getTypeIcon(item.type);
               const CategoryIcon = categoryInfo.icon;
@@ -320,11 +320,11 @@ const InteractiveContentDiscovery2026 = () => {
               return (
                 <motion.div
                   key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -5, scale: 1.02 }}
+                  initial={{ opacity: 0y: 20 }}
+                  animate={{ opacity: 1y: 0 }}
+                  exit={{ opacity: 0y: -20 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
+                  whileHover={{ y: -5scale: 1.02 }}
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group cursor-pointer"
                   onClick={() => setSelectedContent(item)}
                 >
@@ -379,7 +379,7 @@ const InteractiveContentDiscovery2026 = () => {
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {item.tags.slice(0, 3).map((tag, tagIndex) => (
+                      {item.tags.slice(03).map((tagIndex) => (
                         <span
                           key={tagIndex}
                           className="bg-slate-100 text-slate-600 px-2 py-1 rounded-full text-xs"
@@ -473,9 +473,9 @@ const InteractiveContentDiscovery2026 = () => {
         {/* Load More */}
         {filteredContent.length > 0 && (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.6delay: 0.6 }}
             className="text-center mt-12"
           >
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center gap-2 mx-auto">

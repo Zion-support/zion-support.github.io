@@ -7,9 +7,9 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-export function SidebarGroup({ className, children, ...props }: SidebarGroupProps) {
+export function SidebarGroup({ classNamechildren...props }: SidebarGroupProps) {
   return (
-    <div className={cn("mb-4", className)} {...props}>
+    <div className={cn("mb-4"className)} {...props}>
       {children}
     </div>
   );

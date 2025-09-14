@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-  ArrowRightIcon, 
-  SparklesIcon, 
-  TrendingUpIcon, 
+  ArrowRightIcon
+  SparklesIcon
+  TrendingUpIcon
   LightBulbIcon,
   RocketLaunchIcon,
   ChartBarIcon
@@ -62,8 +62,8 @@ const AITrends2025PromotionalBanner: React.FC = () => {
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl opacity-90 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Discover the revolutionary AI trends that are reshaping industries, 
-            transforming businesses, and creating unprecedented opportunities for growth and innovation.
+            Discover the revolutionary AI trends that are reshaping industries
+            transforming businessesand creating unprecedented opportunities for growth and innovation.
           </p>
 
           {/* CTA Buttons */}
@@ -107,7 +107,7 @@ const AITrends2025PromotionalBanner: React.FC = () => {
 
         {/* Trending Topics */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {trends.map((trend, index) => {
+          {trends.map((trendindex) => {
             const IconComponent = trend.icon;
             return (
               <div
@@ -127,7 +127,7 @@ const AITrends2025PromotionalBanner: React.FC = () => {
                 </p>
                 
                 <Link
-                  href={`/ai-trends/${trend.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/ai-trends/${trend.title.toLowerCase().replace(/\s+/g'-')}`}
                   className="inline-flex items-center text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
                 >
                   Learn More

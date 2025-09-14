@@ -13,7 +13,7 @@ export default function RevolutionaryContent2025Banner() {
             The Future is Here
           </h2>
           <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Experience the most advanced AI, quantum computing, and neural interface content 
+            Experience the most advanced AIquantum computingand neural interface content 
             that's transforming businesses worldwide in 2025.
           </p>
         </div>
@@ -24,7 +24,7 @@ export default function RevolutionaryContent2025Banner() {
             <h3 className="text-3xl font-bold mb-6 text-yellow-300">AI Enterprise Transformation</h3>
             <p className="text-xl mb-8 text-blue-100">
               Master the complete AI transformation journey with our comprehensive guide. 
-              Learn about neural architectures, quantum AI, and autonomous business systems 
+              Learn about neural architecturesquantum AIand autonomous business systems 
               that are revolutionizing enterprise operations.
             </p>
             <div className="space-y-4 mb-8">
@@ -54,7 +54,7 @@ export default function RevolutionaryContent2025Banner() {
             <h3 className="text-3xl font-bold mb-6 text-yellow-300">Quantum Computing Revolution</h3>
             <p className="text-xl mb-8 text-green-100">
               Discover how quantum computing is transforming business operations. 
-              Explore real-world applications, implementation strategies, and success stories 
+              Explore real-world applicationsimplementation strategiesand success stories 
               from companies already leveraging quantum AI.
             </p>
             <div className="space-y-4 mb-8">
@@ -86,7 +86,7 @@ export default function RevolutionaryContent2025Banner() {
             <h3 className="text-4xl font-bold mb-6 text-white">Neural Interface Revolution</h3>
             <p className="text-2xl mb-8 text-purple-100 max-w-4xl mx-auto">
               Experience the future of human-AI collaboration through advanced neural interfaces. 
-              Learn about brain-computer interfaces, thought-controlled systems, and the seamless 
+              Learn about brain-computer interfacesthought-controlled systemsand the seamless 
               integration of human intelligence with artificial intelligence.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">

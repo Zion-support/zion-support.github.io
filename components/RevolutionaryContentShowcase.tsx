@@ -13,8 +13,8 @@ export default function RevolutionaryContentShowcase() {
             Revolutionary AI Content Showcase
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Discover our latest breakthrough content featuring revolutionary AI technologies, 
-            quantum computing integration, and unprecedented ROI success stories.
+            Discover our latest breakthrough content featuring revolutionary AI technologies
+            quantum computing integrationand unprecedented ROI success stories.
           </p>
         </div>
 

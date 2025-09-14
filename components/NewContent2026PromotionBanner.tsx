@@ -25,7 +25,7 @@ const NewContent2026PromotionBanner = () => {
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-gray-100">
-            Discover the most advanced AI technologies, insights, and breakthroughs that are reshaping 
+            Discover the most advanced AI technologiesinsightsand breakthroughs that are reshaping 
             the future of business and technology. Stay ahead of the curve with our cutting-edge content.
           </p>
           

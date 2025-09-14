@@ -10,8 +10,8 @@ export default function AutonomousSystemsShowcase2025() {
             Autonomous Systems Showcase 2025
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the future of business operations with autonomous AI systems that work 24/7 to optimize, 
-            maintain, and evolve your business processes.
+            Discover the future of business operations with autonomous AI systems that work 24/7 to optimize
+            maintainand evolve your business processes.
           </p>
         </div>
 
@@ -21,7 +21,7 @@ export default function AutonomousSystemsShowcase2025() {
             <div className="text-4xl mb-4">🤖</div>
             <h3 className="text-xl font-bold text-gray-900 mb-4">Autonomous Operations</h3>
             <p className="text-gray-600 mb-4">
-              Self-managing systems that handle complex business operations without human intervention, 
+              Self-managing systems that handle complex business operations without human intervention
               optimizing performance in real-time.
             </p>
             <ul className="text-sm text-gray-500 space-y-1">
@@ -36,7 +36,7 @@ export default function AutonomousSystemsShowcase2025() {
             <div className="text-4xl mb-4">🧠</div>
             <h3 className="text-xl font-bold text-gray-900 mb-4">Intelligent Decision Making</h3>
             <p className="text-gray-600 mb-4">
-              AI systems that make complex business decisions autonomously, learning from outcomes 
+              AI systems that make complex business decisions autonomouslylearning from outcomes 
               and continuously improving strategies.
             </p>
             <ul className="text-sm text-gray-500 space-y-1">
@@ -51,7 +51,7 @@ export default function AutonomousSystemsShowcase2025() {
             <div className="text-4xl mb-4">⚡</div>
             <h3 className="text-xl font-bold text-gray-900 mb-4">Adaptive Learning</h3>
             <p className="text-gray-600 mb-4">
-              Systems that continuously learn and adapt to changing business conditions, 
+              Systems that continuously learn and adapt to changing business conditions
               ensuring optimal performance at all times.
             </p>
             <ul className="text-sm text-gray-500 space-y-1">
@@ -80,7 +80,7 @@ export default function AutonomousSystemsShowcase2025() {
                 <span className="text-white text-2xl">💰</span>
               </div>
               <h4 className="font-semibold mb-2">Finance</h4>
-              <p className="text-gray-600 text-sm">Autonomous trading, risk management, and fraud detection systems</p>
+              <p className="text-gray-600 text-sm">Autonomous tradingrisk managementand fraud detection systems</p>
             </div>
             
             <div className="text-center">
@@ -88,7 +88,7 @@ export default function AutonomousSystemsShowcase2025() {
                 <span className="text-white text-2xl">🏥</span>
               </div>
               <h4 className="font-semibold mb-2">Healthcare</h4>
-              <p className="text-gray-600 text-sm">Autonomous patient monitoring, diagnosis assistance, and treatment optimization</p>
+              <p className="text-gray-600 text-sm">Autonomous patient monitoringdiagnosis assistanceand treatment optimization</p>
             </div>
             
             <div className="text-center">

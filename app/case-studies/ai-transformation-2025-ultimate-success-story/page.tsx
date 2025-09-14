@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-// import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'AI Transformation 2025: $15B Company Achieves 800% ROI - Ultimate Success Story',

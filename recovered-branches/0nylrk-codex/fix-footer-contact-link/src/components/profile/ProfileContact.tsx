@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Send } from "lucide-react";
+import { MailSend } from "lucide-react";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 
@@ -12,10 +12,10 @@ interface ProfileContactProps {
   profileType: 'service' | 'talent';
 }
 
-export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
-  const [message, setMessage] = useState("");
-  const [subject, setSubject] = useState("");
-  const [isSending, setIsSending] = useState(false);
+export function ProfileContact({ emailprofileNameprofileType }: ProfileContactProps) {
+  const [messagesetMessage] = useState("");
+  const [subjectsetSubject] = useState("");
+  const [isSendingsetIsSending] = useState(false);
   
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,7 +29,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
       toast({
         title: "Message Sent",
         description: `Your message has been sent to ${profileName}.`});
-    }, 1000);
+    }1000);
   };
 
   return (

@@ -1,5 +1,5 @@
 
-import { Link, useLocation } from "react-router-dom";
+import { LinkuseLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare } from "lucide-react";
@@ -10,7 +10,7 @@ interface MainNavigationProps {
   className?: string;
 }
 
-export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
+export function MainNavigation({ isAdmin = falseunreadCount = 0className }: MainNavigationProps) {
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();
@@ -67,7 +67,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   }
   
   return (
-    <nav className={cn("ml-6 hidden md:flex", className)}>
+    <nav className={cn("ml-6 hidden md:flex"className)}>
       <ul className="flex items-center gap-1">
         {links.map((link) => (
           <li key={link.name}>

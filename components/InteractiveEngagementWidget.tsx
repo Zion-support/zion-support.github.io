@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 
 interface EngagementData {
   visitors: number;
@@ -12,14 +12,14 @@ interface EngagementData {
 }
 
 export default function InteractiveEngagementWidget() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [engagementData, setEngagementData] = useState<EngagementData>({
+  const [isVisiblesetIsVisible] = useState(false);
+  const [engagementDatasetEngagementData] = useState<EngagementData>({
     visitors: 0,
     timeOnSite: 0,
     bounceRate: 0,
     conversionRate: 0
   });
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [currentTestimonialsetCurrentTestimonial] = useState(0);
 
   const testimonials = [
     {
@@ -50,39 +50,39 @@ export default function InteractiveEngagementWidget() {
     const interval = setInterval(() => {
       setEngagementData((prev: EngagementData) => ({
         visitors: prev.visitors + Math.floor(Math.random() * 3) + 1,
-        timeOnSite: Math.max(0, prev.timeOnSite + (Math.random() - 0.5) * 10),
-        bounceRate: Math.max(0, Math.min(100, prev.bounceRate + (Math.random() - 0.5) * 2)),
-        conversionRate: Math.max(0, Math.min(100, prev.conversionRate + (Math.random() - 0.5) * 1))
+        timeOnSite: Math.max(0prev.timeOnSite + (Math.random() - 0.5) * 10),
+        bounceRate: Math.max(0Math.min(100prev.bounceRate + (Math.random() - 0.5) * 2)),
+        conversionRate: Math.max(0Math.min(100prev.conversionRate + (Math.random() - 0.5) * 1))
       }));
-    }, 2000);
+    }2000);
 
     // Rotate testimonials
     const testimonialInterval = setInterval(() => {
       setCurrentTestimonial((prev: number) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }5000);
 
     return () => {
       clearInterval(interval);
       clearInterval(testimonialInterval);
     };
-  }, [testimonials.length]);
+  }[testimonials.length]);
 
   useEffect(() => {
     // Show widget after 3 seconds
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 3000);
+    }3000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0y: 50 }}
+      animate={{ opacity: 1y: 0 }}
+      exit={{ opacity: 0y: 50 }}
       className="fixed bottom-4 left-4 bg-white rounded-lg shadow-2xl border border-gray-200 p-4 max-w-sm z-40"
     >
       <div className="flex justify-between items-center mb-3">
@@ -120,9 +120,9 @@ export default function InteractiveEngagementWidget() {
         <AnimatePresence mode="wait">
           <motion.div
             key={currentTestimonial}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0x: 20 }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: -20 }}
             transition={{ duration: 0.3 }}
           >
             <div className="text-xs text-gray-600 mb-2">
@@ -134,11 +134,11 @@ export default function InteractiveEngagementWidget() {
                   {testimonials[currentTestimonial].name}
                 </div>
                 <div className="text-xs text-gray-500">
-                  {testimonials[currentTestimonial].role}, {testimonials[currentTestimonial].company}
+                  {testimonials[currentTestimonial].role}{testimonials[currentTestimonial].company}
                 </div>
               </div>
               <div className="flex">
-                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                {[...Array(testimonials[currentTestimonial].rating)].map((_i) => (
                   <span key={i} className="text-yellow-400 text-xs">★</span>
                 ))}
               </div>

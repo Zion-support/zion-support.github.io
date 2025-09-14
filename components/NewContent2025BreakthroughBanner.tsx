@@ -14,8 +14,8 @@ export default function NewContent2025BreakthroughBanner() {
             🚀 Revolutionary New Content Just Dropped
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover our latest breakthrough content: Enterprise Automation Revolution Guide, 
-            $2.4B Manufacturing Success Story, and comprehensive 150+ page Implementation Master Guide. 
+            Discover our latest breakthrough content: Enterprise Automation Revolution Guide
+            $2.4B Manufacturing Success Storyand comprehensive 150+ page Implementation Master Guide. 
             Everything you need to dominate AI in 2025.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -66,7 +66,7 @@ export default function NewContent2025BreakthroughBanner() {
             <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
               <h3 className="text-lg font-semibold mb-2">AI Implementation Master Guide</h3>
-              <p className="text-sm opacity-90 mb-3">150+ pages of templates, checklists, and strategies</p>
+              <p className="text-sm opacity-90 mb-3">150+ pages of templateschecklistsand strategies</p>
               <div className="flex items-center text-xs opacity-75">
                 <span>Free Download</span>
                 <span className="mx-2">•</span>

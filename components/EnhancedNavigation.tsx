@@ -1,86 +1,86 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Zap, ChevronDown } from 'lucide-react';
+import { motionAnimatePresence } from 'framer-motion';
+MenuXZapChevronDown
 
 const EnhancedNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpensetIsOpen] = useState(false);
+  const [isScrolledsetIsScrolled] = useState(false);
+  const [activeDropdownsetActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll'handleScroll);
+    return () => window.removeEventListener('scroll'handleScroll);
+  }[]);
 
   const services = [
-    { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
-    { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },
-    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' },
-    { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },
-    { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },
-    { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
+    { name: 'All Solutions'href: '/comprehensive-2025-services-showcase'icon: Globedescription: 'Complete collection of innovative solutions' },
+    { name: 'AI Business Intelligence'href: 'https://ziontechgroup.com/ai-business-intelligence'icon: Braindescription: 'AI-powered analytics and insights' },
+    { name: 'Quantum Cybersecurity'href: 'https://ziontechgroup.com/quantum-cybersecurity'icon: Shieldescription: 'Quantum-resistant security solutions' },
+    { name: 'Edge Computing'href: 'https://ziontechgroup.com/edge-computing-orchestration'icon: Cpudescription: 'Edge orchestration and IoT management' },
+    { name: 'Space Technology'href: 'https://ziontechgroup.com/space-technology'icon: Rocketdescription: 'Space exploration and satellite tech' },
+    { name: 'Pricing'href: '/pricing-2025'icon: Awardescription: 'Transparent pricing for all solutions' }
   ];
 
   const navigationItems = [
-    { name: 'Home', href: '/' },
+    { name: 'Home'href: '/' },
     { 
-      name: 'Services', 
+      name: 'Services'
       href: '/services',
       dropdown: [
-        { name: 'AI Solutions', href: '/services/ai' },
-        { name: 'Cloud Infrastructure', href: '/services/cloud' },
-        { name: 'Cybersecurity', href: '/services/security' },
-        { name: 'Quantum Computing', href: '/services/quantum' }
+        { name: 'AI Solutions'href: '/services/ai' },
+        { name: 'Cloud Infrastructure'href: '/services/cloud' },
+        { name: 'Cybersecurity'href: '/services/security' },
+        { name: 'Quantum Computing'href: '/services/quantum' }
       ]
     },
     { 
-      name: 'Content', 
+      name: 'Content'
       href: '/blog',
       dropdown: [
-        { name: 'Latest Blog Posts', href: '/blog' },
-        { name: 'AI 2025 Breakthroughs', href: '/blog/ai-2025-next-generation-breakthrough' },
-        { name: 'Interactive AI Demo Center', href: '/ai-tools/interactive-ai-demo-center' },
-        { name: 'Ultimate AI Resource Library', href: '/resources/ultimate-ai-resource-library' },
-        { name: 'AI Implementation Mastery Guide', href: '/guides/ai-implementation-mastery-2025' },
-        { name: 'Enterprise Success Story', href: '/case-studies/ai-2025-global-enterprise-transformation-ultimate-success' },
-        { name: 'AI Solutions 2025 Ultimate', href: '/ai-solutions-2025-ultimate' },
-        { name: 'Tech Trends 2025-2030', href: '/tech-trends-2025-2030' },
-        { name: 'Business Transformation Guide', href: '/business-transformation-guide-2025' },
-        { name: 'Neural Interface Revolution', href: '/blog/ai-2025-neural-interface-revolution' },
-        { name: 'Quantum AI Superintelligence', href: '/blog/quantum-ai-superintelligence-2025' },
-        { name: 'AI 2025 Insights', href: '/blog/ai-2025-generative-ai-business-transformation' },
-        { name: 'Quantum Computing Guide', href: '/blog/quantum-computing-2025-business-applications' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Global AI Transformation', href: '/case-studies/global-ai-transformation-2025-mega-success' },
-        { name: 'Implementation Guides', href: '/resources' },
-        { name: 'Autonomous Operations Guide', href: '/resources/ai-2025-autonomous-business-operations-guide' }
+        { name: 'Latest Blog Posts'href: '/blog' },
+        { name: 'AI 2025 Breakthroughs'href: '/blog/ai-2025-next-generation-breakthrough' },
+        { name: 'Interactive AI Demo Center'href: '/ai-tools/interactive-ai-demo-center' },
+        { name: 'Ultimate AI Resource Library'href: '/resources/ultimate-ai-resource-library' },
+        { name: 'AI Implementation Mastery Guide'href: '/guides/ai-implementation-mastery-2025' },
+        { name: 'Enterprise Success Story'href: '/case-studies/ai-2025-global-enterprise-transformation-ultimate-success' },
+        { name: 'AI Solutions 2025 Ultimate'href: '/ai-solutions-2025-ultimate' },
+        { name: 'Tech Trends 2025-2030'href: '/tech-trends-2025-2030' },
+        { name: 'Business Transformation Guide'href: '/business-transformation-guide-2025' },
+        { name: 'Neural Interface Revolution'href: '/blog/ai-2025-neural-interface-revolution' },
+        { name: 'Quantum AI Superintelligence'href: '/blog/quantum-ai-superintelligence-2025' },
+        { name: 'AI 2025 Insights'href: '/blog/ai-2025-generative-ai-business-transformation' },
+        { name: 'Quantum Computing Guide'href: '/blog/quantum-computing-2025-business-applications' },
+        { name: 'Case Studies'href: '/case-studies' },
+        { name: 'Global AI Transformation'href: '/case-studies/global-ai-transformation-2025-mega-success' },
+        { name: 'Implementation Guides'href: '/resources' },
+        { name: 'Autonomous Operations Guide'href: '/resources/ai-2025-autonomous-business-operations-guide' }
       ]
     },
     { 
-      name: 'AI Tools', 
+      name: 'AI Tools'
       href: '/ai-tools',
       dropdown: [
-        { name: 'Interactive AI Demo Center', href: '/ai-tools/interactive-ai-demo-center' },
-        { name: 'All AI Tools', href: '/ai-tools' },
-        { name: 'Quantum Computing Demos', href: '/ai-tools/quantum-computing-demo' },
-        { name: 'Neural Networks Demos', href: '/ai-tools/neural-networks-demo' },
-        { name: 'Autonomous Systems Demos', href: '/ai-tools/autonomous-systems-demo' },
-        { name: 'Computer Vision Demos', href: '/ai-tools/computer-vision-demo' },
-        { name: 'NLP & Chatbots', href: '/ai-tools/nlp-demo' },
-        { name: 'AI Security & Ethics', href: '/ai-tools/security-ethics-demo' }
+        { name: 'Interactive AI Demo Center'href: '/ai-tools/interactive-ai-demo-center' },
+        { name: 'All AI Tools'href: '/ai-tools' },
+        { name: 'Quantum Computing Demos'href: '/ai-tools/quantum-computing-demo' },
+        { name: 'Neural Networks Demos'href: '/ai-tools/neural-networks-demo' },
+        { name: 'Autonomous Systems Demos'href: '/ai-tools/autonomous-systems-demo' },
+        { name: 'Computer Vision Demos'href: '/ai-tools/computer-vision-demo' },
+        { name: 'NLP & Chatbots'href: '/ai-tools/nlp-demo' },
+        { name: 'AI Security & Ethics'href: '/ai-tools/security-ethics-demo' }
       ]
     },
-    { name: 'Portfolio', href: '/portfolio' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Portfolio'href: '/portfolio' },
+    { name: 'About'href: '/about' },
+    { name: 'Contact'href: '/contact' }
   ];
 
   return (
@@ -120,9 +120,9 @@ const EnhancedNavigation: React.FC = () => {
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
+                        initial={{ opacity: 0y: 10 }}
+                        animate={{ opacity: 1y: 0 }}
+                        exit={{ opacity: 0y: 10 }}
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-48 bg-white/95 backdrop-blur-md rounded-lg shadow-xl border border-white/20 py-2"
                         onMouseEnter={() => setActiveDropdown(item.name)}
@@ -174,9 +174,9 @@ const EnhancedNavigation: React.FC = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 0height: 0 }}
+              animate={{ opacity: 1height: 'auto' }}
+              exit={{ opacity: 0height: 0 }}
               transition={{ duration: 0.3 }}
               className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10"
             >

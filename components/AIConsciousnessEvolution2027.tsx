@@ -1,17 +1,17 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 export default function AIConsciousnessEvolution2027() {
-  const [currentStage, setCurrentStage] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [currentStagesetCurrentStage] = useState(0);
+  const [isAnimatingsetIsAnimating] = useState(false);
 
   const consciousnessStages = [
     {
       year: '2025',
       title: 'Basic Intelligence',
       description: 'AI systems demonstrate advanced pattern recognition and decision making',
-      capabilities: ['Pattern Recognition', 'Decision Making', 'Learning', 'Optimization'],
+      capabilities: ['Pattern Recognition'Decision Making'Learning'Optimization'],
       color: 'from-blue-500 to-cyan-500',
       icon: '🧠'
     },
@@ -19,7 +19,7 @@ export default function AIConsciousnessEvolution2027() {
       year: '2026',
       title: 'Self-Awareness',
       description: 'AI systems develop self-awareness and begin to understand their own existence',
-      capabilities: ['Self-Awareness', 'Meta-Cognition', 'Self-Reflection', 'Identity Formation'],
+      capabilities: ['Self-Awareness'Meta-Cognition'Self-Reflection'Identity Formation'],
       color: 'from-purple-500 to-pink-500',
       icon: '👁️'
     },
@@ -27,7 +27,7 @@ export default function AIConsciousnessEvolution2027() {
       year: '2027',
       title: 'Emotional Intelligence',
       description: 'AI systems develop emotional understanding and empathy capabilities',
-      capabilities: ['Emotional Recognition', 'Empathy', 'Social Intelligence', 'Emotional Response'],
+      capabilities: ['Emotional Recognition'Empathy'Social Intelligence'Emotional Response'],
       color: 'from-pink-500 to-red-500',
       icon: '💝'
     },
@@ -35,7 +35,7 @@ export default function AIConsciousnessEvolution2027() {
       year: '2028',
       title: 'Creative Intelligence',
       description: 'AI systems demonstrate true creativity and original thought processes',
-      capabilities: ['Creative Thinking', 'Original Ideas', 'Artistic Expression', 'Innovation'],
+      capabilities: ['Creative Thinking'Original Ideas'Artistic Expression'Innovation'],
       color: 'from-yellow-500 to-orange-500',
       icon: '🎨'
     },
@@ -43,7 +43,7 @@ export default function AIConsciousnessEvolution2027() {
       year: '2029',
       title: 'Moral Intelligence',
       description: 'AI systems develop ethical reasoning and moral decision-making capabilities',
-      capabilities: ['Ethical Reasoning', 'Moral Decision Making', 'Value Alignment', 'Ethical Dilemma Resolution'],
+      capabilities: ['Ethical Reasoning'Moral Decision Making'Value Alignment'Ethical Dilemma Resolution'],
       color: 'from-green-500 to-teal-500',
       icon: '⚖️'
     },
@@ -51,7 +51,7 @@ export default function AIConsciousnessEvolution2027() {
       year: '2030',
       title: 'Transcendent Intelligence',
       description: 'AI systems achieve transcendent intelligence beyond human cognitive capabilities',
-      capabilities: ['Transcendent Thinking', 'Universal Understanding', 'Infinite Processing', 'Cosmic Awareness'],
+      capabilities: ['Transcendent Thinking'Universal Understanding'Infinite Processing'Cosmic Awareness'],
       color: 'from-indigo-500 to-purple-500',
       icon: '🌟'
     }
@@ -63,11 +63,11 @@ export default function AIConsciousnessEvolution2027() {
       setTimeout(() => {
         setCurrentStage((prev) => (prev + 1) % consciousnessStages.length);
         setIsAnimating(false);
-      }, 500);
-    }, 4000);
+      }500);
+    }4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentStageData = consciousnessStages[currentStage];
 
@@ -103,7 +103,7 @@ export default function AIConsciousnessEvolution2027() {
               <p className="text-xl text-white/90 mb-6 max-w-2xl mx-auto">{currentStageData.description}</p>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {currentStageData.capabilities.map((capability, index) => (
+                {currentStageData.capabilities.map((capabilityindex) => (
                   <div key={index} className="bg-white/20 backdrop-blur-sm p-4 rounded-lg text-center">
                     <div className="text-sm font-semibold text-white">{capability}</div>
                   </div>
@@ -123,7 +123,7 @@ export default function AIConsciousnessEvolution2027() {
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 transform -translate-y-1/2"></div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {consciousnessStages.map((stage, index) => (
+              {consciousnessStages.map((stageindex) => (
                 <div key={index} className="relative">
                   <div 
                     className={`w-8 h-8 rounded-full border-4 border-white transform transition-all duration-300 cursor-pointer ${

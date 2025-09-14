@@ -30,7 +30,7 @@ export default function AIAutomationTrends2025() {
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
                   AI & Automation
                 </span>
-                <span className="text-white/60 text-sm">January 17, 2025</span>
+                <span className="text-white/60 text-sm">January 172025</span>
                 <span className="text-white/60 text-sm">•</span>
                 <span className="text-white/60 text-sm">8 min read</span>
               </div>
@@ -38,7 +38,7 @@ export default function AIAutomationTrends2025() {
                 AI Automation Trends 2025: The Future of Autonomous Systems
               </h1>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                As we navigate through 2025, the landscape of AI automation is evolving at an unprecedented pace. 
+                As we navigate through 2025the landscape of AI automation is evolving at an unprecedented pace. 
                 Discover the key trends that are reshaping industries and creating new possibilities for autonomous technology.
               </p>
             </header>
@@ -48,7 +48,7 @@ export default function AIAutomationTrends2025() {
                 <h2 className="text-3xl font-bold mb-6 text-cyan-400">The Rise of Autonomous Decision Making</h2>
                 <p className="text-lg text-white/80 mb-6">
                   One of the most significant trends in 2025 is the shift from rule-based automation to truly autonomous 
-                  decision-making systems. These AI systems can now analyze complex scenarios, learn from outcomes, and 
+                  decision-making systems. These AI systems can now analyze complex scenarioslearn from outcomesand 
                   make decisions without human intervention.
                 </p>
                 <div className="bg-white/10 rounded-xl p-6 mb-6">
@@ -66,7 +66,7 @@ export default function AIAutomationTrends2025() {
                 <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Edge Computing and AI Integration</h2>
                 <p className="text-lg text-white/80 mb-6">
                   The integration of AI with edge computing is revolutionizing how automation systems operate. 
-                  By processing data closer to the source, these systems can respond faster and operate more efficiently.
+                  By processing data closer to the sourcethese systems can respond faster and operate more efficiently.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-white/5 rounded-xl p-4">
@@ -94,7 +94,7 @@ export default function AIAutomationTrends2025() {
                 <h2 className="text-3xl font-bold mb-6 text-green-400">Human-AI Collaboration</h2>
                 <p className="text-lg text-white/80 mb-6">
                   The future isn't about AI replacing humans—it's about AI augmenting human capabilities. 
-                  Collaborative AI systems are becoming more sophisticated, working alongside humans to achieve 
+                  Collaborative AI systems are becoming more sophisticatedworking alongside humans to achieve 
                   better outcomes than either could achieve alone.
                 </p>
                 <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-xl p-6 mb-6">
@@ -122,7 +122,7 @@ export default function AIAutomationTrends2025() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-blue-400">Ethical AI and Responsible Automation</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  As AI systems become more autonomous, the importance of ethical considerations and responsible 
+                  As AI systems become more autonomousthe importance of ethical considerations and responsible 
                   development practices has never been greater. Organizations are implementing comprehensive 
                   frameworks to ensure AI systems operate fairly and transparently.
                 </p>
@@ -141,8 +141,8 @@ export default function AIAutomationTrends2025() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-purple-400">The Future Outlook</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  Looking ahead, we can expect AI automation to become even more sophisticated and integrated 
-                  into our daily lives. The key to success will be balancing innovation with responsibility, 
+                  Looking aheadwe can expect AI automation to become even more sophisticated and integrated 
+                  into our daily lives. The key to success will be balancing innovation with responsibility
                   ensuring that these powerful technologies benefit humanity as a whole.
                 </p>
                 <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-xl p-6">

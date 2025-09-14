@@ -21,7 +21,7 @@ export default function QuantumFinancialTradingPlatformPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
               <h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
-              <p className="text-slate-300">Market prediction models, algorithmic trading, risk management, and performance analytics with enterprise-grade security and compliance.</p>
+              <p className="text-slate-300">Market prediction modelsalgorithmic tradingrisk managementand performance analytics with enterprise-grade security and compliance.</p>
             </div>
             <div className="p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
               <div className="text-3xl font-bold text-white text-base font-medium text-gray-400">Starting at $18,999<span >/month</span></div>

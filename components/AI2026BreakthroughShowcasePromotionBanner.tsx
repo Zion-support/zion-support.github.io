@@ -20,7 +20,7 @@ export default function AI2026BreakthroughShowcasePromotionBanner() {
           </h2>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Experience the future of artificial intelligence with our revolutionary 2026 breakthrough technologies, 
+            Experience the future of artificial intelligence with our revolutionary 2026 breakthrough technologies
             delivering unprecedented performance and transformation across every industry.
           </p>
           

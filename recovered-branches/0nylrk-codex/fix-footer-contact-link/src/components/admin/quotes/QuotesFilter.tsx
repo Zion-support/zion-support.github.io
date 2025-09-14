@@ -1,9 +1,9 @@
 import React from "react";
-import { Calendar, RefreshCw } from "@/components/icons";
-import { Card, CardContent } from "@/components/ui/card";
+import { CalendarRefreshCw } from "@/components/icons";
+import { CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
+import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
 import { Calendar as CalendarComponent } from "@/components/ui/calendar";
 import { format } from "date-fns";
@@ -89,11 +89,11 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   {dateRange?.from ? (
                     dateRange.to ? (
                       <>
-                        {format(dateRange.from, "LLL dd, y")} -{" "}
-                        {format(dateRange.to, "LLL dd, y")}
+                        {format(dateRange.from"LLL ddy")} -{" "}
+                        {format(dateRange.to"LLL ddy")}
                       </>
                     ) : (
-                      format(dateRange.from, "LLL dd, y")
+                      format(dateRange.from"LLL ddy")
                     )
                   ) : (
                     <span>Date range</span>

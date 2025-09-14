@@ -24,7 +24,7 @@ export default function UltimateInnovation2025Banner() {
           
           {/* Subheading */}
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Experience revolutionary breakthroughs in artificial intelligence that are reshaping the future of business, technology, and human potential.
+            Experience revolutionary breakthroughs in artificial intelligence that are reshaping the future of businesstechnologyand human potential.
           </p>
           
           {/* Key Features */}

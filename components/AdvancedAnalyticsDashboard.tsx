@@ -1,9 +1,9 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import { BarChart3, TrendingUp, Users, Eye, MousePointer, Clock, Globe, Zap } from 'lucide-react';
+import React{ useStateuseEffect } from 'react';
+BarChart3TrendingUpUsersEyeMousePointerClockGlobeZap
 
 const AdvancedAnalyticsDashboard = () => {
-  const [analytics, setAnalytics] = useState({
+  const [analyticsetAnalytics] = useState({
     pageViews: 0,
     uniqueVisitors: 0,
     bounceRate: 0,
@@ -14,7 +14,7 @@ const AdvancedAnalyticsDashboard = () => {
     realTimeUsers: 0
   });
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingsetIsLoading] = useState(true);
 
   useEffect(() => {
     // Simulate analytics data loading
@@ -27,25 +27,25 @@ const AdvancedAnalyticsDashboard = () => {
           avgSessionDuration: 4.2,
           conversionRate: 12.8,
           topPages: [
-            { name: 'AI 2025 Trends', views: 15420, growth: 15.2 },
-            { name: 'Quantum Computing', views: 12890, growth: 8.7 },
-            { name: 'Case Studies', views: 11230, growth: 22.1 },
-            { name: 'Resources', views: 9870, growth: 5.4 }
+            { name: 'AI 2025 Trends'views: 15420growth: 15.2 },
+            { name: 'Quantum Computing'views: 12890growth: 8.7 },
+            { name: 'Case Studies'views: 11230growth: 22.1 },
+            { name: 'Resources'views: 9870growth: 5.4 }
           ],
           trafficSources: [
-            { name: 'Organic Search', percentage: 45.2, color: 'bg-blue-500' },
-            { name: 'Direct Traffic', percentage: 28.7, color: 'bg-green-500' },
-            { name: 'Social Media', percentage: 15.3, color: 'bg-purple-500' },
-            { name: 'Referrals', percentage: 10.8, color: 'bg-orange-500' }
+            { name: 'Organic Search'percentage: 45.2color: 'bg-blue-500' },
+            { name: 'Direct Traffic'percentage: 28.7color: 'bg-green-500' },
+            { name: 'Social Media'percentage: 15.3color: 'bg-purple-500' },
+            { name: 'Referrals'percentage: 10.8color: 'bg-orange-500' }
           ],
           realTimeUsers: 47
         });
         setIsLoading(false);
-      }, 1500);
+      }1500);
     };
 
     loadAnalytics();
-  }, []);
+  }[]);
 
   const formatNumber = (num: number) => {
     if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
@@ -159,7 +159,7 @@ const AdvancedAnalyticsDashboard = () => {
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <h3 className="text-2xl font-bold text-white mb-6">Top Performing Pages</h3>
             <div className="space-y-4">
-              {analytics.topPages.map((page, index) => (
+              {analytics.topPages.map((pageindex) => (
                 <div key={index} className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
                   <div className="flex items-center">
                     <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">
@@ -183,7 +183,7 @@ const AdvancedAnalyticsDashboard = () => {
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <h3 className="text-2xl font-bold text-white mb-6">Traffic Sources</h3>
             <div className="space-y-4">
-              {analytics.trafficSources.map((source, index) => (
+              {analytics.trafficSources.map((sourceindex) => (
                 <div key={index} className="space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="text-white font-semibold">{source.name}</span>

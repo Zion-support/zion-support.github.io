@@ -30,7 +30,7 @@ const AI2026_2030FuturePredictionsPromotionBanner: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-5xl mx-auto leading-relaxed">
             Discover the most accurate future predictions for AI development. Based on our advanced 
             <strong className="text-cyan-400"> quantum computing models</strong> and 
-            <strong className="text-purple-400"> predictive analytics</strong>, these breakthroughs will 
+            <strong className="text-purple-400"> predictive analytics</strong>these breakthroughs will 
             <strong className="text-pink-400"> fundamentally transform</strong> every aspect of human civilization.
           </p>
           
@@ -184,7 +184,7 @@ const AI2026_2030FuturePredictionsPromotionBanner: React.FC = () => {
       
       {/* Floating elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(15)].map((_, i) => (
+        {[...Array(15)].map((_i) => (
           <div
             key={i}
             className="absolute w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full animate-float-slow opacity-30"
@@ -201,11 +201,11 @@ const AI2026_2030FuturePredictionsPromotionBanner: React.FC = () => {
       {/* CSS animations */}
       <style jsx>{`
         @keyframes float-slow {
-          0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+          0%100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
           50% { transform: translateY(-30px) rotate(180deg); opacity: 0.8; }
         }
         @keyframes pulse-slow {
-          0%, 100% { opacity: 0.3; }
+          0%100% { opacity: 0.3; }
           50% { opacity: 0.6; }
         }
         .animate-float-slow {

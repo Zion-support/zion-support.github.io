@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
 import CommunityPage from "../pages/CommunityPage";
 import ForumCategoryPage from "../pages/ForumCategoryPage";

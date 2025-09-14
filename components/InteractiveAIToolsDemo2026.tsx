@@ -1,14 +1,14 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Settings, 
-  Code, 
+  Play
+  Pause
+  RotateCcw
+  Settings
+  Code
   Database,
   Cpu,
   Network,
@@ -24,15 +24,15 @@ import {
 } from 'lucide-react';
 
 const InteractiveAIToolsDemo2026 = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeDemo, setActiveDemo] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [activeDemosetActiveDemo] = useState(0);
+  const [isRunningsetIsRunning] = useState(false);
+  const [progressetProgress] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 200);
+    const timer = setTimeout(() => setIsVisible(true)200);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -45,10 +45,10 @@ const InteractiveAIToolsDemo2026 = () => {
           }
           return prev + 2;
         });
-      }, 100);
+      }100);
     }
     return () => clearInterval(interval);
-  }, [isRunning]);
+  }[isRunning]);
 
   const demos = [
     {
@@ -57,8 +57,8 @@ const InteractiveAIToolsDemo2026 = () => {
       icon: Code,
       color: 'from-blue-500 to-cyan-500',
       description: 'Automated code analysis and optimization suggestions',
-      features: ['Security Scanning', 'Performance Optimization', 'Best Practices', 'Bug Detection'],
-      metrics: { efficiency: '95%', accuracy: '98%', time: '3x faster' }
+      features: ['Security Scanning'Performance Optimization'Best Practices'Bug Detection'],
+      metrics: { efficiency: '95%'accuracy: '98%'time: '3x faster' }
     },
     {
       id: 'data-analytics',
@@ -66,8 +66,8 @@ const InteractiveAIToolsDemo2026 = () => {
       icon: BarChart3,
       color: 'from-green-500 to-emerald-500',
       description: 'Real-time data processing and predictive insights',
-      features: ['Real-time Processing', 'Predictive Analytics', 'Data Visualization', 'Trend Analysis'],
-      metrics: { efficiency: '90%', accuracy: '96%', time: '5x faster' }
+      features: ['Real-time Processing'Predictive Analytics'Data Visualization'Trend Analysis'],
+      metrics: { efficiency: '90%'accuracy: '96%'time: '5x faster' }
     },
     {
       id: 'infrastructure-monitoring',
@@ -75,8 +75,8 @@ const InteractiveAIToolsDemo2026 = () => {
       icon: Network,
       color: 'from-purple-500 to-pink-500',
       description: 'Comprehensive system health and performance monitoring',
-      features: ['Health Monitoring', 'Performance Tracking', 'Alert System', 'Auto-scaling'],
-      metrics: { efficiency: '99%', accuracy: '99%', time: 'Real-time' }
+      features: ['Health Monitoring'Performance Tracking'Alert System'Auto-scaling'],
+      metrics: { efficiency: '99%'accuracy: '99%'time: 'Real-time' }
     },
     {
       id: 'security-scanning',
@@ -84,8 +84,8 @@ const InteractiveAIToolsDemo2026 = () => {
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       description: 'Advanced threat detection and vulnerability assessment',
-      features: ['Threat Detection', 'Vulnerability Scanning', 'Risk Assessment', 'Compliance Check'],
-      metrics: { efficiency: '97%', accuracy: '99%', time: '2x faster' }
+      features: ['Threat Detection'Vulnerability Scanning'Risk Assessment'Compliance Check'],
+      metrics: { efficiency: '97%'accuracy: '99%'time: '2x faster' }
     }
   ];
 
@@ -135,8 +135,8 @@ const InteractiveAIToolsDemo2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -151,12 +151,12 @@ const InteractiveAIToolsDemo2026 = () => {
 
         {/* Demo Selector */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
-          {demos.map((demo, index) => (
+          {demos.map((demoindex) => (
             <button
               key={demo.id}
               onClick={() => setActiveDemo(index)}
@@ -177,9 +177,9 @@ const InteractiveAIToolsDemo2026 = () => {
 
         {/* Interactive Demo Area */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           className="bg-white bg-opacity-10 rounded-2xl p-8 mb-12"
         >
           <div className="flex items-center justify-between mb-6">
@@ -237,7 +237,7 @@ const InteractiveAIToolsDemo2026 = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Key Features</h4>
               <div className="space-y-3">
-                {demos[activeDemo].features.map((feature, index) => (
+                {demos[activeDemo].features.map((featureindex) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-blue-200">{feature}</span>
@@ -269,26 +269,26 @@ const InteractiveAIToolsDemo2026 = () => {
 
         {/* Testimonials */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
           className="mb-12"
         >
           <h3 className="text-3xl font-bold text-center mb-12">
             What Developers Are Saying
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonialindex) => (
               <div key={index} className="bg-white bg-opacity-10 rounded-xl p-6">
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map((_i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 <p className="text-blue-200 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold">{testimonial.name}</div>
-                  <div className="text-blue-300 text-sm">{testimonial.role}, {testimonial.company}</div>
+                  <div className="text-blue-300 text-sm">{testimonial.role}{testimonial.company}</div>
                 </div>
               </div>
             ))}
@@ -297,9 +297,9 @@ const InteractiveAIToolsDemo2026 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12">

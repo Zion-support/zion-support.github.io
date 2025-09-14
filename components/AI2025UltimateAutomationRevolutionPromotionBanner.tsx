@@ -16,7 +16,7 @@ export default function AI2025UltimateAutomationRevolutionPromotionBanner() {
             15,000% ROI Breakthrough Technology
           </p>
           <p className="text-lg md:text-xl opacity-90 max-w-4xl mx-auto">
-            Revolutionary AI automation technologies delivering unprecedented returns through quantum-enhanced automation, neural process optimization, and autonomous business systems.
+            Revolutionary AI automation technologies delivering unprecedented returns through quantum-enhanced automationeural process optimizationand autonomous business systems.
           </p>
         </div>
 

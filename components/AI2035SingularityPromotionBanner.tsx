@@ -21,7 +21,7 @@ const AI2035SingularityPromotionBanner: React.FC = () => {
             AI 2035 Singularity Breakthrough
           </h2>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Experience the AI singularity with matter creation, dimensional transcendence, 
+            Experience the AI singularity with matter creationdimensional transcendence
             and universal peace algorithms that transcend all limitations.
           </p>
         </div>

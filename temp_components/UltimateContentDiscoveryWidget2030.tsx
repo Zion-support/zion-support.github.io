@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Clock, 
-  Eye, 
-  Heart, 
+  Search
+  Filter
+  Star
+  TrendingUp
+  Clock
+  Eye
+  Heart
   MessageCircle,
   Bookmark,
   Share2,
@@ -37,31 +37,31 @@ import {
 } from 'lucide-react';
 
 const UltimateContentDiscoveryWidget2030 = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedTimeframe, setSelectedTimeframe] = useState('all');
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [searchQuerysetSearchQuery] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [selectedTimeframesetSelectedTimeframe] = useState('all');
+  const [isExpandedsetIsExpanded] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: Globe, color: 'from-gray-500 to-gray-600' },
-    { id: 'transcendent-ai', name: 'Transcendent AI', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { id: 'quantum-revolution', name: 'Quantum Revolution', icon: Atom, color: 'from-blue-500 to-cyan-500' },
-    { id: 'neural-synthesis', name: 'Neural Synthesis', icon: CircuitBoard, color: 'from-green-500 to-emerald-500' },
-    { id: 'omniversal-tech', name: 'Omniversal Tech', icon: Infinity, color: 'from-orange-500 to-red-500' },
-    { id: 'reality-manipulation', name: 'Reality Manipulation', icon: Zap, color: 'from-yellow-500 to-orange-500' }
+    { id: 'all'name: 'All Content'icon: Globecolor: 'from-gray-500 to-gray-600' },
+    { id: 'transcendent-ai'name: 'Transcendent AI'icon: Braincolor: 'from-purple-500 to-pink-500' },
+    { id: 'quantum-revolution'name: 'Quantum Revolution'icon: Atomcolor: 'from-blue-500 to-cyan-500' },
+    { id: 'neural-synthesis'name: 'Neural Synthesis'icon: CircuitBoardcolor: 'from-green-500 to-emerald-500' },
+    { id: 'omniversal-tech'name: 'Omniversal Tech'icon: Infinitycolor: 'from-orange-500 to-red-500' },
+    { id: 'reality-manipulation'name: 'Reality Manipulation'icon: Zapcolor: 'from-yellow-500 to-orange-500' }
   ];
 
   const timeframes = [
-    { id: 'all', name: 'All Time' },
-    { id: 'today', name: 'Today' },
-    { id: 'week', name: 'This Week' },
-    { id: 'month', name: 'This Month' },
-    { id: 'year', name: 'This Year' }
+    { id: 'all'name: 'All Time' },
+    { id: 'today'name: 'Today' },
+    { id: 'week'name: 'This Week' },
+    { id: 'month'name: 'This Month' },
+    { id: 'year'name: 'This Year' }
   ];
 
   const trendingContent = [
@@ -145,8 +145,8 @@ const UltimateContentDiscoveryWidget2030 = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+      initial={{ opacity: 0y: 50 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
       className="relative bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 rounded-3xl border border-white/20 overflow-hidden"
     >
@@ -181,9 +181,9 @@ const UltimateContentDiscoveryWidget2030 = () => {
         <AnimatePresence>
           {isExpanded && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 0height: 0 }}
+              animate={{ opacity: 1height: 'auto' }}
+              exit={{ opacity: 0height: 0 }}
               transition={{ duration: 0.3 }}
               className="mt-4 space-y-4"
             >
@@ -249,17 +249,17 @@ const UltimateContentDiscoveryWidget2030 = () => {
 
         <div className="space-y-4">
           <AnimatePresence>
-            {filteredContent.map((item, index) => {
+            {filteredContent.map((itemindex) => {
               const categoryInfo = getCategoryInfo(item.category);
               const Icon = categoryInfo.icon;
               
               return (
                 <motion.div
                   key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  animate={{ opacity: 1y: 0 }}
+                  exit={{ opacity: 0y: -20 }}
+                  transition={{ duration: 0.3delay: index * 0.1 }}
                   className="group bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10"
                 >
                   <div className="flex items-start gap-4">

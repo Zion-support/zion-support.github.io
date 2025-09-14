@@ -1,6 +1,6 @@
 "use client";
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React{ useRef } from 'react';
+import { motionuseInView } from 'framer-motion';
 
 interface LazySectionProps {
   children: React.ReactNode;
@@ -18,35 +18,35 @@ export const LazySection: React.FC<LazySectionProps> = ({
   direction = 'up'
 }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { threshold, once: true });
+  const isInView = useInView(ref{ thresholdonce: true });
 
   const getInitialPosition = () => {
     switch (direction) {
       case 'up':
-        return { opacity: 0, y: 50 };
+        return { opacity: 0y: 50 };
       case 'down':
-        return { opacity: 0, y: -50 };
+        return { opacity: 0y: -50 };
       case 'left':
-        return { opacity: 0, x: 50 };
+        return { opacity: 0x: 50 };
       case 'right':
-        return { opacity: 0, x: -50 };
+        return { opacity: 0x: -50 };
       default:
-        return { opacity: 0, y: 50 };
+        return { opacity: 0y: 50 };
     }
   };
 
   const getAnimatePosition = () => {
     switch (direction) {
       case 'up':
-        return { opacity: 1, y: 0 };
+        return { opacity: 1y: 0 };
       case 'down':
-        return { opacity: 1, y: 0 };
+        return { opacity: 1y: 0 };
       case 'left':
-        return { opacity: 1, x: 0 };
+        return { opacity: 1x: 0 };
       case 'right':
-        return { opacity: 1, x: 0 };
+        return { opacity: 1x: 0 };
       default:
-        return { opacity: 1, y: 0 };
+        return { opacity: 1y: 0 };
     }
   };
 
@@ -55,7 +55,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
       ref={ref}
       initial={getInitialPosition()}
       animate={isInView ? getAnimatePosition() : getInitialPosition()}
-      transition={{ duration: 0.8, delay, ease: "easeOut" }}
+      transition={{ duration: 0.8delayease: "easeOut" }}
       className={className}
     >
       {children}

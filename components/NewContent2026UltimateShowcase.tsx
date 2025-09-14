@@ -76,7 +76,7 @@ const NewContent2026UltimateShowcase = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {ultimateContent.map((content, index) => (
+          {ultimateContent.map((contentindex) => (
             <div 
               key={index} 
               className={`bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden border ${

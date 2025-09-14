@@ -14,7 +14,7 @@ const NewContent2025AnalyticsRevolutionBanner = () => {
             Analytics Revolution 2025
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover the future of data analytics with AI-powered insights, real-time processing, 
+            Discover the future of data analytics with AI-powered insightsreal-time processing
             and predictive intelligence that transforms raw data into actionable business strategies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

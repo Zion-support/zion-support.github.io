@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 
 interface GeneratedContent {
   description: string;
@@ -20,7 +20,7 @@ interface GeneratedContentDisplayProps {
   onApply: () => void;
 }
 
-export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
+export function GeneratedContentDisplay({ contentonApply }: GeneratedContentDisplayProps) {
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -35,7 +35,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
-            {content.tags.map((tag, index) => (
+            {content.tags.map((tagindex) => (
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
                 {tag}
               </Badge>
@@ -53,7 +53,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
-            {content.keyPoints.map((point, index) => (
+            {content.keyPoints.map((pointindex) => (
               <li key={index}>{point}</li>
             ))}
           </ul>

@@ -1,18 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react';
+ArrowRightBrainRocketTestTubeGlobeMicroscopeLockStarTrendingUpZapSparklesAtom
 import Link from 'next/link';
 
 const Revolutionary2027Hero = () => {
   const floatingIcons = [
-    { icon: Brain, delay: 0, position: 'top-20 left-20' },
-    { icon: Rocket, delay: 0.5, position: 'top-40 right-32' },
-    { icon: TestTube, delay: 1, position: 'bottom-40 left-32' },
-    { icon: Globe, delay: 1.5, position: 'bottom-20 right-20' },
-    { icon: Microscope, delay: 2, position: 'top-1/2 left-10' },
-    { icon: Lock, delay: 2.5, position: 'top-1/2 right-10' },
-    { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' },
-    { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' }
+    { icon: Braindelay: 0position: 'top-20 left-20' },
+    { icon: Rocketdelay: 0.5position: 'top-40 right-32' },
+    { icon: TestTubedelay: 1position: 'bottom-40 left-32' },
+    { icon: Globedelay: 1.5position: 'bottom-20 right-20' },
+    { icon: Microscopedelay: 2position: 'top-1/2 left-10' },
+    { icon: Lockdelay: 2.5position: 'top-1/2 right-10' },
+    { icon: Atomdelay: 3position: 'bottom-1/3 left-1/2' },
+    { icon: Sparklesdelay: 3.5position: 'top-1/3 right-1/2' }
   ];
 
   const containerVariants = {
@@ -26,7 +26,7 @@ const Revolutionary2027Hero = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -50,13 +50,13 @@ const Revolutionary2027Hero = () => {
       </div>
 
       {/* Floating Icons */}
-      {floatingIcons.map((item, index) => (
+      {floatingIcons.map((itemindex) => (
         <motion.div
           key={index}
           className={`absolute ${item.position} text-purple-400/30`}
           animate={{
-            y: [0, -20, 0],
-            rotate: [0, 5, -5, 0]}}
+            y: [0-20],
+            rotate: [05-50]}}
           transition={{
             duration: 4,
             delay: item.delay,
@@ -97,7 +97,7 @@ const Revolutionary2027Hero = () => {
           {/* Subtitle */}
           <motion.div variants={itemVariants} className="max-w-4xl mx-auto">
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed">
-              Experience the next generation of AI, quantum computing, and emerging technologies. 
+              Experience the next generation of AIquantum computingand emerging technologies. 
               Transform your business with solutions that were once science fiction.
             </p>
           </motion.div>
@@ -174,7 +174,7 @@ const Revolutionary2027Hero = () => {
       <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         animate={{
-          y: [0, 10, 0]}}
+          y: [010]}}
         transition={{
           duration: 2,
           repeat: Infinity,
@@ -185,7 +185,7 @@ const Revolutionary2027Hero = () => {
           <motion.div
             className="w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2"
             animate={{
-              y: [0, 12, 0]}}
+              y: [0120]}}
             transition={{
               duration: 2,
               repeat: Infinity,
@@ -197,7 +197,7 @@ const Revolutionary2027Hero = () => {
 
       {/* Particle Effects */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(20)].map((_i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"
@@ -205,8 +205,8 @@ const Revolutionary2027Hero = () => {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`}}
             animate={{
-              y: [0, -100],
-              opacity: [0, 1, 0]}}
+              y: [0-100],
+              opacity: [010]}}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,

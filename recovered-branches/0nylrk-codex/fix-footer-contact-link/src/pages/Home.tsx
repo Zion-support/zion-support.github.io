@@ -18,8 +18,8 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Zion - The Tech & AI Marketplace" 
-        description="Discover top AI and tech talent, services, and equipment in one place."
-        keywords="AI, technology, marketplace, services, talent"
+        description="Discover top AI and tech talentservicesand equipment in one place."
+        keywords="AItechnologymarketplaceservicestalent"
         canonical="https://app.ziontechgroup.com/"
       />
       <Header />

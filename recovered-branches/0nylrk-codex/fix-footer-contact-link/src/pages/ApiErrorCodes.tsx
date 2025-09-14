@@ -42,7 +42,7 @@ export function ApiErrorCodes() {
       status: 401,
       code: "invalid_token",
       message: "Invalid or expired API key.",
-      details: "The provided API key is incorrect, expired, or revoked."
+      details: "The provided API key is incorrectexpiredor revoked."
     },
     {
       status: 403,
@@ -60,7 +60,7 @@ export function ApiErrorCodes() {
       status: 409,
       code: "conflict",
       message: "The request conflicts with the current state of the resource.",
-      details: "For example, trying to create a duplicate resource or updating a resource that has been modified."
+      details: "For exampletrying to create a duplicate resource or updating a resource that has been modified."
     },
     {
       status: 429,
@@ -72,7 +72,7 @@ export function ApiErrorCodes() {
       status: 500,
       code: "internal_error",
       message: "An unexpected error occurred.",
-      details: "Something went wrong on our end. If the problem persists, contact support."
+      details: "Something went wrong on our end. If the problem persistscontact support."
     },
     {
       status: 503,
@@ -127,7 +127,7 @@ export function ApiErrorCodes() {
         
         <h2>Error Format</h2>
         <p>
-          When an error occurs, the API will return an appropriate HTTP status code along with 
+          When an error occursthe API will return an appropriate HTTP status code along with 
           a JSON response body containing details about the error.
         </p>
         
@@ -156,7 +156,7 @@ export function ApiErrorCodes() {
               </tr>
             </thead>
             <tbody>
-              {errorCodes.map((error, index) => (
+              {errorCodes.map((errorindex) => (
                 <tr key={error.code} className={index < errorCodes.length - 1 ? "border-b border-zinc-800" : ""}>
                   <td className="py-2 px-4 text-white">
                     <span className={`inline-block px-2 rounded text-xs font-medium ${
@@ -187,14 +187,14 @@ export function ApiErrorCodes() {
         
         <h3>Rate Limiting</h3>
         <p>
-          When you exceed the rate limit, you'll receive a 429 response with details on when to retry:
+          When you exceed the rate limityou'll receive a 429 response with details on when to retry:
         </p>
         
         <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />
         
         <h2>Rate Limits</h2>
         <p>
-          To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.
+          To ensure fair usage and protect the API from abusewe enforce rate limits on all endpoints.
           The limits are based on the number of requests per minute per API key.
         </p>
         
@@ -208,7 +208,7 @@ export function ApiErrorCodes() {
               </tr>
             </thead>
             <tbody>
-              {rateLimits.map((limit, index) => (
+              {rateLimits.map((limitindex) => (
                 <tr key={index} className={index < rateLimits.length - 1 ? "border-b border-zinc-800" : ""}>
                   <td className="py-2 px-4 text-white font-mono">{limit.endpoint}</td>
                   <td className="py-2 px-4 text-zinc-300">{limit.limit}</td>
@@ -235,12 +235,12 @@ export function ApiErrorCodes() {
           <li>Monitor the rate limit headers to avoid hitting limits</li>
           <li>Implement retry logic with exponential backoff for 429 errors</li>
           <li>Cache responses when possible to reduce API calls</li>
-          <li>For high-volume needs, contact us about increased limits</li>
+          <li>For high-volume needscontact us about increased limits</li>
         </ul>
         
         <h2>Need Help?</h2>
         <p>
-          If you're encountering persistent errors or need higher rate limits, please 
+          If you're encountering persistent errors or need higher rate limitsplease 
           <a href="#" className="text-zion-cyan"> contact our support team</a>.
         </p>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React, { useEffect } from 'react';
+import React{ useEffect } from 'react';
 import Head from 'next/head';
 
 interface SEOEnhancerProps {
@@ -17,8 +17,8 @@ interface SEOEnhancerProps {
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = "Zion Tech Group - AI & Technology Solutions",
-  description = "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
-  keywords = "AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation",
+  description = "Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions. Expert consulting and implementation services.",
+  keywords = "AI automationcloud computingmicro SaaStechnology consultingenterprise solutionsdigital transformation",
   canonicalUrl = "https://zion.app",
   ogImage = "https://zion.app/images/og-image.jpg",
   ogType = "website",
@@ -32,49 +32,49 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     }
 
     // Add or update meta tags
-    const updateMetaTag = (name: string, content: string, property?: boolean) => {
+    const updateMetaTag = (name: stringcontent: stringproperty?: boolean) => {
       const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
       let meta = document.querySelector(selector) as HTMLMetaElement;
       
       if (!meta) {
         meta = document.createElement('meta');
         if (property) {
-          meta.setAttribute('property', name);
+          meta.setAttribute('property'name);
         } else {
-          meta.setAttribute('name', name);
+          meta.setAttribute('name'name);
         }
         document.head.appendChild(meta);
       }
-      meta.setAttribute('content', content);
+      meta.setAttribute('content'content);
     };
 
     // Basic meta tags
-    updateMetaTag('description', description);
-    updateMetaTag('keywords', keywords);
-    updateMetaTag('author', 'Zion Tech Group');
-    updateMetaTag('robots', 'index, follow');
-    updateMetaTag('viewport', 'width=device-width, initial-scale=1.0');
-    updateMetaTag('theme-color', '#1e40af');
+    updateMetaTag('description'description);
+    updateMetaTag('keywords'keywords);
+    updateMetaTag('author'Zion Tech Group');
+    updateMetaTag('robots'indexfollow');
+    updateMetaTag('viewport'width=device-widthinitial-scale=1.0');
+    updateMetaTag('theme-color'#1e40af');
 
     // Open Graph tags
-    updateMetaTag('og:title', title, true);
-    updateMetaTag('og:description', description, true);
-    updateMetaTag('og:url', canonicalUrl, true);
-    updateMetaTag('og:image', ogImage, true);
-    updateMetaTag('og:type', ogType, true);
-    updateMetaTag('og:site_name', 'Zion Tech Group', true);
+    updateMetaTag('og:title'titletrue);
+    updateMetaTag('og:description'descriptiontrue);
+    updateMetaTag('og:url'canonicalUrltrue);
+    updateMetaTag('og:image'ogImagetrue);
+    updateMetaTag('og:type'ogTypetrue);
+    updateMetaTag('og:site_name'Zion Tech Group'true);
 
     // Twitter Card tags
-    updateMetaTag('twitter:card', twitterCard);
-    updateMetaTag('twitter:title', title);
-    updateMetaTag('twitter:description', description);
-    updateMetaTag('twitter:image', ogImage);
+    updateMetaTag('twitter:card'twitterCard);
+    updateMetaTag('twitter:title'title);
+    updateMetaTag('twitter:description'description);
+    updateMetaTag('twitter:image'ogImage);
 
     // Additional SEO tags
-    updateMetaTag('language', 'en');
-    updateMetaTag('revisit-after', '7 days');
-    updateMetaTag('distribution', 'global');
-    updateMetaTag('rating', 'general');
+    updateMetaTag('language'en');
+    updateMetaTag('revisit-after'7 days');
+    updateMetaTag('distribution'global');
+    updateMetaTag('rating'general');
 
     // Canonical URL
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -144,7 +144,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     organizationScript.textContent = JSON.stringify(organizationStructuredData);
     document.head.appendChild(organizationScript);
 
-  }, [title, description, keywords, canonicalUrl, ogImage, ogType, twitterCard, structuredData]);
+  }[titledescriptionkeywordscanonicalUrlogImageogTypetwitterCardstructuredData]);
 
   return null; // This component doesn't render anything visible
 };

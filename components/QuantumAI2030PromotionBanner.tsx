@@ -14,7 +14,7 @@ const QuantumAI2030PromotionBanner: React.FC = () => {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Experience the convergence of quantum computing and AI. Unlock unprecedented computational 
-            power with quantum-enhanced machine learning, neural networks, and business intelligence.
+            power with quantum-enhanced machine learningneural networksand business intelligence.
           </p>
         </div>
 
@@ -63,21 +63,21 @@ const QuantumAI2030PromotionBanner: React.FC = () => {
               <div className="text-3xl mb-3">💼</div>
               <h4 className="text-lg font-bold mb-2">Financial Services</h4>
               <p className="text-gray-300 text-sm">
-                Quantum portfolio optimization, risk management, and fraud detection.
+                Quantum portfolio optimizationrisk managementand fraud detection.
               </p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-3">🏭</div>
               <h4 className="text-lg font-bold mb-2">Manufacturing</h4>
               <p className="text-gray-300 text-sm">
-                Supply chain optimization, predictive maintenance, and quality control.
+                Supply chain optimizationpredictive maintenanceand quality control.
               </p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-3">🏥</div>
               <h4 className="text-lg font-bold mb-2">Healthcare</h4>
               <p className="text-gray-300 text-sm">
-                Drug discovery, personalized medicine, and medical diagnostics.
+                Drug discoverypersonalized medicineand medical diagnostics.
               </p>
             </div>
           </div>

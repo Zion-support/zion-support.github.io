@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useState } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Phone, Mail, MapPin, Globe, 
-  Clock, ChevronDown, ChevronUp,
-  MessageCircle, Calendar, Star
+  PhoneMailMapPinGlobe
+  ClockChevronDownChevronUp,
+  MessageCircleCalendarStar
 } from 'lucide-react';
 
 const contactInfo = {
@@ -17,13 +17,13 @@ const contactInfo = {
 };
 
 const quickActions = [
-  { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> },
-  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
+  { name: 'Get Quote'href: '/quote'icon: <MessageCircle className="w-4 h-4" /> },
+  { name: 'Book Demo'href: '/demo'icon: <Calendar className="w-4 h-4" /> },
+  { name: 'Live Chat'href: '/chat'icon: <MessageCircle className="w-4 h-4" /> }
 ];
 
 export default function TopContactBar() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpandedsetIsExpanded] = useState(false);
 
   return (
     <div className="relative z-40">
@@ -61,7 +61,7 @@ export default function TopContactBar() {
               <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
                 <Globe className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
                 <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-200">
-                  {contactInfo.website.replace('https://', '')}
+                  {contactInfo.website.replace('https://'')}
                 </a>
               </div>
             </div>
@@ -118,9 +118,9 @@ export default function TopContactBar() {
       <AnimatePresence>
         {isExpanded && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0height: 0 }}
+            animate={{ opacity: 1height: 'auto' }}
+            exit={{ opacity: 0height: 0 }}
             transition={{ duration: 0.3 }}
             className="bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-hidden"
           >

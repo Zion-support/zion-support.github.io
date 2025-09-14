@@ -1,15 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
-import { Brain, Zap, Shield, Users, TrendingUp, Target, CheckCircle, ArrowRight } from 'lucide-react';
+BrainZapShieldUsersTrendingUpTargetCheckCircleArrowRight
 
 export default function AISolutionsPage() {
   return (
     <>
       <Head>
         <title>AI Solutions — Zion Tech Group</title>
-        <meta name="description" content="Transform your business with Zion Tech Group's cutting-edge AI solutions. From machine learning to autonomous systems, we deliver intelligent technology that drives growth." />
+        <meta name="description" content="Transform your business with Zion Tech Group's cutting-edge AI solutions. From machine learning to autonomous systemswe deliver intelligent technology that drives growth." />
         <meta property="og:title" content="AI Solutions — Zion Tech Group" />
-        <meta property="og:description" content="Transform your business with Zion Tech Group's cutting-edge AI solutions. From machine learning to autonomous systems, we deliver intelligent technology that drives growth." />
+        <meta property="og:description" content="Transform your business with Zion Tech Group's cutting-edge AI solutions. From machine learning to autonomous systemswe deliver intelligent technology that drives growth." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
@@ -21,7 +21,7 @@ export default function AISolutionsPage() {
               AI Solutions
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-              Harness the power of artificial intelligence to transform your business operations, enhance decision-making, and unlock unprecedented growth opportunities.
+              Harness the power of artificial intelligence to transform your business operationsenhance decision-makingand unlock unprecedented growth opportunities.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
@@ -43,7 +43,7 @@ export default function AISolutionsPage() {
                 <Brain className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Machine Learning</h3>
                 <p className="text-white/70">
-                  Custom ML models, predictive analytics, and intelligent automation systems that learn and adapt to your business needs.
+                  Custom ML modelspredictive analyticsand intelligent automation systems that learn and adapt to your business needs.
                 </p>
               </div>
               
@@ -51,7 +51,7 @@ export default function AISolutionsPage() {
                 <Zap className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Autonomous Systems</h3>
                 <p className="text-white/70">
-                  Self-operating systems that can make decisions, execute tasks, and optimize processes without human intervention.
+                  Self-operating systems that can make decisionsexecute tasksand optimize processes without human intervention.
                 </p>
               </div>
               
@@ -59,7 +59,7 @@ export default function AISolutionsPage() {
                 <Shield className="w-12 h-12 text-green-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">AI Security</h3>
                 <p className="text-white/70">
-                  Advanced threat detection, behavioral analysis, and intelligent security systems that protect against evolving cyber threats.
+                  Advanced threat detectionbehavioral analysisand intelligent security systems that protect against evolving cyber threats.
                 </p>
               </div>
               
@@ -67,7 +67,7 @@ export default function AISolutionsPage() {
                 <Users className="w-12 h-12 text-orange-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Natural Language Processing</h3>
                 <p className="text-white/70">
-                  Chatbots, language understanding, and text analysis systems that enhance customer interactions and automate communication.
+                  Chatbotslanguage understandingand text analysis systems that enhance customer interactions and automate communication.
                 </p>
               </div>
               
@@ -83,7 +83,7 @@ export default function AISolutionsPage() {
                 <Target className="w-12 h-12 text-pink-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Computer Vision</h3>
                 <p className="text-white/70">
-                  Image and video analysis systems for quality control, security monitoring, and automated visual inspection processes.
+                  Image and video analysis systems for quality controlsecurity monitoringand automated visual inspection processes.
                 </p>
               </div>
             </div>
@@ -197,7 +197,7 @@ export default function AISolutionsPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Discovery & Assessment</h3>
                 <p className="text-white/70">
-                  We analyze your business processes, identify AI opportunities, and develop a comprehensive implementation strategy.
+                  We analyze your business processesidentify AI opportunitiesand develop a comprehensive implementation strategy.
                 </p>
               </div>
               
@@ -207,7 +207,7 @@ export default function AISolutionsPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Data Preparation</h3>
                 <p className="text-white/70">
-                  We clean, structure, and prepare your data for AI model training, ensuring quality and compliance.
+                  We cleanstructureand prepare your data for AI model trainingensuring quality and compliance.
                 </p>
               </div>
               
@@ -217,7 +217,7 @@ export default function AISolutionsPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Model Development</h3>
                 <p className="text-white/70">
-                  Our AI experts develop, train, and validate custom models tailored to your specific business requirements.
+                  Our AI experts developtrainand validate custom models tailored to your specific business requirements.
                 </p>
               </div>
               
@@ -227,7 +227,7 @@ export default function AISolutionsPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Deployment & Optimization</h3>
                 <p className="text-white/70">
-                  We deploy your AI solution, monitor performance, and continuously optimize for maximum business impact.
+                  We deploy your AI solutionmonitor performanceand continuously optimize for maximum business impact.
                 </p>
               </div>
             </div>

@@ -2,28 +2,28 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react';
+RocketNetworkBoxesCheckCircle
 
 export default function EmergingTechPage() {
   const features = [
-    'Blockchain, tokenization, and smart contract audits',
+    'Blockchaintokenizationand smart contract audits',
     'IoT and edge orchestration with zero-trust patterns',
     '5G private networks and campus connectivity',
     'Metaverse and spatial computing experimentation',
   ];
 
   const solutions = [
-    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
-    { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
-    { name: '5G Private Networks', href: '/5g-private-network-solutions' },
-    { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' },
+    { name: 'Blockchain Infrastructure'href: '/blockchain-infrastructure-platform' },
+    { name: 'Edge Computing Orchestration'href: '/edge-computing-orchestration' },
+    { name: '5G Private Networks'href: '/5g-private-network-solutions' },
+    { name: 'Metaverse AI Platform'href: '/metaverse-ai-development-platform' },
   ];
 
   return (
     <Layout>
       <Head>
         <title>Emerging Tech | Zion Tech Group</title>
-        <meta name="description" content="Blockchain, IoT/edge, 5G, and metaverse initiatives with secure, scalable architectures." />
+        <meta name="description" content="BlockchainIoT/edge5Gand metaverse initiatives with securescalable architectures." />
         <link rel="canonical" href="https://ziontechgroup.com/emerging-tech" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -33,7 +33,7 @@ export default function EmergingTechPage() {
               <Rocket className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Emerging Technology</h1>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">Accelerate innovation responsibly across blockchain, IoT/edge, 5G, and spatial computing.</p>
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto">Accelerate innovation responsibly across blockchainIoT/edge5Gand spatial computing.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="/contact" className="px-8 py-4">Start a Pilot</a>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>

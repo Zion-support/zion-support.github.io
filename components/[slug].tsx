@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
+import React{ useMemo } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
+PhoneMailMapPinCheckArrowRightStar
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -64,7 +64,7 @@ export default function DynamicServicePage() {
     const byLink = all.find(s => {
       try {
         const url = new URL(s.link);
-        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
+        return url.pathname.replace(/^\/+|\/+$/g'') === slug.replace(/^\/+|\/+$/g'');
       } catch {
         return false;
       }
@@ -73,7 +73,7 @@ export default function DynamicServicePage() {
     const byId = enhancedRealMicroSaasServices.find(s => s.id === slug);
     if (byId) return byId;
     return undefined;
-  }, [slug]);
+  }[slug]);
 
   if (!service) {
     return (
@@ -112,7 +112,7 @@ export default function DynamicServicePage() {
               <h2 className="text-2xl font-semibold mb-4">What you get</h2>
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0, 16).map((feat, i) => (
+                {service.features.slice(016).map((feati) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0.5" /><span>{feat}</span></li>
                 ))}
               </ul>
@@ -163,14 +163,14 @@ function collectAllServices(): Svc[] {
 }
 
 function normalizeSlug(value: string): string {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  return value.toLowerCase().replace(/[^a-z0-9]+/g'-').replace(/(^-|-$)/g'');
 }
 
 function extractRootSlugFromLink(link?: string): string | null {
   if (!link) return null;
   try {
     const url = new URL(link);
-    const path = url.pathname.replace(/^\/+|\/+$/g, '');
+    const path = url.pathname.replace(/^\/+|\/+$/g'');
     // Accept root-level slugs like "/ai-energy-management"; ignore nested like "services/..."
     if (path && !path.includes('/')) return path;
     return null;
@@ -184,13 +184,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const candidateSlugs = new Set<string>();
 
   // Gather existing root-level page slugs to avoid conflicts
-  const pagesDir = path.join(process.cwd(), 'pages');
+  const pagesDir = path.join(process.cwd()'pages');
   const staticSlugs = new Set<string>();
   try {
-    const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
+    const entries = fs.readdirSync(pagesDir{ withFileTypes: true });
     for (const entry of entries) {
       if (entry.isFile() && /\.tsx?$/.test(entry.name)) {
-        const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/i, '');
+        const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/i'');
         if (base !== 'index' && base !== '[slug]' && !base.startsWith('_')) {
           staticSlugs.add(base.toLowerCase());
         }

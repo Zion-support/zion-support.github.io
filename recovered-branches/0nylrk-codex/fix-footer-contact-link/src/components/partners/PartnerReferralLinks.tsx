@@ -1,20 +1,20 @@
-import { useRef, useState } from "react";
+import { useRefuseState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Copy, Download, Link, Plus } from "lucide-react";
+import { CopyDownloadLinkPlus } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useReferrals } from "@/hooks/useReferrals";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { DialogContentDialogDescriptionDialogFooterDialogHeaderDialogTitleDialogTrigger } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
 
 export function PartnerReferralLinks() {
-  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
-  const [customParam, setCustomParam] = useState<string>("");
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]);
+  const { referralCodegetReferralLinkcopyReferralLinkshareOnSocialMedia } = useReferrals();
+  const [isDialogOpensetIsDialogOpen] = useState(false);
+  const [selectedCampaignsetSelectedCampaign] = useState<string>("default");
+  const [customParamsetCustomParam] = useState<string>("");
+  const [generatedLinksetGeneratedLinks] = useState<{name: stringlink: string}[]>([]);
   
   // Get the base referral link
   const baseLink = getReferralLink();
@@ -34,12 +34,12 @@ export function PartnerReferralLinks() {
       
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
-        url.searchParams.append("campaign", selectedCampaign);
+        url.searchParams.append("campaign"selectedCampaign);
       }
       
       // Add custom parameter if provided
       if (customParam) {
-        url.searchParams.append("source", customParam);
+        url.searchParams.append("source"customParam);
       }
       
       const newLink = {
@@ -47,7 +47,7 @@ export function PartnerReferralLinks() {
         link: url.toString()
       };
       
-      setGeneratedLinks(prev => [...prev, newLink]);
+      setGeneratedLinks(prev => [...prevnewLink]);
       setIsDialogOpen(false);
       setCustomParam("");
     }
@@ -55,7 +55,7 @@ export function PartnerReferralLinks() {
   
   const handleDownloadLinks = () => {
     const allLinks = [
-      { name: "Default", link: baseLink },
+      { name: "Default"link: baseLink },
       ...generatedLinks
     ];
     
@@ -64,11 +64,11 @@ export function PartnerReferralLinks() {
       ...allLinks.map(l => `${l.name},${l.link}`)
     ].join("\n");
     
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const blob = new Blob([csvContent]{ type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
-    link.setAttribute("href", url);
-    link.setAttribute("download", "zion_referral_links.csv");
+    link.setAttribute("href"url);
+    link.setAttribute("download"zion_referral_links.csv");
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
@@ -148,7 +148,7 @@ export function PartnerReferralLinks() {
                 <Label htmlFor="custom">Custom Parameter (Optional)</Label>
                 <Input 
                   id="custom" 
-                  placeholder="spring_campaign, video_123, etc." 
+                  placeholder="spring_campaignvideo_123etc." 
                   value={customParam}
                   onChange={(e) => setCustomParam(e.target.value)}
                 />
@@ -176,7 +176,7 @@ export function PartnerReferralLinks() {
 
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
-          generatedLinks.map((item, index) => (
+          generatedLinks.map((itemindex) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="pb-2">
                 <CardTitle className="text-base flex items-center justify-between">

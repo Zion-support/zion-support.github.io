@@ -12,7 +12,7 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
       <h3 className="text-xl font-bold text-white mb-4">Skills</h3>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {skills.map((skill, index) => (
+        {skills.map((skillindex) => (
           <div key={index} className="flex flex-col">
             <div className="flex justify-between items-center mb-1">
               <span className="text-zion-slate-light">{skill.name}</span>

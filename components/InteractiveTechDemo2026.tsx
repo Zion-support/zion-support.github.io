@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
-import { Play, Pause, RotateCcw, CheckCircle, ArrowRight, Brain, Zap, Target, Globe } from 'lucide-react';
+PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
 
 const InteractiveTechDemo2026 = () => {
-  const [activeDemo, setActiveDemo] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
+  const [activeDemosetActiveDemo] = useState(0);
+  const [isRunningsetIsRunning] = useState(false);
 
   const demos = [
     {
@@ -13,7 +13,7 @@ const InteractiveTechDemo2026 = () => {
       title: "AI-Powered Data Analysis",
       description: "Watch our AI analyze complex datasets in real-time and provide actionable insights",
       icon: Brain,
-      features: ["Real-time processing", "Pattern recognition", "Predictive analytics"],
+      features: ["Real-time processing"Pattern recognition"Predictive analytics"],
       demoData: {
         datasets: 15,
         accuracy: 99.2,
@@ -25,7 +25,7 @@ const InteractiveTechDemo2026 = () => {
       title: "Automated Workflow Engine",
       description: "Experience how our automation engine streamlines business processes",
       icon: Zap,
-      features: ["Process automation", "Smart routing", "Error handling"],
+      features: ["Process automation"Smart routing"Error handling"],
       demoData: {
         processes: 8,
         efficiency: 95,
@@ -37,7 +37,7 @@ const InteractiveTechDemo2026 = () => {
       title: "Predictive Maintenance System",
       description: "See how AI predicts equipment failures before they happen",
       icon: Target,
-      features: ["Failure prediction", "Maintenance scheduling", "Cost optimization"],
+      features: ["Failure prediction"Maintenance scheduling"Cost optimization"],
       demoData: {
         assets: 12,
         uptime: 99.8,
@@ -49,7 +49,7 @@ const InteractiveTechDemo2026 = () => {
       title: "Global AI Network",
       description: "Explore how distributed AI systems collaborate across the globe",
       icon: Globe,
-      features: ["Distributed learning", "Global collaboration", "Real-time sync"],
+      features: ["Distributed learning"Global collaboration"Real-time sync"],
       demoData: {
         nodes: 25,
         latency: "2ms",
@@ -61,7 +61,7 @@ const InteractiveTechDemo2026 = () => {
   const handleStartDemo = () => {
     setIsRunning(true);
     // Simulate demo running
-    setTimeout(() => setIsRunning(false), 3000);
+    setTimeout(() => setIsRunning(false)3000);
   };
 
   const handleResetDemo = () => {
@@ -114,7 +114,7 @@ const InteractiveTechDemo2026 = () => {
               </p>
               
               <div className="space-y-3 mb-8">
-                {demos[activeDemo].features.map((feature, index) => (
+                {demos[activeDemo].features.map((featureindex) => (
                   <div key={index} className="flex items-center text-gray-300">
                     <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
                     {feature}
@@ -145,10 +145,10 @@ const InteractiveTechDemo2026 = () => {
             <div className="bg-slate-800 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-white mb-4">Live Demo Data</h3>
               <div className="space-y-4">
-                {Object.entries(demos[activeDemo].demoData).map(([key, value], index) => (
+                {Object.entries(demos[activeDemo].demoData).map(([keyvalue]index) => (
                   <div key={index} className="flex justify-between items-center">
                     <span className="text-gray-300 capitalize">
-                      {key.replace(/([A-Z])/g, ' $1').trim()}:
+                      {key.replace(/([A-Z])/g' $1').trim()}:
                     </span>
                     <span className="text-white font-semibold">
                       {typeof value === 'number' ? `${value}${key.includes('accuracy') || key.includes('uptime') || key.includes('reliability') ? '%' : ''}` : value}

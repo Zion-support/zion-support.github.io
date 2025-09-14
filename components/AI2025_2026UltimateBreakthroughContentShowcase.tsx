@@ -5,7 +5,7 @@ const AI2025_2026UltimateBreakthroughContentShowcase = () => {
   const contentItems = [
     {
       title: "AI 2025-2026 Ultimate Business Intelligence Revolution",
-      description: "Transform your business with revolutionary AI intelligence that predicts market trends, optimizes operations, and drives unprecedented growth.",
+      description: "Transform your business with revolutionary AI intelligence that predicts market trendsoptimizes operationsand drives unprecedented growth.",
       image: "🧠",
       link: "/ai-2025-2026-ultimate-business-intelligence-revolution",
       category: "Business Intelligence",
@@ -29,7 +29,7 @@ const AI2025_2026UltimateBreakthroughContentShowcase = () => {
     },
     {
       title: "Autonomous Business Operations 2025",
-      description: "Fully autonomous business systems that self-optimize, predict issues, and make decisions without human intervention.",
+      description: "Fully autonomous business systems that self-optimizepredict issuesand make decisions without human intervention.",
       image: "🤖",
       link: "/autonomous-business-operations-2025",
       category: "Automation",
@@ -67,7 +67,7 @@ const AI2025_2026UltimateBreakthroughContentShowcase = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {contentItems.map((item, index) => (
+          {contentItems.map((itemindex) => (
             <div
               key={index}
               className={`bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${

@@ -1,14 +1,14 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
+  ArrowRight
+  TrendingUp
+  Users
+  DollarSign
+  Clock
   Target,
   CheckCircle,
   Star,
@@ -19,12 +19,12 @@ import {
 } from 'lucide-react';
 
 const EnterpriseSuccessStories = () => {
-  const [activeStory, setActiveStory] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeStorysetActiveStory] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const successStories = [
     {
@@ -41,7 +41,7 @@ const EnterpriseSuccessStories = () => {
         roi: "340%"
       },
       quote: "Zion Tech Group transformed our entire supply chain. The AI solutions delivered results beyond our expectations.",
-      author: "Sarah Chen, CTO",
+      author: "Sarah ChenCTO",
       logo: "TC",
       color: "from-blue-500 to-cyan-600"
     },
@@ -59,7 +59,7 @@ const EnterpriseSuccessStories = () => {
         roi: "280%"
       },
       quote: "The AI diagnostic tools have improved our accuracy by 40% while reducing processing time by 60%.",
-      author: "Dr. Michael Rodriguez, Chief Medical Officer",
+      author: "Dr. Michael RodriguezChief Medical Officer",
       logo: "HF",
       color: "from-green-500 to-emerald-600"
     },
@@ -77,7 +77,7 @@ const EnterpriseSuccessStories = () => {
         roi: "420%"
       },
       quote: "Our risk assessment accuracy improved by 65% while reducing processing time from days to minutes.",
-      author: "Jennifer Walsh, Chief Risk Officer",
+      author: "Jennifer WalshChief Risk Officer",
       logo: "FM",
       color: "from-purple-500 to-violet-600"
     },
@@ -95,7 +95,7 @@ const EnterpriseSuccessStories = () => {
         roi: "310%"
       },
       quote: "The autonomous systems increased our production efficiency by 55% while reducing defects by 70%.",
-      author: "Robert Kim, Operations Director",
+      author: "Robert KimOperations Director",
       logo: "MP",
       color: "from-orange-500 to-red-600"
     }
@@ -142,8 +142,8 @@ const EnterpriseSuccessStories = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -164,12 +164,12 @@ const EnterpriseSuccessStories = () => {
 
         {/* Key Metrics */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid md:grid-cols-4 gap-6 mb-16"
         >
-          {keyMetrics.map((metric, index) => (
+          {keyMetrics.map((metricindex) => (
             <div
               key={index}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all duration-300"
@@ -186,12 +186,12 @@ const EnterpriseSuccessStories = () => {
 
         {/* Story Navigation */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {successStories.map((story, index) => (
+          {successStories.map((storyindex) => (
             <button
               key={story.id}
               onClick={() => setActiveStory(index)}
@@ -209,8 +209,8 @@ const EnterpriseSuccessStories = () => {
         {/* Active Story Display */}
         <motion.div
           key={activeStory}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.5 }}
           className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16"
         >
@@ -281,16 +281,16 @@ const EnterpriseSuccessStories = () => {
 
         {/* Benefits Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16"
         >
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Why Our Solutions Deliver Results
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefitindex) => (
               <div key={index} className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
@@ -301,9 +301,9 @@ const EnterpriseSuccessStories = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">

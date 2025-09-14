@@ -2,7 +2,7 @@
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 
 export function ApiWebhooks() {
   // Sample webhook event payload
@@ -57,7 +57,7 @@ export function ApiWebhooks() {
     "conversation_id": "conv-456",
     "sender_id": "user-789",
     "recipient_id": "user-012",
-    "content": "Hi, I'd like to discuss the project details.",
+    "content": "HiI'd like to discuss the project details.",
     "created_at": "2023-06-18T14:22:15Z"
   }
 }`;
@@ -74,7 +74,7 @@ app.use(express.json());
 const webhookSecret = 'YOUR_WEBHOOK_SECRET';
 
 // Middleware to verify webhook signatures
-function verifyWebhookSignature(req, res, next) {
+function verifyWebhookSignature(reqresnext) {
   const signature = req.headers['x-zion-signature'];
   const timestamp = req.headers['x-zion-timestamp'];
   
@@ -85,7 +85,7 @@ function verifyWebhookSignature(req, res, next) {
   // Verify the signature
   const payload = timestamp + '.' + JSON.stringify(req.body);
   const expectedSignature = crypto
-    .createHmac('sha256', webhookSecret)
+    .createHmac('sha256'webhookSecret)
     .update(payload)
     .digest('hex');
   
@@ -97,40 +97,40 @@ function verifyWebhookSignature(req, res, next) {
 }
 
 // Webhook endpoint with signature verification
-app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
-  const { event_type, data } = req.body;
+app.post('/webhooks/zion'verifyWebhookSignature(reqres) => {
+  const { event_typedata } = req.body;
   
   // Handle different event types
   switch (event_type) {
     case 'new_application':
-      console.log('New application received:', data.application_id);
+      console.log('New application received:'data.application_id);
       // Process the new application...
       break;
     
     case 'talent_hired':
-      console.log('Talent hired:', data.talent_id);
+      console.log('Talent hired:'data.talent_id);
       // Update your system...
       break;
     
     case 'quote_received':
-      console.log('New quote received:', data.quote_id);
+      console.log('New quote received:'data.quote_id);
       // Process the quote...
       break;
     
     case 'message_received':
-      console.log('New message received:', data.message_id);
+      console.log('New message received:'data.message_id);
       // Process the message...
       break;
     
     default:
-      console.log('Unknown event type:', event_type);
+      console.log('Unknown event type:'event_type);
   }
   
   // Always return a 200 response quickly
   res.status(200).send('Webhook received');
 });
 
-app.listen(3000, () => {
+app.listen(3000() => {
   console.log('Webhook server listening on port 3000');
 });`;
 
@@ -141,7 +141,7 @@ app.listen(3000, () => {
         
         <p>
           Webhooks allow your application to receive real-time notifications when events occur in the Zion AI Marketplace.
-          Instead of constantly polling our API for updates, webhooks push data to your server whenever relevant events happen.
+          Instead of constantly polling our API for updateswebhooks push data to your server whenever relevant events happen.
         </p>
 
         <h2>Supported Events</h2>
@@ -179,7 +179,7 @@ app.listen(3000, () => {
         <h2>Setting Up Webhooks</h2>
         <p>
           You can configure webhooks in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a> under the Webhooks tab.
-          For each webhook, you'll need to provide:
+          For each webhookyou'll need to provide:
         </p>
         
         <ul>
@@ -189,7 +189,7 @@ app.listen(3000, () => {
         </ul>
         
         <p>
-          After creating a webhook, you'll be given a webhook secret that you should use to verify that incoming requests are genuinely from Zion.
+          After creating a webhookyou'll be given a webhook secret that you should use to verify that incoming requests are genuinely from Zion.
         </p>
 
         <h2>Webhook Payload Format</h2>
@@ -218,7 +218,7 @@ app.listen(3000, () => {
 
         <h2>Verifying Webhook Signatures</h2>
         <p>
-          To ensure webhook requests are genuinely from Zion, you should verify the signature included in each request.
+          To ensure webhook requests are genuinely from Zionyou should verify the signature included in each request.
           We include two HTTP headers with each webhook request:
         </p>
         
@@ -239,7 +239,7 @@ app.listen(3000, () => {
         
         <h2>Best Practices</h2>
         <ul>
-          <li><strong>Respond quickly</strong>: Return a 200 response as soon as you receive the webhook, then process it asynchronously</li>
+          <li><strong>Respond quickly</strong>: Return a 200 response as soon as you receive the webhookthen process it asynchronously</li>
           <li><strong>Verify signatures</strong>: Always verify webhook signatures to ensure requests are legitimate</li>
           <li><strong>Implement retries</strong>: Prepare for occasional failures by implementing retry logic</li>
           <li><strong>Monitor webhook activity</strong>: Use the Developer Portal to view webhook delivery history and logs</li>

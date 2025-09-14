@@ -3,13 +3,13 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-  Brain, 
-  MessageSquare, 
-  Image, 
-  Video, 
-  Code, 
-  FileText, 
-  Zap, 
+  Brain
+  MessageSquare
+  Image
+  Video
+  Code
+  FileText
+  Zap
   Star,
   ExternalLink,
   CheckCircle,
@@ -22,7 +22,7 @@ export default function AiToolsPage() {
     {
       icon: <Brain className="w-8 h-8 text-white" />,
       title: 'ChatGPT Plus',
-      description: 'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',
+      description: 'Advanced AI chatbot with enhanced reasoningweb browsingand plugin capabilities for professional use.',
       features: [
         'Advanced reasoning & analysis',
         'Web browsing & real-time info',
@@ -82,7 +82,7 @@ export default function AiToolsPage() {
     {
       icon: <Video className="w-8 h-8 text-white" />,
       title: 'Runway ML',
-      description: 'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.',
+      description: 'Professional AI video generation and editing tools for filmmakersmarketersand content creators.',
       features: [
         'AI video generation',
         'Video editing tools',
@@ -102,7 +102,7 @@ export default function AiToolsPage() {
     {
       icon: <MessageSquare className="w-8 h-8 text-white" />,
       title: 'Claude Pro',
-      description: 'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.',
+      description: 'Anthropic\'s advanced AI assistant with superior reasoninganalysisand document processing capabilities.',
       features: [
         'Advanced reasoning abilities',
         'Document analysis',
@@ -122,7 +122,7 @@ export default function AiToolsPage() {
     {
       icon: <FileText className="w-8 h-8 text-white" />,
       title: 'Jasper AI',
-      description: 'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.',
+      description: 'AI-powered content creation platform for marketerswritersand businesses with enterprise features.',
       features: [
         'Content generation',
         'Brand voice training',
@@ -171,13 +171,13 @@ export default function AiToolsPage() {
   const aiCategories = [
     {
       name: 'Conversational AI',
-      description: 'Chatbots, virtual assistants, and language models',
+      description: 'Chatbotsvirtual assistantsand language models',
       tools: 3,
       avgPrice: '$20/month'
     },
     {
       name: 'Image Generation',
-      description: 'AI-powered art, design, and visual content creation',
+      description: 'AI-powered artdesignand visual content creation',
       tools: 1,
       avgPrice: '$20/month'
     },
@@ -205,7 +205,7 @@ export default function AiToolsPage() {
     <>
       <Head>
         <title>AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing</title>
-        <meta name="description" content="Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links." />
+        <meta name="description" content="Discover real AI tools and services including ChatGPTMidjourneyGitHub Copilotand more. All tools include real pricingfeaturesand direct links." />
         <meta property="og:title" content="AI Tools & Services | Zion Tech Group" />
         <meta property="og:description" content="Real AI tools with pricing and direct links to help boost your productivity and creativity." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -245,7 +245,7 @@ export default function AiToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {aiMarketStats.map((stat, index) => (
+            {aiMarketStats.map((statindex) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
@@ -271,12 +271,12 @@ export default function AiToolsPage() {
               Curated AI Tools & Services
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Each tool has been carefully selected based on performance, reliability, and real-world value.
+              Each tool has been carefully selected based on performancereliabilityand real-world value.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {aiTools.map((tool, index) => (
+            {aiTools.map((toolindex) => (
               <Card
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${
@@ -327,7 +327,7 @@ export default function AiToolsPage() {
                     </div>
 
                     <ul className="space-y-2 mb-6">
-                      {tool.features.map((feature, featureIndex) => (
+                      {tool.features.map((featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                           {feature}
@@ -371,7 +371,7 @@ export default function AiToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {aiCategories.map((category, index) => (
+            {aiCategories.map((categoryindex) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
@@ -432,7 +432,7 @@ export default function AiToolsPage() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li>• Always review and edit AI-generated content</li>
-                  <li>• Use specific, detailed prompts</li>
+                  <li>• Use specificdetailed prompts</li>
                   <li>• Maintain human oversight and creativity</li>
                 </ul>
               </div>

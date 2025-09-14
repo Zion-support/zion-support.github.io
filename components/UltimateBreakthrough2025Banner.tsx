@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateBreakthrough2025Banner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
 
   const breakthroughContent = [
     {
@@ -61,14 +61,14 @@ const UltimateBreakthrough2025Banner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % breakthroughContent.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ultimateBreakthrough2025BannerDismissed', 'true');
+    localStorage.setItem('ultimateBreakthrough2025BannerDismissed'true');
   };
 
   useEffect(() => {
@@ -76,7 +76,7 @@ const UltimateBreakthrough2025Banner = () => {
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -170,7 +170,7 @@ const UltimateBreakthrough2025Banner = () => {
                 
                 {/* Progress Indicators */}
                 <div className="flex justify-center space-x-2 mb-6">
-                  {breakthroughContent.map((_, index) => (
+                  {breakthroughContent.map((_index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}

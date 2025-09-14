@@ -20,7 +20,7 @@ interface AdvancedSEOProps {
 export default function AdvancedSEO({
   title,
   description,
-  keywords = 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
+  keywords = 'AI automationcloud computingmicro SaaStechnology consultingenterprise solutionsdigital transformation',
   url,
   image = '/images/og-default.jpg',
   type = 'website',
@@ -53,7 +53,7 @@ export default function AdvancedSEO({
       "datePublished": publishedTime,
       "dateModified": modifiedTime,
       "articleSection": section,
-      "keywords": tags.join(', ')
+      "keywords": tags.join(')
     }),
     ...(type === 'website' && {
       "potentialAction": {
@@ -71,8 +71,8 @@ export default function AdvancedSEO({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="indexfollow" />
+      <meta name="viewport" content="width=device-widthinitial-scale=1.0" />
       
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content={type} />

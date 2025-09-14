@@ -10,7 +10,7 @@ export default function UltimateContent2026Showcase() {
       href: '/ai-2026-breakthrough-revolution',
       gradient: 'from-purple-600 to-pink-600',
       icon: '🚀',
-      features: ['Quantum Neural Networks', 'Autonomous Systems', 'Predictive Intelligence']
+      features: ['Quantum Neural Networks'Autonomous Systems'Predictive Intelligence']
     },
     {
       title: 'Quantum Computing 2026 Ultimate',
@@ -18,15 +18,15 @@ export default function UltimateContent2026Showcase() {
       href: '/quantum-computing-2026-ultimate',
       gradient: 'from-cyan-600 to-blue-600',
       icon: '⚛️',
-      features: ['Quantum Supremacy', 'Quantum Cryptography', 'Quantum Algorithms']
+      features: ['Quantum Supremacy'Quantum Cryptography'Quantum Algorithms']
     },
     {
       title: 'Neural Interface Revolution 2026',
-      description: 'Transform human potential with direct brain-computer integration. Control devices, share thoughts, and enhance cognition.',
+      description: 'Transform human potential with direct brain-computer integration. Control deviceshare thoughtsand enhance cognition.',
       href: '/neural-interface-revolution-2026-ultimate',
       gradient: 'from-emerald-600 to-teal-600',
       icon: '🧠',
-      features: ['Direct Neural Control', 'Neural Communication', 'Enhanced Cognition']
+      features: ['Direct Neural Control'Neural Communication'Enhanced Cognition']
     }
   ];
 
@@ -41,13 +41,13 @@ export default function UltimateContent2026Showcase() {
             Ultimate Content 2026 Showcase
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover the most revolutionary content of 2026. Cutting-edge AI, quantum computing, 
+            Discover the most revolutionary content of 2026. Cutting-edge AIquantum computing
             and neural interfaces that are transforming the future of technology and human potential.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {contentItems.map((item, index) => (
+          {contentItems.map((itemindex) => (
             <Card key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 border-0 hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-center mb-6">
                 <div className="text-6xl mb-4">{item.icon}</div>
@@ -58,7 +58,7 @@ export default function UltimateContent2026Showcase() {
               <div className="mb-6">
                 <h4 className="font-semibold text-lg mb-3">Key Features:</h4>
                 <ul className="space-y-2">
-                  {item.features.map((feature, featureIndex) => (
+                  {item.features.map((featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
                       <span className="text-sm text-gray-300">{feature}</span>

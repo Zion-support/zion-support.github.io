@@ -1,11 +1,11 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React{ useEffectuseState } from 'react';
 import { useRouter } from 'next/router';
 
 export default function EpisodePage() {
   const router = useRouter();
   const { id } = router.query as { id?: string };
-  const [episode, setEpisode] = useState<any>(null);
+  const [episodesetEpisode] = useState<any>(null);
 
   useEffect(() => {
     if (!id) return;
@@ -14,7 +14,7 @@ export default function EpisodePage() {
       const data = await res.json();
       setEpisode(data.episode);
     })();
-  }, [id]);
+  }[id]);
 
   if (!episode) return <div>Loading…</div>;
 
