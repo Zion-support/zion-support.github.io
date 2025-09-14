@@ -9,7 +9,7 @@ permissions:
   
 jobs:
   main:
-    name: Main Job
+    name: Dependabot Auto Approve Job
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:

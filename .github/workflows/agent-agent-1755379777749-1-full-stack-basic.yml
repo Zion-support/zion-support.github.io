@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   main:
-    name: Main Job
+    name: Agent Agent 1755379777749 1 Full Stack Basic Job
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:

@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   main:
-    name: Main Job
+    name: Agent Agent 1755379777750 2 Monitoring Intermediate Job
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
