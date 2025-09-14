@@ -122,4 +122,4 @@ const baseConfig = {
   },
 };
 
-module.exports = withSentryConfig(baseConfig);
+module.exports = nextConfig;
