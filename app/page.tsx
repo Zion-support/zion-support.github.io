@@ -50,6 +50,7 @@ import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBann
 import RevolutionaryAI2026Banner from '../components/RevolutionaryAI2026Banner';
 import AI2026RevolutionaryBanner from '../components/AI2026RevolutionaryBanner';
 import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
