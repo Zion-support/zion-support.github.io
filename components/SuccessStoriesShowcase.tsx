@@ -15,7 +15,7 @@ const SuccessStoriesShowcase = () => {
         accuracy: '99.8%'
       },
       quote: 'Zion Tech Group transformed our entire operation. What used to take days now happens in minutes.',
-      author: 'Sarah Johnson, CEO',
+      author: 'Sarah JohnsonCEO',
       logo: '🏢'
     },
     {
@@ -29,7 +29,7 @@ const SuccessStoriesShowcase = () => {
         accuracy: '99.9%'
       },
       quote: 'The quantum computing solutions gave us an edge that competitors simply cannot match.',
-      author: 'Michael Chen, CTO',
+      author: 'Michael ChenCTO',
       logo: '💰'
     },
     {
@@ -43,7 +43,7 @@ const SuccessStoriesShowcase = () => {
         accuracy: '99.7%'
       },
       quote: 'Our diagnostic accuracy improved dramatically while reducing analysis time by 85%.',
-      author: 'Dr. Emily Rodriguez, Chief Medical Officer',
+      author: 'Dr. Emily RodriguezChief Medical Officer',
       logo: '🏥'
     },
     {
@@ -57,7 +57,7 @@ const SuccessStoriesShowcase = () => {
         accuracy: '99.9%'
       },
       quote: 'The autonomous systems run our production 24/7 with zero downtime. Incredible results.',
-      author: 'David Park, Operations Director',
+      author: 'David ParkOperations Director',
       logo: '🏭'
     }
   ];
@@ -66,8 +66,8 @@ const SuccessStoriesShowcase = () => {
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -80,12 +80,12 @@ const SuccessStoriesShowcase = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {stories.map((story, index) => (
+          {stories.map((storyindex) => (
             <motion.div
               key={story.company}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              initial={{ opacity: 0x: index % 2 === 0 ? -30 : 30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: index * 0.2 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300"
             >
               {/* Company Header */}
@@ -136,9 +136,9 @@ const SuccessStoriesShowcase = () => {
 
         {/* Statistics Summary */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-12"
         >
           <h3 className="text-3xl font-bold text-center mb-8 text-white">
@@ -167,9 +167,9 @@ const SuccessStoriesShowcase = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 1.0 }}
           className="text-center"
         >
           <h3 className="text-3xl font-bold mb-4 text-white">

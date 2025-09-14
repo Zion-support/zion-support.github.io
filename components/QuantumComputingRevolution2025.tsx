@@ -1,22 +1,22 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Zap, Atom, Shield, Target, TrendingUp, Globe, Lock } from 'lucide-react';
+CpuZapAtomShieldTargetTrendingUpGlobeLock
 import Link from 'next/link';
 
 const QuantumComputingRevolution2025: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeFeature, setActiveFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [activeFeaturesetActiveFeature] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setActiveFeature(prev => (prev + 1) % 4);
-    }, 4000);
+    }4000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const quantumFeatures = [
     {
@@ -50,16 +50,16 @@ const QuantumComputingRevolution2025: React.FC = () => {
   ];
 
   const capabilities = [
-    { icon: Target, text: "Cryptographic Security", description: "Unbreakable quantum encryption" },
-    { icon: TrendingUp, text: "Exponential Speed", description: "Millions of times faster processing" },
-    { icon: Shield, text: "Quantum Advantage", description: "Solve impossible problems" },
-    { icon: Lock, text: "Secure Communications", description: "Quantum key distribution" }
+    { icon: Targetext: "Cryptographic Security"description: "Unbreakable quantum encryption" },
+    { icon: TrendingUptext: "Exponential Speed"description: "Millions of times faster processing" },
+    { icon: Shieldtext: "Quantum Advantage"description: "Solve impossible problems" },
+    { icon: Locktext: "Secure Communications"description: "Quantum key distribution" }
   ];
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+      initial={{ opacity: 0y: 50 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 py-20"
     >
@@ -73,9 +73,9 @@ const QuantumComputingRevolution2025: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ delay: 0.2duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
@@ -93,8 +93,8 @@ const QuantumComputingRevolution2025: React.FC = () => {
         {/* Active Feature Showcase */}
         <motion.div
           key={activeFeature}
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0scale: 0.9 }}
+          animate={{ opacity: 1scale: 1 }}
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
@@ -115,17 +115,17 @@ const QuantumComputingRevolution2025: React.FC = () => {
 
         {/* Quantum Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {quantumFeatures.map((feature, index) => (
+          {quantumFeatures.map((featureindex) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-              transition={{ delay: 0.4 + index * 0.1, duration: 0.8 }}
+              initial={{ opacity: 0y: 50 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
+              transition={{ delay: 0.4 + index * 0.1duration: 0.8 }}
               className={`group relative cursor-pointer ${activeFeature === index ? 'scale-105' : ''}`}
               onClick={() => setActiveFeature(index)}
             >
               <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl blur-xl"
-                   style={{ background: `linear-gradient(to right, ${feature.color})` }}></div>
+                   style={{ background: `linear-gradient(to right${feature.color})` }}></div>
               <div className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-2xl p-6 h-full transition-all duration-300 ${
                 activeFeature === index ? 'border-blue-500 shadow-2xl shadow-blue-500/20' : 'border-gray-700 hover:border-gray-600'
               }`}>
@@ -142,19 +142,19 @@ const QuantumComputingRevolution2025: React.FC = () => {
 
         {/* Quantum Capabilities */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ delay: 0.8duration: 0.8 }}
           className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 mb-12"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Quantum Computing Capabilities</h2>
           <div className="grid md:grid-cols-4 gap-6">
-            {capabilities.map((capability, index) => (
+            {capabilities.map((capabilityindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
-                transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
+                transition={{ delay: 1 + index * 0.1duration: 0.5 }}
                 className="text-center"
               >
                 <div className="inline-flex p-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl mb-4">
@@ -169,9 +169,9 @@ const QuantumComputingRevolution2025: React.FC = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ delay: 1.2duration: 0.8 }}
           className="text-center"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Card, CardContent } from "@/components/ui/card";
+import { AvatarFallback } from "@/components/ui/avatar";
+import { CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 interface DiscussionPost {
@@ -28,13 +28,13 @@ const initialPosts: DiscussionPost[] = [
     author: "David Kim",
     time: "50m ago",
     title: "Quick tip: How to rank your Zion listing higher",
-    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}];
+    body: "Fill out every profile detailadd strong tagsand post weekly! See results in a month."}];
 
 export const CommunityDiscussion: React.FC = () => {
-  const [posts, setPosts] = useState(initialPosts);
-  const [showNew, setShowNew] = useState(false);
-  const [newTitle, setNewTitle] = useState("");
-  const [newBody, setNewBody] = useState("");
+  const [postsetPosts] = useState(initialPosts);
+  const [showNewsetShowNew] = useState(false);
+  const [newTitlesetNewTitle] = useState("");
+  const [newBodysetNewBody] = useState("");
 
   const handleAddPost = () => {
     if (!newTitle.trim() || !newBody.trim()) return;
@@ -76,7 +76,7 @@ export const CommunityDiscussion: React.FC = () => {
         <Card className="mb-6 animate-scale-in">
           <CardContent className="py-5">
             <Input
-              placeholder="Title (e.g., Share an AI tool, Ask for help...)"
+              placeholder="Title (e.g.Share an AI toolAsk for help...)"
               className="mb-3 bg-zion-blue-light text-white placeholder:text-zion-slate"
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
@@ -122,7 +122,7 @@ export const CommunityDiscussion: React.FC = () => {
                     .map((s) => s[0])
                     .join("")
                     .toUpperCase()
-                    .slice(0, 2)}
+                    .slice(02)}
                 </AvatarFallback>
               </Avatar>
               <div>

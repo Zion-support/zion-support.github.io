@@ -31,8 +31,8 @@ export default function AdvancedServicesShowcaseBanner2025() {
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
             Discover our comprehensive suite of revolutionary AI services. 
-            <span className="text-purple-400 font-bold"> Quantum-neural fusion</span>, 
-            <span className="text-blue-400 font-bold"> autonomous operations</span>, and 
+            <span className="text-purple-400 font-bold"> Quantum-neural fusion</span>
+            <span className="text-blue-400 font-bold"> autonomous operations</span>and 
             <span className="text-cyan-400 font-bold"> transcendent intelligence</span> solutions.
           </p>
           

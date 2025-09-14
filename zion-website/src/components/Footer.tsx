@@ -1,13 +1,13 @@
 
 const navigation = {;
   main: [;
-    { name: 'About', href: '/about' },;
-    { name: 'Services', href: '/services' },;
-    { name: 'Solutions', href: '/solutions' },;
-    { name: 'Research', href: '/research' },;
-    { name: 'Contact', href: '/contact' },;
-    { name: 'Privacy', href: '/privacy' },;
-    { name: 'Terms', href: '/terms' }],;
+    { name: 'About'href: '/about' },;
+    { name: 'Services'href: '/services' },;
+    { name: 'Solutions'href: '/solutions' },;
+    { name: 'Research'href: '/research' },;
+    { name: 'Contact'href: '/contact' },;
+    { name: 'Privacy'href: '/privacy' },;
+    { name: 'Terms'href: '/terms' }],;
   social: [;
     {;
       name: 'LinkedIn',;
@@ -60,13 +60,13 @@ export default function Footer() {;
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">;
 const navigation = {
   main: [;
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Research', href: '/research' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Privacy', href: '/privacy' },
-    { name: 'Terms', href: '/terms' }],
+    { name: 'About'href: '/about' },
+    { name: 'Services'href: '/services' },
+    { name: 'Solutions'href: '/solutions' },
+    { name: 'Research'href: '/research' },
+    { name: 'Contact'href: '/contact' },
+    { name: 'Privacy'href: '/privacy' },
+    { name: 'Terms'href: '/terms' }],
   social: [;
     {
       name: 'LinkedIn',
@@ -108,13 +108,13 @@ function Footer() {
             <div className="text - 2xl font - bold bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent">;
 const navigation = {;
   main: [;
-    { name: 'About', href: '/about' },;
-    { name: 'Services', href: '/services' },;
-    { name: 'Solutions', href: '/solutions' },;
-    { name: 'Research', href: '/research' },;
-    { name: 'Contact', href: '/contact' },;
-    { name: 'Privacy', href: '/privacy' },;
-    { name: 'Terms', href: '/terms' }],;
+    { name: 'About'href: '/about' },;
+    { name: 'Services'href: '/services' },;
+    { name: 'Solutions'href: '/solutions' },;
+    { name: 'Research'href: '/research' },;
+    { name: 'Contact'href: '/contact' },;
+    { name: 'Privacy'href: '/privacy' },;
+    { name: 'Terms'href: '/terms' }],;
   social: [;
     {;
       name: 'LinkedIn',;
@@ -272,7 +272,7 @@ export default function Footer() {;
         </div>;
         <div className="mt - 12 border - t border - gray - 800 pt - 8">;
           <p className="text - base text - gray - 400 xl:text - center">;
-            &copy, {new Date ().getFullYear ()} Zion Tech Group. All rights reserved.;
+            &copy{new Date ().getFullYear ()} Zion Tech Group. All rights reserved.;
           </p>;
         </div>;
       </div>;

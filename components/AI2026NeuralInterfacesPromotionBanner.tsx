@@ -29,7 +29,7 @@ export default function AI2026NeuralInterfacesPromotionBanner() {
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-4xl mx-auto leading-relaxed">
             Experience the revolutionary neural interface technology that enables direct brain-computer 
-            communication, transforming how humans interact with AI systems and digital environments.
+            communicationtransforming how humans interact with AI systems and digital environments.
           </p>
 
           {/* Key Features Grid */}

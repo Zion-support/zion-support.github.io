@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 const LoginPage = () => {
-  const { user, error, isLoading } = useUser();
+  const { userrorisLoading } = useUser();
   const router = useRouter();
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const LoginPage = () => {
       const returnTo = router.query.returnTo as string || '/dashboard';
       router.push(returnTo);
     }
-  }, [user, isLoading, router]);
+  }[userisLoadingrouter]);
 
   if (isLoading) {
     return (
@@ -148,7 +148,7 @@ const LoginPage = () => {
 
           <div className="text-center">
             <p className="text-xs text-gray-500">
-              By signing in, you agree to our{' '}
+              By signing inyou agree to our{' '}
               <Link href="/legal/terms" className="text-blue-600 hover:text-blue-500">
                 Terms of Service
               </Link>{' '}

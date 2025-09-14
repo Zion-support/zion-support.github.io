@@ -20,7 +20,7 @@ export default function TermsPage() {
               Back to Home
             </Link>
             <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
-            <p className="text-xl text-white/80">Last updated: January 17, 2025</p>
+            <p className="text-xl text-white/80">Last updated: January 172025</p>
           </div>
 
           {/* Terms Content */}
@@ -28,14 +28,14 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">1. Acceptance of Terms</h2>
               <p className="text-white/80 mb-4">
-                By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms and provision of this agreement.
+                By accessing and using Zion Tech Group's servicesyou accept and agree to be bound by the terms and provision of this agreement.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">2. Description of Service</h2>
               <p className="text-white/80 mb-4">
-                Zion Tech Group provides autonomous cloud automation, AI development, and technology consulting services. Our services include but are not limited to:
+                Zion Tech Group provides autonomous cloud automationAI developmentand technology consulting services. Our services include but are not limited to:
               </p>
               <ul className="list-disc list-inside text-white/80 ml-6 mb-4">
                 <li>Cloud infrastructure automation</li>
@@ -62,28 +62,28 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">4. Intellectual Property</h2>
               <p className="text-white/80 mb-4">
-                All content, features, and functionality of our services are owned by Zion Tech Group and are protected by international copyright, trademark, and other intellectual property laws.
+                All contentfeaturesand functionality of our services are owned by Zion Tech Group and are protected by international copyrightrademarkand other intellectual property laws.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">5. Privacy and Data Protection</h2>
               <p className="text-white/80 mb-4">
-                Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services.
+                Your privacy is important to us. Please review our Privacy Policywhich also governs your use of our services.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">6. Limitation of Liability</h2>
               <p className="text-white/80 mb-4">
-                Zion Tech Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.
+                Zion Tech Group shall not be liable for any indirectincidentalspecialconsequentialor punitive damages resulting from your use of our services.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">7. Termination</h2>
               <p className="text-white/80 mb-4">
-                We may terminate or suspend your access to our services immediately, without prior notice, for any reason whatsoever.
+                We may terminate or suspend your access to our services immediatelywithout prior noticefor any reason whatsoever.
               </p>
             </section>
 
@@ -104,7 +104,7 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">10. Contact Information</h2>
               <p className="text-white/80 mb-4">
-                If you have any questions about these Terms of Service, please contact us at:
+                If you have any questions about these Terms of Serviceplease contact us at:
               </p>
               <div className="bg-white/10 p-4 rounded-lg">
                 <p className="text-white/90">Zion Tech Group</p>

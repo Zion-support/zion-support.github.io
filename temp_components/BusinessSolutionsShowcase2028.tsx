@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Shield, 
-  Zap, 
+  TrendingUp
+  Users
+  DollarSign
+  Shield
+  Zap
   Target,
   BarChart3,
   Building2,
@@ -28,8 +28,8 @@ import {
 } from 'lucide-react';
 
 const BusinessSolutionsShowcase2028 = () => {
-  const [activeSolution, setActiveSolution] = useState('automation');
-  const [currentMetric, setCurrentMetric] = useState(0);
+  const [activeSolutionsetActiveSolution] = useState('automation');
+  const [currentMetricsetCurrentMetric] = useState(0);
 
   const solutions = {
     automation: {
@@ -46,10 +46,10 @@ const BusinessSolutionsShowcase2028 = () => {
         'Cost reduction up to 80%'
       ],
       metrics: [
-        { label: 'Efficiency Gain', value: '500%', icon: TrendingUp },
-        { label: 'Cost Savings', value: '$2.5M', icon: DollarSign },
-        { label: 'Time Saved', value: '40hrs/week', icon: Clock },
-        { label: 'Error Reduction', value: '99.9%', icon: Shield }
+        { label: 'Efficiency Gain'value: '500%'icon: TrendingUp },
+        { label: 'Cost Savings'value: '$2.5M'icon: DollarSign },
+        { label: 'Time Saved'value: '40hrs/week'icon: Clock },
+        { label: 'Error Reduction'value: '99.9%'icon: Shield }
       ]
     },
     analytics: {
@@ -66,10 +66,10 @@ const BusinessSolutionsShowcase2028 = () => {
         'ROI tracking and optimization'
       ],
       metrics: [
-        { label: 'Data Processed', value: '10TB/day', icon: Database },
-        { label: 'Insights Generated', value: '1000+', icon: Target },
-        { label: 'Decision Speed', value: '90% faster', icon: Zap },
-        { label: 'Accuracy Rate', value: '98.5%', icon: CheckCircle }
+        { label: 'Data Processed'value: '10TB/day'icon: Database },
+        { label: 'Insights Generated'value: '1000+'icon: Target },
+        { label: 'Decision Speed'value: '90% faster'icon: Zap },
+        { label: 'Accuracy Rate'value: '98.5%'icon: CheckCircle }
       ]
     },
     security: {
@@ -86,10 +86,10 @@ const BusinessSolutionsShowcase2028 = () => {
         '24/7 security monitoring'
       ],
       metrics: [
-        { label: 'Threats Blocked', value: '99.9%', icon: Shield },
-        { label: 'Response Time', value: '<1min', icon: Clock },
-        { label: 'Compliance Score', value: '100%', icon: Award },
-        { label: 'Uptime', value: '99.99%', icon: CheckCircle }
+        { label: 'Threats Blocked'value: '99.9%'icon: Shield },
+        { label: 'Response Time'value: '<1min'icon: Clock },
+        { label: 'Compliance Score'value: '100%'icon: Award },
+        { label: 'Uptime'value: '99.99%'icon: CheckCircle }
       ]
     },
     cloud: {
@@ -106,10 +106,10 @@ const BusinessSolutionsShowcase2028 = () => {
         'Multi-cloud management'
       ],
       metrics: [
-        { label: 'Uptime', value: '99.99%', icon: CheckCircle },
-        { label: 'Global Reach', value: '200+', icon: Globe },
-        { label: 'Cost Reduction', value: '60%', icon: DollarSign },
-        { label: 'Deployment Speed', value: '10x faster', icon: Zap }
+        { label: 'Uptime'value: '99.99%'icon: CheckCircle },
+        { label: 'Global Reach'value: '200+'icon: Globe },
+        { label: 'Cost Reduction'value: '60%'icon: DollarSign },
+        { label: 'Deployment Speed'value: '10x faster'icon: Zap }
       ]
     }
   };
@@ -209,9 +209,9 @@ const BusinessSolutionsShowcase2028 = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMetric((prev) => (prev + 1) % 4);
-    }, 2000);
+    }2000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -220,8 +220,8 @@ const BusinessSolutionsShowcase2028 = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -229,7 +229,7 @@ const BusinessSolutionsShowcase2028 = () => {
               Business Solutions 2028
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with cutting-edge AI, automation, and cloud solutions 
+              Transform your business with cutting-edge AIautomationand cloud solutions 
               designed to drive growth and maximize efficiency.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -264,7 +264,7 @@ const BusinessSolutionsShowcase2028 = () => {
 
           {/* Solution Tabs */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            {Object.entries(solutions).map(([key, solution]) => (
+            {Object.entries(solutions).map(([keysolution]) => (
               <motion.button
                 key={key}
                 whileHover={{ scale: 1.05 }}
@@ -286,9 +286,9 @@ const BusinessSolutionsShowcase2028 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeSolution}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              exit={{ opacity: 0y: -20 }}
               transition={{ duration: 0.5 }}
               className="bg-gray-800/50 backdrop-blur-sm rounded-3xl p-8"
             >
@@ -310,7 +310,7 @@ const BusinessSolutionsShowcase2028 = () => {
                   </p>
 
                   <ul className="space-y-3 mb-8">
-                    {solutions[activeSolution].features.map((feature, index) => (
+                    {solutions[activeSolution].features.map((featureindex) => (
                       <li key={index} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                         {feature}
@@ -332,12 +332,12 @@ const BusinessSolutionsShowcase2028 = () => {
                 <div>
                   <h4 className="text-2xl font-bold mb-6">Key Metrics</h4>
                   <div className="grid grid-cols-2 gap-4">
-                    {solutions[activeSolution].metrics.map((metric, index) => (
+                    {solutions[activeSolution].metrics.map((metricindex) => (
                       <motion.div
                         key={index}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        initial={{ opacity: 0scale: 0.8 }}
+                        animate={{ opacity: 1scale: 1 }}
+                        transition={{ duration: 0.5delay: index * 0.1 }}
                         className="bg-gray-700/50 rounded-xl p-4 text-center"
                       >
                         <metric.icon className="w-8 h-8 mx-auto mb-2 text-blue-400" />
@@ -362,12 +362,12 @@ const BusinessSolutionsShowcase2028 = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
+            {caseStudies.map((studyindex) => (
               <motion.div
                 key={study.company}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6"
               >
                 <div className="flex items-center mb-4">
@@ -379,7 +379,7 @@ const BusinessSolutionsShowcase2028 = () => {
                     <p className="text-gray-400">{study.industry}</p>
                   </div>
                   <div className="ml-auto flex">
-                    {[...Array(study.rating)].map((_, i) => (
+                    {[...Array(study.rating)].map((_i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -398,7 +398,7 @@ const BusinessSolutionsShowcase2028 = () => {
                 <div>
                   <h5 className="font-semibold text-gray-300 mb-2">Results:</h5>
                   <ul className="space-y-1">
-                    {study.results.map((result, resultIndex) => (
+                    {study.results.map((resultIndex) => (
                       <li key={resultIndex} className="text-sm text-gray-400 flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2" />
                         {result}
@@ -421,12 +421,12 @@ const BusinessSolutionsShowcase2028 = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map((tierindex) => (
               <motion.div
                 key={tier.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 ${
                   tier.popular ? 'ring-2 ring-blue-500' : ''
                 }`}
@@ -449,7 +449,7 @@ const BusinessSolutionsShowcase2028 = () => {
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
+                  {tier.features.map((featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                       {feature}

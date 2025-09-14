@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { TabsContentTabsListTabsTrigger } from '@/components/ui/tabs';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { DropzoneBulkUpload } from '@/components/DropzoneBulkUpload';
@@ -7,7 +7,7 @@ import { ProductSubmissionForm } from '@/components/ProductSubmissionForm';
 import { SEO } from '@/components/SEO';
 
 export default function SellerDashboard() {
-  const [tab, setTab] = useState('products');
+  const [tabsetTab] = useState('products');
 
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">

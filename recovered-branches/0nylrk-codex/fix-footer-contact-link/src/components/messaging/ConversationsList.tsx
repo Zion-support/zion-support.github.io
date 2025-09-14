@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { User } from 'lucide-react';
+User
 import { Conversation } from '@/types/messaging';
 import { ConversationItem } from './ConversationItem';
 
@@ -12,9 +12,9 @@ interface ConversationsListProps {
 }
 
 export function ConversationsList({ 
-  conversations, 
-  activeConversation, 
-  setActiveConversation, 
+  conversations
+  activeConversation
+  setActiveConversation
   markAsRead 
 }: ConversationsListProps) {
   return (

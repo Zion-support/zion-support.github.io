@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Star, 
-  ArrowRight, 
-  Play, 
-  Eye, 
-  Heart, 
+  Star
+  ArrowRight
+  Play
+  Eye
+  Heart
   MessageCircle,
   Zap,
   Brain,
@@ -44,9 +44,9 @@ import {
 } from 'lucide-react';
 
 const UltimateContentShowcase2030PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -54,10 +54,10 @@ const UltimateContentShowcase2030PromotionBanner = () => {
     // Auto-advance slides
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const slides = [
     {
@@ -91,7 +91,7 @@ const UltimateContentShowcase2030PromotionBanner = () => {
 
   const features = [
     "Transcendent AI Consciousness",
-    "Quantum Reality Manipulation", 
+    "Quantum Reality Manipulation"
     "Neural Synthesis Technology",
     "Omniversal Communication",
     "Dimensional Gateway Systems",
@@ -104,10 +104,10 @@ const UltimateContentShowcase2030PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: -100, scale: 0.9 }}
-          transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
+          initial={{ opacity: 0y: -100scale: 0.9 }}
+          animate={{ opacity: 1y: 0scale: 1 }}
+          exit={{ opacity: 0y: -100scale: 0.9 }}
+          transition={{ duration: 0.6type: "spring"bounce: 0.3 }}
           className="relative overflow-hidden"
         >
           {/* Main Banner */}
@@ -131,9 +131,9 @@ const UltimateContentShowcase2030PromotionBanner = () => {
                 <div className="flex-1 text-center lg:text-left">
                   {/* Badge */}
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.2, duration: 0.5 }}
+                    initial={{ opacity: 0scale: 0.8 }}
+                    animate={{ opacity: 1scale: 1 }}
+                    transition={{ delay: 0.2duration: 0.5 }}
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-4"
                   >
                     <Infinity className="w-4 h-4" />
@@ -143,9 +143,9 @@ const UltimateContentShowcase2030PromotionBanner = () => {
 
                   {/* Main Title */}
                   <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3, duration: 0.6 }}
+                    initial={{ opacity: 0y: 20 }}
+                    animate={{ opacity: 1y: 0 }}
+                    transition={{ delay: 0.3duration: 0.6 }}
                     className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent mb-4"
                   >
                     Transcendent
@@ -157,23 +157,23 @@ const UltimateContentShowcase2030PromotionBanner = () => {
 
                   {/* Subtitle */}
                   <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4, duration: 0.6 }}
+                    initial={{ opacity: 0y: 20 }}
+                    animate={{ opacity: 1y: 0 }}
+                    transition={{ delay: 0.4duration: 0.6 }}
                     className="text-xl text-gray-300 mb-6 max-w-2xl"
                   >
                     Experience the pinnacle of technological evolution. From transcendent AI consciousness 
-                    to omniversal technology, discover innovations that transcend reality itself.
+                    to omniversal technologydiscover innovations that transcend reality itself.
                   </motion.p>
 
                   {/* Features Grid */}
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5, duration: 0.6 }}
+                    initial={{ opacity: 0y: 20 }}
+                    animate={{ opacity: 1y: 0 }}
+                    transition={{ delay: 0.5duration: 0.6 }}
                     className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8"
                   >
-                    {features.map((feature, index) => (
+                    {features.map((featureindex) => (
                       <div
                         key={feature}
                         className="flex items-center gap-2 text-sm text-gray-300"
@@ -186,9 +186,9 @@ const UltimateContentShowcase2030PromotionBanner = () => {
 
                   {/* CTA Buttons */}
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6, duration: 0.6 }}
+                    initial={{ opacity: 0y: 20 }}
+                    animate={{ opacity: 1y: 0 }}
+                    transition={{ delay: 0.6duration: 0.6 }}
                     className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                   >
                     <button className="group bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 shadow-2xl hover:shadow-indigo-500/25 flex items-center justify-center gap-2">
@@ -206,9 +206,9 @@ const UltimateContentShowcase2030PromotionBanner = () => {
                 {/* Right Content - Carousel */}
                 <div className="flex-1 max-w-lg">
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.4, duration: 0.6 }}
+                    initial={{ opacity: 0scale: 0.8 }}
+                    animate={{ opacity: 1scale: 1 }}
+                    transition={{ delay: 0.4duration: 0.6 }}
                     className="relative"
                   >
                     {/* Carousel Container */}
@@ -216,9 +216,9 @@ const UltimateContentShowcase2030PromotionBanner = () => {
                       <AnimatePresence mode="wait">
                         <motion.div
                           key={currentSlide}
-                          initial={{ opacity: 0, x: 100 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          exit={{ opacity: 0, x: -100 }}
+                          initial={{ opacity: 0x: 100 }}
+                          animate={{ opacity: 1x: 0 }}
+                          exit={{ opacity: 0x: -100 }}
                           transition={{ duration: 0.5 }}
                           className="absolute inset-0 p-6 flex flex-col justify-center"
                         >
@@ -254,7 +254,7 @@ const UltimateContentShowcase2030PromotionBanner = () => {
 
                       {/* Slide Indicators */}
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-                        {slides.map((_, index) => (
+                        {slides.map((_index) => (
                           <button
                             key={index}
                             onClick={() => setCurrentSlide(index)}
@@ -288,9 +288,9 @@ const UltimateContentShowcase2030PromotionBanner = () => {
 
           {/* Bottom Stats Bar */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ delay: 0.8duration: 0.6 }}
             className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 border-t border-indigo-500/20"
           >
             <div className="container mx-auto px-4 py-4">

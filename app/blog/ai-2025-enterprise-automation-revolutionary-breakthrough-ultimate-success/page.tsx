@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI 2025: The Enterprise Automation Revolutionary Breakthrough - Ultimate Success Guide to 2,500% ROI',

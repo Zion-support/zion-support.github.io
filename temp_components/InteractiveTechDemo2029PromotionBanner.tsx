@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Cpu, 
-  Brain, 
-  Zap, 
-  Globe, 
+  Cpu
+  Brain
+  Zap
+  Globe
   Play,
   Pause,
   RotateCcw,
@@ -18,9 +18,9 @@ import {
 } from 'lucide-react';
 
 const InteractiveTechDemo2029PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [isRunning, setIsRunning] = useState(false);
-  const [currentDemo, setCurrentDemo] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [isRunningsetIsRunning] = useState(false);
+  const [currentDemosetCurrentDemo] = useState(0);
 
   const demos = [
     {
@@ -56,10 +56,10 @@ const InteractiveTechDemo2029PromotionBanner = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentDemo((prev) => (prev + 1) % demos.length);
-    }, 3000);
+    }3000);
 
     return () => clearInterval(timer);
-  }, [demos.length]);
+  }[demos.length]);
 
   const startDemo = () => {
     setIsRunning(true);
@@ -74,9 +74,9 @@ const InteractiveTechDemo2029PromotionBanner = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0y: -100 }}
+        animate={{ opacity: 1y: 0 }}
+        exit={{ opacity: 0y: -100 }}
         className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 border-b border-blue-500/20 overflow-hidden"
       >
         {/* Background Effects */}
@@ -93,13 +93,13 @@ const InteractiveTechDemo2029PromotionBanner = () => {
               {/* Animated Demo Icon */}
               <motion.div
                 key={currentDemo}
-                initial={{ scale: 0, rotate: -180 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ duration: 0.5, type: "spring" }}
+                initial={{ scale: 0rotate: -180 }}
+                animate={{ scale: 1rotate: 0 }}
+                transition={{ duration: 0.5type: "spring" }}
                 className="relative"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${demos[currentDemo].color} rounded-2xl flex items-center justify-center shadow-lg ${isRunning ? 'animate-pulse' : ''}`}>
-                  {React.createElement(demos[currentDemo].icon, { 
+                  {React.createElement(demos[currentDemo].icon{ 
                     className: "w-8 h-8 text-white" 
                   })}
                 </div>
@@ -113,9 +113,9 @@ const InteractiveTechDemo2029PromotionBanner = () => {
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentDemo}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0x: 20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    exit={{ opacity: 0x: -20 }}
                     transition={{ duration: 0.3 }}
                     className="space-y-1"
                   >
@@ -170,7 +170,7 @@ const InteractiveTechDemo2029PromotionBanner = () => {
 
               {/* Demo Indicators */}
               <div className="flex items-center gap-2">
-                {demos.map((_, index) => (
+                {demos.map((_index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentDemo(index)}
@@ -217,7 +217,7 @@ const InteractiveTechDemo2029PromotionBanner = () => {
             key={currentDemo}
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
-            transition={{ duration: 3, ease: "linear" }}
+            transition={{ duration: 3ease: "linear" }}
             className="h-full bg-gradient-to-r from-blue-600 to-purple-600"
           />
         </div>

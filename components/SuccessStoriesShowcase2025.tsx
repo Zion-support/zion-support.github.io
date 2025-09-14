@@ -1,14 +1,14 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Quote, 
-  Star, 
-  TrendingUp, 
-  Users, 
+  Quote
+  Star
+  TrendingUp
+  Users
   Award,
   ArrowRight,
   Play,
@@ -26,8 +26,8 @@ import {
 } from 'lucide-react';
 
 const SuccessStoriesShowcase2025 = () => {
-  const [activeStory, setActiveStory] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeStorysetActiveStory] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   const successStories = [
     {
@@ -46,10 +46,10 @@ const SuccessStoriesShowcase2025 = () => {
       testimonial: {
         text: 'Zion Tech Group transformed our manufacturing process completely. The AI quality control system reduced our defect rate by 95% and saved us $2.5M annually. The ROI was achieved in just 3 months.',
         author: 'Sarah Johnson',
-        position: 'CEO, TechCorp Solutions',
+        position: 'CEOTechCorp Solutions',
         rating: 5
       },
-      technologies: ['Computer Vision', 'Machine Learning', 'IoT Sensors'],
+      technologies: ['Computer Vision'Machine Learning'IoT Sensors'],
       duration: '3 months',
       teamSize: '50+ employees',
       href: '/case-studies/techcorp-solutions'
@@ -70,10 +70,10 @@ const SuccessStoriesShowcase2025 = () => {
       testimonial: {
         text: 'The automation platform from Zion Tech Group revolutionized our document processing. We now process 10x more documents with 99.8% accuracy. Our team can focus on strategic work instead of manual data entry.',
         author: 'Michael Chen',
-        position: 'CTO, FinanceFlow Inc',
+        position: 'CTOFinanceFlow Inc',
         rating: 5
       },
-      technologies: ['OCR', 'Workflow Automation', 'AI Analytics'],
+      technologies: ['OCR'Workflow Automation'AI Analytics'],
       duration: '2 months',
       teamSize: '25+ employees',
       href: '/case-studies/financeflow-inc'
@@ -83,7 +83,7 @@ const SuccessStoriesShowcase2025 = () => {
       company: 'HealthTech Innovations',
       industry: 'Healthcare',
       logo: '/api/placeholder/80/80',
-      challenge: 'Patient data scattered across multiple systems, leading to delayed diagnoses',
+      challenge: 'Patient data scattered across multiple systemsleading to delayed diagnoses',
       solution: 'Unified AI-powered patient data platform with predictive analytics',
       results: {
         diagnosisTime: '60% faster',
@@ -94,10 +94,10 @@ const SuccessStoriesShowcase2025 = () => {
       testimonial: {
         text: 'Zion Tech Group\'s AI platform transformed our patient care. We can now diagnose conditions 60% faster with 98% accuracy. This has saved countless lives and significantly improved our operational efficiency.',
         author: 'Dr. Emily Rodriguez',
-        position: 'Chief Medical Officer, HealthTech Innovations',
+        position: 'Chief Medical OfficerHealthTech Innovations',
         rating: 5
       },
-      technologies: ['AI Analytics', 'Data Integration', 'Predictive Modeling'],
+      technologies: ['AI Analytics'Data Integration'Predictive Modeling'],
       duration: '4 months',
       teamSize: '100+ employees',
       href: '/case-studies/healthtech-innovations'
@@ -116,12 +116,12 @@ const SuccessStoriesShowcase2025 = () => {
         timeSaved: '30 hours/week'
       },
       testimonial: {
-        text: 'The inventory optimization system from Zion Tech Group is a game-changer. We reduced stockouts by 80% and overstock by 70%, saving $4.1M annually. Our supply chain is now perfectly optimized.',
+        text: 'The inventory optimization system from Zion Tech Group is a game-changer. We reduced stockouts by 80% and overstock by 70%saving $4.1M annually. Our supply chain is now perfectly optimized.',
         author: 'David Kim',
-        position: 'Supply Chain Director, RetailMax Global',
+        position: 'Supply Chain DirectorRetailMax Global',
         rating: 5
       },
-      technologies: ['Demand Forecasting', 'Machine Learning', 'Supply Chain AI'],
+      technologies: ['Demand Forecasting'Machine Learning'Supply Chain AI'],
       duration: '3 months',
       teamSize: '75+ employees',
       href: '/case-studies/retailmax-global'
@@ -142,10 +142,10 @@ const SuccessStoriesShowcase2025 = () => {
       testimonial: {
         text: 'Zion Tech Group\'s adaptive learning platform transformed our educational approach. Student engagement increased by 250% and completion rates improved by 85%. It\'s like having a personal tutor for every student.',
         author: 'Prof. Lisa Thompson',
-        position: 'Academic Director, EduTech Academy',
+        position: 'Academic DirectorEduTech Academy',
         rating: 5
       },
-      technologies: ['Adaptive Learning', 'Personalization AI', 'Learning Analytics'],
+      technologies: ['Adaptive Learning'Personalization AI'Learning Analytics'],
       duration: '5 months',
       teamSize: '40+ employees',
       href: '/case-studies/edutech-academy'
@@ -164,12 +164,12 @@ const SuccessStoriesShowcase2025 = () => {
         timeSaved: '35 hours/week'
       },
       testimonial: {
-        text: 'The logistics optimization system from Zion Tech Group is incredible. We reduced delivery times by 45% and fuel costs by 35%, saving $2.8M annually. Our customers are much happier with faster deliveries.',
+        text: 'The logistics optimization system from Zion Tech Group is incredible. We reduced delivery times by 45% and fuel costs by 35%saving $2.8M annually. Our customers are much happier with faster deliveries.',
         author: 'James Wilson',
-        position: 'Operations Manager, LogiChain Solutions',
+        position: 'Operations ManagerLogiChain Solutions',
         rating: 5
       },
-      technologies: ['Route Optimization', 'Real-time Analytics', 'IoT Integration'],
+      technologies: ['Route Optimization'Real-time Analytics'IoT Integration'],
       duration: '2 months',
       teamSize: '60+ employees',
       href: '/case-studies/logichain-solutions'
@@ -180,9 +180,9 @@ const SuccessStoriesShowcase2025 = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setActiveStory((prev) => (prev + 1) % successStories.length);
-    }, 8000);
+    }8000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentStory = successStories[activeStory];
 
@@ -192,17 +192,17 @@ const SuccessStoriesShowcase2025 = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           >
             Success Stories & Testimonials
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.6delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto mb-8"
           >
             Discover how leading companies across industries have transformed their 
@@ -211,9 +211,9 @@ const SuccessStoriesShowcase2025 = () => {
           
           {/* Overall Stats */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.6delay: 0.4 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
             <div className="text-center">
@@ -239,9 +239,9 @@ const SuccessStoriesShowcase2025 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeStory}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
+            exit={{ opacity: 0y: -20 }}
             transition={{ duration: 0.5 }}
             className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16"
           >
@@ -256,7 +256,7 @@ const SuccessStoriesShowcase2025 = () => {
                     <h3 className="text-2xl font-bold text-gray-900">{currentStory.company}</h3>
                     <p className="text-gray-600">{currentStory.industry} • {currentStory.teamSize}</p>
                     <div className="flex items-center gap-1 mt-1">
-                      {[...Array(currentStory.testimonial.rating)].map((_, i) => (
+                      {[...Array(currentStory.testimonial.rating)].map((_i) => (
                         <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                       ))}
                     </div>
@@ -277,10 +277,10 @@ const SuccessStoriesShowcase2025 = () => {
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Results</h4>
                   <div className="grid grid-cols-2 gap-4">
-                    {Object.entries(currentStory.results).map(([key, value], index) => (
+                    {Object.entries(currentStory.results).map(([keyvalue]index) => (
                       <div key={index} className="p-4 bg-green-50 rounded-lg">
                         <div className="text-2xl font-bold text-green-600 mb-1">{value}</div>
-                        <div className="text-sm text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                        <div className="text-sm text-gray-600 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</div>
                       </div>
                     ))}
                   </div>
@@ -290,7 +290,7 @@ const SuccessStoriesShowcase2025 = () => {
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Technologies Used</h4>
                   <div className="flex flex-wrap gap-2">
-                    {currentStory.technologies.map((tech, index) => (
+                    {currentStory.technologies.map((techindex) => (
                       <span
                         key={index}
                         className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
@@ -329,7 +329,7 @@ const SuccessStoriesShowcase2025 = () => {
                   <div className="font-semibold text-lg">{currentStory.testimonial.author}</div>
                   <div className="text-blue-100">{currentStory.testimonial.position}</div>
                   <div className="flex items-center justify-center gap-1 mt-2">
-                    {[...Array(currentStory.testimonial.rating)].map((_, i) => (
+                    {[...Array(currentStory.testimonial.rating)].map((_i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -354,17 +354,17 @@ const SuccessStoriesShowcase2025 = () => {
 
         {/* All Success Stories Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.5 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {successStories.map((story, index) => (
+          {successStories.map((storyindex) => (
             <motion.div
               key={story.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.5delay: index * 0.1 }}
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
               <div className="p-6">
@@ -383,9 +383,9 @@ const SuccessStoriesShowcase2025 = () => {
                 </p>
 
                 <div className="space-y-2 mb-4">
-                  {Object.entries(story.results).slice(0, 2).map(([key, value], idx) => (
+                  {Object.entries(story.results).slice(02).map(([keyvalue]idx) => (
                     <div key={idx} className="flex items-center justify-between text-sm">
-                      <span className="text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+                      <span className="text-gray-600 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</span>
                       <span className="font-semibold text-green-600">{value}</span>
                     </div>
                   ))}
@@ -393,7 +393,7 @@ const SuccessStoriesShowcase2025 = () => {
 
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-1">
-                    {[...Array(story.testimonial.rating)].map((_, i) => (
+                    {[...Array(story.testimonial.rating)].map((_i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -414,9 +414,9 @@ const SuccessStoriesShowcase2025 = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-12 text-white">

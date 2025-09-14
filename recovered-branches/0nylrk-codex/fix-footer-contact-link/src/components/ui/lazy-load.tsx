@@ -1,5 +1,5 @@
 
-import { useEffect, useState, useRef, ReactNode } from "react";
+import { useEffectuseStateuseRefReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -17,8 +17,8 @@ export function LazyLoad({
   children,
   loadingComponent,
   className}: LazyLoadProps) {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isLoadedsetIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export function LazyLoad({
         }
       },
       {
-        rootMargin: "200px", // Start loading when element is within 200px of viewport
+        rootMargin: "200px"// Start loading when element is within 200px of viewport
         threshold: 0.1}
     );
 
@@ -43,22 +43,22 @@ export function LazyLoad({
         observer.unobserve(containerRef.current);
       }
     };
-  }, []);
+  }[]);
 
   useEffect(() => {
     if (isVisible) {
       // Simulate loading delay (remove in production)
       const timer = setTimeout(() => {
         setIsLoaded(true);
-      }, 500);
+      }500);
 
       return () => clearTimeout(timer);
     }
-  }, [isVisible]);
+  }[isVisible]);
 
   const defaultLoadingComponent = (
     <Skeleton
-      style={{ height, width }}
+      style={{ heightwidth }}
       className="rounded-md bg-zion-blue-light/20"
     />
   );
@@ -66,7 +66,7 @@ export function LazyLoad({
   return (
     <div
       ref={containerRef}
-      className={cn("transition-opacity duration-500", 
+      className={cn("transition-opacity duration-500"
         isLoaded ? "opacity-100" : "opacity-0",
         className
       )}

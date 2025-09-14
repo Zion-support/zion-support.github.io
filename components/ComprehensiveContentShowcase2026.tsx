@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, TrendingUp } from 'lucide-react';
+ArrowRightStarZapTrendingUp
 
 const ComprehensiveContentShowcase2026 = () => {
   return (

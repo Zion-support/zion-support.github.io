@@ -20,7 +20,7 @@ export default function NeuralInterfaceRevolution2026PromotionBanner() {
           </h2>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Experience the future of human-AI collaboration with our revolutionary neural interface technology, 
+            Experience the future of human-AI collaboration with our revolutionary neural interface technology
             enabling direct brain-computer communication and consciousness integration.
           </p>
           

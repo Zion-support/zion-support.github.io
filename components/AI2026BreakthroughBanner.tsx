@@ -32,7 +32,7 @@ export default function AI2026BreakthroughBanner() {
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Experience the next evolution of AI with quantum-neural fusion, transcendent intelligence, 
+            Experience the next evolution of AI with quantum-neural fusiontranscendent intelligence
             and breakthrough innovations delivering unprecedented 
             <span className="text-cyan-400 font-bold text-2xl"> 15,000% ROI</span> through neural interfaces and consciousness AI.
           </p>

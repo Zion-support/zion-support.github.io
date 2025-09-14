@@ -1,18 +1,18 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
-import { Search, Filter, TrendingUp, Star, Clock, ArrowRight, BookOpen, Users, Target, Zap } from 'lucide-react';
+SearchFilterTrendingUpStarClockArrowRightBookOpenUsersTargetZap
 
 const UltimateContentDiscoveryWidget2025 = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: BookOpen },
-    { id: 'trends', name: 'AI Trends', icon: TrendingUp },
-    { id: 'case-studies', name: 'Case Studies', icon: Target },
-    { id: 'guides', name: 'Implementation Guides', icon: BookOpen },
-    { id: 'breakthroughs', name: 'Breakthroughs', icon: Zap }
+    { id: 'all'name: 'All Content'icon: BookOpen },
+    { id: 'trends'name: 'AI Trends'icon: TrendingUp },
+    { id: 'case-studies'name: 'Case Studies'icon: Target },
+    { id: 'guides'name: 'Implementation Guides'icon: BookOpen },
+    { id: 'breakthroughs'name: 'Breakthroughs'icon: Zap }
   ];
 
   const featuredContent = [
@@ -91,7 +91,7 @@ const UltimateContentDiscoveryWidget2025 = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Discover the most relevant AI content, case studies, and implementation guides 
+            Discover the most relevant AI contentcase studiesand implementation guides 
             tailored to your business needs and transformation goals.
           </p>
         </div>
@@ -104,7 +104,7 @@ const UltimateContentDiscoveryWidget2025 = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
               <input
                 type="text"
-                placeholder="Search AI content, trends, case studies..."
+                placeholder="Search AI contentrendscase studies..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20"
@@ -133,7 +133,7 @@ const UltimateContentDiscoveryWidget2025 = () => {
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredContent.map((content, index) => (
+          {filteredContent.map((contentindex) => (
             <Link
               key={index}
               href={content.href}

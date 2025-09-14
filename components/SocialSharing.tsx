@@ -10,10 +10,10 @@ interface SocialSharingProps {
 }
 
 export default function SocialSharing({ 
-  title, 
-  url, 
-  description = '', 
-  hashtags = ['AI2025', 'AI', 'ArtificialIntelligence', 'Technology'],
+  title
+  url
+  description = ''
+  hashtags = ['AI2025'AI'ArtificialIntelligence'Technology'],
   className = ''
 }: SocialSharingProps) {
   const encodedTitle = encodeURIComponent(title);
@@ -36,7 +36,7 @@ export default function SocialSharing({
       // You could add a toast notification here
       alert('Link copied to clipboard!');
     } catch (err) {
-      console.error('Failed to copy: ', err);
+      console.error('Failed to copy: 'err);
     }
   };
 

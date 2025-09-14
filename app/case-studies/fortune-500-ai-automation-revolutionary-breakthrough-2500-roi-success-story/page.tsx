@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Fortune 500 AI Automation Revolutionary Breakthrough: $8.5B Annual Savings - 2,500% ROI Success Story',

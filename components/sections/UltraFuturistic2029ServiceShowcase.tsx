@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles } from 'lucide-react';
+ChevronDownStarTrendingUpZapBrainCpuShieldRocketGlobeDatabaseLockCloudEyeTimerSparkles
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
 
@@ -44,32 +44,32 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
   subtitle = "Experience the future of technology with our revolutionary services",
   maxServices = 12
 }) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation');
+  const [selectedCategorysetSelectedCategory] = useState<string>('all');
+  const [sortBysetSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation');
 
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(services.map(service => service.category)))];
+  const categories = ['all'...Array.from(new Set(services.map(service => service.category)))];
 
   // Filter and sort services
   const filteredServices = services
     .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
-    .sort((a, b) => {
+    .sort((ab) => {
       switch (sortBy) {
         case 'innovation':
           // Default to 'Advanced' if innovationLevel is not available
           const aLevel = (a as any).innovationLevel || 'Advanced';
           const bLevel = (b as any).innovationLevel || 'Advanced';
-          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 };
+          const innovationOrder = { 'Revolutionary': 4'Breakthrough': 3'Advanced': 2'Emerging': 1 };
           return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0);
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          return parseFloat(a.price.replace(/[^0-9.]/g'')) - parseFloat(b.price.replace(/[^0-9.]/g''));
         case 'rating':
           return b.rating - a.rating;
         default:
           return 0;
       }
     })
-    .slice(0, maxServices);
+    .slice(0maxServices);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -82,7 +82,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -105,23 +105,23 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.1 }}
             className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
           >
             {title}
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             {subtitle}
@@ -130,9 +130,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
         {/* Filters and Controls */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12"
         >
           {/* Category Filter */}
@@ -178,7 +178,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {filteredServices.map((service, index) => (
+          {filteredServices.map((serviceindex) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -194,9 +194,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm">
@@ -225,23 +225,23 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
         {/* Innovation Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.5 }}
           className="mt-20"
         >
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-            ].map((stat, index) => (
+              { label: 'Revolutionary Services'value: services.filter(s => s.innovationLevel === 'Revolutionary').lengthicon: Rocketcolor: 'from-purple-500 to-pink-500' },
+              { label: 'Patent Pending'value: services.filter(s => s.patentStatus === 'Patent Pending').lengthicon: Shieldcolor: 'from-blue-500 to-cyan-500' },
+              { label: 'Total Customers'value: services.reduce((sums) => sum + s.customers0)icon: Starcolor: 'from-yellow-500 to-orange-500' },
+              { label: 'Average Rating'value: (services.reduce((sums) => sum + s.rating0) / services.length).toFixed(1)icon: TrendingUpcolor: 'from-green-500 to-teal-500' }
+            ].map((statindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>

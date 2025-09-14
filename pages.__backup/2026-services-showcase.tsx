@@ -1,8 +1,8 @@
-import React, { useState, useMemo } from 'react';
+import React{ useStateuseMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, Search as SearchIcon, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles as SparklesIcon, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain as BrainIcon, Atom as AtomIcon, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon2, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as CodeIcon2, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon2, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon2, Atom as AtomIcon2, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
+import { motionAnimatePresence } from 'framer-motion';
+SearchStarUsersTrendingUpDollarSignClockCheckCircleArrowRightRocketBrainAtomSparklesShieldZapGlobeCpuDatabaseCloudSmartphonePaletteSearch as SearchIconMessageSquareFileTextCalendarCreditCardBarChart3SettingsZap as ZapIconCodeBookOpenActivityDatabase as DatabaseIconPlayMailPhoneMapPinFilterGridListChevronDownChevronUpSparkles as SparklesIconFlaskConicalDnaCarLeafFactoryTruckMicroscopeGraduationCapShieldCheckBrain as BrainIconAtom as AtomIconGlobe2BotChevronRightCrownInfinityZap as ZapIcon2Shield as ShieldIconUsers as UsersIconGlobe as GlobeIconCpu as CpuIconDatabase as DatabaseIcon2Cloud as CloudIconSmartphone as SmartphoneIconPalette as PaletteIconSearch as SearchIcon2MessageSquare as MessageSquareIconFileText as FileTextIconCalendar as CalendarIconCreditCard as CreditCardIconBarChart3 as BarChart3IconSettings as SettingsIconZap as ZapIcon3Code as CodeIconBookOpen as CodeIcon2Activity as ActivityIconDatabase as DatabaseIcon3Play as PlayIconMail as MailIconPhone as PhoneIconMapPin as MapPinIconFilter as FilterIconGrid as GridIconList as ListIconChevronDown as ChevronDownIconChevronUp as ChevronUpIconSparkles as SparklesIcon2FlaskConical as FlaskConicalIconDna as DnaIconCar as CarIconLeaf as LeafIconFactory as FactoryIconTruck as TruckIconMicroscope as MicroscopeIconGraduationCap as GraduationCapIconShieldCheck as ShieldCheckIconBrain as BrainIcon2Atom as AtomIcon2Globe2 as Globe2IconBot as BotIconChevronRight as ChevronRightIcon
 
 
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -12,10 +12,10 @@ import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-
 import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
 
 export default function Services2026ShowcasePage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState<string>('all');
+  const [selectedPriceRangesetSelectedPriceRange] = useState<string>('all');
+  const [sortBysetSortBy] = useState<string>('name');
 
   // Map service variants to supported card variants
   const mapServiceVariantToCardVariant = (serviceVariant: string): 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'enterprise-futuristic' | 'quantum-futuristic' | 'holographic-futuristic' | 'quantum-iot' | 'quantum-logistics' | 'quantum-financial' | 'quantum-energy' | 'quantum-neural' | 'quantum-cyberpunk' => {
@@ -67,27 +67,27 @@ export default function Services2026ShowcasePage() {
 
   // Enhanced categories for 2026
   const categories = [
-    { id: 'all', name: 'All 2026 Services', icon: '🚀', count: all2026Services.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length },
-    { id: 'quantum', name: 'Quantum & Emerging Tech', icon: '⚛️', count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length },
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length },
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: all2026Services.filter(s => s.category.includes('SaaS')).length }
+    { id: 'all'name: 'All 2026 Services'icon: '🚀'count: all2026Services.length },
+    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: all2026Services.filter(s => s.category.includes('AI')).length },
+    { id: 'quantum'name: 'Quantum & Emerging Tech'icon: '⚛️'count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length },
+    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length },
+    { id: 'micro-saas'name: 'Micro SaaS'icon: '💻'count: all2026Services.filter(s => s.category.includes('SaaS')).length }
   ];
 
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
-    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
-    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
-    { id: 'premium', name: '$20K+/month', range: '$20K+' }
+    { id: 'all'name: 'All Prices'range: 'All' },
+    { id: 'low'name: 'Under $1K/month'range: 'Under $1K' },
+    { id: 'medium'name: '$1K - $5K/month'range: '$1K - $5K' },
+    { id: 'high'name: '$5K - $20K/month'range: '$5K - $20K' },
+    { id: 'premium'name: '$20K+/month'range: '$20K+' }
   ];
 
   const sortOptions = [
-    { id: 'name', name: 'Name A-Z' },
-    { id: 'price-low', name: 'Price Low to High' },
-    { id: 'price-high', name: 'Price High to Low' },
-    { id: 'popularity', name: 'Most Popular' },
-    { id: 'newest', name: 'Newest First' }
+    { id: 'name'name: 'Name A-Z' },
+    { id: 'price-low'name: 'Price Low to High' },
+    { id: 'price-high'name: 'Price High to Low' },
+    { id: 'popularity'name: 'Most Popular' },
+    { id: 'newest'name: 'Newest First' }
   ];
 
   // Filter and sort services
@@ -117,7 +117,7 @@ export default function Services2026ShowcasePage() {
     // Price range filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
-        const price = parseInt(service.price.replace('$', '').replace(',', ''));
+        const price = parseInt(service.price.replace('$'').replace(',''));
         if (selectedPriceRange === 'low') return price < 1000;
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000;
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000;
@@ -127,12 +127,12 @@ export default function Services2026ShowcasePage() {
     }
 
     // Sort services
-    filtered.sort((a, b) => {
+    filtered.sort((ab) => {
       switch (sortBy) {
         case 'price-low':
-          return parseInt(a.price.replace('$', '').replace(',', '')) - parseInt(b.price.replace('$', '').replace(',', ''));
+          return parseInt(a.price.replace('$'').replace(','')) - parseInt(b.price.replace('$'').replace(',''));
         case 'price-high':
-          return parseInt(b.price.replace('$', '').replace(',', '')) - parseInt(a.price.replace('$', '').replace(',', ''));
+          return parseInt(b.price.replace('$'').replace(','')) - parseInt(a.price.replace('$'').replace(',''));
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
         case 'newest':
@@ -143,7 +143,7 @@ export default function Services2026ShowcasePage() {
     });
 
     return filtered;
-  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, all2026Services]);
+  }[searchTermselectedCategoryselectedPriceRangesortByall2026Services]);
 
   return (
     <UltraFuturisticBackground 
@@ -152,13 +152,13 @@ export default function Services2026ShowcasePage() {
     >
       <div className="min-h-screen">
         <Head>
-          <title>2026 Services Showcase - Zion Tech Group | Revolutionary AI, Quantum & IT Solutions</title>
-          <meta name="description" content="Explore our revolutionary 2026 services including AI-powered platforms, quantum computing, emerging technologies, and enterprise IT solutions. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="2026 services, AI services, quantum computing, emerging technology, enterprise IT, micro SaaS, neuromorphic computing, DNA computing, photonic computing, holographic displays, swarm robotics, quantum internet, biometric authentication, zero trust, edge computing, 5G networks" />
+          <title>2026 Services Showcase - Zion Tech Group | Revolutionary AIQuantum & IT Solutions</title>
+          <meta name="description" content="Explore our revolutionary 2026 services including AI-powered platformsquantum computingemerging technologiesand enterprise IT solutions. Contact: +1 302 464 0950" />
+          <meta name="keywords" content="2026 servicesAI servicesquantum computingemerging technologyenterprise ITmicro SaaSneuromorphic computingDNA computingphotonic computingholographic displayswarm roboticsquantum internetbiometric authenticationzero trustedge computing5G networks" />
           <meta name="author" content="Zion Tech Group" />
-          <meta name="robots" content="index, follow" />
+          <meta name="robots" content="indexfollow" />
           <meta property="og:title" content="2026 Services Showcase - Zion Tech Group" />
-          <meta property="og:description" content="Revolutionary AI, quantum computing, and emerging technology services for 2026 and beyond." />
+          <meta property="og:description" content="Revolutionary AIquantum computingand emerging technology services for 2026 and beyond." />
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase" />
@@ -169,15 +169,15 @@ export default function Services2026ShowcasePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30"></div>
           <div className="max-w-7xl mx-auto relative z-10 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 2026 Services Showcase
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Discover our revolutionary AI, quantum computing, and emerging technology services that will define the future of business and technology.
+                Discover our revolutionary AIquantum computingand emerging technology services that will define the future of business and technology.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-3">
@@ -287,13 +287,13 @@ export default function Services2026ShowcasePage() {
                 </motion.div>
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {filteredServices.map((service, index) => (
+                  {filteredServices.map((serviceindex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
+                      exit={{ opacity: 0y: -20 }}
+                      transition={{ duration: 0.5delay: index * 0.1 }}
                     >
                       <UltraFuturisticCard className="h-full group hover:scale-105 transition-transform duration-300">
                         <div className="p-6 h-full flex flex-col">
@@ -330,7 +330,7 @@ export default function Services2026ShowcasePage() {
                           <div className="mb-6">
                             <div className="text-sm text-gray-300 mb-2">Key Features:</div>
                             <div className="space-y-1">
-                              {service.features.slice(0, 3).map((feature, idx) => (
+                              {service.features.slice(03).map((featureidx) => (
                                 <div key={idx} className="flex items-center text-xs text-gray-400">
                                   <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                                   {feature}
@@ -382,8 +382,8 @@ export default function Services2026ShowcasePage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

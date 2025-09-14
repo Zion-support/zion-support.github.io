@@ -1,4 +1,4 @@
-import { createContext, useContext, ReactNode } from 'react';
+import { createContextuseContextReactNode } from 'react';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import type { UnitSystem } from '@/utils/unitConversion';
 
@@ -24,10 +24,10 @@ const UnitContext = createContext<UnitContextState>({
   toggleUnit: () => {}});
 
 export function UnitProvider({ children }: { children: ReactNode }) {
-  const [unit, setUnit] = useLocalStorage<UnitSystem>('unitSystem', getDefaultUnit());
+  const [unitsetUnit] = useLocalStorage<UnitSystem>('unitSystem'getDefaultUnit());
   const toggleUnit = () => setUnit(unit === 'metric' ? 'imperial' : 'metric');
   return (
-    <UnitContext.Provider value={{ unit, setUnit, toggleUnit }}>
+    <UnitContext.Provider value={{ unitsetUnitoggleUnit }}>
       {children}
     </UnitContext.Provider>
   );

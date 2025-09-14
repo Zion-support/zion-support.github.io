@@ -1,16 +1,16 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
-  Zap, 
-  Brain, 
-  Rocket, 
-  Target, 
-  TrendingUp, 
-  Users, 
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  Target
+  TrendingUp
+  Users
   Award,
   ChevronRight,
   Play,
@@ -24,12 +24,12 @@ import {
 } from 'lucide-react';
 
 const UltimateContentRevolution2026 = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const contentSections = [
     {
@@ -49,9 +49,9 @@ const UltimateContentRevolution2026 = () => {
           'Real-time Language Processing'
         ],
         stats: [
-          { label: 'ROI Increase', value: '340%', icon: TrendingUp },
-          { label: 'Efficiency Gain', value: '85%', icon: Zap },
-          { label: 'Cost Reduction', value: '60%', icon: Target }
+          { label: 'ROI Increase'value: '340%'icon: TrendingUp },
+          { label: 'Efficiency Gain'value: '85%'icon: Zap },
+          { label: 'Cost Reduction'value: '60%'icon: Target }
         ]
       }
     },
@@ -72,9 +72,9 @@ const UltimateContentRevolution2026 = () => {
           'Error Correction Systems'
         ],
         stats: [
-          { label: 'Processing Speed', value: '1000x', icon: Zap },
-          { label: 'Security Level', value: '99.9%', icon: Shield },
-          { label: 'Problem Solving', value: '∞', icon: Brain }
+          { label: 'Processing Speed'value: '1000x'icon: Zap },
+          { label: 'Security Level'value: '99.9%'icon: Shield },
+          { label: 'Problem Solving'value: '∞'icon: Brain }
         ]
       }
     },
@@ -95,9 +95,9 @@ const UltimateContentRevolution2026 = () => {
           'Customer Service Bots'
         ],
         stats: [
-          { label: 'Uptime', value: '99.9%', icon: CheckCircle },
-          { label: 'Cost Savings', value: '75%', icon: TrendingUp },
-          { label: 'Error Reduction', value: '95%', icon: Target }
+          { label: 'Uptime'value: '99.9%'icon: CheckCircle },
+          { label: 'Cost Savings'value: '75%'icon: TrendingUp },
+          { label: 'Error Reduction'value: '95%'icon: Target }
         ]
       }
     }
@@ -106,7 +106,7 @@ const UltimateContentRevolution2026 = () => {
   const testimonials = [
     {
       name: 'Sarah Chen',
-      role: 'CTO, TechCorp',
+      role: 'CTOTechCorp',
       company: 'Fortune 500',
       content: 'Zion\'s AI solutions increased our operational efficiency by 340% in just 6 months.',
       avatar: '/api/placeholder/64/64',
@@ -114,7 +114,7 @@ const UltimateContentRevolution2026 = () => {
     },
     {
       name: 'Michael Rodriguez',
-      role: 'CEO, InnovateLabs',
+      role: 'CEOInnovateLabs',
       company: 'Startup',
       content: 'The quantum computing integration transformed our data processing capabilities completely.',
       avatar: '/api/placeholder/64/64',
@@ -135,8 +135,8 @@ const UltimateContentRevolution2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -148,20 +148,20 @@ const UltimateContentRevolution2026 = () => {
             Ultimate Content Revolution
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
-            Experience the most advanced AI, quantum computing, and automation technologies 
+            Experience the most advanced AIquantum computingand automation technologies 
             that are reshaping the future of business and technology.
           </p>
         </motion.div>
 
         {/* Content Tabs */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {contentSections.map((section, index) => (
+            {contentSections.map((sectionindex) => (
               <button
                 key={section.id}
                 onClick={() => setActiveTab(index)}
@@ -181,9 +181,9 @@ const UltimateContentRevolution2026 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0x: 20 }}
+              animate={{ opacity: 1x: 0 }}
+              exit={{ opacity: 0x: -20 }}
               transition={{ duration: 0.5 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >
@@ -197,7 +197,7 @@ const UltimateContentRevolution2026 = () => {
                   </p>
                   
                   <div className="grid grid-cols-2 gap-4 mb-6">
-                    {contentSections[activeTab].content.stats.map((stat, index) => (
+                    {contentSections[activeTab].content.stats.map((statindex) => (
                       <div key={index} className="bg-white/10 rounded-lg p-4 text-center">
                         <stat.icon className="w-8 h-8 mx-auto mb-2 text-purple-400" />
                         <div className="text-2xl font-bold text-white">{stat.value}</div>
@@ -210,7 +210,7 @@ const UltimateContentRevolution2026 = () => {
                 <div>
                   <h4 className="text-xl font-semibold mb-4 text-white">Key Features</h4>
                   <div className="space-y-3">
-                    {contentSections[activeTab].content.features.map((feature, index) => (
+                    {contentSections[activeTab].content.features.map((featureindex) => (
                       <div key={index} className="flex items-center gap-3">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
@@ -225,21 +225,21 @@ const UltimateContentRevolution2026 = () => {
 
         {/* Testimonials */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-center mb-12 text-white">
             What Industry Leaders Are Saying
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonialindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.5delay: 0.1 * index }}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
               >
                 <div className="flex items-center gap-4 mb-4">
@@ -250,12 +250,12 @@ const UltimateContentRevolution2026 = () => {
                   />
                   <div>
                     <h4 className="font-semibold text-white">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</p>
+                    <p className="text-sm text-gray-400">{testimonial.role}{testimonial.company}</p>
                   </div>
                 </div>
                 <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
                 <div className="flex items-center gap-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map((_i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -266,9 +266,9 @@ const UltimateContentRevolution2026 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">

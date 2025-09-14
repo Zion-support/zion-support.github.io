@@ -1,10 +1,10 @@
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons';
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
+import { VideoOffMicOffPhoneScreenShareOffVolume2VolumeX } from '@/components/icons';
 import './video-call.css';
 
 interface Participant {
@@ -28,28 +28,28 @@ interface VideoCallRoomProps {
 }
 
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ 
-  roomId, 
-  participants = [], 
+  roomId
+  participants = []
   onLeave,
   onToggleMute,
   onToggleVideo,
   onToggleScreenShare,
   className 
 }) => {
-  const [isMuted, setIsMuted] = useState(false);
-  const [isVideoEnabled, setIsVideoEnabled] = useState(true);
-  const [isScreenSharing, setIsScreenSharing] = useState(false);
-  const [isAudioOnly, setIsAudioOnly] = useState(false);
-  const [callDuration, setCallDuration] = useState(0);
+  const [isMutedsetIsMuted] = useState(false);
+  const [isVideoEnabledsetIsVideoEnabled] = useState(true);
+  const [isScreenSharingsetIsScreenSharing] = useState(false);
+  const [isAudioOnlysetIsAudioOnly] = useState(false);
+  const [callDurationsetCallDuration] = useState(0);
 
   // Call duration timer
   React.useEffect(() => {
     const timer = setInterval(() => {
       setCallDuration(prevDuration => prevDuration + 1);
-    }, 1000);
+    }1000);
     
     return () => clearInterval(timer);
-  }, []);
+  }[]);
 
   const formatDuration = (seconds: number) => {
     const hrs = Math.floor(seconds / 3600);
@@ -74,7 +74,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
       onToggleVideo(newVideoState);
     }
     
-    // If turning video back on, ensure we're not in audio-only mode
+    // If turning video back onensure we're not in audio-only mode
     if (newVideoState) {
       setIsAudioOnly(false);
     }

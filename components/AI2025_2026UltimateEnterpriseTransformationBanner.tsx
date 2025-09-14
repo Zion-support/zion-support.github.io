@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRightIcon, SparklesIcon, ChartBarIcon, CpuChipIcon } from '@heroicons/react/24/outline';
+import { ArrowRightIconSparklesIconChartBarIconCpuChipIcon } from '@heroicons/react/24/outline';
 
 export default function AI2025_2026UltimateEnterpriseTransformationBanner() {
   return (
@@ -33,8 +33,8 @@ export default function AI2025_2026UltimateEnterpriseTransformationBanner() {
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover how AI is revolutionizing enterprise operations with <strong className="text-yellow-400">500%+ ROI improvements</strong>, 
-            autonomous systems, and next-generation business intelligence that's transforming industries worldwide.
+            Discover how AI is revolutionizing enterprise operations with <strong className="text-yellow-400">500%+ ROI improvements</strong>
+            autonomous systemsand next-generation business intelligence that's transforming industries worldwide.
           </p>
 
           {/* Key Benefits Grid */}

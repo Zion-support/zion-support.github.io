@@ -3,10 +3,10 @@ import { useState } from 'react';
 import Head from 'next/head';
 
 export default function OffworldDeploy() {
-  const [cid, setCid] = useState<string | null>(null);
-  const [status, setStatus] = useState<string>('');
-  const [error, setError] = useState<string>('');
-  const [provider, setProvider] = useState<string>('');
+  const [cidsetCid] = useState<string | null>(null);
+  const [statusetStatus] = useState<string>('');
+  const [errorsetError] = useState<string>('');
+  const [providersetProvider] = useState<string>('');
 
   async function handleDeploy() {
     setStatus('Exporting and deploying to IPFS...');
@@ -14,7 +14,7 @@ export default function OffworldDeploy() {
     setCid(null);
     setProvider('');
     try {
-      const res = await fetch('/api/offworld/deploy', { method: 'POST' });
+      const res = await fetch('/api/offworld/deploy'{ method: 'POST' });
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Deploy failed');
       setCid(data.cid);

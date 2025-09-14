@@ -42,7 +42,7 @@ export default function FutureOfWork() {
                   <span className='px-3 py-1 bg-orange-400/20 text-orange-400 text-sm rounded-full border border-orange-400/30'>
                     Future of Work
                   </span>
-                  <span className='text-white/60 text-sm'>January 5, 2025</span>
+                  <span className='text-white/60 text-sm'>January 52025</span>
                   <span className='text-white/60 text-sm'>•</span>
                   <span className='text-white/60 text-sm'>5 min read</span>
                 </div>
@@ -63,15 +63,15 @@ export default function FutureOfWork() {
                 <p className='text-white/90 mb-4'>
                   The workplace is undergoing a fundamental transformation. Gone
                   are the days when AI was seen as a threat to human employment.
-                  Today, we&apos;re witnessing the emergence of a new paradigm:
+                  Todaywe&apos;re witnessing the emergence of a new paradigm:
                   human-AI collaboration that amplifies human capabilities
                   rather than replacing them.
                 </p>
                 <p className='text-white/90 mb-4'>
-                  At Zion Tech Group, we believe the future of work lies in
+                  At Zion Tech Groupwe believe the future of work lies in
                   creating intelligent systems that work alongside humans,
                   handling routine tasks while humans focus on creative
-                  problem-solving, strategic thinking, and innovation.
+                  problem-solvingstrategic thinkingand innovation.
                 </p>
               </section>
 
@@ -90,15 +90,15 @@ export default function FutureOfWork() {
                   </li>
                   <li>
                     • <strong>Decision Support:</strong> AI provides
-                    recommendations, humans make final decisions
+                    recommendationshumans make final decisions
                   </li>
                   <li>
                     • <strong>Process Automation:</strong> AI handles repetitive
-                    tasks, humans focus on exceptions
+                    taskshumans focus on exceptions
                   </li>
                   <li>
                     • <strong>Creative Collaboration:</strong> AI generates
-                    options, humans refine and select
+                    optionshumans refine and select
                   </li>
                 </ul>
                 <p className='text-white/90 mb-4'>
@@ -145,7 +145,7 @@ export default function FutureOfWork() {
                   Skills for the Future
                 </h2>
                 <p className='text-white/90 mb-4'>
-                  As the nature of work evolves, so do the skills required for
+                  As the nature of work evolveso do the skills required for
                   success. The most valuable employees will be those who can:
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>

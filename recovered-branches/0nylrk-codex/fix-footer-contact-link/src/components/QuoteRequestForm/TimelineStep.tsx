@@ -5,7 +5,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { CalendarIcon } from "@/components/icons";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
 
@@ -14,7 +14,7 @@ interface TimelineStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 
-export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
+export function TimelineStep({ formDataupdateFormData }: TimelineStepProps) {
   return (
     <div className="space-y-6">
       <div>
@@ -61,7 +61,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
-                      {formData.startDate ? format(formData.startDate, "PPP") : <span>Pick a date</span>}
+                      {formData.startDate ? format(formData.startDate"PPP") : <span>Pick a date</span>}
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">
@@ -88,7 +88,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
-                      {formData.endDate ? format(formData.endDate, "PPP") : <span>Pick a date</span>}
+                      {formData.endDate ? format(formData.endDate"PPP") : <span>Pick a date</span>}
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">

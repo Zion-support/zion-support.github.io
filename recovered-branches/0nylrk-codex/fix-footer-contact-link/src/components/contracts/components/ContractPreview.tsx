@@ -18,17 +18,17 @@ interface ContractPreviewProps {
 }
 
 export function ContractPreview({ 
-  contractContent, 
-  generatedContract, 
-  status = 'ready', 
-  onDeploy, 
+  contractContent
+  generatedContract
+  status = 'ready'
+  onDeploy
   onSign,
   onClose,
   deployStatus,
   deploymentInfo
 }: ContractPreviewProps) {
   
-  // Use either contractContent or generatedContract, whichever is provided
+  // Use either contractContent or generatedContractwhichever is provided
   const displayContent = contractContent || generatedContract || "";
   
   return (

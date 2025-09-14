@@ -1,13 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-  Brain, 
-  Cpu, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Database, 
-  Lock, 
+  Brain
+  Cpu
+  Shield
+  Zap
+  Globe
+  Database
+  Lock
   TrendingUp,
   ArrowRight,
   Star,
@@ -21,7 +21,7 @@ const TechnologyShowcase2025 = () => {
       name: "AI-Powered Automation",
       description: "Revolutionary AI systems that automate complex business processes with 99.9% accuracy.",
       icon: <Brain className="w-8 h-8 text-blue-500" />,
-      features: ["Machine Learning", "Natural Language Processing", "Predictive Analytics"],
+      features: ["Machine Learning"Natural Language Processing"Predictive Analytics"],
       status: "Available Now",
       category: "Artificial Intelligence"
     },
@@ -30,7 +30,7 @@ const TechnologyShowcase2025 = () => {
       name: "Quantum Computing Solutions",
       description: "Breakthrough quantum algorithms that solve problems impossible for classical computers.",
       icon: <Cpu className="w-8 h-8 text-purple-500" />,
-      features: ["Quantum Algorithms", "Cryptography", "Optimization"],
+      features: ["Quantum Algorithms"Cryptography"Optimization"],
       status: "Beta Testing",
       category: "Quantum Technology"
     },
@@ -39,7 +39,7 @@ const TechnologyShowcase2025 = () => {
       name: "Neural Interface Platform",
       description: "Direct brain-computer interfaces enabling seamless human-machine interaction.",
       icon: <Zap className="w-8 h-8 text-green-500" />,
-      features: ["BCI Technology", "Real-time Processing", "Neural Networks"],
+      features: ["BCI Technology"Real-time Processing"Neural Networks"],
       status: "In Development",
       category: "Neural Technology"
     },
@@ -48,7 +48,7 @@ const TechnologyShowcase2025 = () => {
       name: "Advanced Cybersecurity",
       description: "Next-generation security systems protecting against quantum and AI threats.",
       icon: <Shield className="w-8 h-8 text-red-500" />,
-      features: ["Quantum Encryption", "AI Threat Detection", "Zero Trust Architecture"],
+      features: ["Quantum Encryption"AI Threat Detection"Zero Trust Architecture"],
       status: "Available Now",
       category: "Cybersecurity"
     },
@@ -57,7 +57,7 @@ const TechnologyShowcase2025 = () => {
       name: "Global Cloud Infrastructure",
       description: "Distributed cloud computing with edge processing and real-time synchronization.",
       icon: <Globe className="w-8 h-8 text-orange-500" />,
-      features: ["Edge Computing", "Global CDN", "Auto-scaling"],
+      features: ["Edge Computing"Global CDN"Auto-scaling"],
       status: "Available Now",
       category: "Cloud Computing"
     },
@@ -66,17 +66,17 @@ const TechnologyShowcase2025 = () => {
       name: "Blockchain Integration",
       description: "Decentralized systems ensuring transparency and immutability across all operations.",
       icon: <Database className="w-8 h-8 text-indigo-500" />,
-      features: ["Smart Contracts", "DeFi Integration", "NFT Support"],
+      features: ["Smart Contracts"DeFi Integration"NFT Support"],
       status: "Available Now",
       category: "Blockchain"
     }
   ];
 
   const stats = [
-    { label: "Technologies Deployed", value: "50+", icon: <Cpu className="w-6 h-6" /> },
-    { label: "Global Clients", value: "1000+", icon: <Globe className="w-6 h-6" /> },
-    { label: "Success Rate", value: "99.9%", icon: <CheckCircle className="w-6 h-6" /> },
-    { label: "Uptime", value: "99.99%", icon: <TrendingUp className="w-6 h-6" /> }
+    { label: "Technologies Deployed"value: "50+"icon: <Cpu className="w-6 h-6" /> },
+    { label: "Global Clients"value: "1000+"icon: <Globe className="w-6 h-6" /> },
+    { label: "Success Rate"value: "99.9%"icon: <CheckCircle className="w-6 h-6" /> },
+    { label: "Uptime"value: "99.99%"icon: <TrendingUp className="w-6 h-6" /> }
   ];
 
   return (
@@ -101,7 +101,7 @@ const TechnologyShowcase2025 = () => {
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <div key={index} className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                 {stat.icon}
@@ -145,7 +145,7 @@ const TechnologyShowcase2025 = () => {
                 </p>
                 
                 <div className="space-y-2 mb-6">
-                  {tech.features.map((feature, index) => (
+                  {tech.features.map((featureindex) => (
                     <div key={index} className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                       {feature}

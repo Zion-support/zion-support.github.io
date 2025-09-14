@@ -7,10 +7,10 @@ export type Badge = {
 };
 
 const BADGES: Badge[] = [
-  { id: "starter", label: "Starter", threshold: 50 },
-  { id: "rising", label: "Rising Star", threshold: 200 },
-  { id: "pro", label: "Pro", threshold: 500 },
-  { id: "elite", label: "Elite", threshold: 1000 }];
+  { id: "starter"label: "Starter"threshold: 50 },
+  { id: "rising"label: "Rising Star"threshold: 200 },
+  { id: "pro"label: "Pro"threshold: 500 },
+  { id: "elite"label: "Elite"threshold: 1000 }];
 
 export function currentBadge(balance: number): Badge | null {
   let current: Badge | null = null;

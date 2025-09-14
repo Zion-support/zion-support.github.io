@@ -6,7 +6,7 @@ export default function AIAutonomousResearchAssistant() {
 		<ServiceLanding
 			title="AI Autonomous Research Assistant"
 			slug="ai-autonomous-research-assistant"
-			description="An AI agent that continuously tracks competitors, markets, regulations, and technologies. It synthesizes findings, drafts briefs, and recommends actions—so your team stays ahead."
+			description="An AI agent that continuously tracks competitorsmarketsregulationsand technologies. It synthesizes findingsdrafts briefsand recommends actions—so your team stays ahead."
 			subtitle="Always-on competitive and market intelligence at analyst-level quality."
 			pricePerMonthUSD={1299}
 			implementationWeeks="Implementation: 1–2 weeks"
@@ -17,9 +17,9 @@ export default function AIAutonomousResearchAssistant() {
 				"Regulatory watchlists and impact analysis",
 				"RFP/RFI opportunity discovery and alerts",
 				"Export to Slides/Docs/Notion",
-				"Compliance-friendly data handling, audit logs"
+				"Compliance-friendly data handlingaudit logs"
 			]}
-			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
+			industries={["Consulting"Healthcare"Finance"Public Sector"]}
 			canonical="https://ziontechgroup.com/ai-autonomous-research-assistant"
 		/>
 	);

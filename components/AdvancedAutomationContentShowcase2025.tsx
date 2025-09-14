@@ -21,7 +21,7 @@ const AdvancedAutomationContentShowcase2025 = () => {
     },
     {
       title: "Financial Process Automation",
-      description: "Automated invoice processing, expense management, and financial reporting",
+      description: "Automated invoice processingexpense managementand financial reporting",
       image: "💰",
       link: "/automation/financial",
       category: "Finance",
@@ -37,7 +37,7 @@ const AdvancedAutomationContentShowcase2025 = () => {
     },
     {
       title: "HR Process Automation",
-      description: "Automated recruitment, onboarding, and employee lifecycle management",
+      description: "Automated recruitmentonboardingand employee lifecycle management",
       image: "👥",
       link: "/automation/hr",
       category: "Human Resources",
@@ -67,7 +67,7 @@ const AdvancedAutomationContentShowcase2025 = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {automationContent.map((content, index) => (
+          {automationContent.map((contentindex) => (
             <div key={index} className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-emerald-100">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">

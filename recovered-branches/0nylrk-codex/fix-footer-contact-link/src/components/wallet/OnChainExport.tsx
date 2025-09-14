@@ -1,8 +1,8 @@
 
-import React, { useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import React{ useState } from "react";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react";
+import { WalletInfoCheckChevronRightArrowUpRight } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -12,9 +12,9 @@ import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 
 export function OnChainExport() {
-  const [isConnected, setIsConnected] = useState(false);
-  const [isExporting, setIsExporting] = useState(false);
-  const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
+  const [isConnectedsetIsConnected] = useState(false);
+  const [isExportingsetIsExporting] = useState(false);
+  const [exportStatusetExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
   const { toast } = useToast();
   const { user } = useAuth();
   
@@ -39,13 +39,13 @@ export function OnChainExport() {
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
       await ethereum.request({
         method: 'personal_sign',
-        params: [address, message]
+        params: [addressmessage]
       });
       
       setIsConnected(true);
       toast({
         title: "Wallet connected",
-        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`});
+        description: `Wallet ${address.slice(06)}...${address.slice(-4)} connected successfully`});
     } catch (error: any) {
       toast({
         title: "Connection failed",
@@ -61,7 +61,7 @@ export function OnChainExport() {
     
     try {
       // Simulate token export
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve2000));
       
       setExportStatus('success');
       toast({

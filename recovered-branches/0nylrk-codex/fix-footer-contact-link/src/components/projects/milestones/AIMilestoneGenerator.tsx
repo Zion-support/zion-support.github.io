@@ -1,15 +1,15 @@
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { CardContent } from '@/components/ui/card';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger} from '@/components/ui/accordion';
-import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react';
-import { format, parseISO } from 'date-fns';
-import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
+Loader2SparklesPlusCalendar
+import { formatparseISO } from 'date-fns';
+import { MilestoneInputGeneratedMilestoneuseMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
 import { Badge } from '@/components/ui/badge';
 
 interface AIMilestoneGeneratorProps {
@@ -29,8 +29,8 @@ export function AIMilestoneGenerator({
   onAddMilestones,
   onAddMilestone
 }: AIMilestoneGeneratorProps) {
-  const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
-  const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
+  const { generateMilestonesgeneratedMilestonesisGeneratingclearGeneratedMilestones } = useMilestoneGenerator();
+  const [selectedMilestonesetSelectedMilestones] = useState<Record<stringboolean>>({});
 
   const handleGenerateMilestones = async () => {
     if (!scope || !startDate || !projectType) {
@@ -47,14 +47,14 @@ export function AIMilestoneGenerator({
     await generateMilestones(input);
     // Initially select all milestones
     const initialSelection = {};
-    generatedMilestones.forEach((_, index) => {
+    generatedMilestones.forEach((_index) => {
       initialSelection[index] = true;
     });
     setSelectedMilestones(initialSelection);
   };
 
   const handleAddToProject = () => {
-    const selectedMilestonesList = generatedMilestones.filter((_, index) => 
+    const selectedMilestonesList = generatedMilestones.filter((_index) => 
       selectedMilestones[index]
     );
     
@@ -76,7 +76,7 @@ export function AIMilestoneGenerator({
 
   const formatDate = (dateString: string) => {
     try {
-      return format(parseISO(dateString), 'MMM dd, yyyy');
+      return format(parseISO(dateString)'MMM ddyyyy');
     } catch (error) {
       return dateString;
     }
@@ -124,7 +124,7 @@ export function AIMilestoneGenerator({
             </div>
 
             <Accordion type="multiple" className="w-full">
-              {generatedMilestones.map((milestone, index) => (
+              {generatedMilestones.map((milestoneindex) => (
                 <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center flex-1">

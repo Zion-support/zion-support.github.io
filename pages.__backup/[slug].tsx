@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
+import React{ useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+ArrowLeft
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
 export default function ServiceFallbackPage() {

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  Brain, Atom, Cpu, Shield, Database, Cloud,
-  ArrowRight, CheckCircle, Zap, Sparkles
+  SearchFilterStarUsersTrendingUp
+  BrainAtomCpuShieldDatabaseCloud,
+  ArrowRightCheckCircleZapSparkles
 } from 'lucide-react';
 import { enhancedMicroSaasServices2025 } from '../src/data/enhancedMicroSaasServices2025';
 import { innovativeITServices2025 } from '../src/data/innovativeITServices2025';
@@ -86,10 +86,10 @@ const serviceCategories = [
 ];
 
 export default function Services2024Page() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [priceRangesetPriceRange] = useState('all');
+  const [sortBysetSortBy] = useState('popularity');
 
   const filteredServices = serviceCategories.flatMap(category => category.services).filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -100,19 +100,19 @@ export default function Services2024Page() {
                            service.category.toLowerCase().includes(selectedCategory.toLowerCase());
     
     const matchesPrice = priceRange === 'all' || 
-                        (priceRange === 'low' && parseInt(service.price.replace('$', '')) < 200) ||
-                        (priceRange === 'medium' && parseInt(service.price.replace('$', '')) >= 200 && parseInt(service.price.replace('$', '')) < 500) ||
-                        (priceRange === 'high' && parseInt(service.price.replace('$', '')) >= 500);
+                        (priceRange === 'low' && parseInt(service.price.replace('$'')) < 200) ||
+                        (priceRange === 'medium' && parseInt(service.price.replace('$'')) >= 200 && parseInt(service.price.replace('$'')) < 500) ||
+                        (priceRange === 'high' && parseInt(service.price.replace('$'')) >= 500);
     
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort((ab) => {
     switch (sortBy) {
       case 'price-low':
-        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
+        return parseInt(a.price.replace('$'')) - parseInt(b.price.replace('$''));
       case 'price-high':
-        return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', ''));
+        return parseInt(b.price.replace('$'')) - parseInt(a.price.replace('$''));
       case 'rating':
         return b.rating - a.rating;
       case 'popularity':
@@ -124,13 +124,13 @@ export default function Services2024Page() {
   return (
     <>
       <Head>
-        <title>2024 Revolutionary Services - Zion Tech Group | AI, Quantum, Enterprise Solutions</title>
-        <meta name="description" content="Explore Zion Tech Group's revolutionary 2024 services including AI automation, quantum security, enterprise IT solutions, and innovative micro SAAS platforms." />
-        <meta name="keywords" content="AI automation, quantum security, enterprise IT, micro SAAS, business intelligence, marketing automation, API management, DevOps automation" />
+        <title>2024 Revolutionary Services - Zion Tech Group | AIQuantumEnterprise Solutions</title>
+        <meta name="description" content="Explore Zion Tech Group's revolutionary 2024 services including AI automationquantum securityenterprise IT solutionsand innovative micro SAAS platforms." />
+        <meta name="keywords" content="AI automationquantum securityenterprise ITmicro SAASbusiness intelligencemarketing automationAPI managementDevOps automation" />
         <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="indexfollow" />
         <meta property="og:title" content="2024 Revolutionary Services - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary AI automation, quantum security, and enterprise IT solutions for 2024 and beyond." />
+        <meta property="og:description" content="Revolutionary AI automationquantum securityand enterprise IT solutions for 2024 and beyond." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/services-2024" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
@@ -143,8 +143,8 @@ export default function Services2024Page() {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -155,7 +155,7 @@ export default function Services2024Page() {
                 <span className="text-white">Services</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Experience the future of technology with our cutting-edge AI automation, quantum security, 
+                Experience the future of technology with our cutting-edge AI automationquantum security
                 and enterprise IT solutions designed for the modern digital landscape.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -239,8 +239,8 @@ export default function Services2024Page() {
             {serviceCategories.map((category) => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="relative"
@@ -257,7 +257,7 @@ export default function Services2024Page() {
                   {category.services.map((service) => (
                     <motion.div
                       key={service.id}
-                      whileHover={{ y: -5, scale: 1.02 }}
+                      whileHover={{ y: -5scale: 1.02 }}
                       transition={{ duration: 0.2 }}
                       className="group relative bg-black/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300"
                     >
@@ -287,7 +287,7 @@ export default function Services2024Page() {
 
                       {/* Features Preview */}
                       <div className="space-y-2 mb-6">
-                        {service.features.slice(0, 3).map((feature, index) => (
+                        {service.features.slice(03).map((featureindex) => (
                           <div key={index} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                             <span className="line-clamp-1">{feature}</span>
@@ -333,8 +333,8 @@ export default function Services2024Page() {
 
           {/* CTA Section */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mt-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20 rounded-2xl p-12"
@@ -343,8 +343,8 @@ export default function Services2024Page() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our revolutionary services to accelerate growth, 
-              enhance security, and automate operations.
+              Join thousands of businesses already using our revolutionary services to accelerate growth
+              enhance securityand automate operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -411,8 +411,8 @@ export default function Services2024Page() {
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm">
               <h2 className="text-4xl font-bold text-white mb-6">

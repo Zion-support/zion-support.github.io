@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
+import { useSearchParamsLink } from 'react-router-dom';
 
 export default function OrderSuccess() {
   const [params] = useSearchParams();

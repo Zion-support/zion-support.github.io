@@ -2,8 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Shield, Lock, Eye, Zap, Cpu, Database, 
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
+  ShieldLockEyeZapCpuDatabase
+  ArrowRightCheckCircleStarUsersClockTrendingUp
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
@@ -13,7 +13,7 @@ export default function CybersecurityServicesPage() {
     {
       title: "Advanced Threat Detection",
       description: "AI-powered threat detection and response systems",
-      features: ["Real-time Monitoring", "Behavioral Analysis", "Automated Response", "24/7 Protection"],
+      features: ["Real-time Monitoring"Behavioral Analysis"Automated Response"24/7 Protection"],
       price: "From $8,000",
       icon: Eye,
       color: "from-red-500 to-orange-500"
@@ -21,7 +21,7 @@ export default function CybersecurityServicesPage() {
     {
       title: "Quantum-Resistant Encryption",
       description: "Future-proof security with quantum-resistant cryptography",
-      features: ["Post-Quantum Algorithms", "Key Management", "Compliance Ready", "Future-Proof"],
+      features: ["Post-Quantum Algorithms"Key Management"Compliance Ready"Future-Proof"],
       price: "From $12,000",
       icon: Lock,
       color: "from-purple-500 to-pink-500"
@@ -29,7 +29,7 @@ export default function CybersecurityServicesPage() {
     {
       title: "Security Auditing & Compliance",
       description: "Comprehensive security assessments and compliance solutions",
-      features: ["Penetration Testing", "Vulnerability Assessment", "SOC2 Compliance", "GDPR Ready"],
+      features: ["Penetration Testing"Vulnerability Assessment"SOC2 Compliance"GDPR Ready"],
       price: "From $5,000",
       icon: Shield,
       color: "from-blue-500 to-cyan-500"
@@ -37,7 +37,7 @@ export default function CybersecurityServicesPage() {
     {
       title: "Zero Trust Architecture",
       description: "Modern security framework for distributed environments",
-      features: ["Identity Verification", "Access Control", "Network Segmentation", "Continuous Monitoring"],
+      features: ["Identity Verification"Access Control"Network Segmentation"Continuous Monitoring"],
       price: "From $15,000",
       icon: Zap,
       color: "from-emerald-500 to-teal-500"
@@ -45,17 +45,17 @@ export default function CybersecurityServicesPage() {
   ];
 
   const stats = [
-    { number: "99.99%", label: "Threat Detection Rate", icon: Shield },
-    { number: "24/7", label: "Security Monitoring", icon: Eye },
-    { number: "0", label: "Security Breaches", icon: Lock },
-    { number: "500+", label: "Protected Systems", icon: CheckCircle }
+    { number: "99.99%"label: "Threat Detection Rate"icon: Shield },
+    { number: "24/7"label: "Security Monitoring"icon: Eye },
+    { number: "0"label: "Security Breaches"icon: Lock },
+    { number: "500+"label: "Protected Systems"icon: CheckCircle }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced cybersecurity solutions from Zion Tech Group. AI-powered threat detection, quantum-resistant encryption, and comprehensive security services." />
+        <meta name="description" content="Advanced cybersecurity solutions from Zion Tech Group. AI-powered threat detectionquantum-resistant encryptionand comprehensive security services." />
         <meta property="og:title" content="Cybersecurity Services - Zion Tech Group" />
         <meta property="og:description" content="Advanced cybersecurity solutions for comprehensive protection." />
         <link rel="canonical" href="https://ziontechgroup.com/services/cybersecurity" />
@@ -67,8 +67,8 @@ export default function CybersecurityServicesPage() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -81,13 +81,13 @@ export default function CybersecurityServicesPage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              From AI-powered threat detection to quantum-resistant encryption, we provide 
+              From AI-powered threat detection to quantum-resistant encryptionwe provide 
               comprehensive cybersecurity solutions that keep your business secure and compliant.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -102,12 +102,12 @@ export default function CybersecurityServicesPage() {
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((statindex) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -126,8 +126,8 @@ export default function CybersecurityServicesPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -139,12 +139,12 @@ export default function CybersecurityServicesPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+            {services.map((serviceindex) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 30 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-red-500/30 transition-all duration-300"
               >
@@ -177,8 +177,8 @@ export default function CybersecurityServicesPage() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >

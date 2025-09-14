@@ -22,7 +22,7 @@ export default function CaseStudy25000ROIBanner() {
           
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover how a Fortune 500 company achieved unprecedented 25,000% ROI with our AI 2025 breakthrough technology, 
+            Discover how a Fortune 500 company achieved unprecedented 25,000% ROI with our AI 2025 breakthrough technology
             transforming their entire business ecosystem in just 90 days.
           </p>
           

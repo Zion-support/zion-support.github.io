@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 export default function RevolutionaryContentDiscoveryWidget() {
-  const [activeTab, setActiveTab] = useState('breakthrough');
+  const [activeTabsetActiveTab] = useState('breakthrough');
 
   const contentCategories = {
     breakthrough: {
@@ -104,14 +104,14 @@ export default function RevolutionaryContentDiscoveryWidget() {
             Discover Revolutionary Content
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our breakthrough AI content, success stories, and implementation guides 
+            Explore our breakthrough AI contentsuccess storiesand implementation guides 
             that deliver unprecedented ROI and transformation.
           </p>
         </div>
 
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {Object.entries(contentCategories).map(([key, category]) => (
+          {Object.entries(contentCategories).map(([keycategory]) => (
             <button
               key={key}
               onClick={() => setActiveTab(key)}
@@ -129,7 +129,7 @@ export default function RevolutionaryContentDiscoveryWidget() {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {contentCategories[activeTab as keyof typeof contentCategories].content.map((item, index) => (
+          {contentCategories[activeTab as keyof typeof contentCategories].content.map((itemindex) => (
             <div
               key={index}
               className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl border border-gray-700/50 p-6 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-105 ${

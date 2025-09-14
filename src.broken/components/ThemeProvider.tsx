@@ -1,5 +1,5 @@
 
-import { createContext, useContext, useLayoutEffect, useState } from "react"
+import { createContextuseContextuseLayoutEffectuseState } from "react"
 import { safeStorage } from "@/utils/safeStorage"
 
 type Theme = "dark" | "light" | "system"
@@ -25,7 +25,7 @@ export const ThemeProviderContext = createContext<ThemeProviderState>(initialSta
 export function ThemeProvider({
   children,
   defaultTheme = "system"}: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(() => {
+  const [themesetTheme] = useState<Theme>(() => {
     const stored = safeStorage.getItem("theme") as Theme | null
     return stored || defaultTheme
   })
@@ -34,8 +34,8 @@ export function ThemeProvider({
     const root = window.document.documentElement
     const body = window.document.body
 
-    root.classList.remove("light", "dark")
-    body.classList.remove("light", "dark")
+    root.classList.remove("light"dark")
+    body.classList.remove("light"dark")
 
     if (t === "system") {
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
@@ -44,25 +44,25 @@ export function ThemeProvider({
         : "light"
 
       root.classList.add(systemTheme)
-      root.setAttribute("data-theme", systemTheme)
+      root.setAttribute("data-theme"systemTheme)
       body.classList.add(systemTheme)
-      body.setAttribute("data-theme", systemTheme)
+      body.setAttribute("data-theme"systemTheme)
       return
     }
 
     root.classList.add(t)
-    root.setAttribute("data-theme", t)
+    root.setAttribute("data-theme"t)
     body.classList.add(t)
-    body.setAttribute("data-theme", t)
+    body.setAttribute("data-theme"t)
   }
 
   useLayoutEffect(() => {
     applyTheme(theme)
-    safeStorage.setItem("theme", theme)
-  }, [theme])
+    safeStorage.setItem("theme"theme)
+  }[theme])
 
   const setCurrentTheme = (newTheme: Theme) => {
-    safeStorage.setItem("theme", newTheme);
+    safeStorage.setItem("theme"newTheme);
     applyTheme(newTheme);
     setTheme(newTheme);
   };

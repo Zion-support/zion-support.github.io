@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo, useState } from 'react';
+import React{ useMemouseState } from 'react';
 
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
@@ -7,25 +7,25 @@ interface TryItProps {
   requiresAuth: boolean;
 }
 
-export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
-  const [token, setToken] = useState('');
-  const [body, setBody] = useState('');
-  const [response, setResponse] = useState<string>('');
-  const [loading, setLoading] = useState(false);
+export default function TryItConsole({ methodpathrequiresAuth }: TryItProps) {
+  const [baseUrlsetBaseUrl] = useState('https://api.zion.os');
+  const [tokensetToken] = useState('');
+  const [bodysetBody] = useState('');
+  const [responsetResponse] = useState<string>('');
+  const [loadingsetLoading] = useState(false);
 
   const url = useMemo(() => {
     if (path.startsWith('http')) return path;
-    return baseUrl.replace(/\/$/, '') + path;
-  }, [baseUrl, path]);
+    return baseUrl.replace(/\/$/'') + path;
+  }[baseUrlpath]);
 
   async function onSend() {
     setLoading(true);
     setResponse('');
     try {
-      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      const headers: Record<string> = { 'Content-Type': 'application/json' };
       if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
-      const res = await fetch(url, {
+      const res = await fetch(url{
         method,
         headers,
         body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined});

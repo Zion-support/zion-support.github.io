@@ -2,7 +2,7 @@
 import { SkillCategoryProps } from './types';
 import { SkillItem } from './SkillItem';
 
-export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {
+export const SkillCategory = ({ categoryskillsonDelete }: SkillCategoryProps) => {
   if (!skills || skills.length === 0) return null;
   
   return (

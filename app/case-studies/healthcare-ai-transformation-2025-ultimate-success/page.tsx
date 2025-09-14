@@ -289,7 +289,7 @@ export default function HealthcareAITransformationPage() {
               </blockquote>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
-                  <Building2 className="w-6 h-6" />
+                  <Building className="w-6 h-6" />
                 </div>
                 <div>
                   <div className="font-bold">Dr. Sarah Johnson</div>

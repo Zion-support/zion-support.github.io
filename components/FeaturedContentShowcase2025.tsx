@@ -70,7 +70,7 @@ const FeaturedContentShowcase2025 = () => {
     {
       id: 5,
       title: "Autonomous Business Operations 2025",
-      description: "Complete automation of business operations with AI systems that manage, optimize, and evolve without human intervention.",
+      description: "Complete automation of business operations with AI systems that manageoptimizeand evolve without human intervention.",
       category: "Automation",
       type: "Implementation",
       url: "/blog/ai-2025-autonomous-business-operations",
@@ -116,7 +116,7 @@ const FeaturedContentShowcase2025 = () => {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the most groundbreaking AI insights, case studies, and implementation guides that are transforming industries worldwide.
+            Discover the most groundbreaking AI insightscase studiesand implementation guides that are transforming industries worldwide.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ const FeaturedContentShowcase2025 = () => {
                 
                 {/* Metrics */}
                 <div className="grid grid-cols-3 gap-2 mb-4">
-                  {Object.entries(content.metrics).map(([key, value]) => (
+                  {Object.entries(content.metrics).map(([keyvalue]) => (
                     <div key={key} className="text-center">
                       <div className="text-sm font-bold text-gray-900">{value}</div>
                       <div className="text-xs text-gray-500 capitalize">{key}</div>

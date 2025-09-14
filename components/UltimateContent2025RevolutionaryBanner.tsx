@@ -39,7 +39,7 @@ const UltimateContent2025RevolutionaryBanner = () => {
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl lg:text-3xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">
-            Discover the most comprehensive AI trends, case studies, and implementation guides for 2025-2026. 
+            Discover the most comprehensive AI trendscase studiesand implementation guides for 2025-2026. 
             <span className="text-yellow-400 font-semibold"> Achieve 5000% ROI</span> with our revolutionary content.
           </p>
 

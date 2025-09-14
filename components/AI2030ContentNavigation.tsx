@@ -1,16 +1,16 @@
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
-import { Card, CardContent } from '@/components/ui/card';
+import { CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { 
-  ChevronDown, 
-  ChevronUp, 
-  Brain, 
-  Zap, 
-  Target, 
+  ChevronDown
+  ChevronUp
+  Brain
+  Zap
+  Target
   Calendar,
   ArrowRight,
   Sparkles,
@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 
 export default function AI2030ContentNavigation() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpandedsetIsExpanded] = useState(false);
 
   const contentSections = [
     {
@@ -125,7 +125,7 @@ export default function AI2030ContentNavigation() {
             Explore the Future of AI
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Discover cutting-edge insights, tools, and success stories that will prepare your organization 
+            Discover cutting-edge insightstoolsand success stories that will prepare your organization 
             for the AI-driven future. From workforce transformation to sustainable operations.
           </p>
         </div>
@@ -152,7 +152,7 @@ export default function AI2030ContentNavigation() {
 
         {/* Content Sections */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {contentSections.map((section, sectionIndex) => (
+          {contentSections.map((sectionIndex) => (
             <Card key={sectionIndex} className="h-full">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
@@ -163,7 +163,7 @@ export default function AI2030ContentNavigation() {
                 </div>
                 
                 <div className="space-y-3">
-                  {section.items.slice(0, isExpanded ? section.items.length : 2).map((item, itemIndex) => (
+                  {section.items.slice(0isExpanded ? section.items.length : 2).map((itemIndex) => (
                     <div key={itemIndex} className="group">
                       <Link href={item.href} className="block">
                         <div className="p-3 rounded-lg hover:bg-gray-50 transition-colors">
@@ -213,7 +213,7 @@ export default function AI2030ContentNavigation() {
                 <h3 className="text-2xl font-bold">Join the AI 2030 Community</h3>
               </div>
               <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-                Stay ahead of the curve with exclusive insights, early access to new tools, 
+                Stay ahead of the curve with exclusive insightsearly access to new tools
                 and networking opportunities with AI transformation leaders.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

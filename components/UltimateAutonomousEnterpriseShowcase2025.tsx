@@ -37,12 +37,12 @@ const UltimateAutonomousEnterpriseShowcase2025 = () => {
             Ultimate Autonomous Enterprise 2025
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-4xl mx-auto">
-            Experience the future of business with fully autonomous AI systems that manage, optimize, and transform your enterprise operations.
+            Experience the future of business with fully autonomous AI systems that manageoptimizeand transform your enterprise operations.
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {features.map((featureindex) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-bold text-white mb-4">
@@ -63,7 +63,7 @@ const UltimateAutonomousEnterpriseShowcase2025 = () => {
             Ready to Transform Your Enterprise?
           </h3>
           <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-            Join the autonomous enterprise revolution and achieve unprecedented efficiency, savings, and growth with our AI-powered solutions.
+            Join the autonomous enterprise revolution and achieve unprecedented efficiencysavingsand growth with our AI-powered solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

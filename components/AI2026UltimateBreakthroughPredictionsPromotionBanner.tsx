@@ -29,8 +29,8 @@ export default function AI2026UltimateBreakthroughPredictionsPromotionBanner() {
 
           {/* Description */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover the most comprehensive AI 2026 predictions featuring quantum-neural fusion, 
-            consciousness breakthroughs, and revolutionary technology that will transform everything.
+            Discover the most comprehensive AI 2026 predictions featuring quantum-neural fusion
+            consciousness breakthroughsand revolutionary technology that will transform everything.
           </p>
 
           {/* Key highlights */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, BookOpen, Play, Zap, Brain, TrendingUp, Users, Target, CheckCircle, Award, DollarSign } from 'lucide-react';
+ArrowRightStarBookOpenPlayZapBrainTrendingUpUsersTargetCheckCircleAwardDollarSign
 
 interface RevolutionaryContentPromotionBanner2025Props {
   variant?: 'featured' | 'compact' | 'hero';
@@ -8,22 +8,22 @@ interface RevolutionaryContentPromotionBanner2025Props {
 }
 
 export default function RevolutionaryContentPromotionBanner2025({ 
-  variant = 'featured', 
+  variant = 'featured'
   className = '' 
 }: RevolutionaryContentPromotionBanner2025Props) {
   const content = {
     featured: {
       title: "🚀 Revolutionary AI Content 2025",
       subtitle: "Discover the Future of Enterprise Automation",
-      description: "Explore cutting-edge AI solutions, real success stories, and implementation guides that are transforming businesses worldwide.",
+      description: "Explore cutting-edge AI solutionsreal success storiesand implementation guides that are transforming businesses worldwide.",
       bgColor: "bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600",
       textColor: "text-white",
       buttonText: "Explore Now",
       buttonHref: "/blog/ai-2025-enterprise-automation-revolution",
       stats: [
-        { label: "15,000% ROI", value: "Achieved" },
-        { label: "$2.3B Revenue", value: "Generated" },
-        { label: "500+ Clients", value: "Transformed" }
+        { label: "15,000% ROI"value: "Achieved" },
+        { label: "$2.3B Revenue"value: "Generated" },
+        { label: "500+ Clients"value: "Transformed" }
       ]
     },
     compact: {
@@ -38,7 +38,7 @@ export default function RevolutionaryContentPromotionBanner2025({
     hero: {
       title: "🌟 The AI Revolution is Here",
       subtitle: "Transform Your Business with Cutting-Edge AI Solutions",
-      description: "Join 500+ enterprises that have achieved unprecedented success through our AI-powered automation solutions. Discover real case studies, implementation guides, and the latest AI innovations.",
+      description: "Join 500+ enterprises that have achieved unprecedented success through our AI-powered automation solutions. Discover real case studiesimplementation guidesand the latest AI innovations.",
       bgColor: "bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900",
       textColor: "text-white",
       buttonText: "Start Your Journey",
@@ -207,7 +207,7 @@ export default function RevolutionaryContentPromotionBanner2025({
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-6 mb-8">
-            {currentContent.stats?.map((stat, index) => (
+            {currentContent.stats?.map((statindex) => (
               <div key={index} className="text-center">
                 <div className="text-2xl font-bold text-white mb-1">{stat.label}</div>
                 <div className="text-white/80 text-sm">{stat.value}</div>

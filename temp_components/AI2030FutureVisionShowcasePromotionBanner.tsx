@@ -20,7 +20,7 @@ export default function AI2030FutureVisionShowcasePromotionBanner() {
               AI 2030 Future Vision Showcase
             </h2>
             <p className="text-lg md:text-xl text-pink-100 mb-6 max-w-2xl">
-              Journey into the future with our comprehensive vision of AI in 2030 - featuring transcendent intelligence, omniversal consciousness, and revolutionary breakthroughs
+              Journey into the future with our comprehensive vision of AI in 2030 - featuring transcendent intelligenceomniversal consciousnessand revolutionary breakthroughs
             </p>
             <div className="flex flex-wrap gap-4 mb-6">
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold">

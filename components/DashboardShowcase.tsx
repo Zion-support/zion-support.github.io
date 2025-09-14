@@ -13,7 +13,7 @@ const DashboardShowcase: React.FC = () => {
             Advanced Dashboard
           </h2>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Real-time monitoring, analytics, and security insights for optimal system performance
+            Real-time monitoringanalyticsand security insights for optimal system performance
           </p>
           <Link 
             href="/dashboard"
@@ -42,7 +42,7 @@ const DashboardShowcase: React.FC = () => {
           <div className="text-center">
             <h3 className="text-3xl font-bold mb-4 text-white">Ready to Monitor Your Systems?</h3>
             <p className="text-gray-300 mb-6 text-lg max-w-3xl mx-auto">
-              Get comprehensive insights into your application performance, security status, and user analytics with our advanced monitoring dashboard.
+              Get comprehensive insights into your application performancesecurity statusand user analytics with our advanced monitoring dashboard.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 

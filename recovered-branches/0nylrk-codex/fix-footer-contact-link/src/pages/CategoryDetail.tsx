@@ -1,11 +1,11 @@
 
-import { useParams, Link } from "react-router-dom";
+import { useParamsLink } from "react-router-dom";
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
-import { useState, useEffect } from "react";
-import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react";
+import { useStateuseEffect } from "react";
+import { BrainPenLineBarChartEyeBotMicCodeBriefcase } from "lucide-react";
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { useNavigate } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
@@ -14,9 +14,9 @@ export default function CategoryDetail() {
   // Cast to specify the expected route param type since useParams may be untyped
   const { slug } = useParams() as { slug?: string };
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
-  const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
+  const [isLoadingsetIsLoading] = useState(true);
+  const [listingsetListings] = useState(MARKETPLACE_LISTINGS);
+  const [categorysetCategory] = useState<{title: stringdescription: stringicon: JSX.Element}>({
     title: "",
     description: "",
     icon: <Bot className="w-6 h-6" />
@@ -26,17 +26,17 @@ export default function CategoryDetail() {
   const categoryData = {
     'services': {
       title: "Services",
-      description: "On-demand IT support, consulting, development, and more",
+      description: "On-demand IT supportconsultingdevelopmentand more",
       icon: <Briefcase className="w-6 h-6" />
     },
     'talents': {
       title: "Talents",
-      description: "Connect with AI experts, developers, and tech specialists",
+      description: "Connect with AI expertsdevelopersand tech specialists",
       icon: <Brain className="w-6 h-6" />
     },
     'equipment': {
       title: "Equipment",
-      description: "Rent or buy specialized hardware, servers, and devices",
+      description: "Rent or buy specialized hardwareserversand devices",
       icon: <Code className="w-6 h-6" />
     },
     'innovation': {
@@ -104,16 +104,16 @@ export default function CategoryDetail() {
       listing.category.toLowerCase() === categoryTitle.toLowerCase()
     );
     
-    // If we don't have real listings for this category, generate placeholder listings
+    // If we don't have real listings for this categorygenerate placeholder listings
     const listingsToShow = filteredListings.length > 0 ? filteredListings : 
-      Array(4).fill(null).map((_, index) => ({
+      Array(4).fill(null).map((_index) => ({
         id: `${slug}-${index}`,
         title: `${currentCategory.title} Product ${index + 1}`,
         description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`,
         category: currentCategory.title,
         price: Math.floor(Math.random() * 500) + 50,
         currency: "$",
-        tags: [`${slug}`, "ai", "tool"],
+        tags: [`${slug}`"ai"tool"],
         author: {
           name: `Provider ${index + 1}`,
           id: `author-${index + 1}`,
@@ -127,7 +127,7 @@ export default function CategoryDetail() {
 
     setListings(listingsToShow);
     setIsLoading(false);
-  }, [slug]);
+  }[slug]);
 
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
@@ -140,7 +140,7 @@ export default function CategoryDetail() {
       });
       
       // Navigate to the quote request page with the listing information
-      navigate("/request-quote", {
+      navigate("/request-quote"{
         state: { 
           serviceType: listing.category,
           specificItem: {

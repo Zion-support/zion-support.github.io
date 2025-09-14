@@ -1,9 +1,9 @@
 
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react';
+import React{ useEffectuseState } from 'react';
+MessageSquareVideo
 import { useMessaging } from '@/context/MessagingContext';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { ConversationsList, ConversationDetailView } from '@/components/messaging';
+import { ConversationsListConversationDetailView } from '@/components/messaging';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
@@ -11,16 +11,16 @@ import { useNavigate } from 'react-router-dom';
 
 export default function MessagingInbox() {
   const { 
-    conversations, 
-    activeConversation, 
-    setActiveConversation, 
+    conversations
+    activeConversation
+    setActiveConversation
     markAsRead,
     fetchConversations,
     isLoading
   } = useMessaging();
   const isMobile = useIsMobile();
   const navigate = useNavigate();
-  const [activeCall, setActiveCall] = useState<string | null>(null);
+  const [activeCallsetActiveCall] = useState<string | null>(null);
   
   useEffect(() => {
     // Fetch conversations when component mounts
@@ -28,13 +28,13 @@ export default function MessagingInbox() {
       try {
         await fetchConversations();
       } catch (error) {
-        console.error("Failed to load conversations:", error);
+        console.error("Failed to load conversations:"error);
         toast.error("Failed to load messages. Please try again.");
       }
     };
     
     loadData();
-  }, [fetchConversations]);
+  }[fetchConversations]);
   
   const startVideoCall = () => {
     if (!activeConversation) {
@@ -46,7 +46,7 @@ export default function MessagingInbox() {
     setActiveCall(roomId);
     
     // Show toast notification
-    toast.success("Starting video call", {
+    toast.success("Starting video call"{
       description: "Initializing video call connection..."
     });
     

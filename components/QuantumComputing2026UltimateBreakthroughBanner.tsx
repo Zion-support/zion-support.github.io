@@ -27,8 +27,8 @@ export default function QuantumComputing2026UltimateBreakthroughBanner() {
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             The ultimate quantum computing breakthrough is here. Experience 
-            <span className="text-indigo-400 font-bold"> error-corrected quantum computers</span>, 
-            <span className="text-purple-400 font-bold"> quantum supremacy</span>, and 
+            <span className="text-indigo-400 font-bold"> error-corrected quantum computers</span>
+            <span className="text-purple-400 font-bold"> quantum supremacy</span>and 
             <span className="text-pink-400 font-bold"> revolutionary applications</span>.
           </p>
 
@@ -37,7 +37,7 @@ export default function QuantumComputing2026UltimateBreakthroughBanner() {
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
               <div className="text-3xl mb-3">⚛️</div>
               <h3 className="text-lg font-bold mb-2">Error-Corrected Quantum</h3>
-              <p className="text-sm text-gray-300">99.9% accuracy, unlimited scalability</p>
+              <p className="text-sm text-gray-300">99.9% accuracyunlimited scalability</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
               <div className="text-3xl mb-3">🚀</div>
@@ -47,7 +47,7 @@ export default function QuantumComputing2026UltimateBreakthroughBanner() {
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
               <div className="text-3xl mb-3">🌌</div>
               <h3 className="text-lg font-bold mb-2">Revolutionary Apps</h3>
-              <p className="text-sm text-gray-300">Cryptography, drug discovery, AI</p>
+              <p className="text-sm text-gray-300">Cryptographydrug discoveryAI</p>
             </div>
           </div>
 

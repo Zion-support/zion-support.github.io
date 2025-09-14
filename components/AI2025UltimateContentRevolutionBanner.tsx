@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const AI2025UltimateContentRevolutionBanner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
 
   const contentItems = [
     {
@@ -58,14 +58,14 @@ const AI2025UltimateContentRevolutionBanner = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentItems.length);
-    }, 4000);
+    }4000);
 
     return () => clearInterval(timer);
-  }, [contentItems.length]);
+  }[contentItems.length]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ai2025-ultimate-content-banner-dismissed', 'true');
+    localStorage.setItem('ai2025-ultimate-content-banner-dismissed'true');
   };
 
   useEffect(() => {
@@ -73,7 +73,7 @@ const AI2025UltimateContentRevolutionBanner = () => {
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -104,7 +104,7 @@ const AI2025UltimateContentRevolutionBanner = () => {
                   </span>
                 </div>
                 <div className="flex items-center space-x-1">
-                  {contentItems.map((_, index) => (
+                  {contentItems.map((_index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}

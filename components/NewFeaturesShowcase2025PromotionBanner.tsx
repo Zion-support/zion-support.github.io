@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Zap, Star, CheckCircle } from 'lucide-react';
+ArrowRightSparklesZapStarCheckCircle
 
 export default function NewFeaturesShowcase2025PromotionBanner() {
   return (
@@ -31,7 +31,7 @@ export default function NewFeaturesShowcase2025PromotionBanner() {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Discover 500+ new features that are transforming how businesses operate, create content, and engage with their audiences in 2025.
+                Discover 500+ new features that are transforming how businesses operatecreate contentand engage with their audiences in 2025.
               </p>
               
               {/* Feature Highlights */}

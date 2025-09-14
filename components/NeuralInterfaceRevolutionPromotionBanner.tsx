@@ -17,7 +17,7 @@ export default function NeuralInterfaceRevolutionPromotionBanner() {
           
           <p className="text-xl text-violet-200 max-w-4xl mx-auto mb-8">
             Breakthrough neural interface technology that enables seamless communication between human consciousness 
-            and artificial intelligence, creating the ultimate human-AI symbiosis.
+            and artificial intelligencecreating the ultimate human-AI symbiosis.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-8">

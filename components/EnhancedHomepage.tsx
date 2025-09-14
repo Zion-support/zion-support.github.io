@@ -1,18 +1,18 @@
 "use client";
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useEffectuseState } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { 
-  ArrowRight, 
-  TrendingUp, 
-  Brain, 
-  Shield, 
-  Rocket, 
-  Atom, 
+  ArrowRight
+  TrendingUp
+  Brain
+  Shield
+  Rocket
+  Atom
   Sparkles,
-  Building, 
-  Phone, 
-  Mail, 
+  Building
+  Phone
+  Mail
   MapPin,
   ArrowUpRight
 } from 'lucide-react';
@@ -35,12 +35,12 @@ import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-
 import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
 
 const EnhancedHomepage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [colorScheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber');
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [mousePositionsetMousePosition] = useState({ x: 0y: 0 });
+  const [currentServiceIndexsetCurrentServiceIndex] = useState(0);
+  const [colorSchemesetColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber');
+  const [showPerformanceMonitorsetShowPerformanceMonitor] = useState(false);
   
   useEffect(() => {
     setIsVisible(true);
@@ -48,26 +48,26 @@ const EnhancedHomepage: React.FC = () => {
     // Auto-rotate featured services
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }, 6000);
+    }6000);
     
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      setMousePosition({ x: e.clientXy: e.clientY });
     };
     
     // Show performance monitor after 5 seconds
     const performanceTimer = setTimeout(() => {
       setShowPerformanceMonitor(true);
-    }, 5000);
+    }5000);
     
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove'handleMouseMove);
     
     return () => {
       clearInterval(interval);
       clearTimeout(performanceTimer);
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mousemove'handleMouseMove);
     };
-  }, []);
+  }[]);
 
   // Combine all revolutionary services
   const allRevolutionaryServices = [
@@ -91,16 +91,16 @@ const EnhancedHomepage: React.FC = () => {
   };
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const },
-    { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-cyan-500 to-blue-500', scheme: 'cyber' as const },
-    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-500 to-indigo-500', scheme: 'quantum' as const },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500', scheme: 'neon' as const },
-    { id: 'space', name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500', scheme: 'holographic' as const },
-    { id: 'enterprise', name: 'Enterprise Solutions', icon: Building, color: 'from-green-500 to-teal-500', scheme: 'cyber' as const }
+    { id: 'all'name: 'All Services'icon: Sparklescolor: 'from-purple-500 to-pink-500'scheme: 'holographic' as const },
+    { id: 'ai'name: 'AI & Consciousness'icon: Braincolor: 'from-cyan-500 to-blue-500'scheme: 'cyber' as const },
+    { id: 'quantum'name: 'Quantum Technology'icon: Atomcolor: 'from-blue-500 to-indigo-500'scheme: 'quantum' as const },
+    { id: 'cybersecurity'name: 'Cybersecurity'icon: Shieldcolor: 'from-red-500 to-orange-500'scheme: 'neon' as const },
+    { id: 'space'name: 'Space Technology'icon: Rocketcolor: 'from-indigo-500 to-purple-500'scheme: 'holographic' as const },
+    { id: 'enterprise'name: 'Enterprise Solutions'icon: Buildingcolor: 'from-green-500 to-teal-500'scheme: 'cyber' as const }
   ];
 
   // Get featured services for rotation
-  const featuredServices = allRevolutionaryServices.slice(0, 6);
+  const featuredServices = allRevolutionaryServices.slice(06);
 
   // Animation variants
   const containerVariants = {
@@ -115,7 +115,7 @@ const EnhancedHomepage: React.FC = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -127,7 +127,7 @@ const EnhancedHomepage: React.FC = () => {
   };
 
   const heroVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -140,7 +140,7 @@ const EnhancedHomepage: React.FC = () => {
 
   const floatingVariants = {
     animate: {
-      y: [-10, 10, -10],
+      y: [-10-10],
       transition: {
         duration: 3,
         ease: "easeInOut" as const
@@ -160,8 +160,8 @@ const EnhancedHomepage: React.FC = () => {
     <>
       <Head>
         <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title>
-        <meta name="description" content="Experience the future of technology with Zion Tech Group's revolutionary AI consciousness, quantum computing, and autonomous solutions. Transform your business with cutting-edge innovation." />
-        <meta name="keywords" content="AI consciousness, quantum computing, autonomous solutions, space technology, cybersecurity, business intelligence, Zion Tech Group, 2045 technology" />
+        <meta name="description" content="Experience the future of technology with Zion Tech Group's revolutionary AI consciousnessquantum computingand autonomous solutions. Transform your business with cutting-edge innovation." />
+        <meta name="keywords" content="AI consciousnessquantum computingautonomous solutionspace technologycybersecuritybusiness intelligenceZion Tech Group2045 technology" />
         <meta property="og:title" content="Zion Tech Group - Revolutionary 2045 Technology" />
         <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness and quantum computing solutions." />
         <meta property="og:url" content="https://ziontechgroup.com" />
@@ -169,9 +169,9 @@ const EnhancedHomepage: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com" />
         
         {/* Performance and SEO Meta Tags */}
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="viewport" content="width=device-widthinitial-scale=1viewport-fit=cover" />
         <meta name="theme-color" content="#00d4ff" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="indexfollow" />
         <meta name="author" content="Zion Tech Group" />
         
         {/* Preload critical resources */}
@@ -204,8 +204,8 @@ const EnhancedHomepage: React.FC = () => {
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
             >
-              Pioneering the Future of Technology with Revolutionary AI Consciousness, 
-              Quantum Computing, and Autonomous Solutions
+              Pioneering the Future of Technology with Revolutionary AI Consciousness
+              Quantum Computingand Autonomous Solutions
             </motion.p>
 
             {/* CTA Buttons */}
@@ -335,7 +335,7 @@ const EnhancedHomepage: React.FC = () => {
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
             >
-              {getFilteredServices().slice(0, 12).map((service, index) => (
+              {getFilteredServices().slice(012).map((serviceindex) => (
                 <EnhancedServiceCard
                   key={service.id}
                   id={service.id}
@@ -343,7 +343,7 @@ const EnhancedHomepage: React.FC = () => {
                   description={service.description}
                   category={service.category}
                   type={(service as any).type || service.category}
-                  features={service.features?.map(f => ({ name: f, description: f }))}
+                  features={service.features?.map(f => ({ name: fdescription: f }))}
                   slug={(service as any).slug || service.id}
                   index={index}
                   isPopular={Math.random() > 0.7}
@@ -351,7 +351,7 @@ const EnhancedHomepage: React.FC = () => {
                   rating={4.0 + Math.random() * 1.0}
                   reviewCount={Math.floor(Math.random() * 100) + 10}
                   estimatedDelivery="2-4 weeks"
-                  technologies={['AI', 'Cloud', 'Security', 'Automation']}
+                  technologies={['AI'Cloud'Security'Automation']}
                 />
               ))}
             </motion.div>
@@ -398,9 +398,9 @@ const EnhancedHomepage: React.FC = () => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentServiceIndex}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0x: 20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  exit={{ opacity: 0x: -20 }}
                   transition={{ duration: 0.5 }}
                   className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
                 >
@@ -414,7 +414,7 @@ const EnhancedHomepage: React.FC = () => {
                     </p>
                     
                     <div className="flex flex-wrap gap-4 mb-6">
-                      {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map((feature, idx) => (
+                      {featuredServices[currentServiceIndex]?.features?.slice(03).map((featureidx) => (
                         <span key={idx} className="text-xs text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full border border-gray-600">
                           {feature}
                         </span>

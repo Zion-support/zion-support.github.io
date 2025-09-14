@@ -34,7 +34,7 @@ export default function AI2025UltimateContentShowcaseBanner() {
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Experience the most advanced AI technologies, breakthrough innovations, and revolutionary tools that are transforming industries and reshaping our digital future.
+            Experience the most advanced AI technologiesbreakthrough innovationsand revolutionary tools that are transforming industries and reshaping our digital future.
           </p>
 
           {/* Feature Grid */}
