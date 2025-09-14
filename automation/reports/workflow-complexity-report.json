@@ -74,7 +74,7 @@
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-        "totalLines": 38,
+        "totalLines": 39,
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,
@@ -3167,7 +3167,7 @@
       "path": "/workspace/.github/workflows/rapid-git-sync.yml"
     },
     "rapid-sync.yml": {
-      "complexityScore": 5,
+      "complexityScore": 15,
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 49,
@@ -3383,10 +3383,10 @@
       "path": "/workspace/.github/workflows/security-auto-heal.yml"
     },
     "security-gates.yml": {
-      "complexityScore": 0,
+      "complexityScore": 10,
       "complexityLevel": "low",
       "metrics": {
-        "totalLines": 50,
+        "totalLines": 51,
         "jobCount": 0,
         "stepCount": 5,
         "conditionalCount": 0,
