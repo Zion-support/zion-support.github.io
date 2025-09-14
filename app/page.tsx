@@ -4,6 +4,8 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 
+// Import new Neural Consciousness Breakthrough components - NEWEST FEATURED
+import NeuralConsciousnessBreakthroughBanner2025 from '../components/NeuralConsciousnessBreakthroughBanner2025';
 // Import new AI 2025 Ultimate Content Revolution components - NEWEST FEATURED
 import AI2025UltimateContentRevolution50000ROIBanner from '../components/AI2025UltimateContentRevolution50000ROIBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
@@ -349,47 +351,8 @@ import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeura
 import NewContent2026RevolutionaryBanner from '../components/NewContent2026RevolutionaryBanner';
 import UltimateContentShowcase2026Banner from '../components/UltimateContentShowcase2026Banner';
 import RevolutionaryContent2026UltimateBanner from '../components/RevolutionaryContent2026UltimateBanner';
-import NewContentShowcase2026 from '../components/NewContentShowcase2026';
-import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
-import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBanner';
-import RevolutionaryAI2026Banner from '../components/RevolutionaryAI2026Banner';
-import AI2026RevolutionaryBanner from '../components/AI2026RevolutionaryBanner';
-import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
-import UltimateSuccessStoriesShowcase2025 from '../components/UltimateSuccessStoriesShowcase2025';
-import UltimateROICalculator2025 from '../components/UltimateROICalculator2025';
-import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
-import UltimateCaseStudiesShowcase2025 from '../components/UltimateCaseStudiesShowcase2025';
-import UltimateTestimonialShowcase2025 from '../components/UltimateTestimonialShowcase2025';
-import UltimateSuccessMetricsShowcase2025 from '../components/UltimateSuccessMetricsShowcase2025';
-// Import new revolutionary content components - NEWEST ADDITIONS
-import AI2025NextGenInnovationBanner from '../components/AI2025NextGenInnovationBanner';
-import QuantumComputingRevolution2025Banner from '../components/QuantumComputingRevolution2025Banner';
-import NeuralInterfaceRevolution2025Banner from '../components/NeuralInterfaceRevolution2025Banner';
-import AutonomousSystems2025Banner from '../components/AutonomousSystems2025Banner';
-import UltimateTechShowcase2025Banner from '../components/UltimateTechShowcase2025Banner';
-import InnovationHub2025Banner from '../components/InnovationHub2025Banner';
-// Import new content promotional banners - LATEST FEATURED
-import NewContent2025UltimateBusinessTransformationBanner from '../components/NewContent2025UltimateBusinessTransformationBanner';
-import QuantumAIRevolution2025PromotionalBanner from '../components/QuantumAIRevolution2025PromotionalBanner';
-import Fortune500SuccessStoryBanner from '../components/Fortune500SuccessStoryBanner';
-// Import new Ultimate Content Revolution components - NEWEST FEATURED
-import NewContent2025UltimateContentRevolutionBanner from '../components/NewContent2025UltimateContentRevolutionBanner';
-import UltimateContentRevolutionShowcase2025 from '../components/UltimateContentRevolutionShowcase2025';
-// Import new 2026 revolutionary content components - LATEST BREAKTHROUGH
-import AI2026RevolutionaryBreakthroughBanner from '../components/AI2026RevolutionaryBreakthroughBanner';
-import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
-// Import new 2026 ultimate promotional components - NEWEST FEATURED
-// Import new promotional banners for latest content
-import AI2025UltimateTransformation50000ROIBanner from '../components/AI2025UltimateTransformation50000ROIBanner';
-// Import new 2026 content showcase components - LATEST FEATURED
-import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
-import UltimateContentShowcase2026Banner from '../components/UltimateContentShowcase2026Banner';
-import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
-import SuccessStoriesShowcase2026 from '../components/SuccessStoriesShowcase2026';
-import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
-import AI2025UltimateBusinessRevolutionBanner from '../components/AI2025UltimateBusinessRevolutionBanner';
-import NewContentDiscoveryWidget2025 from '../components/NewContentDiscoveryWidget2025';
-import InteractiveROICalculator2025 from '../components/InteractiveROICalculator2025';
+// Import new content components
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import RevolutionaryTechTrends2025 from '../components/RevolutionaryTechTrends2025';
 import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscoveryWidget';
 import InteractiveContentPromotionBanner from '../components/InteractiveContentPromotionBanner';
@@ -397,10 +360,6 @@ import SuccessStoriesBanner2025 from '../components/SuccessStoriesBanner2025';
 import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
 import UltimateSuccessMetricsShowcase from '../components/UltimateSuccessMetricsShowcase';
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
-
-// Import new Ultimate Business Intelligence components
-import UltimateBusinessIntelligence2025Banner from '../components/UltimateBusinessIntelligence2025Banner';
-import UltimateBusinessIntelligenceShowcase2025 from '../components/UltimateBusinessIntelligenceShowcase2025';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions | Ultimate Content Showcase 2025',
@@ -422,34 +381,26 @@ export default function HomePage() {
         />
         
         <div className='min-h-screen bg-white'>
-          {/* NEW CONTENT 2026 PROMOTION BANNER - LATEST FEATURED */}
-          <NewContent2026PromotionBanner />
-          {/* ULTIMATE CONTENT SHOWCASE 2026 BANNER - NEWEST FEATURED */}
-          <UltimateContentShowcase2026Banner />
-          {/* AI 2025 ULTIMATE CONTENT REVOLUTION PROMOTION BANNER - NEWEST FEATURED */}
-          <AI2025UltimateContentRevolutionPromotionBanner />
-          {/* ULTIMATE AUTOMATION REVOLUTION 50,000% ROI BANNER - NEWEST BREAKTHROUGH */}
-          <UltimateAutomationRevolution50000ROIBanner />
-          {/* NEURAL SUPERINTELLIGENCE BREAKTHROUGH BANNER 2025 - LATEST BREAKTHROUGH */}
-          <NeuralSuperintelligenceBreakthroughBanner2025 />
-          {/* NEURAL SUPERINTELLIGENCE ROI CALCULATOR - INTERACTIVE TOOL */}
-          <NeuralSuperintelligenceROICalculator />
-          
-          {/* AI 2025 ULTIMATE BREAKTHROUGH 100,000% ROI BANNER - NEWEST FEATURED */}
-          <AI2025UltimateBreakthrough100000ROIBanner />
-          
-          {/* NEW REVOLUTIONARY CONTENT SHOWCASE BANNER - LATEST FEATURED */}
-          <AI2025RevolutionaryContentShowcaseBanner />
-          
-          {/* ULTIMATE BUSINESS TRANSFORMATION 2025 SHOWCASE - LATEST FEATURED */}
-          <UltimateBusinessTransformation2025Showcase />
-          
-          {/* AI 2025 FUTURE VISION PROMOTION BANNER - LATEST FEATURED */}
-          <AI2025FutureVisionPromotionBanner />
-          
-          {/* NEW CONTENT DISCOVERY 2025 BANNER - LATEST FEATURED */}
-          <NewContentDiscovery2025Banner />
-          
+        {/* NEURAL CONSCIOUSNESS BREAKTHROUGH BANNER 2025 - NEWEST FEATURED */}
+        <NeuralConsciousnessBreakthroughBanner2025 />
+        {/* NEW CONTENT 2025 ULTIMATE SHOWCASE BANNER - NEWEST FEATURED */}
+        <NewContent2025UltimateShowcaseBanner />
+        {/* AI 2025 ULTIMATE TRENDS SHOWCASE - NEWEST FEATURED */}
+        <AI2025UltimateTrendsShowcase />
+        {/* ULTIMATE ROI CALCULATOR 2025 - NEWEST INTERACTIVE */}
+        <UltimateROICalculator2025 />
+        {/* ULTIMATE CASE STUDIES SHOWCASE 2025 - NEWEST FEATURED */}
+        <UltimateCaseStudiesShowcase2025 />
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 - NEWEST FEATURED */}
+        <UltimateContentDiscoveryWidget2025 />
+        {/* AI 2025 ULTIMATE CONTENT REVOLUTION PROMOTION BANNER - NEWEST FEATURED */}
+        <AI2025UltimateContentRevolutionPromotionBanner />
+        {/* ULTIMATE AUTOMATION REVOLUTION 50,000% ROI BANNER - NEWEST BREAKTHROUGH */}
+        <UltimateAutomationRevolution50000ROIBanner />
+        {/* NEURAL SUPERINTELLIGENCE BREAKTHROUGH BANNER 2025 - LATEST BREAKTHROUGH */}
+        <NeuralSuperintelligenceBreakthroughBanner2025 />
+        {/* NEURAL SUPERINTELLIGENCE ROI CALCULATOR - INTERACTIVE TOOL */}
+        <NeuralSuperintelligenceROICalculator />
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
         {/* AI 2025 ULTIMATE BREAKTHROUGH 100,000% ROI BANNER - NEWEST FEATURED */}
@@ -500,34 +451,7 @@ export default function HomePage() {
         
         {/* AI 2025 ULTIMATE CONTENT REVOLUTION 50,000% ROI BANNER - NEWEST FEATURED */}
         <AI2025UltimateContentRevolution50000ROIBanner />
-        {/* ULTIMATE CONTENT SHOWCASE 2025-2026 - LATEST FEATURED */}
-        <UltimateContentShowcase2025_2026 />
-        {/* INTERACTIVE ROI CALCULATOR 2025-2026 - LATEST FEATURED */}
-        <InteractiveROICalculator2025_2026 />
-        {/* ULTIMATE SUCCESS STORIES SHOWCASE 2025 - NEWEST FEATURED */}
-        <UltimateSuccessStoriesShowcase2025 />
-        {/* ULTIMATE ROI CALCULATOR 2025 - NEWEST INTERACTIVE */}
-        <UltimateROICalculator2025 />
-        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 - NEWEST FEATURED */}
-        <UltimateContentDiscoveryWidget2025 />
-        {/* ULTIMATE CASE STUDIES SHOWCASE 2025 - NEWEST FEATURED */}
-        <UltimateCaseStudiesShowcase2025 />
-        {/* ULTIMATE TESTIMONIAL SHOWCASE 2025 - NEWEST FEATURED */}
-        <UltimateTestimonialShowcase2025 />
-        {/* ULTIMATE SUCCESS METRICS SHOWCASE 2025 - NEWEST FEATURED */}
-        <UltimateSuccessMetricsShowcase2025 />
-        {/* ULTIMATE CONTENT REVOLUTION SHOWCASE 2025 - NEWEST FEATURED */}
-        <UltimateContentRevolutionShowcase2025 />
-        {/* ULTIMATE CONTENT REVOLUTION SHOWCASE - NEWEST FEATURED */}
-        <UltimateContentRevolutionShowcase />
-        {/* ULTIMATE CONTENT SHOWCASE 2026 - NEWEST FEATURED */}
-        <UltimateContentShowcase2026 />
-        {/* INTERACTIVE CONTENT DISCOVERY 2026 - NEWEST FEATURED */}
-        <InteractiveContentDiscovery2026 />
-        {/* SUCCESS STORIES SHOWCASE 2026 - NEWEST FEATURED */}
-        <SuccessStoriesShowcase2026 />
-        {/* ULTIMATE CONTENT REVOLUTION ROI CALCULATOR - NEWEST FEATURED */}
-        <UltimateContentRevolutionROICalculator />
+        
         {/* ULTIMATE CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
         <UltimateContentShowcase2025 />
         
@@ -974,15 +898,6 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
-        <UltimateBusinessIntelligenceShowcase2025 />
-        <NewContent2026PromotionBanner />
-        <QuantumAI2026BreakthroughBanner />
-        <NewContentShowcase2026 />
-        <QuantumAIContentShowcase2026 />
-        <AI2026ContentShowcaseBanner />
-        <RevolutionaryAI2026Banner />
-        <AI2026RevolutionaryBanner />
-        <RevolutionaryTechBanner2026 />
         <UltimateContentShowcase2025 />
         <InteractiveContentDiscovery2025 />
         <AIAutomationROICalculator />
