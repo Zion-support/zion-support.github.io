@@ -118,6 +118,10 @@ import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryC
 import AI2027BreakthroughPromotionBanner from '../components/AI2027BreakthroughPromotionBanner';
 import QuantumComputingShowcase2027 from '../components/QuantumComputingShowcase2027';
 
+// Import new Ultimate Autonomous AI Revolution components
+import UltimateAutonomousAIRevolutionBanner from '../components/UltimateAutonomousAIRevolutionBanner';
+import UltimateAutonomousAIContentShowcase from '../components/UltimateAutonomousAIContentShowcase';
+
 // Import new neural interface and autonomous AI promotional components
 import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRevolutionBanner2025';
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
@@ -230,6 +234,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE AUTONOMOUS AI REVOLUTION BANNER - NEWEST ULTIMATE FEATURED */}
+        <UltimateAutonomousAIRevolutionBanner />
+        
         {/* AI Revolution 2025-2026 Banner - NEWEST ULTIMATE FEATURED */}
         <AIRevolution2025Banner />
         
@@ -264,6 +271,9 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2025 - FEATURED */}
         <UltimateContentShowcase2025 />
+        
+        {/* ULTIMATE AUTONOMOUS AI CONTENT SHOWCASE - NEWEST FEATURED */}
+        <UltimateAutonomousAIContentShowcase />
         
         {/* SUCCESS STORIES SHOWCASE - NEW CONTENT */}
         <SuccessStoriesShowcase />
