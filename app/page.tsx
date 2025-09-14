@@ -82,6 +82,10 @@ import RevolutionaryAIContent2026Banner from '../components/RevolutionaryAIConte
 import NewContent2025AdvancedAutomationBanner from '../components/NewContent2025AdvancedAutomationBanner';
 import AdvancedAutomationContentShowcase2025 from '../components/AdvancedAutomationContentShowcase2025';
 
+// Import new 2025 data revolution promotional components
+import NewContent2025DataRevolutionBanner from '../components/NewContent2025DataRevolutionBanner';
+import DataRevolutionContentShowcase2025 from '../components/DataRevolutionContentShowcase2025';
+
 // Import new 2025 analytics promotional components
 import NewContent2025AnalyticsRevolutionBanner from '../components/NewContent2025AnalyticsRevolutionBanner';
 import AnalyticsContentShowcase2025 from '../components/AnalyticsContentShowcase2025';
@@ -103,6 +107,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New Content 2025 Data Revolution Banner - NEW FEATURED */}
+        <NewContent2025DataRevolutionBanner />
+        
+        {/* Data Revolution Content Showcase 2025 - NEW FEATURED */}
+        <DataRevolutionContentShowcase2025 />
+        
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
         
