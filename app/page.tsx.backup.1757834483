@@ -91,6 +91,28 @@ import NeuralConsensusRevolutionBanner from '../components/NeuralConsensusRevolu
 
 // Import additional content promotion banners
 
+<<<<<<< HEAD
+// Import new content revolution components
+import NewContent2025UltimatePromotionBanner from '../components/NewContent2025UltimatePromotionBanner';
+import ContentRevolutionShowcase2025 from '../components/ContentRevolutionShowcase2025';
+import EnhancedContentDiscoveryWidget2025 from '../components/EnhancedContentDiscoveryWidget2025';
+
+// Import new ultimate breakthrough content banners
+import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
+import RevolutionaryContentShowcase2025Banner from '../components/RevolutionaryContentShowcase2025Banner';
+import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
+
+// Import new interactive components
+import AIToolsShowcase2025 from '../components/AIToolsShowcase2025';
+import AIToolsShowcase2025PromotionBanner from '../components/AIToolsShowcase2025PromotionBanner';
+import InteractiveCaseStudies2025 from '../components/InteractiveCaseStudies2025';
+import InteractiveCaseStudies2025PromotionBanner from '../components/InteractiveCaseStudies2025PromotionBanner';
+import InteractiveAIDemo2025 from '../components/InteractiveAIDemo2025';
+import InteractiveAIDemo2025PromotionBanner from '../components/InteractiveAIDemo2025PromotionBanner';
+import StructuredData2025 from '../components/StructuredData2025';
+
+=======
+>>>>>>> origin/backup-main-20250913-185456
 // Import new 2026-2030 content components
 import AI2026_2030UltimatePredictionsShowcase from '../components/AI2026_2030UltimatePredictionsShowcase';
 import AI2026_2030UltimatePredictionsPromotionBanner from '../components/AI2026_2030UltimatePredictionsPromotionBanner';
@@ -222,6 +244,10 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+<<<<<<< HEAD
+        {/* NEW 2025 BREAKTHROUGH CONTENT BANNER */}
+        <NewContent2025BreakthroughBanner />
+=======
         {/* NEW 2026 PROMOTIONAL BANNERS */}
         <UltimateContentShowcase2026PromotionBanner />
         <AITrendsPredictions2026PromotionBanner />
@@ -290,6 +316,7 @@ export default function HomePage() {
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2025UltimateBreakthroughAnnouncementBanner />
+>>>>>>> origin/backup-main-20250913-185456
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
@@ -325,6 +352,8 @@ export default function HomePage() {
         {/* ULTIMATE CONTENT SHOWCASE 2026 */}
         <UltimateContentShowcase2026 />
         
+<<<<<<< HEAD
+=======
         {/* REVOLUTIONARY CONTENT SHOWCASE 2026 - FEATURED */}
         <RevolutionaryContentShowcase2026 />
         
@@ -334,6 +363,7 @@ export default function HomePage() {
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2026 */}
         <UltimateContentDiscoveryWidget2026 />
         
+>>>>>>> origin/backup-main-20250913-185456
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
         
