@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import MainLayout from '../src/components/layout/MainLayout';
 import { 
   Home, 
   Brain, 
@@ -355,17 +356,10 @@ export default function SitemapPage() {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.5, delay: (sectionIndex * 0.1) + (pageIndex * 0.05) }}
                         >
-                          <div className="flex items-start justify-between">
-                            <div className="flex-1">
-                              <Link
-                                href={page.url}
-                                className="text-lg font-semibold text-indigo-600 hover:text-indigo-700 transition-colors duration-300"
-                              >
-                                {page.name}
-                              </Link>
-                              <p className="text-gray-600 text-sm mt-1">{page.description}</p>
-                            </div>
-                            <ExternalLink className="w-4 h-4 text-gray-400 ml-2 flex-shrink-0" />
+                          <ArrowRight className="h-4 w-4 mr-2" />
+                          <div>
+                            <div className="font-medium">{page.name}</div>
+                            <div className="text-sm text-gray-500">{page.description}</div>
                           </div>
                         </motion.div>
                       ))}
