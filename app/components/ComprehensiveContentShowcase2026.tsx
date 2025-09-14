@@ -9,11 +9,10 @@ import {
   Award, 
   FileText, 
   Users, 
-  Calculator, 
+  BarChart3, 
   Star,
   Clock,
   BookOpen,
-  Target,
   Zap,
   CheckCircle
 } from 'lucide-react';
