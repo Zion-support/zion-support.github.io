@@ -363,6 +363,10 @@ import NeuralInterfaceRevolution2026Banner from '../components/NeuralInterfaceRe
 import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 
+// Import new 2026 ultimate promotional components - NEWEST FEATURED
+import NewContent2026UltimatePromotionBanner from '../components/NewContent2026UltimatePromotionBanner';
+import RevolutionaryContent2026UltimateShowcase from '../components/RevolutionaryContent2026UltimateShowcase';
+
 // Import new 2025 content and advertising components
 import NewContent2025PromotionalBanner from '../components/NewContent2025PromotionalBanner';
 import InteractiveROICalculator from '../components/InteractiveROICalculator';
@@ -419,6 +423,9 @@ export default function HomePage() {
         {/* NEW CONTENT 2026 PROMOTION BANNER - LATEST BREAKTHROUGH */}
         <NewContent2026PromotionBanner />
         
+        {/* NEW CONTENT 2026 ULTIMATE PROMOTION BANNER - NEWEST FEATURED */}
+        <NewContent2026UltimatePromotionBanner />
+        
         {/* AI 2026 REVOLUTIONARY BREAKTHROUGH BANNER - LATEST BREAKTHROUGH */}
         <AI2026RevolutionaryBreakthroughBanner />
         
@@ -430,6 +437,9 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT 2026 SHOWCASE - LATEST FEATURED */}
         <UltimateContent2026Showcase />
+        
+        {/* REVOLUTIONARY CONTENT 2026 ULTIMATE SHOWCASE - NEWEST FEATURED */}
+        <RevolutionaryContent2026UltimateShowcase />
         
         {/* AI 2025 CONTENT REVOLUTION PROMOTION BANNER - NEWEST FEATURED */}
         <AI2025ContentRevolutionPromotionBanner />
