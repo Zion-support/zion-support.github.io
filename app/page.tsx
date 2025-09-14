@@ -151,6 +151,13 @@ import QuantumComputingPromotionBanner from '../components/QuantumComputingPromo
 import Fortune500CaseStudyBanner from '../components/Fortune500CaseStudyBanner';
 import NewContent2026ComprehensiveShowcase from '../components/NewContent2026ComprehensiveShowcase';
 
+// Import new 2026 ultimate promotional components
+import NewContent2026UltimatePromotionBanner from '../components/NewContent2026UltimatePromotionBanner';
+import InteractiveTechTrends2026 from '../components/InteractiveTechTrends2026';
+import RevolutionaryAIServices2026 from '../components/RevolutionaryAIServices2026';
+import NewContentNavigationBanner from '../components/NewContentNavigationBanner';
+import RevolutionaryNewsletterSignup from '../components/RevolutionaryNewsletterSignup';
+
 // Import new 2025-2026 ultimate breakthrough components
 import AI2025_2026UltimateBreakthroughBanner from '../components/AI2025_2026UltimateBreakthroughBanner';
 import RevolutionaryContent2025_2026Showcase from '../components/RevolutionaryContent2025_2026Showcase';
@@ -240,6 +247,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT NAVIGATION BANNER - FEATURED */}
+        <NewContentNavigationBanner />
+        
+        {/* NEW CONTENT 2026 ULTIMATE PROMOTION BANNER - NEWEST FEATURED */}
+        <NewContent2026UltimatePromotionBanner />
+        
         {/* AI 2025 Ultimate Breakthrough Revolution Banner - NEWEST ULTIMATE FEATURED */}
         <AI2025UltimateBreakthroughRevolutionBanner />
         
@@ -269,8 +282,17 @@ export default function HomePage() {
         {/* INTERACTIVE CONTENT DISCOVERY 2025 - NEW FEATURED */}
         <InteractiveContentDiscovery2025 />
         
+        {/* INTERACTIVE TECH TRENDS 2026 - NEW FEATURED */}
+        <InteractiveTechTrends2026 />
+        
+        {/* REVOLUTIONARY AI SERVICES 2026 - NEW FEATURED */}
+        <RevolutionaryAIServices2026 />
+        
         {/* AI AUTOMATION ROI CALCULATOR - INTERACTIVE TOOL */}
         <AIAutomationROICalculator />
+        
+        {/* REVOLUTIONARY NEWSLETTER SIGNUP - NEW FEATURED */}
+        <RevolutionaryNewsletterSignup />
         
         {/* NEW CONTENT 2025 ULTIMATE SHOWCASE - FEATURED */}
         <NewContent2025UltimateShowcase />
