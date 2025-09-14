@@ -1202,13 +1202,19 @@
   integrity sha512-ZW3FPWIc7K1sH9E3nxIGB3y3dZkpJlMnkk7z5tu1nSkBoCgw2nSRTFHI5pB/3CQaJM0pdzMF3paf9ckKMSE9Tg==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> pr-17315
 "@img/sharp-libvips-linuxmusl-x64@1.2.0":
   version "1.2.0"
   resolved "https://registry.npmjs.org/@img/sharp-libvips-linuxmusl-x64/-/sharp-libvips-linuxmusl-x64-1.2.0.tgz"
   integrity sha512-SRYOLR7CXPgNze8akZwjoGBoN1ThNZoqpOgfnOxmWsklTGVfJiGJoC/Lod7aNMGA1jSsKWM1+HRX43OP6p9+6Q==
 
+<<<<<<< HEAD
 >>>>>>> pr-17316
+=======
+>>>>>>> pr-17315
 "@img/sharp-linux-x64@0.34.3":
   version "0.34.3"
   resolved "https://registry.npmjs.org/@img/sharp-linux-x64/-/sharp-linux-x64-0.34.3.tgz"
@@ -1217,7 +1223,10 @@
     "@img/sharp-libvips-linux-x64" "1.2.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> pr-17315
 "@img/sharp-linuxmusl-x64@0.34.3":
   version "0.34.3"
   resolved "https://registry.npmjs.org/@img/sharp-linuxmusl-x64/-/sharp-linuxmusl-x64-0.34.3.tgz"
@@ -1225,7 +1234,10 @@
   optionalDependencies:
     "@img/sharp-libvips-linuxmusl-x64" "1.2.0"
 
+<<<<<<< HEAD
 >>>>>>> pr-17316
+=======
+>>>>>>> pr-17315
 "@isaacs/balanced-match@^4.0.1":
   version "4.0.1"
   resolved "https://registry.npmjs.org/@isaacs/balanced-match/-/balanced-match-4.0.1.tgz"
@@ -1645,13 +1657,19 @@
   integrity sha512-lDtOOScYDZxI2BENN9m0pfVPJDSuUkAD1YXSvlJF0DKwZt0WlA7T7o3wrcEr4Q+iHYGzEaVuZcsIbCps4K27sA==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> pr-17315
 "@next/swc-linux-x64-musl@15.5.3":
   version "15.5.3"
   resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-15.5.3.tgz"
   integrity sha512-9vWVUnsx9PrY2NwdVRJ4dUURAQ8Su0sLRPqcCCxtX5zIQUBES12eRVHq6b70bbfaVaxIDGJN2afHui0eDm+cLg==
 
+<<<<<<< HEAD
 >>>>>>> pr-17316
+=======
+>>>>>>> pr-17315
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"
@@ -4001,10 +4019,14 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001741:
 =======
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.30001741:
 >>>>>>> pr-17316
+=======
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.30001741:
+>>>>>>> pr-17315
   version "1.0.30001741"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001741.tgz"
   integrity sha512-QGUGitqsc8ARjLdgAfxETDhRbJ0REsP6O3I96TAth/mVjh2cYzN2u+3AzPP3aVSm2FehEItaJw1xd+IGBXWeSw==
