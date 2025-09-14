@@ -50,6 +50,7 @@ import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBa
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
 import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 import AIImplementationGuideBanner from '../components/AIImplementationGuideBanner';
+import NewContent2025ShowcaseBanner from '../components/NewContent2025ShowcaseBanner';
 
 // Import new enhanced components
 import AITrends2025_2030FuturePredictionsBanner from '../components/AITrends2025_2030FuturePredictionsBanner';
