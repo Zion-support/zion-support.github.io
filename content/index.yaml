@@ -70,6 +70,96 @@ content_index:
       is_new: true
 
   new_2025_content_latest:
+    - id: "enterprise-ai-revolution"
+      type: "blog"
+      title: "AI 2025: The Enterprise AI Revolution - Ultimate Guide to 500% ROI"
+      file_path: "/content/blog/ai-2025-enterprise-ai-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-enterprise-ai-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Enterprise AI", "AI Transformation", "ROI", "Business Intelligence", "Automation", "Strategy"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        success_rate: "89%"
+        savings: "$14M annually"
+        efficiency: "78% improvement"
+        satisfaction: "99.7%"
+      reading_time: "22 min read"
+      
+    - id: "healthcare-transformation"
+      type: "case-study"
+      title: "AI 2025 Healthcare Transformation: $1.2B Hospital System Achieves 580% ROI with Intelligent Healthcare"
+      file_path: "/content/case-studies/ai-2025-healthcare-transformation-ultimate-success.md"
+      url: "/case-studies/ai-2025-healthcare-transformation-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Healthcare", "AI Transformation", "ROI", "Patient Care", "Medical AI", "Hospital Systems"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "580%"
+        savings: "$115.9M annually"
+        efficiency: "89% improvement"
+        satisfaction: "96%"
+        quality: "96.8% accuracy"
+      reading_time: "18 min read"
+      
+    - id: "retail-transformation"
+      type: "blog"
+      title: "AI 2025: The Retail Transformation Revolution - Ultimate Guide to 450% ROI"
+      file_path: "/content/blog/ai-2025-retail-transformation-ultimate-guide.md"
+      url: "/blog/ai-2025-retail-transformation-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Retail AI", "E-commerce", "ROI", "Customer Experience", "Inventory Management", "Personalization"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        conversion: "78% increase"
+        satisfaction: "95%"
+        efficiency: "67% improvement"
+        savings: "$16.8M annually"
+      reading_time: "20 min read"
+      
+    - id: "manufacturing-transformation"
+      type: "case-study"
+      title: "AI 2025 Manufacturing Transformation: $3.2B Company Achieves 620% ROI with Intelligent Manufacturing"
+      file_path: "/content/case-studies/ai-2025-manufacturing-transformation-ultimate-success.md"
+      url: "/case-studies/ai-2025-manufacturing-transformation-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Manufacturing", "AI Transformation", "ROI", "Production", "Quality Control", "Supply Chain"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "620%"
+        savings: "$313.3M annually"
+        efficiency: "89% improvement"
+        quality: "96.2% yield"
+        utilization: "89%"
+      reading_time: "19 min read"
+      
+    - id: "implementation-checklist-ultimate"
+      type: "resource"
+      title: "AI 2025 Implementation Checklist: Ultimate Guide to 600% ROI Success"
+      file_path: "/content/resources/ai-2025-implementation-checklist-ultimate.md"
+      url: "/resources/ai-2025-implementation-checklist-ultimate"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Implementation", "Checklist", "ROI", "Best Practices", "Framework", "Strategy"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        success_rate: "89%"
+        savings: "$10M+ annually"
+        efficiency: "70% improvement"
+        satisfaction: "99%"
+      reading_time: "25 min read"
+      
     - id: "edge-computing-revolution"
       type: "blog"
       title: "AI 2025: The Edge Computing Revolution - Ultimate Guide to 450% ROI"
