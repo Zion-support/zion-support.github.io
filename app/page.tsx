@@ -48,6 +48,8 @@ import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026
 // Import new 2025 promotional components
 import AutonomousAIRevolutionBanner2025 from '../components/AutonomousAIRevolutionBanner2025';
 import EdgeAIRevolutionShowcase2025 from '../components/EdgeAIRevolutionShowcase2025';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
 >>>>>>> pr-17316
 =======
 
@@ -131,6 +133,12 @@ export default function HomePage() {
         {/* AI 2026 Ultimate Showcase Banner */}
         <AI2026UltimateShowcaseBanner />
 =======
+        {/* NEW 2025 Content - Revolutionary Content Banner */}
+        <RevolutionaryContentBanner2025 />
+        
+        {/* NEW 2025 Content - Ultimate Content Showcase */}
+        <UltimateContentShowcase2025 />
+        
         {/* NEW 2025 Content - Autonomous AI Revolution Banner */}
         <AutonomousAIRevolutionBanner2025 />
         
