@@ -79,6 +79,7 @@ const ContactPage: React.FC = () => {
     { day: 'Sunday', hours: 'Closed' }
   ];
 
+export default function Contact() {
   return (
     <Layout>
       <Head>
