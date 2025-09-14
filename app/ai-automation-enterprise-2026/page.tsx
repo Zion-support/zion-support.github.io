@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Brain, Zap, Shield, TrendingUp, Users, BarChart3, Globe, Rocket } from 'lucide-react';
+import { ArrowLeft, Brain, Zap, Shield, TrendingUp, Users, BarChart3, Globe } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI Automation Enterprise 2026: Transform Your Business with Next-Gen AI',

@@ -32,6 +32,13 @@ merge_pr() {
         fi
     fi
     
+    # Check if the PR is already merged by checking if it's ahead of main
+    if git merge-base --is-ancestor $branch_name HEAD 2>/dev/null; then
+        echo "  ℹ️  PR #$pr_number is already merged, skipping..."
+        git branch -d $branch_name 2>/dev/null || true
+        return 0
+    fi
+    
     # Check for merge conflicts
     echo "  🔍 Checking for merge conflicts..."
     if git merge --no-commit --no-ff $branch_name 2>/dev/null; then
@@ -69,67 +76,42 @@ merge_pr() {
     fi
 }
 
-# Process PRs in batches
-BATCH_SIZE=5
-BATCH_NUM=1
+# Process PRs one by one
 SUCCESS_COUNT=0
 FAILED_COUNT=0
+SKIPPED_COUNT=0
 
-echo "📦 Processing PRs in batches of $BATCH_SIZE..."
+echo "📦 Processing PRs individually..."
 
 for pr_number in $PR_NUMBERS; do
     echo ""
-    echo "--- Batch $BATCH_NUM, Processing PR #$pr_number ---"
+    echo "--- Processing PR #$pr_number ---"
     
     if merge_pr $pr_number; then
         ((SUCCESS_COUNT++))
-        echo "✅ PR #$pr_number merged successfully"
-    else
-        ((FAILED_COUNT++))
-        echo "❌ PR #$pr_number failed to merge"
-    fi
-    
-    # Check if we've processed a full batch
-    if [ $((SUCCESS_COUNT + FAILED_COUNT)) -eq $BATCH_SIZE ]; then
-        echo ""
-        echo "📊 Batch $BATCH_NUM completed: $SUCCESS_COUNT successful, $FAILED_COUNT failed"
+        echo "✅ PR #$pr_number processed successfully"
         
-        # Push changes after each batch
+        # Push changes after each successful merge
         echo "🚀 Pushing changes to main branch..."
         if git push origin main; then
-            echo "✅ Successfully pushed batch $BATCH_NUM to main"
+            echo "✅ Successfully pushed changes to main"
         else
-            echo "❌ Failed to push batch $BATCH_NUM to main"
+            echo "❌ Failed to push changes to main"
         fi
         
-        # Reset counters for next batch
-        SUCCESS_COUNT=0
-        FAILED_COUNT=0
-        ((BATCH_NUM++))
-        
-        echo "⏳ Waiting 5 seconds before next batch..."
-        sleep 5
+        echo "⏳ Waiting 3 seconds before next PR..."
+        sleep 3
+    else
+        ((FAILED_COUNT++))
+        echo "❌ PR #$pr_number failed to process"
     fi
 done
-
-# Process any remaining PRs
-if [ $((SUCCESS_COUNT + FAILED_COUNT)) -gt 0 ]; then
-    echo ""
-    echo "📊 Final batch completed: $SUCCESS_COUNT successful, $FAILED_COUNT failed"
-    
-    # Push final changes
-    echo "🚀 Pushing final changes to main branch..."
-    if git push origin main; then
-        echo "✅ Successfully pushed final changes to main"
-    else
-        echo "❌ Failed to push final changes to main"
-    fi
-fi
 
 echo ""
 echo "🎉 PR merge process completed!"
 echo "📈 Total successful merges: $SUCCESS_COUNT"
 echo "📉 Total failed merges: $FAILED_COUNT"
+echo "⏭️  Total skipped (already merged): $SKIPPED_COUNT"
 
 # Verify final state
 echo ""
