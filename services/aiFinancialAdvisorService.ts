@@ -173,9 +173,7 @@ export class AIFinancialAdvisorService {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-        },
-      });
+          'Authorization': `Bearer ${this.apiKey}`}});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -195,10 +193,8 @@ export class AIFinancialAdvisorService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userId, riskTolerance, investmentHorizon }),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify({ userId, riskTolerance, investmentHorizon })});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -218,10 +214,8 @@ export class AIFinancialAdvisorService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(request),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(request)});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -239,9 +233,7 @@ export class AIFinancialAdvisorService {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/goals/${userId}`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-        },
-      });
+          'Authorization': `Bearer ${this.apiKey}`}});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -259,9 +251,7 @@ export class AIFinancialAdvisorService {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/market-analysis/${market}`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-        },
-      });
+          'Authorization': `Bearer ${this.apiKey}`}});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -292,10 +282,8 @@ export class AIFinancialAdvisorService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ targetAllocation }),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify({ targetAllocation })});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -321,10 +309,8 @@ export class AIFinancialAdvisorService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userId, targetAge, desiredIncome }),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify({ userId, targetAge, desiredIncome })});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -350,10 +336,8 @@ export class AIFinancialAdvisorService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userId, taxYear }),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify({ userId, taxYear })});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -380,10 +364,8 @@ export class AIFinancialAdvisorService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userId, reportType }),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify({ userId, reportType })});
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

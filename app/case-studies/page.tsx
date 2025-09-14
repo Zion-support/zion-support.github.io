@@ -5,38 +5,12 @@ import { ArrowRight, TrendingUp, DollarSign, Clock, Users, Target, CheckCircle, 
 export default function CaseStudies() {
   const caseStudies = [
     {
-<<<<<<< HEAD
-      id: 1,
-      title: "AI 2025 Global Enterprise Transformation",
-      company: "Fortune 100 Global Manufacturing",
-      industry: "Manufacturing & Technology",
-      challenge: "Legacy systems, operational inefficiencies, and competitive pressure",
-      solution: "AI 2025 Enterprise Automation Platform with quantum-neural hybrid architecture",
-      results: {
-        roi: "4,200%",
-        efficiency: "94%",
-        costReduction: "73%",
-        customerSatisfaction: "96%"
-      },
-      description: "Revolutionary transformation of Fortune 100 company achieving $42B revenue increase and unprecedented operational efficiency.",
-      technologies: ["AI 2025", "Quantum-Neural Hybrid", "Enterprise Automation", "Predictive Analytics"],
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 2,
-      title: "AI-Powered E-commerce Optimization",
-      company: "TechRetail Corp",
-      industry: "E-commerce",
-      challenge: "Manual inventory management and customer service inefficiencies",
-      solution: "Implemented AI autonomous operations with predictive analytics",
-=======
       id: 'manufacturing-giant',
       title: 'Global Manufacturing Transformation',
       company: 'Fortune 500 Manufacturing Company',
       industry: 'Manufacturing',
       challenge: 'Manual quality control processes were causing 15% defect rates and $2M+ annual losses',
       solution: 'Implemented AI-powered autonomous quality control systems with computer vision and predictive maintenance',
->>>>>>> origin/cursor/create-and-deploy-new-content-ccac
       results: {
         defectReduction: '99.8%',
         costSavings: '$5.2M',

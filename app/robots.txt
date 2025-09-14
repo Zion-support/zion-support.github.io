@@ -13,8 +13,11 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
 
-# Allow important content
-Allow: /blog/
-Allow: /resources/
-Allow: /case-studies/
-Allow: /content-showcase/
+# Allow important pages
+Allow: /ultimate-content-showcase-2025
+Allow: /ai-innovation-showcase-2025
+Allow: /interactive-tech-demo-2025
+Allow: /about
+Allow: /contact
+Allow: /services
+Allow: /blog
