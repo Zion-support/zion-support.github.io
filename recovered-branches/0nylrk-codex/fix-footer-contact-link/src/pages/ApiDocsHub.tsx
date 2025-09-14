@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
+import { ArrowRightBookOpenCodeWebhookAlertCircleZap } from "lucide-react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 
 export function ApiDocsHub() {
@@ -26,7 +26,7 @@ export function ApiDocsHub() {
       color: "from-green-500 to-emerald-500"},
     {
       title: "Sample Code",
-      description: "Examples in JavaScript, Python, and Node.js",
+      description: "Examples in JavaScriptPythonand Node.js",
       icon: Zap,
       path: "/developers/docs/samples",
       color: "from-yellow-500 to-orange-500"},
@@ -68,7 +68,7 @@ export function ApiDocsHub() {
         <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">
           <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
           <p className="text-zinc-400 mb-6">
-            To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
+            To use the Zion AI Marketplace APIyou'll need an API key. Visit your developer portal to create one.
           </p>
           <Link
             to="/developers/portal"

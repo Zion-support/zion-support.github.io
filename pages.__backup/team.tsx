@@ -2,8 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Users, Award, Linkedin, Twitter, Github, 
-  Mail, MapPin, Globe, Star, Zap, Brain, Rocket
+  UsersAwardLinkedinTwitterGithub
+  MailMapPinGlobeStarZapBrainRocket
 } from 'lucide-react';
 
 export default function TeamPage() {
@@ -12,39 +12,39 @@ export default function TeamPage() {
       name: 'Dr. Sarah Chen',
       title: 'Chief Executive Officer',
       image: '/team/sarah-chen.jpg',
-      bio: 'Former AI Research Lead at Google, PhD in Computer Science from MIT. Pioneered breakthrough AI algorithms that power our autonomous systems.',
-      expertise: ['AI & Machine Learning', 'Strategic Leadership', 'Research & Development'],
+      bio: 'Former AI Research Lead at GooglePhD in Computer Science from MIT. Pioneered breakthrough AI algorithms that power our autonomous systems.',
+      expertise: ['AI & Machine Learning'Strategic Leadership'Research & Development'],
       social: {
         linkedin: 'https://linkedin.com/in/sarah-chen-zion',
         twitter: 'https://twitter.com/sarahchen_zion',
         github: 'https://github.com/sarahchen-zion'
       },
-      achievements: ['25+ AI Patents', 'MIT Technology Review Innovator', 'Forbes 30 Under 30']
+      achievements: ['25+ AI Patents'MIT Technology Review Innovator'Forbes 30 Under 30']
     },
     {
       name: 'Marcus Rodriguez',
       title: 'Chief Technology Officer',
       image: '/team/marcus-rodriguez.jpg',
-      bio: 'Ex-Engineering Director at Microsoft, specializing in cloud architecture and quantum computing. Leads our technical innovation strategy.',
-      expertise: ['Cloud Architecture', 'Quantum Computing', 'System Design'],
+      bio: 'Ex-Engineering Director at Microsoftspecializing in cloud architecture and quantum computing. Leads our technical innovation strategy.',
+      expertise: ['Cloud Architecture'Quantum Computing'System Design'],
       social: {
         linkedin: 'https://linkedin.com/in/marcus-rodriguez-zion',
         twitter: 'https://twitter.com/marcusrod_zion',
         github: 'https://github.com/marcusrod-zion'
       },
-      achievements: ['Microsoft MVP Award', 'Quantum Computing Pioneer', 'Cloud Architecture Expert']
+      achievements: ['Microsoft MVP Award'Quantum Computing Pioneer'Cloud Architecture Expert']
     },
     {
       name: 'Emily Watson',
       title: 'Chief Operations Officer',
       image: '/team/emily-watson.jpg',
-      bio: 'Former VP of Operations at Amazon, expert in scaling technology operations and building high-performing teams.',
-      expertise: ['Operations Management', 'Team Leadership', 'Process Optimization'],
+      bio: 'Former VP of Operations at Amazonexpert in scaling technology operations and building high-performing teams.',
+      expertise: ['Operations Management'Team Leadership'Process Optimization'],
       social: {
         linkedin: 'https://linkedin.com/in/emily-watson-zion',
         twitter: 'https://twitter.com/emilywat_zion'
       },
-      achievements: ['Amazon Leadership Award', 'Operations Excellence', 'Team Building Expert']
+      achievements: ['Amazon Leadership Award'Operations Excellence'Team Building Expert']
     }
   ];
 
@@ -65,7 +65,7 @@ export default function TeamPage() {
     },
     {
       name: 'Cloud & Infrastructure',
-      description: 'Building scalable, secure, and high-performance cloud solutions.',
+      description: 'Building scalablesecureand high-performance cloud solutions.',
       members: 32,
       icon: Globe,
       color: 'from-green-400 to-emerald-500'
@@ -132,26 +132,26 @@ export default function TeamPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
           <div className="relative z-10 container mx-auto px-6 text-center">
             <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"
             >
               Meet Our Team
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.2 }}
               className="text-xl text-white/80 max-w-4xl mx-auto mb-8"
             >
               The brilliant minds behind Zion Tech Group's revolutionary technology solutions. 
               Our team combines decades of experience from the world's leading tech companies.
             </motion.p>
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.4 }}
               className="flex flex-wrap justify-center gap-4"
             >
               <a href="/careers" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
@@ -168,8 +168,8 @@ export default function TeamPage() {
         <section className="py-20">
           <div className="container mx-auto px-6">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -183,12 +183,12 @@ export default function TeamPage() {
             </motion.div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {leadership.map((leader, index) => (
+              {leadership.map((leaderindex) => (
                 <motion.div
                   key={leader.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/30 transition-all duration-300"
                 >
@@ -205,7 +205,7 @@ export default function TeamPage() {
                   <div className="mb-4">
                     <h4 className="text-white font-semibold mb-2">Expertise:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {leader.expertise.map((skill, idx) => (
+                      {leader.expertise.map((skillidx) => (
                         <span key={idx} className="px-3 py-1 bg-white/10 rounded-full text-sm text-white/80">
                           {skill}
                         </span>
@@ -216,7 +216,7 @@ export default function TeamPage() {
                   <div className="mb-4">
                     <h4 className="text-white font-semibold mb-2">Achievements:</h4>
                     <ul className="space-y-1">
-                      {leader.achievements.map((achievement, idx) => (
+                      {leader.achievements.map((achievementidx) => (
                         <li key={idx} className="text-sm text-white/70 flex items-center">
                           <Star className="w-4 h-4 text-yellow-400 mr-2" />
                           {achievement}
@@ -252,8 +252,8 @@ export default function TeamPage() {
         <section className="py-20">
           <div className="container mx-auto px-6">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -267,12 +267,12 @@ export default function TeamPage() {
             </motion.div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {departments.map((dept, index) => (
+              {departments.map((deptindex) => (
                 <motion.div
                   key={dept.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/30 transition-all duration-300"
                 >
@@ -295,8 +295,8 @@ export default function TeamPage() {
         <section className="py-20">
           <div className="container mx-auto px-6">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -310,12 +310,12 @@ export default function TeamPage() {
             </motion.div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
+              {values.map((valueindex) => (
                 <motion.div
                   key={value.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
                 >
@@ -334,8 +334,8 @@ export default function TeamPage() {
         <section className="py-20">
           <div className="container mx-auto px-6 text-center">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

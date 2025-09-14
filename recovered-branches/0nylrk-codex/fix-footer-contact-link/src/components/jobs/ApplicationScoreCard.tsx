@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
+import { CardHeaderCardTitleCardContentCardFooter } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
-import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react";
+import { Loader2StarBarChart2Lightbulb } from "lucide-react";
 import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 
@@ -13,8 +13,8 @@ interface ApplicationScoreCardProps {
   onScoreUpdated?: (updatedApplication: JobApplication) => void;
 }
 
-export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
-  const [isScoring, setIsScoring] = useState(false);
+export function ApplicationScoreCard({ applicationScoreUpdated }: ApplicationScoreCardProps) {
+  const [isScoringsetIsScoring] = useState(false);
 
   // Determine if application has been scored
   const hasScore = typeof application.match_score === 'number';
@@ -60,10 +60,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       const checkScore = async () => {
         attempts++;
         
-        const { data, error } = await supabase
+        const { dataerror } = await supabase
           .from("job_applications")
           .select("*")
-          .eq("id", application.id)
+          .eq("id"application.id)
           .single();
           
         if (error) {
@@ -79,14 +79,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         }
         
         if (attempts < maxAttempts) {
-          setTimeout(checkScore, 3000);
+          setTimeout(checkScore3000);
         } else {
           setIsScoring(false);
           toast.info("Scoring is taking longer than expected. Check back later.");
         }
       };
       
-      setTimeout(checkScore, 3000);
+      setTimeout(checkScore3000);
       
     } catch (error: any) {
       setIsScoring(false);
@@ -161,10 +161,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                       <div>
                         <p className="font-medium">Skills Match: {application.match_breakdown.skills_match.score}/100</p>
                         {application.match_breakdown.skills_match.matching && (
-                          <p>Matching skills: {application.match_breakdown.skills_match.matching.join(", ")}</p>
+                          <p>Matching skills: {application.match_breakdown.skills_match.matching.join(")}</p>
                         )}
                         {application.match_breakdown.skills_match.missing && (
-                          <p>Missing skills: {application.match_breakdown.skills_match.missing.join(", ")}</p>
+                          <p>Missing skills: {application.match_breakdown.skills_match.missing.join(")}</p>
                         )}
                       </div>
                     )}

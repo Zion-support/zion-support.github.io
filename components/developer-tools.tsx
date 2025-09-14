@@ -3,12 +3,12 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-  Code, 
-  GitBranch, 
-  Database, 
-  Cloud, 
-  Shield, 
-  Zap, 
+  Code
+  GitBranch
+  Database
+  Cloud
+  Shield
+  Zap
   Star,
   ExternalLink,
   CheckCircle,
@@ -42,7 +42,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <GitBranch className="w-8 h-8 text-white" />,
       title: 'GitHub Pro',
-      description: 'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.',
+      description: 'Advanced GitHub features for professional developers including private repositoriesadvanced toolsand priority support.',
       features: [
         'Unlimited private repositories',
         'Advanced code review tools',
@@ -62,7 +62,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <Database className="w-8 h-8 text-white" />,
       title: 'MongoDB Atlas',
-      description: 'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.',
+      description: 'Fully managed cloud database service with automatic scalingbackupand monitoring for modern applications.',
       features: [
         'Fully managed MongoDB',
         'Auto-scaling & optimization',
@@ -82,7 +82,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <Cloud className="w-8 h-8 text-white" />,
       title: 'Vercel Pro',
-      description: 'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.',
+      description: 'Next.js deployment platform with automatic deploymentspreview deploymentsand advanced analytics.',
       features: [
         'Zero-config deployments',
         'Preview deployments',
@@ -102,7 +102,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Snyk',
-      description: 'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.',
+      description: 'Developer security platform that finds and fixes vulnerabilities in codependenciesand containers.',
       features: [
         'Vulnerability scanning',
         'Dependency monitoring',
@@ -122,7 +122,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: 'Postman',
-      description: 'Complete API development platform for building, testing, and documenting APIs with team collaboration.',
+      description: 'Complete API development platform for buildingtestingand documenting APIs with team collaboration.',
       features: [
         'API design & testing',
         'Team collaboration',
@@ -201,7 +201,7 @@ export default function DeveloperToolsPage() {
     },
     {
       name: 'API Development',
-      description: 'Tools for building, testing, and managing APIs',
+      description: 'Tools for buildingtestingand managing APIs',
       tools: 1,
       avgPrice: '$55/month'
     }
@@ -210,22 +210,22 @@ export default function DeveloperToolsPage() {
   const devWorkflow = [
     {
       phase: 'Development',
-      tools: ['GitHub Copilot', 'VS Code', 'Git'],
+      tools: ['GitHub Copilot'VS Code'Git'],
       description: 'Write and manage code with AI assistance'
     },
     {
       phase: 'Testing',
-      tools: ['Jest', 'Cypress', 'Postman'],
+      tools: ['Jest'Cypress'Postman'],
       description: 'Test code quality and API functionality'
     },
     {
       phase: 'Security',
-      tools: ['Snyk', 'GitHub Advanced Security'],
+      tools: ['Snyk'GitHub Advanced Security'],
       description: 'Scan for vulnerabilities and security issues'
     },
     {
       phase: 'Deployment',
-      tools: ['Vercel', 'GitHub Actions', 'Docker'],
+      tools: ['Vercel'GitHub Actions'Docker'],
       description: 'Deploy and host applications'
     }
   ];
@@ -234,7 +234,7 @@ export default function DeveloperToolsPage() {
     <>
       <Head>
         <title>Developer Tools & Services | Zion Tech Group - Real Dev Tools with Pricing</title>
-        <meta name="description" content="Discover real developer tools and services including GitHub Copilot, MongoDB Atlas, Vercel, and more. All tools include pricing, features, and direct links." />
+        <meta name="description" content="Discover real developer tools and services including GitHub CopilotMongoDB AtlasVerceland more. All tools include pricingfeaturesand direct links." />
         <meta property="og:title" content="Developer Tools & Services | Zion Tech Group" />
         <meta property="og:description" content="Real developer tools with pricing and direct links to boost your development workflow." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -274,7 +274,7 @@ export default function DeveloperToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {devMarketStats.map((stat, index) => (
+            {devMarketStats.map((statindex) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
@@ -300,12 +300,12 @@ export default function DeveloperToolsPage() {
               Curated Developer Tools & Services
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Each tool has been carefully selected based on performance, reliability, and real-world developer usage.
+              Each tool has been carefully selected based on performancereliabilityand real-world developer usage.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {developerTools.map((tool, index) => (
+            {developerTools.map((toolindex) => (
               <Card
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${
@@ -356,7 +356,7 @@ export default function DeveloperToolsPage() {
                     </div>
 
                     <ul className="space-y-2 mb-6">
-                      {tool.features.map((feature, featureIndex) => (
+                      {tool.features.map((featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                           {feature}
@@ -400,7 +400,7 @@ export default function DeveloperToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {devWorkflow.map((phase, index) => (
+            {devWorkflow.map((phaseindex) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
@@ -413,7 +413,7 @@ export default function DeveloperToolsPage() {
                   <h3 className="text-xl font-semibold text-white mb-3">{phase.phase}</h3>
                   <p className="text-gray-400 mb-4">{phase.description}</p>
                   <div className="space-y-1">
-                    {phase.tools.map((tool, toolIndex) => (
+                    {phase.tools.map((toolIndex) => (
                       <div key={toolIndex} className="text-sm text-cursor-blue font-medium">
                         {tool}
                       </div>
@@ -439,7 +439,7 @@ export default function DeveloperToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {devCategories.map((category, index) => (
+            {devCategories.map((categoryindex) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"

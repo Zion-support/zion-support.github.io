@@ -19,17 +19,17 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { TabsListTabsTriggerTabsContent } from "@/components/ui/tabs";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from "lucide-react";
 
 // Define the form schema with zod
 const productSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters"),
-  description: z.string().min(10, "Description must be at least 10 characters"),
-  price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
+  title: z.string().min(3"Title must be at least 3 characters"),
+  description: z.string().min(10"Description must be at least 10 characters"),
+  price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0{
     message: "Price must be a valid number"}),
-  category: z.string().min(1, "Please select a category"),
+  category: z.string().min(1"Please select a category"),
   image: z.instanceof(File).optional(),
   tags: z.string().optional()});
 
@@ -40,9 +40,9 @@ export function ProductSubmissionForm() {
   const { user } = useAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [imagePreview, setImagePreview] = React.useState(null as string | null);
-  const [activeTab, setActiveTab] = React.useState("manual");
+  const [isSubmittingsetIsSubmitting] = React.useState(false);
+  const [imagePreviewsetImagePreview] = React.useState(null as string | null);
+  const [activeTabsetActiveTab] = React.useState("manual");
   
   // Initialize the form
   const form = useForm<ProductFormValues>({
@@ -58,7 +58,7 @@ export function ProductSubmissionForm() {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      form.setValue("image", file);
+      form.setValue("image"file);
       const reader = new FileReader();
       reader.onloadend = () => {
         setImagePreview(reader.result as string);
@@ -69,12 +69,12 @@ export function ProductSubmissionForm() {
 
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
-    form.setValue("description", content.description);
-    form.setValue("tags", content.tags.join(", "));
+    form.setValue("description"content.description);
+    form.setValue("tags"content.tags.join("));
     
     // Set a default price as the middle of the suggested range
     const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);
-    form.setValue("price", averagePrice);
+    form.setValue("price"averagePrice);
     
     // Switch to the manual tab to show applied content
     setActiveTab("manual");
@@ -99,14 +99,14 @@ export function ProductSubmissionForm() {
         description: values.description,
         price: parseFloat(values.price),
         category: values.category,
-        currency: "USD", // Default currency
+        currency: "USD"// Default currency
         tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [],
         author: {
           name: user.displayName || "Anonymous Creator",
           id: user.id},
         createdAt: new Date().toISOString()};
       
-      const { data: productRecord, error: productError } = await supabase
+      const { data: productRecorderror: productError } = await supabase
         .from('product_listings')
         .insert([productData])
         .select('id')
@@ -116,12 +116,12 @@ export function ProductSubmissionForm() {
         throw new Error(productError.message);
       }
 
-      // If we have an image, upload it
+      // If we have an imageupload it
       if (values.image) {
         const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
         const { error: uploadError } = await supabase.storage
           .from('products')
-          .upload(imagePath, values.image);
+          .upload(imagePathvalues.image);
           
         if (uploadError) {
           throw new Error(uploadError.message);
@@ -138,7 +138,7 @@ export function ProductSubmissionForm() {
           .update({ 
             images: [publicUrlData.publicUrl]
           })
-          .eq('id', productRecord.id);
+          .eq('id'productRecord.id);
           
         if (updateError) {
           throw new Error(updateError.message);
@@ -269,7 +269,7 @@ export function ProductSubmissionForm() {
                     <Input placeholder="Enter tags separated by commas" {...field} />
                   </FormControl>
                   <FormDescription>
-                    Add relevant tags to help users find your product (e.g., ai, productivity, design)
+                    Add relevant tags to help users find your product (e.g.aiproductivitydesign)
                   </FormDescription>
                   <FormMessage />
                 </FormItem>

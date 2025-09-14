@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+MailPhoneMapPin
 
 interface ContactSectionProps {
   className?: string;
@@ -40,7 +40,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ className }) => {
               <MapPin className="w-8 h-8 text-purple-600" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Location</h3>
-            <p className="text-gray-600">San Francisco, CA</p>
+            <p className="text-gray-600">San FranciscoCA</p>
           </div>
         </div>
       </div>

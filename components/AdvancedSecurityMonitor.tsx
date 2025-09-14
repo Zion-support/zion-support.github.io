@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+'use client';
+
+import React{ useStateuseEffect } from 'react';
 
 interface SecurityEvent {
   id: string;
@@ -31,11 +33,11 @@ interface ComplianceStatus {
 }
 
 const AdvancedSecurityMonitor: React.FC = () => {
-  const [events, setEvents] = useState<SecurityEvent[]>([]);
-  const [metrics, setMetrics] = useState<SecurityMetric[]>([]);
-  const [compliance, setCompliance] = useState<ComplianceStatus[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [filter, setFilter] = useState<'all' | 'critical' | 'high' | 'medium' | 'low'>('all');
+  const [eventsetEvents] = useState<SecurityEvent[]>([]);
+  const [metricsetMetrics] = useState<SecurityMetric[]>([]);
+  const [compliancesetCompliance] = useState<ComplianceStatus[]>([]);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [filtersetFilter] = useState<'all' | 'critical' | 'high' | 'medium' | 'low'>('all');
 
   useEffect(() => {
     generateMockData();
@@ -43,15 +45,15 @@ const AdvancedSecurityMonitor: React.FC = () => {
     // Simulate real-time updates
     const interval = setInterval(() => {
       generateNewEvent();
-    }, 10000); // New event every 10 seconds
+    }10000); // New event every 10 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const generateMockData = async () => {
     setIsLoading(true);
     
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve1000));
 
     const mockEvents: SecurityEvent[] = [
       {
@@ -63,7 +65,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         timestamp: new Date(Date.now() - 5 * 60 * 1000),
         source: 'Firewall',
         status: 'investigating',
-        affectedSystems: ['Web Server', 'Admin Portal']
+        affectedSystems: ['Web Server'Admin Portal']
       },
       {
         id: '2',
@@ -74,7 +76,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000),
         source: 'Certificate Monitor',
         status: 'active',
-        affectedSystems: ['API Gateway', 'Load Balancer']
+        affectedSystems: ['API Gateway'Load Balancer']
       },
       {
         id: '3',
@@ -85,7 +87,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000),
         source: 'Compliance System',
         status: 'resolved',
-        affectedSystems: ['Database', 'User Management']
+        affectedSystems: ['Database'User Management']
       },
       {
         id: '4',
@@ -96,7 +98,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         timestamp: new Date(Date.now() - 30 * 60 * 1000),
         source: 'Database Monitor',
         status: 'investigating',
-        affectedSystems: ['Primary Database', 'Backup System']
+        affectedSystems: ['Primary Database'Backup System']
       },
       {
         id: '5',
@@ -107,7 +109,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         timestamp: new Date(Date.now() - 45 * 60 * 1000),
         source: 'Antivirus Scanner',
         status: 'resolved',
-        affectedSystems: ['File Storage', 'Upload Service']
+        affectedSystems: ['File Storage'Upload Service']
       }
     ];
 
@@ -206,8 +208,8 @@ const AdvancedSecurityMonitor: React.FC = () => {
   };
 
   const generateNewEvent = () => {
-    const eventTypes: SecurityEvent['type'][] = ['threat', 'vulnerability', 'breach', 'compliance', 'access'];
-    const severities: SecurityEvent['severity'][] = ['critical', 'high', 'medium', 'low'];
+    const eventTypes: SecurityEvent['type'][] = ['threat'vulnerability'breach'compliance'access'];
+    const severities: SecurityEvent['severity'][] = ['critical'high'medium'low'];
     
     const newEvent: SecurityEvent = {
       id: Date.now().toString(),
@@ -218,10 +220,10 @@ const AdvancedSecurityMonitor: React.FC = () => {
       timestamp: new Date(),
       source: 'Security Scanner',
       status: 'active',
-      affectedSystems: ['System A', 'System B']
+      affectedSystems: ['System A'System B']
     };
 
-    setEvents(prev => [newEvent, ...prev.slice(0, 9)]);
+    setEvents(prev => [newEvent...prev.slice(09)]);
   };
 
   const getSeverityColor = (severity: string) => {
@@ -283,7 +285,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         <div className="animate-pulse">
           <div className="h-8 bg-gray-200 rounded w-1/3 mb-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map(i => (
+            {[123].map(i => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
                 <div className="h-8 bg-gray-200 rounded w-1/3 mb-2"></div>
@@ -359,7 +361,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl font-bold text-gray-900">🚨 Security Events</h3>
               <div className="flex space-x-2">
-                {(['all', 'critical', 'high', 'medium', 'low'] as const).map((level) => (
+                {(['all'critical'high'medium'low'] as const).map((level) => (
                   <button
                     key={level}
                     onClick={() => setFilter(level)}
@@ -396,11 +398,11 @@ const AdvancedSecurityMonitor: React.FC = () => {
                         event.status === 'investigating' ? 'bg-yellow-100 text-yellow-800' :
                         'bg-red-100 text-red-800'
                       }`}>
-                        {event.status.replace('_', ' ')}
+                        {event.status.replace('_' ')}
                       </span>
                     </div>
                     <div className="flex space-x-1">
-                      {event.affectedSystems.map((system, index) => (
+                      {event.affectedSystems.map((systemindex) => (
                         <span key={index} className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs">
                           {system}
                         </span>
@@ -424,7 +426,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
                   <div className="flex items-center justify-between mb-3">
                     <h4 className="font-semibold text-gray-900">{item.framework}</h4>
                     <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getComplianceStatusColor(item.status)}`}>
-                      {item.status.replace('_', ' ')}
+                      {item.status.replace('_' ')}
                     </span>
                   </div>
                   

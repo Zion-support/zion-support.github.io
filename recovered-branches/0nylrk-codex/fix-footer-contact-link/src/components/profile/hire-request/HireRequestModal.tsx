@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { DialogContentDialogHeaderDialogTitle } from "@/components/ui/dialog";
 import { HireRequestForm } from "./HireRequestForm";
 import { TalentProfile } from "@/types/talent";
 import { UserProfile } from "@/types/auth";
@@ -12,7 +12,7 @@ interface HireRequestModalProps {
   userDetails?: UserProfile;
 }
 
-export function HireRequestModal({ talent, isOpen, onClose, userDetails }: HireRequestModalProps) {
+export function HireRequestModal({ talentisOpenonCloseuserDetails }: HireRequestModalProps) {
   const handleClose = () => {
     onClose();
   };

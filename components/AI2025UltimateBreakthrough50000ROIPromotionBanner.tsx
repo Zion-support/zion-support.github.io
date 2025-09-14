@@ -35,7 +35,7 @@ export default function AI2025UltimateBreakthrough50000ROIPromotionBanner() {
             <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-2xl p-6 border border-purple-500/30 backdrop-blur-sm">
               <div className="text-4xl mb-3">⚛️</div>
               <h3 className="text-xl font-bold text-white mb-2">Quantum-Neural Fusion</h3>
-              <p className="text-gray-300 text-sm">99.97% accuracy, 1Mx faster processing</p>
+              <p className="text-gray-300 text-sm">99.97% accuracy1Mx faster processing</p>
             </div>
             <div className="bg-gradient-to-br from-blue-800/50 to-cyan-800/50 rounded-2xl p-6 border border-blue-500/30 backdrop-blur-sm">
               <div className="text-4xl mb-3">🧠</div>

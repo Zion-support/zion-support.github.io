@@ -1,6 +1,6 @@
 
-import React, { useState, useEffect } from "react";
-import { X, ArrowRight } from "lucide-react";
+import React{ useStateuseEffect } from "react";
+import { XArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -19,7 +19,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   googlePlayUrl = "/download",
   delay = 1500
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
   const isMobile = useIsMobile();
   
   useEffect(() => {
@@ -27,15 +27,15 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     if (isMobile && !localStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true);
-      }, delay);
+      }delay);
       
       return () => clearTimeout(timer);
     }
-  }, [isMobile, delay]);
+  }[isMobiledelay]);
   
   const dismissBanner = () => {
     setIsVisible(false);
-    localStorage.setItem("smartBannerDismissed", "true");
+    localStorage.setItem("smartBannerDismissed"true");
   };
 
   const resetBanner = () => {

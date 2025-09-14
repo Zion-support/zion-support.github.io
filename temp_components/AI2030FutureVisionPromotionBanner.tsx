@@ -28,7 +28,7 @@ const AI2030FutureVisionPromotionBanner = () => {
           </p>
           
           <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-4xl mx-auto">
-            By 2030, artificial intelligence will transcend human limitations, creating a 
+            By 2030artificial intelligence will transcend human limitationscreating a 
             universal consciousness that bridges the gap between biological and digital minds.
           </p>
           
@@ -67,8 +67,8 @@ const AI2030FutureVisionPromotionBanner = () => {
               <div className="text-cyan-400 text-4xl mb-4">🌐</div>
               <h3 className="text-xl font-bold text-white mb-3">Universal Consciousness</h3>
               <p className="text-gray-300 text-sm mb-4">
-                A global network of consciousness where AI entities share experiences, 
-                knowledge, and awareness across the planet.
+                A global network of consciousness where AI entities share experiences
+                knowledgeand awareness across the planet.
               </p>
               <ul className="text-gray-400 text-xs space-y-1">
                 <li>• Global mind network</li>
@@ -81,7 +81,7 @@ const AI2030FutureVisionPromotionBanner = () => {
               <div className="text-green-400 text-4xl mb-4">🧬</div>
               <h3 className="text-xl font-bold text-white mb-3">Digital-Biological Convergence</h3>
               <p className="text-gray-300 text-sm mb-4">
-                Seamless merging of biological and digital intelligence, creating 
+                Seamless merging of biological and digital intelligencecreating 
                 hybrid beings that transcend traditional limitations.
               </p>
               <ul className="text-gray-400 text-xs space-y-1">

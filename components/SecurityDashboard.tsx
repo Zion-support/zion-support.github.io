@@ -1,10 +1,11 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Shield, AlertTriangle, CheckCircle, Eye, Lock, Activity, Users, Server } from 'lucide-react';
+import React{ useStateuseEffect } from 'react';
+ShieldAlertTriangleCheckCircleEyeLockActivityUsersServer
 
 const SecurityDashboard = () => {
-  const [securityMetrics, setSecurityMetrics] = useState({
+  const [securityMetricsetSecurityMetrics] = useState({
     threatLevel: 'Low',
     activeThreats: 0,
     blockedAttacks: 1247,
@@ -13,16 +14,16 @@ const SecurityDashboard = () => {
     lastScan: '2 minutes ago',
   });
 
-  const [threats, setThreats] = useState([
-    { id: 1, type: 'DDoS Attack', severity: 'Medium', status: 'Blocked', time: '5 min ago' },
-    { id: 2, type: 'SQL Injection', severity: 'High', status: 'Blocked', time: '12 min ago' },
-    { id: 3, type: 'Malware', severity: 'Low', status: 'Quarantined', time: '1 hour ago' },
+  const [threatsetThreats] = useState([
+    { id: 1type: 'DDoS Attack'severity: 'Medium'status: 'Blocked'time: '5 min ago' },
+    { id: 2type: 'SQL Injection'severity: 'High'status: 'Blocked'time: '12 min ago' },
+    { id: 3type: 'Malware'severity: 'Low'status: 'Quarantined'time: '1 hour ago' },
   ]);
 
-  const [logs, setLogs] = useState([
-    { id: 1, action: 'Login Attempt', user: 'admin@company.com', ip: '192.168.1.100', status: 'Success', time: '2 min ago' },
-    { id: 2, action: 'File Access', user: 'user@company.com', ip: '192.168.1.101', status: 'Success', time: '5 min ago' },
-    { id: 3, action: 'Failed Login', user: 'unknown@external.com', ip: '10.0.0.50', status: 'Blocked', time: '8 min ago' },
+  const [logsetLogs] = useState([
+    { id: 1action: 'Login Attempt'user: 'admin@company.com'ip: '192.168.1.100'status: 'Success'time: '2 min ago' },
+    { id: 2action: 'File Access'user: 'user@company.com'ip: '192.168.1.101'status: 'Success'time: '5 min ago' },
+    { id: 3action: 'Failed Login'user: 'unknown@external.com'ip: '10.0.0.50'status: 'Blocked'time: '8 min ago' },
   ]);
 
   useEffect(() => {
@@ -32,10 +33,10 @@ const SecurityDashboard = () => {
         blockedAttacks: prev.blockedAttacks + Math.floor(Math.random() * 3),
         lastScan: 'Just now',
       }));
-    }, 30000);
+    }30000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const getThreatLevelColor = (level) => {
     switch (level) {

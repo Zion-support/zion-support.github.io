@@ -1,9 +1,9 @@
 
-import React, { useState } from "react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import React{ useState } from "react";
+import { AvatarImageAvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react";
+import { SendPaperclipIconChevronLeftMoreVerticalVideoPhone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
@@ -30,8 +30,8 @@ interface MobileChatViewProps {
   onSendMessage: (content: string) => void;
 }
 
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-  const [newMessage, setNewMessage] = useState("");
+export function MobileChatView({ contactmessagesonBackonSendMessage }: MobileChatViewProps) {
+  const [newMessagesetNewMessage] = useState("");
   const navigate = useNavigate();
   
   const handleSend = () => {
@@ -50,7 +50,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
-    toast.success("Starting video call", {
+    toast.success("Starting video call"{
       description: `Connecting with ${contact.name}...`
     });
     
@@ -60,7 +60,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`;
-    toast.success("Starting audio call", {
+    toast.success("Starting audio call"{
       description: `Connecting with ${contact.name}...`
     });
     

@@ -3,17 +3,17 @@ import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
 import { 
-  FormField, 
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormDescription, 
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
   FormMessage 
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 
@@ -46,7 +46,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
               <Textarea
-                placeholder="Describe the project scope, deliverables, and expectations..."
+                placeholder="Describe the project scopedeliverablesand expectations..."
                 className="min-h-[120px]"
                 {...field}
               />
@@ -74,7 +74,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
                       {field.value ? (
-                        format(field.value, "PPP")
+                        format(field.value"PPP")
                       ) : (
                         <span>Pick a date</span>
                       )}
@@ -111,7 +111,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
                       {field.value ? (
-                        format(field.value, "PPP")
+                        format(field.value"PPP")
                       ) : (
                         <span>Pick a date</span>
                       )}

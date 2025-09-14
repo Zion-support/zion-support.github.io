@@ -1,13 +1,13 @@
 
-import { useState, useEffect } from 'react';
+import { useStateuseEffect } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Wallet, Database, Save } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { WalletDatabaseSave } from "lucide-react";
+import { CardContentCardDescriptionCardHeaderCardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
@@ -15,10 +15,10 @@ import { toast } from 'sonner';
 
 export default function AccountSettings() {
   const { user } = useAuth();
-  const [displayWeb3, setDisplayWeb3] = useState(false);
-  const [didHandle, setDidHandle] = useState('');
-  const [enableBackup, setEnableBackup] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [displayWeb3setDisplayWeb3] = useState(false);
+  const [didHandlesetDidHandle] = useState('');
+  const [enableBackupsetEnableBackup] = useState(false);
+  const [isSubmittingsetIsSubmitting] = useState(false);
 
   useEffect(() => {
     try {
@@ -30,9 +30,9 @@ export default function AccountSettings() {
         setEnableBackup(!!parsed.enableBackup);
       }
     } catch (e) {
-      console.error('Error loading account settings', e);
+      console.error('Error loading account settings'e);
     }
-  }, []);
+  }[]);
 
   const handleSave = () => {
     setIsSubmitting(true);
@@ -42,17 +42,17 @@ export default function AccountSettings() {
       try {
         localStorage.setItem(
           'account_settings',
-          JSON.stringify({ displayWeb3, didHandle, enableBackup })
+          JSON.stringify({ displayWeb3didHandlenableBackup })
         );
-        console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
+        console.log('Saved settings'{ displayWeb3didHandlenableBackup });
         toast.success('Account settings updated successfully');
       } catch (e) {
-        console.error('Failed to save settings', e);
+        console.error('Failed to save settings'e);
         toast.error('Failed to save settings');
       } finally {
         setIsSubmitting(false);
       }
-    }, 1000);
+    }1000);
   };
   
   const handleConnectWallet = async () => {
@@ -72,7 +72,7 @@ export default function AccountSettings() {
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
       await ethereum.request({
         method: 'personal_sign',
-        params: [address, message]
+        params: [addressmessage]
       });
       
       // Auto-set DID handle if ENS is available
@@ -83,10 +83,10 @@ export default function AccountSettings() {
           setDidHandle(ensName);
         }
       } catch (error) {
-        console.error('ENS lookup error:', error);
+        console.error('ENS lookup error:'error);
       }
       
-      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
+      toast.success(`Wallet connected: ${address.slice(06)}...${address.slice(-4)}`);
     } catch (error: any) {
       toast.error(error.message || 'Failed to connect wallet');
     }

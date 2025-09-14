@@ -1,16 +1,17 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Users, 
-  Zap, 
-  Shield, 
-  Brain, 
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  Zap
+  Shield
+  Brain
   Globe,
   CheckCircle,
   Play,
@@ -32,8 +33,8 @@ import {
 } from 'lucide-react';
 
 const BusinessSuccessStoriesShowcase2026 = () => {
-  const [activeStory, setActiveStory] = useState(0);
-  const [hoveredCard, setHoveredCard] = useState(null);
+  const [activeStorysetActiveStory] = useState(0);
+  const [hoveredCardsetHoveredCard] = useState(null);
 
   const successStories = [
     {
@@ -53,10 +54,10 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       testimonial: {
         text: 'The AI automation system transformed our entire operation. We achieved 300% efficiency improvement and saved millions in operational costs.',
         author: 'Sarah Johnson',
-        position: 'CEO, TechCorp Global',
+        position: 'CEOTechCorp Global',
         avatar: '/api/placeholder/60/60'
       },
-      technologies: ['Neural Consensus AI', 'Workflow Automation', 'Predictive Analytics'],
+      technologies: ['Neural Consensus AI'Workflow Automation'Predictive Analytics'],
       duration: '6 months',
       featured: true,
       rating: 5.0,
@@ -80,10 +81,10 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       testimonial: {
         text: 'Our security posture improved dramatically. Zero breaches since implementation and 100% compliance achievement.',
         author: 'Michael Chen',
-        position: 'CISO, FinanceFirst Bank',
+        position: 'CISOFinanceFirst Bank',
         avatar: '/api/placeholder/60/60'
       },
-      technologies: ['Quantum-Safe Encryption', 'AI Threat Detection', 'Zero-Trust Security'],
+      technologies: ['Quantum-Safe Encryption'AI Threat Detection'Zero-Trust Security'],
       duration: '4 months',
       featured: false,
       rating: 4.9,
@@ -107,10 +108,10 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       testimonial: {
         text: 'Predictive maintenance AI reduced our downtime by 80% and saved us $1.8M monthly. Game-changing technology.',
         author: 'David Rodriguez',
-        position: 'Operations Director, ManufacturingPro',
+        position: 'Operations DirectorManufacturingPro',
         avatar: '/api/placeholder/60/60'
       },
-      technologies: ['Predictive Maintenance AI', 'Quality Control Automation', 'IoT Integration'],
+      technologies: ['Predictive Maintenance AI'Quality Control Automation'IoT Integration'],
       duration: '5 months',
       featured: true,
       rating: 4.8,
@@ -134,10 +135,10 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       testimonial: {
         text: 'AI-driven inventory management increased our sales by 25% and customer satisfaction by 90%. Incredible results.',
         author: 'Lisa Anderson',
-        position: 'VP Operations, RetailMax',
+        position: 'VP OperationsRetailMax',
         avatar: '/api/placeholder/60/60'
       },
-      technologies: ['Inventory AI', 'Customer Analytics', 'Demand Forecasting'],
+      technologies: ['Inventory AI'Customer Analytics'Demand Forecasting'],
       duration: '3 months',
       featured: false,
       rating: 4.9,
@@ -161,10 +162,10 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       testimonial: {
         text: 'AI diagnostic platform improved our diagnostic accuracy to 95% and reduced analysis time by 75%. Life-saving technology.',
         author: 'Dr. Emily Watson',
-        position: 'Chief Medical Officer, HealthTech',
+        position: 'Chief Medical OfficerHealthTech',
         avatar: '/api/placeholder/60/60'
       },
-      technologies: ['AI Diagnostics', 'Real-time Analytics', 'Medical AI'],
+      technologies: ['AI Diagnostics'Real-time Analytics'Medical AI'],
       duration: '7 months',
       featured: true,
       rating: 5.0,
@@ -188,10 +189,10 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       testimonial: {
         text: 'AI route optimization reduced our fuel costs by 35% and delivery time by 50%. Massive operational improvement.',
         author: 'James Wilson',
-        position: 'Logistics Director, LogisticsPro',
+        position: 'Logistics DirectorLogisticsPro',
         avatar: '/api/placeholder/60/60'
       },
-      technologies: ['Route Optimization AI', 'Fuel Efficiency', 'Supply Chain AI'],
+      technologies: ['Route Optimization AI'Fuel Efficiency'Supply Chain AI'],
       duration: '4 months',
       featured: false,
       rating: 4.7,
@@ -232,8 +233,8 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -252,24 +253,24 @@ const BusinessSuccessStoriesShowcase2026 = () => {
 
         {/* Featured Stories */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="mb-16"
         >
           <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">Featured Success Stories</h3>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredStories.map((story, index) => {
+            {featuredStories.map((storyindex) => {
               const IndustryIcon = getIndustryIcon(story.industry);
               const industryColor = getIndustryColor(story.industry);
 
               return (
                 <motion.div
                   key={story.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -5, scale: 1.02 }}
+                  initial={{ opacity: 0y: 20 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
+                  whileHover={{ y: -5scale: 1.02 }}
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group cursor-pointer"
                   onClick={() => setActiveStory(story.id - 1)}
                 >
@@ -313,10 +314,10 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                     <div className="mb-6">
                       <h5 className="font-semibold text-slate-900 mb-3">Key Results</h5>
                       <div className="grid grid-cols-2 gap-3">
-                        {Object.entries(story.results).slice(0, 4).map(([key, value], resultIndex) => (
+                        {Object.entries(story.results).slice(04).map(([keyvalue]resultIndex) => (
                           <div key={resultIndex} className="text-center">
                             <div className="text-lg font-bold text-purple-600">{value}</div>
-                            <div className="text-xs text-slate-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                            <div className="text-xs text-slate-600 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</div>
                           </div>
                         ))}
                       </div>
@@ -326,7 +327,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                     <div className="mb-4">
                       <h5 className="font-semibold text-slate-900 mb-2">Technologies Used</h5>
                       <div className="flex flex-wrap gap-1">
-                        {story.technologies.map((tech, techIndex) => (
+                        {story.technologies.map((techIndex) => (
                           <span
                             key={techIndex}
                             className="bg-slate-100 text-slate-600 px-2 py-1 rounded-full text-xs"
@@ -374,24 +375,24 @@ const BusinessSuccessStoriesShowcase2026 = () => {
 
         {/* All Stories Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           className="mb-16"
         >
           <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">All Success Stories</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allStories.map((story, index) => {
+            {allStories.map((storyindex) => {
               const IndustryIcon = getIndustryIcon(story.industry);
               const industryColor = getIndustryColor(story.industry);
 
               return (
                 <motion.div
                   key={story.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -3, scale: 1.01 }}
+                  initial={{ opacity: 0y: 20 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
+                  whileHover={{ y: -3scale: 1.01 }}
                   className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group cursor-pointer"
                   onClick={() => setActiveStory(story.id - 1)}
                 >
@@ -420,10 +421,10 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                     
                     {/* Key Results */}
                     <div className="grid grid-cols-2 gap-2 mb-3">
-                      {Object.entries(story.results).slice(0, 2).map(([key, value], resultIndex) => (
+                      {Object.entries(story.results).slice(02).map(([keyvalue]resultIndex) => (
                         <div key={resultIndex} className="text-center">
                           <div className="text-sm font-bold text-purple-600">{value}</div>
-                          <div className="text-xs text-slate-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                          <div className="text-xs text-slate-600 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</div>
                         </div>
                       ))}
                     </div>
@@ -457,9 +458,9 @@ const BusinessSuccessStoriesShowcase2026 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">

@@ -2,8 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Brain, BarChart3, TrendingUp, Users, Target, Zap, 
-  Shield, Database, Globe, ArrowRight, CheckCircle, Star
+  BrainBarChart3TrendingUpUsersTargetZap
+  ShieldDatabaseGlobeArrowRightCheckCircleStar
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
@@ -19,7 +19,7 @@ export default function AIBusinessIntelligencePage() {
     {
       icon: BarChart3,
       title: "Real-time Dashboards",
-      description: "Monitor key performance indicators in real-time with customizable, interactive dashboards.",
+      description: "Monitor key performance indicators in real-time with customizableinteractive dashboards.",
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -31,7 +31,7 @@ export default function AIBusinessIntelligencePage() {
     {
       icon: Users,
       title: "Customer Insights",
-      description: "Deep understanding of customer behavior, preferences, and lifetime value through AI analysis.",
+      description: "Deep understanding of customer behaviorpreferencesand lifetime value through AI analysis.",
       color: "from-orange-500 to-red-500"
     },
     {
@@ -43,7 +43,7 @@ export default function AIBusinessIntelligencePage() {
     {
       icon: Zap,
       title: "Automated Reporting",
-      description: "Generate comprehensive reports automatically, saving hours of manual work each week.",
+      description: "Generate comprehensive reports automaticallysaving hours of manual work each week.",
       color: "from-yellow-500 to-orange-500"
     }
   ];
@@ -60,23 +60,23 @@ export default function AIBusinessIntelligencePage() {
   const useCases = [
     {
       industry: "Retail & E-commerce",
-      description: "Customer segmentation, inventory optimization, and demand forecasting",
-      results: "35% increase in conversion rates, 25% reduction in inventory costs"
+      description: "Customer segmentationinventory optimizationand demand forecasting",
+      results: "35% increase in conversion rates25% reduction in inventory costs"
     },
     {
       industry: "Financial Services",
-      description: "Risk assessment, fraud detection, and portfolio optimization",
-      results: "40% improvement in risk prediction, 60% faster fraud detection"
+      description: "Risk assessmentfraud detectionand portfolio optimization",
+      results: "40% improvement in risk prediction60% faster fraud detection"
     },
     {
       industry: "Healthcare",
-      description: "Patient outcome prediction, resource allocation, and treatment optimization",
-      results: "30% improvement in patient outcomes, 20% reduction in operational costs"
+      description: "Patient outcome predictionresource allocationand treatment optimization",
+      results: "30% improvement in patient outcomes20% reduction in operational costs"
     },
     {
       industry: "Manufacturing",
-      description: "Predictive maintenance, quality control, and supply chain optimization",
-      results: "45% reduction in downtime, 35% improvement in product quality"
+      description: "Predictive maintenancequality controland supply chain optimization",
+      results: "45% reduction in downtime35% improvement in product quality"
     }
   ];
 
@@ -133,10 +133,10 @@ export default function AIBusinessIntelligencePage() {
     <>
       <Head>
         <title>AI Business Intelligence - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights to drive growth and efficiency." />
-        <meta name="keywords" content="AI business intelligence, predictive analytics, business analytics, data insights, machine learning, business intelligence platform" />
+        <meta name="description" content="Transform your business with AI-powered business intelligence. Get predictive analyticsreal-time dashboardsand data-driven insights to drive growth and efficiency." />
+        <meta name="keywords" content="AI business intelligencepredictive analyticsbusiness analyticsdata insightsmachine learningbusiness intelligence platform" />
         <meta property="og:title" content="AI Business Intelligence - Zion Tech Group" />
-        <meta property="og:description" content="Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights." />
+        <meta property="og:description" content="Transform your business with AI-powered business intelligence. Get predictive analyticsreal-time dashboardsand data-driven insights." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-business-intelligence" />
       </Head>
@@ -147,8 +147,8 @@ export default function AIBusinessIntelligencePage() {
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -160,7 +160,7 @@ export default function AIBusinessIntelligencePage() {
             </h1>
             <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
               Transform raw data into actionable insights with our advanced AI platform. 
-              Make data-driven decisions, predict future trends, and optimize every aspect of your business 
+              Make data-driven decisionspredict future trendsand optimize every aspect of your business 
               with machine learning-powered analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -185,8 +185,8 @@ export default function AIBusinessIntelligencePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -197,12 +197,12 @@ export default function AIBusinessIntelligencePage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6`}>
@@ -221,22 +221,22 @@ export default function AIBusinessIntelligencePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0x: -20 }}
+              whileInView={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose AI Business Intelligence?</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
                 Our AI-powered platform delivers measurable results that directly impact your bottom line. 
-                From increased revenue to reduced costs, see the difference data-driven decisions can make.
+                From increased revenue to reduced costsee the difference data-driven decisions can make.
               </p>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map((benefitindex) => (
                   <motion.div
                     key={benefit}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={{ opacity: 0x: -20 }}
+                    whileInView={{ opacity: 1x: 0 }}
+                    transition={{ duration: 0.6delay: index * 0.1 }}
                     className="flex items-center space-x-3"
                   >
                     <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
@@ -247,9 +247,9 @@ export default function AIBusinessIntelligencePage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0x: 20 }}
+              whileInView={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.2 }}
               className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8"
             >
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Key Metrics</h3>
@@ -276,8 +276,8 @@ export default function AIBusinessIntelligencePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -288,12 +288,12 @@ export default function AIBusinessIntelligencePage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCaseindex) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300"
               >
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">{useCase.industry}</h3>
@@ -311,24 +311,24 @@ export default function AIBusinessIntelligencePage() {
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">SimpleTransparent Pricing</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Choose the plan that fits your business needs. All plans include our core AI features.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map((planindex) => (
               <motion.div
                 key={plan.plan}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className={`relative bg-white rounded-2xl p-8 ${
                   plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
                 }`}
@@ -373,8 +373,8 @@ export default function AIBusinessIntelligencePage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>

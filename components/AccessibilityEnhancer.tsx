@@ -13,7 +13,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     document.body.appendChild(liveRegion);
 
     // Add focus management
-    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    const focusableElements = 'button[href]inputselectextarea[tabindex]:not([tabindex="-1"])';
     
     const trapFocus = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {

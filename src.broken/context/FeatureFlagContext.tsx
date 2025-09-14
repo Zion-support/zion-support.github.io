@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React{ createContextuseContextuseEffectuseState } from 'react';
 import { UnleashClient } from 'unleash-proxy-client';
 
 // Variant type is not exported from the client typings
@@ -21,20 +21,20 @@ const FeatureFlagContext = createContext<FeatureFlagContextValue | undefined>(un
 
 export function FeatureFlagProvider({ children }: { children: React.ReactNode }) {
   const url = (import.meta as any)?.env?.VITE_UNLEASH_URL || process.env.UNLEASH_URL || '';
-  const [client] = useState(() => new UnleashClient({ url, clientKey: 'frontend', appName: 'zion-app' }));
-  const [ready, setReady] = useState(false);
+  const [client] = useState(() => new UnleashClient({ urlclientKey: 'frontend'appName: 'zion-app' }));
+  const [readysetReady] = useState(false);
 
   useEffect(() => {
     const c: any = client;
     if (typeof c.on === 'function') {
-      c.on('ready', () => setReady(true));
+      c.on('ready'() => setReady(true));
     } else {
       setReady(true);
     }
     if (typeof c.start === 'function') {
       c.start();
     }
-  }, [client]);
+  }[client]);
 
   const isEnabled = (name: string) => (ready ? client.isEnabled(name) : false);
   const getVariant = (name: string) =>
@@ -47,7 +47,7 @@ export function FeatureFlagProvider({ children }: { children: React.ReactNode })
   };
 
   return (
-    <FeatureFlagContext.Provider value={{ isEnabled, getVariant, track }}>
+    <FeatureFlagContext.Provider value={{ isEnabledgetVariantrack }}>
       {children}
     </FeatureFlagContext.Provider>
   );

@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Briefcase, Star, User } from "lucide-react";
+import { BriefcaseStarUser } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface UserTypeOption {
@@ -15,7 +15,7 @@ interface UserTypeSelectionProps {
   selectedType: string | null;
 }
 
-export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
+export function UserTypeSelection({ onSelectselectedType }: UserTypeSelectionProps) {
   const userTypes: UserTypeOption[] = [
     {
       id: "serviceProvider",

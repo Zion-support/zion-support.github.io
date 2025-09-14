@@ -1,17 +1,17 @@
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm";
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 
 export default function WhitelabelManager() {
   const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("tenants");
+  const [activeTabsetActiveTab] = useState("tenants");
   
   // Check if user has admin role
   const isAdmin = user?.role === "admin";
@@ -32,7 +32,7 @@ export default function WhitelabelManager() {
           <div>
             <h1 className="text-3xl font-bold tracking-tight">White-Label Management</h1>
             <p className="text-muted-foreground mt-2">
-              Create and manage branded versions of the platform for agencies, startups, and enterprise clients.
+              Create and manage branded versions of the platform for agenciestartupsand enterprise clients.
             </p>
           </div>
 
@@ -56,7 +56,7 @@ export default function WhitelabelManager() {
                 <h2>White-Label Documentation</h2>
                 <h3>DNS Configuration</h3>
                 <p>
-                  To use a custom domain with your white-label instance, you need to configure the DNS records. 
+                  To use a custom domain with your white-label instanceyou need to configure the DNS records. 
                   Add a CNAME record pointing to <code>ziontechmarketplace.com</code>.
                 </p>
                 <table>
@@ -93,8 +93,8 @@ export default function WhitelabelManager() {
                 
                 <h3>Admin Access</h3>
                 <p>
-                  You can assign tenant administrators who will have access to manage their white-label instance, 
-                  including content, users, and analytics. Tenant admins cannot access data from other tenants.
+                  You can assign tenant administrators who will have access to manage their white-label instance
+                  including contentusersand analytics. Tenant admins cannot access data from other tenants.
                 </p>
               </div>
             </TabsContent>

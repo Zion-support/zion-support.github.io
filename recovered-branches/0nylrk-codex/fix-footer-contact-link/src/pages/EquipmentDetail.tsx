@@ -5,9 +5,9 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
+import { ShoppingCartStarTruckShieldRotateCcwClock } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 interface EquipmentSpecification {
@@ -40,7 +40,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   "pro-camera-x1000": {
     id: "pro-camera-x1000",
     name: "Pro Camera X1000",
-    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",
+    description: "Professional-grade cinema camera with 8K resolutionadvanced color scienceand exceptional low-light performance. Designed for feature filmshigh-end commercialsand documentary production. Includes comprehensive shooting modescustomizable settingsand industry-leading dynamic range.",
     brand: "CineTech",
     category: "Equipment",
     subcategory: "Cameras",
@@ -56,16 +56,16 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     inStock: true,
     expectedShipping: "3-5 business days",
     specifications: [
-      { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" },
-      { name: "Resolution", value: "8K (8192 x 4320)" },
-      { name: "Dynamic Range", value: "16+ stops" },
-      { name: "ISO Range", value: "100-51,200 (expandable to 50-204,800)" },
-      { name: "Recording Format", value: "RAW, ProRes, H.265" },
-      { name: "Frame Rates", value: "Up to 120fps at 4K, 60fps at 8K" },
-      { name: "Storage", value: "Dual CFexpress Type B" },
-      { name: "Battery Life", value: "~3 hours continuous recording" },
-      { name: "Weight", value: "4.5 lbs (body only)" },
-      { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
+      { name: "Sensor"value: "Full-frame CMOS (36 x 24 mm)" },
+      { name: "Resolution"value: "8K (8192 x 4320)" },
+      { name: "Dynamic Range"value: "16+ stops" },
+      { name: "ISO Range"value: "100-51,200 (expandable to 50-204,800)" },
+      { name: "Recording Format"value: "RAWProResH.265" },
+      { name: "Frame Rates"value: "Up to 120fps at 4K60fps at 8K" },
+      { name: "Storage"value: "Dual CFexpress Type B" },
+      { name: "Battery Life"value: "~3 hours continuous recording" },
+      { name: "Weight"value: "4.5 lbs (body only)" },
+      { name: "Connectivity"value: "HDMI 2.1USB-CWi-FiBluetooth" }
     ],
     features: [
       "Advanced 8K full-frame sensor",
@@ -75,7 +75,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "5-axis in-body image stabilization",
       "AI-powered autofocus with subject tracking",
       "Weather-sealed magnesium alloy body",
-      "Multiple assist tools: false color, waveform, vectorscope",
+      "Multiple assist tools: false colorwaveformvectorscope",
       "Anamorphic de-squeeze options",
       "Custom 3D LUT support"
     ],
@@ -85,7 +85,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   "audio-mixer-pro": {
     id: "audio-mixer-pro",
     name: "AudioMixer Pro Digital Mixing Console",
-    description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.",
+    description: "Professional digital mixing console designed for studio recordinglive sound mixingand post-production applications. Features 32 channelspremium preampsextensive routing optionsand intuitive control interface.",
     brand: "AudioTech",
     category: "Equipment",
     subcategory: "Audio",
@@ -100,15 +100,15 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     inStock: true,
     expectedShipping: "5-7 business days",
     specifications: [
-      { name: "Channels", value: "32 input channels" },
-      { name: "Faders", value: "16 motorized faders" },
-      { name: "Preamps", value: "24 premium mic preamps" },
-      { name: "Sampling Rate", value: "Up to 96kHz" },
-      { name: "EQ", value: "4-band parametric per channel" },
-      { name: "Dynamics", value: "Compressor/Gate on all channels" },
-      { name: "Effects", value: "8 stereo effects processors" },
-      { name: "Recording", value: "64-channel USB interface" },
-      { name: "Weight", value: "32 lbs" }
+      { name: "Channels"value: "32 input channels" },
+      { name: "Faders"value: "16 motorized faders" },
+      { name: "Preamps"value: "24 premium mic preamps" },
+      { name: "Sampling Rate"value: "Up to 96kHz" },
+      { name: "EQ"value: "4-band parametric per channel" },
+      { name: "Dynamics"value: "Compressor/Gate on all channels" },
+      { name: "Effects"value: "8 stereo effects processors" },
+      { name: "Recording"value: "64-channel USB interface" },
+      { name: "Weight"value: "32 lbs" }
     ],
     features: [
       "32-channel digital mixer with 24 premium mic preamps",
@@ -128,11 +128,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
 
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string };
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
-  const [isAdding, setIsAdding] = useState(false);
+  const [selectedImageIndexsetSelectedImageIndex] = useState(0);
+  const [quantitysetQuantity] = useState(1);
+  const [isAddingsetIsAdding] = useState(false);
   
-  // In a real app, this would fetch from an API
+  // In a real appthis would fetch from an API
   const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined;
   
   if (!equipment) {
@@ -161,7 +161,7 @@ export default function EquipmentDetail() {
       toast({
         title: "Added to cart",
         description: `${quantity}x ${equipment.name} added to your cart.`});
-    }, 800);
+    }800);
   };
 
   const handleBuyNow = () => {
@@ -173,7 +173,7 @@ export default function EquipmentDetail() {
       toast({
         title: "Proceeding to checkout",
         description: `Preparing your order for ${equipment.name}.`});
-    }, 800);
+    }800);
   };
 
   return (
@@ -197,7 +197,7 @@ export default function EquipmentDetail() {
                 {/* Thumbnail Gallery */}
                 {equipment.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
-                    {equipment.images.map((image, index) => (
+                    {equipment.images.map((imageindex) => (
                       <div 
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
@@ -242,7 +242,7 @@ export default function EquipmentDetail() {
                   <TabsContent value="specifications" className="mt-4">
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {equipment.specifications.map((spec, index) => (
+                        {equipment.specifications.map((specindex) => (
                           <div key={index} className="border-b border-zion-blue-light pb-2 mb-2 last:border-0 last:mb-0 last:pb-0">
                             <div className="flex justify-between">
                               <span className="text-zion-slate-light">{spec.name}</span>
@@ -257,7 +257,7 @@ export default function EquipmentDetail() {
                   <TabsContent value="features" className="mt-4">
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                       <ul className="space-y-2">
-                        {equipment.features.map((feature, index) => (
+                        {equipment.features.map((featureindex) => (
                           <li key={index} className="flex items-start gap-2">
                             <div className="text-zion-cyan mt-1 flex-shrink-0">•</div>
                             <span className="text-zion-slate-light">{feature}</span>
@@ -293,7 +293,7 @@ export default function EquipmentDetail() {
                 {equipment.rating && (
                   <div className="flex items-center gap-2 mb-4">
                     <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
+                      {[...Array(5)].map((_i) => (
                         <Star
                           key={i}
                           className={`h-5 w-5 ${
@@ -341,7 +341,7 @@ export default function EquipmentDetail() {
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">
                     <button 
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
-                      onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
+                      onClick={() => setQuantity(prev => Math.max(1prev - 1))}
                       disabled={quantity <= 1 || !equipment.inStock}
                     >
                       -

@@ -1,281 +1,251 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Search, Filter, TrendingUp, Clock, Users, Star, ArrowRight, Sparkles } from 'lucide-react';
 
-export default function InteractiveContentDiscovery2025() {
-  const [searchTerm, setSearchTerm] = useState('');
+const InteractiveContentDiscovery2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('trending');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [isVisible, setIsVisible] = useState(false);
 
-  const categories = [
-    { id: 'all', name: 'All Content', icon: '🌟' },
-    { id: 'innovations', name: 'AI Innovations', icon: '🚀' },
-    { id: 'case-studies', name: 'Success Stories', icon: '📈' },
-    { id: 'tutorials', name: 'Tutorials', icon: '🎓' },
-    { id: 'trends', name: 'Trends', icon: '📊' },
-  ];
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const contentItems = [
     {
       id: 1,
-      title: 'AI 2025: Latest Innovations and Breakthrough Technologies',
-      category: 'innovations',
-      type: 'blog',
-      readTime: '5 min',
-      views: '12.5K',
-      rating: 4.9,
-      trending: true,
-      description: 'Discover quantum AI fusion, neural interfaces, and autonomous systems revolutionizing industries.',
-      tags: ['AI', 'Innovation', 'Technology', '2025'],
-      url: '/blog/ai-2025-latest-innovations'
+      title: "AI 2025 Ultimate Automation Revolution",
+      category: "ai-automation",
+      type: "blog",
+      excerpt: "Discover how AI automation is revolutionizing businesses with unprecedented ROI gains of up to 50,000%.",
+      readTime: "8 min read",
+      featured: true,
+      tags: ["AI", "Automation", "ROI", "2025"]
     },
     {
       id: 2,
-      title: 'Global Tech Giant: 50,000% ROI Success Story',
-      category: 'case-studies',
-      type: 'case-study',
-      readTime: '8 min',
-      views: '8.2K',
-      rating: 4.8,
-      trending: true,
-      description: 'How a Fortune 500 company achieved unprecedented ROI through AI transformation.',
-      tags: ['ROI', 'Success', 'Fortune 500', 'Transformation'],
-      url: '/case-studies/ai-2025-global-tech-transformation-mega-success'
+      title: "Quantum-Neural Fusion 2026",
+      category: "quantum-computing",
+      type: "blog",
+      excerpt: "Explore the revolutionary convergence of quantum computing and neural networks that's redefining AI.",
+      readTime: "12 min read",
+      featured: true,
+      tags: ["Quantum Computing", "Neural Networks", "AI", "2026"]
     },
     {
       id: 3,
-      title: 'Quantum Computing Breakthroughs in 2025',
-      category: 'innovations',
-      type: 'blog',
-      readTime: '6 min',
-      views: '15.3K',
-      rating: 4.7,
-      trending: false,
-      description: 'Exploring the latest quantum computing advances and their impact on AI development.',
-      tags: ['Quantum', 'Computing', 'Breakthrough', 'AI'],
-      url: '/blog/quantum-computing-breakthroughs-2025'
+      title: "Fortune 500 AI Transformation",
+      category: "case-study",
+      type: "case-study",
+      excerpt: "How a Fortune 500 company achieved 800% ROI in just 6 months through comprehensive AI transformation.",
+      readTime: "15 min read",
+      featured: true,
+      tags: ["Fortune 500", "AI Transformation", "ROI", "Enterprise"]
     },
     {
       id: 4,
-      title: 'Neural Interface Revolution: Healthcare Transformation',
-      category: 'case-studies',
-      type: 'case-study',
-      readTime: '7 min',
-      views: '6.8K',
-      rating: 4.9,
-      trending: false,
-      description: 'Revolutionary neural interface technology transforming healthcare diagnostics and treatment.',
-      tags: ['Neural Interface', 'Healthcare', 'Revolution', 'Medical'],
-      url: '/case-studies/neural-interface-healthcare-transformation'
+      title: "Neural Interface Revolution 2025",
+      category: "neural-interfaces",
+      type: "blog",
+      excerpt: "The future of human-computer interaction through advanced neural interface technology.",
+      readTime: "10 min read",
+      featured: false,
+      tags: ["Neural Interfaces", "Human-Computer Interaction", "2025"]
     },
     {
       id: 5,
-      title: 'AI Automation Mastery: Complete Implementation Guide',
-      category: 'tutorials',
-      type: 'tutorial',
-      readTime: '12 min',
-      views: '22.1K',
-      rating: 4.8,
-      trending: true,
-      description: 'Step-by-step guide to implementing AI automation in your organization.',
-      tags: ['Automation', 'Implementation', 'Guide', 'Business'],
-      url: '/tutorials/ai-automation-mastery-guide'
+      title: "Autonomous Business Operations",
+      category: "automation",
+      type: "blog",
+      excerpt: "How businesses are achieving full autonomy through AI-powered operational systems.",
+      readTime: "9 min read",
+      featured: false,
+      tags: ["Autonomous Operations", "AI", "Business"]
     },
     {
       id: 6,
-      title: 'Future AI Trends: 2025-2030 Predictions',
-      category: 'trends',
-      type: 'blog',
-      readTime: '9 min',
-      views: '18.7K',
-      rating: 4.6,
-      trending: true,
-      description: 'Comprehensive analysis of AI trends and predictions for the next five years.',
-      tags: ['Trends', 'Predictions', 'Future', 'Analysis'],
-      url: '/blog/future-ai-trends-2025-2030'
+      title: "Synthetic Intelligence Breakthrough",
+      category: "ai-research",
+      type: "blog",
+      excerpt: "The latest breakthroughs in synthetic intelligence and their implications for business.",
+      readTime: "11 min read",
+      featured: false,
+      tags: ["Synthetic Intelligence", "AI Research", "Breakthrough"]
     }
   ];
 
+  const categories = [
+    { id: 'all', name: 'All Content', count: contentItems.length },
+    { id: 'ai-automation', name: 'AI Automation', count: contentItems.filter(item => item.category === 'ai-automation').length },
+    { id: 'quantum-computing', name: 'Quantum Computing', count: contentItems.filter(item => item.category === 'quantum-computing').length },
+    { id: 'case-study', name: 'Case Studies', count: contentItems.filter(item => item.category === 'case-study').length },
+    { id: 'neural-interfaces', name: 'Neural Interfaces', count: contentItems.filter(item => item.category === 'neural-interfaces').length },
+    { id: 'automation', name: 'Automation', count: contentItems.filter(item => item.category === 'automation').length },
+    { id: 'ai-research', name: 'AI Research', count: contentItems.filter(item => item.category === 'ai-research').length }
+  ];
+
   const filteredContent = contentItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+    const matchesSearch = searchTerm === '' || 
+      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch;
   });
 
-  const sortedContent = [...filteredContent].sort((a, b) => {
-    switch (sortBy) {
-      case 'trending':
-        return b.trending - a.trending;
-      case 'rating':
-        return b.rating - a.rating;
-      case 'views':
-        return parseInt(b.views.replace('K', '')) - parseInt(a.views.replace('K', ''));
-      case 'recent':
-        return b.id - a.id;
-      default:
-        return 0;
+  const getContentUrl = (item) => {
+    if (item.type === 'case-study') {
+      return `/case-studies/${item.title.toLowerCase().replace(/\s+/g, '-')}`;
     }
-  });
+    return `/blog/${item.title.toLowerCase().replace(/\s+/g, '-')}`;
+  };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl p-8">
-      {/* Header */}
-      <div className="text-center mb-8">
-        <div className="flex items-center justify-center mb-4">
-          <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
-            <Sparkles className="w-6 h-6 text-white" />
+    <section className={`py-16 bg-gradient-to-br from-gray-50 to-blue-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-500 rounded-full px-6 py-2 mb-4 text-sm font-semibold text-white">
+            <span className="mr-2">🔍</span>
+            INTERACTIVE CONTENT DISCOVERY
           </div>
-          <h2 className="text-3xl font-bold text-white">Discover Amazing Content</h2>
-        </div>
-        <p className="text-gray-300 text-lg">
-          Explore our latest articles, case studies, and tutorials powered by AI
-        </p>
-      </div>
-
-      {/* Search and Filters */}
-      <div className="mb-8">
-        {/* Search Bar */}
-        <div className="relative mb-6">
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-          <input
-            type="text"
-            placeholder="Search content, tags, or topics..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-          />
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Explore Our Latest Content
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover cutting-edge insights, case studies, and breakthrough technologies that are shaping the future of AI and business.
+          </p>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap gap-3 mb-6">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${
-                selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+        {/* Search and Filter */}
+        <div className="mb-8">
+          <div className="flex flex-col lg:flex-row gap-4 mb-6">
+            {/* Search Bar */}
+            <div className="flex-1">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search content, tags, or topics..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-4 py-3 pl-12 pr-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                />
+                <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            {/* Category Filter */}
+            <div className="lg:w-64">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              >
+                {categories.map(category => (
+                  <option key={category.id} value={category.id}>
+                    {category.name} ({category.count})
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredContent.map((item, index) => (
+            <div
+              key={item.id}
+              className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
+                item.featured ? 'ring-2 ring-purple-500' : ''
               }`}
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <span className="mr-2">{category.icon}</span>
-              {category.name}
-            </button>
+              {/* Featured Badge */}
+              {item.featured && (
+                <div className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  FEATURED
+                </div>
+              )}
+              
+              <div className="p-6">
+                {/* Category Tag */}
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded">
+                    {categories.find(cat => cat.id === item.category)?.name}
+                  </span>
+                  <span className="text-xs text-gray-500">{item.readTime}</span>
+                </div>
+                
+                {/* Title */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  {item.title}
+                </h3>
+                
+                {/* Excerpt */}
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {item.excerpt}
+                </p>
+                
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {item.tags.slice(0, 3).map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                {/* CTA Button */}
+                <Link
+                  href={getContentUrl(item)}
+                  className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
+                >
+                  Read More
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
           ))}
         </div>
 
-        {/* Sort Options */}
-        <div className="flex items-center space-x-4">
-          <Filter className="text-gray-400 w-5 h-5" />
-          <span className="text-gray-300">Sort by:</span>
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+        {/* No Results */}
+        {filteredContent.length === 0 && (
+          <div className="text-center py-12">
+            <div className="text-gray-400 mb-4">
+              <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.29-1.009-5.824-2.709M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">No content found</h3>
+            <p className="text-gray-600">Try adjusting your search terms or category filter.</p>
+          </div>
+        )}
+
+        {/* View All Button */}
+        <div className="text-center mt-12">
+          <Link
+            href="/blog"
+            className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
           >
-            <option value="trending">Trending</option>
-            <option value="rating">Rating</option>
-            <option value="views">Most Views</option>
-            <option value="recent">Most Recent</option>
-          </select>
+            View All Content
+            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </div>
-
-      {/* Content Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sortedContent.map((item) => (
-          <Link
-            key={item.id}
-            href={item.url}
-            className="group bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
-          >
-            {/* Header */}
-            <div className="flex items-start justify-between mb-4">
-              <div className="flex items-center">
-                <div className={`w-8 h-8 rounded-lg flex items-center justify-center mr-3 ${
-                  item.type === 'blog' ? 'bg-blue-500/20' :
-                  item.type === 'case-study' ? 'bg-green-500/20' :
-                  item.type === 'tutorial' ? 'bg-purple-500/20' :
-                  'bg-orange-500/20'
-                }`}>
-                  <span className="text-white text-sm font-bold">
-                    {item.type === 'blog' ? '📝' :
-                     item.type === 'case-study' ? '📊' :
-                     item.type === 'tutorial' ? '🎓' : '📄'}
-                  </span>
-                </div>
-                <div>
-                  <div className="text-xs text-gray-400 uppercase tracking-wide">
-                    {item.type.replace('-', ' ')}
-                  </div>
-                  {item.trending && (
-                    <div className="flex items-center text-yellow-400 text-xs">
-                      <TrendingUp className="w-3 h-3 mr-1" />
-                      Trending
-                    </div>
-                  )}
-                </div>
-              </div>
-              <div className="flex items-center text-yellow-400">
-                <Star className="w-4 h-4 fill-current mr-1" />
-                <span className="text-sm font-semibold">{item.rating}</span>
-              </div>
-            </div>
-
-            {/* Title */}
-            <h3 className="text-white font-bold text-lg mb-3 group-hover:text-purple-300 transition-colors">
-              {item.title}
-            </h3>
-
-            {/* Description */}
-            <p className="text-gray-300 text-sm mb-4 line-clamp-2">
-              {item.description}
-            </p>
-
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {item.tags.slice(0, 3).map((tag, index) => (
-                <span
-                  key={index}
-                  className="px-2 py-1 bg-white/10 rounded-full text-xs text-gray-300"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            {/* Stats */}
-            <div className="flex items-center justify-between text-gray-400 text-sm">
-              <div className="flex items-center">
-                <Clock className="w-4 h-4 mr-1" />
-                {item.readTime}
-              </div>
-              <div className="flex items-center">
-                <Users className="w-4 h-4 mr-1" />
-                {item.views}
-              </div>
-              <div className="flex items-center text-purple-400 group-hover:text-purple-300">
-                Read More
-                <ArrowRight className="w-4 h-4 ml-1" />
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
-
-      {/* View All Button */}
-      <div className="text-center mt-8">
-        <Link
-          href="/content-hub"
-          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-        >
-          <Sparkles className="w-5 h-5 mr-2" />
-          Explore All Content
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default InteractiveContentDiscovery2025;

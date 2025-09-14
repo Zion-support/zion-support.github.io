@@ -1,12 +1,13 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Play, 
-  ArrowRight, 
-  Star, 
-  Zap, 
+  Play
+  ArrowRight
+  Star
+  Zap
   TrendingUp,
   Users,
   Award,
@@ -25,24 +26,24 @@ import {
 } from 'lucide-react';
 
 const InteractiveTechShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const features = [
-    { icon: Brain, text: 'AI Automation', color: 'from-blue-500 to-purple-500' },
-    { icon: Shield, text: 'Cybersecurity', color: 'from-red-500 to-orange-500' },
-    { icon: Cloud, text: 'Cloud Solutions', color: 'from-green-500 to-teal-500' },
-    { icon: BarChart3, text: 'Data Analytics', color: 'from-purple-500 to-pink-500' }
+    { icon: Braintext: 'AI Automation'color: 'from-blue-500 to-purple-500' },
+    { icon: Shieldtext: 'Cybersecurity'color: 'from-red-500 to-orange-500' },
+    { icon: Cloudtext: 'Cloud Solutions'color: 'from-green-500 to-teal-500' },
+    { icon: BarChart3text: 'Data Analytics'color: 'from-purple-500 to-pink-500' }
   ];
 
   const stats = [
-    { value: '10x', label: 'Performance Gain' },
-    { value: '99.7%', label: 'Accuracy Rate' },
-    { value: '<2s', label: 'Response Time' },
-    { value: '500+', label: 'Live Demos' }
+    { value: '10x'label: 'Performance Gain' },
+    { value: '99.7%'label: 'Accuracy Rate' },
+    { value: '<2s'label: 'Response Time' },
+    { value: '500+'label: 'Live Demos' }
   ];
 
   const demoSteps = [
@@ -65,8 +66,8 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-6"
           >
@@ -75,9 +76,9 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
           </motion.div>
 
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
             Watch Our Technology
@@ -87,20 +88,20 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.4 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed"
           >
             Experience our revolutionary AI systems live in action. See how our technology 
-            processes data, optimizes processes, and delivers results in real-time.
+            processes dataoptimizes processesand delivers results in real-time.
           </motion.p>
 
           {/* Interactive Demo Preview */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.6 }}
             className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/10 max-w-4xl mx-auto mb-8"
           >
             <div className="flex items-center justify-between mb-6">
@@ -194,9 +195,9 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 1.0 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2 group shadow-lg hover:shadow-xl transform hover:scale-105">

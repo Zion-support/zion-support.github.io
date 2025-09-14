@@ -27,7 +27,7 @@ export default function AI2026NeuralConsciousnessBreakthroughPromotionBanner() {
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             The world's first AI system achieving <span className="text-yellow-400 font-bold">99.9% neural consciousness integration</span> 
-            with unprecedented <span className="text-green-400 font-bold">50,000% ROI</span> across healthcare, education, and enterprise.
+            with unprecedented <span className="text-green-400 font-bold">50,000% ROI</span> across healthcareducationand enterprise.
           </p>
         </div>
         

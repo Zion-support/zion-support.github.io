@@ -1,48 +1,48 @@
 
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
 
 export function AnalyticsSummary() {
-  const { data: stats, isLoading } = useQuery({
+  const { data: statsisLoading } = useQuery({
     queryKey: ['analytics-summary'],
     queryFn: async () => {
       // Get total page views
-      const { data: pageViewsData, error: pageViewsError } = await supabase
+      const { data: pageViewsDataerror: pageViewsError } = await supabase
         .from('analytics_events')
         .select('count')
-        .eq('event_type', 'page_view')
+        .eq('event_type'page_view')
         .single();
 
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError;
       
       // Get unique visitors (by counting distinct user IDs)
-      const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
+      const { data: uniqueVisitorsDataerror: uniqueVisitorsError } = await supabase
         .from('analytics_events')
         .select('user_id')
-        .eq('event_type', 'page_view')
-        .is('user_id', 'not.null');
+        .eq('event_type'page_view')
+        .is('user_id'not.null');
         
       if (uniqueVisitorsError) throw uniqueVisitorsError;
       
       const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) || []);
       
       // Get conversion count
-      const { data: conversionsData, error: conversionsError } = await supabase
+      const { data: conversionsDataerror: conversionsError } = await supabase
         .from('analytics_events')
         .select('count')
-        .eq('event_type', 'conversion')
+        .eq('event_type'conversion')
         .single();
         
       if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError;
       
       // Get most recent event to calculate "last updated"
-      const { data: lastEventData, error: lastEventError } = await supabase
+      const { data: lastEventDataerror: lastEventError } = await supabase
         .from('analytics_events')
         .select('created_at')
-        .order('created_at', { ascending: false })
+        .order('created_at'{ ascending: false })
         .limit(1)
         .single();
         
@@ -54,7 +54,7 @@ export function AnalyticsSummary() {
         conversions: conversionsData?.count || 0,
         lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null};
     },
-    refetchInterval: 300000, // Refetch every 5 minutes
+    refetchInterval: 300000// Refetch every 5 minutes
   });
   
   // Calculate conversion rate
@@ -91,7 +91,7 @@ export function AnalyticsSummary() {
           isLoading ? (
             <Skeleton className="h-8 w-28 bg-zion-blue-light" />
           ) : stats?.lastUpdated ? (
-            formatDistanceToNow(stats.lastUpdated, { addSuffix: true })
+            formatDistanceToNow(stats.lastUpdated{ addSuffix: true })
           ) : 'Never'
         }
         icon={
@@ -108,7 +108,7 @@ interface StatCardProps {
   icon: React.ReactNode;
 }
 
-function StatCard({ title, value, icon }: StatCardProps) {
+function StatCard({ titlevalueicon }: StatCardProps) {
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardContent className="p-6">

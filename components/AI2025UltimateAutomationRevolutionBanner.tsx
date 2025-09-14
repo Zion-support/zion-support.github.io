@@ -1,107 +1,179 @@
-import React from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
-export default function AI2025UltimateAutomationRevolutionBanner() {
+const AI2025UltimateAutomationRevolutionBanner: React.FC = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  const content = [
+    {
+      title: "AI 2025 Ultimate Automation Revolution",
+      subtitle: "500% ROI • $200M Savings • 99.8% Satisfaction",
+      description: "Transform your business with the most advanced AI automation platform. Join Fortune 500 companies achieving unprecedented results.",
+      cta: "Start Your Revolution",
+      link: "/ai-2025-ultimate-automation-revolution",
+      metrics: {
+        roi: "500%",
+        savings: "$200M",
+        satisfaction: "99.8%",
+        timeline: "12 months"
+      }
+    },
+    {
+      title: "Quantum AI 2026 Business Breakthrough",
+      subtitle: "400-600% ROI • 1,200% Speed • 99.97% Accuracy",
+      description: "Experience the future with Quantum AI. $100B market transformation delivering revolutionary business results.",
+      cta: "Explore Quantum AI",
+      link: "/quantum-ai-2026-business-breakthrough",
+      metrics: {
+        roi: "400-600%",
+        speed: "1,200%",
+        accuracy: "99.97%",
+        market: "$100B"
+      }
+    },
+    {
+      title: "Enterprise AI Transformation Success",
+      subtitle: "567% ROI • $2.8B Savings • 156% Efficiency",
+      description: "Join hundreds of companies revolutionizing operations with AI. Complete implementation guides and success stories available.",
+      cta: "View Success Stories",
+      link: "/case-studies/fortune-500-ai-transformation-2025-ultimate-success",
+      metrics: {
+        roi: "567%",
+        savings: "$2.8B",
+        efficiency: "156%",
+        companies: "500+"
+      }
+    }
+  ];
+
+  useEffect(() => {
+    // Check if banner was previously dismissed
+    const dismissed = localStorage.getItem('ai2025-automation-banner-dismissed');
+    if (!dismissed) {
+      setIsVisible(true);
+    }
+
+    // Auto-rotate content every 5 seconds
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % content.length);
+    }5000);
+
+    return () => clearInterval(interval);
+  }[content.length]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+    localStorage.setItem('ai2025-automation-banner-dismissed'true');
+  };
+
+  const handleSlideChange = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  if (!isVisible || isDismissed) return null;
+
+  const currentContent = content[currentSlide];
+
   return (
-    <section className="py-16 px-4 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden">
-      {/* Background Pattern */}
+    <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden">
+      {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-yellow-400 to-red-500 transform rotate-12 scale-150"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-10 left-10 w-20 h-20 bg-white rounded-full animate-pulse"></div>
+          <div className="absolute top-32 right-20 w-16 h-16 bg-white rounded-full animate-bounce"></div>
+          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white rounded-full animate-ping"></div>
+          <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-white rounded-full animate-pulse"></div>
+        </div>
       </div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center bg-red-500 text-white text-sm font-bold px-4 py-2 rounded-full mb-4 animate-pulse">
-            🚀 BREAKTHROUGH ANNOUNCEMENT
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent">
-            AI 2025 Ultimate Automation Revolution
-          </h2>
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
-            Experience the most revolutionary AI automation breakthrough in history, delivering unprecedented 
-            <span className="text-yellow-400 font-bold"> 10,000% ROI</span> and transforming entire industries overnight.
-          </p>
-        </div>
 
-        {/* Key Features Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 text-center">
-            <div className="text-4xl mb-4">🤖</div>
-            <h3 className="text-xl font-bold mb-3">Autonomous Systems</h3>
-            <p className="text-gray-300 text-sm">
-              AI systems that make complex business decisions autonomously with 99.9% accuracy
-            </p>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 text-center">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-bold mb-3">Lightning Processing</h3>
-            <p className="text-gray-300 text-sm">
-              Process millions of operations per second with quantum-enhanced AI algorithms
-            </p>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 text-center">
-            <div className="text-4xl mb-4">🎯</div>
-            <h3 className="text-xl font-bold mb-3">Predictive Intelligence</h3>
-            <p className="text-gray-300 text-sm">
-              Anticipate market changes and operational challenges 5 years into the future
-            </p>
-          </div>
-        </div>
+      <div className="relative z-10 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            {/* Content */}
+            <div className="flex-1">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
+                  <span className="text-sm font-medium">🚀 NEW CONTENT</span>
+                </div>
+                <div className="flex space-x-1">
+                  {content.map((_index) => (
+                    <button
+                      key={index}
+                      onClick={() => handleSlideChange(index)}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-50'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
 
-        {/* Success Metrics */}
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">10,000%</div>
-            <div className="text-sm text-gray-300">Guaranteed ROI</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">99.9%</div>
-            <div className="text-sm text-gray-300">Accuracy Rate</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">10,000x</div>
-            <div className="text-sm text-gray-300">Faster Processing</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">500+</div>
-            <div className="text-sm text-gray-300">Companies Transformed</div>
-          </div>
-        </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                {currentContent.title}
+              </h2>
+              <p className="text-lg md:text-xl opacity-90 mb-3">
+                {currentContent.subtitle}
+              </p>
+              <p className="text-base md:text-lg opacity-80 mb-6 max-w-2xl">
+                {currentContent.description}
+              </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/ai-2025-ultimate-automation-revolution"
-            className="bg-gradient-to-r from-yellow-500 to-red-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform shadow-lg"
-          >
-            🚀 Explore the Revolution
-          </Link>
-          <Link
-            href="/case-studies/ai-2025-global-transformation-50000-roi"
-            className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
-          >
-            📊 View Success Stories
-          </Link>
-          <Link
-            href="/resources/ai-2025-ultimate-automation-guide"
-            className="bg-white bg-opacity-20 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-opacity-30 transition-colors"
-          >
-            📚 Get Implementation Guide
-          </Link>
-        </div>
+              {/* Metrics Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                {Object.entries(currentContent.metrics).map(([keyvalue]) => (
+                  <div key={key} className="bg-white bg-opacity-10 rounded-lg p-3 text-center">
+                    <div className="text-lg font-bold">{value}</div>
+                    <div className="text-xs opacity-80 capitalize">
+                      {key.replace(/([A-Z])/g' $1').trim()}
+                    </div>
+                  </div>
+                ))}
+              </div>
 
-        {/* Trust Indicators */}
-        <div className="mt-12 text-center">
-          <p className="text-gray-300 text-sm mb-4">Trusted by Fortune 500 companies worldwide</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <div className="text-2xl font-bold">Microsoft</div>
-            <div className="text-2xl font-bold">Google</div>
-            <div className="text-2xl font-bold">Amazon</div>
-            <div className="text-2xl font-bold">Tesla</div>
-            <div className="text-2xl font-bold">Apple</div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href={currentContent.link}
+                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                >
+                  {currentContent.cta}
+                </Link>
+                <Link
+                  href="/resources/ai-automation-implementation-guide-2025"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center"
+                >
+                  Download Guide
+                </Link>
+              </div>
+            </div>
+
+            {/* Dismiss button */}
+            <button
+              onClick={handleDismiss}
+              className="ml-4 text-white hover:text-gray-200 transition-colors"
+              aria-label="Dismiss banner"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
-    </section>
+
+      {/* Progress bar */}
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-black bg-opacity-20">
+        <div 
+          className="h-full bg-white transition-all duration-100 ease-linear"
+          style={{ 
+            width: `${((currentSlide + 1) / content.length) * 100}%` 
+          }}
+        />
+      </div>
+    </div>
   );
-}
+};
+
+export default AI2025UltimateAutomationRevolutionBanner;

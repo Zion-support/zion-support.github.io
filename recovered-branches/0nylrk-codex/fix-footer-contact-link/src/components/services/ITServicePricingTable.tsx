@@ -1,14 +1,14 @@
 
-import { useState, useMemo } from "react";
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
+import { useStateuseMemo } from "react";
+import { onsiteServicePricingCountryPricing } from "@/data/onsiteServicePricing";
 import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Globe, Search, ArrowUpDown } from "lucide-react";
+import { TableBodyTableCellTableHeaderTableRow } from "@/components/ui/table";
+import { GlobeSearchArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [sortConfig, setSortConfig] = useState<{
+  const [searchQuerysetSearchQuery] = useState("");
+  const [sortConfigsetSortConfig] = useState<{
     key: keyof CountryPricing;
     direction: "ascending" | "descending";
   }>({
@@ -26,7 +26,7 @@ export function ITServicePricingTable() {
     }
     
     // Sort data
-    filteredData.sort((a, b) => {
+    filteredData.sort((ab) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? -1 : 1;
       }
@@ -37,7 +37,7 @@ export function ITServicePricingTable() {
     });
     
     return filteredData;
-  }, [onsiteServicePricing, searchQuery, sortConfig]);
+  }[onsiteServicePricingsearchQuerysortConfig]);
 
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({

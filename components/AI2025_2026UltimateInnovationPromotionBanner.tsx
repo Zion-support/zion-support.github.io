@@ -1,13 +1,14 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
-  ArrowRight, 
-  Brain, 
-  Zap, 
-  Cpu, 
+  Sparkles
+  ArrowRight
+  Brain
+  Zap
+  Cpu
   Star,
   TrendingUp,
   Award,
@@ -16,31 +17,31 @@ import {
 } from 'lucide-react';
 
 const AI2025_2026UltimateInnovationPromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   const features = [
-    { icon: Brain, text: 'Quantum-AI Fusion Technology', color: 'text-purple-400' },
-    { icon: Zap, text: '10,000x Processing Speed', color: 'text-yellow-400' },
-    { icon: Cpu, text: 'Neural Consensus Revolution', color: 'text-blue-400' },
-    { icon: Star, text: 'Synthetic Consciousness', color: 'text-green-400' }
+    { icon: Braintext: 'Quantum-AI Fusion Technology'color: 'text-purple-400' },
+    { icon: Zaptext: '10,000x Processing Speed'color: 'text-yellow-400' },
+    { icon: Cputext: 'Neural Consensus Revolution'color: 'text-blue-400' },
+    { icon: Startext: 'Synthetic Consciousness'color: 'text-green-400' }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0y: -100 }}
+        animate={{ opacity: 1y: 0 }}
+        exit={{ opacity: 0y: -100 }}
         className="relative bg-gradient-to-r from-purple-900 via-pink-900 to-purple-900 text-white overflow-hidden"
       >
         {/* Background Pattern */}
@@ -56,7 +57,7 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
               <div className="flex items-center justify-center lg:justify-start mb-3">
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="mr-3"
                 >
                   <Sparkles className="w-6 h-6 text-yellow-400" />
@@ -73,9 +74,9 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
               <div className="flex items-center justify-center lg:justify-start mb-4">
                 <motion.div
                   key={currentFeature}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0x: 20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  exit={{ opacity: 0x: -20 }}
                   transition={{ duration: 0.5 }}
                   className="flex items-center"
                 >
@@ -88,7 +89,7 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
               
               <p className="text-gray-200 text-sm lg:text-base max-w-2xl">
                 Discover revolutionary AI innovations that will reshape our world. 
-                Quantum-AI fusion, neural consensus, and synthetic consciousness await.
+                Quantum-AI fusioneural consensusand synthetic consciousness await.
               </p>
             </div>
 
@@ -132,7 +133,7 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
             className="h-full bg-gradient-to-r from-yellow-400 to-orange-500"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 10repeat: Infinityease: "linear" }}
           />
         </div>
       </motion.div>

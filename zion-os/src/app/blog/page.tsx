@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Blog & Insights | Zion OS - AI-Powered Digital Economies',
-  description: 'Practical guides, pricing insights, and implementation tips for building AI-powered digital economies. Learn from our latest research and real-world deployments.',
-  keywords: 'AI deployment, digital economy, Web3, blockchain, enterprise AI, automation, governance',
+  description: 'Practical guidespricing insightsand implementation tips for building AI-powered digital economies. Learn from our latest research and real-world deployments.',
+  keywords: 'AI deploymentdigital economyWeb3blockchainenterprise AIautomationgovernance',
   openGraph: {
     title: 'Blog & Insights | Zion OS',
-    description: 'Practical guides, pricing insights, and implementation tips for building AI-powered digital economies.',
+    description: 'Practical guidespricing insightsand implementation tips for building AI-powered digital economies.',
     type: 'website',
   },
 };
@@ -16,7 +16,7 @@ export default function BlogIndexPage() {
     {
       slug: "ai-deployment-blueprint-2025",
       title: "AI Deployment Blueprint: Launch Faster in 2025",
-      excerpt: "A pragmatic guide to ship AI assistants, analytics, and automation safely and quickly. Learn production-ready patterns for enterprise AI deployment.",
+      excerpt: "A pragmatic guide to ship AI assistantsanalyticsand automation safely and quickly. Learn production-ready patterns for enterprise AI deployment.",
       date: "2025-09-12",
       tag: "AI",
       readTime: "8 min read",
@@ -24,7 +24,7 @@ export default function BlogIndexPage() {
     },
     {
       slug: "service-pricing-starters-for-smbs",
-      title: "Starter Pricing: AI, IT, and Web3 Service Bundles",
+      title: "Starter Pricing: AITand Web3 Service Bundles",
       excerpt: "Transparent entry pricing and project ranges so teams can budget with confidence. Real-world pricing data from 100+ deployments.",
       date: "2025-09-12",
       tag: "Business",
@@ -34,7 +34,7 @@ export default function BlogIndexPage() {
     {
       slug: "web3-stack-checklist-for-enterprise",
       title: "Enterprise Web3 Stack Checklist",
-      excerpt: "From smart contracts to infra, a minimal-but-complete checklist to get production-ready. Security, scalability, and compliance included.",
+      excerpt: "From smart contracts to infra minimal-but-complete checklist to get production-ready. Securityscalabilityand compliance included.",
       date: "2025-09-12",
       tag: "Web3",
       readTime: "12 min read",
@@ -43,7 +43,7 @@ export default function BlogIndexPage() {
     {
       slug: "ai-governance-roadmap-2025",
       title: "AI Governance Roadmap 2025: From Policy to Production",
-      excerpt: "Comprehensive guide to implementing AI governance frameworks in enterprise environments. Risk management, compliance, and operational excellence.",
+      excerpt: "Comprehensive guide to implementing AI governance frameworks in enterprise environments. Risk managementcomplianceand operational excellence.",
       date: "2025-09-11",
       tag: "Governance",
       readTime: "15 min read",
@@ -52,7 +52,7 @@ export default function BlogIndexPage() {
     {
       slug: "sovereign-ai-security-basics",
       title: "Sovereign AI Security: Essential Patterns for 2025",
-      excerpt: "Security-first approaches to AI deployment in sovereign environments. Data privacy, model protection, and threat mitigation strategies.",
+      excerpt: "Security-first approaches to AI deployment in sovereign environments. Data privacymodel protectionand threat mitigation strategies.",
       date: "2025-09-10",
       tag: "Security",
       readTime: "10 min read",
@@ -61,7 +61,7 @@ export default function BlogIndexPage() {
     {
       slug: "observability-for-llm-agents",
       title: "Observability for LLM Agents: Production Monitoring Guide",
-      excerpt: "Complete observability stack for production LLM agents. Metrics, logging, tracing, and debugging strategies for reliable AI systems.",
+      excerpt: "Complete observability stack for production LLM agents. Metricsloggingtracingand debugging strategies for reliable AI systems.",
       date: "2025-09-09",
       tag: "DevOps",
       readTime: "14 min read",
@@ -82,7 +82,7 @@ export default function BlogIndexPage() {
             Insights & Updates
           </h1>
           <p className="text-blue-100 text-xl mb-8 max-w-2xl mx-auto">
-            Practical guides, pricing insights, and implementation tips for building AI-powered digital economies.
+            Practical guidespricing insightsand implementation tips for building AI-powered digital economies.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200">
             <span className="flex items-center gap-2">
@@ -178,7 +178,7 @@ export default function BlogIndexPage() {
           <div className="glass-effect rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
             <p className="text-white/70 mb-6">
-              Get the latest insights on AI, Web3, and digital economies delivered to your inbox.
+              Get the latest insights on AIWeb3and digital economies delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input

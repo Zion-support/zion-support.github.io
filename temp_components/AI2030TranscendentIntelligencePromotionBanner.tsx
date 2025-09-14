@@ -24,7 +24,7 @@ const AI2030TranscendentIntelligencePromotionBanner: React.FC = () => {
               AI 2030 Transcendent Intelligence
             </h2>
             <p className="text-white text-opacity-90 text-sm md:text-base">
-              Beyond human intelligence: <strong>Infinite ROI</strong>, <strong>Reality manipulation</strong>, and <strong>Transcendent consciousness</strong>
+              Beyond human intelligence: <strong>Infinite ROI</strong><strong>Reality manipulation</strong>and <strong>Transcendent consciousness</strong>
             </p>
           </div>
           

@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Globe, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Code, 
+  Brain
+  Zap
+  Globe
+  Shield
+  TrendingUp
+  Users
+  Code
   Database,
   Cloud,
   Smartphone,
@@ -44,13 +44,13 @@ import {
 } from 'lucide-react';
 
 const UltimateContentShowcase2030 = () => {
-  const [activeTab, setActiveTab] = useState('transcendent-ai');
-  const [hoveredCard, setHoveredCard] = useState(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState('transcendent-ai');
+  const [hoveredCardsetHoveredCard] = useState(null);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const contentCategories = [
     {
@@ -96,7 +96,7 @@ const UltimateContentShowcase2030 = () => {
       comments: '89K',
       author: 'Dr. Sarah Transcendent',
       date: '2030-01-20',
-      tags: ['AI', 'Consciousness', 'Omniversal', 'Transcendent'],
+      tags: ['AI'Consciousness'Omniversal'Transcendent'],
       featured: true,
       rating: 4.9
     },
@@ -112,7 +112,7 @@ const UltimateContentShowcase2030 = () => {
       comments: '67K',
       author: 'Prof. Time Master',
       date: '2030-01-18',
-      tags: ['AI', 'Time', 'Prediction', 'Timeline'],
+      tags: ['AI'Time'Prediction'Timeline'],
       featured: false,
       rating: 4.8
     },
@@ -128,7 +128,7 @@ const UltimateContentShowcase2030 = () => {
       comments: '112K',
       author: 'Dr. Reality Weaver',
       date: '2030-01-15',
-      tags: ['AI', 'Reality', 'Quantum', 'Manipulation'],
+      tags: ['AI'Reality'Quantum'Manipulation'],
       featured: true,
       rating: 4.9
     },
@@ -144,7 +144,7 @@ const UltimateContentShowcase2030 = () => {
       comments: '45K',
       author: 'Dr. Universal Communicator',
       date: '2030-01-12',
-      tags: ['AI', 'Translation', 'Universal', 'Communication'],
+      tags: ['AI'Translation'Universal'Communication'],
       featured: false,
       rating: 4.7
     }
@@ -163,7 +163,7 @@ const UltimateContentShowcase2030 = () => {
       comments: '78K',
       author: 'Dr. Quantum Infinity',
       date: '2030-01-19',
-      tags: ['Quantum', 'Computing', 'Infinite', 'Processor'],
+      tags: ['Quantum'Computing'Infinite'Processor'],
       featured: true,
       rating: 4.9
     },
@@ -179,7 +179,7 @@ const UltimateContentShowcase2030 = () => {
       comments: '95K',
       author: 'Prof. Reality Creator',
       date: '2030-01-16',
-      tags: ['Quantum', 'Reality', 'Engine', 'Creation'],
+      tags: ['Quantum'Reality'Engine'Creation'],
       featured: false,
       rating: 4.8
     }
@@ -198,7 +198,7 @@ const UltimateContentShowcase2030 = () => {
       comments: '72K',
       author: 'Dr. Neural Fusion',
       date: '2030-01-17',
-      tags: ['Neural', 'Integration', 'Human', 'AI'],
+      tags: ['Neural'Integration'Human'AI'],
       featured: true,
       rating: 4.9
     },
@@ -214,7 +214,7 @@ const UltimateContentShowcase2030 = () => {
       comments: '108K',
       author: 'Dr. Consciousness Transfer',
       date: '2030-01-14',
-      tags: ['Consciousness', 'Transfer', 'Protocol', 'Immortality'],
+      tags: ['Consciousness'Transfer'Protocol'Immortality'],
       featured: false,
       rating: 4.8
     }
@@ -233,7 +233,7 @@ const UltimateContentShowcase2030 = () => {
       comments: '156K',
       author: 'Dr. Dimensional Traveler',
       date: '2030-01-21',
-      tags: ['Dimensional', 'Gateway', 'Travel', 'Multiverse'],
+      tags: ['Dimensional'Gateway'Travel'Multiverse'],
       featured: true,
       rating: 4.9
     },
@@ -249,7 +249,7 @@ const UltimateContentShowcase2030 = () => {
       comments: '89K',
       author: 'Prof. Matter Creator',
       date: '2030-01-13',
-      tags: ['Matter', 'Synthesis', 'Universal', 'Energy'],
+      tags: ['Matter'Synthesis'Universal'Energy'],
       featured: false,
       rating: 4.7
     }
@@ -290,8 +290,8 @@ const UltimateContentShowcase2030 = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -50 }}
+          initial={{ opacity: 0y: -50 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : -50 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -308,15 +308,15 @@ const UltimateContentShowcase2030 = () => {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Experience the pinnacle of technological evolution. From transcendent AI consciousness 
-            to omniversal technology, discover innovations that transcend the boundaries of reality itself.
+            to omniversal technologydiscover innovations that transcend the boundaries of reality itself.
           </p>
         </motion.div>
 
         {/* Category Tabs */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {contentCategories.map((category) => {
@@ -342,7 +342,7 @@ const UltimateContentShowcase2030 = () => {
                   <motion.div
                     layoutId="activeTab"
                     className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl -z-10"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    transition={{ type: "spring"bounce: 0.2duration: 0.6 }}
                   />
                 )}
               </button>
@@ -354,17 +354,17 @@ const UltimateContentShowcase2030 = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: isVisible ? 1 : 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="wait">
-            {currentContent.map((item, index) => (
+            {currentContent.map((itemindex) => (
               <motion.div
                 key={`${activeTab}-${item.id}`}
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -50, scale: 0.9 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 50scale: 0.9 }}
+                animate={{ opacity: 1y: 0scale: 1 }}
+                exit={{ opacity: 0y: -50scale: 0.9 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 className={`group relative bg-white/10 backdrop-blur-lg rounded-3xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 ${
                   item.featured ? 'md:col-span-2 lg:col-span-1' : ''
                 }`}
@@ -509,9 +509,9 @@ const UltimateContentShowcase2030 = () => {
 
         {/* Load More Button */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
           <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 shadow-2xl hover:shadow-indigo-500/25">

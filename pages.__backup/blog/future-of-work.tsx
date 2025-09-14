@@ -30,7 +30,7 @@ export default function FutureOfWork() {
                 <span className="px-3 py-1 bg-yellow-400/20 text-yellow-400 text-sm rounded-full border border-yellow-400/30">
                   Future of Work
                 </span>
-                <span className="text-white/60 text-sm">January 5, 2025</span>
+                <span className="text-white/60 text-sm">January 52025</span>
                 <span className="text-white/60 text-sm">•</span>
                 <span className="text-white/60 text-sm">5 min read</span>
               </div>
@@ -48,7 +48,7 @@ export default function FutureOfWork() {
                 <h2 className="text-3xl font-bold mb-6 text-cyan-400">The Workplace Revolution</h2>
                 <p className="text-lg text-white/80 mb-6">
                   The workplace is undergoing a fundamental transformation as AI and automation technologies 
-                  become increasingly sophisticated. Rather than replacing humans, these technologies are 
+                  become increasingly sophisticated. Rather than replacing humansthese technologies are 
                   creating new collaborative models that amplify human capabilities.
                 </p>
                 <div className="bg-white/10 rounded-xl p-6 mb-6">
@@ -71,17 +71,17 @@ export default function FutureOfWork() {
                 <div className="space-y-6 mb-6">
                   <div className="bg-white/5 rounded-xl p-4">
                     <h3 className="text-lg font-semibold mb-2 text-cyan-400">1. Assistive AI</h3>
-                    <p className="text-white/70">AI systems that support human workers by providing information, 
-                    suggestions, and handling routine tasks, allowing humans to focus on higher-value work.</p>
+                    <p className="text-white/70">AI systems that support human workers by providing information
+                    suggestionsand handling routine tasksallowing humans to focus on higher-value work.</p>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4">
                     <h3 className="text-lg font-semibold mb-2 text-fuchsia-400">2. Collaborative AI</h3>
-                    <p className="text-white/70">AI systems that work alongside humans as team members, 
+                    <p className="text-white/70">AI systems that work alongside humans as team members
                     contributing to problem-solving and decision-making processes.</p>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4">
                     <h3 className="text-lg font-semibold mb-2 text-green-400">3. Augmented Intelligence</h3>
-                    <p className="text-white/70">AI systems that enhance human cognitive abilities, 
+                    <p className="text-white/70">AI systems that enhance human cognitive abilities
                     providing insights and analysis that humans can use to make better decisions.</p>
                   </div>
                 </div>
@@ -118,8 +118,8 @@ export default function FutureOfWork() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-blue-400">Benefits of Human-AI Collaboration</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  When humans and AI work together effectively, the results can be transformative, 
-                  leading to increased productivity, innovation, and job satisfaction.
+                  When humans and AI work together effectivelythe results can be transformative
+                  leading to increased productivityinnovationand job satisfaction.
                 </p>
                 <div className="bg-white/10 rounded-xl p-6">
                   <h3 className="text-xl font-semibold mb-3 text-purple-400">Collaboration Benefits:</h3>
@@ -127,7 +127,7 @@ export default function FutureOfWork() {
                     <div className="text-center">
                       <div className="text-3xl mb-2">🚀</div>
                       <h4 className="font-semibold">Increased Productivity</h4>
-                      <p className="text-sm text-white/70">AI handles routine tasks, humans focus on value creation</p>
+                      <p className="text-sm text-white/70">AI handles routine taskshumans focus on value creation</p>
                     </div>
                     <div className="text-center">
                       <div className="text-3xl mb-2">💡</div>
@@ -146,7 +146,7 @@ export default function FutureOfWork() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-purple-400">Challenges & Considerations</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  While the future of human-AI collaboration is promising, there are important challenges 
+                  While the future of human-AI collaboration is promisingthere are important challenges 
                   and considerations that organizations must address.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -203,7 +203,7 @@ export default function FutureOfWork() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">The Future Outlook</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  As we look to the future, the workplace will continue to evolve, with AI becoming 
+                  As we look to the futurethe workplace will continue to evolvewith AI becoming 
                   increasingly integrated into all aspects of work.
                 </p>
                 <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6">
@@ -232,7 +232,7 @@ export default function FutureOfWork() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-green-400">Getting Started</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  Organizations looking to embrace human-AI collaboration can start with small, 
+                  Organizations looking to embrace human-AI collaboration can start with small
                   manageable projects that demonstrate value and build momentum.
                 </p>
                 <div className="bg-white/10 rounded-xl p-6">

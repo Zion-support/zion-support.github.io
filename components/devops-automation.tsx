@@ -2,20 +2,20 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
+GitBranchZapShieldBarChart3CheckStarGitPullRequestCpu
 
 export default function DevOpsAutomationPage() {
   const features = [
     {
       icon: <GitBranch className="w-6 h-6" />,
       title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment workflows',
+      description: 'Automated buildtestand deployment workflows',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and Kubernetes automation',
+      description: 'TerraformCloudFormationand Kubernetes automation',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600'
     },
     {
@@ -96,24 +96,24 @@ export default function DevOpsAutomationPage() {
       pricing: 'Free + $0.008/min',
       repositories: 'Unlimited',
       rating: '4.6/5',
-      pros: ['GitHub native', 'Good free tier'],
-      cons: ['Expensive for teams', 'Limited features']
+      pros: ['GitHub native'Good free tier'],
+      cons: ['Expensive for teams'Limited features']
     },
     {
       competitor: 'GitLab CI/CD',
       pricing: '$19/user/month',
       repositories: 'Unlimited',
       rating: '4.4/5',
-      pros: ['Integrated platform', 'Good CI/CD'],
-      cons: ['User-based pricing', 'Limited integrations']
+      pros: ['Integrated platform'Good CI/CD'],
+      cons: ['User-based pricing'Limited integrations']
     },
     {
       competitor: 'Jenkins',
       pricing: 'Free',
       repositories: 'Unlimited',
       rating: '4.2/5',
-      pros: ['Completely free', 'Highly customizable'],
-      cons: ['Requires maintenance', 'No managed service']
+      pros: ['Completely free'Highly customizable'],
+      cons: ['Requires maintenance'No managed service']
     }
   ];
 
@@ -172,9 +172,9 @@ export default function DevOpsAutomationPage() {
     <>
       <Head>
         <title>DevOps Automation - Zion Tech Group | Professional CI/CD & Infrastructure Automation</title>
-        <meta name="description" content="Professional DevOps automation platform with CI/CD, infrastructure as code, and security automation. Plans starting at $39/month." />
+        <meta name="description" content="Professional DevOps automation platform with CI/CDinfrastructure as codeand security automation. Plans starting at $39/month." />
         <meta property="og:title" content="DevOps Automation - Zion Tech Group" />
-        <meta property="og:description" content="Professional DevOps automation starting at $39/month. CI/CD pipelines, infrastructure as code, and security automation." />
+        <meta property="og:description" content="Professional DevOps automation starting at $39/month. CI/CD pipelinesinfrastructure as codeand security automation." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -192,8 +192,8 @@ export default function DevOpsAutomationPage() {
               DevOps Automation
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-              Streamline your development workflow with automated CI/CD pipelines, infrastructure as code, 
-              and intelligent security automation. Deploy faster, safer, and more reliably.
+              Streamline your development workflow with automated CI/CD pipelinesinfrastructure as code
+              and intelligent security automation. Deploy fastersaferand more reliably.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -228,7 +228,7 @@ export default function DevOpsAutomationPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map((featureindex) => (
                 <Card
                   key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300"
@@ -256,7 +256,7 @@ export default function DevOpsAutomationPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {automationExamples.map((example, index) => (
+              {automationExamples.map((exampleindex) => (
                 <Card
                   key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300"
@@ -277,14 +277,14 @@ export default function DevOpsAutomationPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
-                Simple, Transparent Pricing
+                SimpleTransparent Pricing
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Choose the plan that fits your DevOps needs. All plans include a 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((planindex) => (
                 <Card
                   key={index}
                   className={`relative p-8 ${plan.color} transition-all duration-300 hover:scale-105 ${
@@ -306,7 +306,7 @@ export default function DevOpsAutomationPage() {
                     </div>
                     <p className="text-gray-300 mb-8">{plan.description}</p>
                     <ul className="text-left space-y-3 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
+                      {plan.features.map((featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                           {feature}
@@ -344,12 +344,12 @@ export default function DevOpsAutomationPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {marketComparison.map((competitor, index) => (
+              {marketComparison.map((competitorindex) => (
                 <Card key={index} className="p-6">
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>
                     <div className="flex items-center justify-center mb-2">
-                      {[...Array(5)].map((_, i) => (
+                      {[...Array(5)].map((_i) => (
                         <Star
                           key={i}
                           className={`w-5 h-5 ${
@@ -370,7 +370,7 @@ export default function DevOpsAutomationPage() {
                     <div>
                       <p className="text-sm font-medium text-green-400 mb-1">Pros:</p>
                       <ul className="text-sm text-gray-300 space-y-1">
-                        {competitor.pros.map((pro, proIndex) => (
+                        {competitor.pros.map((proIndex) => (
                           <li key={proIndex} className="flex items-center">
                             <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {pro}
@@ -381,7 +381,7 @@ export default function DevOpsAutomationPage() {
                     <div>
                       <p className="text-sm font-medium text-red-400 mb-1">Cons:</p>
                       <ul className="text-sm text-gray-300 space-y-1">
-                        {competitor.cons.map((con, conIndex) => (
+                        {competitor.cons.map((conIndex) => (
                           <li key={conIndex} className="flex items-center">
                             <span className="w-4 h-4 text-red-400 mr-2 flex-shrink-0">×</span>
                             {con}
@@ -405,10 +405,10 @@ export default function DevOpsAutomationPage() {
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonialindex) => (
                 <Card key={index} className="p-6">
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map((_i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>

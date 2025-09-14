@@ -19,12 +19,12 @@ import { SocialShareSection } from "@/components/SocialShareSection";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
 import { 
-  ArrowRight, 
-  Users, 
-  Zap, 
-  Settings, 
+  ArrowRight
+  Users
+  Zap
+  Settings
   Search,
-  MessageSquare, 
+  MessageSquare
   Sparkles,
   BarChart3,
   Smartphone
@@ -98,7 +98,7 @@ export default function Index() {
           </div>
           
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
-            {toolsFeatures.map((feature, index) => (
+            {toolsFeatures.map((featureindex) => (
               <Link 
                 key={index} 
                 to={feature.link} 

@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+"use client";
+import React{ useEffectuseRef } from 'react';
 import { motion } from 'framer-motion';
 
 export default function UltraFuturisticBackground2035() {
@@ -16,7 +17,7 @@ export default function UltraFuturisticBackground2035() {
     canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
     canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
     if (ctx) {
-      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+      ctx.scale(window.devicePixelRatio || 1);
     }
 
     let animationFrameId: number;
@@ -43,16 +44,16 @@ export default function UltraFuturisticBackground2035() {
           vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4,
           size: Math.random() * (isSmallScreen ? 1.5 : 2) + 0.8,
           opacity: Math.random() * 0.35 + 0.08,
-          color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][Math.floor(Math.random() * 4)]
+          color: ['#8b5cf6'#06b6d4'#ec4899'#10b981'][Math.floor(Math.random() * 4)]
         });
       }
     };
 
     // Update and draw particles
     const updateParticles = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0canvas.widthcanvas.height);
 
-      particles.forEach((particle, index) => {
+      particles.forEach((particleindex) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
@@ -64,7 +65,7 @@ export default function UltraFuturisticBackground2035() {
 
         // Draw particle
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.arc(particle.xparticle.yparticle.size0Math.PI * 2);
         ctx.fillStyle = particle.color;
         ctx.globalAlpha = particle.opacity;
         ctx.fill();
@@ -72,7 +73,7 @@ export default function UltraFuturisticBackground2035() {
         // Draw connections
         const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140);
         if (maxDistance > 0) {
-          particles.forEach((otherParticle, otherIndex) => {
+          particles.forEach((otherParticleotherIndex) => {
             if (index !== otherIndex) {
               const dx = particle.x - otherParticle.x;
               const dy = particle.y - otherParticle.y;
@@ -80,8 +81,8 @@ export default function UltraFuturisticBackground2035() {
 
               if (distance < maxDistance) {
                 ctx.beginPath();
-                ctx.moveTo(particle.x, particle.y);
-                ctx.lineTo(otherParticle.x, otherParticle.y);
+                ctx.moveTo(particle.xparticle.y);
+                ctx.lineTo(otherParticle.xotherParticle.y);
                 ctx.strokeStyle = particle.color;
                 ctx.globalAlpha = (maxDistance - distance) / maxDistance * 0.08;
                 ctx.lineWidth = 1;
@@ -104,21 +105,21 @@ export default function UltraFuturisticBackground2035() {
       canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
       canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
       if (ctx) {
-        ctx.setTransform(1, 0, 0, 1, 0, 0);
-        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+        ctx.setTransform(1010);
+        ctx.scale(window.devicePixelRatio || 1);
       }
       initParticles();
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize'handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize'handleResize);
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }
     };
-  }, []);
+  }[]);
 
   return (
     <>
@@ -126,7 +127,7 @@ export default function UltraFuturisticBackground2035() {
       <canvas
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'radial-gradient(ellipse at center, rgba(139,92,246,0.04) 0%, rgba(0,0,0,0) 70%)' }}
+        style={{ background: 'radial-gradient(ellipse at centergba(139,92,246,0.04) 0%rgba(0,0,0,0) 70%)' }}
       />
 
       {/* Animated Background Elements */}
@@ -135,9 +136,9 @@ export default function UltraFuturisticBackground2035() {
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-purple-500/15 rounded-full"
           animate={{
-            scale: [1, 1.15, 1],
-            rotate: [0, 180, 360],
-            opacity: [0.22, 0.45, 0.22]
+            scale: [1.151],
+            rotate: [0180360],
+            opacity: [0.220.450.22]
           }}
           transition={{
             duration: 8,
@@ -149,9 +150,9 @@ export default function UltraFuturisticBackground2035() {
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transform rotate-45"
           animate={{
-            scale: [1, 1.3, 1],
-            rotate: [45, 225, 405],
-            opacity: [0.2, 0.5, 0.2]
+            scale: [1.31],
+            rotate: [45225405],
+            opacity: [0.20.50.2]
           }}
           transition={{
             duration: 10,
@@ -163,9 +164,9 @@ export default function UltraFuturisticBackground2035() {
         <motion.div
           className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 rounded-full"
           animate={{
-            scale: [1, 1.4, 1],
-            y: [0, -20, 0],
-            opacity: [0.4, 0.7, 0.4]
+            scale: [1.41],
+            y: [0-20],
+            opacity: [0.40.70.4]
           }}
           transition={{
             duration: 12,
@@ -183,15 +184,15 @@ export default function UltraFuturisticBackground2035() {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)
+              linear-gradient(rgba(139,92,246,0.3) 1pxtransparent 1px),
+              linear-gradient(90degrgba(139,92,246,0.3) 1pxtransparent 1px)
             `,
             backgroundSize: '50px 50px'
           }} />
         </div>
 
         {/* Floating Particles */}
-        {[...Array(20)].map((_, i) => (
+        {[...Array(20)].map((_i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-purple-400 rounded-full"
@@ -200,9 +201,9 @@ export default function UltraFuturisticBackground2035() {
               top: `${Math.random() * 100}%`
             }}
             animate={{
-              y: [0, -30, 0],
-              opacity: [0, 1, 0],
-              scale: [0, 1, 0]
+              y: [0-30],
+              opacity: [010],
+              scale: [010]
             }}
             transition={{
               duration: 3 + Math.random() * 2,
@@ -217,8 +218,8 @@ export default function UltraFuturisticBackground2035() {
         <motion.div
           className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"
           animate={{
-            scaleX: [0, 1, 0],
-            opacity: [0, 1, 0]
+            scaleX: [010],
+            opacity: [010]
           }}
           transition={{
             duration: 4,
@@ -230,8 +231,8 @@ export default function UltraFuturisticBackground2035() {
         <motion.div
           className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"
           animate={{
-            scaleX: [0, 1, 0],
-            opacity: [0, 1, 0]
+            scaleX: [010],
+            opacity: [010]
           }}
           transition={{
             duration: 4,
@@ -242,7 +243,7 @@ export default function UltraFuturisticBackground2035() {
         />
 
         {/* Quantum Dots */}
-        {[...Array(15)].map((_, i) => (
+        {[...Array(15)].map((_i) => (
           <motion.div
             key={`quantum-${i}`}
             className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"
@@ -251,9 +252,9 @@ export default function UltraFuturisticBackground2035() {
               top: `${Math.random() * 100}%`
             }}
             animate={{
-              scale: [0, 1, 0],
-              opacity: [0, 0.8, 0],
-              rotate: [0, 360]
+              scale: [010],
+              opacity: [0.80],
+              rotate: [0360]
             }}
             transition={{
               duration: 5 + Math.random() * 3,
@@ -274,7 +275,7 @@ export default function UltraFuturisticBackground2035() {
             </linearGradient>
           </defs>
           
-          {[...Array(8)].map((_, i) => (
+          {[...Array(8)].map((_i) => (
             <motion.circle
               key={`neural-${i}`}
               cx={`${20 + (i * 10)}%`}
@@ -282,8 +283,8 @@ export default function UltraFuturisticBackground2035() {
               r="3"
               fill="url(#neuralGradient)"
               animate={{
-                r: [3, 6, 3],
-                opacity: [0.3, 0.8, 0.3]
+                r: [363],
+                opacity: [0.30.80.3]
               }}
               transition={{
                 duration: 4,
@@ -300,9 +301,9 @@ export default function UltraFuturisticBackground2035() {
           <motion.div
             className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full"
             animate={{
-              scale: [1, 1.1, 1],
-              rotate: [0, 90, 180, 270, 360],
-              opacity: [0.1, 0.3, 0.1]
+              scale: [1.1],
+              rotate: [090180270360],
+              opacity: [0.10.30.1]
             }}
             transition={{
               duration: 20,
@@ -314,9 +315,9 @@ export default function UltraFuturisticBackground2035() {
           <motion.div
             className="absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 rounded-full"
             animate={{
-              scale: [1, 1.2, 1],
-              rotate: [360, 270, 180, 90, 0],
-              opacity: [0.1, 0.4, 0.1]
+              scale: [1.21],
+              rotate: [36027018090],
+              opacity: [0.10.40.1]
             }}
             transition={{
               duration: 15,
@@ -328,7 +329,7 @@ export default function UltraFuturisticBackground2035() {
 
         {/* Data Streams */}
         <div className="absolute right-0 top-0 w-32 h-full opacity-30">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(20)].map((_i) => (
             <motion.div
               key={`stream-${i}`}
               className="absolute w-1 h-8 bg-gradient-to-b from-purple-400 to-transparent"
@@ -337,8 +338,8 @@ export default function UltraFuturisticBackground2035() {
                 top: `${i * 5}%`
               }}
               animate={{
-                height: [8, 32, 8],
-                opacity: [0.3, 1, 0.3]
+                height: [8328],
+                opacity: [0.310.3]
               }}
               transition={{
                 duration: 2 + Math.random() * 2,

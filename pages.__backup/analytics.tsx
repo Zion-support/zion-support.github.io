@@ -35,33 +35,33 @@ const Analytics = () => {
   ];
 
   const trafficSources = [
-    { source: 'Organic Search', percentage: 45, change: '+5.2%' },
-    { source: 'Direct Traffic', percentage: 28, change: '+2.1%' },
-    { source: 'Social Media', percentage: 15, change: '+8.7%' },
-    { source: 'Referral', percentage: 8, change: '-1.3%' },
-    { source: 'Email', percentage: 4, change: '+12.4%' }
+    { source: 'Organic Search'percentage: 45change: '+5.2%' },
+    { source: 'Direct Traffic'percentage: 28change: '+2.1%' },
+    { source: 'Social Media'percentage: 15change: '+8.7%' },
+    { source: 'Referral'percentage: 8change: '-1.3%' },
+    { source: 'Email'percentage: 4change: '+12.4%' }
   ];
 
   const topPages = [
-    { page: '/', views: '324K', change: '+8.2%' },
-    { page: '/services', views: '156K', change: '+12.4%' },
-    { page: '/about', views: '98K', change: '+5.7%' },
-    { page: '/automation', views: '87K', change: '+18.9%' },
-    { page: '/reports', views: '76K', change: '+22.1%' }
+    { page: '/'views: '324K'change: '+8.2%' },
+    { page: '/services'views: '156K'change: '+12.4%' },
+    { page: '/about'views: '98K'change: '+5.7%' },
+    { page: '/automation'views: '87K'change: '+18.9%' },
+    { page: '/reports'views: '76K'change: '+22.1%' }
   ];
 
   const geographicData = [
-    { country: 'United States', visitors: '45.2%', change: '+3.1%' },
-    { country: 'United Kingdom', visitors: '18.7%', change: '+1.8%' },
-    { country: 'Germany', visitors: '12.3%', change: '+2.4%' },
-    { country: 'Canada', visitors: '8.9%', change: '+0.9%' },
-    { country: 'Australia', visitors: '6.2%', change: '+1.2%' }
+    { country: 'United States'visitors: '45.2%'change: '+3.1%' },
+    { country: 'United Kingdom'visitors: '18.7%'change: '+1.8%' },
+    { country: 'Germany'visitors: '12.3%'change: '+2.4%' },
+    { country: 'Canada'visitors: '8.9%'change: '+0.9%' },
+    { country: 'Australia'visitors: '6.2%'change: '+1.2%' }
   ];
 
   const deviceBreakdown = [
-    { device: 'Desktop', percentage: 58, change: '+2.1%' },
-    { device: 'Mobile', percentage: 35, change: '+4.7%' },
-    { device: 'Tablet', percentage: 7, change: '-1.2%' }
+    { device: 'Desktop'percentage: 58change: '+2.1%' },
+    { device: 'Mobile'percentage: 35change: '+4.7%' },
+    { device: 'Tablet'percentage: 7change: '-1.2%' }
   ];
 
   return (
@@ -69,7 +69,7 @@ const Analytics = () => {
       <Head>
         <title>Analytics - bolt.new.zion.app</title>
         <meta name="description" content="Comprehensive analytics and insights for bolt.new.zion.app" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-widthinitial-scale=1" />
       </Head>
 
       <div className="container mx-auto px-4 py-8">
@@ -88,7 +88,7 @@ const Analytics = () => {
 
         {/* Key Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {keyMetrics.map((metric, index) => (
+          {keyMetrics.map((metricindex) => (
             <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20 backdrop-blur-xl">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold text-indigo-300">{metric.title}</h3>
@@ -111,7 +111,7 @@ const Analytics = () => {
         <div className="bg-white/10 rounded-xl p-6 border border-white/20 backdrop-blur-xl mb-8">
           <h2 className="text-2xl font-bold mb-6 text-indigo-300">Traffic Sources</h2>
           <div className="space-y-4">
-            {trafficSources.map((source, index) => (
+            {trafficSources.map((sourceindex) => (
               <div key={index} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/10">
                 <div className="flex items-center space-x-4">
                   <div className="w-4 h-4 bg-gradient-to-r from-indigo-400 to-cyan-400 rounded-full"></div>
@@ -134,7 +134,7 @@ const Analytics = () => {
           <div className="bg-white/10 rounded-xl p-6 border border-white/20 backdrop-blur-xl">
             <h2 className="text-2xl font-bold mb-6 text-indigo-300">Top Pages</h2>
             <div className="space-y-4">
-              {topPages.map((page, index) => (
+              {topPages.map((pageindex) => (
                 <div key={index} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/10">
                   <div>
                     <div className="font-medium text-white">{page.page}</div>
@@ -149,7 +149,7 @@ const Analytics = () => {
           <div className="bg-white/10 rounded-xl p-6 border border-white/20 backdrop-blur-xl">
             <h2 className="text-2xl font-bold mb-6 text-indigo-300">Geographic Distribution</h2>
             <div className="space-y-4">
-              {geographicData.map((geo, index) => (
+              {geographicData.map((geoindex) => (
                 <div key={index} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/10">
                   <div>
                     <div className="font-medium text-white">{geo.country}</div>
@@ -166,7 +166,7 @@ const Analytics = () => {
         <div className="bg-white/10 rounded-xl p-6 border border-white/20 backdrop-blur-xl mb-8">
           <h2 className="text-2xl font-bold mb-6 text-indigo-300">Device Breakdown</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {deviceBreakdown.map((device, index) => (
+            {deviceBreakdown.map((deviceindex) => (
               <div key={index} className="text-center p-6 bg-white/5 rounded-lg border border-white/10">
                 <div className="text-3xl font-bold text-white mb-2">{device.percentage}%</div>
                 <div className="text-lg font-semibold text-indigo-300 mb-2">{device.device}</div>

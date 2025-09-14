@@ -6,7 +6,7 @@ interface TalentDirectoryHeaderProps {
   description: string;
 }
 
-export function TalentDirectoryHeader({ title, description }: TalentDirectoryHeaderProps) {
+export function TalentDirectoryHeader({ titledescription }: TalentDirectoryHeaderProps) {
   return (
     <div className="bg-zion-blue-dark border-b border-zion-blue-light">
       <div className="container mx-auto px-4 py-8 md:py-12">

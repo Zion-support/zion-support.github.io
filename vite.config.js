@@ -4,6 +4,11 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': '/workspace/src'
+    }
+  },
   plugins: [
     react({
       babel: {
@@ -24,7 +29,6 @@ export default defineConfig({
       registerType: 'autoUpdate',
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,avif}'],
-        globIgnores: ['**/reports/**/*', '**/node_modules/**/*'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
         runtimeCaching: [
           {
@@ -68,8 +72,10 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          utils: ['axios', 'framer-motion'],
-          charts: ['recharts']
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
+          utils: ['axios', 'framer-motion', 'clsx', 'tailwind-merge'],
+          charts: ['recharts'],
+          forms: ['react-hook-form', '@hookform/resolvers']
         },
       },
     },

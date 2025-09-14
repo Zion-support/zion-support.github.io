@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Quantum Neural Network Platform - Zion Tech Group",
   description: "Revolutionary quantum neural network platform that combines quantum computing with artificial intelligence to solve previously intractable problems.",
-  keywords: "quantum neural networks, quantum computing, AI, machine learning, quantum machine learning, Zion Tech Group",
+  keywords: "quantum neural networksquantum computingAImachine learningquantum machine learningZion Tech Group",
 };
 
 export default function QuantumNeuralNetworkPlatformPage() {
@@ -14,7 +14,7 @@ import Link from "next/link",;
 export const metadata = {;
   title: "Quantum Neural Network Platform - Zion Tech Group",;
   description: "Revolutionary quantum neural network platform that combines quantum computing with artificial intelligence to solve previously intractable problems.";
-  keywords: "quantum neural networks, quantum computing, AI, machine learning, quantum machine learning, Zion Tech Group"};
+  keywords: "quantum neural networksquantum computingAImachine learningquantum machine learningZion Tech Group"};
 export default function QuantumNeuralNetworkPlatformPage() {;
   return (;
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
@@ -37,12 +37,12 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               <h2 className="text-3xl font-bold mb-6">Quantum Advantage in AI</h2>
               <p className="text-lg text-gray-300 mb-6">
                 Our Quantum Neural Network Platform represents a paradigm shift in computational capabilities. 
-                By harnessing quantum superposition and entanglement, we can process exponentially more information 
+                By harnessing quantum superposition and entanglementwe can process exponentially more information 
                 than classical computers.
               </p>
               <p className="text-lg text-gray-300 mb-8">
-                This platform is designed for researchers, enterprises, and innovators who need to tackle problems 
-                in drug discovery, financial modeling, climate prediction, and beyond.
+                This platform is designed for researchersenterprisesand innovators who need to tackle problems 
+                in drug discoveryfinancial modelingclimate predictionand beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="btn-primary">
@@ -151,7 +151,7 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               </div>
               <h3 className="text-xl font-semibold mb-3">Real Quantum Hardware</h3>
               <p className="text-gray-400 mb-4">
-                Access to real quantum computers from leading providers including IBM, Google, and our own quantum systems.
+                Access to real quantum computers from leading providers including IBMGoogleand our own quantum systems.
               </p>
             </div>
 
@@ -164,7 +164,7 @@ export default function QuantumNeuralNetworkPlatformPage() {;
               </div>
               <h3 className="text-xl font-semibold mb-3">Advanced Analytics</h3>
               <p className="text-gray-400 mb-4">
-                Comprehensive analytics dashboard with performance metrics, optimization insights, and result visualization.
+                Comprehensive analytics dashboard with performance metricsoptimization insightsand result visualization.
               </p>
             </div>
           </div>
@@ -193,7 +193,7 @@ export default function QuantumNeuralNetworkPlatformPage() {;
             <div className="card bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-purple-500/30">
               <h3 className="text-2xl font-bold mb-4">Financial Modeling</h3>
               <p className="text-gray-300 mb-4">
-                Revolutionize risk assessment, portfolio optimization, and market prediction with quantum-enhanced 
+                Revolutionize risk assessmentportfolio optimizationand market prediction with quantum-enhanced 
                 financial algorithms.
               </p>
               <ul className="text-sm text-gray-400 space-y-1">

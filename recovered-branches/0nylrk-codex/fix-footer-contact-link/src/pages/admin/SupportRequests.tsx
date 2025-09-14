@@ -1,13 +1,13 @@
 
-import React, { useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import React{ useState } from "react";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
+import { TableBodyTableCellTableHeaderTableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Search, Filter } from "lucide-react";
+import { SearchFilter } from "lucide-react";
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
 
@@ -53,7 +53,7 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "API integration documentation is outdated",
     status: "open",
     priority: "low",
-    createdAt: "2023-12-13T16:45:00Z", 
+    createdAt: "2023-12-13T16:45:00Z"
     lastUpdated: "2023-12-13T16:45:00Z",
     category: "api"
   },
@@ -93,10 +93,10 @@ const MOCK_SUPPORT_REQUESTS = [
 ];
 
 export default function SupportRequests() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState<string | null>(null);
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+  const [searchQuerysetSearchQuery] = useState("");
+  const [statusFiltersetStatusFilter] = useState<string | null>(null);
+  const [priorityFiltersetPriorityFilter] = useState<string | null>(null);
+  const [categoryFiltersetCategoryFilter] = useState<string | null>(null);
   
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
@@ -208,7 +208,7 @@ export default function SupportRequests() {
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <Input
-                  placeholder="Search by ID, user or issue..."
+                  placeholder="Search by IDuser or issue..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"

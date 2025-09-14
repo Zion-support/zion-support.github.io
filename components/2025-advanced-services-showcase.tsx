@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import {
-  Search, List, Star, CheckCircle, ArrowRight, Check,
-  Brain, Shield, Building, Globe,
-  Users, TrendingUp, Award, Phone, Mail, MapPin
+  SearchListStarCheckCircleArrowRightCheck,
+  BrainShieldBuildingGlobe,
+  UsersTrendingUpAwardPhoneMailMapPin
 } from 'lucide-react';
 
 // Import our new service data
@@ -91,10 +92,10 @@ const getServiceFeatures = (service: any) => {
 
 
 export default function AdvancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [filteredServices, setFilteredServices] = useState(allServices);
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [searchTermsetSearchTerm] = useState('');
+  const [viewModesetViewMode] = useState<'grid' | 'list'>('grid');
+  const [filteredServicesetFilteredServices] = useState(allServices);
 
   useEffect(() => {
     let filtered = allServices;
@@ -123,12 +124,12 @@ export default function AdvancedServicesShowcase() {
     }
 
     setFilteredServices(filtered);
-  }, [selectedCategory, searchTerm]);
+  }[selectedCategorysearchTerm]);
 
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0y: 20 }}
+      animate={{ opacity: 1y: 0 }}
       transition={{ duration: 0.5 }}
       className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
         service.popular ? 'ring-2 ring-blue-500' : ''
@@ -189,7 +190,7 @@ export default function AdvancedServicesShowcase() {
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
           <div className="space-y-1">
-            {getServiceFeatures(service).slice(0, 3).map((feature: string, index: number) => (
+            {getServiceFeatures(service).slice(03).map((feature: stringindex: number) => (
               <div key={index} className="flex items-center gap-2">
                 <Check className="w-3 h-3 text-green-500" />
                 <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
@@ -239,8 +240,8 @@ export default function AdvancedServicesShowcase() {
 
   const ServiceList = ({ service }: { service: any }) => (
     <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0x: -20 }}
+      animate={{ opacity: 1x: 0 }}
       transition={{ duration: 0.5 }}
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
         service.popular ? 'ring-2 ring-blue-500' : ''
@@ -303,7 +304,7 @@ export default function AdvancedServicesShowcase() {
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
                 <div className="space-y-1">
-                  {getServiceFeatures(service).slice(0, 4).map((feature: string, index: number) => (
+                  {getServiceFeatures(service).slice(04).map((feature: stringindex: number) => (
                     <div key={index} className="flex items-center gap-2">
                       <Check className="w-3 h-3 text-green-500" />
                       <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
@@ -351,8 +352,8 @@ export default function AdvancedServicesShowcase() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <SEO 
         title="2025 Advanced Services Showcase - Zion Tech Group"
-        description="Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses."
-        keywords="AI services, micro SAAS, IT infrastructure, quantum computing, enterprise solutions, Zion Tech Group"
+        description="Discover our comprehensive portfolio of advanced AI servicesmicro SAAS solutionsand cutting-edge IT infrastructure. Realinnovativeand market-ready solutions for modern businesses."
+        keywords="AI servicesmicro SAASIT infrastructurequantum computingenterprise solutionsZion Tech Group"
       />
       
       {/* Hero Section */}
@@ -361,26 +362,26 @@ export default function AdvancedServicesShowcase() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold text-white mb-6"
             >
               2025 Advanced Services Showcase
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.2 }}
               className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
             >
-              Discover our comprehensive portfolio of real, innovative, and market-ready solutions. 
+              Discover our comprehensive portfolio of realinnovativeand market-ready solutions. 
               From AI-powered enterprise services to cutting-edge quantum computing platforms.
             </motion.p>
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <div className="flex items-center gap-2 text-white">

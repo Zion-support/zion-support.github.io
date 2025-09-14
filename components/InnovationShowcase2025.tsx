@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const InnovationShowcase2025 = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+  const [activeTabsetActiveTab] = useState('ai');
 
   const innovations = {
     ai: [
@@ -10,21 +11,21 @@ const InnovationShowcase2025 = () => {
         title: "Autonomous AI Systems",
         description: "Self-managing AI that operates independently with 99.9% accuracy",
         icon: "🤖",
-        features: ["Self-healing algorithms", "Predictive maintenance", "Real-time optimization"],
+        features: ["Self-healing algorithms"Predictive maintenance"Real-time optimization"],
         roi: "2,500%"
       },
       {
         title: "Neural Consciousness Integration",
         description: "Advanced AI with consciousness-like decision making capabilities",
         icon: "🧠",
-        features: ["Emotional intelligence", "Creative problem solving", "Ethical reasoning"],
+        features: ["Emotional intelligence"Creative problem solving"Ethical reasoning"],
         roi: "3,000%"
       },
       {
         title: "Quantum-Enhanced AI",
         description: "AI systems powered by quantum computing for unprecedented speed",
         icon: "⚛️",
-        features: ["Quantum algorithms", "Parallel processing", "Complex optimization"],
+        features: ["Quantum algorithms"Parallel processing"Complex optimization"],
         roi: "5,000%"
       }
     ],
@@ -33,21 +34,21 @@ const InnovationShowcase2025 = () => {
         title: "Error-Corrected Quantum Computers",
         description: "Stable quantum computing systems for enterprise applications",
         icon: "🔬",
-        features: ["Fault tolerance", "Scalable architecture", "Real-world applications"],
+        features: ["Fault tolerance"Scalable architecture"Real-world applications"],
         roi: "4,000%"
       },
       {
         title: "Quantum Machine Learning",
         description: "ML algorithms running on quantum hardware for superior performance",
         icon: "🧮",
-        features: ["Quantum neural networks", "Exponential speedup", "Pattern recognition"],
+        features: ["Quantum neural networks"Exponential speedup"Pattern recognition"],
         roi: "6,000%"
       },
       {
         title: "Quantum Security Solutions",
         description: "Unbreakable encryption and secure communication systems",
         icon: "🔐",
-        features: ["Quantum key distribution", "Post-quantum cryptography", "Secure protocols"],
+        features: ["Quantum key distribution"Post-quantum cryptography"Secure protocols"],
         roi: "3,500%"
       }
     ],
@@ -56,21 +57,21 @@ const InnovationShowcase2025 = () => {
         title: "Autonomous Business Operations",
         description: "Complete business process automation with minimal human intervention",
         icon: "⚙️",
-        features: ["End-to-end automation", "Intelligent workflows", "Self-optimization"],
+        features: ["End-to-end automation"Intelligent workflows"Self-optimization"],
         roi: "2,800%"
       },
       {
         title: "Predictive Enterprise Systems",
         description: "AI systems that predict and prevent business issues before they occur",
         icon: "📊",
-        features: ["Predictive analytics", "Risk mitigation", "Proactive solutions"],
+        features: ["Predictive analytics"Risk mitigation"Proactive solutions"],
         roi: "3,200%"
       },
       {
         title: "Intelligent Process Automation",
         description: "Smart automation that learns and adapts to business needs",
         icon: "🔄",
-        features: ["Adaptive algorithms", "Continuous learning", "Dynamic optimization"],
+        features: ["Adaptive algorithms"Continuous learning"Dynamic optimization"],
         roi: "2,600%"
       }
     ]
@@ -128,7 +129,7 @@ const InnovationShowcase2025 = () => {
 
         {/* Innovation Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {innovations[activeTab].map((innovation, index) => (
+          {innovations[activeTab].map((innovationindex) => (
             <div
               key={index}
               className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100 hover:border-blue-200"
@@ -147,7 +148,7 @@ const InnovationShowcase2025 = () => {
               </div>
 
               <div className="space-y-3">
-                {innovation.features.map((feature, featureIndex) => (
+                {innovation.features.map((featureIndex) => (
                   <div key={featureIndex} className="flex items-center">
                     <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />

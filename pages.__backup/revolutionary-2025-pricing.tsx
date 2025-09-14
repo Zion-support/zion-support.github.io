@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
+StarZapShieldUsersGlobeArrowRightExternalLinkTrendingUpClockTargetBuildingRocketAwardDollarSignChartBarLockCpuDatabaseCloudSmartphonePaletteSearchMessageSquareFileTextCalendarCreditCardBarChart3SettingsCodeBookOpenActivityPlayMailPhoneMapPinFilterGridListChevronDownChevronUpSparklesFlaskConicalDnaCarLeafFactoryTruckMicroscopeGraduationCapShieldCheckBrainAtomGlobe2BotChevronRightCrownInfinityCheckXAlertTriangleInfoZap as ZapIconShield as ShieldIconUsers as UsersIconGlobe as GlobeIconCpu as CpuIconDatabase as DatabaseIconCloud as CloudIconSmartphone as SmartphoneIconPalette as PaletteIconSearch as SearchIconMessageSquare as MessageSquareIconFileText as FileTextIconCalendar as CalendarIconCreditCard as CreditCardIconBarChart3 as BarChart3IconSettings as SettingsIconCode as CodeIconBookOpen as BookIconActivity as ActivityIconDatabase as DatabaseIcon2Play as PlayIconMail as MailIconPhone as PhoneIconMapPin as MapPinIconFilter as FilterIconGrid as GridIconList as ListIconChevronDown as ChevronDownIconChevronUp as ChevronUpIconSparkles as SparklesIconFlaskConical as FlaskConicalIconDna as DnaIconCar as CarIconLeaf as LeafIconFactory as FactoryIconTruck as TruckIconMicroscope as MicroscopeIconGraduationCap as GraduationCapIconShieldCheck as ShieldCheckIconBrain as BrainIconAtom as AtomIconGlobe2 as Globe2IconBot as BotIconChevronRight as ChevronRightIconEyeHeartShare2DownloadBookmarkThumbsUpMessageCircleShareUsers as UsersIcon2Target as TargetZap as ZapIcon2
 
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
@@ -10,8 +10,8 @@ import { revolutionaryITInfrastructure2025Services } from '../data/revolutionary
 import { revolutionary2025MicroSaasServices } from '../data/revolutionary-2025-micro-saas';
 
 export default function Revolutionary2025Pricing() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [billingCyclesetBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [selectedCategorysetSelectedCategory] = useState<string>('all');
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -29,10 +29,10 @@ export default function Revolutionary2025Pricing() {
 
   // Service categories
   const serviceCategories = [
-    { id: 'all', name: 'All Services', icon: Sparkles, count: allRevolutionaryServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: revolutionaryAI2025Services.length },
-    { id: 'infrastructure', name: 'IT Infrastructure', icon: Cpu, count: revolutionaryITInfrastructure2025Services.length },
-          { id: 'saas', name: 'Micro SaaS', icon: Zap, count: revolutionary2025MicroSaasServices.length }
+    { id: 'all'name: 'All Services'icon: Sparklescount: allRevolutionaryServices.length },
+    { id: 'ai'name: 'AI & Machine Learning'icon: Braincount: revolutionaryAI2025Services.length },
+    { id: 'infrastructure'name: 'IT Infrastructure'icon: Cpucount: revolutionaryITInfrastructure2025Services.length },
+          { id: 'saas'name: 'Micro SaaS'icon: Zapcount: revolutionary2025MicroSaasServices.length }
   ];
 
   // Filter services based on selected category
@@ -47,7 +47,7 @@ export default function Revolutionary2025Pricing() {
 
   // Calculate pricing with billing cycle
   const getPrice = (service: any) => {
-    const basePrice = parseInt(service.price.replace('$', '').replace(',', ''));
+    const basePrice = parseInt(service.price.replace('$'').replace(',''));
     if (billingCycle === 'yearly') {
       return Math.floor(basePrice * 0.8); // 20% discount for yearly
     }
@@ -145,12 +145,12 @@ export default function Revolutionary2025Pricing() {
       <div className="min-h-screen">
         <Head>
           <title>Revolutionary 2025 Pricing - Zion Tech Group | Competitive AI & IT Solutions</title>
-          <meta name="description" content="Explore competitive pricing for Zion Tech Group's revolutionary 2025 services. AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="AI pricing, quantum computing pricing, zero trust security pricing, edge computing pricing, 5G pricing, neuromorphic computing pricing, AI branding pricing, holographic events pricing" />
+          <meta name="description" content="Explore competitive pricing for Zion Tech Group's revolutionary 2025 services. AI consciousness simulationquantum computingzero trust securityand innovative micro SaaS solutions. Contact: +1 302 464 0950" />
+          <meta name="keywords" content="AI pricingquantum computing pricingzero trust security pricingedge computing pricing5G pricingneuromorphic computing pricingAI branding pricingholographic events pricing" />
           <meta name="author" content="Zion Tech Group" />
-          <meta name="robots" content="index, follow" />
+          <meta name="robots" content="indexfollow" />
           <meta property="og:title" content="Revolutionary 2025 Pricing - Zion Tech Group" />
-          <meta property="og:description" content="Competitive pricing for cutting-edge AI, quantum computing, and IT infrastructure services. Contact: +1 302 464 0950" />
+          <meta property="og:description" content="Competitive pricing for cutting-edge AIquantum computingand IT infrastructure services. Contact: +1 302 464 0950" />
           <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2025-pricing" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2025-pricing" />
@@ -162,8 +162,8 @@ export default function Revolutionary2025Pricing() {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
@@ -195,49 +195,49 @@ export default function Revolutionary2025Pricing() {
               {/* Market Analysis */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.1 }} className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30">
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  transition={{ duration: 0.6delay: 0.1 }} className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30">
                   <div className="text-2xl font-bold text-blue-400">{marketAnalysis.totalMarketSize}</div>
                   <div className="text-xs text-gray-400">Market Size</div>
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.2 }} className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-4 border border-green-500/30">
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  transition={{ duration: 0.6delay: 0.2 }} className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-4 border border-green-500/30">
                   <div className="text-2xl font-bold text-green-400">{marketAnalysis.growthRate}</div>
                   <div className="text-xs text-gray-400">Growth Rate</div>
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.3 }} className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/30">
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  transition={{ duration: 0.6delay: 0.3 }} className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/30">
                   <div className="text-2xl font-bold text-purple-400">{marketAnalysis.customerSatisfaction}</div>
                   <div className="text-xs text-gray-400">Satisfaction</div>
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.4 }} className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-500/30">
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  transition={{ duration: 0.6delay: 0.4 }} className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-500/30">
                   <div className="text-2xl font-bold text-orange-400">{marketAnalysis.averageROI}</div>
                   <div className="text-xs text-gray-400">Average ROI</div>
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.5 }} className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-4 border border-cyan-500/30">
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  transition={{ duration: 0.6delay: 0.5 }} className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-4 border border-cyan-500/30">
                   <div className="text-2xl font-bold text-cyan-400">{marketAnalysis.timeToValue}</div>
                   <div className="text-xs text-gray-400">Time to Value</div>
                 </motion.div>
                 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.6 }} className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30">
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  transition={{ duration: 0.6delay: 0.6 }} className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30">
                   <div className="text-2xl font-bold text-pink-400">{marketAnalysis.globalReach}</div>
                   <div className="text-xs text-gray-400">Global Reach</div>
                 </motion.div>
@@ -250,8 +250,8 @@ export default function Revolutionary2025Pricing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -264,12 +264,12 @@ export default function Revolutionary2025Pricing() {
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
+              {pricingTiers.map((tierindex) => (
                 <motion.div
                   key={tier.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.2 }}
                   viewport={{ once: true }}
                   className={`relative ${
                     tier.popular 
@@ -305,7 +305,7 @@ export default function Revolutionary2025Pricing() {
                   </div>
 
                   <ul className="space-y-4 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
+                    {tier.features.map((featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
@@ -326,8 +326,8 @@ export default function Revolutionary2025Pricing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -365,9 +365,9 @@ export default function Revolutionary2025Pricing() {
               {filteredServices.map((service) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.5delay: 0.1 }}
                   viewport={{ once: true }} className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105">
                   {/* Service Header */}
                   <div className="flex items-start justify-between mb-4">
@@ -410,7 +410,7 @@ export default function Revolutionary2025Pricing() {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                     <div className="grid grid-cols-1 gap-1">
-                      {service.features.slice(0, 3).map((feature, idx) => (
+                      {service.features.slice(03).map((featureidx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
                           <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
                           {feature}
@@ -453,8 +453,8 @@ export default function Revolutionary2025Pricing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -507,8 +507,8 @@ export default function Revolutionary2025Pricing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

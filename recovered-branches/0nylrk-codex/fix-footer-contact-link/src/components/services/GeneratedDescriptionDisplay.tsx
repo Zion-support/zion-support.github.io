@@ -1,10 +1,10 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { CardContentCardHeaderCardTitleCardFooter } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
-import { Check, Pencil } from "lucide-react";
+import { CheckPencil } from "lucide-react";
 
 interface GeneratedDescriptionDisplayProps {
   description: string;
@@ -12,12 +12,12 @@ interface GeneratedDescriptionDisplayProps {
 }
 
 export function GeneratedDescriptionDisplay({ 
-  description, 
+  description
   onSave 
 }: GeneratedDescriptionDisplayProps) {
   const { toast } = useToast();
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedDescription, setEditedDescription] = useState(description);
+  const [isEditingsetIsEditing] = useState(false);
+  const [editedDescriptionsetEditedDescription] = useState(description);
 
   const handleSave = () => {
     onSave(editedDescription);

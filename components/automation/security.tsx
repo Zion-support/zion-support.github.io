@@ -14,12 +14,12 @@ type Props = { report: AuditReport };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd(), 'public', 'automation', 'security-audit.json');
-    const raw = fs.readFileSync(file, 'utf8');
+    const file = path.join(process.cwd()'public'automation'security-audit.json');
+    const raw = fs.readFileSync(file'utf8');
     const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 86400 };
+    return { props: { report: data }revalidate: 86400 };
   } catch {
-    return { props: { report: { error: 'No audit report yet.' } }, revalidate: 86400 };
+    return { props: { report: { error: 'No audit report yet.' } }revalidate: 86400 };
   }
 };
 
@@ -35,7 +35,7 @@ export default function SecurityAudit({ report }: Props) {
         <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
       )}
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">
-{JSON.stringify(report, null, 2)}
+{JSON.stringify(reportnull2)}
       </pre>
     </div>
   );

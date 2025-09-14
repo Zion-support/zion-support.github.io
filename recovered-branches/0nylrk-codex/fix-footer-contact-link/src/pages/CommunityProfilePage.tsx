@@ -1,15 +1,15 @@
 
-import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useStateuseEffect } from "react";
+import { useParamsLink } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { formatDistanceToNow } from "date-fns";
-import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community";
+import { CommunityUserForumPostBadge as BadgeType } from "@/types/community";
 import PostCard from "@/components/community/PostCard";
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
@@ -61,7 +61,7 @@ const userPosts: ForumPost[] = [
     authorAvatar: "https://i.pravatar.cc/150?img=3",
     authorRole: "Verified Talent",
     categoryId: "ai-tools",
-    tags: ["machine-learning", "fine-tuning", "gpt"],
+    tags: ["machine-learning"fine-tuning"gpt"],
     createdAt: "2025-04-01T12:00:00Z",
     updatedAt: "2025-04-01T12:00:00Z",
     upvotes: 48,
@@ -73,13 +73,13 @@ const userPosts: ForumPost[] = [
   {
     id: "11",
     title: "How to structure an AI prompt for best results",
-    content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...",
+    content: "After experimenting with different prompt formatsI've found these patterns to work consistently better...",
     authorId: "user1",
     authorName: "Alex Johnson",
     authorAvatar: "https://i.pravatar.cc/150?img=3",
     authorRole: "Verified Talent",
     categoryId: "ai-tools",
-    tags: ["prompts", "techniques", "optimization"],
+    tags: ["prompts"techniques"optimization"],
     createdAt: "2025-03-20T14:25:00Z",
     updatedAt: "2025-03-20T14:25:00Z",
     upvotes: 36,
@@ -95,7 +95,7 @@ const userPosts: ForumPost[] = [
     authorAvatar: "https://i.pravatar.cc/150?img=3",
     authorRole: "Verified Talent",
     categoryId: "project-help",
-    tags: ["monitoring", "production", "devops"],
+    tags: ["monitoring"production"devops"],
     createdAt: "2025-03-12T09:30:00Z",
     updatedAt: "2025-03-12T09:30:00Z",
     upvotes: 24,
@@ -106,17 +106,17 @@ const userPosts: ForumPost[] = [
 
 export default function CommunityProfilePage() {
   const { userId } = useParams();
-  const [user, setUser] = useState<CommunityUser | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [posts, setPosts] = useState<ForumPost[]>([]);
+  const [usersetUser] = useState<CommunityUser | null>(null);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [postsetPosts] = useState<ForumPost[]>([]);
   
   useEffect(() => {
-    // In a real app, we would fetch the user data here
-    // For now, we'll just use the mock data
+    // In a real appwe would fetch the user data here
+    // For nowe'll just use the mock data
     setUser(mockUser);
     setPosts(userPosts);
     setIsLoading(false);
-  }, [userId]);
+  }[userId]);
   
   if (isLoading) {
     return (
@@ -147,8 +147,8 @@ export default function CommunityProfilePage() {
     <AppLayout>
       <SEO 
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
-        description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
-        keywords={`community, forum, profile, user profile, ${user.name}`}
+        description={`View ${user.name}'s profilepostsand contributions in the Zion AI Marketplace community.`}
+        keywords={`communityforumprofileuser profile${user.name}`}
       />
       
       <div className="container py-8">
@@ -258,7 +258,7 @@ export default function CommunityProfilePage() {
                     <ul className="space-y-4">
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"){ addSuffix: true })}
                         </div>
                         <div>
                           <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover:underline">Looking for feedback on my automated testing approach</Link></p>
@@ -266,7 +266,7 @@ export default function CommunityProfilePage() {
                       </li>
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-08T09:15:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-04-08T09:15:00Z"){ addSuffix: true })}
                         </div>
                         <div>
                           <p>Earned badge <span className="font-medium">Top Contributor</span></p>
@@ -274,7 +274,7 @@ export default function CommunityProfilePage() {
                       </li>
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-05T16:40:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-04-05T16:40:00Z"){ addSuffix: true })}
                         </div>
                         <div>
                           <p>Replied to <Link to="/community/post/7" className="text-zion-purple hover:underline">Comparing different vector embedding models</Link></p>
@@ -282,7 +282,7 @@ export default function CommunityProfilePage() {
                       </li>
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-01T12:00:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-04-01T12:00:00Z"){ addSuffix: true })}
                         </div>
                         <div>
                           <p>Created post <Link to="/community/post/1" className="text-zion-purple hover:underline">Best practices for AI model fine-tuning</Link></p>
@@ -290,7 +290,7 @@ export default function CommunityProfilePage() {
                       </li>
                       <li className="flex items-start gap-4">
                         <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
+                          {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"){ addSuffix: true })}
                         </div>
                         <div>
                           <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover:underline">How to optimize RAG systems for better results</Link></p>

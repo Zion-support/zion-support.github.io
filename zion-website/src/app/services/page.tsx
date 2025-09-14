@@ -44,7 +44,7 @@ const professional_services = [;
     duration: '2 - 4 weeks'},
   {
     name: 'AI Maintenance & Support',
-    description: 'Continuous monitoring, optimization, and support for your AI solutions.',
+    description: 'Continuous monitoringoptimizationand support for your AI solutions.',
     icon: ShieldCheckIcon,
     features: [;
       '24 / 7 MonitoringPerformance OptimizationSecurity UpdatesTechnical Support';
@@ -63,7 +63,7 @@ const service_process = [;
   {
     step: '01'
     title: 'Discovery & Assessment'
-    description: 'We begin by understanding your business challenges, current technology stack, and AI objectives.'
+    description: 'We begin by understanding your business challengescurrent technology stackand AI objectives.'
     icon: LightBulbIcon}
   {
     step: '02'
@@ -84,7 +84,7 @@ const service_process = [;
 
     step: '05',
     title: 'Ongoing Support',
-    description: 'Continuous monitoring, optimization, and support to ensure lasting success.',
+    description: 'Continuous monitoringoptimizationand support to ensure lasting success.',
     icon: ShieldCheckIcon}];
 const reasonsToChoose = [;
   {
@@ -114,7 +114,7 @@ const reasonsToChoose = [;
 
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              From strategy to implementation, our comprehensive AI services help you navigate 
+              From strategy to implementationour comprehensive AI services help you navigate 
 
 
               the complexities of artificial intelligence and achieve transformative results.
@@ -171,7 +171,7 @@ const reasonsToChoose = [;
               </span>;
             </h1>;
             <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-              From strategy to implementation, our comprehensive AI services help you navigate;
+              From strategy to implementationour comprehensive AI services help you navigate;
               the complexities of artificial intelligence and achieve transformative results.;
             </p>;
           </div>;
@@ -233,7 +233,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
               </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              From strategy to implementation, our comprehensive AI services help you navigate 
+              From strategy to implementationour comprehensive AI services help you navigate 
               the complexities of artificial intelligence and achieve transformative results.
             </p>
           </div>
@@ -302,7 +302,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>
         <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
           <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5&quot;>
-            {serviceProcess.map((step, index) => (
+            {serviceProcess.map((stepindex) => (
               <div key={step.step} className=&quot;relative&quot;>
                 {index < serviceProcess.length - 1 && (
                   <div className=&quot;hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700&quot;></div>
@@ -330,7 +330,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
         <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
           <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 5&quot;>;
-            {service_process.map ((step, index) => (
+            {service_process.map ((stepindex) => (
               <div key={step.step} className=&quot;relative & quot;>;
                 {index < service_process.length - 1 && (
                   <div className=&quot;hidden lg:block absolute top - 8 left - 8 w - full h - 0.5 bg - gray - 700 & quot;></div>)}
@@ -356,7 +356,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5">
-            {serviceProcess.map((step, index) => (
+            {serviceProcess.map((stepindex) => (
               <div key={step.step} className="relative">
                 {index < serviceProcess.length - 1 && (
                   <div className="hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700"></div>

@@ -13,7 +13,7 @@ export default function ComprehensiveContentShowcase() {
             Your Complete AI Knowledge Hub
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Access our extensive library of AI insights, case studies, implementation guides, 
+            Access our extensive library of AI insightscase studiesimplementation guides
             and tools designed to accelerate your organization's AI transformation journey.
           </p>
         </div>
@@ -121,7 +121,7 @@ export default function ComprehensiveContentShowcase() {
               <h3 className="text-2xl font-bold text-gray-900">Implementation Guides</h3>
             </div>
             <p className="text-gray-600 mb-6">
-              Step-by-step guides, templates, and tools to successfully implement AI across your organization.
+              Step-by-step guidestemplatesand tools to successfully implement AI across your organization.
             </p>
             <div className="space-y-4">
               <Link href="/resources/ai-2025-enterprise-implementation-guide" className="block group">

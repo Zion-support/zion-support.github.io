@@ -1,24 +1,24 @@
 
 import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
+import { BriefcaseHardDriveLightbulbUsers } from "lucide-react";
 
 const categories = [
   {
     title: "Services",
-    description: "On-demand IT support, consulting, development, and more",
+    description: "On-demand IT supportconsultingdevelopmentand more",
     icon: <Briefcase className="w-10 h-10" />,
     link: "/services",
     color: "from-purple-500 to-indigo-600"},
   {
     title: "Talents",
-    description: "Connect with AI experts, developers, and tech specialists",
+    description: "Connect with AI expertsdevelopersand tech specialists",
     icon: <Users className="w-10 h-10" />,
     link: "/talent",
     color: "from-cyan-500 to-blue-600"},
   {
     title: "Equipment",
-    description: "Rent or buy specialized hardware, servers, and devices",
+    description: "Rent or buy specialized hardwareserversand devices",
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
     color: "from-amber-500 to-orange-600"},
@@ -48,7 +48,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           <div className="text-center mb-16">
             <GradientHeading>Explore Categories</GradientHeading>
             <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
+              Discover our comprehensive ecosystem of tech servicestalentequipmentand innovation
             </p>
           </div>
         )}

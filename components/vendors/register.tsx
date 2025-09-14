@@ -1,8 +1,9 @@
-import { FormEvent, useState } from 'react';
+"use client";
+import { FormEventuseState } from 'react';
 
 export default function VendorRegisterPage() {
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState<string | null>(null);
+  const [loadingsetLoading] = useState(false);
+  const [messagesetMessage] = useState<string | null>(null);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -12,7 +13,7 @@ export default function VendorRegisterPage() {
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
     try {
-      const res = await fetch('/api/vendors/register', {
+      const res = await fetch('/api/vendors/register'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -55,7 +56,7 @@ export default function VendorRegisterPage() {
         </div>
         <div>
           <label className="block text-sm mb-1">Services Offered</label>
-          <input name="servicesOffered" placeholder="AI prototyping, Data labeling, MLOps" className="w-full border rounded px-3 py-2 bg-transparent" />
+          <input name="servicesOffered" placeholder="AI prototypingData labelingMLOps" className="w-full border rounded px-3 py-2 bg-transparent" />
         </div>
         <div>
           <label className="block text-sm mb-1">Team Size</label>
@@ -66,7 +67,7 @@ export default function VendorRegisterPage() {
           <textarea name="about" rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />
         </div>
         <div>
-          <label className="block text-sm mb-1">Verification Docs (URLs, comma-separated)</label>
+          <label className="block text-sm mb-1">Verification Docs (URLscomma-separated)</label>
           <input name="verificationDocs" className="w-full border rounded px-3 py-2 bg-transparent" />
         </div>
         <button disabled={loading} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">

@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallbackuseState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Button } from './ui/button';
 import { Progress } from './ui/progress';
@@ -14,10 +14,10 @@ interface UploadReport {
 }
 
 export function DropzoneBulkUpload() {
-  const [file, setFile] = useState<File | null>(null);
-  const [progress, setProgress] = useState(0);
-  const [report, setReport] = useState<UploadReport | null>(null);
-  const [errorUrl, setErrorUrl] = useState<string | null>(null);
+  const [filesetFile] = useState<File | null>(null);
+  const [progressetProgress] = useState(0);
+  const [reportsetReport] = useState<UploadReport | null>(null);
+  const [errorUrlsetErrorUrl] = useState<string | null>(null);
 
   const onDrop = useCallback((accepted: File[]) => {
     if (accepted.length) {
@@ -25,9 +25,9 @@ export function DropzoneBulkUpload() {
       setReport(null);
       setErrorUrl(null);
     }
-  }, []);
+  }[]);
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+  const { getRootPropsgetInputPropsisDragActive } = useDropzone({
     onDrop,
     accept: { 'text/csv': ['.csv'] }});
 
@@ -35,17 +35,17 @@ export function DropzoneBulkUpload() {
     if (!file) return;
     setProgress(10);
     const formData = new FormData();
-    formData.append('file', file);
+    formData.append('file'file);
     try {
-      const res = await fetch('/products/bulk-upload', {
+      const res = await fetch('/products/bulk-upload'{
         method: 'POST',
         body: formData});
       setProgress(70);
       const data = await res.json();
       setReport(data);
       if (data.errors && data.errors.length) {
-        const csv = ['row,error', ...data.errors.map((e: UploadError) => `${e.row},"${e.error}"`)].join('\n');
-        const blob = new Blob([csv], { type: 'text/csv' });
+        const csv = ['row,error'...data.errors.map((e: UploadError) => `${e.row},"${e.error}"`)].join('\n');
+        const blob = new Blob([csv]{ type: 'text/csv' });
         setErrorUrl(URL.createObjectURL(blob));
       }
     } catch (err) {
@@ -66,7 +66,7 @@ export function DropzoneBulkUpload() {
         {isDragActive ? (
           <p>Drop the CSV here...</p>
         ) : (
-          <p>Drag and drop CSV file here, or click to select file</p>
+          <p>Drag and drop CSV file hereor click to select file</p>
         )}
       </div>
       {file && <p className="text-sm">Selected: {file.name}</p>}

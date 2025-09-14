@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React{ useStateuseEffectuseCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
@@ -18,11 +18,11 @@ interface JobPostingFormProps {
   onSuccess?: () => void;
 }
 
-export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
+export function JobPostingForm({ jobIdonSuccess }: JobPostingFormProps) {
   const navigate = useNavigate();
-  const { createJob, updateJob, getJobById } = useJobs();
-  const [isFormLoading, setIsFormLoading] = useState(false);
-  const [editorContent, setEditorContent] = useState("");
+  const { createJobupdateJobgetJobById } = useJobs();
+  const [isFormLoadingsetIsFormLoading] = useState(false);
+  const [editorContentsetEditorContent] = useState("");
   
   const {
     form,
@@ -34,9 +34,9 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
     isRemote,
     setIsRemote,
     submitJob
-  } = useJobForm({ jobId, onSuccess });
+  } = useJobForm({ jobIdonSuccess });
 
-  const { handleSubmit, setValue, formState } = form;
+  const { handleSubmitsetValueformState } = form;
   const { isSubmitting } = formState;
 
   useEffect(() => {
@@ -46,22 +46,22 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
         .then((job) => {
           if (job) {
             // Set form values
-            Object.entries(job).forEach(([key, value]) => {
+            Object.entries(job).forEach(([keyvalue]) => {
               if (key === 'published_date' && value) {
                 setStartDate(new Date(value as string));
-                setValue('published_date', value as string);
+                setValue('published_date'value as string);
               } else if (key === 'expiry_date' && value) {
                 setEndDate(new Date(value as string));
-                setValue('expiry_date', value as string);
+                setValue('expiry_date'value as string);
               } else if (key === 'is_remote') {
                 setIsRemote(value as boolean);
               } else if (key === 'description') {
                 setEditorContent(value as string);
-                setValue('description', value as string);
+                setValue('description'value as string);
               } else {
                 try {
                   // @ts-ignore - We know these fields exist in our form
-                  setValue(key, value as any);
+                  setValue(keyvalue as any);
                 } catch (e) {
                   // Skip fields that don't exist in our form
                 }
@@ -70,19 +70,19 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
           }
         })
         .catch((error) => {
-          console.error("Failed to load job:", error);
+          console.error("Failed to load job:"error);
           toast.error("Failed to load job");
         })
         .finally(() => {
           setIsFormLoading(false);
         });
     }
-  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]);
+  }[jobIdgetJobByIdsetValuesetStartDatesetEndDatesetIsRemote]);
 
   const handleEditorChange = useCallback((value: string) => {
     setEditorContent(value);
-    setValue('description', value);
-  }, [setValue]);
+    setValue('description'value);
+  }[setValue]);
 
   const onSubmit = async (values: JobSchemaType) => {
     setIsFormLoading(true);
@@ -91,7 +91,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
       const jobData = await submitJob(values);
       
       if (jobId) {
-        await updateJob(jobId, jobData);
+        await updateJob(jobIdjobData);
         toast.success("Job updated successfully!");
       } else {
         await createJob(jobData);
@@ -104,7 +104,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
         onSuccess();
       }
     } catch (error: any) {
-      console.error("Error creating/updating job:", error);
+      console.error("Error creating/updating job:"error);
       toast.error(error.message || "Failed to post job");
     } finally {
       setIsFormLoading(false);

@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Settings, 
-  Code, 
-  Database, 
-  Cpu, 
+  Play
+  Pause
+  RotateCcw
+  Settings
+  Code
+  Database
+  Cpu
   Network,
   Zap,
   Shield,
@@ -36,13 +37,13 @@ import {
 } from 'lucide-react';
 
 const InteractiveTechShowcase2025 = () => {
-  const [activeDemo, setActiveDemo] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeDemosetActiveDemo] = useState(0);
+  const [isPlayingsetIsPlaying] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const demos = [
     {
@@ -60,10 +61,10 @@ const InteractiveTechShowcase2025 = () => {
         'Dynamic Performance Tuning'
       ],
       metrics: [
-        { label: 'Process Speed', value: '10x Faster', trend: '+850%' },
-        { label: 'Accuracy', value: '99.7%', trend: '+15%' },
-        { label: 'Cost Savings', value: '$2.3M', trend: '+340%' },
-        { label: 'Uptime', value: '99.9%', trend: '+25%' }
+        { label: 'Process Speed'value: '10x Faster'trend: '+850%' },
+        { label: 'Accuracy'value: '99.7%'trend: '+15%' },
+        { label: 'Cost Savings'value: '$2.3M'trend: '+340%' },
+        { label: 'Uptime'value: '99.9%'trend: '+25%' }
       ],
       simulation: {
         steps: [
@@ -92,10 +93,10 @@ const InteractiveTechShowcase2025 = () => {
         'Incident Forensics'
       ],
       metrics: [
-        { label: 'Threats Blocked', value: '15,847', trend: '+95%' },
-        { label: 'Detection Time', value: '<2 seconds', trend: '-80%' },
-        { label: 'False Positives', value: '0.1%', trend: '-90%' },
-        { label: 'System Uptime', value: '99.99%', trend: '+12%' }
+        { label: 'Threats Blocked'value: '15,847'trend: '+95%' },
+        { label: 'Detection Time'value: '<2 seconds'trend: '-80%' },
+        { label: 'False Positives'value: '0.1%'trend: '-90%' },
+        { label: 'System Uptime'value: '99.99%'trend: '+12%' }
       ],
       simulation: {
         steps: [
@@ -124,10 +125,10 @@ const InteractiveTechShowcase2025 = () => {
         'Disaster Recovery'
       ],
       metrics: [
-        { label: 'Performance Gain', value: '8x', trend: '+700%' },
-        { label: 'Cost Reduction', value: '45%', trend: '+60%' },
-        { label: 'Response Time', value: '50ms', trend: '-85%' },
-        { label: 'Availability', value: '99.99%', trend: '+18%' }
+        { label: 'Performance Gain'value: '8x'trend: '+700%' },
+        { label: 'Cost Reduction'value: '45%'trend: '+60%' },
+        { label: 'Response Time'value: '50ms'trend: '-85%' },
+        { label: 'Availability'value: '99.99%'trend: '+18%' }
       ],
       simulation: {
         steps: [
@@ -156,10 +157,10 @@ const InteractiveTechShowcase2025 = () => {
         'Business Intelligence'
       ],
       metrics: [
-        { label: 'Data Processed', value: '1.2M/sec', trend: '+500%' },
-        { label: 'Insight Accuracy', value: '98.5%', trend: '+22%' },
-        { label: 'Query Speed', value: '0.3s', trend: '-95%' },
-        { label: 'Storage Efficiency', value: '85%', trend: '+40%' }
+        { label: 'Data Processed'value: '1.2M/sec'trend: '+500%' },
+        { label: 'Insight Accuracy'value: '98.5%'trend: '+22%' },
+        { label: 'Query Speed'value: '0.3s'trend: '-95%' },
+        { label: 'Storage Efficiency'value: '85%'trend: '+40%' }
       ],
       simulation: {
         steps: [
@@ -175,19 +176,19 @@ const InteractiveTechShowcase2025 = () => {
     }
   ];
 
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStepsetCurrentStep] = useState(0);
 
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
         setCurrentStep(prev => (prev + 1) % demos[activeDemo].simulation.steps.length);
-      }, 2000);
+      }2000);
       return () => clearInterval(interval);
     }
-  }, [isPlaying, activeDemo, demos]);
+  }[isPlayingactiveDemodemos]);
 
   const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -199,7 +200,7 @@ const InteractiveTechShowcase2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -241,14 +242,14 @@ const InteractiveTechShowcase2025 = () => {
             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             Watch our AI systems work in real-time. See how our revolutionary technology 
-            transforms data, optimizes processes, and delivers unprecedented results.
+            transforms dataoptimizes processesand delivers unprecedented results.
           </motion.p>
         </motion.div>
 
         {/* Demo Selector */}
         <motion.div variants={itemVariants} className="mb-12">
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {demos.map((demo, index) => {
+            {demos.map((demoindex) => {
               const Icon = demo.icon;
               return (
                 <button
@@ -296,9 +297,9 @@ const InteractiveTechShowcase2025 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeDemo}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              exit={{ opacity: 0y: -20 }}
               transition={{ duration: 0.5 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >
@@ -322,7 +323,7 @@ const InteractiveTechShowcase2025 = () => {
                           <span>System Status: {isPlaying ? 'Running' : 'Paused'}</span>
                         </div>
                         <div className="space-y-1">
-                          {demos[activeDemo].simulation.steps.map((step, index) => (
+                          {demos[activeDemo].simulation.steps.map((stepindex) => (
                             <div
                               key={index}
                               className={`flex items-center gap-2 ${
@@ -346,7 +347,7 @@ const InteractiveTechShowcase2025 = () => {
 
                     {/* Metrics Display */}
                     <div className="grid grid-cols-2 gap-4">
-                      {demos[activeDemo].metrics.map((metric, index) => (
+                      {demos[activeDemo].metrics.map((metricindex) => (
                         <div key={index} className="bg-white/5 rounded-lg p-3">
                           <div className="text-2xl font-bold text-white">{metric.value}</div>
                           <div className="text-sm text-gray-400">{metric.label}</div>
@@ -364,7 +365,7 @@ const InteractiveTechShowcase2025 = () => {
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <div className={`p-3 rounded-xl bg-gradient-to-r ${demos[activeDemo].color}`}>
-                      {React.createElement(demos[activeDemo].icon, { className: "w-8 h-8 text-white" })}
+                      {React.createElement(demos[activeDemo].icon{ className: "w-8 h-8 text-white" })}
                     </div>
                     <div>
                       <h3 className="text-3xl font-bold text-white mb-2">
@@ -379,7 +380,7 @@ const InteractiveTechShowcase2025 = () => {
                   <div className="space-y-4">
                     <h4 className="text-xl font-semibold text-white">Key Features:</h4>
                     <div className="grid grid-cols-1 gap-3">
-                      {demos[activeDemo].features.map((feature, index) => (
+                      {demos[activeDemo].features.map((featureindex) => (
                         <div key={index} className="flex items-center gap-3">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-gray-300">{feature}</span>
@@ -391,7 +392,7 @@ const InteractiveTechShowcase2025 = () => {
                   <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-purple-500/20">
                     <h4 className="text-lg font-semibold text-white mb-4">Real-Time Performance</h4>
                     <div className="space-y-3">
-                      {demos[activeDemo].metrics.map((metric, index) => (
+                      {demos[activeDemo].metrics.map((metricindex) => (
                         <div key={index} className="flex justify-between items-center">
                           <span className="text-gray-300">{metric.label}</span>
                           <div className="flex items-center gap-2">

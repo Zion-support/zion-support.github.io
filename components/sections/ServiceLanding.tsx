@@ -37,7 +37,7 @@ export default function ServiceLanding({
 
         {features.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h3 className="text-lg font-semibold text-white mb-3">
                   {feature}

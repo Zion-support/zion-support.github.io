@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useState, useEffect, useRef } from 'react';
 
@@ -57,7 +57,7 @@ const UltimateAIAssistant2026: React.FC = () => {
   ];
 
   const sampleResponses = [
-    "I'd be happy to help you with AI implementation! Based on your question, I can provide comprehensive guidance on strategy, technology selection, and best practices.",
+    "I'd be happy to help you with AI implementation! Based on your questionI can provide comprehensive guidance on strategytechnology selectionand best practices.",
     "Great question! Let me break down the key considerations for your AI project and provide specific recommendations tailored to your needs.",
     "I can help you explore various AI solutions and their potential impact on your business. Let me gather some relevant information for you.",
     "That's an excellent starting point! I'll provide you with a detailed roadmap and actionable steps to get started with your AI journey."
@@ -69,7 +69,7 @@ const UltimateAIAssistant2026: React.FC = () => {
       const welcomeMessage: Message = {
         id: '1',
         type: 'assistant',
-        content: "Hello! I'm your AI assistant for 2026. I can help you with AI implementation, technology recommendations, ROI calculations, and much more. How can I assist you today?",
+        content: "Hello! I'm your AI assistant for 2026. I can help you with AI implementationtechnology recommendationsROI calculationsand much more. How can I assist you today?",
         timestamp: new Date()
       };
       setMessages([welcomeMessage]);
@@ -90,7 +90,7 @@ const UltimateAIAssistant2026: React.FC = () => {
       timestamp: new Date()
     };
 
-    setMessages(prev => [...prev, userMessage]);
+    setMessages(prev => [...prevuserMessage]);
     setInputValue('');
     setIsTyping(true);
 
