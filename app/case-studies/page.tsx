@@ -229,41 +229,6 @@ const CaseStudiesPage = () => {
                       Read Full Case Study →
                     </Link>
                   </div>
-                  
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                    {study.title}
-                  </h3>
-                  
-                  <div className="mb-6">
-                    <p className="text-lg text-gray-600 mb-2">
-                      <span className="font-semibold">Client:</span> {study.client}
-                    </p>
-                    <p className="text-lg text-gray-600 mb-2">
-                      <span className="font-semibold">Challenge:</span> {study.challenge}
-                    </p>
-                    <p className="text-lg text-gray-600 mb-4">
-                      <span className="font-semibold">Solution:</span> {study.solution}
-                    </p>
-                  </div>
-                  
-                  <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">Key Results</h4>
-                    <div className="grid grid-cols-2 gap-4">
-                      {Object.entries(study.metrics).map(([key, value], metricIndex) => (
-                        <div key={metricIndex} className="text-center">
-                          <div className="text-2xl font-bold text-emerald-600">{value}</div>
-                          <div className="text-sm text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <Link
-                    href={`/case-studies/${study.slug}`}
-                    className="inline-flex items-center bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
-                  >
-                    Read Full Case Study →
-                  </Link>
                 </div>
               </div>
             ))}

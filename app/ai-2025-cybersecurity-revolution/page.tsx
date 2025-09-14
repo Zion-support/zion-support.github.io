@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function AICybersecurity2025Page() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="AI 2025 Cybersecurity Revolution: The Ultimate Protection Guide"
         description="Discover how AI is revolutionizing cybersecurity in 2025. Learn about advanced threat detection, automated response systems, and next-generation security solutions."
@@ -232,6 +232,6 @@ export default function AICybersecurity2025Page() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }
