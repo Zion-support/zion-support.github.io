@@ -40,9 +40,6 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 // Import new promotional components
 import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
-
-// Import new 2026 promotional components
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
 
@@ -51,7 +48,6 @@ import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
-import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
 
 // Import new AI 2026 promotional components
 import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
@@ -63,36 +59,12 @@ import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase
 // Import new promotional components
 import RevolutionaryAI2026ContentBanner from '../components/RevolutionaryAI2026ContentBanner';
 import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
-<<<<<<< HEAD
-
-// Import new 2025 quantum AI promotional components
-import QuantumAIRevolutionBanner2025 from '../components/QuantumAIRevolutionBanner2025';
-import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
-import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
-=======
-import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
-import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-
-// Import additional promotional components
-import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
-import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
-import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
-import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
-
-// Import new AI 2026 promotional components
-import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
-import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
-import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
 
 // Import new 2025 content promotional components
 import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
->>>>>>> origin/main
 
 // Import new 2026 ultimate promotional components
 import AI2026QuantumRevolutionUltimateBanner from '../components/AI2026QuantumRevolutionUltimateBanner';
-import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
 import RevolutionaryAIContent2026Banner from '../components/RevolutionaryAIContent2026Banner';
 
 export const metadata = {
