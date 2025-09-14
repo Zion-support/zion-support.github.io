@@ -133,6 +133,57 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
+    - id: "ai-2025-enterprise-automation-revolution-ultimate-guide"
+      type: "blog"
+      title: "AI 2025: The Enterprise Automation Revolution - Ultimate Guide"
+      file_path: "/content/blog/ai-2025-enterprise-automation-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-enterprise-automation-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Automation", "Enterprise", "ROI", "Business Transformation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        savings: "$200M"
+        efficiency: "95%"
+        timeline: "8 months"
+      reading_time: "18 min read"
+      
+    - id: "fortune-500-ai-automation-success-500-roi"
+      type: "case-study"
+      title: "Fortune 500 AI Automation Success: 500% ROI in 8 Months"
+      file_path: "/content/case-studies/fortune-500-ai-automation-success-500-roi.md"
+      url: "/case-studies/fortune-500-ai-automation-success-500-roi"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "AI Automation", "ROI", "Manufacturing", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        savings: "$200M"
+        efficiency: "95%"
+        satisfaction: "99.8%"
+      reading_time: "12 min read"
+      
+    - id: "ai-automation-implementation-master-guide-2025"
+      type: "resource"
+      title: "AI Automation Implementation Master Guide 2025: From Strategy to 500% ROI"
+      file_path: "/content/resources/ai-automation-implementation-master-guide-2025.md"
+      url: "/resources/ai-automation-implementation-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Automation", "Strategy", "ROI", "Best Practices", "Framework", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        success: "98%"
+        timeline: "8 months"
+        projects: "500+"
+      reading_time: "15 min read"
+      
     - id: "ai-2025-neural-interfaces-business-revolution-ultimate-guide"
       type: "blog"
       title: "AI 2025: The Neural Interfaces Business Revolution - Ultimate Enterprise Guide"
