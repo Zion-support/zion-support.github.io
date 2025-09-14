@@ -71,6 +71,10 @@ import QuantumAIRevolutionBanner2025 from '../components/QuantumAIRevolutionBann
 import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
 
+// Import new neural interface promotional components
+import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRevolutionBanner2025';
+import NeuralInterfaceContentShowcase2025 from '../components/NeuralInterfaceContentShowcase2025';
+
 // Import new 2026 ultimate promotional components
 import AI2026QuantumRevolutionUltimateBanner from '../components/AI2026QuantumRevolutionUltimateBanner';
 import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
@@ -101,6 +105,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Neural Interface Revolution Banner 2025 - NEW FEATURED */}
+        <NeuralInterfaceRevolutionBanner2025 />
+        
+        {/* Neural Interface Content Showcase 2025 - NEW FEATURED */}
+        <NeuralInterfaceContentShowcase2025 />
+        
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
         
