@@ -1,18 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
 import { VitePWA } from 'vite-plugin-pwa';
 import path from 'path';
 
-export default defineConfig({
-  plugins: [
+export default defineConfig(async ({ mode }) => {
+  const plugins = [
     react(),
-    visualizer({
-      filename: 'dist/stats.html',
-      open: true,
-      gzipSize: true,
-      brotliSize: true,
-    }),
     VitePWA({
       registerType: 'autoUpdate',
       workbox: {
@@ -54,32 +47,54 @@ export default defineConfig({
         ]
       }
     })
-  ],
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
-          utils: ['axios', 'framer-motion', 'clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          forms: ['react-hook-form', '@hookform/resolvers']
+  ];
+
+  // Only add visualizer plugin in development mode or when ANALYZE is true
+  if (mode === 'development' || process.env.ANALYZE === 'true') {
+    try {
+      const { visualizer } = await import('rollup-plugin-visualizer');
+      plugins.push(visualizer({
+        filename: 'dist/stats.html',
+        open: true,
+        gzipSize: true,
+        brotliSize: true,
+      }));
+    } catch (error) {
+      console.warn('rollup-plugin-visualizer not available, skipping bundle analysis');
+    }
+  }
+
+  return {
+    plugins,
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ['react', 'react-dom'],
+            ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
+            utils: ['axios', 'framer-motion', 'clsx', 'tailwind-merge'],
+            charts: ['recharts'],
+            forms: ['react-hook-form', '@hookform/resolvers']
+          },
         },
       },
-    },
-    chunkSizeWarningLimit: 1000,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info'],
-        passes: 2
+      chunkSizeWarningLimit: 1000,
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+          pure_funcs: ['console.log', 'console.info'],
+          passes: 2
+        },
+        mangle: {
+          safari10: true
+        }
       },
-      mangle: {
-        safari10: true
-      }
+      sourcemap: false,
+      reportCompressedSize: true
     },
+<<<<<<< HEAD
     sourcemap: false,
     reportCompressedSize: true
   },
@@ -111,4 +126,20 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   }
+=======
+    server: {
+      hmr: true,
+      port: 3000,
+      host: true
+    },
+    preview: {
+      port: 3000,
+      host: true
+    },
+    optimizeDeps: {
+      include: ['react', 'react-dom', 'framer-motion'],
+      exclude: ['@vite/client', '@vite/env']
+    }
+  };
+>>>>>>> origin/cursor/build-vite-project-with-missing-dependency-a2d7
 });

@@ -835,7 +835,11 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
+<<<<<<< HEAD
 "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.23.2", "@babel/runtime@^7.23.9", "@babel/runtime@^7.26.7":
+=======
+"@babel/runtime@^7.11.2", "@babel/runtime@^7.13.10", "@babel/runtime@^7.23.2", "@babel/runtime@^7.23.9", "@babel/runtime@^7.26.7":
+>>>>>>> origin/cursor/build-vite-project-with-missing-dependency-a2d7
   version "7.28.4"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.28.4.tgz"
   integrity sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==
@@ -3049,6 +3053,7 @@
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/js-cookie@^3.0.6":
   version "3.0.6"
   resolved "https://registry.npmjs.org/@types/js-cookie/-/js-cookie-3.0.6.tgz"
@@ -3056,6 +3061,8 @@
 
 =======
 >>>>>>> origin/cursor/build-vite-project-with-missing-dependency-e03a
+=======
+>>>>>>> origin/cursor/build-vite-project-with-missing-dependency-a2d7
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
