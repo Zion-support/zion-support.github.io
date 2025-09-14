@@ -58,55 +58,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
-    // New blog posts
+    // New AI 2025 Content
     {
-<<<<<<< HEAD
-      url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
-=======
-      url: `${baseUrl}/blog/ai-2025-enterprise-integration-revolution`,
->>>>>>> origin/main
+      url: `${baseUrl}/blog/ai-2025-edge-computing-revolution-enterprise-transformation`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-<<<<<<< HEAD
-      url: `${baseUrl}/blog/quantum-ai-2026-business-revolution`,
-=======
-      url: `${baseUrl}/blog/ai-2025-smart-automation-breakthrough`,
->>>>>>> origin/main
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    // New resources
-    {
-<<<<<<< HEAD
-      url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
-=======
-      url: `${baseUrl}/blog/ai-2025-data-intelligence-revolution`,
->>>>>>> origin/main
+      url: `${baseUrl}/blog/quantum-ai-breakthrough-2025-next-generation-autonomy`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/case-studies/global-manufacturing-ai-transformation`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/case-studies/financial-services-ai-revolution`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/resources/ai-implementation-guide-2025`,
+      url: `${baseUrl}/case-studies/global-logistics-ai-transformation-2025-ultimate-success`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
-    }
+    },
+    {
+      url: `${baseUrl}/resources/ai-2025-implementation-master-guide-ultimate-roadmap`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
   ]
 }

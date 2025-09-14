@@ -2,6 +2,71 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 <<<<<<< HEAD
+import { ArrowLeft, Calendar, Clock, User, CheckCircle, AlertCircle, Star, Download } from 'lucide-react';
+import SEO from '../../../components/SEO';
+
+export const metadata: Metadata = {
+  title: 'AI Implementation Checklist 2025: Complete Guide to Success | Zion Tech Group',
+  description: 'The definitive checklist for AI implementation in 2025. Ensure your AI transformation succeeds with this comprehensive step-by-step guide.',
+  keywords: ['AI Implementation', 'Checklist', 'Guide', 'Best Practices', '2025', 'AI Strategy'],
+  openGraph: {
+    title: 'AI Implementation Checklist 2025: Complete Guide to Success',
+    description: 'The definitive checklist for AI implementation in 2025. Ensure your AI transformation succeeds with this comprehensive step-by-step guide.',
+    type: 'article',
+    publishedTime: '2025-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI Implementation', 'Checklist', 'Guide', 'Best Practices', '2025'],
+  },
+};
+
+export default function AIImplementationChecklist() {
+  return (
+    <div className="min-h-screen bg-white">
+      <SEO
+        title="AI Implementation Checklist 2025: Complete Guide to Success"
+        description="The definitive checklist for AI implementation in 2025. Ensure your AI transformation succeeds with this comprehensive step-by-step guide."
+        keywords="AI Implementation, Checklist, Guide, Best Practices, 2025, AI Strategy"
+        url="/resources/ai-implementation-checklist-2025"
+      />
+
+      {/* Header */}
+      <div className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link href="/" className="inline-flex items-center text-white hover:text-gray-200 mb-8 transition-colors">
+            <ArrowLeft className="w-5 h-5 mr-2" />
+            Back to Home
+          </Link>
+          
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🎯 RESOURCE GUIDE</span>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            AI Implementation Checklist 2025
+          </h1>
+          
+          <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
+            The definitive step-by-step guide to AI success. Don't miss any critical steps in your transformation journey. 
+            Used by 500+ successful companies with 95% success rate.
+          </p>
+          
+          <div className="flex flex-wrap items-center gap-6 text-sm">
+            <div className="flex items-center">
+              <Calendar className="w-4 h-4 mr-2" />
+              January 15, 2025
+            </div>
+            <div className="flex items-center">
+              <Clock className="w-4 h-4 mr-2" />
+              8 min read
+            </div>
+            <div className="flex items-center">
+              <User className="w-4 h-4 mr-2" />
+              Zion Tech Group
+            </div>
+            <div className="flex items-center">
+              <Star className="w-4 h-4 mr-2" />
+              95% Success Rate
+=======
 import { ArrowLeftIcon, CalendarIcon, UserIcon, TagIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 
 export const metadata: Metadata = {
@@ -313,75 +378,13 @@ export default function ResourceGuide() {
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-purple-600 text-purple-600 font-semibold rounded-lg hover:bg-purple-600 hover:text-white transition-colors"
               >
                 View Our Services
-=======
-import { ArrowLeft, Calendar, Clock, User, CheckCircle, AlertCircle, Star, Download } from 'lucide-react';
-import SEO from '../../../components/SEO';
-
-export const metadata: Metadata = {
-  title: 'AI Implementation Checklist 2025: Complete Guide to Success | Zion Tech Group',
-  description: 'The definitive checklist for AI implementation in 2025. Ensure your AI transformation succeeds with this comprehensive step-by-step guide.',
-  keywords: ['AI Implementation', 'Checklist', 'Guide', 'Best Practices', '2025', 'AI Strategy'],
-  openGraph: {
-    title: 'AI Implementation Checklist 2025: Complete Guide to Success',
-    description: 'The definitive checklist for AI implementation in 2025. Ensure your AI transformation succeeds with this comprehensive step-by-step guide.',
-    type: 'article',
-    publishedTime: '2025-01-15T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-    tags: ['AI Implementation', 'Checklist', 'Guide', 'Best Practices', '2025'],
-  },
-};
-
-export default function AIImplementationChecklist() {
-  return (
-    <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Implementation Checklist 2025: Complete Guide to Success"
-        description="The definitive checklist for AI implementation in 2025. Ensure your AI transformation succeeds with this comprehensive step-by-step guide."
-        keywords="AI Implementation, Checklist, Guide, Best Practices, 2025, AI Strategy"
-        url="/resources/ai-implementation-checklist-2025"
-      />
-
-      {/* Header */}
-      <div className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/" className="inline-flex items-center text-white hover:text-gray-200 mb-8 transition-colors">
-            <ArrowLeft className="w-5 h-5 mr-2" />
-            Back to Home
-          </Link>
-          
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🎯 RESOURCE GUIDE</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            AI Implementation Checklist 2025
-          </h1>
-          
-          <p className="text-xl md:text-2xl opacity-90 mb-8 leading-relaxed">
-            The definitive step-by-step guide to AI success. Don't miss any critical steps in your transformation journey. 
-            Used by 500+ successful companies with 95% success rate.
-          </p>
-          
-          <div className="flex flex-wrap items-center gap-6 text-sm">
-            <div className="flex items-center">
-              <Calendar className="w-4 h-4 mr-2" />
-              January 15, 2025
-            </div>
-            <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-2" />
-              8 min read
-            </div>
-            <div className="flex items-center">
-              <User className="w-4 h-4 mr-2" />
-              Zion Tech Group
-            </div>
-            <div className="flex items-center">
-              <Star className="w-4 h-4 mr-2" />
-              95% Success Rate
+              </Link>
+>>>>>>> cursor/create-and-deploy-new-content-123d
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Checklist Content */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -766,16 +769,13 @@ export default function AIImplementationChecklist() {
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
               >
                 Schedule Consultation
->>>>>>> origin/main
               </Link>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-=======
       </article>
->>>>>>> origin/main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-123d
     </div>
   );
 }
