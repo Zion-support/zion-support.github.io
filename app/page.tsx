@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
-import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 
@@ -10,7 +9,7 @@ const StructuredData = lazy(() => import('../components/StructuredData'));
 const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
-// Import only working promotional components
+// Import working promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
@@ -40,14 +39,6 @@ import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025Ul
 
 // Import new 2025 advanced automation promotional components
 import NewContent2025AdvancedAutomationBanner from '../components/NewContent2025AdvancedAutomationBanner';
-import AdvancedAutomationContentShowcase2025 from '../components/AdvancedAutomationContentShowcase2025';
-
-// Import new AI 2026 promotional components
-import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
-import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
-import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
-import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
-import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -57,7 +48,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
         description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
@@ -66,18 +57,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
         {/* Revolutionary Content 2025 Banner - NEW FEATURED */}
         <RevolutionaryContent2025Banner />
         
         {/* New Content 2025 Advanced Automation Banner - NEW FEATURED */}
         <NewContent2025AdvancedAutomationBanner />
-        
-        {/* Advanced Automation Content Showcase 2025 - NEW FEATURED */}
-        <AdvancedAutomationContentShowcase2025 />
-        
-        {/* Revolutionary AI Content 2026 Banner - NEW FEATURED */}
-        <RevolutionaryAIContent2026Banner />
         
         {/* Ultimate Content 2025 Showcase - NEW FEATURED */}
         <UltimateContentShowcase2025 />
@@ -90,30 +74,6 @@ export default function HomePage() {
         
         {/* New Content 2026 Ultimate Showcase - NEW FEATURED */}
         <NewContent2025UltimateShowcase />
-        
-        {/* New Content 2025 Ultimate Banner */}
-        <NewContent2025UltimateBanner />
-        
-        {/* AI 2026 Ultimate Showcase Banner */}
-        <AI2026UltimateShowcaseBanner />
-        
-        {/* Quantum AI 2026 Breakthrough Banner */}
-        <QuantumAI2026BreakthroughBanner />
-        
-        {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
-        
-        {/* AI 2026 Quantum Revolution Banner */}
-        <AI2026QuantumRevolutionBanner />
-        
-        {/* AI 2026 Autonomous Systems Banner */}
-        <AI2026AutonomousSystemsBanner />
-        
-        {/* Revolutionary Content 2025 Banner - NEW CONTENT */}
-        <RevolutionaryContent2025Banner />
-        
-        {/* New Content 2025 Ultimate Banner - FEATURED */}
-        <NewContent2025UltimateBanner />
         
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
@@ -267,6 +227,6 @@ export default function HomePage() {
           />
         </Suspense>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }
