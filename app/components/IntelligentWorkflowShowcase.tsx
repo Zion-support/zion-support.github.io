@@ -238,7 +238,7 @@ const IntelligentWorkflowShowcase = () => {
                   {item.description}
                 </p>
 
-                {/* Tags */}
+                {/* Users */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.slice(0, 3).map((tag) => (
                     <span

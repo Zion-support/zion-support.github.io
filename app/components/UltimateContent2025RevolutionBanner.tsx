@@ -160,7 +160,7 @@ const UltimateContent2025RevolutionBanner = () => {
                   </div>
                 </div>
 
-                {/* Tags */}
+                {/* Users */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {currentContent.tags.map((tag, index) => (
                     <span
