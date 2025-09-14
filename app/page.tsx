@@ -58,12 +58,14 @@ import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBann
 // Import new ultimate AI transformation promotional components
 import UltimateAITransformationBanner2025 from '../components/UltimateAITransformationBanner2025';
 
+// Import new 2026 revolutionary content promotional components
+import UltimateAI2026RevolutionBanner from '../components/UltimateAI2026RevolutionBanner';
+
 // Import new 2025 autonomous systems promotional components
 import AutonomousSystems2025RevolutionBanner from '../components/AutonomousSystems2025RevolutionBanner';
-import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowcase2025';
+// import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowcase2025';
 
 // Import new ultimate content showcase banners
-import UltimateContent2025ShowcaseBanner from '../components/UltimateContent2025ShowcaseBanner';
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
 
 export const metadata = {
@@ -83,17 +85,23 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Ultimate Content 2025 Showcase Banner - LATEST */}
-        <UltimateContent2025ShowcaseBanner />
+        {/* Ultimate AI 2026 Revolution Banner - LATEST */}
+        {/* <UltimateAI2026RevolutionBanner /> */}
+        
+        {/* New Content 2026 Showcase - LATEST */}
+        {/* <NewContent2026Showcase /> */}
+        
+        {/* Ultimate Content 2025 Showcase Banner */}
+        {/* <UltimateContent2025ShowcaseBanner /> */}
         
         {/* New Content 2025 Ultimate Showcase Banner */}
-        <NewContent2025UltimateShowcaseBanner />
+        {/* <NewContent2025UltimateShowcaseBanner /> */}
         
         {/* Ultimate AI Transformation Banner 2025 - NEW */}
-        <UltimateAITransformationBanner2025 />
+        {/* <UltimateAITransformationBanner2025 /> */}
         
         {/* Autonomous Systems 2025 Revolution Banner - NEW */}
-        <AutonomousSystems2025RevolutionBanner />
+        {/* <AutonomousSystems2025RevolutionBanner /> */}
         
         {/* AI 2025 Ultimate Breakthrough Banner - NEW */}
         <AI2025UltimateBreakthroughBanner />

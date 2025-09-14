@@ -1,12 +1,8 @@
+"use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 
-export const metadata = {
-  title: 'AI 2026 ROI Calculator - Calculate Your Transformation Returns',
-  description: 'Calculate the potential ROI and business impact of implementing AI 2026 technologies including enterprise automation and quantum computing.',
-  keywords: ['AI 2026', 'ROI calculator', 'business transformation', 'enterprise automation', 'quantum computing'],
-};
 
 export default function AI2026ROICalculator() {
   const [inputs, setInputs] = useState({
