@@ -71,4 +71,6 @@ export default function Services() {
       </div>
     </>
   );
-}
+};
+
+export default ServicesPage;
