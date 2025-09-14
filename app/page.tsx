@@ -247,17 +247,8 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* ULTIMATE AUTONOMOUS AI REVOLUTION BANNER - NEWEST ULTIMATE FEATURED */}
+        {/* ULTIMATE AUTONOMOUS AI REVOLUTION BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
         <UltimateAutonomousAIRevolutionBanner />
-        
-        {/* ULTIMATE AUTONOMOUS AI CONTENT SHOWCASE - NEWEST FEATURED */}
-        <UltimateAutonomousAIContentShowcase />
-        
-        {/* AI 2025 ULTIMATE ENTERPRISE TRANSFORMATION BANNER - NEWEST ULTIMATE FEATURED */}
-        <AI2025UltimateEnterpriseTransformationBanner />
-        
-        {/* ULTIMATE ENTERPRISE TRANSFORMATION SHOWCASE - NEWEST FEATURED */}
-        <UltimateEnterpriseTransformationShowcase />
         
         {/* AI 2026 QUANTUM-NEURAL FUSION REVOLUTION BANNER - NEWEST BREAKTHROUGH */}
         <AI2026QuantumNeuralFusionRevolutionBanner />
@@ -325,6 +316,9 @@ export default function HomePage() {
         <UltimateContentShowcase2025 />
         
         {/* ULTIMATE AUTONOMOUS AI CONTENT SHOWCASE - NEWEST FEATURED */}
+        <UltimateAutonomousAIContentShowcase />
+        
+        {/* ULTIMATE AUTONOMOUS AI REVOLUTION CONTENT SHOWCASE - NEWEST ULTIMATE FEATURED */}
         <UltimateAutonomousAIContentShowcase />
         
         {/* SUCCESS STORIES SHOWCASE - NEW CONTENT */}
