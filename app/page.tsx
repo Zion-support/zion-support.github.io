@@ -135,6 +135,14 @@ import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContent
 // Import new ultimate content showcase banners
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
 
+// Import new 2025 content promotional components
+import NewContent2025AdvancedAutomationBanner from '../components/NewContent2025AdvancedAutomationBanner';
+import QuantumAI2026RevolutionBanner from '../components/QuantumAI2026RevolutionBanner';
+import NeuralInterface2025BreakthroughBanner from '../components/NeuralInterface2025BreakthroughBanner';
+import NewContent2025ShowcaseBanner from '../components/NewContent2025ShowcaseBanner';
+import AI2025EnterpriseTransformationBanner from '../components/AI2025EnterpriseTransformationBanner';
+import SyntheticIntelligence2026Banner from '../components/SyntheticIntelligence2026Banner';
+
 // Import new autonomous enterprise components
 import UltimateAutonomousEnterpriseBanner2025 from '../components/UltimateAutonomousEnterpriseBanner2025';
 import RevolutionaryContent2026UltimateShowcase from '../components/RevolutionaryContent2026UltimateShowcase';
@@ -249,6 +257,24 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT NAVIGATION BANNER - FEATURED */}
         <NewContentNavigationBanner />
+        
+        {/* NEW CONTENT 2025 SHOWCASE BANNER - LATEST FEATURED */}
+        <NewContent2025ShowcaseBanner />
+        
+        {/* NEW CONTENT 2025 ADVANCED AUTOMATION BANNER - NEWEST FEATURED */}
+        <NewContent2025AdvancedAutomationBanner />
+        
+        {/* QUANTUM AI 2026 REVOLUTION BANNER - NEWEST FEATURED */}
+        <QuantumAI2026RevolutionBanner />
+        
+        {/* NEURAL INTERFACE 2025 BREAKTHROUGH BANNER - NEWEST FEATURED */}
+        <NeuralInterface2025BreakthroughBanner />
+        
+        {/* AI 2025 ENTERPRISE TRANSFORMATION BANNER - NEWEST FEATURED */}
+        <AI2025EnterpriseTransformationBanner />
+        
+        {/* SYNTHETIC INTELLIGENCE 2026 BANNER - NEWEST FEATURED */}
+        <SyntheticIntelligence2026Banner />
         
         {/* AI CONTENT REVOLUTION 2025 BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
         <AIContentRevolution2025Banner />
