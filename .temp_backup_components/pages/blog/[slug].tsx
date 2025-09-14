@@ -1,42 +1,41 @@
-import type { GetServerSideProps, NextPage } from 'next';
-import Head from 'next/head';
-import { useEffect, useMemo } from 'react';
-import { BlogPost } from '@/utils/types/blog';
-import { findPostBySlug, listPublishedPosts } from '@/utils/data/blogStore';
-import PostContent from '@/components/blog/PostContent';
-import ShareButtons from '@/components/blog/ShareButtons';
-import SuggestedArticles from '@/components/blog/SuggestedArticles';
-import CTASection from '@/components/blog/CTASection';
-import LikeButton from '@/components/blog/LikeButton';
+import type { GetServerSideProps, NextPage } from 'next',
+import Head from 'next/head',
+import { useEffect, useMemo } from 'react',
+import { BlogPost } from '@/utils/types/blog',
+import { findPostBySlug, listPublishedPosts } from '@/utils/data/blogStore',
+import PostContent from '@/components/blog/PostContent',
+import ShareButtons from '@/components/blog/ShareButtons',
+import SuggestedArticles from '@/components/blog/SuggestedArticles',
+import CTASection from '@/components/blog/CTASection',
+import LikeButton from '@/components/blog/LikeButton',
 
-type Props = { post: BlogPost; all: BlogPost[] };
+type Props = { post: BlogPost, all: BlogPost[] },
 
 const PostPage: NextPage<Props> = ({ post, all }) => {
-  const pageUrl = typeof window === 'undefined' ? '' : window.location.href;
+  const pageUrl = typeof window === 'undefined' ? '' : window.location.href,
 
   useEffect(() => {
     // track view
-    fetch(`/api/blog/metrics/${post.id}/views`, { method: 'POST' }).catch(() => {});
-  }, [post.id]);
+    fetch(`/api/blog/metrics/${post.id}/views`, { method: 'POST' }).catch(() => {}),
+  }, [post.id]),
 
   const toc = useMemo(() => {
-    const headings: { level: number; text: string; id: string }[] = [];
-    const lines = post.body.split('\n');
+    const headings: { level: number, text: string, id: string }[] = [],
+    const lines = post.body.split('\n'),
     lines.forEach((line) => {
-      const m = /^(#{1,3})\s+(.*)$/.exec(line);
+      const m = /^(#{1,3})\s+(.*)$/.exec(line),
       if (m) {
-        const level = m[1].length;
-        const text = m[2].trim();
-        const id = text;
-        headings.push({ level, text, id });
+        const level = m[1].length,
+        const text = m[2].trim(),
+        const id = text,
+        headings.push({ level, text, id }),
       }
-    });
-    return headings;
-  }, [post.body]);
+    }),
+    return headings,
+  }, [post.body]),
 
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
+    '@context': 'https://schema.org@type': 'BlogPosting',
     headline: post.seo.metaTitle || post.title,
     description: post.seo.metaDescription,
     image: post.seo.ogImageUrl || post.coverImageUrl,
@@ -97,17 +96,17 @@ const PostPage: NextPage<Props> = ({ post, all }) => {
         <CTASection />
       </article>
     </div>
-  );
-};
+  ),
+},
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const slug = ctx.params?.slug as string;
-  const post = findPostBySlug(slug);
+  const slug = ctx.params?.slug as string,
+  const post = findPostBySlug(slug),
   if (!post || post.status !== 'published') {
-    return { notFound: true };
+    return { notFound: true },
   }
-  const all = listPublishedPosts();
-  return { props: { post, all } };
-};
+  const all = listPublishedPosts(),
+  return { props: { post, all } },
+},
 
-export default PostPage;
+export default PostPage,

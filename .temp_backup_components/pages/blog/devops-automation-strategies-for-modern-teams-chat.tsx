@@ -16,7 +16,7 @@ const DevopsAutomationStrategiesForModernTeamsChat: NextPage = () => {
         <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default DevopsAutomationStrategiesForModernTeamsChat;
+export default DevopsAutomationStrategiesForModernTeamsChat,

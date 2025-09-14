@@ -3496,44 +3496,44 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   },
 
   return (
-    <nav aria-label=&quot;Primary&quot; className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-black/95 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl' 
         : 'bg-transparent'
     }`}>
       {/* Background Effects */}
-      <div className=&quot;absolute inset-0&quot;>
+      <div className="absolute inset-0">
         <div className={`absolute inset-0 transition-opacity duration-300 ${
           isScrolled ? 'opacity-100' : 'opacity-0'
         }`}>
-          <div className=&quot;absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black/95&quot; />
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5&quot; />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black/95" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />
         </div>
       </div>
 
-      <div className=&quot;relative z-10&quot;>
-        <div className=&quot;container mx-auto px-4&quot;>
-          <div className=&quot;flex items-center justify-between h-20&quot;>
+      <div className="relative z-10">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href=&quot;/&quot; className=&quot;flex items-center gap-3 group&quot;>
-              <div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300&quot;>
-                <Brain className=&quot;w-6 h-6 text-white&quot; />
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-6 h-6 text-white" />
               </div>
               <div>
-                <div className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
+                <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                   Zion Tech Group
                 </div>
-                <div className=&quot;text-xs text-gray-400&quot;>Revolutionary Technology</div>
+                <div className="text-xs text-gray-400">Revolutionary Technology</div>
               </div>
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
-            <div className=&quot;hidden lg:flex items-center gap-8&quot;>
+            <div className="hidden lg:flex items-center gap-8">
               {navigationItems.map((item) => (
-                <div key={item.name} className=&quot;relative group&quot;>
+                <div key={item.name} className="relative group">
                   <button
                     onClick={() => toggleDropdown(item.name)}
-                    className=&quot;flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400&quot;
+                    className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
                   >
                     {_item.icon}
                     <span>{_item.name}</span>
@@ -3672,9 +3672,9 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
             {/* Right Side Actions */}
-            <div className=&quot;hidden lg:flex items-center gap-4&quot;>
+            <div className="hidden lg:flex items-center gap-4">
               {/* Quick Actions */}
-              <div className=&quot;flex items-center gap-2&quot;>
+              <div className="flex items-center gap-2">
                 {quickActions.map((action) => (
                   <Link
                     key={action.name}
@@ -3686,19 +3686,19 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   >
                     {action.icon}
                     <span>{action.name}</span>
-                  </a>
+                  </Link>
                 ))}
               </div>
 
               {/* Contact Info */}
-              <div className=&quot;flex items-center gap-4 text-sm text-gray-400&quot;>
-                <a href={`tel:${contactInfo.mobile}`} className=&quot;flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200&quot;>
-                  <Phone className=&quot;w-4 h-4&quot; />
-                  <span className=&quot;hidden xl:inline&quot;>{contactInfo.mobile}</span>
+              <div className="flex items-center gap-4 text-sm text-gray-400">
+                <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200">
+                  <Phone className="w-4 h-4" />
+                  <span className="hidden xl:inline">{contactInfo.mobile}</span>
                 </a>
-                <a href={`mailto:${contactInfo.email}`} className=&quot;flex items-center gap-2 hover:text-purple-400 transition-colors duration-200&quot;>
-                  <Mail className=&quot;w-4 h-4&quot; />
-                  <span className=&quot;hidden xl:inline&quot;>{contactInfo.email}</span>
+                <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 hover:text-purple-400 transition-colors duration-200">
+                  <Mail className="w-4 h-4" />
+                  <span className="hidden xl:inline">{contactInfo.email}</span>
                 </a>
               </div>
             </div>
@@ -3706,10 +3706,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
             {_/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className=&quot;lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200&quot;
-              aria-label=&quot;Toggle mobile menu&quot;
+              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
+              aria-label="Toggle mobile menu"
             >
-              {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>

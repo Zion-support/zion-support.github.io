@@ -265,20 +265,20 @@ function Sidebar() {
       </div>
 
       <div>
-        <div className=&quot;text-xs text-high-contrast-muted mb-1&quot;>Publish Mode</div>
-        <select className=&quot;w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={visibilityFilter} onChange={(e) => onChangeVisibility(e.target.value as any)}>
-          <option value=&quot;all&quot;>All</option>
-          <option value=&quot;public&quot;>Public</option>
-          <option value=&quot;partner&quot;>Partner-only</option>
-          <option value=&quot;internal&quot;>Internal</option>
+        <div className="text-xs text-high-contrast-muted mb-1">Publish Mode</div>
+        <select className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={visibilityFilter} onChange={(e) => onChangeVisibility(e.target.value as any)}>
+          <option value="all">All</option>
+          <option value="public">Public</option>
+          <option value="partner">Partner-only</option>
+          <option value="internal">Internal</option>
         </select>
       </div>
 
-      <nav className=&quot;space-y-3&quot;>
+      <nav className="space-y-3">
         {spec.sections.map((section) => (
           <div key={section.id}>
-            <div className=&quot;text-sm font-medium mb-1&quot;>{section.title}</div>
-            <ul className=&quot;space-y-1&quot;>
+            <div className="text-sm font-medium mb-1">{section.title}</div>
+            <ul className="space-y-1">
               {section.endpoints
                 .filter((e) => e.versions.includes(selectedVersion))
                 .filter(_(e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter)

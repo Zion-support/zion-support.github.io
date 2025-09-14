@@ -41,7 +41,7 @@ export default function CloudMonitoringPage() {
       title: 'Auto-scaling',
       description: 'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
       color: 'bg-gradient-to-br from-teal-500 to-blue-600',
-      gradient: 'from-teal-400 to-blue-500'}];
+      gradient: 'from-teal-400 to-blue-500'}],
 
   const monitoringCapabilities = [
     {
@@ -64,7 +64,7 @@ export default function CloudMonitoringPage() {
       icon: <Shield className="w-6 h-6 text-red-400" />,
       metrics: ['Threat Detection'Access Logs'Vulnerability Scans'Compliance Status'Audit Trails']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -73,12 +73,9 @@ export default function CloudMonitoringPage() {
       period: '/month',
       description: 'Perfect for small teams and startups',
       features: [
-        'Up to 10 servers',
-        'Basic monitoring',
-        'Email alerts',
-        '7-day data retention',
-        'Community support',
-        'Mobile app access'
+        'Up to 10 serversBasic monitoring',
+        'Email alerts7-day data retention',
+        'Community supportMobile app access'
       ],
       popular: false,
       color: 'border-gray-600',
@@ -90,14 +87,10 @@ export default function CloudMonitoringPage() {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 100 servers',
-        'Advanced monitoring',
-        'SMS & Slack alerts',
-        '30-day data retention',
-        'Priority support',
-        'Custom dashboards',
-        'API access',
-        'Team collaboration'
+        'Up to 100 serversAdvanced monitoring',
+        'SMS & Slack alerts30-day data retention',
+        'Priority supportCustom dashboards',
+        'API accessTeam collaboration'
       ],
       popular: true,
       color: 'border-blue-500',
@@ -109,20 +102,16 @@ export default function CloudMonitoringPage() {
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited servers',
-        'Full monitoring suite',
-        'Custom integrations',
-        '1-year data retention',
-        'Dedicated support',
-        'White-label solution',
-        'SLA guarantee',
-        'On-premise option'
+        'Unlimited serversFull monitoring suite',
+        'Custom integrations1-year data retention',
+        'Dedicated supportWhite-label solution',
+        'SLA guaranteeOn-premise option'
       ],
       popular: false,
       color: 'border-purple-600',
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
-  ];
+  ],
 
   const integrations = [
     { name: 'AWS'icon: '☁️'description: 'CloudWatch integration' },
@@ -160,7 +149,7 @@ export default function CloudMonitoringPage() {
       icon: '💰',
       benefits: ['Regulatory compliance'Fraud detection'Risk management'Customer trust']
     }
-  ];
+  ],
 
   return (
     <>
@@ -229,7 +218,7 @@ export default function CloudMonitoringPage() {
               <div className="text-gray-400">Integrations</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400">&lt;100ms</div>
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400"><100ms</div>
               <div className="text-gray-400">Latency</div>
             </div>
           </div>
@@ -443,7 +432,7 @@ export default function CloudMonitoringPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Monitor Your Infrastructure?
@@ -474,5 +463,5 @@ export default function CloudMonitoringPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

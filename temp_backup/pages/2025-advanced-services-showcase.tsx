@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import SEO from '../components/SEO',
+import { motion, AnimatePresence } from 'framer-motion',
 import {
   Search, Grid, List, Star, CheckCircle, ArrowRight, Check,
   Brain, Atom, Shield, Building, Globe,
   Users, TrendingUp, Award, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new service data
-import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
-import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
-import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
+import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion',
+import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion',
+import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const allServices = [
   ...advancedEnterpriseServices2025,
       ...innovativeMicroSaasExpansion2025,
   ...cuttingEdgeITInfrastructureServices
-];
+],
 
 const categories = [
   {
@@ -68,48 +68,48 @@ const categories = [
     color: 'from-violet-500 to-indigo-500',
     description: 'Quantum computing solutions'
   }
-];
+],
 
 const getServiceCategory = (service: any) => {
-  if (service.category) return service.category;
-  return 'Other';
-};
+  if (service.category) return service.category,
+  return 'Other'
+},
 
 const getServicePricing = (service: any) => {
-  if (service.price) return `${service.price}${service.period}`;
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
-  return 'Contact for pricing';
-};
+  if (service.price) return `${service.price}${service.period}`,
+  if (service.pricing?.starter) return service.pricing.starter,
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,
+  return 'Contact for pricing',
+},
 
 const getServiceFeatures = (service: any) => {
-  if (service.features) return service.features;
-  if (service.keyFeatures) return service.keyFeatures;
-  return [];
-};
+  if (service.features) return service.features,
+  if (service.keyFeatures) return service.keyFeatures,
+  return []
+},
 
 
 
 export default function AdvancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [filteredServices, setFilteredServices] = useState(allServices);
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [filteredServices, setFilteredServices] = useState(allServices),
 
   useEffect(() => {
-    let filtered = allServices;
+    let filtered = allServices,
 
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
-        const category = getServiceCategory(service).toLowerCase();
-        if (selectedCategory === 'enterprise') return category.includes('enterprise') || category.includes('legal') || category.includes('financial');
-        if (selectedCategory === 'micro-saas') return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes('project');
-        if (selectedCategory === 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge');
-        if (selectedCategory === 'ai-ml') return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes('ml');
-        if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant');
-        return false;
-      });
+        const category = getServiceCategory(service).toLowerCase(),
+        if (selectedCategory === 'enterprise') return category.includes('enterprise') || category.includes('legal') || category.includes('financial'),
+        if (selectedCategory === 'micro-saas') return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes('project'),
+        if (selectedCategory === 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge'),
+        if (selectedCategory === 'ai-ml') return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes('ml'),
+        if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant'),
+        return false,
+      }),
     }
 
     // Filter by search term
@@ -119,11 +119,11 @@ export default function AdvancedServicesShowcase() {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
         getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      ),
     }
 
-    setFilteredServices(filtered);
-  }, [selectedCategory, searchTerm]);
+    setFilteredServices(filtered),
+  }, [selectedCategory, searchTerm]),
 
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
@@ -228,14 +228,14 @@ export default function AdvancedServicesShowcase() {
           
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-            className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+            className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
           >
             Contact
           </a>
         </div>
       </div>
     </motion.div>
-  );
+  ),
 
   const ServiceList = ({ service }: { service: any }) => (
     <motion.div
@@ -336,7 +336,7 @@ export default function AdvancedServicesShowcase() {
               
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-                className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
               >
                 Contact Sales
               </a>
@@ -345,7 +345,7 @@ export default function AdvancedServicesShowcase() {
         </div>
       </div>
     </motion.div>
-  );
+  ),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
@@ -583,7 +583,7 @@ export default function AdvancedServicesShowcase() {
               </a>
               <a
                 href={`tel:${contactInfo.mobile}`}
-                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300"
               >
                 <Phone className="w-5 h-5" />
                 Call Now
@@ -593,5 +593,5 @@ export default function AdvancedServicesShowcase() {
         </div>
       </div>
     </div>
-  );
+  )
 }

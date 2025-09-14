@@ -362,7 +362,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
         
         {_/* Animated grid */}
         <motion.div
-          className=&quot;absolute inset-0 opacity-5&quot;
+          className="absolute inset-0 opacity-5"
           style={{
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),

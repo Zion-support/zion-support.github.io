@@ -16,7 +16,7 @@ const DigitalTwinsRevolutionizingIndustry40Chat: NextPage = () => {
         <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default DigitalTwinsRevolutionizingIndustry40Chat;
+export default DigitalTwinsRevolutionizingIndustry40Chat,

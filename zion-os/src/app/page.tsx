@@ -400,7 +400,7 @@ export default function HomePage() {
               <a href=&quot;/admin/instances&quot; className=&quot;btn-secondary hover-lift&quot;>
 
                 📊 View Instances
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -453,16 +453,16 @@ export default function HomePage() {
 
               Ready to Build the Future?
             </h2>
-            <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
-              <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift text-lg px-8 py-4&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
-              </Link>
-              <a href=&quot;/admin/instances&quot; className=&quot;btn-secondary hover-lift text-lg px-8 py-4&quot;>
+              </a>
+              <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function AIAutomationTrends2025Page() {
   const trends = [
@@ -10,7 +10,7 @@ export default function AIAutomationTrends2025Page() {
       description: 'AI systems that can make complex decisions without human intervention.',
       impact: 'High',
       timeline: '2025-2026',
-      examples: ['Financial trading algorithms', 'Supply chain optimization', 'Healthcare diagnostics']
+      examples: ['Financial trading algorithmsSupply chain optimization', 'Healthcare diagnostics']
     },
     {
       id: 'edge-ai-computing',
@@ -18,7 +18,7 @@ export default function AIAutomationTrends2025Page() {
       description: 'AI processing moved closer to data sources for real-time decision making.',
       impact: 'Medium',
       timeline: '2025-2027',
-      examples: ['IoT devices', 'Autonomous vehicles', 'Smart cities']
+      examples: ['IoT devicesAutonomous vehicles', 'Smart cities']
     },
     {
       id: 'ai-powered-automation',
@@ -26,7 +26,7 @@ export default function AIAutomationTrends2025Page() {
       description: 'Intelligent automation that learns and improves over time.',
       impact: 'High',
       timeline: '2025-2026',
-      examples: ['Process automation', 'Customer service', 'Content generation']
+      examples: ['Process automationCustomer service', 'Content generation']
     },
     {
       id: 'human-ai-collaboration',
@@ -34,32 +34,32 @@ export default function AIAutomationTrends2025Page() {
       description: 'Enhanced collaboration between humans and AI systems.',
       impact: 'Medium',
       timeline: '2025-2028',
-      examples: ['Augmented decision making', 'Creative assistance', 'Problem solving']
+      examples: ['Augmented decision makingCreative assistance', 'Problem solving']
     }
-  ];
+  ],
 
   const industryApplications = [
     {
       industry: 'Manufacturing',
-      trends: ['Predictive maintenance', 'Quality control automation', 'Supply chain optimization'],
+      trends: ['Predictive maintenanceQuality control automation', 'Supply chain optimization'],
       icon: '🏭'
     },
     {
       industry: 'Healthcare',
-      trends: ['Diagnostic assistance', 'Drug discovery', 'Patient care automation'],
+      trends: ['Diagnostic assistanceDrug discovery', 'Patient care automation'],
       icon: '🏥'
     },
     {
       industry: 'Finance',
-      trends: ['Fraud detection', 'Algorithmic trading', 'Risk assessment'],
+      trends: ['Fraud detectionAlgorithmic trading', 'Risk assessment'],
       icon: '💳'
     },
     {
       industry: 'Retail',
-      trends: ['Personalized marketing', 'Inventory management', 'Customer service automation'],
+      trends: ['Personalized marketingInventory management', 'Customer service automation'],
       icon: '🛍️'
     }
-  ];
+  ],
 
   return (
     <>
@@ -102,12 +102,12 @@ export default function AIAutomationTrends2025Page() {
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 text-cyan-400">The Rise of Autonomous Decision-Making</h2>
                 <p className="text-white/90 mb-4">
-                  One of the most significant trends we&apos;re seeing in 2025 is the emergence of truly autonomous decision-making systems. 
-                  These aren&apos;t just rule-based automations anymore—they&apos;re intelligent systems that can analyze complex scenarios, 
+                  One of the most significant trends we're seeing in 2025 is the emergence of truly autonomous decision-making systems. 
+                  These aren't just rule-based automations anymore—they're intelligent systems that can analyze complex scenarios, 
                   learn from outcomes, and make decisions with minimal human intervention.
                 </p>
                 <p className="text-white/90 mb-4">
-                  At Zion Tech Group, we&apos;ve been at the forefront of this revolution, developing systems that can:
+                  At Zion Tech Group, we've been at the forefront of this revolution, developing systems that can:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
                   <li>• Analyze market conditions and adjust strategies in real-time</li>
@@ -133,8 +133,8 @@ export default function AIAutomationTrends2025Page() {
               <section className="mb-12">
                 <h2 className="text-2xl font-semibold mb-6 text-green-400">Human-AI Collaboration</h2>
                 <p className="text-white/90 mb-4">
-                  Contrary to popular belief, the future isn&apos;t about AI replacing humans—it&apos;s about AI augmenting human capabilities. 
-                  We&apos;re seeing a new paradigm emerge where humans and AI systems work together as collaborative partners.
+                  Contrary to popular belief, the future isn't about AI replacing humans—it's about AI augmenting human capabilities. 
+                  We're seeing a new paradigm emerge where humans and AI systems work together as collaborative partners.
                 </p>
                 <p className="text-white/90 mb-4">
                   This collaboration takes many forms:
@@ -162,7 +162,7 @@ export default function AIAutomationTrends2025Page() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Looking Ahead: What&apos;s Next?</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Looking Ahead: What's Next?</h2>
                 <p className="text-white/90 mb-4">
                   As we look toward the latter half of 2025 and beyond, several emerging trends are worth watching:
                 </p>
@@ -193,9 +193,9 @@ export default function AIAutomationTrends2025Page() {
                   will find themselves at a competitive advantage.
                 </p>
                 <p className="text-white/90">
-                  At Zion Tech Group, we&apos;re committed to staying at the forefront of these developments, 
+                  At Zion Tech Group, we're committed to staying at the forefront of these developments, 
                   ensuring our clients have access to the most advanced autonomous systems available. 
-                  The future of AI automation is here, and it&apos;s more exciting than ever.
+                  The future of AI automation is here, and it's more exciting than ever.
                 </p>
               </section>
             </article>
@@ -341,7 +341,7 @@ export default function AIAutomationTrends2025Page() {
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 mb-12 border border-white/20">
               <h2 className="text-xl font-bold mb-4 text-cyan-400">Table of Contents</h2>
               <ul className="space-y-2 text-white/80">
-                <li><a href="#trend-1" className="hover:text-cyan-300 transition-colors">1. Autonomous Decision-Making Systems</a></li>
+                <li><a href="#trend-1" className="hover: text-cyan-300 transition-colors">1. Autonomous Decision-Making Systems</a></li>
                 <li><a href="#trend-2" className="hover:text-cyan-300 transition-colors">2. Intelligent Process Orchestration</a></li>
                 <li><a href="#trend-3" className="hover:text-cyan-300 transition-colors">3. Self-Healing Infrastructure</a></li>
                 <li><a href="#trend-4" className="hover:text-cyan-300 transition-colors">4. Predictive Business Intelligence</a></li>
@@ -355,5 +355,5 @@ export default function AIAutomationTrends2025Page() {
         </main>
       </div>
     </>
-  );
+  )
 }

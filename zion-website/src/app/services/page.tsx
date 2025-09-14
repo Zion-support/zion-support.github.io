@@ -124,10 +124,10 @@ const reasonsToChoose = [;
         </div>
       </div>
       {/* Professional Services */}
-      <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Services</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Services</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Comprehensive AI Solutions
           </p>
 
@@ -139,31 +139,31 @@ const reasonsToChoose = [;
             and drive measurable business outcomes.
           </p>
         </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2&quot;>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
             {professionalServices.map((service) => (
-              <div key={service.name} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
-                <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
-                  <service.icon className=&quot;h-8 w-8 text-blue-400&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white&quot;>{service.name}</h3>
+              <div key={service.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center gap-x-3 mb-4">
+                  <service.icon className="h-8 w-8 text-blue-400" />
+                  <h3 className="text-xl font-semibold text-white">{service.name}</h3>
                 </div>
-                <p className=&quot;text-gray-300 mb-6&quot;>{service.description}</p>
-                <div className=&quot;space-y-3 mb-6&quot;>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <div className="space-y-3 mb-6">
                   {service.features.map((feature) => (
-                    <div key={feature} className=&quot;flex items-center gap-2&quot;>
-                      <div className=&quot;h-2 w-2 bg-blue-400 rounded-full&quot;></div>
-                      <span className=&quot;text-sm text-gray-300&quot;>{feature}</span>
+                    <div key={feature} className="flex items-center gap-2">
+                      <div className="h-2 w-2 bg-blue-400 rounded-full"></div>
+                      <span className="text-sm text-gray-300">{feature}</span>
                     </div>
                   ))}
                 </div>
-                <div className=&quot;flex items-center justify-between&quot;>
-                  <span className=&quot;text-sm text-blue-400 font-medium&quot;>Duration: {service.duration}</span>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-blue-400 font-medium">Duration: {service.duration}</span>
                   <a
-                    href=&quot;/contact&quot;
-                    className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
+                    href="/contact"
+                    className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                   >
-                    Learn more <span aria-hidden=&quot;true&quot;>→</span>
-                  </Link>
+                    Learn more <span aria-hidden="true">→</span>
+                  </a>
                 </div>
               </div>
             ))}
@@ -306,15 +306,15 @@ const Page: React.FC<PageProps> = ({ className }) => {
             {serviceProcess.map((stepindex) => (
               <div key={step.step} className=&quot;relative&quot;>
                 {index < serviceProcess.length - 1 && (
-                  <div className=&quot;hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700&quot;></div>
+                  <div className="hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700"></div>
                 )}
-                <div className=&quot;bg-white/5 p-6 rounded-2xl backdrop-blur-sm text-center hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
-                  <div className=&quot;mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-600/20 mb-4&quot;>
-                    <step.icon className=&quot;h-8 w-8 text-blue-400&quot; />
+                <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm text-center hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-600/20 mb-4">
+                    <step.icon className="h-8 w-8 text-blue-400" />
                   </div>
-                  <div className=&quot;text-sm font-semibold text-blue-400 mb-2&quot;>{step.step}</div>
-                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>{step.title}</h3>
-                  <p className=&quot;text-sm text-gray-300&quot;>{step.description}</p>
+                  <div className="text-sm font-semibold text-blue-400 mb-2">{step.step}</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
+                  <p className="text-sm text-gray-300">{step.description}</p>
                 </div>
               </div>
             ))}

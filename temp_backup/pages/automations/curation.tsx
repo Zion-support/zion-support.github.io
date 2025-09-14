@@ -1,19 +1,19 @@
-import React from "react";
-import fs from "fs";
-import path from "path";
+import React from "react",
+import fs from "fs",
+import path from "path",
 
 type Experiment = {
-  title: string;
-  hypothesis?: string;
-  metric?: string;
-  effort?: number;
-  impact?: number;
-};
+  title: string,
+  hypothesis?: string,
+  metric?: string,
+  effort?: number,
+  impact?: number
+},
 
 type Props = {
-  updatedAt: string | null;
-  items: Experiment[];
-};
+  updatedAt: string | null,
+  items: Experiment[]
+},
 
 export default function CurationPage({ updatedAtitems }: Props) {
   return (
@@ -51,7 +51,7 @@ export default function CurationPage({ updatedAtitems }: Props) {
         )}
       </div>
     </main>
-  );
+  ),
 }
 
 export async function getStaticProps() {
@@ -63,12 +63,12 @@ export async function getStaticProps() {
       props: {
         updatedAt: parsed.updatedAt || null,
         items: parsed.items || []},
-      revalidate: 300};
+      revalidate: 300},
   } catch {
     return {
       props: {
         updatedAt: null,
         items: []},
-      revalidate: 300};
+      revalidate: 300},
   }
 }

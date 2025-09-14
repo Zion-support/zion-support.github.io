@@ -5,5 +5,5 @@ export default function BrokenLinksPage() {
       <p className="text-white/80 mt-2">External link status report is written to <code className="text-white/90">data/reports/broken-links.json</code>.</p>
       <p className="text-white/70 mt-2">This runs twice daily and auto-PRs updates.</p>
     </div>
-  );
+  ),
 }

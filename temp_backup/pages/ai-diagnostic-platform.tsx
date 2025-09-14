@@ -1,54 +1,50 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Brain, Shield, Zap, Target, Stethoscope, 
   BarChart3, Cpu, Globe, Users, Award,
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const features = [
-  'AI-powered medical image analysis',
-  'Symptom assessment algorithms',
-  'Treatment recommendation engine',
-  'Patient history integration',
-  'Real-time diagnostic updates',
-  'Multi-specialty coverage',
-  'Mobile app integration',
-  'HIPAA-compliant platform'
-];
+  'AI-powered medical image analysisSymptom assessment algorithms',
+  'Treatment recommendation enginePatient history integration',
+  'Real-time diagnostic updatesMulti-specialty coverage',
+  'Mobile app integrationHIPAA-compliant platform'
+],
 
 const pricingPlans = [
   {
     name: 'Starter',
     price: 299,
     period: 'month',
-    features: ['Basic diagnostic tools', '3 medical specialties', 'Standard reporting', 'Standard support'],
+    features: ['Basic diagnostic tools3 medical specialties', 'Standard reportingStandard support'],
     popular: false
   },
   {
     name: 'Professional',
     price: 799,
     period: 'month',
-    features: ['Advanced AI diagnostics', 'All specialties', 'Custom reporting', 'API access', 'Priority support'],
+    features: ['Advanced AI diagnosticsAll specialties', 'Custom reportingAPI access', 'Priority support'],
     popular: true
   },
   {
     name: 'Enterprise',
     price: 1999,
     period: 'month',
-    features: ['Custom AI models', 'White-label solution', 'Dedicated support', 'Custom integrations', 'Training included'],
+    features: ['Custom AI modelsWhite-label solution', 'Dedicated supportCustom integrations', 'Training included'],
     popular: false
   }
-];
+],
 
 export default function AIDiagnosticPlatform() {
   return (
@@ -289,5 +285,5 @@ export default function AIDiagnosticPlatform() {
         </div>
       </section>
     </Layout>
-  );
+  ),
 }

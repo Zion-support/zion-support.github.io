@@ -1,10 +1,10 @@
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
+import fs from 'fs',
+import path from 'path',
+import type { GetStaticProps } from 'next',
 
-type Item = { source: string; name: string; url: string; description?: string; downloads?: number };
+type Item = { source: string, name: string, url: string, description?: string, downloads?: number },
 
-type Props = { pypi: Item[]; crates: Item[]; github: { [k: string]: Item[] } };
+type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
@@ -16,11 +16,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         pypi: data.ecosystems.pypi || [],
         crates: data.ecosystems.crates || [],
         github: data.ecosystems.github || {}},
-      revalidate: 7200};
+      revalidate: 7200},
   } catch {
     return { props: { pypi: []crates: []github: {} }revalidate: 7200 };
   }
-};
+},
 
 export default function TechRadar({ pypicratesgithub }: Props) {
   const langs = Object.keys(github);
@@ -71,5 +71,5 @@ export default function TechRadar({ pypicratesgithub }: Props) {
         </section>
       ))}
     </div>
-  );
+  ),
 }

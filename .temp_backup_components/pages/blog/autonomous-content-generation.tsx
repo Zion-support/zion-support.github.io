@@ -37,7 +37,7 @@ export default function AutonomousContentGeneration() {
                 </h1>
                 <p className="text-xl text-white/80 max-w-3xl mx-auto">
                   The content creation landscape is undergoing a fundamental transformation. 
-                  Autonomous AI systems are not just assisting human creators—they&apos;re becoming creators themselves.
+                  Autonomous AI systems are not just assisting human creators—they're becoming creators themselves.
                 </p>
               </header>
               
@@ -60,10 +60,10 @@ export default function AutonomousContentGeneration() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Zion Tech Group&apos;s Approach</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Zion Tech Group's Approach</h2>
                 <p className="text-white/90 mb-4">
-                  At Zion Tech Group, we&apos;ve developed a unique approach to autonomous content generation 
-                  that combines the best of human creativity with AI efficiency. Our systems don&apos;t just 
+                  At Zion Tech Group, we've developed a unique approach to autonomous content generation 
+                  that combines the best of human creativity with AI efficiency. Our systems don't just 
                   generate content—they understand context, audience, and purpose.
                 </p>
                 <p className="text-white/90 mb-4">
@@ -142,7 +142,7 @@ export default function AutonomousContentGeneration() {
                 <h2 className="text-2xl font-semibold mb-6 text-purple-400">The Future of Content</h2>
                 <p className="text-white/90 mb-4">
                   As we look to the future, autonomous content generation will become even more sophisticated. 
-                  We&apos;re working on next-generation systems that will:
+                  We're working on next-generation systems that will:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
                   <li>• Generate multimedia content including images, videos, and interactive elements</li>
@@ -156,10 +156,10 @@ export default function AutonomousContentGeneration() {
                 <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Conclusion</h2>
                 <p className="text-white/90 mb-4">
                   Autonomous content generation represents a paradigm shift in how we create and distribute content. 
-                  It&apos;s not about replacing human creativity—it&apos;s about amplifying it and making it more accessible.
+                  It's not about replacing human creativity—it's about amplifying it and making it more accessible.
                 </p>
                 <p className="text-white/90">
-                  At Zion Tech Group, we&apos;re excited to be at the forefront of this revolution, 
+                  At Zion Tech Group, we're excited to be at the forefront of this revolution, 
                   helping organizations harness the power of autonomous AI to create better content, 
                   reach more audiences, and achieve their communication goals more effectively than ever before.
                 </p>
@@ -169,7 +169,7 @@ export default function AutonomousContentGeneration() {
             <div className="mt-16 pt-8 border-t border-white/20">
               <h3 className="text-xl font-semibold mb-4 text-white">Share this article</h3>
               <div className="flex gap-4">
-                <a href="https://twitter.com/intent/tweet?text=Autonomous%20Content%20Generation%20-%20The%20Future%20of%20Content%20Creation&url=https://bolt.new.zion.app/blog/autonomous-content-generation" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white transition-colors">
+                <a href="https: //twitter.com/intent/tweet?text=Autonomous%20Content%20Generation%20-%20The%20Future%20of%20Content%20Creation&url=https://bolt.new.zion.app/blog/autonomous-content-generation" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white transition-colors">
                   Twitter
                 </a>
                 <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://bolt.new.zion.app/blog/autonomous-content-generation" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-blue-800 hover:bg-blue-900 rounded-lg text-white transition-colors">
@@ -184,5 +184,5 @@ export default function AutonomousContentGeneration() {
         </main>
       </div>
     </>
-  );
+  )
 }

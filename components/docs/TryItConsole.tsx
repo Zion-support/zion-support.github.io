@@ -214,16 +214,16 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       </div>
       {_(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
         <div>
-          <label className=&quot;block text-sm mb-1&quot;>Request Body (JSON)</label>
-          <textarea className=&quot;w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm&quot; value={body} onChange={(e) => setBody(e.target.value)} placeholder=&quot;{ }&quot; />
+          <label className="block text-sm mb-1">Request Body (JSON)</label>
+          <textarea className="w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm" value={body} onChange={(e) => setBody(e.target.value)} placeholder="{ }" />
         </div>
       )}
-      <button onClick={onSend} className=&quot;px-3 py-2 rounded bg-high-contrast-accent text-black&quot; disabled={loading}>
+      <button onClick={onSend} className="px-3 py-2 rounded bg-high-contrast-accent text-black" disabled={loading}>
         {loading ? 'Sending…' : 'Send Request'}
       </button>
       <div>
-        <label className=&quot;block text-sm mb-1&quot;>Response</label>
-        <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80&quot;><code>{response}</code></pre>
+        <label className="block text-sm mb-1">Response</label>
+        <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80"><code>{response}</code></pre>
       </div>
     </div>
   )

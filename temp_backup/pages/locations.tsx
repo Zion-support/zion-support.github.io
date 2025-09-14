@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 export default function LocationsPage() {
 	return (
@@ -15,8 +15,8 @@ export default function LocationsPage() {
 					<h2 className="text-white text-xl font-semibold mb-2">Middletown, DE (HQ)</h2>
 					<p className="text-slate-300">364 E Main St STE 1008 Middletown DE 19709</p>
 				</div>
-				<p className="text-slate-300">Call <a className="text-cyan-400" href="tel:+13024640950">+1 302 464 0950</a> or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
+				<p className="text-slate-300">Call <a className="text-cyan-400" href="tel: +13024640950">+1 302 464 0950</a> or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
 			</div>
 		</div>
-	);
+	)
 }

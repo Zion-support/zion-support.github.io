@@ -16,7 +16,7 @@ const AugmentedRealityInEnterpriseApplicationsChat: NextPage = () => {
         <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default AugmentedRealityInEnterpriseApplicationsChat;
+export default AugmentedRealityInEnterpriseApplicationsChat,

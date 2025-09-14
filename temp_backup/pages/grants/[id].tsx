@@ -1,33 +1,33 @@
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import type { GrantApplication } from '../../types/grants';
+import { useEffect, useState } from 'react',
+import { useRouter } from 'next/router',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import type { GrantApplication } from '../../types/grants',
 
 export default function GrantDetailPage() {
-  const router = useRouter();
-  const { id } = router.query as { id: string };
-  const [item, setItem] = useState<GrantApplication | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [updateContent, setUpdateContent] = useState('');
+  const router = useRouter(),
+  const { id } = router.query as { id: string },
+  const [item, setItem] = useState<GrantApplication | null>(null),
+  const [loading, setLoading] = useState(true),
+  const [updateContent, setUpdateContent] = useState(''),
 
   useEffect(() => {
-    if (!id) return;
-    setLoading(true);
-    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false));
-  }, [id]);
+    if (!id) return,
+    setLoading(true),
+    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false)),
+  }, [id]),
 
   const addUpdate = async () => {
-    if (!id || !updateContent.trim()) return;
-    const resp = await fetch(`/api/grants/${id}/updates`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: updateContent }) });
+    if (!id || !updateContent.trim()) return,
+    const resp = await fetch(`/api/grants/${id}/updates`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: updateContent }) }),
     if (resp.ok) {
-      const u = await resp.json();
-      setItem((prev) => prev ? { ...prev, updates: [...(prev.updates || []), u.update] } : prev);
-      setUpdateContent('');
+      const u = await resp.json(),
+      setItem((prev) => prev ? { ...prev, updates: [...(prev.updates || []), u.update] } : prev),
+      setUpdateContent(''),
     }
-  };
+  },
 
-  if (loading) return <EnhancedLayout><div>Loading...</div></EnhancedLayout>;
-  if (!item) return <EnhancedLayout><div>Not found</div></EnhancedLayout>;
+  if (loading) return <EnhancedLayout><div>Loading...</div></EnhancedLayout>,
+  if (!item) return <EnhancedLayout><div>Not found</div></EnhancedLayout>,
 
   return (
     <EnhancedLayout>
@@ -105,5 +105,5 @@ export default function GrantDetailPage() {
         </aside>
       </div>
     </EnhancedLayout>
-  );
+  ),
 }
