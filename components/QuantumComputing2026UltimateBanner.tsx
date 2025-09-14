@@ -1,57 +1,122 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function QuantumComputing2026UltimateBanner() {
+const QuantumComputing2026UltimateBanner = () => {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900 via-blue-900 to-indigo-900 text-white">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">⚛️ QUANTUM REVOLUTION</span>
+    <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 relative overflow-hidden">
+      {/* Quantum field animation background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-cyan-400 rounded-full opacity-10 animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-purple-400 rounded-full opacity-15 animate-bounce"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-16 h-16 bg-pink-400 rounded-full opacity-20 animate-ping"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full px-8 py-3 mb-8">
+            <span className="text-lg font-bold text-black">⚛️ QUANTUM COMPUTING 2026 ULTIMATE</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
-            Quantum Computing 2026 Ultimate
-          </h2>
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Experience the ultimate quantum computing revolution of 2026. From quantum supremacy to 
-            practical applicationsdiscover how quantum computing is transforming every industry.
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
+            Quantum Supremacy Achieved
+          </h1>
+          <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
+            Witness the dawn of true quantum supremacy. Our 2026 quantum processors solve problems 
+            that would take classical computers billions of years in mere seconds.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
-              href="/quantum-computing-2026-ultimate"
-              className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all transform hover:scale-105"
+              href="/quantum-computing-2026"
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
-              Enter the Quantum Era
+              Explore Quantum 2026
             </Link>
             <Link
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-900 transition-all"
+              href="/quantum-applications"
+              className="border-2 border-cyan-400 text-cyan-400 px-10 py-5 rounded-xl font-bold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
             >
-              Get Quantum Access
+              Quantum Applications
             </Link>
           </div>
         </div>
-        
-        {/* Performance Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
-          <div className="text-center bg-gradient-to-br from-cyan-600 to-blue-600 p-6 rounded-xl">
-            <div className="text-3xl font-bold mb-2">10^15</div>
-            <div className="text-lg opacity-90">Speed Increase</div>
+
+        {/* Quantum Capabilities Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
+            <div className="text-5xl mb-6">🔬</div>
+            <h3 className="text-2xl font-bold mb-4">Drug Discovery</h3>
+            <p className="text-gray-200 mb-6 text-lg">
+              Accelerate pharmaceutical research by simulating molecular interactions at quantum scale.
+            </p>
+            <div className="text-3xl font-bold text-cyan-300">1000x Faster</div>
           </div>
-          <div className="text-center bg-gradient-to-br from-blue-600 to-indigo-600 p-6 rounded-xl">
-            <div className="text-3xl font-bold mb-2">1000+</div>
-            <div className="text-lg opacity-90">Qubits</div>
+          
+          <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
+            <div className="text-5xl mb-6">🌍</div>
+            <h3 className="text-2xl font-bold mb-4">Climate Modeling</h3>
+            <p className="text-gray-200 mb-6 text-lg">
+              Model complex climate systems with unprecedented accuracy and speed.
+            </p>
+            <div className="text-3xl font-bold text-purple-300">∞ Accuracy</div>
           </div>
-          <div className="text-center bg-gradient-to-br from-indigo-600 to-purple-600 p-6 rounded-xl">
-            <div className="text-3xl font-bold mb-2">99.9%</div>
-            <div className="text-lg opacity-90">Accuracy</div>
+          
+          <div className="bg-gradient-to-br from-pink-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30">
+            <div className="text-5xl mb-6">🔐</div>
+            <h3 className="text-2xl font-bold mb-4">Cryptography</h3>
+            <p className="text-gray-200 mb-6 text-lg">
+              Unbreakable quantum encryption that ensures perfect security for all communications.
+            </p>
+            <div className="text-3xl font-bold text-pink-300">100% Secure</div>
           </div>
-          <div className="text-center bg-gradient-to-br from-purple-600 to-pink-600 p-6 rounded-xl">
-            <div className="text-3xl font-bold mb-2">∞</div>
-            <div className="text-lg opacity-90">Possibilities</div>
+          
+          <div className="bg-gradient-to-br from-cyan-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
+            <div className="text-5xl mb-6">🧬</div>
+            <h3 className="text-2xl font-bold mb-4">Genomics</h3>
+            <p className="text-gray-200 mb-6 text-lg">
+              Decode genetic sequences and predict protein folding with quantum precision.
+            </p>
+            <div className="text-3xl font-bold text-cyan-300">Perfect Match</div>
           </div>
+        </div>
+
+        {/* Quantum Statistics */}
+        <div className="bg-gradient-to-r from-black/30 to-black/50 backdrop-blur-sm rounded-3xl p-12 border border-cyan-400/20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold text-cyan-300 mb-3">1000+</div>
+              <div className="text-gray-300 text-lg">Qubits</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-purple-300 mb-3">99.99%</div>
+              <div className="text-gray-300 text-lg">Fidelity</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-pink-300 mb-3">10^18</div>
+              <div className="text-gray-300 text-lg">Operations/sec</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-cyan-300 mb-3">-273°C</div>
+              <div className="text-gray-300 text-lg">Operating Temp</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <p className="text-xl text-gray-300 mb-8">
+            Ready to harness the power of quantum computing for your business?
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-12 py-4 rounded-xl font-bold text-xl hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+          >
+            Get Quantum Access Now
+            <span className="ml-2">→</span>
+          </Link>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default QuantumComputing2026UltimateBanner;
