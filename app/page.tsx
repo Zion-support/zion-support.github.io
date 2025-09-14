@@ -66,6 +66,10 @@ import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025Ul
 import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 import AIImplementationGuideBanner from '../components/AIImplementationGuideBanner';
 
+// Import new AI 2025 Advanced Automation Mastery components
+import AI2025AdvancedAutomationMasteryBanner from '../components/AI2025AdvancedAutomationMasteryBanner';
+import UltimateAIAutomationShowcase2025 from '../components/UltimateAIAutomationShowcase2025';
+
 // Import new enhanced components
 import AITrends2025_2030FuturePredictionsBanner from '../components/AITrends2025_2030FuturePredictionsBanner';
 import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';
@@ -124,6 +128,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 Advanced Automation Mastery Banner - NEW FEATURED */}
+        <AI2025AdvancedAutomationMasteryBanner />
+        
         {/* New Resource 2025 Implementation Roadmap Banner - NEW FEATURED */}
         <NewResource2025ImplementationRoadmapBanner />
         
@@ -264,6 +271,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Ultimate AI Automation Showcase 2025 - NEW FEATURED */}
+        <UltimateAIAutomationShowcase2025 />
+        
         {/* Ultimate Content Showcase 2025 - NEW */}
         <UltimateContentShowcase2025 />
         
