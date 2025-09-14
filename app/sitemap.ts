@@ -58,51 +58,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
-    // New 2026 Content
+    // New 2025 Content
     {
-      url: `${baseUrl}/blog/ai-2026-next-generation-autonomous-systems-revolution`,
+      url: `${baseUrl}/blog/ai-2025-machine-learning-revolution-enterprise-success`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/case-studies/ai-transformation-2026-ultimate-success-story`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    // New blog posts
-    {
-      url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/blog/ai-2025-quantum-computing-breakthrough`,
+      url: `${baseUrl}/blog/ai-2025-cloud-computing-revolution-ultimate-guide`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 0.9,
     },
-    // New case studies
     {
-      url: `${baseUrl}/case-studies/enterprise-ai-transformation-success-story`,
+      url: `${baseUrl}/case-studies/ai-transformation-2025-ultimate-success-story-enterprise`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 0.9,
-    },
-    // New resources
-    {
-      url: `${baseUrl}/resources/ai-implementation-checklist-2025`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
     }
   ]
 }
