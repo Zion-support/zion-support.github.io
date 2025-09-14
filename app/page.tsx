@@ -16,6 +16,8 @@ import BusinessIntelligenceDashboard from '../components/BusinessIntelligenceDas
 import AdvancedSecurityMonitor from '../components/AdvancedSecurityMonitor';
 import AdvancedAnalyticsEngine from '../components/AdvancedAnalyticsEngine';
 import AutomationWorkflowEngine from '../components/AutomationWorkflowEngine';
+import EnterpriseDataManagement from '../components/EnterpriseDataManagement';
+import APIManagementSystem from '../components/APIManagementSystem';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
@@ -3538,6 +3540,8 @@ export default function HomePage() {
       <AdvancedSecurityMonitor />
       <AdvancedAnalyticsEngine />
       <AutomationWorkflowEngine />
+      <EnterpriseDataManagement />
+      <APIManagementSystem />
     </div>
   );
 }
