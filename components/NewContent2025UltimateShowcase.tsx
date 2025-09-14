@@ -1,8 +1,9 @@
-import React{ useState } from 'react';
+import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 const NewContent2025UltimateShowcase = () => {
-  const [activeCategorysetActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('all');
 
   const content = [
     {
@@ -56,10 +57,10 @@ const NewContent2025UltimateShowcase = () => {
   ];
 
   const categories = [
-    { id: 'all'label: 'All Content'count: content.length },
-    { id: 'ai-revolution'label: 'AI Revolution'count: content.filter(c => c.category === 'ai-revolution').length },
-    { id: 'success-stories'label: 'Success Stories'count: content.filter(c => c.category === 'success-stories').length },
-    { id: 'implementation'label: 'Implementation'count: content.filter(c => c.category === 'implementation').length }
+    { id: 'all', label: 'All Content', count: content.length },
+    { id: 'ai-revolution', label: 'AI Revolution', count: content.filter(c => c.category === 'ai-revolution').length },
+    { id: 'success-stories', label: 'Success Stories', count: content.filter(c => c.category === 'success-stories').length },
+    { id: 'implementation', label: 'Implementation', count: content.filter(c => c.category === 'implementation').length }
   ];
 
   const filteredContent = activeCategory === 'all' 
@@ -105,8 +106,8 @@ const NewContent2025UltimateShowcase = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover the breakthrough strategies and technologies that are delivering extraordinary results: 
-            <span className="font-semibold text-purple-600"> 1,200% ROI</span>
-            <span className="font-semibold text-green-600"> $3.2B+ savings</span>and 
+            <span className="font-semibold text-purple-600"> 1,200% ROI</span>, 
+            <span className="font-semibold text-green-600"> $3.2B+ savings</span>, and 
             <span className="font-semibold text-blue-600"> 95% efficiency improvements</span>
           </p>
         </div>
@@ -146,7 +147,7 @@ const NewContent2025UltimateShowcase = () => {
                 {/* Type Badge */}
                 <div className="flex items-center justify-between mb-4">
                   <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
-                    {getTypeIcon(item.type)} {item.type.replace('-' ').toUpperCase()}
+                    {getTypeIcon(item.type)} {item.type.replace('-', ' ').toUpperCase()}
                   </span>
                   <span className="text-sm text-gray-500">{item.readingTime}</span>
                 </div>
