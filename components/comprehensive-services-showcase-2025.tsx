@@ -151,7 +151,49 @@ export default function ComprehensiveServicesShowcase2025() {
     }
   };
 
-  const getCategoryIcon = (category: string) => {
+
+
+  return (
+    <Layout>
+      <Head>
+        <title>Comprehensive Services Showcase 2025 - Zion Tech Group</title>
+        <meta name="description" content="Explore our complete portfolio of innovative micro SAAS, AI, IT, and emerging technology services. Find the perfect solution for your business needs." />
+        <meta name="keywords" content="micro SAAS, AI services, IT solutions, quantum computing, emerging technology, business solutions, Zion Tech Group" />
+      </Head>
+      {/* Hero Section */}
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+        </div>
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20"
+              animate={{
+                x: [0, 100, 0];
+                y: [0, -100, 0];
+                opacity: [0.2, 0.8, 0.2]}}
+              transition={{
+;
+    setFilteredServices (filtered);  }, [search_term, selected_category, selectedPriceRange, sort_by]);
+;
+  const getCategoryColor = (category: string) =>: any {
+    switch (category) {        case 'price - low':;
+          return parse_float (a.price.replace (/[^0 - 9.]/g, '')) - parse_float (b.price.replace (/[^0 - 9.]/g, ''));
+        case 'price - high':;
+          return parse_float (b.price.replace (/[^0 - 9.]/g, '')) - parse_float (a.price.replace (/[^0 - 9.]/g, ''));
+        default: return 0;
+      }
+    });
+;
+    setFilteredServices (filtered);
+  }, [search_term, selected_category, selectedPriceRange, sort_by]);
+;
+  const getCategoryColor = (category: string) =>: any {
     switch (category) {
       case 'Micro SAAS': return <Rocket className="w-5 h-5" />;
       case 'AI & Consciousness': return <Brain className="w-5 h-5" />;
@@ -451,6 +493,9 @@ export default function ComprehensiveServicesShowcase2025() {
                       {service.icon}
                     </div>
                   </div>
+
+
+
 
                   {/* Service Details */}
                   <div className="flex-1 min-w-0">

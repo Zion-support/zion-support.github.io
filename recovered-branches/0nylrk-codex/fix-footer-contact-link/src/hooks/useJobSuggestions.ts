@@ -10,6 +10,7 @@ export function useJobSuggestions(talentId?: string) {
   
   useEffect(() => {
     const fetchSuggestedJobs = async () => {
+
       if (!talentId) return;
       
       try {

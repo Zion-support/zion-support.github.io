@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -435,6 +436,7 @@ export default function MarketResearchPage() {
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* Key Trends */}
                         <div>
+
                           <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
                             <TrendingUp className="w-5 h-5 mr-2 text-green-400" />
                             Key Trends

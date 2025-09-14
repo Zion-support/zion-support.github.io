@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 export default function Privacy() {
   return (
+
     <>
       <Head>
         <title>Privacy | Zion Tech Group</title>

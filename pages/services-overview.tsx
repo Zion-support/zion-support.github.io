@@ -70,6 +70,7 @@ export default function ServicesOverviewPage() {
           </div>
         </section>
 
+
         {/* Service Categories */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -121,6 +122,7 @@ export default function ServicesOverviewPage() {
             </div>
           </div>
         </section>
+
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">

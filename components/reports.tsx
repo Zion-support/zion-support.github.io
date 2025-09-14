@@ -282,7 +282,6 @@ const ReportsPage: React.FC = () => {
                   {category.name} ({category.count})
                 </button>
               ))}
-            </motion.div>
 
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

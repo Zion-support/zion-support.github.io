@@ -232,6 +232,7 @@ export default function PricingComparisonPage() {
                     {insight.icon}
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
+
                     {insight.insight}
                   </p>
                 </Card>

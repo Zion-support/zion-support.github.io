@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 export default function FAQ() {
   return (
+
     <>
       <Head>
         <title>FAQ | Zion Tech Group</title>

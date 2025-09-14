@@ -20,6 +20,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     { title: "Sample Code"path: "/developers/docs/samples" },
     { title: "Error Codes & Rate Limits"path: "/developers/docs/errors" }];
 
+
   return (
     <div className="flex min-h-screen bg-zinc-950">
       {/* Sidebar */}

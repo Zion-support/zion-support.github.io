@@ -15,6 +15,7 @@ type ThemeProviderState = {
 
 const initialState: ThemeProviderState = {
   theme: "system",
+
   setTheme: () => null}
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
@@ -24,6 +25,8 @@ export function ThemeProvider({
   defaultTheme = "system"}: ThemeProviderProps) {
   const [themesetTheme] = useState<Theme>(
     () => (localStorage.getItem("theme") as Theme) || defaultTheme
+
+
   )
 
   useEffect(() => {

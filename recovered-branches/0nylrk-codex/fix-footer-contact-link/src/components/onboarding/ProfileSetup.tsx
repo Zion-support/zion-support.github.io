@@ -120,6 +120,7 @@ export function ProfileSetup({ onCompleteuserType }: ProfileSetupProps) {
                     }`}
                     className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]"
                     {...field}
+
                   />
                 </FormControl>
                 <FormMessage className="text-red-400" />

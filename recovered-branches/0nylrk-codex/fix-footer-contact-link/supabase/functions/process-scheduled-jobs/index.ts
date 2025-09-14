@@ -216,6 +216,7 @@ async function processContentGeneration(supabase, contentType) {
               previewText: contentData.previewText,
               body: contentData.body,
               testMode: true,
+
               testEmail: adminEmail
             })}
         );

@@ -425,6 +425,20 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 
+              href='/comprehensive-services-showcase-2026'
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25'
+            >
+              <Rocket className='w-5 h-5 mr-2' />
+              View All 2026 Services
+              <ArrowRight className='w-5 h-5 ml-2' />            </a>            >
+              <Rocket className="w-5 h-5 mr-2" />
+              View All 2026 Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">

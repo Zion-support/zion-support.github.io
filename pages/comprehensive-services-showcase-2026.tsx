@@ -89,14 +89,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     'Digital Twin & Simulation'
   ];
 
-  const priceRanges = [
-    { value: 'all', label: 'All Prices' },
-    { value: '0-100', label: '$0 - $100' },
-    { value: '100-200', label: '$100 - $200' },
-    { value: '200-400', label: '$200 - $400' },
-    { value: '400-600', label: '$400 - $600' },
-    { value: '600+', label: '$600+' }
-  ];
 
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -425,6 +417,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   className="bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
                 >
                   Call Us
+
                 </a>
               </div>
             </div>

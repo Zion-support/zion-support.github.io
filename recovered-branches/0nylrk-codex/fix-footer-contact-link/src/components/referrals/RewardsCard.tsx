@@ -52,6 +52,7 @@ export function RewardsCard({ rewardsisLoading }: RewardsCardProps) {
   }
 
   return (
+
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">

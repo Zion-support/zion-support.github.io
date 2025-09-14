@@ -130,6 +130,7 @@ const industries = [
     href: '/industries/government',
     features: ['Citizen Services', 'Data Security', 'Digital Transformation']
   }
+
 ]
 
 export default function Industries() {
@@ -175,6 +176,7 @@ export default function Industries() {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
@@ -200,6 +202,7 @@ export default function Industries() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
+
                     whileHover={{ y: -5 }}
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                     <p className="text-gray-600 mb-6 leading-relaxed">";
@@ -257,6 +260,7 @@ export default function Industries() {
               className="text-center mb-16"";
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
@@ -293,6 +297,7 @@ export default function Industries() {
                 className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
@@ -305,6 +310,7 @@ export default function Industries() {
                   We ensure all solutions meet industry-specific regulatory requirements and;
                   maintain the highest security standards.;
                 </p>;
+
               </motion.div>;
 
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
@@ -340,6 +346,7 @@ export default function Industries() {
                   className="text-center""
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
@@ -364,6 +371,7 @@ export default function Industries() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

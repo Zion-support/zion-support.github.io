@@ -129,6 +129,7 @@ export default function GovernmentPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -209,6 +210,7 @@ export default function GovernmentPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0.8 }}
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center mb-16"
@@ -247,6 +249,7 @@ export default function GovernmentPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0.8 }}
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             >

@@ -21,6 +21,7 @@ const contact_methods = [;
 import React from 'react';
 
 const contactMethods = [
+
   {
     name: 'Email'
     description: 'Get in touch with our team'
@@ -172,6 +173,7 @@ export default function ContactPage() {
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Get in{' '}
+
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 Touch
               </span>
@@ -183,6 +185,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+
       {/* Contact methods */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -212,6 +215,9 @@ export default function ContactPage() {
                 </dd>
               </div>
             ))}
+
+
+
           </dl>;
         </div>;
       </div>;
@@ -222,6 +228,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
 
 
             Let's start a conversation
@@ -313,6 +320,7 @@ export default function ContactPage() {
           </form>;
         </div>;
       </div>;
+
 
       {/* Office locations */}
       <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
@@ -482,8 +490,6 @@ export default function ContactPage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
             Common questions
           </p>
         </div>

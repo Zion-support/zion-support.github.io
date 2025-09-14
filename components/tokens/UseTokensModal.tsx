@@ -87,6 +87,9 @@ export default function UseTokensModal({
           </div>
         </div>
 
+
+
+
         <div className="mt-4 flex items-center justify-between">
           <div className="text-xs opacity-70">You can spend tokens to boost visibilitypromote listingsor access premium support.</div>
           <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className="enhanced-button enhanced-button-primary disabled:opacity-50">Redeem</button>

@@ -245,6 +245,7 @@ export default function FirstSteps() {
             </div>
           </div>
           {/* Next Steps */}
+
           <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Ready for the Next Step?</h2>
             <p className="text-gray-600 mb-6">

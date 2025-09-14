@@ -44,11 +44,12 @@ const features = [
     description: 'Platforms for creating, managing, and delivering educational content and resources.',
   },
   {}
-    icon: Laptop,
-    title: 'Virtual Classrooms,',
-    description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
-  },
+    icon: BookOpen,;
+    title: 'Digital Content Management,',;
+    description: 'Platforms for creating, managing, and delivering educational content and resources.',;
+  },;
   {}
+
     icon: Globe,
     title: 'Accessibility Solutions,',
     description: 'ADA-compliant educational technology that ensures equal access for all students.'';
@@ -79,6 +80,7 @@ const features = [
     icon: Users,
     title: 'Teacher Resources',
     description: 'Professional development and teaching support tools'
+
   }
 ;];
 const solutions = [;
@@ -156,6 +158,7 @@ const benefits = [
   'Reduced operational costs',
   'Accessible learning for all students'
 ];
+
 export default function EducationSolutions() {
     title: 'Virtual Classrooms',
     description: 'Online learning platform with video conferencing and collaboration',
@@ -306,6 +309,7 @@ export default function EducationSolutionsPage() {
             </div>;
           </div>;
         </section>;
+
       </div>;
     </Layout>;
         {/* Benefits Section */}
