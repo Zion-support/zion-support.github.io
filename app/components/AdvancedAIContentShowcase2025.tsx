@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ChevronRightIcon, StarIcon, ChartBarIcon, CurrencyDollarIcon, ClockIcon, TagIcon } from '@heroicons/react/24/outline';
+import { ChevronRightIcon, StarIcon, ChartBarIcon, CurrencyDollarIcon, ClockIconIcon } from '@heroicons/react/24/outline';
 
 const AdvancedAIContentShowcase2025 = () => {
   const [activeFilter, setActiveFilter] = useState('all');
