@@ -134,12 +134,12 @@ export default function HomePage() {
         </section>
 
         {/* New Content 2025 Ultimate Showcase */}
-        <section className="py-16 bg-white">
+        <section className="relative overflow-hidden">
           <NewContent2025UltimateShowcaseBanner />
         </section>
 
         {/* Revolutionary Content 2025 Banner */}
-        <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <section className="relative overflow-hidden">
           <RevolutionaryContent2025Banner />
         </section>
 
