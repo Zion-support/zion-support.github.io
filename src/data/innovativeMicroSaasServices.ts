@@ -1,4 +1,6 @@
 import { ProductListing } from "@/types/listings";
+
+interface InnovativeMicroSaasService extends ProductListing {
   category: 'AI & Automation' | 'Business Intelligence' | 'Digital Marketing' | 'Productivity' | 'Security & Compliance' | 'Development Tools' | 'Analytics' | 'Collaboration' | 'Finance & HR' | 'Industry Specific';
   subcategory: string;
   price: {
@@ -67,6 +69,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,499 - $8,999/month",
+  };
   technology: string[];
   integrations: string[];
   compliance: string[];
