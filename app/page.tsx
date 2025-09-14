@@ -1,5 +1,4 @@
 import React, { Suspense, lazy } from 'react';
-import Link from 'next/link';
 import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -55,7 +54,6 @@ import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
-import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
 
 // Import new AI 2026 promotional components
 import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
@@ -146,10 +144,7 @@ export default function HomePage() {
         <AI2025BreakthroughBanner />
         
         {/* New Content 2025 Showcase Banner */}
-        <NewContent2025PromotionBanner />
-        
-        {/* Revolutionary Content 2025 Banner */}
-        <RevolutionaryContent2025Banner />
+        <NewContent2025ShowcaseBanner />
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -169,18 +164,18 @@ export default function HomePage() {
                 Expert consulting and implementation services for enterprise success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <a
                   href="/services"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Explore Services
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   Get Started
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -221,9 +216,9 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Intelligent automation solutions that streamline operations and boost productivity across your organization.
                 </p>
-                <Link href="/services/ai-automation" className="text-purple-600 font-semibold hover:text-purple-800">
+                <a href="/services/ai-automation" className="text-purple-600 font-semibold hover:text-purple-800">
                   Learn More →
-                </Link>
+                </a>
               </div>
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="text-4xl mb-4">☁️</div>
@@ -231,9 +226,9 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Scalable, secure cloud solutions designed to support your business growth and digital transformation.
                 </p>
-                <Link href="/services/cloud-infrastructure" className="text-purple-600 font-semibold hover:text-purple-800">
+                <a href="/services/cloud-infrastructure" className="text-purple-600 font-semibold hover:text-purple-800">
                   Learn More →
-                </Link>
+                </a>
               </div>
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="text-4xl mb-4">💼</div>
@@ -241,9 +236,9 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.
                 </p>
-                <Link href="/services/micro-saas" className="text-purple-600 font-semibold hover:text-purple-800">
+                <a href="/services/micro-saas" className="text-purple-600 font-semibold hover:text-purple-800">
                   Learn More →
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -265,7 +260,6 @@ export default function HomePage() {
         <LatestContentShowcase2025 />
         <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
-        <FeaturedContentShowcase2026 />
         <NewContentPromotionBanner />
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />

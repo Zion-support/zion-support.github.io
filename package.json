@@ -275,7 +275,6 @@
     "@tanstack/react-query": "^5.85.5",
     "@types/js-cookie": "^3.0.6",
     "@vitejs/plugin-react": "^5.0.2",
-    "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
     "chalk": "^5.5.0",
     "cheerio": "^1.1.2",
