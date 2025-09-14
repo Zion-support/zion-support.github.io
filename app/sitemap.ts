@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com'
-  
+  const baseUrl = 'https://zion.app'
+
   return [
     {
       url: baseUrl,
@@ -11,16 +11,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/ai-automation-services`,
+      url: `${baseUrl}/services`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/cybersecurity-solutions`,
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/case-studies`,
@@ -29,100 +35,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.7,
-    },
-    {
       url: `${baseUrl}/resources`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'monthly',
       priority: 0.7,
     },
-<<<<<<< HEAD
     // New 2026 Content
     {
-      url: `${baseUrl}/blog/ai-2026-next-generation-autonomous-systems-revolution`,
+      url: `${baseUrl}/blog/ai-2026-next-generation-autonomous-business-revolution-ultimate-guide`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/case-studies/ai-transformation-2026-ultimate-success-story`,
+      url: `${baseUrl}/case-studies/ai-2026-global-autonomous-transformation-ultimate-success-story`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
+      url: `${baseUrl}/autonomous-business-systems-2026`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-=======
->>>>>>> cursor/create-and-deploy-new-content-123d
-    // New blog posts
-    {
-      url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
-      lastModified: new Date(),
-<<<<<<< HEAD
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog/ai-2025-quantum-computing-breakthrough`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    // New case studies
-    {
-      url: `${baseUrl}/case-studies/enterprise-ai-transformation-success-story`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-=======
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/blog/quantum-ai-2026-business-revolution`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
->>>>>>> cursor/create-and-deploy-new-content-123d
-      priority: 0.9,
-    },
-    // New resources
-    {
-<<<<<<< HEAD
       url: `${baseUrl}/resources/ai-implementation-checklist-2025`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
-=======
-      url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
->>>>>>> cursor/create-and-deploy-new-content-123d
     }
   ]
 }

@@ -5,26 +5,29 @@ const featuredContent = [
   {
     title: "AI 2025: The Enterprise Automation Revolution",
     description: "Discover how AI is transforming enterprise operations in 2025 with intelligent automation, predictive analytics, and autonomous decision-making systems.",
-    category: "AI & Automation",
-    date: "Jan 14, 2025",
     href: "/blog/ai-2025-enterprise-automation-revolution",
-    featured: true
+    category: "AI & Automation",
+    date: "2025-01-14",
+    featured: true,
+    tags: ["AI", "Enterprise", "Automation", "2025"]
   },
   {
     title: "AI 2025: Next-Generation Cybersecurity Revolution",
-    description: "Explore how AI is revolutionizing cybersecurity in 2025 with advanced threat detection, autonomous response systems, and predictive security analytics.",
-    category: "Cybersecurity",
-    date: "Jan 14, 2025",
+    description: "Explore how AI is revolutionizing cybersecurity with advanced threat detection, autonomous response systems, and predictive security analytics.",
     href: "/blog/ai-2025-cybersecurity-revolution-next-generation-threat-protection",
-    featured: true
+    category: "Cybersecurity",
+    date: "2025-01-14",
+    featured: true,
+    tags: ["AI", "Cybersecurity", "Threat Detection", "2025"]
   },
   {
-    title: "Global Enterprise AI Transformation: Ultimate Success Story",
-    description: "Discover how a Fortune 500 company achieved 340% ROI through comprehensive AI transformation, reducing costs by 67% while increasing efficiency by 89%.",
+    title: "Fortune 500 AI Transformation: 340% ROI Success Story",
+    description: "How a Fortune 500 company achieved 340% ROI increase through comprehensive AI transformation, reducing operational costs by 60%.",
+    href: "/case-studies/fortune-500-ai-transformation-2025-ultimate-success-story",
     category: "Case Study",
-    date: "Jan 14, 2025",
-    href: "/case-studies/global-enterprise-ai-transformation-2025-ultimate-success",
-    featured: true
+    date: "2025-01-14",
+    featured: true,
+    tags: ["Fortune 500", "AI Transformation", "ROI", "Success Story"]
   }
 ];
 
@@ -37,7 +40,7 @@ export default function FeaturedContent() {
             Featured Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the latest insights, success stories, and expert guidance on AI transformation and technology innovation.
+            Discover the latest insights, case studies, and resources on AI, automation, and technology transformation.
           </p>
         </div>
         
@@ -47,10 +50,11 @@ export default function FeaturedContent() {
               key={index}
               title={content.title}
               description={content.description}
+              href={content.href}
               category={content.category}
               date={content.date}
-              href={content.href}
               featured={content.featured}
+              tags={content.tags}
             />
           ))}
         </div>
@@ -58,9 +62,9 @@ export default function FeaturedContent() {
         <div className="text-center mt-12">
           <a
             href="/blog"
-            className="inline-flex items-center px-8 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors"
           >
-            View All Content →
+            View All Content
           </a>
         </div>
       </div>
