@@ -230,6 +230,10 @@ import NewResource2025ImplementationRoadmapBanner from '../components/NewResourc
 import AI2030ContentShowcaseBanner from '../components/AI2030ContentShowcaseBanner';
 import AI2030ContentNavigation from '../components/AI2030ContentNavigation';
 
+// Import new ultimate breakthrough content components
+import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
+import NewContent2025UltimateBreakthroughShowcase from '../components/NewContent2025UltimateBreakthroughShowcase';
+
 // Import new Advanced Neural Architectures 2026 components
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
@@ -251,6 +255,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER - LATEST FEATURED */}
+        <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* NEW ULTIMATE BREAKTHROUGH CONTENT SHOWCASE - LATEST FEATURED */}
+        <NewContent2025UltimateBreakthroughShowcase />
+        
         {/* AI 2026 Ultimate Business Automation Revolution Banner - NEW ULTIMATE BREAKTHROUGH */}
         <AI2026UltimateBusinessAutomationRevolutionBanner />
         
