@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
 
-interface User {
+export interface User {
   id: string;
-<<<<<<< HEAD
   email: string;
-<<<<<<< HEAD
   name: string;
   role: 'user' | 'admin';
   userType: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin';
@@ -79,18 +73,11 @@ import { useState } from 'react'
       isAuthenticated: false,
       isLoading: false,
     });
-    localStorage.removeItem('authToken');
   };
-=======
-    })
-  }
 
-  const signup = async (email: string, password: string, name: string) => {
-    setAuthState({ ...authState, isLoading: true })
-    
+  const register = async (userData: RegisterData): Promise<void> => {
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
       
       const user: User = {
         id: '1',
@@ -161,87 +148,116 @@ export function useAuth(): AuthContextType {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      const mockUser: User = {
-        id: '1',
-        name: 'Demo User',
-        email,
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+      // Mock user data - in a real app this would come from your API
+      const newUser: User = {
+        id: Math.random().toString(36).substr(2, 9),
+        email: userData.email,
+        name: userData.name,
+        role: userData.role || 'user',
+        avatar: `https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face`,
+        company: userData.company,
+        phone: userData.phone,
+        location: userData.location,
+        bio: userData.bio,
+        skills: userData.skills || [],
+        experience: userData.experience || 0,
+        hourlyRate: userData.hourlyRate || 0,
+        rating: 0,
+        reviewCount: 0,
+        isVerified: false,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       };
+
+      // Store user in localStorage
+      localStorage.setItem('user', JSON.stringify(newUser));
       
-      setUser(mockUser);
-      localStorage.setItem('zion_user', JSON.stringify(mockUser));
+      setAuthState({
+        user: newUser,
+        isAuthenticated: true,
+        isLoading: false,
+        error: null,
+      });
     } catch (error) {
-      console.error('Login failed:', error);
+      setAuthState(prev => ({
+        ...prev,
+        isLoading: false,
+        error: 'Registration failed. Please try again.',
+      }));
       throw error;
-    } finally {
-      setIsLoading(false);
     }
   };
 
-  const logout = async (): Promise<void> => {
-    setIsLoading(true);
+  const updateProfile = async (userData: Partial<User>): Promise<void> => {
     try {
+      setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
+      
+      if (!authState.user) {
+        throw new Error('No user logged in');
+      }
+
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 500));
       
-      setUser(null);
-      localStorage.removeItem('zion_user');
+      const updatedUser: User = {
+        ...authState.user,
+        ...userData,
+        updatedAt: new Date(),
+      };
+
+      // Update localStorage
+      localStorage.setItem('user', JSON.stringify(updatedUser));
+      
+      setAuthState(prev => ({
+        ...prev,
+        user: updatedUser,
+        isLoading: false,
+        error: null,
+      }));
     } catch (error) {
-      console.error('Logout failed:', error);
+      setAuthState(prev => ({
+        ...prev,
+        isLoading: false,
+        error: 'Profile update failed. Please try again.',
+      }));
       throw error;
-    } finally {
-      setIsLoading(false);
     }
   };
 
-  const signup = async (email: string, password: string, name: string): Promise<void> => {
-    setIsLoading(true);
+  const resetPassword = async (email: string): Promise<void> => {
     try {
+      setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
+      
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      const mockUser: User = {
-        id: '1',
-        name,
-        email,
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
-      };
+      // In a real app, this would send a password reset email
+      console.log(`Password reset email sent to ${email}`);
       
-      setUser(mockUser);
-      localStorage.setItem('zion_user', JSON.stringify(mockUser));
+      setAuthState(prev => ({ ...prev, isLoading: false, error: null }));
     } catch (error) {
-      console.error('Signup failed:', error);
+      setAuthState(prev => ({
+        ...prev,
+        isLoading: false,
+        error: 'Password reset failed. Please try again.',
+      }));
       throw error;
-    } finally {
-      setIsLoading(false);
     }
   };
 
-  return {
-    user,
+  const clearError = (): void => {
+    setAuthState(prev => ({ ...prev, error: null }));
+  };
+
+  const value: AuthContextType = {
+    ...authState,
     login,
     logout,
-    signup,
-    isLoading
-  };
-}
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-=======
-  const signIn = async (email: string, password: string) => {
-    // Simulate sign in
-    return { success: true };
+    register,
+    updateProfile,
+    resetPassword,
+    clearError,
   };
 
-  const signOut = async () => {
-    setUser(null);
-  };
-
-  return {
-    user,
-    loading,
-    signIn,
-    signOut,
-    isAuthenticated: !!user,
-  };
+  return value;
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
