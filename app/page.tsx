@@ -72,20 +72,14 @@ export default function HomePage() {
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
         
-        {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
-        
         {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
         
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
         
-        {/* New Content 2025 Showcase Banner */}
-        <NewContent2025ShowcaseBanner />
-        
-        {/* Revolutionary Content 2025 Banner */}
-        <RevolutionaryContent2025Banner />
+        {/* Ultimate Promotion Banner */}
+        <UltimatePromotionBanner2026 />
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -196,6 +190,11 @@ export default function HomePage() {
         <NewServicesShowcase2025 />
         <NewContent2026Showcase />
         <InteractiveContentDiscoveryWidget />
+        
+        {/* New 2025 Content Showcase */}
+        <NewContent2025UltimateBanner />
+        <RevolutionaryContent2025Banner />
+        <AI2025BreakthroughBanner />
 
         {/* Advanced AI Components */}
         <AdvancedContentRecommendationEngine />
