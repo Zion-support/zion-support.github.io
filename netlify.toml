@@ -1,6 +1,6 @@
 [build]
   # Build command
-  command = "npm run build"
+  command = "npm run build:netlify"
   
   # Directory to publish
   publish = "dist"
@@ -28,6 +28,9 @@
   
   # Force install all dependencies including devDependencies
   NPM_CONFIG_INCLUDE = "dev"
+  
+  # Clear cache and force clean install
+  YARN_CACHE_CLEAR = "true"
   
   # Ensure Vite is available
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
