@@ -4,9 +4,8 @@ const nextConfig = {
   reactStrictMode: true,
   trailingSlash: false,
   
-  // Enable App Router
+  // Enable App Router (stable in Next.js 14+)
   experimental: {
-    appDir: true,
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },

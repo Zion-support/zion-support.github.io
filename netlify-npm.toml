@@ -1,6 +1,6 @@
 [build]
-  # Build command with error handling
-  command = "bash scripts/netlify-build-robust.sh"
+  # Build command using npm instead of yarn
+  command = "bash scripts/netlify-build-npm.sh"
   
   # Directory to publish
   publish = "dist"
@@ -12,26 +12,13 @@
   # Node.js version
   NODE_VERSION = "20"
   
-  # Yarn version
-  YARN_VERSION = "1.22.22"
-  
   # Build environment
   NODE_OPTIONS = "--max-old-space-size=6144"
   NODE_ENV = "production"
   
-  # Yarn configuration - optimized for reliable builds
-  YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
-  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
-  YARN_FLAGS = "--network-timeout 1000000 --ignore-engines --force"
-  
-  # Install devDependencies for build tools
-  YARN_INSTALL_DEV = "true"
-  
-  # Force install all dependencies including devDependencies
-  NPM_CONFIG_INCLUDE = "dev"
-  
-  # Ensure Vite is available and handle peer dependencies
+  # NPM configuration - optimized for reliable builds
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+  NPM_CONFIG_INCLUDE = "dev"
   
   # Disable Next.js auto-detection since this is a Vite project
   NETLIFY_USE_NEXTJS = "false"
@@ -60,8 +47,6 @@
 [build.processing.js]
   bundle = true
   minify = true
-
-# Force Vite build detection
 
 # Static redirects for exported site
 [[redirects]]
