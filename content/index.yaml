@@ -537,6 +537,57 @@ content_index:
       - "Implemented interactive content discovery and filtering"
 
   new_content_january_2025:
+    - id: "generative-ai-enterprise-revolution-ultimate-breakthrough"
+      type: "blog"
+      title: "AI 2025: Generative AI Enterprise Revolution - Ultimate Breakthrough Guide"
+      file_path: "/content/blog/ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough.md"
+      url: "/blog/ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough"
+      status: "published"
+      created: "2025-01-15"
+      tags: ["Generative AI", "Enterprise", "Automation", "2025", "Breakthrough"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        content_creation_time: "67% reduction"
+        customer_service: "89% improvement"
+        market_value: "$2.3T"
+      reading_time: "12 min read"
+      
+    - id: "quantum-computing-business-revolution-ultimate-guide"
+      type: "blog"
+      title: "AI 2025: Quantum Computing Business Revolution - Ultimate Guide"
+      file_path: "/content/blog/ai-2025-quantum-computing-business-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-quantum-computing-business-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-15"
+      tags: ["Quantum Computing", "Business Revolution", "AI", "2025", "Breakthrough"]
+      featured: true
+      is_new: true
+      metrics:
+        market_size: "$180B"
+        fortune_500_adoption: "67%"
+        average_roi: "340%"
+        value_creation: "$2.3T"
+      reading_time: "10 min read"
+      
+    - id: "quantum-optimization-fortune-500-ultimate-success"
+      type: "case-study"
+      title: "AI 2025: Quantum Optimization Fortune 500 Ultimate Success Story"
+      file_path: "/content/case-studies/ai-2025-quantum-optimization-fortune-500-ultimate-success.md"
+      url: "/case-studies/ai-2025-quantum-optimization-fortune-500-ultimate-success"
+      status: "published"
+      created: "2025-01-15"
+      tags: ["Quantum Computing", "Fortune 500", "Optimization", "ROI", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1200%"
+        annual_savings: "$180M"
+        carbon_reduction: "78%"
+        delivery_improvement: "65%"
+      reading_time: "8 min read"
+      
     - id: "ultimate-business-transformation-revolution"
       type: "blog"
       title: "AI 2025: The Ultimate Business Transformation Revolution - Complete Guide"
