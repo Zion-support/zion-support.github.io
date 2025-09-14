@@ -69,6 +69,8 @@ import EnterpriseSuccessBanner from '../components/EnterpriseSuccessBanner';
 import FutureTechPreviewBanner from '../components/FutureTechPreviewBanner';
 import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
 import NewContent2025UltimateBreakthroughShowcase from '../components/NewContent2025UltimateBreakthroughShowcase';
+import UltimateAISuccess2025Banner from '../components/UltimateAISuccess2025Banner';
+import UltimateAISuccess2025Showcase from '../components/UltimateAISuccess2025Showcase';
 =======
 >>>>>>> 37d015f531208ae6fae69d4af3de909c50a3bafc
 
@@ -216,6 +218,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate AI Success 2025 Banner - NEW FEATURED */}
+        <UltimateAISuccess2025Banner />
+        
+        {/* Ultimate AI Success 2025 Showcase - NEW FEATURED */}
+        <UltimateAISuccess2025Showcase />
+        
         {/* Next-Generation Autonomous Systems Banner - NEW FEATURED */}
         <NextGenAutonomousSystemsBanner />
         
