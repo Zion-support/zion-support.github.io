@@ -1,8 +1,8 @@
 import React from 'react';
 import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
-import AI2026UltimateBreakthroughBanner from '../../components/AI2026UltimateBreakthroughBanner';
-import AdvancedContentOptimization2026 from '../../components/AdvancedContentOptimization2026';
+import AI2026UltimateBreakthroughBanner from '../components/AI2026UltimateBreakthroughBanner';
+import AdvancedContentOptimization2026 from '../components/AdvancedContentOptimization2026';
 
 const AI2026UltimateBreakthroughPage: React.FC = () => {
   return (
