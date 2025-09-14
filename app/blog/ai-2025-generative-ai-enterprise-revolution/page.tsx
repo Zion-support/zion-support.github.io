@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Tag, TrendingUp, DollarSign, Users, Zap } from 'lucide-react';
-import SEO from '../../components/SEO';
+import SEO from '../../../components/SEO';
 
 export const metadata = {
   title: 'AI 2025: The Generative AI Enterprise Revolution - $2.3T Market Transformation',
