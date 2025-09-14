@@ -202,6 +202,12 @@ import RevolutionaryNewsletterSignup from '../components/RevolutionaryNewsletter
 import AI2025_2026UltimateBreakthroughBanner from '../components/AI2025_2026UltimateBreakthroughBanner';
 import RevolutionaryContent2025_2026Showcase from '../components/RevolutionaryContent2025_2026Showcase';
 
+// Import new Ultimate Content Revolution components
+import AI2025UltimateContentRevolutionPromotionBanner from '../components/AI2025UltimateContentRevolutionPromotionBanner';
+import UltimateContentRevolutionShowcase from '../components/UltimateContentRevolutionShowcase';
+import UltimateContentRevolutionROICalculator from '../components/UltimateContentRevolutionROICalculator';
+import NewContentDiscoveryWidget from '../components/NewContentDiscoveryWidget';
+
 // Import new Ultimate Business Intelligence components
 import AI2025UltimateBusinessIntelligenceRevolutionBanner from '../components/AI2025UltimateBusinessIntelligenceRevolutionBanner';
 import AI2025UltimateBusinessIntelligenceShowcase from '../components/AI2025UltimateBusinessIntelligenceShowcase';
@@ -296,6 +302,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE CONTENT REVOLUTION PROMOTION BANNER - NEWEST BREAKTHROUGH */}
+        <AI2025UltimateContentRevolutionPromotionBanner />
+        
         {/* AI 2026 FUTURE PREDICTIONS ULTIMATE BREAKTHROUGH BANNER - NEWEST BREAKTHROUGH */}
         <AI2026FuturePredictionsUltimateBreakthroughBanner />
         
@@ -552,6 +561,15 @@ export default function HomePage() {
 
         {/* AI 2025 Ultimate Business Intelligence Showcase - NEWEST FEATURED */}
         <AI2025UltimateBusinessIntelligenceShowcase />
+
+        {/* Ultimate Content Revolution Showcase - NEWEST FEATURED */}
+        <UltimateContentRevolutionShowcase />
+
+        {/* Ultimate Content Revolution ROI Calculator - NEWEST INTERACTIVE */}
+        <UltimateContentRevolutionROICalculator />
+
+        {/* New Content Discovery Widget - NEWEST FEATURED */}
+        <NewContentDiscoveryWidget />
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
