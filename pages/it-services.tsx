@@ -469,11 +469,9 @@ export default function ITServicesPage() {
   });
 
   return (
-    <Layout
-      title="IT Services - Zion Tech Group"
-      description="Comprehensive IT services and solutions for modern businesses. From AI operations to cybersecurity, we provide cutting-edge technology solutions."
-      keywords="IT services, technology solutions, AI operations, cybersecurity, cloud computing, digital transformation"
-    >
+    <div>
+      <h1>IT Services - Zion Tech Group</h1>
+      <p>Comprehensive IT services and solutions for modern businesses.</p>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -956,6 +954,6 @@ export default function ITServicesPage() {
           </motion.div>
         </div>
       </section>
-    </Layout>
+    </div>
   );
 }
