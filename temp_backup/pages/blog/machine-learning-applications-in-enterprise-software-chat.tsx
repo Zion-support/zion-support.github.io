@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const MachineLearningApplicationsInEnterpriseSoftwareChat: NextPage = () => {
+export default function MachineLearningApplicationsInEnterpriseSoftwareChatPage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>MachineLearningApplicationsInEnterpriseSoftwareChat - Zion Tech Solutions</title>
-        <meta name="description" content="MachineLearningApplicationsInEnterpriseSoftwareChat blog post" />
+        <title>Machine Learning Applications In Enterprise Software Chat - Zion Tech Group</title>
+        <meta name="description" content="machine learning applications in enterprise software chat page" />
       </Head>
       
       <main>
@@ -17,6 +16,4 @@ const MachineLearningApplicationsInEnterpriseSoftwareChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default MachineLearningApplicationsInEnterpriseSoftwareChat;
+}

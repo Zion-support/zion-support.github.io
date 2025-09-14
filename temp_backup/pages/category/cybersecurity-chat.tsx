@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const CybersecurityChat: NextPage = () => {
+export default function CybersecurityChatPage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>CybersecurityChat - Zion Tech Solutions</title>
-        <meta name="description" content="CybersecurityChat blog post" />
+        <title>Cybersecurity Chat - Zion Tech Group</title>
+        <meta name="description" content="cybersecurity chat page" />
       </Head>
       
       <main>
@@ -17,6 +16,4 @@ const CybersecurityChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default CybersecurityChat;
+}

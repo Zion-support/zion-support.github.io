@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const BlockchainTechnologyInModernBusinessSolutionsChat: NextPage = () => {
+export default function BlockchainTechnologyInModernBusinessSolutionsChatPage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>BlockchainTechnologyInModernBusinessSolutionsChat - Zion Tech Solutions</title>
-        <meta name="description" content="BlockchainTechnologyInModernBusinessSolutionsChat blog post" />
+        <title>Blockchain Technology In Modern Business Solutions Chat - Zion Tech Group</title>
+        <meta name="description" content="blockchain technology in modern business solutions chat page" />
       </Head>
       
       <main>
@@ -17,6 +16,4 @@ const BlockchainTechnologyInModernBusinessSolutionsChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default BlockchainTechnologyInModernBusinessSolutionsChat;
+}

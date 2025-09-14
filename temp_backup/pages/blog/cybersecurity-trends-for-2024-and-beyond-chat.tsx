@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const CybersecurityTrendsFor2024AndBeyondChat: NextPage = () => {
+export default function CybersecurityTrendsFor2024AndBeyondChatPage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>CybersecurityTrendsFor2024AndBeyondChat - Zion Tech Solutions</title>
-        <meta name="description" content="CybersecurityTrendsFor2024AndBeyondChat blog post" />
+        <title>Cybersecurity Trends For 2024 And Beyond Chat - Zion Tech Group</title>
+        <meta name="description" content="cybersecurity trends for 2024 and beyond chat page" />
       </Head>
       
       <main>
@@ -17,6 +16,4 @@ const CybersecurityTrendsFor2024AndBeyondChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default CybersecurityTrendsFor2024AndBeyondChat;
+}

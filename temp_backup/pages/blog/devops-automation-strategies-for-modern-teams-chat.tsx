@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const DevopsAutomationStrategiesForModernTeamsChat: NextPage = () => {
+export default function DevopsAutomationStrategiesForModernTeamsChatPage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>DevopsAutomationStrategiesForModernTeamsChat - Zion Tech Solutions</title>
-        <meta name="description" content="DevopsAutomationStrategiesForModernTeamsChat blog post" />
+        <title>Devops Automation Strategies For Modern Teams Chat - Zion Tech Group</title>
+        <meta name="description" content="devops automation strategies for modern teams chat page" />
       </Head>
       
       <main>
@@ -17,6 +16,4 @@ const DevopsAutomationStrategiesForModernTeamsChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default DevopsAutomationStrategiesForModernTeamsChat;
+}

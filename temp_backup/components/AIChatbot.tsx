@@ -20,11 +20,12 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   const [messages, setMessages] = useState<ChatMessage[]>(() => [
     {
       id: '1',
-      type: 'bot',
+      type: 'bot' as const,
       content: 'Hello! I\'m Zion AI, your intelligent assistant. How can I help you today? I can help with:\n\n• AI & Quantum Computing Services\n• Business Solutions\n• Technical Support\n• Pricing Information\n• Service Comparisons',
       timestamp: new Date()
     }
   ]);
+  const setMessagesTyped = setMessages as React.Dispatch<React.SetStateAction<ChatMessage[]>>;
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);

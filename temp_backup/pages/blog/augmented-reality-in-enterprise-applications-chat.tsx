@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const AugmentedRealityInEnterpriseApplicationsChat: NextPage = () => {
+export default function AugmentedRealityInEnterpriseApplicationsChatPage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>AugmentedRealityInEnterpriseApplicationsChat - Zion Tech Solutions</title>
-        <meta name="description" content="AugmentedRealityInEnterpriseApplicationsChat blog post" />
+        <title>Augmented Reality In Enterprise Applications Chat - Zion Tech Group</title>
+        <meta name="description" content="augmented reality in enterprise applications chat page" />
       </Head>
       
       <main>
@@ -17,6 +16,4 @@ const AugmentedRealityInEnterpriseApplicationsChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default AugmentedRealityInEnterpriseApplicationsChat;
+}

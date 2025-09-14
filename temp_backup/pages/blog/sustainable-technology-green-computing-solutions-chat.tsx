@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const SustainableTechnologyGreenComputingSolutionsChat: NextPage = () => {
+export default function SustainableTechnologyGreenComputingSolutionsChatPage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>SustainableTechnologyGreenComputingSolutionsChat - Zion Tech Solutions</title>
-        <meta name="description" content="SustainableTechnologyGreenComputingSolutionsChat blog post" />
+        <title>Sustainable Technology Green Computing Solutions Chat - Zion Tech Group</title>
+        <meta name="description" content="sustainable technology green computing solutions chat page" />
       </Head>
       
       <main>
@@ -17,6 +16,4 @@ const SustainableTechnologyGreenComputingSolutionsChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default SustainableTechnologyGreenComputingSolutionsChat;
+}

@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const BusinessIntelligenceChat: NextPage = () => {
+export default function BusinessIntelligenceChatPage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
-        <meta name="description" content="BusinessIntelligenceChat blog post" />
+        <title>Business Intelligence Chat - Zion Tech Group</title>
+        <meta name="description" content="business intelligence chat page" />
       </Head>
       
       <main>
@@ -17,6 +16,4 @@ const BusinessIntelligenceChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default BusinessIntelligenceChat;
+}

@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const CloudNativeArchitectureBestPracticesChat: NextPage = () => {
+export default function CloudNativeArchitectureBestPracticesChatPage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>CloudNativeArchitectureBestPracticesChat - Zion Tech Solutions</title>
-        <meta name="description" content="CloudNativeArchitectureBestPracticesChat blog post" />
+        <title>Cloud Native Architecture Best Practices Chat - Zion Tech Group</title>
+        <meta name="description" content="cloud native architecture best practices chat page" />
       </Head>
       
       <main>
@@ -17,6 +16,4 @@ const CloudNativeArchitectureBestPracticesChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default CloudNativeArchitectureBestPracticesChat;
+}

@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const MicroservicesArchitectureBenefitsAndChallengesChat: NextPage = () => {
+export default function MicroservicesArchitectureBenefitsAndChallengesChatPage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>MicroservicesArchitectureBenefitsAndChallengesChat - Zion Tech Solutions</title>
-        <meta name="description" content="MicroservicesArchitectureBenefitsAndChallengesChat blog post" />
+        <title>Microservices Architecture Benefits And Challenges Chat - Zion Tech Group</title>
+        <meta name="description" content="microservices architecture benefits and challenges chat page" />
       </Head>
       
       <main>
@@ -17,6 +16,4 @@ const MicroservicesArchitectureBenefitsAndChallengesChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default MicroservicesArchitectureBenefitsAndChallengesChat;
+}

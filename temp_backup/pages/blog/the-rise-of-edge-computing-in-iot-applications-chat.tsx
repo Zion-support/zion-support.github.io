@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const TheRiseOfEdgeComputingInIotApplicationsChat: NextPage = () => {
+export default function TheRiseOfEdgeComputingInIotApplicationsChatPage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>TheRiseOfEdgeComputingInIotApplicationsChat - Zion Tech Solutions</title>
-        <meta name="description" content="TheRiseOfEdgeComputingInIotApplicationsChat blog post" />
+        <title>The Rise Of Edge Computing In Iot Applications Chat - Zion Tech Group</title>
+        <meta name="description" content="the rise of edge computing in iot applications chat page" />
       </Head>
       
       <main>
@@ -17,6 +16,4 @@ const TheRiseOfEdgeComputingInIotApplicationsChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default TheRiseOfEdgeComputingInIotApplicationsChat;
+}

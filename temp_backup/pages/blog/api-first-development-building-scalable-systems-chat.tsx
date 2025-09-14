@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const ApiFirstDevelopmentBuildingScalableSystemsChat: NextPage = () => {
+export default function ApiFirstDevelopmentBuildingScalableSystemsChatPage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>ApiFirstDevelopmentBuildingScalableSystemsChat - Zion Tech Solutions</title>
-        <meta name="description" content="ApiFirstDevelopmentBuildingScalableSystemsChat blog post" />
+        <title>Api First Development Building Scalable Systems Chat - Zion Tech Group</title>
+        <meta name="description" content="api first development building scalable systems chat page" />
       </Head>
       
       <main>
@@ -17,6 +16,4 @@ const ApiFirstDevelopmentBuildingScalableSystemsChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default ApiFirstDevelopmentBuildingScalableSystemsChat;
+}

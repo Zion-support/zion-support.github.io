@@ -227,48 +227,20 @@ const CybersecurityServicesPage: React.FC = () => {
     }
   ];
 
+export default function CybersecurityServicesPage() {
   return (
-    <Layout
-      title="Cybersecurity Services - Zion Tech Group"
-      description="Comprehensive cybersecurity services including threat protection, cloud security, data protection, and security consulting. Protect your digital assets with our advanced security solutions."
-      keywords="cybersecurity services, threat protection, cloud security, data protection, security consulting, Zion Tech Group"
-      canonicalUrl="https://ziontechgroup.com/cybersecurity-services"
-    >
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
-                Cybersecurity Services
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Protect your digital assets with our comprehensive cybersecurity solutions. 
-              From advanced threat protection to compliance management, we've got you covered.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 shadow-lg hover:shadow-green-500/25"
-              >
-                Secure Your Business
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-200"
-              >
-                Security Assessment
-              </motion.button>
-            </div>
-          </motion.div>
+    <>
+      <Head>
+        <title>Cybersecurity Services - Zion Tech Group</title>
+        <meta name="description" content="cybersecurity services page" />
+      </Head>
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">Cybersecurity Services</h1>
+        <p className="text-lg mb-4">This page is under construction.</p>
+        <div className="mt-4">
+          <a href="/" className="text-blue-600 hover:underline">
+            ← Back to Home
+          </a>
         </div>
       </section>
 
