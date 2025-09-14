@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Search, Filter, TrendingUp, Clock, Users, Star, ArrowRight, Sparkles } from 'lucide-react';
