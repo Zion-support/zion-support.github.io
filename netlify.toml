@@ -1,5 +1,5 @@
 [build]
-  # Build command with error handling
+  # Build command with comprehensive error handling
   command = "bash scripts/netlify-build.sh"
   
   # Directory to publish
@@ -42,7 +42,27 @@
 
 # Cache configuration to prevent dependency issues
 [build.cache]
-  directories = ["node_modules/.cache"]
+  directories = ["node_modules/.cache", ".yarn/cache"]
+
+# Alternative build configuration for fallback
+[build.processing]
+  skip_processing = false
+
+# Disable problematic features that can cause EEXIST errors
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+# Ignore files that might cause conflicts
+[[build.ignore]]
+  path = "package-lock.json"
+
+[[build.ignore]]
+  path = "node_modules/.yarn-integrity"
 
 # Plugin configurations
 [[plugins]]
