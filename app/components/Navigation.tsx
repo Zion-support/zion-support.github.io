@@ -23,11 +23,17 @@ export default function Navigation() {
             <Link href="/services" className="text-gray-700 hover:text-purple-600 font-medium">
               Services
             </Link>
-            <Link href="/blog" className="text-gray-700 hover:text-purple-600 font-medium">
-              Blog
+            <Link href="/blog" className="relative text-gray-700 hover:text-purple-600 font-medium">
+              <span className="flex items-center">
+                Blog
+                <span className="ml-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">NEW</span>
+              </span>
             </Link>
-            <Link href="/case-studies" className="text-gray-700 hover:text-purple-600 font-medium">
-              Case Studies
+            <Link href="/case-studies" className="relative text-gray-700 hover:text-purple-600 font-medium">
+              <span className="flex items-center">
+                Case Studies
+                <span className="ml-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-bold">HOT</span>
+              </span>
             </Link>
             <Link href="/resources" className="text-gray-700 hover:text-purple-600 font-medium">
               Resources
@@ -37,7 +43,7 @@ export default function Navigation() {
             </Link>
             <Link 
               href="/contact" 
-              className="bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-colors"
             >
               Get Started
             </Link>
@@ -71,10 +77,16 @@ export default function Navigation() {
                 Services
               </Link>
               <Link href="/blog" className="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">
-                Blog
+                <span className="flex items-center">
+                  Blog
+                  <span className="ml-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">NEW</span>
+                </span>
               </Link>
               <Link href="/case-studies" className="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">
-                Case Studies
+                <span className="flex items-center">
+                  Case Studies
+                  <span className="ml-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-bold">HOT</span>
+                </span>
               </Link>
               <Link href="/resources" className="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">
                 Resources
@@ -84,7 +96,7 @@ export default function Navigation() {
               </Link>
               <Link 
                 href="/contact" 
-                className="block px-3 py-2 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center"
+                className="block px-3 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-colors text-center"
               >
                 Get Started
               </Link>
