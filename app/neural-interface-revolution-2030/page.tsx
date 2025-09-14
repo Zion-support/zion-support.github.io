@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Neural Interface Revolution 2030: Brain-Computer Integration | Zion Tech Group',
@@ -11,7 +10,7 @@ export const metadata = {
 
 export default function NeuralInterfacePage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Neural Interface Revolution 2030: Brain-Computer Integration"
         description="Explore the revolutionary neural interface technology that will connect human brains directly to AI systems by 2030."
@@ -388,6 +387,6 @@ export default function NeuralInterfacePage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }
