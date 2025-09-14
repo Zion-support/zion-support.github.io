@@ -66,6 +66,22 @@ const NewContent2025UltimateBreakthroughBanner = () => {
               View Case Study
             </Link>
           </div>
+
+          {/* Trust Indicators */}
+          <div className="mt-12 flex flex-wrap justify-center items-center gap-8 opacity-80">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span className="text-sm">Fortune 500 Clients</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+              <span className="text-sm">Proven Results</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+              <span className="text-sm">Industry Leading</span>
+            </div>
+          </div>
           
           {/* Additional Links */}
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm">
@@ -81,6 +97,36 @@ const NewContent2025UltimateBreakthroughBanner = () => {
           </div>
         </div>
       </div>
+
+      {/* Floating Elements */}
+      <div className="absolute top-1/4 left-10 text-6xl opacity-10 animate-float">🤖</div>
+      <div className="absolute top-1/3 right-10 text-5xl opacity-10 animate-float-delayed">⚡</div>
+      <div className="absolute bottom-1/4 left-1/4 text-4xl opacity-10 animate-float-slow">🚀</div>
+      <div className="absolute bottom-1/3 right-1/4 text-5xl opacity-10 animate-float">💡</div>
+
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        @keyframes float-delayed {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-15px); }
+        }
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+          animation: float-delayed 8s ease-in-out infinite;
+        }
+        .animate-float-slow {
+          animation: float-slow 10s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };
