@@ -39,7 +39,10 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+
+// Import new autonomous enterprise promotional components
+import AutonomousEnterpriseRevolutionBanner2025 from '../components/AutonomousEnterpriseRevolutionBanner2025';
+import AutonomousEnterpriseShowcase2025 from '../components/AutonomousEnterpriseShowcase2025';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
@@ -47,18 +50,15 @@ import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase20
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
-<<<<<<< HEAD
 import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
 
 // Import new AI 2026 promotional components
 import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
 import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
 import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
-=======
 import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
 import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
->>>>>>> cursor/create-and-deploy-new-content-4254
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -77,16 +77,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
+        {/* Autonomous Enterprise Revolution Banner - NEW CONTENT */}
+        <AutonomousEnterpriseRevolutionBanner2025 />
+        
         {/* AI 2026 Ultimate Showcase Banner */}
         <AI2026UltimateShowcaseBanner />
-=======
+        
         {/* Quantum AI 2026 Breakthrough Banner */}
         <QuantumAI2026BreakthroughBanner />
         
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
->>>>>>> cursor/create-and-deploy-new-content-4254
         
         {/* AI 2026 Quantum Revolution Banner */}
         <AI2026QuantumRevolutionBanner />
@@ -205,6 +206,7 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <AutonomousEnterpriseShowcase2025 />
         <RevolutionaryContent2026Banner />
         <UltimateContentShowcase2026 />
         <QuantumAIContentShowcase2026 />

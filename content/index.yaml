@@ -278,6 +278,58 @@ content_index:
         satisfaction: "98%"
         projects: "500+"
         savings: "$2.8B"
+
+  autonomous_enterprise_2025_content:
+    - id: "autonomous-enterprise-systems-revolution"
+      type: "blog"
+      title: "AI 2025: The Autonomous Enterprise Systems Revolution - 600% ROI Breakthrough"
+      file_path: "/content/blog/ai-2025-autonomous-enterprise-systems-revolution.md"
+      url: "/blog/ai-2025-autonomous-enterprise-systems-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Autonomous AI", "Enterprise Systems", "ROI", "Fortune 500", "Business Automation", "AI Revolution"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        savings: "$2.8B"
+        efficiency: "99.7%"
+        satisfaction: "98%"
+      reading_time: "18 min read"
+        
+    - id: "fortune-500-autonomous-transformation"
+      type: "case-study"
+      title: "Fortune 500 Autonomous Transformation: $3.2B Annual Savings with 700% ROI"
+      file_path: "/content/case-studies/fortune-500-autonomous-transformation-2025.md"
+      url: "/case-studies/fortune-500-autonomous-transformation-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Fortune 500", "Autonomous AI", "Case Study", "ROI", "Cost Savings", "Enterprise Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "700%"
+        savings: "$3.2B"
+        efficiency: "89%"
+        satisfaction: "99.4%"
+      reading_time: "22 min read"
+        
+    - id: "autonomous-enterprise-implementation-master-guide"
+      type: "resource"
+      title: "Autonomous Enterprise Implementation Master Guide 2025: From Strategy to 700% ROI"
+      file_path: "/content/resources/autonomous-enterprise-implementation-master-guide-2025.md"
+      url: "/resources/autonomous-enterprise-implementation-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "Autonomous AI", "Fortune 500", "ROI", "Strategy", "Enterprise Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "700%"
+        savings: "$3B+"
+        efficiency: "98%"
+        satisfaction: "98%"
+      reading_time: "35 min read"
       
     - id: "retail-ai-transformation"
       type: "case-study"
