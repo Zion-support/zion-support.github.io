@@ -1,8 +1,12 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
-// // import ErrorBoundary from '../components/ErrorBoundary';
+import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
+
+// Import neural superintelligence components - TOP PRIORITY
+import NeuralSuperintelligence2025Banner from '../components/NeuralSuperintelligence2025Banner';
+import UltimateNeuralSuperintelligenceShowcase from '../components/UltimateNeuralSuperintelligenceShowcase';
 // Import new AI Revolution 2025-2026 components
 import AIRevolution2025Banner from '../components/AIRevolution2025Banner';
 import AIRevolutionContentShowcase from '../components/AIRevolutionContentShowcase';
@@ -240,6 +244,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEURAL SUPERINTELLIGENCE 2025-2026 - TOP PRIORITY FEATURED */}
+        <NeuralSuperintelligence2025Banner />
+        
+        {/* ULTIMATE NEURAL SUPERINTELLIGENCE SHOWCASE - NEWEST FEATURED */}
+        <UltimateNeuralSuperintelligenceShowcase />
+        
         {/* AI 2025 Ultimate Breakthrough Revolution Banner - NEWEST ULTIMATE FEATURED */}
         <AI2025UltimateBreakthroughRevolutionBanner />
         
