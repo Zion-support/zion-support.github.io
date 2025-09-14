@@ -57,11 +57,11 @@ const nextConfig = {
   
   // TypeScript and ESLint configuration
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
     tsconfigPath: './tsconfig.json'
   },
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: false
   },
 };
 

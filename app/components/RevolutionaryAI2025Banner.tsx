@@ -2,257 +2,266 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, 
-  TrendingUp, 
-  Shield, 
-  Users, 
-  Zap, 
-  Star,
-  CheckCircle,
-  Clock,
-  Target,
-  Award,
-  BookOpen,
-  FileText,
-  BarChart3
-} from 'lucide-react';
+import { X, Sparkles, Rocket, TrendingUp, Award, ArrowRight, Star, Zap, Target, Users, CheckCircle } from 'lucide-react';
 
 const RevolutionaryAI2025Banner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentStat, setCurrentStat] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const [isDismissed, setIsDismissed] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState(0);
 
-  const stats = [
-    { value: '340%', label: 'Average ROI', icon: TrendingUp, color: 'text-green-400' },
-    { value: '500+', label: 'Success Stories', icon: Users, color: 'text-blue-400' },
-    { value: '$2.8B', label: 'Value Created', icon: BarChart3, color: 'text-purple-400' },
-    { value: '98%', label: 'Satisfaction', icon: Star, color: 'text-yellow-400' }
-  ];
-
-  const contentHighlights = [
-    {
-      title: 'AI Cybersecurity Revolution',
-      description: '89% threat reduction, $2.8M average savings',
-      type: 'blog',
-      url: '/blog/ai-2025-cybersecurity-revolution',
-      icon: Shield,
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      title: 'Healthcare AI Transformation',
-      description: '450% ROI, $18.7M savings, 67% better outcomes',
-      type: 'case-study',
-      url: '/case-studies/healthcare-ai-transformation-2025',
-      icon: Users,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'AI Implementation Roadmap',
-      description: 'Complete guide to 340% ROI achievement',
-      type: 'resource',
-      url: '/resources/ai-implementation-roadmap-2025',
-      icon: Target,
-      color: 'from-blue-500 to-cyan-500'
-    }
-  ];
-
+  // Check if banner was previously dismissed
   useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % stats.length);
-    }, 3000);
-    return () => clearInterval(interval);
+    const dismissed = localStorage.getItem('revolutionaryAI2025BannerDismissed');
+    if (dismissed === 'true') {
+      setIsDismissed(true);
+      setIsVisible(false);
+    }
   }, []);
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'blog': return <BookOpen className="w-5 h-5" />;
-      case 'case-study': return <FileText className="w-5 h-5" />;
-      case 'resource': return <Target className="w-5 h-5" />;
-      default: return <Star className="w-5 h-5" />;
+  // Auto-rotate features every 5 seconds
+  useEffect(() => {
+    if (!isDismissed) {
+      const interval = setInterval(() => {
+        setCurrentFeature((prev) => (prev === features.length - 1 ? 0 : prev + 1));
+      }, 5000);
+      return () => clearInterval(interval);
     }
+  }, [isDismissed]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+    setIsVisible(false);
+    localStorage.setItem('revolutionaryAI2025BannerDismissed', 'true');
   };
 
+  if (!isVisible || isDismissed) {
+    return null;
+  }
+
+  const features = [
+    {
+      title: "Generative AI 3.0",
+      description: "99.7% accuracy in enterprise applications",
+      icon: <Sparkles className="w-6 h-6" />,
+      metric: "99.7%",
+      metricLabel: "Accuracy"
+    },
+    {
+      title: "Quantum-Enhanced ML",
+      description: "1,200x faster processing for complex algorithms",
+      icon: <Zap className="w-6 h-6" />,
+      metric: "1,200x",
+      metricLabel: "Faster Processing"
+    },
+    {
+      title: "Autonomous Systems",
+      description: "Self-managing infrastructure with predictive capabilities",
+      icon: <Rocket className="w-6 h-6" />,
+      metric: "92%",
+      metricLabel: "Automation"
+    },
+    {
+      title: "Real-time Analytics",
+      description: "Instant insights and decision support",
+      icon: <TrendingUp className="w-6 h-6" />,
+      metric: "99.9%",
+      metricLabel: "Uptime"
+    }
+  ];
+
+  const currentFeatureData = features[currentFeature];
+
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-      {/* Animated Background Elements */}
+    <div className="relative bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 text-white overflow-hidden">
+      {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse" />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-bounce" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-bounce" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-bounce" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-violet-600/20 via-purple-600/20 to-indigo-600/20"></div>
+        <div className="absolute top-4 left-4 w-48 h-48 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-4 right-4 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56 h-56 bg-white/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
-            <Award className="w-5 h-5 text-yellow-400 mr-2" />
-            <span className="text-sm font-medium text-white">🚀 REVOLUTIONARY 2025 CONTENT</span>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 bg-white/20 rounded-full px-4 py-2">
+              <Rocket className="w-5 h-5 text-yellow-300" />
+              <span className="text-sm font-semibold">REVOLUTIONARY AI 2025</span>
+            </div>
+            <div className="hidden sm:flex items-center space-x-2 bg-white/20 rounded-full px-4 py-2">
+              <Award className="w-4 h-4" />
+              <span className="text-sm font-semibold">BREAKTHROUGH TECHNOLOGY</span>
+            </div>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            The AI Revolution is Here
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              And It's Transforming Everything
-            </span>
-          </h2>
-          
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Discover the cutting-edge AI insights, proven strategies, and real-world success stories 
-            that are reshaping industries and delivering unprecedented results.
-          </p>
-
-          {/* Dynamic Stat Display */}
-          <motion.div
-            key={currentStat}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.2 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center bg-white/10 backdrop-blur-lg rounded-2xl px-8 py-4 border border-white/20"
+          <button
+            onClick={handleDismiss}
+            className="p-2 hover:bg-white/20 rounded-full transition-colors"
+            aria-label="Dismiss banner"
           >
-            <stats[currentStat].icon className={`w-8 h-8 ${stats[currentStat].color} mr-4`} />
-            <div>
-              <div className={`text-3xl font-bold ${stats[currentStat].color}`}>
-                {stats[currentStat].value}
-              </div>
-              <div className="text-white text-sm">
-                {stats[currentStat].label}
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* Content Highlights Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {contentHighlights.map((highlight, index) => (
-            <motion.div
-              key={highlight.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="group"
-            >
-              <Link href={highlight.url}>
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 h-full group-hover:scale-105">
-                  {/* Content Type Badge */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/20 text-white">
-                      {getTypeIcon(highlight.type)}
-                      <span className="ml-2 capitalize">{highlight.type.replace('-', ' ')}</span>
-                    </div>
-                    <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium animate-pulse">
-                      NEW
-                    </div>
-                  </div>
-
-                  {/* Icon */}
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${highlight.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                    <highlight.icon className="w-8 h-8 text-white" />
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
-                    {highlight.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {highlight.description}
-                  </p>
-
-                  {/* CTA */}
-                  <div className="flex items-center text-blue-400 font-semibold group-hover:text-blue-300 transition-colors">
-                    Read Full Article
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+            <X className="w-5 h-5" />
+          </button>
         </div>
 
-        {/* Success Stories Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-12"
-        >
-          <h3 className="text-2xl font-bold text-white text-center mb-8">
-            Real Results from Real Organizations
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">450%</div>
-              <div className="text-gray-300 text-sm">Healthcare ROI</div>
-              <div className="text-gray-400 text-xs mt-1">Regional Hospital System</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">89%</div>
-              <div className="text-gray-300 text-sm">Threat Reduction</div>
-              <div className="text-gray-400 text-xs mt-1">Cybersecurity AI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">$18.7M</div>
-              <div className="text-gray-300 text-sm">Annual Savings</div>
-              <div className="text-gray-400 text-xs mt-1">Healthcare System</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">67%</div>
-              <div className="text-gray-300 text-sm">Better Outcomes</div>
-              <div className="text-gray-400 text-xs mt-1">Patient Care</div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Join the AI Revolution
-            </h3>
-            <p className="text-xl text-blue-100 mb-6 max-w-3xl mx-auto">
-              Don't get left behind. Access our comprehensive AI resources, case studies, and implementation guides 
-              that have helped 500+ organizations achieve unprecedented success.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-              <Link
-                href="/resources"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
-              >
-                Explore All Resources
-                <BookOpen className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                href="/case-studies"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
-              >
-                View Success Stories
-                <FileText className="w-5 h-5 ml-2" />
-              </Link>
+        {/* Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Revolutionary Features */}
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+                The AI Revolution is Here
+              </h2>
+              <p className="text-xl text-purple-100 leading-relaxed">
+                Experience the breakthrough technologies that are transforming enterprises worldwide. 
+                From <span className="font-bold text-yellow-300">Generative AI 3.0</span> to 
+                <span className="font-bold text-yellow-300"> Quantum-Enhanced Machine Learning</span>, 
+                discover the future of business intelligence.
+              </p>
             </div>
 
-            <div className="flex items-center justify-center text-blue-100 text-sm">
-              <CheckCircle className="w-4 h-4 mr-2" />
-              <span>Free access • No registration required • Updated weekly</span>
+            {/* Feature Showcase */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="p-3 bg-white/20 rounded-full">
+                    {currentFeatureData.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold">{currentFeatureData.title}</h3>
+                    <p className="text-purple-100">{currentFeatureData.description}</p>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="text-3xl font-bold text-yellow-300">{currentFeatureData.metric}</div>
+                  <div className="text-sm text-purple-100">{currentFeatureData.metricLabel}</div>
+                </div>
+              </div>
+
+              {/* Feature Navigation Dots */}
+              <div className="flex items-center justify-center space-x-2">
+                {features.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentFeature(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === currentFeature ? 'bg-white' : 'bg-white/40'
+                    }`}
+                    aria-label={`Go to feature ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Key Benefits */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-300" />
+                <span className="text-sm">600% ROI in 18 months</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-300" />
+                <span className="text-sm">94% success rate</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-300" />
+                <span className="text-sm">Real-time processing</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-300" />
+                <span className="text-sm">Enterprise-grade security</span>
+              </div>
             </div>
           </div>
-        </motion.div>
+
+          {/* Right Side - Technology Stack and CTA */}
+          <div className="space-y-8">
+            {/* Technology Stack */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-6 text-center">Revolutionary Technology Stack</h3>
+              
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Sparkles className="w-8 h-8 text-yellow-300" />
+                  </div>
+                  <h4 className="font-semibold mb-2">Generative AI 3.0</h4>
+                  <p className="text-sm text-purple-100">Multimodal intelligence with 99.7% accuracy</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-8 h-8 text-blue-300" />
+                  </div>
+                  <h4 className="font-semibold mb-2">Quantum ML</h4>
+                  <p className="text-sm text-purple-100">1,200x faster processing capabilities</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Rocket className="w-8 h-8 text-green-300" />
+                  </div>
+                  <h4 className="font-semibold mb-2">Autonomous Systems</h4>
+                  <p className="text-sm text-purple-100">Self-managing infrastructure</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-8 h-8 text-purple-300" />
+                  </div>
+                  <h4 className="font-semibold mb-2">Real-time Analytics</h4>
+                  <p className="text-sm text-purple-100">Instant insights and predictions</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Success Statistics */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
+                <div className="text-3xl font-bold text-yellow-300 mb-2">500+</div>
+                <div className="text-sm text-purple-100">Companies Transformed</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
+                <div className="text-3xl font-bold text-green-300 mb-2">$3.2B</div>
+                <div className="text-sm text-purple-100">Average Savings</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
+                <div className="text-3xl font-bold text-blue-300 mb-2">340%</div>
+                <div className="text-sm text-purple-100">Efficiency Gains</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
+                <div className="text-3xl font-bold text-purple-300 mb-2">18</div>
+                <div className="text-sm text-purple-100">Months to ROI</div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-xl font-semibold mb-4 text-center">Ready to Join the Revolution?</h3>
+              <p className="text-purple-100 mb-6 text-center">
+                Transform your business with cutting-edge AI technologies that deliver measurable results.
+              </p>
+              
+              <div className="space-y-3">
+                <Link
+                  href="/blog/ai-2025-enterprise-transformation-ultimate-guide"
+                  className="w-full bg-white text-purple-600 px-6 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors flex items-center justify-center space-x-2"
+                >
+                  <span>Explore AI 2025 Guide</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                
+                <Link
+                  href="/contact"
+                  className="w-full border-2 border-white text-white px-6 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center space-x-2"
+                >
+                  <span>Schedule Demo</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
