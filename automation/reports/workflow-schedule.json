@@ -4647,7 +4647,7 @@
   "recommendations": [
     {
       "type": "warning",
-      "message": "Too many critical workflows (5/3)",
+      "message": "Too many critical workflows (4/3)",
       "suggestion": "Consider consolidating or deprioritizing some critical workflows"
     },
     {
@@ -4657,7 +4657,7 @@
     },
     {
       "type": "info",
-      "message": "High priority workflows may compete for resources (14)",
+      "message": "High priority workflows may compete for resources (13)",
       "suggestion": "Consider staggering high-priority workflow execution"
     }
   ]

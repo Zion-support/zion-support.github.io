@@ -152,6 +152,10 @@
       "route": "/explore"
     },
     {
+      "file": "pages/front/index.tsx",
+      "route": "/front"
+    },
+    {
       "file": "pages/events/index.tsx",
       "route": "/events"
     },
@@ -172,16 +176,16 @@
       "route": "/components/form-demo"
     },
     {
+      "file": "pages/automation/index.tsx",
+      "route": "/automation"
+    },
+    {
       "file": "pages/blog/index.tsx",
       "route": "/blog"
     },
     {
       "file": "pages/blog/ai-automation-trends-2025.tsx",
       "route": "/blog/ai-automation-trends-2025"
-    },
-    {
-      "file": "pages/automation/index.tsx",
-      "route": "/automation"
     },
     {
       "file": "pages/reports/whitepapers/index.tsx",
