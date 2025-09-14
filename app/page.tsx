@@ -182,10 +182,13 @@ import UltimateAIBreakthrough2025Banner from './components/UltimateAIBreakthroug
 import UltimateContentShowcase2025Banner from './components/UltimateContentShowcase2025Banner';
 import AI2025UltimateBreakthroughContentBanner from '../components/AI2025UltimateBreakthroughContentBanner';
 
+// Import new ultimate business transformation components
+import UltimateBusinessTransformation2025Banner from './components/UltimateBusinessTransformation2025Banner';
+import RevolutionaryContent2025UltimateShowcase from './components/RevolutionaryContent2025UltimateShowcase';
+
 // Import new ultimate AI transformation components
 import UltimateAITransformation2025Banner from '../components/UltimateAITransformation2025Banner';
 import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
-import UltimateContentShowcase2025Banner from '../components/UltimateContentShowcase2025Banner';
 import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
 
 // Import new 2026 ultimate promotional components
@@ -268,6 +271,12 @@ export default function HomePage() {
         
         {/* Ultimate Business Transformation 2025 Banner - NEW ULTIMATE BREAKTHROUGH */}
         <UltimateBusinessTransformation2025Banner />
+        
+        {/* Revolutionary Content 2025 Ultimate Showcase - NEW FEATURED */}
+        <RevolutionaryContent2025UltimateShowcase />
+        
+        {/* Predictive Analytics 2025 Breakthrough Banner - LATEST */}
+        <PredictiveAnalytics2025BreakthroughBanner />
         
         {/* Revolutionary Content 2025 Showcase - NEW FEATURED */}
         <RevolutionaryContent2025Showcase />
