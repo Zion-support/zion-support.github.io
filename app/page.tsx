@@ -45,6 +45,7 @@ import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import NewContent2025Showcase from '../components/NewContent2025Showcase';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
 import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
@@ -94,6 +95,9 @@ export default function HomePage() {
         
         {/* New Content 2025 Showcase Banner */}
         <NewContent2025ShowcaseBanner />
+        
+        {/* New Content 2025 Showcase */}
+        <NewContent2025Showcase />
         
         {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
