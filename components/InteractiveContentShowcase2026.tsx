@@ -1,12 +1,12 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 import { 
-  ArrowRight, 
-  Play, 
-  Star, 
-  TrendingUp, 
-  Users, 
+  ArrowRight
+  Play
+  Star
+  TrendingUp
+  Users
   Zap,
   Brain,
   Rocket,
@@ -20,8 +20,8 @@ import {
 } from 'lucide-react';
 
 const InteractiveContentShowcase2026 = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   const contentCategories = [
     {
@@ -142,7 +142,7 @@ const InteractiveContentShowcase2026 = () => {
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const currentCategory = contentCategories[activeTab];
 
@@ -168,14 +168,14 @@ const InteractiveContentShowcase2026 = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover revolutionary AI innovations, comprehensive tool suites, and real-world success stories. 
+            Discover revolutionary AI innovationscomprehensive tool suitesand real-world success stories. 
             Interact with cutting-edge technology and see the future of business transformation.
           </p>
         </div>
 
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {contentCategories.map((category, index) => {
+          {contentCategories.map((categoryindex) => {
             const IconComponent = category.icon;
             return (
               <button
@@ -202,7 +202,7 @@ const InteractiveContentShowcase2026 = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {currentCategory.content.map((item, index) => (
+            {currentCategory.content.map((itemindex) => (
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -235,7 +235,7 @@ const InteractiveContentShowcase2026 = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => {
+            {features.map((featureindex) => {
               const IconComponent = feature.icon;
               return (
                 <div

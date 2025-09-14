@@ -8,7 +8,7 @@ const RevolutionaryAI2025ContentShowcase = () => {
       description: "Unlock unprecedented growth with AI 2025's revolutionary breakthroughs. This ultimate guide provides a complete roadmap to achieving 2,000% ROI and transforming your enterprise.",
       type: "Blog Post",
       readingTime: "25 min read",
-      tags: ["AI Revolution", "Business Transformation", "ROI", "Fortune 500"],
+      tags: ["AI Revolution"Business Transformation"ROI"Fortune 500"],
       url: "/blog/ai-2025-revolutionary-breakthrough-ultimate-success-guide"
     },
     {
@@ -16,7 +16,7 @@ const RevolutionaryAI2025ContentShowcase = () => {
       description: "Discover how a Fortune 500 manufacturing leader achieved an astounding 2,000% ROI and $5.2 billion in annual savings through a comprehensive AI transformation.",
       type: "Case Study",
       readingTime: "22 min read",
-      tags: ["Fortune 500", "AI Transformation", "ROI Success", "Manufacturing"],
+      tags: ["Fortune 500"AI Transformation"ROI Success"Manufacturing"],
       url: "/case-studies/fortune-500-ai-transformation-2000-roi-ultimate-success-story"
     },
     {
@@ -24,7 +24,7 @@ const RevolutionaryAI2025ContentShowcase = () => {
       description: "Master the implementation of AI 2025 technologies with our comprehensive framework. Step-by-step guide to achieving 2,000% ROI and transforming your business operations.",
       type: "Resource",
       readingTime: "18 min read",
-      tags: ["Implementation", "Framework", "ROI", "AI 2025"],
+      tags: ["Implementation"Framework"ROI"AI 2025"],
       url: "/resources/ai-2025-implementation-ultimate-framework-2000-roi"
     }
   ];
@@ -37,12 +37,12 @@ const RevolutionaryAI2025ContentShowcase = () => {
             Revolutionary AI 2025 Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our comprehensive collection of AI 2025 content, featuring breakthrough technologies, success stories, and implementation guides.
+            Discover our comprehensive collection of AI 2025 contentfeaturing breakthrough technologiesuccess storiesand implementation guides.
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          {contentItems.map((item, index) => (
+          {contentItems.map((itemindex) => (
             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
@@ -61,7 +61,7 @@ const RevolutionaryAI2025ContentShowcase = () => {
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag, tagIndex) => (
+                  {item.tags.slice(03).map((tagIndex) => (
                     <span key={tagIndex} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
                       {tag}
                     </span>

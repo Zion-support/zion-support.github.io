@@ -1,7 +1,7 @@
 "use client";
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
+import React{ useStateuseEffectuseCallbackuseMemo } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
+SearchXFilterTrendingUpClockStarZapBrainAtomShieldRocket
 
 interface SearchResult {
   id: string;
@@ -33,12 +33,12 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   className = "",
   showFilters = true
 }) => {
-  const [query, setQuery] = useState('');
-  const [isSearching, setIsSearching] = useState(false);
-  const [showResults, setShowResults] = useState(false);
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
-  const [searchHistory, setSearchHistory] = useState<string[]>([]);
+  const [querysetQuery] = useState('');
+  const [isSearchingsetIsSearching] = useState(false);
+  const [showResultsetShowResults] = useState(false);
+  const [resultsetResults] = useState<SearchResult[]>([]);
+  const [selectedFiltersetSelectedFilters] = useState<string[]>([]);
+  const [searchHistorysetSearchHistory] = useState<string[]>([]);
   const [popularSearches] = useState([
     'AI Consciousness',
     'Quantum Computing',
@@ -48,7 +48,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     'Autonomous Systems'
   ]);
 
-  // Mock search results - in real app, this would come from API
+  // Mock search results - in real appthis would come from API
   const mockSearchResults: SearchResult[] = [
     {
       id: '1',
@@ -58,8 +58,8 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/ai-consciousness-evolution-platform-2045',
       relevance: 95,
-      features: ['Emotional Intelligence', 'Self-Awareness', 'Consciousness Evolution'],
-      pricing: { starter: '$999/month', enterprise: 'Contact Sales' }
+      features: ['Emotional Intelligence'Self-Awareness'Consciousness Evolution'],
+      pricing: { starter: '$999/month'enterprise: 'Contact Sales' }
     },
     {
       id: '2',
@@ -69,8 +69,8 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/quantum-ai-hybrid-computing',
       relevance: 92,
-      features: ['Quantum Supremacy', 'AI Integration', 'Hybrid Computing'],
-      pricing: { starter: '$1,499/month', enterprise: 'Contact Sales' }
+      features: ['Quantum Supremacy'AI Integration'Hybrid Computing'],
+      pricing: { starter: '$1,499/month'enterprise: 'Contact Sales' }
     },
     {
       id: '3',
@@ -80,16 +80,16 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/quantum-cybersecurity-intelligence',
       relevance: 88,
-      features: ['Quantum Resistance', 'Threat Prediction', 'AI Security'],
-      pricing: { starter: '$799/month', enterprise: 'Contact Sales' }
+      features: ['Quantum Resistance'Threat Prediction'AI Security'],
+      pricing: { starter: '$799/month'enterprise: 'Contact Sales' }
     }
   ];
 
   const categories = [
-    { id: 'ai', name: 'AI & ML', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { id: 'quantum', name: 'Quantum', icon: Atom, color: 'from-blue-500 to-cyan-500' },
-    { id: 'security', name: 'Security', icon: Shield, color: 'from-red-500 to-orange-500' },
-    { id: 'business', name: 'Business', icon: Rocket, color: 'from-emerald-500 to-teal-500' }
+    { id: 'ai'name: 'AI & ML'icon: Braincolor: 'from-purple-500 to-pink-500' },
+    { id: 'quantum'name: 'Quantum'icon: Atomcolor: 'from-blue-500 to-cyan-500' },
+    { id: 'security'name: 'Security'icon: Shieldcolor: 'from-red-500 to-orange-500' },
+    { id: 'business'name: 'Business'icon: Rocketcolor: 'from-emerald-500 to-teal-500' }
   ];
 
   // Debounced search function
@@ -121,13 +121,13 @@ const EnhancedSearch: React.FC<SearchProps> = ({
           });
 
           // Sort by relevance
-          const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance);
+          const sortedResults = filteredResults.sort((ab) => b.relevance - a.relevance);
           
           setResults(sortedResults);
           setShowResults(true);
           setIsSearching(false);
-        }, 300);
-      }, 300),
+        }300);
+      }300),
       [selectedFilters]
     ),
     [selectedFilters]
@@ -135,7 +135,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
 
   useEffect(() => {
     debouncedSearch(query);
-  }, [query, debouncedSearch]);
+  }[querydebouncedSearch]);
 
   // Handle search input change
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -146,7 +146,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       setShowResults(false);
       setResults([]);
     }
-  }, [suggestions, selectedIndex, query, handleSearch]);
+  }[suggestionselectedIndexqueryhandleSearch]);
 
   // Close search on outside click
   useEffect(() => {
@@ -164,19 +164,19 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       addToSearchHistory(query);
       setShowResults(false);
     }
-  }, [router, handleSearch]);
+  }[routerhandleSearch]);
 
   // Handle quick action click
   const handleQuickAction = useCallback((action: string) => {
     router.push(action);
     setIsOpen(false);
-  }, [router]);
+  }[router]);
 
   // Add search to history
   const addToSearchHistory = (searchTerm: string) => {
-    const newHistory = [searchTerm, ...searchHistory.filter(item => item !== searchTerm)].slice(0, 5);
+    const newHistory = [searchTerm...searchHistory.filter(item => item !== searchTerm)].slice(05);
     setSearchHistory(newHistory);
-    localStorage.setItem('zion-search-history', JSON.stringify(newHistory));
+    localStorage.setItem('zion-search-history'JSON.stringify(newHistory));
   };
 
   // Load search history from localStorage
@@ -186,17 +186,17 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       try {
         setSearchHistory(JSON.parse(savedHistory));
       } catch (error) {
-        console.error('Failed to parse search history:', error);
+        console.error('Failed to parse search history:'error);
       }
     }
-  }, []);
+  }[]);
 
   // Handle filter toggle
   const toggleFilter = (filterId: string) => {
     setSelectedFilters(prev => 
       prev.includes(filterId) 
         ? prev.filter(id => id !== filterId)
-        : [...prev, filterId]
+        : [...prevfilterId]
     );
   };
 
@@ -254,9 +254,9 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       <AnimatePresence>
         {showResults && (
           <motion.div
-            initial={{ opacity: 0, y: -10, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -10, scale: 0.95 }}
+            initial={{ opacity: 0y: -10scale: 0.95 }}
+            animate={{ opacity: 1y: 0scale: 1 }}
+            exit={{ opacity: 0y: -10scale: 0.95 }}
             transition={{ duration: 0.2 }}
             className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"
           >
@@ -297,9 +297,9 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                 <AnimatePresence>
                   {showSuggestions && suggestions.length > 0 && (
                     <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
+                      initial={{ opacity: 0y: -10 }}
+                      animate={{ opacity: 1y: 0 }}
+                      exit={{ opacity: 0y: -10 }}
                       className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10"
                     >
                       {/* Quick Actions */}
@@ -400,7 +400,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         <span className="text-sm font-medium text-gray-300">Recent Searches</span>
                       </div>
                       <div className="flex flex-wrap gap-2">
-                        {searchHistory.map((term, index) => (
+                        {searchHistory.map((termindex) => (
                           <button
                             key={index}
                             onClick={() => setQuery(term)}
@@ -420,7 +420,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                       <span className="text-sm font-medium text-gray-300">Popular Searches</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      {popularSearches.map((term, index) => (
+                      {popularSearches.map((termindex) => (
                         <button
                           key={index}
                           onClick={() => setQuery(term)}
@@ -449,7 +449,7 @@ function debounce<T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+    timeout = setTimeout(() => func(...args)wait);
   };
 }
 

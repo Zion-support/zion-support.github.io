@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  DollarSign, Clock, CheckCircle, ArrowRight,
-  Brain, Rocket, Dna, Globe, Shield, Wifi, 
-  Package, Bot, Car, Building2, Monitor, Cpu, 
-  Zap, Atom, Database, Cloud, Lock, Code,
-  Phone, Mail, MapPin, ExternalLink, ChevronDown,
-  Award, Target, Zap as ZapIcon, Globe as GlobeIcon
+  SearchFilterStarUsersTrendingUp
+  DollarSignClockCheckCircleArrowRight,
+  BrainRocketDnaGlobeShieldWifi
+  PackageBotCarBuilding2MonitorCpu
+  ZapAtomDatabaseCloudLockCode,
+  PhoneMailMapPinExternalLinkChevronDown,
+  AwardTargetZap as ZapIconGlobe as GlobeIcon
 } from 'lucide-react';
 
 // Import the new revolutionary services
 import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
 import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
 
-const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices];
+const allServices = [...revolutionary2025Services...revolutionary2025ITServices];
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -38,7 +38,7 @@ const serviceCategories = [
   {
     id: 'quantum-emerging',
     title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing, DNA computing, and beyond',
+    description: 'Quantum computingDNA computingand beyond',
     icon: Atom,
     color: 'from-blue-500 to-cyan-500',
     services: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('DNA Computing')),
@@ -119,10 +119,10 @@ const serviceCategories = [
 ];
 
 export default function Revolutionary2025ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-  const [viewMode, setViewMode] = useState('grid');
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [sortBysetSortBy] = useState('popularity');
+  const [viewModesetViewMode] = useState('grid');
 
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -133,12 +133,12 @@ export default function Revolutionary2025ServicesShowcase() {
     return matchesSearch && matchesCategory;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort((ab) => {
     switch (sortBy) {
       case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+        return parseFloat(a.price.replace(/[^0-9.]/g'')) - parseFloat(b.price.replace(/[^0-9.]/g''));
       case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
+        return parseFloat(b.price.replace(/[^0-9.]/g'')) - parseFloat(a.price.replace(/[^0-9.]/g''));
       case 'rating':
         return b.rating - a.rating;
       case 'customers':
@@ -152,8 +152,8 @@ export default function Revolutionary2025ServicesShowcase() {
     <>
       <Head>
         <title>Revolutionary 2025 Services Showcase | Zion Tech Group</title>
-        <meta name="description" content="Discover the most innovative micro SAAS services, IT solutions, and AI platforms of 2025. Revolutionary technology with real implementation and proven ROI." />
-        <meta name="keywords" content="AI services, quantum computing, cybersecurity, cloud infrastructure, fintech, healthcare AI, space technology, Zion Tech Group" />
+        <meta name="description" content="Discover the most innovative micro SAAS servicesIT solutionsand AI platforms of 2025. Revolutionary technology with real implementation and proven ROI." />
+        <meta name="keywords" content="AI servicesquantum computingcybersecuritycloud infrastructurefintechealthcare AIspace technologyZion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2025-services-showcase" />
       </Head>
 
@@ -165,8 +165,8 @@ export default function Revolutionary2025ServicesShowcase() {
           
           <div className="container mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -174,7 +174,7 @@ export default function Revolutionary2025ServicesShowcase() {
                 Revolutionary 2025 Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Discover the most innovative micro SAAS services, IT solutions, and AI platforms that are reshaping industries and creating unprecedented value.
+                Discover the most innovative micro SAAS servicesIT solutionsand AI platforms that are reshaping industries and creating unprecedented value.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <div className="flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 px-4 py-2 rounded-full">
@@ -293,12 +293,12 @@ export default function Revolutionary2025ServicesShowcase() {
                   transition={{ duration: 0.3 }}
                   className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
                 >
-                  {sortedServices.map((service, index) => (
+                  {sortedServices.map((serviceindex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
+                      transition={{ duration: 0.5delay: index * 0.1 }}
                       className="group relative"
                     >
                       <div className="relative bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 rounded-2xl p-6 h-full backdrop-blur-xl hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -332,7 +332,7 @@ export default function Revolutionary2025ServicesShowcase() {
                         <div className="space-y-2 mb-6">
                           <h4 className="text-sm font-semibold text-purple-400">Key Features</h4>
                           <ul className="space-y-1">
-                            {service.features.slice(0, 4).map((feature, featureIndex) => (
+                            {service.features.slice(04).map((featureIndex) => (
                               <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                                 <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                                 {feature}
@@ -372,7 +372,7 @@ export default function Revolutionary2025ServicesShowcase() {
                         <div className="grid grid-cols-1 gap-2 text-xs">
                           <div className="flex items-center gap-2 text-purple-400">
                             <Phone className="w-3 h-3" />
-                            <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">
+                            <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g'')}`} className="hover:text-white">
                               {service.contactInfo.mobile}
                             </a>
                           </div>
@@ -396,12 +396,12 @@ export default function Revolutionary2025ServicesShowcase() {
                   transition={{ duration: 0.3 }}
                   className="space-y-6"
                 >
-                  {sortedServices.map((service, index) => (
+                  {sortedServices.map((serviceindex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      initial={{ opacity: 0x: -20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      transition={{ duration: 0.5delay: index * 0.1 }}
                       className="bg-gradient-to-r from-gray-900/80 to-black/90 border border-gray-700/50 rounded-xl p-6 backdrop-blur-xl hover:border-purple-500/50 transition-all duration-300"
                     >
                       <div className="flex flex-col lg:flex-row gap-6">
@@ -428,7 +428,7 @@ export default function Revolutionary2025ServicesShowcase() {
                             <div>
                               <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>
                               <ul className="space-y-1">
-                                {service.features.slice(0, 4).map((feature, featureIndex) => (
+                                {service.features.slice(04).map((featureIndex) => (
                                   <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                                     <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                                     {feature}
@@ -439,7 +439,7 @@ export default function Revolutionary2025ServicesShowcase() {
                             <div>
                               <h4 className="text-sm font-semibold text-blue-400 mb-2">Technology Stack</h4>
                               <div className="flex flex-wrap gap-2">
-                                {service.technology.slice(0, 6).map((tech, techIndex) => (
+                                {service.technology.slice(06).map((techIndex) => (
                                   <span key={techIndex} className="bg-gray-800/50 text-gray-300 text-xs px-2 py-1 rounded">
                                     {tech}
                                   </span>
@@ -497,7 +497,7 @@ export default function Revolutionary2025ServicesShowcase() {
                           <div className="space-y-2 text-xs">
                             <div className="flex items-center gap-2 text-purple-400">
                               <Phone className="w-3 h-3" />
-                              <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">
+                              <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g'')}`} className="hover:text-white">
                                 {service.contactInfo.mobile}
                               </a>
                             </div>
@@ -540,8 +540,8 @@ export default function Revolutionary2025ServicesShowcase() {
         <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20">
           <div className="container mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -557,7 +557,7 @@ export default function Revolutionary2025ServicesShowcase() {
                   <Phone className="w-8 h-8 text-purple-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                   <p className="text-gray-300 mb-3">{contactInfo.mobile}</p>
-                  <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="text-purple-400 hover:text-purple-300">
+                  <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g'')}`} className="text-purple-400 hover:text-purple-300">
                     Call Now →
                   </a>
                 </div>

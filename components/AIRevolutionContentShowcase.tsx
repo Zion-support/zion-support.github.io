@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const AIRevolutionContentShowcase = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategorysetActiveCategory] = useState('all');
 
   const contentItems = [
     {
@@ -22,12 +22,12 @@ const AIRevolutionContentShowcase = () => {
       },
       readingTime: '45 min read',
       featured: true,
-      tags: ['AI Revolution', '2025-2026', 'ROI', 'Fortune 500', 'Breakthrough']
+      tags: ['AI Revolution'2025-2026'ROI'Fortune 500'Breakthrough']
     },
     {
       id: 'fortune-500-success',
       title: 'Fortune 500 AI Revolution Success: $50B Annual Savings',
-      description: 'How a Fortune 500 manufacturing conglomerate achieved unprecedented success through comprehensive AI revolution implementation, delivering 10,000% ROI and $50B in annual savings.',
+      description: 'How a Fortune 500 manufacturing conglomerate achieved unprecedented success through comprehensive AI revolution implementationdelivering 10,000% ROI and $50B in annual savings.',
       type: 'case-study',
       category: 'success-stories',
       url: '/case-studies/fortune-500-ai-revolution-10000-roi-success-story',
@@ -39,12 +39,12 @@ const AIRevolutionContentShowcase = () => {
       },
       readingTime: '25 min read',
       featured: true,
-      tags: ['Case Study', 'Fortune 500', 'AI Revolution', 'Success Story']
+      tags: ['Case Study'Fortune 500'AI Revolution'Success Story']
     },
     {
       id: 'implementation-guide',
       title: 'AI Revolution Implementation Ultimate Guide 2025-2026',
-      description: 'The definitive guide to implementing AI revolution technologies in your organization, with step-by-step instructions, best practices, and proven strategies for achieving 10,000% ROI.',
+      description: 'The definitive guide to implementing AI revolution technologies in your organizationwith step-by-step instructionsbest practicesand proven strategies for achieving 10,000% ROI.',
       type: 'resource',
       category: 'implementation',
       url: '/resources/ai-revolution-implementation-ultimate-guide-2025-2026',
@@ -56,7 +56,7 @@ const AIRevolutionContentShowcase = () => {
       },
       readingTime: '60 min read',
       featured: true,
-      tags: ['Implementation Guide', 'AI Revolution', 'ROI', 'Strategy']
+      tags: ['Implementation Guide'AI Revolution'ROI'Strategy']
     },
     {
       id: 'quantum-ai-breakthrough',
@@ -73,7 +73,7 @@ const AIRevolutionContentShowcase = () => {
       },
       readingTime: '22 min read',
       featured: false,
-      tags: ['Quantum AI', 'Business Revolution', 'ROI', 'Fortune 500']
+      tags: ['Quantum AI'Business Revolution'ROI'Fortune 500']
     },
     {
       id: 'autonomous-enterprise',
@@ -90,12 +90,12 @@ const AIRevolutionContentShowcase = () => {
       },
       readingTime: '28 min read',
       featured: false,
-      tags: ['Autonomous Systems', 'Enterprise AI', 'ROI', 'Revolution']
+      tags: ['Autonomous Systems'Enterprise AI'ROI'Revolution']
     },
     {
       id: 'multimodal-intelligence',
       title: 'Multimodal AI: The Complete Business Intelligence Solution',
-      description: 'Discover how multimodal AI systems process text, images, audio, and sensor data simultaneously to provide comprehensive business insights.',
+      description: 'Discover how multimodal AI systems process textimagesaudioand sensor data simultaneously to provide comprehensive business insights.',
       type: 'blog',
       category: 'ai-revolution',
       url: '/blog/ai-2025-multimodal-intelligence-revolution-ultimate-guide',
@@ -107,15 +107,15 @@ const AIRevolutionContentShowcase = () => {
       },
       readingTime: '25 min read',
       featured: false,
-      tags: ['Multimodal AI', 'Enterprise AI', 'ROI', 'Cross-Modal Intelligence']
+      tags: ['Multimodal AI'Enterprise AI'ROI'Cross-Modal Intelligence']
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length },
-    { id: 'ai-revolution', name: 'AI Revolution', count: contentItems.filter(item => item.category === 'ai-revolution').length },
-    { id: 'success-stories', name: 'Success Stories', count: contentItems.filter(item => item.category === 'success-stories').length },
-    { id: 'implementation', name: 'Implementation', count: contentItems.filter(item => item.category === 'implementation').length }
+    { id: 'all'name: 'All Content'count: contentItems.length },
+    { id: 'ai-revolution'name: 'AI Revolution'count: contentItems.filter(item => item.category === 'ai-revolution').length },
+    { id: 'success-stories'name: 'Success Stories'count: contentItems.filter(item => item.category === 'success-stories').length },
+    { id: 'implementation'name: 'Implementation'count: contentItems.filter(item => item.category === 'implementation').length }
   ];
 
   const filteredContent = activeCategory === 'all' 
@@ -214,9 +214,9 @@ const AIRevolutionContentShowcase = () => {
 
                 {/* Metrics */}
                 <div className="grid grid-cols-2 gap-2 mb-6">
-                  {Object.entries(item.metrics).map(([key, value]) => (
+                  {Object.entries(item.metrics).map(([keyvalue]) => (
                     <div key={key} className="bg-gradient-to-r from-purple-50 to-blue-50 p-2 rounded-lg text-center">
-                      <div className="text-sm font-semibold text-gray-700 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                      <div className="text-sm font-semibold text-gray-700 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</div>
                       <div className="text-lg font-bold text-purple-600">{value}</div>
                     </div>
                   ))}
@@ -224,7 +224,7 @@ const AIRevolutionContentShowcase = () => {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {item.tags.slice(0, 3).map((tag) => (
+                  {item.tags.slice(03).map((tag) => (
                     <span
                       key={tag}
                       className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs font-medium"

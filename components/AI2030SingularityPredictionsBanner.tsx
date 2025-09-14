@@ -24,7 +24,7 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
             AI 2030: Singularity Predictions
           </h2>
           <p className="text-3xl md:text-4xl opacity-90 mb-12 max-w-6xl mx-auto leading-relaxed">
-            The ultimate technological transformation where AI surpasses human intelligence, 
+            The ultimate technological transformation where AI surpasses human intelligence
             creating <span className="text-purple-300 font-bold">unlimited possibilities</span> and 
             <span className="text-pink-300 font-bold"> new forms of consciousness</span>.
           </p>
@@ -136,7 +136,7 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
                 <h4 className="text-2xl font-bold">Post-Scarcity Economics</h4>
               </div>
               <p className="text-cyan-200 mb-4">
-                AI-driven abundance with unlimited energy, automated production, and focus on creativity and personal growth.
+                AI-driven abundance with unlimited energyautomated productionand focus on creativity and personal growth.
               </p>
               <div className="text-yellow-300 font-semibold">→ Explore New Economy</div>
             </div>
@@ -147,7 +147,7 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
                 <h4 className="text-2xl font-bold">Healthcare Revolution</h4>
               </div>
               <p className="text-cyan-200 mb-4">
-                AI doctors with superhuman capabilities, personalized medicine, and extended lifespan through optimization.
+                AI doctors with superhuman capabilitiespersonalized medicineand extended lifespan through optimization.
               </p>
               <div className="text-yellow-300 font-semibold">→ Discover Health Future</div>
             </div>
@@ -158,7 +158,7 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
                 <h4 className="text-2xl font-bold">Space Exploration</h4>
               </div>
               <p className="text-cyan-200 mb-4">
-                Faster-than-light travel, terraforming technology, and AI-driven space colonization with extraterrestrial contact.
+                Faster-than-light travelterraforming technologyand AI-driven space colonization with extraterrestrial contact.
               </p>
               <div className="text-yellow-300 font-semibold">→ Journey to Stars</div>
             </div>

@@ -1,14 +1,14 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Search, 
-  Filter, 
-  Grid, 
-  List, 
+  Search
+  Filter
+  Grid
+  List
   Star,
   Clock,
   TrendingUp,
@@ -30,29 +30,29 @@ import {
 } from 'lucide-react';
 
 const RevolutionaryContentDiscoveryWidget2026 = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState('grid');
-  const [sortBy, setSortBy] = useState('trending');
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const [filteredContent, setFilteredContent] = useState([]);
-  const [isVisible, setIsVisible] = useState(false);
+  const [searchQuerysetSearchQuery] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [viewModesetViewMode] = useState('grid');
+  const [sortBysetSortBy] = useState('trending');
+  const [isFilterOpensetIsFilterOpen] = useState(false);
+  const [filteredContentsetFilteredContent] = useState([]);
+  const [isVisiblesetIsVisible] = useState(false);
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: Grid, color: 'from-gray-600 to-gray-800' },
-    { id: 'ai-breakthroughs', name: 'AI Breakthroughs', icon: Brain, color: 'from-purple-600 to-pink-600' },
-    { id: 'automation', name: 'Automation', icon: Zap, color: 'from-blue-600 to-cyan-600' },
-    { id: 'quantum', name: 'Quantum Computing', icon: Cpu, color: 'from-indigo-600 to-purple-600' },
-    { id: 'predictions', name: 'Future Predictions', icon: Eye, color: 'from-emerald-600 to-teal-600' },
-    { id: 'tutorials', name: 'Tutorials', icon: BookOpen, color: 'from-orange-600 to-red-600' },
-    { id: 'case-studies', name: 'Case Studies', icon: BarChart3, color: 'from-green-600 to-emerald-600' }
+    { id: 'all'name: 'All Content'icon: Gridcolor: 'from-gray-600 to-gray-800' },
+    { id: 'ai-breakthroughs'name: 'AI Breakthroughs'icon: Braincolor: 'from-purple-600 to-pink-600' },
+    { id: 'automation'name: 'Automation'icon: Zapcolor: 'from-blue-600 to-cyan-600' },
+    { id: 'quantum'name: 'Quantum Computing'icon: Cpucolor: 'from-indigo-600 to-purple-600' },
+    { id: 'predictions'name: 'Future Predictions'icon: Eyecolor: 'from-emerald-600 to-teal-600' },
+    { id: 'tutorials'name: 'Tutorials'icon: BookOpencolor: 'from-orange-600 to-red-600' },
+    { id: 'case-studies'name: 'Case Studies'icon: BarChart3color: 'from-green-600 to-emerald-600' }
   ];
 
   const sortOptions = [
-    { id: 'trending', name: 'Trending', icon: TrendingUp },
-    { id: 'newest', name: 'Newest', icon: Clock },
-    { id: 'rating', name: 'Highest Rated', icon: Star },
-    { id: 'popular', name: 'Most Popular', icon: Users }
+    { id: 'trending'name: 'Trending'icon: TrendingUp },
+    { id: 'newest'name: 'Newest'icon: Clock },
+    { id: 'rating'name: 'Highest Rated'icon: Star },
+    { id: 'popular'name: 'Most Popular'icon: Users }
   ];
 
   const sampleContent = [
@@ -68,7 +68,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
       views: 15420,
       author: 'Dr. Sarah Chen',
       publishedAt: '2026-01-15',
-      tags: ['AI', 'Quantum Computing', 'Neural Networks', 'Breakthrough'],
+      tags: ['AI'Quantum Computing'Neural Networks'Breakthrough'],
       featured: true
     },
     {
@@ -83,7 +83,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
       views: 12850,
       author: 'Michael Rodriguez',
       publishedAt: '2026-01-14',
-      tags: ['Automation', 'Business', 'AI', 'Process Optimization'],
+      tags: ['Automation'Business'AI'Process Optimization'],
       featured: false
     },
     {
@@ -98,7 +98,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
       views: 22100,
       author: 'Prof. Alex Thompson',
       publishedAt: '2026-01-13',
-      tags: ['AI Singularity', 'Future Predictions', 'Technology', 'Analysis'],
+      tags: ['AI Singularity'Future Predictions'Technology'Analysis'],
       featured: true
     },
     {
@@ -113,7 +113,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
       views: 18750,
       author: 'Dr. Elena Volkov',
       publishedAt: '2026-01-12',
-      tags: ['Quantum Computing', 'Machine Learning', 'Algorithms', 'Performance'],
+      tags: ['Quantum Computing'Machine Learning'Algorithms'Performance'],
       featured: false
     },
     {
@@ -128,7 +128,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
       views: 9650,
       author: 'Dr. James Park',
       publishedAt: '2026-01-11',
-      tags: ['Neural Interface', 'Tutorial', 'Implementation', 'BCI'],
+      tags: ['Neural Interface'Tutorial'Implementation'BCI'],
       featured: false
     },
     {
@@ -143,14 +143,14 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
       views: 14200,
       author: 'Lisa Wang',
       publishedAt: '2026-01-10',
-      tags: ['Case Study', 'Enterprise', 'ROI', 'AI Implementation'],
+      tags: ['Case Study'Enterprise'ROI'AI Implementation'],
       featured: true
     }
   ];
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   useEffect(() => {
     let filtered = sampleContent;
@@ -172,13 +172,13 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
     // Sort content
     switch (sortBy) {
       case 'newest':
-        filtered.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+        filtered.sort((ab) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
         break;
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
+        filtered.sort((ab) => b.rating - a.rating);
         break;
       case 'popular':
-        filtered.sort((a, b) => b.views - a.views);
+        filtered.sort((ab) => b.views - a.views);
         break;
       case 'trending':
       default:
@@ -187,7 +187,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
     }
 
     setFilteredContent(filtered);
-  }, [searchQuery, selectedCategory, sortBy]);
+  }[searchQueryselectedCategorysortBy]);
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
@@ -210,8 +210,8 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
@@ -229,15 +229,15 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             AI-powered content discovery that learns your preferences and recommends the most relevant 
-            articles, tutorials, and insights tailored to your interests.
+            articlestutorialsand insights tailored to your interests.
           </p>
         </motion.div>
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8 border border-white/20"
         >
           <div className="flex flex-col lg:flex-row gap-4">
@@ -246,7 +246,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search articles, tutorials, case studies..."
+                placeholder="Search articlestutorialscase studies..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
@@ -309,9 +309,9 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
 
         {/* Content Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className={`grid gap-6 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
@@ -319,13 +319,13 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
           }`}
         >
           <AnimatePresence>
-            {filteredContent.map((item, index) => (
+            {filteredContent.map((itemindex) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 30 }}
+                animate={{ opacity: 1y: 0 }}
+                exit={{ opacity: 0y: -30 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 className={`group relative bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
@@ -388,7 +388,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {item.tags.slice(0, 3).map((tag, idx) => (
+                    {item.tags.slice(03).map((tagidx) => (
                       <span
                         key={idx}
                         className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
@@ -415,7 +415,7 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
 
                   {/* CTA Button */}
                   <Link
-                    href={`/content/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    href={`/content/${item.title.toLowerCase().replace(/\s+/g'-')}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-4 rounded-lg font-medium flex items-center justify-center group-hover:from-purple-500 group-hover:to-pink-500 transition-all duration-300"
                   >
                     Read Article
@@ -453,9 +453,9 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">

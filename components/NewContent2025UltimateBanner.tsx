@@ -13,7 +13,7 @@ export default function NewContent2025UltimateBanner() {
             Revolutionary AI Content
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover the most comprehensive collection of AI, quantum computing, and neural interface content for 2025. 
+            Discover the most comprehensive collection of AIquantum computingand neural interface content for 2025. 
             Transform your business with cutting-edge insights and proven strategies.
           </p>
         </div>
@@ -23,8 +23,8 @@ export default function NewContent2025UltimateBanner() {
             <div className="text-4xl mb-4">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-yellow-400">AI Enterprise Guide</h3>
             <p className="text-gray-300 mb-6">
-              Complete guide to AI transformation in 2025. Learn about neural architectures, 
-              quantum AI, and autonomous business systems.
+              Complete guide to AI transformation in 2025. Learn about neural architectures
+              quantum AIand autonomous business systems.
             </p>
             <Link 
               href="/blog/ai-2025-enterprise-transformation-guide"

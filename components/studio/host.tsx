@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 
 type PersonaConfig = {
   voice: 'Visionary' | 'Grounded' | 'Technical';
@@ -8,24 +8,24 @@ type PersonaConfig = {
 };
 
 export default function StudioHostPage() {
-  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' });
-  const [inviteeName, setInviteeName] = useState('');
-  const [inviteeBio, setInviteeBio] = useState('');
-  const [topic, setTopic] = useState('');
-  const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
+  const [personasetPersona] = useState<PersonaConfig>({ voice: 'Visionary'language: 'English' });
+  const [inviteeNamesetInviteeName] = useState('');
+  const [inviteeBiosetInviteeBio] = useState('');
+  const [topicsetTopic] = useState('');
+  const [operatorPromptsetOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questionsplus a CTA.');
 
-  const [generating, setGenerating] = useState(false);
-  const [episode, setEpisode] = useState<any>(null);
-  const [synthesizing, setSynthesizing] = useState(false);
-  const [publishing, setPublishing] = useState(false);
+  const [generatingsetGenerating] = useState(false);
+  const [episodesetEpisode] = useState<any>(null);
+  const [synthesizingsetSynthesizing] = useState(false);
+  const [publishingsetPublishing] = useState(false);
 
   const handleGenerate = async () => {
     setGenerating(true);
     try {
-      const res = await fetch('/api/podcast/generate', {
+      const res = await fetch('/api/podcast/generate'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio }, topic, operatorPrompt })});
+        body: JSON.stringify({ personainvitee: { name: inviteeNamebio: inviteeBio }topicoperatorPrompt })});
       const data = await res.json();
       setEpisode(data.episode);
     } catch (e) {
@@ -40,10 +40,10 @@ export default function StudioHostPage() {
     if (!episode?.id) return;
     setSynthesizing(true);
     try {
-      const res = await fetch('/api/podcast/synthesize', {
+      const res = await fetch('/api/podcast/synthesize'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ episodeId: episode.id, persona })});
+        body: JSON.stringify({ episodeId: episode.idpersona })});
       const data = await res.json();
       setEpisode(data.episode);
     } catch (e) {
@@ -58,7 +58,7 @@ export default function StudioHostPage() {
     if (!episode?.id) return;
     setPublishing(true);
     try {
-      const res = await fetch('/api/podcast/rss', { method: 'POST' });
+      const res = await fetch('/api/podcast/rss'{ method: 'POST' });
       await res.json();
       alert('RSS feed updated. Platforms will pull on next refresh.');
     } catch (e) {
@@ -81,7 +81,7 @@ export default function StudioHostPage() {
             <select
               className="mt-1 w-full border rounded p-2"
               value={persona.voice}
-              onChange={(e) => setPersona({ ...persona, voice: e.target.value as any })}
+              onChange={(e) => setPersona({ ...personavoice: e.target.value as any })}
             >
               <option value="Visionary">Visionary</option>
               <option value="Grounded">Grounded</option>
@@ -90,11 +90,11 @@ export default function StudioHostPage() {
           </div>
           <div>
             <label className="block text-sm font-medium">Language</label>
-            <input className="mt-1 w-full border rounded p-2" value={persona.language} onChange={(e) => setPersona({ ...persona, language: e.target.value })} />
+            <input className="mt-1 w-full border rounded p-2" value={persona.language} onChange={(e) => setPersona({ ...personalanguage: e.target.value })} />
           </div>
           <div>
             <label className="block text-sm font-medium">Clone Style (optional)</label>
-            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...personacloneStyleText: e.target.value })} />
           </div>
         </div>
       </section>
@@ -133,7 +133,7 @@ export default function StudioHostPage() {
             <div>
               <h4 className="font-semibold">Questions</h4>
               <ol className="list-decimal list-inside space-y-1">
-                {episode.questions?.map((q: string, idx: number) => (
+                {episode.questions?.map((q: stringidx: number) => (
                   <li key={idx}>{q}</li>
                 ))}
               </ol>

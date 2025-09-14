@@ -65,7 +65,7 @@ const CaseStudiesShowcase = () => {
         fraudReduction: "95%"
       },
       image: "/images/case-studies/fintech-ai.jpg",
-      testimonial: "Our fraud detection capabilities are now industry-leading, and customer onboarding is seamless and fast."
+      testimonial: "Our fraud detection capabilities are now industry-leadingand customer onboarding is seamless and fast."
     }
   ];
 

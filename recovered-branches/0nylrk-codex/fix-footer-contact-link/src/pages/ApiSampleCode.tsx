@@ -2,7 +2,7 @@
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 
 export function ApiSampleCode() {
   // JavaScript example with Axios
@@ -21,10 +21,10 @@ const api = axios.create({
 // Get all jobs
 async function getJobs(filters = {}) {
   try {
-    const response = await api.get('/api/jobs', { params: filters });
+    const response = await api.get('/api/jobs'{ params: filters });
     return response.data;
   } catch (error) {
-    console.error('Error fetching jobs:', error.response?.data || error.message);
+    console.error('Error fetching jobs:'error.response?.data || error.message);
     throw error;
   }
 }
@@ -32,10 +32,10 @@ async function getJobs(filters = {}) {
 // Post a new job
 async function createJob(jobData) {
   try {
-    const response = await api.post('/api/jobs', jobData);
+    const response = await api.post('/api/jobs'jobData);
     return response.data;
   } catch (error) {
-    console.error('Error creating job:', error.response?.data || error.message);
+    console.error('Error creating job:'error.response?.data || error.message);
     throw error;
   }
 }
@@ -43,10 +43,10 @@ async function createJob(jobData) {
 // Search for talent
 async function searchTalent(filters = {}) {
   try {
-    const response = await api.get('/api/talent', { params: filters });
+    const response = await api.get('/api/talent'{ params: filters });
     return response.data;
   } catch (error) {
-    console.error('Error searching talent:', error.response?.data || error.message);
+    console.error('Error searching talent:'error.response?.data || error.message);
     throw error;
   }
 }
@@ -55,8 +55,8 @@ async function searchTalent(filters = {}) {
 async function main() {
   try {
     // Get all open jobs
-    const jobs = await getJobs({ status: 'open', limit: 5 });
-    console.log('Jobs:', jobs);
+    const jobs = await getJobs({ status: 'open'limit: 5 });
+    console.log('Jobs:'jobs);
     
     // Create a new job
     const newJob = await createJob({
@@ -68,15 +68,15 @@ async function main() {
         max: 7500,
         currency: 'USD'
       },
-      skills: ['React', 'TypeScript', 'Tailwind CSS']
+      skills: ['React'TypeScript'Tailwind CSS']
     });
-    console.log('New job created:', newJob);
+    console.log('New job created:'newJob);
     
     // Search for talent with React skills
-    const talent = await searchTalent({ skills: 'React', limit: 10 });
-    console.log('Talent:', talent);
+    const talent = await searchTalent({ skills: 'React'limit: 10 });
+    console.log('Talent:'talent);
   } catch (error) {
-    console.error('Something went wrong:', error);
+    console.error('Something went wrong:'error);
   }
 }
 
@@ -98,21 +98,21 @@ headers = {
 def get_jobs(filters=None):
     """Get all jobs with optional filters"""
     url = f"{BASE_URL}/api/jobs"
-    response = requests.get(url, params=filters, headers=headers)
+    response = requests.get(urlparams=filtersheaders=headers)
     response.raise_for_status()  # Raise exception for 4XX/5XX responses
     return response.json()
 
 def create_job(job_data):
     """Create a new job posting"""
     url = f"{BASE_URL}/api/jobs"
-    response = requests.post(url, json=job_data, headers=headers)
+    response = requests.post(urljson=job_dataheaders=headers)
     response.raise_for_status()
     return response.json()
 
 def search_talent(filters=None):
     """Search for talent with optional filters"""
     url = f"{BASE_URL}/api/talent"
-    response = requests.get(url, params=filters, headers=headers)
+    response = requests.get(urlparams=filtersheaders=headers)
     response.raise_for_status()
     return response.json()
 
@@ -120,7 +120,7 @@ def search_talent(filters=None):
 if __name__ == "__main__":
     try:
         # Get all open jobs
-        jobs = get_jobs({'status': 'open', 'limit': 5})
+        jobs = get_jobs({'status': 'open'limit': 5})
         print(f"Found {len(jobs['jobs'])} jobs")
         
         # Create a new job
@@ -133,12 +133,12 @@ if __name__ == "__main__":
                 'max': 9000,
                 'currency': 'USD'
             },
-            'skills': ['Python', 'Machine Learning', 'SQL']
+            'skills': ['Python'Machine Learning'SQL']
         })
         print(f"New job created with ID: {new_job['id']}")
         
         # Search for talent with Python skills
-        talent = search_talent({'skills': 'Python', 'limit': 10})
+        talent = search_talent({'skills': 'Python'limit': 10})
         print(f"Found {len(talent['talent'])} talented people")
         
     except requests.exceptions.HTTPError as e:
@@ -155,7 +155,7 @@ const API_KEY = 'YOUR_API_KEY';
 const BASE_URL = 'https://api.zionai.com/v1';
 
 // Helper to handle API requests
-async function apiRequest(endpoint, options = {}) {
+async function apiRequest(endpointoptions = {}) {
   const url = \`\${BASE_URL}\${endpoint}\`;
   
   const headers = {
@@ -169,7 +169,7 @@ async function apiRequest(endpoint, options = {}) {
     headers
   };
   
-  const response = await fetch(url, config);
+  const response = await fetch(urlconfig);
   
   if (!response.ok) {
     const error = await response.json();
@@ -183,17 +183,17 @@ async function apiRequest(endpoint, options = {}) {
 async function getJobs(filters = {}) {
   // Convert filters to query string
   const params = new URLSearchParams();
-  Object.entries(filters).forEach(([key, value]) => {
-    params.append(key, value);
+  Object.entries(filters).forEach(([keyvalue]) => {
+    params.append(keyvalue);
   });
   
   const queryString = params.toString() ? \`?\${params.toString()}\` : '';
-  return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' });
+  return apiRequest(\`/api/jobs\${queryString}\`{ method: 'GET' });
 }
 
 // Post a new job
 async function createJob(jobData) {
-  return apiRequest('/api/jobs', {
+  return apiRequest('/api/jobs'{
     method: 'POST',
     body: JSON.stringify(jobData)
   });
@@ -202,20 +202,20 @@ async function createJob(jobData) {
 // Search for talent
 async function searchTalent(filters = {}) {
   const params = new URLSearchParams();
-  Object.entries(filters).forEach(([key, value]) => {
-    params.append(key, value);
+  Object.entries(filters).forEach(([keyvalue]) => {
+    params.append(keyvalue);
   });
   
   const queryString = params.toString() ? \`?\${params.toString()}\` : '';
-  return apiRequest(\`/api/talent\${queryString}\`, { method: 'GET' });
+  return apiRequest(\`/api/talent\${queryString}\`{ method: 'GET' });
 }
 
 // Example usage
 async function main() {
   try {
     // Get all open jobs
-    const jobs = await getJobs({ status: 'open', limit: 5 });
-    console.log('Jobs:', jobs);
+    const jobs = await getJobs({ status: 'open'limit: 5 });
+    console.log('Jobs:'jobs);
     
     // Create a new job
     const newJob = await createJob({
@@ -227,15 +227,15 @@ async function main() {
         max: 8000,
         currency: 'USD'
       },
-      skills: ['Node.js', 'Express', 'MongoDB']
+      skills: ['Node.js'Express'MongoDB']
     });
-    console.log('New job created:', newJob);
+    console.log('New job created:'newJob);
     
     // Search for talent with Node.js skills
-    const talent = await searchTalent({ skills: 'Node.js', limit: 10 });
-    console.log('Talent:', talent);
+    const talent = await searchTalent({ skills: 'Node.js'limit: 10 });
+    console.log('Talent:'talent);
   } catch (error) {
-    console.error('Something went wrong:', error);
+    console.error('Something went wrong:'error);
   }
 }
 
@@ -287,7 +287,7 @@ main();`;
 
         <h2>Using the Examples</h2>
         <p>
-          To use these examples, you'll need to replace 'YOUR_API_KEY' with your actual API key,
+          To use these examplesyou'll need to replace 'YOUR_API_KEY' with your actual API key,
           which you can generate in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a>.
         </p>
         

@@ -1,14 +1,14 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Building2, 
-  TrendingUp, 
-  DollarSign, 
+  Building2
+  TrendingUp
+  DollarSign
   Users,
-  ArrowRight, 
+  ArrowRight
   X,
   CheckCircle,
   Zap,
@@ -19,36 +19,36 @@ import {
 } from 'lucide-react';
 
 const BusinessSolutionsShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentMetric, setCurrentMetric] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentMetricsetCurrentMetric] = useState(0);
 
   const metrics = [
-    { label: 'ROI', value: '300%', icon: TrendingUp, color: 'text-green-500' },
-    { label: 'Cost Savings', value: '$2.5B+', icon: DollarSign, color: 'text-blue-500' },
-    { label: 'Companies', value: '10K+', icon: Building2, color: 'text-purple-500' },
-    { label: 'Satisfaction', value: '98%', icon: Award, color: 'text-yellow-500' }
+    { label: 'ROI'value: '300%'icon: TrendingUpcolor: 'text-green-500' },
+    { label: 'Cost Savings'value: '$2.5B+'icon: DollarSigncolor: 'text-blue-500' },
+    { label: 'Companies'value: '10K+'icon: Building2color: 'text-purple-500' },
+    { label: 'Satisfaction'value: '98%'icon: Awardcolor: 'text-yellow-500' }
   ];
 
   const solutions = [
-    { name: 'Automation', icon: Zap, color: 'from-blue-500 to-cyan-500' },
-    { name: 'Analytics', icon: BarChart3, color: 'from-purple-500 to-pink-500' },
-    { name: 'Security', icon: Shield, color: 'from-green-500 to-emerald-500' }
+    { name: 'Automation'icon: Zapcolor: 'from-blue-500 to-cyan-500' },
+    { name: 'Analytics'icon: BarChart3color: 'from-purple-500 to-pink-500' },
+    { name: 'Security'icon: Shieldcolor: 'from-green-500 to-emerald-500' }
   ];
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 3000);
+    const timer = setTimeout(() => setIsVisible(true)3000);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   useEffect(() => {
     if (isVisible) {
       const interval = setInterval(() => {
         setCurrentMetric((prev) => (prev + 1) % metrics.length);
-      }, 2500);
+      }2500);
       return () => clearInterval(interval);
     }
-  }, [isVisible, metrics.length]);
+  }[isVisiblemetrics.length]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
@@ -56,7 +56,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
 
   const containerVariants = {
     hidden: { 
-      opacity: 0, 
+      opacity: 0
       y: -100,
       scale: 0.9
     },
@@ -82,7 +82,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
   };
 
   const textVariants = {
-    hidden: { opacity: 0, x: -20 },
+    hidden: { opacity: 0x: -20 },
     visible: {
       opacity: 1,
       x: 0,
@@ -94,7 +94,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
   };
 
   const buttonVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 0scale: 0.8 },
     visible: {
       opacity: 1,
       scale: 1,
@@ -128,12 +128,12 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                   <motion.div
                     className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
                     animate={{ 
-                      rotate: [0, 360],
-                      scale: [1, 1.1, 1]
+                      rotate: [0360],
+                      scale: [1.1]
                     }}
                     transition={{ 
-                      duration: 4, 
-                      repeat: Infinity, 
+                      duration: 4
+                      repeat: Infinity
                       ease: "easeInOut" 
                     }}
                   >
@@ -160,14 +160,14 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentMetric}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
+                      exit={{ opacity: 0y: -20 }}
                       transition={{ duration: 0.5 }}
                       className="flex items-center space-x-2"
                     >
                       <div className={`w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center`}>
-                        {React.createElement(metrics[currentMetric].icon, { 
+                        {React.createElement(metrics[currentMetric].icon{ 
                           className: `w-4 h-4 ${metrics[currentMetric].color}` 
                         })}
                       </div>
@@ -228,7 +228,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.3 }}
                   >
-                    {React.createElement(metrics[currentMetric].icon, { 
+                    {React.createElement(metrics[currentMetric].icon{ 
                       className: `w-3 h-3 ${metrics[currentMetric].color}` 
                     })}
                   </motion.div>
@@ -241,12 +241,12 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-2">
-                {solutions.map((solution, index) => (
+                {solutions.map((solutionindex) => (
                   <div
                     key={index}
                     className={`w-6 h-6 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center`}
                   >
-                    {React.createElement(solution.icon, { className: "w-3 h-3 text-white" })}
+                    {React.createElement(solution.icon{ className: "w-3 h-3 text-white" })}
                   </div>
                 ))}
               </div>
@@ -258,8 +258,8 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
             <motion.div
               className="absolute -top-4 -left-4 w-24 h-24 bg-white/10 rounded-full"
               animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.3, 0.6, 0.3]
+                scale: [1.21],
+                opacity: [0.30.60.3]
               }}
               transition={{
                 duration: 3,
@@ -270,8 +270,8 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
             <motion.div
               className="absolute -bottom-4 -right-4 w-32 h-32 bg-white/5 rounded-full"
               animate={{
-                scale: [1, 1.3, 1],
-                opacity: [0.2, 0.4, 0.2]
+                scale: [1.31],
+                opacity: [0.20.40.2]
               }}
               transition={{
                 duration: 4,
@@ -283,8 +283,8 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
             <motion.div
               className="absolute top-1/2 left-1/2 w-16 h-16 bg-white/8 rounded-full"
               animate={{
-                scale: [1, 1.5, 1],
-                opacity: [0.1, 0.3, 0.1]
+                scale: [1.51],
+                opacity: [0.10.30.1]
               }}
               transition={{
                 duration: 2.5,

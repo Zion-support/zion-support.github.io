@@ -1,21 +1,21 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Sparkles, Brain, Zap, Target, TrendingUp, Users, Globe } from 'lucide-react';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
+ArrowRightSparklesBrainZapTargetTrendingUpUsersGlobe
 
 const AI2025LatestInnovationsShowcase = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % innovations.length);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const innovations = [
     {
@@ -29,7 +29,7 @@ const AI2025LatestInnovationsShowcase = () => {
     {
       id: 2,
       title: "Autonomous Business Orchestration",
-      description: "Self-managing AI systems that automatically optimize business processes, predict market changes, and execute strategic decisions.",
+      description: "Self-managing AI systems that automatically optimize business processespredict market changesand execute strategic decisions.",
       icon: Target,
       stats: "95% efficiency increase",
       color: "from-green-600 to-teal-600"
@@ -37,7 +37,7 @@ const AI2025LatestInnovationsShowcase = () => {
     {
       id: 3,
       title: "Synthetic Intelligence Platforms",
-      description: "Next-generation AI that can create, modify, and improve itself while maintaining ethical boundaries and human oversight.",
+      description: "Next-generation AI that can createmodifyand improve itself while maintaining ethical boundaries and human oversight.",
       icon: Sparkles,
       stats: "Self-evolving capabilities",
       color: "from-orange-600 to-red-600"
@@ -45,7 +45,7 @@ const AI2025LatestInnovationsShowcase = () => {
     {
       id: 4,
       title: "Global Transformation Engine",
-      description: "AI-powered platform that transforms entire organizations, industries, and ecosystems through intelligent automation and optimization.",
+      description: "AI-powered platform that transforms entire organizationsindustriesand ecosystems through intelligent automation and optimization.",
       icon: Globe,
       stats: "15,000% ROI average",
       color: "from-indigo-600 to-purple-600"
@@ -66,7 +66,7 @@ const AI2025LatestInnovationsShowcase = () => {
     {
       icon: Zap,
       title: "Lightning Fast",
-      description: "Implement solutions in days, not months, with our rapid deployment"
+      description: "Implement solutions in daysnot monthswith our rapid deployment"
     }
   ];
 
@@ -78,8 +78,8 @@ const AI2025LatestInnovationsShowcase = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -104,9 +104,9 @@ const AI2025LatestInnovationsShowcase = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0scale: 1.1 }}
+                animate={{ opacity: 1scale: 1 }}
+                exit={{ opacity: 0scale: 0.9 }}
                 transition={{ duration: 0.5 }}
                 className="absolute inset-0"
               >
@@ -139,7 +139,7 @@ const AI2025LatestInnovationsShowcase = () => {
 
           {/* Navigation Dots */}
           <div className="flex justify-center gap-3 mt-6">
-            {innovations.map((_, index) => (
+            {innovations.map((_index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
@@ -155,12 +155,12 @@ const AI2025LatestInnovationsShowcase = () => {
 
         {/* Features Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.3 }}
           className="grid md:grid-cols-3 gap-8 mb-16"
         >
-          {features.map((feature, index) => (
+          {features.map((featureindex) => (
             <div
               key={index}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300 group"
@@ -176,9 +176,9 @@ const AI2025LatestInnovationsShowcase = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">

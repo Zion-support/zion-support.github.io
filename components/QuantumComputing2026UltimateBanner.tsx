@@ -14,7 +14,7 @@ export default function QuantumComputing2026UltimateBanner() {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Experience the ultimate quantum computing revolution of 2026. From quantum supremacy to 
-            practical applications, discover how quantum computing is transforming every industry.
+            practical applicationsdiscover how quantum computing is transforming every industry.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

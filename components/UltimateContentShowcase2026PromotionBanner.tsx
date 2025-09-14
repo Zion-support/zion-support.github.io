@@ -23,7 +23,7 @@ export default function UltimateContentShowcase2026PromotionBanner() {
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Discover the most comprehensive collection of revolutionary AI content for 2026. 
-            From Quantum-Neural Fusion breakthroughs to transcendent intelligence predictions, 
+            From Quantum-Neural Fusion breakthroughs to transcendent intelligence predictions
             explore the future of AI that will reshape human civilization.
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function UltimateContentShowcase2026PromotionBanner() {
             <div className="text-3xl mb-4">⚛️</div>
             <h3 className="text-xl font-bold text-white mb-3">Quantum-Neural Fusion</h3>
             <p className="text-gray-300 mb-4 text-sm">
-              Revolutionary fusion of quantum computing and neural networks, delivering unprecedented processing power.
+              Revolutionary fusion of quantum computing and neural networksdelivering unprecedented processing power.
             </p>
             <div className="flex items-center justify-between">
               <span className="text-green-400 font-bold">15,000% ROI</span>
@@ -48,7 +48,7 @@ export default function UltimateContentShowcase2026PromotionBanner() {
             <div className="text-3xl mb-4">🔮</div>
             <h3 className="text-xl font-bold text-white mb-3">Future Predictions</h3>
             <p className="text-gray-300 mb-4 text-sm">
-              Comprehensive predictions for AI development from 2026-2030, including transcendent intelligence.
+              Comprehensive predictions for AI development from 2026-2030including transcendent intelligence.
             </p>
             <div className="flex items-center justify-between">
               <span className="text-blue-400 font-bold">99.7% Accuracy</span>

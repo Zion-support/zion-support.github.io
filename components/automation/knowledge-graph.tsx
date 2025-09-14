@@ -10,12 +10,12 @@ type Props = { report: Report | null };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd(), 'public', 'automation', 'knowledge-graph.json');
-    const raw = fs.readFileSync(file, 'utf8');
+    const file = path.join(process.cwd()'public'automation'knowledge-graph.json');
+    const raw = fs.readFileSync(file'utf8');
     const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 86400 };
+    return { props: { report: data }revalidate: 86400 };
   } catch {
-    return { props: { report: null }, revalidate: 86400 };
+    return { props: { report: null }revalidate: 86400 };
   }
 };
 
@@ -30,7 +30,7 @@ export default function KnowledgeGraph({ report }: Props) {
       <section>
         <h2 className="font-semibold mb-2">Top Terms</h2>
         <ul className="flex flex-wrap gap-2 text-sm">
-          {report.topTerms.map((t, i) => (
+          {report.topTerms.map((ti) => (
             <li key={i} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800">{t.term} <span className="text-gray-500">({t.count})</span></li>
           ))}
         </ul>
@@ -45,8 +45,8 @@ export default function KnowledgeGraph({ report }: Props) {
       <section>
         <h2 className="font-semibold mb-2">Sample Edges</h2>
         <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
-          {report.edges.slice(0, 200).map((e, i) => (
-            <li key={i} className="flex justify-between gap-4"><span className="truncate">{e.source} ⇄ {e.target}</span><span className="text-gray-500 truncate">{e.terms.join(', ')}</span></li>
+          {report.edges.slice(0200).map((ei) => (
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{e.source} ⇄ {e.target}</span><span className="text-gray-500 truncate">{e.terms.join(')}</span></li>
           ))}
         </ul>
       </section>

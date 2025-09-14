@@ -1,14 +1,14 @@
 "use client";
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useEffectuseStateuseCallback } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { 
-  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
-  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity,
-  ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon,
-  DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor,
-  Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon,
-  ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon
+  ArrowRightPlayTrendingUpBrainShieldRocketGlobeCpuDatabaseAtomTargetStarSparkles as SparklesIcon,
+  Brain as BrainIconAtom as AtomIconShield as ShieldIconRocket as RocketIconZapEyeHeartInfinity,
+  ChevronRightChevronLeftExternalLinkUsersAwardClockCheckCircleZap as ZapIcon,
+  DollarSignBarChart3PaletteCloudNetworkShoppingCartSettingsBuildingMonitor,
+  LayersGlobe2LockCodeServerPhoneSearchFilterGridListEye as EyeIcon,
+  ArrowUpRightStar as StarIconSparklesTarget as Target
 } from 'lucide-react';
 
 // Import our new innovative services
@@ -22,13 +22,13 @@ import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation204
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
 
 const Homepage2047: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
-  const [consciousnessLevel, setConsciousnessLevel] = useState(0.5);
-  const [scrollY, setScrollY] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentServiceIndexsetCurrentServiceIndex] = useState(0);
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [mousePositionsetMousePosition] = useState({ x: 0y: 0 });
+  const [hoveredServicesetHoveredService] = useState<string | null>(null);
+  const [consciousnessLevelsetConsciousnessLevel] = useState(0.5);
+  const [scrollYsetScrollY] = useState(0);
   
   useEffect(() => {
     setIsVisible(true);
@@ -36,33 +36,33 @@ const Homepage2047: React.FC = () => {
     // Auto-rotate featured services
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }, 8000);
+    }8000);
     
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      setMousePosition({ x: e.clientXy: e.clientY });
     };
     
     // Animate consciousness level
     const consciousnessInterval = setInterval(() => {
       setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7);
-    }, 100);
+    }100);
 
     // Track scroll position
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
     
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('mousemove'handleMouseMove);
+    window.addEventListener('scroll'handleScroll);
     
     return () => {
       clearInterval(interval);
       clearInterval(consciousnessInterval);
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove'handleMouseMove);
+      window.removeEventListener('scroll'handleScroll);
     };
-  }, []);
+  }[]);
 
   // Combine all innovative services
   const allInnovativeServices = [
@@ -72,7 +72,7 @@ const Homepage2047: React.FC = () => {
   ];
 
   // Get featured services for rotation
-  const featuredServices = allInnovativeServices.slice(0, 6);
+  const featuredServices = allInnovativeServices.slice(06);
 
   // Filter services by category
   const getFilteredServices = () => {
@@ -84,31 +84,31 @@ const Homepage2047: React.FC = () => {
   };
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length },
-    { id: 'ai', name: 'AI & Autonomous', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: innovative2025AIAutonomousEcosystemV2.length },
-    { id: 'quantum', name: 'Quantum & Emerging', icon: AtomIcon, color: 'from-blue-500 to-indigo-500', count: emergingTechBreakthroughs2025V4.length },
-    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-emerald-500 to-teal-500', count: innovative2025ITInfrastructureV2.length }
+    { id: 'all'name: 'All Services'icon: SparklesIconcolor: 'from-purple-500 to-pink-500'count: allInnovativeServices.length },
+    { id: 'ai'name: 'AI & Autonomous'icon: BrainIconcolor: 'from-cyan-500 to-blue-500'count: innovative2025AIAutonomousEcosystemV2.length },
+    { id: 'quantum'name: 'Quantum & Emerging'icon: AtomIconcolor: 'from-blue-500 to-indigo-500'count: emergingTechBreakthroughs2025V4.length },
+    { id: 'it'name: 'IT Infrastructure'icon: Cpucolor: 'from-emerald-500 to-teal-500'count: innovative2025ITInfrastructureV2.length }
   ];
 
   const features = [
-    { icon: Brain, title: "AI Autonomous Ecosystem 2025", description: "Revolutionary autonomous AI solutions", href: "/2025-innovative-services-showcase-v2", color: "from-purple-500 to-pink-500" },
-    { icon: Atom, title: "Quantum AI Neural Networks 2025", description: "Quantum-powered AI with consciousness", href: "/quantum-ai-neural-network-fusion-platform-2025", color: "from-blue-500 to-cyan-500" },
-    { icon: Shield, title: "Quantum Cybersecurity Intelligence 2025", description: "Quantum-resistant security with AI", href: "/quantum-cybersecurity-intelligence-platform-2025", color: "from-red-500 to-orange-500" },
-    { icon: Rocket, title: "Space Resource Intelligence 2025", description: "AI-powered space resource discovery", href: "/space-resource-intelligence-platform-2025", color: "from-indigo-500 to-purple-500" },
-    { icon: Cpu, title: "Autonomous DevOps Intelligence 2025", description: "AI-powered DevOps optimization", href: "/autonomous-devops-intelligence-platform-2025", color: "from-emerald-500 to-teal-500" },
-    { icon: Database, title: "Edge Computing Orchestration 2025", description: "Edge computing optimization platform", href: "/edge-computing-orchestration-platform-2025", color: "from-yellow-500 to-orange-500" }
+    { icon: Braintitle: "AI Autonomous Ecosystem 2025"description: "Revolutionary autonomous AI solutions"href: "/2025-innovative-services-showcase-v2"color: "from-purple-500 to-pink-500" },
+    { icon: Atomtitle: "Quantum AI Neural Networks 2025"description: "Quantum-powered AI with consciousness"href: "/quantum-ai-neural-network-fusion-platform-2025"color: "from-blue-500 to-cyan-500" },
+    { icon: Shieldtitle: "Quantum Cybersecurity Intelligence 2025"description: "Quantum-resistant security with AI"href: "/quantum-cybersecurity-intelligence-platform-2025"color: "from-red-500 to-orange-500" },
+    { icon: Rocketitle: "Space Resource Intelligence 2025"description: "AI-powered space resource discovery"href: "/space-resource-intelligence-platform-2025"color: "from-indigo-500 to-purple-500" },
+    { icon: Cputitle: "Autonomous DevOps Intelligence 2025"description: "AI-powered DevOps optimization"href: "/autonomous-devops-intelligence-platform-2025"color: "from-emerald-500 to-teal-500" },
+    { icon: Databasetitle: "Edge Computing Orchestration 2025"description: "Edge computing optimization platform"href: "/edge-computing-orchestration-platform-2025"color: "from-yellow-500 to-orange-500" }
   ];
 
   const stats = [
-    { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star },
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
-    { number: "24/7", label: "AI Intelligence Available", icon: Brain },
-    { number: "300+", label: "Countries Served", icon: Globe }
+    { number: `${allInnovativeServices.length}+`label: "Innovative Services"icon: Star },
+    { number: "99.99%"label: "Uptime Guarantee"icon: TrendingUp },
+    { number: "24/7"label: "AI Intelligence Available"icon: Brain },
+    { number: "300+"label: "Countries Served"icon: Globe }
   ];
 
   const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
+    initial: { opacity: 0y: 60 },
+    animate: { opacity: 1y: 0 },
     transition: { duration: 0.6 }
   };
 
@@ -134,16 +134,16 @@ const Homepage2047: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0x: -50 }}
+              animate={{ opacity: 1x: 0 }}
               transition={{ duration: 1 }}
               className="space-y-8"
             >
               <div className="space-y-6">
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
+                  initial={{ opacity: 0y: 20 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.8delay: 0.2 }}
                   className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium"
                 >
                   <Sparkles className="w-4 h-4" />
@@ -163,15 +163,15 @@ const Homepage2047: React.FC = () => {
                 </h1>
 
                 <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl">
-                  Discover our cutting-edge micro SAAS services, AI autonomous ecosystems, quantum computing breakthroughs, and next-generation IT infrastructure that are shaping the future of technology.
+                  Discover our cutting-edge micro SAAS servicesAI autonomous ecosystemsquantum computing breakthroughsand next-generation IT infrastructure that are shaping the future of technology.
                 </p>
               </div>
 
               {/* CTA Buttons */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: 0.4 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <Link
@@ -198,7 +198,7 @@ const Homepage2047: React.FC = () => {
                 animate="animate"
                 className="grid grid-cols-2 md:grid-cols-4 gap-6"
               >
-                {stats.map((stat, index) => (
+                {stats.map((statindex) => (
                   <motion.div
                     key={index}
                     variants={fadeInUp}
@@ -213,17 +213,17 @@ const Homepage2047: React.FC = () => {
 
             {/* Right Content - Featured Service */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
+              initial={{ opacity: 0x: 50 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 1delay: 0.3 }}
               className="relative"
             >
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentServiceIndex}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
+                  initial={{ opacity: 0scale: 0.9 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  exit={{ opacity: 0scale: 0.9 }}
                   transition={{ duration: 0.5 }}
                   className="relative"
                 >
@@ -278,8 +278,8 @@ const Homepage2047: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -288,7 +288,7 @@ const Homepage2047: React.FC = () => {
               Revolutionary Service Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies
+              Explore our comprehensive suite of innovative solutions across AIquantum computingIT infrastructureand emerging technologies
             </p>
           </motion.div>
 
@@ -300,7 +300,7 @@ const Homepage2047: React.FC = () => {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
-            {categories.map((category, index) => (
+            {categories.map((categoryindex) => (
               <motion.div
                 key={category.id}
                 variants={fadeInUp}
@@ -341,8 +341,8 @@ const Homepage2047: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -363,7 +363,7 @@ const Homepage2047: React.FC = () => {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <motion.div
                 key={index}
                 variants={fadeInUp}
@@ -394,10 +394,10 @@ const Homepage2047: React.FC = () => {
 
           {/* View All Services CTA */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="text-center mt-16"
           >
             <Link
@@ -415,8 +415,8 @@ const Homepage2047: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -424,7 +424,7 @@ const Homepage2047: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of organizations already leveraging our revolutionary AI, quantum, and IT infrastructure solutions
+              Join thousands of organizations already leveraging our revolutionary AIquantumand IT infrastructure solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

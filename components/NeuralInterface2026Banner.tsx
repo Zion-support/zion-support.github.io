@@ -37,7 +37,7 @@ const NeuralInterface2026Banner = () => {
           
           <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
             The future of human-AI interaction is here. Direct neural interfaces that allow 
-            seamless communication between your brain and artificial intelligence systems, 
+            seamless communication between your brain and artificial intelligence systems
             creating unprecedented possibilities for human enhancement.
           </p>
           

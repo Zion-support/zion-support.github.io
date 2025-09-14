@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const AI2025BreakthroughContentShowcase = () => {
-  const [activeTab, setActiveTab] = useState('all');
+  const [activeTabsetActiveTab] = useState('all');
 
   const content = [
     {
@@ -21,7 +21,7 @@ const AI2025BreakthroughContentShowcase = () => {
       description: 'Transform your business with revolutionary AI automation achieving unprecedented returns',
       featured: true,
       readingTime: '28 min read',
-      tags: ['AI Automation', 'Enterprise', 'ROI', 'Breakthrough']
+      tags: ['AI Automation'Enterprise'ROI'Breakthrough']
     },
     {
       id: 'fortune-500-success',
@@ -37,7 +37,7 @@ const AI2025BreakthroughContentShowcase = () => {
       description: 'Real-world success story of comprehensive AI transformation',
       featured: true,
       readingTime: '22 min read',
-      tags: ['Fortune 500', 'Case Study', 'ROI', 'Success Story']
+      tags: ['Fortune 500'Case Study'ROI'Success Story']
     },
     {
       id: 'implementation-roadmap',
@@ -53,7 +53,7 @@ const AI2025BreakthroughContentShowcase = () => {
       description: 'Step-by-step guide to achieving unprecedented AI success',
       featured: true,
       readingTime: '35 min read',
-      tags: ['Implementation', 'Strategy', 'ROI', 'Roadmap']
+      tags: ['Implementation'Strategy'ROI'Roadmap']
     },
     {
       id: 'quantum-computing',
@@ -69,7 +69,7 @@ const AI2025BreakthroughContentShowcase = () => {
       description: 'Revolutionary quantum AI transforming enterprise operations',
       featured: false,
       readingTime: '30 min read',
-      tags: ['Quantum Computing', 'AI Revolution', 'Business Transformation']
+      tags: ['Quantum Computing'AI Revolution'Business Transformation']
     },
     {
       id: 'fortune-500-650',
@@ -85,15 +85,15 @@ const AI2025BreakthroughContentShowcase = () => {
       description: 'Comprehensive AI transformation delivering exceptional results',
       featured: false,
       readingTime: '22 min read',
-      tags: ['Fortune 500', 'AI Transformation', 'ROI', 'Manufacturing']
+      tags: ['Fortune 500'AI Transformation'ROI'Manufacturing']
     }
   ];
 
   const tabs = [
-    { id: 'all', label: 'All Content', count: content.length },
-    { id: 'blog', label: 'Blog Posts', count: content.filter(c => c.type === 'blog').length },
-    { id: 'case-study', label: 'Case Studies', count: content.filter(c => c.type === 'case-study').length },
-    { id: 'resource', label: 'Resources', count: content.filter(c => c.type === 'resource').length }
+    { id: 'all'label: 'All Content'count: content.length },
+    { id: 'blog'label: 'Blog Posts'count: content.filter(c => c.type === 'blog').length },
+    { id: 'case-study'label: 'Case Studies'count: content.filter(c => c.type === 'case-study').length },
+    { id: 'resource'label: 'Resources'count: content.filter(c => c.type === 'resource').length }
   ];
 
   const filteredContent = activeTab === 'all' 
@@ -138,7 +138,7 @@ const AI2025BreakthroughContentShowcase = () => {
             Revolutionary AI Content That Delivers Results
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the strategies, case studies, and implementation guides that are helping 
+            Discover the strategiescase studiesand implementation guides that are helping 
             Fortune 500 companies achieve 750%+ ROI and transform their operations.
           </p>
         </div>
@@ -179,7 +179,7 @@ const AI2025BreakthroughContentShowcase = () => {
                 {/* Type Badge */}
                 <div className="flex items-center justify-between mb-4">
                   <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${getTypeColor(item.type)}`}>
-                    {getTypeIcon(item.type)} {item.type.replace('-', ' ').toUpperCase()}
+                    {getTypeIcon(item.type)} {item.type.replace('-' ').toUpperCase()}
                   </span>
                   <span className="text-sm text-gray-500">{item.readingTime}</span>
                 </div>
@@ -196,17 +196,17 @@ const AI2025BreakthroughContentShowcase = () => {
 
                 {/* Metrics */}
                 <div className="grid grid-cols-2 gap-2 mb-4">
-                  {Object.entries(item.metrics).map(([key, value]) => (
+                  {Object.entries(item.metrics).map(([keyvalue]) => (
                     <div key={key} className="bg-gray-50 rounded-lg p-2 text-center">
                       <div className="text-sm font-bold text-purple-600">{value}</div>
-                      <div className="text-xs text-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
+                      <div className="text-xs text-gray-500 capitalize">{key.replace(/([A-Z])/g' $1')}</div>
                     </div>
                   ))}
                 </div>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-1 mb-4">
-                  {item.tags.slice(0, 3).map((tag) => (
+                  {item.tags.slice(03).map((tag) => (
                     <span
                       key={tag}
                       className="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded"

@@ -5,7 +5,7 @@ const RevolutionaryTechTrends2025 = () => {
   const trends = [
     {
       title: "Autonomous AI Systems",
-      description: "Self-managing AI that operates independently, making real-time decisions without human intervention.",
+      description: "Self-managing AI that operates independentlymaking real-time decisions without human intervention.",
       impact: "85% efficiency increase",
       icon: "🤖",
       color: "from-blue-500 to-cyan-500"
@@ -70,7 +70,7 @@ const RevolutionaryTechTrends2025 = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {trends.map((trend, index) => (
+          {trends.map((trendindex) => (
             <div
               key={index}
               className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105"

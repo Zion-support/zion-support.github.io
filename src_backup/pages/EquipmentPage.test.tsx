@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SERVICE_CATEGORIES } from '@/data/servicesData';
 
 export function ContactPage() {
-  const [formData, setFormData] = useState({
+  const [formDatasetFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -14,10 +14,10 @@ export function ContactPage() {
     timeline: ''
   });
 
-  const [selectedService, setSelectedService] = useState('');
+  const [selectedServicesetSelectedService] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { namevalue } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -67,7 +67,7 @@ export function ContactPage() {
           <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
             <div className="flex items-center gap-2">
               <span className="text-blue-600">📍</span>
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <span>364 E Main St STE 1008Middletown DE 19709</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-blue-600">📱</span>
@@ -273,7 +273,7 @@ export function ContactPage() {
                   value={formData.message}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell us about your project, goals, and requirements..."
+                  placeholder="Tell us about your projectgoalsand requirements..."
                 />
               </div>
               

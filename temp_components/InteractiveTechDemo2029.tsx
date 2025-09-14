@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Cpu, 
-  Brain, 
-  Zap, 
-  Globe, 
-  Shield, 
+  Cpu
+  Brain
+  Zap
+  Globe
+  Shield
   Layers,
   Play,
   Pause,
@@ -27,10 +27,10 @@ import {
 } from 'lucide-react';
 
 const InteractiveTechDemo2029 = () => {
-  const [activeDemo, setActiveDemo] = useState('quantum-ai');
-  const [isRunning, setIsRunning] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [demoData, setDemoData] = useState({});
+  const [activeDemosetActiveDemo] = useState('quantum-ai');
+  const [isRunningsetIsRunning] = useState(false);
+  const [progressetProgress] = useState(0);
+  const [demoDatasetDemoData] = useState({});
 
   const demos = {
     'quantum-ai': {
@@ -110,54 +110,54 @@ const InteractiveTechDemo2029 = () => {
   const demoComponents = {
     'quantum-ai': {
       nodes: [
-        { id: 'input', type: 'input', x: 50, y: 200, label: 'Data Input' },
-        { id: 'quantum', type: 'quantum', x: 200, y: 150, label: 'Quantum Layer' },
-        { id: 'neural', type: 'neural', x: 350, y: 200, label: 'Neural Network' },
-        { id: 'output', type: 'output', x: 500, y: 200, label: 'AI Output' }
+        { id: 'input'type: 'input'x: 50y: 200label: 'Data Input' },
+        { id: 'quantum'type: 'quantum'x: 200y: 150label: 'Quantum Layer' },
+        { id: 'neural'type: 'neural'x: 350y: 200label: 'Neural Network' },
+        { id: 'output'type: 'output'x: 500y: 200label: 'AI Output' }
       ],
       connections: [
-        { from: 'input', to: 'quantum' },
-        { from: 'quantum', to: 'neural' },
-        { from: 'neural', to: 'output' }
+        { from: 'input'to: 'quantum' },
+        { from: 'quantum'to: 'neural' },
+        { from: 'neural'to: 'output' }
       ]
     },
     'neural-interface': {
       nodes: [
-        { id: 'brain', type: 'brain', x: 50, y: 200, label: 'Brain Signals' },
-        { id: 'processor', type: 'processor', x: 200, y: 200, label: 'Neural Processor' },
-        { id: 'interface', type: 'interface', x: 350, y: 200, label: 'Interface Layer' },
-        { id: 'device', type: 'device', x: 500, y: 200, label: 'Device Control' }
+        { id: 'brain'type: 'brain'x: 50y: 200label: 'Brain Signals' },
+        { id: 'processor'type: 'processor'x: 200y: 200label: 'Neural Processor' },
+        { id: 'interface'type: 'interface'x: 350y: 200label: 'Interface Layer' },
+        { id: 'device'type: 'device'x: 500y: 200label: 'Device Control' }
       ],
       connections: [
-        { from: 'brain', to: 'processor' },
-        { from: 'processor', to: 'interface' },
-        { from: 'interface', to: 'device' }
+        { from: 'brain'to: 'processor' },
+        { from: 'processor'to: 'interface' },
+        { from: 'interface'to: 'device' }
       ]
     },
     'quantum-internet': {
       nodes: [
-        { id: 'sender', type: 'sender', x: 50, y: 200, label: 'Sender' },
-        { id: 'quantum', type: 'quantum', x: 200, y: 150, label: 'Quantum Channel' },
-        { id: 'encryption', type: 'encryption', x: 350, y: 200, label: 'Encryption' },
-        { id: 'receiver', type: 'receiver', x: 500, y: 200, label: 'Receiver' }
+        { id: 'sender'type: 'sender'x: 50y: 200label: 'Sender' },
+        { id: 'quantum'type: 'quantum'x: 200y: 150label: 'Quantum Channel' },
+        { id: 'encryption'type: 'encryption'x: 350y: 200label: 'Encryption' },
+        { id: 'receiver'type: 'receiver'x: 500y: 200label: 'Receiver' }
       ],
       connections: [
-        { from: 'sender', to: 'quantum' },
-        { from: 'quantum', to: 'encryption' },
-        { from: 'encryption', to: 'receiver' }
+        { from: 'sender'to: 'quantum' },
+        { from: 'quantum'to: 'encryption' },
+        { from: 'encryption'to: 'receiver' }
       ]
     },
     'ai-automation': {
       nodes: [
-        { id: 'data', type: 'data', x: 50, y: 200, label: 'Business Data' },
-        { id: 'ai', type: 'ai', x: 200, y: 150, label: 'AI Engine' },
-        { id: 'process', type: 'process', x: 350, y: 200, label: 'Process Automation' },
-        { id: 'result', type: 'result', x: 500, y: 200, label: 'Optimized Output' }
+        { id: 'data'type: 'data'x: 50y: 200label: 'Business Data' },
+        { id: 'ai'type: 'ai'x: 200y: 150label: 'AI Engine' },
+        { id: 'process'type: 'process'x: 350y: 200label: 'Process Automation' },
+        { id: 'result'type: 'result'x: 500y: 200label: 'Optimized Output' }
       ],
       connections: [
-        { from: 'data', to: 'ai' },
-        { from: 'ai', to: 'process' },
-        { from: 'process', to: 'result' }
+        { from: 'data'to: 'ai' },
+        { from: 'ai'to: 'process' },
+        { from: 'process'to: 'result' }
       ]
     }
   };
@@ -173,10 +173,10 @@ const InteractiveTechDemo2029 = () => {
           }
           return prev + 2;
         });
-      }, 100);
+      }100);
     }
     return () => clearInterval(interval);
-  }, [isRunning]);
+  }[isRunning]);
 
   const startDemo = () => {
     setIsRunning(true);
@@ -207,8 +207,8 @@ const InteractiveTechDemo2029 = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -223,18 +223,18 @@ const InteractiveTechDemo2029 = () => {
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Interact with cutting-edge technologies and see how they work in real-time. 
-            Experience the power of quantum computing, neural interfaces, and AI automation.
+            Experience the power of quantum computingneural interfacesand AI automation.
           </p>
         </motion.div>
 
         {/* Demo Selector */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
         >
-          {Object.entries(demos).map(([key, demo]) => {
+          {Object.entries(demos).map(([keydemo]) => {
             const Icon = demo.icon;
             const isActive = activeDemo === key;
             return (
@@ -259,8 +259,8 @@ const InteractiveTechDemo2029 = () => {
           {/* Demo Visualization */}
           <motion.div
             key={activeDemo}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0scale: 0.9 }}
+            animate={{ opacity: 1scale: 1 }}
             transition={{ duration: 0.5 }}
             className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
           >
@@ -279,12 +279,12 @@ const InteractiveTechDemo2029 = () => {
             {/* Interactive Demo Area */}
             <div className="relative h-64 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl overflow-hidden mb-6">
               {/* Demo Nodes */}
-              {currentComponents.nodes.map((node, index) => (
+              {currentComponents.nodes.map((nodeindex) => (
                 <motion.div
                   key={node.id}
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0scale: 0 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   className={`absolute w-16 h-16 rounded-xl flex items-center justify-center text-xs font-medium ${
                     isRunning ? 'animate-pulse' : ''
                   }`}
@@ -292,8 +292,8 @@ const InteractiveTechDemo2029 = () => {
                     left: `${node.x}px`,
                     top: `${node.y}px`,
                     background: isRunning 
-                      ? `linear-gradient(135deg, ${currentDemo.color.split(' ')[1]}, ${currentDemo.color.split(' ')[3]})`
-                      : 'rgba(255, 255, 255, 0.1)'
+                      ? `linear-gradient(135deg${currentDemo.color.split(' ')[1]}${currentDemo.color.split(' ')[3]})`
+                      : 'rgba(2552550.1)'
                   }}
                 >
                   {node.label}
@@ -302,7 +302,7 @@ const InteractiveTechDemo2029 = () => {
 
               {/* Demo Connections */}
               <svg className="absolute inset-0 w-full h-full">
-                {currentComponents.connections.map((conn, index) => {
+                {currentComponents.connections.map((connindex) => {
                   const fromNode = currentComponents.nodes.find(n => n.id === conn.from);
                   const toNode = currentComponents.nodes.find(n => n.id === conn.to);
                   if (!fromNode || !toNode) return null;
@@ -312,7 +312,7 @@ const InteractiveTechDemo2029 = () => {
                       key={index}
                       initial={{ pathLength: 0 }}
                       animate={{ pathLength: isRunning ? 1 : 0 }}
-                      transition={{ duration: 1, delay: index * 0.2 }}
+                      transition={{ duration: 1delay: index * 0.2 }}
                       x1={fromNode.x + 32}
                       y1={fromNode.y + 32}
                       x2={toNode.x + 32}
@@ -379,12 +379,12 @@ const InteractiveTechDemo2029 = () => {
                 Key Features
               </h4>
               <div className="space-y-3">
-                {currentDemo.features.map((feature, index) => (
+                {currentDemo.features.map((featureindex) => (
                   <motion.div
                     key={feature}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    initial={{ opacity: 0x: -20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    transition={{ duration: 0.3delay: index * 0.1 }}
                     className="flex items-center gap-3"
                   >
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -401,7 +401,7 @@ const InteractiveTechDemo2029 = () => {
                 Performance Metrics
               </h4>
               <div className="grid grid-cols-2 gap-4">
-                {Object.entries(currentDemo.metrics).map(([key, value]) => (
+                {Object.entries(currentDemo.metrics).map(([keyvalue]) => (
                   <div key={key} className="text-center">
                     <div className="text-2xl font-bold text-white mb-1">{value}</div>
                     <div className="text-sm text-gray-400">{key}</div>

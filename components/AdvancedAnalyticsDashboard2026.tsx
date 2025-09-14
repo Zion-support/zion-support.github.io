@@ -1,15 +1,15 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  BarChart3, 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Eye, 
-  MousePointer, 
+  BarChart3
+  TrendingUp
+  Users
+  DollarSign
+  Eye
+  MousePointer
   Clock,
   Target,
   Zap,
@@ -35,15 +35,15 @@ interface AnalyticsData {
 }
 
 const AdvancedAnalyticsDashboard2026 = () => {
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData[]>([]);
-  const [selectedTimeframe, setSelectedTimeframe] = useState('7d');
-  const [isLoading, setIsLoading] = useState(true);
+  const [analyticsDatasetAnalyticsData] = useState<AnalyticsData[]>([]);
+  const [selectedTimeframesetSelectedTimeframe] = useState('7d');
+  const [isLoadingsetIsLoading] = useState(true);
 
   useEffect(() => {
     // Simulate data loading
     const loadData = async () => {
       setIsLoading(true);
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve1000));
       
       const data: AnalyticsData[] = [
         {
@@ -133,7 +133,7 @@ const AdvancedAnalyticsDashboard2026 = () => {
     };
 
     loadData();
-  }, [selectedTimeframe]);
+  }[selectedTimeframe]);
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
@@ -149,10 +149,10 @@ const AdvancedAnalyticsDashboard2026 = () => {
   };
 
   const timeframes = [
-    { value: '24h', label: '24 Hours' },
-    { value: '7d', label: '7 Days' },
-    { value: '30d', label: '30 Days' },
-    { value: '90d', label: '90 Days' }
+    { value: '24h'label: '24 Hours' },
+    { value: '7d'label: '7 Days' },
+    { value: '30d'label: '30 Days' },
+    { value: '90d'label: '90 Days' }
   ];
 
   if (isLoading) {
@@ -199,13 +199,13 @@ const AdvancedAnalyticsDashboard2026 = () => {
       {/* Analytics Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <AnimatePresence>
-          {analyticsData.map((item, index) => (
+          {analyticsData.map((itemindex) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              exit={{ opacity: 0y: -20 }}
+              transition={{ duration: 0.5delay: index * 0.1 }}
               className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
             >
               <div className="flex items-center justify-between mb-4">

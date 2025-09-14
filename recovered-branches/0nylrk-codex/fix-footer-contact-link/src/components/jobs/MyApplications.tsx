@@ -1,16 +1,16 @@
 
 import { useState } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Loader2, MessageSquare, ExternalLink } from "lucide-react";
+import { Loader2MessageSquareExternalLink } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { Link } from "react-router-dom";
 import { ApplicationStatus } from "@/types/jobs";
 
 export function MyApplications() {
-  const { applications, isLoading, error } = useJobApplications();
+  const { applicationsisLoadingerror } = useJobApplications();
   
   const getStatusBadge = (status: ApplicationStatus) => {
     switch (status) {
@@ -74,7 +74,7 @@ export function MyApplications() {
               {getStatusBadge(application.status)}
             </div>
             <p className="text-sm text-muted-foreground">
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+              Applied {formatDistanceToNow(new Date(application.created_at){ addSuffix: true })}
             </p>
           </CardHeader>
           <CardContent>

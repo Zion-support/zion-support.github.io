@@ -3,14 +3,14 @@ import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Atom, Brain, Rocket, Shield, Zap, Target, Cpu, 
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
-  Lightbulb, Search, Grid, List, TrendingUp, 
-  User, ShoppingCart, Bell, HelpCircle, FileText, 
-  Video, Headphones, Code, Database, Network, Server, 
-  Monitor, Smartphone, Camera, Gamepad2, Palette, 
-  Music, Film, BookOpenCheck, Building, MessageCircle, 
-  Sparkles, ArrowRight, CheckCircle, Star, Globe
+  AtomBrainRocketShieldZapTargetCpu
+  LockCloudSettingsEyeAwardClockHeart
+  LightbulbSearchGridListTrendingUp
+  UserShoppingCartBellHelpCircleFileText
+  VideoHeadphonesCodeDatabaseNetworkServer
+  MonitorSmartphoneCameraGamepad2Palette
+  MusicFilmBookOpenCheckBuildingMessageCircle
+  SparklesArrowRightCheckCircleStarGlobe
 } from 'lucide-react';
 
 const QuantumServicesPage: React.FC = () => {
@@ -19,7 +19,7 @@ const QuantumServicesPage: React.FC = () => {
       id: 'quantum-neural-networks',
       name: 'Quantum Neural Networks',
       description: 'Next-generation neural networks powered by quantum computing',
-      features: ['Quantum Superposition', 'Entanglement Processing', 'Quantum Memory', 'Hybrid Classical-Quantum'],
+      features: ['Quantum Superposition'Entanglement Processing'Quantum Memory'Hybrid Classical-Quantum'],
       price: '$3,999',
       period: 'month',
       popular: true,
@@ -29,7 +29,7 @@ const QuantumServicesPage: React.FC = () => {
       id: 'quantum-financial-trading',
       name: 'Quantum Financial Trading',
       description: 'Quantum-powered algorithmic trading and risk management',
-      features: ['Quantum Risk Assessment', 'Portfolio Optimization', 'Market Prediction', 'Real-time Analysis'],
+      features: ['Quantum Risk Assessment'Portfolio Optimization'Market Prediction'Real-time Analysis'],
       price: '$2,999',
       period: 'month',
       popular: false,
@@ -39,7 +39,7 @@ const QuantumServicesPage: React.FC = () => {
       id: 'quantum-materials-discovery',
       name: 'Quantum Materials Discovery',
       description: 'Accelerated materials research using quantum simulation',
-      features: ['Quantum Simulation', 'Molecular Modeling', 'Property Prediction', 'Discovery Automation'],
+      features: ['Quantum Simulation'Molecular Modeling'Property Prediction'Discovery Automation'],
       price: '$2,499',
       period: 'month',
       popular: false,
@@ -49,7 +49,7 @@ const QuantumServicesPage: React.FC = () => {
       id: 'quantum-bio-computing',
       name: 'Quantum Bio-Computing',
       description: 'Quantum computing for biological and pharmaceutical research',
-      features: ['Protein Folding', 'Drug Discovery', 'Genetic Analysis', 'Bioinformatics'],
+      features: ['Protein Folding'Drug Discovery'Genetic Analysis'Bioinformatics'],
       price: '$2,799',
       period: 'month',
       popular: false,
@@ -59,7 +59,7 @@ const QuantumServicesPage: React.FC = () => {
       id: 'quantum-internet-security',
       name: 'Quantum Internet Security',
       description: 'Unbreakable quantum encryption and secure communications',
-      features: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Secure Networks', 'Quantum Authentication'],
+      features: ['Quantum Key Distribution'Post-Quantum Cryptography'Secure Networks'Quantum Authentication'],
       price: '$1,999',
       period: 'month',
       popular: false,
@@ -69,7 +69,7 @@ const QuantumServicesPage: React.FC = () => {
       id: 'quantum-cloud-infrastructure',
       name: 'Quantum Cloud Infrastructure',
       description: 'Quantum-ready cloud computing infrastructure',
-      features: ['Quantum Processing Units', 'Hybrid Computing', 'Scalable Architecture', 'Performance Optimization'],
+      features: ['Quantum Processing Units'Hybrid Computing'Scalable Architecture'Performance Optimization'],
       price: '$3,499',
       period: 'month',
       popular: false,
@@ -115,8 +115,8 @@ export default function QuantumServices() {
     <Layout>
       <SEO 
         title="Quantum Computing Services - Zion Tech Group"
-        description="Revolutionary quantum computing solutions for the future. From neural networks to financial trading, unlock quantum advantage."
-        keywords="quantum computing, quantum services, quantum neural networks, quantum financial trading, quantum materials discovery"
+        description="Revolutionary quantum computing solutions for the future. From neural networks to financial tradingunlock quantum advantage."
+        keywords="quantum computingquantum servicesquantum neural networksquantum financial tradingquantum materials discovery"
       />
       
       <main className="relative z-10">
@@ -124,8 +124,8 @@ export default function QuantumServices() {
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent">
@@ -156,8 +156,8 @@ export default function QuantumServices() {
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -171,12 +171,12 @@ export default function QuantumServices() {
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {quantumCapabilities.map((capability, index) => (
+              {quantumCapabilities.map((capabilityindex) => (
                 <motion.div
                   key={capability.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300"
                 >
@@ -197,8 +197,8 @@ export default function QuantumServices() {
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -212,12 +212,12 @@ export default function QuantumServices() {
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {quantumServices.map((service, index) => (
+              {quantumServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
                     service.popular 
@@ -246,7 +246,7 @@ export default function QuantumServices() {
                   </div>
                   
                   <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map((featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -270,8 +270,8 @@ export default function QuantumServices() {
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

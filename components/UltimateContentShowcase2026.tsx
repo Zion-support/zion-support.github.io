@@ -102,13 +102,13 @@ const UltimateContentShowcase2026 = () => {
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Explore the most comprehensive collection of AI content, insights, and technologies 
+            Explore the most comprehensive collection of AI contentinsightsand technologies 
             that are shaping the future of business and technology.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {contentCategories.map((category, categoryIndex) => (
+          {contentCategories.map((categoryIndex) => (
             <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <div className="mb-8">
                 <div className={`inline-block bg-gradient-to-r ${category.color} text-white px-4 py-2 rounded-full text-sm font-bold mb-4`}>
@@ -119,7 +119,7 @@ const UltimateContentShowcase2026 = () => {
               </div>
 
               <div className="space-y-6">
-                {category.articles.map((article, articleIndex) => (
+                {category.articles.map((articleIndex) => (
                   <div key={articleIndex} className={`p-6 rounded-xl border ${
                     article.featured 
                       ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border-cyan-500/30' 
@@ -142,7 +142,7 @@ const UltimateContentShowcase2026 = () => {
                         <span className="text-gray-400 text-sm">{article.readTime}</span>
                       </div>
                       <Link
-                        href={`/content/${category.title.toLowerCase().replace(/\s+/g, '-')}/${article.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        href={`/content/${category.title.toLowerCase().replace(/\s+/g'-')}/${article.title.toLowerCase().replace(/\s+/g'-')}`}
                         className="text-cyan-400 font-semibold hover:text-cyan-300 transition-colors"
                       >
                         Read More →
@@ -154,7 +154,7 @@ const UltimateContentShowcase2026 = () => {
 
               <div className="mt-8 text-center">
                 <Link
-                  href={`/category/${category.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/category/${category.title.toLowerCase().replace(/\s+/g'-')}`}
                   className={`bg-gradient-to-r ${category.color} text-white px-6 py-3 rounded-lg font-bold hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
                 >
                   View All {category.title} Content

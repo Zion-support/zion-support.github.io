@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Star, CheckCircle, ArrowRight, TrendingUp, Users, 
-  Award, Clock, Zap, Shield, Brain, Atom, Rocket,
-  ShoppingCart, Cpu, Globe, Lock, Video, Palette,
-  BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
+  StarCheckCircleArrowRightTrendingUpUsers
+  AwardClockZapShieldBrainAtomRocket,
+  ShoppingCartCpuGlobeLockVideoPalette,
+  BarChartUserCheckFileTextHeartEyeSearchPhone
 } from 'lucide-react';
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
@@ -75,10 +75,10 @@ const serviceCategories = [
 ];
 
 export default function UltraFuturisticServiceShowcase2034() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [searchTermsetSearchTerm] = useState('');
 
-  const allServices = [...realMarketServices, ...aiEmergingTechServices];
+  const allServices = [...realMarketServices...aiEmergingTechServices];
   
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
@@ -100,8 +100,8 @@ export default function UltraFuturisticServiceShowcase2034() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+    hidden: { opacity: 0y: 20 },
+    visible: { opacity: 1y: 0 }
   };
 
   return (
@@ -116,8 +116,8 @@ export default function UltraFuturisticServiceShowcase2034() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -126,23 +126,23 @@ export default function UltraFuturisticServiceShowcase2034() {
             Revolutionary Technology Services
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. 
+            Discover our comprehensive suite of cutting-edge AIquantum computingand emerging technology solutions. 
             Each service is designed to transform your business and propel you into the future.
           </p>
           
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
             {[
-              { label: 'Total Services', value: allServices.length.toString(), icon: Rocket },
-              { label: 'Happy Customers', value: '50K+', icon: Users },
-              { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe }
-            ].map((stat, index) => (
+              { label: 'Total Services'value: allServices.length.toString()icon: Rocket },
+              { label: 'Happy Customers'value: '50K+'icon: Users },
+              { label: 'Success Rate'value: '99.9%'icon: CheckCircle },
+              { label: 'Global Reach'value: '45+ Countries'icon: Globe }
+            ].map((statindex) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0scale: 0.8 }}
+                whileInView={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
@@ -156,9 +156,9 @@ export default function UltraFuturisticServiceShowcase2034() {
 
         {/* Search and Filter */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           viewport={{ once: true }}
           className="mb-12"
         >
@@ -193,19 +193,19 @@ export default function UltraFuturisticServiceShowcase2034() {
 
         {/* Service Categories */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           viewport={{ once: true }}
           className="mb-16"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {serviceCategories.map((category, index) => (
+            {serviceCategories.map((categoryindex) => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
                   selectedCategory === category.id 
@@ -239,7 +239,7 @@ export default function UltraFuturisticServiceShowcase2034() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {filteredServices.map((service, index) => (
+          {filteredServices.map((serviceindex) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -273,7 +273,7 @@ export default function UltraFuturisticServiceShowcase2034() {
 
               {/* Features */}
               <div className="space-y-2 mb-4">
-                {service.features.slice(0, 3).map((feature, idx) => (
+                {service.features.slice(03).map((featureidx) => (
                   <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                     <span>{feature}</span>
@@ -348,9 +348,9 @@ export default function UltraFuturisticServiceShowcase2034() {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
           viewport={{ once: true }}
           className="text-center mt-20"
         >

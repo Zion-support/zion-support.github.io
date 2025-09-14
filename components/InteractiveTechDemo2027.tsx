@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const InteractiveTechDemo2027 = () => {
-  const [activeDemo, setActiveDemo] = useState(0);
+  const [activeDemosetActiveDemo] = useState(0);
 
   const demos = [
     {
       id: 0,
       title: "Neural Interface Demo",
       description: "Experience direct brain-computer interaction",
-      features: ["Real-time thought processing", "Emotion recognition", "Memory enhancement"],
+      features: ["Real-time thought processing"Emotion recognition"Memory enhancement"],
       icon: "🧠",
       color: "from-purple-500 to-pink-500"
     },
@@ -17,7 +17,7 @@ const InteractiveTechDemo2027 = () => {
       id: 1,
       title: "Quantum AI Simulation",
       description: "Witness quantum computing power in action",
-      features: ["Exponential speed increase", "Parallel processing", "Quantum entanglement"],
+      features: ["Exponential speed increase"Parallel processing"Quantum entanglement"],
       icon: "⚛️",
       color: "from-blue-500 to-cyan-500"
     },
@@ -25,7 +25,7 @@ const InteractiveTechDemo2027 = () => {
       id: 2,
       title: "Autonomous Systems",
       description: "See self-managing AI systems at work",
-      features: ["Self-healing networks", "Adaptive learning", "Predictive maintenance"],
+      features: ["Self-healing networks"Adaptive learning"Predictive maintenance"],
       icon: "🤖",
       color: "from-green-500 to-emerald-500"
     },
@@ -33,7 +33,7 @@ const InteractiveTechDemo2027 = () => {
       id: 3,
       title: "Synthetic Reality",
       description: "Step into AI-generated virtual worlds",
-      features: ["Photorealistic environments", "Dynamic content generation", "Immersive experiences"],
+      features: ["Photorealistic environments"Dynamic content generation"Immersive experiences"],
       icon: "🌐",
       color: "from-orange-500 to-red-500"
     }
@@ -64,7 +64,7 @@ const InteractiveTechDemo2027 = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Demo Selector */}
           <div className="space-y-4">
-            {demos.map((demo, index) => (
+            {demos.map((demoindex) => (
               <button
                 key={demo.id}
                 onClick={() => setActiveDemo(index)}
@@ -94,7 +94,7 @@ const InteractiveTechDemo2027 = () => {
             </div>
 
             <div className="space-y-4 mb-8">
-              {demos[activeDemo].features.map((feature, index) => (
+              {demos[activeDemo].features.map((featureindex) => (
                 <div key={index} className="flex items-center bg-white/5 rounded-lg p-4">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full mr-4"></div>
                   <span className="text-gray-300">{feature}</span>

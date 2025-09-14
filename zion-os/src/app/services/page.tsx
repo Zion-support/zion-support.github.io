@@ -26,7 +26,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-6 text-center text-sm">
           <span className="mr-8">📱 +1 302 464 0950</span>
           <span className="mr-8">✉️ kleber@ziontechgroup.com</span>
-          <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>
+          <span>📍 364 E Main St STE 1008Middletown DE 19709</span>
         </div>
       </div>
 
@@ -65,7 +65,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
               <div className="text-3xl mb-4">✍️</div>
               <h3 className="text-xl font-semibold mb-3">AI Content Generation</h3>
-              <p className="text-zinc-300 mb-4">Automated content creation for blogs, social media, marketing materials, and technical documentation.</p>
+              <p className="text-zinc-300 mb-4">Automated content creation for blogsocial mediamarketing materialsand technical documentation.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -85,7 +85,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
               <div className="text-3xl mb-4">📊</div>
               <h3 className="text-xl font-semibold mb-3">AI-Powered Analytics</h3>
-              <p className="text-zinc-300 mb-4">Predictive analytics, trend forecasting, and intelligent business insights powered by machine learning.</p>
+              <p className="text-zinc-300 mb-4">Predictive analyticstrend forecastingand intelligent business insights powered by machine learning.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -125,7 +125,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
               <div className="text-3xl mb-4">⚙️</div>
               <h3 className="text-xl font-semibold mb-3">AI Process Automation</h3>
-              <p className="text-zinc-300 mb-4">Intelligent workflow automation, document processing, and business process optimization.</p>
+              <p className="text-zinc-300 mb-4">Intelligent workflow automationdocument processingand business process optimization.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -145,7 +145,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
               <div className="text-3xl mb-4">🔒</div>
               <h3 className="text-xl font-semibold mb-3">AI Security & Compliance</h3>
-              <p className="text-zinc-300 mb-4">AI-powered threat detection, compliance monitoring, and security automation for enterprise environments.</p>
+              <p className="text-zinc-300 mb-4">AI-powered threat detectioncompliance monitoringand security automation for enterprise environments.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -176,7 +176,7 @@ export default function ServicesPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">💻 IT Services & Solutions</h2>
             <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-              Comprehensive IT infrastructure, cloud solutions, and digital transformation services
+              Comprehensive IT infrastructurecloud solutionsand digital transformation services
             </p>
           </div>
           
@@ -185,7 +185,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
               <div className="text-3xl mb-4">☁️</div>
               <h3 className="text-xl font-semibold mb-3">Cloud Infrastructure</h3>
-              <p className="text-zinc-300 mb-4">AWS, Azure, and Google Cloud setup, migration, and optimization services.</p>
+              <p className="text-zinc-300 mb-4">AWSAzureand Google Cloud setupmigrationand optimization services.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -205,7 +205,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
               <div className="text-3xl mb-4">🚀</div>
               <h3 className="text-xl font-semibold mb-3">DevOps & CI/CD</h3>
-              <p className="text-zinc-300 mb-4">Automated deployment pipelines, infrastructure as code, and DevOps culture implementation.</p>
+              <p className="text-zinc-300 mb-4">Automated deployment pipelinesinfrastructure as codeand DevOps culture implementation.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -225,7 +225,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
               <div className="text-3xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold mb-3">Cybersecurity</h3>
-              <p className="text-zinc-300 mb-4">Security audits, penetration testing, compliance frameworks, and incident response planning.</p>
+              <p className="text-zinc-300 mb-4">Security auditspenetration testingcompliance frameworksand incident response planning.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -245,7 +245,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
               <div className="text-3xl mb-4">📈</div>
               <h3 className="text-xl font-semibold mb-3">Data Engineering</h3>
-              <p className="text-zinc-300 mb-4">Data pipelines, warehousing, ETL processes, and business intelligence solutions.</p>
+              <p className="text-zinc-300 mb-4">Data pipelineswarehousingETL processesand business intelligence solutions.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -265,7 +265,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
               <div className="text-3xl mb-4">🔌</div>
               <h3 className="text-xl font-semibold mb-3">API Development</h3>
-              <p className="text-zinc-300 mb-4">RESTful APIs, GraphQL, microservices architecture, and API gateway solutions.</p>
+              <p className="text-zinc-300 mb-4">RESTful APIsGraphQLmicroservices architectureand API gateway solutions.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -285,7 +285,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-green-500 transition-all">
               <div className="text-3xl mb-4">🔄</div>
               <h3 className="text-xl font-semibold mb-3">Digital Transformation</h3>
-              <p className="text-zinc-300 mb-4">End-to-end digital transformation consulting, legacy system modernization, and change management.</p>
+              <p className="text-zinc-300 mb-4">End-to-end digital transformation consultinglegacy system modernizationand change management.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -316,7 +316,7 @@ export default function ServicesPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">⛓️ Blockchain & Web3 Services</h2>
             <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-              Next-generation blockchain solutions, DeFi platforms, NFT marketplaces, and Web3 infrastructure
+              Next-generation blockchain solutionsDeFi platformsNFT marketplacesand Web3 infrastructure
             </p>
           </div>
           
@@ -325,7 +325,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
               <div className="text-3xl mb-4">💰</div>
               <h3 className="text-xl font-semibold mb-3">DeFi Platform Development</h3>
-              <p className="text-zinc-300 mb-4">Build next-generation decentralized finance platforms with lending, borrowing, and yield farming.</p>
+              <p className="text-zinc-300 mb-4">Build next-generation decentralized finance platforms with lendingborrowingand yield farming.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -365,7 +365,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
               <div className="text-3xl mb-4">📜</div>
               <h3 className="text-xl font-semibold mb-3">Smart Contract Development</h3>
-              <p className="text-zinc-300 mb-4">Secure, audited smart contracts for any blockchain use case with comprehensive testing.</p>
+              <p className="text-zinc-300 mb-4">Secureaudited smart contracts for any blockchain use case with comprehensive testing.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -385,7 +385,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
               <div className="text-3xl mb-4">🌐</div>
               <h3 className="text-xl font-semibold mb-3">Web3 Infrastructure</h3>
-              <p className="text-zinc-300 mb-4">Build robust Web3 infrastructure with node management, API gateways, and decentralized storage.</p>
+              <p className="text-zinc-300 mb-4">Build robust Web3 infrastructure with node managementAPI gatewaysand decentralized storage.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -425,7 +425,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-orange-500 transition-all">
               <div className="text-3xl mb-4">💡</div>
               <h3 className="text-xl font-semibold mb-3">Blockchain Consulting</h3>
-              <p className="text-zinc-300 mb-4">Strategic blockchain consulting including technology selection, architecture design, and compliance.</p>
+              <p className="text-zinc-300 mb-4">Strategic blockchain consulting including technology selectionarchitecture designand compliance.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Consulting Rate:</span>
@@ -465,7 +465,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
               <div className="text-3xl mb-4">🛒</div>
               <h3 className="text-xl font-semibold mb-3">Zion Marketplace</h3>
-              <p className="text-zinc-300 mb-4">Complete marketplace solution with job boards, talent matching, and project management.</p>
+              <p className="text-zinc-300 mb-4">Complete marketplace solution with job boardstalent matchingand project management.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -485,7 +485,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
               <div className="text-3xl mb-4">📝</div>
               <h3 className="text-xl font-semibold mb-3">Resume AI Builder</h3>
-              <p className="text-zinc-300 mb-4">AI-powered resume creation, optimization, and ATS-friendly formatting with industry insights.</p>
+              <p className="text-zinc-300 mb-4">AI-powered resume creationoptimizationand ATS-friendly formatting with industry insights.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -545,7 +545,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
               <div className="text-3xl mb-4">🗳️</div>
               <h3 className="text-xl font-semibold mb-3">DAO Governance Platform</h3>
-              <p className="text-zinc-300 mb-4">Decentralized governance tools with proposal creation, voting mechanisms, and treasury management.</p>
+              <p className="text-zinc-300 mb-4">Decentralized governance tools with proposal creationvoting mechanismsand treasury management.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -565,7 +565,7 @@ export default function ServicesPage() {
             <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-600 hover:border-purple-500 transition-all">
               <div className="text-3xl mb-4">🎓</div>
               <h3 className="text-xl font-semibold mb-3">Zion Academy</h3>
-              <p className="text-zinc-300 mb-4">Learning management system with AI-powered course creation, assessments, and skill tracking.</p>
+              <p className="text-zinc-300 mb-4">Learning management system with AI-powered course creationassessmentsand skill tracking.</p>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Starting Price:</span>
@@ -595,7 +595,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our AI, IT, blockchain, and SAAS solutions can drive your digital transformation and business growth.
+            Let's discuss how our AITblockchainand SAAS solutions can drive your digital transformation and business growth.
           </p>
           <div className="space-y-4">
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -607,7 +607,7 @@ export default function ServicesPage() {
               </a>
             </div>
             <p className="text-blue-100 text-sm">
-              📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https://ziontechgroup.com
+              📍 364 E Main St STE 1008Middletown DE 19709 | 🌐 https://ziontechgroup.com
             </p>
           </div>
         </div>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
+import React{ useEffectuseRef } from 'react';
 import { motion } from 'framer-motion';
 
 interface UltraAdvancedFuturisticBackgroundV2Props {
@@ -8,7 +8,7 @@ interface UltraAdvancedFuturisticBackgroundV2Props {
 }
 
 const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({ 
-  children, 
+  children
   className = '' 
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -36,8 +36,8 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
     }> = [];
 
     const colors = [
-      '#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080',
-      '#8000ff', '#ff8000', '#0080ff', '#ff0080', '#80ff00'
+      '#00ffff'#ff00ff'#ffff00'#00ff00'#ff0080',
+      '#8000ff'#ff8000'#0080ff'#ff0080'#80ff00'
     ];
 
     // Initialize particles
@@ -59,21 +59,21 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
 
     // Update and draw particles
     const updateParticles = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0canvas.widthcanvas.height);
 
       // Create gradient background
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 0,
-        canvas.width / 2, canvas.height / 2, canvas.width / 2
+        canvas.width / 2canvas.height / 20,
+        canvas.width / 2canvas.height / 2canvas.width / 2
       );
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
-      gradient.addColorStop(0.5, 'rgba(20, 20, 40, 0.6)');
-      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
+      gradient.addColorStop(0'rgba(00.8)');
+      gradient.addColorStop(0.5'rgba(2040.6)');
+      gradient.addColorStop(1'rgba(00.9)');
       ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0canvas.widthcanvas.height);
 
       // Update and draw particles
-      particles.forEach((particle, index) => {
+      particles.forEach((particleindex) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.life--;
@@ -95,22 +95,22 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         ctx.globalAlpha = alpha;
         ctx.fillStyle = particle.color;
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.arc(particle.xparticle.yparticle.size0Math.PI * 2);
         ctx.fill();
 
         // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
+        particles.forEach((otherParticleotherIndex) => {
           if (index !== otherIndex) {
             const distance = Math.sqrt(
-              Math.pow(particle.x - otherParticle.x, 2) + 
-              Math.pow(particle.y - otherParticle.y, 2)
+              Math.pow(particle.x - otherParticle.x2) + 
+              Math.pow(particle.y - otherParticle.y2)
             );
             if (distance < 100) {
-              ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
+              ctx.strokeStyle = `rgba(0255${0.1 * (1 - distance / 100)})`;
               ctx.lineWidth = 1;
               ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(otherParticle.x, otherParticle.y);
+              ctx.moveTo(particle.xparticle.y);
+              ctx.lineTo(otherParticle.xotherParticle.y);
               ctx.stroke();
             }
           }
@@ -125,16 +125,16 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
       // Vertical lines
       for (let x = 0; x < canvas.width; x += 50) {
         ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
+        ctx.moveTo(x0);
+        ctx.lineTo(xcanvas.height);
         ctx.stroke();
       }
       
       // Horizontal lines
       for (let y = 0; y < canvas.height; y += 50) {
         ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
+        ctx.moveTo(0y);
+        ctx.lineTo(canvas.widthy);
         ctx.stroke();
       }
 
@@ -145,10 +145,10 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         const centerY = canvas.height / 2 + Math.cos(Date.now() * 0.001 + i) * 100;
         const radius = 100 + Math.sin(Date.now() * 0.002 + i) * 50;
         
-        ctx.strokeStyle = `hsl(${180 + i * 60}, 100%, 50%)`;
+        ctx.strokeStyle = `hsl(${180 + i * 60}100%50%)`;
         ctx.lineWidth = 2;
         ctx.beginPath();
-        ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+        ctx.arc(centerXcenterYradius0Math.PI * 2);
         ctx.stroke();
       }
 
@@ -162,17 +162,17 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
       initParticles();
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize'handleResize);
     initParticles();
     updateParticles();
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize'handleResize);
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }
     };
-  }, []);
+  }[]);
 
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
@@ -180,7 +180,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
       <canvas
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)' }}
+        style={{ background: 'radial-gradient(circle at centergba(0,0,0,0.8) 0%rgba(20,20,40,0.6) 50%rgba(0,0,0,0.9) 100%)' }}
       />
       
       {/* Floating Geometric Shapes */}
@@ -188,9 +188,9 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20"
           animate={{
-            rotate: [0, 360],
-            scale: [1, 1.2, 1],
-            opacity: [0.1, 0.3, 0.1]
+            rotate: [0360],
+            scale: [1.21],
+            opacity: [0.10.30.1]
           }}
           transition={{
             duration: 8,
@@ -202,9 +202,9 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20"
           animate={{
-            rotate: [360, 0],
-            scale: [1, 0.8, 1],
-            opacity: [0.1, 0.4, 0.1]
+            rotate: [360],
+            scale: [10.81],
+            opacity: [0.10.40.1]
           }}
           transition={{
             duration: 6,
@@ -216,9 +216,9 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         <motion.div
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20"
           animate={{
-            rotate: [0, 360],
-            scale: [1, 1.3, 1],
-            opacity: [0.1, 0.2, 0.1]
+            rotate: [0360],
+            scale: [1.31],
+            opacity: [0.10.20.1]
           }}
           transition={{
             duration: 10,
@@ -230,9 +230,9 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         <motion.div
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
           animate={{
-            rotate: [360, 0],
-            scale: [1, 0.9, 1],
-            opacity: [0.1, 0.3, 0.1]
+            rotate: [360],
+            scale: [10.91],
+            opacity: [0.10.30.1]
           }}
           transition={{
             duration: 7,
@@ -244,7 +244,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
 
       {/* Quantum Energy Particles */}
       <div className="fixed inset-0 pointer-events-none z-20">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(20)].map((_i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-cyan-400 rounded-full"
@@ -253,9 +253,9 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
               top: `${Math.random() * 100}%`
             }}
             animate={{
-              y: [0, -100, 0],
-              opacity: [0, 1, 0],
-              scale: [0, 1, 0]
+              y: [0-100],
+              opacity: [010],
+              scale: [010]
             }}
             transition={{
               duration: 3 + Math.random() * 2,
@@ -276,7 +276,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
               <stop offset="100%" stopColor="#ff00ff" stopOpacity="0.3" />
             </linearGradient>
           </defs>
-          {[...Array(15)].map((_, i) => (
+          {[...Array(15)].map((_i) => (
             <motion.line
               key={i}
               x1={Math.random() * 100}
@@ -287,8 +287,8 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
               strokeWidth="1"
               opacity="0.1"
               animate={{
-                opacity: [0.1, 0.3, 0.1],
-                strokeDasharray: [0, 100, 0]
+                opacity: [0.10.30.1],
+                strokeDasharray: [0100]
               }}
               transition={{
                 duration: 4 + Math.random() * 2,

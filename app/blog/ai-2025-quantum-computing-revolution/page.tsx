@@ -3,7 +3,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, Brain } from 'lucide-react';
 import SEO from '../../../components/SEO';
-// import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'AI 2025: The Quantum Computing Revolution That\'s Reshaping Enterprise',

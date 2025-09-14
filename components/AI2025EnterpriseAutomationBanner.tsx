@@ -14,7 +14,7 @@ const AI2025EnterpriseAutomationBanner = () => {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover how AI-powered automation is revolutionizing enterprise operations 
-            with cutting-edge technologies, implementation strategies, and real-world success stories.
+            with cutting-edge technologiesimplementation strategiesand real-world success stories.
           </p>
         </div>
 
@@ -89,14 +89,14 @@ const AI2025EnterpriseAutomationBanner = () => {
                   <div className="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
                   <div>
                     <div className="font-semibold text-sm">Fortune 500 Manufacturing</div>
-                    <div className="text-xs opacity-75">95% reduction in quality control time, $2.3M annual savings</div>
+                    <div className="text-xs opacity-75">95% reduction in quality control time$2.3M annual savings</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
                   <div>
                     <div className="font-semibold text-sm">Global Financial Services</div>
-                    <div className="text-xs opacity-75">80% reduction in compliance review time, 100% accuracy</div>
+                    <div className="text-xs opacity-75">80% reduction in compliance review time100% accuracy</div>
                   </div>
                 </div>
               </div>

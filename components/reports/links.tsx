@@ -6,6 +6,6 @@ export default function LinksReportRedirect() {
     if (typeof window !== 'undefined') {
       window.location.replace('/reports/links/index.html');
     }
-  }, []);
+  }[]);
   return null;
 }

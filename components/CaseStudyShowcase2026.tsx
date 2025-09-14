@@ -1,16 +1,16 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Users, 
-  Zap, 
-  Shield, 
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  Zap
+  Shield
   Globe,
   Brain,
   Database,
@@ -66,13 +66,13 @@ import {
 } from 'lucide-react';
 
 const CaseStudyShowcase2026 = () => {
-  const [activeIndustry, setActiveIndustry] = useState('technology');
-  const [hoveredCase, setHoveredCase] = useState<number | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeIndustrysetActiveIndustry] = useState('technology');
+  const [hoveredCasetHoveredCase] = useState<number | null>(null);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const industries = {
     'technology': {
@@ -128,10 +128,10 @@ const CaseStudyShowcase2026 = () => {
         customerSatisfaction: '40%',
         efficiency: '70%'
       },
-      description: 'TechCorp Solutions transformed their customer service operations using our AI-powered chatbot system, resulting in significant cost savings and improved customer satisfaction.',
+      description: 'TechCorp Solutions transformed their customer service operations using our AI-powered chatbot systemresulting in significant cost savings and improved customer satisfaction.',
       duration: '6 months',
       teamSize: '12 people',
-      technologies: ['Natural Language Processing', 'Machine Learning', 'API Integration', 'Cloud Computing'],
+      technologies: ['Natural Language Processing'Machine Learning'API Integration'Cloud Computing'],
       testimonial: {
         quote: "The AI solution completely transformed our customer service operations. We've seen incredible improvements in efficiency and customer satisfaction.",
         author: "Sarah Johnson",
@@ -158,7 +158,7 @@ const CaseStudyShowcase2026 = () => {
       description: 'MedTech Innovations leveraged our predictive analytics platform to improve patient outcomes and reduce healthcare costs through early disease detection.',
       duration: '8 months',
       teamSize: '15 people',
-      technologies: ['Machine Learning', 'Data Analytics', 'IoT Integration', 'Cloud Infrastructure'],
+      technologies: ['Machine Learning'Data Analytics'IoT Integration'Cloud Infrastructure'],
       testimonial: {
         quote: "The predictive analytics system has revolutionized our approach to patient care. We're saving lives and reducing costs simultaneously.",
         author: "Dr. Michael Chen",
@@ -185,7 +185,7 @@ const CaseStudyShowcase2026 = () => {
       description: 'FinanceFlow Capital implemented our AI trading system to automate their investment strategies and maximize returns while minimizing risk.',
       duration: '10 months',
       teamSize: '20 people',
-      technologies: ['Machine Learning', 'Real-time Analytics', 'Blockchain', 'High-frequency Trading'],
+      technologies: ['Machine Learning'Real-time Analytics'Blockchain'High-frequency Trading'],
       testimonial: {
         quote: "The automated trading system has been a game-changer for our business. We've seen unprecedented growth in both volume and profitability.",
         author: "Robert Martinez",
@@ -204,8 +204,8 @@ const CaseStudyShowcase2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -228,12 +228,12 @@ const CaseStudyShowcase2026 = () => {
 
         {/* Industry Filter */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.1 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {Object.entries(industries).map(([key, industry]) => {
+          {Object.entries(industries).map(([keyindustry]) => {
             const Icon = industry.icon;
             return (
               <button
@@ -256,18 +256,18 @@ const CaseStudyShowcase2026 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndustry}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
+            exit={{ opacity: 0y: -20 }}
             transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {filteredCaseStudies.map((caseStudy, index) => (
+            {filteredCaseStudies.map((caseStudyindex) => (
               <motion.div
                 key={caseStudy.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 onHoverStart={() => setHoveredCase(caseStudy.id)}
                 onHoverEnd={() => setHoveredCase(null)}
                 className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
@@ -333,11 +333,11 @@ const CaseStudyShowcase2026 = () => {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Results:</h4>
                     <div className="grid grid-cols-2 gap-2">
-                      {Object.entries(caseStudy.results).slice(0, 4).map(([key, value], idx) => (
+                      {Object.entries(caseStudy.results).slice(04).map(([keyvalue]idx) => (
                         <div key={idx} className="text-center">
                           <div className="text-lg font-bold text-green-600">{value}</div>
                           <div className="text-xs text-gray-600 capitalize">
-                            {key.replace(/([A-Z])/g, ' $1').trim()}
+                            {key.replace(/([A-Z])/g' $1').trim()}
                           </div>
                         </div>
                       ))}
@@ -347,7 +347,7 @@ const CaseStudyShowcase2026 = () => {
                   {/* Technologies */}
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-1">
-                      {caseStudy.technologies.slice(0, 3).map((tech, idx) => (
+                      {caseStudy.technologies.slice(03).map((techidx) => (
                         <span
                           key={idx}
                           className="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded"
@@ -400,9 +400,9 @@ const CaseStudyShowcase2026 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.5 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">

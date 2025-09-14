@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Calculator, TrendingUp, DollarSign, Clock, Users } from 'lucide-react';
+import React{ useState } from 'react';
+CalculatorTrendingUpDollarSignClockUsers
 
 interface InteractiveROICalculatorProps {
   variant?: 'default' | 'hero' | 'compact';
@@ -9,13 +9,13 @@ interface InteractiveROICalculatorProps {
 }
 
 const InteractiveROICalculator: React.FC<InteractiveROICalculatorProps> = ({ 
-  variant = 'default', 
+  variant = 'default'
   className = '' 
 }) => {
-  const [monthlyRevenue, setMonthlyRevenue] = useState(100000);
-  const [currentEmployees, setCurrentEmployees] = useState(50);
-  const [automationLevel, setAutomationLevel] = useState(30);
-  const [implementationTime, setImplementationTime] = useState(12);
+  const [monthlyRevenuesetMonthlyRevenue] = useState(100000);
+  const [currentEmployeesetCurrentEmployees] = useState(50);
+  const [automationLevelsetAutomationLevel] = useState(30);
+  const [implementationTimesetImplementationTime] = useState(12);
 
   const calculateROI = () => {
     const annualRevenue = monthlyRevenue * 12;
@@ -31,7 +31,7 @@ const InteractiveROICalculator: React.FC<InteractiveROICalculatorProps> = ({
       automationSavings,
       implementationCost,
       netSavings,
-      roi: Math.max(0, roi)
+      roi: Math.max(0roi)
     };
   };
 

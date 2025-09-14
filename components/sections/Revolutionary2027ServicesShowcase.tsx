@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react';
+ArrowRightBrainZapShieldRocketSparklesStarTrendingUpGlobeCpuLockCloudAtomMicroscopeSatelliteDollarSignFactoryEarthTestTubeMegaphoneScaleNetwork
 import Link from 'next/link';
 
 const Revolutionary2027ServicesShowcase = () => {
@@ -14,7 +14,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Brain,
       color: 'from-purple-600 to-indigo-700',
       category: 'Quantum AI & Neuroscience',
-      features: ['Quantum consciousness simulation', 'Neural pattern recognition', 'Emotional intelligence modeling', 'Real-time brain-computer interface'],
+      features: ['Quantum consciousness simulation'Neural pattern recognition'Emotional intelligence modeling'Real-time brain-computer interface'],
       marketSize: '$15B research market',
       growthRate: '300% annual growth'
     },
@@ -27,7 +27,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Rocket,
       color: 'from-blue-600 to-cyan-700',
       category: 'Space Technology & AI',
-      features: ['Autonomous mining operations', 'Resource detection algorithms', 'Risk assessment AI', 'Mission planning automation'],
+      features: ['Autonomous mining operations'Resource detection algorithms'Risk assessment AI'Mission planning automation'],
       marketSize: '$3.8T space economy',
       growthRate: '400% annual growth'
     },
@@ -40,7 +40,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: TestTube,
       color: 'from-green-600 to-emerald-700',
       category: 'Biotechnology & Computing',
-      features: ['DNA-based computation', 'Molecular algorithm optimization', 'Real-time molecular analysis', 'Algorithm library (100+ algorithms)'],
+      features: ['DNA-based computation'Molecular algorithm optimization'Real-time molecular analysis'Algorithm library (100+ algorithms)'],
       marketSize: '$2.1T biotechnology market',
       growthRate: '250% annual growth'
     },
@@ -53,7 +53,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Globe,
       color: 'from-pink-600 to-rose-700',
       category: 'Metaverse & Holographics',
-      features: ['3D holographic rendering', 'Real-time 3D modeling', 'Holographic projection systems', 'AI-powered content generation'],
+      features: ['3D holographic rendering'Real-time 3D modeling'Holographic projection systems'AI-powered content generation'],
       marketSize: '$800B metaverse market',
       growthRate: '350% annual growth'
     },
@@ -66,7 +66,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Microscope,
       color: 'from-red-600 to-orange-700',
       category: 'Healthcare & AI',
-      features: ['Autonomous diagnosis', 'Treatment recommendation AI', 'Continuous learning algorithms', 'Predictive health analytics'],
+      features: ['Autonomous diagnosis'Treatment recommendation AI'Continuous learning algorithms'Predictive health analytics'],
       marketSize: '$4.1T healthcare market',
       growthRate: '280% annual growth'
     },
@@ -79,17 +79,17 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Lock,
       color: 'from-indigo-600 to-purple-700',
       category: 'Quantum Security',
-      features: ['Quantum key distribution', 'Unbreakable encryption', 'Real-time threat detection', 'Zero-trust architecture'],
+      features: ['Quantum key distribution'Unbreakable encryption'Real-time threat detection'Zero-trust architecture'],
       marketSize: '$500B cybersecurity market',
       growthRate: '500% annual growth'
     }
   ];
 
   const categories = [
-    { name: 'Quantum AI Services', count: '25+', icon: Atom, color: 'from-purple-500 to-indigo-600' },
-    { name: 'Space Technology', count: '15+', icon: Satellite, color: 'from-blue-500 to-cyan-600' },
-    { name: 'Biotechnology', count: '20+', icon: TestTube, color: 'from-green-500 to-emerald-600' },
-    { name: 'Emerging Tech', count: '30+', icon: Sparkles, color: 'from-pink-500 to-rose-600' }
+    { name: 'Quantum AI Services'count: '25+'icon: Atomcolor: 'from-purple-500 to-indigo-600' },
+    { name: 'Space Technology'count: '15+'icon: Satellitecolor: 'from-blue-500 to-cyan-600' },
+    { name: 'Biotechnology'count: '20+'icon: TestTubecolor: 'from-green-500 to-emerald-600' },
+    { name: 'Emerging Tech'count: '30+'icon: Sparklescolor: 'from-pink-500 to-rose-600' }
   ];
 
   const containerVariants = {
@@ -103,7 +103,7 @@ const Revolutionary2027ServicesShowcase = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -124,8 +124,8 @@ const Revolutionary2027ServicesShowcase = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-20"
@@ -136,7 +136,7 @@ const Revolutionary2027ServicesShowcase = () => {
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the future of technology with our cutting-edge AI, quantum computing, and emerging technology services. 
+            Experience the future of technology with our cutting-edge AIquantum computingand emerging technology services. 
             Transform your business with solutions that were once science fiction.
           </p>
         </motion.div>
@@ -149,7 +149,7 @@ const Revolutionary2027ServicesShowcase = () => {
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
-          {categories.map((category, index) => (
+          {categories.map((categoryindex) => (
             <motion.div
               key={category.name}
               variants={itemVariants}
@@ -174,7 +174,7 @@ const Revolutionary2027ServicesShowcase = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {featuredServices.map((service, index) => (
+          {featuredServices.map((serviceindex) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -198,7 +198,7 @@ const Revolutionary2027ServicesShowcase = () => {
 
                   {/* Features */}
                   <div className="space-y-2">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(03).map((featureidx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
                         <span className="text-sm text-gray-400">{feature}</span>
@@ -239,9 +239,9 @@ const Revolutionary2027ServicesShowcase = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           viewport={{ once: true }}
           className="text-center"
         >

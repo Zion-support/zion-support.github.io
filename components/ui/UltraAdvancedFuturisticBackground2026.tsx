@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
+import React{ useEffectuseRef } from 'react';
 import { motion } from 'framer-motion';
 
 interface UltraAdvancedFuturisticBackground2026Props {
@@ -51,7 +51,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     };
 
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('resize'resizeCanvas);
 
     // Particle class
     class Particle {
@@ -65,7 +65,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
       life: number;
       maxLife: number;
 
-      constructor(x: number, y: number) {
+      constructor(x: numbery: number) {
         this.x = x;
         this.y = y;
         this.vx = (Math.random() - 0.5) * 2 * animationSpeed;
@@ -101,7 +101,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
         ctx.globalAlpha = this.alpha;
         ctx.fillStyle = this.color;
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.arc(this.xthis.ythis.size0Math.PI * 2);
         ctx.fill();
         ctx.restore();
       }
@@ -115,7 +115,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
       activation: number;
       pulse: number;
 
-      constructor(x: number, y: number) {
+      constructor(x: numbery: number) {
         this.x = x;
         this.y = y;
         this.connections = [];
@@ -125,29 +125,29 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
 
       update() {
         this.activation += (Math.random() - 0.5) * 0.1;
-        this.activation = Math.max(0, Math.min(1, this.activation));
+        this.activation = Math.max(0Math.min(1this.activation));
         this.pulse = Math.sin(Date.now() * 0.001 + this.x * 0.01) * 0.5 + 0.5;
       }
 
       draw() {
         ctx.save();
         ctx.globalAlpha = 0.8;
-        ctx.fillStyle = `rgba(0, 255, 255, ${this.activation})`;
+        ctx.fillStyle = `rgba(0255${this.activation})`;
         ctx.beginPath();
-        ctx.arc(this.x, this.y, 3 + this.pulse * 2, 0, Math.PI * 2);
+        ctx.arc(this.xthis.y3 + this.pulse * 20Math.PI * 2);
         ctx.fill();
 
         // Draw connections
         this.connections.forEach(connection => {
           const distance = Math.sqrt(
-            Math.pow(this.x - connection.x, 2) + Math.pow(this.y - connection.y, 2)
+            Math.pow(this.x - connection.x2) + Math.pow(this.y - connection.y2)
           );
           if (distance < 150) {
-            ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * this.activation * connection.activation})`;
+            ctx.strokeStyle = `rgba(0255${0.3 * this.activation * connection.activation})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
-            ctx.moveTo(this.x, this.y);
-            ctx.lineTo(connection.x, connection.y);
+            ctx.moveTo(this.xthis.y);
+            ctx.lineTo(connection.xconnection.y);
             ctx.stroke();
           }
         });
@@ -163,7 +163,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
       intensity: number;
       phase: number;
 
-      constructor(x: number, y: number) {
+      constructor(x: numbery: number) {
         this.x = x;
         this.y = y;
         this.radius = Math.random() * 100 + 50;
@@ -183,10 +183,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
           const waveRadius = this.radius + Math.sin(this.phase + i * Math.PI / 3) * 20;
           const alpha = this.intensity * (1 - i / 3);
           
-          ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
+          ctx.strokeStyle = `rgba(0255${alpha})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
-          ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
+          ctx.arc(this.xthis.ywaveRadius0Math.PI * 2);
           ctx.stroke();
         }
         
@@ -221,15 +221,15 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
 
       draw() {
         ctx.save();
-        ctx.translate(this.x, this.y);
+        ctx.translate(this.xthis.y);
         ctx.rotate(this.rotation);
         ctx.globalAlpha = this.alpha;
         ctx.strokeStyle = this.color;
         ctx.lineWidth = 1;
-        ctx.setLineDash([5, 5]);
+        ctx.setLineDash([5]);
         
         ctx.beginPath();
-        ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
+        ctx.rect(-this.width / 2-this.height / 2this.widthis.height);
         ctx.stroke();
         
         ctx.restore();
@@ -239,11 +239,11 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
-        'neural-network': ['#00ffff', '#0080ff', '#8000ff', '#ff0080'],
-        'quantum-field': ['#00ff80', '#80ff00', '#ff8000', '#ff0080'],
-        'cyberpunk': ['#ff0066', '#00ffff', '#ffff00', '#ff6600'],
-        'holographic': ['#ff00ff', '#00ffff', '#ffff00', '#ff8000'],
-        'multidimensional': ['#8000ff', '#00ff80', '#ff8000', '#0080ff']
+        'neural-network': ['#00ffff'#0080ff'#8000ff'#ff0080'],
+        'quantum-field': ['#00ff80'#80ff00'#ff8000'#ff0080'],
+        'cyberpunk': ['#ff0066'#00ffff'#ffff00'#ff6600'],
+        'holographic': ['#ff00ff'#00ffff'#ffff00'#ff8000'],
+        'multidimensional': ['#8000ff'#00ff80'#ff8000'#0080ff']
       };
       
       const schemeColors = colors[colorScheme] || colors['neural-network'];
@@ -296,29 +296,29 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
 
     // Animation loop
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0canvas.widthcanvas.height);
 
       // Create gradient background
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 0,
-        canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
+        canvas.width / 2canvas.height / 20,
+        canvas.width / 2canvas.height / 2Math.max(canvas.widthcanvas.height) / 2
       );
       
       const bgColors = {
-        'neural-network': ['rgba(0, 0, 20, 0.8)', 'rgba(0, 20, 40, 0.6)', 'rgba(20, 0, 40, 0.4)'],
-        'quantum-field': ['rgba(0, 20, 0, 0.8)', 'rgba(20, 40, 0, 0.6)', 'rgba(40, 0, 20, 0.4)'],
-        'cyberpunk': ['rgba(40, 0, 20, 0.8)', 'rgba(20, 0, 40, 0.6)', 'rgba(0, 20, 40, 0.4)'],
-        'holographic': ['rgba(40, 0, 40, 0.8)', 'rgba(0, 40, 40, 0.6)', 'rgba(40, 40, 0, 0.4)'],
-        'multidimensional': ['rgba(20, 0, 40, 0.8)', 'rgba(0, 40, 20, 0.6)', 'rgba(40, 20, 0, 0.4)']
+        'neural-network': ['rgba(020.8)'rgba(02040.6)'rgba(2040.4)'],
+        'quantum-field': ['rgba(0200.8)'rgba(20400.6)'rgba(4020.4)'],
+        'cyberpunk': ['rgba(4020.8)'rgba(2040.6)'rgba(02040.4)'],
+        'holographic': ['rgba(4040.8)'rgba(0400.6)'rgba(400.4)'],
+        'multidimensional': ['rgba(2040.8)'rgba(04020.6)'rgba(40200.4)']
       };
       
       const currentBgColors = bgColors[colorScheme] || bgColors['neural-network'];
-      gradient.addColorStop(0, currentBgColors[0]);
-      gradient.addColorStop(0.5, currentBgColors[1]);
-      gradient.addColorStop(1, currentBgColors[2]);
+      gradient.addColorStop(0currentBgColors[0]);
+      gradient.addColorStop(0.5currentBgColors[1]);
+      gradient.addColorStop(1currentBgColors[2]);
       
       ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0canvas.widthcanvas.height);
 
       // Update and draw quantum fields
       if (enableQuantumEffects) {
@@ -345,7 +345,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
       }
 
       // Update and draw particles
-      particles.forEach((particle, index) => {
+      particles.forEach((particleindex) => {
         particle.update();
         particle.draw();
 
@@ -360,11 +360,11 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
 
       // Draw particle connections
       if (intensity === 'extreme' || intensity === 'high') {
-        particles.forEach((particle, i) => {
+        particles.forEach((particlei) => {
           particles.slice(i + 1).forEach(otherParticle => {
             const distance = Math.sqrt(
-              Math.pow(particle.x - otherParticle.x, 2) + 
-              Math.pow(particle.y - otherParticle.y, 2)
+              Math.pow(particle.x - otherParticle.x2) + 
+              Math.pow(particle.y - otherParticle.y2)
             );
             
             if (distance < 100) {
@@ -373,8 +373,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
               ctx.strokeStyle = getColorSchemeColor();
               ctx.lineWidth = 1;
               ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(otherParticle.x, otherParticle.y);
+              ctx.moveTo(particle.xparticle.y);
+              ctx.lineTo(otherParticle.xotherParticle.y);
               ctx.stroke();
               ctx.restore();
             }
@@ -388,10 +388,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     animate();
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize'resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]);
+  }[intensitycolorSchemeparticleCountanimationSpeedenableHolographicenableQuantumEffectsenableNeuralNetworksenableMultidimensional]);
 
   return (
     <div ref={containerRef} className="fixed inset-0 w-full h-full overflow-hidden">
@@ -407,9 +407,9 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
           <motion.div
             className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full"
             animate={{
-              scale: [1, 1.2, 1],
-              rotate: [0, 180, 360],
-              opacity: [0.1, 0.3, 0.1]
+              scale: [1.21],
+              rotate: [0180360],
+              opacity: [0.10.30.1]
             }}
             transition={{
               duration: 8,
@@ -420,9 +420,9 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
           <motion.div
             className="absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full"
             animate={{
-              scale: [1.2, 1, 1.2],
-              rotate: [360, 180, 0],
-              opacity: [0.1, 0.3, 0.1]
+              scale: [1.21.2],
+              rotate: [360180],
+              opacity: [0.10.30.1]
             }}
             transition={{
               duration: 10,

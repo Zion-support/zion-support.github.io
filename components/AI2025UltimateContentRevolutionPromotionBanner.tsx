@@ -1,14 +1,14 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  BookOpen, 
-  ArrowRight, 
-  Star, 
-  Clock, 
+  BookOpen
+  ArrowRight
+  Star
+  Clock
   Eye,
   MessageCircle,
   ThumbsUp,
@@ -22,31 +22,31 @@ import {
 } from 'lucide-react';
 
 const AI2025UltimateContentRevolutionPromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentStat, setCurrentStat] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentStatsetCurrentStat] = useState(0);
 
   const stats = [
-    { icon: TrendingUp, text: "5,000% ROI Achieved", color: "text-green-400" },
-    { icon: Brain, text: "Revolutionary AI Breakthroughs", color: "text-purple-400" },
-    { icon: Zap, text: "90% Cost Reduction", color: "text-blue-400" },
-    { icon: Rocket, text: "Future Technology Predictions", color: "text-yellow-400" }
+    { icon: TrendingUptext: "5,000% ROI Achieved"color: "text-green-400" },
+    { icon: Braintext: "Revolutionary AI Breakthroughs"color: "text-purple-400" },
+    { icon: Zaptext: "90% Cost Reduction"color: "text-blue-400" },
+    { icon: Rocketext: "Future Technology Predictions"color: "text-yellow-400" }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentStat((prev) => (prev + 1) % stats.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0y: -100 }}
+        animate={{ opacity: 1y: 0 }}
+        exit={{ opacity: 0y: -100 }}
         className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 border-b border-blue-500/20 overflow-hidden"
       >
         {/* Animated Background */}
@@ -67,7 +67,7 @@ const AI2025UltimateContentRevolutionPromotionBanner = () => {
               <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="w-6 h-6"
                 >
                   <BookOpen className="w-6 h-6 text-blue-400" />
@@ -76,7 +76,7 @@ const AI2025UltimateContentRevolutionPromotionBanner = () => {
                   New Blog Post
                 </span>
                 <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, i) => (
+                  {[...Array(5)].map((_i) => (
                     <Star key={i} className="w-3 h-3 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -90,9 +90,9 @@ const AI2025UltimateContentRevolutionPromotionBanner = () => {
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentStat}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0x: 20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    exit={{ opacity: 0x: -20 }}
                     transition={{ duration: 0.5 }}
                     className="flex items-center gap-2"
                   >
@@ -105,7 +105,7 @@ const AI2025UltimateContentRevolutionPromotionBanner = () => {
               </div>
 
               <p className="text-gray-300 text-sm md:text-base max-w-2xl">
-                Discover revolutionary AI breakthroughs, enterprise solutions, and future technology predictions 
+                Discover revolutionary AI breakthroughsenterprise solutionsand future technology predictions 
                 that are reshaping industries worldwide. Learn how companies are achieving 5,000% ROI.
               </p>
             </div>
@@ -146,7 +146,7 @@ const AI2025UltimateContentRevolutionPromotionBanner = () => {
               className="bg-gradient-to-r from-blue-500 to-purple-500 h-1 rounded-full"
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
-              transition={{ duration: 8, ease: "linear" }}
+              transition={{ duration: 8ease: "linear" }}
             />
           </div>
 

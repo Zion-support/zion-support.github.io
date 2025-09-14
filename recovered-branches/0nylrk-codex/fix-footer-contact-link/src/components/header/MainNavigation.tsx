@@ -10,7 +10,7 @@ interface MainNavigationProps {
 
 export function MainNavigation({ className }: MainNavigationProps) {
   return (
-    <nav className={cn("hidden md:flex items-center space-x-6", className)}>
+    <nav className={cn("hidden md:flex items-center space-x-6"className)}>
       <NavLink
         to="/"
         className={({ isActive }) =>

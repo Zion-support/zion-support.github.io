@@ -1,14 +1,14 @@
 
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+CheckCircle
+import { TooltipContentTooltipProviderTooltipTrigger } from '@/components/ui/tooltip';
 
 interface VerifiedBadgeProps {
   verified: boolean;
   size?: 'sm' | 'md' | 'lg';
 }
 
-export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
+export function VerifiedBadge({ verifiedsize = 'sm' }: VerifiedBadgeProps) {
   if (!verified) return null;
   
   const sizeClasses = {

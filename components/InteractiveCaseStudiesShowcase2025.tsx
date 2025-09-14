@@ -1,14 +1,14 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
-  Target, 
+  TrendingUp
+  Users
+  DollarSign
+  Clock
+  Target
   CheckCircle,
   ArrowRight,
   Play,
@@ -22,17 +22,17 @@ import {
 } from 'lucide-react';
 
 const InteractiveCaseStudiesShowcase2025 = () => {
-  const [activeStudy, setActiveStudy] = useState(0);
-  const [filter, setFilter] = useState('all');
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [activeStudysetActiveStudy] = useState(0);
+  const [filtersetFilter] = useState('all');
+  const [isPlayingsetIsPlaying] = useState(false);
 
   const industries = [
-    { id: 'all', name: 'All Industries', count: 12 },
-    { id: 'finance', name: 'Finance', count: 3 },
-    { id: 'healthcare', name: 'Healthcare', count: 2 },
-    { id: 'retail', name: 'Retail', count: 2 },
-    { id: 'manufacturing', name: 'Manufacturing', count: 2 },
-    { id: 'technology', name: 'Technology', count: 3 }
+    { id: 'all'name: 'All Industries'count: 12 },
+    { id: 'finance'name: 'Finance'count: 3 },
+    { id: 'healthcare'name: 'Healthcare'count: 2 },
+    { id: 'retail'name: 'Retail'count: 2 },
+    { id: 'manufacturing'name: 'Manufacturing'count: 2 },
+    { id: 'technology'name: 'Technology'count: 3 }
   ];
 
   const caseStudies = [
@@ -41,7 +41,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
       company: 'Global Finance Corp',
       industry: 'finance',
       title: 'AI-Powered Risk Assessment Revolution',
-      challenge: 'Manual risk assessment processes were taking 3-5 days per application, causing delays and customer dissatisfaction.',
+      challenge: 'Manual risk assessment processes were taking 3-5 days per applicationcausing delays and customer dissatisfaction.',
       solution: 'Implemented AI-driven risk assessment system with real-time data analysis and predictive modeling.',
       results: {
         timeReduction: '85%',
@@ -55,7 +55,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
         position: "Chief Risk Officer",
         avatar: "/api/placeholder/60/60"
       },
-      technologies: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics'],
+      technologies: ['Machine Learning'Natural Language Processing'Predictive Analytics'],
       duration: '6 months',
       teamSize: '12',
       image: '/api/placeholder/600/400',
@@ -67,7 +67,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
       company: 'MedTech Solutions',
       industry: 'healthcare',
       title: 'AI-Driven Patient Care Optimization',
-      challenge: 'Patient care coordination was fragmented across multiple systems, leading to delays and missed appointments.',
+      challenge: 'Patient care coordination was fragmented across multiple systemsleading to delays and missed appointments.',
       solution: 'Deployed AI-powered care coordination platform with intelligent scheduling and patient monitoring.',
       results: {
         timeReduction: '70%',
@@ -81,7 +81,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
         position: "Chief Medical Officer",
         avatar: "/api/placeholder/60/60"
       },
-      technologies: ['AI/ML', 'IoT Integration', 'Real-time Analytics'],
+      technologies: ['AI/ML'IoT Integration'Real-time Analytics'],
       duration: '8 months',
       teamSize: '15',
       image: '/api/placeholder/600/400',
@@ -93,7 +93,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
       company: 'RetailMax',
       industry: 'retail',
       title: 'Intelligent Inventory Management',
-      challenge: 'Inventory management was causing stockouts and overstock situations, impacting revenue and customer satisfaction.',
+      challenge: 'Inventory management was causing stockouts and overstock situationsimpacting revenue and customer satisfaction.',
       solution: 'Implemented AI-powered demand forecasting and automated inventory optimization system.',
       results: {
         timeReduction: '60%',
@@ -107,7 +107,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
         position: "VP of Operations",
         avatar: "/api/placeholder/60/60"
       },
-      technologies: ['Demand Forecasting', 'Supply Chain AI', 'Real-time Analytics'],
+      technologies: ['Demand Forecasting'Supply Chain AI'Real-time Analytics'],
       duration: '5 months',
       teamSize: '10',
       image: '/api/placeholder/600/400',
@@ -133,7 +133,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
         position: "Plant Manager",
         avatar: "/api/placeholder/60/60"
       },
-      technologies: ['IoT', 'Machine Learning', 'Predictive Analytics'],
+      technologies: ['IoT'Machine Learning'Predictive Analytics'],
       duration: '7 months',
       teamSize: '18',
       image: '/api/placeholder/600/400',
@@ -152,10 +152,10 @@ const InteractiveCaseStudiesShowcase2025 = () => {
     if (isPlaying) {
       const interval = setInterval(() => {
         setActiveStudy((prev) => (prev + 1) % filteredStudies.length);
-      }, 5000);
+      }5000);
       return () => clearInterval(interval);
     }
-  }, [isPlaying, filteredStudies.length]);
+  }[isPlayingfilteredStudies.length]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -168,7 +168,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -183,8 +183,8 @@ const InteractiveCaseStudiesShowcase2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -206,9 +206,9 @@ const InteractiveCaseStudiesShowcase2025 = () => {
 
         {/* Industry Filter */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {industries.map((industry) => (
@@ -237,8 +237,8 @@ const InteractiveCaseStudiesShowcase2025 = () => {
           {/* Case Study Details */}
           <motion.div
             key={currentStudy?.id}
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0x: -30 }}
+            animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.5 }}
             className="space-y-8"
           >
@@ -291,13 +291,13 @@ const InteractiveCaseStudiesShowcase2025 = () => {
 
             {/* Results Grid */}
             <div className="grid grid-cols-2 gap-4">
-              {Object.entries(currentStudy?.results || {}).map(([key, value]) => (
+              {Object.entries(currentStudy?.results || {}).map(([keyvalue]) => (
                 <div key={key} className="bg-white p-4 rounded-xl border border-gray-100">
                   <div className="text-2xl font-bold text-green-600 mb-1">
                     {value}
                   </div>
                   <div className="text-sm text-gray-600 capitalize">
-                    {key.replace(/([A-Z])/g, ' $1').trim()}
+                    {key.replace(/([A-Z])/g' $1').trim()}
                   </div>
                 </div>
               ))}
@@ -309,7 +309,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
                 Technologies Used
               </h4>
               <div className="flex flex-wrap gap-2">
-                {currentStudy?.technologies.map((tech, index) => (
+                {currentStudy?.technologies.map((techindex) => (
                   <span
                     key={index}
                     className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
@@ -336,9 +336,9 @@ const InteractiveCaseStudiesShowcase2025 = () => {
           {/* Visual Content */}
           <motion.div
             key={`visual-${currentStudy?.id}`}
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            initial={{ opacity: 0x: 30 }}
+            animate={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.5delay: 0.2 }}
             className="space-y-6"
           >
             {/* Image/Video */}
@@ -388,13 +388,13 @@ const InteractiveCaseStudiesShowcase2025 = () => {
 
         {/* Navigation */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           className="flex items-center justify-center mt-12 space-x-4"
         >
           <button
-            onClick={() => setActiveStudy(Math.max(0, activeStudy - 1))}
+            onClick={() => setActiveStudy(Math.max(0activeStudy - 1))}
             disabled={activeStudy === 0}
             className="p-3 rounded-full bg-white border border-gray-200 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
@@ -402,7 +402,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
           </button>
 
           <div className="flex space-x-2">
-            {filteredStudies.map((_, index) => (
+            {filteredStudies.map((_index) => (
               <button
                 key={index}
                 onClick={() => setActiveStudy(index)}
@@ -414,7 +414,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
           </div>
 
           <button
-            onClick={() => setActiveStudy(Math.min(filteredStudies.length - 1, activeStudy + 1))}
+            onClick={() => setActiveStudy(Math.min(filteredStudies.length - 1activeStudy + 1))}
             disabled={activeStudy === filteredStudies.length - 1}
             className="p-3 rounded-full bg-white border border-gray-200 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
@@ -424,9 +424,9 @@ const InteractiveCaseStudiesShowcase2025 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white">

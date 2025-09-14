@@ -4,19 +4,19 @@ import path from 'path';
 type RouteInfo = { path: string; lastModified: string };
 
 export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'data', 'site-map.json');
+  const file = path.join(process.cwd()'data'site-map.json');
   let routes: RouteInfo[] = [];
   let generatedAt = '';
   try {
-    const raw = fs.readFileSync(file, 'utf-8');
+    const raw = fs.readFileSync(file'utf-8');
     const json = JSON.parse(raw);
     routes = json.routes || [];
     generatedAt = json.generatedAt || '';
   } catch {}
-  return { props: { routes, generatedAt } };
+  return { props: { routesgeneratedAt } };
 }
 
-export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[]; generatedAt: string }) {
+export default function SiteMapIntelPage({ routesgeneratedAt }: { routes: RouteInfo[]; generatedAt: string }) {
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Site Map Intelligence</h1>

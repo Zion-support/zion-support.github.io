@@ -61,7 +61,7 @@ const QuantumAI2026RevolutionBanner = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
               <div>
                 <h4 className="text-lg font-semibold mb-2 text-cyan-300">Quantum Machine Learning</h4>
-                <p className="text-sm opacity-80">Process massive datasets in seconds, not hours</p>
+                <p className="text-sm opacity-80">Process massive datasets in secondsnot hours</p>
               </div>
               <div>
                 <h4 className="text-lg font-semibold mb-2 text-blue-300">Quantum Cryptography</h4>

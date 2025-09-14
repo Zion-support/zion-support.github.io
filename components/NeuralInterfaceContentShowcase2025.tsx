@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const NeuralInterfaceContentShowcase2025 = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategorysetActiveCategory] = useState('all');
 
   const neuralContent = [
     {
@@ -20,7 +20,7 @@ const NeuralInterfaceContentShowcase2025 = () => {
       },
       readingTime: '18 min read',
       featured: true,
-      tags: ['Neural Interfaces', 'Business Revolution', 'ROI', 'Enterprise', '2025']
+      tags: ['Neural Interfaces'Business Revolution'ROI'Enterprise'2025']
     },
     {
       id: 'fortune-500-neural-transformation',
@@ -37,7 +37,7 @@ const NeuralInterfaceContentShowcase2025 = () => {
       },
       readingTime: '15 min read',
       featured: true,
-      tags: ['Case Study', 'Fortune 500', 'Neural Interfaces', 'ROI', 'Success Story']
+      tags: ['Case Study'Fortune 500'Neural Interfaces'ROI'Success Story']
     },
     {
       id: 'neural-interface-implementation-guide',
@@ -54,15 +54,15 @@ const NeuralInterfaceContentShowcase2025 = () => {
       },
       readingTime: '25 min read',
       featured: true,
-      tags: ['Implementation Guide', 'Neural Interfaces', 'Strategy', 'ROI', 'Framework']
+      tags: ['Implementation Guide'Neural Interfaces'Strategy'ROI'Framework']
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Content', count: neuralContent.length },
-    { id: 'guides', name: 'Guides', count: neuralContent.filter(item => item.category === 'guides').length },
-    { id: 'case-studies', name: 'Case Studies', count: neuralContent.filter(item => item.category === 'case-studies').length },
-    { id: 'resources', name: 'Resources', count: neuralContent.filter(item => item.category === 'resources').length }
+    { id: 'all'name: 'All Content'count: neuralContent.length },
+    { id: 'guides'name: 'Guides'count: neuralContent.filter(item => item.category === 'guides').length },
+    { id: 'case-studies'name: 'Case Studies'count: neuralContent.filter(item => item.category === 'case-studies').length },
+    { id: 'resources'name: 'Resources'count: neuralContent.filter(item => item.category === 'resources').length }
   ];
 
   const filteredContent = activeCategory === 'all' 
@@ -180,7 +180,7 @@ const NeuralInterfaceContentShowcase2025 = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div className={`inline-flex items-center space-x-2 px-3 py-1 rounded-full text-sm font-medium ${getTypeColor(item.type)}`}>
                     {getTypeIcon(item.type)}
-                    <span className="capitalize">{item.type.replace('-', ' ')}</span>
+                    <span className="capitalize">{item.type.replace('-' ')}</span>
                   </div>
                   {item.featured && (
                     <div className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">
@@ -199,7 +199,7 @@ const NeuralInterfaceContentShowcase2025 = () => {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag) => (
+                  {item.tags.slice(03).map((tag) => (
                     <span
                       key={tag}
                       className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs"

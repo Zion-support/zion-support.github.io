@@ -14,7 +14,7 @@ const NewContent2025AdvancedAutomationBanner = () => {
             Advanced Automation 2025
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your business operations with intelligent automation that learns, adapts, 
+            Transform your business operations with intelligent automation that learnsadapts
             and scales. Reduce costs by 60% while increasing productivity by 300%.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

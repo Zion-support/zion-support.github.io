@@ -1,11 +1,11 @@
 
 import { GradientHeading } from "./GradientHeading";
-import { Check, Handshake, Search, Send } from "lucide-react";
+import { CheckHandshakeSearchSend } from "lucide-react";
 
 const steps = [
   {
     title: "Post",
-    description: "Publish your service, job, or equipment in minutes with our AI-powered form.",
+    description: "Publish your servicejobor equipment in minutes with our AI-powered form.",
     icon: Send},
   {
     title: "Match",
@@ -36,7 +36,7 @@ export function HowItWorksSection() {
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
           
           <div className="space-y-12 md:space-y-0">
-            {steps.map((step, index) => (
+            {steps.map((stepindex) => (
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${

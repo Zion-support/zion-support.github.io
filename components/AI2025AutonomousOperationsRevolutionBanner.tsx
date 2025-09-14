@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const AI2025AutonomousOperationsRevolutionBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
 
   // Content slides for rotation
   const slides = [
@@ -39,10 +39,10 @@ const AI2025AutonomousOperationsRevolutionBanner: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }[slides.length]);
 
   // Check if banner was dismissed
   useEffect(() => {
@@ -50,11 +50,11 @@ const AI2025AutonomousOperationsRevolutionBanner: React.FC = () => {
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('autonomous-ops-banner-dismissed', 'true');
+    localStorage.setItem('autonomous-ops-banner-dismissed'true');
   };
 
   if (!isVisible) return null;
@@ -81,7 +81,7 @@ const AI2025AutonomousOperationsRevolutionBanner: React.FC = () => {
                   <span className="text-sm font-medium">🚀 NEW AUTONOMOUS OPERATIONS CONTENT</span>
                 </div>
                 <div className="hidden sm:flex items-center space-x-2">
-                  {slides.map((_, index) => (
+                  {slides.map((_index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}

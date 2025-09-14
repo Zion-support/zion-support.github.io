@@ -1,15 +1,15 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Star, 
-  ArrowRight, 
-  Zap, 
-  Brain, 
-  Rocket, 
+  Star
+  ArrowRight
+  Zap
+  Brain
+  Rocket
   Globe,
   X,
   Play,
@@ -20,8 +20,8 @@ import {
 } from 'lucide-react';
 
 const UltimateContentPromotionBanner2025 = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   const features = [
     {
@@ -51,18 +51,18 @@ const UltimateContentPromotionBanner2025 = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "AI Innovations" },
-    { number: "100+", label: "Success Stories" },
-    { number: "50+", label: "Interactive Tools" },
-    { number: "10K+", label: "Happy Users" }
+    { number: "500+"label: "AI Innovations" },
+    { number: "100+"label: "Success Stories" },
+    { number: "50+"label: "Interactive Tools" },
+    { number: "10K+"label: "Happy Users" }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, [features.length]);
+  }[features.length]);
 
   if (!isVisible) return null;
 

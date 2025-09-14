@@ -13,7 +13,7 @@ export default function NewContent2025ShowcaseBanner() {
             Revolutionary AI Content & Resources
           </h2>
           <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-            Discover our latest breakthrough content on Quantum AI, Autonomous Systems, and Enterprise Transformation. 
+            Discover our latest breakthrough content on Quantum AIAutonomous Systemsand Enterprise Transformation. 
             Stay ahead with cutting-edge AI knowledge and implementation guides.
           </p>
         </div>

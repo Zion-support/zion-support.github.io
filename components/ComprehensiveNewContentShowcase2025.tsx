@@ -13,7 +13,7 @@ export default function ComprehensiveNewContentShowcase2025() {
             Comprehensive New Content Showcase 2025
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover our latest revolutionary content, cutting-edge innovations, and future predictions 
+            Discover our latest revolutionary contentcutting-edge innovationsand future predictions 
             that are transforming the AI and technology landscape.
           </p>
         </div>
@@ -25,8 +25,8 @@ export default function ComprehensiveNewContentShowcase2025() {
             <div className="text-4xl mb-4">🚀</div>
             <h3 className="text-2xl font-bold mb-4">AI 2025 Ultimate Innovation Showcase</h3>
             <p className="text-gray-200 mb-6">
-              Explore the most revolutionary AI breakthroughs of 2025, including neural consciousness, 
-              quantum processing, and autonomous business ecosystems.
+              Explore the most revolutionary AI breakthroughs of 2025including neural consciousness
+              quantum processingand autonomous business ecosystems.
             </p>
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-2">
@@ -55,7 +55,7 @@ export default function ComprehensiveNewContentShowcase2025() {
             <div className="text-4xl mb-4">🔮</div>
             <h3 className="text-2xl font-bold mb-4">AI 2026 Future Predictions</h3>
             <p className="text-gray-200 mb-6">
-              Get exclusive insights into the groundbreaking AI technologies that will define 2026, 
+              Get exclusive insights into the groundbreaking AI technologies that will define 2026
               from quantum neural interfaces to synthetic intelligence.
             </p>
             <div className="space-y-3 mb-6">
@@ -85,7 +85,7 @@ export default function ComprehensiveNewContentShowcase2025() {
             <div className="text-4xl mb-4">🌟</div>
             <h3 className="text-2xl font-bold mb-4">Revolutionary Content Hub</h3>
             <p className="text-gray-200 mb-6">
-              Access our comprehensive collection of cutting-edge content, case studies, 
+              Access our comprehensive collection of cutting-edge contentcase studies
               and success stories that showcase the power of AI transformation.
             </p>
             <div className="space-y-3 mb-6">

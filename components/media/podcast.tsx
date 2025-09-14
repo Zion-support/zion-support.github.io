@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React{ useEffectuseState } from 'react';
 import Link from 'next/link';
 
 type EpisodeListItem = {
@@ -16,8 +16,8 @@ type EpisodeListItem = {
 };
 
 export default function PodcastIndexPage() {
-  const [episodes, setEpisodes] = useState<EpisodeListItem[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [episodesetEpisodes] = useState<EpisodeListItem[]>([]);
+  const [loadingsetLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const load = async () => {
@@ -32,7 +32,7 @@ export default function PodcastIndexPage() {
       }
     };
     load();
-  }, []);
+  }[]);
 
   if (loading) return <div>Loading episodes…</div>;
 

@@ -1,16 +1,16 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Users, 
-  Globe, 
-  Cpu, 
+  Brain
+  Zap
+  Shield
+  BarChart3
+  Users
+  Globe
+  Cpu
   Database,
   Cloud,
   Lock,
@@ -23,18 +23,18 @@ import {
 } from 'lucide-react';
 
 const AI2026UltimateServicesShowcase = () => {
-  const [activeService, setActiveService] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeServicesetActiveService] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const services = [
     {
       id: 1,
       title: "Neural Interface Revolution",
-      description: "Breakthrough neural interfaces that enable direct brain-computer communication, revolutionizing how humans interact with technology.",
+      description: "Breakthrough neural interfaces that enable direct brain-computer communicationrevolutionizing how humans interact with technology.",
       icon: Brain,
       features: [
         "Direct neural data processing",
@@ -48,7 +48,7 @@ const AI2026UltimateServicesShowcase = () => {
     {
       id: 2,
       title: "Quantum AI Fusion",
-      description: "Revolutionary quantum computing integration with AI, delivering unprecedented processing power and problem-solving capabilities.",
+      description: "Revolutionary quantum computing integration with AIdelivering unprecedented processing power and problem-solving capabilities.",
       icon: Cpu,
       features: [
         "Quantum-enhanced machine learning",
@@ -62,7 +62,7 @@ const AI2026UltimateServicesShowcase = () => {
     {
       id: 3,
       title: "Autonomous Business Operations",
-      description: "Fully automated business processes that run independently, optimizing operations 24/7 without human intervention.",
+      description: "Fully automated business processes that run independentlyoptimizing operations 24/7 without human intervention.",
       icon: Zap,
       features: [
         "Self-healing systems",
@@ -118,7 +118,7 @@ const AI2026UltimateServicesShowcase = () => {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -130,7 +130,7 @@ const AI2026UltimateServicesShowcase = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -165,7 +165,7 @@ const AI2026UltimateServicesShowcase = () => {
 
         {/* Services Grid */}
         <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
+          {services.map((serviceindex) => (
             <motion.div
               key={service.id}
               className={`relative group cursor-pointer ${
@@ -189,7 +189,7 @@ const AI2026UltimateServicesShowcase = () => {
                 </p>
 
                 <div className="space-y-3 mb-6">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300 text-sm">{feature}</span>
@@ -223,9 +223,9 @@ const AI2026UltimateServicesShowcase = () => {
           <motion.div
             key={activeService}
             variants={itemVariants}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
+            initial={{ opacity: 0y: 50 }}
+            animate={{ opacity: 1y: 0 }}
+            exit={{ opacity: 0y: -50 }}
             className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -259,11 +259,11 @@ const AI2026UltimateServicesShowcase = () => {
 
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
-                {services[activeService].features.map((feature, index) => (
+                {services[activeService].features.map((featureindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0x: 50 }}
+                    animate={{ opacity: 1x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10"
                   >

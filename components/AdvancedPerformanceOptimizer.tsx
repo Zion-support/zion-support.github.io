@@ -1,14 +1,14 @@
 "use client";
 
 const AdvancedPerformanceOptimizer = () => {
-  const [metrics, setMetrics] = useState({
+  const [metricsetMetrics] = useState({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     bundleSize: 0
   });
 
-  const [isOptimized, setIsOptimized] = useState(false);
+  const [isOptimizedsetIsOptimized] = useState(false);
 
   useEffect(() => {
     // Simulate performance monitoring
@@ -29,15 +29,15 @@ const AdvancedPerformanceOptimizer = () => {
       if (loadTime < 1000 && metrics.memoryUsage < 50) {
         setIsOptimized(true);
       }
-    }, 100);
+    }100);
 
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   const getPerformanceStatus = () => {
-    if (metrics.loadTime < 500) return { status: 'Excellent', color: 'text-green-500' };
-    if (metrics.loadTime < 1000) return { status: 'Good', color: 'text-yellow-500' };
-    return { status: 'Needs Improvement', color: 'text-red-500' };
+    if (metrics.loadTime < 500) return { status: 'Excellent'color: 'text-green-500' };
+    if (metrics.loadTime < 1000) return { status: 'Good'color: 'text-yellow-500' };
+    return { status: 'Needs Improvement'color: 'text-red-500' };
   };
 
   const performanceStatus = getPerformanceStatus();

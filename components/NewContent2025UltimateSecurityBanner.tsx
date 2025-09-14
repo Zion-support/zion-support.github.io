@@ -13,8 +13,8 @@ const NewContent2025UltimateSecurityBanner = () => {
             AI 2025 Cybersecurity Revolution
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover how AI is revolutionizing cybersecurity with advanced threat detection, 
-            automated response systems, and next-generation security solutions that protect your enterprise.
+            Discover how AI is revolutionizing cybersecurity with advanced threat detection
+            automated response systemsand next-generation security solutions that protect your enterprise.
           </p>
         </div>
 

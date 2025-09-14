@@ -1,26 +1,26 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield } from 'lucide-react';
+import { motionAnimatePresence } from 'framer-motion';
+MenuXChevronDownSearchPhoneMailMapPinRocketBrainAtomShield
 
 interface UltraFuturisticNavigationProps {
   className?: string;
 }
 
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpensetIsOpen] = useState(false);
+  const [isScrolledsetIsScrolled] = useState(false);
+  const [activeDropdownsetActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll'handleScroll);
+    return () => window.removeEventListener('scroll'handleScroll);
+  }[]);
 
   const navigationItems = [
     {
@@ -28,17 +28,17 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
       href: '/services',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' },
-        { name: 'Quantum Computing', href: '/services/quantum', icon: Atom, color: 'from-cyan-500 to-blue-600' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-red-500 to-pink-600' },
-        { name: 'IT Solutions', href: '/services/it-solutions', icon: Rocket, color: 'from-green-500 to-emerald-600' },
-        { name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
+        { name: 'AI & Machine Learning'href: '/services/ai-ml'icon: Braincolor: 'from-purple-500 to-pink-600' },
+        { name: 'Quantum Computing'href: '/services/quantum'icon: Atomcolor: 'from-cyan-500 to-blue-600' },
+        { name: 'Cybersecurity'href: '/services/cybersecurity'icon: Shieldcolor: 'from-red-500 to-pink-600' },
+        { name: 'IT Solutions'href: '/services/it-solutions'icon: Rocketcolor: 'from-green-500 to-emerald-600' },
+        { name: 'View All Services'href: '/services'icon: Rocketcolor: 'from-gray-500 to-gray-600' }
       ]
     },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Pricing', href: '/pricing' }
+    { name: 'Solutions'href: '/solutions' },
+    { name: 'About'href: '/about' },
+    { name: 'Contact'href: '/contact' },
+    { name: 'Pricing'href: '/pricing' }
   ];
 
   const contactInfo = {
@@ -57,8 +57,8 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0x: -20 }}
+            animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.6 }}
             className="flex items-center space-x-3"
           >
@@ -75,7 +75,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item, index) => (
+            {navigationItems.map((itemindex) => (
               <div key={item.name} className="relative group">
                 {item.hasDropdown ? (
                   <div
@@ -91,15 +91,15 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          initial={{ opacity: 0y: 10scale: 0.95 }}
+                          animate={{ opacity: 1y: 0scale: 1 }}
+                          exit={{ opacity: 0y: 10scale: 0.95 }}
                           transition={{ duration: 0.2 }}
                           className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
                         >
                           <div className="p-4">
                             <div className="grid gap-3">
-                              {item.dropdownItems?.map((dropdownItem, idx) => (
+                              {item.dropdownItems?.map((dropdownItemidx) => (
                                 <Link
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
@@ -177,9 +177,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0height: 0 }}
+            animate={{ opacity: 1height: 'auto' }}
+            exit={{ opacity: 0height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden"
           >
@@ -201,9 +201,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                       
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
+                          initial={{ opacity: 0y: -10 }}
+                          animate={{ opacity: 1y: 0 }}
+                          exit={{ opacity: 0y: -10 }}
                           transition={{ duration: 0.2 }}
                           className="ml-4 mt-2 space-y-2"
                         >

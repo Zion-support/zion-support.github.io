@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Users, DollarSign, Clock, CheckCircle, Star } from 'lucide-react';
+ArrowRightTrendingUpUsersDollarSignClockCheckCircleStar
 
 const SuccessStoriesShowcase2026 = () => {
   const successStories = [
@@ -16,7 +16,7 @@ const SuccessStoriesShowcase2026 = () => {
         accuracy: 99.2
       },
       testimonial: "The AI system transformed our quality control. We went from 15% defects to less than 1% in just 3 months.",
-      author: "Sarah Chen, CTO",
+      author: "Sarah ChenCTO",
       logo: "🏭"
     },
     {
@@ -31,13 +31,13 @@ const SuccessStoriesShowcase2026 = () => {
         accuracy: 98.5
       },
       testimonial: "We can now process loans in under 2 hours instead of days. Our customer satisfaction has skyrocketed.",
-      author: "Michael Rodriguez, CEO",
+      author: "Michael RodriguezCEO",
       logo: "🏦"
     },
     {
       company: "HealthTech Solutions",
       industry: "Healthcare",
-      challenge: "Patient data analysis taking weeks, delaying treatment decisions",
+      challenge: "Patient data analysis taking weeksdelaying treatment decisions",
       solution: "AI-powered medical data analysis and diagnosis support",
       results: {
         roi: 420,
@@ -45,8 +45,8 @@ const SuccessStoriesShowcase2026 = () => {
         costReduction: 35,
         accuracy: 99.7
       },
-      testimonial: "Our AI system helps doctors make faster, more accurate diagnoses. We've saved countless lives.",
-      author: "Dr. Emily Watson, Chief Medical Officer",
+      testimonial: "Our AI system helps doctors make fastermore accurate diagnoses. We've saved countless lives.",
+      author: "Dr. Emily WatsonChief Medical Officer",
       logo: "🏥"
     },
     {
@@ -61,16 +61,16 @@ const SuccessStoriesShowcase2026 = () => {
         accuracy: 97.8
       },
       testimonial: "Our inventory is now perfectly optimized. We've eliminated stockouts and reduced waste by 50%.",
-      author: "David Kim, Operations Director",
+      author: "David KimOperations Director",
       logo: "🛍️"
     }
   ];
 
   const overallStats = [
-    { label: "Average ROI", value: "340%", icon: TrendingUp },
-    { label: "Time Saved", value: "81%", icon: Clock },
-    { label: "Cost Reduction", value: "48%", icon: DollarSign },
-    { label: "Client Satisfaction", value: "98%", icon: Star }
+    { label: "Average ROI"value: "340%"icon: TrendingUp },
+    { label: "Time Saved"value: "81%"icon: Clock },
+    { label: "Cost Reduction"value: "48%"icon: DollarSign },
+    { label: "Client Satisfaction"value: "98%"icon: Star }
   ];
 
   return (
@@ -82,14 +82,14 @@ const SuccessStoriesShowcase2026 = () => {
             Success Stories 2026
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Real businesses, real results. Discover how companies across industries 
+            Real businessesreal results. Discover how companies across industries 
             achieved remarkable transformations with our AI solutions.
           </p>
         </div>
 
         {/* Overall Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-          {overallStats.map((stat, index) => (
+          {overallStats.map((statindex) => (
             <div key={index} className="text-center">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <stat.icon className="h-8 w-8 text-green-400 mx-auto mb-4" />
@@ -102,7 +102,7 @@ const SuccessStoriesShowcase2026 = () => {
 
         {/* Success Stories Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-20">
-          {successStories.map((story, index) => (
+          {successStories.map((storyindex) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="text-4xl">{story.logo}</div>

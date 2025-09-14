@@ -1,13 +1,13 @@
 "use client";
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Search, 
-  Filter, 
-  Star, 
-  Clock, 
-  TrendingUp, 
-  Users, 
+  Search
+  Filter
+  Star
+  Clock
+  TrendingUp
+  Users
   BookOpen,
   Play,
   Download,
@@ -23,39 +23,39 @@ import {
 } from 'lucide-react';
 
 const InteractiveContentDiscoveryWidget2025 = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [sortBy, setSortBy] = useState('trending');
-  const [isVisible, setIsVisible] = useState(false);
+  const [searchQuerysetSearchQuery] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [selectedTypesetSelectedType] = useState('all');
+  const [sortBysetSortBy] = useState('trending');
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const categories = [
-    { id: 'all', label: 'All Content', icon: <Sparkles className="w-4 h-4" /> },
-    { id: 'ai-innovations', label: 'AI Innovations', icon: <Brain className="w-4 h-4" /> },
-    { id: 'tools', label: 'AI Tools', icon: <Zap className="w-4 h-4" /> },
-    { id: 'predictions', label: 'Future Predictions', icon: <Target className="w-4 h-4" /> },
-    { id: 'case-studies', label: 'Case Studies', icon: <Award className="w-4 h-4" /> },
-    { id: 'tutorials', label: 'Tutorials', icon: <BookOpen className="w-4 h-4" /> }
+    { id: 'all'label: 'All Content'icon: <Sparkles className="w-4 h-4" /> },
+    { id: 'ai-innovations'label: 'AI Innovations'icon: <Brain className="w-4 h-4" /> },
+    { id: 'tools'label: 'AI Tools'icon: <Zap className="w-4 h-4" /> },
+    { id: 'predictions'label: 'Future Predictions'icon: <Target className="w-4 h-4" /> },
+    { id: 'case-studies'label: 'Case Studies'icon: <Award className="w-4 h-4" /> },
+    { id: 'tutorials'label: 'Tutorials'icon: <BookOpen className="w-4 h-4" /> }
   ];
 
   const contentTypes = [
-    { id: 'all', label: 'All Types' },
-    { id: 'articles', label: 'Articles' },
-    { id: 'videos', label: 'Videos' },
-    { id: 'tools', label: 'Tools' },
-    { id: 'guides', label: 'Guides' },
-    { id: 'reports', label: 'Reports' }
+    { id: 'all'label: 'All Types' },
+    { id: 'articles'label: 'Articles' },
+    { id: 'videos'label: 'Videos' },
+    { id: 'tools'label: 'Tools' },
+    { id: 'guides'label: 'Guides' },
+    { id: 'reports'label: 'Reports' }
   ];
 
   const sortOptions = [
-    { id: 'trending', label: 'Trending', icon: <TrendingUp className="w-4 h-4" /> },
-    { id: 'newest', label: 'Newest', icon: <Clock className="w-4 h-4" /> },
-    { id: 'popular', label: 'Most Popular', icon: <Users className="w-4 h-4" /> },
-    { id: 'rating', label: 'Highest Rated', icon: <Star className="w-4 h-4" /> }
+    { id: 'trending'label: 'Trending'icon: <TrendingUp className="w-4 h-4" /> },
+    { id: 'newest'label: 'Newest'icon: <Clock className="w-4 h-4" /> },
+    { id: 'popular'label: 'Most Popular'icon: <Users className="w-4 h-4" /> },
+    { id: 'rating'label: 'Highest Rated'icon: <Star className="w-4 h-4" /> }
   ];
 
   const contentItems = [
@@ -72,7 +72,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
       author: "Dr. Sarah Chen",
       publishedAt: "2025-01-15",
       image: "/api/placeholder/400/250",
-      tags: ["quantum computing", "AI", "innovation", "technology"],
+      tags: ["quantum computing"AI"innovation"technology"],
       trending: true,
       featured: true
     },
@@ -89,7 +89,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
       author: "Tech Review Team",
       publishedAt: "2025-01-14",
       image: "/api/placeholder/400/250",
-      tags: ["content generation", "AI tools", "demo", "productivity"],
+      tags: ["content generation"AI tools"demo"productivity"],
       trending: true,
       featured: false
     },
@@ -106,7 +106,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
       author: "AI Research Institute",
       publishedAt: "2025-01-13",
       image: "/api/placeholder/400/250",
-      tags: ["predictions", "future", "AI trends", "forecasting"],
+      tags: ["predictions"future"AI trends"forecasting"],
       trending: false,
       featured: true
     },
@@ -123,7 +123,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
       author: "Business Solutions Team",
       publishedAt: "2025-01-12",
       image: "/api/placeholder/400/250",
-      tags: ["case study", "ROI", "transformation", "enterprise"],
+      tags: ["case study"ROI"transformation"enterprise"],
       trending: false,
       featured: false
     },
@@ -140,7 +140,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
       author: "AI Education Team",
       publishedAt: "2025-01-11",
       image: "/api/placeholder/400/250",
-      tags: ["tutorial", "beginner", "implementation", "guide"],
+      tags: ["tutorial"beginner"implementation"guide"],
       trending: false,
       featured: false
     },
@@ -157,7 +157,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
       author: "Dr. Michael Rodriguez",
       publishedAt: "2025-01-10",
       image: "/api/placeholder/400/250",
-      tags: ["conscious AI", "future", "ethics", "technology"],
+      tags: ["conscious AI"future"ethics"technology"],
       trending: true,
       featured: true
     }
@@ -188,7 +188,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
   });
 
   const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -200,7 +200,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -236,7 +236,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Find exactly what you're looking for with our intelligent content discovery system. 
-            Filter by category, type, and trending topics.
+            Filter by categorytypeand trending topics.
           </p>
         </motion.div>
 
@@ -247,7 +247,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input
               type="text"
-              placeholder="Search for AI content, tools, predictions, or topics..."
+              placeholder="Search for AI contentoolspredictionsor topics..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-4 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -327,10 +327,10 @@ const InteractiveContentDiscoveryWidget2025 = () => {
               <motion.div
                 key={item.id}
                 variants={itemVariants}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                whileHover={{ scale: 1.02, y: -5 }}
+                initial={{ opacity: 0scale: 0.9 }}
+                animate={{ opacity: 1scale: 1 }}
+                exit={{ opacity: 0scale: 0.9 }}
+                whileHover={{ scale: 1.02y: -5 }}
                 className="group"
               >
                 <Link href={`/content/${item.id}`}>
@@ -371,7 +371,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
 
                       {/* Tags */}
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {item.tags.slice(0, 3).map((tag, index) => (
+                        {item.tags.slice(03).map((tagindex) => (
                           <span
                             key={index}
                             className="px-2 py-1 bg-white/20 text-white text-xs rounded-full"

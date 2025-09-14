@@ -13,7 +13,7 @@ const NeuralNetworksContentShowcase2025 = () => {
     },
     {
       title: "Advanced Architectures",
-      description: "Explore cutting-edge neural network architectures like GPT, BERT, and Vision Transformers",
+      description: "Explore cutting-edge neural network architectures like GPTBERTand Vision Transformers",
       image: "🏗️",
       link: "/neural-networks/architectures",
       category: "Advanced",
@@ -29,7 +29,7 @@ const NeuralNetworksContentShowcase2025 = () => {
     },
     {
       title: "Real-World Applications",
-      description: "See how neural networks are applied in healthcare, finance, and autonomous systems",
+      description: "See how neural networks are applied in healthcarefinanceand autonomous systems",
       image: "🌍",
       link: "/neural-networks/applications",
       category: "Applications",
@@ -67,7 +67,7 @@ const NeuralNetworksContentShowcase2025 = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {neuralContent.map((content, index) => (
+          {neuralContent.map((contentindex) => (
             <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-orange-100">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">

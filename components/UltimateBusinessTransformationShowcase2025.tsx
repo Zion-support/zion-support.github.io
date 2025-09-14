@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessTransformationShowcase2025 = () => {
-  const [activeTab, setActiveTab] = useState('all');
+  const [activeTabsetActiveTab] = useState('all');
 
   const contentData = [
     {
@@ -24,7 +24,7 @@ const UltimateBusinessTransformationShowcase2025 = () => {
       readingTime: '35 min read',
       featured: true,
       image: '🎯',
-      tags: ['AI Revolution', 'Business Transformation', 'ROI', 'Fortune 500', 'Quantum AI']
+      tags: ['AI Revolution'Business Transformation'ROI'Fortune 500'Quantum AI']
     },
     {
       id: 'fortune-500-ultimate-transformation-case-study',
@@ -38,12 +38,12 @@ const UltimateBusinessTransformationShowcase2025 = () => {
         timeline: '18 months',
         satisfaction: '99.8%'
       },
-      description: 'Documentation of the most successful AI transformation in business history, detailing the complete journey and results achieved.',
+      description: 'Documentation of the most successful AI transformation in business historydetailing the complete journey and results achieved.',
       url: '/case-studies/fortune-500-ultimate-business-transformation-8500-roi-success-story',
       readingTime: '25 min read',
       featured: true,
       image: '🏆',
-      tags: ['Fortune 500', 'Case Study', 'Success Story', 'ROI', 'Manufacturing']
+      tags: ['Fortune 500'Case Study'Success Story'ROI'Manufacturing']
     },
     {
       id: 'ultimate-implementation-guide',
@@ -57,12 +57,12 @@ const UltimateBusinessTransformationShowcase2025 = () => {
         timeline: '18 months',
         projects: '1,000+'
       },
-      description: 'Step-by-step roadmap for achieving unprecedented ROI through AI transformation, including detailed implementation strategies.',
+      description: 'Step-by-step roadmap for achieving unprecedented ROI through AI transformationincluding detailed implementation strategies.',
       url: '/resources/ai-2025-2026-ultimate-business-transformation-implementation-guide',
       readingTime: '45 min read',
       featured: true,
       image: '📋',
-      tags: ['Implementation Guide', 'ROI', 'Strategy', 'Framework', 'Best Practices']
+      tags: ['Implementation Guide'ROI'Strategy'Framework'Best Practices']
     }
   ];
 
@@ -71,10 +71,10 @@ const UltimateBusinessTransformationShowcase2025 = () => {
     : contentData.filter(item => item.category === activeTab);
 
   const tabs = [
-    { id: 'all', label: 'All Content', count: contentData.length },
-    { id: 'guides', label: 'Guides', count: contentData.filter(item => item.category === 'guides').length },
-    { id: 'case-studies', label: 'Case Studies', count: contentData.filter(item => item.category === 'case-studies').length },
-    { id: 'resources', label: 'Resources', count: contentData.filter(item => item.category === 'resources').length }
+    { id: 'all'label: 'All Content'count: contentData.length },
+    { id: 'guides'label: 'Guides'count: contentData.filter(item => item.category === 'guides').length },
+    { id: 'case-studies'label: 'Case Studies'count: contentData.filter(item => item.category === 'case-studies').length },
+    { id: 'resources'label: 'Resources'count: contentData.filter(item => item.category === 'resources').length }
   ];
 
   return (
@@ -189,7 +189,7 @@ const UltimateBusinessTransformationShowcase2025 = () => {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {content.tags.slice(0, 3).map((tag, index) => (
+                  {content.tags.slice(03).map((tagindex) => (
                     <span key={index} className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs">
                       {tag}
                     </span>

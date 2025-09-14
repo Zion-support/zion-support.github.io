@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
-// import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'AI 2027 Global Enterprise Transformation: Ultimate Success Story',

@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { X } from 'lucide-react';
+X
 
 export type SmartNudgeBannerProps = {
   role: 'talent' | 'client';
@@ -8,23 +8,23 @@ export type SmartNudgeBannerProps = {
   message: string;
 };
 
-export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
-  const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
-  const [hidden, setHidden] = React.useState<boolean>(false);
+export default function SmartNudgeBanner({ roleuserIdmessage }: SmartNudgeBannerProps) {
+  const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`[roleuserId]);
+  const [hiddensetHidden] = React.useState<boolean>(false);
 
   React.useEffect(() => {
     try {
       const v = typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed');
     } catch {}
-  }, [storageKey]);
+  }[storageKey]);
 
   const dismiss = React.useCallback(() => {
     setHidden(true);
     try {
-      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed');
+      if (typeof window !== 'undefined') localStorage.setItem(storageKey'dismissed');
     } catch {}
-  }, [storageKey]);
+  }[storageKey]);
 
   if (hidden) return null;
 

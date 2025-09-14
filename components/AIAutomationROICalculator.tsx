@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { CalculatorIcon, ChartBarIcon, TrendingUpIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline';
+import React{ useStateuseEffect } from 'react';
+import { CalculatorIconChartBarIconTrendingUpIconCurrencyDollarIcon } from '@heroicons/react/24/outline';
 
 interface CalculationInputs {
   currentEmployees: number;
@@ -26,7 +26,7 @@ interface CalculationResults {
 }
 
 const AIAutomationROICalculator: React.FC = () => {
-  const [inputs, setInputs] = useState<CalculationInputs>({
+  const [inputsetInputs] = useState<CalculationInputs>({
     currentEmployees: 10,
     averageSalary: 75000,
     processHours: 2000,
@@ -38,7 +38,7 @@ const AIAutomationROICalculator: React.FC = () => {
     maintenanceCost: 25000
   });
 
-  const [results, setResults] = useState<CalculationResults>({
+  const [resultsetResults] = useState<CalculationResults>({
     laborSavings: 0,
     errorSavings: 0,
     efficiencyGains: 0,
@@ -50,11 +50,11 @@ const AIAutomationROICalculator: React.FC = () => {
     threeYearNPV: 0
   });
 
-  const [isCalculating, setIsCalculating] = useState(false);
+  const [isCalculatingsetIsCalculating] = useState(false);
 
   useEffect(() => {
     calculateROI();
-  }, [inputs]);
+  }[inputs]);
 
   const calculateROI = () => {
     setIsCalculating(true);
@@ -102,9 +102,9 @@ const AIAutomationROICalculator: React.FC = () => {
 
       // 3-year NPV calculation (simplified)
       const discountRate = 0.1; // 10% discount rate
-      const year1Value = netAnnualBenefit / Math.pow(1 + discountRate, 1);
-      const year2Value = netAnnualBenefit / Math.pow(1 + discountRate, 2);
-      const year3Value = netAnnualBenefit / Math.pow(1 + discountRate, 3);
+      const year1Value = netAnnualBenefit / Math.pow(1 + discountRate1);
+      const year2Value = netAnnualBenefit / Math.pow(1 + discountRate2);
+      const year3Value = netAnnualBenefit / Math.pow(1 + discountRate3);
       const threeYearNPV = year1Value + year2Value + year3Value - implementationCost;
 
       setResults({
@@ -120,10 +120,10 @@ const AIAutomationROICalculator: React.FC = () => {
       });
 
       setIsCalculating(false);
-    }, 800);
+    }800);
   };
 
-  const handleInputChange = (field: keyof CalculationInputs, value: number) => {
+  const handleInputChange = (field: keyof CalculationInputsvalue: number) => {
     setInputs(prev => ({
       ...prev,
       [field]: value
@@ -131,7 +131,7 @@ const AIAutomationROICalculator: React.FC = () => {
   };
 
   const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-US'{
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0,
@@ -180,7 +180,7 @@ const AIAutomationROICalculator: React.FC = () => {
                 <input
                   type="number"
                   value={inputs.currentEmployees}
-                  onChange={(e) => handleInputChange('currentEmployees', parseInt(e.target.value) || 0)}
+                  onChange={(e) => handleInputChange('currentEmployees'parseInt(e.target.value) || 0)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   min="1"
                 />
@@ -194,7 +194,7 @@ const AIAutomationROICalculator: React.FC = () => {
                 <input
                   type="number"
                   value={inputs.averageSalary}
-                  onChange={(e) => handleInputChange('averageSalary', parseInt(e.target.value) || 0)}
+                  onChange={(e) => handleInputChange('averageSalary'parseInt(e.target.value) || 0)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   min="0"
                   step="1000"
@@ -209,7 +209,7 @@ const AIAutomationROICalculator: React.FC = () => {
                 <input
                   type="number"
                   value={inputs.processHours}
-                  onChange={(e) => handleInputChange('processHours', parseInt(e.target.value) || 0)}
+                  onChange={(e) => handleInputChange('processHours'parseInt(e.target.value) || 0)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   min="0"
                 />
@@ -223,7 +223,7 @@ const AIAutomationROICalculator: React.FC = () => {
                 <input
                   type="number"
                   value={inputs.errorRate}
-                  onChange={(e) => handleInputChange('errorRate', parseFloat(e.target.value) || 0)}
+                  onChange={(e) => handleInputChange('errorRate'parseFloat(e.target.value) || 0)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   min="0"
                   max="100"
@@ -239,7 +239,7 @@ const AIAutomationROICalculator: React.FC = () => {
                 <input
                   type="number"
                   value={inputs.errorCost}
-                  onChange={(e) => handleInputChange('errorCost', parseInt(e.target.value) || 0)}
+                  onChange={(e) => handleInputChange('errorCost'parseInt(e.target.value) || 0)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   min="0"
                 />
@@ -253,7 +253,7 @@ const AIAutomationROICalculator: React.FC = () => {
                 <input
                   type="number"
                   value={inputs.processingVolume}
-                  onChange={(e) => handleInputChange('processingVolume', parseInt(e.target.value) || 0)}
+                  onChange={(e) => handleInputChange('processingVolume'parseInt(e.target.value) || 0)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   min="0"
                 />
@@ -269,7 +269,7 @@ const AIAutomationROICalculator: React.FC = () => {
                   min="10"
                   max="90"
                   value={inputs.automationPercentage}
-                  onChange={(e) => handleInputChange('automationPercentage', parseInt(e.target.value) || 0)}
+                  onChange={(e) => handleInputChange('automationPercentage'parseInt(e.target.value) || 0)}
                   className="w-full"
                 />
                 <div className="flex justify-between text-sm text-gray-500 mt-1">
@@ -287,7 +287,7 @@ const AIAutomationROICalculator: React.FC = () => {
                 <input
                   type="number"
                   value={inputs.implementationCost}
-                  onChange={(e) => handleInputChange('implementationCost', parseInt(e.target.value) || 0)}
+                  onChange={(e) => handleInputChange('implementationCost'parseInt(e.target.value) || 0)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   min="0"
                   step="1000"
@@ -302,7 +302,7 @@ const AIAutomationROICalculator: React.FC = () => {
                 <input
                   type="number"
                   value={inputs.maintenanceCost}
-                  onChange={(e) => handleInputChange('maintenanceCost', parseInt(e.target.value) || 0)}
+                  onChange={(e) => handleInputChange('maintenanceCost'parseInt(e.target.value) || 0)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   min="0"
                   step="1000"
@@ -417,7 +417,7 @@ const AIAutomationROICalculator: React.FC = () => {
         <div className="mt-12 text-center">
           <p className="text-sm text-gray-500 max-w-4xl mx-auto">
             * These calculations are estimates based on industry averages and typical AI automation results. 
-            Actual results may vary based on specific implementation, industry, and business factors. 
+            Actual results may vary based on specific implementationindustryand business factors. 
             Consult with our experts for a detailed analysis tailored to your organization.
           </p>
         </div>

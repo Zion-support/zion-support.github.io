@@ -24,7 +24,7 @@ export default function UltimateContent2025ShowcaseBanner() {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover the most comprehensive collection of AI and technology content for 2025. 
-            Revolutionary guides, breakthrough insights, and transformative strategies.
+            Revolutionary guidesbreakthrough insightsand transformative strategies.
           </p>
         </div>
 

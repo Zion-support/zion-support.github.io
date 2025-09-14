@@ -5,7 +5,7 @@ import { NEW_PRODUCTS } from "@/data/newProductsData";
 
 const CATEGORY_FILTERS = Array.from(
   new Set(NEW_PRODUCTS.map(p => p.category))
-).map(c => ({ label: c, value: c }));
+).map(c => ({ label: cvalue: c }));
 
 export default function NewProductsPage() {
   const [listings] = useState<ProductListing[]>([...NEW_PRODUCTS]);
@@ -17,7 +17,7 @@ export default function NewProductsPage() {
       categorySlug="new-products"
       listings={listings}
       categoryFilters={CATEGORY_FILTERS}
-      initialPrice={{ min: 0, max: 5000 }}
+      initialPrice={{ min: 0max: 5000 }}
       detailBasePath="/product"
     />
   );

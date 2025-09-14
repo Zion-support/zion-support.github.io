@@ -1,17 +1,17 @@
 "use client";
-import React, { useMemo, useState } from 'react';
+import React{ useMemouseState } from 'react';
 import Sidebar from './Sidebar';
 import EndpointDetail from './EndpointDetail';
 import v1 from '../../data/api-docs/v1';
-import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
+import { ApiDocsSpecEndpointSpecVisibility } from '../../data/api-docs/types';
 
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1; // could switch by version later
-  const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion);
-  const [visibility, setVisibility] = useState<Visibility | 'all'>('all');
-  const allEndpoints: EndpointSpec[] = useMemo(() => spec.sections.flatMap((s) => s.endpoints), [spec]);
-  const firstEndpoint = useMemo(() => allEndpoints.find((e) => e.versions.includes(selectedVersion)), [allEndpoints, selectedVersion]);
-  const [activeEndpointId, setActiveEndpointId] = useState<string | undefined>(firstEndpoint?.id);
+  const [selectedVersionsetSelectedVersion] = useState<string>(spec.defaultVersion);
+  const [visibilitysetVisibility] = useState<Visibility | 'all'>('all');
+  const allEndpoints: EndpointSpec[] = useMemo(() => spec.sections.flatMap((s) => s.endpoints)[spec]);
+  const firstEndpoint = useMemo(() => allEndpoints.find((e) => e.versions.includes(selectedVersion))[allEndpointselectedVersion]);
+  const [activeEndpointIdsetActiveEndpointId] = useState<string | undefined>(firstEndpoint?.id);
 
   const activeEndpoint = allEndpoints.find((e) => e.id === activeEndpointId) || firstEndpoint;
 
@@ -55,8 +55,8 @@ export default function ApiDocsPage() {
 }
 
 function ChangelogWidget() {
-  const [content, setContent] = useState('');
-  const [message, setMessage] = useState('');
+  const [contentsetContent] = useState('');
+  const [messagesetMessage] = useState('');
 
   async function load() {
     setMessage('');
@@ -67,7 +67,7 @@ function ChangelogWidget() {
 
   async function save() {
     setMessage('');
-    await fetch('/api/docs/changelog', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content }) });
+    await fetch('/api/docs/changelog'{ method: 'POST'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ content }) });
     setMessage('Saved');
   }
 

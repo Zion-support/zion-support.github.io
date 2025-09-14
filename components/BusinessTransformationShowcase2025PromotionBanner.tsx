@@ -1,12 +1,12 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  ArrowRight, 
-  X, 
+  TrendingUp
+  ArrowRight
+  X
   Star,
   Zap,
   Users,
@@ -15,13 +15,13 @@ import {
 } from 'lucide-react';
 
 const BusinessTransformationShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1500);
+    const timer = setTimeout(() => setIsVisible(true)1500);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
@@ -33,10 +33,10 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0y: -100 }}
+          animate={{ opacity: 1y: 0 }}
+          exit={{ opacity: 0y: -100 }}
+          transition={{ duration: 0.6ease: "easeOut" }}
           className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 border-b border-blue-500/30 shadow-2xl"
         >
           <div className="container mx-auto px-4 py-4">
@@ -46,8 +46,8 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                 <motion.div
                   className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 rounded-full"
                   animate={{ 
-                    scale: [1, 1.05, 1],
-                    rotate: [0, 1, -1, 0]
+                    scale: [1.051],
+                    rotate: [01-10]
                   }}
                   transition={{ 
                     duration: 2.5,
@@ -72,7 +72,7 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                 <motion.h2 
                   className="text-lg md:text-xl font-bold text-white mb-1"
                   animate={{ 
-                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+                    backgroundPosition: ['0% 50%'100% 50%'0% 50%']
                   }}
                   transition={{ 
                     duration: 4,
@@ -80,7 +80,7 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
                     ease: "linear"
                   }}
                   style={{
-                    background: 'linear-gradient(90deg, #ffffff, #3b82f6, #a855f7, #10b981, #ffffff)',
+                    background: 'linear-gradient(90deg#ffffff#3b82f6#a855f7#10b981#ffffff)',
                     backgroundSize: '200% 100%',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
@@ -138,8 +138,8 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
             <motion.div
               className="absolute -top-4 -left-4 w-8 h-8 bg-blue-500/20 rounded-full"
               animate={{
-                y: [0, 20, 0],
-                opacity: [0.3, 0.7, 0.3]
+                y: [020],
+                opacity: [0.30.70.3]
               }}
               transition={{
                 duration: 3.5,
@@ -150,8 +150,8 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
             <motion.div
               className="absolute -top-2 -right-8 w-6 h-6 bg-purple-500/20 rounded-full"
               animate={{
-                y: [0, -15, 0],
-                opacity: [0.2, 0.6, 0.2]
+                y: [0-150],
+                opacity: [0.20.60.2]
               }}
               transition={{
                 duration: 2.8,
@@ -163,8 +163,8 @@ const BusinessTransformationShowcase2025PromotionBanner = () => {
             <motion.div
               className="absolute top-1/2 -right-4 w-4 h-4 bg-green-400/30 rounded-full"
               animate={{
-                x: [0, -10, 0],
-                opacity: [0.4, 0.8, 0.4]
+                x: [0-10],
+                opacity: [0.40.80.4]
               }}
               transition={{
                 duration: 2.2,

@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateAI2025TransformationBanner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
 
   const content = [
     {
@@ -58,14 +58,14 @@ const UltimateAI2025TransformationBanner = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(timer);
-  }, [content.length]);
+  }[content.length]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ultimate-ai-2025-banner-dismissed', 'true');
+    localStorage.setItem('ultimate-ai-2025-banner-dismissed'true');
   };
 
   useEffect(() => {
@@ -73,7 +73,7 @@ const UltimateAI2025TransformationBanner = () => {
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -116,13 +116,13 @@ const UltimateAI2025TransformationBanner = () => {
 
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              {Object.entries(currentContent.metrics).map(([key, value]) => (
+              {Object.entries(currentContent.metrics).map(([keyvalue]) => (
                 <div key={key} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
                   <div className="text-2xl md:text-3xl font-bold text-yellow-400 mb-1">
                     {value}
                   </div>
                   <div className="text-sm text-gray-300 capitalize">
-                    {key.replace(/([A-Z])/g, ' $1').trim()}
+                    {key.replace(/([A-Z])/g' $1').trim()}
                   </div>
                 </div>
               ))}
@@ -159,7 +159,7 @@ const UltimateAI2025TransformationBanner = () => {
 
         {/* Progress Indicators */}
         <div className="flex justify-center mt-8 space-x-2">
-          {content.map((_, index) => (
+          {content.map((_index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}

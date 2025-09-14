@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import StarRating from './StarRating';
 
 export type ReviewFormValues = {
@@ -18,26 +18,26 @@ export type ReviewFormValues = {
 };
 
 type Props = {
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
+  initial: Pick<ReviewFormValues'projectId' | 'fromRole' | 'fromId'>;
 };
 
 const ReviewForm: React.FC<Props> = ({ initial }) => {
-  const [rating, setRating] = useState(0);
-  const [text, setText] = useState('');
-  const [anonymous, setAnonymous] = useState(false);
-  const [communication, setCommunication] = useState<number | undefined>();
-  const [qualityOfWork, setQualityOfWork] = useState<number | undefined>();
-  const [timeliness, setTimeliness] = useState<number | undefined>();
-  const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [message, setMessage] = useState<string | null>(null);
+  const [ratingsetRating] = useState(0);
+  const [textsetText] = useState('');
+  const [anonymousetAnonymous] = useState(false);
+  const [communicationsetCommunication] = useState<number | undefined>();
+  const [qualityOfWorksetQualityOfWork] = useState<number | undefined>();
+  const [timelinessetTimeliness] = useState<number | undefined>();
+  const [wouldWorkWithAgainsetWouldWorkWithAgain] = useState<boolean>(false);
+  const [submittingsetSubmitting] = useState(false);
+  const [messagesetMessage] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSubmitting(true);
     setMessage(null);
     try {
-      const res = await fetch('/api/reviews/submit', {
+      const res = await fetch('/api/reviews/submit'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

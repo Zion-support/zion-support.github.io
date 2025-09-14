@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Cog, BarChart3, Target, ArrowRight, CheckCircle } from 'lucide-react';
+CogBarChart3TargetArrowRightCheckCircle
 
 export default function EnterpriseAutomation2026Banner() {
   return (

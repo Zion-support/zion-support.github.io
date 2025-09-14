@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const UltimateContentDiscovery2026 = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategorysetActiveCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: '🌟' },
-    { id: 'quantum', name: 'Quantum AI', icon: '⚡' },
-    { id: 'neural', name: 'Neural Interfaces', icon: '🧠' },
-    { id: 'autonomous', name: 'Autonomous Systems', icon: '🤖' },
-    { id: 'analytics', name: 'Analytics', icon: '📊' },
-    { id: 'edge', name: 'Edge Computing', icon: '💻' }
+    { id: 'all'name: 'All Content'icon: '🌟' },
+    { id: 'quantum'name: 'Quantum AI'icon: '⚡' },
+    { id: 'neural'name: 'Neural Interfaces'icon: '🧠' },
+    { id: 'autonomous'name: 'Autonomous Systems'icon: '🤖' },
+    { id: 'analytics'name: 'Analytics'icon: '📊' },
+    { id: 'edge'name: 'Edge Computing'icon: '💻' }
   ];
 
   const contentItems = [
@@ -103,7 +103,7 @@ const UltimateContentDiscovery2026 = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore the most comprehensive collection of AI technologies, breakthrough innovations, 
+            Explore the most comprehensive collection of AI technologiesbreakthrough innovations
             and future-ready solutions curated for 2026 and beyond.
           </p>
         </div>
@@ -128,7 +128,7 @@ const UltimateContentDiscovery2026 = () => {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((item, index) => (
+          {filteredContent.map((itemindex) => (
             <div
               key={index}
               className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ${

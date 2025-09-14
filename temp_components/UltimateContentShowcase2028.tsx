@@ -1,14 +1,14 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Users, 
-  Zap, 
-  Shield, 
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  Zap
+  Shield
   Globe,
   Brain,
   Rocket,
@@ -22,12 +22,12 @@ import {
 } from 'lucide-react';
 
 const UltimateContentShowcase2028 = () => {
-  const [activeTab, setActiveTab] = useState('ai-innovations');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState('ai-innovations');
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const contentSections = {
     'ai-innovations': {
@@ -39,21 +39,21 @@ const UltimateContentShowcase2028 = () => {
         {
           title: 'Quantum-Enhanced Neural Networks',
           description: 'Breakthrough AI systems that leverage quantum computing principles for unprecedented processing power.',
-          features: ['10,000x faster processing', '99.9% accuracy', 'Real-time learning'],
+          features: ['10,000x faster processing'99.9% accuracy'Real-time learning'],
           image: '/api/placeholder/400/300',
           category: 'AI Technology'
         },
         {
           title: 'Consciousness-Level AI Systems',
           description: 'AI that demonstrates genuine understanding and reasoning capabilities beyond current limitations.',
-          features: ['Self-aware processing', 'Emotional intelligence', 'Creative problem solving'],
+          features: ['Self-aware processing'Emotional intelligence'Creative problem solving'],
           image: '/api/placeholder/400/300',
           category: 'Advanced AI'
         },
         {
           title: 'Autonomous Business Orchestration',
           description: 'AI systems that can independently manage entire business operations with minimal human oversight.',
-          features: ['End-to-end automation', 'Strategic decision making', 'Resource optimization'],
+          features: ['End-to-end automation'Strategic decision making'Resource optimization'],
           image: '/api/placeholder/400/300',
           category: 'Business AI'
         }
@@ -68,21 +68,21 @@ const UltimateContentShowcase2028 = () => {
         {
           title: 'Fault-Tolerant Quantum Computers',
           description: 'Stable quantum systems ready for commercial deployment and real-world applications.',
-          features: ['Error correction', 'Scalable architecture', 'Commercial viability'],
+          features: ['Error correction'Scalable architecture'Commercial viability'],
           image: '/api/placeholder/400/300',
           category: 'Quantum Tech'
         },
         {
           title: 'Quantum Machine Learning',
           description: 'Machine learning algorithms that exploit quantum superposition for exponential speedups.',
-          features: ['Exponential speedup', 'Pattern recognition', 'Optimization'],
+          features: ['Exponential speedup'Pattern recognition'Optimization'],
           image: '/api/placeholder/400/300',
           category: 'Quantum ML'
         },
         {
           title: 'Quantum Internet Infrastructure',
           description: 'Global quantum communication networks enabling ultra-secure data transmission.',
-          features: ['Quantum encryption', 'Global connectivity', 'Unhackable security'],
+          features: ['Quantum encryption'Global connectivity'Unhackable security'],
           image: '/api/placeholder/400/300',
           category: 'Quantum Networks'
         }
@@ -97,21 +97,21 @@ const UltimateContentShowcase2028 = () => {
         {
           title: 'Non-Invasive Brain-Computer Interfaces',
           description: 'Advanced neural interfaces that enable direct thought-to-computer communication.',
-          features: ['Thought control', 'Real-time translation', 'Enhanced cognition'],
+          features: ['Thought control'Real-time translation'Enhanced cognition'],
           image: '/api/placeholder/400/300',
           category: 'Neural Tech'
         },
         {
           title: 'Memory Enhancement Systems',
           description: 'Technology that can augment and improve human memory capabilities.',
-          features: ['Memory augmentation', 'Learning acceleration', 'Cognitive enhancement'],
+          features: ['Memory augmentation'Learning acceleration'Cognitive enhancement'],
           image: '/api/placeholder/400/300',
           category: 'Cognitive Enhancement'
         },
         {
           title: 'Emotional AI Integration',
           description: 'AI systems that can read and respond to human emotions in real-time.',
-          features: ['Emotion recognition', 'Empathetic responses', 'Personalized interactions'],
+          features: ['Emotion recognition'Empathetic responses'Personalized interactions'],
           image: '/api/placeholder/400/300',
           category: 'Emotional AI'
         }
@@ -126,21 +126,21 @@ const UltimateContentShowcase2028 = () => {
         {
           title: 'Singularity Timeline Predictions',
           description: 'Comprehensive analysis of when artificial general intelligence will be achieved.',
-          features: ['Timeline analysis', 'Impact assessment', 'Preparation strategies'],
+          features: ['Timeline analysis'Impact assessment'Preparation strategies'],
           image: '/api/placeholder/400/300',
           category: 'Future Studies'
         },
         {
           title: 'Post-Human Society Models',
           description: 'Detailed projections of how society will evolve with advanced AI and human enhancement.',
-          features: ['Social structures', 'Economic models', 'Cultural evolution'],
+          features: ['Social structures'Economic models'Cultural evolution'],
           image: '/api/placeholder/400/300',
           category: 'Sociology'
         },
         {
           title: 'Interplanetary AI Networks',
           description: 'AI systems designed to operate across multiple planets and space environments.',
-          features: ['Space adaptation', 'Multi-planetary coordination', 'Autonomous exploration'],
+          features: ['Space adaptation'Multi-planetary coordination'Autonomous exploration'],
           image: '/api/placeholder/400/300',
           category: 'Space AI'
         }
@@ -149,10 +149,10 @@ const UltimateContentShowcase2028 = () => {
   };
 
   const tabs = [
-    { id: 'ai-innovations', label: 'AI Innovations', icon: Brain },
-    { id: 'quantum-computing', label: 'Quantum Computing', icon: Zap },
-    { id: 'neural-interfaces', label: 'Neural Interfaces', icon: Target },
-    { id: 'future-predictions', label: 'Future Predictions', icon: Rocket }
+    { id: 'ai-innovations'label: 'AI Innovations'icon: Brain },
+    { id: 'quantum-computing'label: 'Quantum Computing'icon: Zap },
+    { id: 'neural-interfaces'label: 'Neural Interfaces'icon: Target },
+    { id: 'future-predictions'label: 'Future Predictions'icon: Rocket }
   ];
 
   const currentSection = contentSections[activeTab as keyof typeof contentSections];
@@ -169,8 +169,8 @@ const UltimateContentShowcase2028 = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -188,7 +188,7 @@ const UltimateContentShowcase2028 = () => {
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Explore revolutionary technologies that will reshape our world in the coming decade. 
-            From quantum computing to neural interfaces, discover what's possible.
+            From quantum computing to neural interfacesdiscover what's possible.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
@@ -213,9 +213,9 @@ const UltimateContentShowcase2028 = () => {
 
         {/* Tab Navigation */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="flex flex-wrap justify-center gap-2 mb-12"
         >
           {tabs.map((tab) => {
@@ -241,9 +241,9 @@ const UltimateContentShowcase2028 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            exit={{ opacity: 0y: -30 }}
             transition={{ duration: 0.5 }}
             className="mb-16"
           >
@@ -265,12 +265,12 @@ const UltimateContentShowcase2028 = () => {
 
             {/* Content Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentSection.content.map((item, index) => (
+              {currentSection.content.map((itemindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   {/* Category Badge */}
@@ -300,7 +300,7 @@ const UltimateContentShowcase2028 = () => {
 
                   {/* Features */}
                   <div className="space-y-2 mb-6">
-                    {item.features.map((feature, featureIndex) => (
+                    {item.features.map((featureIndex) => (
                       <div key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span>{feature}</span>
@@ -329,9 +329,9 @@ const UltimateContentShowcase2028 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/10"
         >
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -339,7 +339,7 @@ const UltimateContentShowcase2028 = () => {
           </h3>
           
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of innovators, researchers, and visionaries who are already 
+            Join thousands of innovatorsresearchersand visionaries who are already 
             building the technologies of tomorrow.
           </p>
 

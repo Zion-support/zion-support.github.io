@@ -6,7 +6,7 @@ type Props = {
   generatedAt: string | null;
 };
 
-export default function ChangelogPage({ content, generatedAt }: Props) {
+export default function ChangelogPage({ contentgeneratedAt }: Props) {
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">
       <h1 className="text-2xl font-bold text-gray-900">Changelog</h1>
@@ -28,10 +28,10 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
 
 export async function getStaticProps() {
   try {
-    const file = path.join(process.cwd(), 'CHANGELOG.md');
-    const content = fs.readFileSync(file, 'utf8');
-    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 };
+    const file = path.join(process.cwd()'CHANGELOG.md');
+    const content = fs.readFileSync(file'utf8');
+    return { props: { contentgeneratedAt: new Date().toISOString() }revalidate: 300 };
   } catch {
-    return { props: { content: null, generatedAt: null }, revalidate: 300 };
+    return { props: { content: nullgeneratedAt: null }revalidate: 300 };
   }
 }

@@ -1,12 +1,12 @@
 "use client";
-import React, { useState, useEffect, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffectuseMemo } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  FaRocket, 
-  FaBrain, 
-  FaCloud, 
-  FaShieldAlt, 
-  FaChartLine, 
+  FaRocket
+  FaBrain
+  FaCloud
+  FaShieldAlt
+  FaChartLine
   FaCogs,
   FaLightbulb,
   FaGlobe,
@@ -17,9 +17,9 @@ import {
   FaSearch
 } from 'react-icons/fa';
 import { 
-  SiNextdotjs, 
-  SiReact, 
-  SiTypescript, 
+  SiNextdotjs
+  SiReact
+  SiTypescript
   SiTailwindcss,
   SiPrisma,
   SiSupabase,
@@ -120,7 +120,7 @@ const services: Service[] = [
       professional: 799,
       enterprise: 1999
     },
-    technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'LangChain', 'React', 'Node.js'],
+    technologies: ['TensorFlow'PyTorch'OpenAI'LangChain'React'Node.js'],
     benefits: [
       'Reduce manual tasks by 80%',
       'Improve accuracy by 95%',
@@ -147,7 +147,7 @@ const services: Service[] = [
       professional: 2499,
       enterprise: 4999
     },
-    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
+    technologies: ['Qiskit'Cirq'PennyLane'Python'C++'CUDA'],
     benefits: [
       'Solve previously impossible problems',
       'Exponential speed improvements',
@@ -174,7 +174,7 @@ const services: Service[] = [
       professional: 599,
       enterprise: 1499
     },
-    technologies: ['TensorFlow Lite', 'ONNX Runtime', 'Edge TPU', 'Raspberry Pi', 'Arduino'],
+    technologies: ['TensorFlow Lite'ONNX Runtime'Edge TPU'Raspberry Pi'Arduino'],
     benefits: [
       'Reduced latency by 90%',
       'Lower bandwidth costs',
@@ -201,7 +201,7 @@ const services: Service[] = [
       professional: 999,
       enterprise: 2499
     },
-    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
+    technologies: ['NIST PQC'QKD protocols'Zero Trust'SIEM'SOAR'],
     benefits: [
       'Future-proof security',
       'Quantum-resistant encryption',
@@ -228,7 +228,7 @@ const services: Service[] = [
       professional: 799,
       enterprise: 1999
     },
-    technologies: ['Apache Kafka', 'Apache Spark', 'Snowflake', 'Databricks', 'Airflow'],
+    technologies: ['Apache Kafka'Apache Spark'Snowflake'Databricks'Airflow'],
     benefits: [
       'Unified data view',
       'Real-time insights',
@@ -255,7 +255,7 @@ const services: Service[] = [
       professional: 599,
       enterprise: 1499
     },
-    technologies: ['Kubernetes', 'Docker', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana'],
+    technologies: ['Kubernetes'Docker'Helm'ArgoCD'Prometheus'Grafana'],
     benefits: [
       'Faster deployment',
       'Improved scalability',
@@ -266,10 +266,10 @@ const services: Service[] = [
 ];
 
 const EnhancedServicesShowcase2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
+  const [selectedCategorysetSelectedCategory] = useState<string>('all');
+  const [selectedServicesetSelectedService] = useState<Service | null>(null);
+  const [searchTermsetSearchTerm] = useState('');
+  const [sortBysetSortBy] = useState<'name' | 'price' | 'category'>('name');
 
   const filteredServices = useMemo(() => {
     let filtered = services;
@@ -286,7 +286,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       );
     }
     
-    return filtered.sort((a, b) => {
+    return filtered.sort((ab) => {
       switch (sortBy) {
         case 'price':
           return a.pricing.starter - b.pricing.starter;
@@ -296,7 +296,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           return a.title.localeCompare(b.title);
       }
     });
-  }, [selectedCategory, searchTerm, sortBy]);
+  }[selectedCategorysearchTermsortBy]);
 
   const handleServiceSelect = (service: Service) => {
     setSelectedService(service);
@@ -311,8 +311,8 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       {/* Header */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -321,22 +321,22 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover our cutting-edge technology solutions designed for the future. 
-            From AI-powered automation to quantum computing, we're building tomorrow's innovations today.
+            From AI-powered automation to quantum computingwe're building tomorrow's innovations today.
           </p>
         </motion.div>
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             <div className="relative flex-1 max-w-md">
               <input
                 type="text"
-                placeholder="Search services, technologies, or features..."
+                placeholder="Search servicestechnologiesor features..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -358,9 +358,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
         {/* Category Tabs */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4">
@@ -393,18 +393,18 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
         {/* Services Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {filteredServices.map((service, index) => (
+          {filteredServices.map((serviceindex) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5, scale: 1.02 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
+              whileHover={{ y: -5scale: 1.02 }}
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300"
               onClick={() => handleServiceSelect(service)}
             >
@@ -421,7 +421,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
               
               <div className="flex flex-wrap gap-2 mb-4">
-                {service.technologies.slice(0, 3).map((tech) => (
+                {service.technologies.slice(03).map((tech) => (
                   <span
                     key={tech}
                     className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300"
@@ -474,9 +474,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             onClick={closeModal}
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.9opacity: 0 }}
+              animate={{ scale: 1opacity: 1 }}
+              exit={{ scale: 0.9opacity: 0 }}
               className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -505,7 +505,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
                   <ul className="space-y-2">
-                    {selectedService.features.map((feature, index) => (
+                    {selectedService.features.map((featureindex) => (
                       <li key={index} className="flex items-center gap-2 text-gray-300">
                         <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                         {feature}
@@ -518,7 +518,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4">Key Benefits</h3>
                   <ul className="space-y-2">
-                    {selectedService.benefits.map((benefit, index) => (
+                    {selectedService.benefits.map((benefitindex) => (
                       <li key={index} className="flex items-center gap-2 text-gray-300">
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                         {benefit}
@@ -547,7 +547,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               <div className="mt-8">
                 <h3 className="text-xl font-bold text-white mb-4">Pricing Plans</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {Object.entries(selectedService.pricing).map(([plan, price]) => (
+                  {Object.entries(selectedService.pricing).map(([planprice]) => (
                     <div
                       key={plan}
                       className="p-4 bg-white/5 border border-white/20 rounded-lg text-center"

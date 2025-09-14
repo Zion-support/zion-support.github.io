@@ -1,8 +1,8 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { IntegrationCards } from "./IntegrationCards";
 import { ZapierIntegration } from "./ZapierIntegration";
 import { Badge } from "@/components/ui/badge";
@@ -10,7 +10,7 @@ import { WebhookManager } from "./WebhookManager";
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
 
 export function IntegrationsHub() {
-  const [activeTab, setActiveTab] = useState("marketplace");
+  const [activeTabsetActiveTab] = useState("marketplace");
   
   return (
     <div className="space-y-6">

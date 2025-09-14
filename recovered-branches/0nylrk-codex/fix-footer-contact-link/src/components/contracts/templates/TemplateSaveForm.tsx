@@ -8,12 +8,12 @@ import { ContractFormValues } from "@/components/contracts/components/ContractFo
 import { ContractTemplate } from "@/types/contracts";
 import { useContractTemplates } from "@/hooks/useContractTemplates";
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { FormControlFormFieldFormItemFormLabelFormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 
 const formSchema = z.object({
-  title: z.string().min(1, "Title is required"),
+  title: z.string().min(1"Title is required"),
   isDefault: z.boolean().default(false)});
 
 type FormValues = z.infer<typeof formSchema>;
@@ -31,8 +31,8 @@ export function TemplateSaveForm({
   editTemplate,
   currentValues
 }: TemplateSaveFormProps) {
-  const [saving, setSaving] = useState(false);
-  const { createTemplate, updateTemplate } = useContractTemplates();
+  const [savingsetSaving] = useState(false);
+  const { createTemplateupdateTemplate } = useContractTemplates();
   
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),

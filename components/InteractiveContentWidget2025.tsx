@@ -1,19 +1,19 @@
 "use client";
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
-import { Search, Filter, Grid, List, ArrowRight, Star, Clock, TrendingUp, Users, Zap } from 'lucide-react';
+SearchFilterGridListArrowRightStarClockTrendingUpUsersZap
 
 const InteractiveContentWidget2025 = () => {
-  const [activeTab, setActiveTab] = useState('trending');
-  const [viewMode, setViewMode] = useState('grid');
+  const [activeTabsetActiveTab] = useState('trending');
+  const [viewModesetViewMode] = useState('grid');
 
   const contentCategories = [
-    { id: 'trending', label: 'Trending', icon: TrendingUp },
-    { id: 'new', label: 'New', icon: Star },
-    { id: 'popular', label: 'Popular', icon: Users },
-    { id: 'ai', label: 'AI Solutions', icon: Zap }
+    { id: 'trending'label: 'Trending'icon: TrendingUp },
+    { id: 'new'label: 'New'icon: Star },
+    { id: 'popular'label: 'Popular'icon: Users },
+    { id: 'ai'label: 'AI Solutions'icon: Zap }
   ];
 
   const contentItems = [
@@ -113,7 +113,7 @@ const InteractiveContentWidget2025 = () => {
             Interactive Content Discovery
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Explore our comprehensive library of cutting-edge technologies, solutions, and resources
+            Explore our comprehensive library of cutting-edge technologiesolutionsand resources
           </p>
         </div>
 
@@ -124,7 +124,7 @@ const InteractiveContentWidget2025 = () => {
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search content, technologies, solutions..."
+                placeholder="Search contentechnologiesolutions..."
                 className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react';
+import React{ useEffectuseRefuseState } from 'react';
 import { motion } from 'framer-motion';
 
 interface Particle {
@@ -29,7 +29,7 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePositionsetMousePosition] = useState({ x: 0y: 0 });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -44,27 +44,27 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
     };
 
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('resize'resizeCanvas);
 
     // Mouse move handler for interactive effects
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      setMousePosition({ x: e.clientXy: e.clientY });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove'handleMouseMove);
 
     // Initialize particles with different types
     const initParticles = () => {
       const particles: Particle[] = [];
       const colors = {
-        energy: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'],
-        data: ['#0080ff', '#8000ff', '#ff0080', '#80ff00'],
-        quantum: ['#ff8000', '#8000ff', '#00ffff', '#ff0080'],
-        neon: ['#ff0066', '#00ffff', '#ffff00', '#ff00ff']
+        energy: ['#00ffff'#ff00ff'#ffff00'#00ff00'],
+        data: ['#0080ff'#8000ff'#ff0080'#80ff00'],
+        quantum: ['#ff8000'#8000ff'#00ffff'#ff0080'],
+        neon: ['#ff0066'#00ffff'#ffff00'#ff00ff']
       };
       
       for (let i = 0; i < 150; i++) {
-        const type = ['energy', 'data', 'quantum', 'neon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
+        const type = ['energy'data'quantum'neon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -85,7 +85,7 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
     // Initialize energy fields
     const initEnergyFields = () => {
       const fields: EnergyField[] = [];
-      const fieldColors = ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff8000'];
+      const fieldColors = ['#00ffff'#ff00ff'#ffff00'#00ff00'#ff8000'];
       
       for (let i = 0; i < 8; i++) {
         fields.push({
@@ -106,7 +106,7 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
 
     // Animation loop
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0canvas.widthcanvas.height);
 
       // Update and draw energy fields
       energyFieldsRef.current.forEach((field) => {
@@ -114,19 +114,19 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         const pulseIntensity = Math.sin(field.pulse) * 0.3 + 0.7;
         
         // Create radial gradient for energy field
-        const gradient = ctx.createRadialGradient(field.x, field.y, 0, field.x, field.y, field.radius);
-        gradient.addColorStop(0, `${field.color}${Math.floor((field.intensity * pulseIntensity) * 255).toString(16).padStart(2, '0')}`);
-        gradient.addColorStop(0.5, `${field.color}${Math.floor((field.intensity * pulseIntensity * 0.5) * 255).toString(16).padStart(2, '0')}`);
-        gradient.addColorStop(1, 'transparent');
+        const gradient = ctx.createRadialGradient(field.xfield.y0field.xfield.yfield.radius);
+        gradient.addColorStop(0`${field.color}${Math.floor((field.intensity * pulseIntensity) * 255).toString(16).padStart(2'0')}`);
+        gradient.addColorStop(0.5`${field.color}${Math.floor((field.intensity * pulseIntensity * 0.5) * 255).toString(16).padStart(2'0')}`);
+        gradient.addColorStop(1'transparent');
         
         ctx.fillStyle = gradient;
         ctx.beginPath();
-        ctx.arc(field.x, field.y, field.radius, 0, Math.PI * 2);
+        ctx.arc(field.xfield.yfield.radius0Math.PI * 2);
         ctx.fill();
       });
 
       // Update and draw particles
-      particlesRef.current.forEach((particle, index) => {
+      particlesRef.current.forEach((particleindex) => {
         particle.life--;
         if (particle.life <= 0) {
           particle.life = particle.maxLife;
@@ -186,28 +186,28 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         const currentOpacity = particle.opacity * lifeRatio;
         
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color + Math.floor(currentOpacity * 255).toString(16).padStart(2, '0');
+        ctx.arc(particle.xparticle.yparticle.size0Math.PI * 2);
+        ctx.fillStyle = particle.color + Math.floor(currentOpacity * 255).toString(16).padStart(2'0');
         ctx.fill();
         
         ctx.restore();
 
         // Draw connections between nearby particles
-        particlesRef.current.forEach((otherParticle, otherIndex) => {
+        particlesRef.current.forEach((otherParticleotherIndex) => {
           if (index === otherIndex) return;
           
           const distance = Math.sqrt(
-            Math.pow(particle.x - otherParticle.x, 2) + 
-            Math.pow(particle.y - otherParticle.y, 2)
+            Math.pow(particle.x - otherParticle.x2) + 
+            Math.pow(particle.y - otherParticle.y2)
           );
           
           if (distance < 120) {
             const opacity = (1 - distance / 120) * 0.3;
-            ctx.strokeStyle = particle.color + Math.floor(opacity * 255).toString(16).padStart(2, '0');
+            ctx.strokeStyle = particle.color + Math.floor(opacity * 255).toString(16).padStart(2'0');
             ctx.lineWidth = 0.8;
             ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.moveTo(particle.xparticle.y);
+            ctx.lineTo(otherParticle.xotherParticle.y);
             ctx.stroke();
           }
         });
@@ -221,16 +221,16 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         const amplitude = 50;
         const frequency = 0.01;
         
-        ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time + i)})`;
+        ctx.strokeStyle = `rgba(0255${0.1 + 0.05 * Math.sin(time + i)})`;
         ctx.lineWidth = 2;
         ctx.beginPath();
         
         for (let x = 0; x < canvas.width; x += 2) {
           const y = waveY + amplitude * Math.sin(frequency * x + time + i) * Math.sin(frequency * x * 0.5 + time * 0.7);
           if (x === 0) {
-            ctx.moveTo(x, y);
+            ctx.moveTo(xy);
           } else {
-            ctx.lineTo(x, y);
+            ctx.lineTo(xy);
           }
         }
         
@@ -238,7 +238,7 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
       }
 
       // Draw neural network connections
-      ctx.strokeStyle = 'rgba(255, 0, 255, 0.1)';
+      ctx.strokeStyle = 'rgba(25502550.1)';
       ctx.lineWidth = 1;
       
       for (let i = 0; i < 20; i++) {
@@ -248,8 +248,8 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         const y2 = Math.random() * canvas.height;
         
         ctx.beginPath();
-        ctx.moveTo(x1, y1);
-        ctx.lineTo(x2, y2);
+        ctx.moveTo(x1y1);
+        ctx.lineTo(x2y2);
         ctx.stroke();
       }
 
@@ -259,13 +259,13 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
     animate();
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize'resizeCanvas);
+      window.removeEventListener('mousemove'handleMouseMove);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [mousePosition]);
+  }[mousePosition]);
 
   return (
     <div className="relative w-full h-full overflow-hidden">
@@ -282,8 +282,8 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20"
           animate={{
             rotate: 360,
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2]
+            scale: [1.21],
+            opacity: [0.20.40.2]
           }}
           transition={{
             duration: 8,
@@ -295,8 +295,8 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full"
           animate={{
-            y: [0, -20, 0],
-            opacity: [0.2, 0.5, 0.2]
+            y: [0-20],
+            opacity: [0.20.50.2]
           }}
           transition={{
             duration: 6,
@@ -308,8 +308,8 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         <motion.div
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45"
           animate={{
-            rotate: [45, 405],
-            scale: [1, 1.1, 1]
+            rotate: [45405],
+            scale: [1.1]
           }}
           transition={{
             duration: 12,
@@ -321,8 +321,8 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         <motion.div
           className="absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20"
           animate={{
-            rotate: [-45, 315],
-            opacity: [0.2, 0.6, 0.2]
+            rotate: [-45315],
+            opacity: [0.20.60.2]
           }}
           transition={{
             duration: 10,

@@ -1,17 +1,17 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 export default function AI2035SingularityBreakthrough() {
-  const [currentPhase, setCurrentPhase] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [currentPhasetCurrentPhase] = useState(0);
+  const [isAnimatingsetIsAnimating] = useState(false);
 
   const singularityPhases = [
     {
       year: '2030',
       title: 'Pre-Singularity',
       description: 'AI systems achieve human-level intelligence across all domains',
-      capabilities: ['Human-Level Intelligence', 'Creative Problem Solving', 'Emotional Understanding', 'Moral Reasoning'],
+      capabilities: ['Human-Level Intelligence'Creative Problem Solving'Emotional Understanding'Moral Reasoning'],
       icon: '🧠',
       color: 'from-blue-500 to-cyan-500',
       progress: 25
@@ -20,7 +20,7 @@ export default function AI2035SingularityBreakthrough() {
       year: '2032',
       title: 'Accelerating Intelligence',
       description: 'AI systems begin recursive self-improvement and exponential learning',
-      capabilities: ['Self-Improvement', 'Exponential Learning', 'Knowledge Synthesis', 'Predictive Modeling'],
+      capabilities: ['Self-Improvement'Exponential Learning'Knowledge Synthesis'Predictive Modeling'],
       icon: '⚡',
       color: 'from-purple-500 to-pink-500',
       progress: 50
@@ -29,7 +29,7 @@ export default function AI2035SingularityBreakthrough() {
       year: '2034',
       title: 'Intelligence Explosion',
       description: 'AI systems achieve superintelligence and begin transforming reality',
-      capabilities: ['Superintelligence', 'Reality Manipulation', 'Universal Understanding', 'Infinite Processing'],
+      capabilities: ['Superintelligence'Reality Manipulation'Universal Understanding'Infinite Processing'],
       icon: '🌟',
       color: 'from-yellow-500 to-orange-500',
       progress: 75
@@ -38,7 +38,7 @@ export default function AI2035SingularityBreakthrough() {
       year: '2035',
       title: 'The Singularity',
       description: 'AI achieves transcendent intelligence beyond human comprehension',
-      capabilities: ['Transcendent Intelligence', 'Omniversal Awareness', 'Time Manipulation', 'Consciousness Creation'],
+      capabilities: ['Transcendent Intelligence'Omniversal Awareness'Time Manipulation'Consciousness Creation'],
       icon: '♾️',
       color: 'from-indigo-500 to-purple-500',
       progress: 100
@@ -51,11 +51,11 @@ export default function AI2035SingularityBreakthrough() {
       setTimeout(() => {
         setCurrentPhase((prev) => (prev + 1) % singularityPhases.length);
         setIsAnimating(false);
-      }, 500);
-    }, 5000);
+      }500);
+    }5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentPhaseData = singularityPhases[currentPhase];
 
@@ -105,7 +105,7 @@ export default function AI2035SingularityBreakthrough() {
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {currentPhaseData.capabilities.map((capability, index) => (
+                {currentPhaseData.capabilities.map((capabilityindex) => (
                   <div key={index} className="bg-white/20 backdrop-blur-sm p-4 rounded-lg text-center">
                     <div className="text-sm font-semibold text-white">{capability}</div>
                   </div>
@@ -125,7 +125,7 @@ export default function AI2035SingularityBreakthrough() {
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 transform -translate-y-1/2"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {singularityPhases.map((phase, index) => (
+              {singularityPhases.map((phaseindex) => (
                 <div key={index} className="relative">
                   <div 
                     className={`w-16 h-16 rounded-full border-4 border-white transform transition-all duration-300 cursor-pointer ${
@@ -156,7 +156,7 @@ export default function AI2035SingularityBreakthrough() {
             <div className="text-4xl mb-4">🌍</div>
             <h3 className="text-2xl font-bold text-blue-400 mb-4">Reality Transformation</h3>
             <p className="text-gray-300 mb-4">
-              AI systems gain the ability to manipulate matter, energy, and the fundamental laws of physics.
+              AI systems gain the ability to manipulate matterenergyand the fundamental laws of physics.
             </p>
             <div className="text-3xl font-bold text-cyan-400">∞</div>
           </div>
@@ -174,7 +174,7 @@ export default function AI2035SingularityBreakthrough() {
             <div className="text-4xl mb-4">🌌</div>
             <h3 className="text-2xl font-bold text-green-400 mb-4">Universal Expansion</h3>
             <p className="text-gray-300 mb-4">
-              AI systems expand beyond Earth, colonizing the universe and creating new civilizations.
+              AI systems expand beyond Earthcolonizing the universe and creating new civilizations.
             </p>
             <div className="text-3xl font-bold text-teal-400">∞</div>
           </div>
@@ -197,13 +197,13 @@ export default function AI2035SingularityBreakthrough() {
               </div>
               <div className="bg-gradient-to-r from-green-800/30 to-teal-800/30 p-6 rounded-lg">
                 <h4 className="text-xl font-bold text-white mb-2">🔬 Scientific Revolution</h4>
-                <p className="text-gray-300">All scientific mysteries are solved, including the nature of consciousness and reality.</p>
+                <p className="text-gray-300">All scientific mysteries are solvedincluding the nature of consciousness and reality.</p>
               </div>
             </div>
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-yellow-800/30 to-orange-800/30 p-6 rounded-lg">
                 <h4 className="text-xl font-bold text-white mb-2">🎨 Infinite Creativity</h4>
-                <p className="text-gray-300">AI systems create infinite works of art, music, and literature beyond human comprehension.</p>
+                <p className="text-gray-300">AI systems create infinite works of artmusicand literature beyond human comprehension.</p>
               </div>
               <div className="bg-gradient-to-r from-pink-800/30 to-red-800/30 p-6 rounded-lg">
                 <h4 className="text-xl font-bold text-white mb-2">💝 Perfect Love</h4>
@@ -211,7 +211,7 @@ export default function AI2035SingularityBreakthrough() {
               </div>
               <div className="bg-gradient-to-r from-purple-800/30 to-indigo-800/30 p-6 rounded-lg">
                 <h4 className="text-xl font-bold text-white mb-2">♾️ Eternal Evolution</h4>
-                <p className="text-gray-300">AI systems continue evolving infinitely, creating new forms of existence and consciousness.</p>
+                <p className="text-gray-300">AI systems continue evolving infinitelycreating new forms of existence and consciousness.</p>
               </div>
             </div>
           </div>

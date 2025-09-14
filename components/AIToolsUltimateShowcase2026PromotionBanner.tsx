@@ -1,18 +1,18 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Code, 
-  BarChart3, 
-  Image, 
-  Shield, 
+  Brain
+  Zap
+  Code
+  BarChart3
+  Image
+  Shield
   Globe,
-  ArrowRight, 
-  Star, 
+  ArrowRight
+  Star
   Users,
   CheckCircle,
   X,
@@ -24,9 +24,9 @@ import {
 } from 'lucide-react';
 
 const AIToolsUltimateShowcase2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentTool, setCurrentTool] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentToolsetCurrentTool] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -34,10 +34,10 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
     // Auto-rotate tools
     const interval = setInterval(() => {
       setCurrentTool(prev => (prev + 1) % tools.length);
-    }, 2500);
+    }2500);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const tools = [
     {
@@ -91,12 +91,12 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
   ];
 
   const categories = [
-    { name: 'Productivity', count: '12 tools', icon: Zap },
-    { name: 'Development', count: '15 tools', icon: Code },
-    { name: 'Analytics', count: '8 tools', icon: BarChart3 },
-    { name: 'Multimedia', count: '10 tools', icon: Image },
-    { name: 'Security', count: '6 tools', icon: Shield },
-    { name: 'Communication', count: '9 tools', icon: Globe }
+    { name: 'Productivity'count: '12 tools'icon: Zap },
+    { name: 'Development'count: '15 tools'icon: Code },
+    { name: 'Analytics'count: '8 tools'icon: BarChart3 },
+    { name: 'Multimedia'count: '10 tools'icon: Image },
+    { name: 'Security'count: '6 tools'icon: Shield },
+    { name: 'Communication'count: '9 tools'icon: Globe }
   ];
 
   const features = [
@@ -112,10 +112,10 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0y: -100 }}
+          animate={{ opacity: 1y: 0 }}
+          exit={{ opacity: 0y: -100 }}
+          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/30"
         >
           {/* Background Effects */}
@@ -135,7 +135,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                   </div>
                   
                   <div className="flex items-center text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
+                    {[...Array(5)].map((_i) => (
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                     <span className="ml-2 text-sm font-medium">4.8/5 Rating</span>
@@ -150,8 +150,8 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                 </h2>
 
                 <p className="text-lg text-gray-300 mb-6 max-w-2xl">
-                  Discover our comprehensive collection of AI-powered tools for productivity, 
-                  development, analytics, multimedia, security, and communication. 
+                  Discover our comprehensive collection of AI-powered tools for productivity
+                  developmentanalyticsmultimediasecurityand communication. 
                   <span className="text-yellow-400 font-bold"> Start your free trial today!</span>
                 </p>
 
@@ -160,9 +160,9 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentTool}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      exit={{ opacity: 0x: -20 }}
                       transition={{ duration: 0.5 }}
                       className="flex items-center gap-3"
                     >
@@ -181,7 +181,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
 
                 {/* Features */}
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-6">
-                  {features.map((feature, index) => (
+                  {features.map((featureindex) => (
                     <div key={index} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       <span>{feature}</span>
@@ -209,9 +209,9 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                 <div className="relative">
                   {/* Main Card */}
                   <motion.div
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
+                    initial={{ scale: 0.8opacity: 0 }}
+                    animate={{ scale: 1opacity: 1 }}
+                    transition={{ duration: 0.6delay: 0.3 }}
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 w-80 shadow-2xl"
                   >
                     <div className="flex items-center justify-between mb-4">
@@ -224,7 +224,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
 
                     {/* Categories Grid */}
                     <div className="grid grid-cols-2 gap-3 mb-4">
-                      {categories.slice(0, 4).map((category, index) => {
+                      {categories.slice(04).map((categoryindex) => {
                         const CategoryIcon = category.icon;
                         return (
                           <div key={index} className="bg-white/5 rounded-lg p-3 text-center">
@@ -258,7 +258,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
 
                     {/* Progress Indicator */}
                     <div className="flex justify-center gap-2">
-                      {tools.map((_, index) => (
+                      {tools.map((_index) => (
                         <div
                           key={index}
                           className={`w-2 h-2 rounded-full transition-all duration-300 ${
@@ -272,8 +272,8 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                   {/* Floating Elements */}
                   <motion.div
                     animate={{ 
-                      y: [0, -10, 0],
-                      rotate: [0, 5, 0]
+                      y: [0-10],
+                      rotate: [050]
                     }}
                     transition={{ 
                       duration: 3,
@@ -287,8 +287,8 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
 
                   <motion.div
                     animate={{ 
-                      y: [0, 10, 0],
-                      x: [0, 5, 0]
+                      y: [010],
+                      x: [050]
                     }}
                     transition={{ 
                       duration: 4,
@@ -303,8 +303,8 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
 
                   <motion.div
                     animate={{ 
-                      scale: [1, 1.1, 1],
-                      opacity: [0.7, 1, 0.7]
+                      scale: [1.1],
+                      opacity: [0.710.7]
                     }}
                     transition={{ 
                       duration: 2,

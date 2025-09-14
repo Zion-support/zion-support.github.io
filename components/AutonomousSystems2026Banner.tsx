@@ -9,7 +9,7 @@ const AutonomousSystems2026Banner = () => {
       {/* Autonomous system grid pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="grid grid-cols-12 gap-4 h-full">
-          {Array.from({ length: 48 }).map((_, i) => (
+          {Array.from({ length: 48 }).map((_i) => (
             <div key={i} className="border border-gray-400/20 rounded animate-pulse" style={{ animationDelay: `${i * 0.1}s` }}></div>
           ))}
         </div>
@@ -31,8 +31,8 @@ const AutonomousSystems2026Banner = () => {
           </h1>
           
           <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
-            The era of fully autonomous systems is here. AI systems that operate independently, 
-            make complex decisions, and adapt to changing environments without human intervention. 
+            The era of fully autonomous systems is here. AI systems that operate independently
+            make complex decisionsand adapt to changing environments without human intervention. 
             Experience the future of autonomous technology.
           </p>
           

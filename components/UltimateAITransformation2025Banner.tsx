@@ -10,7 +10,7 @@ const UltimateAITransformation2025Banner = () => {
             Ultimate AI Transformation 2025
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-teal-100">
-            Transform your business with the most advanced AI technologies. Achieve unprecedented growth, efficiency, and competitive advantage in the digital age.
+            Transform your business with the most advanced AI technologies. Achieve unprecedented growthefficiencyand competitive advantage in the digital age.
           </p>
         </div>
         

@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from 'react'
+import React{ useState } from 'react'
 import Link from 'next/link'
 import { useUser } from '../../providers/UserProvider'
 
 export default function AvatarDropdown() {
-  const { user, logout } = useUser()
-  const [open, setOpen] = useState(false)
+  const { userlogout } = useUser()
+  const [opensetOpen] = useState(false)
 
   if (!user) return null
 

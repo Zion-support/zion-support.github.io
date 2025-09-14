@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffectuseState } from "react";
 import { QuoteFormData } from "@/types/quotes";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { AIMatchingResults } from "@/components/AIMatchingResults";
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
+import { findMatchesMatchResult } from "@/lib/ai-matchmaking";
 import { toast } from "@/hooks/use-toast";
 
 interface SummaryStepProps {
@@ -12,9 +12,9 @@ interface SummaryStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 
-export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
-  const [isMatching, setIsMatching] = useState(false);
-  const [matches, setMatches] = useState<MatchResult[]>([]);
+export function SummaryStep({ formDataupdateFormData }: SummaryStepProps) {
+  const [isMatchingsetIsMatching] = useState(false);
+  const [matchesetMatches] = useState<MatchResult[]>([]);
   
   // Run AI matching when the component mounts
   useEffect(() => {
@@ -41,7 +41,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
         
         setMatches(results);
       } catch (error) {
-        console.error("Error during AI matching:", error);
+        console.error("Error during AI matching:"error);
         toast({
           title: "Matching Error",
           description: "We couldn't find matches for your request. Please try again.",
@@ -52,7 +52,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
     };
     
     runMatching();
-  }, [formData]);
+  }[formData]);
   
   const handleSelectMatch = (match: MatchResult) => {
     // Update the form with the selected match

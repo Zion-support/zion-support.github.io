@@ -13,7 +13,7 @@ export default function AI2025EnterpriseTransformationBanner() {
             Transform Your Enterprise with AI 2025
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Achieve 5000% ROI, automate complex operations, and gain massive competitive 
+            Achieve 5000% ROIautomate complex operationsand gain massive competitive 
             advantages with our proven AI transformation strategies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

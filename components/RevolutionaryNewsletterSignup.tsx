@@ -1,17 +1,17 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 
 export default function RevolutionaryNewsletterSignup() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [emailsetEmail] = useState('');
+  const [isSubscribedsetIsSubscribed] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve2000));
     
     setIsSubscribed(true);
     setIsLoading(false);
@@ -24,8 +24,8 @@ export default function RevolutionaryNewsletterSignup() {
         <div className="text-6xl mb-4">🎉</div>
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Welcome to the Revolution!</h3>
         <p className="text-gray-600 mb-6">
-          You're now part of the AI revolution. Get ready for exclusive breakthrough content, 
-          early access to revolutionary features, and insider success stories.
+          You're now part of the AI revolution. Get ready for exclusive breakthrough content
+          early access to revolutionary featuresand insider success stories.
         </p>
         <div className="bg-white p-4 rounded-lg border border-green-200">
           <h4 className="font-semibold text-gray-900 mb-2">What's Next?</h4>
@@ -48,7 +48,7 @@ export default function RevolutionaryNewsletterSignup() {
           Join the AI Revolution
         </h2>
         <p className="text-xl text-gray-200 mb-8">
-          Get exclusive access to revolutionary AI breakthroughs, success stories, 
+          Get exclusive access to revolutionary AI breakthroughsuccess stories
           and implementation guides that deliver massive ROI.
         </p>
 
@@ -102,7 +102,7 @@ export default function RevolutionaryNewsletterSignup() {
           
           <p className="text-sm text-gray-300">
             Join 10,000+ companies already experiencing the AI revolution. 
-            No spam, just revolutionary content.
+            No spamjust revolutionary content.
           </p>
         </form>
 

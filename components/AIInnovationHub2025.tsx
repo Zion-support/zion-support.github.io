@@ -1,16 +1,16 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Rocket, 
-  Target, 
-  Users, 
-  TrendingUp, 
-  Shield, 
+  Brain
+  Zap
+  Rocket
+  Target
+  Users
+  TrendingUp
+  Shield
   Globe,
   ArrowRight,
   Play,
@@ -51,15 +51,15 @@ import {
 } from 'lucide-react';
 
 const AIInnovationHub2025 = () => {
-  const [activeCategory, setActiveCategory] = useState('ai-core');
-  const [viewMode, setViewMode] = useState('grid');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isVisible, setIsVisible] = useState(false);
-  const [hoveredItem, setHoveredItem] = useState(null);
+  const [activeCategorysetActiveCategory] = useState('ai-core');
+  const [viewModesetViewMode] = useState('grid');
+  const [searchQuerysetSearchQuery] = useState('');
+  const [isVisiblesetIsVisible] = useState(false);
+  const [hoveredItemsetHoveredItem] = useState(null);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const categories = {
     'ai-core': {
@@ -101,7 +101,7 @@ const AIInnovationHub2025 = () => {
         status: 'Featured',
         icon: Network,
         color: 'from-purple-500 to-pink-500',
-        features: ['Auto-architecture', 'Performance optimization', 'Multi-task learning'],
+        features: ['Auto-architecture'Performance optimization'Multi-task learning'],
         price: 'Free',
         lastUpdated: '2 days ago'
       },
@@ -116,7 +116,7 @@ const AIInnovationHub2025 = () => {
         status: 'New',
         icon: Cpu,
         color: 'from-blue-500 to-cyan-500',
-        features: ['Quantum processing', 'Exponential speedup', 'Quantum advantage'],
+        features: ['Quantum processing'Exponential speedup'Quantum advantage'],
         price: 'Premium',
         lastUpdated: '1 week ago'
       },
@@ -131,7 +131,7 @@ const AIInnovationHub2025 = () => {
         status: 'Popular',
         icon: Shield,
         color: 'from-green-500 to-emerald-500',
-        features: ['Privacy-first', 'Distributed training', 'Secure aggregation'],
+        features: ['Privacy-first'Distributed training'Secure aggregation'],
         price: 'Free',
         lastUpdated: '3 days ago'
       },
@@ -146,7 +146,7 @@ const AIInnovationHub2025 = () => {
         status: 'Featured',
         icon: Layers,
         color: 'from-orange-500 to-red-500',
-        features: ['Memory efficient', 'Faster inference', 'Scalable training'],
+        features: ['Memory efficient'Faster inference'Scalable training'],
         price: 'Free',
         lastUpdated: '1 day ago'
       }
@@ -163,7 +163,7 @@ const AIInnovationHub2025 = () => {
         status: 'Featured',
         icon: Building,
         color: 'from-indigo-500 to-purple-500',
-        features: ['Enterprise ready', 'Scalable deployment', 'Full management'],
+        features: ['Enterprise ready'Scalable deployment'Full management'],
         price: 'Enterprise',
         lastUpdated: '5 days ago'
       },
@@ -178,7 +178,7 @@ const AIInnovationHub2025 = () => {
         status: 'Popular',
         icon: MessageCircle,
         color: 'from-teal-500 to-cyan-500',
-        features: ['Natural language', 'Multi-channel', 'Sentiment analysis'],
+        features: ['Natural language'Multi-channel'Sentiment analysis'],
         price: 'Standard',
         lastUpdated: '2 days ago'
       },
@@ -193,7 +193,7 @@ const AIInnovationHub2025 = () => {
         status: 'Featured',
         icon: BarChart3,
         color: 'from-pink-500 to-rose-500',
-        features: ['Time series', 'Anomaly detection', 'Real-time predictions'],
+        features: ['Time series'Anomaly detection'Real-time predictions'],
         price: 'Premium',
         lastUpdated: '1 week ago'
       }
@@ -210,7 +210,7 @@ const AIInnovationHub2025 = () => {
         status: 'New',
         icon: Cloud,
         color: 'from-sky-500 to-blue-500',
-        features: ['Low latency', 'Offline capable', 'Resource efficient'],
+        features: ['Low latency'Offline capable'Resource efficient'],
         price: 'Premium',
         lastUpdated: '3 days ago'
       },
@@ -225,7 +225,7 @@ const AIInnovationHub2025 = () => {
         status: 'Beta',
         icon: Eye,
         color: 'from-violet-500 to-purple-500',
-        features: ['Real-time AR', 'Object tracking', 'Spatial mapping'],
+        features: ['Real-time AR'Object tracking'Spatial mapping'],
         price: 'Premium',
         lastUpdated: '1 week ago'
       }
@@ -242,7 +242,7 @@ const AIInnovationHub2025 = () => {
         status: 'Popular',
         icon: Settings,
         color: 'from-amber-500 to-orange-500',
-        features: ['Model compression', 'Quantization', 'Pruning'],
+        features: ['Model compression'Quantization'Pruning'],
         price: 'Free',
         lastUpdated: '4 days ago'
       },
@@ -257,7 +257,7 @@ const AIInnovationHub2025 = () => {
         status: 'Popular',
         icon: Code,
         color: 'from-emerald-500 to-green-500',
-        features: ['Natural language', 'Multi-language', 'Code review'],
+        features: ['Natural language'Multi-language'Code review'],
         price: 'Free',
         lastUpdated: '2 days ago'
       }
@@ -294,8 +294,8 @@ const AIInnovationHub2025 = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+        initial={{ opacity: 0y: 50 }}
+        animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
         transition={{ duration: 0.8 }}
         className="relative overflow-hidden"
       >
@@ -309,7 +309,7 @@ const AIInnovationHub2025 = () => {
               2025 Edition
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover, explore, and implement cutting-edge AI technologies that are shaping the future
+              Discoverexploreand implement cutting-edge AI technologies that are shaping the future
             </p>
           </div>
         </div>
@@ -318,9 +318,9 @@ const AIInnovationHub2025 = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="mb-8"
         >
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between mb-6">
@@ -359,7 +359,7 @@ const AIInnovationHub2025 = () => {
 
           {/* Category Tabs */}
           <div className="flex flex-wrap gap-4 justify-center">
-            {Object.entries(categories).map(([key, category]) => (
+            {Object.entries(categories).map(([keycategory]) => (
               <button
                 key={key}
                 onClick={() => setActiveCategory(key)}
@@ -380,19 +380,19 @@ const AIInnovationHub2025 = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5delay: 0.4 }}
           className={`grid gap-6 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
               : 'grid-cols-1'
           }`}
         >
-          {filteredInnovations.map((item, index) => (
+          {filteredInnovations.map((itemindex) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.5delay: index * 0.1 }}
               onHoverStart={() => setHoveredItem(item.id)}
               onHoverEnd={() => setHoveredItem(null)}
               className={`group cursor-pointer ${
@@ -423,7 +423,7 @@ const AIInnovationHub2025 = () => {
                     
                     {/* Features */}
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {item.features.slice(0, 2).map((feature, idx) => (
+                      {item.features.slice(02).map((featureidx) => (
                         <span key={idx} className="px-2 py-1 bg-white/20 rounded-full text-xs text-white">
                           {feature}
                         </span>
@@ -481,9 +481,9 @@ const AIInnovationHub2025 = () => {
 
         {/* Load More */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-12"
         >
           <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center mx-auto">

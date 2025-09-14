@@ -1,18 +1,18 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Download, 
-  Share2, 
-  Settings, 
-  Zap, 
-  Brain, 
-  Cpu, 
+  Play
+  Pause
+  RotateCcw
+  Download
+  Share2
+  Settings
+  Zap
+  Brain
+  Cpu
   Database,
   BarChart3,
   Image,
@@ -43,17 +43,17 @@ interface AITool {
 }
 
 const InteractiveAIToolsDemo2025: React.FC = () => {
-  const [selectedTool, setSelectedTool] = useState<string>('text-generator');
-  const [isProcessing, setIsProcessing] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [results, setResults] = useState<{[key: string]: string}>({});
-  const [inputText, setInputText] = useState('');
+  const [selectedToolsetSelectedTool] = useState<string>('text-generator');
+  const [isProcessingsetIsProcessing] = useState(false);
+  const [progressetProgress] = useState(0);
+  const [resultsetResults] = useState<{[key: string]: string}>({});
+  const [inputTextsetInputText] = useState('');
 
   const aiTools: AITool[] = [
     {
       id: 'text-generator',
       name: 'AI Text Generator',
-      description: 'Generate high-quality content, articles, and creative writing',
+      description: 'Generate high-quality contentarticlesand creative writing',
       category: 'Content',
       icon: <FileText className="w-6 h-6" />,
       status: 'ready',
@@ -61,7 +61,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       output: '',
       processingTime: 2.3,
       accuracy: 96,
-      features: ['Natural Language', 'Multiple Languages', 'Style Adaptation', 'SEO Optimized']
+      features: ['Natural Language'Multiple Languages'Style Adaptation'SEO Optimized']
     },
     {
       id: 'image-generator',
@@ -74,12 +74,12 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       output: '',
       processingTime: 4.7,
       accuracy: 94,
-      features: ['High Resolution', 'Multiple Styles', 'Custom Prompts', 'Batch Generation']
+      features: ['High Resolution'Multiple Styles'Custom Prompts'Batch Generation']
     },
     {
       id: 'code-assistant',
       name: 'AI Code Assistant',
-      description: 'Generate, debug, and optimize code in multiple programming languages',
+      description: 'Generatedebugand optimize code in multiple programming languages',
       category: 'Development',
       icon: <Code className="w-6 h-6" />,
       status: 'ready',
@@ -87,7 +87,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       output: '',
       processingTime: 1.8,
       accuracy: 98,
-      features: ['Multi-Language', 'Error Detection', 'Optimization', 'Documentation']
+      features: ['Multi-Language'Error Detection'Optimization'Documentation']
     },
     {
       id: 'data-analyzer',
@@ -100,12 +100,12 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       output: '',
       processingTime: 3.2,
       accuracy: 97,
-      features: ['Pattern Recognition', 'Predictive Analysis', 'Visualization', 'Export Options']
+      features: ['Pattern Recognition'Predictive Analysis'Visualization'Export Options']
     },
     {
       id: 'video-generator',
       name: 'AI Video Creator',
-      description: 'Generate videos from text, images, or audio inputs',
+      description: 'Generate videos from textimagesor audio inputs',
       category: 'Media',
       icon: <Video className="w-6 h-6" />,
       status: 'ready',
@@ -113,7 +113,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       output: '',
       processingTime: 8.5,
       accuracy: 92,
-      features: ['Multiple Formats', 'Custom Duration', 'Voice Synthesis', 'Visual Effects']
+      features: ['Multiple Formats'Custom Duration'Voice Synthesis'Visual Effects']
     },
     {
       id: 'music-composer',
@@ -126,7 +126,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       output: '',
       processingTime: 5.1,
       accuracy: 89,
-      features: ['Genre Selection', 'Custom Instruments', 'Mood Setting', 'Export Options']
+      features: ['Genre Selection'Custom Instruments'Mood Setting'Export Options']
     }
   ];
 
@@ -157,18 +157,18 @@ We're offering an exclusive early-bird discount of 30% for the first 100 custome
 Best regards,
 [Your Name]
 Product Launch Team`,
-    'image-generator': 'Generated: A stunning futuristic cityscape featuring towering glass buildings with neon lights, flying cars zipping through the sky, and a beautiful sunset casting golden light across the scene.',
-    'code-assistant': `import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+    'image-generator': 'Generated: A stunning futuristic cityscape featuring towering glass buildings with neon lightsflying cars zipping through the skyand a beautiful sunset casting golden light across the scene.',
+    'code-assistant': `import React{ useStateuseEffect } from 'react';
+import { CardContentCardHeaderCardTitle } from '@/components/ui/card';
+import { BarChartBarXAxisYAxisCartesianGridTooltip } from 'recharts';
 
 const UserDashboard = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [datasetData] = useState([]);
+  const [loadingsetLoading] = useState(true);
 
   useEffect(() => {
     fetchDashboardData();
-  }, []);
+  }[]);
 
   const fetchDashboardData = async () => {
     try {
@@ -176,7 +176,7 @@ const UserDashboard = () => {
       const result = await response.json();
       setData(result.data);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error('Error fetching data:'error);
     } finally {
       setLoading(false);
     }
@@ -228,8 +228,8 @@ Recommendations:
 2. Launch targeted marketing campaign for Q4
 3. Implement customer retention program
 4. Prepare for increased demand in December`,
-    'video-generator': 'Generated: 30-second promotional video featuring dynamic animations of the tech startup logo, sleek product shots, customer testimonials, and a compelling call-to-action with upbeat background music.',
-    'music-composer': 'Generated: Upbeat electronic track (120 BPM) featuring synthesizer melodies, driving bassline, energetic drum patterns, and motivational chord progressions perfect for workout sessions.'
+    'video-generator': 'Generated: 30-second promotional video featuring dynamic animations of the tech startup logosleek product shotscustomer testimonialsand a compelling call-to-action with upbeat background music.',
+    'music-composer': 'Generated: Upbeat electronic track (120 BPM) featuring synthesizer melodiesdriving basslinenergetic drum patternsand motivational chord progressions perfect for workout sessions.'
   };
 
   const currentTool = aiTools.find(tool => tool.id === selectedTool) || aiTools[0];
@@ -254,7 +254,7 @@ Recommendations:
         }
         return prev + Math.random() * 15;
       });
-    }, 200);
+    }200);
   };
 
   const handleReset = () => {
@@ -271,7 +271,7 @@ Recommendations:
   const handleDownload = () => {
     const result = results[selectedTool];
     if (result) {
-      const blob = new Blob([result], { type: 'text/plain' });
+      const blob = new Blob([result]{ type: 'text/plain' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -287,8 +287,8 @@ Recommendations:
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: -20 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <div className="flex items-center justify-center mb-6">
@@ -302,7 +302,7 @@ Recommendations:
             Experience the Power of AI
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Try our cutting-edge AI tools in real-time. Generate content, create visuals, write code, and much more with just a few clicks.
+            Try our cutting-edge AI tools in real-time. Generate contentcreate visualswrite codeand much more with just a few clicks.
           </p>
         </motion.div>
 
@@ -427,9 +427,9 @@ Recommendations:
               {isProcessing && (
                 <motion.div
                   className="mb-8"
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
+                  initial={{ opacity: 0height: 0 }}
+                  animate={{ opacity: 1height: 'auto' }}
+                  exit={{ opacity: 0height: 0 }}
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-white font-semibold">Processing...</span>
@@ -454,8 +454,8 @@ Recommendations:
                 <div className="bg-slate-800 rounded-lg p-6 min-h-[200px] border border-white/10">
                   {results[selectedTool] ? (
                     <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
                       className="text-gray-300 whitespace-pre-wrap"
                     >
                       {results[selectedTool]}
@@ -472,7 +472,7 @@ Recommendations:
               <div className="mt-8">
                 <h4 className="text-lg font-semibold text-white mb-4">Features</h4>
                 <div className="grid grid-cols-2 gap-3">
-                  {currentTool.features.map((feature, index) => (
+                  {currentTool.features.map((featureindex) => (
                     <div key={index} className="flex items-center p-3 bg-white/5 rounded-lg">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       <span className="text-gray-300 text-sm">{feature}</span>
@@ -487,9 +487,9 @@ Recommendations:
         {/* Call to Action */}
         <motion.div 
           className="text-center mt-20"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
         >
           <h3 className="text-3xl font-bold text-white mb-4">
             Ready to Integrate AI into Your Workflow?

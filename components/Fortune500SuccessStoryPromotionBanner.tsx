@@ -21,7 +21,7 @@ const Fortune500SuccessStoryPromotionBanner = () => {
             </span>
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover how a Fortune 500 company achieved unprecedented success through comprehensive AI transformation, 
+            Discover how a Fortune 500 company achieved unprecedented success through comprehensive AI transformation
             resulting in $2.3B revenue increase and 340% ROI in just 12 months.
           </p>
         </div>
@@ -98,7 +98,7 @@ const Fortune500SuccessStoryPromotionBanner = () => {
                 <div className="text-green-400 text-xl">✓</div>
                 <div>
                   <div className="font-semibold">Technology Excellence</div>
-                  <div className="text-sm text-gray-300">Cloud-native, scalable AI platform</div>
+                  <div className="text-sm text-gray-300">Cloud-nativescalable AI platform</div>
                 </div>
               </div>
               <div className="flex items-start space-x-3">

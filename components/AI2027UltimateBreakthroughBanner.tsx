@@ -23,7 +23,7 @@ export default function AI2027UltimateBreakthroughBanner() {
           
           {/* Subheading */}
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover the revolutionary AI technologies predicted for 2027. Quantum neural networks, autonomous business systems, and next-generation breakthroughs that will transform your business.
+            Discover the revolutionary AI technologies predicted for 2027. Quantum neural networksautonomous business systemsand next-generation breakthroughs that will transform your business.
           </p>
           
           {/* Key Features Grid */}

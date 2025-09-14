@@ -7,9 +7,9 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { AlertCircle, FileText, Loader2 } from "lucide-react";
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
+import { AlertDescription } from "@/components/ui/alert";
+import { AlertCircleFileTextLoader2 } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
@@ -19,23 +19,23 @@ interface ApplyToJobFormProps {
   onSuccess?: () => void;
 }
 
-export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
+export function ApplyToJobForm({ jobonSuccess }: ApplyToJobFormProps) {
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
-  const { resumes, isLoading: isResumesLoading } = useResume();
+  const { resumesisLoading: isResumesLoading } = useResume();
   const navigate = useNavigate();
   
-  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
-  const [selectedResumeId, setSelectedResumeId] = useState<string>("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [coverLettersetCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
+  const [selectedResumeIdsetSelectedResumeId] = useState<string>("");
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [errorsetError] = useState<string | null>(null);
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!user) {
       toast.error("You must be logged in to apply");
-      navigate("/login", { state: { returnTo: `/jobs/${job.id}` } });
+      navigate("/login"{ state: { returnTo: `/jobs/${job.id}` } });
       return;
     }
     
@@ -48,7 +48,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     setError(null);
     
     try {
-      const success = await applyToJob(job.id, coverLetter, selectedResumeId || undefined);
+      const success = await applyToJob(job.idcoverLetterselectedResumeId || undefined);
       
       if (success) {
         toast.success("Your application has been submitted!");
@@ -69,7 +69,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       <div>
         <h3 className="text-lg font-medium mb-1">Apply to: {job.title}</h3>
         <p className="text-sm text-muted-foreground mb-4">
-          Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
+          Posted {formatDistanceToNow(new Date(job.created_at){ addSuffix: true })}
         </p>
       </div>
       

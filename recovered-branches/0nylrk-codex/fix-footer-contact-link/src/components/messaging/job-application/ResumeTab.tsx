@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ResumeSelector, ResumeOption } from "../resume-selector";
+import { ResumeSelectorResumeOption } from "../resume-selector";
 import { Button } from "@/components/ui/button";
 
 export interface ResumeTabProps {
@@ -11,7 +11,7 @@ export interface ResumeTabProps {
   isSubmitting?: boolean;
 }
 
-export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false }: ResumeTabProps) {
+export function ResumeTab({ selectedResumeIdonSelectResumeonResumeSelectedonApplyisSubmitting = false }: ResumeTabProps) {
   const handleResumeSelected = (resume: ResumeOption) => {
     if (onResumeSelected) {
       onResumeSelected(resume);

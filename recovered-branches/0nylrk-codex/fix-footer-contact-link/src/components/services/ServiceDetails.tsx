@@ -1,6 +1,6 @@
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Server, Clock, MapPin } from "lucide-react";
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+import { ServerClockMapPin } from "lucide-react";
 
 interface ServiceDetailsProps {
   country: string;
@@ -10,14 +10,14 @@ interface ServiceDetailsProps {
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
   const getDatacenters = (country: string): string[] => {
-    const dataCenters: Record<string, string[]> = {
-      "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
-      "United Kingdom": ["London", "Manchester", "Birmingham"],
-      "Germany": ["Frankfurt", "Berlin", "Munich"],
-      "Japan": ["Tokyo", "Osaka"],
-      "Australia": ["Sydney", "Melbourne", "Perth"],
+    const dataCenters: Record<string[]> = {
+      "United States": ["New York"Los Angeles"Chicago"Dallas"Seattle"],
+      "United Kingdom": ["London"Manchester"Birmingham"],
+      "Germany": ["Frankfurt"Berlin"Munich"],
+      "Japan": ["Tokyo"Osaka"],
+      "Australia": ["Sydney"Melbourne"Perth"],
       "Singapore": ["Singapore Central"],
-      "Canada": ["Toronto", "Montreal", "Vancouver"],
+      "Canada": ["Toronto"Montreal"Vancouver"],
       // Default for other countries
       "default": ["Major metropolitan areas"]
     };
@@ -27,8 +27,8 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
   
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
-    // In a real app, you'd have specific images for each region
-    const regions: Record<string, string> = {
+    // In a real appyou'd have specific images for each region
+    const regions: Record<string> = {
       "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
       "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",
       "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany",
@@ -44,8 +44,8 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
   
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
-    // In a real implementation, this would be much more detailed and specific
-    const timeZones: Record<string, string> = {
+    // In a real implementationthis would be much more detailed and specific
+    const timeZones: Record<string> = {
       "United States": "EST/CST/PST depending on location",
       "United Kingdom": "GMT/BST",
       "Germany": "CET/CEST",
@@ -60,7 +60,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
            `Please have site access permissions and contact details ready for our technicians. ` +
-           `For remote locations, additional travel fees may apply.`;
+           `For remote locationsadditional travel fees may apply.`;
   };
   
   const datacenters = getDatacenters(country);
@@ -92,7 +92,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
               Service Locations
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-              {datacenters.map((dc, idx) => (
+              {datacenters.map((dcidx) => (
                 <div 
                   key={idx} 
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
@@ -127,7 +127,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       </CardContent>
       <CardFooter className="border-t border-zion-blue-light pt-4">
         <p className="text-sm text-zion-slate-light">
-          For custom enterprise needs or multi-site services in {country}, please contact our enterprise team for tailored pricing.
+          For custom enterprise needs or multi-site services in {country}please contact our enterprise team for tailored pricing.
         </p>
       </CardFooter>
     </Card>

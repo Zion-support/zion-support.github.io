@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronRightIcon, XMarkIcon, SparklesIconChipIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import { ChevronRightIcon, XMarkIcon, SparklesIcon, ChartBarIcon, CpuChipIcon } from '@heroicons/react/24/outline';
 
 const AdvancedNeuralArchitecturesBanner = () => {
   const [isVisible, setIsVisible] = useState(false);

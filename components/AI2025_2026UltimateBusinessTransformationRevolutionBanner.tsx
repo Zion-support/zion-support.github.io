@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const AI2025_2026UltimateBusinessTransformationRevolutionBanner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
 
   // Content showcase data
   const contentShowcase = [
@@ -63,10 +63,10 @@ const AI2025_2026UltimateBusinessTransformationRevolutionBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentShowcase.length);
-    }, 8000);
+    }8000);
 
     return () => clearInterval(interval);
-  }, [contentShowcase.length]);
+  }[contentShowcase.length]);
 
   // Check if banner was dismissed
   useEffect(() => {
@@ -74,11 +74,11 @@ const AI2025_2026UltimateBusinessTransformationRevolutionBanner = () => {
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ai-2025-2026-ultimate-business-transformation-banner-dismissed', 'true');
+    localStorage.setItem('ai-2025-2026-ultimate-business-transformation-banner-dismissed'true');
   };
 
   const currentContent = contentShowcase[currentSlide];
@@ -202,7 +202,7 @@ const AI2025_2026UltimateBusinessTransformationRevolutionBanner = () => {
 
         {/* Navigation Dots */}
         <div className="flex justify-center space-x-2 mb-6">
-          {contentShowcase.map((_, index) => (
+          {contentShowcase.map((_index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}

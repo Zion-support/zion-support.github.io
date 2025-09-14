@@ -1,13 +1,13 @@
 
-import React, { useState } from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import React{ useState } from "react";
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
-import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts";
-import { Loader2, ShieldCheck, Download } from "lucide-react";
+import { BlockchainNetworkDeploymentOptions } from "@/types/smart-contracts";
+import { Loader2ShieldCheckDownload } from "lucide-react";
 import { toast } from "sonner";
 
 interface SmartContractDeploymentProps {
@@ -17,11 +17,11 @@ interface SmartContractDeploymentProps {
 }
 
 export function SmartContractDeployment({ 
-  solidityCode, 
+  solidityCode
   onDeploy,
   isDeploying
 }: SmartContractDeploymentProps) {
-  const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
+  const [deploymentOptionsetDeploymentOptions] = useState<DeploymentOptions>({
     network: 'none',
     useEscrow: true,
     deployToChain: false,
@@ -37,13 +37,13 @@ export function SmartContractDeployment({
     try {
       await onDeploy(deploymentOptions);
     } catch (error) {
-      console.error("Deployment error:", error);
+      console.error("Deployment error:"error);
     }
   };
   
   const handleDownloadSolidity = () => {
     // Create a blob from the Solidity code
-    const blob = new Blob([solidityCode], { type: 'text/plain' });
+    const blob = new Blob([solidityCode]{ type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     
     // Create a temporary anchor to trigger download
@@ -100,11 +100,11 @@ export function SmartContractDeployment({
                 >
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="ethereum" id="ethereum" />
-                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>
+                    <Label htmlFor="ethereum">Ethereum (higher feesmore secure)</Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="polygon" id="polygon" />
-                    <Label htmlFor="polygon">Polygon (lower fees, faster)</Label>
+                    <Label htmlFor="polygon">Polygon (lower feesfaster)</Label>
                   </div>
                 </RadioGroup>
               </div>
@@ -139,7 +139,7 @@ export function SmartContractDeployment({
           <div className="rounded-md bg-muted p-4">
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">
-              <pre>{solidityCode.slice(0, 500)}...</pre>
+              <pre>{solidityCode.slice(0500)}...</pre>
             </div>
           </div>
         </div>

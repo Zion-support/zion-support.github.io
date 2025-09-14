@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
+import { CardHeaderCardContentCardTitle } from "@/components/ui/card";
 import { TalentProfile } from "@/types/talent";
 
 interface ProfileCardProps {

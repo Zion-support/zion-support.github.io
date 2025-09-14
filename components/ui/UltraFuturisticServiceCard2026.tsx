@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket } from 'lucide-react';
+StarCheckZapTrendingUpShieldBrainAtomRocket
 
 interface Service {
   id: string;
@@ -33,7 +33,7 @@ interface ServiceCardProps {
   variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
 }
 
-const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
+const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ servicevariant = 'default' }) => {
   const getVariantStyles = () => {
     switch (variant) {
       case 'ai':
@@ -133,8 +133,8 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0y: 20 }}
+      whileInView={{ opacity: 1y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
       className="group relative"
@@ -148,7 +148,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            transition={{ delay: 0.2type: "spring"stiffness: 200 }}
             className="absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full shadow-lg"
           >
             <Star className="w-4 h-4 inline mr-1" />
@@ -188,11 +188,11 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             <Zap className="w-4 h-4 mr-2 text-cyan-400" />
             Key Features
           </h4>
-          {service.features.slice(0, 6).map((feature, idx) => (
+          {service.features.slice(06).map((featureidx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0x: -10 }}
+              animate={{ opacity: 1x: 0 }}
               transition={{ delay: idx * 0.1 }}
               className="flex items-center space-x-3 text-sm text-gray-300 group-hover:text-gray-200 transition-colors"
             >
@@ -212,7 +212,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             
             {service.competitors && (
               <div className="text-xs text-gray-500">
-                Competes with: {service.competitors.slice(0, 2).join(', ')}
+                Competes with: {service.competitors.slice(02).join(')}
               </div>
             )}
           </div>
@@ -229,7 +229,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             {service.useCases && (
               <div className="text-xs mt-3">
                 <div className="text-gray-400 mb-2">Use Cases:</div>
-                <div className="text-gray-300">{service.useCases.slice(0, 3).join(', ')}</div>
+                <div className="text-gray-300">{service.useCases.slice(03).join(')}</div>
               </div>
             )}
           </div>
@@ -243,7 +243,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               Key Benefits
             </h4>
             <div className="space-y-2">
-              {service.benefits.slice(0, 3).map((benefit, idx) => (
+              {service.benefits.slice(03).map((benefitidx) => (
                 <div key={idx} className="text-xs text-gray-400 flex items-start space-x-2">
                   <Check className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
                   <span>{benefit}</span>

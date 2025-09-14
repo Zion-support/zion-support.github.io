@@ -1,13 +1,13 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  Award, 
-  ArrowRight, 
+  TrendingUp
+  Users
+  Award
+  ArrowRight
   X,
   Play,
   Star,
@@ -16,21 +16,21 @@ import {
 } from 'lucide-react';
 
 export default function InteractiveCaseStudies2025PromotionBanner() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   if (isDismissed) return null;
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : {}}
-      exit={{ opacity: 0, y: -50 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      initial={{ opacity: 0y: -50 }}
+      animate={isVisible ? { opacity: 1y: 0 } : {}}
+      exit={{ opacity: 0y: -50 }}
+      transition={{ duration: 0.6ease: "easeOut" }}
       className="relative bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-900 border-b border-blue-500/20 overflow-hidden"
     >
       {/* Animated Background */}

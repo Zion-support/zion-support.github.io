@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const NeuralInterfaceRevolution2025Banner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   useEffect(() => {
     // Check if banner was previously dismissed
@@ -16,15 +16,15 @@ const NeuralInterfaceRevolution2025Banner = () => {
     // Auto-rotate slides every 5 seconds
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % neuralContent.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
     setIsVisible(false);
-    localStorage.setItem('neural-interface-banner-dismissed', 'true');
+    localStorage.setItem('neural-interface-banner-dismissed'true');
   };
 
   const neuralContent = [
@@ -97,7 +97,7 @@ const NeuralInterfaceRevolution2025Banner = () => {
                 <span className="text-sm font-medium text-green-400">NEW NEURAL INTERFACE CONTENT</span>
               </div>
               <div className="flex space-x-1">
-                {neuralContent.map((_, index) => (
+                {neuralContent.map((_index) => (
                   <div
                     key={index}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${

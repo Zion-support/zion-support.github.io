@@ -5,17 +5,17 @@ import { Button } from "@/components/ui/button";
 import { ChatAssistant } from "@/components/ChatAssistant";
 
 export function ChatAssistantTrigger() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpensetIsOpen] = useState(false);
 
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
+      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat"{
         method: "POST",
         headers: {
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
-          messages: [{ role: "user", content: message }] 
+          messages: [{ role: "user"content: message }] 
         })});
       
       if (!response.ok) {
@@ -24,7 +24,7 @@ export function ChatAssistantTrigger() {
       
       return Promise.resolve();
     } catch (error) {
-      console.error("Error in AI chat:", error);
+      console.error("Error in AI chat:"error);
       return Promise.resolve();
     }
   };

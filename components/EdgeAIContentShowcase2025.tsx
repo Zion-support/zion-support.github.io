@@ -96,7 +96,7 @@ const EdgeAIContentShowcase2025 = () => {
     {
       id: 'edge-ai-industry-applications',
       title: 'Edge AI Industry Applications: 15 Use Cases with ROI',
-      description: 'Real-world applications across manufacturing, healthcare, retail, and financial services.',
+      description: 'Real-world applications across manufacturinghealthcaretailand financial services.',
       url: '/resources/edge-ai-industry-applications-guide',
       type: 'Industry Guide',
       category: 'Applications',
@@ -113,8 +113,8 @@ const EdgeAIContentShowcase2025 = () => {
     }
   ];
 
-  const categories = ['All', 'Technology', 'Success Story', 'Strategy', 'Calculator', 'Security', 'Applications'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const categories = ['All'Technology'Success Story'Strategy'Calculator'Security'Applications'];
+  const [selectedCategorysetSelectedCategory] = React.useState('All');
 
   const filteredContent = selectedCategory === 'All' 
     ? edgeAIContent 

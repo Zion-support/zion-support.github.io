@@ -3,12 +3,12 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { format } from 'date-fns';
-import { Loader2 } from 'lucide-react';
+Loader2
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import { AlertDescription } from '@/components/ui/alert';
 import {
   Form,
   FormControl,
@@ -22,10 +22,10 @@ import { Education } from '@/types/resume';
 
 // Define schema for form validation
 const educationSchema = z.object({
-  institution: z.string().min(1, 'Institution is required'),
-  degree: z.string().min(1, 'Degree is required'),
+  institution: z.string().min(1'Institution is required'),
+  degree: z.string().min(1'Degree is required'),
   field_of_study: z.string().optional(),
-  start_date: z.string().min(1, 'Start date is required'),
+  start_date: z.string().min(1'Start date is required'),
   end_date: z.string().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
@@ -34,12 +34,12 @@ const educationSchema = z.object({
 type EducationFormValues = z.infer<typeof educationSchema>;
 
 export function EducationFormFields({ 
-  isEditing, 
-  onSubmit, 
+  isEditing
+  onSubmit
   onCancel 
 }: EducationFormFieldsProps) {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [isLoadingsetIsLoading] = useState(false);
+  const [errorsetError] = useState<string | null>(null);
 
   const form = useForm<EducationFormValues>({
     resolver: zodResolver(educationSchema),
@@ -47,7 +47,7 @@ export function EducationFormFields({
       institution: '',
       degree: '',
       field_of_study: '',
-      start_date: format(new Date(), 'yyyy-MM-dd'),
+      start_date: format(new Date()'yyyy-MM-dd'),
       is_current: false,
       description: '',
       location: ''}});
@@ -75,7 +75,7 @@ export function EducationFormFields({
               <FormItem>
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
-                  <Input placeholder="University of California, MIT, etc." {...field} />
+                  <Input placeholder="University of CaliforniaMITetc." {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -89,7 +89,7 @@ export function EducationFormFields({
               <FormItem>
                 <FormLabel>Degree</FormLabel>
                 <FormControl>
-                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />
+                  <Input placeholder="Bachelor'sMaster'sPh.Detc." {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -104,7 +104,7 @@ export function EducationFormFields({
             <FormItem>
               <FormLabel>Field of Study</FormLabel>
               <FormControl>
-                <Input placeholder="Computer Science, Engineering, etc." {...field} />
+                <Input placeholder="Computer ScienceEngineeringetc." {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -178,7 +178,7 @@ export function EducationFormFields({
             <FormItem>
               <FormLabel>Location (Optional)</FormLabel>
               <FormControl>
-                <Input placeholder="Cambridge, MA" {...field} />
+                <Input placeholder="CambridgeMA" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -193,7 +193,7 @@ export function EducationFormFields({
               <FormLabel>Description (Optional)</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Notable achievements, courses, activities..."
+                  placeholder="Notable achievementscoursesactivities..."
                   className="min-h-[100px]"
                   {...field}
                 />

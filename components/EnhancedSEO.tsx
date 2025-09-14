@@ -26,14 +26,14 @@ export default function EnhancedSEO({
   nofollow = false,
 }: SEOProps) {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
-  const keywordsString = keywords.join(', ');
+  const fullDescription = description.length > 160 ? description.substring(0157) + '...' : description;
+  const keywordsString = keywords.join(');
 
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "description": "Leading AI and technology solutions provider specializing in enterprise automation, cloud infrastructure, and micro SaaS solutions.",
+    "description": "Leading AI and technology solutions provider specializing in enterprise automationcloud infrastructureand micro SaaS solutions.",
     "url": "https://zion.app",
     "logo": "https://zion.app/logo.png",
     "sameAs": [
@@ -64,7 +64,7 @@ export default function EnhancedSEO({
     ]
   };
 
-  const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
+  const mergedStructuredData = structuredData ? { ...defaultStructuredData...structuredData } : defaultStructuredData;
 
   return (
     <Head>
@@ -73,8 +73,8 @@ export default function EnhancedSEO({
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywordsString} />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="viewport" content="width=device-widthinitial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />

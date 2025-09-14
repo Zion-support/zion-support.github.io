@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  BarChart3, 
-  TrendingUp, 
-  Users, 
-  Eye, 
-  MousePointer, 
-  Clock, 
-  Zap, 
+  BarChart3
+  TrendingUp
+  Users
+  Eye
+  MousePointer
+  Clock
+  Zap
   Target,
   Brain,
   Cpu,
@@ -46,10 +46,10 @@ import {
 } from 'lucide-react';
 
 const AIAdvancedAnalyticsDashboard2030 = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisProgress, setAnalysisProgress] = useState(0);
-  const [currentMetric, setCurrentMetric] = useState(0);
+  const [activeTabsetActiveTab] = useState('overview');
+  const [isAnalyzingsetIsAnalyzing] = useState(false);
+  const [analysisProgressetAnalysisProgress] = useState(0);
+  const [currentMetricsetCurrentMetric] = useState(0);
 
   const analyticsTabs = {
     overview: {
@@ -226,20 +226,20 @@ const AIAdvancedAnalyticsDashboard2030 = () => {
     {
       title: 'User Growth Over Time',
       type: 'line',
-      data: [1200, 1900, 3000, 5000, 7500, 12000, 18000, 23000],
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug']
+      data: [12001900300050007500120001800023000],
+      labels: ['Jan'Feb'Mar'Apr'May'Jun'Jul'Aug']
     },
     {
       title: 'Revenue by Source',
       type: 'pie',
-      data: [45, 25, 20, 10],
-      labels: ['Organic', 'Paid', 'Social', 'Direct']
+      data: [45252010],
+      labels: ['Organic'Paid'Social'Direct']
     },
     {
       title: 'Page Performance',
       type: 'bar',
-      data: [85, 92, 78, 96, 88, 94, 90, 87],
-      labels: ['Home', 'About', 'Services', 'Products', 'Blog', 'Contact', 'Pricing', 'Support']
+      data: [8592789688949087],
+      labels: ['Home'About'Services'Products'Blog'Contact'Pricing'Support']
     }
   ];
 
@@ -253,17 +253,17 @@ const AIAdvancedAnalyticsDashboard2030 = () => {
           }
           return prev + 2;
         });
-      }, 100);
+      }100);
       return () => clearInterval(interval);
     }
-  }, [isAnalyzing]);
+  }[isAnalyzing]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMetric(prev => (prev + 1) % realTimeMetrics.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const startAnalysis = () => {
     setIsAnalyzing(true);
@@ -277,15 +277,15 @@ const AIAdvancedAnalyticsDashboard2030 = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="flex items-center justify-center gap-3 mb-6">
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 3repeat: Infinityease: "linear" }}
                 className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center"
               >
                 <Brain className="w-6 h-6 text-white" />
@@ -299,8 +299,8 @@ const AIAdvancedAnalyticsDashboard2030 = () => {
               Intelligent Analytics
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Advanced AI-powered analytics dashboard providing real-time insights, 
-              predictive analytics, and automated business intelligence.
+              Advanced AI-powered analytics dashboard providing real-time insights
+              predictive analyticsand automated business intelligence.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <motion.button
@@ -344,12 +344,12 @@ const AIAdvancedAnalyticsDashboard2030 = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {realTimeMetrics.map((metric, index) => (
+            {realTimeMetrics.map((metricindex) => (
               <motion.div
                 key={metric.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-gray-800/70 transition-all duration-300"
               >
                 <div className="flex items-center justify-center mb-4">
@@ -379,7 +379,7 @@ const AIAdvancedAnalyticsDashboard2030 = () => {
 
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {Object.entries(analyticsTabs).map(([key, tab]) => (
+            {Object.entries(analyticsTabs).map(([keytab]) => (
               <motion.button
                 key={key}
                 whileHover={{ scale: 1.05 }}
@@ -401,9 +401,9 @@ const AIAdvancedAnalyticsDashboard2030 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              exit={{ opacity: 0y: -20 }}
               transition={{ duration: 0.5 }}
               className="space-y-8"
             >
@@ -418,12 +418,12 @@ const AIAdvancedAnalyticsDashboard2030 = () => {
 
               {/* User Insights */}
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {userInsights.map((insight, index) => (
+                {userInsights.map((insightindex) => (
                   <motion.div
                     key={insight.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={{ opacity: 0y: 20 }}
+                    animate={{ opacity: 1y: 0 }}
+                    transition={{ duration: 0.6delay: index * 0.1 }}
                     className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 hover:bg-gray-800/70 transition-all duration-300"
                   >
                     <div className="flex items-center justify-between mb-4">
@@ -448,12 +448,12 @@ const AIAdvancedAnalyticsDashboard2030 = () => {
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8">
                 <h4 className="text-2xl font-bold mb-6">Performance Metrics</h4>
                 <div className="grid md:grid-cols-2 gap-6">
-                  {performanceData.map((perf, index) => (
+                  {performanceData.map((perfindex) => (
                     <motion.div
                       key={perf.metric}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      initial={{ opacity: 0x: -20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      transition={{ duration: 0.6delay: index * 0.1 }}
                       className="p-4 bg-gray-700/50 rounded-lg"
                     >
                       <div className="flex items-center justify-between mb-3">
@@ -507,12 +507,12 @@ const AIAdvancedAnalyticsDashboard2030 = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {aiFeatures.map((feature, index) => (
+            {aiFeatures.map((featureindex) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 hover:bg-gray-800/70 transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">

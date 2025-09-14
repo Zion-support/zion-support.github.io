@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 export default function FutureTechContentDiscoveryWidget() {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategorysetActiveCategory] = useState('all');
 
   const contentCategories = {
     all: {
@@ -36,7 +36,7 @@ export default function FutureTechContentDiscoveryWidget() {
       category: 'singularity',
       url: '/ai-2035-singularity-breakthrough',
       image: '🧠',
-      features: ['Consciousness Evolution', 'Neural Integration', 'Quantum Consciousness'],
+      features: ['Consciousness Evolution'Neural Integration'Quantum Consciousness'],
       gradient: 'from-purple-800 to-indigo-800'
     },
     {
@@ -46,7 +46,7 @@ export default function FutureTechContentDiscoveryWidget() {
       category: 'quantum',
       url: '/quantum-ai-fusion-2030',
       image: '⚛️',
-      features: ['Quantum Supremacy', 'AI Evolution', 'Future Computing'],
+      features: ['Quantum Supremacy'AI Evolution'Future Computing'],
       gradient: 'from-cyan-800 to-emerald-800'
     },
     {
@@ -56,7 +56,7 @@ export default function FutureTechContentDiscoveryWidget() {
       category: 'neural',
       url: '/neural-interface-revolution-2035',
       image: '🔗',
-      features: ['Neural Enhancement', 'Consciousness Bridge', 'Direct Thought Control'],
+      features: ['Neural Enhancement'Consciousness Bridge'Direct Thought Control'],
       gradient: 'from-violet-800 to-fuchsia-800'
     },
     {
@@ -66,7 +66,7 @@ export default function FutureTechContentDiscoveryWidget() {
       category: 'singularity',
       url: '/ai-2026-advanced-automation-revolution',
       image: '🤖',
-      features: ['Autonomous Systems', 'Smart Automation', 'Industry Transformation'],
+      features: ['Autonomous Systems'Smart Automation'Industry Transformation'],
       gradient: 'from-blue-800 to-purple-800'
     },
     {
@@ -76,7 +76,7 @@ export default function FutureTechContentDiscoveryWidget() {
       category: 'quantum',
       url: '/quantum-computing-solutions-2026',
       image: '⚡',
-      features: ['Quantum Processing', 'Complex Problem Solving', 'Exponential Speed'],
+      features: ['Quantum Processing'Complex Problem Solving'Exponential Speed'],
       gradient: 'from-teal-800 to-cyan-800'
     },
     {
@@ -86,7 +86,7 @@ export default function FutureTechContentDiscoveryWidget() {
       category: 'neural',
       url: '/brain-computer-interface-2030',
       image: '🧬',
-      features: ['Telepathic Communication', 'Enhanced Cognition', 'Neural Enhancement'],
+      features: ['Telepathic Communication'Enhanced Cognition'Neural Enhancement'],
       gradient: 'from-purple-800 to-pink-800'
     }
   ];
@@ -107,13 +107,13 @@ export default function FutureTechContentDiscoveryWidget() {
             Explore Revolutionary Technologies
           </h2>
           <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-            Discover cutting-edge AI, quantum computing, and neural interface technologies that will reshape the future of humanity.
+            Discover cutting-edge AIquantum computingand neural interface technologies that will reshape the future of humanity.
           </p>
         </div>
 
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {Object.entries(contentCategories).map(([key, category]) => (
+          {Object.entries(contentCategories).map(([keycategory]) => (
             <button
               key={key}
               onClick={() => setActiveCategory(key)}
@@ -148,7 +148,7 @@ export default function FutureTechContentDiscoveryWidget() {
 
               <div className="mb-6">
                 <div className="flex flex-wrap gap-2">
-                  {content.features.map((feature, index) => (
+                  {content.features.map((featureindex) => (
                     <span
                       key={index}
                       className="px-3 py-1 bg-white/20 text-white text-xs rounded-full"

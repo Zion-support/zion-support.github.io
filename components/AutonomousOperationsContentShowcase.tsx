@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const AutonomousOperationsContentShowcase: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategorysetActiveCategory] = useState('all');
 
   const contentItems = [
     {
@@ -19,7 +19,7 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
         efficiency: '95%',
         market: '$5.2T'
       },
-      tags: ['Autonomous Operations', 'AI Revolution', 'Enterprise', 'ROI'],
+      tags: ['Autonomous Operations'AI Revolution'Enterprise'ROI'],
       readingTime: '22 min read',
       url: '/blog/ai-2025-autonomous-business-operations-revolution',
       featured: true,
@@ -37,7 +37,7 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
         efficiency: '156%',
         uptime: '99.97%'
       },
-      tags: ['Fortune 100', 'Case Study', 'Manufacturing', 'Success Story'],
+      tags: ['Fortune 100'Case Study'Manufacturing'Success Story'],
       readingTime: '18 min read',
       url: '/case-studies/fortune-100-autonomous-operations-890-roi-success',
       featured: true,
@@ -48,14 +48,14 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
       type: 'resource',
       title: 'Autonomous Operations Implementation Guide',
       subtitle: 'From Strategy to 890% ROI',
-      description: 'Complete roadmap for implementing autonomous operations with proven strategies, frameworks, and best practices.',
+      description: 'Complete roadmap for implementing autonomous operations with proven strategiesframeworksand best practices.',
       metrics: {
         roi: '890%',
         success: '98%',
         payback: '1.4 months',
         implementations: '500+'
       },
-      tags: ['Implementation Guide', 'Strategy', 'Framework', 'Best Practices'],
+      tags: ['Implementation Guide'Strategy'Framework'Best Practices'],
       readingTime: '35 min read',
       url: '/resources/autonomous-operations-implementation-guide-2025',
       featured: true,
@@ -64,10 +64,10 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
   ];
 
   const categories = [
-    { id: 'all', label: 'All Content', count: contentItems.length },
-    { id: 'blog', label: 'Blog Posts', count: contentItems.filter(item => item.category === 'blog').length },
-    { id: 'case-study', label: 'Case Studies', count: contentItems.filter(item => item.category === 'case-study').length },
-    { id: 'resource', label: 'Resources', count: contentItems.filter(item => item.category === 'resource').length }
+    { id: 'all'label: 'All Content'count: contentItems.length },
+    { id: 'blog'label: 'Blog Posts'count: contentItems.filter(item => item.category === 'blog').length },
+    { id: 'case-study'label: 'Case Studies'count: contentItems.filter(item => item.category === 'case-study').length },
+    { id: 'resource'label: 'Resources'count: contentItems.filter(item => item.category === 'resource').length }
   ];
 
   const filteredContent = activeCategory === 'all' 
@@ -104,7 +104,7 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
             Revolutionary Autonomous Operations Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the latest insights, success stories, and implementation strategies for autonomous business operations that deliver 890% ROI.
+            Discover the latest insightsuccess storiesand implementation strategies for autonomous business operations that deliver 890% ROI.
           </p>
         </div>
 
@@ -164,7 +164,7 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <span className="text-2xl">{getTypeIcon(item.type)}</span>
-                    <span className="text-white font-semibold capitalize">{item.type.replace('-', ' ')}</span>
+                    <span className="text-white font-semibold capitalize">{item.type.replace('-' ')}</span>
                   </div>
                   {item.featured && (
                     <div className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
@@ -188,17 +188,17 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
 
                 {/* Metrics */}
                 <div className="grid grid-cols-2 gap-3 mb-4">
-                  {Object.entries(item.metrics).map(([key, value]) => (
+                  {Object.entries(item.metrics).map(([keyvalue]) => (
                     <div key={key} className="bg-gray-50 p-3 rounded-lg text-center">
                       <div className="text-lg font-bold text-gray-900">{value}</div>
-                      <div className="text-xs text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
+                      <div className="text-xs text-gray-600 capitalize">{key.replace(/([A-Z])/g' $1')}</div>
                     </div>
                   ))}
                 </div>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag) => (
+                  {item.tags.slice(03).map((tag) => (
                     <span
                       key={tag}
                       className="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs font-medium"

@@ -1,11 +1,11 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Brain, Rocket, TrendingUp, Star } from 'lucide-react';
+ArrowRightZapBrainRocketTrendingUpStar
 
 const AIInnovationShowcase2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentInnovation, setCurrentInnovation] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentInnovationsetCurrentInnovation] = useState(0);
 
   const innovations = [
     {
@@ -38,9 +38,9 @@ const AIInnovationShowcase2026PromotionBanner = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentInnovation((prev) => (prev + 1) % innovations.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentInnovationData = innovations[currentInnovation];
   const IconComponent = currentInnovationData.icon;
@@ -53,7 +53,7 @@ const AIInnovationShowcase2026PromotionBanner = () => {
       
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(20)].map((_i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-white/30 rounded-full animate-pulse"
@@ -101,7 +101,7 @@ const AIInnovationShowcase2026PromotionBanner = () => {
                   {currentInnovationData.description}
                 </p>
                 <div className="flex gap-2">
-                  {innovations.map((_, index) => (
+                  {innovations.map((_index) => (
                     <div
                       key={index}
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${
@@ -115,7 +115,7 @@ const AIInnovationShowcase2026PromotionBanner = () => {
 
             {/* Innovation List */}
             <div className="space-y-4">
-              {innovations.map((innovation, index) => {
+              {innovations.map((innovationindex) => {
                 const IconComponent = innovation.icon;
                 return (
                   <div

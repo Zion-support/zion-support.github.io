@@ -1,20 +1,20 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateContentPromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 4000);
+    }4000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const slides = [
     {
@@ -69,14 +69,14 @@ const UltimateContentPromotionBanner = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto">
-              Experience the most comprehensive collection of AI breakthrough content, 
-              revolutionary automation solutions, and future technology predictions
+              Experience the most comprehensive collection of AI breakthrough content
+              revolutionary automation solutionsand future technology predictions
             </p>
           </div>
 
           {/* Rotating Content Cards */}
           <div className="relative h-64 mb-12">
-            {slides.map((slide, index) => (
+            {slides.map((slideindex) => (
               <div
                 key={index}
                 className={`absolute inset-0 transition-all duration-1000 transform ${

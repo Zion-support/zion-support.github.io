@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-// import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'AI Implementation Ultimate Roadmap 2025: From Strategy to 800% ROI in 18 Months',

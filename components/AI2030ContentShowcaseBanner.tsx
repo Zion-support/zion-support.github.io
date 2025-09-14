@@ -2,16 +2,16 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Card, CardContent } from '@/components/ui/card';
+import { CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { 
-  Brain, 
-  Zap, 
-  TrendingUp, 
-  ArrowRight, 
-  Calendar, 
-  Users, 
+  Brain
+  Zap
+  TrendingUp
+  ArrowRight
+  Calendar
+  Users
   Target,
   Sparkles,
   Rocket,
@@ -37,7 +37,7 @@ export default function AI2030ContentShowcaseBanner() {
             Prepare for the AI 2030 Revolution
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover cutting-edge insights, strategies, and tools to transform your organization 
+            Discover cutting-edge insightstrategiesand tools to transform your organization 
             for the autonomous AI future that's arriving faster than you think.
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function AI2030ContentShowcaseBanner() {
                       AI 2030: Future Workforce Revolution
                     </h4>
                     <p className="text-gray-300 mb-4">
-                      Explore how AI will revolutionize workplace collaboration by 2030, 
+                      Explore how AI will revolutionize workplace collaboration by 2030
                       creating seamless human-AI partnerships that transform productivity.
                     </p>
                     <Link href="/blog/ai-2030-future-workforce-autonomous-collaboration-revolution">
@@ -88,7 +88,7 @@ export default function AI2030ContentShowcaseBanner() {
                       Sustainable Enterprise Transformation
                     </h4>
                     <p className="text-gray-300 mb-4">
-                      Discover how AI will drive sustainable business transformation, 
+                      Discover how AI will drive sustainable business transformation
                       enabling enterprises to achieve carbon neutrality while maximizing profitability.
                     </p>
                     <Link href="/blog/ai-2030-sustainable-enterprise-transformation-ultimate-guide">

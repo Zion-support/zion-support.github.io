@@ -1,43 +1,43 @@
 
-import { useState, useEffect } from "react";
+import { useStateuseEffect } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/components/ui/use-toast";
 import { SEO } from "@/components/SEO";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 import { 
-  Star, 
-  MapPin, 
-  Clock, 
-  Link as LinkIcon, 
-  Github, 
-  Twitter, 
+  Star
+  MapPin
+  Clock
+  Link as LinkIcon
+  Github
+  Twitter
   Linkedin,
   CheckCircle2
 } from "lucide-react";
 
 export default function ProfilePage() {
-  // useParams may be untyped in this environment, so avoid passing a
+  // useParams may be untyped in this environmentso avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
   const { profileId } = useParams() as { profileId?: string };
-  const [profileData, setProfileData] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
+  const [profileDatasetProfileData] = useState<any>(null);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [isErrorsetIsError] = useState(false);
 
   useEffect(() => {
     const fetchProfile = async () => {
       setIsLoading(true);
       setIsError(false);
       try {
-        const { data, error } = await supabase
+        const { dataerror } = await supabase
           .from("talent_profiles")
           .select("*")
-          .eq("id", profileId)
+          .eq("id"profileId)
           .single();
 
         if (error) {
@@ -46,7 +46,7 @@ export default function ProfilePage() {
 
         setProfileData(data);
       } catch (error) {
-        console.error("Error fetching profile:", error);
+        console.error("Error fetching profile:"error);
         setIsError(true);
         toast({
           title: "Error",
@@ -60,7 +60,7 @@ export default function ProfilePage() {
     if (profileId) {
       fetchProfile();
     }
-  }, [profileId]);
+  }[profileId]);
 
   if (isLoading) {
     return (
@@ -141,7 +141,7 @@ export default function ProfilePage() {
                 <div className="mt-4">
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>
                   <div className="flex flex-wrap gap-2">
-                    {profileData.skills.map((skill, index) => (
+                    {profileData.skills.map((skillindex) => (
                       <Badge key={index} variant="secondary">{skill}</Badge>
                     ))}
                   </div>
@@ -160,7 +160,7 @@ export default function ProfilePage() {
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
               <div className="space-y-3">
                 {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (
-                  profileData.portfolio_links.map((link, index) => (
+                  profileData.portfolio_links.map((linkindex) => (
                     <a
                       key={index}
                       href={link}

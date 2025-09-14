@@ -6,7 +6,7 @@ const AdvancedSEOStructuredData = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "description": "Leading AI and technology solutions provider specializing in enterprise automation, quantum computing, and revolutionary AI innovations.",
+    "description": "Leading AI and technology solutions provider specializing in enterprise automationquantum computingand revolutionary AI innovations.",
     "url": "https://zion.app",
     "logo": "https://zion.app/logo.png",
     "foundingDate": "2020",
@@ -33,7 +33,7 @@ const AdvancedSEOStructuredData = () => {
     ],
     "offers": {
       "@type": "Offer",
-      "description": "AI automation solutions, quantum computing services, and enterprise technology consulting",
+      "description": "AI automation solutionsquantum computing servicesand enterprise technology consulting",
       "category": "Technology Services"
     }
   };
@@ -43,7 +43,7 @@ const AdvancedSEOStructuredData = () => {
     "@type": "WebSite",
     "name": "Zion Tech Group - AI & Technology Solutions",
     "url": "https://zion.app",
-    "description": "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
+    "description": "Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions. Expert consulting and implementation services.",
     "publisher": {
       "@type": "Organization",
       "name": "Zion Tech Group"
@@ -132,7 +132,7 @@ const AdvancedSEOStructuredData = () => {
         "name": "What AI services does Zion Tech Group offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Zion Tech Group offers comprehensive AI automation solutions, quantum computing services, enterprise AI consulting, and revolutionary technology implementations for businesses of all sizes."
+          "text": "Zion Tech Group offers comprehensive AI automation solutionsquantum computing servicesenterprise AI consultingand revolutionary technology implementations for businesses of all sizes."
         }
       },
       {
@@ -140,7 +140,7 @@ const AdvancedSEOStructuredData = () => {
         "name": "How can AI automation improve my business ROI?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our AI automation solutions have helped Fortune 500 companies achieve up to 15,000% ROI through process optimization, intelligent automation, and strategic AI implementation."
+          "text": "Our AI automation solutions have helped Fortune 500 companies achieve up to 15,000% ROI through process optimizationintelligent automationand strategic AI implementation."
         }
       },
       {
@@ -148,7 +148,7 @@ const AdvancedSEOStructuredData = () => {
         "name": "What makes Zion Tech Group different from other AI companies?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We specialize in cutting-edge quantum computing integration, revolutionary AI architectures, and provide end-to-end solutions with proven results and comprehensive support."
+          "text": "We specialize in cutting-edge quantum computing integrationrevolutionary AI architecturesand provide end-to-end solutions with proven results and comprehensive support."
         }
       }
     ]
@@ -197,9 +197,9 @@ const AdvancedSEOStructuredData = () => {
       />
       
       {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
+      <meta name="robots" content="indexfollowmax-image-preview:largemax-snippet:-1max-video-preview:-1" />
+      <meta name="googlebot" content="indexfollow" />
+      <meta name="bingbot" content="indexfollow" />
       
       {/* Open Graph Enhanced */}
       <meta property="og:type" content="website" />

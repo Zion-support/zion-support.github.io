@@ -7,8 +7,8 @@ interface UltraFuturisticBackgroundProps {
 }
 
 export default function UltraFuturisticBackground({ 
-  children, 
-  variant = 'quantum', 
+  children
+  variant = 'quantum'
   intensity = 'medium' 
 }: UltraFuturisticBackgroundProps) {
   const getBackgroundClasses = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, TrendingUp, Users, Clock } from 'lucide-react';
+ArrowRightSparklesTrendingUpUsersClock
 
 export default function NewContent2025PromotionBanner() {
   return (
@@ -30,7 +30,7 @@ export default function NewContent2025PromotionBanner() {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Explore cutting-edge AI technologies, breakthrough case studies, and revolutionary insights that are reshaping industries in 2025.
+                Explore cutting-edge AI technologiesbreakthrough case studiesand revolutionary insights that are reshaping industries in 2025.
               </p>
               
               {/* Stats */}
@@ -83,7 +83,7 @@ export default function NewContent2025PromotionBanner() {
                   AI 2025: Latest Innovations and Breakthrough Technologies
                 </h3>
                 <p className="text-gray-300 text-sm mb-4">
-                  Discover quantum AI fusion, neural interfaces, and autonomous systems revolutionizing industries.
+                  Discover quantum AI fusioneural interfacesand autonomous systems revolutionizing industries.
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-gray-400 text-sm">

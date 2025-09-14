@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { TrendingUp, BarChart3, Globe, Calendar, ArrowRight, Star, Target, Zap } from 'lucide-react';
+TrendingUpBarChart3GlobeCalendarArrowRightStarTargetZap
 
 export default function AITrends2025UltimatePredictionsPromotionBanner() {
   return (

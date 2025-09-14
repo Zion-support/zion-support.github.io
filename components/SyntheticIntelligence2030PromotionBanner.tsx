@@ -13,8 +13,8 @@ const SyntheticIntelligence2030PromotionBanner: React.FC = () => {
             The Business Revolution
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Experience the next evolutionary leap in AI—systems that create, modify, and improve themselves. 
-            Unlock autonomous evolution, creative problem-solving, and unprecedented innovation capabilities.
+            Experience the next evolutionary leap in AI—systems that createmodifyand improve themselves. 
+            Unlock autonomous evolutioncreative problem-solvingand unprecedented innovation capabilities.
           </p>
         </div>
 

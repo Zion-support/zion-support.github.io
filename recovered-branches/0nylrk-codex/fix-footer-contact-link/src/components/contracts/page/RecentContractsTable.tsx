@@ -15,7 +15,7 @@ interface RecentContractsTableProps {
   onViewContract: (contractId: string) => void;
 }
 
-export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
+export function RecentContractsTable({ contractsonViewContract }: RecentContractsTableProps) {
   return (
     <>
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>

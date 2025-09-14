@@ -37,12 +37,12 @@ const UltimateAIAutomationShowcase2025 = () => {
             Ultimate AI Automation 2025
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-pink-100 max-w-4xl mx-auto">
-            Experience the future of business automation with our advanced AI systems that streamline operations, reduce costs, and maximize efficiency.
+            Experience the future of business automation with our advanced AI systems that streamline operationsreduce costsand maximize efficiency.
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {automationFeatures.map((feature, index) => (
+          {automationFeatures.map((featureindex) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-bold text-white mb-4">
@@ -63,7 +63,7 @@ const UltimateAIAutomationShowcase2025 = () => {
             Ready to Automate Your Business?
           </h3>
           <p className="text-xl text-pink-100 mb-8 max-w-3xl mx-auto">
-            Transform your business with our advanced AI automation solutions and achieve unprecedented efficiency, savings, and growth.
+            Transform your business with our advanced AI automation solutions and achieve unprecedented efficiencysavingsand growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
