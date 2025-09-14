@@ -111,11 +111,6 @@ export default defineConfig(async ({ mode }) => {
     optimizeDeps: {
       include: ['react', 'react-dom', 'framer-motion'],
       exclude: ['@vite/client', '@vite/env']
-    },
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, './src'),
-      },
     }
   };
 });
