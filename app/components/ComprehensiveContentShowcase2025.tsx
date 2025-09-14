@@ -2,202 +2,232 @@ import React from 'react';
 import Link from 'next/link';
 
 const ComprehensiveContentShowcase2025 = () => {
-  const contentItems = [
+  const contentSections = [
     {
-      category: "AI Revolution",
-      title: "Data Analytics Revolution",
-      description: "Transform your data into actionable intelligence with AI-powered analytics. Achieve 500%+ ROI through advanced business intelligence solutions.",
-      image: "📊",
-      link: "/blog/ai-2025-data-analytics-revolution-enterprise-intelligence",
-      tags: ["Data Analytics", "Business Intelligence", "500% ROI"],
-      featured: true
+      title: "Latest AI Insights",
+      description: "Cutting-edge AI strategies and implementation guides",
+      icon: "🚀",
+      content: [
+        {
+          title: "AI 2025 Enterprise Integration Mastery",
+          description: "Complete implementation guide with 340% average ROI increase",
+          href: "/blog/ai-2025-enterprise-integration-mastery",
+          new: true,
+          featured: true,
+          readingTime: "12 min read"
+        },
+        {
+          title: "Quantum AI Business Revolution 2025",
+          description: "Discover exponential improvements with quantum AI",
+          href: "/blog/quantum-ai-business-revolution-2025",
+          new: true,
+          featured: true,
+          readingTime: "15 min read"
+        },
+        {
+          title: "AI Autonomous Business Operations 2025",
+          description: "Self-managing enterprises with 500% productivity increases",
+          href: "/blog/ai-autonomous-business-operations-2025",
+          new: true,
+          featured: true,
+          readingTime: "18 min read"
+        }
+      ]
     },
     {
-      category: "Blockchain Innovation",
-      title: "Blockchain Integration Revolution",
-      description: "Revolutionize your business with AI-powered blockchain solutions. Achieve 600%+ ROI through intelligent decentralized systems.",
-      image: "⛓️",
-      link: "/blog/ai-2025-blockchain-integration-revolution-enterprise-solutions",
-      tags: ["Blockchain", "Smart Contracts", "600% ROI"],
-      featured: true
+      title: "Implementation Resources",
+      description: "Practical guides and frameworks for AI adoption",
+      icon: "📚",
+      content: [
+        {
+          title: "AI Implementation Enterprise Guide 2025",
+          description: "Complete roadmap with real-world case studies",
+          href: "/resources/ai-implementation-enterprise-guide-2025",
+          new: true,
+          featured: true,
+          readingTime: "25 min read"
+        },
+        {
+          title: "AI ROI Calculator 2025",
+          description: "Calculate your potential AI investment returns",
+          href: "/tools/ai-roi-calculator",
+          new: false,
+          featured: false,
+          readingTime: "5 min read"
+        },
+        {
+          title: "AI Readiness Assessment Tool",
+          description: "Evaluate your organization's AI readiness",
+          href: "/tools/ai-readiness-assessment",
+          new: false,
+          featured: false,
+          readingTime: "10 min read"
+        }
+      ]
     },
     {
-      category: "IoT Transformation",
-      title: "IoT Integration Revolution",
-      description: "Transform your enterprise with AI-powered IoT solutions. Achieve 700%+ ROI through intelligent smart system automation.",
-      image: "🌐",
-      link: "/blog/ai-2025-iot-integration-revolution-smart-enterprise-systems",
-      tags: ["IoT", "Smart Systems", "700% ROI"],
-      featured: true
-    },
-    {
-      category: "Success Stories",
-      title: "Enterprise Transformation Success Story",
-      description: "Discover how a Fortune 500 company achieved 500% ROI through comprehensive AI transformation. Learn the strategies and results.",
-      image: "🏆",
-      link: "/case-studies/ai-enterprise-transformation-success-story-2025",
-      tags: ["Case Study", "500% ROI", "Fortune 500"],
-      featured: false
-    },
-    {
-      category: "Implementation Guide",
-      title: "AI Implementation Guide 2025",
-      description: "Master AI implementation with our comprehensive 2025 guide. Step-by-step roadmap for enterprise AI transformation.",
-      image: "📋",
-      link: "/resources/ai-implementation-guide-2025",
-      tags: ["Guide", "Implementation", "Roadmap"],
-      featured: false
-    },
-    {
-      category: "Cloud Computing",
-      title: "Cloud Computing Revolution",
-      description: "Master the cloud computing revolution with AI-powered solutions. Learn how enterprises achieve 400%+ ROI through intelligent cloud strategies.",
-      image: "☁️",
-      link: "/blog/ai-2025-cloud-computing-revolution-ultimate-guide",
-      tags: ["Cloud Computing", "400% ROI", "Enterprise"],
-      featured: false
+      title: "Success Stories",
+      description: "Real-world case studies and transformation stories",
+      icon: "📊",
+      content: [
+        {
+          title: "Manufacturing: 400% Efficiency Increase",
+          description: "How AI transformed production operations",
+          href: "/case-studies/manufacturing-ai-success",
+          new: false,
+          featured: false,
+          readingTime: "8 min read"
+        },
+        {
+          title: "Financial Services: $2B Autonomous Trading",
+          description: "Bank achieves 300% ROI with AI trading",
+          href: "/case-studies/financial-ai-transformation",
+          new: false,
+          featured: false,
+          readingTime: "10 min read"
+        },
+        {
+          title: "Healthcare: Life-Saving AI Implementation",
+          description: "Hospital system saves 2,000+ lives annually",
+          href: "/case-studies/healthcare-ai-breakthrough",
+          new: false,
+          featured: false,
+          readingTime: "12 min read"
+        }
+      ]
     }
   ];
 
-  const categories = ["All", "AI Revolution", "Blockchain Innovation", "IoT Transformation", "Success Stories", "Implementation Guide", "Cloud Computing"];
+  const stats = [
+    { number: "500+", label: "AI Projects Delivered", color: "text-purple-600" },
+    { number: "340%", label: "Average ROI Increase", color: "text-green-600" },
+    { number: "98%", label: "Client Satisfaction", color: "text-blue-600" },
+    { number: "24/7", label: "Expert Support", color: "text-orange-600" }
+  ];
 
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 COMPREHENSIVE CONTENT LIBRARY</span>
+          <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">📚 COMPREHENSIVE CONTENT LIBRARY</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Revolutionary AI Content
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              for 2025
-            </span>
+            Everything You Need for AI Success
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Access our comprehensive library of AI insights, implementation guides, and success stories. 
-            Transform your business with proven strategies and cutting-edge solutions.
+            Access our complete library of AI insights, implementation guides, 
+            success stories, and practical tools to transform your business
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className="px-6 py-3 rounded-full border-2 border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-medium"
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+        {/* Content Sections */}
+        <div className="space-y-16">
+          {contentSections.map((section, sectionIndex) => (
+            <div key={sectionIndex} className="bg-gray-50 rounded-2xl p-8">
+              <div className="flex items-center mb-8">
+                <div className="text-4xl mr-4">{section.icon}</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {section.title}
+                  </h3>
+                  <p className="text-gray-600">{section.description}</p>
+                </div>
+              </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {contentItems.map((item, index) => (
-            <div
-              key={index}
-              className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105 ${
-                item.featured ? 'ring-2 ring-blue-500' : ''
-              }`}
-            >
-              {item.featured && (
-                <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 text-sm font-medium text-center">
-                  ⭐ FEATURED CONTENT
-                </div>
-              )}
-              
-              <div className="p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-4xl">{item.image}</div>
-                  <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm font-medium">
-                    {item.category}
-                  </span>
-                </div>
-                
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {item.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {item.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {item.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium"
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {section.content.map((item, itemIndex) => (
+                  <div
+                    key={itemIndex}
+                    className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 group"
+                  >
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center space-x-2">
+                        {item.new && (
+                          <span className="bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
+                            NEW
+                          </span>
+                        )}
+                        {item.featured && (
+                          <span className="bg-purple-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
+                            FEATURED
+                          </span>
+                        )}
+                      </div>
+                      <span className="text-sm text-gray-500">{item.readingTime}</span>
+                    </div>
+
+                    <h4 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                      {item.title}
+                    </h4>
+
+                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+
+                    <Link
+                      href={item.href}
+                      className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold text-sm group-hover:underline"
                     >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                
-                <Link
-                  href={item.link}
-                  className="inline-flex items-center w-full justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                >
-                  Read Full Article →
-                </Link>
+                      Read More
+                      <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+                    </Link>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Statistics Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white mb-16">
+        {/* Success Statistics */}
+        <div className="mt-20 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12 text-white">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">Proven Results Across Industries</h3>
-            <p className="text-xl opacity-90">
-              Our content is based on real-world implementations and measurable outcomes
+            <h3 className="text-3xl font-bold mb-4">
+              Proven Results Across Industries
+            </h3>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Our AI solutions have delivered measurable results for organizations 
+              worldwide, from startups to Fortune 500 companies
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">500+</div>
-              <div className="text-lg opacity-90">Successful Implementations</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">400%+</div>
-              <div className="text-lg opacity-90">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">98%</div>
-              <div className="text-lg opacity-90">Client Satisfaction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">$2.1B</div>
-              <div className="text-lg opacity-90">Total Value Created</div>
-            </div>
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className={`text-4xl font-bold mb-2 ${stat.color}`}>
+                  {stat.number}
+                </div>
+                <div className="text-lg opacity-90">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Join hundreds of enterprises that have already achieved remarkable success with our AI solutions. 
-            Get started with a free consultation and discover your transformation potential.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Free Consultation
-            </Link>
-            <Link
-              href="/services"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
-            >
-              Explore All Services
-            </Link>
+        <div className="mt-20 text-center">
+          <div className="bg-gray-50 rounded-2xl p-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Ready to Start Your AI Journey?
+            </h3>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Join thousands of organizations already leveraging our AI solutions 
+              to achieve unprecedented growth and efficiency
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/services"
+                className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              >
+                Explore Our Services
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
+              >
+                Get Free Consultation
+              </Link>
+            </div>
           </div>
         </div>
       </div>

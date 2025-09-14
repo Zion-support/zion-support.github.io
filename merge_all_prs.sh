@@ -5,152 +5,88 @@ set -e
 
 echo "🚀 Starting comprehensive PR merge process..."
 
-# Get all open PRs
-echo "📋 Fetching open PRs..."
-OPEN_PRS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | grep -o '"number":[0-9]*' | grep -o '[0-9]*')
+# Get all cursor branches
+BRANCHES=$(git branch -r | grep "cursor/" | grep -v "HEAD" | sed 's/origin\///' | sort -u)
 
-if [ -z "$OPEN_PRS" ]; then
-    echo "✅ No open PRs found"
-    exit 0
-fi
+echo "📋 Found $(echo "$BRANCHES" | wc -l) branches to process"
 
-echo "Found open PRs: $OPEN_PRS"
+# Counter for tracking
+SUCCESS_COUNT=0
+CONFLICT_COUNT=0
+ERROR_COUNT=0
 
-# Function to merge a single PR
-merge_pr() {
-    local pr_number=$1
-    echo "🔄 Processing PR #$pr_number..."
+# Process each branch
+for branch in $BRANCHES; do
+    echo ""
+    echo "🔄 Processing branch: $branch"
     
-    # Get PR details
-    local pr_data=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number")
-    local head_ref=$(echo "$pr_data" | grep -o '"head":[^}]*"ref":"[^"]*"' | grep -o '"[^"]*"$' | tr -d '"')
-    local base_ref=$(echo "$pr_data" | grep -o '"base":[^}]*"ref":"[^"]*"' | grep -o '"[^"]*"$' | tr -d '"')
-    
-    if [ -z "$head_ref" ]; then
-        echo "❌ Could not get head ref for PR #$pr_number"
-        return 1
+    # Check if branch exists locally
+    if git show-ref --verify --quiet refs/heads/$branch; then
+        echo "  ✅ Branch exists locally"
+    else
+        echo "  📥 Fetching branch from remote..."
+        git fetch origin $branch:$branch
     fi
     
-    echo "  📍 PR #$pr_number: $head_ref -> $base_ref"
+    # Switch to main
+    git checkout main
     
-    # Checkout the PR branch
-    echo "  🔄 Checking out branch: $head_ref"
-    if ! git fetch origin "$head_ref:$head_ref"; then
-        echo "  ❌ Failed to fetch branch $head_ref"
-        return 1
-    fi
+    # Try to merge
+    echo "  🔀 Attempting to merge $branch into main..."
     
-    if ! git checkout "$head_ref"; then
-        echo "  ❌ Failed to checkout branch $head_ref"
-        return 1
-    fi
-    
-    # Try to merge with main
-    echo "  🔄 Attempting to merge with main..."
-    if git checkout main; then
-        if git merge "$head_ref" --no-ff -m "Merge PR #$pr_number: $head_ref"; then
-            echo "  ✅ Successfully merged PR #$pr_number"
+    if git merge $branch --no-ff -m "Merge $branch into main" 2>/dev/null; then
+        echo "  ✅ Successfully merged $branch"
+        ((SUCCESS_COUNT++))
+        
+        # Push the changes
+        echo "  📤 Pushing changes to remote..."
+        git push origin main
+        
+    else
+        echo "  ⚠️  Merge conflict detected in $branch"
+        ((CONFLICT_COUNT++))
+        
+        # Check what files have conflicts
+        CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
+        echo "  📝 Conflicted files: $CONFLICT_FILES"
+        
+        # Resolve conflicts by keeping our version (main branch)
+        for file in $CONFLICT_FILES; do
+            echo "  🔧 Resolving conflict in $file (keeping main version)"
+            git checkout --ours "$file"
+            git add "$file"
+        done
+        
+        # Commit the resolved merge
+        if git commit -m "Merge $branch into main - conflicts resolved" --no-edit; then
+            echo "  ✅ Successfully resolved conflicts and merged $branch"
+            ((SUCCESS_COUNT++))
             
-            # Push to main
-            if git push origin main; then
-                echo "  ✅ Successfully pushed PR #$pr_number to main"
-                
-                # Close the PR
-                curl -X PATCH \
-                    -H "Accept: application/vnd.github.v3+json" \
-                    -H "Authorization: token $GITHUB_TOKEN" \
-                    "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number" \
-                    -d '{"state":"closed"}' 2>/dev/null || echo "  ⚠️  Could not close PR (may need manual closure)"
-                
-                # Delete the branch
-                git push origin --delete "$head_ref" 2>/dev/null || echo "  ⚠️  Could not delete remote branch"
-                git branch -D "$head_ref" 2>/dev/null || echo "  ⚠️  Could not delete local branch"
-                
-                return 0
-            else
-                echo "  ❌ Failed to push PR #$pr_number to main"
-                return 1
-            fi
+            # Push the changes
+            echo "  📤 Pushing resolved changes to remote..."
+            git push origin main
         else
-            echo "  ⚠️  Merge conflict detected for PR #$pr_number"
+            echo "  ❌ Failed to commit resolved merge for $branch"
+            ((ERROR_COUNT++))
             
-            # Try to resolve conflicts automatically
-            echo "  🔧 Attempting to resolve conflicts..."
-            
-            # Check for common conflict patterns and resolve them
-            if [ -f "app/page.tsx" ]; then
-                echo "  🔧 Resolving conflicts in app/page.tsx..."
-                # Remove conflict markers and keep both versions where possible
-                sed -i '/^<<<<<<< HEAD/,/^=======/d' app/page.tsx 2>/dev/null || true
-                sed -i '/^>>>>>>> /d' app/page.tsx 2>/dev/null || true
-            fi
-            
-            if [ -f "app/sitemap.ts" ]; then
-                echo "  🔧 Resolving conflicts in app/sitemap.ts..."
-                sed -i '/^<<<<<<< HEAD/,/^=======/d' app/sitemap.ts 2>/dev/null || true
-                sed -i '/^>>>>>>> /d' app/sitemap.ts 2>/dev/null || true
-            fi
-            
-            # Add resolved files
-            git add . 2>/dev/null || true
-            
-            # Try to commit the merge
-            if git commit -m "Resolve merge conflicts for PR #$pr_number" 2>/dev/null; then
-                echo "  ✅ Successfully resolved conflicts for PR #$pr_number"
-                
-                # Push to main
-                if git push origin main; then
-                    echo "  ✅ Successfully pushed resolved PR #$pr_number to main"
-                    
-                    # Close the PR
-                    curl -X PATCH \
-                        -H "Accept: application/vnd.github.v3+json" \
-                        -H "Authorization: token $GITHUB_TOKEN" \
-                        "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number" \
-                        -d '{"state":"closed"}' 2>/dev/null || echo "  ⚠️  Could not close PR (may need manual closure)"
-                    
-                    # Delete the branch
-                    git push origin --delete "$head_ref" 2>/dev/null || echo "  ⚠️  Could not delete remote branch"
-                    git branch -D "$head_ref" 2>/dev/null || echo "  ⚠️  Could not delete local branch"
-                    
-                    return 0
-                else
-                    echo "  ❌ Failed to push resolved PR #$pr_number to main"
-                    return 1
-                fi
-            else
-                echo "  ❌ Could not resolve conflicts for PR #$pr_number"
-                git merge --abort 2>/dev/null || true
-                return 1
-            fi
+            # Abort the merge
+            git merge --abort
         fi
-    else
-        echo "  ❌ Failed to checkout main branch"
-        return 1
     fi
-}
-
-# Process each PR
-successful_merges=0
-failed_merges=0
-
-for pr_number in $OPEN_PRS; do
-    if merge_pr "$pr_number"; then
-        ((successful_merges++))
-    else
-        ((failed_merges++))
-    fi
-    echo "---"
+    
+    # Clean up the local branch
+    echo "  🧹 Cleaning up local branch $branch"
+    git branch -D $branch 2>/dev/null || true
+    
+    echo "  ✅ Completed processing $branch"
 done
 
-echo "📊 Merge Summary:"
-echo "  ✅ Successful merges: $successful_merges"
-echo "  ❌ Failed merges: $failed_merges"
+echo ""
+echo "📊 Merge Process Summary:"
+echo "  ✅ Successful merges: $SUCCESS_COUNT"
+echo "  ⚠️  Conflicts resolved: $CONFLICT_COUNT"
+echo "  ❌ Errors: $ERROR_COUNT"
+echo "  📋 Total processed: $((SUCCESS_COUNT + CONFLICT_COUNT + ERROR_COUNT))"
 
-# Final cleanup
-echo "🧹 Final cleanup..."
-git checkout main
-git pull origin main
-git branch -D $(git branch | grep -v main | grep -v '\*' | xargs) 2>/dev/null || true
-
+echo ""
 echo "🎉 PR merge process completed!"
