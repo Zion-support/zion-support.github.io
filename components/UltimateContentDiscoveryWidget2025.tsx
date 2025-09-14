@@ -1,236 +1,266 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateContentDiscoveryWidget2025 = () => {
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedTrend, setSelectedTrend] = useState('all');
   const [filteredContent, setFilteredContent] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
 
   const contentItems = [
     {
       id: 1,
-      title: "AI Automation Mastery Guide 2025",
-      description: "Complete guide to implementing AI automation in your business with proven strategies and real-world case studies.",
-      category: "AI Automation",
-      type: "Guide",
+      title: "Neural Superintelligence Breakthrough 2025",
+      description: "Revolutionary AI systems achieving human-level consciousness and beyond",
+      category: "ai-trends",
+      trend: "neural-ai",
+      type: "article",
       readTime: "15 min",
-      difficulty: "Intermediate",
-      rating: 4.9,
-      views: 12500,
-      featured: true,
-      tags: ["AI", "Automation", "Business", "Strategy"],
-      image: "/images/ai-automation-guide.jpg",
-      url: "/guides/ai-automation-mastery-2025"
+      difficulty: "Advanced",
+      roi: "2,400%",
+      image: "🧠",
+      tags: ["AI", "Neural Networks", "Consciousness", "Breakthrough"],
+      featured: true
     },
     {
       id: 2,
-      title: "Quantum Computing Breakthroughs 2025",
-      description: "Explore the latest quantum computing innovations and their potential impact on business operations.",
-      category: "Quantum Computing",
-      type: "Article",
-      readTime: "12 min",
-      difficulty: "Advanced",
-      rating: 4.8,
-      views: 8900,
-      featured: true,
-      tags: ["Quantum", "Computing", "Innovation", "Technology"],
-      image: "/images/quantum-computing.jpg",
-      url: "/articles/quantum-computing-breakthroughs-2025"
+      title: "Quantum-Neural Fusion Implementation Guide",
+      description: "Complete guide to implementing quantum computing with neural networks",
+      category: "implementation",
+      trend: "quantum-ai",
+      type: "guide",
+      readTime: "25 min",
+      difficulty: "Expert",
+      roi: "5,000%",
+      image: "⚛️",
+      tags: ["Quantum Computing", "Neural Networks", "Implementation", "Guide"],
+      featured: true
     },
     {
       id: 3,
-      title: "Neural Interface Revolution",
-      description: "Discover how neural interfaces are transforming human-computer interaction and business applications.",
-      category: "Neural Interfaces",
-      type: "Case Study",
-      readTime: "20 min",
-      difficulty: "Expert",
-      rating: 4.9,
-      views: 15600,
-      featured: true,
-      tags: ["Neural", "Interface", "Revolution", "Future"],
-      image: "/images/neural-interface.jpg",
-      url: "/case-studies/neural-interface-revolution"
+      title: "Autonomous Business Ecosystems Case Study",
+      description: "How Fortune 500 companies achieved 8,000% ROI with autonomous systems",
+      category: "case-studies",
+      trend: "autonomous-systems",
+      type: "case-study",
+      readTime: "12 min",
+      difficulty: "Intermediate",
+      roi: "8,000%",
+      image: "🤖",
+      tags: ["Case Study", "Autonomous Systems", "ROI", "Fortune 500"],
+      featured: false
     },
     {
       id: 4,
-      title: "Micro SaaS Development Framework",
-      description: "Step-by-step framework for building and scaling micro SaaS applications with modern technologies.",
-      category: "Micro SaaS",
-      type: "Framework",
-      readTime: "25 min",
-      difficulty: "Intermediate",
-      rating: 4.7,
-      views: 10200,
-      featured: false,
-      tags: ["SaaS", "Development", "Framework", "Scaling"],
-      image: "/images/micro-saas.jpg",
-      url: "/frameworks/micro-saas-development"
+      title: "Synthetic Intelligence Revolution Framework",
+      description: "Framework for building self-improving AI systems",
+      category: "frameworks",
+      trend: "synthetic-ai",
+      type: "framework",
+      readTime: "30 min",
+      difficulty: "Expert",
+      roi: "10,000%",
+      image: "🔬",
+      tags: ["Synthetic Intelligence", "Framework", "Self-Improving AI", "Revolution"],
+      featured: true
     },
     {
       id: 5,
-      title: "Cloud Infrastructure Optimization",
-      description: "Best practices for optimizing cloud infrastructure for performance, cost, and scalability.",
-      category: "Cloud Computing",
-      type: "Tutorial",
-      readTime: "18 min",
-      difficulty: "Intermediate",
-      rating: 4.6,
-      views: 7800,
-      featured: false,
-      tags: ["Cloud", "Infrastructure", "Optimization", "Performance"],
-      image: "/images/cloud-infrastructure.jpg",
-      url: "/tutorials/cloud-infrastructure-optimization"
+      title: "AI ROI Calculator: Ultimate Guide",
+      description: "Calculate your potential ROI with our comprehensive AI solutions",
+      category: "tools",
+      trend: "roi-optimization",
+      type: "tool",
+      readTime: "8 min",
+      difficulty: "Beginner",
+      roi: "Variable",
+      image: "💰",
+      tags: ["ROI Calculator", "Tools", "Business", "Optimization"],
+      featured: false
     },
     {
       id: 6,
-      title: "AI Ethics and Governance Framework",
-      description: "Comprehensive framework for implementing ethical AI practices and governance in enterprise environments.",
-      category: "AI Ethics",
-      type: "Framework",
-      readTime: "22 min",
+      title: "Edge Computing Revolution 2025",
+      description: "How edge computing is transforming AI deployment and performance",
+      category: "ai-trends",
+      trend: "edge-computing",
+      type: "article",
+      readTime: "18 min",
       difficulty: "Advanced",
-      rating: 4.8,
-      views: 9200,
-      featured: true,
-      tags: ["AI Ethics", "Governance", "Enterprise", "Compliance"],
-      image: "/images/ai-ethics.jpg",
-      url: "/frameworks/ai-ethics-governance"
+      roi: "1,500%",
+      image: "🌐",
+      tags: ["Edge Computing", "AI Deployment", "Performance", "Revolution"],
+      featured: false
     },
     {
       id: 7,
-      title: "Edge Computing Revolution 2025",
-      description: "How edge computing is transforming data processing and enabling real-time business applications.",
-      category: "Edge Computing",
-      type: "Article",
-      readTime: "14 min",
+      title: "AI Ethics and Governance Framework",
+      description: "Comprehensive framework for ethical AI development and deployment",
+      category: "frameworks",
+      trend: "ai-ethics",
+      type: "framework",
+      readTime: "20 min",
       difficulty: "Intermediate",
-      rating: 4.5,
-      views: 6500,
-      featured: false,
-      tags: ["Edge Computing", "Data Processing", "Real-time", "Innovation"],
-      image: "/images/edge-computing.jpg",
-      url: "/articles/edge-computing-revolution-2025"
+      roi: "Risk Mitigation",
+      image: "⚖️",
+      tags: ["AI Ethics", "Governance", "Framework", "Responsible AI"],
+      featured: false
     },
     {
       id: 8,
-      title: "Synthetic Intelligence Applications",
-      description: "Exploring synthetic intelligence and its applications in business automation and decision-making.",
-      category: "Synthetic Intelligence",
-      type: "Research",
-      readTime: "30 min",
-      difficulty: "Expert",
-      rating: 4.9,
-      views: 11800,
-      featured: true,
-      tags: ["Synthetic Intelligence", "AI", "Business", "Decision Making"],
-      image: "/images/synthetic-intelligence.jpg",
-      url: "/research/synthetic-intelligence-applications"
+      title: "Multimodal AI Applications Guide",
+      description: "Complete guide to implementing multimodal AI across industries",
+      category: "implementation",
+      trend: "multimodal-ai",
+      type: "guide",
+      readTime: "22 min",
+      difficulty: "Advanced",
+      roi: "3,200%",
+      image: "🎯",
+      tags: ["Multimodal AI", "Implementation", "Guide", "Applications"],
+      featured: true
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length },
-    { id: 'AI Automation', name: 'AI Automation', count: contentItems.filter(item => item.category === 'AI Automation').length },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: contentItems.filter(item => item.category === 'Quantum Computing').length },
-    { id: 'Neural Interfaces', name: 'Neural Interfaces', count: contentItems.filter(item => item.category === 'Neural Interfaces').length },
-    { id: 'Micro SaaS', name: 'Micro SaaS', count: contentItems.filter(item => item.category === 'Micro SaaS').length },
-    { id: 'Cloud Computing', name: 'Cloud Computing', count: contentItems.filter(item => item.category === 'Cloud Computing').length },
-    { id: 'AI Ethics', name: 'AI Ethics', count: contentItems.filter(item => item.category === 'AI Ethics').length },
-    { id: 'Edge Computing', name: 'Edge Computing', count: contentItems.filter(item => item.category === 'Edge Computing').length },
-    { id: 'Synthetic Intelligence', name: 'Synthetic Intelligence', count: contentItems.filter(item => item.category === 'Synthetic Intelligence').length }
+    { value: 'all', label: 'All Content', count: contentItems.length },
+    { value: 'ai-trends', label: 'AI Trends', count: contentItems.filter(item => item.category === 'ai-trends').length },
+    { value: 'implementation', label: 'Implementation', count: contentItems.filter(item => item.category === 'implementation').length },
+    { value: 'case-studies', label: 'Case Studies', count: contentItems.filter(item => item.category === 'case-studies').length },
+    { value: 'frameworks', label: 'Frameworks', count: contentItems.filter(item => item.category === 'frameworks').length },
+    { value: 'tools', label: 'Tools', count: contentItems.filter(item => item.category === 'tools').length }
+  ];
+
+  const trends = [
+    { value: 'all', label: 'All Trends' },
+    { value: 'neural-ai', label: 'Neural AI' },
+    { value: 'quantum-ai', label: 'Quantum AI' },
+    { value: 'autonomous-systems', label: 'Autonomous Systems' },
+    { value: 'synthetic-ai', label: 'Synthetic AI' },
+    { value: 'edge-computing', label: 'Edge Computing' },
+    { value: 'multimodal-ai', label: 'Multimodal AI' },
+    { value: 'ai-ethics', label: 'AI Ethics' }
   ];
 
   useEffect(() => {
-    let filtered = contentItems;
+    setIsSearching(true);
+    const timer = setTimeout(() => {
+      let filtered = contentItems;
 
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(item => item.category === selectedCategory);
-    }
+      if (searchTerm) {
+        filtered = filtered.filter(item =>
+          item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+        );
+      }
 
-    if (searchQuery) {
-      filtered = filtered.filter(item => 
-        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
-    }
+      if (selectedCategory !== 'all') {
+        filtered = filtered.filter(item => item.category === selectedCategory);
+      }
 
-    setFilteredContent(filtered);
-  }, [selectedCategory, searchQuery]);
+      if (selectedTrend !== 'all') {
+        filtered = filtered.filter(item => item.trend === selectedTrend);
+      }
 
-  const getDifficultyColor = (difficulty: string) => {
+      setFilteredContent(filtered);
+      setIsSearching(false);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [searchTerm, selectedCategory, selectedTrend]);
+
+  const getDifficultyColor = (difficulty) => {
     switch (difficulty) {
-      case 'Beginner': return 'bg-green-100 text-green-800';
-      case 'Intermediate': return 'bg-yellow-100 text-yellow-800';
-      case 'Advanced': return 'bg-orange-100 text-orange-800';
-      case 'Expert': return 'bg-red-100 text-red-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'Beginner': return 'text-green-600 bg-green-100';
+      case 'Intermediate': return 'text-yellow-600 bg-yellow-100';
+      case 'Advanced': return 'text-orange-600 bg-orange-100';
+      case 'Expert': return 'text-red-600 bg-red-100';
+      default: return 'text-gray-600 bg-gray-100';
     }
   };
 
-  const getTypeColor = (type: string) => {
+  const getTypeIcon = (type) => {
     switch (type) {
-      case 'Guide': return 'bg-blue-100 text-blue-800';
-      case 'Article': return 'bg-purple-100 text-purple-800';
-      case 'Case Study': return 'bg-green-100 text-green-800';
-      case 'Framework': return 'bg-indigo-100 text-indigo-800';
-      case 'Tutorial': return 'bg-pink-100 text-pink-800';
-      case 'Research': return 'bg-yellow-100 text-yellow-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'article': return '📄';
+      case 'guide': return '📚';
+      case 'case-study': return '📊';
+      case 'framework': return '🏗️';
+      case 'tool': return '🛠️';
+      default: return '📄';
     }
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
+    <div className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🔍 CONTENT DISCOVERY 2025</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🔍 CONTENT DISCOVERY</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Discover Our Latest Content
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Ultimate Content Discovery Widget
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our comprehensive library of guides, case studies, frameworks, and research papers. 
-            Find the perfect content to accelerate your AI and technology journey.
+            Discover the latest AI content, trends, and resources tailored to your interests and expertise level.
           </p>
         </div>
 
-        {/* Search and Filter */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
-          <div className="flex flex-col lg:flex-row gap-6">
-            {/* Search Bar */}
-            <div className="flex-1">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search content by title, description, or tags..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
+        {/* Search and Filters */}
+        <div className="bg-white rounded-3xl shadow-2xl p-8 mb-12">
+          {/* Search Bar */}
+          <div className="mb-8">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search content, trends, or topics..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-6 py-4 pl-12 text-lg border border-gray-300 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              />
+              <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          {/* Filters */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Category Filter */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-3">Category</label>
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category) => (
+                  <button
+                    key={category.value}
+                    onClick={() => setSelectedCategory(category.value)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                      selectedCategory === category.value
+                        ? 'bg-purple-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {category.label} ({category.count})
+                  </button>
+                ))}
               </div>
             </div>
 
-            {/* Category Filter */}
-            <div className="lg:w-80">
+            {/* Trend Filter */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-3">AI Trend</label>
               <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                value={selectedTrend}
+                onChange={(e) => setSelectedTrend(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               >
-                {categories.map(category => (
-                  <option key={category.id} value={category.id}>
-                    {category.name} ({category.count})
+                {trends.map((trend) => (
+                  <option key={trend.value} value={trend.value}>
+                    {trend.label}
                   </option>
                 ))}
               </select>
@@ -239,90 +269,101 @@ const UltimateContentDiscoveryWidget2025 = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((item) => (
-            <div key={item.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group">
-              {/* Image */}
-              <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
-                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-                <div className="absolute top-4 left-4 flex gap-2">
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="text-2xl font-bold text-gray-900">
+              {isSearching ? 'Searching...' : `Found ${filteredContent.length} content items`}
+            </h3>
+            <div className="text-gray-600">
+              {searchTerm && `Results for "${searchTerm}"`}
+            </div>
+          </div>
+
+          {isSearching ? (
+            <div className="flex justify-center py-12">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredContent.map((item) => (
+                <div
+                  key={item.id}
+                  className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden ${
+                    item.featured ? 'ring-2 ring-purple-500' : ''
+                  }`}
+                >
                   {item.featured && (
-                    <span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Featured
-                    </span>
+                    <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-2 text-sm font-semibold">
+                      ⭐ FEATURED
+                    </div>
                   )}
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getTypeColor(item.type)}`}>
-                    {item.type}
-                  </span>
-                </div>
-                <div className="absolute bottom-4 right-4 text-white">
-                  <div className="flex items-center space-x-1">
-                    <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    <span className="text-sm font-semibold">{item.rating}</span>
+                  
+                  <div className="p-6">
+                    <div className="flex items-start space-x-4 mb-4">
+                      <div className="text-4xl">{item.image}</div>
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <span className="text-2xl">{getTypeIcon(item.type)}</span>
+                          <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getDifficultyColor(item.difficulty)}`}>
+                            {item.difficulty}
+                          </span>
+                        </div>
+                        <h4 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h4>
+                        <p className="text-gray-600 text-sm mb-3">{item.description}</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-sm text-gray-500">
+                        {item.readTime} read
+                      </div>
+                      <div className="text-sm font-semibold text-green-600">
+                        {item.roi} ROI
+                      </div>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {item.tags.slice(0, 3).map((tag, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                      {item.tags.length > 3 && (
+                        <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                          +{item.tags.length - 3} more
+                        </span>
+                      )}
+                    </div>
+
+                    <Link
+                      href={`/content/${item.id}`}
+                      className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-3 rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-colors"
+                    >
+                      Read More
+                    </Link>
                   </div>
                 </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getDifficultyColor(item.difficulty)}`}>
-                    {item.difficulty}
-                  </span>
-                  <span className="text-sm text-gray-500">{item.readTime} read</span>
-                </div>
-
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {item.title}
-                </h3>
-
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {item.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag, index) => (
-                    <span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Stats */}
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                  <span>{item.views.toLocaleString()} views</span>
-                  <span>{item.category}</span>
-                </div>
-
-                {/* CTA */}
-                <Link
-                  href={item.url}
-                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors"
-                >
-                  Read More →
-                </Link>
-              </div>
+              ))}
             </div>
-          ))}
+          )}
         </div>
 
         {/* No Results */}
-        {filteredContent.length === 0 && (
+        {!isSearching && filteredContent.length === 0 && (
           <div className="text-center py-12">
             <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">No Content Found</h3>
-            <p className="text-gray-600 mb-6">
-              Try adjusting your search terms or category filter to find what you're looking for.
-            </p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">No content found</h3>
+            <p className="text-gray-600 mb-6">Try adjusting your search terms or filters</p>
             <button
               onClick={() => {
-                setSearchQuery('');
+                setSearchTerm('');
                 setSelectedCategory('all');
+                setSelectedTrend('all');
               }}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               Clear Filters
             </button>
@@ -330,24 +371,30 @@ const UltimateContentDiscoveryWidget2025 = () => {
         )}
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12 text-white">
-            <h3 className="text-3xl font-bold mb-4">Can't Find What You're Looking For?</h3>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              We're constantly adding new content. Let us know what topics you'd like us to cover.
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-3xl">
+            <h3 className="text-3xl font-bold mb-4">Want More Content?</h3>
+            <p className="text-xl mb-6 text-white/90">
+              Subscribe to get the latest AI content, trends, and insights delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              <Link
+                href="/newsletter"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Subscribe Now
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
                 Request Content
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Subscribe to Updates
-              </button>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

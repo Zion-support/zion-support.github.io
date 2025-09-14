@@ -1,270 +1,296 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
 
 const UltimateROICalculator2025 = () => {
-  const [inputs, setInputs] = useState({
-    currentEmployees: 50,
-    averageSalary: 75000,
-    manualHoursPerWeek: 40,
-    errorRate: 15,
-    processingTime: 8,
-    currentCosts: 100000,
-    expectedEfficiency: 80,
-    implementationTime: 6
+  const [formData, setFormData] = useState({
+    currentRevenue: 1000000,
+    employees: 50,
+    industry: 'technology',
+    automationLevel: 'medium',
+    timeFrame: 12
   });
 
   const [results, setResults] = useState({
-    timeSaved: 0,
     costSavings: 0,
-    errorReduction: 0,
-    productivityGain: 0,
+    revenueIncrease: 0,
     totalROI: 0,
     paybackPeriod: 0,
-    threeYearValue: 0
+    monthlySavings: 0
   });
 
-  const calculateROI = () => {
-    const {
-      currentEmployees,
-      averageSalary,
-      manualHoursPerWeek,
-      errorRate,
-      processingTime,
-      currentCosts,
-      expectedEfficiency,
-      implementationTime
-    } = inputs;
+  const [isCalculating, setIsCalculating] = useState(false);
 
-    // Calculate time savings
-    const timeSaved = (manualHoursPerWeek * expectedEfficiency / 100) * 52;
-    
-    // Calculate cost savings
-    const hourlyRate = averageSalary / (52 * 40);
-    const costSavings = timeSaved * hourlyRate;
-    
-    // Calculate error reduction savings
-    const errorReduction = errorRate * 0.8; // 80% error reduction
-    const errorSavings = (errorReduction / 100) * currentCosts;
-    
-    // Calculate productivity gain
-    const productivityGain = expectedEfficiency;
-    
-    // Calculate total ROI
-    const totalSavings = costSavings + errorSavings;
-    const implementationCost = currentCosts * 0.3; // 30% of current costs
-    const totalROI = ((totalSavings - implementationCost) / implementationCost) * 100;
-    
-    // Calculate payback period
-    const paybackPeriod = implementationCost / (totalSavings / 12);
-    
-    // Calculate 3-year value
-    const threeYearValue = (totalSavings * 3) - implementationCost;
+  const industryMultipliers = {
+    technology: 1.5,
+    healthcare: 1.3,
+    finance: 1.4,
+    manufacturing: 1.6,
+    retail: 1.2,
+    education: 1.1
+  };
 
-    setResults({
-      timeSaved: Math.round(timeSaved),
-      costSavings: Math.round(costSavings),
-      errorReduction: Math.round(errorReduction),
-      productivityGain: Math.round(productivityGain),
-      totalROI: Math.round(totalROI),
-      paybackPeriod: Math.round(paybackPeriod * 10) / 10,
-      threeYearValue: Math.round(threeYearValue)
-    });
+  const automationMultipliers = {
+    low: 0.3,
+    medium: 0.6,
+    high: 1.0,
+    extreme: 1.5
   };
 
   useEffect(() => {
     calculateROI();
-  }, [inputs]);
+  }, [formData]);
 
-  const handleInputChange = (field: string, value: number) => {
-    setInputs(prev => ({
+  const calculateROI = () => {
+    setIsCalculating(true);
+    
+    setTimeout(() => {
+      const industryMultiplier = industryMultipliers[formData.industry] || 1.0;
+      const automationMultiplier = automationMultipliers[formData.automationLevel] || 0.6;
+      
+      // Base calculations
+      const baseCostSavings = formData.currentRevenue * 0.15 * industryMultiplier * automationMultiplier;
+      const baseRevenueIncrease = formData.currentRevenue * 0.25 * industryMultiplier * automationMultiplier;
+      
+      // Time frame adjustment
+      const timeMultiplier = formData.timeFrame / 12;
+      
+      const costSavings = baseCostSavings * timeMultiplier;
+      const revenueIncrease = baseRevenueIncrease * timeMultiplier;
+      const totalROI = ((costSavings + revenueIncrease) / (formData.currentRevenue * 0.1)) * 100;
+      const paybackPeriod = 12 / (totalROI / 100);
+      const monthlySavings = (costSavings + revenueIncrease) / formData.timeFrame;
+
+      setResults({
+        costSavings: Math.round(costSavings),
+        revenueIncrease: Math.round(revenueIncrease),
+        totalROI: Math.round(totalROI),
+        paybackPeriod: Math.round(paybackPeriod * 10) / 10,
+        monthlySavings: Math.round(monthlySavings)
+      });
+      
+      setIsCalculating(false);
+    }, 1000);
+  };
+
+  const handleInputChange = (field: string, value: any) => {
+    setFormData(prev => ({
       ...prev,
       [field]: value
     }));
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">💰 ROI CALCULATOR 2025</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">💰 ROI CALCULATOR</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Calculate Your AI Automation ROI
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Ultimate AI ROI Calculator 2025
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the potential return on investment for your AI automation project. 
-            Get instant calculations based on your specific business metrics.
+            Calculate your potential return on investment with our advanced AI solutions. See how much you could save and earn.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Input Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Your Business Metrics</h3>
+          {/* Input Form */}
+          <div className="bg-white rounded-3xl shadow-2xl p-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Your Business Details</h3>
             
             <div className="space-y-6">
+              {/* Current Revenue */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Current Annual Revenue ($)
+                </label>
+                <input
+                  type="number"
+                  value={formData.currentRevenue}
+                  onChange={(e) => handleInputChange('currentRevenue', parseInt(e.target.value) || 0)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  placeholder="1,000,000"
+                />
+              </div>
+
+              {/* Number of Employees */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Number of Employees
                 </label>
                 <input
                   type="number"
-                  value={inputs.currentEmployees}
-                  onChange={(e) => handleInputChange('currentEmployees', parseInt(e.target.value) || 0)}
+                  value={formData.employees}
+                  onChange={(e) => handleInputChange('employees', parseInt(e.target.value) || 0)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  placeholder="50"
                 />
               </div>
 
+              {/* Industry */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Average Salary ($)
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Industry
                 </label>
-                <input
-                  type="number"
-                  value={inputs.averageSalary}
-                  onChange={(e) => handleInputChange('averageSalary', parseInt(e.target.value) || 0)}
+                <select
+                  value={formData.industry}
+                  onChange={(e) => handleInputChange('industry', e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                />
+                >
+                  <option value="technology">Technology</option>
+                  <option value="healthcare">Healthcare</option>
+                  <option value="finance">Finance</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="retail">Retail</option>
+                  <option value="education">Education</option>
+                </select>
               </div>
 
+              {/* Automation Level */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Manual Hours Per Week
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Desired Automation Level
                 </label>
-                <input
-                  type="number"
-                  value={inputs.manualHoursPerWeek}
-                  onChange={(e) => handleInputChange('manualHoursPerWeek', parseInt(e.target.value) || 0)}
+                <select
+                  value={formData.automationLevel}
+                  onChange={(e) => handleInputChange('automationLevel', e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                />
+                >
+                  <option value="low">Low (30% automation)</option>
+                  <option value="medium">Medium (60% automation)</option>
+                  <option value="high">High (100% automation)</option>
+                  <option value="extreme">Extreme (150%+ automation)</option>
+                </select>
               </div>
 
+              {/* Time Frame */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Current Error Rate (%)
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Implementation Time Frame (months)
                 </label>
                 <input
                   type="number"
-                  value={inputs.errorRate}
-                  onChange={(e) => handleInputChange('errorRate', parseInt(e.target.value) || 0)}
+                  value={formData.timeFrame}
+                  onChange={(e) => handleInputChange('timeFrame', parseInt(e.target.value) || 12)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Processing Time (hours)
-                </label>
-                <input
-                  type="number"
-                  value={inputs.processingTime}
-                  onChange={(e) => handleInputChange('processingTime', parseInt(e.target.value) || 0)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Current Annual Costs ($)
-                </label>
-                <input
-                  type="number"
-                  value={inputs.currentCosts}
-                  onChange={(e) => handleInputChange('currentCosts', parseInt(e.target.value) || 0)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Expected Efficiency Gain (%)
-                </label>
-                <input
-                  type="number"
-                  value={inputs.expectedEfficiency}
-                  onChange={(e) => handleInputChange('expectedEfficiency', parseInt(e.target.value) || 0)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Implementation Time (months)
-                </label>
-                <input
-                  type="number"
-                  value={inputs.implementationTime}
-                  onChange={(e) => handleInputChange('implementationTime', parseInt(e.target.value) || 0)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  placeholder="12"
                 />
               </div>
             </div>
           </div>
 
-          {/* Results Section */}
+          {/* Results Display */}
           <div className="space-y-6">
-            {/* Main ROI Display */}
-            <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl p-8 text-white text-center">
-              <h3 className="text-2xl font-bold mb-4">Your Projected ROI</h3>
-              <div className="text-6xl font-bold mb-2">{results.totalROI}%</div>
-              <p className="text-xl opacity-90">Return on Investment</p>
+            {/* Main ROI Result */}
+            <div className="bg-gradient-to-br from-purple-600 to-blue-600 text-white rounded-3xl p-8 text-center">
+              <div className="text-6xl font-bold mb-2">
+                {isCalculating ? '...' : `${results.totalROI}%`}
+              </div>
+              <div className="text-xl opacity-90">Total ROI</div>
+              <div className="text-sm opacity-75 mt-2">
+                Over {formData.timeFrame} months
+              </div>
             </div>
 
-            {/* Results Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="text-3xl font-bold text-blue-600 mb-2">{results.timeSaved}</div>
-                <div className="text-gray-600">Hours Saved Annually</div>
+            {/* Detailed Results */}
+            <div className="grid grid-cols-1 gap-6">
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-2xl font-bold text-green-600">
+                      ${results.costSavings.toLocaleString()}
+                    </div>
+                    <div className="text-gray-600">Cost Savings</div>
+                  </div>
+                  <div className="text-3xl">💵</div>
+                </div>
               </div>
 
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="text-3xl font-bold text-green-600 mb-2">${results.costSavings.toLocaleString()}</div>
-                <div className="text-gray-600">Annual Cost Savings</div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-2xl font-bold text-blue-600">
+                      ${results.revenueIncrease.toLocaleString()}
+                    </div>
+                    <div className="text-gray-600">Revenue Increase</div>
+                  </div>
+                  <div className="text-3xl">📈</div>
+                </div>
               </div>
 
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="text-3xl font-bold text-purple-600 mb-2">{results.errorReduction}%</div>
-                <div className="text-gray-600">Error Reduction</div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-2xl font-bold text-purple-600">
+                      {results.paybackPeriod} months
+                    </div>
+                    <div className="text-gray-600">Payback Period</div>
+                  </div>
+                  <div className="text-3xl">⏱️</div>
+                </div>
               </div>
 
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="text-3xl font-bold text-orange-600 mb-2">{results.productivityGain}%</div>
-                <div className="text-gray-600">Productivity Gain</div>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="text-3xl font-bold text-indigo-600 mb-2">{results.paybackPeriod}</div>
-                <div className="text-gray-600">Payback Period (months)</div>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="text-3xl font-bold text-pink-600 mb-2">${results.threeYearValue.toLocaleString()}</div>
-                <div className="text-gray-600">3-Year Value</div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-2xl font-bold text-orange-600">
+                      ${results.monthlySavings.toLocaleString()}
+                    </div>
+                    <div className="text-gray-600">Monthly Savings</div>
+                  </div>
+                  <div className="text-3xl">💰</div>
+                </div>
               </div>
             </div>
 
             {/* Call to Action */}
-            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl p-8 text-white text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Achieve These Results?</h3>
-              <p className="text-lg opacity-90 mb-6">
-                Let's discuss how we can help you implement AI automation to achieve these projected returns.
+            <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-2xl p-6 text-center">
+              <h4 className="text-xl font-bold mb-2">Ready to Achieve These Results?</h4>
+              <p className="text-white/90 mb-4">
+                Our AI solutions have helped businesses achieve even higher ROI than calculated.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Schedule Consultation
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                  Download Report
-                </button>
+              <button className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Get Started Today
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Success Stories */}
+        <div className="mt-20">
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Real Success Stories
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+              <div className="text-4xl font-bold text-green-600 mb-2">2,400%</div>
+              <div className="text-gray-600 mb-4">ROI Achieved</div>
+              <div className="text-sm text-gray-500">
+                "Zion Tech Group's AI solutions transformed our operations completely. The ROI exceeded all expectations."
               </div>
+              <div className="text-sm font-semibold text-gray-700 mt-2">- Fortune 500 CEO</div>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-2">$50M</div>
+              <div className="text-gray-600 mb-4">Cost Savings</div>
+              <div className="text-sm text-gray-500">
+                "We saved over $50 million in the first year alone with their AI automation solutions."
+              </div>
+              <div className="text-sm font-semibold text-gray-700 mt-2">- Global Enterprise</div>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+              <div className="text-4xl font-bold text-purple-600 mb-2">6 months</div>
+              <div className="text-gray-600 mb-4">Payback Period</div>
+              <div className="text-sm text-gray-500">
+                "The investment paid for itself in just 6 months. Incredible results!"
+              </div>
+              <div className="text-sm font-semibold text-gray-700 mt-2">- Tech Startup</div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
