@@ -58,25 +58,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
-    // New blog posts
-    {
-      url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog/quantum-ai-2026-business-revolution`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    // New resources
-    {
-      url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
     }
   ]
 }

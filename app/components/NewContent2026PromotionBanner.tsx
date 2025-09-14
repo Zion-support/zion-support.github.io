@@ -34,16 +34,6 @@ const NewContent2026PromotionBanner: React.FC = () => {
     }
   }, []);
 
-  // Auto-rotate content every 5 seconds
-  useEffect(() => {
-    if (!isDismissed) {
-      const interval = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % featuredContent.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isDismissed]);
-
   const featuredContent: ContentItem[] = [
     {
       id: 'ai-2026-enterprise-automation',
@@ -61,26 +51,26 @@ const NewContent2026PromotionBanner: React.FC = () => {
       }
     },
     {
-      id: 'fortune-500-transformation',
+      id: 'fortune-500-ai-transformation',
       title: 'Fortune 500 AI Transformation: $5.2B Revenue Impact in 12 Months',
       type: 'case-study',
       url: '/case-studies/fortune-500-ai-transformation-2026',
-      excerpt: 'How a Fortune 500 manufacturing company achieved $5.2B in additional revenue through comprehensive AI transformation.',
+      excerpt: 'Learn how a Fortune 500 company achieved $5.2B in additional revenue through strategic AI implementation.',
       featured: true,
       isNew: true,
-      tags: ['Case Study', 'Fortune 500', 'AI Transformation', 'Revenue Growth'],
+      tags: ['Case Study', 'Fortune 500', 'AI Transformation', 'Revenue Impact'],
       metrics: {
-        roi: '512%',
+        roi: '500%',
         impact: '$5.2B',
-        readers: '25K+'
+        readers: '75K+'
       }
     },
     {
-      id: 'ai-implementation-guide',
+      id: 'ai-implementation-master-guide',
       title: 'AI Implementation Master Guide 2026: Complete Roadmap to 500% ROI',
       type: 'resource',
       url: '/resources/ai-implementation-master-guide-2026',
-      excerpt: 'The definitive guide to implementing AI in your organization. Step-by-step roadmap to achieve 500% ROI within 12 months.',
+      excerpt: 'The definitive guide to implementing AI solutions that deliver 500% ROI within 12 months.',
       featured: true,
       isNew: true,
       tags: ['Implementation Guide', 'AI', 'ROI', 'Best Practices'],
@@ -92,6 +82,17 @@ const NewContent2026PromotionBanner: React.FC = () => {
     }
   ];
 
+  // Auto-rotate content every 8 seconds
+  useEffect(() => {
+    if (!isDismissed && isVisible) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % featuredContent.length);
+      }, 8000);
+
+      return () => clearInterval(interval);
+    }
+  }, [isDismissed, isVisible, featuredContent.length]);
+
   const handleDismiss = () => {
     setIsVisible(false);
     setIsDismissed(true);
@@ -101,13 +102,13 @@ const NewContent2026PromotionBanner: React.FC = () => {
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog':
-        return '📝';
+        return <TrendingUp className="w-4 h-4" />;
       case 'case-study':
-        return '📊';
+        return <Users className="w-4 h-4" />;
       case 'resource':
-        return '📚';
+        return <Award className="w-4 h-4" />;
       default:
-        return '📄';
+        return <Star className="w-4 h-4" />;
     }
   };
 
@@ -134,11 +135,11 @@ const NewContent2026PromotionBanner: React.FC = () => {
     <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 animate-pulse"></div>
-        <div className="absolute top-4 left-4 w-2 h-2 bg-white/30 rounded-full animate-bounce"></div>
-        <div className="absolute top-8 right-8 w-1 h-1 bg-white/40 rounded-full animate-ping"></div>
-        <div className="absolute bottom-4 left-1/4 w-1.5 h-1.5 bg-white/20 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-8 right-1/4 w-1 h-1 bg-white/30 rounded-full animate-bounce"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-20 right-1/3 w-8 h-8 bg-white/10 rounded-full animate-pulse delay-3000"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -158,59 +159,55 @@ const NewContent2026PromotionBanner: React.FC = () => {
               </div>
             </div>
 
-            {/* Content showcase */}
+            {/* Content Display */}
             <div className="space-y-4">
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center text-2xl">
-                    {getTypeIcon(currentContent.type)}
-                  </div>
+                <div className={`p-2 rounded-lg ${getTypeColor(currentContent.type)}`}>
+                  {getTypeIcon(currentContent.type)}
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <span className={`px-2 py-1 rounded text-xs font-medium ${getTypeColor(currentContent.type)}`}>
-                      {currentContent.type.replace('-', ' ').toUpperCase()}
-                    </span>
-                    <span className="px-2 py-1 bg-green-500 text-white rounded text-xs font-medium">
-                      NEW
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold mb-2 line-clamp-2">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-2 leading-tight">
                     {currentContent.title}
                   </h3>
-                  <p className="text-white/90 text-sm mb-3 line-clamp-2">
+                  <p className="text-white/90 mb-3 text-sm leading-relaxed">
                     {currentContent.excerpt}
                   </p>
                   
-                  {/* Metrics */}
-                  {currentContent.metrics && (
-                    <div className="flex items-center space-x-4 mb-3">
-                      <div className="flex items-center space-x-1">
-                        <TrendingUp className="w-4 h-4 text-green-300" />
-                        <span className="text-sm font-medium">{currentContent.metrics.roi} ROI</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Award className="w-4 h-4 text-yellow-300" />
-                        <span className="text-sm font-medium">{currentContent.metrics.impact} Impact</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Users className="w-4 h-4 text-blue-300" />
-                        <span className="text-sm font-medium">{currentContent.metrics.readers} Readers</span>
-                      </div>
-                    </div>
-                  )}
-
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-1 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-3">
                     {currentContent.tags.slice(0, 3).map((tag, index) => (
                       <span
                         key={index}
-                        className="px-2 py-1 bg-white/10 text-white/80 rounded text-xs"
+                        className="px-2 py-1 bg-white/20 rounded-full text-xs font-medium"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
+
+                  {/* Metrics */}
+                  {currentContent.metrics && (
+                    <div className="flex items-center space-x-4 mb-4">
+                      {currentContent.metrics.roi && (
+                        <div className="flex items-center space-x-1">
+                          <span className="text-sm font-medium">ROI:</span>
+                          <span className="text-yellow-300 font-bold">{currentContent.metrics.roi}</span>
+                        </div>
+                      )}
+                      {currentContent.metrics.impact && (
+                        <div className="flex items-center space-x-1">
+                          <span className="text-sm font-medium">Impact:</span>
+                          <span className="text-green-300 font-bold">{currentContent.metrics.impact}</span>
+                        </div>
+                      )}
+                      {currentContent.metrics.readers && (
+                        <div className="flex items-center space-x-1">
+                          <span className="text-sm font-medium">Readers:</span>
+                          <span className="text-blue-300 font-bold">{currentContent.metrics.readers}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
 
                   {/* CTA Button */}
                   <Link
@@ -225,13 +222,13 @@ const NewContent2026PromotionBanner: React.FC = () => {
             </div>
 
             {/* Progress indicators */}
-            <div className="flex space-x-2 mt-4">
+            <div className="flex space-x-1 mt-4">
               {featuredContent.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentIndex ? 'bg-white' : 'bg-white/40'
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentIndex ? 'bg-white' : 'bg-white/30'
                   }`}
                 />
               ))}
