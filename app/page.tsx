@@ -42,6 +42,10 @@ import AI2027UltimateBreakthroughBanner from '../components/AI2027UltimateBreakt
 import NewContent2027Showcase from '../components/NewContent2027Showcase';
 import RevolutionaryTechTrends2027Banner from '../components/RevolutionaryTechTrends2027Banner';
 
+// Import new AI 2025 Future Trends components
+import NewContent2025FutureTrendsBanner from '../components/NewContent2025FutureTrendsBanner';
+import NewContent2025FutureTrendsShowcase from '../components/NewContent2025FutureTrendsShowcase';
+
 // Import new AI 2028 future vision components
 import AI2028FutureVisionBanner from '../components/AI2028FutureVisionBanner';
 import InteractiveTechDemo2027 from '../components/InteractiveTechDemo2027';
@@ -290,13 +294,19 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* AI 2027 Ultimate Breakthrough Banner - NEWEST FEATURED */}
+        {/* AI 2025 Future Trends Revolutionary Breakthrough Banner - NEWEST FEATURED */}
+        <NewContent2025FutureTrendsBanner />
+        
+        {/* AI 2025 Future Trends Content Showcase - LATEST FEATURED */}
+        <NewContent2025FutureTrendsShowcase />
+        
+        {/* AI 2027 Ultimate Breakthrough Banner - FEATURED */}
         <AI2027UltimateBreakthroughBanner />
         
-        {/* Revolutionary Tech Trends 2027 Banner - NEW FEATURED */}
+        {/* Revolutionary Tech Trends 2027 Banner - FEATURED */}
         <RevolutionaryTechTrends2027Banner />
         
-        {/* New Content 2027 Showcase - LATEST FEATURED */}
+        {/* New Content 2027 Showcase - FEATURED */}
         <NewContent2027Showcase />
         
         {/* Interactive Tech Demo 2027 - EXPERIENCE THE FUTURE */}
