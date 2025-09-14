@@ -48,16 +48,10 @@ content_index:
         roi: "833%"
         savings: "$500M+"
         satisfaction: "95%"
-=======
-      tags: ["AI", "Cybersecurity", "Enterprise Security", "Threat Detection", "ROI"]
-      featured: true
-      is_new: true
-      metrics:
         threat_reduction: "95%"
         cost_savings: "$2.3M average"
         response_time: "67% faster"
         false_positives: "89% reduction"
->>>>>>> cursor/create-and-deploy-new-content-5865
         
     - id: "autonomous-systems-revolution"
       type: "blog"
@@ -153,6 +147,42 @@ content_index:
       featured: true
       is_new: true
       
+<<<<<<< HEAD
+    - id: "enterprise-automation-breakthrough"
+      type: "blog"
+      title: "AI 2026: Enterprise Automation Breakthrough - 400% ROI in 90 Days"
+      file_path: "/content/blog/ai-2026-enterprise-automation-breakthrough.md"
+      url: "/blog/ai-2026-enterprise-automation-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Enterprise Automation", "ROI", "Business Transformation", "2026"]
+      featured: true
+      is_new: true
+      
+    - id: "fortune-500-transformation"
+      type: "case-study"
+      title: "Fortune 500 AI Transformation: $50M Annual Savings in 6 Months"
+      file_path: "/content/case-studies/fortune-500-ai-transformation-2026.md"
+      url: "/case-studies/fortune-500-ai-transformation-2026"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "AI Transformation", "Cost Savings", "ROI"]
+      featured: true
+      is_new: true
+      
+    - id: "ai-implementation-master-guide"
+      type: "resource"
+      title: "AI Implementation Master Guide 2026: From Strategy to 400% ROI"
+      file_path: "/content/resources/ai-implementation-master-guide-2026.md"
+      url: "/resources/ai-implementation-master-guide-2026"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2026"]
+      featured: true
+      is_new: true
+      
+=======
+>>>>>>> dc74c189457b8e5ab5d59d5b5d2600dd0a35db1c
     - id: "cybersecurity-revolution"
 
   new_2025_content_latest:
@@ -256,11 +286,40 @@ content_index:
   new_2026_content:
     - id: "ai-2026-enterprise-automation"
       type: "blog"
-      title: "AI 2026: Enterprise Automation Breakthrough - 400% ROI in 90 Days"
+      title: "AI 2026: The Enterprise Automation Breakthrough That's Reshaping Business"
       file_path: "/content/blog/ai-2026-enterprise-automation-breakthrough.md"
       url: "/blog/ai-2026-enterprise-automation-breakthrough"
       status: "published"
       created: "2025-01-17"
+      tags: ["AI", "Enterprise Automation", "Business Transformation", "ROI", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        satisfaction: "98%"
+        projects: "500+"
+        savings: "$2.8B"
+      
+    - id: "retail-ai-transformation"
+      type: "case-study"
+      title: "Retail AI Transformation 2026: How a $50M Company Achieved 400% ROI"
+      file_path: "/content/case-studies/retail-ai-transformation-2026-success.md"
+      url: "/case-studies/retail-ai-transformation-2026-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Retail", "AI Transformation", "ROI", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "400%"
+        revenue: "$20M"
+        satisfaction: "89%"
+        cost_reduction: "67%"
+      
+    - id: "ai-implementation-guide-2026"
+      type: "resource"
+      title: "AI Implementation Master Guide 2026: From Strategy to ROI"
+=======
       tags: ["AI", "Enterprise Automation", "ROI", "Business Transformation", "2026"]
       featured: true
       is_new: true
@@ -279,6 +338,7 @@ content_index:
     - id: "ai-implementation-master-guide-2026"
       type: "resource"
       title: "AI Implementation Master Guide 2026: From Strategy to 400% ROI"
+>>>>>>> dc74c189457b8e5ab5d59d5b5d2600dd0a35db1c
       file_path: "/content/resources/ai-implementation-master-guide-2026.md"
       url: "/resources/ai-implementation-master-guide-2026"
       status: "published"
@@ -286,6 +346,11 @@ content_index:
       tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2026"]
       featured: true
       is_new: true
+      metrics:
+        roi: "340%"
+        success_rate: "98%"
+        implementation_time: "67% Faster"
+        projects: "500+ Success Stories"
 
   promotion_components:
     - name: "NewContent2025PromotionBanner"
