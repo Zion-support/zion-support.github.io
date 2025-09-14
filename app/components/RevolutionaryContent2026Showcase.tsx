@@ -7,11 +7,11 @@ const RevolutionaryContent2026Showcase = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const contentCategories = [
-    { id: 'all', label: 'All Content', count: 9 },
-    { id: 'neural-architectures', label: 'Neural Architectures', count: 3 },
+    { id: 'all', label: 'All Content', count: 12 },
+    { id: 'neural-architectures', label: 'Neural Architectures', count: 4 },
     { id: 'quantum-ai', label: 'Quantum AI', count: 3 },
     { id: 'case-studies', label: 'Case Studies', count: 3 },
-    { id: 'implementation', label: 'Implementation', count: 3 }
+    { id: 'implementation', label: 'Implementation', count: 2 }
   ];
 
   const featuredContent = [
@@ -122,57 +122,6 @@ const RevolutionaryContent2026Showcase = () => {
       isNew: true,
       featured: true,
       readingTime: '50 min read'
-    },
-    {
-      id: 'ai-2025-2026-ultimate-breakthrough',
-      title: 'AI 2025-2026: The Ultimate Breakthrough Revolution',
-      description: 'Achieve 2,500% ROI through next-generation intelligence systems combining quantum computing, neural interfaces, and autonomous business intelligence.',
-      category: 'neural-architectures',
-      type: 'blog',
-      metrics: {
-        roi: '2,500%',
-        savings: '$8.2B+',
-        efficiency: '99.7%',
-        timeline: '18 months'
-      },
-      url: '/blog/ai-2025-2026-ultimate-breakthrough-revolution',
-      readingTime: '35 min read',
-      featured: true,
-      tags: ['AI Revolution', 'Quantum AI', 'Neural Interfaces', 'Autonomous Systems']
-    },
-    {
-      id: 'fortune-100-2500-roi-success',
-      title: 'Fortune 100 Achieves 2,500% ROI in 18 Months',
-      description: 'Revolutionary AI transformation case study showing how a $8.2B manufacturing company achieved unprecedented results.',
-      category: 'case-studies',
-      type: 'case-study',
-      metrics: {
-        roi: '2,500%',
-        savings: '$8.2B',
-        efficiency: '99.7%',
-        timeline: '18 months'
-      },
-      url: '/case-studies/ai-2025-2026-revolutionary-transformation-2500-roi-success',
-      readingTime: '22 min read',
-      featured: true,
-      tags: ['Fortune 100', 'Case Study', 'ROI Success', 'Manufacturing']
-    },
-    {
-      id: 'ai-implementation-ultimate-framework',
-      title: 'AI 2025-2026 Implementation Ultimate Framework',
-      description: 'Complete roadmap to 2,500% ROI with proven methodologies, step-by-step implementation strategies, and best practices.',
-      category: 'implementation',
-      type: 'resource',
-      metrics: {
-        roi: '2,500%',
-        timeline: '18-24 months',
-        success: '99.7%',
-        projects: '1,000+'
-      },
-      url: '/resources/ai-2025-2026-implementation-ultimate-framework',
-      readingTime: '45 min read',
-      featured: true,
-      tags: ['Implementation', 'Framework', 'ROI Guide', 'Best Practices']
     }
   ];
 
@@ -191,10 +140,10 @@ const RevolutionaryContent2026Showcase = () => {
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'blog': return 'bg-blue-100 text-blue-800';
-      case 'case-study': return 'bg-green-100 text-green-800';
-      case 'resource': return 'bg-purple-100 text-purple-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'blog': return 'bg-blue-500';
+      case 'case-study': return 'bg-green-500';
+      case 'resource': return 'bg-purple-500';
+      default: return 'bg-gray-500';
     }
   };
 
@@ -247,7 +196,7 @@ const RevolutionaryContent2026Showcase = () => {
                   <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                     NEW
                   </span>
-                  <span className={`${getTypeColor(content.type)} px-3 py-1 rounded-full text-sm font-medium`}>
+                  <span className={`${getTypeColor(content.type)} text-white px-3 py-1 rounded-full text-sm font-medium`}>
                     {content.type.toUpperCase()}
                   </span>
                   <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -264,45 +213,43 @@ const RevolutionaryContent2026Showcase = () => {
                   {content.title}
                 </h3>
                 
-                {content.subtitle && (
-                  <p className="text-lg font-semibold text-purple-600 mb-3">
-                    {content.subtitle}
-                  </p>
-                )}
+                <p className="text-lg font-semibold text-purple-600 mb-3">
+                  {content.subtitle}
+                </p>
                 
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {content.description}
                 </p>
+              </div>
 
-                {/* Success Metrics */}
-                <div className="px-6 pb-4">
-                  <div className="grid grid-cols-2 gap-3">
-                    {Object.entries(content.metrics).slice(0, 4).map(([key, value]) => (
-                      <div key={key} className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-3 text-center">
-                        <div className="text-lg font-bold text-purple-600">{value}</div>
-                        <div className="text-xs text-gray-600 capitalize">
-                          {key.replace('_', ' ')}
-                        </div>
+              {/* Success Metrics */}
+              <div className="px-6 pb-4">
+                <div className="grid grid-cols-2 gap-3">
+                  {Object.entries(content.metrics).slice(0, 4).map(([key, value]) => (
+                    <div key={key} className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-3 text-center">
+                      <div className="text-lg font-bold text-purple-600">{value}</div>
+                      <div className="text-xs text-gray-600 capitalize">
+                        {key.replace('_', ' ')}
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
+              </div>
 
-                {/* Action Buttons */}
-                <div className="px-6 pb-6">
-                  <div className="flex gap-3">
-                    <Link
-                      href={content.url}
-                      className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center"
-                    >
-                      Read Now
-                    </Link>
-                    <button className="px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                      </svg>
-                    </button>
-                  </div>
+              {/* Action Buttons */}
+              <div className="px-6 pb-6">
+                <div className="flex gap-3">
+                  <Link
+                    href={content.url}
+                    className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center"
+                  >
+                    Read Now
+                  </Link>
+                  <button className="px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
