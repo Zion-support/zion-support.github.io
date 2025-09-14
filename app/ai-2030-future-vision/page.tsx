@@ -9,7 +9,6 @@ export default function AI2030FutureVisionPage() {
         title="AI 2030 Future Vision - Transcendent Intelligence & Universal Consciousness"
         description="Explore the future of AI in 2030: transcendent intelligence, universal consciousness, and the convergence of biological and digital minds. Discover what's possible."
         keywords="AI 2030, future vision, transcendent intelligence, universal consciousness, artificial intelligence predictions, future technology"
-        url="/ai-2030-future-vision"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">

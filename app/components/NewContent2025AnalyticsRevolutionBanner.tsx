@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, TrendingUp, BarChart3,  Zap, ArrowRight } from 'lucide-react';
+import { X, TrendingUp, BarChart3, Zap, ArrowRight } from 'lucide-react';
 
 const NewContent2025AnalyticsRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);

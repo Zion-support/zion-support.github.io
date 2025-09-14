@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Zap, TrendingUp, Clock,  Database, Globe, 
+  Zap, TrendingUp, Clock, Database, Globe, 
   Shield, CheckCircle, AlertCircle, Loader,
   BarChart3, Activity, Gauge
 } from 'lucide-react';
@@ -328,7 +328,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           
           <div className="text-center">
             <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Award className="w-8 h-8 text-orange-600" />
+              <ArrowRight className="w-8 h-8 text-orange-600" />
             </div>
             <h4 className="text-lg font-semibold text-gray-900 mb-2">Goal Oriented</h4>
             <p className="text-gray-600 text-sm">Optimization aligned with business objectives</p>
