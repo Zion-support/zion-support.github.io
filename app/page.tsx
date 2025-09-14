@@ -99,6 +99,17 @@ import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026
 import NewContent2025UltimateBreakthroughBanner from './components/NewContent2025UltimateBreakthroughBanner';
 import UltimateBreakthroughContentShowcase2025 from './components/UltimateBreakthroughContentShowcase2025';
 
+// Import new AI Content Revolution promotional components
+import AIContentRevolution2025Banner from '../components/AIContentRevolution2025Banner';
+import AIContentRevolutionShowcase2025 from '../components/AIContentRevolutionShowcase2025';
+
+// Import new Ultimate AI Revolution promotional components
+import AI2025UltimateRevolutionBanner from '../components/AI2025UltimateRevolutionBanner';
+import UltimateAIRevolutionShowcase from '../components/UltimateAIRevolutionShowcase';
+
+// Import new Ultimate Enterprise Transformation components
+import AI2025UltimateEnterpriseTransformationBanner from '../components/AI2025UltimateEnterpriseTransformationBanner';
+import UltimateEnterpriseTransformationShowcase from '../components/UltimateEnterpriseTransformationShowcase';
 // Import new AI 2025 Ultimate Breakthrough Revolution components
 import AI2025UltimateBreakthroughRevolutionBanner from './components/AI2025UltimateBreakthroughRevolutionBanner';
 
@@ -261,6 +272,9 @@ export default function HomePage() {
         {/* AI TRANSFORMATION ROI CALCULATOR - INTERACTIVE TOOL */}
         <AITransformationROICalculator />
         
+        {/* AI 2025 ULTIMATE REVOLUTION BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
+        <AI2025UltimateRevolutionBanner />
+        
         {/* NEW CONTENT NAVIGATION BANNER - FEATURED */}
         <NewContentNavigationBanner />
         
@@ -287,6 +301,9 @@ export default function HomePage() {
         
         {/* AI 2026 CONTENT SHOWCASE - NEWEST FEATURED */}
         <AI2026ContentShowcase />
+        
+        {/* ULTIMATE AI REVOLUTION SHOWCASE - NEWEST ULTIMATE FEATURED */}
+        <UltimateAIRevolutionShowcase />
         
         {/* AI CONTENT REVOLUTION 2025 SHOWCASE - NEWEST ULTIMATE FEATURED */}
         <AIContentRevolutionShowcase2025 />
