@@ -231,6 +231,10 @@ import NewContent2025UltimateSecurityBanner from '../components/NewContent2025Ul
 import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
 import AI2025EnterpriseAutomationBanner from '../components/AI2025EnterpriseAutomationBanner';
 
+// Import new Ultimate Automation Revolution 50,000% ROI components
+import UltimateAutomationRevolution50000ROIBanner from '../components/UltimateAutomationRevolution50000ROIBanner';
+import UltimateAutomationRevolutionShowcase from '../components/UltimateAutomationRevolutionShowcase';
+
 // Import new 2025 ultimate breakthrough content components
 import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
 import AI2025ContentRevolutionUltimateBanner from '../components/AI2025ContentRevolutionUltimateBanner';
@@ -320,6 +324,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE AUTOMATION REVOLUTION 50,000% ROI BANNER - NEWEST BREAKTHROUGH */}
+        <UltimateAutomationRevolution50000ROIBanner />
+        
         {/* AI 2025-2026 CONTENT REVOLUTION 50,000% ROI BANNER - NEWEST BREAKTHROUGH */}
         <AI2025_2026ContentRevolution50000ROIBanner />
         
@@ -679,6 +686,7 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <UltimateAutomationRevolutionShowcase />
         <UltimateContentShowcase2025 />
         <InteractiveContentDiscovery2025 />
         <AIAutomationROICalculator />
