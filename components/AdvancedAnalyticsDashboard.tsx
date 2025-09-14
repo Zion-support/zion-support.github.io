@@ -233,6 +233,4 @@ const AdvancedAnalyticsDashboard = () => {
       </div>
     </div>
   );
-};
-
-export default AdvancedAnalyticsDashboard;
+}
