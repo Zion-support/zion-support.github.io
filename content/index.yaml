@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 6
+  total_content_pieces: 12
   
   new_2025_content:
     - id: "autonomous-systems-revolution"
@@ -36,7 +36,56 @@ content_index:
       featured: true
       is_new: true
       
-    - id: "ai-2026-enterprise-automation-breakthrough"
+    - id: "cybersecurity-revolution"
+      type: "blog"
+      title: "AI 2025: The Cybersecurity Revolution - Next-Generation Threat Protection"
+      file_path: "/content/blog/ai-2025-cybersecurity-revolution-next-generation-threat-protection.md"
+      url: "/blog/ai-2025-cybersecurity-revolution-next-generation-threat-protection"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Cybersecurity", "Threat Protection", "Business Security", "ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "94%"
+        savings: "$2.3M"
+        efficiency: "67%"
+        satisfaction: "100%"
+      
+    - id: "fintech-transformation"
+      type: "case-study"
+      title: "Fintech AI Transformation 2025: How a $100M Company Achieved 450% ROI"
+      file_path: "/content/case-studies/fintech-ai-transformation-2025-ultimate-success-story.md"
+      url: "/case-studies/fintech-ai-transformation-2025-ultimate-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fintech", "AI Transformation", "ROI", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        savings: "$15M"
+        efficiency: "78%"
+        satisfaction: "89%"
+      
+    - id: "ai-implementation-roadmap"
+      type: "resource"
+      title: "AI Implementation Roadmap 2025: Complete Guide to Successful AI Deployment"
+      file_path: "/content/resources/ai-implementation-roadmap-2025-complete-guide.md"
+      url: "/resources/ai-implementation-roadmap-2025-complete-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "Digital Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        savings: "$2.8B"
+        efficiency: "67%"
+        satisfaction: "98%"
+
+  new_2026_content:
+    - id: "ai-2026-enterprise-automation"
       type: "blog"
       title: "AI 2026: Enterprise Automation Breakthrough - 400% ROI in 90 Days"
       file_path: "/content/blog/ai-2026-enterprise-automation-breakthrough.md"
