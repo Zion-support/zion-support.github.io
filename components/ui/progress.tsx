@@ -6,8 +6,8 @@ interface ProgressProps {
   className?: string;
 }
 
-export function Progress({ valuemax = 100className = '' }: ProgressProps) {
-  const percentage = Math.min(Math.max((value / max) * 100)100);
+export function Progress({ value, max = 100, className = '' }: ProgressProps) {
+  const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
   
   return (
     <div className={`w-full bg-gray-200 rounded-full h-2.5 ${className}`}>

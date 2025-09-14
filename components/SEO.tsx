@@ -27,7 +27,7 @@ export default function SEO({
   const robots = [
     noindex ? 'noindex' : 'index',
     nofollow ? 'nofollow' : 'follow'
-  ].join(');
+  ].join(', ');
 
   return (
     <Head>

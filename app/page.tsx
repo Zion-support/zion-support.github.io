@@ -5,8 +5,8 @@ import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 // Import neural superintelligence components - TOP PRIORITY
-import NeuralSuperintelligence2025Banner from '../components/NeuralSuperintelligence2025Banner';
-import UltimateNeuralSuperintelligenceShowcase from '../components/UltimateNeuralSuperintelligenceShowcase';
+import NeuralSuperintelligence2025Banner from './components/NeuralSuperintelligence2025Banner';
+import UltimateNeuralSuperintelligenceShowcase from './components/UltimateNeuralSuperintelligenceShowcase';
 // Import new AI Revolution 2025-2026 components
 import AIRevolution2025Banner from '../components/AIRevolution2025Banner';
 import AIRevolutionContentShowcase from '../components/AIRevolutionContentShowcase';
@@ -108,8 +108,8 @@ import NewContent2025UltimateBreakthroughBanner from './components/NewContent202
 import UltimateBreakthroughContentShowcase2025 from './components/UltimateBreakthroughContentShowcase2025';
 
 // Import new AI Content Revolution promotional components
-import AIContentRevolution2025Banner from '../components/AIContentRevolution2025Banner';
-import AIContentRevolutionShowcase2025 from '../components/AIContentRevolutionShowcase2025';
+import AIContentRevolution2025Banner from './components/AIContentRevolution2025Banner';
+import AIContentRevolutionShowcase2025 from './components/AIContentRevolutionShowcase2025';
 
 // Import new Ultimate Enterprise Transformation components
 import AI2025UltimateEnterpriseTransformationBanner from '../components/AI2025UltimateEnterpriseTransformationBanner';
@@ -141,8 +141,8 @@ import AI2027BreakthroughPromotionBanner from './components/AI2027BreakthroughPr
 import QuantumComputingShowcase2027 from './components/QuantumComputingShowcase2027';
 
 // Import new breakthrough technologies promotional components
-import BreakthroughTechnologies2025PromotionBanner from '../components/BreakthroughTechnologies2025PromotionBanner';
-import BreakthroughTechnologies2025Showcase from '../components/BreakthroughTechnologies2025Showcase';
+import BreakthroughTechnologies2025PromotionBanner from './components/BreakthroughTechnologies2025PromotionBanner';
+import BreakthroughTechnologies2025Showcase from './components/BreakthroughTechnologies2025Showcase';
 
 // Import new Ultimate Autonomous AI Revolution components
 import UltimateAutonomousAIRevolutionBanner from '../components/UltimateAutonomousAIRevolutionBanner';

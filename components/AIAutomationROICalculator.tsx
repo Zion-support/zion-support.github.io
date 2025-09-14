@@ -1,5 +1,5 @@
-import React{ useStateuseEffect } from 'react';
-import { CalculatorIconChartBarIconTrendingUpIconCurrencyDollarIcon } from '@heroicons/react/24/outline';
+import React, { useState, useEffect } from 'react';
+import { CalculatorIcon, ChartBarIcon, TrendingUpIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline';
 
 interface CalculationInputs {
   currentEmployees: number;
@@ -50,11 +50,11 @@ const AIAutomationROICalculator: React.FC = () => {
     threeYearNPV: 0
   });
 
-  const [isCalculatingsetIsCalculating] = useState(false);
+  const [isCalculating, setIsCalculating] = useState(false);
 
   useEffect(() => {
     calculateROI();
-  }[inputs]);
+  }, [inputs]);
 
   const calculateROI = () => {
     setIsCalculating(true);
