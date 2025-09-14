@@ -109,6 +109,7 @@ const ReportsPage: React.FC = () => {
     }
   ];
 
+export default function ReportsPage() {
   return (
     <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
@@ -376,6 +377,4 @@ const ReportsPage: React.FC = () => {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-};
-
-export default ReportsPage;
+}

@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const CloudArchitectureChat: NextPage = () => {
+export default function CloudArchitectureChatPage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>CloudArchitectureChat - Zion Tech Solutions</title>
-        <meta name="description" content="CloudArchitectureChat blog post" />
+        <title>Cloud Architecture Chat - Zion Tech Group</title>
+        <meta name="description" content="cloud architecture chat page" />
       </Head>
       
       <main>
@@ -17,6 +16,4 @@ const CloudArchitectureChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default CloudArchitectureChat;
+}

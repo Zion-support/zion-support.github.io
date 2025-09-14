@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const UiUxDesignChat: NextPage = () => {
+export default function UiUxDesignChatPage() {
   return (
-    <div>
+    <>
       <Head>
-        <title>UiUxDesignChat - Zion Tech Solutions</title>
-        <meta name="description" content="UiUxDesignChat blog post" />
+        <title>Ui Ux Design Chat - Zion Tech Group</title>
+        <meta name="description" content="ui ux design chat page" />
       </Head>
       
       <main>
@@ -17,6 +16,4 @@ const UiUxDesignChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default UiUxDesignChat;
+}

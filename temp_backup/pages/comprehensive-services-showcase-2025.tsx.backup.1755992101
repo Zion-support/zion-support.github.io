@@ -344,6 +344,7 @@ export default function ComprehensiveServicesShowcase2025() {
     </motion.div>
   );
 
+export default function ComprehensiveServicesShowcase2025Page() {
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900/20 to-black">
