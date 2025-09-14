@@ -71,7 +71,7 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
   showStats = true,
   maxItems = 4 
 }) => {
-  const content = hotContent.slice(0maxItems);
+  const content = hotContent.slice(0, maxItems);
 
   const getVariantClasses = () => {
     switch (variant) {
