@@ -24,6 +24,8 @@ const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
 // Import key promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
@@ -149,9 +151,12 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <EnhancedContentPromotionBanner2026 />
+        <ComprehensiveContentShowcase2026 />
         <NewContentPromotionBanner />
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
+        <NewContent2026Showcase />
         <InteractiveContentDiscoveryWidget />
         
         {/* New 2026 Content Showcase */}
