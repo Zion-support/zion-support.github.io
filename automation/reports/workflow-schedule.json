@@ -4048,7 +4048,7 @@
       "dependencies": [],
       "triggers": [
         "schedule",
-        "workflow_dispatch null"
+        "workflow_dispatch {}"
       ],
       "resourceScore": 104
     },
@@ -4087,7 +4087,7 @@
       "triggers": [
         "push",
         "schedule",
-        "workflow_dispatch null"
+        "workflow_dispatch {}"
       ],
       "resourceScore": 102
     },

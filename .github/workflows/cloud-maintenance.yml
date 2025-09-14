@@ -1,5 +1,5 @@
 ---
-name: Cloud Maintenance Automations
+name: Cloud Maintenance
 on:
   schedule:
     - cron: '0 */2 * * *'
