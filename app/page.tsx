@@ -312,6 +312,15 @@ import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import ROICalculatorWidget from '../components/ROICalculatorWidget';
 
+// Import new Ultimate Content 2025 components
+import UltimateSuccessStoriesShowcase2025 from '../components/UltimateSuccessStoriesShowcase2025';
+import UltimateROICalculator2025 from '../components/UltimateROICalculator2025';
+import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
+import UltimateCaseStudiesShowcase2025 from '../components/UltimateCaseStudiesShowcase2025';
+import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+import UltimateTestimonialShowcase2025 from '../components/UltimateTestimonialShowcase2025';
+import UltimateSuccessMetricsShowcase2025 from '../components/UltimateSuccessMetricsShowcase2025';
+
 // Import new 2025 content and advertising components
 import NewContent2025PromotionalBanner from '../components/NewContent2025PromotionalBanner';
 import InteractiveROICalculator from '../components/InteractiveROICalculator';
@@ -353,11 +362,29 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* NEW CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED */}
-        <NewContentPromotionBanner2025 />
+        {/* ULTIMATE CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED */}
+        <UltimateContentPromotionBanner2025 />
         
         {/* AI 2025 ULTIMATE CONTENT REVOLUTION 50,000% ROI BANNER - NEWEST FEATURED */}
         <AI2025UltimateContentRevolution50000ROIBanner />
+        
+        {/* ULTIMATE SUCCESS STORIES SHOWCASE 2025 - NEWEST FEATURED */}
+        <UltimateSuccessStoriesShowcase2025 />
+        
+        {/* ULTIMATE ROI CALCULATOR 2025 - NEWEST INTERACTIVE */}
+        <UltimateROICalculator2025 />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 - NEWEST FEATURED */}
+        <UltimateContentDiscoveryWidget2025 />
+        
+        {/* ULTIMATE CASE STUDIES SHOWCASE 2025 - NEWEST FEATURED */}
+        <UltimateCaseStudiesShowcase2025 />
+        
+        {/* ULTIMATE TESTIMONIAL SHOWCASE 2025 - NEWEST FEATURED */}
+        <UltimateTestimonialShowcase2025 />
+        
+        {/* ULTIMATE SUCCESS METRICS SHOWCASE 2025 - NEWEST FEATURED */}
+        <UltimateSuccessMetricsShowcase2025 />
         
         {/* ULTIMATE CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
         <UltimateContentShowcase2025 />
