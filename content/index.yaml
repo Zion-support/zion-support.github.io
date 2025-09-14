@@ -311,6 +311,58 @@ content_index:
         implementation_time: "67% Faster"
         projects: "500+ Success Stories"
 
+  quantum_ai_revolution_2025:
+    - id: "quantum-computing-breakthrough"
+      type: "blog"
+      title: "AI 2025: The Quantum Computing Breakthrough That's Revolutionizing Enterprise AI"
+      file_path: "/content/blog/ai-2025-quantum-computing-breakthrough.md"
+      url: "/blog/ai-2025-quantum-computing-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Quantum Computing", "AI", "Enterprise", "Breakthrough", "ROI", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1000%"
+        accuracy: "99.9%"
+        speed: "67% Faster"
+        market: "$2.8B"
+      reading_time: "18 min read"
+      
+    - id: "quantum-ai-success-story"
+      type: "case-study"
+      title: "AI Transformation Success: $5B Company Achieves 1000% ROI with Quantum AI Implementation"
+      file_path: "/content/case-studies/ai-transformation-1000-roi-quantum-success.md"
+      url: "/case-studies/ai-transformation-1000-roi-quantum-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Quantum AI", "ROI", "Enterprise", "Success Story", "1000% ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1000%"
+        savings: "$4.0B"
+        satisfaction: "99.2%"
+        timeline: "18 months"
+      reading_time: "20 min read"
+      
+    - id: "quantum-ai-implementation-guide"
+      type: "resource"
+      title: "Quantum AI Implementation Guide 2025: From Strategy to 1000% ROI"
+      file_path: "/content/resources/quantum-ai-implementation-guide-2025.md"
+      url: "/resources/quantum-ai-implementation-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "Quantum AI", "ROI", "Strategy", "Enterprise", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1000%"
+        success: "98%"
+        timeline: "12-18 months"
+        projects: "500+"
+      reading_time: "35 min read"
+
   promotion_components:
     - name: "RevolutionaryContent2025Banner"
       file_path: "/app/components/RevolutionaryContent2025Banner.tsx"

@@ -49,6 +49,9 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
 import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+
+// Import new quantum AI promotional components
+import QuantumAIRevolutionBanner2025 from '../components/QuantumAIRevolutionBanner2025';
 =======
 >>>>>>> dc89c58f58dbd387047878ee5691a22997309a80
 
@@ -69,6 +72,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Quantum AI Revolution Banner - NEW */}
+        <QuantumAIRevolutionBanner2025 />
+        
+        {/* Revolutionary Content 2026 Banner - NEW */}
+        <RevolutionaryContent2026Banner />
+        
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
         
