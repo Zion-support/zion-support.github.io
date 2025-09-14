@@ -65579,6 +65579,16 @@
     {
       "route": "/reports/updates/update-2025-08-18-0112",
       "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-18 01:12",
+        "description": "Autonomous Update — 2025-08-18 01:12 — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-18-0113",
+      "missing": [
         "og:title",
         "og:description",
         "og:image",
