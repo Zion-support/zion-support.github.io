@@ -35,9 +35,6 @@
 
 # Plugin configurations
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-[[plugins]]
   package = "netlify-plugin-cloudinary"
 
 # Static redirects for exported site
