@@ -35,22 +35,12 @@ import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPro
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
-<<<<<<< HEAD
-// Import new 2026 promotional components
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
-import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
-import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-
-// Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
-import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
-import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
-=======
->>>>>>> dc89c58f58dbd387047878ee5691a22997309a80
+import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -69,11 +59,8 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* New Content 2025 Ultimate Banner */}
-        <NewContent2025UltimateBanner />
-        
-        {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
+        {/* AI 2025 Ultimate Breakthrough Banner - NEW */}
+        <AI2025UltimateBreakthroughBanner />
         
         {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
