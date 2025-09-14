@@ -219,7 +219,6 @@
     "analyze": "ANALYZE=true npm run build",
     "dev:fast": "npm run dev -- --turbo",
     "build:analyze": "ANALYZE=true npm run build",
-    "build:clean": "npm run clean && npm run build",
     "automation:master": "node automation/master-orchestrator.cjs",
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
