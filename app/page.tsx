@@ -29,6 +29,8 @@ import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutio
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import SuccessStoriesBanner2025 from '../components/SuccessStoriesBanner2025';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import UltimateContent2025PromotionBanner from '../components/UltimateContent2025PromotionBanner';
@@ -195,6 +197,10 @@ import RevolutionaryTechTrends2025 from '../components/RevolutionaryTechTrends20
 import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscoveryWidget';
 import InteractiveContentPromotionBanner from '../components/InteractiveContentPromotionBanner';
 >>>>>>> 0b0d9635540987b86bfe293a34b043aefc21b256
+=======
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import SuccessStoriesBanner2025 from '../components/SuccessStoriesBanner2025';
+>>>>>>> cursor/create-and-deploy-new-content-8671
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -537,6 +543,8 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <NewContentShowcase2025 />
+        <SuccessStoriesBanner2025 />
         <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
         <NewContentPromotionBanner />
