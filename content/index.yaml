@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 6
+  total_content_pieces: 10
   
   new_2025_content:
     - id: "autonomous-systems-revolution"
@@ -68,8 +68,72 @@ content_index:
       tags: ["Implementation Guide", "AI", "Enterprise", "Best Practices", "Framework"]
       featured: true
       is_new: true
+      
+    - id: "ai-practical-implementation-guide"
+      type: "blog"
+      title: "AI Implementation in 2025: A Practical Guide for Business Leaders"
+      file_path: "/content/blog/ai-2025-practical-implementation-guide.md"
+      url: "/blog/ai-2025-practical-implementation-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Business Strategy", "Implementation", "ROI", "Digital Transformation"]
+      featured: true
+      is_new: true
+      
+    - id: "quantum-computing-business-applications"
+      type: "blog"
+      title: "Quantum Computing Business Applications: Real-World Use Cases for 2025"
+      file_path: "/content/blog/quantum-computing-business-applications-2025.md"
+      url: "/blog/quantum-computing-business-applications-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Quantum Computing", "Business Applications", "Optimization", "Cryptography", "Machine Learning"]
+      featured: true
+      is_new: true
+      
+    - id: "ai-automation-roi-calculator-guide"
+      type: "blog"
+      title: "AI Automation ROI Calculator: Measure Your Investment Returns"
+      file_path: "/content/blog/ai-automation-roi-calculator-guide.md"
+      url: "/blog/ai-automation-roi-calculator-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI ROI", "Automation", "ROI Calculator", "Business Metrics", "Cost-Benefit Analysis"]
+      featured: true
+      is_new: true
+      
+    - id: "manufacturing-ai-transformation-case-study"
+      type: "case-study"
+      title: "Manufacturing AI Transformation: 340% ROI in 18 Months"
+      file_path: "/content/case-studies/manufacturing-ai-transformation.md"
+      url: "/case-studies/manufacturing-ai-transformation"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Manufacturing", "AI Transformation", "ROI", "Automation", "Predictive Maintenance"]
+      featured: true
+      is_new: true
 
   promotion_components:
+    - name: "NewContentShowcase2025"
+      file_path: "/components/NewContentShowcase2025.tsx"
+      status: "active"
+      features:
+        - "Auto-rotating content carousel"
+        - "Featured blog posts and case studies"
+        - "Interactive navigation controls"
+        - "Responsive design"
+        - "Call-to-action integration"
+        
+    - name: "SuccessStoriesBanner2025"
+      file_path: "/components/SuccessStoriesBanner2025.tsx"
+      status: "active"
+      features:
+        - "Success stories carousel"
+        - "ROI and metrics display"
+        - "Industry-specific case studies"
+        - "Animated statistics"
+        - "Professional testimonials"
+        
     - name: "NewContent2025PromotionBanner"
       file_path: "/src/components/NewContent2025PromotionBanner.tsx"
       status: "active"
@@ -99,21 +163,14 @@ content_index:
       - "Updated layout to include promotional content"
 
   metrics:
-    expected_roi_mentions: 39
-    success_stories: 8
-    implementation_guides: 4
-    blog_posts: 8
-    total_word_count: "~85,000 words"
-    estimated_reading_time: "~340 minutes"
-    new_content_roi_highlights: "2,500-3,500% ROI featured prominently"
-    promotional_components: 9
-    homepage_integration: "Complete with auto-rotation, filtering, and new breakthrough banners"
-    new_content_categories:
-      - "Synthetic Intelligence (2,500% ROI)"
-      - "Advanced Automation Mastery (3,500% ROI)"
-      - "Ultimate Breakthrough Content (2,500-8,500% ROI)"
-      - "Fortune 500 Success Stories"
-      - "Implementation Ultimate Guides"
+    expected_roi_mentions: 15
+    success_stories: 3
+    implementation_guides: 3
+    blog_posts: 5
+    total_word_count: "~45,000 words"
+    estimated_reading_time: "~180 minutes"
+    new_components: 2
+    featured_content: 10
 
   ultimate_content_2025:
     - id: "ai-2025-2026-ultimate-autonomous-enterprise-revolution-ultimate-breakthrough"
