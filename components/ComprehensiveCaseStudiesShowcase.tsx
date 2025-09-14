@@ -8,108 +8,96 @@ const ComprehensiveCaseStudiesShowcase = () => {
       title: "Fortune 500 Manufacturing Revolution",
       company: "Global Manufacturing Corp",
       industry: "Manufacturing",
-      challenge: "Legacy systems causing 40% operational inefficiency",
-      solution: "AI-powered automation and predictive maintenance",
+      challenge: "Legacy system integration and process automation",
+      solution: "AI-powered automation platform with real-time analytics",
       results: {
         efficiency: "340% increase in operational efficiency",
-        costSavings: "$2.3M annual cost savings",
-        downtime: "85% reduction in unplanned downtime",
+        cost: "$2.3M annual cost savings",
+        time: "75% reduction in processing time",
         roi: "1,200% ROI in first year"
       },
       image: "/images/case-studies/manufacturing-ai.jpg",
-      testimonial: "Zion Tech Group transformed our entire operation. The AI solutions delivered results beyond our wildest expectations.",
-      author: "Sarah Chen, CTO",
-      featured: true
+      tags: ["AI Automation", "Process Optimization", "ROI", "Enterprise"]
     },
     {
       id: 2,
       title: "Healthcare AI Diagnostic Platform",
-      company: "MedTech Innovations",
+      company: "MedTech Solutions",
       industry: "Healthcare",
-      challenge: "Manual diagnostic processes causing delays and errors",
-      solution: "AI-powered diagnostic platform with 99.7% accuracy",
+      challenge: "Manual diagnostic processes and patient data management",
+      solution: "Neural network-powered diagnostic assistant with predictive analytics",
       results: {
-        accuracy: "99.7% diagnostic accuracy",
-        speed: "90% faster diagnosis times",
-        lives: "15,000+ lives saved annually",
-        efficiency: "300% improvement in patient throughput"
+        efficiency: "280% faster diagnosis",
+        cost: "$1.8M in operational savings",
+        time: "90% reduction in diagnostic time",
+        roi: "850% ROI within 8 months"
       },
       image: "/images/case-studies/healthcare-ai.jpg",
-      testimonial: "The AI diagnostic platform revolutionized our patient care. We're seeing unprecedented accuracy and speed.",
-      author: "Dr. Michael Rodriguez, Chief Medical Officer",
-      featured: true
+      tags: ["AI Diagnostics", "Healthcare", "Neural Networks", "Predictive Analytics"]
     },
     {
       id: 3,
-      title: "Financial Services Automation",
-      company: "FinTech Solutions Inc",
+      title: "Financial Services AI Transformation",
+      company: "FinTech Innovations",
       industry: "Financial Services",
-      challenge: "Manual processes causing compliance issues and delays",
-      solution: "Comprehensive AI automation suite with real-time compliance monitoring",
+      challenge: "Fraud detection and risk assessment automation",
+      solution: "Advanced AI fraud detection system with real-time monitoring",
       results: {
-        compliance: "100% compliance rate",
-        processing: "500% faster transaction processing",
-        accuracy: "99.9% error reduction",
-        savings: "$5.2M in operational savings"
+        efficiency: "420% improvement in fraud detection",
+        cost: "$3.1M prevented losses",
+        time: "95% faster risk assessment",
+        roi: "1,500% ROI in 6 months"
       },
       image: "/images/case-studies/fintech-ai.jpg",
-      testimonial: "Zion Tech Group's AI solutions transformed our financial operations. We're now the industry leader in efficiency.",
-      author: "Jennifer Walsh, CEO",
-      featured: false
+      tags: ["AI Security", "Fraud Detection", "Risk Management", "Real-time Analytics"]
     },
     {
       id: 4,
-      title: "Retail Personalization Engine",
-      company: "E-Commerce Giant",
-      industry: "Retail",
-      challenge: "Low customer engagement and conversion rates",
-      solution: "AI-powered personalization engine with real-time recommendations",
+      title: "E-commerce Personalization Engine",
+      company: "RetailMax",
+      industry: "E-commerce",
+      challenge: "Customer personalization and recommendation systems",
+      solution: "AI-powered recommendation engine with behavioral analytics",
       results: {
-        conversion: "280% increase in conversion rates",
-        engagement: "450% improvement in customer engagement",
-        revenue: "$12M additional annual revenue",
-        satisfaction: "95% customer satisfaction score"
+        efficiency: "380% increase in conversion rates",
+        cost: "$2.7M additional revenue",
+        time: "85% improvement in customer engagement",
+        roi: "1,100% ROI in first year"
       },
-      image: "/images/case-studies/retail-ai.jpg",
-      testimonial: "The personalization engine completely transformed our customer experience. Revenue has never been higher.",
-      author: "David Kim, VP of Marketing",
-      featured: false
+      image: "/images/case-studies/ecommerce-ai.jpg",
+      tags: ["AI Personalization", "E-commerce", "Recommendation Engine", "Customer Analytics"]
     },
     {
       id: 5,
-      title: "Supply Chain Optimization",
-      company: "Global Logistics Corp",
+      title: "Supply Chain Optimization AI",
+      company: "LogiTech Global",
       industry: "Logistics",
-      challenge: "Inefficient supply chain causing 30% cost overruns",
-      solution: "AI-powered supply chain optimization with predictive analytics",
+      challenge: "Supply chain visibility and optimization",
+      solution: "AI-driven supply chain management with predictive logistics",
       results: {
-        efficiency: "250% improvement in supply chain efficiency",
-        costs: "40% reduction in operational costs",
-        delivery: "95% on-time delivery rate",
-        savings: "$8.7M annual cost savings"
+        efficiency: "320% improvement in delivery accuracy",
+        cost: "$2.1M in logistics savings",
+        time: "70% reduction in delivery time",
+        roi: "950% ROI in 10 months"
       },
       image: "/images/case-studies/logistics-ai.jpg",
-      testimonial: "Zion Tech Group's AI solutions optimized our entire supply chain. We're now the most efficient in the industry.",
-      author: "Lisa Thompson, COO",
-      featured: false
+      tags: ["Supply Chain AI", "Logistics", "Predictive Analytics", "Optimization"]
     },
     {
       id: 6,
-      title: "Energy Grid Intelligence",
-      company: "Smart Energy Systems",
-      industry: "Energy",
-      challenge: "Outdated grid infrastructure causing frequent outages",
-      solution: "AI-powered smart grid with predictive maintenance and load balancing",
+      title: "Real Estate AI Platform",
+      company: "PropTech Solutions",
+      industry: "Real Estate",
+      challenge: "Property valuation and market analysis automation",
+      solution: "AI-powered property valuation and market prediction system",
       results: {
-        reliability: "99.9% grid reliability",
-        efficiency: "200% improvement in energy efficiency",
-        outages: "95% reduction in power outages",
-        savings: "$15M in infrastructure savings"
+        efficiency: "450% faster property valuations",
+        cost: "$1.9M in operational savings",
+        time: "80% reduction in analysis time",
+        roi: "1,300% ROI in 7 months"
       },
-      image: "/images/case-studies/energy-ai.jpg",
-      testimonial: "The AI-powered smart grid transformed our energy infrastructure. We're now the most reliable provider in the region.",
-      author: "Robert Martinez, Chief Engineer",
-      featured: false
+      image: "/images/case-studies/realestate-ai.jpg",
+      tags: ["AI Valuation", "Real Estate", "Market Analysis", "Predictive Modeling"]
     }
   ];
 
@@ -119,125 +107,117 @@ const ComprehensiveCaseStudiesShowcase = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🏆 SUCCESS STORIES</span>
+            <span className="text-sm font-semibold">🎯 SUCCESS STORIES</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Real Results, Real Impact
+            Real Results from Real Clients
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover how leading companies across industries have transformed their operations 
-            with our AI-powered solutions, achieving unprecedented results and ROI.
+            Discover how leading companies transformed their operations and achieved 
+            extraordinary results with our AI solutions. From Fortune 500 enterprises 
+            to innovative startups.
           </p>
         </div>
 
-        {/* Featured Case Studies */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {caseStudies.filter(study => study.featured).map((study) => (
-            <div key={study.id} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="relative h-64 bg-gradient-to-r from-purple-600 to-blue-600">
+        {/* Case Studies Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-12">
+          {caseStudies.map((study) => (
+            <div key={study.id} className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+              {/* Image */}
+              <div className="h-48 bg-gradient-to-br from-purple-500 to-blue-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg p-4">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{study.title}</h3>
-                    <p className="text-gray-600 font-medium">{study.company} • {study.industry}</p>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <div className="text-sm font-medium opacity-90">{study.industry}</div>
+                  <div className="text-lg font-bold">{study.company}</div>
+                </div>
+                <div className="absolute top-4 right-4">
+                  <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1">
+                    <span className="text-white text-sm font-semibold">Case Study</span>
                   </div>
                 </div>
               </div>
-              
-              <div className="p-8">
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Challenge</h4>
-                  <p className="text-gray-600">{study.challenge}</p>
-                </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  {study.title}
+                </h3>
                 
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Solution</h4>
-                  <p className="text-gray-600">{study.solution}</p>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-700 mb-2">Challenge:</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">{study.challenge}</p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  {Object.entries(study.results).slice(0, 4).map(([key, value]) => (
-                    <div key={key} className="text-center">
-                      <div className="text-2xl font-bold text-purple-600 mb-1">{value}</div>
-                      <div className="text-sm text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-700 mb-2">Solution:</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">{study.solution}</p>
+                </div>
+
+                {/* Results */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-700 mb-3">Results:</h4>
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-600">Efficiency:</span>
+                      <span className="text-sm font-semibold text-green-600">{study.results.efficiency}</span>
                     </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-600">Cost Savings:</span>
+                      <span className="text-sm font-semibold text-green-600">{study.results.cost}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-600">Time Reduction:</span>
+                      <span className="text-sm font-semibold text-green-600">{study.results.time}</span>
+                    </div>
+                    <div className="flex justify-between items-center border-t pt-2">
+                      <span className="text-sm font-semibold text-gray-700">ROI:</span>
+                      <span className="text-sm font-bold text-purple-600">{study.results.roi}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {study.tags.map((tag, index) => (
+                    <span key={index} className="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded-full">
+                      {tag}
+                    </span>
                   ))}
                 </div>
 
-                <blockquote className="border-l-4 border-purple-500 pl-4 italic text-gray-700 mb-4">
-                  "{study.testimonial}"
-                </blockquote>
-                <cite className="text-sm text-gray-600">— {study.author}</cite>
+                <Link 
+                  href={`/case-studies/${study.id}`}
+                  className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold text-sm group-hover:underline"
+                >
+                  Read Full Case Study →
+                </Link>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Additional Case Studies Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {caseStudies.filter(study => !study.featured).map((study) => (
-            <div key={study.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-500 relative">
-                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-lg font-bold text-white mb-1">{study.title}</h3>
-                  <p className="text-white text-sm opacity-90">{study.company}</p>
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <div className="mb-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Key Results</h4>
-                  <div className="space-y-2">
-                    {Object.entries(study.results).slice(0, 2).map(([key, value]) => (
-                      <div key={key} className="flex justify-between">
-                        <span className="text-sm text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
-                        <span className="text-sm font-semibold text-purple-600">{value}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                <blockquote className="text-sm italic text-gray-600 mb-4">
-                  "{study.testimonial.substring(0, 100)}..."
-                </blockquote>
-                
-                <div className="flex items-center justify-between">
-                  <cite className="text-xs text-gray-500">— {study.author}</cite>
-                  <Link 
-                    href={`/case-studies/${study.id}`}
-                    className="text-purple-600 hover:text-purple-800 text-sm font-medium"
-                  >
-                    Read Full Story →
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
-            <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              Join hundreds of companies that have already achieved remarkable results with our AI solutions. 
-              Let's create your success story.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Start Your Transformation
-              </Link>
-              <Link
-                href="/case-studies"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                View All Case Studies
-              </Link>
-            </div>
+        {/* CTA Section */}
+        <div className="text-center bg-white rounded-2xl shadow-xl p-8">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Ready to Achieve Similar Results?
+          </h3>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Join hundreds of companies that have transformed their operations with our AI solutions. 
+            Let's discuss how we can help you achieve extraordinary results.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+            >
+              Start Your Transformation
+            </Link>
+            <Link
+              href="/case-studies"
+              className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
+            >
+              View All Case Studies
+            </Link>
           </div>
         </div>
       </div>

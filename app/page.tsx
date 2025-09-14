@@ -268,6 +268,13 @@ import UltimateContent2026Showcase from '../components/UltimateContent2026Showca
 // Import new Ultimate Content 2025 Revolutionary components
 import UltimateContent2025RevolutionaryBanner from '../components/UltimateContent2025RevolutionaryBanner';
 import UltimateContent2025Showcase from '../components/UltimateContent2025Showcase';
+
+// Import new comprehensive content components
+import ComprehensiveCaseStudiesShowcase from '../components/ComprehensiveCaseStudiesShowcase';
+import InteractiveAIToolsShowcase from '../components/InteractiveAIToolsShowcase';
+import UltimateSuccessMetricsShowcase from '../components/UltimateSuccessMetricsShowcase';
+import UltimateContentPromotionBanner from '../components/UltimateContentPromotionBanner';
+import InteractiveROICalculatorAdvanced from '../components/InteractiveROICalculatorAdvanced';
 // Import new content components
 import LatestAITrends2025 from '../components/LatestAITrends2025';
 import SuccessStoriesShowcase from '../components/SuccessStoriesShowcase';
@@ -316,12 +323,32 @@ export default function HomePage() {
         {/* AI 2025-2026 CONTENT REVOLUTION 50,000% ROI BANNER - NEWEST BREAKTHROUGH */}
         <AI2025_2026ContentRevolution50000ROIBanner />
         
+        {/* ULTIMATE CONTENT PROMOTION BANNER - NEWEST FEATURED */}
+        <UltimateContentPromotionBanner />
+        
+        {/* COMPREHENSIVE CASE STUDIES SHOWCASE - NEWEST FEATURED */}
+        <ComprehensiveCaseStudiesShowcase />
+        
+        {/* INTERACTIVE AI TOOLS SHOWCASE - NEWEST FEATURED */}
+        <InteractiveAIToolsShowcase />
+        
+        {/* ULTIMATE SUCCESS METRICS SHOWCASE - NEWEST FEATURED */}
+        <UltimateSuccessMetricsShowcase />
+        
+        {/* INTERACTIVE ROI CALCULATOR ADVANCED - NEWEST FEATURED */}
+        <InteractiveROICalculatorAdvanced />
+        
         {/* NEW CONTENT 2025 ULTIMATE BREAKTHROUGH BANNER - NEWEST FEATURED */}
         <NewContent2025UltimateBreakthroughBanner />
         
         {/* INTERACTIVE CONTENT DISCOVERY 2025 - NEWEST FEATURED */}
         <InteractiveContentDiscovery2025 />
         
+        {/* SUCCESS STORIES SHOWCASE 2025 - NEWEST FEATURED */}
+        <SuccessStoriesShowcase2025 />
+        
+        {/* REVOLUTIONARY NEWSLETTER SIGNUP 2025 - NEWEST FEATURED */}
+        <RevolutionaryNewsletterSignup2025 />
         {/* AI 2025 ULTIMATE CONTENT REVOLUTION PROMOTION BANNER - NEWEST BREAKTHROUGH */}
         <AI2025UltimateContentRevolutionPromotionBanner />
         
