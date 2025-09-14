@@ -3,7 +3,7 @@
   "systems": {
     "workflow-health": {
       "success": true,
-      "duration": 90,
+      "duration": 95,
       "error": null
     },
     "dependency-health": {
@@ -23,7 +23,7 @@
     },
     "retry-system": {
       "success": true,
-      "duration": 80,
+      "duration": 103,
       "error": null
     }
   },
