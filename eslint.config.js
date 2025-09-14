@@ -1,4 +1,3 @@
-import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -8,7 +7,7 @@ export default [
   {
     files: ['src/**/*.{js,jsx}', 'app/**/*.{js,jsx}'],
     languageOptions: {
-      ecmaVersion: 'latest',
+      ecmaVersion: 2022,
       sourceType: 'module',
       globals: {
         window: 'readonly',
