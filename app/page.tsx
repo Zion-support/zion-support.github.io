@@ -42,7 +42,6 @@ import UltimateContentShowcase2026 from '../components/UltimateContentShowcase20
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
 
 // Import new ultimate content showcase banner
-import UltimateContent2025ShowcaseBanner from '../components/UltimateContent2025ShowcaseBanner';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
@@ -56,14 +55,10 @@ import AutonomousBusinessOperationsPromotionBanner from '../components/Autonomou
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
 
 // Import new ultimate AI transformation promotional components
-import UltimateAITransformationBanner2025 from '../components/UltimateAITransformationBanner2025';
 
 // Import new 2025 autonomous systems promotional components
-import AutonomousSystems2025RevolutionBanner from '../components/AutonomousSystems2025RevolutionBanner';
-import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowcase2025';
 
 // Import new ultimate content showcase banners
-import UltimateContent2025ShowcaseBanner from '../components/UltimateContent2025ShowcaseBanner';
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
 
 export const metadata = {
@@ -83,17 +78,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Ultimate Content 2025 Showcase Banner - LATEST */}
-        <UltimateContent2025ShowcaseBanner />
         
         {/* New Content 2025 Ultimate Showcase Banner */}
         <NewContent2025UltimateShowcaseBanner />
         
-        {/* Ultimate AI Transformation Banner 2025 - NEW */}
-        <UltimateAITransformationBanner2025 />
         
-        {/* Autonomous Systems 2025 Revolution Banner - NEW */}
-        <AutonomousSystems2025RevolutionBanner />
         
         {/* AI 2025 Ultimate Breakthrough Banner - NEW */}
         <AI2025UltimateBreakthroughBanner />
@@ -104,8 +93,6 @@ export default function HomePage() {
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
         
-        {/* New Content 2025 Showcase Banner */}
-        <NewContent2025ShowcaseBanner />
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -216,8 +203,6 @@ export default function HomePage() {
         {/* Content Promotion Banners */}
         <UltimateContentShowcase2025 />
         
-        {/* Autonomous Systems Showcase 2025 - NEW */}
-        <AutonomousSystemsShowcase2025 />
         
         <RevolutionaryContent2026Banner />
         <FeaturedContentShowcase2026 />
