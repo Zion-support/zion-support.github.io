@@ -35415,6 +35415,16 @@
       }
     },
     {
+      "route": "/reports/innovations/insight-2025-08-18-0450",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Checklist: Agent Ops",
+        "description": "Checklist: Agent Ops — auto-suggested description"
+      }
+    },
+    {
       "route": "/reports/innovations/insight-2025-08-18T03-11",
       "missing": [
         "og:image"
@@ -65814,6 +65824,16 @@
       "suggestion": {
         "title": "Autonomous Playbook — Cloud Cost Optimization (2025-08-18 04:40 UTC)",
         "description": "Autonomous Playbook — Cloud Cost Optimization (2025-08-18 04:40 UTC) — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-18-0450",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Performance Tuning Guide — AI Service Design (2025-08-18 04:50 UTC)",
+        "description": "Autonomous Performance Tuning Guide — AI Service Design (2025-08-18 04:50 UTC) — auto-suggested description"
       }
     },
     {
