@@ -35075,6 +35075,16 @@
       }
     },
     {
+      "route": "/reports/innovations/insight-2025-08-18-0330",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Guide: AI QA & Eval",
+        "description": "Guide: AI QA & Eval — auto-suggested description"
+      }
+    },
+    {
       "route": "/reports/innovations/insight-2025-08-18T03-11",
       "missing": [
         "og:image"
@@ -64994,6 +65004,16 @@
       "suggestion": {
         "title": "Autonomous Playbook — Vision & Multimodal (2025-08-18 03:20 UTC)",
         "description": "Autonomous Playbook — Vision & Multimodal (2025-08-18 03:20 UTC) — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-18-0330",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Performance Tuning Guide — AI Service Design (2025-08-18 03:30 UTC)",
+        "description": "Autonomous Performance Tuning Guide — AI Service Design (2025-08-18 03:30 UTC) — auto-suggested description"
       }
     },
     {
