@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
-import ErrorBoundary from '../../components/ErrorBoundary';
-import SEO from '../../components/SEO';
+import ErrorBoundary from '../../../components/ErrorBoundary';
+import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'Global Enterprise AI 2025 Transformation: $2.8B Value Creation Success Story | Zion Tech Group',
