@@ -56,14 +56,14 @@ export default function MicroSaasServices() {
         : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
-        <div className="container mx-auto px-4 text-center">
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Micro SAAS Solutions
+            Micro SAAS Services & Solutions
           </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Transform your business with our comprehensive suite of AI-powered micro SAAS services. 
-            From automation to analytics, we provide enterprise-grade solutions at startup prices.
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            Transform your business with our comprehensive suite of micro SAAS solutions, 
+            designed to streamline operations and drive growth.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-white text-zion-blue hover:bg-gray-100">
@@ -248,18 +248,10 @@ export default function MicroSaasServices() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-zion-blue mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Get in touch with our team to discuss your needs and discover how our micro SAAS solutions can drive your success
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <section className="bg-gray-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-8">Ready to Get Started?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="text-2xl font-bold text-zion-blue mb-6">Contact Information</h3>
               <div className="space-y-4">
@@ -295,39 +287,21 @@ export default function MicroSaasServices() {
                 </div>
               </div>
             </div>
-            
             <div>
-              <h3 className="text-2xl font-bold text-zion-blue mb-6">Quick Actions</h3>
-              <div className="space-y-4">
-                <Link to="/request-quote">
-                  <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
-                    Request Custom Quote
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">
-                    Schedule Consultation
-                  </Button>
-                </Link>
-                <Link to="/services">
-                  <Button variant="outline" className="w-full border-zion-blue text-zion-blue hover:bg-zion-blue hover:text-white">
-                    View All Services
-                  </Button>
-                </Link>
-              </div>
-              
-              <div className="mt-8 p-6 bg-zion-blue/5 rounded-lg border border-zion-blue/20">
-                <h4 className="font-medium text-zion-blue mb-2">Why Choose Zion Tech Group?</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• 24/7 Technical Support</li>
-                  <li>• 99.9% Uptime Guarantee</li>
-                  <li>• SOC 2 Type II Compliant</li>
-                  <li>• 30-Day Money Back Guarantee</li>
-                  <li>• Free Migration Support</li>
-                </ul>
-              </div>
+              <h3 className="text-xl font-semibold mb-2">Email</h3>
+              <p>{CONTACT_INFO.email}</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Address</h3>
+              <p>{CONTACT_INFO.address}</p>
             </div>
           </div>
+          <a
+            href={`tel:${CONTACT_INFO.mobile}`}
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Contact Us Now
+          </a>
         </div>
       </section>
 
