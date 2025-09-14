@@ -76,18 +76,24 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'AI behavioral analysis',
       'Automated incident response',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       'Predictive threat modeling',
       'Zero-day vulnerability detection',
       'Advanced threat intelligence',
       'Compliance reporting',
       '24/7 security monitoring'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       'Zero-day threat protection',
       'Compliance reporting',
       'Security orchestration',
       'Threat intelligence feeds',
       '24/7 monitoring'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-802e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🛡️',
@@ -95,16 +101,23 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-cybersecurity',
 <<<<<<< HEAD
+    marketPosition: 'Advanced AI cybersecurity solution',
+    targetAudience: 'Enterprises, financial institutions, healthcare, government',
+=======
+<<<<<<< HEAD
     marketPosition: 'Enterprise-grade AI security solution with 99.9% threat detection accuracy',
     targetAudience: 'Enterprises, financial institutions, healthcare organizations, and government agencies',
 =======
     marketPosition: 'Advanced AI cybersecurity solution',
     targetAudience: 'Enterprises, financial institutions, healthcare, government',
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-802e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     trialDays: 14,
     setupTime: '20 minutes',
     category: 'Cybersecurity',
     realService: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     technology: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Blockchain'],
     integrations: ['SIEM systems', 'Firewalls', 'EDR solutions', 'Cloud platforms'],
@@ -114,6 +127,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$2.5B global market',
     growthRate: '120% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['AI/ML', 'Threat Intelligence', 'Behavioral Analysis', 'Automation'],
     integrations: ['SIEM systems', 'Firewalls', 'EDR solutions', 'Cloud platforms'],
     useCases: ['Threat detection', 'Incident response', 'Compliance', 'Risk management'],
@@ -121,7 +135,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace'],
     marketSize: '$2.5B global market',
     growthRate: '35% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-802e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     id: 'autonomous-ai-agents',
@@ -2749,6 +2766,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     category: 'Quantum Computing',
     realService: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     technology: ['Quantum Computing', 'Simulation Algorithms', 'High-Performance Computing', 'Scientific Computing'],
     integrations: ['Python', 'Julia', 'MATLAB', 'Jupyter Notebooks'],
     useCases: ['Quantum research', 'Algorithm development', 'Education', 'Technology development'],
@@ -2937,6 +2956,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$28B global business intelligence market',
     growthRate: '30% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['Post-Quantum Cryptography', 'Quantum Key Distribution', 'Lattice-based Encryption', 'Quantum Randomness'],
     integrations: ['PKI systems', 'VPN solutions', 'Cloud platforms', 'IoT devices'],
     useCases: ['Data encryption', 'Secure communications', 'Digital signatures', 'Key management'],
@@ -3846,7 +3866,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['MetricStream', 'SaiGlobal', 'LogicGate'],
     marketSize: '$2.8B global market',
     growthRate: '40% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-802e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

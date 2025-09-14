@@ -6,7 +6,7 @@ import {
   Cpu, Database, Users, Award, BookOpen, Phone
 } from 'lucide-react';
 
-const EnhancedNavigation = () => {
+const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -20,7 +20,6 @@ const EnhancedNavigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
   const services = [
     { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
     { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },
@@ -28,41 +27,6 @@ const EnhancedNavigation = () => {
     { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },
     { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },
     { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
-=======
-  const navigationItems = [
-    { name: 'Home', href: '/' },
-    { 
-      name: 'Services', 
-      href: '/services',
-      dropdown: [
-        { name: 'AI Solutions', href: '/services/ai' },
-        { name: 'Cloud Infrastructure', href: '/services/cloud' },
-        { name: 'Cybersecurity', href: '/services/security' },
-        { name: 'Quantum Computing', href: '/services/quantum' }
-      ]
-    },
-    { 
-      name: 'Content', 
-      href: '/blog',
-      dropdown: [
-        { name: 'Latest Blog Posts', href: '/blog' },
-        { name: 'AI Solutions 2025 Ultimate', href: '/ai-solutions-2025-ultimate' },
-        { name: 'Tech Trends 2025-2030', href: '/tech-trends-2025-2030' },
-        { name: 'Business Transformation Guide', href: '/business-transformation-guide-2025' },
-        { name: 'Neural Interface Revolution', href: '/blog/ai-2025-neural-interface-revolution' },
-        { name: 'Quantum AI Superintelligence', href: '/blog/quantum-ai-superintelligence-2025' },
-        { name: 'AI 2025 Insights', href: '/blog/ai-2025-generative-ai-business-transformation' },
-        { name: 'Quantum Computing Guide', href: '/blog/quantum-computing-2025-business-applications' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Global AI Transformation', href: '/case-studies/global-ai-transformation-2025-mega-success' },
-        { name: 'Implementation Guides', href: '/resources' },
-        { name: 'Autonomous Operations Guide', href: '/resources/ai-2025-autonomous-business-operations-guide' }
-      ]
-    },
-    { name: 'Portfolio', href: '/portfolio' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
->>>>>>> cursor/create-and-deploy-new-content-e336
   ];
 
   const company = [

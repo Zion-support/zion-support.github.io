@@ -6,20 +6,28 @@
     "criticalFailures": 0,
     "canBuild": true,
 <<<<<<< HEAD
+    "timestamp": "2025-08-19T18:32:30.697Z"
+=======
+<<<<<<< HEAD
     "timestamp": "2025-08-19T18:25:53.083Z"
 =======
     "timestamp": "2025-08-19T18:32:30.697Z"
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-494d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   "results": [
     {
       "name": "Page Structure Validation",
       "status": "PASS",
 <<<<<<< HEAD
+      "result": "All 2 pages are properly structured",
+=======
+<<<<<<< HEAD
       "result": "All 22 pages are properly structured",
 =======
       "result": "All 2 pages are properly structured",
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-494d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       "critical": true
     },
     {

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export const real2036SpecializedServices = [
   // AI-Powered Agriculture Platform
   {
@@ -439,6 +441,7 @@ export const real2036SpecializedServices = [
       'Uptime': '99.9%'
     }
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 export type Real2036SpecializedService = {
   id: string;
   name: string;
@@ -758,6 +761,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     integration: ['Spacecraft systems', 'Training facilities', 'Booking systems', 'Safety systems'],
     useCases: ['Space tourism', 'Training programs', 'Safety management', 'Customer experience'],
     technology: ['Space systems', 'Safety protocols', 'Training technology', 'Customer management']
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-917e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];

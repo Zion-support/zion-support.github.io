@@ -1536,6 +1536,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     category: 'Professional Services',
     realService: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     technology: ['NLP', 'Machine Learning', 'Legal AI', 'Document Processing'],
     integrations: ['Legal research databases', 'Practice management systems', 'Document management', 'Billing systems'],
     useCases: ['Legal research', 'Contract review', 'Document generation', 'Compliance monitoring'],
@@ -1544,6 +1546,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$800M legal tech market',
     growthRate: '140% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['Natural Language Processing', 'Machine Learning', 'Legal AI', 'Document Analysis'],
     integrations: ['Legal research databases', 'Practice management systems', 'Document storage', 'Billing platforms'],
     useCases: ['Contract review', 'Legal research', 'Document analysis', 'Case management'],
@@ -4647,7 +4650,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['None - Unique absolute 5.0'],
     marketSize: '$1Q potential market',
     growthRate: '20000000000000000% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-6f72
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
@@ -4674,6 +4680,8 @@ export const serviceCategories = [
   'Automotive & Transportation',
   'Energy & Utilities',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   'Agriculture & Farming',
   'Sports & Fitness',
   'Entertainment & Media',
@@ -4685,6 +4693,7 @@ export const serviceCategories = [
   'Quantum Computing',
   'Data & Privacy'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Research & Development',
   'Government & Defense',
   'Education & Training',
@@ -4734,7 +4743,10 @@ export const serviceCategories = [
   'Transcendent Technology',
   'Cosmic Technology',
   'Godlike Technology'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-6f72
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];
 
 export const getServicesByCategory = (category: string) => {

@@ -10,7 +10,12 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
+  DialogTrigger,
+} from "@/components/ui/dialog";
+=======
   DialogTrigger} from "@/components/ui/dialog";
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
 type RewardOption = {
   id: string;

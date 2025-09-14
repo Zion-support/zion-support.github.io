@@ -1293,6 +1293,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT'],
     marketSize: '$1.8B global market',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     growthRate: '40% annual growth'
   },
   // Cybersecurity & Zero Trust Services
@@ -1332,6 +1334,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$2.8B global market',
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e1ac
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '40% annual growth'
   },
   {
@@ -1407,6 +1410,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     growthRate: '45% annual growth'
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'quantum-machine-learning',
     name: 'Quantum Machine Learning Platform',
@@ -3070,6 +3075,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$5B+ emerging market',
     growthRate: '500% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'quantum-cryptography-vault',
     name: 'Quantum Cryptography Vault',
     tagline: 'Future-proof quantum encryption',
@@ -3752,7 +3758,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['MetricStream', 'SaiGlobal', 'LogicGate'],
     marketSize: '$2.8B global market',
     growthRate: '40% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e1ac
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

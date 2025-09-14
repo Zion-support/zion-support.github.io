@@ -102,6 +102,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
   },
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     id: 'ai-code-review-assistant',
     name: 'AI Code Review Assistant',
     tagline: 'Intelligent code analysis and optimization',
@@ -924,6 +926,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       '24/7 SOC monitoring',
       'Threat intelligence feeds'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'quantum-ai-optimizer',
     name: 'Quantum AI Optimizer',
     tagline: 'Quantum-powered AI optimization platform',
@@ -975,12 +978,17 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Security orchestration',
       'Threat intelligence feeds',
       '24/7 monitoring'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1d16
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-500 to-pink-600',
     textColor: 'text-red-400',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/cyber-threat-intelligence',
     marketPosition: 'Advanced threat intelligence platform, competitive with CrowdStrike and Palo Alto Networks',
@@ -996,6 +1004,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['CrowdStrike', 'Palo Alto Networks', 'FireEye', 'Recorded Future'],
     marketSize: '$20B global threat intelligence market',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/ai-cybersecurity',
     marketPosition: 'Advanced AI cybersecurity solution',
     targetAudience: 'Enterprises, financial institutions, healthcare, government',
@@ -1009,7 +1018,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     roi: '400% average ROI in 6 months',
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace'],
     marketSize: '$2.5B global market',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1d16
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '35% annual growth'
   },
   {
@@ -1554,6 +1566,9 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
   },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'metaverse-commerce-platform',
     name: 'Metaverse Commerce Platform',
@@ -1591,7 +1606,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     growthRate: '200% annual growth'
   },
   // IoT & Smart City Services
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1d16
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'quantum-blockchain-oracle',
     name: 'Quantum Blockchain Oracle',
@@ -1665,6 +1683,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     growthRate: '45% annual growth'
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'ai-powered-chatbot-platform',
     name: 'AI Chatbot Platform',
@@ -2205,6 +2225,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$2.1B quantum security market',
     growthRate: '280% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'edge-computing-orchestrator',
     name: 'Edge Computing Orchestrator',
     tagline: 'Intelligent edge infrastructure management',
@@ -2995,7 +3016,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['MetricStream', 'SaiGlobal', 'LogicGate'],
     marketSize: '$2.8B global market',
     growthRate: '40% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1d16
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

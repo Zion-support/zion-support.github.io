@@ -9,7 +9,8 @@ import {
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbSeparator} from '@/components/ui/breadcrumb';
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 

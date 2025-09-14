@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Search, Grid, List, Star, CheckCircle, ArrowRight, Check,
-  Brain, Atom, Shield, Building, Globe,
+  Search, List, Star, CheckCircle, ArrowRight, Check,
+  Brain, Shield, Building, Globe,
   Users, TrendingUp, Award, Phone, Mail, MapPin
 } from 'lucide-react';
 
 // Import our new service data
-import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
-import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
-import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
+// import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
+import { innovativeMicroSaasExpansionServices } from '../data/2025-innovative-micro-saas-expansion';
+import { cuttingEdgeITInfrastructure2025 } from '../data/2025-cutting-edge-it-infrastructure';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -20,16 +20,16 @@ const contactInfo = {
 };
 
 const allServices = [
-  ...advancedEnterpriseServices2025,
-      ...innovativeMicroSaasExpansion2025,
-  ...cuttingEdgeITInfrastructureServices
+  // ...advancedEnterpriseServices2025,
+      ...innovativeMicroSaasExpansionServices,
+      ...cuttingEdgeITInfrastructure2025
 ];
 
 const categories = [
   {
     id: 'all',
     name: 'All Services',
-    icon: <Grid className="w-6 h-6" />,
+    icon: <List className="w-6 h-6" />,
     color: 'from-gray-500 to-slate-500',
     description: 'Complete portfolio of advanced services'
   },
@@ -64,7 +64,7 @@ const categories = [
   {
     id: 'quantum',
     name: 'Quantum Computing',
-    icon: <Atom className="w-6 h-6" />,
+    icon: <Brain className="w-6 h-6" />,
     color: 'from-violet-500 to-indigo-500',
     description: 'Quantum computing solutions'
   }
@@ -352,7 +352,7 @@ export default function AdvancedServicesShowcase() {
       <SEO 
         title="2025 Advanced Services Showcase - Zion Tech Group"
         description="Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses."
-        keywords={["AI services", "micro SAAS", "IT infrastructure", "quantum computing", "enterprise solutions", "Zion Tech Group"]}
+        keywords="AI services, micro SAAS, IT infrastructure, quantum computing, enterprise solutions, Zion Tech Group"
       />
       
       {/* Hero Section */}
@@ -467,7 +467,7 @@ export default function AdvancedServicesShowcase() {
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
                 >
-                  <Grid className="w-5 h-5" />
+                  <List className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}

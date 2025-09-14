@@ -49,6 +49,7 @@ export default function HomePage() {
         "Web3 Login + DID"
       ],
       gradient: "bg-gradient-to-r from-orange-600 to-red-600"
+<<<<<<< HEAD
     },
     {
       icon: "🎓",
@@ -97,11 +98,38 @@ export default function HomePage() {
       href: "/blog/web3-stack-checklist-for-enterprise",
       type: "Blog Post",
       readTime: "12 min read"
+=======
+    },
+    {
+      icon: "🎓",
+      title: "Education & Growth",
+      description: "Zion Academy, incubator programs, and grants foster innovation and community growth.",
+      features: [
+        "Zion Academy",
+        "Incubator + Grants",
+        "Regional Job Categories",
+        "Wage Baselines"
+      ],
+      gradient: "bg-gradient-to-r from-teal-600 to-cyan-600"
+    },
+    {
+      icon: "🚀",
+      title: "One-Click Deployment",
+      description: "Launch your complete digital economy in minutes with our unified deployment protocol.",
+      features: [
+        "Automated Orchestration",
+        "CMS Instance Generation",
+        "Landing + Auth Flows",
+        "Blog + Roadmap Setup"
+      ],
+      gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
+>>>>>>> origin/final-sprint-completion-backup-20250827-052055
     }
   ];
 
   return (
     <div className="min-h-screen">
+<<<<<<< HEAD
       {/* Enhanced Promo Banner */}
       <div className="w-full bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
@@ -111,6 +139,33 @@ export default function HomePage() {
               🆕 New Content
             </span>
             <span className="font-semibold">3 fresh guides on AI deployment, services pricing, and Web3</span>
+=======
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="hero-gradient absolute inset-0 -z-10"></div>
+          
+          <div className="animate-fade-in">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="gradient-text">Launch Sovereign</span>
+              <br />
+              <span className="text-white">AI-Powered Digital Economies</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+              Built for the future of decentralized business.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+                🚀 Launch Your Economy
+              </a>
+              <a href="/admin/instances" className="btn-secondary hover-lift">
+                📊 View Instances
+              </a>
+            </div>
+>>>>>>> origin/final-sprint-completion-backup-20250827-052055
           </div>
           <a href="/blog" className="inline-flex items-center gap-1 underline underline-offset-4 decoration-white/60 hover:decoration-white font-semibold hover:gap-2 transition-all duration-200">
             Read the blog →
@@ -118,6 +173,7 @@ export default function HomePage() {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="hero-gradient absolute inset-0 -z-10"></div>
@@ -257,6 +313,32 @@ export default function HomePage() {
               <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
               <div className="text-white/70">Scalability</div>
             </div>
+=======
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Everything You Need to Build the Future
+            </h2>
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
+              for launching sovereign digital economies.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                features={feature.features}
+                gradient={feature.gradient}
+              />
+            ))}
+>>>>>>> origin/final-sprint-completion-backup-20250827-052055
           </div>
         </div>
       </section>
@@ -278,9 +360,36 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
+<<<<<<< HEAD
               <a href="/blog" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 Read the Blog
               </a>
+=======
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div className="animate-fade-in">
+              <div className="text-3xl font-bold text-blue-400 mb-2">100+</div>
+              <div className="text-white/70">Features Available</div>
+            </div>
+            <div className="animate-fade-in" style={{animationDelay: '0.1s'}}>
+              <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+              <div className="text-white/70">Deployment Options</div>
+            </div>
+            <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
+              <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+              <div className="text-white/70">AI Orchestration</div>
+            </div>
+            <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
+              <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
+              <div className="text-white/70">Scalability</div>
+>>>>>>> origin/final-sprint-completion-backup-20250827-052055
             </div>
           </div>
         </div>
