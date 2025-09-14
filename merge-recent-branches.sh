@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Continue merge process for remaining branches
+# Merge recent branches efficiently
 set -e
 
-echo "🚀 Continuing comprehensive merge process..."
+echo "🚀 Starting merge of recent branches..."
 echo "⏰ Started at: $(date)"
 
 # Ensure we're on main and it's up to date
@@ -16,14 +16,13 @@ SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
 SKIPPED_BRANCHES=0
 CONFLICT_RESOLUTIONS=0
-TOTAL_BRANCHES=0
 
-# Get all remaining branches that need to be merged
-echo "📊 Getting remaining branches to merge..."
-ALL_BRANCHES=$(git branch -r | grep -E "(cursor|pr)" | sed 's/origin\///' | sort)
-TOTAL_BRANCHES=$(echo "$ALL_BRANCHES" | wc -l)
+# Get recent branches (last 100)
+echo "📊 Getting recent branches to merge..."
+RECENT_BRANCHES=$(git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(refname:short)' | grep -E "(cursor|pr)" | head -100)
+TOTAL_BRANCHES=$(echo "$RECENT_BRANCHES" | wc -l)
 
-echo "📊 Total branches to process: $TOTAL_BRANCHES"
+echo "📊 Processing $TOTAL_BRANCHES recent branches"
 
 # Function to resolve conflicts intelligently
 resolve_conflicts() {
@@ -145,23 +144,13 @@ merge_branch() {
     fi
 }
 
-# Main processing loop - process in batches of 50
-echo "🔄 Starting batch processing..."
+# Main processing loop
+echo "🔄 Starting branch processing..."
 echo "---"
 
 CURRENT=0
-BATCH_SIZE=50
-BATCH_NUM=1
-
-for branch in $ALL_BRANCHES; do
+for branch in $RECENT_BRANCHES; do
     CURRENT=$((CURRENT + 1))
-    
-    # Start new batch
-    if [ $((CURRENT % BATCH_SIZE)) -eq 1 ]; then
-        echo "📦 Starting Batch $BATCH_NUM (branches $CURRENT-$((CURRENT + BATCH_SIZE - 1)))"
-        BATCH_NUM=$((BATCH_NUM + 1))
-    fi
-    
     echo "📋 [$CURRENT/$TOTAL_BRANCHES] Processing branch: $branch"
     
     # Check if branch can be merged
@@ -183,11 +172,11 @@ for branch in $ALL_BRANCHES; do
         echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
     fi
     
-    # Push changes every 50 branches to avoid losing work
-    if [ $((CURRENT % BATCH_SIZE)) -eq 0 ]; then
-        echo "💾 Pushing batch progress to remote..."
+    # Push changes every 20 branches to avoid losing work
+    if [ $((CURRENT % 20)) -eq 0 ]; then
+        echo "💾 Pushing progress to remote..."
         git push origin main
-        echo "✅ Batch $((BATCH_NUM - 1)) completed and pushed"
+        echo "✅ Progress pushed"
         echo "---"
     fi
 done
@@ -198,7 +187,7 @@ git push origin main
 
 # Summary
 echo ""
-echo "🎉 Comprehensive merge process completed!"
+echo "🎉 Recent branches merge process completed!"
 echo "📊 Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
@@ -210,7 +199,7 @@ echo "⏰ Completed at: $(date)"
 # Show recent commits
 echo ""
 echo "📝 Recent commits:"
-git log --oneline -20
+git log --oneline -10
 
 echo ""
-echo "🎯 All remaining PRs have been processed!"
+echo "🎯 Recent branches have been processed!"
