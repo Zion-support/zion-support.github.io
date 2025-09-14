@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-"use client";
-"use client";
-=======
 'use client';
 
->>>>>>> origin/cursor/create-and-deploy-new-content-ad66
 import React, { useState } from 'react';
 import Link from 'next/link';
 
