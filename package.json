@@ -8,6 +8,7 @@
     "build": "vite build",
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
+    "prebuild:netlify": "yarn install --production=false",
     "start": "vite preview",
     "postbuild": "echo \"Build completed\"",
     "lint": "eslint . --max-warnings 1000",

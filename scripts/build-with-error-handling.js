@@ -15,9 +15,10 @@ try {
   process.chdir(__dirname + '/..');
   
   console.log('📦 Installing dependencies...');
-  execSync('yarn install', { stdio: 'inherit' });
+  execSync('yarn install --production=false', { stdio: 'inherit' });
   
   console.log('🔨 Building application...');
+  execSync('npm run prebuild:netlify', { stdio: 'inherit' });
   execSync('npm run build', { stdio: 'inherit' });
   
   // Check if build output exists
