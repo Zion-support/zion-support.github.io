@@ -259,6 +259,24 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
+    - id: "enterprise-automation-mastery"
+      type: "blog"
+      title: "AI 2025: Enterprise Automation Mastery - 1,500% ROI Guide"
+      file_path: "/content/blog/ai-2025-enterprise-automation-mastery.md"
+      url: "/blog/ai-2025-enterprise-automation-mastery"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Enterprise Automation", "AI Mastery", "ROI", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,500%"
+        automation: "99%"
+        efficiency: "98%"
+        savings: "$8.5B annually"
+        satisfaction: "99.9%"
+      reading_time: "20 min read"
+      
     - id: "enterprise-ai-revolution-ultimate-breakthrough-2025"
       type: "blog"
       title: "AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide"
