@@ -25,6 +25,9 @@ import UltimateBreakthroughContentShowcase100000ROI from '../components/Ultimate
 import NewContent2025UltimateDiscoveryBanner from '../components/NewContent2025UltimateDiscoveryBanner';
 import AI2025ContentRevolutionPromotionBanner from '../components/AI2025ContentRevolutionPromotionBanner';
 import InteractiveContentShowcase2025 from '../components/InteractiveContentShowcase2025';
+// Import new AI 2025 Ultimate Breakthrough components - NEWEST FEATURED
+import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
+import InteractiveAIAssessment2025 from '../components/InteractiveAIAssessment2025';
 // Import new AI 2025-2026 Ultimate Transformation components - LATEST FEATURED
 import AI2025_2026UltimateTransformation50000ROIPromotionBanner from '../components/AI2025_2026UltimateTransformation50000ROIPromotionBanner';
 import UltimateContentShowcase2025_2026 from '../components/UltimateContentShowcase2025_2026';
@@ -355,6 +358,16 @@ export default function HomePage() {
           
           {/* Ultimate Digital Transformation Banner */}
           <UltimateDigitalTransformationBanner />
+          
+          {/* AI 2025 ULTIMATE BREAKTHROUGH BANNER - NEWEST FEATURED */}
+          <AI2025UltimateBreakthroughBanner />
+          
+          {/* INTERACTIVE AI ASSESSMENT 2025 - NEWEST FEATURED */}
+          <div className="py-16 bg-gray-50">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+              <InteractiveAIAssessment2025 />
+            </div>
+          </div>
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
         {/* AI 2025 ULTIMATE BREAKTHROUGH 100,000% ROI BANNER - NEWEST FEATURED */}
