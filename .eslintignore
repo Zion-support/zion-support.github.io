@@ -7,8 +7,6 @@ dist/
 # Build outputs
 *.tsbuildinfo
 *.log
-<<<<<<< HEAD
-
 # Environment files
 .env*
 
@@ -44,7 +42,6 @@ automation/
 scripts/automation/
 scripts/pm2/
 *.cjs
-*.js
 !jest.config.*.cjs
 !next.config.*.cjs
 !postcss.config.*.cjs
@@ -79,14 +76,10 @@ utils/supabase/client.ts
 utils/next-link-shim.tsx
 utils/messageChannelHandler.ts
 utils/api.ts
-=======
+
+# Generated files
 **/*.generated.*
 zion.app/recovered-content/**
 
 # Netlify functions (serverless functions with different linting rules)
-<<<<<<< HEAD
 netlify/functions/
-=======
-netlify/functions/
->>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
