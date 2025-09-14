@@ -1,12 +1,5 @@
 [build]
-<<<<<<< HEAD
-  # Build command
-<<<<<<< HEAD
-=======
   # Build command - using Vite directly
->>>>>>> origin/cursor/build-and-deploy-web-application-with-netlify-0bed
-=======
->>>>>>> origin/cursor/build-and-deploy-web-application-with-netlify-638a
   command = "npm run build"
   
   # Directory to publish
@@ -39,20 +32,10 @@
   # Ensure Vite is available
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-  # Force Vite build detection (disable Next.js auto-detection)
-  NETLIFY_USE_NEXTJS = "false"
-=======
-  # Disable automatic Next.js plugin detection
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
->>>>>>> origin/cursor/build-and-deploy-web-application-with-netlify-0bed
-=======
   # Disable Next.js auto-detection
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   # Force Vite build mode
   NETLIFY_USE_NEXT_PLUGIN = "false"
->>>>>>> origin/cursor/build-and-deploy-web-application-with-netlify-638a
 
 # Cache configuration to prevent dependency issues
 [build.cache]

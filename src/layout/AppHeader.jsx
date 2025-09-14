@@ -42,10 +42,7 @@ export function AppHeader() {
     setActiveDropdown(null);
     setSearchOpen(false);
   }, [location.pathname]);
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/build-vite-project-with-missing-dependency-e03a
   const navigationItems = [
     { name: 'Home', path: '/', icon: null },
     { 
@@ -53,11 +50,6 @@ export function AppHeader() {
       path: '/services', 
       icon: null,
       dropdown: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/build-vite-project-with-missing-dependency-e03a
         { name: 'AI & Machine Learning', path: '/services?category=ai-ml', icon: Brain, color: 'from-purple-500 to-pink-500', description: 'Intelligent automation and insights' },
         { name: 'Quantum Computing', path: '/services?category=quantum', icon: Zap, color: 'from-blue-500 to-cyan-500', description: 'Next-generation problem solving' },
         { name: 'Blockchain & Web3', path: '/services?category=blockchain', icon: Lock, color: 'from-green-500 to-emerald-500', description: 'Decentralized solutions' },
@@ -66,44 +58,17 @@ export function AppHeader() {
         { name: 'FinTech Solutions', path: '/services?category=fintech', icon: Database, color: 'from-yellow-500 to-orange-500', description: 'Financial technology' },
         { name: 'Green Technology', path: '/services?category=green-tech', icon: Shield, color: 'from-green-400 to-teal-500', description: 'Sustainable solutions' },
         { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500', description: 'Advanced protection' },
-<<<<<<< HEAD
-      ]
-    },
-    { 
-      name: 'Solutions', 
-      path: '/business-solutions', 
-      icon: null,
-      dropdown: [
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Shield, color: 'from-green-400 to-teal-500' },
-        { name: 'Financial Services', path: '/solutions/financial', icon: Database, color: 'from-yellow-500 to-orange-500' },
-        { name: 'Manufacturing', path: '/solutions/manufacturing', icon: Code, color: 'from-blue-500 to-indigo-500' },
-        { name: 'Retail & E-commerce', path: '/solutions/retail', icon: Users, color: 'from-purple-500 to-pink-500' },
-        { name: 'Government', path: '/solutions/government', icon: Lock, color: 'from-gray-500 to-slate-500' },
-        { name: 'Education', path: '/solutions/education', icon: Brain, color: 'from-cyan-500 to-blue-500' },
->>>>>>> origin/cursor/build-vite-project-with-missing-dependency-fbe9
-=======
->>>>>>> origin/cursor/build-vite-project-with-missing-dependency-e03a
       ]
     },
     { name: 'About', path: '/about', icon: null },
     { name: 'Contact', path: '/contact', icon: null },
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/build-vite-project-with-missing-dependency-e03a
 
   const isActive = (path) => location.pathname === path;
 
   const handleDropdownToggle = (index) => {
     setActiveDropdown(activeDropdown === index ? null : index);
   };
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/build-vite-project-with-missing-dependency-fbe9
-=======
->>>>>>> origin/cursor/build-vite-project-with-missing-dependency-e03a
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'

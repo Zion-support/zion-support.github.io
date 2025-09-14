@@ -94,39 +94,6 @@ export default defineConfig(async ({ mode }) => {
       sourcemap: false,
       reportCompressedSize: true
     },
-<<<<<<< HEAD
-    sourcemap: false,
-    reportCompressedSize: true
-  },
-  server: {
-    hmr: true,
-    port: 3000,
-    host: true
-  },
-  preview: {
-    port: 3000,
-    host: true
-  },
-  resolve: {
-    alias: {
-<<<<<<< HEAD
-      '@': '/workspace/src'
-    }
-=======
-      '@': path.resolve(__dirname, './src'),
-    },
->>>>>>> origin/cursor/build-vite-project-with-missing-dependency-e03a
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion'],
-    exclude: ['@vite/client', '@vite/env']
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  }
-=======
     server: {
       hmr: true,
       port: 3000,
@@ -136,10 +103,14 @@ export default defineConfig(async ({ mode }) => {
       port: 3000,
       host: true
     },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './src'),
+      },
+    },
     optimizeDeps: {
       include: ['react', 'react-dom', 'framer-motion'],
       exclude: ['@vite/client', '@vite/env']
     }
   };
->>>>>>> origin/cursor/build-vite-project-with-missing-dependency-a2d7
 });
