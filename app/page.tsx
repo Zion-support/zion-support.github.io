@@ -27,18 +27,10 @@ import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
-import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
-import NewContent2026Showcase from '../components/NewContent2026Showcase';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
-import RevolutionaryAIContent2025Banner from '../components/RevolutionaryAIContent2025Banner';
-import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-
-// Import new 2025 content promotional components
-import NewContent2025CybersecurityBanner from '../components/NewContent2025CybersecurityBanner';
-import NewContent2025CloudOptimizationBanner from '../components/NewContent2025CloudOptimizationBanner';
-import ComprehensiveContentShowcase2025 from '../components/ComprehensiveContentShowcase2025';
+import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
+import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
+import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -57,24 +49,6 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
-        {/* Revolutionary AI Content 2025 Banner */}
-        <RevolutionaryAIContent2025Banner />
-=======
-        {/* New 2025 Content Banners */}
-        <NewContent2025CybersecurityBanner />
-        <NewContent2025CloudOptimizationBanner />
-        
-        {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
->>>>>>> origin/cursor/create-and-deploy-new-content-db9e
-        
-        {/* AI 2025 Breakthrough Banner */}
-        <AI2025BreakthroughBanner />
-        
-        {/* New Content 2025 Showcase Banner */}
-        <NewContent2025ShowcaseBanner />
-        
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
         
@@ -174,10 +148,10 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
-        <ComprehensiveContentShowcase2025 />
-        <UltimateContentShowcase2025 />
-        <RevolutionaryContent2026Banner />
-        <FeaturedContentShowcase2026 />
+        <QuantumAI2026BreakthroughBanner />
+        <NewContentShowcase2026 />
+        <EnhancedContentPromotionBanner2026 />
+        <ComprehensiveContentShowcase2026 />
         <NewContentPromotionBanner />
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
