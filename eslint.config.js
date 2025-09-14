@@ -93,6 +93,7 @@ export default [
       'scripts/**',
       'server/**',
       'src.broken/**',
+      'src/**',
       'netlify/**',
       'hooks/**',
       'lib/**',

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Cog, TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Zap, Target, BarChart3 } from 'lucide-react';
+import { Cog, TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Zap,  BarChart3 } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
 export const metadata = {
@@ -187,7 +187,7 @@ export default function EnterpriseAutomationRevolutionPage() {
             <div className="space-y-6 mb-12">
               <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl">
                 <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <Target className="w-6 h-6 text-green-600 mr-3" />
+                  <Award className="w-6 h-6 text-green-600 mr-3" />
                   Phase 1: Automation Assessment & Strategy (Months 1-2)
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

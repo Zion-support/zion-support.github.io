@@ -1,8 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'Fortune 500 Quantum AI Transformation: $2.8B Annual Savings in 6 Months',
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function QuantumAIFortune500CaseStudyPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Fortune 500 Quantum AI Transformation: $2.8B Annual Savings in 6 Months"
         description="Discover how a Fortune 500 manufacturing conglomerate achieved $2.8B in annual savings and 567% ROI improvement through Quantum AI implementation."
@@ -329,6 +328,6 @@ export default function QuantumAIFortune500CaseStudyPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Share2, BarChart3, TrendingUp, Target, Award, Building2 } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Clock, Share2, BarChart3, TrendingUp,  Award } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI Transformation 2025: Ultimate Enterprise Success Story - $2.8B ROI Achievement',
