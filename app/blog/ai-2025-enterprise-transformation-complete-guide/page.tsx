@@ -347,8 +347,8 @@ export default function AI2025EnterpriseTransformationPage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 AI 2025: Complete Enterprise Transformation Guide
               </h1>
-              <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Transform your enterprise with cutting-edge AI solutions. Learn how to achieve 500-2000% ROI and gain unprecedented competitive advantages.
+              <p className="text-xl md:text-2xl opacity-90 mb-8">
+                Comprehensive guide to AI transformation in 2025. Learn how to implement AI solutions, measure ROI, and transform your enterprise with cutting-edge technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
