@@ -1,142 +1,119 @@
 #!/bin/bash
 
-# Batch PR Merge Script
-# This script will merge multiple PRs efficiently
-
+# Batch merge script for handling multiple PRs efficiently
 set -e
 
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m' # No Color
+echo "🚀 Starting batch PR merge process..."
 
-# List of branches to merge (most recent first)
-BRANCHES=(
-    "origin/cursor/enhance-pm2-automations-for-development-and-deployment-17a8"
-    "origin/cursor/add-new-services-and-advertise-them-2e38"
-    "origin/cursor/fix-lint-push-and-merge-to-main-7269"
-    "origin/cursor/fix-errors-and-automate-with-pm2-0532"
-    "origin/cursor/website-audit-content-update-and-deployment-ae19"
-    "origin/cursor/analyze-improve-and-deploy-application-07c5"
-    "origin/cursor/resolve-conflicts-and-merge-to-main-c25f"
-    "origin/cursor/fix-errors-and-automate-with-pm2-80da"
-)
+# Get all cursor branches, sorted by creation date (most recent first)
+BRANCHES=$(git branch -r | grep "cursor/" | grep -v "HEAD" | sed 's/origin\///' | sort -u)
 
-log() {
-    echo -e "${BLUE}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
-}
+echo "📋 Found $(echo "$BRANCHES" | wc -l) branches to process"
 
-success() {
-    echo -e "${GREEN}✅ $1${NC}"
-}
+# Process in batches of 10
+BATCH_SIZE=10
+BATCH_NUM=1
+TOTAL_BRANCHES=$(echo "$BRANCHES" | wc -l)
+PROCESSED=0
 
-warning() {
-    echo -e "${YELLOW}⚠️  $1${NC}"
-}
+# Counter for tracking
+SUCCESS_COUNT=0
+CONFLICT_COUNT=0
+ERROR_COUNT=0
 
-error() {
-    echo -e "${RED}❌ $1${NC}"
-}
+echo "📊 Processing $TOTAL_BRANCHES branches in batches of $BATCH_SIZE"
 
-# Function to resolve conflicts automatically
-resolve_conflicts() {
-    local conflicts=$(git diff --name-only --diff-filter=U)
+# Process branches in batches
+echo "$BRANCHES" | while IFS= read -r branch; do
+    if [ -z "$branch" ]; then
+        continue
+    fi
     
-    for file in $conflicts; do
-        log "Resolving conflicts in $file"
-        
-        # For most files, take our version (main branch)
-        if [[ "$file" == *.json ]] || [[ "$file" == *.js ]] || [[ "$file" == *.cjs ]]; then
-            git checkout --ours "$file" || true
-        else
-            # For other files, try to merge intelligently
-            git checkout --theirs "$file" || git checkout --ours "$file" || true
-        fi
-        
-        git add "$file" || true
-    done
-}
-
-# Function to merge a single branch
-merge_branch() {
-    local branch="$1"
-    local branch_name=$(basename "$branch")
+    # Calculate batch info
+    PROCESSED=$((PROCESSED + 1))
+    CURRENT_BATCH=$(((PROCESSED - 1) / BATCH_SIZE + 1))
     
-    log "Merging branch: $branch_name"
+    echo ""
+    echo "🔄 [$PROCESSED/$TOTAL_BRANCHES] Processing branch: $branch (Batch $CURRENT_BATCH)"
     
-    # Fetch the branch
-    git fetch origin "$branch_name" || {
-        warning "Failed to fetch $branch_name, skipping..."
-        return 1
-    }
-    
-    # Attempt merge
-    if git merge "$branch" --no-ff -m "Merge: $branch_name"; then
-        success "Successfully merged $branch_name"
-        return 0
+    # Check if branch exists locally
+    if git show-ref --verify --quiet refs/heads/$branch; then
+        echo "  ✅ Branch exists locally"
     else
-        warning "Merge conflict in $branch_name, attempting to resolve..."
+        echo "  📥 Fetching branch from remote..."
+        if ! git fetch origin $branch:$branch 2>/dev/null; then
+            echo "  ⚠️  Failed to fetch branch $branch, skipping..."
+            continue
+        fi
+    fi
+    
+    # Switch to main
+    git checkout main
+    
+    # Try to merge
+    echo "  🔀 Attempting to merge $branch into main..."
+    
+    if git merge $branch --no-ff -m "Merge $branch into main" 2>/dev/null; then
+        echo "  ✅ Successfully merged $branch"
+        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
         
-        # Try to resolve conflicts
-        if resolve_conflicts; then
-            if git commit -m "Resolve conflicts and merge $branch_name"; then
-                success "Resolved conflicts and merged $branch_name"
-                return 0
+    else
+        echo "  ⚠️  Merge conflict detected in $branch"
+        CONFLICT_COUNT=$((CONFLICT_COUNT + 1))
+        
+        # Check what files have conflicts
+        CONFLICT_FILES=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
+        if [ -n "$CONFLICT_FILES" ]; then
+            echo "  📝 Conflicted files: $CONFLICT_FILES"
+            
+            # Resolve conflicts by keeping our version (main branch)
+            for file in $CONFLICT_FILES; do
+                echo "  🔧 Resolving conflict in $file (keeping main version)"
+                git checkout --ours "$file" 2>/dev/null || true
+                git add "$file" 2>/dev/null || true
+            done
+            
+            # Commit the resolved merge
+            if git commit -m "Merge $branch into main - conflicts resolved" --no-edit 2>/dev/null; then
+                echo "  ✅ Successfully resolved conflicts and merged $branch"
+                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+            else
+                echo "  ❌ Failed to commit resolved merge for $branch"
+                ERROR_COUNT=$((ERROR_COUNT + 1))
+                
+                # Abort the merge
+                git merge --abort 2>/dev/null || true
             fi
+        else
+            echo "  ❌ No conflict files found, aborting merge"
+            git merge --abort 2>/dev/null || true
+            ERROR_COUNT=$((ERROR_COUNT + 1))
         fi
-        
-        error "Could not resolve conflicts for $branch_name, aborting merge"
-        git merge --abort || true
-        return 1
-    fi
-}
-
-# Main execution
-main() {
-    log "Starting batch PR merge process"
-    
-    # Ensure we're on main branch
-    git checkout main || {
-        error "Failed to checkout main branch"
-        exit 1
-    }
-    
-    # Pull latest changes
-    git pull origin main || {
-        error "Failed to pull latest changes from main"
-        exit 1
-    }
-    
-    local success_count=0
-    local total_count=${#BRANCHES[@]}
-    
-    # Process each branch
-    for branch in "${BRANCHES[@]}"; do
-        if merge_branch "$branch"; then
-            success_count=$((success_count + 1))
-        fi
-        
-        # Small delay
-        sleep 1
-    done
-    
-    # Summary
-    log "=== BATCH MERGE SUMMARY ==="
-    log "Total branches processed: $total_count"
-    log "Successfully merged: $success_count"
-    
-    # Push changes
-    if [[ $success_count -gt 0 ]]; then
-        log "Pushing merged changes to main branch"
-        git push origin main || {
-            error "Failed to push changes to main branch"
-        }
     fi
     
-    success "Batch merge process completed!"
-}
+    # Clean up the local branch
+    echo "  🧹 Cleaning up local branch $branch"
+    git branch -D $branch 2>/dev/null || true
+    
+    echo "  ✅ Completed processing $branch"
+    
+    # Push changes every 5 successful merges
+    if [ $((SUCCESS_COUNT % 5)) -eq 0 ] && [ $SUCCESS_COUNT -gt 0 ]; then
+        echo "  📤 Pushing changes to remote..."
+        git push origin main
+    fi
+done
 
-# Run the main function
-main "$@"
+echo ""
+echo "📊 Batch Merge Process Summary:"
+echo "  ✅ Successful merges: $SUCCESS_COUNT"
+echo "  ⚠️  Conflicts resolved: $CONFLICT_COUNT"
+echo "  ❌ Errors: $ERROR_COUNT"
+echo "  📋 Total processed: $((SUCCESS_COUNT + CONFLICT_COUNT + ERROR_COUNT))"
+
+# Final push
+echo "  📤 Final push to remote..."
+git push origin main
+
+echo ""
+echo "🎉 Batch PR merge process completed!"
