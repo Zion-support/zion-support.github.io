@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import { Smartphone, Wifi, Battery, Touch, Zap, Globe, Eye, Users } from 'lucide-react';
 

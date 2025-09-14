@@ -57,6 +57,7 @@ import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026Breakthr
 import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+import UltimateContentShowcase2025Banner from '../components/UltimateContentShowcase2025Banner';
 
 // Import new 2025 content components
 import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
@@ -80,6 +81,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate Content Showcase 2025 Banner - NEW */}
+        <UltimateContentShowcase2025Banner />
+        
         {/* Revolutionary Content 2025 Banner - NEW */}
         <RevolutionaryContent2025Banner />
         
