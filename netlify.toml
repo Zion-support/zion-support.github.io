@@ -1,13 +1,12 @@
 [build]
   # Build command
-  command = "yarn build"
+  command = "npm run build:netlify"
   
   # Directory to publish
   publish = "dist"
   
   # Functions directory
   functions = "netlify/functions"
-  command = "bash scripts/netlify-build-fix.sh"
 
 [build.environment]
   # Node.js version
@@ -17,6 +16,7 @@
   YARN_VERSION = "1.22.22"
   
   # Build environment
+  NODE_OPTIONS = "--max-old-space-size=6144"
   NODE_ENV = "production"
   
   # Disable telemetry
@@ -34,7 +34,10 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Redirects for SPA
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+
+# Static redirects for exported site
 [[redirects]]
   from = "/*"
   to = "/index.html"
