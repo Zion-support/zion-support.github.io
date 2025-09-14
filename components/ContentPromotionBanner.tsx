@@ -146,7 +146,7 @@ export default function ContentPromotionBanner() {
 
         {/* Progress Indicators */}
         <div className="flex justify-center space-x-2 mt-3">
-          {contentItems.map((_index) => (
+          {contentItems.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}

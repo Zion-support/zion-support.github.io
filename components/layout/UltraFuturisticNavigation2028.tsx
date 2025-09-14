@@ -168,9 +168,9 @@ const resourceLinks = [
 ];
 
 export default function UltraFuturisticNavigation2028() {
-  const [isOpensetIsOpen] = useState(false);
-  const [activeCategorysetActiveCategory] = useState<string | null>(null);
-  const [searchQuerysetSearchQuery] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);

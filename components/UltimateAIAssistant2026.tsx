@@ -19,10 +19,10 @@ interface QuickAction {
 }
 
 const UltimateAIAssistant2026: React.FC = () => {
-  const [isOpensetIsOpen] = useState(false);
-  const [messagesetMessages] = useState<Message[]>([]);
-  const [inputValuesetInputValue] = useState('');
-  const [isTypingsetIsTyping] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [inputValue, setInputValue] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const quickActions: QuickAction[] = [

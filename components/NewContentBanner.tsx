@@ -143,7 +143,7 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
 
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {content.map((itemindex) => (
+          {content.map((item, index) => (
             <Link key={item.href} href={item.href} className="group">
               <div className={`${getCardClasses()} p-6 rounded-xl transition-all duration-300`}>
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">

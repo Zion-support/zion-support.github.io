@@ -76,7 +76,7 @@ export default function PricingPage() {
   };
 
   // Group services by category for better organization
-  const servicesByCategory = filteredServices.reduce((accservice) => {
+  const servicesByCategory = filteredServices.reduce((acc, service) => {
     const category = Array.isArray(service.category) ? service.category[0] : service.category;
     if (!acc[category]) {
       acc[category] = [];

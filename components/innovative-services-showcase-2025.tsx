@@ -206,7 +206,7 @@ export default function InnovativeServicesShowcase2025() {
           >
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                {serviceCategories.reduce((totalcategory) => total + category.services.length0)}+
+                {serviceCategories.reduce((total, category) => total + category.services.length, 0)}+
               </div>
               <div className="text-gray-400">Services</div>
             </div>
