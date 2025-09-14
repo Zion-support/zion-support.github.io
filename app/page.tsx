@@ -40,6 +40,8 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 // Import new promotional components
 import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 
 // Import new 2026 promotional components
 import RevolutionaryAI2026ContentBanner from '../components/RevolutionaryAI2026ContentBanner';
@@ -200,6 +202,12 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Revolutionary Content 2025 Banner */}
+        <RevolutionaryContent2025Banner />
+        
+        {/* Ultimate Content Showcase 2025 */}
+        <UltimateContentShowcase2025 />
+        
         {/* Content Promotion Banners */}
         <NewContent2025UltimateShowcase />
         <NewContent2026PromotionBanner />
