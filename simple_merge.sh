@@ -1,44 +1,60 @@
 #!/bin/bash
 
-# Simple merge script to handle the current situation
-echo "🚀 Starting simple merge process..."
+# Simple merge script
+cd /workspace
 
-# Make scripts executable
-chmod +x resolve_merge_conflicts.sh
-chmod +x merge_prs_script.sh
+echo "=== Starting Simple Merge Process ==="
 
-# Try the simple approach first
-echo "📍 Current directory: $(pwd)"
-echo "📍 Current branch: $(git branch --show-current 2>/dev/null || echo 'unknown')"
+# Check current status
+echo "Current git status:"
+git status --short
 
-# Check if we have uncommitted changes
-if git diff --quiet && git diff --cached --quiet; then
-    echo "✅ Working directory is clean"
-else
-    echo "⚠️  Working directory has uncommitted changes"
-    echo "📝 Staging all changes..."
-    git add .
-    git commit -m "Auto-commit before merge - New content and advertising components"
+# Check for merge conflicts
+echo "Checking for merge conflicts..."
+if git diff --name-only --diff-filter=U | grep -q .; then
+    echo "Found merge conflicts. Resolving..."
+    git diff --name-only --diff-filter=U | while read file; do
+        echo "Resolving conflict in $file"
+        git checkout --ours "$file"
+        git add "$file"
+    done
+    git commit -m "Resolve merge conflicts automatically"
 fi
 
-# Try to switch to main and merge
-echo "🔄 Switching to main branch..."
-git checkout main 2>/dev/null || echo "Already on main"
+# Check for open PRs via GitHub API
+echo "Checking for open PRs..."
+curl -s -H "Accept: application/vnd.github.v3+json" \
+     "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open" \
+     | jq -r '.[] | "\(.number):\(.head.ref)"' > /tmp/open_prs.txt
 
-echo "📥 Pulling latest changes..."
-git pull origin main 2>/dev/null || echo "Pull failed, continuing..."
-
-echo "🔄 Attempting to merge feature branch..."
-git merge cursor/create-and-deploy-new-content-9e4d 2>/dev/null || {
-    echo "⚠️  Merge conflicts detected - resolving automatically"
+if [ -s /tmp/open_prs.txt ]; then
+    echo "Found open PRs:"
+    cat /tmp/open_prs.txt
     
-    # Auto-resolve conflicts by keeping our version
-    git checkout --ours . 2>/dev/null || true
-    git add . 2>/dev/null || true
-    git commit -m "Merge cursor/create-and-deploy-new-content-9e4d into main - Conflicts resolved" 2>/dev/null || true
-}
+    # Process each PR
+    while IFS=':' read -r pr_number branch_name; do
+        echo "Processing PR #$pr_number from branch $branch_name"
+        
+        # Fetch and merge
+        git fetch origin "$branch_name"
+        if git merge "origin/$branch_name" --no-commit; then
+            git commit -m "Merge PR #$pr_number from $branch_name"
+            echo "Successfully merged PR #$pr_number"
+        else
+            echo "Merge conflict in PR #$pr_number. Resolving..."
+            git diff --name-only --diff-filter=U | while read file; do
+                git checkout --ours "$file"
+                git add "$file"
+            done
+            git commit -m "Resolve conflicts and merge PR #$pr_number"
+        fi
+    done < /tmp/open_prs.txt
+else
+    echo "No open PRs found"
+fi
 
-echo "📤 Pushing changes..."
-git push origin main 2>/dev/null || echo "Push failed, but merge completed locally"
+# Push changes
+echo "Pushing changes..."
+git push origin main
 
-echo "✅ Simple merge process completed!"
+echo "=== Merge Process Complete ==="
