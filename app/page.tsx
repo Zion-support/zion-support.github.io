@@ -264,6 +264,13 @@ import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import ROICalculatorWidget from '../components/ROICalculatorWidget';
 
+// Import new comprehensive content components
+import ComprehensiveCaseStudiesShowcase from '../components/ComprehensiveCaseStudiesShowcase';
+import InteractiveAIAssessmentTool from '../components/InteractiveAIAssessmentTool';
+import ComprehensiveBlogShowcase from '../components/ComprehensiveBlogShowcase';
+import NewContentShowcase2025Banner from '../components/NewContentShowcase2025Banner';
+import InteractiveROICalculator from '../components/InteractiveROICalculator';
+
 // Import new Advanced Neural Architectures 2026 components
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
@@ -296,6 +303,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT SHOWCASE 2025 BANNER - LATEST FEATURED */}
+        <NewContentShowcase2025Banner />
+        
         {/* AI 2026 FUTURE PREDICTIONS ULTIMATE BREAKTHROUGH BANNER - NEWEST BREAKTHROUGH */}
         <AI2026FuturePredictionsUltimateBreakthroughBanner />
         
@@ -552,6 +562,18 @@ export default function HomePage() {
 
         {/* AI 2025 Ultimate Business Intelligence Showcase - NEWEST FEATURED */}
         <AI2025UltimateBusinessIntelligenceShowcase />
+
+        {/* COMPREHENSIVE CASE STUDIES SHOWCASE - NEW FEATURED */}
+        <ComprehensiveCaseStudiesShowcase />
+
+        {/* INTERACTIVE AI ASSESSMENT TOOL - NEW FEATURED */}
+        <InteractiveAIAssessmentTool />
+
+        {/* INTERACTIVE ROI CALCULATOR - NEW FEATURED */}
+        <InteractiveROICalculator />
+
+        {/* COMPREHENSIVE BLOG SHOWCASE - NEW FEATURED */}
+        <ComprehensiveBlogShowcase />
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
