@@ -1,223 +1,192 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Zap, 
-  TrendingUp, 
-  Shield, 
-  Heart, 
-  DollarSign, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Target,
-  X
-} from 'lucide-react';
+import { Zap, Brain,  Rocket, TrendingUp, Award } from 'lucide-react';
 
-const AI2025BreakthroughBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentMetric, setCurrentMetric] = useState(0);
-
-  const metrics = [
-    { value: '$500M+', label: 'Average ROI', icon: DollarSign, color: 'text-green-400' },
-    { value: '99.8%', label: 'Success Rate', icon: CheckCircle, color: 'text-blue-400' },
-    { value: '340%', label: 'ROI Increase', icon: TrendingUp, color: 'text-purple-400' },
-    { value: '500+', label: 'Projects', icon: Target, color: 'text-pink-400' }
-  ];
-
-  const contentHighlights = [
-    {
-      title: 'AI Cybersecurity Revolution',
-      description: 'Protecting $50B+ in enterprise assets with 99.7% accuracy',
-      url: '/blog/ai-2025-cybersecurity-revolution',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      title: 'Healthcare AI Transformation',
-      description: '$2.1B health system achieves 99.8% patient safety',
-      url: '/case-studies/healthcare-ai-transformation-2025',
-      icon: Heart,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Enterprise Implementation Guide',
-      description: 'Complete framework for $500M+ ROI in 24 months',
-      url: '/resources/ai-implementation-enterprise-guide-2025',
-      icon: Target,
-      color: 'from-purple-500 to-pink-500'
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentMetric((prev) => (prev + 1) % metrics.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  if (!isVisible) return null;
-
+const AI2025BreakthroughBanner = () => {
   return (
-    <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20"></div>
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Close Button */}
-        <div className="flex justify-end mb-4">
-          <button
-            onClick={() => setIsVisible(false)}
-            className="p-2 hover:bg-white/10 rounded-full transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
+    <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full px-6 py-2 mb-6">
+            <Zap className="w-5 h-5 mr-2" />
+            <span className="text-sm font-bold">AI 2025 BREAKTHROUGH</span>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+            The Future of AI is Here
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Experience the most advanced AI solutions, breakthrough technologies, and 
+            revolutionary insights that will define the next decade of artificial intelligence.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left Content */}
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6"
-            >
-              <Zap className="w-5 h-5 mr-2 text-yellow-400" />
-              <span className="text-sm font-medium">BREAKTHROUGH 2025</span>
-            </motion.div>
+        {/* Key Statistics */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <Brain className="w-8 h-8 text-white" />
+            </div>
+            <div className="text-3xl font-bold text-yellow-400 mb-2">500%</div>
+            <div className="text-gray-300">Average ROI Increase</div>
+          </div>
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-green-500 to-teal-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <Award className="w-8 h-8 text-white" />
+            </div>
+            <div className="text-3xl font-bold text-yellow-400 mb-2">95%</div>
+            <div className="text-gray-300">Implementation Success Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-pink-500 to-rose-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <TrendingUp className="w-8 h-8 text-white" />
+            </div>
+            <div className="text-3xl font-bold text-yellow-400 mb-2">340%</div>
+            <div className="text-gray-300">Revenue Growth</div>
+          </div>
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-orange-500 to-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <Award className="w-8 h-8 text-white" />
+            </div>
+            <div className="text-3xl font-bold text-yellow-400 mb-2">#1</div>
+            <div className="text-gray-300">Industry Leadership</div>
+          </div>
+        </div>
 
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
-            >
-              AI 2025: The Ultimate
-              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Business Breakthrough
-              </span>
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl opacity-90 mb-8 leading-relaxed"
-            >
-              Discover the revolutionary AI strategies that are transforming businesses worldwide. 
-              Learn from real success stories and proven implementation frameworks.
-            </motion.p>
-
-            {/* Rotating Metrics */}
-            <motion.div
-              key={currentMetric}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/20"
-            >
-              <div className="flex items-center gap-4">
-                <div className={`p-3 rounded-full bg-gradient-to-r ${metrics[currentMetric].color.replace('text-', 'from-').replace('-400', '-500')} to-${metrics[currentMetric].color.replace('text-', '').replace('-400', '-600')}`}>
-                  <metrics[currentMetric].icon className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-3xl font-bold">{metrics[currentMetric].value}</div>
-                  <div className="text-sm opacity-75">{metrics[currentMetric].label}</div>
-                </div>
+        {/* Featured Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {/* Main Feature */}
+          <div className="bg-gradient-to-r from-blue-800 to-purple-800 rounded-2xl p-8 border border-white border-opacity-20">
+            <div className="flex items-center mb-4">
+              <Rocket className="w-6 h-6 mr-2 text-yellow-400" />
+              <span className="text-sm font-semibold text-yellow-400">BREAKTHROUGH TECHNOLOGY</span>
+            </div>
+            <h3 className="text-2xl font-bold mb-4">
+              AI 2025 Enterprise Transformation: Complete Implementation Guide
+            </h3>
+            <p className="text-gray-200 mb-6">
+              Master the complete AI transformation journey for enterprise success in 2025. 
+              From strategy to implementation, discover proven frameworks and real-world case studies 
+              that have delivered 500% revenue growth for Fortune 500 companies.
+            </p>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-4">
+                <span className="text-sm text-gray-300">15 min read</span>
+                <span className="text-sm text-yellow-400">★ 4.9/5 rating</span>
               </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <Link
-                href="/blog/ai-2025-cybersecurity-revolution"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              <Link 
+                href="/blog/ai-2025-enterprise-transformation-complete-guide"
+                className="bg-yellow-400 text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition-colors"
               >
-                Explore New Content
-                <ArrowRight className="w-5 h-5" />
+                Read Now
+              </Link>
+            </div>
+          </div>
+
+          {/* Secondary Features */}
+          <div className="space-y-6">
+            <div className="bg-gradient-to-r from-green-800 to-teal-800 rounded-xl p-6 border border-white border-opacity-20">
+              <div className="flex items-center mb-3">
+                <Brain className="w-5 h-5 mr-2 text-green-400" />
+                <span className="text-sm font-semibold text-green-400">SUCCESS STORY</span>
+              </div>
+              <h4 className="text-lg font-bold mb-2">
+                AI 2025 Retail Transformation: 500% Revenue Growth
+              </h4>
+              <p className="text-gray-200 text-sm mb-3">
+                Discover how a major retail chain achieved unprecedented growth through strategic AI implementation.
+              </p>
+              <Link 
+                href="/case-studies/ai-2025-retail-transformation-ultimate-success-story"
+                className="text-green-400 hover:text-green-300 font-semibold text-sm"
+              >
+                Read Success Story →
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-r from-purple-800 to-pink-800 rounded-xl p-6 border border-white border-opacity-20">
+              <div className="flex items-center mb-3">
+                <Award className="w-5 h-5 mr-2 text-purple-400" />
+                <span className="text-sm font-semibold text-purple-400">IMPLEMENTATION TOOLKIT</span>
+              </div>
+              <h4 className="text-lg font-bold mb-2">
+                AI 2025 Implementation Toolkit: Complete Guide
+              </h4>
+              <p className="text-gray-200 text-sm mb-3">
+                Comprehensive toolkit with frameworks, templates, and best practices for AI transformation.
+              </p>
+              <Link 
+                href="/resources/ai-2025-implementation-toolkit"
+                className="text-purple-400 hover:text-purple-300 font-semibold text-sm"
+              >
+                Access Toolkit →
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Technology Highlights */}
+        <div className="bg-white bg-opacity-5 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20 mb-16">
+          <h3 className="text-2xl font-bold text-center mb-8">Revolutionary AI Technologies</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                <Brain className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="text-lg font-bold mb-2">Cloud-Native AI</h4>
+              <p className="text-gray-300 text-sm">
+                Scalable, resilient AI systems built for the cloud era
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="text-lg font-bold mb-2">Real-time Processing</h4>
+              <p className="text-gray-300 text-sm">
+                Instant AI decisions with sub-100ms response times
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                <Award className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="text-lg font-bold mb-2">Predictive Analytics</h4>
+              <p className="text-gray-300 text-sm">
+                Anticipate trends and opportunities before they happen
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-8 text-black">
+            <h3 className="text-3xl font-bold mb-4">Ready to Lead the AI Revolution?</h3>
+            <p className="text-lg mb-6 opacity-90">
+              Join thousands of forward-thinking organizations already transforming their business 
+              with our proven AI solutions and expert guidance.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/services"
+                className="bg-black text-yellow-400 px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors inline-flex items-center"
+              >
+                Explore AI Services <Rocket className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
+                className="border-2 border-black text-black px-8 py-3 rounded-lg font-semibold hover:bg-black hover:text-yellow-400 transition-colors"
               >
-                Get Free Consultation
+                Schedule Consultation
               </Link>
-            </motion.div>
-          </div>
-
-          {/* Right Content - Content Highlights */}
-          <div className="space-y-4">
-            {contentHighlights.map((highlight, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <Link href={highlight.url} className="block">
-                  <div className="flex items-start gap-4">
-                    <div className={`p-3 rounded-full bg-gradient-to-r ${highlight.color}`}>
-                      <highlight.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold mb-2 hover:text-blue-400 transition-colors">
-                        {highlight.title}
-                      </h3>
-                      <p className="text-sm opacity-90 mb-3">
-                        {highlight.description}
-                      </p>
-                      <div className="flex items-center gap-2 text-sm text-blue-400">
-                        <span>Read More</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
+            </div>
           </div>
         </div>
-
-        {/* Success Stories Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
-        >
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-            <div className="text-3xl font-bold text-green-400 mb-2">$50B+</div>
-            <div className="text-sm opacity-75">Assets Protected</div>
-            <div className="text-xs opacity-60 mt-1">Cybersecurity Solutions</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">99.8%</div>
-            <div className="text-sm opacity-75">Patient Safety</div>
-            <div className="text-xs opacity-60 mt-1">Healthcare AI</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-            <div className="text-3xl font-bold text-purple-400 mb-2">$500M+</div>
-            <div className="text-sm opacity-75">Average ROI</div>
-            <div className="text-xs opacity-60 mt-1">Enterprise AI</div>
-          </div>
-        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
