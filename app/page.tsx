@@ -32,6 +32,10 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import AI2025_2026ContentRevolution50000ROIBanner from '../components/AI2025_2026ContentRevolution50000ROIBanner';
 import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
 
+// Import new AI 2025 Ultimate Automation Revolution components
+import AI2025UltimateAutomationRevolution50000ROIBanner from '../components/AI2025UltimateAutomationRevolution50000ROIBanner';
+import AI2025UltimateAutomationRevolutionShowcase from '../components/AI2025UltimateAutomationRevolutionShowcase';
+
 // Import new 2025 Innovation Showcase components
 import AI2025InnovationShowcase from '../components/AI2025InnovationShowcase';
 import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
@@ -320,6 +324,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE AUTOMATION REVOLUTION 50,000% ROI BANNER - NEWEST BREAKTHROUGH */}
+        <AI2025UltimateAutomationRevolution50000ROIBanner />
+        
         {/* AI 2025-2026 CONTENT REVOLUTION 50,000% ROI BANNER - NEWEST BREAKTHROUGH */}
         <AI2025_2026ContentRevolution50000ROIBanner />
         
@@ -614,6 +621,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* AI 2025 ULTIMATE AUTOMATION REVOLUTION SHOWCASE - NEWEST FEATURED */}
+        <AI2025UltimateAutomationRevolutionShowcase />
 
         {/* AI 2025 Ultimate Business Intelligence Showcase - NEWEST FEATURED */}
         <AI2025UltimateBusinessIntelligenceShowcase />
