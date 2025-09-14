@@ -34,6 +34,7 @@ import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPro
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Import new 2026 promotional components
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
@@ -56,9 +57,10 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import UltimateContent2025RevolutionBanner from '../components/UltimateContent2025RevolutionBanner';
 import UltimateContent2025Showcase from '../components/UltimateContent2025Showcase';
 >>>>>>> origin/cursor/create-and-deploy-new-content-18b4
+=======
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+>>>>>>> origin/cursor/create-and-deploy-new-content-ad66
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
@@ -102,6 +104,7 @@ import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBann
 // Import new ultimate AI transformation promotional components
 
 // Import new 2025 autonomous systems promotional components
+<<<<<<< HEAD
 
 // Import new ultimate content showcase banners
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
@@ -165,6 +168,14 @@ import EdgeComputingRevolutionShowcase2025 from '../components/EdgeComputingRevo
 // Import new ultimate content promotional components
 import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
 >>>>>>> origin/cursor/create-and-deploy-new-content-18b4
+=======
+// import AutonomousSystems2025RevolutionBanner from '../components/AutonomousSystems2025RevolutionBanner';
+// import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowcase2025';
+
+// Import new ultimate content showcase components
+// import UltimateContent2025ShowcaseBanner from '../components/UltimateContent2025ShowcaseBanner';
+// import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-ad66
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -183,6 +194,7 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -260,6 +272,16 @@ export default function HomePage() {
         
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
+=======
+        {/* Ultimate Content 2025 Showcase Banner - LATEST */}
+        {/* <UltimateContent2025ShowcaseBanner /> */}
+        
+        {/* New Content 2025 Ultimate Showcase Banner */}
+        {/* <NewContent2025UltimateShowcaseBanner /> */}
+        
+        {/* Autonomous Systems 2025 Revolution Banner - NEW */}
+        {/* <AutonomousSystems2025RevolutionBanner /> */}
+>>>>>>> origin/cursor/create-and-deploy-new-content-ad66
         
         {/* AI 2025 Ultimate Breakthrough Banner - NEW */}
         <AI2025UltimateBreakthroughBanner />
@@ -408,7 +430,11 @@ export default function HomePage() {
 <<<<<<< HEAD
         
         {/* Autonomous Systems Showcase 2025 - NEW */}
+<<<<<<< HEAD
         {/* Note: Component will be added in future updates */}
+=======
+        {/* <AutonomousSystemsShowcase2025 /> */}
+>>>>>>> origin/cursor/create-and-deploy-new-content-ad66
         
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1663
