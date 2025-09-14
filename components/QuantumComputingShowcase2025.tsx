@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Atom, Zap, Cpu, Shield, Target, TrendingUp, ArrowRight, Play, Pause } from 'lucide-react';

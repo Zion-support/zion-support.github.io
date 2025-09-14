@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
+'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Star, TrendingUp, Users, DollarSign, Clock, ArrowRight, Filter } from 'lucide-react';
 
 interface ContentItem {

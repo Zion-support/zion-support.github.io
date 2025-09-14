@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect } from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';

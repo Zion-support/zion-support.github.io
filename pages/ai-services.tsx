@@ -836,7 +836,7 @@ export default function AIServicesPage() {
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
                       <ul className="text-xs text-gray-600 space-y-1">
-                        {service.features.slice(0, 4).map((feature, idx) => (
+                        {(service.features || []).slice(0, 4).map((feature, idx) => (
                           <li key={idx} className="flex items-center">
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                             {feature}
@@ -848,7 +848,7 @@ export default function AIServicesPage() {
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-900 mb-2">Benefits:</h4>
                       <div className="flex flex-wrap gap-1">
-                        {service.benefits.slice(0, 2).map((benefit, idx) => (
+                        {(service.benefits || []).slice(0, 2).map((benefit, idx) => (
                           <span key={idx} className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">
                             {benefit}
                           </span>

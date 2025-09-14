@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';

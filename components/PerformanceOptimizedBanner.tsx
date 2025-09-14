@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { Zap, TrendingUp, Clock, Shield } from 'lucide-react';
 

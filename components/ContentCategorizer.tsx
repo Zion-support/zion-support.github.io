@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect, useMemo } from 'react';
 import { 
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code, 

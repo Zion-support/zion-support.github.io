@@ -39,29 +39,25 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
-import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
-import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
-import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
-import AIImplementationGuideBanner from '../components/AIImplementationGuideBanner';
+import UltimateContent2025MasteryBanner from './components/UltimateContent2025MasteryBanner';
+import RevolutionaryContent2025UltimateShowcase from './components/RevolutionaryContent2025UltimateShowcase';
+import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
+import Fortune500SuccessBanner from './components/Fortune500SuccessBanner';
+import AIImplementationGuideBanner from './components/AIImplementationGuideBanner';
+import AI2026UltimateShowcaseBanner from './components/AI2026UltimateShowcaseBanner';
+import QuantumAI2026BreakthroughBanner from './components/QuantumAI2026BreakthroughBanner';
+import AI2026QuantumRevolutionBanner from './components/AI2026QuantumRevolutionBanner';
+import AI2026AutonomousSystemsBanner from './components/AI2026AutonomousSystemsBanner';
+import NewContent2025ShowcaseBanner from './components/NewContent2025ShowcaseBanner';
+import RevolutionaryAIContentBanner from './components/RevolutionaryAIContentBanner';
+import QuantumAIContentShowcase2026 from './components/QuantumAIContentShowcase2026';
 
 // Import new AI 2026 promotional components
-import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
-import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
-import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
-import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
-import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
-import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
-
-// Import new 2025 mastery content promotional components
-import UltimateContent2025MasteryBanner from '../components/UltimateContent2025MasteryBanner';
-import RevolutionaryContent2025UltimateShowcase from '../components/RevolutionaryContent2025UltimateShowcase';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',

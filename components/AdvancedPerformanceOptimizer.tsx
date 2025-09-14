@@ -1,3 +1,5 @@
+'use client';
+
 
 const AdvancedPerformanceOptimizer = () => {
   const [metrics, setMetrics] = useState({
