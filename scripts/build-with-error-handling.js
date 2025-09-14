@@ -55,6 +55,8 @@ try {
   } catch (error) {
     log(`${colors.yellow}⚠️  Cleanup failed, continuing anyway: ${error.message}${colors.reset}`);
   }
+<<<<<<< HEAD
+=======
 }
 
 function installDependencies() {
@@ -156,4 +158,5 @@ async function main() {
     console.error('❌ Alternative build also failed:', altError.message);
     process.exit(1);
   }
+>>>>>>> cursor/create-and-deploy-new-content-dc11
 }

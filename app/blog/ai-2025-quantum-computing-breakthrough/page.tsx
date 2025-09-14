@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 import ErrorBoundary from '../../../components/ErrorBoundary';
@@ -16,11 +18,14 @@ export default function QuantumComputingBreakthroughPage() {
         title="AI 2025: The Quantum Computing Breakthrough That's Reshaping Enterprise"
         description="Discover how quantum computing breakthroughs in 2025 are revolutionizing AI capabilities and creating unprecedented opportunities for enterprise transformation."
         keywords="quantum computing, AI, enterprise, breakthrough, 2025"
+>>>>>>> cursor/create-and-deploy-new-content-040d
         url="/blog/ai-2025-quantum-computing-breakthrough"
       />
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
+<<<<<<< HEAD
+=======
         <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -46,12 +51,15 @@ export default function QuantumComputingBreakthroughPage() {
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   Get Expert Consultation
+>>>>>>> cursor/create-and-deploy-new-content-040d
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -222,3 +230,4 @@ export default function QuantumComputingBreakthroughPage() {
     </ErrorBoundary>
   );
 }
+>>>>>>> cursor/create-and-deploy-new-content-040d
