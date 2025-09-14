@@ -35,6 +35,11 @@ import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContent
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 
+// Import new promotional banners
+import AI2025QuantumBreakthroughPromotionBanner from '../components/AI2025QuantumBreakthroughPromotionBanner';
+import AI2025AutonomousOperationsPromotionBanner from '../components/AI2025AutonomousOperationsPromotionBanner';
+import Fortune500SuccessStoryPromotionBanner from '../components/Fortune500SuccessStoryPromotionBanner';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -156,6 +161,11 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* New Content Promotion Banners */}
+        <AI2025QuantumBreakthroughPromotionBanner />
+        <AI2025AutonomousOperationsPromotionBanner />
+        <Fortune500SuccessStoryPromotionBanner />
+        
         {/* Content Promotion Banners */}
         <UltimateContentShowcase2025 />
         <EnhancedContentPromotionBanner2026 />
