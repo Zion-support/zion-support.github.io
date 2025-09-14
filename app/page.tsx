@@ -7,6 +7,10 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import AIRevolution2025Banner from '../components/AIRevolution2025Banner';
 import AIRevolutionContentShowcase from '../components/AIRevolutionContentShowcase';
 
+// Import new Ultimate AI 2025 Breakthrough components
+import UltimateAI2025BreakthroughBanner from '../components/UltimateAI2025BreakthroughBanner';
+import RevolutionaryAI2025Showcase from '../components/RevolutionaryAI2025Showcase';
+
 // Import new Revolutionary AI Automation 2025 components
 import RevolutionaryAIAutomationBanner2025 from '../components/RevolutionaryAIAutomationBanner2025';
 import RevolutionaryAIAutomationShowcase2025 from '../components/RevolutionaryAIAutomationShowcase2025';
@@ -209,6 +213,12 @@ import ROICalculatorWidget from '../components/ROICalculatorWidget';
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
 
+// Import new AI 2030 promotional components
+import AI2030ContentPromotionBanner from '../components/AI2030ContentPromotionBanner';
+import QuantumAI2030PromotionBanner from '../components/QuantumAI2030PromotionBanner';
+import UltimateContentShowcase2030 from '../components/UltimateContentShowcase2030';
+import SyntheticIntelligence2030PromotionBanner from '../components/SyntheticIntelligence2030PromotionBanner';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -249,6 +259,25 @@ export default function HomePage() {
         
         {/* ROI CALCULATOR WIDGET - NEW CONTENT */}
         <ROICalculatorWidget />
+        
+        {/* Ultimate AI 2025 Breakthrough Banner - NEWEST FEATURED */}
+        <UltimateAI2025BreakthroughBanner />
+        
+        {/* AI 2030 Content Promotion Banner - NEWEST FEATURED */}
+        <AI2030ContentPromotionBanner />
+        
+        {/* Quantum AI 2030 Promotion Banner - NEWEST FEATURED */}
+        <QuantumAI2030PromotionBanner />
+        
+        {/* Ultimate Content Showcase 2030 - NEWEST FEATURED */}
+        <UltimateContentShowcase2030 />
+        
+        {/* Synthetic Intelligence 2030 Promotion Banner - NEWEST FEATURED */}
+        <SyntheticIntelligence2030PromotionBanner />
+        
+        {/* Ultimate Business Intelligence 2025 Banner - NEW ULTIMATE FEATURED */}
+        <UltimateBusinessIntelligence2025Banner />
+>>>>>>> 53bf3f16c3c9cb7377d4c66abd279757574782fe
         
         {/* Ultimate Enterprise Transformation 2025 Banner - NEW ULTIMATE FEATURED */}
         <UltimateEnterpriseTransformation2025Banner />
@@ -299,6 +328,9 @@ export default function HomePage() {
         
         {/* Revolutionary AI Automation Showcase 2025 - NEW FEATURED */}
         <RevolutionaryAIAutomationShowcase2025 />
+        
+        {/* Revolutionary AI 2025 Showcase - NEWEST FEATURED */}
+        <RevolutionaryAI2025Showcase />
         
         {/* NEW ULTIMATE CONTENT 2025 - TOP PRIORITY FEATURED */}
         <UltimateContent2025Banner />
@@ -517,7 +549,6 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
-        <UltimateEnterpriseTransformationShowcase />
         <RevolutionaryContent2026Banner />
         <UltimateContentShowcase2026 />
         <QuantumAIContentShowcase2026 />
