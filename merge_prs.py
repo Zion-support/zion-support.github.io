@@ -1,248 +1,115 @@
 #!/usr/bin/env python3
-"""
-Merge PRs and resolve conflicts programmatically
-"""
 
 import subprocess
-import sys
-import os
-import re
-from pathlib import Path
+import json
+import requests
+import time
 
-def run_command(cmd, cwd=None):
-    """Run a command and return the result"""
+def run_command(cmd):
+    """Run a shell command and return the output"""
     try:
-        result = subprocess.run(
-            cmd, 
-            shell=True, 
-            cwd=cwd, 
-            capture_output=True, 
-            text=True, 
-            timeout=300
-        )
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
         return result.returncode == 0, result.stdout, result.stderr
-    except subprocess.TimeoutExpired:
-        print(f"Command timed out: {cmd}")
-        return False, "", "Command timed out"
     except Exception as e:
-        print(f"Error running command: {cmd}, Error: {e}")
         return False, "", str(e)
 
-def log(message, level="INFO"):
-    """Log a message with timestamp"""
-    from datetime import datetime
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print(f"[{timestamp}] [{level}] {message}")
+def get_open_prs():
+    """Get all open PRs"""
+    url = "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100"
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.json()
+    return []
 
-def resolve_conflicts_in_file(file_path):
-    """Resolve merge conflicts in a file"""
-    if not os.path.exists(file_path):
-        log(f"File not found: {file_path}", "WARNING")
+def get_pr_details(pr_number):
+    """Get details for a specific PR"""
+    url = f"https://api.github.com/repos/Zion-Holdings/zion.app/pulls/{pr_number}"
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.json()
+    return None
+
+def merge_pr(pr_number, head_ref):
+    """Merge a PR into main"""
+    print(f"Processing PR #{pr_number} with head ref: {head_ref}")
+    
+    # Fetch the branch
+    success, stdout, stderr = run_command(f"git fetch origin {head_ref}")
+    if not success:
+        print(f"Failed to fetch branch {head_ref}: {stderr}")
         return False
     
-    try:
-        # Read the file
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Create backup
-        backup_path = f"{file_path}.backup"
-        with open(backup_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        
-        # Simple conflict resolution - remove conflict markers
-        lines = content.split('\n')
-        resolved_lines = []
-        in_conflict = False
-        
-        for line in lines:
-            if line.startswith('<<<<<<<'):
-                in_conflict = True
-                continue
-            elif line.startswith('======='):
-                continue
-            elif line.startswith('>>>>>>>'):
-                in_conflict = False
-                continue
-            elif not in_conflict:
-                resolved_lines.append(line)
-        
-        # Write resolved content
-        resolved_content = '\n'.join(resolved_lines)
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(resolved_content)
-        
-        log(f"Resolved conflicts in: {file_path}")
-        return True
-        
-    except Exception as e:
-        log(f"Error resolving conflicts in {file_path}: {e}", "ERROR")
-        return False
-
-def main():
-    """Main function to merge PRs and resolve conflicts"""
-    log("🚀 Starting PR merge and conflict resolution process...")
-    
-    # Change to workspace directory
-    workspace = Path("/workspace")
-    if not workspace.exists():
-        log("Workspace directory not found", "ERROR")
-        return 1
-    
-    os.chdir(workspace)
-    log(f"Working directory: {os.getcwd()}")
-    
-    # Check if we're in a git repository
-    success, stdout, stderr = run_command("git status")
+    # Checkout the branch
+    success, stdout, stderr = run_command(f"git checkout -b pr-{pr_number} origin/{head_ref}")
     if not success:
-        log("Not in a git repository", "ERROR")
-        return 1
+        # Try to checkout existing branch
+        success, stdout, stderr = run_command(f"git checkout pr-{pr_number}")
+        if not success:
+            print(f"Failed to checkout branch {head_ref}: {stderr}")
+            return False
     
-    # Get current branch
-    success, current_branch, stderr = run_command("git branch --show-current")
-    if success:
-        current_branch = current_branch.strip()
-        log(f"Current branch: {current_branch}")
-    
-    # Fetch all remote changes
-    log("📥 Fetching all remote changes...")
-    success, stdout, stderr = run_command("git fetch origin --all --prune")
+    # Merge with main
+    success, stdout, stderr = run_command("git merge main --no-edit")
     if not success:
-        log(f"Failed to fetch remote changes: {stderr}", "WARNING")
+        print(f"Merge conflict in PR #{pr_number}, resolving...")
+        # Resolve conflicts by keeping main branch content
+        run_command("git checkout --ours .")
+        run_command("git add .")
+        run_command(f"git commit -m 'Resolve merge conflicts - keep main branch content'")
     
-    # Check for existing merge conflicts
-    log("🔍 Checking for existing merge conflicts...")
-    success, status_output, stderr = run_command("git status --porcelain")
-    if success:
-        conflicted_files = []
-        for line in status_output.split('\n'):
-            if line.startswith('UU') or line.startswith('AA') or line.startswith('DD'):
-                file_path = line[3:].strip()
-                conflicted_files.append(file_path)
-        
-        if conflicted_files:
-            log(f"Found {len(conflicted_files)} conflicted files: {conflicted_files}")
-            for file_path in conflicted_files:
-                resolve_conflicts_in_file(file_path)
-            
-            # Add resolved files
-            run_command("git add .")
-            run_command('git commit -m "Resolve merge conflicts automatically"')
-            log("Committed resolved conflicts")
-    
-    # Switch to main branch
-    log("🔄 Switching to main branch...")
+    # Switch back to main and merge
     success, stdout, stderr = run_command("git checkout main")
     if not success:
-        # Try master branch
-        success, stdout, stderr = run_command("git checkout master")
-        if not success:
-            log("Failed to switch to main or master branch", "ERROR")
-            return 1
+        print(f"Failed to checkout main: {stderr}")
+        return False
     
-    main_branch = "main" if success else "master"
-    log(f"On main branch: {main_branch}")
-    
-    # Pull latest main
-    log("📥 Pulling latest main branch...")
-    success, stdout, stderr = run_command(f"git pull origin {main_branch}")
+    success, stdout, stderr = run_command(f"git merge pr-{pr_number} --no-edit")
     if not success:
-        log(f"Failed to pull main branch: {stderr}", "WARNING")
+        print(f"Failed to merge PR #{pr_number} into main: {stderr}")
+        return False
     
-    # Get list of all branches
-    log("🌿 Getting list of all branches...")
-    success, stdout, stderr = run_command("git branch -r")
+    # Push to main
+    success, stdout, stderr = run_command("git push origin main --force")
     if not success:
-        log(f"Failed to get branch list: {stderr}", "ERROR")
-        return 1
+        print(f"Failed to push PR #{pr_number} to main: {stderr}")
+        return False
     
-    branches = []
-    for line in stdout.split('\n'):
-        if 'origin/' in line and not 'HEAD' in line and main_branch not in line:
-            branch = line.replace('origin/', '').strip()
-            if branch:
-                branches.append(branch)
+    print(f"Successfully merged PR #{pr_number}")
     
-    log(f"Found {len(branches)} branches to process: {branches}")
+    # Clean up
+    run_command(f"git branch -D pr-{pr_number}")
     
-    # Process each branch
-    for branch in branches:
-        log(f"🔄 Processing branch: {branch}")
+    return True
+
+def main():
+    print("Starting to merge all open PRs...")
+    
+    # Get all open PRs
+    prs = get_open_prs()
+    if not prs:
+        print("No open PRs found")
+        return
+    
+    print(f"Found {len(prs)} open PRs")
+    
+    # Process each PR
+    for pr in prs:
+        pr_number = pr['number']
+        head_ref = pr['head']['ref']
         
-        # Checkout branch
-        success, stdout, stderr = run_command(f"git checkout {branch}")
-        if not success:
-            # Try to create branch from remote
-            success, stdout, stderr = run_command(f"git checkout -b {branch} origin/{branch}")
-            if not success:
-                log(f"Failed to checkout branch {branch}: {stderr}", "WARNING")
-                continue
-        
-        # Merge main into branch
-        log(f"🔀 Merging main into {branch}...")
-        success, stdout, stderr = run_command(f"git merge {main_branch} --no-edit")
-        if not success:
-            log(f"Merge conflicts in {branch}. Resolving...", "WARNING")
-            
-            # Resolve conflicts
-            success, status_output, stderr = run_command("git status --porcelain")
+        try:
+            success = merge_pr(pr_number, head_ref)
             if success:
-                conflicted_files = []
-                for line in status_output.split('\n'):
-                    if line.startswith('UU') or line.startswith('AA') or line.startswith('DD'):
-                        file_path = line[3:].strip()
-                        conflicted_files.append(file_path)
-                
-                for file_path in conflicted_files:
-                    resolve_conflicts_in_file(file_path)
-                
-                run_command("git add .")
-                run_command(f'git commit -m "Resolve merge conflicts with main branch"')
+                print(f"✅ Successfully merged PR #{pr_number}")
+            else:
+                print(f"❌ Failed to merge PR #{pr_number}")
+        except Exception as e:
+            print(f"❌ Error processing PR #{pr_number}: {e}")
         
-        # Push updated branch
-        log(f"📤 Pushing updated {branch}...")
-        run_command(f"git push origin {branch}")
-        
-        # Switch back to main
-        run_command(f"git checkout {main_branch}")
-        
-        # Merge branch into main
-        log(f"🔀 Merging {branch} into main...")
-        success, stdout, stderr = run_command(f"git merge {branch} --no-edit")
-        if not success:
-            log(f"Merge conflicts when merging {branch} into main. Resolving...", "WARNING")
-            
-            # Resolve conflicts
-            success, status_output, stderr = run_command("git status --porcelain")
-            if success:
-                conflicted_files = []
-                for line in status_output.split('\n'):
-                    if line.startswith('UU') or line.startswith('AA') or line.startswith('DD'):
-                        file_path = line[3:].strip()
-                        conflicted_files.append(file_path)
-                
-                for file_path in conflicted_files:
-                    resolve_conflicts_in_file(file_path)
-                
-                run_command("git add .")
-                run_command(f'git commit -m "Resolve merge conflicts when merging {branch} into main"')
-        
-        # Push updated main
-        log(f"📤 Pushing updated main branch...")
-        run_command(f"git push origin {main_branch}")
-        
-        log(f"✅ Completed processing branch: {branch}")
+        # Small delay to avoid rate limiting
+        time.sleep(1)
     
-    # Final status
-    log("📊 Final status:")
-    run_command("git status --short")
-    
-    # Show recent commits
-    log("📝 Recent commits:")
-    run_command("git log --oneline -10")
-    
-    log("🎉 PR merge and conflict resolution process completed!")
-    return 0
+    print("Finished processing all PRs")
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()

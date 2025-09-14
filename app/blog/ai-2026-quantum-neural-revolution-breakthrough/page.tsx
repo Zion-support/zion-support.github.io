@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Cpu, Zap, Target, TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Atom } from 'lucide-react';
+import {  Zap,  TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Atom } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
 export const metadata = {
@@ -115,7 +115,7 @@ export default function QuantumNeuralRevolutionPage() {
 
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
                 <div className="flex items-center mb-4">
-                  <Cpu className="w-8 h-8 text-blue-600 mr-3" />
+                  <Brain className="w-8 h-8 text-blue-600 mr-3" />
                   <h4 className="text-xl font-bold text-gray-900">Manufacturing Giant</h4>
                 </div>
                 <p className="text-gray-600 mb-4">Complete supply chain optimization through quantum AI</p>
@@ -133,7 +133,7 @@ export default function QuantumNeuralRevolutionPage() {
             <div className="space-y-6 mb-12">
               <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-xl">
                 <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <Target className="w-6 h-6 text-purple-600 mr-3" />
+                  <Award className="w-6 h-6 text-purple-600 mr-3" />
                   Phase 1: Quantum Readiness Assessment
                 </h4>
                 <ul className="text-gray-600 space-y-2">

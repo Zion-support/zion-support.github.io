@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { TALENT_PROFILES } from '../../data/talent';
 import type { TalentProfile } from '../../data/talent';

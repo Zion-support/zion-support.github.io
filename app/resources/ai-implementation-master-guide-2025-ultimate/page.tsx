@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag, Share2, BookOpen, TrendingUp, DollarSign, Users, CheckCircle, Download, Play } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User,  Share2, BookOpen, TrendingUp, DollarSign, Users, CheckCircle, Download, Play } from 'lucide-react';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'AI Implementation Master Guide 2025: From Strategy to 500% ROI',
@@ -12,7 +11,7 @@ export const metadata = {
 
 export default function AIImplementationMasterGuidePage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI Implementation Master Guide 2025: From Strategy to 500% ROI"
         description="The complete guide to successful AI implementation. Proven frameworks, real case studies, and step-by-step strategies for achieving 500% ROI in 60 days."
@@ -51,7 +50,7 @@ export default function AIImplementationMasterGuidePage() {
               Zion Tech Group
             </div>
             <div className="flex items-center">
-              <Tag className="w-4 h-4 mr-2" />
+              <Award className="w-4 h-4 mr-2" />
               Implementation Guide
             </div>
           </div>
@@ -469,6 +468,6 @@ export default function AIImplementationMasterGuidePage() {
           </div>
         </article>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }
