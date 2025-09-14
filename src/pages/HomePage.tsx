@@ -11,6 +11,8 @@ import { Button } from '../components/Button';
 import { FeatureCard } from '../components/FeatureCard';
 import { SEO } from '../components/SEO';
 import { trackButtonClick } from '../components/Analytics';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import NewContent2025ShowcaseSection from '../components/NewContent2025ShowcaseSection';
 
 export const HomePage: React.FC = () => {
   const features = [
@@ -42,6 +44,9 @@ export const HomePage: React.FC = () => {
         title="Zion Tech Group - AI Solutions & Enterprise Technology"
         description="Leading provider of AI solutions, quantum security, and enterprise technology. Transform your business with cutting-edge artificial intelligence and innovative tech solutions."
       />
+      
+      {/* New Content Promotion Banner */}
+      <NewContent2025PromotionBanner />
       
       {/* Hero Section */}
       <section id="home" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -75,6 +80,9 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* New Content Showcase Section */}
+      <NewContent2025ShowcaseSection />
 
       {/* Features Section */}
       <section id="services" className="py-20 bg-white">
