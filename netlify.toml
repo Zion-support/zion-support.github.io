@@ -1,6 +1,6 @@
 [build]
   # Build command with comprehensive error handling
-  command = "bash scripts/netlify-build.sh"
+  command = "npm run build:netlify"
   
   # Directory to publish
   publish = "dist"
@@ -26,6 +26,9 @@
   
   # Force install all dependencies including devDependencies
   NPM_CONFIG_INCLUDE = "dev"
+  
+  # Clear cache and force clean install
+  YARN_CACHE_CLEAR = "true"
   
   # Ensure Vite is available and handle peer dependencies
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
