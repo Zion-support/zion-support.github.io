@@ -32,6 +32,14 @@ import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase
 import UltimatePromotionalBanner from '../components/UltimatePromotionalBanner';
 import InteractiveDemoRequest from '../components/InteractiveDemoRequest';
 
+// New automation and AI tools components
+import AIToolsInteractiveDemo2025 from '../components/AIToolsInteractiveDemo2025';
+import AIToolsInteractiveDemo2025PromotionBanner from '../components/AIToolsInteractiveDemo2025PromotionBanner';
+import EnterpriseAutomationSolutions2025 from '../components/EnterpriseAutomationSolutions2025';
+import EnterpriseAutomationSolutions2025PromotionBanner from '../components/EnterpriseAutomationSolutions2025PromotionBanner';
+import BusinessSolutionsShowcase2025 from '../components/BusinessSolutionsShowcase2025';
+import BusinessSolutionsShowcase2025PromotionBanner from '../components/BusinessSolutionsShowcase2025PromotionBanner';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -48,6 +56,18 @@ export default function HomePage() {
         
         {/* ULTIMATE SERVICES SHOWCASE 2025 */}
         <UltimateServicesShowcase2025 />
+        
+        {/* AI TOOLS INTERACTIVE DEMO 2025 */}
+        <AIToolsInteractiveDemo2025PromotionBanner />
+        <AIToolsInteractiveDemo2025 />
+        
+        {/* ENTERPRISE AUTOMATION SOLUTIONS 2025 */}
+        <EnterpriseAutomationSolutions2025PromotionBanner />
+        <EnterpriseAutomationSolutions2025 />
+        
+        {/* BUSINESS SOLUTIONS SHOWCASE 2025 */}
+        <BusinessSolutionsShowcase2025PromotionBanner />
+        <BusinessSolutionsShowcase2025 />
         
         {/* INTERACTIVE ROI CALCULATOR */}
         <InteractiveROICalculator />
