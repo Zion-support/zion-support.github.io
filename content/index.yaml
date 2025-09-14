@@ -537,6 +537,57 @@ content_index:
       - "Implemented interactive content discovery and filtering"
 
   new_content_january_2025:
+    - id: "edge-computing-revolution"
+      type: "blog"
+      title: "AI 2025: The Edge Computing Revolution - Enterprise Breakthrough Guide"
+      file_path: "/content/blog/ai-2025-edge-computing-revolution-enterprise-breakthrough.md"
+      url: "/blog/ai-2025-edge-computing-revolution-enterprise-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Edge Computing", "AI Revolution", "Enterprise AI", "ROI", "Digital Transformation", "2025 Trends", "Real-time Analytics", "IoT"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        savings: "$180M"
+        uptime: "99.7%"
+        speed: "94% faster"
+      reading_time: "14 min read"
+      
+    - id: "fortune-500-edge-ai-transformation"
+      type: "case-study"
+      title: "Fortune 500 Edge AI Transformation: 450% ROI Success Story"
+      file_path: "/content/case-studies/fortune-500-edge-ai-transformation-450-percent-roi.md"
+      url: "/case-studies/fortune-500-edge-ai-transformation-450-percent-roi"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Edge AI", "Fortune 500", "Manufacturing", "ROI", "Case Study", "Success Story", "Digital Transformation", "Smart Manufacturing"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        savings: "$2.1B"
+        efficiency: "78%"
+        quality: "92%"
+      reading_time: "12 min read"
+      
+    - id: "edge-ai-implementation-guide"
+      type: "resource"
+      title: "AI 2025 Edge Computing Implementation Guide: From Strategy to 450% ROI"
+      file_path: "/content/resources/ai-2025-edge-computing-implementation-guide.md"
+      url: "/resources/ai-2025-edge-computing-implementation-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Edge Computing", "AI Implementation", "ROI Guide", "Enterprise AI", "Digital Transformation", "2025 Strategy", "Technology Roadmap"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        timeline: "24 months"
+        success: "98%"
+        savings: "$180M"
+      reading_time: "25 min read"
+      
     - id: "neural-architecture-search-revolution"
       type: "blog"
       title: "AI 2025 Neural Architecture Search Revolution: Enterprise Breakthrough Guide"
