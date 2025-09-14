@@ -1,34 +1,34 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Search, Filter, Star, CheckCircle, ArrowRight, 
   Brain, Atom, Shield, Rocket, Target, Microscope,
   Phone, Mail, MapPin, TrendingUp, Users, Award,
   Zap, Globe, Cpu, Database, Lock, Cloud,
   Stethoscope, GraduationCap, Leaf, Truck
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 // Import all the new 2025 innovative service data
-import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services';
-import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services';
-import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services';
-import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services';
-import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services';
+import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services',
+import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services',
+import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services',
+import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services',
+import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services',
 
 // Import existing services for comprehensive coverage
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
-import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
-import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
-import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',
+import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services',
+import { innovativeITServices2025 } from '../data/2025-innovative-it-services',
+import { emergingTechServices2025 } from '../data/2025-emerging-tech-services',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -121,12 +121,12 @@ const serviceCategories = [
     gradient: 'from-teal-500/20 to-green-500/20',
     badge: 'Popular'
   }
-];
+],
 
 export default function InnovativeServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('name'),
 
   const filteredServices = serviceCategories.flatMap(category => 
     category.services.filter(service =>
@@ -136,20 +136,19 @@ export default function InnovativeServicesShowcase2025() {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase()))
     )
-  );
+  ),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name),
       case 'price':
-        return a.pricing.starter.price - b.pricing.starter.price;
+        return a.pricing.starter.price - b.pricing.starter.price,
       case 'category':
-        return a.category.localeCompare(b.category);
-      default:
-        return 0;
+        return a.category.localeCompare(b.category),
+      default: return 0
     }
-  });
+  }),
 
   return (
     <Layout>
@@ -440,5 +439,5 @@ export default function InnovativeServicesShowcase2025() {
         </div>
       </section>
     </Layout>
-  );
+  ),
 }

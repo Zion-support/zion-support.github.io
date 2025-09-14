@@ -3,13 +3,9 @@ import { ElementRef, ComponentPropsWithoutRef } from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { ChevronDown } from 'lucide-react'
 
+import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root
-
-
-
-
-
 
 const AccordionItem = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Item>
@@ -31,18 +27,9 @@ const AccordionItem = React.forward_ref<;
     ref={ref}
     className={cn("border-b", className)}
     {...props}
-
-
-
+  />
+))
 AccordionItem.displayName = "AccordionItem"
-
-AccordionItem.displayName = "AccordionItem"
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 
 const AccordionTrigger = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Trigger>,
@@ -101,16 +88,6 @@ const AccordionTrigger = React && React.forwardRef<;
 ))
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
-
 const AccordionContent = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Content>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
@@ -144,41 +121,11 @@ const AccordionContent = React.forward_ref<;
     ref={ref}
     className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
+  >
+    <div className={cn("pb-4 pt-0", className)}>{children}</div>
+  </AccordionPrimitive.Content>
+))
 
+AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
-
-
-      <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />;
-    </AccordionPrimitive && AccordionPrimitive.Trigger>;
-  </AccordionPrimitive && AccordionPrimitive.Header>;
-));
-AccordionTrigger && AccordionTrigger.displayName = AccordionPrimitive && AccordionPrimitive.Trigger.displayName;
-
-const AccordionContent = React && React.forwardRef<;
-  ElementRef<typeof AccordionPrimitive && AccordionPrimitive.Content>,;
-  ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive && AccordionPrimitive.Content>;
->(({ className, children, ...props }, ref) => (;
-  <AccordionPrimitive&& AccordionPrimitive.Content
-    ref={ref}
-    className='overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down'
-    {...props}>;
-    <div className={cn('pb-4 pt-0', className)}>{children}</div>;
-  </AccordionPrimitive && AccordionPrimitive.Content>;
-));
-
-AccordionContent && AccordionContent.displayName = AccordionPrimitive && AccordionPrimitive.Content.displayName;
-
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
-
-
-AccordionContent.displayName = AccordionPrimitive.Content.displayName;
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
-
-  >;
-    <div className={cn ('pb - 4 pt - 0', class_name)}>{children}</div>;
-  </AccordionPrimitive.Content>));
-AccordionContent.display_name = AccordionPrimitive.Content.display_name;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
-
-;
-

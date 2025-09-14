@@ -11,19 +11,14 @@ export function AdminHeader() {
   const { company } = useCompanyWorkspace(),
 
 
-import React from "react";
-import { Button } from "@/components/ui/button";
+import React from "react",
+import { Button } from "@/components/ui/button",
 import { Download, Settings } from 'lucide-react'
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
 
-export function AdminHeader() { // const { user  } = useAuth(), // Unused but available
-  const { company  } = useCompanyWorkspace(),
-
-
-
-
-
-
+export function AdminHeader() {
+  // const { user } = useAuth(), // Unused but available
+  const { company } = useCompanyWorkspace(),
 
   return (
     <div className="space-y-4">
@@ -152,8 +147,6 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -167,94 +160,7 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
         <Button>Customize Workspace</Button>
       </div>
     </div>
-
-
-
-
-    <div className='space-y-4'>;
-      <div className='flex items-center justify-between'>;
-
-;
-
-
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Download, Settings } from 'lucide-react';
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;
-export function AdminHeader() {;
-  // const { user } = useAuth(), // Unused but available;
-  const { company } = useCompanyWorkspace();
-  return (;
-    <div className="space-y-4">;
-      <div className="flex items-center justify-between">;
-
-        <div>;
-          <h1 className='text-3xl font-bold tracking-tight'>;
-            Enterprise Admin Dashboard;
-          </h1>;
-          <p className='text-muted-foreground mt-1'>;
-            Manage your company's account, team members, and subscription;
-          </p>;
-        </div>;
-        <div className='flex items-center gap-2'>;
-          <Button variant='outline' size='sm' className='gap-2'>;
-            <Settings className='h-4 w-4' />;
-            Settings;
-          </Button>;
-          <Button variant='outline' size='sm' className='gap-2'>;
-            <Download className='h-4 w-4' />            Export Data;
-          </Button>;
-        </div>;
-      </div>        <div className="flex items-center gap-2">;
-          <Button variant="outline" size="sm" className="gap-2">;
-            <Settings className="h-4 w-4" />;
-            Settings;
-          </Button>;
-          <Button variant="outline" size="sm" className="gap-2">;
-            <Download className="h-4 w-4" />;
-import React from 'react';
-import { Button } from '@/components / ui / button';
-import { Download, Settings } from 'lucide-react';
-import { useCompanyWorkspace } from '@/hooks / useCompanyWorkspace';
-export /**
- * AdminHeader - Function description
- */
-function AdminHeader() {
-  // const { user } = use_auth (); // Unused but available;
-  const { company } = useCompanyWorkspace ();
-  return (
-    <div className='space - y-4'>;
-      <div className='flex items - center justify - between'>;
-        <div>;
-          <h1 className='text - 3xl font - bold tracking - tight'>;
-            Enterprise Admin Dashboard;
-          </h1>;
-          <p className='text - muted - foreground mt - 1'>;
-            Manage your company's account, team members, and subscription;
-          </p>;
-        </div>;
-        <div className='flex items - center gap - 2'>;
-          <Button variant='outline' size='sm' className='gap - 2'>;
-            <Settings className='h - 4 w - 4' />;
-            Settings;
-          </Button>;
-          <Button variant='outline' size='sm' className='gap - 2'>;
-            <Download className='h - 4 w - 4' />            Export Data;
-          </Button>;
-        </div>;
-      </div>        <div className="flex items - center gap - 2">;
-          <Button variant="outline" size="sm" className="gap - 2">;
-            <Settings className="h - 4 w - 4" />;
-            Settings;
-          </Button>;
-          <Button variant="outline" size="sm" className="gap - 2">;
-            <Download className="h - 4 w - 4" />;
-            Export Data;
-          </Button>;
-        </div>;
-      </div>;
-
-  );
+  ),
 }
 
       <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4'>;

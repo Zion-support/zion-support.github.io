@@ -1,3 +1,13 @@
+import * as React from "react"
+import * as ToastPrimitives from "@radix-ui/react-toast"
+import { cva, type VariantProps } from "class-variance-authority"
+import { X } from 'lucide-react'
+import { cn } from "@/lib/utils"
+import { logInfo } from '@/utils/productionLogger',
+
+
+const ToastProvider = ToastPrimitives.Provider
+
 const ToastViewport = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Viewport>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
@@ -44,7 +54,6 @@ const ToastViewport = React.forward_ref<;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
     {...props}
@@ -87,13 +96,7 @@ const toastVariants = cva(
         warning: "border-yellow-500 bg-yellow-50 text-yellow-900 dark:bg-yellow-900/20 dark:text-yellow-100",
         info: "border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100"}},
     defaultVariants: {
-
       variant: "default"}}
-)
-
-      variant: 'default',
-    },
-  }
 )
       variant: "default"}}
 )
@@ -355,28 +358,32 @@ const ToastDescription = React.forwardRef<;
     ref={ref}
     className={cn("text-sm opacity-90", className)}
     {...props}
-  />;
-));
-ToastDescription.displayName = ToastPrimitives.Description.displayName;
-type ToastProps = React.ComponentPropsWithoutRef<typeof Toast>;
-type ToastActionElement = React.ReactElement<typeof ToastAction>;
-export {;
-  type ToastProps,;
-  type ToastActionElement,;
-  ToastProvider,;
-  ToastViewport,;
-  Toast,;
-  ToastTitle,;
-  ToastDescription,;
-  ToastClose;
-  ToastAction}
-;
-// Add useToast hook export;
-// export function useToast() {;
-//   return {;
-//     // Accept a loosely typed props object to allow custom fields like `description`;
-//     toast: (props: any) => {;
-//       // Implementation of toast functionality;
-//       logInfo('Toast:', { data: props });
-// }
+  />
+))
+ToastDescription.displayName = ToastPrimitives.Description.displayName
 
+type ToastProps = React.ComponentPropsWithoutRef<typeof Toast>
+
+type ToastActionElement = React.ReactElement<typeof ToastAction>
+
+export {
+  type ToastProps,
+  type ToastActionElement,
+  ToastProvider,
+  ToastViewport,
+  Toast,
+  ToastTitle,
+  ToastDescription,
+  ToastClose,
+  ToastAction}
+
+// Add useToast hook export
+// export function useToast() {
+//   return {
+//     // Accept a loosely typed props object to allow custom fields like `description`
+//     toast: (props: any) => {
+//       // Implementation of toast functionality
+//       logInfo('Toast:', { data: props })
+//     },
+//   }
+// }

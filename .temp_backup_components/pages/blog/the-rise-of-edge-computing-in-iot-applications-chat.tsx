@@ -13,10 +13,10 @@ const TheRiseOfEdgeComputingInIotApplicationsChat: NextPage = () => {
       <main>
         <h1>TheRiseOfEdgeComputingInIotApplicationsChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default TheRiseOfEdgeComputingInIotApplicationsChat;
+export default TheRiseOfEdgeComputingInIotApplicationsChat,

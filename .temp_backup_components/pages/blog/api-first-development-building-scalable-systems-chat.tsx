@@ -13,10 +13,10 @@ const ApiFirstDevelopmentBuildingScalableSystemsChat: NextPage = () => {
       <main>
         <h1>ApiFirstDevelopmentBuildingScalableSystemsChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default ApiFirstDevelopmentBuildingScalableSystemsChat;
+export default ApiFirstDevelopmentBuildingScalableSystemsChat,

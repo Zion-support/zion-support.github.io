@@ -696,16 +696,16 @@ export default function UltraFuturisticHero2029() {;
         </div>
 
         {/* Grid Pattern */}
-        <div className=&quot;absolute inset-0 opacity-10&quot;>
-          <div className=&quot;absolute inset-0&quot; style={{
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`,
             backgroundSize: '50px 50px'
           }} />
         </div>
 
         {/* Gradient Orbs */}
-        <div className=&quot;absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse&quot; />
-        <div className=&quot;absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000&quot; />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
       {/* Content */}
@@ -768,20 +768,20 @@ export default function UltraFuturisticHero2029() {;
           className=&quot;flex flex-col sm:flex-row gap-4 justify-center mb-16&quot;
         >
           <Link
-            href=&quot;/services&quot;
-            className=&quot;group px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-lg font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-cyan-500/25 flex items-center justify-center space-x-2&quot;
+            href="/services"
+            className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-lg font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl hover:shadow-cyan-500/25 flex items-center justify-center space-x-2"
           >
             <span>Explore Services</span>
-            <ArrowRight className=&quot;w-5 h-5 group-hover:translate-x-1 transition-transform&quot; />
-          </a>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
           
           <Link
-            href=&quot;/contact&quot;
-            className=&quot;px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 text-lg font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center space-x-2&quot;
+            href="/contact"
+            className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 text-lg font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center space-x-2"
           >
             <span>Get Started</span>
-            <Zap className=&quot;w-5 h-5&quot; />
-          </a>
+            <Zap className="w-5 h-5" />
+          </Link>
         </motion.div>
 
         {_/* Features Grid */}

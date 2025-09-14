@@ -1,6 +1,6 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../components/SEO',
+import Link from 'next/link',
 
 export default function RAGEvaluationLabPage() {
 	return (
@@ -17,7 +17,7 @@ export default function RAGEvaluationLabPage() {
 							{ title: 'Grounding & Faithfulness', desc: 'Measure factual consistency, citation quality, and hallucination rate.' },
 							{ title: 'Golden Datasets', desc: 'Curate and run task-specific datasets for repeatable evaluation.' },
 							{ title: 'Scenario Evals', desc: 'Synthetic and real-world tests across intents, domains, and edge cases.' },
-							{ title: 'CI/CD Quality Gates', desc: 'Fail builds on regressions; compare models and versions.' },
+							{ title: 'CI/CD Quality Gates', desc: 'Fail builds on regressions, compare models and versions.' },
 							{ title: 'Offline & Canary', desc: 'Pre-release offline runs and live traffic canaries with alerts.' },
 							{ title: 'Dashboards & Reports', desc: 'Team dashboards, API access, and exportable reports.' }
 						].map((f) => (
@@ -47,7 +47,7 @@ export default function RAGEvaluationLabPage() {
 								<p className="mt-4 text-3xl font-bold">Custom</p>
 							</div>
 						</div>
-						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://humanloop.com" target="_blank" rel="noreferrer">Humanloop</a>, <a className="underline hover:text-cyan-300" href="https://arize.com" target="_blank" rel="noreferrer">Arize</a>, <a className="underline hover:text-cyan-300" href="https://promptfoo.dev" target="_blank" rel="noreferrer">promptfoo</a>.</p>
+						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://humanloop.com" target="_blank" rel="noreferrer">Humanloop</a>, <a className="underline hover:text-cyan-300" href="https://arize.com" target="_blank" rel="noreferrer">Arize</a>, <a className="underline hover: text-cyan-300" href="https://promptfoo.dev" target="_blank" rel="noreferrer">promptfoo</a>.</p>
 					</div>
 
 					<div className="mt-12 flex flex-wrap items-center gap-4">
@@ -58,5 +58,5 @@ export default function RAGEvaluationLabPage() {
 				</div>
 			</section>
 		</>
-	);
+	)
 }

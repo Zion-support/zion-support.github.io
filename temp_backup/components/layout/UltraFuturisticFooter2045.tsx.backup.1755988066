@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, ArrowRight, Globe, Shield, Rocket, Brain, Atom, Cpu,
@@ -159,9 +158,9 @@ const UltraFuturisticFooter2045: React.FC = () => {
               <motion.div key={section.title} variants={fadeInUp} className="space-y-4">
                 <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>
                 <ul className="space-y-3">
-                  {section.links.map((link) => (
+                  {section.links.map((link, linkIndex) => (
                     <li key={link.name}>
-                      <Link
+                      <a
                         href={link.href}
                         className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors group"
                       >
@@ -242,20 +241,7 @@ const UltraFuturisticFooter2045: React.FC = () => {
                     <span className="sr-only">{social.name}</span>
                   </a>
                 ))}
-              </div>
-
-              {/* Additional Links */}
-              <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <Link href="/status" className="hover:text-cyan-400 transition-colors duration-200">
-                  System Status
-                </Link>
-                <Link href="/sitemap" className="hover:text-cyan-400 transition-colors duration-200">
-                  Sitemap
-                </Link>
-                <Link href="/accessibility" className="hover:text-cyan-400 transition-colors duration-200">
-                  Accessibility
-                </Link>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
 

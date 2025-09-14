@@ -13,5 +13,5 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
         <p className="text-sm">{basicInfo.summary}</p>
       )}
     </div>
-  );
+  )
 }

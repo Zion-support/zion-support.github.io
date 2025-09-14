@@ -1,70 +1,70 @@
-import { useEffect, useMemo, useState } from 'react';
-import Head from 'next/head';
-import EnhancedNavigation from '@/components/layout/EnhancedNavigation';
+import { useEffect, useMemo, useState } from 'react',
+import Head from 'next/head',
+import EnhancedNavigation from '@/components/layout/EnhancedNavigation',
 
-type LogsSummary = { entries: any[]; byModule: Record<string, number>; byType: Record<string, number>; total: number };
+type LogsSummary = { entries: any[], byModule: Record<string number>, byType: Record<string number>, total: number },
 
 export default function ZionBrainAdmin() {
-  const [token, setToken] = useState<string>('');
-  const [routerInput, setRouterInput] = useState('');
-  const [routerResult, setRouterResult] = useState<any>(null);
+  const [token, setToken] = useState<string>(''),
+  const [routerInput, setRouterInput] = useState(''),
+  const [routerResult, setRouterResult] = useState<any>(null),
 
-  const [metrics, setMetrics] = useState({ signupsLastHour: 18, disputeFlagsLastHour: 2, zionVelocity: 110 });
-  const [triggers, setTriggers] = useState<any[]>([]);
+  const [metrics, setMetrics] = useState({ signupsLastHour: 18, disputeFlagsLastHour: 2, zionVelocity: 110 }),
+  const [triggers, setTriggers] = useState<any[]>([]),
 
-  const [prompt, setPrompt] = useState('');
-  const [userIntent, setUserIntent] = useState('');
-  const [optimized, setOptimized] = useState('');
+  const [prompt, setPrompt] = useState(''),
+  const [userIntent, setUserIntent] = useState(''),
+  const [optimized, setOptimized] = useState(''),
 
-  const [logs, setLogs] = useState<LogsSummary | null>(null);
-  const [stuck, setStuck] = useState<any[]>([]);
+  const [logs, setLogs] = useState<LogsSummary | null>(null),
+  const [stuck, setStuck] = useState<any[]>([]),
 
   useEffect(() => {
-    const t = localStorage.getItem('zion_superadmin_token') || '';
-    setToken(t);
-    refreshLogs(t);
-  }, []);
+    const t = localStorage.getItem('zion_superadmin_token') || '',
+    setToken(t),
+    refreshLogs(t),
+  }, []),
 
-  const authHeaders = useMemo(() => (token ? { 'x-admin-token': token } : {}), [token]);
+  const authHeaders = useMemo(() => (token ? { 'x-admin-token': token } : {}), [token]),
 
   async function refreshLogs(t?: string) {
-    const headers = t ? { 'x-admin-token': t } : authHeaders;
-    const res = await fetch('/api/zion-brain/logs', { headers });
-    if (res.ok) setLogs(await res.json());
-    const stuckRes = await fetch('/api/zion-brain/logs?stuck=1', { headers });
-    if (stuckRes.ok) setStuck((await stuckRes.json()).entries || []);
+    const headers = t ? { 'x-admin-token': t } : authHeaders,
+    const res = await fetch('/api/zion-brain/logs', { headers }),
+    if (res.ok) setLogs(await res.json()),
+    const stuckRes = await fetch('/api/zion-brain/logs?stuck=1', { headers }),
+    if (stuckRes.ok) setStuck((await stuckRes.json()).entries || []),
   }
 
   async function handleRoute() {
-    const res = await fetch('/api/zion-brain/router', { method: 'POST', headers: { 'Content-Type': 'application/json', ...authHeaders }, body: JSON.stringify({ text: routerInput }) });
-    const data = await res.json();
-    setRouterResult(data);
-    await refreshLogs();
+    const res = await fetch('/api/zion-brain/router', { method: 'POST', headers: { 'Content-Type': 'application/json', ...authHeaders }, body: JSON.stringify({ text: routerInput }) }),
+    const data = await res.json(),
+    setRouterResult(data),
+    await refreshLogs(),
   }
 
   async function handleEvaluateReflex() {
-    const res = await fetch('/api/zion-brain/reflex', { method: 'POST', headers: { 'Content-Type': 'application/json', ...authHeaders }, body: JSON.stringify(metrics) });
-    const data = await res.json();
-    setTriggers(data.triggers || []);
-    await refreshLogs();
+    const res = await fetch('/api/zion-brain/reflex', { method: 'POST', headers: { 'Content-Type': 'application/json', ...authHeaders }, body: JSON.stringify(metrics) }),
+    const data = await res.json(),
+    setTriggers(data.triggers || []),
+    await refreshLogs(),
   }
 
   async function handleOptimize() {
-    const res = await fetch('/api/zion-brain/optimize', { method: 'POST', headers: { 'Content-Type': 'application/json', ...authHeaders }, body: JSON.stringify({ prompt, userIntent }) });
-    const data = await res.json();
-    setOptimized(data.optimized || '');
-    await refreshLogs();
+    const res = await fetch('/api/zion-brain/optimize', { method: 'POST', headers: { 'Content-Type': 'application/json', ...authHeaders }, body: JSON.stringify({ prompt, userIntent }) }),
+    const data = await res.json(),
+    setOptimized(data.optimized || ''),
+    await refreshLogs(),
   }
 
   function saveToken() {
-    localStorage.setItem('zion_superadmin_token', token);
-    refreshLogs(token);
+    localStorage.setItem('zion_superadmin_token', token),
+    refreshLogs(token),
   }
 
   const heatCells = useMemo(() => {
-    if (!logs) return [] as { key: string; value: number }[];
-    return Object.entries(logs.byModule || {}).map(([k, v]) => ({ key: k, value: v as number }));
-  }, [logs]);
+    if (!logs) return [] as { key: string, value: number }[],
+    return Object.entries(logs.byModule || {}).map(([k, v]) => ({ key: k, value: v as number })),
+  }, [logs]),
 
   return (
     <>
@@ -185,5 +185,5 @@ export default function ZionBrainAdmin() {
         </section>
       </main>
     </>
-  );
+  ),
 }

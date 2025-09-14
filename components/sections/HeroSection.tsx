@@ -208,15 +208,10 @@ const HeroSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
           {/* Badge */}
@@ -267,7 +262,6 @@ const HeroSection: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
           {/* Main Heading */}
           <motion&& motion.h1
@@ -289,7 +283,6 @@ const HeroSection: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
           {/* Subtitle */}
           <motion&& motion.p
@@ -314,9 +307,7 @@ const HeroSection: React.FC = () => {
           </motion.p>
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
           {/* CTA Buttons */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -329,9 +320,7 @@ const HeroSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
           >
@@ -387,11 +376,8 @@ const HeroSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
           {/* Stats */}
@@ -407,9 +393,7 @@ const HeroSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
           >
@@ -535,7 +519,7 @@ const HeroSection: React.FC = () => {
             className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;
           >
             Transform Your Business with
-            <span className=&quot;block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
+            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Cutting-Edge Technology
             </span>
           </motion.h1>
@@ -544,7 +528,6 @@ const HeroSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
           {/* Subtitle */}
@@ -584,18 +567,18 @@ const HeroSection: React.FC = () => {
             className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center mb-16&quot;
           >
             <Link
-              href=&quot;/contact&quot;
-              className=&quot;group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1&quot;
+              href="/contact"
+              className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
             >
               Get Started Today
-              <ArrowRight className=&quot;inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform&quot; />
-            </a>
+              <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
             
-            <button className=&quot;group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300&quot;>
-              <div className=&quot;w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors&quot;>
-                <Play className=&quot;w-6 h-6 ml-1&quot; />
+            <button className="group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300">
+              <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors">
+                <Play className="w-6 h-6 ml-1" />
               </div>
-              <span className=&quot;text-lg font-medium&quot;>Watch Demo</span>
+              <span className="text-lg font-medium">Watch Demo</span>
             </button>
           </motion.div>
 
@@ -670,7 +653,6 @@ const HeroSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -713,11 +695,8 @@ const HeroSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -737,14 +716,10 @@ const HeroSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -767,12 +742,9 @@ const HeroSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       {/* Scroll Indicator */}

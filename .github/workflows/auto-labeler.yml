@@ -9,7 +9,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  label:
+  triage:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v5

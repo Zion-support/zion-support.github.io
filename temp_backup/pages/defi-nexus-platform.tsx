@@ -1,54 +1,50 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   TrendingUp, Brain, Shield, Zap, Target, 
   BarChart3, Cpu, Globe, Users, Award,
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const features = [
-  'Multi-chain DeFi aggregation',
-  'Automated yield optimization',
-  'Liquidity pool management',
-  'Cross-chain bridge services',
-  'Smart contract auditing',
-  'DeFi analytics dashboard',
-  'Mobile app integration',
-  'Staking and governance'
-];
+  'Multi-chain DeFi aggregationAutomated yield optimization',
+  'Liquidity pool managementCross-chain bridge services',
+  'Smart contract auditingDeFi analytics dashboard',
+  'Mobile app integrationStaking and governance'
+],
 
 const pricingPlans = [
   {
     name: 'Starter',
     price: 29,
     period: 'month',
-    features: ['Basic DeFi tools', '3 blockchain networks', 'Yield tracking', 'Standard support'],
+    features: ['Basic DeFi tools3 blockchain networks', 'Yield trackingStandard support'],
     popular: false
   },
   {
     name: 'Professional',
     price: 99,
     period: 'month',
-    features: ['Advanced DeFi tools', 'All major networks', 'Automated strategies', 'Analytics', 'Priority support'],
+    features: ['Advanced DeFi toolsAll major networks', 'Automated strategiesAnalytics', 'Priority support'],
     popular: true
   },
   {
     name: 'Enterprise',
     price: 299,
     period: 'month',
-    features: ['Custom DeFi solutions', 'White-label platform', 'API access', 'Priority support', 'Custom integrations'],
+    features: ['Custom DeFi solutionsWhite-label platform', 'API accessPriority support', 'Custom integrations'],
     popular: false
   }
-];
+],
 
 export default function DeFiNexusPlatform() {
   return (
@@ -289,5 +285,5 @@ export default function DeFiNexusPlatform() {
         </div>
       </section>
     </Layout>
-  );
+  ),
 }

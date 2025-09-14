@@ -1,19 +1,19 @@
-import { useState } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { Switch } from '@/components/ui/switch';
-import { Button } from '@/components/ui/button';
-import { useConsent } from '@/context/ConsentContext';
+import { useState } from 'react',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { SEO } from '@/components/SEO',
+import { Switch } from '@/components/ui/switch',
+import { Button } from '@/components/ui/button',
+import { useConsent } from '@/context/ConsentContext',
 
 export default function PrivacySettings() {
-  const { consentupdateConsent } = useConsent();
-  const [analyticsetAnalytics] = useState(consent.analytics);
-  const [adsetAds] = useState(consent.ads);
+  const { consent, updateConsent } = useConsent(),
+  const [analytics, setAnalytics] = useState(consent.analytics),
+  const [ads, setAds] = useState(consent.ads),
 
   const handleSave = () => {
-    updateConsent({ analyticsads });
-  };
+    updateConsent({ analytics, ads }),
+  },
 
   return (
     <>
@@ -35,5 +35,5 @@ export default function PrivacySettings() {
       </main>
       <Footer />
     </>
-  );
+  ),
 }

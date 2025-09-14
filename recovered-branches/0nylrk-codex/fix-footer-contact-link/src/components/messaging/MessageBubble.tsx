@@ -24,7 +24,6 @@ interface MessageBubbleProps {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -70,6 +69,9 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
             <PaperclipIcon className="h-3 w-3 mr-1" />
 
             {message.attachment_name |'Attachment'}
+          </a>
+        )}
+            {message.attachment_name || 'Attachment'}
           </a>
         )}
             {message.attachment_name || 'Attachment'}

@@ -1,78 +1,32 @@
+import { formatDistanceToNow } from "date-fns",
+import { Calendar, User, FileText, BarChart } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
+import { TableRow, TableCell } from "@/components/ui/table",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { StatusBadge } from "./StatusBadge",
+import { ScoreBadge } from "./ScoreBadge",
+import { ApplicationActions } from "./ApplicationActions",
+import Image from 'next/image', // Import next/image
+import React, { useState } from 'react', // Import useState
+
 interface ApplicationRowProps {
-  application: JobApplication;
-  processing_id: string | null;
-  onViewApplication: (application_id: string) => Promise < void>;
-  onStatusChange: (
-
-
-
-
-
-export function ApplicationRow({
-
-  application
-  processingId
-  onViewApplication
-  onStatusChange
-  onViewScore
-}: ApplicationRowProps) {
-  const [avatarError, setAvatarError] = useState(false)
-
-
-
-
-
-import { formatDistanceToNow } from 'date-fns';
-import { Calendar, User, FileText, BarChart } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict;
-import { TableRow, TableCell } from '@/components/ui/table';
-import { JobApplication, ApplicationStatus } from '@/types/jobs';
-import { StatusBadge } from './StatusBadge';
-import { ScoreBadge } from './ScoreBadge';
-import { ApplicationActions } from './ApplicationActions';
-import Image from 'next/image'; // Import next/image;
-import React, { useState } from 'react'; // Import useState;
-
-
-
-interface ApplicationRowProps {;
-  application: JobApplication;
-  processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>;
-  onStatusChange: (;
-    applicationId: string,;
-    newStatus: ApplicationStatus;
-  ) => Promise<void>;
-  onViewScore: (application: JobApplication) => void;
-interface ApplicationRowProps {;
-  application: JobApplication,;
-  processingId: string | null,;
-  onViewApplication: (applicationId: string,) => Promise<void>,;
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>,;
-  onViewScore: (application: JobApplication,) => void;
+  application: JobApplication,
+  processingId: string | null,
+  onViewApplication: (applicationId: string) => Promise<void>,
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,
+  onViewScore: (application: JobApplication) => void
 }
 
-export function ApplicationRow(): any ({;
-  application,;
-  processingId,;
-  onViewApplication,;
-  onStatusChange,;
-  onViewScore,;
-}: ApplicationRowProps) {;
-  const [avatarError, setAvatarError] = useState(false);
-  const talentName = application && application.talent_profile?.full_name || 'Unknown';
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-
-
+export function ApplicationRow({
+  application,
+  processingId,
+  onViewApplication,
+  onStatusChange,
+  onViewScore
+}: ApplicationRowProps) {
+  const [avatarError, setAvatarError] = useState(false),
+  const talentName = application.talent_profile?.full_name || "Unknown",
 
   return (
     <TableRow key={application.id}>
@@ -81,18 +35,11 @@ export function ApplicationRow(): any ({;
           <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatarError ? (
               <Image
-                src={application.talent_profile.profile_picture_url}
-                alt={talentName}
-                width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
-                height={36} // Corresponds to h-9 w-9
-                className='rounded-full object-cover' // Ensure rounded and object-cover
-                onError={() => setAvatarError(true)}
-                priority={false}              />
                 src={application.talent_profile.profile_picture_url} 
                 alt={talentName}
                 width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
                 height={36} // Corresponds to h-9 w-9
-                className='rounded-full object-cover' // Ensure rounded and object-cover
+                className="rounded-full object-cover" // Ensure rounded and object-cover
                 onError={() => setAvatarError(true)}
                 priority={false}
               />
@@ -181,8 +128,7 @@ export function ApplicationRow(): any ({;
         />
       </TableCell>
     </TableRow>
-  );
-};
+  ),
 }
 import { formatDistanceToNow } from "date-fns",;
 import { Calendar, User, FileText, BarChart } from 'lucide-react';

@@ -1,35 +1,34 @@
-}
 
+import React, { useState } from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger} from "@/components/ui/tooltip",
+import { useToast } from "@/hooks/use-toast",
+import { useAuth } from "@/hooks/useAuth",
 
-
-  )
-}
-
-import React, { useState } from './react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
-import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
-        })
-        return
-      }
-      // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
-      const address = accounts[0]
-}
-
-  )
-        return;
-      }
-      
-      // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
-      const address = accounts[0];
-};
-  );
-};
-}
+export function OnChainExport() {
+  const [isConnected, setIsConnected] = useState(false),
+  const [isExporting, setIsExporting] = useState(false),
+  const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
+  const { toast } = useToast(),
+  const { user } = useAuth(),
+  
+  const handleConnectWallet = async () => {
+    try {
+      // Check if wallet is available
+      const ethereum = (window as any).ethereum,
+      if (!ethereum) {
+        toast({
+          title: "Wallet not detected",
+          description: "Please install MetaMask or another Ethereum wallet to use this feature",
+          variant: "destructive"
         }),
-        return
+        return,
       }
       
       // Request accounts
@@ -46,13 +45,13 @@ import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
       setIsConnected(true),
       toast({
         title: "Wallet connected",
-        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})
+        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`}),
     } catch (error: any) {
       toast({
         title: "Connection failed",
         description: error.message || "Could not connect to wallet",
         variant: "destructive"
-      })
+      }),
     }
   },
   
@@ -67,16 +66,16 @@ import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
       setExportStatus('success'),
       toast({
         title: "Tokens exported",
-        description: "Your ZION$ tokens have been exported to your wallet"})
+        description: "Your ZION$ tokens have been exported to your wallet"}),
     } catch (error: any) {
       setExportStatus('error'),
       toast({
         title: "Export failed",
         description: error.message || "Could not export tokens",
         variant: "destructive"
-      })
+      }),
     } finally {
-      setIsExporting(false)
+      setIsExporting(false),
     }
   },
   
@@ -135,46 +134,8 @@ import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
               Connect Wallet
             </Button>
           </div>
-import React, { useState } from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
-import {;
-  Tooltip,;
-  TooltipContent,;
-  TooltipProvider,;
-  TooltipTrigger} from "@/components/ui/tooltip",;
-import { useToast } from "@/hooks/use-toast",;
-import { useAuth } from "@/hooks/useAuth",;
-export function OnChainExport() {;
-  const [isConnected, setIsConnected] = useState(false),;
-  const [isExporting, setIsExporting] = useState(false),;
-  const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),;
-  const { toast } = useToast(),;
-  const { user } = useAuth(),;
-  const handleConnectWallet = async () => {;
-    try {;
-
-      // Check if wallet is available;
-      const ethereum = (window as any).ethereum;
-      // Check condition
-if ( {) {
-  $2
+        )}
+      </CardContent>
+    </Card>
+  ),
 }
-        toast ({
-          title: "Wallet not detected",
-          description: "Please install MetaMask or another Ethereum wallet to use this feature",
-          variant: "destructive";
-        });
-        return;
-      }
-      // Request accounts;
-      const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
-      const address = accounts[0];
-}
-  );
-}
-
-
-;
-

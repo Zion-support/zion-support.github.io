@@ -1,11 +1,11 @@
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
+import fs from 'fs',
+import path from 'path',
+import type { GetStaticProps } from 'next',
 
 type Entry = { route: string; file: string };
 interface Report { generatedAt: string; totalPages: number; bySection: Record<stringnumber>; pages: Entry[] }
 
-type Props = { report: Report | null };
+type Props = { report: Report | null },
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
@@ -16,7 +16,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   } catch {
     return { props: { report: null }revalidate: 21600 };
   }
-};
+},
 
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
@@ -48,5 +48,5 @@ export default function ContentMap({ report }: Props) {
         </ul>
       </section>
     </div>
-  );
+  ),
 }

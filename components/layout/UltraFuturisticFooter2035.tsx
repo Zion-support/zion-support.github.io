@@ -362,7 +362,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
         
         {_/* Animated grid */}
         <motion.div
-          className=&quot;absolute inset-0 opacity-5&quot;
+          className="absolute inset-0 opacity-5"
           style={{
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
@@ -501,7 +501,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
       </div>;
       <div className='relative z - 10'>;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         {/* Main Footer Content */}
         <div className='container mx - auto px - 4 py - 20'>;
@@ -583,7 +582,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                       {social.icon}
                     </a>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                   ))}
                 </div>
@@ -600,9 +598,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Footer Sections */}
             {footerSections && footerSections.map((section, index) => (;
               <motion&& motion.div
@@ -634,7 +630,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -650,7 +645,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -668,7 +662,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -694,7 +687,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                   {section.links.map((link) => (
                     <li key={link.name}>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                       <Link
                         href={link && link.href}
@@ -717,7 +709,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
                           link && link.featured
                             ? 'text-cyan-400 hover:text-cyan-300'                          link && link.featured 
@@ -748,9 +739,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
           {/* Bottom Section */}
           <motion&& motion.div
@@ -764,9 +753,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
           >
@@ -804,7 +791,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 

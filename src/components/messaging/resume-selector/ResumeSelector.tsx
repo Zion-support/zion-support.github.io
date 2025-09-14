@@ -1,130 +1,121 @@
 
-// Fetch resume data when component mounts
-  useEffect((,) => {
+import React, { useState, useEffect } from 'react',
+import { Button } from "@/components/ui/button",
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
+import { Label } from "@/components/ui/label",
+import { Plus, Loader2 } from 'lucide-react'
+import { useResume } from "@/hooks/useResume",
+import { exportResumeToPDF } from "@/utils/pdfExport",
+import { toast } from "@/components/ui/use-toast",
+import { ResumePreviewCard } from './ResumePreviewCard',
+import { UploadSection } from './UploadSection',
+import { SelectResumeSection } from './SelectResumeSection',
+import { ResumeOption, ResumeSelectorProps } from './types',
+import {logErrorToProduction} from '@/utils/productionLogger',
+
+export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
+
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),
+  const [customFile, setCustomFile] = useState<File | null>(null),
+  const [isLoading, setIsLoading] = useState(false),
+  
+  const { resume, fetchResume } = useResume(),
+  
+  // Fetch resume data when component mounts
+  useEffect(() => {
     const loadResumes = async () => {
-
-import { ResumePreviewCard } from './ResumePreviewCard';
-import { UploadSection } from './UploadSection';
-import { SelectResumeSection } from './SelectResumeSection';
-import { ResumeOption, ResumeSelectorProps } from './types';
-import {logErrorToProduction} from '@/utils/productionLogger';
-export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps) {;
-
-  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
-  const [customFile, setCustomFile] = useState<File | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const { resume, fetchResume } = useResume();
-
-        setIsLoading(false)
+      setIsLoading(true),
+      try {
+        await fetchResume(),
+      } catch (error) {
+        logErrorToProduction('Error loading resumes:', { data: error }),
+      } finally {
+        setIsLoading(false),
+      }
+    },
+    
+    loadResumes(),
+  }, [fetchResume]),
+  
+  // Update resume options when resume data changes
+  useEffect(() => {
+    if (resume) {
+      const options: ResumeOption[] = [{
+        id: resume.id || 'current',
+        title: resume.basic_info.title,
+        type: 'ai_resume',
+        resume: resume
+      }],
+      
+      setResumeOptions(options),
+      
+      // Pre-select the most recent resume
+      if (options.length > 0 && selectedOption === 'recent' && options[0]) {
+        setSelectedResume(options[0]),
+        onResumeSelected(options[0]),
       }
     }
-            return;
-      }
-}
-
-  )
-}
-
-  ;
-};
-  );
-};
-
-
-import React, { useState, useEffect } from 'react',;
-import { Button } from "@/components/ui/button",;
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
-import { Label } from "@/components/ui/label",;
-
-
-import { Plus, Loader2 } from 'lucide-react';
-import { useResume } from '@/hooks/useResume';
-import { exportResumeToPDF } from '@/utils/pdfExport';
-import { toast } from '@/components/ui/use-toast';
-
-interface ResumeOption {
-  id: string;
-  title: string;
-  description: string;
-  lastModified: string;
-  fileSize: string;
-  url: string;
-}
-
-interface ResumeSelectorProps {
-  onResumeSelect: (resume: ResumeOption | null) => void;
-  selectedResume: ResumeOption | null;
-}
-
-export const ResumeSelector: React.FC<ResumeSelectorProps> = ({
-  onResumeSelect,
-  selectedResume,
-}) => {
-  const [resumes, setResumes] = useState<ResumeOption[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [uploading, setUploading] = useState(false);
-  const { resume, updateResume } = useResume();
-
-  useEffect(() => {
-    // Mock data - replace with actual API call
-    const mockResumes: ResumeOption[] = [
-      {
-        id: '1',
-        title: 'Software Engineer Resume',
-        description: 'Updated with latest projects',
-        lastModified: '2024-01-15',
-        fileSize: '2.1 MB',
-        url: '/resumes/software-engineer.pdf',
-      },
-      {
-        id: '2',
-        title: 'Product Manager Resume',
-        description: 'Senior PM experience',
-        lastModified: '2024-01-10',
-        fileSize: '1.8 MB',
-        url: '/resumes/product-manager.pdf',
-      },
-    ];
+  }, [resume, selectedOption, onResumeSelected]),
+  
+  // Handle radio option change
+  const handleOptionChange = (value: 'recent' | 'select' | 'upload') => {
+    setSelectedOption(value),
     
-    setResumes(mockResumes);
-    setLoading(false);
-  }, []);
-
-  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    setUploading(true);
-    try {
-      // Mock file processing
-      await new Promise(resolve => setTimeout(resolve, 2000));
+    if (value === 'recent' && resumeOptions.length > 0 && resumeOptions[0]) {
+      setSelectedResume(resumeOptions[0]),
+      onResumeSelected(resumeOptions[0])
+    } else if (value === 'select') {
+      // Reset selection until user chooses
+      setSelectedResume(null),
+    } else if (value === 'upload') {
+      setSelectedResume(null),
+    }
+  },
+  
+  // Handle resume selection change
+  const handleResumeSelect = (resumeId: string) => {
+    const selected = resumeOptions.find(opt => opt.id === resumeId),
+    if (selected) {
+      setSelectedResume(selected),
+      onResumeSelected(selected)
+    }
+  },
+  
+  // Handle custom file upload
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0],
       
-      const newResume: ResumeOption = {
-        id: Date.now().toString(),
-        title: file.name.replace(/\.[^/.]+$/, ''),
-        description: 'Recently uploaded',
-        lastModified: new Date().toISOString().split('T')[0],
-        fileSize: `${(file.size / 1024 / 1024).toFixed(2)} MB`,
-        url: URL.createObjectURL(file),
-      };
+      // Check if it's a PDF file
+      if (file.type !== 'application/pdf') {
+        toast({
+          title: "Invalid file type",
+          description: "Please upload a PDF file",
+          variant: "destructive"
+        }),
+        return,
+      }
       
-      setResumes(prev => [newResume, ...prev]);
-      onResumeSelect(newResume);
-      toast({
-        title: 'Resume uploaded successfully',
-        description: 'Your resume has been processed and is ready to use.',
-      });
-    } catch (error) {
-      toast({
-        title: 'Upload failed',
-        description: 'There was an error uploading your resume. Please try again.',
-        variant: 'destructive',
-      });
-    } finally {
-      setUploading(false);
+      // Create a custom resume option
+      const customOption: ResumeOption = {
+        id: 'custom-upload',
+        title: file.name,
+        type: 'custom_upload',
+        file: file
+      },
+      
+      setCustomFile(file),
+      setSelectedResume(customOption),
+      onResumeSelected(customOption),
+    }
+  },
+  
+  // Handle resume download
+  const handleDownloadResume = async () => {
+    if (!selectedResume || selectedResume.type !== 'ai_resume' || !selectedResume.resume) {
+      return,
     }
   };
 
@@ -134,26 +125,24 @@ export const ResumeSelector: React.FC<ResumeSelectorProps> = ({
     try {
       await exportResumeToPDF(selectedResume);
       toast({
-        title: 'Resume exported',
-        description: 'Your resume has been exported to PDF.',
-      });
+        title: "Success!",
+        description: "Your resume has been downloaded."}),
     } catch (error) {
       toast({
-        title: 'Export failed',
-        description: 'There was an error exporting your resume.',
-        variant: 'destructive',
-      });
+        title: "Download failed",
+        description: "There was an error downloading your resume.",
+        variant: "destructive"
+      }),
+    } finally {
+      setIsLoading(false),
     }
-  };
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center p-8">
-        <Loader2 className="h-8 w-8 animate-spin" />
-      </div>
-    );
-  }
-
+  },
+  
+  // Handle "Generate Resume Now" button
+  const handleGenerateResume = () => {
+    window.open('/dashboard/talent/portfolio_blank'),
+  },
+  
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -208,22 +197,44 @@ export const ResumeSelector: React.FC<ResumeSelectorProps> = ({
           ))}
         </div>
       </RadioGroup>
-
-      {resumes.length === 0 && (
-        <div className="text-center py-8">
-          <p className="text-gray-500">No resumes found. Upload your first resume to get started.</p>
-        </div>
+      
+      {/* Resume selection options based on radio selection */}
+      {selectedOption === 'recent' && resume && (
+        <ResumePreviewCard
+          resume={resume}
+          onDownload={handleDownloadResume}
+          isLoading={isLoading}
+        />
       )}
+      
+      {selectedOption === 'select' && (
+        <SelectResumeSection
+          resumeOptions={resumeOptions}
+          selectedResume={selectedResume}
+          handleResumeSelect={handleResumeSelect}
+          handleDownloadResume={handleDownloadResume}
+          isLoading={isLoading}
+        />
+      )}
+      
+      {selectedOption === 'upload' && (
+        <UploadSection
+          customFile={customFile}
+          onFileUpload={handleFileUpload}
+        />
+      )}
+      
+      {/* Generate Resume Now button */}
+      <div className="flex justify-between items-center pt-2">
+        <Button 
+          variant="outline"
+          onClick={handleGenerateResume}
+          className="text-zion-purple border-zion-purple/20"
+        >
+          <Plus className="h-4 w-4 mr-2" />
+          Generate Resume Now
+        </Button>
+      </div>
     </div>
-  );
-
-
-
+  ),
 }
-
-
-  )
-}
-
-
-

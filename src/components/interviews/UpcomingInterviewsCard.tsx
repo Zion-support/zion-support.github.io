@@ -1,4 +1,28 @@
-// Filter for confirmed interviews in the future
+
+import React, { useEffect, useState } from "react",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { useInterviews } from "@/hooks/useInterviews",
+import { Interview } from "@/types/interview",
+import { format, isPast, parseISO } from "date-fns",
+import Link from "next/link",
+import { Calendar, Clock, Video } from 'lucide-react'
+import { Avatar } from "@/components/ui/avatar",
+import {logErrorToProduction} from '@/utils/productionLogger',
+
+export function UpcomingInterviewsCard() {
+
+  const { fetchInterviews } = useInterviews(),
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+
+  useEffect(() => {
+    const loadInterviews = async () => {
+      setIsLoading(true),
+      try {
+        const interviews = await fetchInterviews(),
+        
+        // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(
             interview =>
@@ -33,23 +57,16 @@
           )
           .slice(0, 3), // Take only the next 3 interviews
         
-        setUpcomingInterviews(upcoming)
+        setUpcomingInterviews(upcoming),
       } catch (error) {
-        logErrorToProduction('Error loading upcoming interviews:', { data: error })
+        logErrorToProduction('Error loading upcoming interviews:', { data: error }),
       } finally {
-        setIsLoading(false)
+        setIsLoading(false),
       }
     },
 
-    loadInterviews()
+    loadInterviews(),
   }, []),
-
-
-
-
-
-
-
 
   if (isLoading) {
     return (
@@ -70,138 +87,11 @@
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
                 </div>
               </div>
-
-
-
-
-
-import React, { useEffect, useState } from "react",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { useInterviews } from "@/hooks/useInterviews",;
-import { Interview } from "@/types/interview",;
-import { format, isPast, parseISO } from "date-fns",;
-import Link from "next/link",;
-import { Calendar, Clock, Video } from 'lucide-react';
-import { Avatar } from '@/components / ui / avatar';
-import { logErrorToProduction } from '@/utils / production_logger';
-export /**
- * UpcomingInterviewsCard - Function description
- */
-function UpcomingInterviewsCard() {
-  const { fetch_interviews } = use_interviews ();
-  const [upcoming_interviews, setUpcomingInterviews] = useState < Interview[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-  useEffect ((, ) => {
-    const load_interviews = async () => {      setIsLoading (true);
-      try {
-        const interviews = await fetch_interviews ();
-        // Filter for confirmed interviews in the future;
-        const upcoming = interviews;
-          .filter (
-            interview =>;
-              interview.status === 'confirmed' &&;
-              !is_past (parseISO (interview.scheduled_date)));
-          .sort (
-            (a, b) =>;
-              parseISO (a.scheduled_date).get_time () -;
-              parseISO (b.scheduled_date).get_time ()          );
-          .slice (0, 3); // Take only the next 3 interviews;
-        setUpcomingInterviews (upcoming);
-      } catch (error) {
-        logErrorToProduction ('Error loading upcoming interviews:', {
-          data: error,
-        });
-      } finally {
-        setIsLoading (false);
-      }
-    }
-
-
-import React, { useEffect, useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { useInterviews } from '@/hooks/useInterviews';
-import { Interview } from '@/types/interview';
-import { format, isPast, parseISO } from 'date-fns';
-import Link from 'next/link';
-import { Calendar, Clock, Video } from 'lucide-react';
-import { Avatar } from '@/components/ui/avatar';
-import { logErrorToProduction } from '@/utils/productionLogger';
-export function UpcomingInterviewsCard() {;
-  const { fetchInterviews } = useInterviews();
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect((,) => {;
-    const loadInterviews = async () => {      setIsLoading(true);
-      try {;
-        const interviews = await fetchInterviews();
-
-        // Filter for confirmed interviews in the future;
-        const upcoming = interviews;
-
-          .filter(;
-            interview =>;
-              interview && interview.status === 'confirmed' &&;
-              !isPast(parseISO(interview && interview.scheduled_date));
-          );
-          .sort(;
-            (a, b) =>;
-              parseISO(a && a.scheduled_date).getTime() -;
-              parseISO(b && b.scheduled_date).getTime()          );
-          .slice(0, 3); // Take only the next 3 interviews;
-
-        setUpcomingInterviews(upcoming);
-      } catch (error) {;
-        logErrorToProduction('Error loading upcoming interviews:', {;
-          data: error,;
-        });
-      } finally {;
-        setIsLoading(false);
-      }
-    };
-
-    loadInterviews();
-  }, []);
-
-  if (isLoading) {;
-    return (
-      <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
-        <CardHeader>;
-          <CardTitle className='text-lg flex items-center'>;
-            <Video className='h-5 w-5 mr-2 text-zion-purple' />;
-    load_interviews ();
-  }, []);
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <Card className='bg - zion - blue - dark / 40 border - zion - blue - light'>;
-        <CardHeader>;
-          <CardTitle className='text - lg flex items - center'>;
-            <Video className='h - 5 w - 5 mr - 2 text - zion - purple' />;
-            Upcoming Interviews;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-
-          </div>;
-        </CardContent>;
-      </Card>;
-    );
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-
-
-
-
-
-
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    ),
   }
 
 
@@ -226,11 +116,7 @@ if ( {) {
           </div>
         </CardContent>
       </Card>
-    )
-          </div>;
-        </CardContent>;
-      </Card>;
-    );
+    ),
   }
 
   if (upcomingInterviews && upcomingInterviews.length === 0) {;
@@ -268,17 +154,6 @@ if ( {) {
       <CardContent>
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
-            const interviewDate = parseISO(interview.scheduled_date)
-            const formattedDate = format(interviewDate, 'EEE, MMM d')
-            const formattedTime = format(interviewDate, 'h:mm a')
-            // Determine if interview is happening soon (within 30 minutes)            const now = new Date()
-            const isStartingSoon = null;
-              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
-              interviewDate.getTime() > now.getTime()
-
-
-
-
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
@@ -413,19 +288,7 @@ if ( {) {
                   </div>
                 </div>
               </div>
-            )
-          })}
-        </div>
-        <div className='mt-4 pt-3 border-t border-zion-blue-light/40'>
-          <Button asChild size='sm' variant='outline' className='w-full'>
-            <Link href='/interviews'>View All Interviews</Link>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Clock className="h-3 w-3 mr-1" />
-                    {formattedDate} at {formattedTime}
-                  </div>;
-                </div>;
-              </div>;
-            );
+            ),
           })}
         </div>
         
@@ -441,34 +304,7 @@ if ( {) {
         </div>
       </CardContent>
     </Card>
-  )
-
-                  </div>;
-                </div>;
-              </div>;
-            );
-          })}
-        </div>;
-
-        <div className='mt-4 pt-3 border-t border-zion-blue-light/40'>;
-          <Button asChild size='sm' variant='outline' className='w-full'>;
-          <div className='space - y-4'>;
-            {[1, 2].map (index => (
-              <div key={i} className='flex items - center gap - 3 animate - pulse'>;
-                <div className='w - 10 h - 10 bg - zion - blue - light / 30 rounded - full'></div>;
-                <div className='flex - 1'>;
-                  <div className='h - 4 w - 3/4 bg - zion - blue - light / 30 rounded mb - 2'></div>;
-                  <div className='h - 3 w - 1/2 bg - zion - blue - light / 30 rounded'></div>;
-                </div>;
-              </div>))}
-          </div>;
-        </CardContent>;
-      </Card>);
-  }
-  // Check condition
-if ( {) {
-  $2
-
+  ),
 }
     return (
       <Card className='bg - zion - blue - dark / 40 border - zion - blue - light'>;

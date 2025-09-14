@@ -1,96 +1,96 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react',
 
 export default function JSONFormatterPage() {
-  const [inputJson, setInputJson] = useState('');
-  const [formattedJson, setFormattedJson] = useState('');
-  const [isValid, setIsValid] = useState(true);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [indentSize, setIndentSize] = useState(2);
-  const [compactMode, setCompactMode] = useState(false);
-  const [showLineNumbers, setShowLineNumbers] = useState(true);
+  const [inputJson, setInputJson] = useState(''),
+  const [formattedJson, setFormattedJson] = useState(''),
+  const [isValid, setIsValid] = useState(true),
+  const [errorMessage, setErrorMessage] = useState(''),
+  const [indentSize, setIndentSize] = useState(2),
+  const [compactMode, setCompactMode] = useState(false),
+  const [showLineNumbers, setShowLineNumbers] = useState(true),
 
   const formatJSON = () => {
     if (!inputJson.trim()) {
-      setFormattedJson('');
-      setIsValid(true);
-      setErrorMessage('');
-      return;
+      setFormattedJson(''),
+      setIsValid(true),
+      setErrorMessage(''),
+      return,
     }
 
     try {
-      const parsed = JSON.parse(inputJson);
+      const parsed = JSON.parse(inputJson),
       const formatted = compactMode 
         ? JSON.stringify(parsed)
-        : JSON.stringify(parsed, null, indentSize);
+        : JSON.stringify(parsed, null, indentSize),
       
-      setFormattedJson(formatted);
-      setIsValid(true);
-      setErrorMessage('');
+      setFormattedJson(formatted),
+      setIsValid(true),
+      setErrorMessage(''),
     } catch (error) {
-      setIsValid(false);
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
-      setFormattedJson('');
+      setIsValid(false),
+      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),
+      setFormattedJson(''),
     }
-  };
+  },
 
   const minifyJSON = () => {
-    if (!inputJson.trim()) return;
+    if (!inputJson.trim()) return,
     
     try {
-      const parsed = JSON.parse(inputJson);
-      const minified = JSON.stringify(parsed);
-      setFormattedJson(minified);
-      setIsValid(true);
-      setErrorMessage('');
+      const parsed = JSON.parse(inputJson),
+      const minified = JSON.stringify(parsed),
+      setFormattedJson(minified),
+      setIsValid(true),
+      setErrorMessage(''),
     } catch (error) {
-      setIsValid(false);
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
+      setIsValid(false),
+      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),
     }
-  };
+  },
 
   const validateJSON = () => {
     if (!inputJson.trim()) {
-      setIsValid(true);
-      setErrorMessage('');
-      return;
+      setIsValid(true),
+      setErrorMessage(''),
+      return,
     }
 
     try {
-      JSON.parse(inputJson);
-      setIsValid(true);
-      setErrorMessage('');
+      JSON.parse(inputJson),
+      setIsValid(true),
+      setErrorMessage(''),
     } catch (error) {
-      setIsValid(false);
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
+      setIsValid(false),
+      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),
     }
-  };
+  },
 
   const clearAll = () => {
-    setInputJson('');
-    setFormattedJson('');
-    setIsValid(true);
-    setErrorMessage('');
-  };
+    setInputJson(''),
+    setFormattedJson(''),
+    setIsValid(true),
+    setErrorMessage(''),
+  },
 
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-  };
+    navigator.clipboard.writeText(text)
+  },
 
   const downloadJSON = (content: string, filename: string) => {
-    const blob = new Blob([content], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
+    const blob = new Blob([content], { type: 'application/json' }),
+    const url = URL.createObjectURL(blob),
+    const a = document.createElement('a'),
+    a.href = url,
+    a.download = filename,
+    document.body.appendChild(a),
+    a.click(),
+    document.body.removeChild(a),
+    URL.revokeObjectURL(url),
+  },
 
   const loadSampleJSON = () => {
     const sample = {
@@ -116,18 +116,18 @@ export default function JSONFormatterPage() {
       "interests": ["programming", "reading", "hiking"],
       "active": true,
       "lastLogin": "2024-01-15T10:30:00Z"
-    };
+    },
     
-    setInputJson(JSON.stringify(sample, null, 2));
-    setFormattedJson('');
-    setIsValid(true);
-    setErrorMessage('');
-  };
+    setInputJson(JSON.stringify(sample, null, 2)),
+    setFormattedJson(''),
+    setIsValid(true),
+    setErrorMessage(''),
+  },
 
   const getLineNumbers = (text: string) => {
-    const lines = text.split('\n');
-    return lines.map((_, index) => index + 1).join('\n');
-  };
+    const lines = text.split('\n'),
+    return lines.map((_, index) => index + 1).join('\n'),
+  },
 
   return (
     <>
@@ -502,7 +502,7 @@ export default function JSONFormatterPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Format Your JSON?
           </h2>
@@ -530,5 +530,5 @@ export default function JSONFormatterPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

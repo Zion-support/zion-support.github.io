@@ -21,7 +21,6 @@ import TryItConsole from './TryItConsole';
 }: {;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -37,12 +36,8 @@ import TryItConsole from './TryItConsole';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
     <div className='space-y-4'>
@@ -247,12 +242,12 @@ export default function EndpointDetail(): any ({;
       </div>
 
       <div>
-        <div className=&quot;font-medium mb-2&quot;>Code Examples</div>
+        <div className="font-medium mb-2">Code Examples</div>
         <CodeSamples samples={endpoint.samples} />
       </div>
 
       <div>
-        <div className=&quot;font-medium mb-2&quot;>Try It</div>
+        <div className="font-medium mb-2">Try It</div>
         <TryItConsole method={endpoint.method} path={endpoint.path} requiresAuth={(endpoint.auth || []).includes('jwt') || (endpoint.auth || []).includes('wallet')} />
       </div>
 
@@ -271,7 +266,6 @@ export default function EndpointDetail(): any ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
           </ul>
         </div>
@@ -321,11 +315,9 @@ export default function EndpointDetail(): any ({;
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -403,7 +395,6 @@ export default function EndpointDetail(): any ({;
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 }

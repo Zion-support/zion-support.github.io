@@ -21,8 +21,4 @@ import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
-<<<<<<< HEAD
 import _React from 'react' export default OpenAppRedirect';
-=======
-import _React from 'react' export default OpenAppRedirect';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

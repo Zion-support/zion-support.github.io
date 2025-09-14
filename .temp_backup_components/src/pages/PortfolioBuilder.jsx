@@ -1,23 +1,14 @@
-
 import { useState } from 'react';
-import { AppHeader } from '@/layout/AppHeader';
-import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { TabsContentTabsListTabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
-
 function PortfolioBuilderContent() {
-  const [activeTabsetActiveTab] = useState('resume');
-  
-  return (
-    <>
-      <SEO 
-        title="Portfolio Builder | Zion AI Marketplace" 
-        description="Create and customize your resume and portfolio to showcase your skills and experience." 
-      />
-      <AppHeader />
+    const [activeTab, setActiveTab] = useState('resume');
+    return (<>
+      <SEO title="Portfolio Builder | Zion AI Marketplace" description="Create and customize your resume and portfolio to showcase your skills and experience."/>
+      
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-8">Resume & Portfolio Builder</h1>
         
@@ -36,15 +27,11 @@ function PortfolioBuilderContent() {
           </TabsContent>
         </Tabs>
       </main>
-      <Footer />
-    </>
-  );
+      
+    </>);
 }
-
 export default function PortfolioBuilder() {
-  return (
-    <ProtectedRoute>
+    return (<ProtectedRoute>
       <PortfolioBuilderContent />
-    </ProtectedRoute>
-  );
+    </ProtectedRoute>);
 }

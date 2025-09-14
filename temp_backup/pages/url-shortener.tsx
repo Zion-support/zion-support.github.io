@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react',
 
 export default function URLShortenerPage() {
-  const [longUrl, setLongUrl] = useState('');
-  const [customAlias, setCustomAlias] = useState('');
-  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]);
-  const [isShortening, setIsShortening] = useState(false);
-  const [showQR, setShowQR] = useState<string | null>(null);
+  const [longUrl, setLongUrl] = useState(''),
+  const [customAlias, setCustomAlias] = useState(''),
+  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
+  const [isShortening, setIsShortening] = useState(false),
+  const [showQR, setShowQR] = useState<string | null>(null),
 
   const generateShortUrl = async () => {
-    if (!longUrl.trim()) return;
+    if (!longUrl.trim()) return,
     
-    setIsShortening(true);
+    setIsShortening(true),
     
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000)),
     
-    const alias = customAlias.trim() || generateRandomAlias();
-    const shortUrl = `https://zion.tech/${alias}`;
+    const alias = customAlias.trim() || generateRandomAlias(),
+    const shortUrl = `https://zion.tech/${alias}`,
     
     const newShortUrl = {
       id: Date.now(),
@@ -30,46 +30,46 @@ export default function URLShortenerPage() {
       clicks: 0,
       createdAt: new Date().toISOString(),
       qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
-    };
+    },
     
-    setShortenedUrls(prev => [newShortUrl, ...prev]);
-    setLongUrl('');
-    setCustomAlias('');
-    setIsShortening(false);
-  };
+    setShortenedUrls(prev => [newShortUrl, ...prev]),
+    setLongUrl(''),
+    setCustomAlias(''),
+    setIsShortening(false),
+  },
 
   const generateRandomAlias = () => {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    for (let i = 0; i < 6; i++) {
-      result += chars.charAt(Math.floor(Math.random() * chars.length));
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
+    let result = '',
+    for (let i = 0, i < 6, i++) {
+      result += chars.charAt(Math.floor(Math.random() * chars.length)),
     }
-    return result;
-  };
+    return result,
+  },
 
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-  };
+    navigator.clipboard.writeText(text)
+  },
 
   const incrementClicks = (id: number) => {
     setShortenedUrls(prev => 
       prev.map(url => 
         url.id === id ? { ...url, clicks: url.clicks + 1 } : url
       )
-    );
-  };
+    ),
+  },
 
   const deleteUrl = (id: number) => {
-    setShortenedUrls(prev => prev.filter(url => url.id !== id));
-  };
+    setShortenedUrls(prev => prev.filter(url => url.id !== id))
+  },
 
   const getTotalClicks = () => {
-    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0);
-  };
+    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0),
+  },
 
   const getTotalUrls = () => {
-    return shortenedUrls.length;
-  };
+    return shortenedUrls.length,
+  },
 
   return (
     <>
@@ -489,7 +489,7 @@ export default function URLShortenerPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Shorten Your URLs?
           </h2>
@@ -517,5 +517,5 @@ export default function URLShortenerPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -24,27 +5,6 @@ import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrenc
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-import { Settings, ;
-  Brain, ;
-  Shield, ;
-  BarChart3, ;
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import { Settings, 
   Brain, 
   Shield, 
@@ -55,7 +15,6 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import {
   Settings,
   Brain,
@@ -67,36 +26,14 @@ import {
   Wrench,
   Activity,
   Database,
-<<<<<<< HEAD
-import { Settings, ;
-  Brain, ;
-  Shield, ;
-  BarChart3, ;
-import {;
-  Settings,;
-  Brain,;
-  Shield,;
-  BarChart3,;
-  CheckCircle,;
-  ArrowRight,;
-  Cpu,;
-  Wrench,;
-  Activity,;
-  Database,;
-  FileText,;
-=======
   FileText,
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Users;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
 const services = [;
   {}
-<<<<<<< HEAD
-=======
     title: 'Smart Factory Solutions,',
     description: 'IoT-enabled manufacturing systems for intelligent production management.,',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -183,10 +120,6 @@ const benefits = [;
     title: 'Increased Efficiency,',;
     description: 'Automated processes and AI optimization improve production efficiency.,',;
     icon: Activity;
-<<<<<<< HEAD
-    icon: Activity,;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];
 const benefits = [;
   {;
@@ -252,23 +185,14 @@ export default function ManufacturingPage() {;
           </div>;
         </section>;
 ];
-<<<<<<< HEAD
-export default function ManufacturingPage() {;
-=======
 export default function ManufacturingPage() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <Layout
       title="Manufacturing Technology Solutions - Zion Tech Group"
       description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
-<<<<<<< HEAD
-      keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4 && 4.0">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-=======
       keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4.0"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -280,8 +204,6 @@ export default function ManufacturingPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -316,7 +238,6 @@ export default function ManufacturingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -378,12 +299,6 @@ export default function ManufacturingPage() {
             </div>,
           </div>;
         </section>;
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </section>
@@ -436,12 +351,6 @@ export default function ManufacturingPage() {
             </div>,
           </div>;
         </section>;
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </section>

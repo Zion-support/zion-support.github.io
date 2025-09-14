@@ -59,7 +59,6 @@ const SAMPLE_QUERIES = [
   "Mobile app developers iOS / Android",
   "Cloud architects AWS / Azure",
   "DevOps engineers with Kubernetes",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 ];
 
@@ -70,14 +69,12 @@ const SAMPLE_QUERIES = [
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
-  }
   const { q = "" } = req.query;
 
   if (req && req.method !== "GET") {
@@ -144,7 +141,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

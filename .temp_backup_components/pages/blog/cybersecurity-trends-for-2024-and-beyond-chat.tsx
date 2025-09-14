@@ -13,10 +13,10 @@ const CybersecurityTrendsFor2024AndBeyondChat: NextPage = () => {
       <main>
         <h1>CybersecurityTrendsFor2024AndBeyondChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default CybersecurityTrendsFor2024AndBeyondChat;
+export default CybersecurityTrendsFor2024AndBeyondChat,

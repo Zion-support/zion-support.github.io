@@ -13,10 +13,10 @@ const DataAnalyticsInDigitalTransformationChat: NextPage = () => {
       <main>
         <h1>DataAnalyticsInDigitalTransformationChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default DataAnalyticsInDigitalTransformationChat;
+export default DataAnalyticsInDigitalTransformationChat,

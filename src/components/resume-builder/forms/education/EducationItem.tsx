@@ -1,23 +1,12 @@
+
+import { format } from 'date-fns',
 import { Edit, Trash2 } from 'lucide-react'
+import { Button } from '@/components/ui/button',
+import { Card, CardContent } from '@/components/ui/card',
+import { Education } from '@/types/resume',
+import { EducationItemProps } from './types',
 
-import { Button } from '@/components/ui/button'
-import { EducationItemProps } from './types'
-export function EducationItem({
-  education
-  onEdit
-  onDelete
-}: EducationItemProps) {
-
-
-import { format } from 'date-fns';
-import { Edit, Trash2 } from 'lucide-react';
-
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Education } from '@/types/resume';
-import { EducationItemProps } from './types';
-
-
+export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
   return (
 
 
@@ -50,21 +39,32 @@ import { EducationItemProps } from './types';
                   : ''}
             </p>
             {education.location && (
-              <p className='text-xs text-muted-foreground'>
-                {education.location}
-              </p>
+              <p className="text-xs text-muted-foreground">{education.location}</p>
             )}
           </div>
-          <div className='flex gap-2'>
+          <div className="flex gap-2">
             <Button
-              variant='ghost'
-              size='icon'
+              variant="ghost"
+              size="icon"
               onClick={() => onEdit(education)}
-              aria-label='Edit education'            >
-              <Edit className='h-4 w-4' />
+              aria-label="Edit education"
+            >
+              <Edit className="h-4 w-4" />
             </Button>
             <Button
-              variant='ghost'
-              size='icon'
-
-
+              variant="ghost"
+              size="icon"
+              onClick={() => onDelete(education.id!)}
+              aria-label="Delete education"
+            >
+              <Trash2 className="h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+        {education.description && (
+          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
+        )}
+      </CardContent>
+    </Card>
+  ),
+}

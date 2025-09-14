@@ -165,7 +165,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200">
               Zion Tech Group
             </div>
-          </Link>
+          </a>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -185,7 +185,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5"
             >
               {item.name}
-            </Link>
+            </a>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -194,7 +194,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
             className="text-sm font-semibold leading-6 text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all duration-200 hover:scale-105"
           >
             Get Started
-          </Link>
+          </a>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -206,7 +206,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               <div className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
               </div>
-            </Link>
+            </a>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-400"
@@ -237,7 +237,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Get Started
-                </Link>
+                </a>
               </div>
             </div>
           </div>

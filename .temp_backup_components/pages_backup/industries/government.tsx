@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -24,26 +5,6 @@ import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, Fil
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-import { Building, ;
-  Shield, ;
-  Users, ;
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';;
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import { Building, 
   Shield, 
   Users, 
@@ -53,7 +14,6 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import {
   Building,
   Shield,
@@ -65,35 +25,14 @@ import {
   FileText,
   Lock,
   Database,
-<<<<<<< HEAD
-import { Building, ;
-  Shield, ;
-  Users, ;
-import {;
-  Building,;
-  Shield,;
-  Users,;
-  CheckCircle,;
-  ArrowRight,;
-  Globe,;
-  BarChart3,;
-  FileText,;
-  Lock,;
-  Database,;
-  Phone,;
-=======
   Phone,
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Mail;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
 const services = [;
   {}
-<<<<<<< HEAD
-=======
     title: 'Citizen Service Portals,',
     description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -180,10 +119,6 @@ const benefits = [;
     title: 'Enhanced Security,',;
     description: 'Government-grade security measures protect sensitive citizen and government data.,',;
     icon: Shield;
-<<<<<<< HEAD
-    icon: Shield,;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];
 const benefits = [;
   {;
@@ -293,8 +228,6 @@ export default function GovernmentPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
 ];
 export default function GovernmentPage() {
   return (
@@ -342,17 +275,13 @@ export default function GovernmentPage() {
             </motion.div>
           </div>
         </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Services Section */}
         <section className="py-20 bg-white">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
               transition={{ duration: 0.8 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -365,13 +294,10 @@ export default function GovernmentPage() {
                 Comprehensive government technology solutions designed for federal, state, ;
                 and local government agencies.;
               </p>;
-<<<<<<< HEAD
-=======
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -457,12 +383,6 @@ export default function GovernmentPage() {
             </div>,
           </div>;
         </section>;
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </section>
@@ -484,10 +404,7 @@ export default function GovernmentPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
               transition={{ duration: 0.8 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -500,13 +417,10 @@ export default function GovernmentPage() {
                 Our government technology solutions deliver enhanced security, improved efficiency, ;
                 and better citizen services.;
               </p>;
-<<<<<<< HEAD
-=======
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -552,12 +466,6 @@ export default function GovernmentPage() {
             </div>,
           </div>;
         </section>;
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </section>
@@ -579,10 +487,7 @@ export default function GovernmentPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
               transition={{ duration: 0.8 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Government?;

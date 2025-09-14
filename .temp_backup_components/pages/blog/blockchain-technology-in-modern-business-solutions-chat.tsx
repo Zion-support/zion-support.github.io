@@ -13,10 +13,10 @@ const BlockchainTechnologyInModernBusinessSolutionsChat: NextPage = () => {
       <main>
         <h1>BlockchainTechnologyInModernBusinessSolutionsChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default BlockchainTechnologyInModernBusinessSolutionsChat;
+export default BlockchainTechnologyInModernBusinessSolutionsChat,
