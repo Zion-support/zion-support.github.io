@@ -2,6 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen, TrendingUp, Target } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
@@ -305,6 +306,33 @@ export default function AI2025EnterpriseTransformationGuide() {
         title="AI 2025: Complete Enterprise Transformation Guide"
         description="Comprehensive guide to AI transformation in 2025. Learn how to implement AI solutions, measure ROI, and transform your enterprise with cutting-edge technology."
         keywords="AI Implementation, Enterprise Transformation, 2025, AI Strategy, ROI, Digital Transformation"
+=======
+import SEO from '../../../components/SEO';
+import ErrorBoundary from '../../../components/ErrorBoundary';
+
+export const metadata: Metadata = {
+  title: 'AI 2025 Enterprise Transformation: Complete Guide to Digital Revolution',
+  description: 'Discover how AI is revolutionizing enterprise operations in 2025. Complete guide to implementation, ROI, and success strategies.',
+  keywords: ['AI', 'Enterprise', 'Digital Transformation', 'Automation', 'ROI'],
+  openGraph: {
+    title: 'AI 2025 Enterprise Transformation: Complete Guide',
+    description: 'Complete guide to AI-driven enterprise transformation with proven strategies and case studies.',
+    type: 'article',
+    publishedTime: '2025-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI', 'Enterprise', 'Digital Transformation'],
+  },
+};
+
+export default function AI2025EnterpriseTransformationPage() {
+  return (
+    <ErrorBoundary>
+      <SEO
+        title="AI 2025 Enterprise Transformation: Complete Guide to Digital Revolution"
+        description="Discover how AI is revolutionizing enterprise operations in 2025. Complete guide to implementation, ROI, and success strategies."
+        keywords="AI, Enterprise, Digital Transformation, Automation, ROI"
+>>>>>>> origin/main
+>>>>>>> cursor/create-and-deploy-new-content-9c08
         url="/blog/ai-2025-enterprise-transformation-complete-guide"
       />
       

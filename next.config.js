@@ -3,7 +3,6 @@
 const nextConfig = {
   reactStrictMode: true,
   trailingSlash: false,
-  output: 'export',
   
   // Enable App Router
   experimental: {
@@ -58,11 +57,11 @@ const nextConfig = {
   
   // TypeScript and ESLint configuration
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
     tsconfigPath: './tsconfig.json'
   },
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: false
   },
 };
 
