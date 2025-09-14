@@ -620,6 +620,40 @@ content_index:
       - "Implemented interactive content discovery and filtering"
 
   new_content_january_2025:
+    - id: "ai-2025-autonomous-enterprise-systems-revolution"
+      type: "blog"
+      title: "AI 2025: Autonomous Enterprise Systems Revolution"
+      file_path: "/content/blog/ai-2025-autonomous-enterprise-systems-revolution.md"
+      url: "/blog/ai-2025-autonomous-enterprise-systems-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Autonomous Systems", "Enterprise AI", "2025", "Revolution"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1200%"
+        uptime: "99.8%"
+        cost_reduction: "85%"
+        productivity: "400%"
+      reading_time: "12 min read"
+      
+    - id: "fortune-500-autonomous-systems-transformation-success"
+      type: "case-study"
+      title: "Fortune 500 Autonomous Systems Transformation: $3.2B Annual Savings Success Story"
+      file_path: "/content/case-studies/fortune-500-autonomous-systems-transformation-success.md"
+      url: "/case-studies/fortune-500-autonomous-systems-transformation-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "Autonomous Systems", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1500%"
+        savings: "$3.2B"
+        uptime: "99.9%"
+        timeline: "14 months"
+      reading_time: "14 min read"
+      
     - id: "ai-2025-quantum-machine-learning-revolution-enterprise-guide"
       type: "blog"
       title: "AI 2025: Quantum Machine Learning Revolution - Enterprise Guide"
@@ -1225,6 +1259,17 @@ content_index:
         - "Real-time success metrics display (800% ROI, 1000x speed)"
         - "Progress indicators and navigation dots"
         - "Quantum ML specific branding and colors"
+        
+    - name: "AutonomousSystemsRevolutionBanner"
+      file_path: "/app/components/AutonomousSystemsRevolutionBanner.tsx"
+      status: "active"
+      features:
+        - "Auto-rotating autonomous systems content showcase"
+        - "Dismissible banner with localStorage persistence"
+        - "Animated autonomous-themed background elements"
+        - "Real-time success metrics display (1200% ROI, 99.8% uptime)"
+        - "Progress indicators and navigation dots"
+        - "Autonomous systems specific branding and colors"
 
   metrics:
     expected_roi_mentions: 35

@@ -69,6 +69,7 @@ import EnterpriseSuccessBanner from '../components/EnterpriseSuccessBanner';
 import FutureTechPreviewBanner from '../components/FutureTechPreviewBanner';
 import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
 import NewContent2025UltimateBreakthroughShowcase from '../components/NewContent2025UltimateBreakthroughShowcase';
+import AutonomousSystemsRevolutionBanner from '../components/AutonomousSystemsRevolutionBanner';
 
 // Import new advanced AI components
 import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
@@ -213,6 +214,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Autonomous Systems Revolution Banner - NEW FEATURED */}
+        <AutonomousSystemsRevolutionBanner />
+        
         {/* Next-Generation Autonomous Systems Banner - NEW FEATURED */}
         <NextGenAutonomousSystemsBanner />
         
