@@ -1,5 +1,4 @@
 import React, { Suspense, lazy } from 'react';
-import Link from 'next/link';
 import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -22,33 +21,9 @@ const StructuredData = lazy(() => import('../components/StructuredData'));
 const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
-// Import key promotional components
-import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
-import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
-import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
-import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
-import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
-import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
-import NewContent2026Showcase from '../components/NewContent2026Showcase';
-import NewContent2025ShowcaseBanner from '../components/NewContent2025ShowcaseBanner';
-import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
-import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
-import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
-// Import new 2026 promotional components
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
-import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
-import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-import AI2026RevolutionaryBanner from '../components/AI2026RevolutionaryBanner';
-import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 
-// Import additional promotional components
-import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
-import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
-import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
-import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
+// Import new 2025 ultimate promotional components
+import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -68,7 +43,6 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
         {/* AI 2026 Revolutionary Banner */}
-        <AI2026RevolutionaryBanner />
         
         {/* New Content 2026 Showcase Banner */}
         <NewContent2026ShowcaseBanner />
@@ -106,18 +80,18 @@ export default function HomePage() {
                 Expert consulting and implementation services for enterprise success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <a
                   href="/services"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Explore Services
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   Get Started
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -158,9 +132,9 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Intelligent automation solutions that streamline operations and boost productivity across your organization.
                 </p>
-                <Link href="/services/ai-automation" className="text-purple-600 font-semibold hover:text-purple-800">
+                <a href="/services/ai-automation" className="text-purple-600 font-semibold hover:text-purple-800">
                   Learn More →
-                </Link>
+                </a>
               </div>
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="text-4xl mb-4">☁️</div>
@@ -168,9 +142,9 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Scalable, secure cloud solutions designed to support your business growth and digital transformation.
                 </p>
-                <Link href="/services/cloud-infrastructure" className="text-purple-600 font-semibold hover:text-purple-800">
+                <a href="/services/cloud-infrastructure" className="text-purple-600 font-semibold hover:text-purple-800">
                   Learn More →
-                </Link>
+                </a>
               </div>
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="text-4xl mb-4">💼</div>
@@ -178,40 +152,18 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.
                 </p>
-                <Link href="/services/micro-saas" className="text-purple-600 font-semibold hover:text-purple-800">
+                <a href="/services/micro-saas" className="text-purple-600 font-semibold hover:text-purple-800">
                   Learn More →
-                </Link>
+                </a>
               </div>
             </div>
           </div>
         </section>
 
         {/* Content Promotion Banners */}
+        <NewContent2025UltimateBanner />
         <UltimateContentShowcase2025 />
-        <NewContent2025PromotionBanner />
-        <LatestContentShowcase2025 />
-        <EnhancedContentPromotionBanner2026 />
-        <ComprehensiveContentShowcase2026 />
-        <RevolutionaryContent2026Banner />
-        <FeaturedContentShowcase2026 />
-        <NewContent2026PromotionBanner />
-        <NewContentPromotionBanner />
-        <ComprehensiveSolutionsBanner2025 />
-        <NewServicesShowcase2025 />
-        <NewContent2026Showcase />
-        <InteractiveContentDiscoveryWidget />
 
-        {/* Advanced AI Components */}
-        <AdvancedContentRecommendationEngine />
-        <RealTimePerformanceDashboard />
-        <IntelligentSearchEngine />
-        <AdvancedAIAssistant />
-        <BusinessIntelligenceDashboard />
-        <AdvancedSecurityMonitor />
-        <AdvancedAnalyticsEngine />
-        <AutomationWorkflowEngine />
-        <EnterpriseDataManagement />
-        <APIManagementSystem />
 
         {/* Structured Data */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>

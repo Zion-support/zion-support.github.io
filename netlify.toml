@@ -1,6 +1,11 @@
 [build]
+<<<<<<< HEAD
+  # Build command
+  command = "npm run build:netlify"
+=======
   # Pre-build command to handle dependencies
   command = "bash scripts/netlify-pre-build.sh && npm run build"
+>>>>>>> origin/main
   
   # Directory to publish
   publish = "dist"
@@ -12,10 +17,18 @@
   # Node.js version
   NODE_VERSION = "20"
   
+  # Yarn version
+  YARN_VERSION = "1.22.22"
+  
   # Build environment
   NODE_OPTIONS = "--max-old-space-size=6144"
   NODE_ENV = "production"
   
+<<<<<<< HEAD
+  # Yarn configuration
+  YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
+  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
+=======
   # Yarn configuration - optimized for reliable builds
   YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
   YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
@@ -23,6 +36,7 @@
   YARN_PREFER_OFFLINE = "true"
   YARN_IGNORE_ENGINES = "true"
   YARN_IGNORE_PLATFORM = "true"
+>>>>>>> origin/main
   
   # Install devDependencies for build tools
   YARN_INSTALL_DEV = "true"
@@ -30,8 +44,18 @@
   # Force install all dependencies including devDependencies
   NPM_CONFIG_INCLUDE = "dev"
   
+  # Clear cache and force clean install
+  YARN_CACHE_CLEAR = "true"
+  
   # Ensure Vite is available and handle peer dependencies
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+<<<<<<< HEAD
+  
+  # Disable Next.js auto-detection
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Force Vite build mode
+  NETLIFY_USE_NEXT_PLUGIN = "false"
+=======
   NPM_CONFIG_AUDIT = "false"
   NPM_CONFIG_FUND = "false"
   NPM_CONFIG_FORCE = "true"
@@ -44,16 +68,21 @@
   # Additional build optimizations
   CI = "true"
   GENERATE_SOURCEMAP = "false"
+>>>>>>> origin/main
 
 # Cache configuration to prevent dependency issues
 [build.cache]
-  directories = ["node_modules/.cache", ".yarn/cache"]
+  directories = ["node_modules/.cache"]
 
-# Alternative build configuration for fallback
+# Plugin configurations
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+
+# Disable Next.js auto-detection since this is a Vite project
 [build.processing]
   skip_processing = false
 
-# Disable problematic features that can cause EEXIST errors
+# Explicitly disable Next.js plugin
 [build.processing.css]
   bundle = true
   minify = true
@@ -61,17 +90,6 @@
 [build.processing.js]
   bundle = true
   minify = true
-
-# Ignore files that might cause conflicts
-[[build.ignore]]
-  path = "package-lock.json"
-
-[[build.ignore]]
-  path = "node_modules/.yarn-integrity"
-
-# Plugin configurations
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
 
 # Force Vite build detection
 

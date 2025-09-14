@@ -100,7 +100,7 @@ const AI2026AutonomousEnterpriseBanner = () => {
             <div className="text-3xl font-bold text-emerald-300 mb-2">340%</div>
             <div className="text-lg opacity-90">Productivity Increase</div>
             <div className="text-sm opacity-75 mt-2">Across all functions</div>
->>>>>>> 71757f9531811372624d26886995522c4bebf0d2
+>>>>>>> origin/main
           </div>
         </div>
 
@@ -146,7 +146,7 @@ const AI2026AutonomousEnterpriseBanner = () => {
               <h4 className="font-bold text-lg mb-2">Manufacturing Conglomerate</h4>
               <p className="text-sm opacity-90 mb-2">99.9% autonomous production with zero quality defects</p>
               <div className="text-green-300 font-bold">$8.7B in cost savings achieved</div>
->>>>>>> 71757f9531811372624d26886995522c4bebf0d2
+>>>>>>> origin/main
             </div>
           </div>
         </div>
@@ -191,7 +191,7 @@ const AI2026AutonomousEnterpriseBanner = () => {
           </div>
           <p className="text-sm opacity-75">
             Join 1,000+ enterprises already operating autonomously
->>>>>>> 71757f9531811372624d26886995522c4bebf0d2
+>>>>>>> origin/main
           </p>
         </div>
       </div>

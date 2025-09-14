@@ -58,17 +58,71 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+<<<<<<< HEAD
+    // New 2026 Content
     {
-      url: `${baseUrl}/blog/ai-2025-ultimate-breakthrough-revolutionary-autonomous-systems`,
+      url: `${baseUrl}/blog/ai-2026-next-generation-autonomous-systems-revolution`,
       lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/case-studies/ai-transformation-2026-ultimate-success-story`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+=======
+>>>>>>> cursor/create-and-deploy-new-content-123d
+    // New blog posts
+    {
+      url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
+      lastModified: new Date(),
+<<<<<<< HEAD
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2025-quantum-computing-breakthrough`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    // New case studies
+    {
+      url: `${baseUrl}/case-studies/enterprise-ai-transformation-success-story`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+=======
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/case-studies/global-enterprise-ai-2025-autonomous-transformation-ultimate-success`,
+      url: `${baseUrl}/blog/quantum-ai-2026-business-revolution`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+>>>>>>> cursor/create-and-deploy-new-content-123d
+      priority: 0.9,
+    },
+    // New resources
+    {
+<<<<<<< HEAD
+      url: `${baseUrl}/resources/ai-implementation-checklist-2025`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+=======
+      url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
+>>>>>>> cursor/create-and-deploy-new-content-123d
     }
   ]
 }
