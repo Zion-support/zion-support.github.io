@@ -65,6 +65,15 @@ function Header() {
                 <Link href="/ai-2025-comprehensive-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-indigo-50 to-violet-50 border-l-4 border-indigo-500">
                   🚀 AI 2025 Comprehensive Solutions (NEW)
                 </Link>
+                <Link href="/blog/ai-2025-machine-learning-revolution-enterprise-success" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
+                  🤖 Machine Learning Revolution (500%+ ROI) (NEW)
+                </Link>
+                <Link href="/blog/ai-2025-cloud-computing-revolution-ultimate-guide" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-blue-50 to-cyan-50 border-l-4 border-blue-500">
+                  ☁️ Cloud Computing Revolution (400%+ ROI) (NEW)
+                </Link>
+                <Link href="/case-studies/ai-transformation-2025-ultimate-success-story-enterprise" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500">
+                  🏆 Ultimate Success Story ($2.8B ROI) (NEW)
+                </Link>
                 <Link href="/blog/ai-2025-revolutionary-breakthrough-announcement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-500">
                   🚀 AI 2025 Revolutionary Breakthrough (BREAKTHROUGH)
                 </Link>
