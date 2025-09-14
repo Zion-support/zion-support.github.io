@@ -287,6 +287,15 @@ import UltimateContentPromotionBanner2025 from '../components/UltimateContentPro
 import ROICalculatorWidget from '../components/ROICalculatorWidget';
 
 // Import new 2025 content and advertising components
+import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
+import RevolutionaryNewsletterSignup2025 from '../components/RevolutionaryNewsletterSignup2025';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import InteractiveROICalculatorAdvanced from '../components/InteractiveROICalculatorAdvanced';
+import ComprehensiveCaseStudiesShowcase from '../components/ComprehensiveCaseStudiesShowcase';
+import InteractiveAIToolsShowcase from '../components/InteractiveAIToolsShowcase';
+
+// Import new 2025 content and advertising components
 import NewContent2025PromotionalBanner from '../components/NewContent2025PromotionalBanner';
 import InteractiveROICalculator from '../components/InteractiveROICalculator';
 import TestimonialShowcase from '../components/TestimonialShowcase';
@@ -324,6 +333,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 ULTIMATE SHOWCASE BANNER - NEWEST FEATURED */}
+        <NewContent2025UltimateShowcaseBanner />
+        
         {/* AI 2025 ULTIMATE AUTOMATION REVOLUTION 50,000% ROI BANNER - NEWEST BREAKTHROUGH */}
         <AI2025UltimateAutomationRevolution50000ROIBanner />
         
@@ -333,6 +345,9 @@ export default function HomePage() {
         {/* ULTIMATE CONTENT PROMOTION BANNER - NEWEST FEATURED */}
         <UltimateContentPromotionBanner />
         
+        {/* INTERACTIVE CONTENT DISCOVERY 2025 - NEWEST FEATURED */}
+        <InteractiveContentDiscovery2025 />
+        
         {/* COMPREHENSIVE CASE STUDIES SHOWCASE - NEWEST FEATURED */}
         <ComprehensiveCaseStudiesShowcase />
         
@@ -341,6 +356,9 @@ export default function HomePage() {
         
         {/* ULTIMATE SUCCESS METRICS SHOWCASE - NEWEST FEATURED */}
         <UltimateSuccessMetricsShowcase />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
+        <UltimateContentShowcase2025 />
         
         {/* AI 2025 ULTIMATE AUTOMATION REVOLUTION SHOWCASE - NEWEST FEATURED */}
         <AI2025UltimateAutomationRevolutionShowcase />
@@ -480,6 +498,9 @@ export default function HomePage() {
         
         {/* AI AUTOMATION ROI CALCULATOR - INTERACTIVE TOOL */}
         <AIAutomationROICalculator />
+        
+        {/* REVOLUTIONARY NEWSLETTER SIGNUP 2025 - NEWEST FEATURED */}
+        <RevolutionaryNewsletterSignup2025 />
         
         {/* REVOLUTIONARY NEWSLETTER SIGNUP - NEW FEATURED */}
         <RevolutionaryNewsletterSignup />
