@@ -86,6 +86,10 @@ import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBann
 import RevolutionaryContent2030PromotionBanner from '../components/RevolutionaryContent2030PromotionBanner';
 import InteractiveContentDiscoveryWidget2030 from '../components/InteractiveContentDiscoveryWidget2030';
 
+// Import new 2025 breakthrough promotional components
+import UltimateContent2025BreakthroughBanner from '../components/UltimateContent2025BreakthroughBanner';
+import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions | 400-700% ROI Guaranteed',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Achieve 400-700% ROI with our proven AI implementation strategies. Expert consulting and implementation services.',
@@ -179,9 +183,14 @@ export default function HomePage() {
           }}
         />
         
-        {/* Ultimate Content 2025 Banner - NEW */}
+        {/* Ultimate Content 2025 Breakthrough Banner - NEW */}
         <Suspense fallback={<LoadingSpinner />}>
-          <UltimateContent2025Banner />
+          <UltimateContent2025BreakthroughBanner />
+        </Suspense>
+        
+        {/* Revolutionary Content 2025 Ultimate Banner - NEW */}
+        <Suspense fallback={<LoadingSpinner />}>
+          <RevolutionaryContent2025UltimateBanner />
         </Suspense>
         
         {/* AI 2025 Ultimate Breakthrough Banner - NEW */}
