@@ -1,261 +1,226 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRightIcon, StarIcon, ClockIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 
-interface ContentItem {
-  id: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  readTime: string;
-  featured: boolean;
-  url: string;
-  publishDate: string;
-  tags: string[];
-}
-
-const NewContentShowcase2025: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+const NewContentShowcase2025 = () => {
+  const [activeTab, setActiveTab] = useState('case-studies');
   const [isVisible, setIsVisible] = useState(false);
 
-  const featuredContent: ContentItem[] = [
-    {
-      id: 'ai-implementation-guide',
-      title: 'AI Implementation in 2025: A Practical Guide for Business Leaders',
-      excerpt: 'Learn how to successfully implement AI solutions in your organization with our comprehensive practical guide covering strategy, technology selection, and change management.',
-      category: 'AI Implementation',
-      readTime: '12 min read',
-      featured: true,
-      url: '/blog/ai-2025-practical-implementation-guide',
-      publishDate: '2025-01-15',
-      tags: ['AI', 'Business Strategy', 'Implementation', 'ROI']
-    },
-    {
-      id: 'quantum-computing-applications',
-      title: 'Quantum Computing Business Applications: Real-World Use Cases for 2025',
-      excerpt: 'Discover how quantum computing is revolutionizing business operations across industries with real-world applications and practical implementation strategies.',
-      category: 'Quantum Computing',
-      readTime: '15 min read',
-      featured: true,
-      url: '/blog/quantum-computing-business-applications-2025',
-      publishDate: '2025-01-15',
-      tags: ['Quantum Computing', 'Business Applications', 'Optimization']
-    },
-    {
-      id: 'ai-roi-calculator',
-      title: 'AI Automation ROI Calculator: Measure Your Investment Returns',
-      excerpt: 'Learn how to calculate and maximize your AI automation ROI with our comprehensive guide and interactive calculator tools.',
-      category: 'AI ROI',
-      readTime: '10 min read',
-      featured: true,
-      url: '/blog/ai-automation-roi-calculator-guide',
-      publishDate: '2025-01-15',
-      tags: ['AI ROI', 'Automation', 'ROI Calculator', 'Business Metrics']
-    },
-    {
-      id: 'manufacturing-case-study',
-      title: 'Manufacturing AI Transformation: 340% ROI in 18 Months',
-      excerpt: 'How a mid-size manufacturing company achieved 340% ROI through comprehensive AI implementation, reducing costs by $2.8M annually.',
-      category: 'Case Study',
-      readTime: '8 min read',
-      featured: true,
-      url: '/case-studies/manufacturing-ai-transformation',
-      publishDate: '2025-01-15',
-      tags: ['Manufacturing', 'AI Transformation', 'ROI', 'Automation']
-    }
-  ];
-
   useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
-    return () => clearInterval(interval);
+    const timer = setTimeout(() => setIsVisible(true), 500);
+    return () => clearTimeout(timer);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + featuredContent.length) % featuredContent.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
+  const contentSections = {
+    'case-studies': {
+      title: 'Success Stories & Case Studies',
+      description: 'Real-world transformations with measurable ROI',
+      items: [
+        {
+          title: 'Fortune 500 Manufacturing: 2,500% ROI',
+          description: 'Complete autonomous transformation of production lines',
+          roi: '2,500%',
+          industry: 'Manufacturing',
+          link: '/case-studies/fortune-500-manufacturing-2500-roi'
+        },
+        {
+          title: 'Healthcare Revolution: 1,200% ROI',
+          description: 'AI-powered diagnostic platform implementation',
+          roi: '1,200%',
+          industry: 'Healthcare',
+          link: '/case-studies/healthcare-revolution-1200-roi'
+        },
+        {
+          title: 'Financial Services: 1,500% ROI',
+          description: 'Advanced analytics and fraud detection systems',
+          roi: '1,500%',
+          industry: 'Finance',
+          link: '/case-studies/financial-services-1500-roi'
+        }
+      ]
+    },
+    'blog': {
+      title: 'Latest AI Insights & Trends',
+      description: 'Cutting-edge research and industry analysis',
+      items: [
+        {
+          title: 'AI 2025: The Ultimate Automation Revolution',
+          description: 'Comprehensive guide to next-generation AI automation',
+          readTime: '8 min read',
+          category: 'Automation',
+          link: '/blog/ai-2025-ultimate-automation-revolution'
+        },
+        {
+          title: 'Quantum Computing Business Applications',
+          description: 'How quantum computing is transforming enterprise operations',
+          readTime: '12 min read',
+          category: 'Quantum Computing',
+          link: '/blog/quantum-computing-business-applications'
+        },
+        {
+          title: 'Neural Interface Revolution 2025',
+          description: 'The future of human-AI interaction in business',
+          readTime: '10 min read',
+          category: 'Neural Interfaces',
+          link: '/blog/neural-interface-revolution-2025'
+        }
+      ]
+    },
+    'tools': {
+      title: 'Interactive AI Tools & Calculators',
+      description: 'Hands-on tools to explore AI potential',
+      items: [
+        {
+          title: 'ROI Calculator',
+          description: 'Calculate potential returns from AI implementation',
+          type: 'Calculator',
+          link: '/tools/roi-calculator'
+        },
+        {
+          title: 'AI Readiness Assessment',
+          description: 'Evaluate your organization\'s AI readiness',
+          type: 'Assessment',
+          link: '/tools/ai-readiness-assessment'
+        },
+        {
+          title: 'Automation Opportunity Scanner',
+          description: 'Identify automation opportunities in your processes',
+          type: 'Scanner',
+          link: '/tools/automation-scanner'
+        }
+      ]
+    }
   };
 
   return (
-    <section className="py-16 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50">
+    <div className={`py-16 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-4">
-            <StarIcon className="w-5 h-5 mr-2" />
-            <span className="text-sm font-medium">NEW CONTENT 2025</span>
+            <span className="text-sm font-semibold">✨ NEW CONTENT 2025</span>
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Latest AI Insights & Success Stories
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Explore Our Latest Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our newest content featuring practical AI implementation guides, 
-            real-world case studies, and cutting-edge technology insights.
+            Discover success stories, insights, and tools that are transforming businesses worldwide
           </p>
         </div>
 
-        {/* Content Carousel */}
-        <div className="relative">
-          <div className="overflow-hidden rounded-2xl shadow-2xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center mb-8">
+          {Object.entries(contentSections).map(([key, section]) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`px-6 py-3 m-2 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === key
+                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg transform scale-105'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md'
+              }`}
             >
-              {featuredContent.map((item, index) => (
-                <div key={item.id} className="w-full flex-shrink-0">
-                  <div className="bg-white">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
-                      {/* Content Info */}
-                      <div className="flex flex-col justify-center">
-                        <div className="flex items-center mb-4">
-                          <span className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
-                            {item.category}
-                          </span>
-                          <span className="ml-3 text-sm text-gray-500 flex items-center">
-                            <ClockIcon className="w-4 h-4 mr-1" />
-                            {item.readTime}
-                          </span>
-                        </div>
-                        
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
-                          {item.title}
-                        </h3>
-                        
-                        <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                          {item.excerpt}
-                        </p>
-
-                        <div className="flex flex-wrap gap-2 mb-6">
-                          {item.tags.map((tag, tagIndex) => (
-                            <span
-                              key={tagIndex}
-                              className="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full"
-                            >
-                              #{tag}
-                            </span>
-                          ))}
-                        </div>
-
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center text-sm text-gray-500">
-                            <UserGroupIcon className="w-4 h-4 mr-2" />
-                            <span>Zion Tech Group</span>
-                            <span className="mx-2">•</span>
-                            <span>{item.publishDate}</span>
-                          </div>
-                          
-                          <Link
-                            href={item.url}
-                            className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
-                          >
-                            Read More
-                            <ArrowRightIcon className="w-5 h-5 ml-2" />
-                          </Link>
-                        </div>
-                      </div>
-
-                      {/* Visual Element */}
-                      <div className="relative">
-                        <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-xl p-8 h-full flex items-center justify-center">
-                          <div className="text-center">
-                            <div className="w-24 h-24 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                              <span className="text-3xl font-bold text-white">
-                                {item.category === 'AI Implementation' ? '🤖' : 
-                                 item.category === 'Quantum Computing' ? '⚛️' :
-                                 item.category === 'AI ROI' ? '📊' : '📈'}
-                              </span>
-                            </div>
-                            <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                              {item.category}
-                            </h4>
-                            <p className="text-gray-600">
-                              {item.category === 'AI Implementation' ? 'Strategic AI Planning' :
-                               item.category === 'Quantum Computing' ? 'Next-Gen Computing' :
-                               item.category === 'AI ROI' ? 'ROI Optimization' : 'Success Stories'}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-600 hover:text-gray-900 p-3 rounded-full shadow-lg transition-all duration-200"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-600 hover:text-gray-900 p-3 rounded-full shadow-lg transition-all duration-200"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+              {section.title}
+            </button>
+          ))}
         </div>
 
-        {/* Dots Indicator */}
-        <div className="flex justify-center mt-8 space-x-2">
-          {featuredContent.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                index === currentSlide
-                  ? 'bg-purple-600 w-8'
-                  : 'bg-gray-300 hover:bg-gray-400'
-              }`}
-            />
-          ))}
+        {/* Content Display */}
+        <div className="bg-white rounded-2xl shadow-xl p-8">
+          <div className="mb-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              {contentSections[activeTab as keyof typeof contentSections].title}
+            </h3>
+            <p className="text-gray-600">
+              {contentSections[activeTab as keyof typeof contentSections].description}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {contentSections[activeTab as keyof typeof contentSections].items.map((item, index) => (
+              <div
+                key={index}
+                className="group bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-purple-300"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-600 text-sm mb-3">
+                      {item.description}
+                    </p>
+                  </div>
+                  {item.roi && (
+                    <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold ml-2">
+                      {item.roi} ROI
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    {item.industry && (
+                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">
+                        {item.industry}
+                      </span>
+                    )}
+                    {item.category && (
+                      <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium">
+                        {item.category}
+                      </span>
+                    )}
+                    {item.type && (
+                      <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs font-medium">
+                        {item.type}
+                      </span>
+                    )}
+                    {item.readTime && (
+                      <span className="text-gray-500 text-xs">
+                        {item.readTime}
+                      </span>
+                    )}
+                  </div>
+                  <Link
+                    href={item.link}
+                    className="text-purple-600 hover:text-purple-800 font-semibold text-sm group-hover:underline"
+                  >
+                    Explore →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Transform Your Business with AI?
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Transform Your Business?
             </h3>
-            <p className="text-lg text-gray-600 mb-6">
-              Get personalized AI strategy recommendations and implementation guidance 
-              tailored to your specific industry and business needs.
+            <p className="text-lg opacity-90 mb-6">
+              Join thousands of companies already seeing incredible results with our AI solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/services"
-                className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+                href="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Explore Our Services
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
+                Get Started Today
               </Link>
               <Link
-                href="/contact"
-                className="inline-flex items-center border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-200"
+                href="/services"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                Get Free Consultation
+                View All Services
               </Link>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

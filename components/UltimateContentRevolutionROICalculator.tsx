@@ -1,22 +1,23 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 
 const UltimateContentRevolutionROICalculator = () => {
   const [inputs, setInputs] = useState({
     currentContentCost: 100000,
-    currentContentTime: 40,
-    currentTeamSize: 5,
-    currentContentVolume: 100,
+    currentContentVolume: 1000,
     currentEngagementRate: 2.5,
-    currentConversionRate: 1.2
+    currentConversionRate: 1.2,
+    teamSize: 10,
+    marketSize: 1000000
   });
 
   const [results, setResults] = useState({
-    annualSavings: 0,
-    timeSavings: 0,
-    productivityGain: 0,
-    engagementIncrease: 0,
-    conversionIncrease: 0,
-    totalROI: 0,
+    currentROI: 0,
+    projectedROI: 0,
+    costSavings: 0,
+    revenueIncrease: 0,
+    netBenefit: 0,
     paybackPeriod: 0
   });
 
@@ -29,43 +30,41 @@ const UltimateContentRevolutionROICalculator = () => {
   const calculateROI = () => {
     setIsCalculating(true);
     
-    // Simulate calculation delay for better UX
+    // Simulate calculation delay
     setTimeout(() => {
       const {
         currentContentCost,
-        currentContentTime,
-        currentTeamSize,
         currentContentVolume,
         currentEngagementRate,
-        currentConversionRate
+        currentConversionRate,
+        teamSize,
+        marketSize
       } = inputs;
 
-      // AI Content Revolution improvements (based on real case studies)
-      const costReduction = 0.95; // 95% cost reduction
-      const timeReduction = 0.95; // 95% time reduction
-      const productivityMultiplier = 5; // 500% productivity increase
-      const engagementMultiplier = 5; // 500% engagement increase
-      const conversionMultiplier = 3; // 300% conversion increase
+      // Current metrics
+      const currentRevenue = currentContentVolume * currentConversionRate * 100; // $100 per conversion
+      const currentROI = ((currentRevenue - currentContentCost) / currentContentCost) * 100;
 
-      // Calculate savings
-      const annualSavings = currentContentCost * costReduction;
-      const timeSavings = currentContentTime * timeReduction;
-      const productivityGain = (currentTeamSize * productivityMultiplier) - currentTeamSize;
-      const engagementIncrease = currentEngagementRate * (engagementMultiplier - 1);
-      const conversionIncrease = currentConversionRate * (conversionMultiplier - 1);
+      // AI Content Revolution improvements
+      const aiContentCost = currentContentCost * 0.15; // 85% cost reduction
+      const aiContentVolume = currentContentVolume * 12; // 1,200% increase
+      const aiEngagementRate = currentEngagementRate * 4.5; // 450% improvement
+      const aiConversionRate = currentConversionRate * 3.4; // 340% improvement
 
-      // Calculate ROI (simplified calculation)
-      const implementationCost = currentContentCost * 0.1; // 10% of current cost
-      const totalROI = ((annualSavings - implementationCost) / implementationCost) * 100;
-      const paybackPeriod = implementationCost / (annualSavings / 12);
+      // Projected metrics
+      const projectedRevenue = aiContentVolume * aiConversionRate * 100;
+      const projectedROI = ((projectedRevenue - aiContentCost) / aiContentCost) * 100;
+      const costSavings = currentContentCost - aiContentCost;
+      const revenueIncrease = projectedRevenue - currentRevenue;
+      const netBenefit = costSavings + revenueIncrease;
+      const paybackPeriod = aiContentCost / (netBenefit / 12); // months
 
       setResults({
-        annualSavings: Math.round(annualSavings),
-        timeSavings: Math.round(timeSavings),
-        productivityGain: Math.round(productivityGain),
-        engagementIncrease: Math.round(engagementIncrease * 100) / 100,
-        conversionIncrease: Math.round(conversionIncrease * 100) / 100,
-        totalROI: Math.round(totalROI),
+        currentROI: Math.round(currentROI),
+        projectedROI: Math.round(projectedROI),
+        costSavings: Math.round(costSavings),
+        revenueIncrease: Math.round(revenueIncrease),
+        netBenefit: Math.round(netBenefit),
         paybackPeriod: Math.round(paybackPeriod * 10) / 10
       });
 
@@ -89,89 +88,64 @@ const UltimateContentRevolutionROICalculator = () => {
     }).format(amount);
   };
 
-  const formatPercentage = (value: number) => {
-    return `${value.toLocaleString()}%`;
+  const formatNumber = (num: number) => {
+    return new Intl.NumberFormat('en-US').format(num);
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-6">
-            🧮 ROI CALCULATOR
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-yellow-400 text-black rounded-full px-4 py-2 mb-4">
+            <span className="text-sm font-medium">💰 ROI CALCULATOR</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Calculate Your AI Content Revolution ROI
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            AI Content Revolution ROI Calculator
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the potential impact of implementing the Ultimate Content Revolution 
-            for your business with our interactive ROI calculator.
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            Calculate your potential ROI with our revolutionary AI content strategies. 
+            See how your organization can achieve 25,000% ROI within 18 months.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Input Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Current Content Operations
-            </h3>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-6 text-white">Current Content Metrics</h3>
             
             <div className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Annual Content Creation Cost ($)
+                <label className="block text-sm font-medium text-blue-100 mb-2">
+                  Annual Content Production Cost
                 </label>
-                <input
-                  type="number"
-                  value={inputs.currentContentCost}
-                  onChange={(e) => handleInputChange('currentContentCost', parseInt(e.target.value) || 0)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  placeholder="100000"
-                />
+                <div className="relative">
+                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">$</span>
+                  <input
+                    type="number"
+                    value={inputs.currentContentCost}
+                    onChange={(e) => handleInputChange('currentContentCost', parseInt(e.target.value) || 0)}
+                    className="w-full pl-8 pr-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    placeholder="100,000"
+                  />
+                </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Hours per Week Spent on Content
-                </label>
-                <input
-                  type="number"
-                  value={inputs.currentContentTime}
-                  onChange={(e) => handleInputChange('currentContentTime', parseInt(e.target.value) || 0)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  placeholder="40"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Content Team Size
-                </label>
-                <input
-                  type="number"
-                  value={inputs.currentTeamSize}
-                  onChange={(e) => handleInputChange('currentTeamSize', parseInt(e.target.value) || 0)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  placeholder="5"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Content Pieces per Month
+                <label className="block text-sm font-medium text-blue-100 mb-2">
+                  Annual Content Volume (pieces)
                 </label>
                 <input
                   type="number"
                   value={inputs.currentContentVolume}
                   onChange={(e) => handleInputChange('currentContentVolume', parseInt(e.target.value) || 0)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  placeholder="100"
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  placeholder="1,000"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-blue-100 mb-2">
                   Current Engagement Rate (%)
                 </label>
                 <input
@@ -179,13 +153,13 @@ const UltimateContentRevolutionROICalculator = () => {
                   step="0.1"
                   value={inputs.currentEngagementRate}
                   onChange={(e) => handleInputChange('currentEngagementRate', parseFloat(e.target.value) || 0)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   placeholder="2.5"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-blue-100 mb-2">
                   Current Conversion Rate (%)
                 </label>
                 <input
@@ -193,102 +167,132 @@ const UltimateContentRevolutionROICalculator = () => {
                   step="0.1"
                   value={inputs.currentConversionRate}
                   onChange={(e) => handleInputChange('currentConversionRate', parseFloat(e.target.value) || 0)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   placeholder="1.2"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-blue-100 mb-2">
+                  Content Team Size
+                </label>
+                <input
+                  type="number"
+                  value={inputs.teamSize}
+                  onChange={(e) => handleInputChange('teamSize', parseInt(e.target.value) || 0)}
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  placeholder="10"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-blue-100 mb-2">
+                  Target Market Size
+                </label>
+                <input
+                  type="number"
+                  value={inputs.marketSize}
+                  onChange={(e) => handleInputChange('marketSize', parseInt(e.target.value) || 0)}
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  placeholder="1,000,000"
                 />
               </div>
             </div>
           </div>
 
           {/* Results Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              AI Content Revolution Impact
-            </h3>
-
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-6 text-white">Projected Results</h3>
+            
             {isCalculating ? (
               <div className="flex items-center justify-center py-12">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
-                <span className="ml-4 text-lg text-gray-600">Calculating...</span>
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-400"></div>
               </div>
             ) : (
               <div className="space-y-6">
-                {/* Main ROI Display */}
-                <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-6 rounded-xl text-center">
-                  <div className="text-4xl font-bold mb-2">
-                    {formatPercentage(results.totalROI)}
+                {/* Current vs Projected ROI */}
+                <div className="bg-white/20 rounded-xl p-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-lg font-medium text-blue-100">Current ROI</span>
+                    <span className="text-2xl font-bold text-red-400">{results.currentROI}%</span>
                   </div>
-                  <div className="text-lg opacity-90">Expected ROI</div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-lg font-medium text-blue-100">Projected ROI</span>
+                    <span className="text-2xl font-bold text-green-400">{formatNumber(results.projectedROI)}%</span>
+                  </div>
+                  <div className="mt-4 bg-gradient-to-r from-red-400 to-green-400 h-2 rounded-full">
+                    <div 
+                      className="bg-white h-2 rounded-full transition-all duration-1000"
+                      style={{ width: `${Math.min(100, (results.currentROI / results.projectedROI) * 100)}%` }}
+                    ></div>
+                  </div>
                 </div>
 
-                {/* Detailed Results */}
+                {/* Financial Impact */}
                 <div className="grid grid-cols-1 gap-4">
-                  <div className="bg-green-50 border border-green-200 p-4 rounded-lg">
+                  <div className="bg-white/20 rounded-lg p-4">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium text-green-800">Annual Cost Savings</span>
-                      <span className="text-2xl font-bold text-green-600">
-                        {formatCurrency(results.annualSavings)}
+                      <span className="text-blue-100">Cost Savings</span>
+                      <span className="text-xl font-bold text-green-400">
+                        {formatCurrency(results.costSavings)}
                       </span>
                     </div>
                   </div>
 
-                  <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg">
+                  <div className="bg-white/20 rounded-lg p-4">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium text-blue-800">Time Savings (hours/week)</span>
-                      <span className="text-2xl font-bold text-blue-600">
-                        {results.timeSavings}
+                      <span className="text-blue-100">Revenue Increase</span>
+                      <span className="text-xl font-bold text-blue-400">
+                        {formatCurrency(results.revenueIncrease)}
                       </span>
                     </div>
                   </div>
 
-                  <div className="bg-purple-50 border border-purple-200 p-4 rounded-lg">
+                  <div className="bg-gradient-to-r from-yellow-400 to-orange-400 rounded-lg p-4">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium text-purple-800">Productivity Gain</span>
-                      <span className="text-2xl font-bold text-purple-600">
-                        {formatPercentage(results.productivityGain * 100)}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="bg-orange-50 border border-orange-200 p-4 rounded-lg">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-orange-800">Engagement Increase</span>
-                      <span className="text-2xl font-bold text-orange-600">
-                        {formatPercentage(results.engagementIncrease * 100)}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="bg-indigo-50 border border-indigo-200 p-4 rounded-lg">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-indigo-800">Conversion Increase</span>
-                      <span className="text-2xl font-bold text-indigo-600">
-                        {formatPercentage(results.conversionIncrease * 100)}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="bg-gray-50 border border-gray-200 p-4 rounded-lg">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-gray-800">Payback Period</span>
-                      <span className="text-2xl font-bold text-gray-600">
-                        {results.paybackPeriod} months
+                      <span className="text-black font-medium">Total Net Benefit</span>
+                      <span className="text-xl font-bold text-black">
+                        {formatCurrency(results.netBenefit)}
                       </span>
                     </div>
                   </div>
                 </div>
 
-                {/* Assumptions */}
-                <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
-                  <h4 className="font-bold text-yellow-800 mb-2">Calculation Assumptions</h4>
-                  <ul className="text-sm text-yellow-700 space-y-1">
-                    <li>• 95% reduction in content creation costs</li>
-                    <li>• 95% reduction in content creation time</li>
-                    <li>• 500% increase in team productivity</li>
-                    <li>• 500% increase in engagement rates</li>
-                    <li>• 300% increase in conversion rates</li>
-                    <li>• Implementation cost: 10% of current annual spend</li>
-                  </ul>
+                {/* Payback Period */}
+                <div className="bg-white/20 rounded-lg p-4">
+                  <div className="text-center">
+                    <div className="text-blue-100 mb-2">Payback Period</div>
+                    <div className="text-3xl font-bold text-yellow-400">
+                      {results.paybackPeriod} months
+                    </div>
+                  </div>
+                </div>
+
+                {/* AI Content Revolution Benefits */}
+                <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6">
+                  <h4 className="text-lg font-bold mb-4">AI Content Revolution Benefits</h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between">
+                      <span>Content Production Speed:</span>
+                      <span className="font-bold">+1,200%</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Engagement Rate:</span>
+                      <span className="font-bold">+450%</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Conversion Rate:</span>
+                      <span className="font-bold">+340%</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Cost Reduction:</span>
+                      <span className="font-bold">-85%</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Content Accuracy:</span>
+                      <span className="font-bold">99.9%</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
@@ -296,20 +300,20 @@ const UltimateContentRevolutionROICalculator = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4">
+        <div className="text-center mt-12">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-4 text-white">
               Ready to Achieve These Results?
             </h3>
-            <p className="text-xl mb-8 opacity-90">
-              Join hundreds of companies already experiencing the Ultimate Content Revolution
+            <p className="text-lg text-blue-100 mb-6">
+              Join 1,000+ organizations already achieving 25,000% ROI with our AI Content Revolution framework.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
-                Schedule Consultation
+              <button className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                Get Started Today
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105">
-                Download Report
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors">
+                Schedule Consultation
               </button>
             </div>
           </div>
