@@ -326,7 +326,71 @@ content_index:
         satisfaction: "98%"
         projects: "500+"
         savings: "$2.8B"
+        
+    - id: "ai-2025-enterprise-transformation-ultimate"
+      type: "blog"
+      title: "AI 2025: The Ultimate Enterprise Transformation Guide - 600% ROI in 12 Months"
+      file_path: "/content/blog/ai-2025-enterprise-transformation-ultimate-guide.md"
+      url: "/blog/ai-2025-enterprise-transformation-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Transformation", "Enterprise", "ROI", "Digital Transformation", "Strategy", "Implementation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        savings: "$2.8B"
+        accuracy: "99.7%"
+        satisfaction: "98%"
+        
+    - id: "ai-2025-autonomous-business-operations"
+      type: "blog"
+      title: "AI 2025: The Autonomous Business Operations Revolution - 800% ROI Through Complete Automation"
+      file_path: "/content/blog/ai-2025-autonomous-business-operations.md"
+      url: "/blog/ai-2025-autonomous-business-operations"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Autonomous Operations", "AI Automation", "Business Transformation", "ROI", "2025", "Self-Managing Systems"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        automation: "95%"
+        accuracy: "99.7%"
+        efficiency: "89%"
       
+    - id: "fortune-500-600-roi"
+      type: "case-study"
+      title: "Fortune 500 AI Transformation: $5.2B Company Achieves 600% ROI in 12 Months"
+      file_path: "/content/case-studies/fortune-500-ai-transformation-600-percent-roi.md"
+      url: "/case-studies/fortune-500-ai-transformation-600-percent-roi"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "AI Transformation", "ROI", "Manufacturing", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        savings: "$2.8B"
+        satisfaction: "98%"
+        timeline: "12 months"
+        
+    - id: "healthcare-800-roi"
+      type: "case-study"
+      title: "Healthcare AI Transformation: $3.2B Health System Achieves 800% ROI with Autonomous Operations"
+      file_path: "/content/case-studies/healthcare-ai-transformation-800-percent-roi.md"
+      url: "/case-studies/healthcare-ai-transformation-800-percent-roi"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Healthcare", "AI Transformation", "ROI", "Autonomous Operations", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        savings: "$2.1B"
+        accuracy: "99.7%"
+        satisfaction: "96%"
+        
     - id: "retail-ai-transformation"
       type: "case-study"
       title: "Retail AI Transformation 2026: How a $50M Company Achieved 400% ROI"
@@ -343,6 +407,22 @@ content_index:
         satisfaction: "89%"
         cost_reduction: "67%"
       
+    - id: "roi-calculator-2025"
+      type: "resource"
+      title: "AI Transformation ROI Calculator 2025: Calculate Your 600%+ ROI Potential"
+      file_path: "/content/resources/ai-transformation-roi-calculator-2025.md"
+      url: "/resources/ai-transformation-roi-calculator-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["ROI Calculator", "AI Transformation", "ROI", "Implementation Guide", "2025", "Business Case"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%+"
+        accuracy: "95%"
+        users: "10,000+"
+        satisfaction: "97%"
+        
     - id: "ai-implementation-guide-2026"
       type: "resource"
       title: "AI Implementation Master Guide 2026: From Strategy to ROI"
