@@ -1,8 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+import SEO from '../../../components/SEO';
+import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'Quantum AI Implementation Guide 2026: From Strategy to 567% ROI',
