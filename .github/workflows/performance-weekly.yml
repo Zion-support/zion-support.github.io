@@ -1,15 +1,12 @@
 ---
 name: Performance Audit Weekly
 on:
-  workflow_dispatch: null
+  workflow_dispatch: {}
   schedule:
     - cron: 0 2 * * *
 jobs:
-  audit:
+  performance:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      actions: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
