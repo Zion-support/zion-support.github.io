@@ -58,21 +58,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
-    // New 2025 Content
     {
-      url: `${baseUrl}/blog/ai-2025-machine-learning-revolution-enterprise-success`,
+      url: `${baseUrl}/blog/ai-2025-ultimate-breakthrough-revolutionary-autonomous-systems`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/blog/ai-2025-cloud-computing-revolution-ultimate-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/case-studies/ai-transformation-2025-ultimate-success-story-enterprise`,
+      url: `${baseUrl}/case-studies/global-enterprise-ai-2025-autonomous-transformation-ultimate-success`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,

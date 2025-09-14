@@ -36,29 +36,15 @@ import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContent
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 // Import new 2026 promotional components
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
-import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
-import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-
-// Import additional promotional components
+import QuantumAI2026RevolutionBanner from '../components/QuantumAI2026RevolutionBanner';
+import AutonomousAI2026Showcase from '../components/AutonomousAI2026Showcase';
+import NeuralArchitectureSearch2026Banner from '../components/NeuralArchitectureSearch2026Banner';
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
-import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
-import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
-
-// Import new AI 2026 promotional components
-import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
-import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
-import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
-
-// Import new AI 2026 advertising components
-import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
-import AI2026AutonomousEnterpriseBanner from '../components/AI2026AutonomousEnterpriseBanner';
-import AI2026ManufacturingSuccessBanner from '../components/AI2026ManufacturingSuccessBanner';
-import AI2026ToolsSuiteBanner from '../components/AI2026ToolsSuiteBanner';
+import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -77,20 +63,13 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* AI 2026 Ultimate Showcase Banner */}
-        <AI2026UltimateShowcaseBanner />
+        {/* NEW 2026 Content Banners - Featured First */}
+        <QuantumAI2026RevolutionBanner />
+        <AutonomousAI2026Showcase />
+        <NeuralArchitectureSearch2026Banner />
         
-        {/* AI 2026 Quantum Revolution Banner */}
-        <AI2026QuantumRevolutionBanner />
-        
-        {/* AI 2026 Autonomous Systems Banner */}
-        <AI2026AutonomousSystemsBanner />
-        
-        {/* New Content 2025 Ultimate Banner */}
-        <NewContent2025UltimateBanner />
-        
-        {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
+        {/* AI 2025 Ultimate Breakthrough Banner */}
+        <AI2025UltimateBreakthroughBanner />
         
         {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
