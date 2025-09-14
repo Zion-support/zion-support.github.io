@@ -3,22 +3,25 @@ import TestimonialCard from './TestimonialCard';
 
 const testimonials = [
   {
-    quote: "Zion Tech Group transformed our operations with AI automation. We achieved 340% ROI within 18 months and reduced costs by 67%. Their expertise and support were exceptional.",
+    quote: "Zion Tech Group transformed our entire operation with AI. We achieved a 340% ROI increase and reduced costs by 60%. Their expertise and execution were exceptional.",
     author: "Sarah Johnson",
     position: "CTO",
-    company: "Global Manufacturing Corp"
+    company: "Global Manufacturing Corp",
+    rating: 5
   },
   {
-    quote: "The AI implementation roadmap they provided was comprehensive and easy to follow. We successfully deployed AI across all our business functions with minimal disruption.",
+    quote: "The AI implementation was seamless and the results exceeded our expectations. Our customer satisfaction increased by 50% and operational efficiency improved dramatically.",
     author: "Michael Chen",
-    position: "VP of Technology",
-    company: "Fortune 500 Retail"
+    position: "VP of Operations",
+    company: "Tech Solutions Inc",
+    rating: 5
   },
   {
-    quote: "Their cybersecurity solutions protected us from advanced threats while improving our operational efficiency. The ROI exceeded our expectations by 200%.",
-    author: "Dr. Emily Rodriguez",
-    position: "Chief Information Officer",
-    company: "Healthcare Systems Inc"
+    quote: "Working with Zion Tech Group was a game-changer. Their AI solutions helped us automate 80% of our processes and achieve unprecedented growth.",
+    author: "Emily Rodriguez",
+    position: "CEO",
+    company: "Innovation Labs",
+    rating: 5
   }
 ];
 
@@ -31,7 +34,7 @@ export default function Testimonials() {
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what industry leaders say about our AI transformation services.
+            Don't just take our word for it. Here's what our clients have achieved with our AI solutions.
           </p>
         </div>
         
@@ -43,6 +46,7 @@ export default function Testimonials() {
               author={testimonial.author}
               position={testimonial.position}
               company={testimonial.company}
+              rating={testimonial.rating}
             />
           ))}
         </div>
