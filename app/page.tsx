@@ -157,6 +157,10 @@ import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContent
 // Import new autonomous enterprise components
 import RevolutionaryContent2026UltimateShowcase from '../components/RevolutionaryContent2026UltimateShowcase';
 
+// Import new 2025 ultimate breakthrough content banners
+import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
+import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
+
 // Import new 2026 breakthrough content banners
 import AI2026UltimateBreakthroughContentBanner from '../components/AI2026UltimateBreakthroughContentBanner';
 import NewContent2025MultimodalBanner from '../components/NewContent2025MultimodalBanner';
@@ -251,6 +255,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 ULTIMATE BREAKTHROUGH BANNER - NEWEST FEATURED */}
+        <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* REVOLUTIONARY CONTENT 2025 ULTIMATE BANNER - NEWEST FEATURED */}
+        <RevolutionaryContent2025UltimateBanner />
+        
         {/* AI CONTENT REVOLUTION 2025 BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
         <AIContentRevolution2025Banner />
         
