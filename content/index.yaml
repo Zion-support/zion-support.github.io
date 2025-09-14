@@ -259,6 +259,7 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
+<<<<<<< HEAD
     - id: "enterprise-ai-revolution-ultimate-breakthrough-2025"
       type: "blog"
       title: "AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide"
@@ -358,6 +359,24 @@ content_index:
         timeline: "18 months"
         projects: "500+"
       reading_time: "35 min read"
+=======
+    - id: "ai-2025-enterprise-automation-revolution"
+      type: "blog"
+      title: "AI 2025: The Enterprise Automation Revolution That's Reshaping Business"
+      file_path: "/content/blog/ai-2025-enterprise-automation-revolution.md"
+      url: "/blog/ai-2025-enterprise-automation-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Enterprise Automation", "Business Transformation", "ROI", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        satisfaction: "98%"
+        projects: "500+"
+        savings: "$2.8B"
+      reading_time: "12 min read"
+>>>>>>> origin/cursor/create-and-deploy-new-content-fb00
       
     - id: "healthcare-ai-transformation-2025"
       type: "case-study"
@@ -620,6 +639,7 @@ content_index:
       - "Implemented interactive content discovery and filtering"
 
   new_content_january_2025:
+<<<<<<< HEAD
     - id: "ai-2025-enterprise-ai-transformation-ultimate-guide"
       type: "blog"
       title: "AI 2025: The Ultimate Enterprise AI Transformation Guide - 500% ROI Blueprint"
@@ -632,11 +652,26 @@ content_index:
       is_new: true
       metrics:
         roi: "500%+"
+=======
+    - id: "ultimate-automation-revolution-complete-guide"
+      type: "blog"
+      title: "AI 2025: The Ultimate Automation Revolution - Complete Guide"
+      file_path: "/content/blog/ai-2025-ultimate-automation-revolution-complete-guide.md"
+      url: "/blog/ai-2025-ultimate-automation-revolution-complete-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Automation", "Implementation Guide", "ROI", "Enterprise", "2025", "Complete Guide"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+>>>>>>> origin/cursor/create-and-deploy-new-content-fb00
         savings: "$2.8B"
         efficiency: "78%"
         satisfaction: "98%"
       reading_time: "18 min read"
       
+<<<<<<< HEAD
     - id: "ai-transformation-fortune-100-ultimate-success-story"
       type: "case-study"
       title: "Fortune 100 AI Transformation: $5.2B Company Achieves 1,200% ROI in 24 Months"
@@ -705,6 +740,42 @@ content_index:
         efficiency: "156%"
       reading_time: "10 min read"
       
+=======
+    - id: "ai-transformation-1000-percent-roi-ultimate-success"
+      type: "case-study"
+      title: "AI Transformation Success: $2.8B Company Achieves 1,000% ROI in 18 Months"
+      file_path: "/content/case-studies/ai-transformation-1000-percent-roi-ultimate-success-story.md"
+      url: "/case-studies/ai-transformation-1000-percent-roi-ultimate-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "AI Transformation", "ROI", "Success Story", "1,000% ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,000%"
+        savings: "$280M"
+        revenue: "$1.2B"
+        efficiency: "89%"
+      reading_time: "12 min read"
+      
+    - id: "ai-2025-implementation-master-guide-ultimate-success"
+      type: "resource"
+      title: "AI 2025 Implementation Master Guide: Ultimate Success Framework"
+      file_path: "/content/resources/ai-2025-implementation-master-guide-ultimate-success.md"
+      url: "/resources/ai-2025-implementation-master-guide-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Framework", "2025", "Ultimate Success"]
+      featured: true
+      is_new: true
+      metrics:
+        success_rate: "94%"
+        average_roi: "500%"
+        implementation_time: "67% faster"
+        projects: "500+ Success Stories"
+      reading_time: "25 min read"
+      
+>>>>>>> origin/cursor/create-and-deploy-new-content-fb00
     - id: "ultimate-business-transformation-revolution"
       type: "blog"
       title: "AI 2025: The Ultimate Business Transformation Revolution - Complete Guide"
@@ -927,6 +998,7 @@ content_index:
       reading_time: "20 min read"
 
   new_promotional_components:
+<<<<<<< HEAD
     - name: "AI2025UltimateContentRevolutionBanner"
       file_path: "/components/AI2025UltimateContentRevolutionBanner.tsx"
       status: "active"
@@ -951,6 +1023,34 @@ content_index:
         
     - name: "NewContent2025UltimateBanner"
       file_path: "/components/NewContent2025UltimateBanner.tsx"
+=======
+    - name: "UltimateContent2025RevolutionBanner"
+      file_path: "/app/components/UltimateContent2025RevolutionBanner.tsx"
+>>>>>>> origin/cursor/create-and-deploy-new-content-fb00
+      status: "active"
+      features:
+        - "Auto-rotating content showcase with 3 new pieces"
+        - "Dismissible banner with localStorage persistence"
+        - "Animated background elements and progress indicators"
+        - "Success metrics display (500% ROI, $2.8B savings)"
+        - "Interactive content preview cards"
+        - "Featured content highlighting"
+        
+    - name: "NewContent2025UltimateShowcase"
+      file_path: "/app/components/NewContent2025UltimateShowcase.tsx"
+      status: "active"
+      features:
+        - "Full-width showcase section with category filters"
+        - "Interactive content cards with hover effects"
+        - "Success metrics grid and ROI highlights"
+        - "Call-to-action buttons and engagement features"
+        - "Content type indicators and badges"
+        - "Responsive design and mobile optimization"
+        
+<<<<<<< HEAD
+=======
+    - name: "NewContent2025UltimateBanner"
+      file_path: "/components/NewContent2025UltimateBanner.tsx"
       status: "active"
       features:
         - "Revolutionary AI Content Collection showcase"
@@ -959,6 +1059,7 @@ content_index:
         - "Statistics display (340% ROI, 98% satisfaction)"
         - "Call-to-action buttons for exploration and consultation"
         
+>>>>>>> origin/cursor/create-and-deploy-new-content-fb00
     - name: "QuantumAI2025RevolutionBanner"
       file_path: "/components/QuantumAI2025RevolutionBanner.tsx"
       status: "active"
@@ -980,6 +1081,7 @@ content_index:
         - "Multiple call-to-action options"
 
   metrics:
+<<<<<<< HEAD
     expected_roi_mentions: 45
     success_stories: 8
     implementation_guides: 6
@@ -995,3 +1097,14 @@ content_index:
       total_savings: "$2.8B+"
       reading_time: "100+ minutes"
       featured_content: 7
+=======
+    expected_roi_mentions: 35
+    success_stories: 6
+    implementation_guides: 5
+    blog_posts: 8
+    total_word_count: "~65,000 words"
+    estimated_reading_time: "~260 minutes"
+    new_content_roi_highlights: "500% ROI featured prominently"
+    promotional_components: 9
+    homepage_integration: "Complete with auto-rotation and filtering"
+>>>>>>> origin/cursor/create-and-deploy-new-content-fb00
