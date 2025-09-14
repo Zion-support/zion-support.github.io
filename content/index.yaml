@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 15
+  total_content_pieces: 20
   
   new_2025_content:
     - id: "generative-ai-revolution"
@@ -211,6 +211,40 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
+    - id: "ai-2025-enterprise-data-revolution-ultimate-guide"
+      type: "blog"
+      title: "AI 2025: The Enterprise Data Revolution - Ultimate Guide to 800% ROI"
+      file_path: "/content/blog/ai-2025-enterprise-data-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-enterprise-data-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Data Revolution", "Enterprise", "ROI", "Fortune 500", "Data Analytics", "Machine Learning"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        savings: "$4.2M"
+        timeframe: "18 months"
+        accuracy: "99.8%"
+      reading_time: "18 min read"
+      
+    - id: "ai-2025-autonomous-operations-revolution"
+      type: "blog"
+      title: "AI 2025: The Autonomous Operations Revolution - 1,200% ROI Through Intelligent Automation"
+      file_path: "/content/blog/ai-2025-autonomous-operations-revolution.md"
+      url: "/blog/ai-2025-autonomous-operations-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Autonomous Operations", "Intelligent Automation", "ROI", "Fortune 500", "Business Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,200%"
+        savings: "$15.8M"
+        timeframe: "24 months"
+        efficiency: "450%"
+      reading_time: "15 min read"
+      
     - id: "ai-2025-enterprise-automation-revolution"
       type: "blog"
       title: "AI 2025: The Enterprise Automation Revolution That's Reshaping Business"
@@ -228,6 +262,40 @@ content_index:
         savings: "$2.8B"
       reading_time: "12 min read"
       
+    - id: "fortune-500-ai-transformation-800-roi-success"
+      type: "case-study"
+      title: "Fortune 500 AI Transformation: $2.8B Company Achieves 800% ROI in 18 Months"
+      file_path: "/content/case-studies/fortune-500-ai-transformation-800-roi-success.md"
+      url: "/case-studies/fortune-500-ai-transformation-800-roi-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "AI Transformation", "ROI", "Manufacturing", "Data Revolution"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        savings: "$19.2M"
+        timeframe: "18 months"
+        company: "$2.8B"
+      reading_time: "12 min read"
+      
+    - id: "ai-autonomous-operations-1200-roi-success"
+      type: "case-study"
+      title: "AI Autonomous Operations Success: $3.2B Company Achieves 1,200% ROI in 24 Months"
+      file_path: "/content/case-studies/ai-autonomous-operations-1200-roi-success.md"
+      url: "/case-studies/ai-autonomous-operations-1200-roi-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Autonomous Operations", "AI Transformation", "ROI", "Energy", "Fortune 500"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,200%"
+        savings: "$50.2M"
+        timeframe: "24 months"
+        company: "$3.2B"
+      reading_time: "14 min read"
+      
     - id: "healthcare-ai-transformation-2025"
       type: "case-study"
       title: "Healthcare AI Transformation 2025: How a $200M Health System Achieved 300% ROI"
@@ -244,6 +312,23 @@ content_index:
         satisfaction: "95%"
         projects: "1 Major Implementation"
       reading_time: "15 min read"
+      
+    - id: "ai-data-transformation-master-guide-2025"
+      type: "resource"
+      title: "AI Data Transformation Master Guide 2025: From Strategy to 800% ROI"
+      file_path: "/content/resources/ai-data-transformation-master-guide-2025.md"
+      url: "/resources/ai-data-transformation-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "Data Transformation", "ROI", "Fortune 500", "Master Guide"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        enterprises: "500+"
+        timeframe: "18 months"
+        success: "98%"
+      reading_time: "25 min read"
       
     - id: "ai-automation-implementation-guide-2025"
       type: "resource"
@@ -508,12 +593,12 @@ content_index:
       - "Implemented interactive content discovery and filtering"
 
   metrics:
-    expected_roi_mentions: 25
-    success_stories: 4
-    implementation_guides: 3
-    blog_posts: 4
-    total_word_count: "~45,000 words"
-    estimated_reading_time: "~180 minutes"
-    new_content_roi_highlights: "500% ROI featured prominently"
-    promotional_components: 6
+    expected_roi_mentions: 35
+    success_stories: 6
+    implementation_guides: 4
+    blog_posts: 6
+    total_word_count: "~65,000 words"
+    estimated_reading_time: "~260 minutes"
+    new_content_roi_highlights: "800% - 1,200% ROI featured prominently"
+    promotional_components: 8
     homepage_integration: "Complete with auto-rotation and filtering"
