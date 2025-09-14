@@ -334,6 +334,7 @@ function Header() {
                 </Link>
                 <Link href="/tools/ai-2029-roi-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🧮 AI 2029 ROI Calculator (NEW)
+                </Link>
                 <Link href="/ai-2029-breakthrough-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 AI 2029 Breakthrough Showcase (REVOLUTIONARY)
                 </Link>
