@@ -60,6 +60,7 @@ export interface AIService {
 // Enhanced Micro SAAS Services
 export const enhancedMicroSaasServices: MicroSaasService[] = [
   {
+    features: [
       "Intelligent document processing with 99.9% accuracy",
       "Automated workflow orchestration",
       "Real-time analytics dashboard",
