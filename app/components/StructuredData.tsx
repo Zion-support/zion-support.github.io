@@ -15,9 +15,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData, null, 2)
-      }}
     />
   );
 };
