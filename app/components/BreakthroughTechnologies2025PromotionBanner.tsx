@@ -1,218 +1,201 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, Star, TrendingUp, Target, Zap } from 'lucide-react';
-
-interface BreakthroughContent {
-  id: string;
-  title: string;
-  type: string;
-  url: string;
-  metrics: {
-    roi: string;
-    savings: string;
-    accuracy: string;
-  };
-}
 
 const BreakthroughTechnologies2025PromotionBanner: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDismissed, setIsDismissed] = useState(false);
-
-  const breakthroughContent: BreakthroughContent[] = [
-    {
-      id: 'breakthrough-technologies-revolution',
-      title: 'AI 2025: The Breakthrough Technologies Revolution - Ultimate Guide to 5,000% ROI',
-      type: 'blog',
-      url: '/blog/ai-2025-breakthrough-technologies-revolution-ultimate-guide',
-      metrics: {
-        roi: '5,000%',
-        savings: '$15.8B+',
-        accuracy: '99.97%'
-      }
-    },
-    {
-      id: 'fortune-500-breakthrough-technologies-5000-roi-success',
-      title: 'Fortune 500 Breakthrough Technologies Success: $15.8B Annual Savings - 5,000% ROI Success Story',
-      type: 'case-study',
-      url: '/case-studies/fortune-500-breakthrough-technologies-5000-roi-success-story',
-      metrics: {
-        roi: '5,000%',
-        savings: '$15.8B',
-        accuracy: '99.97%'
-      }
-    },
-    {
-      id: 'breakthrough-technologies-implementation-ultimate-guide',
-      title: 'Breakthrough Technologies Implementation Ultimate Guide 2025: Complete Roadmap to 5,000% ROI',
-      type: 'resource',
-      url: '/resources/breakthrough-technologies-implementation-ultimate-guide-2025',
-      metrics: {
-        roi: '5,000%',
-        savings: '$15.8B',
-        accuracy: '97%'
-      }
-    }
-  ];
-
-  useEffect(() => {
-    // Check if banner was dismissed
-    const dismissed = localStorage.getItem('breakthrough-technologies-banner-dismissed');
-    if (dismissed === 'true') {
-      setIsDismissed(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (isDismissed) return;
-    
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % breakthroughContent.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isDismissed, breakthroughContent.length]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-    localStorage.setItem('breakthrough-technologies-banner-dismissed', 'true');
-  };
-
-  if (isDismissed) return null;
-
-  const currentContent = breakthroughContent[currentIndex];
-
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
-      {/* Animated background elements */}
+    <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 overflow-hidden">
+      {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-indigo-900/20"></div>
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl animate-pulse delay-2000"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-transparent to-blue-600/20 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M50 0c27.614 0 50 22.386 50 50s-22.386 50-50 50S0 77.614 0 50 22.386 0 50 0zm0 10c22.091 0 40 17.909 40 40s-17.909 40-40 40S10 72.091 10 50 27.909 10 50 10z'/%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
       </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex items-center justify-between">
-          <div className="flex-1">
-            {/* Header */}
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <Zap className="h-5 w-5 text-yellow-400" />
-                <span className="text-sm font-semibold">BREAKTHROUGH TECHNOLOGIES 2025</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 backdrop-blur-sm rounded-full px-3 py-1">
-                <Star className="h-4 w-4 text-green-400" />
-                <span className="text-xs font-medium">5,000% ROI</span>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center">
+          {/* Main Badge */}
+          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full px-8 py-3 mb-8 shadow-lg">
+            <span className="text-black font-bold text-lg">🌟 BREAKTHROUGH TECHNOLOGIES 2025</span>
+          </div>
+          
+          {/* Main Heading */}
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            Revolutionary
+            <span className="block bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
+              AI Technologies
+            </span>
+            <span className="block text-3xl md:text-4xl font-light mt-4 text-blue-200">
+              Transforming Business in 2025
+            </span>
+          </h2>
+          
+          {/* Subheading */}
+          <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-5xl mx-auto leading-relaxed">
+            Discover the cutting-edge technologies that are revolutionizing industries worldwide. 
+            From <span className="text-yellow-300 font-semibold">Quantum AI</span> to <span className="text-cyan-300 font-semibold">Neural Interfaces</span>, 
+            explore the future of business transformation.
+          </p>
+          
+          {/* Technology Showcase Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {/* Quantum AI */}
+            <div className="group bg-white bg-opacity-5 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-10 hover:bg-opacity-10 transition-all duration-500 hover:scale-105">
+              <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">⚡</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Quantum AI</h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Revolutionary quantum computing integration achieving 800% ROI through optimization and simulation.
+              </p>
+              <div className="space-y-2 text-sm text-cyan-300">
+                <div>• Quantum Machine Learning</div>
+                <div>• Optimization Algorithms</div>
+                <div>• Quantum Simulation</div>
               </div>
             </div>
-
-            {/* Main content */}
-            <div className="space-y-4">
-              <h2 className="text-2xl md:text-3xl font-bold leading-tight">
-                Revolutionary Breakthrough Technologies Transforming Enterprise Operations
-              </h2>
-              
-              <div className="flex flex-wrap items-center gap-4 text-sm">
-                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
-                  <TrendingUp className="h-4 w-4 text-green-400" />
-                  <span>5,000% ROI</span>
-                </div>
-                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
-                  <Target className="h-4 w-4 text-blue-400" />
-                  <span>$15.8B+ Savings</span>
-                </div>
-                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
-                  <Zap className="h-4 w-4 text-purple-400" />
-                  <span>99.97% Accuracy</span>
-                </div>
+            
+            {/* Neural Interfaces */}
+            <div className="group bg-white bg-opacity-5 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-10 hover:bg-opacity-10 transition-all duration-500 hover:scale-105">
+              <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🧠</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Neural Interfaces</h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Direct brain-computer interfaces enabling unprecedented human-AI collaboration and control.
+              </p>
+              <div className="space-y-2 text-sm text-purple-300">
+                <div>• Brain-Computer Interfaces</div>
+                <div>• Neural Command Systems</div>
+                <div>• Cognitive Enhancement</div>
               </div>
-
-              {/* Current content showcase */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <span className="text-xs font-medium text-purple-300 uppercase tracking-wide">
-                        {currentContent.type === 'blog' ? 'Blog Post' : 
-                         currentContent.type === 'case-study' ? 'Case Study' : 'Resource Guide'}
-                      </span>
-                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2 line-clamp-2">
-                      {currentContent.title}
-                    </h3>
-                    <div className="flex items-center space-x-4 text-sm text-gray-300">
-                      <span>ROI: {currentContent.metrics.roi}</span>
-                      <span>Savings: {currentContent.metrics.savings}</span>
-                      <span>Accuracy: {currentContent.metrics.accuracy}</span>
-                    </div>
-                  </div>
-                  <Link
-                    href={currentContent.url}
-                    className="ml-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 flex items-center space-x-2 group"
-                  >
-                    <span>Explore</span>
-                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </div>
-
-              {/* Progress indicators */}
-              <div className="flex items-center space-x-2">
-                {breakthroughContent.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                      index === currentIndex ? 'bg-white w-6' : 'bg-white/30'
-                    }`}
-                  />
-                ))}
+            </div>
+            
+            {/* Autonomous Systems */}
+            <div className="group bg-white bg-opacity-5 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-10 hover:bg-opacity-10 transition-all duration-500 hover:scale-105">
+              <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🤖</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Autonomous Systems</h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Self-managing AI systems that optimize operations and adapt to changing conditions autonomously.
+              </p>
+              <div className="space-y-2 text-sm text-green-300">
+                <div>• Self-Optimizing Operations</div>
+                <div>• Adaptive Intelligence</div>
+                <div>• Autonomous Decision Making</div>
               </div>
             </div>
           </div>
-
-          {/* Dismiss button */}
-          <button
-            onClick={handleDismiss}
-            className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors duration-200"
-            aria-label="Dismiss banner"
-          >
-            <X className="h-5 w-5" />
-          </button>
-        </div>
-
-        {/* Call to action */}
-        <div className="mt-6 flex flex-col sm:flex-row gap-4">
-          <Link
-            href="/blog/ai-2025-breakthrough-technologies-revolution-ultimate-guide"
-            className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2 group"
-          >
-            <span>Read Ultimate Guide</span>
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <Link
-            href="/case-studies/fortune-500-breakthrough-technologies-5000-roi-success-story"
-            className="border-2 border-white/30 hover:border-white/60 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2 group"
-          >
-            <span>View Success Story</span>
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <Link
-            href="/resources/breakthrough-technologies-implementation-ultimate-guide-2025"
-            className="border-2 border-white/30 hover:border-white/60 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2 group"
-          >
-            <span>Get Implementation Guide</span>
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          
+          {/* Success Metrics */}
+          <div className="bg-white bg-opacity-5 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-white border-opacity-10">
+            <h3 className="text-2xl font-bold text-white mb-8">Proven Results</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-yellow-400 mb-2">800%</div>
+                <div className="text-gray-300">ROI Achievement</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">85%</div>
+                <div className="text-gray-300">Efficiency Gain</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-400 mb-2">$58M</div>
+                <div className="text-gray-300">Annual Savings</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-purple-400 mb-2">98%</div>
+                <div className="text-gray-300">Success Rate</div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Content Links */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
+            <Link 
+              href="/content/blog/ai-2025-enterprise-automation-success-stories-ultimate-guide"
+              className="group bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl p-6 hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              <div className="text-left">
+                <div className="flex items-center mb-4">
+                  <span className="text-3xl mr-4">📈</span>
+                  <h4 className="text-xl font-bold text-black group-hover:text-gray-800 transition-colors">
+                    Success Stories Guide
+                  </h4>
+                </div>
+                <p className="text-black opacity-80 mb-4">
+                  Comprehensive guide featuring real-world AI automation success stories with detailed metrics and implementation strategies.
+                </p>
+                <div className="flex items-center text-black font-semibold">
+                  <span>Explore Guide</span>
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </div>
+            </Link>
+            
+            <Link 
+              href="/content/case-studies/quantum-ai-2026-business-transformation-case-study"
+              className="group bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl p-6 hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              <div className="text-left">
+                <div className="flex items-center mb-4">
+                  <span className="text-3xl mr-4">⚡</span>
+                  <h4 className="text-xl font-bold text-white group-hover:text-gray-100 transition-colors">
+                    Quantum AI Case Study
+                  </h4>
+                </div>
+                <p className="text-white opacity-90 mb-4">
+                  Complete case study documenting Fortune 500 company's quantum AI transformation achieving 800% ROI.
+                </p>
+                <div className="flex items-center text-white font-semibold">
+                  <span>View Case Study</span>
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+          
+          {/* Call to Action */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Link
+              href="/services"
+              className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-10 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-300 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              Explore Our Technologies
+            </Link>
+            <Link
+              href="/contact"
+              className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
+            >
+              Schedule Consultation
+            </Link>
+          </div>
+          
+          {/* Innovation Badge */}
+          <div className="mt-16 pt-8 border-t border-white border-opacity-20">
+            <div className="flex flex-wrap justify-center items-center gap-8 text-white opacity-70">
+              <div className="flex items-center">
+                <span className="text-2xl mr-2">🏆</span>
+                <span className="font-semibold">Industry Leader</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-2xl mr-2">🚀</span>
+                <span className="font-semibold">Innovation Pioneer</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-2xl mr-2">⭐</span>
+                <span className="font-semibold">Award Winning</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-2xl mr-2">🌍</span>
+                <span className="font-semibold">Global Impact</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white/5 to-transparent"></div>
-    </div>
+      
+      {/* Animated Elements */}
+      <div className="absolute top-20 left-20 w-32 h-32 bg-yellow-400 bg-opacity-10 rounded-full blur-2xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-20 w-40 h-40 bg-cyan-400 bg-opacity-10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+      <div className="absolute top-1/2 left-10 w-24 h-24 bg-purple-400 bg-opacity-10 rounded-full blur-2xl animate-pulse delay-500"></div>
+      <div className="absolute top-1/3 right-10 w-28 h-28 bg-orange-400 bg-opacity-10 rounded-full blur-2xl animate-pulse delay-1500"></div>
+    </section>
   );
 };
 

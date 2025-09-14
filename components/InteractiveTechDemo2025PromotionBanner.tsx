@@ -161,7 +161,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
 
                   {/* Features */}
                   <div className="flex flex-wrap gap-3 mt-4">
-                    {features.slice(03).map((featureindex) => {
+                    {features.slice(0, 3).map((feature, index) => {
                       const Icon = feature.icon;
                       return (
                         <div key={index} className="flex items-center px-3 py-1 rounded-full bg-white/10 text-white text-sm">
@@ -217,7 +217,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                       <div className="absolute inset-0 flex items-center justify-center">
                         {demos[currentDemo].title.includes('AI Consciousness') && (
                           <div className="grid grid-cols-4 gap-2">
-                            {[...Array(8)].map((_i) => (
+                            {[...Array(8)].map((_, i) => (
                               <motion.div
                                 key={i}
                                 animate={{
@@ -237,7 +237,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         
                         {demos[currentDemo].title.includes('Quantum') && (
                           <div className="relative">
-                            {[...Array(4)].map((_i) => (
+                            {[...Array(4)].map((_, i) => (
                               <motion.div
                                 key={i}
                                 animate={{
@@ -261,7 +261,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         
                         {demos[currentDemo].title.includes('Brain-Computer') && (
                           <div className="w-full h-16 relative">
-                            {[...Array(3)].map((_i) => (
+                            {[...Array(3)].map((_, i) => (
                               <motion.div
                                 key={i}
                                 animate={{
@@ -285,7 +285,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         
                         {demos[currentDemo].title.includes('Edge AI') && (
                           <div className="grid grid-cols-3 gap-2">
-                            {[...Array(6)].map((_i) => (
+                            {[...Array(6)].map((_, i) => (
                               <motion.div
                                 key={i}
                                 animate={{
@@ -344,7 +344,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
 
             {/* Demo Indicators */}
             <div className="flex justify-center mt-6 space-x-2">
-              {demos.map((_index) => (
+              {demos.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentDemo(index)}

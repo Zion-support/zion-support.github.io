@@ -157,7 +157,7 @@ export default function EmailValidatorPage() {
     const invalid = validationResults.filter(r => r.status === 'invalid').length;
     const suspicious = validationResults.filter(r => r.status === 'suspicious').length;
     const disposable = validationResults.filter(r => r.status === 'disposable').length;
-    const avgScore = validationResults.reduce((sumr) => sum + r.score0) / total;
+    const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total;
     
     return { totalvalidinvalidsuspiciousdisposableavgScore };
   };

@@ -232,16 +232,16 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         >
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { label: 'Revolutionary Services'value: services.filter(s => s.innovationLevel === 'Revolutionary').lengthicon: Rocketcolor: 'from-purple-500 to-pink-500' },
-              { label: 'Patent Pending'value: services.filter(s => s.patentStatus === 'Patent Pending').lengthicon: Shieldcolor: 'from-blue-500 to-cyan-500' },
-              { label: 'Total Customers'value: services.reduce((sums) => sum + s.customers0)icon: Starcolor: 'from-yellow-500 to-orange-500' },
-              { label: 'Average Rating'value: (services.reduce((sums) => sum + s.rating0) / services.length).toFixed(1)icon: TrendingUpcolor: 'from-green-500 to-teal-500' }
-            ].map((statindex) => (
+              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
+              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
+              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
+              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
+            ].map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
-                transition={{ duration: 0.6delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
