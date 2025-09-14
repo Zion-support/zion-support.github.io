@@ -1,117 +1,234 @@
 #!/bin/bash
 
-# Script to merge all open PRs into main branch
-# This script will handle conflicts and merge systematically
+                
+                # Add the resolved file
+                git add "$file"
+            fi
+        done
+        
+        # Try to complete the merge
+        if git commit --no-edit; then
+            echo "  ✅ Successfully resolved conflicts and merged $branch_name"
+            return 0
+        else
+            echo "  ❌ Failed to resolve conflicts in $branch_name"
+            git merge --abort
+=======
+# Comprehensive PR Merge Script
+# This script will merge all open PRs into the main branch systematically
 
 set -e
 
-echo "🚀 Starting PR merge process..."
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
 
-# Get list of open PRs
-echo "📋 Fetching open PRs..."
-PRS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | grep -o '"number":[0-9]*' | grep -o '[0-9]*')
+# Configuration
+MAIN_BRANCH="main"
+LOG_FILE="merge_operations.log"
+CONFLICT_LOG="merge_conflicts.log"
+SUCCESS_LOG="merge_success.log"
 
-if [ -z "$PRS" ]; then
-    echo "❌ No open PRs found"
-    exit 0
-fi
+# Initialize logs
+echo "=== PR Merge Operations Started at $(date) ===" > $LOG_FILE
+echo "=== Merge Conflicts Log ===" > $CONFLICT_LOG
+echo "=== Successful Merges Log ===" > $SUCCESS_LOG
 
-echo "Found PRs: $PRS"
+# Logging functions
+log() {
+    echo -e "${BLUE}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
+    echo "[$(date +'%Y-%m-%d %H:%M:%S')] $1" >> $LOG_FILE
+}
 
-# Ensure we're on main branch
-git checkout main
-git pull origin main
+success() {
+    echo -e "${GREEN}✅ $1${NC}"
+    echo "SUCCESS: $1" >> $SUCCESS_LOG
+}
 
-# Counter for tracking
-count=0
-total=$(echo "$PRS" | wc -w)
+warning() {
+    echo -e "${YELLOW}⚠️  $1${NC}"
+    echo "WARNING: $1" >> $LOG_FILE
+}
 
-for pr in $PRS; do
-    count=$((count + 1))
-    echo ""
-    echo "🔄 Processing PR #$pr ($count/$total)"
+error() {
+    echo -e "${RED}❌ $1${NC}"
+    echo "ERROR: $1" >> $LOG_FILE
+}
+
+info() {
+    echo -e "${CYAN}ℹ️  $1${NC}"
+}
+
+# Function to check if branch exists
+branch_exists() {
+    local branch_name="$1"
+    git show-ref --verify --quiet "refs/heads/$branch_name" || git show-ref --verify --quiet "refs/remotes/origin/$branch_name"
+}
+
+# Function to merge a single branch
+merge_branch() {
+    local branch_name="$1"
+    local pr_number="$2"
+    local pr_title="$3"
     
-    # Get PR details
-    PR_DETAILS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr")
-    BRANCH_NAME=$(echo "$PR_DETAILS" | grep -o '"head":{[^}]*"ref":"[^"]*"' | grep -o '"[^"]*"$' | tr -d '"')
+    log "Attempting to merge branch: $branch_name (PR #$pr_number: $pr_title)"
     
-    if [ -z "$BRANCH_NAME" ]; then
-        echo "⚠️  Could not extract branch name for PR #$pr, skipping..."
-        continue
+    # Check if branch exists
+    if ! branch_exists "$branch_name"; then
+        warning "Branch $branch_name does not exist, skipping..."
+        return 1
     fi
     
-    echo "📝 Branch: $BRANCH_NAME"
+    # Fetch the latest changes
+    git fetch origin "$branch_name" || {
+        error "Failed to fetch branch $branch_name"
+        return 1
+    }
     
-    # Fetch the branch
-    echo "📥 Fetching branch $BRANCH_NAME..."
-    git fetch origin "$BRANCH_NAME"
+    # Checkout the branch
+    git checkout "$branch_name" || {
+        error "Failed to checkout branch $branch_name"
+        return 1
+    }
     
-    # Try to merge
-    echo "🔀 Attempting to merge $BRANCH_NAME into main..."
-    if git merge "origin/$BRANCH_NAME" --no-ff -m "Merge PR #$pr: $BRANCH_NAME"; then
-        echo "✅ Successfully merged PR #$pr"
-        
-        # Push the changes
-        echo "📤 Pushing changes..."
-        git push origin main
-        
-        # Close the PR via API (optional)
-        echo "🔒 Closing PR #$pr..."
-        curl -X PATCH \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr" \
-            -d '{"state":"closed"}' || echo "⚠️  Could not close PR #$pr via API"
-            
+    # Pull latest changes
+    git pull origin "$branch_name" || {
+        error "Failed to pull latest changes for $branch_name"
+        return 1
+    }
+    
+    # Switch back to main
+    git checkout "$MAIN_BRANCH" || {
+        error "Failed to checkout main branch"
+        return 1
+    }
+    
+    # Attempt to merge
+    if git merge "$branch_name" --no-ff -m "Merge PR #$pr_number: $pr_title"; then
+        success "Successfully merged $branch_name (PR #$pr_number)"
+        return 0
     else
-        echo "⚠️  Merge conflict in PR #$pr, attempting to resolve..."
+        error "Merge conflict in $branch_name (PR #$pr_number)"
+        echo "CONFLICT: $branch_name (PR #$pr_number) - $pr_title" >> $CONFLICT_LOG
         
-        # Check for conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "🔧 Resolving conflicts..."
-            
-            # Try to resolve conflicts automatically
-            git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
-                echo "  Resolving conflict in: $file"
-                
-                # For now, we'll accept the incoming changes (theirs)
-                # In a real scenario, you might want more sophisticated conflict resolution
-                git checkout --theirs "$file" || true
-                git add "$file" || true
-            done
-            
-            # Commit the resolution
-            if git commit -m "Resolve merge conflicts for PR #$pr"; then
-                echo "✅ Conflicts resolved for PR #$pr"
-                git push origin main
-                
-                # Close the PR
-                curl -X PATCH \
-                    -H "Accept: application/vnd.github.v3+json" \
-                    "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr" \
-                    -d '{"state":"closed"}' || echo "⚠️  Could not close PR #$pr via API"
-            else
-                echo "❌ Failed to resolve conflicts for PR #$pr"
-                git merge --abort
-            fi
+        # Try to resolve conflicts automatically
+        if resolve_conflicts "$branch_name" "$pr_number" "$pr_title"; then
+            success "Resolved conflicts and merged $branch_name (PR #$pr_number)"
+            return 0
         else
-            echo "❌ Failed to merge PR #$pr for unknown reason"
-            git merge --abort
+            error "Could not resolve conflicts for $branch_name (PR #$pr_number)"
+            # Abort the merge
+            git merge --abort || true
+            return 1
         fi
     fi
+}
+
+# Function to resolve conflicts automatically
+resolve_conflicts() {
+    local branch_name="$1"
+    local pr_number="$2"
+    local pr_title="$3"
     
-    echo "⏳ Waiting 2 seconds before next PR..."
-    sleep 2
-done
+    log "Attempting to resolve conflicts for $branch_name"
+    
+    # Check for common conflict patterns and resolve them
+    local conflicts=$(git diff --name-only --diff-filter=U)
+    
+    for file in $conflicts; do
+        log "Resolving conflicts in $file"
+        
+        # Use git checkout to take our version for most conflicts
+        git checkout --ours "$file" || true
+        
+        # Add the resolved file
+        git add "$file" || true
+    done
+    
+    # Commit the resolved conflicts
+    if git commit -m "Resolve merge conflicts for PR #$pr_number: $pr_title"; then
+        return 0
+    else
+        return 1
+    fi
+}
 
-echo ""
-echo "🎉 PR merge process completed!"
-echo "📊 Processed $count PRs"
+# Function to extract PR information from JSON
+extract_pr_info() {
+    local json_file="$1"
+    
+    # Extract PR numbers, titles, and branch names
+    grep -A 20 '"state": "open"' "$json_file" | \
+    grep -E '"number":|"title":|"headRefName":' | \
+    sed 's/.*"number": \([0-9]*\).*/\1/' | \
+    sed 's/.*"title": "\([^"]*\)".*/\1/' | \
+    sed 's/.*"headRefName": "\([^"]*\)".*/\1/' | \
+    paste - - - | \
+    awk '{print $1 "|" $2 "|" $3}'
+}
 
-# Final status check
-echo ""
-echo "📋 Final git status:"
-git status
+# Main execution
+main() {
+    log "Starting comprehensive PR merge process"
+    
+    # Ensure we're on main branch
+    git checkout "$MAIN_BRANCH" || {
+        error "Failed to checkout main branch"
+        exit 1
+    }
+    
+    # Pull latest changes
+    git pull origin "$MAIN_BRANCH" || {
+        error "Failed to pull latest changes from main"
+        exit 1
+    }
+    
+    # Extract PR information
+    info "Extracting PR information from open_prs.json"
+    local pr_info=$(extract_pr_info "open_prs.json")
+    
+    local success_count=0
+    local conflict_count=0
+    local total_count=0
+    
+    # Process each PR
+    while IFS='|' read -r pr_number pr_title branch_name; do
+        if [[ -n "$pr_number" && -n "$pr_title" && -n "$branch_name" ]]; then
+            total_count=$((total_count + 1))
+            log "Processing PR #$pr_number: $pr_title (branch: $branch_name)"
+            
+            if merge_branch "$branch_name" "$pr_number" "$pr_title"; then
+                success_count=$((success_count + 1))
+            else
+                conflict_count=$((conflict_count + 1))
+            fi
+            
+            # Small delay to avoid overwhelming the system
+            sleep 1
+        fi
+    done <<< "$pr_info"
+    
+    # Summary
+    log "=== MERGE SUMMARY ==="
+    log "Total PRs processed: $total_count"
+    log "Successfully merged: $success_count"
+    log "Conflicts encountered: $conflict_count"
+    
+    # Push changes
+    if [[ $success_count -gt 0 ]]; then
+        log "Pushing merged changes to main branch"
+        git push origin "$MAIN_BRANCH" || {
+            error "Failed to push changes to main branch"
+        }
+    fi
+    
+    success "PR merge process completed!"
+}
 
-echo ""
-echo "🌿 Current branches:"
-git branch -a | head -10
+# Run the main function
+main "$@"

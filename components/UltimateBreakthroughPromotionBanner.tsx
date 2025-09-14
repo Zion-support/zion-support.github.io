@@ -1,91 +1,123 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function UltimateBreakthroughPromotionBanner() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const promotions = [
+    {
+      title: "🚀 AI 2025 Ultimate Breakthrough Revolution",
+      subtitle: "5,000% ROI Guaranteed",
+      description: "Revolutionary synthetic intelligence delivering unprecedented returns",
+      link: "/ai-2025-ultimate-breakthrough-revolution",
+      color: "from-red-500 to-pink-500",
+      bgColor: "from-red-500/10 to-pink-500/10",
+      borderColor: "border-red-500/30"
+    },
+    {
+      title: "🔮 AI 2026-2030 Future Predictions",
+      subtitle: "Revolutionary Breakthroughs Ahead",
+      description: "Quantum-neural fusion and consciousness AI predictions",
+      link: "/ai-2026-2030-future-predictions-breakthrough",
+      color: "from-cyan-500 to-purple-500",
+      bgColor: "from-cyan-500/10 to-purple-500/10",
+      borderColor: "border-cyan-500/30"
+    },
+    {
+      title: "🏆 10,000% ROI Success Story",
+      subtitle: "Fortune 500 Transformation",
+      description: "Real case study showcasing ultimate AI transformation success",
+      link: "/case-studies/ai-2025-ultimate-transformation-success",
+      color: "from-green-500 to-emerald-500",
+      bgColor: "from-green-500/10 to-emerald-500/10",
+      borderColor: "border-green-500/30"
+    }
+  ];
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % promotions.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  if (!isVisible) return null;
+
+  const currentPromo = promotions[currentSlide];
+
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 px-4 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-400/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-16 h-16 bg-cyan-400/20 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-pink-400/20 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-20 right-1/3 w-14 h-14 bg-green-400/20 rounded-full animate-pulse delay-500"></div>
+    <div className="fixed top-0 left-0 right-0 z-50 transform transition-transform duration-500 ease-in-out">
+      <div className={`bg-gradient-to-r ${currentPromo.bgColor} backdrop-blur-sm border-b ${currentPromo.borderColor} shadow-lg`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between py-3">
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+              </div>
+              <div className="text-sm font-semibold text-gray-800 animate-pulse">
+                BREAKTHROUGH ANNOUNCEMENT
+              </div>
+            </div>
+            
+            <div className="flex-1 text-center">
+              <Link 
+                href={currentPromo.link}
+                className="group block transition-all duration-300 hover:scale-105"
+              >
+                <div className="flex items-center justify-center space-x-4">
+                  <div className="text-2xl animate-bounce">🚀</div>
+                  <div>
+                    <h3 className={`text-lg font-bold bg-gradient-to-r ${currentPromo.color} bg-clip-text text-transparent group-hover:scale-105 transition-transform`}>
+                      {currentPromo.title}
+                    </h3>
+                    <p className="text-sm text-gray-700 font-semibold">
+                      {currentPromo.subtitle}
+                    </p>
+                  </div>
+                  <div className="text-2xl animate-bounce" style={{ animationDelay: '0.5s' }}>⚡</div>
+                </div>
+              </Link>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <Link 
+                href={currentPromo.link}
+                className={`bg-gradient-to-r ${currentPromo.color} text-white px-4 py-2 rounded-full text-sm font-bold hover:scale-105 transition-transform duration-300`}
+              >
+                Discover Now
+              </Link>
+              <button 
+                onClick={() => setIsVisible(false)}
+                className="text-gray-500 hover:text-gray-700 transition-colors"
+                aria-label="Close banner"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <div className="relative max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-black text-sm font-bold mb-8 animate-bounce">
-            🚀 BREAKTHROUGH ANNOUNCEMENT - LIMITED TIME OFFER
-          </div>
-          <h2 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-            Ultimate AI 2025 Breakthrough
-          </h2>
-          <p className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto">
-            Revolutionary AI solutions delivering unprecedented 
-            <span className="text-yellow-400 font-bold"> 10,000% ROI </span>
-            through synthetic intelligence and quantum-enhanced automation.
-          </p>
-        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          <div className="bg-gradient-to-br from-red-800 to-pink-800 p-8 rounded-2xl text-center">
-            <div className="text-4xl font-bold text-yellow-400 mb-4">10,000% ROI</div>
-            <h3 className="text-xl font-bold mb-4 text-white">AI 2025 Ultimate Breakthrough</h3>
-            <p className="text-gray-300 mb-6">Revolutionary synthetic intelligence delivering unprecedented returns</p>
-            <Link 
-              href="/ai-2025-ultimate-breakthrough-revolution" 
-              className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-6 py-3 rounded-lg font-bold hover:scale-105 transition-transform inline-block"
-            >
-              Discover Breakthrough
-            </Link>
-          </div>
-
-          <div className="bg-gradient-to-br from-cyan-800 to-blue-800 p-8 rounded-2xl text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-4">∞ Power</div>
-            <h3 className="text-xl font-bold mb-4 text-white">Quantum Computing Ultimate</h3>
-            <p className="text-gray-300 mb-6">Infinite computational power with quantum supremacy</p>
-            <Link 
-              href="/quantum-computing-solutions-2025-ultimate" 
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-6 py-3 rounded-lg font-bold hover:scale-105 transition-transform inline-block"
-            >
-              Explore Quantum Power
-            </Link>
-          </div>
-
-          <div className="bg-gradient-to-br from-green-800 to-blue-800 p-8 rounded-2xl text-center">
-            <div className="text-4xl font-bold text-green-400 mb-4">15,000% ROI</div>
-            <h3 className="text-xl font-bold mb-4 text-white">Advanced Automation Ultimate</h3>
-            <p className="text-gray-300 mb-6">Intelligent process automation with autonomous systems</p>
-            <Link 
-              href="/advanced-automation-solutions-2025-ultimate" 
-              className="bg-gradient-to-r from-green-500 to-blue-500 text-black px-6 py-3 rounded-lg font-bold hover:scale-105 transition-transform inline-block"
-            >
-              Start Automation
-            </Link>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-            <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-12 py-6 rounded-lg text-2xl font-bold hover:scale-105 transition-transform"
-            >
-              Get Exclusive Access
-            </Link>
-            <Link 
-              href="/case-studies" 
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-12 py-6 rounded-lg text-2xl font-bold hover:scale-105 transition-transform"
-            >
-              View Success Stories
-            </Link>
-          </div>
-          <div className="text-lg text-gray-400">
-            <p className="mb-2">Limited spots available for 2025 implementation</p>
-            <p className="text-yellow-400 font-bold text-xl">Only 50 businesses will be selected for each breakthrough</p>
-          </div>
-        </div>
+      {/* Slide Indicators */}
+      <div className="flex justify-center space-x-2 py-2 bg-black/10">
+        {promotions.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentSlide 
+                ? 'bg-white scale-125' 
+                : 'bg-white/50 hover:bg-white/75'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </div>
   );

@@ -1,137 +1,277 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
-  SparklesIcon, 
-  ArrowRightIcon, 
-  PlayIcon,
-  BookOpenIcon,
-  LightBulbIcon,
-  RocketLaunchIcon
-} from '@heroicons/react/24/outline';
+  ArrowRight, 
+  Star, 
+  TrendingUp, 
+  Users, 
+  Zap, 
+  Shield, 
+  Brain,
+  Globe,
+  Target,
+  Award,
+  CheckCircle,
+  PlayCircle,
+  BookOpen,
+  Lightbulb,
+  Sparkles,
+  Rocket
+} from 'lucide-react';
 
 const NewContentShowcase2025PromotionBanner = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    
+    // Rotate features every 3 seconds
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % 3);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const features = [
     {
-      icon: BookOpenIcon,
-      title: "Latest Insights",
-      description: "Cutting-edge research and analysis"
+      icon: Brain,
+      title: 'AI Solutions',
+      description: 'Revolutionary AI technology',
+      color: 'from-purple-500 to-blue-500'
     },
     {
-      icon: LightBulbIcon,
-      title: "Innovation Focus",
-      description: "Emerging technologies and trends"
+      icon: Zap,
+      title: 'Automation',
+      description: 'Intelligent workflow automation',
+      color: 'from-green-500 to-teal-500'
     },
     {
-      icon: RocketLaunchIcon,
-      title: "Future Ready",
-      description: "Prepare for tomorrow's challenges"
+      icon: Shield,
+      title: 'Security',
+      description: 'Advanced cybersecurity protection',
+      color: 'from-red-500 to-orange-500'
     }
   ];
 
-  return (
-    <section className="py-16 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Content */}
-          <div>
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6">
-              <SparklesIcon className="w-4 h-4 mr-2" />
-              New Content Available
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Explore Our
-              <span className="block text-yellow-300">2025 Content Showcase</span>
-            </h2>
-            
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Dive into our comprehensive collection of cutting-edge content covering AI innovations, 
-              quantum computing breakthroughs, and emerging technologies that are reshaping industries.
-            </p>
+  const stats = [
+    { label: 'New Features', value: '50+', icon: Sparkles },
+    { label: 'Success Rate', value: '99.8%', icon: Award },
+    { label: 'Client Satisfaction', value: '5.0★', icon: Star },
+    { label: 'ROI Increase', value: '300%', icon: TrendingUp }
+  ];
 
-            {/* Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-              {features.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-4">
-                      <IconComponent className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-white font-semibold mb-1">{feature.title}</h3>
-                      <p className="text-blue-100 text-sm">{feature.description}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+  return (
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-blue-600/20 to-purple-600/20" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="text-white"
+          >
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-sm font-medium mb-6"
+            >
+              <Sparkles className="w-4 h-4 mr-2" />
+              NEW CONTENT AVAILABLE
+            </motion.div>
+
+            {/* Main Heading */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-4xl md:text-5xl font-bold mb-6"
+            >
+              Discover Our Latest{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
+                Innovations
+              </span>
+            </motion.h2>
+
+            {/* Subheading */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-xl text-gray-300 mb-8"
+            >
+              Explore cutting-edge AI solutions, intelligent automation, and advanced cybersecurity 
+              designed to revolutionize your business operations and drive unprecedented growth.
+            </motion.p>
+
+            {/* Rotating Feature */}
+            <motion.div
+              key={currentFeature}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-8"
+            >
+              <div className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                <div className={`p-3 bg-gradient-to-r ${features[currentFeature].color} rounded-lg`}>
+                  <features[currentFeature].icon className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-white">
+                    {features[currentFeature].title}
+                  </h4>
+                  <p className="text-gray-300">
+                    {features[currentFeature].description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
+            >
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                  <div className="text-sm text-gray-300">{stat.label}</div>
+                </div>
+              ))}
+            </motion.div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
               <Link
-                href="/content-showcase-2025"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-medium rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                href="/new-content-showcase-2025"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
-                <BookOpenIcon className="w-5 h-5 mr-2" />
-                Explore Content
-                <ArrowRightIcon className="w-4 h-4 ml-2" />
+                <Rocket className="w-5 h-5 mr-2" />
+                Explore New Content
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 href="/demo"
-                className="inline-flex items-center px-8 py-4 border border-white/30 text-white font-medium rounded-xl hover:bg-white/10 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
-                <PlayIcon className="w-5 h-5 mr-2" />
+                <PlayCircle className="w-5 h-5 mr-2" />
                 Watch Demo
               </Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          {/* Right Column - Visual */}
-          <div className="relative">
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <SparklesIcon className="w-12 h-12 text-white" />
+          {/* Right Content - Visual */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
+          >
+            {/* Main Visual Card */}
+            <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-white">New Content Hub</h3>
+                <div className="flex space-x-2">
+                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  What's Inside?
-                </h3>
-                <ul className="text-left space-y-3 text-blue-100">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-yellow-300 rounded-full mr-3"></div>
-                    AI Innovation Showcases
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-yellow-300 rounded-full mr-3"></div>
-                    Technology Trend Analysis
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-yellow-300 rounded-full mr-3"></div>
-                    Case Studies & Success Stories
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-yellow-300 rounded-full mr-3"></div>
-                    Future Technology Predictions
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-yellow-300 rounded-full mr-3"></div>
-                    Interactive Content Discovery
-                  </li>
-                </ul>
+              </div>
+
+              {/* Feature Cards */}
+              <div className="space-y-4">
+                {features.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                    className={`p-4 rounded-xl border transition-all duration-300 ${
+                      index === currentFeature
+                        ? 'bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-400/50'
+                        : 'bg-white/5 border-white/20'
+                    }`}
+                  >
+                    <div className="flex items-center space-x-3">
+                      <div className={`p-2 bg-gradient-to-r ${feature.color} rounded-lg`}>
+                        <feature.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold">{feature.title}</h4>
+                        <p className="text-gray-300 text-sm">{feature.description}</p>
+                      </div>
+                      {index === currentFeature && (
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          className="ml-auto"
+                        >
+                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        </motion.div>
+                      )}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Progress Bar */}
+              <div className="mt-6">
+                <div className="flex justify-between text-sm text-gray-300 mb-2">
+                  <span>Content Loading</span>
+                  <span>100%</span>
+                </div>
+                <div className="w-full bg-white/20 rounded-full h-2">
+                  <motion.div
+                    className="bg-gradient-to-r from-purple-600 to-blue-600 h-2 rounded-full"
+                    initial={{ width: 0 }}
+                    animate={{ width: '100%' }}
+                    transition={{ duration: 2, delay: 1 }}
+                  />
+                </div>
               </div>
             </div>
-            
+
             {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-yellow-300 rounded-full opacity-60 animate-pulse"></div>
-            <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-white rounded-full opacity-40 animate-pulse delay-1000"></div>
-          </div>
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
+            >
+              <Star className="w-4 h-4 text-white" />
+            </motion.div>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+              className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center"
+            >
+              <CheckCircle className="w-3 h-3 text-white" />
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

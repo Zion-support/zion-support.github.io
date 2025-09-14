@@ -147,6 +147,16 @@ export default function OptimizedNavigation() {
                 <Link href="/case-studies" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🏆 Success Stories
                 </Link>
+                
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide border-b border-gray-100 mt-2">
+                  🚀 New Content 2025
+                </div>
+                <Link href="/new-content-showcase" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-cyan-50 to-purple-50 border-l-4 border-cyan-500">
+                  🎉 New Content Showcase (LATEST)
+                </Link>
+                <Link href="/features-showcase" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
+                  🎯 Revolutionary Features
+                </Link>
                 <Link href="/resources" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   📚 Implementation Guides
                 </Link>

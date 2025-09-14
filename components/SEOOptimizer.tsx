@@ -1,192 +1,223 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import Head from 'next/head';
 
-interface SEOData {
-  titleScore: number;
-  metaDescriptionScore: number;
-  headingStructureScore: number;
-  imageAltScore: number;
-  internalLinksScore: number;
-  pageSpeedScore: number;
-  mobileFriendlyScore: number;
-  overallScore: number;
-  suggestions: string[];
+interface SEOOptimizerProps {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  structuredData?: any;
 }
 
-export default function SEOOptimizer() {
-  const [seoData, setSeoData] = useState<SEOData>({
-    titleScore: 0,
-    metaDescriptionScore: 0,
-    headingStructureScore: 0,
-    imageAltScore: 0,
-    internalLinksScore: 0,
-    pageSpeedScore: 0,
-    mobileFriendlyScore: 0,
-    overallScore: 0,
-    suggestions: [],
-  });
-
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Simulate SEO analysis
-    const analyzeSEO = () => {
-      const scores = {
-        titleScore: 85 + Math.random() * 15,
-        metaDescriptionScore: 90 + Math.random() * 10,
-        headingStructureScore: 88 + Math.random() * 12,
-        imageAltScore: 92 + Math.random() * 8,
-        internalLinksScore: 87 + Math.random() * 13,
-        pageSpeedScore: 89 + Math.random() * 11,
-        mobileFriendlyScore: 95 + Math.random() * 5,
-      };
-
-      const overallScore = Object.values(scores).reduce((sum, score) => sum + score, 0) / Object.keys(scores).length;
-
-      const suggestions = [
-        'Add more internal links to related content',
-        'Optimize images for faster loading',
-        'Include more long-tail keywords in headings',
-        'Add schema markup for better rich snippets',
-        'Improve meta descriptions with action words',
-        'Add more external authority links',
-        'Optimize for featured snippets',
-        'Improve Core Web Vitals scores',
-      ].slice(0, 3 + Math.floor(Math.random() * 3));
-
-      setSeoData({
-        ...scores,
-        overallScore,
-        suggestions,
-      });
-    };
-
-    analyzeSEO();
-    const interval = setInterval(analyzeSEO, 10000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-600 dark:text-green-400';
-    if (score >= 70) return 'text-yellow-600 dark:text-yellow-400';
-    return 'text-red-600 dark:text-red-400';
+/**
+ * Advanced SEO Optimization Component
+ * 
+ * Provides comprehensive SEO optimization including:
+ * - Meta tags optimization
+ * - Open Graph tags
+ * - Twitter Card tags
+ * - Structured data (JSON-LD)
+ * - Canonical URLs
+ * - Performance optimizations
+ */
+export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title,
+  description,
+  keywords = "AI, automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation",
+  canonical,
+  ogImage = "/og-image.jpg",
+  ogType = "website",
+  twitterCard = "summary_large_image",
+  structuredData
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+  
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-ZION-TECH",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://github.com/ziontechgroup"
+    ]
   };
+  noindex?: boolean;
+  nofollow?: boolean;
+}
 
-  const getScoreBgColor = (score: number) => {
-    if (score >= 90) return 'bg-green-50 dark:bg-green-900/20';
-    if (score >= 70) return 'bg-yellow-50 dark:bg-yellow-900/20';
-    return 'bg-red-50 dark:bg-red-900/20';
-  };
+export default function SEOOptimizer({
+  title = "Zion Tech Group - AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
+  keywords = "AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation",
+  canonicalUrl = "https://zion.app",
+  ogImage = "https://zion.app/images/og-image.jpg",
+  structuredData,
+  noindex = false,
+  nofollow = false
+}: SEOOptimizerProps) {
+  const robotsContent = [
+    noindex ? 'noindex' : 'index',
+    nofollow ? 'nofollow' : 'follow',
+    'max-snippet:-1',
+    'max-image-preview:large',
+    'max-video-preview:-1'
+  ].join(', ');
 
   return (
-    <div className="fixed top-4 left-4 z-50">
-      <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg shadow-lg transition-colors duration-200"
-      >
-        {isVisible ? 'Hide' : 'Show'} SEO
-      </button>
+    <Head>
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      
+      {/* Open Graph Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta name="robots" content={robotsContent} />
+      <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Performance Optimizations */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData || defaultStructuredData)
+        }}
+      />
+      
+      {/* Additional Performance Tags */}
+      <meta httpEquiv="x-dns-prefetch-control" content="on" />
+      <meta name="theme-color" content="#1e40af" />
+      <meta name="msapplication-TileColor" content="#1e40af" />
+      
+      {/* Favicon */}
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+    </Head>
+  );
+};
 
-      {isVisible && (
-        <div className="absolute top-16 left-0 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-80 border border-gray-200 dark:border-gray-700">
-          <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-            SEO Optimization Score
-          </h3>
-          
-          {/* Overall Score */}
-          <div className={`${getScoreBgColor(seoData.overallScore)} p-4 rounded-lg mb-4`}>
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Overall Score</span>
-              <span className={`text-2xl font-bold ${getScoreColor(seoData.overallScore)}`}>
-                {seoData.overallScore.toFixed(0)}
-              </span>
-            </div>
-            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-2">
-              <div 
-                className={`h-2 rounded-full ${
-                  seoData.overallScore >= 90 ? 'bg-green-500' : 
-                  seoData.overallScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
-                }`}
-                style={{ width: `${seoData.overallScore}%` }}
-              ></div>
-            </div>
-          </div>
+/**
+ * SEO Performance Metrics Component
+ */
+export const SEOPerformanceMetrics: React.FC = () => {
+  React.useEffect(() => {
+    // Core Web Vitals tracking
+    if (typeof window !== 'undefined') {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+      });
+    }
+  }, []);
 
-          {/* Individual Scores */}
-          <div className="space-y-3 mb-4">
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-300">Title Optimization</span>
-              <span className={`text-sm font-medium ${getScoreColor(seoData.titleScore)}`}>
-                {seoData.titleScore.toFixed(0)}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-300">Meta Description</span>
-              <span className={`text-sm font-medium ${getScoreColor(seoData.metaDescriptionScore)}`}>
-                {seoData.metaDescriptionScore.toFixed(0)}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-300">Heading Structure</span>
-              <span className={`text-sm font-medium ${getScoreColor(seoData.headingStructureScore)}`}>
-                {seoData.headingStructureScore.toFixed(0)}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-300">Image Alt Tags</span>
-              <span className={`text-sm font-medium ${getScoreColor(seoData.imageAltScore)}`}>
-                {seoData.imageAltScore.toFixed(0)}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-300">Internal Links</span>
-              <span className={`text-sm font-medium ${getScoreColor(seoData.internalLinksScore)}`}>
-                {seoData.internalLinksScore.toFixed(0)}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-300">Page Speed</span>
-              <span className={`text-sm font-medium ${getScoreColor(seoData.pageSpeedScore)}`}>
-                {seoData.pageSpeedScore.toFixed(0)}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600 dark:text-gray-300">Mobile Friendly</span>
-              <span className={`text-sm font-medium ${getScoreColor(seoData.mobileFriendlyScore)}`}>
-                {seoData.mobileFriendlyScore.toFixed(0)}
-              </span>
-            </div>
-          </div>
+  return null;
+};
 
-          {/* Suggestions */}
-          <div className="mb-4">
-            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Optimization Suggestions</h4>
-            <div className="space-y-2">
-              {seoData.suggestions.map((suggestion, index) => (
-                <div key={index} className="flex items-start space-x-2 text-xs">
-                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-1.5 flex-shrink-0"></div>
-                  <span className="text-gray-600 dark:text-gray-300">{suggestion}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
-            <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
-              <span>SEO Grade: {seoData.overallScore >= 90 ? 'A' : seoData.overallScore >= 70 ? 'B' : 'C'}</span>
-              <span className="flex items-center">
-                <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                Optimized
-              </span>
-            </div>
-          </div>
-        </div>
+export default SEOOptimizer;
+      {/* Additional SEO Meta Tags */}
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="distribution" content="global" />
+      <meta name="rating" content="general" />
+      
+      {/* Mobile App Meta Tags */}
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      
+      {/* Theme Color */}
+      <meta name="theme-color" content="#3B82F6" />
+      <meta name="msapplication-TileColor" content="#3B82F6" />
+      
+      {/* Favicon */}
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+      
+      {/* DNS Prefetch */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
+          }}
+        />
       )}
-    </div>
+      
+      {/* Additional Performance Hints */}
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/images/hero-bg.jpg" as="image" />
+    </Head>
   );
 }

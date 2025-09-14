@@ -1,106 +1,80 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Star, TrendingUp } from 'lucide-react';
+import { ArrowRight, Sparkles, Brain, Zap } from 'lucide-react';
 
 export default function AI2025UltimateContentRevolutionBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 rounded-2xl mx-4 my-8">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
-      <div className="relative z-10 p-8 md:p-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium mb-6">
-                <Star className="w-4 h-4 mr-2" />
-                NEW: Ultimate Content Revolution
-              </div>
-              
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                AI 2025
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"> Ultimate Content</span>
-                <br />
-                Revolution
-              </h2>
-              
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Discover the most comprehensive collection of AI breakthroughs, predictions, and revolutionary content that will transform your understanding of artificial intelligence. 
-                <span className="text-yellow-400 font-semibold"> 500+ articles, 50+ experts, 1M+ monthly readers.</span>
-              </p>
-              
-              <div className="flex flex-wrap gap-4 mb-8">
-                <div className="flex items-center text-white">
-                  <Brain className="w-5 h-5 mr-2 text-purple-400" />
-                  <span className="font-medium">AI Predictions 2025-2030</span>
-                </div>
-                <div className="flex items-center text-white">
-                  <Zap className="w-5 h-5 mr-2 text-blue-400" />
-                  <span className="font-medium">Quantum Computing</span>
-                </div>
-                <div className="flex items-center text-white">
-                  <TrendingUp className="w-5 h-5 mr-2 text-green-400" />
-                  <span className="font-medium">Neural Interfaces</span>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  href="/ai-2025-ultimate-content-revolution" 
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                >
-                  Explore Ultimate Content
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link 
-                  href="/ai-2025-ultimate-content-revolution#content-showcase" 
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
-                >
-                  View Categories
-                </Link>
-              </div>
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500/20 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500/20 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-purple-400/20 rounded-full animate-pulse delay-500"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center">
+          {/* Main heading with gradient text */}
+          <div className="flex items-center justify-center mb-6">
+            <Sparkles className="h-8 w-8 text-yellow-400 mr-3 animate-spin" />
+            <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              🚀 AI 2025 Ultimate Content Revolution
+            </h2>
+            <Sparkles className="h-8 w-8 text-yellow-400 ml-3 animate-spin" />
+          </div>
+
+          {/* Subheading */}
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Discover the most comprehensive collection of AI insights, breakthrough technologies, and revolutionary content that will transform your understanding of artificial intelligence.
+          </p>
+
+          {/* Feature highlights */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div className="flex items-center justify-center space-x-2">
+              <Brain className="h-6 w-6 text-purple-400" />
+              <span className="text-sm font-semibold">Neural Intelligence</span>
             </div>
+            <div className="flex items-center justify-center space-x-2">
+              <Zap className="h-6 w-6 text-blue-400" />
+              <span className="text-sm font-semibold">Quantum Computing</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2">
+              <ArrowRight className="h-6 w-6 text-green-400" />
+              <span className="text-sm font-semibold">Future Predictions</span>
+            </div>
+          </div>
+
+          {/* Call to action buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/ai-2025-ultimate-content-revolution"
+              className="group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center"
+            >
+              <Sparkles className="h-5 w-5 mr-2 group-hover:animate-pulse" />
+              Explore Revolutionary Content
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
             
-            {/* Right Content - Visual Elements */}
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-6">
-                {/* Stats Cards */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">500+</div>
-                  <div className="text-white font-medium">AI Articles</div>
-                  <div className="text-gray-300 text-sm">Expert Content</div>
-                </div>
-                
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">50+</div>
-                  <div className="text-white font-medium">Expert Authors</div>
-                  <div className="text-gray-300 text-sm">Industry Leaders</div>
-                </div>
-                
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">1M+</div>
-                  <div className="text-white font-medium">Monthly Readers</div>
-                  <div className="text-gray-300 text-sm">Global Audience</div>
-                </div>
-                
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">99.9%</div>
-                  <div className="text-white font-medium">Accuracy Rate</div>
-                  <div className="text-gray-300 text-sm">Verified Content</div>
-                </div>
-              </div>
-              
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full opacity-20 animate-pulse delay-1000"></div>
-            </div>
+            <Link 
+              href="/blog"
+              className="group border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center"
+            >
+              <Brain className="h-5 w-5 mr-2 group-hover:animate-pulse" />
+              Browse All Content
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          {/* Additional info */}
+          <div className="mt-8 text-sm text-gray-400">
+            <p>✨ 500+ Articles • 🎯 200+ Case Studies • 🚀 Future-Ready Insights</p>
           </div>
         </div>
       </div>
-      
-      {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>
+
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/20 to-transparent"></div>
     </div>
   );
 }

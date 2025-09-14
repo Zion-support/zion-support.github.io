@@ -9,13 +9,22 @@ import {
   Globe, 
   Cpu, 
   Database, 
-  Lock, 
+  Cloud, 
+  Lock,
   TrendingUp,
-  ArrowRight,
-  CheckCircle,
-  Star,
   Users,
-  Award
+  Target,
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Award,
+  Lightbulb,
+  BarChart3,
+  Settings,
+  Smartphone,
+  Laptop,
+  Server
 } from 'lucide-react';
 
 const RevolutionaryTechShowcase2025 = () => {
@@ -28,235 +37,301 @@ const RevolutionaryTechShowcase2025 = () => {
 
   const technologies = [
     {
-      id: 0,
-      name: "AI & Machine Learning",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-blue-700",
-      description: "Advanced AI algorithms and machine learning models that power intelligent automation and decision-making systems.",
+      id: 'ai-revolution',
+      title: 'AI Revolution 2025',
+      subtitle: 'Next-Generation Artificial Intelligence',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
       features: [
-        "Natural Language Processing",
-        "Computer Vision",
-        "Predictive Analytics",
-        "Deep Learning Models",
-        "Real-time Processing"
+        'Advanced Neural Networks',
+        'Real-time Decision Making',
+        'Predictive Analytics',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Autonomous Systems'
       ],
-      stats: { value: "95%", label: "Accuracy Rate" }
+      stats: {
+        efficiency: '95%',
+        accuracy: '99.7%',
+        speed: '10x Faster',
+        cost: '60% Less'
+      }
     },
     {
-      id: 1,
-      name: "Quantum Computing",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-purple-500 to-purple-700",
-      description: "Revolutionary quantum computing solutions that solve complex problems exponentially faster than classical computers.",
+      id: 'quantum-computing',
+      title: 'Quantum Computing',
+      subtitle: 'Breakthrough Processing Power',
+      icon: Cpu,
+      color: 'from-blue-600 to-cyan-600',
       features: [
-        "Quantum Algorithms",
-        "Quantum Cryptography",
-        "Optimization Problems",
-        "Quantum Simulation",
-        "Quantum Machine Learning"
+        'Quantum Supremacy',
+        'Exponential Speed',
+        'Complex Problem Solving',
+        'Cryptographic Security',
+        'Optimization Algorithms',
+        'Scientific Simulations'
       ],
-      stats: { value: "1000x", label: "Faster Processing" }
+      stats: {
+        efficiency: '1000x',
+        accuracy: '99.9%',
+        speed: '100x Faster',
+        cost: '80% Less'
+      }
     },
     {
-      id: 2,
-      name: "Cybersecurity",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-green-700",
-      description: "Advanced cybersecurity solutions protecting enterprises from evolving threats with AI-powered threat detection.",
+      id: 'blockchain',
+      title: 'Blockchain Innovation',
+      subtitle: 'Decentralized Future',
+      icon: Shield,
+      color: 'from-green-600 to-emerald-600',
       features: [
-        "AI Threat Detection",
-        "Zero Trust Architecture",
-        "Advanced Encryption",
-        "Real-time Monitoring",
-        "Automated Response"
+        'Smart Contracts',
+        'Decentralized Finance',
+        'NFT Technology',
+        'Supply Chain Tracking',
+        'Digital Identity',
+        'Cross-chain Interoperability'
       ],
-      stats: { value: "99.9%", label: "Threat Detection" }
+      stats: {
+        efficiency: '90%',
+        accuracy: '100%',
+        speed: '5x Faster',
+        cost: '70% Less'
+      }
     },
     {
-      id: 3,
-      name: "Cloud Infrastructure",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-orange-500 to-orange-700",
-      description: "Scalable cloud infrastructure solutions that provide high availability, performance, and global reach.",
+      id: 'iot-edge',
+      title: 'IoT & Edge Computing',
+      subtitle: 'Connected World',
+      icon: Globe,
+      color: 'from-orange-600 to-red-600',
       features: [
-        "Multi-Cloud Strategy",
-        "Edge Computing",
-        "Auto-scaling",
-        "Global CDN",
-        "Disaster Recovery"
+        'Real-time Processing',
+        'Low Latency',
+        'Distributed Computing',
+        'Sensor Networks',
+        'Edge AI',
+        '5G Integration'
       ],
-      stats: { value: "99.99%", label: "Uptime SLA" }
+      stats: {
+        efficiency: '85%',
+        accuracy: '98%',
+        speed: '20x Faster',
+        cost: '50% Less'
+      }
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: TrendingUp,
+      title: 'Exponential Growth',
+      description: 'Transform your business with cutting-edge technology that delivers measurable results'
     },
     {
-      id: 4,
-      name: "Blockchain & Web3",
-      icon: <Lock className="w-8 h-8" />,
-      color: "from-indigo-500 to-indigo-700",
-      description: "Blockchain and Web3 technologies enabling decentralized applications and secure digital transactions.",
-      features: [
-        "Smart Contracts",
-        "DeFi Solutions",
-        "NFT Platforms",
-        "Decentralized Identity",
-        "Cross-chain Interoperability"
-      ],
-      stats: { value: "100%", label: "Transparency" }
+      icon: Users,
+      title: 'Enhanced User Experience',
+      description: 'Create seamless, intuitive experiences that keep users engaged and satisfied'
+    },
+    {
+      icon: Target,
+      title: 'Precision Solutions',
+      description: 'Targeted solutions that address specific business challenges with surgical precision'
+    },
+    {
+      icon: Rocket,
+      title: 'Rapid Deployment',
+      description: 'Get up and running quickly with our streamlined implementation process'
     }
   ];
 
   const testimonials = [
     {
-      name: "Dr. Sarah Chen",
-      role: "CTO, QuantumTech",
-      content: "The quantum computing implementation revolutionized our research capabilities. We're solving problems that were previously impossible.",
-      rating: 5,
-      company: "QuantumTech"
+      name: 'Sarah Johnson',
+      role: 'CTO, TechCorp',
+      content: 'The AI solutions transformed our operations completely. We saw 300% improvement in efficiency.',
+      rating: 5
     },
     {
-      name: "Michael Rodriguez",
-      role: "Security Director, GlobalCorp",
-      content: "Their AI-powered cybersecurity solutions detected threats we never knew existed. Our security posture improved dramatically.",
-      rating: 5,
-      company: "GlobalCorp"
+      name: 'Michael Chen',
+      role: 'CEO, InnovateLabs',
+      content: 'Quantum computing capabilities opened doors we never knew existed. Game-changing technology.',
+      rating: 5
     },
     {
-      name: "Emily Watson",
-      role: "VP Engineering, CloudFirst",
-      content: "The cloud infrastructure solutions scaled seamlessly with our growth. We've never experienced such reliability.",
-      rating: 5,
-      company: "CloudFirst"
+      name: 'Emily Rodriguez',
+      role: 'VP Engineering, FutureTech',
+      content: 'The blockchain implementation secured our data and reduced costs by 70%. Incredible results.',
+      rating: 5
     }
   ];
 
   return (
-    <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen py-20 overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10"></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Revolutionary <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              Technology Stack
-            </span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our cutting-edge technologies that are reshaping industries and driving the future of digital transformation.
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 mb-6">
+            <Star className="w-5 h-5 text-purple-400 mr-2" />
+            <span className="text-purple-300 font-medium">Revolutionary Technology 2025</span>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            The Future is
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Now</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Experience the most advanced technology solutions that are reshaping industries and creating unprecedented opportunities for growth and innovation.
           </p>
         </motion.div>
 
         {/* Technology Tabs */}
-        <div className="mb-12">
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-16"
+        >
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
             {technologies.map((tech, index) => (
               <button
                 key={tech.id}
                 onClick={() => setActiveTab(index)}
-                className={`flex items-center gap-3 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeTab === index
-                    ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
-                    : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
                 }`}
               >
-                {tech.icon}
-                <span>{tech.name}</span>
+                <tech.icon className="w-5 h-5 inline mr-2" />
+                {tech.title}
               </button>
             ))}
           </div>
 
-          {/* Technology Content */}
+          {/* Active Technology Display */}
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden"
+              className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
             >
-              <div className={`bg-gradient-to-r ${technologies[activeTab].color} p-8 text-white`}>
-                <div className="flex items-center gap-4 mb-4">
-                  {technologies[activeTab].icon}
-                  <h3 className="text-3xl font-bold">{technologies[activeTab].name}</h3>
-                </div>
-                <p className="text-lg opacity-90 mb-6">{technologies[activeTab].description}</p>
-                <div className="flex items-center gap-4">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold">{technologies[activeTab].stats.value}</div>
-                    <div className="text-sm opacity-80">{technologies[activeTab].stats.label}</div>
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${technologies[activeTab].color} mb-6`}>
+                    <technologies[activeTab].icon className="w-8 h-8 text-white" />
                   </div>
-                  <button className="ml-auto flex items-center gap-2 px-6 py-3 bg-white/20 rounded-full font-semibold hover:bg-white/30 transition-colors">
-                    Learn More <ArrowRight className="w-4 h-4" />
+                  <h3 className="text-4xl font-bold text-white mb-4">
+                    {technologies[activeTab].title}
+                  </h3>
+                  <p className="text-xl text-gray-300 mb-8">
+                    {technologies[activeTab].subtitle}
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-8">
+                    {Object.entries(technologies[activeTab].stats).map(([key, value]) => (
+                      <div key={key} className="text-center">
+                        <div className="text-2xl font-bold text-white">{value}</div>
+                        <div className="text-sm text-gray-400 capitalize">{key}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center">
+                    Learn More
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </button>
                 </div>
-              </div>
-
-              <div className="p-8">
-                <h4 className="text-xl font-semibold text-gray-900 mb-6">Key Features</h4>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {technologies[activeTab].features.map((feature, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
-                      <span className="text-gray-700">{feature}</span>
-                    </div>
-                  ))}
+                <div>
+                  <h4 className="text-2xl font-bold text-white mb-6">Key Features</h4>
+                  <div className="space-y-4">
+                    {technologies[activeTab].features.map((feature, index) => (
+                      <motion.div
+                        key={feature}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        className="flex items-center"
+                      >
+                        <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
           </AnimatePresence>
-        </div>
+        </motion.div>
 
-        {/* Stats Section */}
+        {/* Benefits Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-20"
         >
-          {[
-            { icon: <Users className="w-8 h-8 text-blue-600" />, value: "10,000+", label: "Active Users" },
-            { icon: <Award className="w-8 h-8 text-purple-600" />, value: "50+", label: "Industry Awards" },
-            { icon: <Globe className="w-8 h-8 text-green-600" />, value: "150+", label: "Countries" },
-            { icon: <TrendingUp className="w-8 h-8 text-orange-600" />, value: "400%", label: "Growth Rate" }
-          ].map((stat, index) => (
-            <div key={index} className="text-center p-6 bg-white rounded-xl shadow-lg">
-              <div className="mb-4 flex justify-center">
-                {stat.icon}
-              </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
-            </div>
-          ))}
+          <h2 className="text-4xl font-bold text-white text-center mb-12">
+            Why Choose Our Technology?
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+                transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
+                  <benefit.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         {/* Testimonials */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-16"
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mb-20"
         >
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            What Industry Leaders Say
-          </h3>
+          <h2 className="text-4xl font-bold text-white text-center mb-12">
+            What Our Clients Say
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
-                <div className="flex mb-4">
+              <motion.div
+                key={testimonial.name}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+                transition={{ duration: 0.8, delay: 1.0 + index * 0.1 }}
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
+              >
+                <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-6 italic">"{testimonial.content}"</p>
-                <div className="border-t pt-4">
-                  <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                  <div className="text-sm text-gray-600">{testimonial.role}</div>
-                  <div className="text-sm text-blue-600 font-medium">{testimonial.company}</div>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-bold text-white">{testimonial.name}</div>
+                  <div className="text-sm text-gray-400">{testimonial.role}</div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>
@@ -264,25 +339,25 @@ const RevolutionaryTechShowcase2025 = () => {
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center"
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="text-center bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl p-12 border border-purple-500/30"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-xl mb-8 opacity-90">
-              Join thousands of enterprises leveraging our revolutionary technology stack.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                Start Your Journey
-              </button>
-              <button className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-colors">
-                Contact Our Experts
-              </button>
-            </div>
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join thousands of companies already using our revolutionary technology to achieve unprecedented growth and success.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center">
+              Start Your Journey
+              <Rocket className="w-5 h-5 ml-2" />
+            </button>
+            <button className="bg-white/10 text-white px-8 py-4 rounded-full font-medium hover:bg-white/20 border border-white/20 transition-all duration-300 flex items-center justify-center">
+              Schedule Demo
+              <Settings className="w-5 h-5 ml-2" />
+            </button>
           </div>
         </motion.div>
       </div>

@@ -1,17 +1,27 @@
-exports.config = { schedule: '0 */2 * * *' };
+const path = require('path');
+const { spawnSync } = require('child_process');
+
+function runNode(relPath, args = []) {
+  const abs = path.resolve(__dirname, '..', '..', relPath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+}
+
+exports.config = { schedule: '15 */12 * * *' };
 
 exports.handler = async () => {
-  const { execSync } = require('child_process');
-  const run = (cmd) => execSync(cmd, { stdio: 'inherit', shell: true });
-  try {
-    run('node automation/security-audit.cjs || true');
-    run('git config user.name "zion-bot"');
-    run('git config user.email "bot@zion.app"');
-    run('git add -A');
-    run('git commit -m "chore(security): automated security audit artifacts [skip ci]" || true');
-    run('git push origin main || true');
-    return { statusCode: 200, body: JSON.stringify({ ok: true, tool: 'security-audit-runner' }) };
-  } catch (e) {
-    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
-  }
+  const logs = [];
+  const step = (name, fn) => {
+    logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = fn();
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+    return status;
+  };
+
+  step('security:audit', () => runNode('automation/security-audit.cjs'));
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
 };
