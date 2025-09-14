@@ -36,7 +36,6 @@ import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContent
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
@@ -50,6 +49,11 @@ import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBann
 // Import new 2025 autonomous systems promotional components
 import AutonomousSystems2025RevolutionBanner from '../components/AutonomousSystems2025RevolutionBanner';
 import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowcase2025';
+
+// Import new 2026 AI breakthrough promotional components
+import AI2026RevolutionaryBreakthroughUltimatePromotionBanner from '../components/AI2026RevolutionaryBreakthroughUltimatePromotionBanner';
+import AI2026GlobalTransformation800ROISuccessBanner from '../components/AI2026GlobalTransformation800ROISuccessBanner';
+import AI2026ImplementationFrameworkUltimatePromotionBanner from '../components/AI2026ImplementationFrameworkUltimatePromotionBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -68,6 +72,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2026 Revolutionary Breakthrough Ultimate Promotion Banner - NEW */}
+        <AI2026RevolutionaryBreakthroughUltimatePromotionBanner />
+        
+        {/* AI 2026 Global Transformation 800% ROI Success Banner - NEW */}
+        <AI2026GlobalTransformation800ROISuccessBanner />
+        
+        {/* AI 2026 Implementation Framework Ultimate Promotion Banner - NEW */}
+        <AI2026ImplementationFrameworkUltimatePromotionBanner />
+        
         {/* Autonomous Systems 2025 Revolution Banner - NEW */}
         <AutonomousSystems2025RevolutionBanner />
         
