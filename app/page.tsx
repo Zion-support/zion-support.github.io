@@ -48,8 +48,6 @@ import AutonomousBusinessOperationsPromotionBanner from '../components/Autonomou
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
 
 // Import new ultimate content promotional components
-import UltimateContent2025RevolutionBanner from '../components/UltimateContent2025RevolutionBanner';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
 
 // Import new 2025 autonomous systems promotional components
@@ -57,7 +55,6 @@ import AutonomousSystems2025RevolutionBanner from '../components/AutonomousSyste
 import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowcase2025';
 
 // Import new revolutionary content promotional components
-import NeuralInterfaceRevolutionBanner from '../components/NeuralInterfaceRevolutionBanner';
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
 
 // Import new content revolution components
@@ -89,11 +86,9 @@ export default function HomePage() {
         {/* New Content 2025 Ultimate Breakthrough Banner - NEW FEATURED */}
         <NewContent2025UltimateBreakthroughBanner />
         
-        {/* Ultimate Content 2025 Revolution Banner - NEW */}
-        <UltimateContent2025RevolutionBanner />
+        {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
+        <UltimateContentShowcase2025 />
         
-        {/* Neural Interface Revolution Banner - NEW REVOLUTIONARY CONTENT */}
-        <NeuralInterfaceRevolutionBanner />
         
         {/* Ultimate AI Breakthrough 2025 Banner - NEW FEATURED */}
         <UltimateAIBreakthrough2025Banner />
@@ -102,7 +97,7 @@ export default function HomePage() {
         <RevolutionaryContent2025UltimateBanner />
         
         {/* Ultimate Content Showcase 2025 Banner - NEW */}
-        <UltimateContentShowcase2025Banner />
+        <UltimateContentShowcase2025 />
         
         {/* Ultimate AI Transformation 2025 Banner - NEW */}
         <UltimateAITransformation2025Banner />
