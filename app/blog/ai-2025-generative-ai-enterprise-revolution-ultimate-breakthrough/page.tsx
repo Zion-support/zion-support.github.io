@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'AI 2025: Generative AI Enterprise Revolution - The Ultimate Breakthrough Guide',
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function GenerativeAIRevolutionPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2025: Generative AI Enterprise Revolution - The Ultimate Breakthrough Guide"
         description="Discover how generative AI is revolutionizing enterprise operations in 2025. Complete guide to implementation, ROI, and transformative business outcomes."
@@ -179,6 +178,6 @@ export default function GenerativeAIRevolutionPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

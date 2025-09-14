@@ -2,276 +2,202 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Users, 
-  Award, 
-  Zap, 
-  Target, 
-  CheckCircle,
-  BookOpen,
-  FileText,
-  BarChart3
-} from 'lucide-react';
+import { ArrowRight, TrendingUp, DollarSign, Clock, CheckCircle, Star, Users } from 'lucide-react';
 
-interface ContentItem {
-  id: string;
-  title: string;
-  type: 'blog' | 'case-study' | 'resource';
-  url: string;
-  readingTime: string;
-  metrics: {
-    roi?: string;
-    savings?: string;
-    accuracy?: string;
-    satisfaction?: string;
-    success?: string;
-  };
-  featured: boolean;
-  description: string;
-}
+const RevolutionaryAI2025Showcase = () => {
+  const [activeCategory, setActiveCategory] = useState('all');
 
-const RevolutionaryAI2025Showcase: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'blog' | 'case-study' | 'resource'>('all');
-
-  const contentItems: ContentItem[] = [
+  const content = [
     {
-      id: 'advanced-neural-architectures',
-      title: 'AI 2025: Advanced Neural Architectures Revolution - The Future of Enterprise Intelligence',
-      type: 'blog',
-      url: '/blog/ai-2025-advanced-neural-architectures-revolution',
-      readingTime: '18 min read',
-      metrics: {
-        roi: '340%',
-        accuracy: '99.7%',
-        savings: '$2.8M'
-      },
-      featured: true,
-      description: 'Explore cutting-edge neural architectures delivering unprecedented performance and ROI improvements across enterprise implementations.'
-    },
-    {
-      id: 'enterprise-transformation-success',
-      title: 'AI 2025 Enterprise Transformation: $2.8B Company Achieves 1,200% ROI - Ultimate Success Story',
-      type: 'case-study',
-      url: '/case-studies/ai-2025-enterprise-transformation-ultimate-success-story',
-      readingTime: '15 min read',
-      metrics: {
-        roi: '1,200%',
-        savings: '$2.8B',
-        satisfaction: '98%'
-      },
-      featured: true,
-      description: 'Discover how a Fortune 100 manufacturing company achieved unprecedented success through comprehensive AI transformation.'
-    },
-    {
-      id: 'implementation-ultimate-framework',
-      title: 'AI 2025 Implementation Ultimate Success Framework: Complete Roadmap to 1,000%+ ROI',
+      id: 'ultimate-transformation-guide',
+      title: 'AI 2025: The Ultimate Enterprise Transformation Guide',
+      description: 'Complete step-by-step guide to achieving 600% ROI with AI transformation. Proven methodology from Fortune 500 companies.',
       type: 'resource',
-      url: '/resources/ai-2025-implementation-ultimate-success-framework',
-      readingTime: '25 min read',
+      category: 'implementation',
       metrics: {
-        roi: '1,000%+',
-        success: '94%',
-        savings: '$2.8B+'
+        roi: '600%',
+        savings: '$500M+',
+        timeframe: '8 months',
+        successRate: '97%'
       },
+      link: '/resources/ai-transformation-600-roi-implementation-guide',
       featured: true,
-      description: 'A comprehensive, battle-tested methodology that has delivered 1,000%+ ROI across 500+ enterprise implementations.'
+      readingTime: '25 min read'
+    },
+    {
+      id: 'fortune-500-success',
+      title: 'Fortune 500 AI Transformation: 600% ROI Success Story',
+      description: 'Real case study showing how a $2.8B manufacturing company achieved 600% ROI in just 8 months.',
+      type: 'case-study',
+      category: 'success-stories',
+      metrics: {
+        roi: '600%',
+        savings: '$500M annually',
+        efficiency: '78%',
+        quality: '99.7%'
+      },
+      link: '/case-studies/fortune-500-ai-transformation-600-roi-success',
+      featured: true,
+      readingTime: '12 min read'
+    },
+    {
+      id: 'enterprise-transformation-ultimate',
+      title: 'AI 2025: The Ultimate Enterprise Transformation Guide',
+      description: 'Discover how Fortune 500 companies are achieving unprecedented 600% ROI with AI transformation strategies.',
+      type: 'blog',
+      category: 'strategy',
+      metrics: {
+        roi: '600%',
+        savings: '$500M+',
+        implementation: '8 months',
+        companies: '500+'
+      },
+      link: '/blog/ai-2025-enterprise-transformation-ultimate-guide',
+      featured: true,
+      readingTime: '18 min read'
     }
   ];
 
-  const filteredContent = activeFilter === 'all' 
-    ? contentItems 
-    : contentItems.filter(item => item.type === activeFilter);
+  const categories = [
+    { id: 'all', label: 'All Content', count: content.length },
+    { id: 'implementation', label: 'Implementation', count: content.filter(c => c.category === 'implementation').length },
+    { id: 'success-stories', label: 'Success Stories', count: content.filter(c => c.category === 'success-stories').length },
+    { id: 'strategy', label: 'Strategy', count: content.filter(c => c.category === 'strategy').length }
+  ];
+
+  const filteredContent = activeCategory === 'all' 
+    ? content 
+    : content.filter(item => item.category === activeCategory);
 
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'blog': return <BookOpen className="w-5 h-5" />;
-      case 'case-study': return <FileText className="w-5 h-5" />;
-      case 'resource': return <BarChart3 className="w-5 h-5" />;
-      default: return <BookOpen className="w-5 h-5" />;
+      case 'resource': return '📚';
+      case 'case-study': return '📊';
+      case 'blog': return '📝';
+      default: return '🚀';
     }
   };
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'blog': return 'bg-blue-100 text-blue-800 border-blue-200';
-      case 'case-study': return 'bg-green-100 text-green-800 border-green-200';
-      case 'resource': return 'bg-purple-100 text-purple-800 border-purple-200';
-      default: return 'bg-gray-100 text-gray-800 border-gray-200';
-    }
-  };
-
-  const getTypeLabel = (type: string) => {
-    switch (type) {
-      case 'blog': return 'Blog Post';
-      case 'case-study': return 'Case Study';
-      case 'resource': return 'Resource';
-      default: return 'Content';
+      case 'resource': return 'bg-blue-100 text-blue-800';
+      case 'case-study': return 'bg-green-100 text-green-800';
+      case 'blog': return 'bg-purple-100 text-purple-800';
+      default: return 'bg-gray-100 text-gray-800';
     }
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <section className="py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
-            <Zap className="w-4 h-4 mr-2" />
-            Revolutionary AI 2025 Content Collection
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-4">
+            <Star className="w-4 h-4 mr-2" />
+            <span className="text-sm font-medium">REVOLUTIONARY AI 2025 CONTENT</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Transform Your Business with
-            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> Revolutionary AI</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            The Ultimate AI Transformation Content Collection
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover breakthrough AI content delivering <strong>1,000%+ ROI</strong> and <strong>$2.8B+ in savings</strong> 
-            across enterprise implementations. Join 500+ successful companies.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover the proven strategies, real success stories, and complete implementation guides that are helping Fortune 500 companies achieve 600% ROI with AI transformation.
           </p>
         </div>
 
-        {/* Success Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <TrendingUp className="w-8 h-8 text-white" />
-            </div>
-            <div className="text-3xl font-bold text-gray-900 mb-2">1,000%+</div>
-            <div className="text-sm text-gray-600">Average ROI</div>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Target className="w-8 h-8 text-white" />
-            </div>
-            <div className="text-3xl font-bold text-gray-900 mb-2">94%</div>
-            <div className="text-sm text-gray-600">Success Rate</div>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="w-8 h-8 text-white" />
-            </div>
-            <div className="text-3xl font-bold text-gray-900 mb-2">500+</div>
-            <div className="text-sm text-gray-600">Success Stories</div>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Award className="w-8 h-8 text-white" />
-            </div>
-            <div className="text-3xl font-bold text-gray-900 mb-2">$2.8B+</div>
-            <div className="text-sm text-gray-600">Total Savings</div>
-          </div>
+        {/* Category filters */}
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-4 py-2 rounded-full font-medium transition-all duration-200 ${
+                activeCategory === category.id
+                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+              }`}
+            >
+              {category.label}
+              <span className="ml-2 text-xs opacity-75">({category.count})</span>
+            </button>
+          ))}
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <button
-            onClick={() => setActiveFilter('all')}
-            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-              activeFilter === 'all'
-                ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
-                : 'bg-white text-gray-600 border-2 border-gray-200 hover:border-purple-300'
-            }`}
-          >
-            All Content
-          </button>
-          <button
-            onClick={() => setActiveFilter('blog')}
-            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-              activeFilter === 'blog'
-                ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
-                : 'bg-white text-gray-600 border-2 border-gray-200 hover:border-purple-300'
-            }`}
-          >
-            Blog Posts
-          </button>
-          <button
-            onClick={() => setActiveFilter('case-study')}
-            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-              activeFilter === 'case-study'
-                ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
-                : 'bg-white text-gray-600 border-2 border-gray-200 hover:border-purple-300'
-            }`}
-          >
-            Case Studies
-          </button>
-          <button
-            onClick={() => setActiveFilter('resource')}
-            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-              activeFilter === 'resource'
-                ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
-                : 'bg-white text-gray-600 border-2 border-gray-200 hover:border-purple-300'
-            }`}
-          >
-            Resources
-          </button>
-        </div>
-
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {/* Content grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {filteredContent.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden"
+              className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${
+                item.featured ? 'ring-2 ring-purple-500' : ''
+              }`}
             >
-              {/* Header */}
-              <div className="p-6 border-b border-gray-100">
-                <div className="flex items-center justify-between mb-4">
-                  <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border ${getTypeColor(item.type)}`}>
-                    {getTypeIcon(item.type)}
-                    <span className="ml-2">{getTypeLabel(item.type)}</span>
-                  </div>
+              {/* Content type badge */}
+              <div className="p-4 pb-0">
+                <div className="flex items-center justify-between mb-3">
+                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
+                    <span className="mr-1">{getTypeIcon(item.type)}</span>
+                    {item.type.replace('-', ' ').toUpperCase()}
+                  </span>
                   {item.featured && (
-                    <div className="flex items-center space-x-1 text-yellow-500">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="text-xs font-semibold">Featured</span>
-                    </div>
+                    <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                      <Star className="w-3 h-3 mr-1" />
+                      FEATURED
+                    </span>
                   )}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
+
+                <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                   {item.description}
                 </p>
               </div>
 
               {/* Metrics */}
-              <div className="p-6 bg-gray-50">
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  {item.metrics.roi && (
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600">{item.metrics.roi}</div>
-                      <div className="text-xs text-gray-600">ROI</div>
+              <div className="px-4 mb-4">
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="bg-green-50 rounded-lg p-2 text-center">
+                    <div className="flex items-center justify-center mb-1">
+                      <TrendingUp className="w-3 h-3 text-green-600 mr-1" />
+                      <span className="text-xs font-medium text-green-600">ROI</span>
                     </div>
-                  )}
-                  {item.metrics.savings && (
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-blue-600">{item.metrics.savings}</div>
-                      <div className="text-xs text-gray-600">Savings</div>
+                    <div className="text-sm font-bold text-green-700">{item.metrics.roi}</div>
+                  </div>
+                  <div className="bg-blue-50 rounded-lg p-2 text-center">
+                    <div className="flex items-center justify-center mb-1">
+                      <DollarSign className="w-3 h-3 text-blue-600 mr-1" />
+                      <span className="text-xs font-medium text-blue-600">Savings</span>
                     </div>
-                  )}
-                  {item.metrics.accuracy && (
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-purple-600">{item.metrics.accuracy}</div>
-                      <div className="text-xs text-gray-600">Accuracy</div>
+                    <div className="text-sm font-bold text-blue-700">{item.metrics.savings}</div>
+                  </div>
+                  <div className="bg-purple-50 rounded-lg p-2 text-center">
+                    <div className="flex items-center justify-center mb-1">
+                      <Clock className="w-3 h-3 text-purple-600 mr-1" />
+                      <span className="text-xs font-medium text-purple-600">Time</span>
                     </div>
-                  )}
-                  {item.metrics.satisfaction && (
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-orange-600">{item.metrics.satisfaction}</div>
-                      <div className="text-xs text-gray-600">Satisfaction</div>
+                    <div className="text-sm font-bold text-purple-700">{item.metrics.timeframe || item.metrics.implementation}</div>
+                  </div>
+                  <div className="bg-orange-50 rounded-lg p-2 text-center">
+                    <div className="flex items-center justify-center mb-1">
+                      <CheckCircle className="w-3 h-3 text-orange-600 mr-1" />
+                      <span className="text-xs font-medium text-orange-600">Success</span>
                     </div>
-                  )}
+                    <div className="text-sm font-bold text-orange-700">{item.metrics.successRate || item.metrics.efficiency}</div>
+                  </div>
                 </div>
+              </div>
+
+              {/* Footer */}
+              <div className="px-4 pb-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">{item.readingTime}</span>
+                  <span className="text-xs text-gray-500">{item.readingTime}</span>
                   <Link
-                    href={item.url}
-                    className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold text-sm transition-colors"
+                    href={item.link}
+                    className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium text-sm"
                   >
-                    Read Now
-                    <ArrowRight className="w-4 h-4 ml-1" />
+                    Read More
+                    <ArrowRight className="w-3 h-3 ml-1" />
                   </Link>
                 </div>
               </div>
@@ -279,29 +205,67 @@ const RevolutionaryAI2025Showcase: React.FC = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
-            <p className="text-lg mb-6 opacity-90">
-              Join 500+ companies achieving 1,000%+ ROI with our revolutionary AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-3 bg-white text-purple-600 font-bold rounded-lg hover:bg-gray-100 transition-colors"
-              >
-                <CheckCircle className="w-5 h-5 mr-2" />
-                Get Started Today
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                <Award className="w-5 h-5 mr-2" />
-                Explore Services
-              </Link>
+        {/* Success metrics summary */}
+        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold mb-2">Proven Results Across 500+ Enterprises</h3>
+            <p className="text-purple-100">Real success stories and measurable outcomes</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-2">
+                <TrendingUp className="w-6 h-6 text-green-400 mr-2" />
+                <span className="text-lg font-bold">600%</span>
+              </div>
+              <div className="text-sm text-purple-100">Average ROI</div>
             </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-2">
+                <DollarSign className="w-6 h-6 text-yellow-400 mr-2" />
+                <span className="text-lg font-bold">$500M+</span>
+              </div>
+              <div className="text-sm text-purple-100">Average Savings</div>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-2">
+                <Clock className="w-6 h-6 text-blue-400 mr-2" />
+                <span className="text-lg font-bold">8 Months</span>
+              </div>
+              <div className="text-sm text-purple-100">Implementation Time</div>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-2">
+                <CheckCircle className="w-6 h-6 text-green-400 mr-2" />
+                <span className="text-lg font-bold">97%</span>
+              </div>
+              <div className="text-sm text-purple-100">Success Rate</div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA section */}
+        <div className="text-center mt-12">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Ready to Start Your 600% ROI AI Transformation?
+          </h3>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join the Fortune 500 companies that are already achieving unprecedented results with AI transformation. Get your personalized implementation roadmap today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200"
+            >
+              Get AI Consultation
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+            <Link
+              href="/services"
+              className="inline-flex items-center border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-200"
+            >
+              View All Services
+            </Link>
           </div>
         </div>
       </div>

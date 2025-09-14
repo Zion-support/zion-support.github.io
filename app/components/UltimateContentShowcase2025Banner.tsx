@@ -20,8 +20,9 @@ interface ContentItem {
 
 const UltimateContentShowcase2025Banner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const featuredContent = [
     {
@@ -30,16 +31,22 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
       type: 'Blog Post',
       url: '/blog/ai-2025-enterprise-automation-mastery-ultimate-breakthrough',
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
   const featuredContent: ContentItem[] = [
     {
       id: 'ultimate-automation-revolution',
       title: 'AI 2025: The Ultimate Automation Revolution - Complete Enterprise Guide',
       type: 'blog',
       url: '/blog/ai-2025-ultimate-automation-revolution-complete-guide',
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
       metrics: {
-        roi: '1,200%',
+        roi: '500%',
         savings: '$2.8B',
+<<<<<<< HEAD
 <<<<<<< HEAD
         efficiency: '89%',
         satisfaction: '94%'
@@ -74,6 +81,8 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
       },
       readingTime: '30 min read',
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
         satisfaction: '98%',
         efficiency: '340%'
       },
@@ -105,12 +114,16 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
         efficiency: '67%'
       },
       readingTime: '25 min read',
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
       featured: true
     }
   ];
 
   useEffect(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (typeof window !== 'undefined') {
       const dismissed = localStorage.getItem('ultimate-content-banner-dismissed');
@@ -118,6 +131,8 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
         setIsDismissed(true);
       }
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
     }, 5000);
@@ -134,15 +149,16 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
     const dismissed = localStorage.getItem('ultimate-content-banner-dismissed');
     if (dismissed === 'true') {
       setIsVisible(false);
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
     }
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
+  if (!isVisible) return null;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     return () => clearInterval(interval);
   }, []);
@@ -158,6 +174,8 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
 
   const currentContent = featuredContent[currentSlide];
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
   const currentContent = featuredContent[currentSlide];
 
   const getTypeColor = (type: string) => {
@@ -177,13 +195,17 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
       default: return '📄';
     }
   };
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
 
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 to-blue-600/20"></div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500/10 rounded-full animate-pulse"></div>
         <div className="absolute top-20 right-20 w-24 h-24 bg-blue-500/10 rounded-full animate-pulse delay-1000"></div>
@@ -193,11 +215,17 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
         <div className="absolute top-32 right-20 w-16 h-16 bg-blue-400/20 rounded-full animate-bounce"></div>
         <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-purple-400/20 rounded-full animate-ping"></div>
 >>>>>>> main
+=======
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-blue-400/20 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-purple-400/20 rounded-full animate-ping"></div>
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-4">
             <span className="text-sm font-medium">🚀 NEW CONTENT 2025</span>
@@ -286,6 +314,8 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
                   </div>
                 ))}
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
           <div className="inline-flex items-center bg-white/20 rounded-full px-6 py-2 mb-4">
             <span className="text-sm font-medium">🚀 NEW ULTIMATE CONTENT 2025</span>
           </div>
@@ -358,12 +388,16 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
               <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-xl p-6 text-center">
                 <div className="text-3xl font-bold">98%</div>
                 <div className="text-sm opacity-90">Satisfaction</div>
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Additional Content Grid */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -413,6 +447,8 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
             >
               View Success Stories
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
         {/* Content Navigation */}
         <div className="flex justify-center space-x-2 mb-6">
           {featuredContent.map((_, index) => (
@@ -466,7 +502,10 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
             >
               Explore All Content
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
             </Link>
           </div>
           <p className="text-blue-200 text-sm mt-4">
