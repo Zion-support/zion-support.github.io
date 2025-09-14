@@ -102,6 +102,10 @@ import NewContent2025MultimodalBanner from '../components/NewContent2025Multimod
 import AI2025BusinessIntelligenceBanner from '../components/AI2025BusinessIntelligenceBanner';
 import AI2025CybersecurityBanner from '../components/AI2025CybersecurityBanner';
 
+// Import new Quantum Neural Superintelligence components
+import QuantumNeuralSuperintelligenceRevolutionBanner from '../components/QuantumNeuralSuperintelligenceRevolutionBanner';
+import UltimateContentShowcase2026Banner from '../components/UltimateContentShowcase2026Banner';
+
 // Import new 2026 promotional components
 import AI2026TrendsPromotionBanner from '../components/AI2026TrendsPromotionBanner';
 import QuantumComputingPromotionBanner from '../components/QuantumComputingPromotionBanner';
@@ -213,6 +217,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* QUANTUM NEURAL SUPERINTELLIGENCE REVOLUTION BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
+        <QuantumNeuralSuperintelligenceRevolutionBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2026 BANNER - NEWEST FEATURED */}
+        <UltimateContentShowcase2026Banner />
+        
         {/* AI BUSINESS INTELLIGENCE 2025 BANNER - NEWEST FEATURED */}
         <AIBusinessIntelligence2025Banner />
         
