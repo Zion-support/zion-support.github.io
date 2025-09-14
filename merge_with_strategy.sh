@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Script to merge remaining cursor branches into main
-# This will attempt to merge branches systematically and resolve conflicts
+# Script to merge branches with conflict resolution strategy
+# This will prefer main branch changes for conflicts
 
 set -e
 
-echo "Starting systematic branch merge process for remaining branches..."
+echo "Starting branch merge with conflict resolution strategy..."
 
-# Get list of recent cursor branches that haven't been merged yet
+# Get list of recent cursor branches
 BRANCHES=(
     "cursor/create-and-deploy-new-content-6179"
     "cursor/create-and-deploy-new-content-8601"
@@ -58,8 +58,8 @@ for branch in "${BRANCHES[@]}"; do
         continue
     fi
     
-    # Try to merge the branch
-    if git merge "origin/$branch" --no-edit; then
+    # Try to merge the branch with strategy
+    if git merge "origin/$branch" --no-edit -X ours; then
         echo "✅ Successfully merged $branch"
         SUCCESSFUL_MERGES+=("$branch")
         
@@ -70,7 +70,7 @@ for branch in "${BRANCHES[@]}"; do
             echo "❌ Failed to push merge for $branch"
         fi
     else
-        echo "❌ Merge conflict in $branch"
+        echo "❌ Merge conflict in $branch even with strategy"
         FAILED_MERGES+=("$branch")
         
         # Abort the merge
