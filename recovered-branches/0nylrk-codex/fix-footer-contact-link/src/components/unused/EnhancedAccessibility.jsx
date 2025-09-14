@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { SpeakerWaveIcon, AdjustmentsHorizontalIcon, ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/24/outline';
+import { AdjustmentsHorizontalIcon, ArrowDownIcon, ArrowUpIcon, SpeakerWaveIcon } from '@heroicons/react/24/outline';
+import { AnimatePresence, motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 const EnhancedAccessibility = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
@@ -95,10 +95,10 @@ const EnhancedAccessibility = () => {
     };
     const speakText = (text) => {
         if ('speechSynthesis' in window) {
-            const utterance = new SpeechSynthesisUtterance(text);
+            const utterance = new window.SpeechSynthesisUtterance(text);
             utterance.rate = 0.9;
             utterance.pitch = 1;
-            speechSynthesis.speak(utterance);
+            window.speechSynthesis.speak(utterance);
         }
     };
     const announcePageChange = (pageName) => {
