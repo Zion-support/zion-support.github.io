@@ -265,11 +265,11 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
-    - id: "enterprise-automation-mastery-ultimate-guide"
+    - id: "enterprise-automation-mastery-ultimate-success-guide"
       type: "blog"
-      title: "AI 2025: Enterprise Automation Mastery - The Ultimate Guide to 500% ROI"
-      file_path: "/content/blog/ai-2025-enterprise-automation-mastery-ultimate-guide.md"
-      url: "/blog/ai-2025-enterprise-automation-mastery-ultimate-guide"
+      title: "AI 2025: Enterprise Automation Mastery - The Ultimate Success Guide to 500% ROI"
+      file_path: "/content/blog/ai-2025-enterprise-automation-mastery-ultimate-success-guide.md"
+      url: "/blog/ai-2025-enterprise-automation-mastery-ultimate-success-guide"
       status: "published"
       created: "2025-01-17"
       tags: ["AI Automation", "Enterprise", "ROI", "Digital Transformation", "Mastery Guide", "500% ROI"]
@@ -281,6 +281,125 @@ content_index:
         efficiency: "340%"
         satisfaction: "98%"
       reading_time: "25 min read"
+      
+    - id: "ai-transformation-fortune-500-ultimate-success"
+      type: "case-study"
+      title: "Fortune 500 AI Transformation: $3.2B Company Achieves 650% ROI with Intelligent Automation"
+      file_path: "/content/case-studies/ai-transformation-fortune-500-ultimate-success-2025.md"
+      url: "/case-studies/ai-transformation-fortune-500-ultimate-success-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Fortune 500", "AI Transformation", "ROI", "Case Study", "Success Story", "650% ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "650%"
+        savings: "$2.8B"
+        accuracy: "99.7%"
+        efficiency: "78%"
+      reading_time: "22 min read"
+      
+    - id: "ai-implementation-ultimate-roadmap-2025"
+      type: "resource"
+      title: "AI Implementation Ultimate Roadmap 2025: From Strategy to 800% ROI in 18 Months"
+      file_path: "/content/resources/ai-implementation-ultimate-roadmap-2025.md"
+      url: "/resources/ai-implementation-ultimate-roadmap-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Implementation", "ROI", "Strategy", "Roadmap", "800% ROI", "18 Months"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        savings: "$173.7M"
+        success: "99%"
+        timeline: "18 months"
+      reading_time: "35 min read"
+      
+    - id: "cybersecurity-revolution-ultimate-guide"
+      type: "blog"
+      title: "AI 2025: The Cybersecurity Revolution - Ultimate Guide to Enterprise Protection"
+      file_path: "/content/blog/ai-2025-cybersecurity-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-cybersecurity-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Cybersecurity", "AI", "Enterprise Security", "Threat Detection", "ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        threatReduction: "95%"
+        savings: "$2.3M"
+        responseTime: "67%"
+        roi: "340%"
+      reading_time: "20 min read"
+      
+    - id: "healthcare-ai-transformation-2025"
+      type: "case-study"
+      title: "Healthcare AI Transformation 2025: How a $200M Health System Achieved 300% ROI"
+      file_path: "/content/case-studies/healthcare-ai-transformation-2025-success.md"
+      url: "/case-studies/healthcare-ai-transformation-2025-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Healthcare", "AI Transformation", "ROI", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "300%"
+        savings: "$18.7M"
+        satisfaction: "95%"
+        efficiency: "67%"
+      reading_time: "15 min read"
+      
+    - id: "fortune-500-ai-transformation-ultimate-success"
+      type: "case-study"
+      title: "Fortune 500 AI Transformation: $3.2B Company Achieves 650% ROI with Intelligent Automation"
+      file_path: "/content/case-studies/ai-transformation-fortune-500-ultimate-success-2025.md"
+      url: "/case-studies/ai-transformation-fortune-500-ultimate-success-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Fortune 500", "AI Transformation", "ROI", "Case Study", "Success Story", "650% ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "650%"
+        savings: "$55.2M"
+        accuracy: "99.7%"
+        efficiency: "78%"
+      reading_time: "22 min read"
+      
+    - id: "ai-implementation-ultimate-roadmap-2025"
+      type: "resource"
+      title: "AI Implementation Ultimate Roadmap 2025: From Strategy to 800% ROI in 18 Months"
+      file_path: "/content/resources/ai-implementation-ultimate-roadmap-2025.md"
+      url: "/resources/ai-implementation-ultimate-roadmap-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Implementation", "ROI", "Strategy", "Roadmap", "800% ROI", "18 Months"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        savings: "$173.7M"
+        success: "99%"
+        timeline: "18 months"
+      reading_time: "35 min read"
+      
+    - id: "cybersecurity-revolution-ultimate-guide"
+      type: "blog"
+      title: "AI 2025: The Cybersecurity Revolution - Ultimate Guide to Enterprise Protection"
+      file_path: "/content/blog/ai-2025-cybersecurity-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-cybersecurity-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Cybersecurity", "AI", "Enterprise Security", "Threat Detection", "ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        threatReduction: "95%"
+        savings: "$2.3M"
+        responseTime: "67%"
+        roi: "340%"
+      reading_time: "20 min read"
       
     - id: "fortune-500-ai-transformation-ultimate-success"
       type: "case-study"
