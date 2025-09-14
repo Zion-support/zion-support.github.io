@@ -228,6 +228,56 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
+    - id: "ai-2025-enterprise-automation-mastery-ultimate-success-guide"
+      type: "blog"
+      title: "AI 2025: Enterprise Automation Mastery - Ultimate Success Guide"
+      file_path: "/content/blog/ai-2025-enterprise-automation-mastery-ultimate-success-guide.md"
+      url: "/blog/ai-2025-enterprise-automation-mastery-ultimate-success-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Automation", "Enterprise", "ROI", "Success Guide", "2025", "Mastery"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,200%"
+        savings: "$500M+"
+        efficiency: "99.8%"
+        success_rate: "98%"
+      reading_time: "35 min read"
+      
+    - id: "fortune-500-ai-success-2025"
+      type: "case-study"
+      title: "Fortune 500 AI Success 2025: $2.8B Annual Savings"
+      file_path: "/content/case-studies/fortune-500-ai-success-2025.md"
+      url: "/case-studies/fortune-500-ai-success-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Fortune 500", "AI Transformation", "Case Study", "ROI", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        annual_savings: "$2.8B"
+        roi: "1,500%"
+        implementation_time: "8 months"
+        efficiency_gains: "89%"
+      reading_time: "20 min read"
+      
+    - id: "ai-roi-guide-2025"
+      type: "resource"
+      title: "AI ROI Guide 2025: Achieve 1,200% ROI"
+      file_path: "/content/resources/ai-roi-guide-2025.md"
+      url: "/resources/ai-roi-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "ROI", "Guide", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,200%"
+        savings: "$500M+"
+        efficiency: "99.8%"
+      reading_time: "15 min read"
+      
     - id: "ai-2025-enterprise-automation-revolution"
       type: "blog"
       title: "AI 2025: The Enterprise Automation Revolution That's Reshaping Business"
