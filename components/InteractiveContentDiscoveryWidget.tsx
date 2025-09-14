@@ -25,12 +25,12 @@ import {
 } from 'lucide-react';
 
 const InteractiveContentDiscoveryWidget = () => {
-  const [isOpensetIsOpen] = useState(false);
-  const [searchQuerysetSearchQuery] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [viewModesetViewMode] = useState('grid');
-  const [favoritesetFavorites] = useState(new Set());
-  const [recentlyViewedsetRecentlyViewed] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState('grid');
+  const [favorites, setFavorites] = useState(new Set());
+  const [recentlyViewed, setRecentlyViewed] = useState([]);
 
   const categories = [
     { id: 'all'name: 'All Content'icon: Gridcount: 156 },

@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 
 const InteractiveTechTrends2026: React.FC = () => {

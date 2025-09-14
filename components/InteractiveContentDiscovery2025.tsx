@@ -1,9 +1,25 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const InteractiveContentDiscovery2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const categories = [
+    { id: 'all', label: 'All Content', icon: '🌟' },
+    { id: 'ai', label: 'AI & Machine Learning', icon: '🤖' },
+    { id: 'quantum', label: 'Quantum Computing', icon: '⚛️' },
+    { id: 'neural', label: 'Neural Interfaces', icon: '🧠' },
+    { id: 'autonomous', label: 'Autonomous Systems', icon: '🚀' },
+    { id: 'business', label: 'Business Solutions', icon: '💼' },
+  ];
 
   const contentItems = [
     {
@@ -16,211 +32,238 @@ const InteractiveContentDiscovery2025 = () => {
       featured: true,
       tags: ["AI Automation", "Enterprise", "ROI"],
       image: "🏢",
-      gradient: "from-blue-500 to-cyan-600"
+      gradient: "from-blue-500 to-cyan-600",
+      link: '/case-studies/enterprise-ai-transformation'
     },
     {
       id: 2,
-      title: "From Idea to $100K ARR: Micro SaaS Success Story",
-      category: "case-study",
-      type: "Case Study",
-      description: "Complete journey of building a profitable micro SaaS from scratch",
-      readTime: "12 min read",
+      title: 'AI Revolution 2025: The Future is Now',
+      description: 'Discover how artificial intelligence is transforming industries and creating unprecedented opportunities.',
+      category: 'ai',
+      readTime: '8 min read',
+      difficulty: 'Intermediate',
+      tags: ['AI', 'Automation', 'Future Tech'],
+      link: '/ai-2025',
       featured: true,
-      tags: ["Micro SaaS", "Startup", "Revenue"],
-      image: "🚀",
-      gradient: "from-green-500 to-emerald-600"
-    },
-    {
-      id: 3,
-      title: "AI Trends 2025: Revolutionary Breakthroughs",
-      category: "blog",
       type: "Blog Post",
-      description: "Comprehensive analysis of AI trends that will transform business in 2025",
-      readTime: "15 min read",
-      featured: true,
-      tags: ["AI Trends", "2025", "Predictions"],
-      image: "🔮",
+      image: "🤖",
       gradient: "from-purple-500 to-pink-600"
     },
     {
-      id: 4,
-      title: "Quantum-Neural Fusion: The Next Frontier",
-      category: "blog",
-      type: "Technical Deep Dive",
-      description: "Exploring the convergence of quantum computing and neural networks",
-      readTime: "20 min read",
-      featured: false,
-      tags: ["Quantum Computing", "Neural Networks", "Future Tech"],
+      id: 3,
+      title: "Quantum Computing Breakthrough: 1000x Faster Processing",
+      category: "quantum",
+      type: "Research Paper",
+      description: "Revolutionary quantum algorithms that are reshaping computational possibilities",
+      readTime: "12 min read",
+      featured: true,
+      tags: ["Quantum Computing", "Algorithms", "Performance"],
       image: "⚛️",
-      gradient: "from-indigo-500 to-purple-600"
+      gradient: "from-indigo-500 to-purple-600",
+      link: '/research/quantum-computing-breakthrough'
+    },
+    {
+      id: 4,
+      title: 'Neural Interface Revolution: Mind-Computer Integration',
+      description: 'Explore the latest developments in brain-computer interfaces and their potential applications.',
+      category: 'neural',
+      readTime: '10 min read',
+      difficulty: 'Advanced',
+      tags: ['Neural Interfaces', 'BCI', 'Innovation'],
+      link: '/neural-interfaces',
+      featured: false,
+      type: "Technical Guide",
+      image: "🧠",
+      gradient: "from-green-500 to-teal-600"
     },
     {
       id: 5,
-      title: "Autonomous Business Ecosystems Guide",
-      category: "guide",
+      title: "Autonomous Business Systems: The Future of Operations",
+      category: "autonomous",
       type: "Implementation Guide",
-      description: "Step-by-step guide to building self-managing business systems",
-      readTime: "25 min read",
-      featured: false,
-      tags: ["Autonomous Systems", "Business Process", "Automation"],
-      image: "🤖",
-      gradient: "from-orange-500 to-red-600"
+      description: "Complete guide to implementing autonomous business systems for maximum efficiency",
+      readTime: "15 min read",
+      featured: true,
+      tags: ["Autonomous Systems", "Business Automation", "Efficiency"],
+      image: "🚀",
+      gradient: "from-orange-500 to-red-600",
+      link: '/guides/autonomous-business-systems'
     },
     {
       id: 6,
-      title: "Synthetic Intelligence Revolution",
-      category: "blog",
-      type: "Future Vision",
-      description: "Understanding the next evolution of artificial intelligence",
-      readTime: "18 min read",
+      title: 'Business Intelligence Revolution: Data-Driven Decisions',
+      description: 'Learn how advanced analytics and AI are transforming business decision-making processes.',
+      category: 'business',
+      readTime: '6 min read',
+      difficulty: 'Beginner',
+      tags: ['Business Intelligence', 'Analytics', 'Decision Making'],
+      link: '/business-intelligence',
       featured: false,
-      tags: ["Synthetic Intelligence", "AI Evolution", "Future"],
-      image: "🧠",
-      gradient: "from-teal-500 to-cyan-600"
+      type: "Business Guide",
+      image: "💼",
+      gradient: "from-yellow-500 to-orange-600"
     }
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Content', icon: '📚' },
-    { id: 'case-study', name: 'Case Studies', icon: '📊' },
-    { id: 'blog', name: 'Blog Posts', icon: '📝' },
-    { id: 'guide', name: 'Guides', icon: '📖' }
-  ];
-
-  const filteredContent = selectedCategory === 'all' 
+  const filteredItems = selectedCategory === 'all' 
     ? contentItems 
     : contentItems.filter(item => item.category === selectedCategory);
 
+  const getDifficultyColor = (difficulty) => {
+    switch (difficulty) {
+      case 'Beginner': return 'bg-green-100 text-green-800';
+      case 'Intermediate': return 'bg-yellow-100 text-yellow-800';
+      case 'Advanced': return 'bg-red-100 text-red-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const getTypeColor = (type) => {
+    switch (type) {
+      case 'Case Study': return 'bg-blue-100 text-blue-800';
+      case 'Blog Post': return 'bg-green-100 text-green-800';
+      case 'Research Paper': return 'bg-purple-100 text-purple-800';
+      case 'Technical Guide': return 'bg-orange-100 text-orange-800';
+      case 'Implementation Guide': return 'bg-indigo-100 text-indigo-800';
+      case 'Business Guide': return 'bg-pink-100 text-pink-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className={`py-16 bg-gradient-to-br from-gray-50 to-blue-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold mb-6">
-            🔍 INTERACTIVE CONTENT DISCOVERY
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-4">
+            <span className="text-sm font-medium">🔍 INTERACTIVE CONTENT DISCOVERY</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Explore Our Revolutionary
-            <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Content Library
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Explore Revolutionary Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover cutting-edge case studies, AI insights, and implementation guides 
-            that are transforming businesses worldwide.
+            Discover cutting-edge insights, breakthrough technologies, and transformative solutions 
+            that are reshaping the future of business and technology.
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+              className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                 selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
+                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 border border-gray-300 hover:border-purple-300'
               }`}
             >
-              <span className="text-lg">{category.icon}</span>
-              {category.name}
+              <span className="mr-2">{category.icon}</span>
+              {category.label}
             </button>
           ))}
         </div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((item) => (
+          {filteredItems.map((item) => (
             <div
               key={item.id}
-              className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden ${
-                item.featured ? 'ring-2 ring-purple-500' : ''
+              className={`bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
+                hoveredItem === item.id ? 'scale-105' : ''
               }`}
               onMouseEnter={() => setHoveredItem(item.id)}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              {/* Featured Badge */}
-              {item.featured && (
-                <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold z-10">
-                  ⭐ FEATURED
-                </div>
-              )}
-
-              {/* Image/Icon */}
-              <div className={`h-48 bg-gradient-to-br ${item.gradient} flex items-center justify-center text-6xl`}>
-                {item.image}
-              </div>
-
-              {/* Content */}
+              {/* Content Header */}
               <div className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-sm font-semibold text-purple-600">{item.type}</span>
-                  <span className="text-gray-400">•</span>
-                  <span className="text-sm text-gray-500">{item.readTime}</span>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center">
+                    <span className="text-3xl mr-3">{item.image}</span>
+                    <div className="flex flex-col">
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${getTypeColor(item.type)}`}>
+                        {item.type}
+                      </span>
+                      {item.featured && (
+                        <span className="mt-1 bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">
+                          ⭐ FEATURED
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  {item.difficulty && (
+                    <span className={`px-2 py-1 rounded text-xs font-medium ${getDifficultyColor(item.difficulty)}`}>
+                      {item.difficulty}
+                    </span>
+                  )}
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
                   {item.title}
                 </h3>
 
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-gray-600 mb-4 leading-relaxed">
                   {item.description}
                 </p>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                      className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                {/* CTA Button */}
-                <Link
-                  href={`/${item.category}/${item.id}`}
-                  className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    hoveredItem === item.id
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white transform scale-105'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  Read More
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </Link>
+                {/* Metrics */}
+                <div className="flex items-center justify-between text-sm text-gray-500">
+                  <span>{item.readTime}</span>
+                  <span className="capitalize">{item.category}</span>
+                </div>
               </div>
 
-              {/* Hover Effect Overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`}></div>
+              {/* Gradient Bottom Border */}
+              <div className={`h-1 bg-gradient-to-r ${item.gradient}`}></div>
+
+              {/* Action Button */}
+              <div className="p-6 pt-0">
+                <Link
+                  href={item.link}
+                  className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r ${item.gradient} text-white hover:shadow-lg transform hover:scale-105`}
+                >
+                  Explore Content
+                </Link>
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        {/* Call to Action */}
+        <div className="mt-12 text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-gray-600 mb-6">
-              Get personalized recommendations and implementation strategies based on your specific needs.
+            <p className="text-lg mb-6 opacity-90">
+              Join thousands of companies already using our revolutionary technologies 
+              to achieve unprecedented growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-bold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
-                Get Personalized Consultation
+                Get Started Today
               </Link>
               <Link
-                href="/newsletter"
-                className="border-2 border-purple-500 text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-purple-500 hover:text-white transition-all duration-300"
+                href="/resources"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                Subscribe to Updates
+                View All Resources
               </Link>
             </div>
           </div>

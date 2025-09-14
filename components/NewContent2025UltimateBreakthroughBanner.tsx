@@ -4,64 +4,66 @@ import Link from 'next/link';
 const NewContent2025UltimateBreakthroughBanner = () => {
   return (
     <section className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-black opacity-20"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
+      
       {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500 rounded-full opacity-30 animate-bounce"></div>
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500 rounded-full opacity-25 animate-ping"></div>
-        <div className="absolute bottom-32 right-1/3 w-8 h-8 bg-pink-500 rounded-full opacity-20 animate-pulse"></div>
-      </div>
-
+      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/30 rounded-full animate-pulse"></div>
+      <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500/30 rounded-full animate-bounce"></div>
+      <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500/30 rounded-full animate-pulse"></div>
+      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Badge */}
-          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 NEW 2025 BREAKTHROUGH CONTENT
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-500 rounded-full px-6 py-2 mb-6 text-sm font-semibold">
+            <span className="mr-2">🚀</span>
+            NEW 2025 BREAKTHROUGH CONTENT
           </div>
-
-          {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Revolutionary AI Content
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              That Transforms Businesses
+          
+          {/* Main Heading */}
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            AI 2025 Ultimate Automation Revolution
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
+              50,000% ROI Breakthrough
             </span>
-          </h1>
-
-          {/* Subheadline */}
+          </h2>
+          
+          {/* Subheading */}
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">
-            Discover groundbreaking case studies, success stories, and AI trends that are reshaping industries. 
-            From 500% ROI transformations to $100K ARR micro SaaS success stories.
+            Discover the revolutionary AI automation strategies that are transforming businesses worldwide. 
+            Learn how Fortune 500 companies are achieving unprecedented ROI through intelligent automation.
           </p>
-
-          {/* Key Highlights */}
+          
+          {/* Key Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">500%</div>
-              <div className="text-sm opacity-90">ROI in 6 Months</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-3xl font-bold text-yellow-400 mb-2">50,000%</div>
+              <div className="text-sm opacity-90">Maximum ROI Achieved</div>
             </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="text-3xl font-bold text-green-400 mb-2">$100K</div>
-              <div className="text-sm opacity-90">ARR Micro SaaS</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-3xl font-bold text-green-400 mb-2">800%</div>
+              <div className="text-sm opacity-90">Fortune 500 ROI</div>
             </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="text-3xl font-bold text-blue-400 mb-2">2025</div>
-              <div className="text-sm opacity-90">AI Predictions</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <div className="text-3xl font-bold text-blue-400 mb-2">6 Months</div>
+              <div className="text-sm opacity-90">Transformation Time</div>
             </div>
           </div>
-
+          
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/case-studies"
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/blog/ai-2025-ultimate-automation-revolution"
+              className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              View Case Studies
+              Read Full Article →
             </Link>
             <Link
-              href="/blog"
+              href="/case-studies/fortune-500-ai-transformation"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
             >
-              Read AI Trends
+              View Case Study
             </Link>
           </div>
 
@@ -79,6 +81,19 @@ const NewContent2025UltimateBreakthroughBanner = () => {
               <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
               <span className="text-sm">Industry Leading</span>
             </div>
+          </div>
+          
+          {/* Additional Links */}
+          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm">
+            <Link href="/blog/quantum-neural-fusion-2026" className="hover:text-yellow-400 transition-colors">
+              Quantum-Neural Fusion 2026 →
+            </Link>
+            <Link href="/services/ai-automation" className="hover:text-yellow-400 transition-colors">
+              AI Automation Services →
+            </Link>
+            <Link href="/contact" className="hover:text-yellow-400 transition-colors">
+              Free Consultation →
+            </Link>
           </div>
         </div>
       </div>
