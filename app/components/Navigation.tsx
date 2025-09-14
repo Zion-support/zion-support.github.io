@@ -23,6 +23,12 @@ export default function Navigation() {
             <Link href="/services" className="text-gray-700 hover:text-purple-600 font-medium">
               Services
             </Link>
+            <Link href="/services/autonomous-operations" className="text-gray-700 hover:text-purple-600 font-medium relative">
+              <span className="bg-gradient-to-r from-green-400 to-blue-500 text-white text-xs px-2 py-1 rounded-full absolute -top-2 -right-2 font-bold">
+                NEW
+              </span>
+              Autonomous Operations
+            </Link>
             <Link href="/blog" className="text-gray-700 hover:text-purple-600 font-medium">
               Blog
             </Link>
@@ -69,6 +75,12 @@ export default function Navigation() {
               </Link>
               <Link href="/services" className="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">
                 Services
+              </Link>
+              <Link href="/services/autonomous-operations" className="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium relative">
+                <span className="bg-gradient-to-r from-green-400 to-blue-500 text-white text-xs px-2 py-1 rounded-full mr-2 font-bold">
+                  NEW
+                </span>
+                Autonomous Operations
               </Link>
               <Link href="/blog" className="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">
                 Blog
