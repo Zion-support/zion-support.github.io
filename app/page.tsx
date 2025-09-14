@@ -25,7 +25,7 @@ const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 // Import key promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
-import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
+import NewContent2026Showcase from '../components/NewContent2026Showcase';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
@@ -34,38 +34,30 @@ import NewContent2026Showcase from '../components/NewContent2026Showcase';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
+import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
-
-// Import new promotional components
-import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+// Import new 2026 promotional components
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
+import AI2026RevolutionaryBanner from '../components/AI2026RevolutionaryBanner';
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
+import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
+import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
 
-// Import new AI 2026 promotional components
-import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
-import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
-import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
-import NewContentShowcase2025 from '../components/NewContentShowcase2025';
-import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
-
-// Import new promotional components
-import RevolutionaryAI2026ContentBanner from '../components/RevolutionaryAI2026ContentBanner';
-import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
-
-// Import new 2025 content promotional components
-import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
-
-// Import new 2026 ultimate promotional components
-import AI2026QuantumRevolutionUltimateBanner from '../components/AI2026QuantumRevolutionUltimateBanner';
-import RevolutionaryAIContent2026Banner from '../components/RevolutionaryAIContent2026Banner';
+// Import new 2026 promotional banners
+import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
+import EnterpriseAutomation2026Banner from '../components/EnterpriseAutomation2026Banner';
+import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -84,38 +76,30 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Revolutionary AI Content 2026 Banner - NEW FEATURED */}
-        <RevolutionaryAIContent2026Banner />
+        {/* New 2026 Content Banners */}
+        <QuantumAI2026BreakthroughBanner />
+        <EnterpriseAutomation2026Banner />
+        <NewContent2026ShowcaseBanner />
         
-        {/* AI 2026 Quantum Revolution Ultimate Banner - NEW FEATURED */}
-        <AI2026QuantumRevolutionUltimateBanner />
+        {/* Revolutionary Tech Banner 2026 */}
+        <RevolutionaryTechBanner2026 />
         
-        {/* New Content 2026 Ultimate Showcase - NEW FEATURED */}
-        <NewContent2026UltimateShowcase />
-        
-        {/* New Content 2025 Ultimate Showcase */}
-        <NewContent2025UltimateShowcase />
-        
-        {/* AI 2026 Ultimate Showcase Banner */}
-        <AI2026UltimateShowcaseBanner />
-        
-        {/* AI 2026 Quantum Revolution Banner */}
-        <AI2026QuantumRevolutionBanner />
-        
-        {/* AI 2026 Autonomous Systems Banner */}
-        <AI2026AutonomousSystemsBanner />
+        {/* AI 2026 Revolutionary Banner */}
+        <AI2026RevolutionaryBanner />
         
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
         
         {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
-        
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
         
         {/* New Content 2025 Showcase Banner */}
-        <NewContent2025PromotionBanner />
+        <NewContent2025ShowcaseBanner />
+        
+        {/* Revolutionary Content 2025 Banner */}
+        <RevolutionaryContent2025Banner />
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -215,26 +199,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Revolutionary Content 2025 Banner */}
-        <RevolutionaryContent2025Banner />
-        
-        {/* Ultimate Content Showcase 2025 */}
-        <UltimateContentShowcase2025 />
-        
         {/* Content Promotion Banners */}
-        <NewContentShowcase2025 />
-        <NewContent2026PromotionBanner />
         <NewContentShowcase2026 />
-        <QuantumAIContentShowcase2026 />
-        <RevolutionaryAI2026ContentBanner />
+        <RevolutionaryContentBanner2025 />
         <UltimateContentShowcase2025 />
         <RevolutionaryContent2026Banner />
-        <UltimateContentShowcase2026 />
-        <NewContent2025PromotionBanner />
-        <LatestContentShowcase2025 />
+        <FeaturedContentShowcase2026 />
         <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
-        <FeaturedContentShowcase2026 />
+        <NewContent2026PromotionBanner />
         <NewContentPromotionBanner />
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
