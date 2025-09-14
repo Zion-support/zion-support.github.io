@@ -54,6 +54,10 @@ import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolution
 import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
 import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
 
+// Import new 2025 content promotional components
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
+
 // Import new 2025 content components
 import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
 import InteractiveROICalculator from '../components/InteractiveROICalculator';
@@ -76,6 +80,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New Content 2025 Ultimate Showcase */}
+        <NewContent2025UltimateShowcase />
+        
+        {/* Revolutionary Content 2025 Ultimate Banner */}
+        <RevolutionaryContent2025UltimateBanner />
+        
         {/* AI 2026 Ultimate Showcase Banner */}
         <AI2026UltimateShowcaseBanner />
         
