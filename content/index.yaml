@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 9
+  total_content_pieces: 12
   
   new_2025_content:
     - id: "cybersecurity-revolution"
@@ -116,6 +116,70 @@ content_index:
       tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2026"]
       featured: true
       is_new: true
+      
+    - id: "generative-ai-enterprise-revolution"
+      type: "blog"
+      title: "AI 2025: The Generative AI Enterprise Revolution - Complete Implementation Guide"
+      file_path: "/content/blog/ai-2025-generative-ai-enterprise-revolution.md"
+      url: "/blog/ai-2025-generative-ai-enterprise-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Generative AI", "Enterprise", "Automation", "2025", "Implementation"]
+      featured: true
+      is_new: true
+      metrics:
+        efficiency_improvement: "340%"
+        roi_increase: "500%"
+        content_creation_time: "67% reduction"
+        customer_satisfaction: "89% improvement"
+        
+    - id: "autonomous-business-operations"
+      type: "blog"
+      title: "AI 2025: Autonomous Business Operations - The Complete Implementation Guide"
+      file_path: "/content/blog/ai-2025-autonomous-business-operations-complete-guide.md"
+      url: "/blog/ai-2025-autonomous-business-operations-complete-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Autonomous Operations", "AI Automation", "Business Process", "2025", "Implementation"]
+      featured: true
+      is_new: true
+      metrics:
+        automation_level: "90%+"
+        productivity_improvement: "400%+"
+        cost_reduction: "60-80%"
+        error_reduction: "70-90%"
+        
+    - id: "quantum-computing-business-transformation"
+      type: "blog"
+      title: "AI 2025: Quantum Computing Business Transformation - The Ultimate Guide"
+      file_path: "/content/blog/ai-2025-quantum-computing-business-transformation.md"
+      url: "/blog/ai-2025-quantum-computing-business-transformation"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Quantum Computing", "AI", "Business Transformation", "2025", "Implementation"]
+      featured: true
+      is_new: true
+      metrics:
+        performance_improvement: "10,000x"
+        roi_increase: "500%+"
+        processing_speed: "1000x faster"
+        optimization_quality: "20-50% better"
+        
+    - id: "ai-2025-implementation-roadmap"
+      type: "resource"
+      title: "AI 2025 Implementation Roadmap - The Ultimate Guide"
+      file_path: "/content/resources/ai-2025-implementation-roadmap-ultimate-guide.md"
+      url: "/resources/ai-2025-implementation-roadmap-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "Roadmap", "Strategy", "2025", "Guide"]
+      featured: true
+      is_new: true
+      metrics:
+        efficiency_improvement: "40-70%"
+        cost_reduction: "25-50%"
+        processing_capacity: "300-500%"
+        decision_speed: "60-80%"
 
   new_2025_content_ultimate:
     - id: "cybersecurity-revolution"
