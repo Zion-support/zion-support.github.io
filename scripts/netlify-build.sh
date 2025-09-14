@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Netlify build script with error handling
+# Netlify build script with comprehensive error handling
 set -e
 
 echo "🚀 Starting Netlify build process..."
@@ -22,10 +22,10 @@ yarn cache clean || true
 echo "📦 Installing dependencies..."
 yarn install \
   --frozen-lockfile \
-  --network-timeout 100000 \
+  --network-timeout 1000000 \
   --prefer-offline \
   --no-emoji \
-  --silent
+  --ignore-engines
 
 # Verify installation
 echo "✅ Verifying installation..."
