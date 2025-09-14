@@ -153,6 +153,10 @@ import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner20
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
 
+// Import new 2025 ultimate content components
+import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
+
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
@@ -290,6 +294,10 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2025 ULTIMATE CONTENT BANNERS - TOP PRIORITY FEATURED */}
+        <NewContent2025UltimateBanner />
+        <RevolutionaryContent2025Banner />
+        
         {/* NEW 2025 CONTENT BANNERS - LATEST FEATURED */}
         <NewContent2025UltimateSecurityBanner />
         <QuantumAI2026BreakthroughBanner />
