@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next'
 
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com'
   
@@ -60,32 +62,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // New blog posts
     {
-<<<<<<< HEAD
-      url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
-=======
-      url: `${baseUrl}/blog/ai-2025-enterprise-integration-revolution`,
->>>>>>> origin/main
+      url: `${baseUrl}/blog/ai-2025-ultimate-business-transformation-revolution`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-<<<<<<< HEAD
-      url: `${baseUrl}/blog/quantum-ai-2026-business-revolution`,
-=======
-      url: `${baseUrl}/blog/ai-2025-smart-automation-breakthrough`,
->>>>>>> origin/main
+      url: `${baseUrl}/case-studies/fortune-500-ai-transformation-2025-ultimate-success-story`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     // New resources
     {
-<<<<<<< HEAD
-      url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
-=======
-      url: `${baseUrl}/blog/ai-2025-data-intelligence-revolution`,
->>>>>>> origin/main
+      url: `${baseUrl}/resources/ai-implementation-ultimate-roadmap-2025-comprehensive`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
