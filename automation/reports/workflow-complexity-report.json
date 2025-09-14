@@ -2475,7 +2475,7 @@
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
-        "secretCount": 4,
+        "secretCount": 0,
         "actionCount": 3
       },
       "refactoringPriority": "low",
@@ -2861,7 +2861,7 @@
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/netlify-functions-trigger.yml"
     },
     "netlify-monitor.yml": {
-      "complexityScore": 0,
+      "complexityScore": 10,
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 44,
