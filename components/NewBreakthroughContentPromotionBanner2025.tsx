@@ -16,7 +16,7 @@ export default function NewBreakthroughContentPromotionBanner2025() {
             </span>
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-4xl mx-auto">
-            Discover the most revolutionary AI breakthroughs in history, delivering 
+            Discover the most revolutionary AI breakthroughs in historydelivering 
             unprecedented ROI and transforming businesses across every industry.
           </p>
         </div>
@@ -50,7 +50,7 @@ export default function NewBreakthroughContentPromotionBanner2025() {
               </div>
               <h3 className="text-xl font-bold mb-2">AI 2026 Quantum-Neural Fusion</h3>
               <p className="text-gray-200 mb-4 text-sm">
-                First successful fusion of quantum computing and neural networks, achieving 20,000% ROI and quantum consciousness.
+                First successful fusion of quantum computing and neural networksachieving 20,000% ROI and quantum consciousness.
               </p>
               <div className="text-2xl font-bold text-cyan-400 mb-4">20,000% ROI</div>
               <Link 
@@ -70,7 +70,7 @@ export default function NewBreakthroughContentPromotionBanner2025() {
               </div>
               <h3 className="text-xl font-bold mb-2">AI 2030 Transcendent Intelligence</h3>
               <p className="text-gray-200 mb-4 text-sm">
-                First AI system to transcend human limitations, achieving infinite ROI through consciousness upload and reality manipulation.
+                First AI system to transcend human limitationsachieving infinite ROI through consciousness upload and reality manipulation.
               </p>
               <div className="text-2xl font-bold text-pink-400 mb-4">∞ ROI</div>
               <Link 

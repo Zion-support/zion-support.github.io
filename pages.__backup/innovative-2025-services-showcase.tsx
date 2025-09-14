@@ -3,11 +3,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, 
-  Phone, Zap, DollarSign, Shield, Mail, 
-  MapPin, Rocket, Brain, Sparkles, Atom, 
-  Dna, Users, Globe, Cpu, Lock, Database,
-  BarChart3, Target, Microscope, Cloud
+  CheckCircleArrowRightStarTrendingUp
+  PhoneZapDollarSignShieldMail
+  MapPinRocketBrainSparklesAtom
+  DnaUsersGlobeCpuLockDatabase,
+  BarChart3TargetMicroscopeCloud
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { innovative2025NewServices } from '../data/innovative-2025-new-services';
@@ -63,12 +63,12 @@ export default function Innovative2025ServicesShowcase() {
     <Layout>
       <Head>
         <title>Innovative 2025 Services Showcase | Zion Tech Group - Revolutionary Technology Solutions</title>
-        <meta name="description" content="Discover our innovative 2025 technology services including AI-powered solutions, quantum computing, edge computing, blockchain, and space technology. Transform your business with cutting-edge innovations." />
-        <meta name="keywords" content="innovative services 2025, AI solutions, quantum computing, edge computing, blockchain, space technology, Zion Tech Group" />
+        <meta name="description" content="Discover our innovative 2025 technology services including AI-powered solutionsquantum computingedge computingblockchainand space technology. Transform your business with cutting-edge innovations." />
+        <meta name="keywords" content="innovative services 2025AI solutionsquantum computingedge computingblockchainspace technologyZion Tech Group" />
         <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="indexfollow" />
         <meta property="og:title" content="Innovative 2025 Services Showcase - Zion Tech Group" />
-        <meta property="og:description" content="Discover revolutionary technology services for 2025 including AI, quantum computing, and emerging technologies." />
+        <meta property="og:description" content="Discover revolutionary technology services for 2025 including AIquantum computingand emerging technologies." />
         <meta property="og:url" content="https://ziontechgroup.com/innovative-2025-services-showcase" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/innovative-2025-services-showcase" />
@@ -87,8 +87,8 @@ export default function Innovative2025ServicesShowcase() {
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -106,9 +106,9 @@ export default function Innovative2025ServicesShowcase() {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
             <Link
@@ -131,8 +131,8 @@ export default function Innovative2025ServicesShowcase() {
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -146,12 +146,12 @@ export default function Innovative2025ServicesShowcase() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.map((category, index) => (
+            {categories.map((categoryindex) => (
               <motion.div
                 key={category.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300 group"
               >
@@ -173,8 +173,8 @@ export default function Innovative2025ServicesShowcase() {
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -188,12 +188,12 @@ export default function Innovative2025ServicesShowcase() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {innovative2025NewServices.map((service, index) => (
+            {innovative2025NewServices.map((serviceindex) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border border-white/10 rounded-3xl hover:border-cyan-500/30 transition-all duration-300 group"
               >
@@ -235,7 +235,7 @@ export default function Innovative2025ServicesShowcase() {
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                   <div className="grid grid-cols-1 gap-2">
-                    {service.features.slice(0, 5).map((feature, featureIndex) => (
+                    {service.features.slice(05).map((featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2 text-gray-300">
                         <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                         <span className="text-sm">{feature}</span>
@@ -282,8 +282,8 @@ export default function Innovative2025ServicesShowcase() {
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -298,8 +298,8 @@ export default function Innovative2025ServicesShowcase() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
@@ -317,9 +317,9 @@ export default function Innovative2025ServicesShowcase() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.1 }}
               viewport={{ once: true }}
               className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
             >
@@ -336,9 +336,9 @@ export default function Innovative2025ServicesShowcase() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.2 }}
               viewport={{ once: true }}
               className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
             >
@@ -356,8 +356,8 @@ export default function Innovative2025ServicesShowcase() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center"

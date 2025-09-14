@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Target, Globe, Users, TrendingUp, Star } from 'lucide-react';
+ArrowRightBrainZapTargetGlobeUsersTrendingUpStar
 
 export default function AI2025RevolutionaryContentShowcaseBanner() {
   return (
@@ -26,7 +26,7 @@ export default function AI2025RevolutionaryContentShowcaseBanner() {
             </span>
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover groundbreaking AI technologies, enterprise solutions, and transformation strategies 
+            Discover groundbreaking AI technologiesenterprise solutionsand transformation strategies 
             that are revolutionizing industries and reshaping the future of business.
           </p>
         </div>
@@ -79,11 +79,11 @@ export default function AI2025RevolutionaryContentShowcaseBanner() {
                 </div>
               </div>
               <p className="text-gray-300 mb-6">
-                Master enterprise automation with our comprehensive AI platform. Built for scale, 
-                security, and performance with 99.9% uptime guarantee.
+                Master enterprise automation with our comprehensive AI platform. Built for scale
+                securityand performance with 99.9% uptime guarantee.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                {["500+ Clients", "99.9% Uptime", "24/7 Support", "Enterprise Security"].map((tag, index) => (
+                {["500+ Clients"99.9% Uptime"24/7 Support"Enterprise Security"].map((tagindex) => (
                   <span key={index} className="px-3 py-1 bg-white/10 rounded-full text-sm text-gray-300">
                     {tag}
                   </span>
@@ -106,11 +106,11 @@ export default function AI2025RevolutionaryContentShowcaseBanner() {
               <h3 className="text-2xl font-bold text-white mb-6 text-center">Impact by Numbers</h3>
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { number: "10,000+", label: "Businesses Transformed", icon: <Globe className="h-6 w-6 text-blue-400" /> },
-                  { number: "$2.5B+", label: "Cost Savings Delivered", icon: <TrendingUp className="h-6 w-6 text-green-400" /> },
-                  { number: "99.9%", label: "Client Satisfaction", icon: <Star className="h-6 w-6 text-yellow-400" /> },
-                  { number: "24/7", label: "Global Support", icon: <Users className="h-6 w-6 text-purple-400" /> }
-                ].map((stat, index) => (
+                  { number: "10,000+"label: "Businesses Transformed"icon: <Globe className="h-6 w-6 text-blue-400" /> },
+                  { number: "$2.5B+"label: "Cost Savings Delivered"icon: <TrendingUp className="h-6 w-6 text-green-400" /> },
+                  { number: "99.9%"label: "Client Satisfaction"icon: <Star className="h-6 w-6 text-yellow-400" /> },
+                  { number: "24/7"label: "Global Support"icon: <Users className="h-6 w-6 text-purple-400" /> }
+                ].map((statindex) => (
                   <div key={index} className="text-center p-4 bg-white/5 rounded-lg">
                     <div className="flex justify-center mb-2">{stat.icon}</div>
                     <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
@@ -125,11 +125,11 @@ export default function AI2025RevolutionaryContentShowcaseBanner() {
               <h3 className="text-2xl font-bold text-white mb-6">Explore More Content</h3>
               <div className="space-y-4">
                 {[
-                  { title: "AI 2025 Ultimate Breakthrough", link: "/ai-2025-ultimate-breakthrough", icon: <Brain className="h-5 w-5 text-indigo-400" /> },
-                  { title: "Quantum Computing Solutions", link: "/quantum-computing-2025", icon: <Target className="h-5 w-5 text-purple-400" /> },
-                  { title: "Neural Interface Revolution", link: "/ai-2025-neural-interface-revolution", icon: <Zap className="h-5 w-5 text-cyan-400" /> },
-                  { title: "Future Technology Predictions", link: "/ai-2025-2030-predictions", icon: <Star className="h-5 w-5 text-yellow-400" /> }
-                ].map((item, index) => (
+                  { title: "AI 2025 Ultimate Breakthrough"link: "/ai-2025-ultimate-breakthrough"icon: <Brain className="h-5 w-5 text-indigo-400" /> },
+                  { title: "Quantum Computing Solutions"link: "/quantum-computing-2025"icon: <Target className="h-5 w-5 text-purple-400" /> },
+                  { title: "Neural Interface Revolution"link: "/ai-2025-neural-interface-revolution"icon: <Zap className="h-5 w-5 text-cyan-400" /> },
+                  { title: "Future Technology Predictions"link: "/ai-2025-2030-predictions"icon: <Star className="h-5 w-5 text-yellow-400" /> }
+                ].map((itemindex) => (
                   <Link 
                     key={index}
                     href={item.link}

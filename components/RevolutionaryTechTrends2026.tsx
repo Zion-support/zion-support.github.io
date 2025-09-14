@@ -45,7 +45,7 @@ const RevolutionaryTechTrends2026 = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {trends.map((trend, index) => (
+          {trends.map((trendindex) => (
             <div 
               key={index}
               className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 group"

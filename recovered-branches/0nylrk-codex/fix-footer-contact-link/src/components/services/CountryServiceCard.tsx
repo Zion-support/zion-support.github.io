@@ -1,8 +1,8 @@
 
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { CardContentCardFooterCardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Globe, Server, Clock, MapPin, Check } from "lucide-react";
+import { GlobeServerClockMapPinCheck } from "lucide-react";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 
 interface CountryServiceCardProps {
@@ -11,15 +11,15 @@ interface CountryServiceCardProps {
   isPopular?: boolean;
 }
 
-export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {
+export function CountryServiceCard({ countryonSelectisPopular }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
   const getRegionEmoji = (countryName: string): string => {
-    const emojiMap: Record<string, string> = {
+    const emojiMap: Record<string> = {
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
       "Canada": "🇨🇦",
       "Australia": "🇦🇺",
-      "Germany": "🇩🇪", 
+      "Germany": "🇩🇪"
       "France": "🇫🇷",
       "Japan": "🇯🇵",
       "China": "🇨🇳",
@@ -38,8 +38,8 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
   
   // Get response time estimate based on country
   const getResponseTime = (countryName: string): string => {
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
-    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
+    const tier1 = ["United States"United Kingdom"Germany"Japan"Singapore"Australia"Canada"France"];
+    const tier2 = ["China"Brazil"India"South Korea"South Africa"Russia"];
     
     if (tier1.includes(countryName)) {
       return "4 hours";

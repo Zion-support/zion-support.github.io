@@ -2,8 +2,8 @@
 import React from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+import { UserCheckStarCalendarCheckBriefcaseIcon } from "lucide-react";
+import { OnboardingTrackerOnboardingStep } from "./OnboardingTracker";
 
 export function TalentOnboardingSteps() {
   const { user } = useAuth();

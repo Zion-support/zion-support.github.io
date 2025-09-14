@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react';
+import React{ useEffectuseRefuseState } from 'react';
 import { motion } from 'framer-motion';
 
 interface LazyImageProps {
@@ -21,8 +21,8 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   width,
   height
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
+  const [isLoadedsetIsLoaded] = useState(false);
+  const [isInViewsetIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export const LazyImage: React.FC<LazyImageProps> = ({
     }
 
     return () => observer.disconnect();
-  }, [threshold]);
+  }[threshold]);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -56,7 +56,7 @@ export const LazyImage: React.FC<LazyImageProps> = ({
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
-        style={{ width, height }}
+        style={{ widtheight }}
       />
       
       {/* Actual Image */}
@@ -66,12 +66,12 @@ export const LazyImage: React.FC<LazyImageProps> = ({
           src={src}
           alt={alt}
           onLoad={handleLoad}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
+          initial={{ opacity: 0scale: 1.1 }}
+          animate={{ opacity: isLoaded ? 1 : 0scale: isLoaded ? 1 : 1.1 }}
           transition={{ duration: 0.5 }}
           className="w-full h-full object-cover"
           loading="lazy"
-          style={{ width, height }}
+          style={{ widtheight }}
         />
       )}
     </div>

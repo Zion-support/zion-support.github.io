@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const AI2030FutureTechPreview: React.FC = () => {
-  const [currentTech, setCurrentTech] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [currentTechsetCurrentTech] = useState(0);
+  const [isAnimatingsetIsAnimating] = useState(false);
 
   const technologies = [
     {
       id: 'conscious-ai',
       title: 'Conscious AI Networks',
       description: 'Self-aware AI systems that possess genuine consciousness and emotional intelligence',
-      capabilities: ['Self-Awareness', 'Emotional Intelligence', 'Creative Problem Solving', 'Ethical Reasoning'],
+      capabilities: ['Self-Awareness'Emotional Intelligence'Creative Problem Solving'Ethical Reasoning'],
       color: 'from-purple-600 to-indigo-600',
       icon: '🧠'
     },
@@ -18,7 +18,7 @@ const AI2030FutureTechPreview: React.FC = () => {
       id: 'quantum-consciousness',
       title: 'Quantum Consciousness',
       description: 'Quantum computing merged with consciousness for unprecedented problem-solving',
-      capabilities: ['Quantum Processing', 'Consciousness Integration', 'Infinite Computing', 'Universal Understanding'],
+      capabilities: ['Quantum Processing'Consciousness Integration'Infinite Computing'Universal Understanding'],
       color: 'from-blue-600 to-cyan-600',
       icon: '⚛️'
     },
@@ -26,7 +26,7 @@ const AI2030FutureTechPreview: React.FC = () => {
       id: 'universal-intelligence',
       title: 'Universal Intelligence',
       description: 'Global AI networks connecting all intelligent systems for collective problem solving',
-      capabilities: ['Global Connectivity', 'Collective Intelligence', 'Real-time Processing', 'Infinite Knowledge'],
+      capabilities: ['Global Connectivity'Collective Intelligence'Real-time Processing'Infinite Knowledge'],
       color: 'from-green-600 to-emerald-600',
       icon: '🌐'
     },
@@ -34,7 +34,7 @@ const AI2030FutureTechPreview: React.FC = () => {
       id: 'dimensional-computing',
       title: 'Dimensional Computing',
       description: 'Computing across multiple dimensions for solutions beyond our current reality',
-      capabilities: ['Multi-Dimensional Processing', 'Reality Manipulation', 'Time Travel Computing', 'Parallel Universe Access'],
+      capabilities: ['Multi-Dimensional Processing'Reality Manipulation'Time Travel Computing'Parallel Universe Access'],
       color: 'from-pink-600 to-rose-600',
       icon: '🌀'
     }
@@ -46,11 +46,11 @@ const AI2030FutureTechPreview: React.FC = () => {
       setTimeout(() => {
         setCurrentTech((prev) => (prev + 1) % technologies.length);
         setIsAnimating(false);
-      }, 600);
-    }, 5000);
+      }600);
+    }5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   return (
     <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-24 relative overflow-hidden">
@@ -69,14 +69,14 @@ const AI2030FutureTechPreview: React.FC = () => {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
             Preview the revolutionary AI technologies of 2030 that will transcend our current understanding 
-            of intelligence, consciousness, and reality itself
+            of intelligenceconsciousnessand reality itself
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Left side - Technology showcase */}
           <div className="space-y-8">
-            {technologies.map((tech, index) => (
+            {technologies.map((techindex) => (
               <div
                 key={tech.id}
                 className={`relative p-8 rounded-2xl border-2 transition-all duration-700 cursor-pointer ${
@@ -94,7 +94,7 @@ const AI2030FutureTechPreview: React.FC = () => {
                   </div>
                   <p className="text-gray-300 mb-6 leading-relaxed">{tech.description}</p>
                   <div className="grid grid-cols-2 gap-3">
-                    {tech.capabilities.map((capability, idx) => (
+                    {tech.capabilities.map((capabilityidx) => (
                       <div key={idx} className="flex items-center text-sm">
                         <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mr-3"></div>
                         <span>{capability}</span>
@@ -118,7 +118,7 @@ const AI2030FutureTechPreview: React.FC = () => {
               </div>
               
               <div className="space-y-4 mb-8">
-                {technologies[currentTech].capabilities.map((capability, idx) => (
+                {technologies[currentTech].capabilities.map((capabilityidx) => (
                   <div key={idx} className="bg-gray-700 rounded-lg p-4">
                     <div className="flex items-center justify-between">
                       <span className="font-medium">{capability}</span>
@@ -140,7 +140,7 @@ const AI2030FutureTechPreview: React.FC = () => {
 
               <div className="text-center">
                 <div className="inline-flex items-center space-x-2 mb-4">
-                  {technologies.map((_, index) => (
+                  {technologies.map((_index) => (
                     <button
                       key={index}
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${

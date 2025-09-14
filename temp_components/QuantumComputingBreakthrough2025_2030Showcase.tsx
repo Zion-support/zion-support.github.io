@@ -9,7 +9,7 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
       title: "Error-Corrected Quantum Computers",
       description: "First commercially viable quantum computers with 99.99% error correction",
       qubits: "1,000+ Logical Qubits",
-      applications: ["Drug Discovery", "Financial Modeling", "Climate Simulation"],
+      applications: ["Drug Discovery"Financial Modeling"Climate Simulation"],
       icon: "🔬",
       color: "from-blue-500 to-purple-500"
     },
@@ -18,7 +18,7 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
       title: "Quantum Machine Learning Revolution",
       description: "Quantum algorithms achieving exponential speedup in AI training",
       qubits: "10,000+ Logical Qubits",
-      applications: ["Autonomous Vehicles", "Medical Diagnosis", "Supply Chain Optimization"],
+      applications: ["Autonomous Vehicles"Medical Diagnosis"Supply Chain Optimization"],
       icon: "🧠",
       color: "from-purple-500 to-pink-500"
     },
@@ -27,7 +27,7 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
       title: "Quantum Internet Network",
       description: "Global quantum communication network with perfect security",
       qubits: "100,000+ Logical Qubits",
-      applications: ["Secure Communications", "Quantum Cloud Computing", "Distributed AI"],
+      applications: ["Secure Communications"Quantum Cloud Computing"Distributed AI"],
       icon: "🌐",
       color: "from-pink-500 to-red-500"
     },
@@ -36,7 +36,7 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
       title: "Quantum Supremacy Achieved",
       description: "Quantum computers solving problems impossible for classical computers",
       qubits: "1,000,000+ Logical Qubits",
-      applications: ["Materials Science", "Cryptography", "Optimization"],
+      applications: ["Materials Science"Cryptography"Optimization"],
       icon: "⚡",
       color: "from-red-500 to-orange-500"
     },
@@ -45,7 +45,7 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
       title: "Quantum-AI Hybrid Systems",
       description: "Seamless integration of quantum and classical computing",
       qubits: "10,000,000+ Logical Qubits",
-      applications: ["Real-time Decision Making", "Predictive Analytics", "Complex Simulations"],
+      applications: ["Real-time Decision Making"Predictive Analytics"Complex Simulations"],
       icon: "🤖",
       color: "from-orange-500 to-yellow-500"
     },
@@ -54,7 +54,7 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
       title: "Universal Quantum Computer",
       description: "Fully programmable quantum computer solving any computable problem",
       qubits: "100,000,000+ Logical Qubits",
-      applications: ["Universal Problem Solving", "Reality Simulation", "Consciousness Modeling"],
+      applications: ["Universal Problem Solving"Reality Simulation"Consciousness Modeling"],
       icon: "🌟",
       color: "from-yellow-500 to-green-500"
     }
@@ -63,25 +63,25 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
   const industryImpact = [
     {
       industry: "Healthcare",
-      impact: "99.9% faster drug discovery, personalized medicine",
+      impact: "99.9% faster drug discoverypersonalized medicine",
       roi: "5,000% ROI",
       timeline: "2025-2027"
     },
     {
       industry: "Finance",
-      impact: "Real-time risk analysis, fraud detection",
+      impact: "Real-time risk analysisfraud detection",
       roi: "8,500% ROI",
       timeline: "2025-2028"
     },
     {
       industry: "Manufacturing",
-      impact: "Optimized supply chains, predictive maintenance",
+      impact: "Optimized supply chainspredictive maintenance",
       roi: "12,000% ROI",
       timeline: "2026-2029"
     },
     {
       industry: "Energy",
-      impact: "Nuclear fusion optimization, renewable energy",
+      impact: "Nuclear fusion optimizationrenewable energy",
       roi: "15,000% ROI",
       timeline: "2027-2030"
     }
@@ -92,8 +92,8 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
       {/* Header Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 50 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8">
@@ -119,12 +119,12 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
         </h2>
         
         <div className="space-y-12">
-          {quantumBreakthroughs.map((breakthrough, index) => (
+          {quantumBreakthroughs.map((breakthroughindex) => (
             <motion.div
               key={breakthrough.year}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              initial={{ opacity: 0x: index % 2 === 0 ? -100 : 100 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.8delay: index * 0.2 }}
               className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}
             >
               <div className="flex-1">
@@ -143,7 +143,7 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
                   <div>
                     <h4 className="text-white font-bold mb-2">Key Applications:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {breakthrough.applications.map((app, idx) => (
+                      {breakthrough.applications.map((appidx) => (
                         <span key={idx} className="bg-white/20 px-3 py-1 rounded-full text-sm text-white">
                           {app}
                         </span>
@@ -188,12 +188,12 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {industryImpact.map((impact, index) => (
+          {industryImpact.map((impactindex) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              initial={{ opacity: 0y: 50 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: index * 0.2 }}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300"
             >
               <div className="text-center mb-6">
@@ -270,8 +270,8 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 50 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-br from-blue-800/30 to-purple-800/30 p-8 rounded-2xl border border-blue-500/30 backdrop-blur-sm"
           >
@@ -284,9 +284,9 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
           </motion.div>
           
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0y: 50 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 p-8 rounded-2xl border border-purple-500/30 backdrop-blur-sm"
           >
             <div className="text-4xl mb-4">🔒</div>
@@ -298,9 +298,9 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
           </motion.div>
           
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0y: 50 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.4 }}
             className="bg-gradient-to-br from-pink-800/30 to-red-800/30 p-8 rounded-2xl border border-pink-500/30 backdrop-blur-sm"
           >
             <div className="text-4xl mb-4">🌍</div>

@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const ContentNavigation2025 = () => {
-  const [activeTab, setActiveTab] = useState('all');
+  const [activeTabsetActiveTab] = useState('all');
 
   const contentCategories = [
     {
@@ -103,7 +103,7 @@ const ContentNavigation2025 = () => {
             Explore Our Content Library
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover comprehensive guides, success stories, and implementation resources 
+            Discover comprehensive guidesuccess storiesand implementation resources 
             to accelerate your AI transformation journey.
           </p>
         </div>
@@ -128,7 +128,7 @@ const ContentNavigation2025 = () => {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {filteredContent.map((content, index) => (
+          {filteredContent.map((contentindex) => (
             <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group border border-gray-100">
               <div className="p-8">
                 <div className="flex items-center justify-between mb-4">

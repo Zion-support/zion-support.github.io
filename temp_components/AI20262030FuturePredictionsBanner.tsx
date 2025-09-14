@@ -15,7 +15,7 @@ export default function AI20262030FuturePredictionsBanner() {
           </h2>
           <p className="text-xl md:text-2xl text-cyan-100 mb-8 max-w-4xl mx-auto">
             Discover the most comprehensive AI predictions for 2026-2030. 
-            <span className="font-bold text-yellow-300"> Quantum neural fusion, consciousness AI, and transcendent intelligence</span> breakthroughs that will reshape humanity.
+            <span className="font-bold text-yellow-300"> Quantum neural fusionconsciousness AIand transcendent intelligence</span> breakthroughs that will reshape humanity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

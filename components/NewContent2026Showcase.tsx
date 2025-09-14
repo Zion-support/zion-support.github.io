@@ -18,7 +18,7 @@ export default function NewContent2026Showcase() {
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Discover the latest breakthrough content featuring neural consciousness, quantum computing, 
+            Discover the latest breakthrough content featuring neural consciousnessquantum computing
             and revolutionary AI technologies delivering unprecedented results.
           </p>
         </div>
@@ -31,7 +31,7 @@ export default function NewContent2026Showcase() {
             <h3 className="text-xl font-bold text-white mb-3">Neural Consciousness Breakthrough</h3>
             <p className="text-gray-300 mb-4 text-sm">
               Revolutionary AI 2026 neural consciousness breakthrough achieving 99.9% accuracy and 50,000% ROI 
-              in healthcare, education, and enterprise applications.
+              in healthcareducationand enterprise applications.
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
               <span className="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs">50,000% ROI</span>
@@ -128,7 +128,7 @@ export default function NewContent2026Showcase() {
             <div className="text-3xl mb-3">🛠️</div>
             <h4 className="text-lg font-bold text-white mb-2">Tools & Resources</h4>
             <p className="text-gray-300 text-sm mb-3">
-              Comprehensive tools, calculators, and resources for AI implementation.
+              Comprehensive toolscalculatorsand resources for AI implementation.
             </p>
             <Link href="/tools" className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold">
               Browse Tools →
@@ -140,7 +140,7 @@ export default function NewContent2026Showcase() {
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">Stay Updated with AI 2026 Breakthroughs</h3>
           <p className="text-gray-300 mb-6">
-            Get exclusive access to the latest neural consciousness breakthroughs, case studies, and implementation guides.
+            Get exclusive access to the latest neural consciousness breakthroughscase studiesand implementation guides.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <input 

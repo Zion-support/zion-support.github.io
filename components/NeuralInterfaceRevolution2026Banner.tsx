@@ -14,7 +14,7 @@ export default function NeuralInterfaceRevolution2026Banner() {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Experience the ultimate neural interface revolution of 2026. Direct brain-computer integration 
-            that transforms human capabilities, communication, and interaction with technology.
+            that transforms human capabilitiescommunicationand interaction with technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Phone, Mail, MapPin, Globe, ArrowRight, Star, 
-  Rocket, Brain, Atom, Building, Briefcase, Microscope,
-  Twitter, Facebook, Linkedin, Instagram, Youtube,
-  Github, Zap, Sparkles, Shield, Cpu, Database
+  PhoneMailMapPinGlobeArrowRightStar
+  RocketBrainAtomBuildingBriefcaseMicroscope,
+  TwitterFacebookLinkedinInstagramYoutube,
+  GithubZapSparklesShieldCpuDatabase
 } from 'lucide-react';
 
 const contactInfo = {
@@ -20,102 +20,102 @@ const serviceCategories = [
     title: 'AI & Machine Learning',
     icon: Brain,
     services: [
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
-      { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
-      { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform' },
-      { name: 'AI-Powered IT Asset Management', href: '/ai-powered-it-asset-management' }
+      { name: 'AI Consciousness Evolution'href: '/ai-consciousness-evolution-2029' },
+      { name: 'Quantum Neural Networks'href: '/quantum-neural-network-platform' },
+      { name: 'Autonomous Business Operations'href: '/autonomous-business-operations-platform' },
+      { name: 'AI-Powered IT Asset Management'href: '/ai-powered-it-asset-management' }
     ]
   },
   {
     title: '🧠 AI & Technology',
     services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'Machine Learning', href: '/machine-learning' },
-      { name: 'Natural Language Processing', href: '/nlp-services' },
-      { name: 'Computer Vision', href: '/computer-vision' }
+      { name: 'AI Services'href: '/ai-services' },
+      { name: 'Machine Learning'href: '/machine-learning' },
+      { name: 'Natural Language Processing'href: '/nlp-services' },
+      { name: 'Computer Vision'href: '/computer-vision' }
     ]
   },
   {
     title: '⚛️ Quantum & Emerging Tech',
     services: [
-      { name: 'Quantum Computing', href: '/quantum-computing' },
-      { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
-      { name: 'IoT Platforms', href: '/iot-platforms' },
-      { name: 'Space Technology', href: '/space-tech' }
+      { name: 'Quantum Computing'href: '/quantum-computing' },
+      { name: 'Blockchain Solutions'href: '/blockchain-solutions' },
+      { name: 'IoT Platforms'href: '/iot-platforms' },
+      { name: 'Space Technology'href: '/space-tech' }
     ]
   },
   {
     title: '🏙️ Enterprise Solutions',
     services: [
-      { name: 'Enterprise IT', href: '/enterprise-it' },
-      { name: 'Cloud Solutions', href: '/cloud-solutions' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'DevOps Automation', href: '/devops-automation' }
+      { name: 'Enterprise IT'href: '/enterprise-it' },
+      { name: 'Cloud Solutions'href: '/cloud-solutions' },
+      { name: 'Cybersecurity'href: '/cybersecurity' },
+      { name: 'DevOps Automation'href: '/devops-automation' }
     ]
   }
 ];
 
 const quickLinks = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'Solutions', href: '/solutions', icon: Rocket },
-  { name: 'About', href: '/about', icon: Users },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'Contact', href: '/contact', icon: MessageCircle },
-  { name: 'Support', href: '/support', icon: MessageCircle },
-  { name: 'Privacy', href: '/privacy', icon: Shield }
+  { name: 'Home'href: '/'icon: Home },
+  { name: 'Services'href: '/services'icon: Briefcase },
+  { name: 'Solutions'href: '/solutions'icon: Rocket },
+  { name: 'About'href: '/about'icon: Users },
+  { name: 'Blog'href: '/blog'icon: BookOpen },
+  { name: 'Contact'href: '/contact'icon: MessageCircle },
+  { name: 'Support'href: '/support'icon: MessageCircle },
+  { name: 'Privacy'href: '/privacy'icon: Shield }
 ];
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
+  { name: 'LinkedIn'href: 'https://linkedin.com/company/ziontechgroup'icon: Linkedincolor: 'hover:text-blue-400' },
+  { name: 'Twitter'href: 'https://twitter.com/ziontechgroup'icon: Twittercolor: 'hover:text-sky-400' },
+  { name: 'GitHub'href: 'https://github.com/Zion-Holdings'icon: Githubcolor: 'hover:text-gray-400' },
+  { name: 'YouTube'href: 'https://youtube.com/@ziontechgroup'icon: Youtubecolor: 'hover:text-red-500' }
 ];
 
 const footerSections = [
   {
     title: 'Company',
     links: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Mission', href: '/mission' },
-      { name: 'Leadership Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Press & Media', href: '/press' },
-      { name: 'Partnerships', href: '/partnerships' }
+      { name: 'About Us'href: '/about' },
+      { name: 'Our Mission'href: '/mission' },
+      { name: 'Leadership Team'href: '/team' },
+      { name: 'Careers'href: '/careers' },
+      { name: 'Press & Media'href: '/press' },
+      { name: 'Partnerships'href: '/partnerships' }
     ]
   },
   {
     title: 'Solutions',
     links: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'Quantum Technology', href: '/quantum-technology' },
-      { name: 'IT Infrastructure', href: '/it-infrastructure' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Cloud Solutions', href: '/cloud-solutions' },
-      { name: 'Blockchain', href: '/blockchain-solutions' }
+      { name: 'AI Services'href: '/ai-services' },
+      { name: 'Quantum Technology'href: '/quantum-technology' },
+      { name: 'IT Infrastructure'href: '/it-infrastructure' },
+      { name: 'Cybersecurity'href: '/cybersecurity' },
+      { name: 'Cloud Solutions'href: '/cloud-solutions' },
+      { name: 'Blockchain'href: '/blockchain-solutions' }
     ]
   },
   {
     title: 'Resources',
     links: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'White Papers', href: '/white-papers' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api' },
-      { name: 'Support Center', href: '/support' }
+      { name: 'Blog'href: '/blog' },
+      { name: 'Case Studies'href: '/case-studies' },
+      { name: 'White Papers'href: '/white-papers' },
+      { name: 'Documentation'href: '/docs' },
+      { name: 'API Reference'href: '/api' },
+      { name: 'Support Center'href: '/support' }
     ]
   },
   {
     title: 'Legal',
     links: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-      { name: 'Data Protection', href: '/data-protection' },
-      { name: 'Accessibility', href: '/accessibility' },
-      { name: 'Compliance', href: '/compliance' }
+      { name: 'Privacy Policy'href: '/privacy' },
+      { name: 'Terms of Service'href: '/terms' },
+      { name: 'Cookie Policy'href: '/cookies' },
+      { name: 'Data Protection'href: '/data-protection' },
+      { name: 'Accessibility'href: '/accessibility' },
+      { name: 'Compliance'href: '/compliance' }
     ]
   }
 ];
@@ -139,7 +139,7 @@ const UltraFuturisticFooter2029 = () => {
             </div>
             
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Leading the revolution in AI, quantum computing, and autonomous technology solutions. 
+              Leading the revolution in AIquantum computingand autonomous technology solutions. 
               Transforming businesses with cutting-edge innovation.
             </p>
 
@@ -183,7 +183,7 @@ const UltraFuturisticFooter2029 = () => {
           <div className="lg:col-span-1">
             <h4 className="text-lg font-semibold text-white mb-6">Our Services</h4>
             <div className="space-y-4">
-              {serviceCategories.map((category, index) => (
+              {serviceCategories.map((categoryindex) => (
                 <div key={index}>
                   <h5 className="text-sm font-medium text-gray-300 mb-3">{category.title}</h5>
                   <ul className="space-y-2">
@@ -278,7 +278,7 @@ const UltraFuturisticFooter2029 = () => {
               Stay Updated with Innovation
             </h3>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Get the latest insights on AI, quantum computing, and autonomous technology. 
+              Get the latest insights on AIquantum computingand autonomous technology. 
               Join our newsletter for exclusive updates and industry insights.
             </p>
             

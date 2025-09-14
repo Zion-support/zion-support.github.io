@@ -45,12 +45,12 @@ export default function AI2026ContentDiscoveryWidget() {
             Discover Revolutionary AI Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our latest breakthrough content, cutting-edge technologies, and revolutionary AI solutions for 2026.
+            Explore our latest breakthrough contentcutting-edge technologiesand revolutionary AI solutions for 2026.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {featuredContent.map((content, index) => (
+          {featuredContent.map((contentindex) => (
             <Link 
               key={index}
               href={content.href}

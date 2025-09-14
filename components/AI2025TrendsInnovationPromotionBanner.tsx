@@ -1,13 +1,13 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  ArrowRight, 
+  TrendingUp
+  Brain
+  Zap
+  ArrowRight
   Star,
   Sparkles,
   Target,
@@ -15,27 +15,27 @@ import {
 } from 'lucide-react';
 
 const AI2025TrendsInnovationPromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentStat, setCurrentStat] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentStatsetCurrentStat] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentStat((prev) => (prev + 1) % stats.length);
-    }, 2000);
+    }2000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const stats = [
-    { icon: TrendingUp, value: "150%", label: "Revenue Increase" },
-    { icon: Brain, value: "85%", label: "Efficiency Boost" },
-    { icon: Zap, value: "60%", label: "Faster Processing" },
-    { icon: Target, value: "95%", label: "Success Rate" }
+    { icon: TrendingUpvalue: "150%"label: "Revenue Increase" },
+    { icon: Brainvalue: "85%"label: "Efficiency Boost" },
+    { icon: Zapvalue: "60%"label: "Faster Processing" },
+    { icon: Targetvalue: "95%"label: "Success Rate" }
   ];
 
   const features = [
     "Generative AI Revolution",
-    "Edge AI Computing", 
+    "Edge AI Computing"
     "Quantum AI Integration",
     "Predictive Analytics"
   ];
@@ -53,8 +53,8 @@ const AI2025TrendsInnovationPromotionBanner = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0x: -50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
@@ -81,12 +81,12 @@ const AI2025TrendsInnovationPromotionBanner = () => {
 
             {/* Features List */}
             <div className="space-y-4">
-              {features.map((feature, index) => (
+              {features.map((featureindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isVisible ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={isVisible ? { opacity: 1x: 0 } : {}}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="flex items-center space-x-3"
                 >
                   <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
@@ -119,9 +119,9 @@ const AI2025TrendsInnovationPromotionBanner = () => {
 
           {/* Right Content - Stats Display */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="relative"
           >
             {/* Main Stats Card */}
@@ -135,8 +135,8 @@ const AI2025TrendsInnovationPromotionBanner = () => {
               <div className="text-center mb-8">
                 <motion.div
                   key={currentStat}
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
+                  initial={{ scale: 0.8opacity: 0 }}
+                  animate={{ scale: 1opacity: 1 }}
                   transition={{ duration: 0.5 }}
                   className="space-y-4"
                 >
@@ -154,7 +154,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {
 
               {/* Progress Indicators */}
               <div className="flex justify-center space-x-2">
-                {stats.map((_, index) => (
+                {stats.map((_index) => (
                   <div
                     key={index}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
@@ -167,16 +167,16 @@ const AI2025TrendsInnovationPromotionBanner = () => {
 
             {/* Floating Elements */}
             <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
+              animate={{ y: [0-10] }}
+              transition={{ duration: 3repeat: Infinity }}
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
             >
               <Star className="w-8 h-8 text-white" />
             </motion.div>
 
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, delay: 1 }}
+              animate={{ y: [010] }}
+              transition={{ duration: 4repeat: Infinitydelay: 1 }}
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center"
             >
               <Zap className="w-6 h-6 text-white" />
@@ -186,9 +186,9 @@ const AI2025TrendsInnovationPromotionBanner = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">

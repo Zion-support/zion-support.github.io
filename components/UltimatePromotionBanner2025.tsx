@@ -2,14 +2,14 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, Target, Users, TrendingUp, Award } from 'lucide-react';
+ArrowRightStarZapTargetUsersTrendingUpAward
 
 const UltimatePromotionBanner2025 = () => {
   const stats = [
-    { number: "15,000+", label: "Businesses Transformed", icon: Users },
-    { number: "95%", label: "Efficiency Increase", icon: TrendingUp },
-    { number: "500%", label: "Average ROI", icon: Target },
-    { number: "24/7", label: "AI Support", icon: Zap }
+    { number: "15,000+"label: "Businesses Transformed"icon: Users },
+    { number: "95%"label: "Efficiency Increase"icon: TrendingUp },
+    { number: "500%"label: "Average ROI"icon: Target },
+    { number: "24/7"label: "AI Support"icon: Zap }
   ];
 
   return (
@@ -41,7 +41,7 @@ const UltimatePromotionBanner2025 = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Experience revolutionary AI solutions that transform businesses, enhance productivity, 
+            Experience revolutionary AI solutions that transform businessesenhance productivity
             and unlock unprecedented growth opportunities in 2025 and beyond.
           </p>
 
@@ -64,7 +64,7 @@ const UltimatePromotionBanner2025 = () => {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => {
+          {stats.map((statindex) => {
             const IconComponent = stat.icon;
             return (
               <div key={index} className="text-center group">

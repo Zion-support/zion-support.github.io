@@ -1,11 +1,11 @@
 "use client";
-import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { motionAnimatePresenceVariants } from 'framer-motion';
 import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  DollarSign, Clock, CheckCircle, ArrowRight,
-  Brain, Rocket, Dna, Globe, Shield, Wifi, 
-  Package, Bot, Car, Building2, Monitor, Cpu, 
-  Zap, Atom, Database, Cloud, Lock, Code
+  SearchFilterStarUsersTrendingUp
+  DollarSignClockCheckCircleArrowRight,
+  BrainRocketDnaGlobeShieldWifi
+  PackageBotCarBuilding2MonitorCpu
+  ZapAtomDatabaseCloudLockCode
 } from 'lucide-react';
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
@@ -25,15 +25,15 @@ import { realMarketServices } from '../data/real-market-services';
 import { new2025Services } from '../data/new-2025-services';
 import { newRealInnovations } from '../data/new-real-innovations';
 import { serviceExpansions2025 } from '../data/service-expansions-2025';
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Search, Grid, List,
-  Brain, Atom, Shield, Target, Rocket,
-  ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
-  Users, DollarSign, Settings, TrendingUp, BarChart3, ChevronDown
+  SearchGridList,
+  BrainAtomShieldTargetRocket,
+  ArrowRightCheckPaletteHeartTruckGraduationCap,
+  UsersDollarSignSettingsTrendingUpBarChart3ChevronDown
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
@@ -97,7 +97,7 @@ const serviceCategories: Array<{
   {
     id: 'quantum-emerging',
     title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing, DNA computing, and beyond',
+    description: 'Quantum computingDNA computingand beyond',
     icon: Atom,
     color: 'from-indigo-500 to-blue-500',
     services: [...emergingTechServices2025],
@@ -115,7 +115,7 @@ const serviceCategories: Array<{
   {
     id: 'space-metaverse',
     title: '🌌 Space & Metaverse',
-    description: 'Space mining, metaverse development, and more',
+    description: 'Space miningmetaverse developmentand more',
     icon: Rocket,
     color: 'from-teal-500 to-emerald-500',
     services: [...quantumSpaceServices],
@@ -127,13 +127,13 @@ const serviceCategories: Array<{
     description: 'Innovative solutions for every business need',
     icon: Target,
     color: 'from-green-500 to-yellow-500',
-    services: [...realMicroSaasServices2025, ...enhancedRealMicroSaasServices],
+    services: [...realMicroSaasServices2025...enhancedRealMicroSaasServices],
     gradient: 'from-green-500/20 to-orange-500/20'
   },
   {
     id: 'financial-technology',
     title: '💰 Financial Technology',
-    description: 'Innovative fintech, DeFi, and financial services',
+    description: 'Innovative fintechDeFiand financial services',
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-500',
     services: [...innovativeFinancialServices2025],
@@ -243,9 +243,9 @@ const serviceCategories: Array<{
 import { realVerifiedServices } from '../data/real-verified-services';
 
 export default function ServicesPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState('name');
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('All');
+  const [sortBysetSortBy] = useState('name');
 
   // Combine all services
   const allServices = [
@@ -273,12 +273,12 @@ export default function ServicesPage() {
   ];
 
   // Get unique services by ID
-  const uniqueServices = allServices.filter((service, index, self) => 
+  const uniqueServices = allServices.filter((serviceindexself) => 
     index === self.findIndex(s => s.id === service.id)
   );
 
   // Get all categories
-  const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
+  const categories = ['All'...Array.from(new Set(uniqueServices.map(s => 
     Array.isArray(s.category) ? s.category[0] : s.category
   )))];
 
@@ -294,12 +294,12 @@ export default function ServicesPage() {
                                service.category === selectedCategory);
       return matchesSearch && matchesCategory;
     })
-    .sort((a, b) => {
+    .sort((ab) => {
       switch (sortBy) {
         case 'name':
           return a.name.localeCompare(b.name);
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          return parseFloat(a.price.replace(/[^0-9.]/g'')) - parseFloat(b.price.replace(/[^0-9.]/g''));
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
         case 'rating':
@@ -320,9 +320,9 @@ export default function ServicesPage() {
     <UltraFuturisticBackground2029>
       <Head>
         <title>Revolutionary 2029 Technology Services | Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive range of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />
-        <meta name="keywords" content="AI services, quantum computing, space technology, biotechnology, 2029 technology, revolutionary services" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Explore our comprehensive range of revolutionary 2029 technology services including AI consciousnessquantum computingspace miningand advanced biotechnology." />
+        <meta name="keywords" content="AI servicesquantum computingspace technologybiotechnology2029 technologyrevolutionary services" />
+        <meta name="viewport" content="width=device-widthinitial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Head>
 
@@ -346,15 +346,15 @@ export default function ServicesPage() {
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
             {/* Enhanced Header */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-20"
             >
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
+                initial={{ opacity: 0scale: 0.9 }}
+                animate={{ opacity: 1scale: 1 }}
+                transition={{ duration: 1delay: 0.2 }}
                 className="mb-6"
               >
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-4">
@@ -370,14 +370,14 @@ export default function ServicesPage() {
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-                Discover our comprehensive suite of cutting-edge AI, quantum computing, emerging technology, 
+                Discover our comprehensive suite of cutting-edge AIquantum computingemerging technology
                 and micro SAAS services designed to transform your business and drive innovation.
               </p>
               
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: 0.4 }}
                 className="flex flex-wrap justify-center gap-6 text-sm text-gray-400"
               >
                 <div className="flex items-center">
@@ -401,9 +401,9 @@ export default function ServicesPage() {
 
             {/* Enhanced Search and Filters */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.2 }}
               className="mb-12"
             >
               <div className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 shadow-2xl shadow-cyan-500/10">
@@ -521,9 +521,9 @@ export default function ServicesPage() {
 
             {/* Enhanced Category Overview */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.4 }}
               className="mb-20"
             >
               <div className="text-center mb-16">
@@ -538,14 +538,14 @@ export default function ServicesPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {categories.map((category, index) => {
+                {categories.map((categoryindex) => {
                   const stats = getCategoryStats(category.id);
                   return (
                     <motion.div
                       key={category.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
+                      transition={{ duration: 0.8delay: 0.6 + index * 0.1 }}
                       className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 cursor-pointer group"
                       onClick={() => setSelectedCategory(category.id)}
                     >
@@ -579,9 +579,9 @@ export default function ServicesPage() {
 
             {/* Services Grid/List */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.8 }}
             >
               <h2 className="text-3xl font-bold text-center mb-12">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -591,12 +591,12 @@ export default function ServicesPage() {
 
               {viewMode === 'grid' ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {sortedServices.map((service, index) => (
+                  {sortedServices.map((serviceindex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
+                      transition={{ duration: 0.8delay: 1 + index * 0.05 }}
                       className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 hover:transform hover:scale-105 group relative overflow-hidden"
                     >
                       {/* Animated Background */}
@@ -661,7 +661,7 @@ export default function ServicesPage() {
                       <div className="mb-6 relative z-10">
                         <div className="text-sm text-cyan-400 font-medium mb-3">✨ Key Features</div>
                         <ul className="space-y-2">
-                          {service.features.slice(0, 3).map((feature, idx) => (
+                          {service.features.slice(03).map((featureidx) => (
                             <li key={idx} className="text-sm text-gray-300 flex items-center group-hover:text-white transition-colors duration-300">
                               <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                               {feature}
@@ -701,12 +701,12 @@ export default function ServicesPage() {
                 </div>
               ) : (
                 <div className="space-y-4">
-                  {sortedServices.map((service, index) => (
+                  {sortedServices.map((serviceindex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
+                      initial={{ opacity: 0x: -20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      transition={{ duration: 0.8delay: 1 + index * 0.05 }}
                       className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/50 transition-all duration-300"
                     >
                       <div className="flex flex-col lg:flex-row gap-6">
@@ -724,7 +724,7 @@ export default function ServicesPage() {
                           <p className="text-gray-300 mb-3">{service.description}</p>
                           
                           <div className="flex flex-wrap gap-2 mb-4">
-                            {service.features.slice(0, 4).map((feature, idx) => (
+                            {service.features.slice(04).map((featureidx) => (
                               <span key={idx} className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-lg">
                                 {feature}
                               </span>
@@ -768,9 +768,9 @@ export default function ServicesPage() {
 
             {/* Enhanced CTA Section */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 1.2 }}
               className="text-center mt-24"
             >
               <div className="relative overflow-hidden bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20 rounded-3xl p-16 shadow-2xl shadow-cyan-500/10">
@@ -780,9 +780,9 @@ export default function ServicesPage() {
                 
                 <div className="relative z-10">
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1, delay: 1.4 }}
+                    initial={{ opacity: 0scale: 0.9 }}
+                    animate={{ opacity: 1scale: 1 }}
+                    transition={{ duration: 1delay: 1.4 }}
                     className="mb-8"
                   >
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6">
@@ -798,7 +798,7 @@ export default function ServicesPage() {
                   </h2>
                   
                   <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-                    Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies.
+                    Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AIquantum computingand emerging technologies.
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-6 justify-center">

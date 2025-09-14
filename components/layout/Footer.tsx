@@ -66,7 +66,7 @@
                 <MapPin className="h-4 w-4 mr-2 mt-0.5" />,
                 <span>,
                   123 Tech Street<br />,
-                  San Francisco, CA 94105,
+                  San FranciscoCA 94105,
                 </span>,
               </div>,
             </div>,
@@ -83,23 +83,23 @@ const Footer = () => {
     {
       title: 'Company',
       links: [
-        { name: 'About', href: '/about' },
-        { name: 'Services', href: '/services' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Contact', href: '/contact' }]},
+        { name: 'About'href: '/about' },
+        { name: 'Services'href: '/services' },
+        { name: 'Case Studies'href: '/case-studies' },
+        { name: 'Contact'href: '/contact' }]},
     {
       title: 'Resources',
       links: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Resources', href: '/resources' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'Support', href: '/support' }]},
+        { name: 'Blog'href: '/blog' },
+        { name: 'Resources'href: '/resources' },
+        { name: 'Documentation'href: '/docs' },
+        { name: 'Support'href: '/support' }]},
     {
       title: 'Legal',
       links: [
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' },
-        { name: 'Cookie Policy', href: '/cookies' }]}];
+        { name: 'Privacy Policy'href: '/privacy' },
+        { name: 'Terms of Service'href: '/terms' },
+        { name: 'Cookie Policy'href: '/cookies' }]}];
 
   const socialLinks = [
     {
@@ -146,8 +146,8 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-gray-400 mb-8 max-w-md leading-relaxed">
-              The world&apos;s most advanced autonomous innovation hub delivering cutting-edge technology solutions, 
-              intelligent automation systems, and the future of cloud-native AI infrastructure.
+              The world&apos;s most advanced autonomous innovation hub delivering cutting-edge technology solutions
+              intelligent automation systemsand the future of cloud-native AI infrastructure.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (

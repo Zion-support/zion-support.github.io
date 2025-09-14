@@ -10,7 +10,7 @@ const UltimateAIRevolution2025Banner = () => {
             Ultimate AI Revolution 2025
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-purple-100">
-            Join the most transformative AI revolution in history. Experience unprecedented business growth, efficiency, and innovation with our cutting-edge AI solutions.
+            Join the most transformative AI revolution in history. Experience unprecedented business growthefficiencyand innovation with our cutting-edge AI solutions.
           </p>
         </div>
         

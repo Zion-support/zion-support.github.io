@@ -1,13 +1,13 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 
-interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
+interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>'type'> {
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
 }
 
-const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(
-  ({ className, checked, onCheckedChange, ...props }, ref) => {
+const Switch = React.forwardRef<HTMLInputElementSwitchProps>(
+  ({ classNamecheckedonCheckedChange...props }ref) => {
     return (
       <label className="inline-flex items-center cursor-pointer">
         <input

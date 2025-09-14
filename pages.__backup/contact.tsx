@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react'
+import React{ useStateuseEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Send, CheckCircle, User, Building, MessageSquare, ArrowRight } from 'lucide-react'
+import { MailPhoneMapPinSendCheckCircleUserBuildingMessageSquareArrowRight } from 'lucide-react'
 import PageTransition from '../src/components/PageTransition'
 
 export default function Contact() {
-	const [formData, setFormData] = useState({
+	const [formDatasetFormData] = useState({
 		name: '',
 		email: '',
 		company: '',
 		service: '',
 		message: ''
 	})
-	const [isSubmitting, setIsSubmitting] = useState(false)
-	const [isSubmitted, setIsSubmitted] = useState(false)
-	const [isVisible, setIsVisible] = useState(false)
-	const [errors, setErrors] = useState<{[key: string]: string}>({})
+	const [isSubmittingsetIsSubmitting] = useState(false)
+	const [isSubmittedsetIsSubmitted] = useState(false)
+	const [isVisiblesetIsVisible] = useState(false)
+	const [errorsetErrors] = useState<{[key: string]: string}>({})
 
 	useEffect(() => {
 		setIsVisible(true)
-	}, [])
+	}[])
 
 	const validateForm = () => {
 		const newErrors: {[key: string]: string} = {}
@@ -51,14 +51,14 @@ export default function Contact() {
 		setIsSubmitting(true)
 		
 		// Simulate form submission
-		await new Promise(resolve => setTimeout(resolve, 1500))
+		await new Promise(resolve => setTimeout(resolve1500))
 		
 		setIsSubmitted(true)
 		setIsSubmitting(false)
 	}
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-		const { name, value } = e.target
+		const { namevalue } = e.target
 		setFormData({
 			...formData,
 			[name]: value
@@ -89,7 +89,7 @@ export default function Contact() {
 									Thank you for your message!
 								</h1>
 								<p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-									We've received your inquiry and will get back to you within one business day. In the meantime, feel free to explore our services.
+									We've received your inquiry and will get back to you within one business day. In the meantimefeel free to explore our services.
 								</p>
 								<div className="flex flex-col sm:flex-row items-center justify-center gap-4">
 									<Link
@@ -126,7 +126,7 @@ export default function Contact(){
 								Get in Touch
 							</h1>
 							<p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-								Ready to transform your business? Let's discuss how our AI, cloud, and cybersecurity solutions can help you scale efficiently and securely.
+								Ready to transform your business? Let's discuss how our AIcloudand cybersecurity solutions can help you scale efficiently and securely.
 							</p>
 						</div>
 					</div>
@@ -323,7 +323,7 @@ export default function Contact(){
 										</div>
 										<div>
 											<h3 className="text-lg font-semibold text-gray-900 dark:text-white">Office</h3>
-											<p className="text-gray-600 dark:text-gray-300">San Francisco, CA</p>
+											<p className="text-gray-600 dark:text-gray-300">San FranciscoCA</p>
 											<p className="text-sm text-gray-500 dark:text-gray-400">Remote-first company</p>
 										</div>
 									</div>

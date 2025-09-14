@@ -1,15 +1,15 @@
 
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
 interface ConversionAnalysisProps {
-  data: Array<Record<string, any>>;
+  data: Array<Record<stringany>>;
   timeRange: string;
   onTimeRangeChange: (range: string) => void;
 }
 
-export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
+export function ConversionAnalysisChart({ datatimeRangeonTimeRangeChange }: ConversionAnalysisProps) {
   const dataKeys = data && data.length > 0
     ? Object.keys(data[0]).filter(key => key !== 'date')
     : [];

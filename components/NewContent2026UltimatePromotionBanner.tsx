@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Brain, Zap, Calendar, TrendingUp } from 'lucide-react';
+ArrowRightSparklesBrainZapCalendarTrendingUp
 
 export default function NewContent2026UltimatePromotionBanner() {
   return (
@@ -25,7 +25,7 @@ export default function NewContent2026UltimatePromotionBanner() {
           </div>
           
           <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
-            Discover the most comprehensive AI predictions, breakthrough innovations, and revolutionary technologies that will shape the future of humanity.
+            Discover the most comprehensive AI predictionsbreakthrough innovationsand revolutionary technologies that will shape the future of humanity.
           </p>
 
           {/* Content highlights */}

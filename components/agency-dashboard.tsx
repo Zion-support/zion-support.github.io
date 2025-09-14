@@ -1,15 +1,15 @@
 "use client";
 import type { GetServerSideProps } from 'next';
-import { FormEvent, useEffect, useState } from 'react';
+import { FormEventuseEffectuseState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
 
 type Props = { vendor: Vendor | null };
 
 export default function AgencyDashboardPage({ vendor }: Props) {
-  const [activeVendor, setActiveVendor] = useState(vendor);
-  const [pkgTitle, setPkgTitle] = useState('');
-  const [pkgDesc, setPkgDesc] = useState('');
-  const [pkgPrice, setPkgPrice] = useState<number | ''>('');
+  const [activeVendorsetActiveVendor] = useState(vendor);
+  const [pkgTitlesetPkgTitle] = useState('');
+  const [pkgDescsetPkgDesc] = useState('');
+  const [pkgPricesetPkgPrice] = useState<number | ''>('');
 
   if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
 
@@ -24,18 +24,18 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         .split(',')
         .map(s => s.trim())
         .filter(Boolean)} as Vendor;
-    // For MVP, update via direct API not implemented; keep local preview only
+    // For MVPupdate via direct API not implemented; keep local preview only
     setActiveVendor(updated);
   }
 
   function addPackage() {
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
-    const packages = [...(activeVendor.packages || []), {
+    const packages = [...(activeVendor.packages || []){
       id: `pkg_${Date.now()}`,
       title: pkgTitle,
       description: pkgDesc,
       priceUsd: Number(pkgPrice)}];
-    setActiveVendor({ ...activeVendor, packages });
+    setActiveVendor({ ...activeVendorpackages });
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('');
@@ -61,7 +61,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
           </div>
           <div className="md:col-span-2">
             <label className="block text-sm mb-1">Services Offered</label>
-            <input name="servicesOffered" defaultValue={activeVendor.servicesOffered?.join(', ') || ''} className="w-full border rounded px-3 py-2 bg-transparent" />
+            <input name="servicesOffered" defaultValue={activeVendor.servicesOffered?.join(') || ''} className="w-full border rounded px-3 py-2 bg-transparent" />
           </div>
           <div className="md:col-span-2">
             <button className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button>
@@ -101,7 +101,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
 }
 
 function Pipeline({ vendorId }: { vendorId: string }) {
-  const [items, setItems] = useState<any[]>([]);
+  const [itemsetItems] = useState<any[]>([]);
 
   async function fetchItems() {
     const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
@@ -109,15 +109,15 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     setItems(data.items || []);
   }
 
-  async function changeStatus(itemId: string, status: string) {
-    await fetch('/api/vendors/update-pipeline', {
+  async function changeStatus(itemId: stringstatus: string) {
+    await fetch('/api/vendors/update-pipeline'{
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ itemId, status })});
+      body: JSON.stringify({ itemIdstatus })});
     fetchItems();
   }
 
-  useEffect(() => { fetchItems(); }, []);
+  useEffect(() => { fetchItems(); }[]);
 
   return (
     <div className="space-y-2">
@@ -128,7 +128,7 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             <div className="font-medium">{item.title}</div>
             <div className="text-xs text-gray-500">{new Date(item.createdAt).toLocaleString()} • {item.status}</div>
           </div>
-          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
+          <select defaultValue={item.status} onChange={e => changeStatus(item.ide.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
             <option value="lead">Lead</option>
             <option value="qualified">Qualified</option>
             <option value="proposal">Proposal</option>

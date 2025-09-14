@@ -1,17 +1,17 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Globe, 
-  Rocket, 
-  Shield, 
-  TrendingUp, 
-  Users, 
+  Brain
+  Zap
+  Globe
+  Rocket
+  Shield
+  TrendingUp
+  Users
   Star,
   ArrowRight,
   Play,
@@ -33,16 +33,16 @@ import {
 } from 'lucide-react';
 
 const RevolutionaryAIInnovations2025 = () => {
-  const [activeInnovation, setActiveInnovation] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeInnovationsetActiveInnovation] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setActiveInnovation((prev) => (prev + 1) % innovations.length);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const innovations = [
     {
@@ -72,7 +72,7 @@ const RevolutionaryAIInnovations2025 = () => {
       id: 2,
       title: "Autonomous Decision Intelligence",
       subtitle: "Self-Evolving AI Systems",
-      description: "AI systems that continuously learn and adapt, making complex business decisions with human-level reasoning and superhuman speed. These systems improve their decision-making capabilities over time without human intervention.",
+      description: "AI systems that continuously learn and adaptmaking complex business decisions with human-level reasoning and superhuman speed. These systems improve their decision-making capabilities over time without human intervention.",
       icon: Target,
       category: "Autonomous Systems",
       impact: "99.9% Decision Accuracy",
@@ -95,7 +95,7 @@ const RevolutionaryAIInnovations2025 = () => {
       id: 3,
       title: "Predictive Business Analytics",
       subtitle: "Future-Ready Intelligence",
-      description: "Advanced forecasting models that predict market trends, customer behavior, and business outcomes with unprecedented accuracy. Transform your business with data-driven insights that anticipate the future.",
+      description: "Advanced forecasting models that predict market trendscustomer behaviorand business outcomes with unprecedented accuracy. Transform your business with data-driven insights that anticipate the future.",
       icon: TrendingUp,
       category: "Analytics",
       impact: "6 Month Forecast Accuracy",
@@ -164,7 +164,7 @@ const RevolutionaryAIInnovations2025 = () => {
       id: 6,
       title: "Space Technology Integration",
       subtitle: "AI-Powered Space Exploration",
-      description: "Advanced AI systems designed for space exploration, satellite management, and interplanetary communication. Push the boundaries of human knowledge with AI that works beyond Earth.",
+      description: "Advanced AI systems designed for space explorationsatellite managementand interplanetary communication. Push the boundaries of human knowledge with AI that works beyond Earth.",
       icon: Rocket,
       category: "Space Technology",
       impact: "Space-Ready AI",
@@ -198,26 +198,26 @@ const RevolutionaryAIInnovations2025 = () => {
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           animate={{ 
-            x: [0, 100, 0],
-            y: [0, -100, 0],
-            rotate: [0, 360, 0]
+            x: [0100],
+            y: [0-100],
+            rotate: [0360]
           }}
           transition={{ 
-            duration: 30, 
-            repeat: Infinity, 
+            duration: 30
+            repeat: Infinity
             ease: "linear" 
           }}
           className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-10 blur-3xl"
         />
         <motion.div
           animate={{ 
-            x: [0, -100, 0],
-            y: [0, 100, 0],
-            rotate: [360, 0, 360]
+            x: [0-100],
+            y: [0100],
+            rotate: [360360]
           }}
           transition={{ 
-            duration: 25, 
-            repeat: Infinity, 
+            duration: 25
+            repeat: Infinity
             ease: "linear" 
           }}
           className="absolute -bottom-20 -left-20 w-96 h-96 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full opacity-10 blur-3xl"
@@ -228,9 +228,9 @@ const RevolutionaryAIInnovations2025 = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ delay: 0.2duration: 0.8 }}
             className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-medium mb-8"
           >
             <Sparkles className="w-6 h-6 mr-3 animate-pulse" />
@@ -238,18 +238,18 @@ const RevolutionaryAIInnovations2025 = () => {
           </motion.div>
           
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ delay: 0.4duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
           >
             The Future is Here
           </motion.h2>
           
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ delay: 0.6duration: 0.8 }}
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
             Experience breakthrough AI innovations that are transforming industries and reshaping the future of technology
@@ -261,8 +261,8 @@ const RevolutionaryAIInnovations2025 = () => {
           {/* Left Side - Innovation Details */}
           <motion.div
             key={activeInnovation}
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0x: -50 }}
+            animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
@@ -299,7 +299,7 @@ const RevolutionaryAIInnovations2025 = () => {
             <div className="space-y-4">
               <h4 className="text-xl font-bold text-white mb-4">Key Features:</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {currentInnovation.features.map((feature, index) => (
+                {currentInnovation.features.map((featureindex) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{feature}</span>
@@ -331,8 +331,8 @@ const RevolutionaryAIInnovations2025 = () => {
           {/* Right Side - Visual Representation */}
           <motion.div
             key={`visual-${activeInnovation}`}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.8 }}
             className="relative"
           >
@@ -341,24 +341,24 @@ const RevolutionaryAIInnovations2025 = () => {
               <div className="absolute inset-0 opacity-20">
                 <motion.div
                   animate={{ 
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 180, 360]
+                    scale: [1.21],
+                    rotate: [0180360]
                   }}
                   transition={{ 
-                    duration: 8, 
-                    repeat: Infinity, 
+                    duration: 8
+                    repeat: Infinity
                     ease: "easeInOut" 
                   }}
                   className={`w-32 h-32 bg-gradient-to-r ${currentInnovation.color} rounded-full absolute top-1/4 left-1/4`}
                 />
                 <motion.div
                   animate={{ 
-                    scale: [1.2, 1, 1.2],
-                    rotate: [360, 180, 0]
+                    scale: [1.21.2],
+                    rotate: [360180]
                   }}
                   transition={{ 
-                    duration: 6, 
-                    repeat: Infinity, 
+                    duration: 6
+                    repeat: Infinity
                     ease: "easeInOut",
                     delay: 1
                   }}
@@ -369,12 +369,12 @@ const RevolutionaryAIInnovations2025 = () => {
               {/* Main Icon */}
               <motion.div
                 animate={{ 
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 5, -5, 0]
+                  scale: [1.1],
+                  rotate: [05-50]
                 }}
                 transition={{ 
-                  duration: 4, 
-                  repeat: Infinity, 
+                  duration: 4
+                  repeat: Infinity
                   ease: "easeInOut" 
                 }}
                 className={`w-32 h-32 bg-gradient-to-r ${currentInnovation.color} rounded-full flex items-center justify-center relative z-10`}
@@ -384,12 +384,12 @@ const RevolutionaryAIInnovations2025 = () => {
 
               {/* Stats Display */}
               <div className="absolute bottom-4 left-4 right-4 grid grid-cols-2 gap-4">
-                {Object.entries(currentInnovation.stats).slice(0, 4).map(([key, value], index) => (
+                {Object.entries(currentInnovation.stats).slice(04).map(([keyvalue]index) => (
                   <motion.div
                     key={key}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                    initial={{ opacity: 0y: 20 }}
+                    animate={{ opacity: 1y: 0 }}
+                    transition={{ delay: index * 0.1duration: 0.5 }}
                     className="bg-white bg-opacity-90 rounded-lg p-3 text-center"
                   >
                     <div className="text-2xl font-bold text-gray-900">{value}</div>
@@ -403,7 +403,7 @@ const RevolutionaryAIInnovations2025 = () => {
 
         {/* Innovation Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {innovations.map((innovation, index) => (
+          {innovations.map((innovationindex) => (
             <button
               key={innovation.id}
               onClick={() => setActiveInnovation(index)}
@@ -421,9 +421,9 @@ const RevolutionaryAIInnovations2025 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
+          initial={{ opacity: 0y: 50 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ delay: 1duration: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-white to-gray-100 rounded-3xl p-12 text-gray-900">

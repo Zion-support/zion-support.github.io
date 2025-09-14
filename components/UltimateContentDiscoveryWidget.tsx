@@ -1,18 +1,18 @@
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const UltimateContentDiscoveryWidget = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategorysetSelectedCategory] = useState('all');
   
   const categories = [
-    { id: 'all', name: 'All Content', icon: '🌟' },
-    { id: 'ai', name: 'AI Solutions', icon: '🤖' },
-    { id: 'tech', name: 'Technology', icon: '⚡' },
-    { id: 'business', name: 'Business', icon: '💼' },
-    { id: 'innovation', name: 'Innovation', icon: '🚀' },
-    { id: 'case-studies', name: 'Case Studies', icon: '📊' }
+    { id: 'all'name: 'All Content'icon: '🌟' },
+    { id: 'ai'name: 'AI Solutions'icon: '🤖' },
+    { id: 'tech'name: 'Technology'icon: '⚡' },
+    { id: 'business'name: 'Business'icon: '💼' },
+    { id: 'innovation'name: 'Innovation'icon: '🚀' },
+    { id: 'case-studies'name: 'Case Studies'icon: '📊' }
   ];
 
   const content = [
@@ -93,7 +93,7 @@ const UltimateContentDiscoveryWidget = () => {
             Discover Amazing Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our comprehensive library of insights, guides, and case studies designed to accelerate your business growth.
+            Explore our comprehensive library of insightsguidesand case studies designed to accelerate your business growth.
           </p>
         </div>
 
@@ -166,7 +166,7 @@ const UltimateContentDiscoveryWidget = () => {
                 </div>
                 
                 <Link
-                  href={`/blog/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/blog/${item.title.toLowerCase().replace(/\s+/g'-')}`}
                   className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                 >
                   Read Article

@@ -1,11 +1,11 @@
 "use client";
-import React, { useEffect, useState, useCallback } from 'react';
+import React{ useEffectuseStateuseCallback } from 'react';
 import Layout from './layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3,
-  Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft,
-  Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
+  ArrowRightPlayUsersTrendingUpBrainShieldRocketGlobeLockCpuDatabaseCloudBarChart3,
+  AtomTargetZapInfinitySparklesStarEyeHeartCodePaletteLayersChevronRightChevronLeft,
+  PhoneMailMapPinClockAwardCheckCircleZap as ZapIconBrain as BrainIconAtom as AtomIcon
 } from 'lucide-react';
 
 // Import our new revolutionary services
@@ -13,10 +13,10 @@ import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-ad
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
 
 const Homepage2043: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentServiceIndexsetCurrentServiceIndex] = useState(0);
+  const [currentTestimonialIndexsetCurrentTestimonialIndex] = useState(0);
+  const [isHoveredsetIsHovered] = useState(false);
   
   useEffect(() => {
     setIsVisible(true);
@@ -24,81 +24,81 @@ const Homepage2043: React.FC = () => {
     // Auto-rotate featured services
     const serviceInterval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }, 4000);
+    }4000);
     
     // Auto-rotate testimonials
     const testimonialInterval = setInterval(() => {
       setCurrentTestimonialIndex((prev) => (prev + 1) % 3);
-    }, 6000);
+    }6000);
     
     return () => {
       clearInterval(serviceInterval);
       clearInterval(testimonialInterval);
     };
-  }, []);
+  }[]);
 
   // Combine all revolutionary services
-  const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices];
+  const allRevolutionaryServices = [...revolutionary2043AdvancedServices...revolutionary2044InnovativeServices];
 
   // Get featured services for rotation
-  const featuredServices = allRevolutionaryServices.slice(0, 6);
+  const featuredServices = allRevolutionaryServices.slice(06);
 
   const features = [
     { 
-      icon: BrainIcon, 
-      title: "AI Consciousness Evolution", 
-      description: "Next-generation AI consciousness with human-level understanding", 
-      href: "/quantum-neural-consciousness-platform", 
+      icon: BrainIcon
+      title: "AI Consciousness Evolution"
+      description: "Next-generation AI consciousness with human-level understanding"
+      href: "/quantum-neural-consciousness-platform"
       color: "from-purple-500 to-pink-500",
       gradient: "bg-gradient-to-br from-purple-500/20 to-pink-500/20"
     },
     { 
-      icon: AtomIcon, 
-      title: "Quantum Computing", 
-      description: "Revolutionary quantum computing with consciousness integration", 
-      href: "/quantum-bio-computing-platform", 
+      icon: AtomIcon
+      title: "Quantum Computing"
+      description: "Revolutionary quantum computing with consciousness integration"
+      href: "/quantum-bio-computing-platform"
       color: "from-blue-500 to-cyan-500",
       gradient: "bg-gradient-to-br from-blue-500/20 to-cyan-500/20"
     },
     { 
-      icon: Shield, 
-      title: "Future Cybersecurity", 
-      description: "Quantum-resistant security with consciousness-based protection", 
-      href: "/quantum-internet-security-gateway", 
+      icon: Shield
+      title: "Future Cybersecurity"
+      description: "Quantum-resistant security with consciousness-based protection"
+      href: "/quantum-internet-security-gateway"
       color: "from-red-500 to-orange-500",
       gradient: "bg-gradient-to-br from-red-500/20 to-orange-500/20"
     },
     { 
-      icon: Rocket, 
-      title: "Space Technology", 
-      description: "AI-powered space resource intelligence and autonomous mining", 
-      href: "/autonomous-space-mining-ai", 
+      icon: Rocket
+      title: "Space Technology"
+      description: "AI-powered space resource intelligence and autonomous mining"
+      href: "/autonomous-space-mining-ai"
       color: "from-indigo-500 to-purple-500",
       gradient: "bg-gradient-to-br from-indigo-500/20 to-purple-500/20"
     },
     { 
-      icon: Cpu, 
-      title: "Autonomous Systems", 
-      description: "Fully autonomous AI systems with consciousness", 
-      href: "/autonomous-business-ecosystem-ai", 
+      icon: Cpu
+      title: "Autonomous Systems"
+      description: "Fully autonomous AI systems with consciousness"
+      href: "/autonomous-business-ecosystem-ai"
       color: "from-emerald-500 to-teal-500",
       gradient: "bg-gradient-to-br from-emerald-500/20 to-teal-500/20"
     },
     { 
-      icon: Database, 
-      title: "Business Intelligence", 
-      description: "Autonomous business intelligence with consciousness insights", 
-      href: "/autonomous-healthcare-ai-ecosystem", 
+      icon: Database
+      title: "Business Intelligence"
+      description: "Autonomous business intelligence with consciousness insights"
+      href: "/autonomous-healthcare-ai-ecosystem"
       color: "from-yellow-500 to-orange-500",
       gradient: "bg-gradient-to-br from-yellow-500/20 to-orange-500/20"
     }
   ];
 
   const stats = [
-    { number: "2000+", label: "Revolutionary Services", icon: Star, color: "from-yellow-400 to-orange-500" },
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, color: "from-green-400 to-emerald-500" },
-    { number: "24/7", label: "AI Support Available", icon: Brain, color: "from-purple-400 to-pink-500" },
-    { number: "150+", label: "Countries Served", icon: Globe, color: "from-blue-400 to-cyan-500" }
+    { number: "2000+"label: "Revolutionary Services"icon: Starcolor: "from-yellow-400 to-orange-500" },
+    { number: "99.99%"label: "Uptime Guarantee"icon: TrendingUpcolor: "from-green-400 to-emerald-500" },
+    { number: "24/7"label: "AI Support Available"icon: Braincolor: "from-purple-400 to-pink-500" },
+    { number: "150+"label: "Countries Served"icon: Globecolor: "from-blue-400 to-cyan-500" }
   ];
 
   const testimonials = [
@@ -130,15 +130,15 @@ const Homepage2043: React.FC = () => {
 
   const handleGetStarted = useCallback(() => {
     window.location.href = '/revolutionary-2040-2041-pricing-showcase';
-  }, []);
+  }[]);
 
   const handleWatchDemo = useCallback(() => {
     window.location.href = '/services';
-  }, []);
+  }[]);
 
   const handleContact = useCallback(() => {
     window.location.href = '/contact';
-  }, []);
+  }[]);
 
   const nextService = () => {
     setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length);
@@ -166,15 +166,15 @@ const Homepage2043: React.FC = () => {
             
             {/* Enhanced animated particles */}
             <div className="absolute inset-0">
-              {[...Array(20)].map((_, i) => (
+              {[...Array(20)].map((_i) => (
                 <motion.div
                   key={i}
                   className="absolute w-2 h-2 bg-cyan-400/40 rounded-full"
                   animate={{
-                    x: [0, 150, 0],
-                    y: [0, -150, 0],
-                    opacity: [0, 1, 0],
-                    scale: [0, 1.5, 0]}}
+                    x: [0150],
+                    y: [0-150],
+                    opacity: [010],
+                    scale: [01.50]}}
                   transition={{
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
@@ -191,7 +191,7 @@ const Homepage2043: React.FC = () => {
             {/* Enhanced grid pattern */}
             <div className="absolute inset-0 opacity-20">
               <div className="absolute inset-0" style={{
-                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
+                backgroundImage: `radial-gradient(circle at 1px 1pxrgba(255,255,255,0.15) 1pxtransparent 0)`,
                 backgroundSize: '50px 50px'
               }}></div>
             </div>
@@ -200,8 +200,8 @@ const Homepage2043: React.FC = () => {
           {/* Hero Content */}
           <div className="text-center max-w-6xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
               transition={{ duration: 0.8 }}
             >
               {/* Enhanced Badge */}
@@ -224,7 +224,7 @@ const Homepage2043: React.FC = () => {
 
               {/* Enhanced Subtitle */}
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Experience the world's most advanced AI consciousness platforms, quantum computing solutions, 
+                Experience the world's most advanced AI consciousness platformsquantum computing solutions
                 and autonomous systems that redefine what's possible in technology.
               </p>
 
@@ -253,12 +253,12 @@ const Homepage2043: React.FC = () => {
 
               {/* Enhanced Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                {stats.map((stat, index) => (
+                {stats.map((statindex) => (
                   <motion.div
                     key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={{ opacity: 0y: 20 }}
+                    animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+                    transition={{ duration: 0.6delay: index * 0.1 }}
                     className="text-center"
                   >
                     <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} mb-3`}>
@@ -277,8 +277,8 @@ const Homepage2043: React.FC = () => {
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -290,20 +290,20 @@ const Homepage2043: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover cutting-edge AI consciousness, quantum computing, and autonomous systems 
+                Discover cutting-edge AI consciousnessquantum computingand autonomous systems 
                 that are transforming industries and reshaping the future.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((featureindex) => (
                 <motion.div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ y: -10, scale: 1.02 }}
+                  whileHover={{ y: -10scale: 1.02 }}
                   className={`group relative p-8 rounded-2xl ${feature.gradient} border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300`}
                 >
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -335,8 +335,8 @@ const Homepage2043: React.FC = () => {
         <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -359,9 +359,9 @@ const Homepage2043: React.FC = () => {
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentServiceIndex}
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -100 }}
+                    initial={{ opacity: 0x: 100 }}
+                    animate={{ opacity: 1x: 0 }}
+                    exit={{ opacity: 0x: -100 }}
                     transition={{ duration: 0.5 }}
                     className="p-12 text-center"
                   >
@@ -403,7 +403,7 @@ const Homepage2043: React.FC = () => {
 
                 {/* Service Indicators */}
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-                  {featuredServices.map((_, index) => (
+                  {featuredServices.map((_index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentServiceIndex(index)}
@@ -424,8 +424,8 @@ const Homepage2043: React.FC = () => {
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -446,9 +446,9 @@ const Homepage2043: React.FC = () => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentTestimonialIndex}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -30 }}
+                  initial={{ opacity: 0y: 30 }}
+                  animate={{ opacity: 1y: 0 }}
+                  exit={{ opacity: 0y: -30 }}
                   transition={{ duration: 0.5 }}
                   className="text-center max-w-4xl mx-auto"
                 >
@@ -470,7 +470,7 @@ const Homepage2043: React.FC = () => {
                   </div>
                   
                   <div className="flex justify-center gap-1">
-                    {[...Array(testimonials[currentTestimonialIndex].rating)].map((_, i) => (
+                    {[...Array(testimonials[currentTestimonialIndex].rating)].map((_i) => (
                       <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -479,7 +479,7 @@ const Homepage2043: React.FC = () => {
 
               {/* Testimonial Indicators */}
               <div className="flex justify-center gap-2 mt-8">
-                {testimonials.map((_, index) => (
+                {testimonials.map((_index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonialIndex(index)}
@@ -499,8 +499,8 @@ const Homepage2043: React.FC = () => {
         <section className="py-20 px-4 relative">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

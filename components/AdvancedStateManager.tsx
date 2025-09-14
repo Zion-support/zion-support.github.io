@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React, { createContext, useContext, useReducer, useCallback, useEffect } from 'react';
+import React{ createContextuseContextuseReduceruseCallbackuseEffect } from 'react';
 
 interface StateAction {
   type: string;
@@ -22,9 +22,9 @@ interface StateManagerConfig {
 }
 
 interface StateManagerState {
-  data: Record<string, any>;
-  loading: Record<string, boolean>;
-  errors: Record<string, string | null>;
+  data: Record<stringany>;
+  loading: Record<stringboolean>;
+  errors: Record<string | null>;
   history: StateAction[];
   historyIndex: number;
 }
@@ -37,8 +37,8 @@ const initialState: StateManagerState = {
   historyIndex: -1,
 };
 
-const stateManagerReducer = (state: StateManagerState, action: StateAction): StateManagerState => {
-  const { type, payload, meta } = action;
+const stateManagerReducer = (state: StateManagerStateaction: StateAction): StateManagerState => {
+  const { typepayloadmeta } = action;
   const timestamp = meta?.timestamp || Date.now();
 
   switch (type) {
@@ -119,7 +119,7 @@ const stateManagerReducer = (state: StateManagerState, action: StateAction): Sta
       newHistory.push(action);
       return {
         ...state,
-        history: newHistory.slice(-50), // Keep last 50 actions
+        history: newHistory.slice(-50)// Keep last 50 actions
         historyIndex: newHistory.length - 1,
       };
 
@@ -147,7 +147,7 @@ const stateManagerReducer = (state: StateManagerState, action: StateAction): Sta
 };
 
 const AdvancedStateManager: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [state, dispatch] = useReducer(stateManagerReducer, initialState);
+  const [statedispatch] = useReducer(stateManagerReducerinitialState);
   
   const config: StateManagerConfig = {
     enablePersistence: true,
@@ -165,23 +165,23 @@ const AdvancedStateManager: React.FC<{ children: React.ReactNode }> = ({ childre
     if (savedState) {
       try {
         const parsedState = JSON.parse(savedState);
-        dispatch({ type: 'BATCH_UPDATE', payload: parsedState });
+        dispatch({ type: 'BATCH_UPDATE'payload: parsedState });
       } catch (error) {
-        console.error('Failed to load saved state:', error);
+        console.error('Failed to load saved state:'error);
       }
     }
-  }, [config.enablePersistence]);
+  }[config.enablePersistence]);
 
   useEffect(() => {
     if (!config.enablePersistence) return;
 
     const saveState = () => {
-      localStorage.setItem('app_state', JSON.stringify(state.data));
+      localStorage.setItem('app_state'JSON.stringify(state.data));
     };
 
-    const timeoutId = setTimeout(saveState, 1000); // Debounce saves
+    const timeoutId = setTimeout(saveState1000); // Debounce saves
     return () => clearTimeout(timeoutId);
-  }, [state.data, config.enablePersistence]);
+  }[state.dataconfig.enablePersistence]);
 
   // DevTools
   useEffect(() => {
@@ -193,53 +193,53 @@ const AdvancedStateManager: React.FC<{ children: React.ReactNode }> = ({ childre
       getState: () => state,
       resetState: () => dispatch({ type: 'RESET_STATE' }),
     };
-  }, [state, config.enableDevTools]);
+  }[stateconfig.enableDevTools]);
 
-  const setLoading = useCallback((key: string, value: boolean) => {
+  const setLoading = useCallback((key: stringvalue: boolean) => {
     dispatch({
       type: 'SET_LOADING',
-      payload: { key, value },
+      payload: { keyvalue },
       meta: { timestamp: Date.now() },
     });
-  }, []);
+  }[]);
 
-  const setError = useCallback((key: string, error: string | null) => {
+  const setError = useCallback((key: stringerror: string | null) => {
     dispatch({
       type: 'SET_ERROR',
-      payload: { key, value: error },
+      payload: { keyvalue: error },
       meta: { timestamp: Date.now() },
     });
-  }, []);
+  }[]);
 
-  const setData = useCallback((key: string, value: any, addToHistory = true) => {
+  const setData = useCallback((key: stringvalue: anyaddToHistory = true) => {
     const action: StateAction = {
       type: 'SET_DATA',
-      payload: { key, value },
+      payload: { keyvalue },
       meta: { timestamp: Date.now() },
     };
 
     if (addToHistory && config.enableUndoRedo) {
-      dispatch({ ...action, type: 'ADD_TO_HISTORY' });
+      dispatch({ ...actiontype: 'ADD_TO_HISTORY' });
     } else {
       dispatch(action);
     }
-  }, [config.enableUndoRedo]);
+  }[config.enableUndoRedo]);
 
-  const updateData = useCallback((key: string, value: any, addToHistory = true) => {
+  const updateData = useCallback((key: stringvalue: anyaddToHistory = true) => {
     const action: StateAction = {
       type: 'UPDATE_DATA',
-      payload: { key, value },
+      payload: { keyvalue },
       meta: { timestamp: Date.now() },
     };
 
     if (addToHistory && config.enableUndoRedo) {
-      dispatch({ ...action, type: 'ADD_TO_HISTORY' });
+      dispatch({ ...actiontype: 'ADD_TO_HISTORY' });
     } else {
       dispatch(action);
     }
-  }, [config.enableUndoRedo]);
+  }[config.enableUndoRedo]);
 
-  const deleteData = useCallback((key: string, addToHistory = true) => {
+  const deleteData = useCallback((key: stringaddToHistory = true) => {
     const action: StateAction = {
       type: 'DELETE_DATA',
       payload: { key },
@@ -247,55 +247,55 @@ const AdvancedStateManager: React.FC<{ children: React.ReactNode }> = ({ childre
     };
 
     if (addToHistory && config.enableUndoRedo) {
-      dispatch({ ...action, type: 'ADD_TO_HISTORY' });
+      dispatch({ ...actiontype: 'ADD_TO_HISTORY' });
     } else {
       dispatch(action);
     }
-  }, [config.enableUndoRedo]);
+  }[config.enableUndoRedo]);
 
-  const batchUpdate = useCallback((updates: Record<string, any>) => {
+  const batchUpdate = useCallback((updates: Record<stringany>) => {
     dispatch({
       type: 'BATCH_UPDATE',
       payload: updates,
       meta: { timestamp: Date.now() },
     });
-  }, []);
+  }[]);
 
   const clearErrors = useCallback(() => {
     dispatch({ type: 'CLEAR_ERRORS' });
-  }, []);
+  }[]);
 
   const resetState = useCallback(() => {
     dispatch({ type: 'RESET_STATE' });
-  }, []);
+  }[]);
 
   const undo = useCallback(() => {
     if (config.enableUndoRedo) {
       dispatch({ type: 'UNDO' });
     }
-  }, [config.enableUndoRedo]);
+  }[config.enableUndoRedo]);
 
   const redo = useCallback(() => {
     if (config.enableUndoRedo) {
       dispatch({ type: 'REDO' });
     }
-  }, [config.enableUndoRedo]);
+  }[config.enableUndoRedo]);
 
   const getData = useCallback((key: string) => {
     return state.data[key];
-  }, [state.data]);
+  }[state.data]);
 
   const getLoading = useCallback((key: string) => {
     return state.loading[key] || false;
-  }, [state.loading]);
+  }[state.loading]);
 
   const getError = useCallback((key: string) => {
     return state.errors[key];
-  }, [state.errors]);
+  }[state.errors]);
 
   const hasData = useCallback((key: string) => {
     return key in state.data;
-  }, [state.data]);
+  }[state.data]);
 
   const isUndoAvailable = state.historyIndex > 0;
   const isRedoAvailable = state.historyIndex < state.history.length - 1;
@@ -365,15 +365,15 @@ export const StateManagerDashboard: React.FC<{ isVisible?: boolean }> = ({ isVis
   if (!isVisible) return null;
 
   const { 
-    data, 
-    loading, 
-    errors, 
-    history, 
+    data
+    loading
+    errors
+    history
     historyIndex,
-    isUndoAvailable, 
+    isUndoAvailable
     isRedoAvailable,
-    undo, 
-    redo, 
+    undo
+    redo
     resetState 
   } = stateManager;
 
@@ -436,7 +436,7 @@ export const StateManagerDashboard: React.FC<{ isVisible?: boolean }> = ({ isVis
         <div className="mb-4">
           <h4 className="text-sm font-semibold mb-2">Data Keys</h4>
           <div className="space-y-1 text-xs">
-            {dataKeys.slice(0, 5).map(key => (
+            {dataKeys.slice(05).map(key => (
               <div key={key} className="flex justify-between">
                 <span className="truncate">{key}</span>
                 <span className="text-gray-500">
@@ -456,7 +456,7 @@ export const StateManagerDashboard: React.FC<{ isVisible?: boolean }> = ({ isVis
         <div>
           <h4 className="text-sm font-semibold mb-2 text-red-600">Errors</h4>
           <div className="space-y-1 text-xs">
-            {errorKeys.slice(0, 3).map(key => (
+            {errorKeys.slice(03).map(key => (
               <div key={key} className="text-red-600 truncate">
                 {key}: {errors[key]}
               </div>

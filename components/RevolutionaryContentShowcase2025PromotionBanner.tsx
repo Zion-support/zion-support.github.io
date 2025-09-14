@@ -29,7 +29,7 @@ export default function RevolutionaryContentShowcase2025PromotionBanner() {
                 AI 2030 Ultimate Future Predictions
               </h3>
               <p className="text-sm opacity-90 mb-4">
-                The most comprehensive AI predictions for 2030, featuring consciousness AI, quantum-neural fusion, and transcendent intelligence breakthroughs.
+                The most comprehensive AI predictions for 2030featuring consciousness AIquantum-neural fusionand transcendent intelligence breakthroughs.
               </p>
               <div className="flex justify-center gap-2 mb-4">
                 <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded text-xs">95% Probability</span>
@@ -73,7 +73,7 @@ export default function RevolutionaryContentShowcase2025PromotionBanner() {
                 Revolutionary Content Showcase 2025
               </h3>
               <p className="text-sm opacity-90 mb-4">
-                Explore our complete collection of breakthrough AI content, case studies, and implementation guides for the ultimate AI revolution.
+                Explore our complete collection of breakthrough AI contentcase studiesand implementation guides for the ultimate AI revolution.
               </p>
               <div className="flex justify-center gap-2 mb-4">
                 <span className="px-2 py-1 bg-orange-500/20 text-orange-300 rounded text-xs">Complete Collection</span>

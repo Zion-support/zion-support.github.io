@@ -1,7 +1,7 @@
 
 import * as React from "react"
 import type { CSSProperties } from "react"
-import { Sheet, SheetContent } from "@/components/ui/sheet"
+import { SheetContent } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context"
 import type { SafeRef } from "../sidebar.types"
@@ -12,8 +12,8 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
   collapsible?: "offcanvas" | "icon" | "none"
 }
 
-export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>((props, ref) => {
-  const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
+export const Sidebar = React.forwardRef<HTMLDivElementSidebarProps>((propsref) => {
+  const { isMobilestateopenMobilesetOpenMobile } = useSidebar()
 
   if (props.collapsible === "none") {
     return (
@@ -98,7 +98,7 @@ Sidebar.displayName = "Sidebar"
 export const SidebarRail = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<"button">
->((props, ref) => {
+>((propsref) => {
   const { toggleSidebar } = useSidebar()
 
   return (
@@ -127,7 +127,7 @@ SidebarRail.displayName = "SidebarRail"
 export const SidebarInset = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"main">
->((props, ref) => {
+>((propsref) => {
   return (
     <main
       ref={ref as SafeRef<HTMLDivElement>}

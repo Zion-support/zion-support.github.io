@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Award, Users, Zap, Target } from 'lucide-react';
+ArrowRightTrendingUpAwardUsersZapTarget
 
 const AI2025BreakthroughShowcase: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const AI2025BreakthroughShowcase: React.FC = () => {
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Access cutting-edge research, proven methodologies, and real-world success stories 
+            Access cutting-edge researchproven methodologiesand real-world success stories 
             that are defining the future of business transformation
           </p>
         </div>
@@ -114,8 +114,8 @@ const AI2025BreakthroughShowcase: React.FC = () => {
             </h3>
             
             <p className="text-gray-300 mb-6 text-sm">
-              Complete roadmap for AI transformation with proven methodologies, 
-              best practices, and step-by-step implementation strategies.
+              Complete roadmap for AI transformation with proven methodologies
+              best practicesand step-by-step implementation strategies.
             </p>
             
             <div className="flex items-center justify-between">

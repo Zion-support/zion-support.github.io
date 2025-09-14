@@ -1,11 +1,11 @@
 
-import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
+import React{ useState } from 'react';
+import { CardContentCardHeaderCardTitleCardFooter } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Sparkles, Loader2, Copy, Check } from '@/components/icons';
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+import { SparklesLoader2CopyCheck } from '@/components/icons';
+import { useAIContentEnhancerAIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 
 interface AIEnhancementPanelProps {
   title: string;
@@ -24,12 +24,12 @@ export function AIEnhancementPanel({
   showInstructions = true,
   initialContent = ''
 }: AIEnhancementPanelProps) {
-  const [options, setOptions] = useState<AIEnhancementOptions>({
+  const [optionsetOptions] = useState<AIEnhancementOptions>({
     ...defaultOptions,
     content: initialContent || defaultOptions.content});
-  const [generatedContent, setGeneratedContent] = useState<string>('');
-  const [copied, setCopied] = useState(false);
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
+  const [generatedContentsetGeneratedContent] = useState<string>('');
+  const [copiedsetCopied] = useState(false);
+  const { enhanceContentisEnhancing } = useAIContentEnhancer();
 
   const handleGenerate = async () => {
     const result = await enhanceContent(options);
@@ -55,7 +55,7 @@ export function AIEnhancementPanel({
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => setCopied(false)2000);
   };
 
   return (
@@ -74,7 +74,7 @@ export function AIEnhancementPanel({
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options.content}
-            onChange={(e) => handleInputChange(e, 'content')}
+            onChange={(e) => handleInputChange(e'content')}
           />
         </div>
 
@@ -85,7 +85,7 @@ export function AIEnhancementPanel({
             placeholder="Add any relevant context to guide the AI..."
             className="min-h-[60px]"
             value={options.context}
-            onChange={(e) => handleInputChange(e, 'context')}
+            onChange={(e) => handleInputChange(e'context')}
           />
         </div>
 
@@ -94,9 +94,9 @@ export function AIEnhancementPanel({
           <div className="space-y-2">
             <label className="text-sm font-medium">Special instructions (optional)</label>
             <Input
-              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
+              placeholder="E.g.'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
-              onChange={(e) => handleInputChange(e, 'instructions')}
+              onChange={(e) => handleInputChange(e'instructions')}
             />
           </div>
         )}

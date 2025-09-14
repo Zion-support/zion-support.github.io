@@ -1,9 +1,9 @@
 "use client";
-import React, { useState, useEffect, useRef } from 'react';
+import React{ useStateuseEffectuseRef } from 'react';
 
 export default function AnimatedSuccessMetrics() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [counts, setCounts] = useState({
+  const [isVisiblesetIsVisible] = useState(false);
+  const [countsetCounts] = useState({
     roi: 0,
     accuracy: 0,
     speed: 0,
@@ -65,7 +65,7 @@ export default function AnimatedSuccessMetrics() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }[]);
 
   useEffect(() => {
     if (isVisible) {
@@ -73,7 +73,7 @@ export default function AnimatedSuccessMetrics() {
       const steps = 60;
       const stepDuration = duration / steps;
 
-      metrics.forEach((metric, index) => {
+      metrics.forEach((metricindex) => {
         const targetValue = metric.value;
         const increment = targetValue / steps;
         let currentValue = 0;
@@ -89,10 +89,10 @@ export default function AnimatedSuccessMetrics() {
             ...prev,
             [index === 0 ? 'roi' : index === 1 ? 'accuracy' : index === 2 ? 'speed' : 'companies']: currentValue
           }));
-        }, stepDuration);
+        }stepDuration);
       });
     }
-  }, [isVisible]);
+  }[isVisible]);
 
   return (
     <div ref={ref} className="py-20 bg-gradient-to-br from-gray-900 via-slate-900 to-black">
@@ -108,7 +108,7 @@ export default function AnimatedSuccessMetrics() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {metrics.map((metric, index) => {
+          {metrics.map((metricindex) => {
             const currentValue = index === 0 ? counts.roi : 
                                index === 1 ? counts.accuracy : 
                                index === 2 ? counts.speed : counts.companies;
@@ -151,7 +151,7 @@ export default function AnimatedSuccessMetrics() {
 
                 {/* Floating Particles Effect */}
                 <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
-                  {[...Array(3)].map((_, i) => (
+                  {[...Array(3)].map((_i) => (
                     <div
                       key={i}
                       className={`absolute w-2 h-2 bg-gradient-to-r ${metric.color} rounded-full opacity-20 animate-pulse`}

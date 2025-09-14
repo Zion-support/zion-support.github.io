@@ -13,7 +13,7 @@ export default function AI2025FuturePredictionsBanner() {
             Explore the Future of AI
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover emerging trends, breakthrough technologies, and unprecedented 
+            Discover emerging trendsbreakthrough technologiesand unprecedented 
             opportunities that will shape 2025 and beyond.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

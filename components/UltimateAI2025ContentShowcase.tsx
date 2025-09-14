@@ -1,17 +1,17 @@
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const UltimateAI2025ContentShowcase = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategorysetActiveCategory] = useState('all');
 
   const content = [
     {
       id: 'ultimate-transformation-guide',
       type: 'blog',
       title: 'AI 2025: The Ultimate Enterprise Transformation Revolution - Ultimate Breakthrough Guide to 5,000% ROI',
-      description: 'The complete framework that has enabled Fortune 500 companies to achieve 5,000% ROI within 18 months, generating $15.8 billion in annual savings.',
+      description: 'The complete framework that has enabled Fortune 500 companies to achieve 5,000% ROI within 18 monthsgenerating $15.8 billion in annual savings.',
       url: '/blog/ai-2025-ultimate-enterprise-transformation-revolution-ultimate-breakthrough-2025',
       metrics: {
         roi: '5,000%',
@@ -106,11 +106,11 @@ const UltimateAI2025ContentShowcase = () => {
   ];
 
   const categories = [
-    { id: 'all', name: 'All Content', count: content.length },
-    { id: 'transformation', name: 'Transformation', count: content.filter(c => c.category === 'transformation').length },
-    { id: 'case-study', name: 'Case Studies', count: content.filter(c => c.category === 'case-study').length },
-    { id: 'implementation', name: 'Implementation', count: content.filter(c => c.category === 'implementation').length },
-    { id: 'innovation', name: 'Innovation', count: content.filter(c => c.category === 'innovation').length }
+    { id: 'all'name: 'All Content'count: content.length },
+    { id: 'transformation'name: 'Transformation'count: content.filter(c => c.category === 'transformation').length },
+    { id: 'case-study'name: 'Case Studies'count: content.filter(c => c.category === 'case-study').length },
+    { id: 'implementation'name: 'Implementation'count: content.filter(c => c.category === 'implementation').length },
+    { id: 'innovation'name: 'Innovation'count: content.filter(c => c.category === 'innovation').length }
   ];
 
   const filteredContent = activeCategory === 'all' 
@@ -159,11 +159,11 @@ const UltimateAI2025ContentShowcase = () => {
                   </p>
                   
                   <div className="grid grid-cols-2 gap-2 mb-4">
-                    {Object.entries(item.metrics).map(([key, value]) => (
+                    {Object.entries(item.metrics).map(([keyvalue]) => (
                       <div key={key} className="bg-gray-50 rounded-lg p-2 text-center">
                         <div className="text-sm font-bold text-purple-600">{value}</div>
                         <div className="text-xs text-gray-500 capitalize">
-                          {key.replace(/([A-Z])/g, ' $1').trim()}
+                          {key.replace(/([A-Z])/g' $1').trim()}
                         </div>
                       </div>
                     ))}
@@ -228,11 +228,11 @@ const UltimateAI2025ContentShowcase = () => {
                 </p>
                 
                 <div className="grid grid-cols-2 gap-2 mb-4">
-                  {Object.entries(item.metrics).map(([key, value]) => (
+                  {Object.entries(item.metrics).map(([keyvalue]) => (
                     <div key={key} className="bg-gray-50 rounded-lg p-2 text-center">
                       <div className="text-sm font-bold text-purple-600">{value}</div>
                       <div className="text-xs text-gray-500 capitalize">
-                        {key.replace(/([A-Z])/g, ' $1').trim()}
+                        {key.replace(/([A-Z])/g' $1').trim()}
                       </div>
                     </div>
                   ))}

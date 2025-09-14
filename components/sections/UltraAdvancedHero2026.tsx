@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+ArrowRightStarTrendingUpZapBrainRocketGlobeSparklesCheckCirclePhoneMailMapPin
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
@@ -26,7 +26,7 @@ export default function UltraAdvancedHero2026() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -83,7 +83,7 @@ export default function UltraAdvancedHero2026() {
             variants={itemVariants}
             className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed"
           >
-            Experience the most advanced AI, quantum computing, and metaverse technologies ever created. 
+            Experience the most advanced AIquantum computingand metaverse technologies ever created. 
             <span className="text-purple-400 font-semibold"> 1000% ROI guaranteed</span> with our revolutionary solutions.
           </motion.p>
 
@@ -216,8 +216,8 @@ export default function UltraAdvancedHero2026() {
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
           animate={{ 
-            y: [0, -20, 0],
-            rotate: [0, 5, 0]
+            y: [0-20],
+            rotate: [050]
           }}
           transition={{ 
             duration: 6,
@@ -231,8 +231,8 @@ export default function UltraAdvancedHero2026() {
         
         <motion.div
           animate={{ 
-            y: [0, 20, 0],
-            rotate: [0, -5, 0]
+            y: [020],
+            rotate: [0-50]
           }}
           transition={{ 
             duration: 8,
@@ -246,8 +246,8 @@ export default function UltraAdvancedHero2026() {
         
         <motion.div
           animate={{ 
-            y: [0, -15, 0],
-            rotate: [0, 3, 0]
+            y: [0-150],
+            rotate: [030]
           }}
           transition={{ 
             duration: 7,
@@ -261,8 +261,8 @@ export default function UltraAdvancedHero2026() {
         
         <motion.div
           animate={{ 
-            y: [0, 15, 0],
-            rotate: [0, -3, 0]
+            y: [0150],
+            rotate: [0-30]
           }}
           transition={{ 
             duration: 9,

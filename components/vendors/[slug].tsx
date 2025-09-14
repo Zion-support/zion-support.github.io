@@ -1,13 +1,13 @@
 "use client";
 import type { GetServerSideProps } from 'next';
-import { FormEvent, useState } from 'react';
+import { FormEventuseState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 
 type Props = { vendor: Vendor | null };
 
 export default function VendorProfilePage({ vendor }: Props) {
-  const [message, setMessage] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [messagesetMessage] = useState<string | null>(null);
+  const [loadingsetLoading] = useState(false);
 
   if (!vendor) return <div className="text-gray-500">Vendor not found.</div>;
 
@@ -19,10 +19,10 @@ export default function VendorProfilePage({ vendor }: Props) {
     setLoading(true);
     setMessage(null);
     try {
-      const res = await fetch('/api/vendors/lead', {
+      const res = await fetch('/api/vendors/lead'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ vendorId: vendor.id, title })});
+        body: JSON.stringify({ vendorId: vendor.idtitle })});
       if (!res.ok) throw new Error('Failed to submit');
       setMessage('Thanks! We will contact you soon.');
       form.reset();
@@ -47,7 +47,7 @@ export default function VendorProfilePage({ vendor }: Props) {
             {vendor.name}
             {vendor.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}
           </div>
-          <div className="text-sm text-gray-500">{vendor.servicesOffered?.join(', ')}</div>
+          <div className="text-sm text-gray-500">{vendor.servicesOffered?.join(')}</div>
         </div>
       </div>
 

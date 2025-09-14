@@ -25,7 +25,7 @@ const UltimateContent2026RevolutionBanner = () => {
           </h1>
           
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Experience the most advanced AI technologies, quantum computing breakthroughs, 
+            Experience the most advanced AI technologiesquantum computing breakthroughs
             and autonomous systems that will transform your business in 2026 and beyond.
           </p>
           

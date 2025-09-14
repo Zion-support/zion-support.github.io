@@ -1,22 +1,22 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Play, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Brain, 
+  Play
+  ArrowRight
+  Star
+  Zap
+  Brain
   TrendingUp,
   X,
   CheckCircle
 } from 'lucide-react';
 
 const InteractiveContentShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   const features = [
     "Interactive AI Demos",
@@ -28,17 +28,17 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 2000);
+    }2000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -50 }}
+      initial={{ opacity: 0y: -50 }}
+      animate={{ opacity: 1y: 0 }}
+      exit={{ opacity: 0y: -50 }}
       className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden"
     >
       {/* Background Pattern */}
@@ -60,7 +60,7 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
                 >
                   <Zap className="w-3 h-3" />
@@ -78,9 +78,9 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
                 <span className="text-lg opacity-90">Featuring:</span>
                 <motion.span
                   key={currentFeature}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
+                  initial={{ opacity: 0y: 10 }}
+                  animate={{ opacity: 1y: 0 }}
+                  exit={{ opacity: 0y: -10 }}
                   className="text-lg font-semibold bg-white/20 px-3 py-1 rounded-full"
                 >
                   {features[currentFeature]}
@@ -143,7 +143,7 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
             className="h-full bg-white"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
-            transition={{ duration: 10, ease: "linear" }}
+            transition={{ duration: 10ease: "linear" }}
           />
         </div>
       </div>

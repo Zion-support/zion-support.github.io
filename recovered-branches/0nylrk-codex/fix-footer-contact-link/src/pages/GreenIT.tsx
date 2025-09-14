@@ -2,7 +2,7 @@
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
-import { Leaf, Server, Cloud } from "lucide-react";
+import { LeafServerCloud } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 
@@ -10,7 +10,7 @@ export default function GreenIT() {
   const greenITSolutions = [
     {
       title: "Energy-Efficient Hardware",
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
+      description: "Modern processorstorage solutionsand networking equipment delivering significant performance improvements while consuming less power.",
       icon: Server},
     {
       title: "Optimized Cooling Systems",
@@ -27,7 +27,7 @@ export default function GreenIT() {
       <SEO 
         title="Green IT Solutions - Sustainable Technology" 
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
-        keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
+        keywords="green ITsustainable technologyeco-friendly computingenergy efficient hardware"
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -45,12 +45,12 @@ export default function GreenIT() {
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
                   <p className="text-zion-slate-light text-lg mb-6">
-                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. 
+                    As AI and cloud computing demand grows exponentiallyso does the environmental impact of data centers. 
                     Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure 
                     while maintaining performance and reliability.
                   </p>
                   <p className="text-zion-slate-light text-lg mb-6">
-                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions 
+                    From energy-efficient hardware to renewable energy integrationwe offer comprehensive solutions 
                     for reducing your carbon footprint.
                   </p>
                   <div className="mt-8">
@@ -73,7 +73,7 @@ export default function GreenIT() {
               <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {greenITSolutions.map((solution, index) => (
+                {greenITSolutions.map((solutionindex) => (
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
                     <div className="flex justify-center mb-4">
                       <solution.icon className="h-12 w-12 text-zion-cyan" />

@@ -9,8 +9,8 @@ interface SocialShareProps {
   className?: string;
 }
 
-export function SocialShare({ url, title, description, className = "" }: SocialShareProps) {
-  const [copied, setCopied] = useState(false);
+export function SocialShare({ urltitledescriptionclassName = "" }: SocialShareProps) {
+  const [copiedsetCopied] = useState(false);
 
   const shareData = {
     url,
@@ -29,9 +29,9 @@ export function SocialShare({ url, title, description, className = "" }: SocialS
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      setTimeout(() => setCopied(false)2000);
     } catch (err) {
-      console.error('Failed to copy: ', err);
+      console.error('Failed to copy: 'err);
     }
   };
 
