@@ -16,39 +16,19 @@
     "strict": false,
     "noEmit": true,
     "esModuleInterop": true,
-<<<<<<< HEAD
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-<<<<<<< HEAD
-    "module": "esnext",
-=======
->>>>>>> cursor/create-and-deploy-new-content-7b62
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "jsx": "react-jsx"
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    "app/**/*",
+    "components/**/*",
+    "lib/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
-=======
-    "allowSyntheticDefaultImports": true
-  }
->>>>>>> cursor/create-and-deploy-new-content-60fa
 }
