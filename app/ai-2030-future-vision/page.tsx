@@ -3,7 +3,6 @@ import Link from 'next/link';
 import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 
-export default function AI2030FutureVision() {
   return (
     <ErrorBoundary>
       <SEO
@@ -316,4 +315,6 @@ export default function AI2030FutureVision() {
       </div>
     </ErrorBoundary>
   );
-}
+};
+
+export default AI2030FutureVisionPage;

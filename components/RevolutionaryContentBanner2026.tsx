@@ -190,6 +190,4 @@ const RevolutionaryContentBanner2026 = () => {
       />
     </section>
   );
-};
-
-export default RevolutionaryContentBanner2026;
+}
