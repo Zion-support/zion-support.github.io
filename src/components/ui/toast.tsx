@@ -2,7 +2,12 @@ import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from 'lucide-react'
+<<<<<<< HEAD
 import { cn } from "../../lib/utils"
+=======
+import { cn } from "@/lib/utils"
+import { logErrorToProduction as logInfo } from '@/utils/productionLogger';
+>>>>>>> origin/cursor/build-vite-project-with-nextjs-1456
 
 
 const ToastProvider = ToastPrimitives.Provider
@@ -130,7 +135,11 @@ export function useToast() {
     // Accept a loosely typed props object to allow custom fields like `description`
     toast: (props: any) => {
       // Implementation of toast functionality
+<<<<<<< HEAD
       console.log('Toast:', { data: props })
+=======
+      logInfo('Toast:', { data: props })
+>>>>>>> origin/cursor/build-vite-project-with-nextjs-1456
     },
   }
 }
