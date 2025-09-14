@@ -2,249 +2,322 @@
 
 import React, { useState, useEffect } from 'react';
 
-const InteractiveDemoWidget = () => {
-  const [currentDemo, setCurrentDemo] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [progress, setProgress] = useState(0);
+interface DemoStep {
+  id: string;
+  title: string;
+  description: string;
+  action: string;
+  result: string;
+  icon: string;
+}
 
-  const demos = [
+const InteractiveDemoWidget: React.FC = () => {
+  const [currentStep, setCurrentStep] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [completedSteps, setCompletedSteps] = useState<number[]>([]);
+
+  const demoSteps: DemoStep[] = [
     {
-      title: 'AI-Powered Document Processing',
-      description: 'Watch how our AI processes and extracts data from complex documents in real-time',
-      features: ['OCR Recognition', 'Data Extraction', 'Smart Classification', 'Quality Validation'],
-      duration: 15
+      id: '1',
+      title: 'Data Input',
+      description: 'Upload your business data and requirements',
+      action: 'Uploading data...',
+      result: 'Data processed successfully!',
+      icon: '📊'
     },
     {
-      title: 'Predictive Analytics Dashboard',
-      description: 'See how predictive analytics can forecast business trends and optimize operations',
-      features: ['Trend Analysis', 'Risk Assessment', 'Performance Metrics', 'Automated Alerts'],
-      duration: 20
+      id: '2',
+      title: 'AI Analysis',
+      description: 'AI analyzes patterns and identifies opportunities',
+      action: 'Analyzing data patterns...',
+      result: 'Found 15 optimization opportunities!',
+      icon: '🤖'
     },
     {
-      title: 'Automated Customer Service',
-      description: 'Experience our AI chatbot handling customer inquiries with human-like responses',
-      features: ['Natural Language Processing', 'Context Understanding', 'Multi-language Support', 'Escalation Management'],
-      duration: 18
+      id: '3',
+      title: 'Strategy Generation',
+      description: 'AI generates personalized implementation strategy',
+      action: 'Generating strategy...',
+      result: 'Strategy created with 340% ROI projection!',
+      icon: '💡'
     },
     {
-      title: 'Supply Chain Optimization',
-      description: 'Discover how AI optimizes supply chain operations for maximum efficiency',
-      features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Cost Reduction'],
-      duration: 22
+      id: '4',
+      title: 'Implementation',
+      description: 'Deploy AI solutions with guided setup',
+      action: 'Deploying solutions...',
+      result: 'AI solutions deployed successfully!',
+      icon: '🚀'
+    },
+    {
+      id: '5',
+      title: 'Monitoring',
+      description: 'Real-time monitoring and optimization',
+      action: 'Monitoring performance...',
+      result: 'Achieved 45% efficiency gain!',
+      icon: '📈'
     }
   ];
 
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isPlaying) {
-      interval = setInterval(() => {
-        setProgress(prev => {
-          if (prev >= 100) {
-            setCurrentDemo(prev => (prev + 1) % demos.length);
-            return 0;
-          }
-          return prev + (100 / (demos[currentDemo].duration * 2));
-        });
-      }, 100);
-    }
-    return () => clearInterval(interval);
-  }, [isPlaying, currentDemo, demos]);
-
-  const startDemo = () => {
+  const handleStartDemo = () => {
     setIsPlaying(true);
-    setProgress(0);
+    setCurrentStep(0);
+    setCompletedSteps([]);
   };
 
-  const stopDemo = () => {
+  const handleNextStep = () => {
+    if (currentStep < demoSteps.length - 1) {
+      setCompletedSteps(prev => [...prev, currentStep]);
+      setCurrentStep(prev => prev + 1);
+    } else {
+      setCompletedSteps(prev => [...prev, currentStep]);
+      setIsPlaying(false);
+    }
+  };
+
+  const handleResetDemo = () => {
     setIsPlaying(false);
+    setCurrentStep(0);
+    setCompletedSteps([]);
   };
 
-  const nextDemo = () => {
-    setCurrentDemo(prev => (prev + 1) % demos.length);
-    setProgress(0);
-  };
-
-  const prevDemo = () => {
-    setCurrentDemo(prev => (prev - 1 + demos.length) % demos.length);
-    setProgress(0);
-  };
+  useEffect(() => {
+    if (isPlaying && currentStep < demoSteps.length) {
+      const timer = setTimeout(() => {
+        handleNextStep();
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [isPlaying, currentStep]);
 
   return (
-    <div className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+    <section className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-indigo-100 text-indigo-800 rounded-full px-6 py-2 mb-6">
             <span className="text-sm font-semibold">🎮 INTERACTIVE DEMO</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Experience AI in Action
           </h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Try our interactive demos to see how AI can transform your business processes
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            See how our AI solutions work in real-time. Follow the interactive demo 
+            to understand the complete transformation process.
           </p>
         </div>
 
-        {/* Demo Container */}
-        <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 mb-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Demo Content */}
-            <div>
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold mb-2">
-                  {demos[currentDemo].title}
-                </h3>
-                <p className="text-lg opacity-90 mb-4">
-                  {demos[currentDemo].description}
-                </p>
-              </div>
-
-              {/* Features List */}
-              <div className="space-y-3 mb-6">
-                {demos[currentDemo].features.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <span className="text-sm">{feature}</span>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Demo Steps */}
+          <div className="space-y-6">
+            {demoSteps.map((step, index) => (
+              <div
+                key={step.id}
+                className={`relative p-6 rounded-xl border-2 transition-all duration-500 ${
+                  index === currentStep && isPlaying
+                    ? 'border-indigo-500 bg-indigo-50 shadow-lg'
+                    : completedSteps.includes(index)
+                    ? 'border-green-500 bg-green-50'
+                    : 'border-gray-200 bg-white'
+                }`}
+              >
+                <div className="flex items-start">
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl mr-4 ${
+                    index === currentStep && isPlaying
+                      ? 'bg-indigo-500 text-white animate-pulse'
+                      : completedSteps.includes(index)
+                      ? 'bg-green-500 text-white'
+                      : 'bg-gray-200 text-gray-600'
+                  }`}>
+                    {completedSteps.includes(index) ? '✓' : step.icon}
                   </div>
-                ))}
-              </div>
+                  
+                  <div className="flex-1">
+                    <h3 className={`text-lg font-bold mb-2 ${
+                      index === currentStep && isPlaying ? 'text-indigo-700' : 'text-gray-900'
+                    }`}>
+                      {step.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-3">
+                      {step.description}
+                    </p>
 
-              {/* Progress Bar */}
-              <div className="mb-6">
-                <div className="flex justify-between text-sm mb-2">
-                  <span>Demo Progress</span>
-                  <span>{Math.round(progress)}%</span>
-                </div>
-                <div className="w-full bg-white bg-opacity-20 rounded-full h-2">
-                  <div
-                    className="bg-gradient-to-r from-green-400 to-blue-400 h-2 rounded-full transition-all duration-300"
-                    style={{ width: `${progress}%` }}
-                  ></div>
-                </div>
-              </div>
+                    {index === currentStep && isPlaying && (
+                      <div className="bg-indigo-100 p-3 rounded-lg">
+                        <div className="flex items-center mb-2">
+                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-indigo-600 mr-2"></div>
+                          <span className="text-sm font-semibold text-indigo-700">
+                            {step.action}
+                          </span>
+                        </div>
+                        <div className="text-sm text-indigo-600">
+                          {step.result}
+                        </div>
+                      </div>
+                    )}
 
-              {/* Controls */}
-              <div className="flex space-x-4">
-                <button
-                  onClick={isPlaying ? stopDemo : startDemo}
-                  className="flex items-center space-x-2 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-                >
-                  {isPlaying ? (
-                    <>
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
-                      </svg>
-                      <span>Pause</span>
-                    </>
-                  ) : (
-                    <>
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                      </svg>
-                      <span>Play Demo</span>
-                    </>
-                  )}
-                </button>
-                <button
-                  onClick={prevDemo}
-                  className="p-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg transition-all duration-300"
-                >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </button>
-                <button
-                  onClick={nextDemo}
-                  className="p-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg transition-all duration-300"
-                >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            {/* Demo Visualization */}
-            <div className="bg-white bg-opacity-5 rounded-xl p-6 border border-white border-opacity-20">
-              <div className="text-center mb-4">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h4 className="text-lg font-semibold mb-2">Live Demo</h4>
-                <p className="text-sm opacity-75">
-                  {isPlaying ? 'Running simulation...' : 'Click play to start'}
-                </p>
-              </div>
-
-              {/* Animated Elements */}
-              <div className="space-y-4">
-                {demos[currentDemo].features.map((feature, index) => (
-                  <div
-                    key={index}
-                    className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-500 ${
-                      progress > (index + 1) * 25
-                        ? 'bg-green-500 bg-opacity-20 border border-green-400'
-                        : 'bg-white bg-opacity-10'
-                    }`}
-                  >
-                    <div className={`w-3 h-3 rounded-full transition-all duration-500 ${
-                      progress > (index + 1) * 25 ? 'bg-green-400' : 'bg-gray-400'
-                    }`}></div>
-                    <span className="text-sm">{feature}</span>
-                    {progress > (index + 1) * 25 && (
-                      <svg className="w-4 h-4 text-green-400 ml-auto" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
+                    {completedSteps.includes(index) && (
+                      <div className="bg-green-100 p-3 rounded-lg">
+                        <div className="text-sm font-semibold text-green-700 mb-1">
+                          ✓ Completed
+                        </div>
+                        <div className="text-sm text-green-600">
+                          {step.result}
+                        </div>
+                      </div>
                     )}
                   </div>
-                ))}
+                </div>
+
+                {/* Progress Line */}
+                {index < demoSteps.length - 1 && (
+                  <div className={`absolute left-6 top-16 w-0.5 h-8 ${
+                    completedSteps.includes(index) ? 'bg-green-500' : 'bg-gray-200'
+                  }`}></div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Demo Controls & Info */}
+          <div className="space-y-8">
+            {/* Demo Controls */}
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Demo Controls</h3>
+              
+              <div className="space-y-4">
+                {!isPlaying ? (
+                  <button
+                    onClick={handleStartDemo}
+                    className="w-full bg-indigo-600 text-white py-4 rounded-lg font-bold text-lg hover:bg-indigo-700 transition-colors"
+                  >
+                    🚀 Start Interactive Demo
+                  </button>
+                ) : (
+                  <div className="text-center">
+                    <div className="text-lg font-semibold text-indigo-700 mb-4">
+                      Demo in Progress...
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
+                      <div 
+                        className="bg-indigo-600 h-2 rounded-full transition-all duration-300"
+                        style={{ width: `${((currentStep + 1) / demoSteps.length) * 100}%` }}
+                      ></div>
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      Step {currentStep + 1} of {demoSteps.length}
+                    </div>
+                  </div>
+                )}
+
+                <button
+                  onClick={handleResetDemo}
+                  className="w-full border-2 border-gray-300 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+                >
+                  🔄 Reset Demo
+                </button>
               </div>
             </div>
+
+            {/* Demo Features */}
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What You'll See</h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <span className="text-blue-600 font-bold">1</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Real-time Processing</h4>
+                    <p className="text-gray-600 text-sm">Watch AI analyze data and generate insights in real-time</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <span className="text-green-600 font-bold">2</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">ROI Calculations</h4>
+                    <p className="text-gray-600 text-sm">See actual ROI projections and cost savings calculations</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <span className="text-purple-600 font-bold">3</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Implementation Guide</h4>
+                    <p className="text-gray-600 text-sm">Follow step-by-step implementation process</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <span className="text-orange-600 font-bold">4</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Live Monitoring</h4>
+                    <p className="text-gray-600 text-sm">Experience real-time performance monitoring</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Results Summary */}
+            {completedSteps.length > 0 && (
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl shadow-xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Demo Results</h3>
+                
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-600">
+                      {completedSteps.length}
+                    </div>
+                    <div className="text-sm text-gray-600">Steps Completed</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-blue-600">
+                      {Math.round((completedSteps.length / demoSteps.length) * 100)}%
+                    </div>
+                    <div className="text-sm text-gray-600">Progress</div>
+                  </div>
+                </div>
+
+                <div className="bg-white p-4 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Projected Results:</h4>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• 340% ROI within 12 months</li>
+                    <li>• 45% efficiency improvement</li>
+                    <li>• $2.1M annual cost savings</li>
+                    <li>• 60% reduction in manual tasks</li>
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
-        {/* Demo Navigation */}
-        <div className="flex justify-center space-x-2 mb-8">
-          {demos.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                setCurrentDemo(index);
-                setProgress(0);
-                setIsPlaying(false);
-              }}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentDemo
-                  ? 'bg-white'
-                  : 'bg-white bg-opacity-40 hover:bg-opacity-60'
-              }`}
-            />
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20">
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to See This in Your Business?
-            </h3>
-            <p className="text-lg opacity-90 mb-6">
-              Schedule a personalized demo with our AI experts
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
-                Schedule Demo
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
-                Learn More
-              </button>
-            </div>
+        {/* CTA Section */}
+        <div className="mt-16 text-center">
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your Business?</h3>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Experience the full power of our AI solutions with a personalized consultation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors">
+              Schedule Live Demo
+            </button>
+            <button className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-50 transition-colors">
+              Download Case Study
+            </button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
