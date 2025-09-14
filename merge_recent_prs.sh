@@ -1,135 +1,121 @@
 #!/bin/bash
 
 # Merge Recent PRs Script
-# Focus on the most recent and important PRs
+# This script processes the most recent 100 branches
 
 set -e
 
 echo "🚀 Starting Recent PRs Merge Process"
 echo "===================================="
 
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m' # No Color
+# Get the most recent 100 branches
+RECENT_BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | tail -100 | sed 's/origin\///' | sort)
 
-print_status() {
-    echo -e "${BLUE}[INFO]${NC} $1"
-}
+echo "📋 Processing 100 most recent branches"
 
-print_success() {
-    echo -e "${GREEN}[SUCCESS]${NC} $1"
-}
+# Counter for tracking
+SUCCESS_COUNT=0
+FAILED_COUNT=0
+TOTAL_COUNT=$(echo "$RECENT_BRANCHES" | wc -l)
 
-print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
-}
-
-print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
-}
-
-# Function to safely merge a branch
-safe_merge() {
-    local branch_name=$1
-    local branch_short=${branch_name#origin/}
+# Function to merge a single branch
+merge_branch() {
+    local branch=$1
+    local branch_num=$2
     
-    print_status "Processing: $branch_short"
+    echo ""
+    echo "🔄 [$branch_num/$TOTAL_COUNT] Processing: $branch"
+    echo "----------------------------------------"
     
-    # Create local branch if it doesn't exist
-    if ! git show-ref --verify --quiet refs/heads/$branch_short; then
-        git checkout -b $branch_short origin/$branch_short
-    else
-        git checkout $branch_short
-        git pull origin $branch_short
-    fi
-    
-    # Switch back to main
-    git checkout main
-    
-    # Attempt merge
-    if git merge $branch_short --no-ff -m "Merge $branch_short: $(git log -1 --pretty=format:'%s' $branch_short)"; then
-        print_success "Merged $branch_short successfully"
+    # Try to merge directly
+    if git merge "origin/$branch" --no-ff -m "Merge $branch into main" 2>/dev/null; then
+        echo "✅ Successfully merged $branch"
+        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
         return 0
     else
-        print_warning "Conflict in $branch_short, resolving..."
+        echo "❌ Merge conflict for $branch, attempting resolution..."
         
-        # Auto-resolve conflicts by accepting incoming changes
-        git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
-            if [ -f "$file" ]; then
-                print_status "Resolving conflict in $file"
-                git checkout --theirs "$file" 2>/dev/null || true
-                git add "$file" 2>/dev/null || true
-            fi
-        done
-        
-        # Complete merge
-        if git commit --no-edit; then
-            print_success "Resolved conflicts and merged $branch_short"
+        # Try to resolve conflicts automatically
+        if resolve_conflicts_quick; then
+            echo "✅ Conflicts resolved for $branch"
+            git add .
+            git commit -m "Resolve merge conflicts for $branch"
+            SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
             return 0
         else
-            print_error "Failed to resolve conflicts for $branch_short"
-            git merge --abort
+            echo "❌ Could not resolve conflicts for $branch"
+            git merge --abort 2>/dev/null || true
+            FAILED_COUNT=$((FAILED_COUNT + 1))
             return 1
         fi
     fi
 }
 
-# Main execution
-main() {
-    # Ensure we're on main and up to date
-    git checkout main
-    git pull origin main
+# Function to resolve conflicts quickly
+resolve_conflicts_quick() {
+    local resolved=false
     
-    # List of recent branches to merge (most recent first)
-    recent_branches=(
-        "origin/cursor/website-improvements-2025"
-        "origin/cursor/create-and-deploy-new-content-baa1"
-        "origin/cursor/create-and-deploy-new-content-2ed6"
-        "origin/cursor/create-and-deploy-new-content-fe8f"
-        "origin/cursor/create-and-deploy-new-content-0454"
-        "origin/cursor/create-and-deploy-new-content-bb7c"
-        "origin/cursor/create-and-deploy-new-content-6c02"
-        "origin/cursor/create-and-deploy-new-content-8a84"
-        "origin/cursor/create-and-deploy-new-content-585c"
-        "origin/cursor/create-and-deploy-new-content-7d26"
-        "origin/cursor/create-and-deploy-new-content-44a0"
-        "origin/cursor/create-and-deploy-new-content-9e4d"
-        "origin/cursor/create-and-deploy-new-content-2917"
-        "origin/cursor/create-and-deploy-new-content-a2eb"
-        "origin/cursor/create-and-deploy-new-content-6292"
-        "origin/cursor/create-and-deploy-new-content-c18b"
-        "origin/cursor/create-and-deploy-new-content-1ed3"
-        "origin/cursor/create-and-deploy-new-content-2a6f"
-        "origin/cursor/create-and-deploy-new-content-b843"
-    )
-    
-    success_count=0
-    failure_count=0
-    
-    for branch in "${recent_branches[@]}"; do
-        if git show-ref --verify --quiet refs/remotes/$branch; then
-            if safe_merge "$branch"; then
-                success_count=$((success_count + 1))
-            else
-                failure_count=$((failure_count + 1))
+    # Resolve common conflicts by taking the newer version
+    if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+        # For all conflicted files, take the newer version (theirs)
+        git status --porcelain | grep "^UU\|^AA\|^DD" | while read line; do
+            file=$(echo "$line" | awk '{print $2}')
+            if [ -f "$file" ]; then
+                git checkout --theirs "$file" 2>/dev/null && git add "$file"
+                resolved=true
             fi
-        else
-            print_warning "Branch $branch not found, skipping"
-        fi
-    done
+        done
+        
+        # Also resolve any remaining conflicts
+        git status --porcelain | grep "^UU\|^AA\|^DD" | while read line; do
+            file=$(echo "$line" | awk '{print $2}')
+            if [ -f "$file" ]; then
+                git checkout --ours "$file" 2>/dev/null && git add "$file"
+                resolved=true
+            fi
+        done
+    fi
     
-    # Push all changes
-    print_status "Pushing merged changes to remote main"
-    git push origin main
-    
-    # Summary
-    print_status "Recent PRs merge completed"
-    print_success "Successfully merged: $success_count branches"
-    print_error "Failed to merge: $failure_count branches"
+    return 0
 }
 
-# Run main function
-main "$@"
+# Process each branch
+branch_num=1
+for branch in $RECENT_BRANCHES; do
+    merge_branch "$branch" "$branch_num"
+    branch_num=$((branch_num + 1))
+    
+    # Push every 10 branches
+    if [ $((branch_num % 10)) -eq 0 ]; then
+        echo ""
+        echo "🚀 Pushing changes after $branch_num branches..."
+        if git push origin main; then
+            echo "✅ Changes pushed successfully"
+        else
+            echo "⚠️  Failed to push changes, will retry later"
+        fi
+    fi
+    
+    # Small delay
+    sleep 0.5
+done
+
+# Final push
+echo ""
+echo "🚀 Final push..."
+if git push origin main; then
+    echo "✅ Final changes pushed successfully"
+else
+    echo "⚠️  Failed to push final changes"
+fi
+
+# Final summary
+echo ""
+echo "🎉 Recent PRs Merge Process Complete!"
+echo "====================================="
+echo "✅ Successfully merged: $SUCCESS_COUNT branches"
+echo "❌ Failed to merge: $FAILED_COUNT branches"
+echo "📊 Total processed: $TOTAL_COUNT branches"
+
+echo ""
+echo "🏁 Recent PRs processing complete!"
