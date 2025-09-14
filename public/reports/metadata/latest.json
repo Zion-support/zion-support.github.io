@@ -64827,6 +64827,29 @@
       }
     },
     {
+      "route": "/reports/updates/update-2025-08-18-0006",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-18 00:06",
+        "description": "Autonomous Update — 2025-08-18 00:06 — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-18-0007",
+      "missing": [
+        "og:title",
+        "og:description",
+        "og:image",
+        "twitter:card"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-18 00:07",
+        "description": "Autonomous Update — 2025-08-18 00:07 — auto-suggested description"
+      }
+    },
+    {
       "route": "/reports/whitepapers/",
       "missing": [
         "og:image"
