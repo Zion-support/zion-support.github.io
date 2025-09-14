@@ -1,3 +1,4 @@
+import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
