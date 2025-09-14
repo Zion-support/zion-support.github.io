@@ -349,6 +349,10 @@ import NewContent2025UltimateBusinessTransformationBanner from '../components/Ne
 import QuantumAIRevolution2025PromotionalBanner from '../components/QuantumAIRevolution2025PromotionalBanner';
 import Fortune500SuccessStoryBanner from '../components/Fortune500SuccessStoryBanner';
 
+// Import new Multimodal Intelligence promotional components - NEWEST FEATURED
+import MultimodalIntelligence2025PromotionBanner from '../components/MultimodalIntelligence2025PromotionBanner';
+import MultimodalIntelligenceShowcase2025 from '../components/MultimodalIntelligenceShowcase2025';
+
 // Import new 2026 revolutionary content components - LATEST BREAKTHROUGH
 import AI2026RevolutionaryBreakthroughBanner from '../components/AI2026RevolutionaryBreakthroughBanner';
 import QuantumComputing2026UltimateBanner from '../components/QuantumComputing2026UltimateBanner';
@@ -400,6 +404,9 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* AI 2025 ULTIMATE BREAKTHROUGH 100,000% ROI BANNER - NEWEST FEATURED */}
         <AI2025UltimateBreakthrough100000ROIBanner />
+        
+        {/* MULTIMODAL INTELLIGENCE 2025 PROMOTION BANNER - NEWEST FEATURED */}
+        <MultimodalIntelligence2025PromotionBanner />
         
         {/* NEW CONTENT 2026 PROMOTION BANNER - LATEST BREAKTHROUGH */}
         <NewContent2026PromotionBanner />
@@ -845,6 +852,9 @@ export default function HomePage() {
         
         {/* ULTIMATE SUCCESS METRICS SHOWCASE - NEWEST FEATURED */}
         <UltimateSuccessMetricsShowcase />
+
+        {/* MULTIMODAL INTELLIGENCE SHOWCASE 2025 - NEWEST FEATURED */}
+        <MultimodalIntelligenceShowcase2025 />
 
         {/* AI 2025 ULTIMATE AUTOMATION REVOLUTION SHOWCASE - NEWEST FEATURED */}
         <AI2025UltimateAutomationRevolutionShowcase />
