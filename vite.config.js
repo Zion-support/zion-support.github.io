@@ -113,5 +113,14 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion'],
     exclude: ['@vite/client', '@vite/env']
+  },
+  resolve: {
+    alias: {
+      '@': '/workspace',
+      '@/components': '/workspace/components',
+      '@/hooks': '/workspace/hooks',
+      '@/lib': '/workspace/lib',
+      '@/app': '/workspace/app'
+    }
   }
 });
