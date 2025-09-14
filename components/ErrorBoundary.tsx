@@ -1,10 +1,12 @@
-'use client';
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+  level?: string;
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
-  children?: ReactNode;
+  children: ReactNode;
   fallback?: ReactNode;
 }
 
@@ -15,32 +17,55 @@ interface State {
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false
-  };
-
-  public static getDerivedStateFromError(_: Error): State {
-    // Update state so the next render will show the fallback UI.
-    return { hasError: true };
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error("Uncaught error:", error, errorInfo);
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+          <div className="text-center text-white">
+            <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
+            <p className="text-slate-300 mb-4">
+              {this.state.error?.message || 'An unexpected error occurred'}
+            </p>
+            <button 
+              onClick={() => window.location.reload()} 
+              className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
+            >
+              Reload Page
+            </button>
+    console.error('Error caught by boundary:', error, errorInfo);
     this.setState({
       error,
       errorInfo
     });
+
+    // Log error to external service (e.g., Sentry)
+    if (typeof window !== 'undefined' && (window as any).Sentry) {
+      (window as any).Sentry.captureException(error, { extra: errorInfo });
+    }
   }
 
-  private handleReload = () => {
+  handleReload = () => {
     window.location.reload();
   };
 
-  private handleGoHome = () => {
+  handleGoHome = () => {
     window.location.href = '/';
   };
 
-  public render() {
+  render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
