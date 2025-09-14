@@ -29,13 +29,11 @@ import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutio
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
 import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
 import NewContent2026Showcase from '../components/NewContent2026Showcase';
-import NewContent2025ShowcaseBanner from '../components/NewContent2025ShowcaseBanner';
-import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
-import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import RevolutionaryAIContent2025Banner from '../components/RevolutionaryAIContent2025Banner';
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
-import AI2025ContentShowcase from '../components/AI2025ContentShowcase';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -54,14 +52,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Revolutionary AI Content 2025 Banner */}
+        <RevolutionaryAIContent2025Banner />
+        
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
-        
-        {/* New Content 2025 Ultimate Banner */}
-        <NewContent2025UltimateBanner />
-        
-        {/* AI 2025 Content Showcase */}
-        <AI2025ContentShowcase />
         
         {/* New Content 2025 Showcase Banner */}
         <NewContent2025ShowcaseBanner />
@@ -166,8 +161,8 @@ export default function HomePage() {
 
         {/* Content Promotion Banners */}
         <UltimateContentShowcase2025 />
-        <EnhancedContentPromotionBanner2026 />
-        <ComprehensiveContentShowcase2026 />
+        <RevolutionaryContent2026Banner />
+        <FeaturedContentShowcase2026 />
         <NewContentPromotionBanner />
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
