@@ -43,6 +43,7 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
 import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+import NewContent2025ShowcaseBanner from '../components/NewContent2025ShowcaseBanner';
 import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
 import NewContentShowcase2026 from '../components/NewContentShowcase2026';
 import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
@@ -84,9 +85,6 @@ export default function HomePage() {
         
         {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
-        
-        {/* Enhanced Content Promotion Banner */}
-        <EnhancedContentPromotionBanner />
         
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
