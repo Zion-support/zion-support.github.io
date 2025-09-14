@@ -29,8 +29,9 @@
   # Force install all dependencies including devDependencies
   NPM_CONFIG_INCLUDE = "dev"
   
-  # Ensure Vite is available
+  # Ensure Vite is available and handle peer dependencies
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+  NPM_CONFIG_AUDIT_LEVEL = "moderate"
   
   # Disable Next.js auto-detection
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
