@@ -48,6 +48,8 @@ import NewContent2025UltimateShowcase from '../components/NewContent2025Ultimate
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
+import AI2026RevolutionaryBreakthroughBanner from '../components/AI2026RevolutionaryBreakthroughBanner';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
@@ -87,6 +89,9 @@ export default function HomePage() {
         
         {/* Revolutionary AI Content Banner */}
         <RevolutionaryAIContentBanner />
+        
+        {/* AI 2026 Revolutionary Breakthrough Banner */}
+        <AI2026RevolutionaryBreakthroughBanner />
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -190,6 +195,7 @@ export default function HomePage() {
         <NewContent2025UltimateShowcase />
         <RevolutionaryContentBanner2025 />
         <UltimateContentShowcase2025 />
+        <UltimateContentShowcase2026 />
         <NewContent2025PromotionBanner />
         <LatestContentShowcase2025 />
         <EnhancedContentPromotionBanner2026 />
