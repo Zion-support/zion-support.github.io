@@ -35365,6 +35365,16 @@
       }
     },
     {
+      "route": "/reports/innovations/insight-2025-08-18-0430",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Blueprint: Agent Ops",
+        "description": "Blueprint: Agent Ops — auto-suggested description"
+      }
+    },
+    {
       "route": "/reports/innovations/insight-2025-08-18T03-11",
       "missing": [
         "og:image"
@@ -65714,6 +65724,16 @@
       "suggestion": {
         "title": "Autonomous Blueprint — Evaluation & Safety (2025-08-18 04:20 UTC)",
         "description": "Autonomous Blueprint — Evaluation & Safety (2025-08-18 04:20 UTC) — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-18-0430",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Blueprint — Evaluation & Safety (2025-08-18 04:30 UTC)",
+        "description": "Autonomous Blueprint — Evaluation & Safety (2025-08-18 04:30 UTC) — auto-suggested description"
       }
     },
     {
