@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-"use client";
-=======
 'use client';
-
->>>>>>> origin/cursor/create-and-deploy-new-content-ad66
 import React, { useState } from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export default function QuantumAIROICalculator2026() {
   const [inputs, setInputs] = useState({

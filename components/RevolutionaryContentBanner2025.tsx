@@ -22,14 +22,6 @@ const RevolutionaryContentBanner2025 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
   const slides = [
     {
       id: 1,
@@ -86,6 +78,14 @@ const RevolutionaryContentBanner2025 = () => {
       transition: { duration: 0.6 }
     }
   };
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
   return (
     <motion.div
@@ -169,7 +169,7 @@ const RevolutionaryContentBanner2025 = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.2 }}
                     >
-                      <slides[currentSlide].icon className="w-5 h-5" />
+                      {React.createElement(slides[currentSlide].icon, { className: "w-5 h-5" })}
                       <span className="font-medium">{slides[currentSlide].subtitle}</span>
                     </motion.div>
                     
@@ -245,7 +245,7 @@ const RevolutionaryContentBanner2025 = () => {
                     <div className="relative w-full h-80 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8">
                       <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl"></div>
                       <div className="relative z-10 h-full flex flex-col justify-center items-center text-white">
-                        <slides[currentSlide].icon className="w-24 h-24 mb-6 text-white/80" />
+                        {React.createElement(slides[currentSlide].icon, { className: "w-24 h-24 mb-6 text-white/80" })}
                         <div className="text-center">
                           <div className="text-2xl font-bold mb-2">Interactive Demo</div>
                           <div className="text-white/70">Experience the power</div>
