@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
-// // import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 
@@ -34,7 +33,7 @@ import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase20
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 import UltimateContent2025PromotionBanner from '../components/UltimateContent2025PromotionBanner';
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 
@@ -63,11 +62,11 @@ import AI2026GlobalTransformation800ROISuccessBanner from '../components/AI2026G
 import AI2026ImplementationFrameworkUltimatePromotionBanner from '../components/AI2026ImplementationFrameworkUltimatePromotionBanner';
 
 // Import new ultimate content promotional components
-import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
+import RevolutionaryContent2025UltimateBanner from './components/RevolutionaryContent2025UltimateBanner';
 
 // Import new 2027 breakthrough promotional components
-import AI2027BreakthroughPromotionBanner from '../components/AI2027BreakthroughPromotionBanner';
-import QuantumComputingShowcase2027 from '../components/QuantumComputingShowcase2027';
+import AI2027BreakthroughPromotionBanner from './components/AI2027BreakthroughPromotionBanner';
+import QuantumComputingShowcase2027 from './components/QuantumComputingShowcase2027';
 
 // Import new neural interface and autonomous AI promotional components
 import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRevolutionBanner2025';
