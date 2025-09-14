@@ -24,25 +24,18 @@ const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
 // Import key promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
-import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
-import NewContent2026Showcase from '../components/NewContent2026Showcase';
-import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
+import NewContent2026Showcase from '../components/NewContent2026Showcase';
+import NewContent2025ShowcaseBanner from '../components/NewContent2025ShowcaseBanner';
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
-import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
+import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
-
-// Import new 2026 promotional components
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
-import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
-import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-
-// Import new 2025 breakthrough promotional components
-import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI2025BreakthroughPromotionBanner';
-import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
-import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
+import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
+import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+import AI2025ContentShowcase from '../components/AI2025ContentShowcase';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -61,14 +54,20 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
+        {/* AI 2025 Breakthrough Banner */}
+        <AI2025BreakthroughBanner />
         
-        {/* Revolutionary Content 2025 Banner */}
-        <RevolutionaryContent2025Banner />
+        {/* New Content 2025 Ultimate Banner */}
+        <NewContent2025UltimateBanner />
+        
+        {/* AI 2025 Content Showcase */}
+        <AI2025ContentShowcase />
+        
+        {/* New Content 2025 Showcase Banner */}
+        <NewContent2025ShowcaseBanner />
         
         {/* Enhanced Content Promotion Banner */}
-        <EnhancedContentPromotionBanner2026 />
+        <EnhancedContentPromotionBanner />
         
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
@@ -165,11 +164,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* New 2025 Breakthrough Content Promotions */}
-        <QuantumAI2025BreakthroughPromotionBanner />
-        <AutonomousBusinessOperationsPromotionBanner />
-        <AI1000ROISuccessStoryBanner />
-        
         {/* Content Promotion Banners */}
         <UltimateContentShowcase2025 />
         <EnhancedContentPromotionBanner2026 />
@@ -179,10 +173,6 @@ export default function HomePage() {
         <NewServicesShowcase2025 />
         <NewContent2026Showcase />
         <InteractiveContentDiscoveryWidget />
-        
-        {/* New 2026 Content Showcase */}
-        <UltimateContentShowcase2026 />
-        <SuccessMetricsShowcase2026 />
 
         {/* Advanced AI Components */}
         <AdvancedContentRecommendationEngine />
