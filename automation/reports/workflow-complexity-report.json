@@ -2867,12 +2867,12 @@
         "totalLines": 44,
         "jobCount": 1,
         "stepCount": 3,
-        "conditionalCount": 1,
+        "conditionalCount": 0,
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
-        "secretCount": 4,
-        "actionCount": 3
+        "secretCount": 0,
+        "actionCount": 2
       },
       "refactoringPriority": "low",
       "status": "active",
