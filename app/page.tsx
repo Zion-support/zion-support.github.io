@@ -233,6 +233,17 @@ import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent
 import AI2025_2026UltimateBusinessTransformationRevolutionBanner from '../components/AI2025_2026UltimateBusinessTransformationRevolutionBanner';
 import UltimateBusinessTransformationShowcase2025 from '../components/UltimateBusinessTransformationShowcase2025';
 
+// Import new content components
+import LatestAITrends2025 from '../components/LatestAITrends2025';
+import SuccessStoriesShowcase from '../components/SuccessStoriesShowcase';
+import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
+import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+import ROICalculatorWidget from '../components/ROICalculatorWidget';
+
+// Import new Advanced Neural Architectures 2026 components
+import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
+import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -271,11 +282,32 @@ export default function HomePage() {
         {/* Ultimate Business Transformation Showcase 2025 - NEW FEATURED */}
         <UltimateBusinessTransformationShowcase2025 />
         
-        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER - FEATURED */}
+        {/* ULTIMATE CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED */}
+        <UltimateContentPromotionBanner2025 />
+        
+        {/* LATEST AI TRENDS 2025 - NEW CONTENT */}
+        <LatestAITrends2025 />
+        
+        {/* SUCCESS STORIES SHOWCASE - NEW CONTENT */}
+        <SuccessStoriesShowcase />
+        
+        {/* INTERACTIVE DEMO WIDGET - NEW CONTENT */}
+        <InteractiveDemoWidget />
+        
+        {/* ROI CALCULATOR WIDGET - NEW CONTENT */}
+        <ROICalculatorWidget />
+        
+        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER - NEWEST FEATURED */}
         <AI2025RevolutionaryBreakthroughBanner />
         
         {/* AI 2025 INNOVATION SHOWCASE - FEATURED */}
         <AI2025InnovationShowcase />
+        
+        {/* ADVANCED NEURAL ARCHITECTURES 2026 BANNER - NEW FEATURED */}
+        <AdvancedNeuralArchitectures2026Banner />
+        
+        {/* ADVANCED NEURAL ARCHITECTURES SHOWCASE 2026 - NEW FEATURED */}
+        <AdvancedNeuralArchitecturesShowcase2026 />
         
         {/* ULTIMATE CONTENT SHOWCASE 2025 - FEATURED */}
         <UltimateContentShowcase2025 />
