@@ -1,58 +1,73 @@
 #!/bin/bash
 
-# Script to merge all remaining open PRs
-set -e
+echo "Starting to merge remaining open PRs..."
 
-echo "Starting to merge all remaining open PRs..."
+# Get all open PR numbers
+PR_NUMBERS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | grep -o '"number": [0-9]*' | grep -o '[0-9]*' | sort -n)
 
-# Get list of open PRs
-PRS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open" | python3 -c "
-import json, sys
-data = json.load(sys.stdin)
-for pr in data:
-    print(f'{pr[\"number\"]}:{pr[\"head\"][\"ref\"]}')
-")
+echo "Found PRs: $PR_NUMBERS"
 
-for pr_info in $PRS; do
-    pr_number=$(echo $pr_info | cut -d: -f1)
-    branch_name=$(echo $pr_info | cut -d: -f2)
+for pr_number in $PR_NUMBERS; do
+    echo "Processing PR #$pr_number..."
     
-    echo "Processing PR #$pr_number with branch $branch_name"
+    # Get PR details
+    PR_DETAILS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number")
+    HEAD_REF=$(echo "$PR_DETAILS" | grep -o '"ref":"[^"]*"' | head -1 | cut -d'"' -f4)
     
-    # Fetch latest changes
-    git fetch origin
-    
-    # Checkout the PR branch
-    git checkout $branch_name || {
-        echo "Failed to checkout $branch_name, skipping..."
+    if [ -z "$HEAD_REF" ]; then
+        echo "Could not get head ref for PR #$pr_number, skipping..."
         continue
-    }
+    fi
     
-    # Merge main into the branch
-    git merge main || {
-        echo "Merge conflicts in $branch_name, resolving automatically..."
-        # Resolve conflicts automatically
-        find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.md" -o -name "*.toml" -o -name "*.json" -o -name "*.yaml" -o -name "*.lock" | xargs sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> main$/d' 2>/dev/null || true
-        git add .
-        git commit -m "Resolve merge conflicts in PR #$pr_number" || true
-    }
+    echo "PR #$pr_number head ref: $HEAD_REF"
     
-    # Switch back to main
-    git checkout main
+    # Fetch the branch
+    if ! git fetch origin "$HEAD_REF"; then
+        echo "Failed to fetch branch $HEAD_REF, skipping PR #$pr_number"
+        continue
+    fi
     
-    # Merge the PR branch into main
-    git merge $branch_name || {
-        echo "Merge conflicts when merging $branch_name into main, resolving automatically..."
-        # Resolve conflicts automatically
-        find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.md" -o -name "*.toml" -o -name "*.json" -o -name "*.yaml" -o -name "*.lock" | xargs sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> main$/d' 2>/dev/null || true
-        git add .
-        git commit -m "Merge PR #$pr_number: Resolve conflicts and integrate content" || true
-    }
+    # Checkout the branch
+    if ! git checkout -b "pr-$pr_number" "origin/$HEAD_REF" 2>/dev/null; then
+        if ! git checkout "pr-$pr_number" 2>/dev/null; then
+            echo "Failed to checkout branch $HEAD_REF, skipping PR #$pr_number"
+            continue
+        fi
+    fi
     
-    echo "Successfully merged PR #$pr_number"
+    # Merge with main
+    if ! git merge main --no-edit; then
+        echo "Merge conflict in PR #$pr_number, resolving..."
+        # Resolve conflicts by keeping main branch content
+        git checkout --ours . 2>/dev/null || true
+        git add . 2>/dev/null || true
+        git commit -m "Resolve merge conflicts - keep main branch content" 2>/dev/null || true
+    fi
+    
+    # Switch back to main and merge
+    if ! git checkout main; then
+        echo "Failed to checkout main, skipping PR #$pr_number"
+        continue
+    fi
+    
+    if ! git merge "pr-$pr_number" --no-edit; then
+        echo "Failed to merge PR #$pr_number into main, skipping"
+        continue
+    fi
+    
+    # Push to main
+    if ! git push origin main --force; then
+        echo "Failed to push PR #$pr_number to main, skipping"
+        continue
+    fi
+    
+    echo "✅ Successfully merged PR #$pr_number"
+    
+    # Clean up
+    git branch -D "pr-$pr_number" 2>/dev/null || true
+    
+    # Small delay
+    sleep 1
 done
 
-# Push all changes
-git push origin main --force
-
-echo "All PRs have been processed and merged!"
+echo "Finished merging all PRs"

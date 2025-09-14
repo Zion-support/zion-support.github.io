@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+"use client";
+=======
+'use client';
+
+>>>>>>> origin/cursor/create-and-deploy-new-content-ad66
 import React, { useState, useEffect } from 'react';
 
 interface APIEndpoint {
