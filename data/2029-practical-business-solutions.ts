@@ -4,6 +4,8 @@ export interface PracticalBusinessSolution2029 {
   tagline: string;
   price: string;
   description: string;
+  category: string[];
+  price: string;
   features: string[];
   link: string;
   category: string;

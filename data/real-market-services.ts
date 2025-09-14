@@ -2085,7 +2085,7 @@ export const realMarketServices: RealMarketService[] = [
     launchDate: '2025-02-08',
     customers: 52,
     rating: 4.6,
-    reviews: 24
+    reviews: 8
   },
   {
     id: 'automated-email-followups',

@@ -146,9 +146,9 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     reviews: 45
   },
   {
-    id: 'space-mining-automation-platform',
-    name: 'Space Mining Automation Platform',
-    tagline: 'Automate asteroid and lunar mining operations',
+    id: 'space-resource-processing-automation',
+    name: 'Space Resource Processing Automation',
+    tagline: 'Automated processing of space resources and materials',
     price: '$65,999',
     period: '/month',
     description: 'Comprehensive platform that automates space mining operations on asteroids, moons, and other celestial bodies. Uses AI-powered robots, autonomous mining equipment, and advanced resource processing for efficient space resource extraction.',

@@ -24,7 +24,6 @@ export interface InnovativeAIService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  variant: string;
   contactInfo: {
     mobile: string;
     email: string;
@@ -48,16 +47,16 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.',
     features: [
-      'Quantum neural signal processing',
-      'Real-time brain activity monitoring',
-      'AI-powered cognitive enhancement',
-      'Neural pattern recognition',
-      'Secure quantum encryption',
-      'Multi-modal interface support',
-      'Advanced analytics dashboard',
-      'API for research integration',
-      'Compliance with medical standards',
-      '24/7 quantum AI support'
+      'Contract risk assessment with 95% accuracy',
+      'Legal compliance checking across jurisdictions',
+      'Automated contract summarization',
+      'Clause recommendation engine',
+      'Version comparison and tracking',
+      'Integration with legal databases',
+      'Multi-language contract support',
+      'Real-time collaboration tools',
+      'Audit trail and compliance reporting',
+      'API for enterprise integration'
     ],
     popular: true,
     icon: '🧠',
@@ -143,23 +142,23 @@ export const innovativeAIServices: InnovativeAIService[] = [
     reviews: 12
   },
   {
-    id: 'biotech-ai-platform',
-    name: 'Biotech AI Platform',
-    tagline: 'AI-powered drug discovery and genetic engineering',
-    price: '$3,999',
+    id: 'ai-market-research-intelligence',
+    name: 'AI Market Research Intelligence',
+    tagline: 'Real-time market analysis and competitive intelligence platform',
+    price: '$399',
     period: '/month',
     description: 'AI-powered drug discovery and genetic engineering platform. Accelerate drug development by 10x while reducing costs by 90%. Advanced protein folding and drug interaction modeling.',
     features: [
-      'AI drug discovery algorithms',
-      'Genetic sequence analysis',
-      'Protein folding prediction',
-      'Drug interaction modeling',
-      'Clinical trial optimization',
-      'Regulatory compliance tools',
-      'Research collaboration platform',
-      'Advanced analytics dashboard',
-      'API for research integration',
-      'Multi-omics data analysis'
+      'Real-time market monitoring',
+      'Competitor analysis and tracking',
+      'Trend prediction algorithms',
+      'Market opportunity identification',
+      'Sentiment analysis',
+      'Social media monitoring',
+      'News and media analysis',
+      'Custom report generation',
+      'API for data integration',
+      'White-label solutions'
     ],
     popular: true,
     icon: '🧬',
@@ -201,16 +200,16 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'Quantum AI-powered algorithmic trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and profit generation.',
     features: [
-      'Quantum AI trading algorithms',
-      'Nanosecond execution speed',
-      'Real-time market analysis',
-      'Risk management tools',
-      'Portfolio optimization',
-      'Multi-asset trading',
-      'Advanced backtesting',
-      'Regulatory compliance',
-      'Performance analytics',
-      'API for integration'
+      'AI-powered lead scoring',
+      'Automated email sequences',
+      'Smart follow-up scheduling',
+      'Sales pipeline analytics',
+      'Revenue forecasting',
+      'Customer behavior analysis',
+      'Sales coaching insights',
+      'Integration with CRM systems',
+      'Mobile sales app',
+      'White-label solutions'
     ],
     popular: true,
     icon: '💰',
