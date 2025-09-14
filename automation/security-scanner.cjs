@@ -2,241 +2,189 @@
 
 const fs = require('fs');
 const path = require('path');
-
-console.log('🔒 Starting Security Scanner...');
+const { execSync } = require('child_process');
 
 class SecurityScanner {
   constructor() {
-    this.results = {
-      timestamp: new Date().toISOString(),
-      securityScore: 0,
-      vulnerabilities: [],
-      recommendations: [],
-      metrics: {},
-    };
+    this.vulnerabilities = [];
+    this.securityIssues = [];
+    this.logFile = path.join(__dirname, 'logs', 'security-scanner.log');
+    this.ensureLogDirectory();
   }
 
-  async scanFiles() {
-    console.log('🔍 Scanning files for security issues...');
-
-    const filesToScan = this.findFilesToScan();
-    this.results.metrics.totalFilesScanned = filesToScan.length;
-
-    for (const file of filesToScan) {
-      await this.scanFile(file);
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
     }
   }
 
-  findFilesToScan() {
-    const files = [];
-    const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logMessage);
+  }
 
-    const scanDirectory = dir => {
-      if (!fs.existsSync(dir)) return;
+  async scanSecurity() {
+    this.log('🔒 Starting security scan...');
+    
+    try {
+      // Scan for vulnerabilities
+      await this.scanVulnerabilities();
+      
+      // Scan for security issues in code
+      await this.scanCodeSecurity();
+      
+      // Scan for sensitive data
+      await this.scanSensitiveData();
+      
+      // Generate security report
+      await this.generateSecurityReport();
+      
+      this.log('Security scan completed');
+      return {
+        vulnerabilities: this.vulnerabilities,
+        securityIssues: this.securityIssues
+      };
+    } catch (error) {
+      this.log(`Security scan failed: ${error.message}`, 'ERROR');
+      return null;
+    }
+  }
 
-      const items = fs.readdirSync(dir);
-      items.forEach(item => {
-        const itemPath = path.join(dir, item);
-        const stats = fs.statSync(itemPath);
-
-        if (
-          stats.isDirectory() &&
-          !item.startsWith('.') &&
-          item !== 'node_modules'
-        ) {
-          scanDirectory(itemPath);
-        } else if (
-          stats.isFile() &&
-          extensions.some(ext => item.endsWith(ext))
-        ) {
-          files.push(itemPath);
-        }
+  async scanVulnerabilities() {
+    try {
+      const result = execSync('npm audit --json', { 
+        stdio: 'pipe', 
+        cwd: process.cwd() 
       });
+      const auditData = JSON.parse(result);
+      
+      if (auditData.vulnerabilities) {
+        Object.entries(auditData.vulnerabilities).forEach(([name, vuln]) => {
+          this.vulnerabilities.push({
+            name,
+            severity: vuln.severity,
+            description: vuln.description,
+            recommendation: vuln.recommendation
+          });
+        });
+      }
+    } catch (error) {
+      this.log('Could not scan vulnerabilities', 'WARNING');
+    }
+  }
+
+  async scanCodeSecurity() {
+    const files = this.getSourceFiles();
+    const securityPatterns = {
+      hardcodedSecrets: /(password|secret|key|token)\s*[:=]\s*['"][^'"]+['"]/gi,
+      evalUsage: /eval\s*\(/gi,
+      innerHTML: /innerHTML\s*=/gi,
+      dangerousFunctions: /(document\.write|setTimeout|setInterval)\s*\(/gi
     };
 
-    scanDirectory(process.cwd());
+    files.forEach(file => {
+      try {
+        const content = fs.readFileSync(file, 'utf8');
+        
+        Object.entries(securityPatterns).forEach(([patternName, pattern]) => {
+          const matches = content.match(pattern);
+          if (matches) {
+            this.securityIssues.push({
+              file,
+              type: patternName,
+              matches: matches.length,
+              description: `Potential ${patternName} found`
+            });
+          }
+        });
+      } catch (error) {
+        // Skip files that can't be read
+      }
+    });
+  }
+
+  async scanSensitiveData() {
+    const sensitivePatterns = {
+      apiKeys: /(api[_-]?key|apikey)\s*[:=]\s*['"][^'"]+['"]/gi,
+      passwords: /(password|pwd)\s*[:=]\s*['"][^'"]+['"]/gi,
+      tokens: /(token|access[_-]?token)\s*[:=]\s*['"][^'"]+['"]/gi
+    };
+
+    const files = this.getSourceFiles();
+    
+    files.forEach(file => {
+      try {
+        const content = fs.readFileSync(file, 'utf8');
+        
+        Object.entries(sensitivePatterns).forEach(([patternName, pattern]) => {
+          const matches = content.match(pattern);
+          if (matches) {
+            this.securityIssues.push({
+              file,
+              type: 'sensitive_data',
+              pattern: patternName,
+              matches: matches.length,
+              description: `Potential ${patternName} found - review for sensitive data`
+            });
+          }
+        });
+      } catch (error) {
+        // Skip files that can't be read
+      }
+    });
+  }
+
+  getSourceFiles() {
+    const files = [];
+    const walkDir = (dir) => {
+      try {
+        const items = fs.readdirSync(dir);
+        items.forEach(item => {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+            walkDir(fullPath);
+          } else if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) {
+            files.push(fullPath);
+          }
+        });
+      } catch (error) {
+        // Skip directories that can't be read
+      }
+    };
+    
+    walkDir(process.cwd());
     return files;
   }
 
-  async scanFile(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-
-      // Check for common security issues
-      this.checkForHardcodedSecrets(content, filePath);
-      this.checkForSQLInjection(content, filePath);
-      this.checkForXSS(content, filePath);
-      this.checkForInsecureDependencies(content, filePath);
-    } catch (error) {
-      console.error(`Error scanning file ${filePath}:`, error.message);
-    }
-  }
-
-  checkForHardcodedSecrets(content, filePath) {
-    const secretPatterns = [
-      /password\s*=\s*['"][^'"]+['"]/gi,
-      /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
-      /secret\s*=\s*['"][^'"]+['"]/gi,
-      /token\s*=\s*['"][^'"]+['"]/gi,
-    ];
-
-    secretPatterns.forEach(pattern => {
-      const matches = content.match(pattern);
-      if (matches) {
-        this.results.vulnerabilities.push({
-          type: 'hardcoded_secret',
-          severity: 'high',
-          file: filePath,
-          description: 'Potential hardcoded secret detected',
-          matches: matches,
-        });
+  async generateSecurityReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      vulnerabilities: this.vulnerabilities,
+      securityIssues: this.securityIssues,
+      summary: {
+        totalVulnerabilities: this.vulnerabilities.length,
+        totalSecurityIssues: this.securityIssues.length,
+        criticalIssues: this.vulnerabilities.filter(v => v.severity === 'critical').length
       }
-    });
-  }
+    };
 
-  checkForSQLInjection(content, filePath) {
-    const sqlPatterns = [
-      /query\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi,
-      /execute\s*\(\s*['"][^'"]*\+[^'"]*['"]/gi,
-    ];
-
-    sqlPatterns.forEach(pattern => {
-      const matches = content.match(pattern);
-      if (matches) {
-        this.results.vulnerabilities.push({
-          type: 'sql_injection',
-          severity: 'high',
-          file: filePath,
-          description: 'Potential SQL injection vulnerability',
-          matches: matches,
-        });
-      }
-    });
-  }
-
-  checkForXSS(content, filePath) {
-    const xssPatterns = [
-      /dangerouslySetInnerHTML/gi,
-      /innerHTML\s*=/gi,
-      /document\.write/gi,
-    ];
-
-    xssPatterns.forEach(pattern => {
-      const matches = content.match(pattern);
-      if (matches) {
-        this.results.vulnerabilities.push({
-          type: 'xss_vulnerability',
-          severity: 'medium',
-          file: filePath,
-          description: 'Potential XSS vulnerability',
-          matches: matches,
-        });
-      }
-    });
-  }
-
-  checkForInsecureDependencies(content, filePath) {
-    if (filePath.endsWith('package.json')) {
-      const packageJson = JSON.parse(content);
-      const dependencies = {
-        ...packageJson.dependencies,
-        ...packageJson.devDependencies,
-      };
-
-      // Check for known vulnerable packages
-      const vulnerablePackages = ['lodash', 'moment', 'jquery'];
-
-      vulnerablePackages.forEach(pkg => {
-        if (dependencies[pkg]) {
-          this.results.vulnerabilities.push({
-            type: 'vulnerable_dependency',
-            severity: 'medium',
-            file: filePath,
-            description: `Potentially vulnerable dependency: ${pkg}`,
-            package: pkg,
-          });
-        }
-      });
-    }
-  }
-
-  calculateSecurityScore() {
-    const totalVulnerabilities = this.results.vulnerabilities.length;
-    const highSeverityVulns = this.results.vulnerabilities.filter(
-      v => v.severity === 'high'
-    ).length;
-    const mediumSeverityVulns = this.results.vulnerabilities.filter(
-      v => v.severity === 'medium'
-    ).length;
-
-    let score = 100;
-    score -= highSeverityVulns * 30;
-    score -= mediumSeverityVulns * 15;
-    score -=
-      (totalVulnerabilities - highSeverityVulns - mediumSeverityVulns) * 5;
-
-    this.results.securityScore = Math.max(0, score);
-  }
-
-  async generateRecommendations() {
-    console.log('💡 Generating security recommendations...');
-
-    const highSeverityVulns = this.results.vulnerabilities.filter(
-      v => v.severity === 'high'
-    );
-
-    if (highSeverityVulns.length > 0) {
-      this.results.recommendations.push({
-        type: 'immediate_fix',
-        priority: 'critical',
-        description: 'Fix high severity vulnerabilities immediately',
-      });
-    }
-
-    this.results.recommendations.push({
-      type: 'security_audit',
-      priority: 'high',
-      description: 'Run regular security audits with npm audit',
-    });
-
-    this.results.recommendations.push({
-      type: 'dependency_update',
-      priority: 'medium',
-      description: 'Keep dependencies updated to latest secure versions',
-    });
-
-    this.results.recommendations.push({
-      type: 'code_review',
-      priority: 'medium',
-      description: 'Implement security-focused code review process',
-    });
-  }
-
-  async saveReport() {
-    const logsDir = path.join(process.cwd(), 'logs');
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
-    }
-
-    const reportPath = path.join(logsDir, `security-scan-${Date.now()}.json`);
-    fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log(`📊 Report saved to: ${reportPath}`);
-  }
-
-  async run() {
-    console.log('🚀 Starting security scan...');
-
-    await this.scanFiles();
-    this.calculateSecurityScore();
-    await this.generateRecommendations();
-    await this.saveReport();
-
-    console.log(
-      `✅ Security scan completed! Score: ${this.results.securityScore}/100`
-    );
+    const reportFile = path.join(__dirname, 'reports', 'security-report.json');
+    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    
+    this.log(`Security report generated: ${reportFile}`);
   }
 }
 
-// Run the security scanner
-const securityScanner = new SecurityScanner();
-securityScanner.run().catch(console.error);
+// Run if called directly
+if (require.main === module) {
+  const scanner = new SecurityScanner();
+  scanner.scanSecurity().catch(console.error);
+}
+
+module.exports = SecurityScanner;
