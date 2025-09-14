@@ -1,5 +1,9 @@
 [build]
+<<<<<<< HEAD
   # Build command
+=======
+  # Build command for Netlify
+>>>>>>> pr-17256
   command = "npm run build:netlify"
   
   # Directory to publish
@@ -12,8 +16,9 @@
   # Node.js version
   NODE_VERSION = "20"
   
-  # Yarn version
+  # Yarn configuration
   YARN_VERSION = "1.22.22"
+<<<<<<< HEAD
   
   # Build environment
   NODE_OPTIONS = "--max-old-space-size=6144"
@@ -33,26 +38,31 @@
   YARN_CACHE_CLEAR = "true"
   
   # Ensure Vite is available
+=======
+  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
+  YARN_DEDUPE = "false"
+  YARN_NETWORK_TIMEOUT = "600000"
+  
+  # NPM configuration
+>>>>>>> pr-17256
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
   
+<<<<<<< HEAD
   # Disable Next.js auto-detection
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   # Force Vite build mode
   NETLIFY_USE_NEXT_PLUGIN = "false"
+=======
+  # Build optimization
+  NODE_ENV = "production"
+>>>>>>> pr-17256
 
-# Cache configuration to prevent dependency issues
-[build.cache]
-  directories = ["node_modules/.cache"]
-
-# Plugin configurations
 [[plugins]]
-  package = "netlify-plugin-cloudinary"
+  package = "@netlify/plugin-nextjs"
 
-# Disable Next.js auto-detection since this is a Vite project
 [build.processing]
   skip_processing = false
 
-# Explicitly disable Next.js plugin
 [build.processing.css]
   bundle = true
   minify = true
@@ -61,31 +71,8 @@
   bundle = true
   minify = true
 
-# Force Vite build detection
+[build.processing.html]
+  pretty_urls = true
 
-# Static redirects for exported site
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-# Headers for security and performance
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-
-# Cache static assets
-[[headers]]
-  for = "/static/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# Cache API routes
-[[headers]]
-  for = "/api/*"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+[build.processing.images]
+  compress = true
