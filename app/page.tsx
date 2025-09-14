@@ -40,7 +40,6 @@ import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
-import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
