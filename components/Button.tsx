@@ -11,11 +11,11 @@ interface ButtonProps {
 }
 
 export default function Button({ 
-  children, 
-  variant = 'primary', 
-  size = 'md', 
-  className = '', 
-  onClick, 
+  children
+  variant = 'primary'
+  size = 'md'
+  className = ''
+  onClick
   type = 'button',
   disabled = false 
 }: ButtonProps) {

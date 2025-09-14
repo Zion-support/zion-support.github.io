@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const AI2025UltimateSuccessFrameworkBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
 
   const content = [
     {
@@ -50,14 +50,14 @@ const AI2025UltimateSuccessFrameworkBanner = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ai2025-ultimate-framework-banner-dismissed', 'true');
+    localStorage.setItem('ai2025-ultimate-framework-banner-dismissed'true');
   };
 
   useEffect(() => {
@@ -65,7 +65,7 @@ const AI2025UltimateSuccessFrameworkBanner = () => {
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -144,7 +144,7 @@ const AI2025UltimateSuccessFrameworkBanner = () => {
           {/* Content Preview Cards */}
           <div className="hidden lg:block ml-8">
             <div className="grid grid-cols-1 gap-4">
-              {content.map((item, index) => (
+              {content.map((itemindex) => (
                 <div
                   key={index}
                   className={`p-4 rounded-lg border-2 transition-all duration-300 cursor-pointer ${
@@ -165,7 +165,7 @@ const AI2025UltimateSuccessFrameworkBanner = () => {
 
         {/* Progress Indicators */}
         <div className="flex justify-center space-x-2 mt-6">
-          {content.map((_, index) => (
+          {content.map((_index) => (
             <button
               key={index}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${

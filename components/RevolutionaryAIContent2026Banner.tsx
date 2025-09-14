@@ -15,8 +15,8 @@ const RevolutionaryAIContent2026Banner = () => {
             Revolutionary AI Content 2026
           </h2>
           <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Experience the future of artificial intelligence with groundbreaking content, 
-            cutting-edge research, and revolutionary applications that will reshape industries.
+            Experience the future of artificial intelligence with groundbreaking content
+            cutting-edge researchand revolutionary applications that will reshape industries.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link

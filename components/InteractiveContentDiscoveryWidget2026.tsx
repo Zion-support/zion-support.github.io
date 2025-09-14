@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
@@ -19,7 +19,7 @@ const contentItems: ContentItem[] = [
     category: 'AI Breakthrough',
     url: '/ai-2025-2026-ultimate-breakthrough',
     featured: true,
-    tags: ['AI', 'Breakthrough', '2025', '2026', 'Neural Networks']
+    tags: ['AI'Breakthrough'2025'2026'Neural Networks']
   },
   {
     id: 'quantum-ai-2026',
@@ -28,7 +28,7 @@ const contentItems: ContentItem[] = [
     category: 'Quantum AI',
     url: '/quantum-ai-2026-breakthrough',
     featured: true,
-    tags: ['Quantum', 'AI', 'Computing', '2026', 'Revolution']
+    tags: ['Quantum'AI'Computing'2026'Revolution']
   },
   {
     id: 'neural-architectures-2026',
@@ -37,7 +37,7 @@ const contentItems: ContentItem[] = [
     category: 'Neural Networks',
     url: '/advanced-neural-architectures-2026',
     featured: true,
-    tags: ['Neural', 'Architecture', '2026', 'Learning', 'AI']
+    tags: ['Neural'Architecture'2026'Learning'AI']
   },
   {
     id: 'ai-automation',
@@ -46,16 +46,16 @@ const contentItems: ContentItem[] = [
     category: 'Automation',
     url: '/services/ai-automation',
     featured: false,
-    tags: ['Automation', 'AI', 'Productivity', 'Solutions']
+    tags: ['Automation'AI'Productivity'Solutions']
   },
   {
     id: 'cloud-infrastructure',
     title: 'Cloud Infrastructure',
-    description: 'Scalable, secure cloud solutions designed to support your business growth.',
+    description: 'Scalablesecure cloud solutions designed to support your business growth.',
     category: 'Cloud',
     url: '/services/cloud-infrastructure',
     featured: false,
-    tags: ['Cloud', 'Infrastructure', 'Scalable', 'Security']
+    tags: ['Cloud'Infrastructure'Scalable'Security']
   },
   {
     id: 'micro-saas',
@@ -64,17 +64,17 @@ const contentItems: ContentItem[] = [
     category: 'SaaS',
     url: '/services/micro-saas',
     featured: false,
-    tags: ['SaaS', 'Micro', 'Custom', 'Solutions']
+    tags: ['SaaS'Micro'Custom'Solutions']
   }
 ];
 
 export default function InteractiveContentDiscoveryWidget2026() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [filteredContent, setFilteredContent] = useState<ContentItem[]>(contentItems);
-  const [isVisible, setIsVisible] = useState(false);
+  const [selectedCategorysetSelectedCategory] = useState<string>('All');
+  const [searchTermsetSearchTerm] = useState<string>('');
+  const [filteredContentsetFilteredContent] = useState<ContentItem[]>(contentItems);
+  const [isVisiblesetIsVisible] = useState(false);
 
-  const categories = ['All', 'AI Breakthrough', 'Quantum AI', 'Neural Networks', 'Automation', 'Cloud', 'SaaS'];
+  const categories = ['All'AI Breakthrough'Quantum AI'Neural Networks'Automation'Cloud'SaaS'];
 
   useEffect(() => {
     let filtered = contentItems;
@@ -92,12 +92,12 @@ export default function InteractiveContentDiscoveryWidget2026() {
     }
 
     setFilteredContent(filtered);
-  }, [selectedCategory, searchTerm]);
+  }[selectedCategorysearchTerm]);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
+    const timer = setTimeout(() => setIsVisible(true)1000);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -109,7 +109,7 @@ export default function InteractiveContentDiscoveryWidget2026() {
             Discover Revolutionary Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our latest AI breakthroughs, quantum computing solutions, and cutting-edge technology innovations.
+            Explore our latest AI breakthroughsquantum computing solutionsand cutting-edge technology innovations.
           </p>
         </div>
 
@@ -153,7 +153,7 @@ export default function InteractiveContentDiscoveryWidget2026() {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((item, index) => (
+          {filteredContent.map((itemindex) => (
             <div
               key={item.id}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
@@ -175,7 +175,7 @@ export default function InteractiveContentDiscoveryWidget2026() {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag) => (
+                  {item.tags.slice(03).map((tag) => (
                     <span
                       key={tag}
                       className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"

@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
+TrendingUpBarChart3DollarSignUsersGlobeTargetClockAwardArrowRightExternalLinkPieChartLineChartActivityZap
 
 export default function MarketResearchPage() {
   const marketSegments = [
@@ -16,7 +16,7 @@ export default function MarketResearchPage() {
         'Natural language processing growth',
         'Computer vision applications expanding'
       ],
-      topPlayers: ['OpenAI', 'Anthropic', 'Google AI', 'Microsoft Azure AI'],
+      topPlayers: ['OpenAI'Anthropic'Google AI'Microsoft Azure AI'],
       opportunities: [
         'AI content generation tools',
         'Predictive analytics platforms',
@@ -36,7 +36,7 @@ export default function MarketResearchPage() {
         'Data privacy regulations',
         'Performance optimization focus'
       ],
-      topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],
+      topPlayers: ['DataDog'New Relic'SolarWinds'Splunk'],
       opportunities: [
         'Database performance monitoring',
         'Real-time analytics dashboards',
@@ -56,7 +56,7 @@ export default function MarketResearchPage() {
         'API security concerns',
         'Compliance requirements increasing'
       ],
-      topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],
+      topPlayers: ['Okta'Auth0'Ping Identity'OneLogin'],
       opportunities: [
         'Identity verification platforms',
         'API security gateways',
@@ -76,7 +76,7 @@ export default function MarketResearchPage() {
         'Mobile BI growth',
         'Predictive analytics demand'
       ],
-      topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
+      topPlayers: ['Tableau'Power BI'Looker'Qlik'],
       opportunities: [
         'Custom dashboard builders',
         'Data integration platforms',
@@ -96,7 +96,7 @@ export default function MarketResearchPage() {
         'Rate limiting importance',
         'Developer experience focus'
       ],
-      topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],
+      topPlayers: ['Kong'Tyk'AWS API Gateway'Azure API Management'],
       opportunities: [
         'API rate limiting services',
         'Developer portal platforms',
@@ -116,7 +116,7 @@ export default function MarketResearchPage() {
         'Conversion optimization focus',
         'Mobile app analytics growth'
       ],
-      topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
+      topPlayers: ['Hotjar'FullStory'Mixpanel'Amplitude'],
       opportunities: [
         'Heatmap and session recording',
         'A/B testing platforms',
@@ -131,7 +131,7 @@ export default function MarketResearchPage() {
   const competitiveAnalysis = [
     {
       company: 'Enterprise Giants',
-      examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP'],
+      examples: ['Salesforce'Microsoft'Oracle'SAP'],
       strengths: [
         'Extensive resources and R&D',
         'Established customer base',
@@ -149,7 +149,7 @@ export default function MarketResearchPage() {
     },
     {
       company: 'Mid-Market Leaders',
-      examples: ['HubSpot', 'Atlassian', 'Slack', 'Zoom'],
+      examples: ['HubSpot'Atlassian'Slack'Zoom'],
       strengths: [
         'Balanced features and pricing',
         'Strong user experience',
@@ -167,7 +167,7 @@ export default function MarketResearchPage() {
     },
     {
       company: 'Micro SaaS Innovators',
-      examples: ['Zapier', 'Notion', 'Airtable', 'Linear'],
+      examples: ['Zapier'Notion'Airtable'Linear'],
       strengths: [
         'Focused feature sets',
         'Fast innovation cycles',
@@ -197,7 +197,7 @@ export default function MarketResearchPage() {
         'Predictive analytics',
         'Natural language interfaces'
       ],
-      opportunities: 'AI integration services, custom AI models, AI consulting'
+      opportunities: 'AI integration servicescustom AI modelsAI consulting'
     },
     {
       trend: 'Privacy-First Design',
@@ -210,7 +210,7 @@ export default function MarketResearchPage() {
         'Data anonymization services',
         'Consent management systems'
       ],
-      opportunities: 'Privacy compliance tools, data governance platforms, audit services'
+      opportunities: 'Privacy compliance toolsdata governance platformsaudit services'
     },
     {
       trend: 'API-First Architecture',
@@ -223,7 +223,7 @@ export default function MarketResearchPage() {
         'API analytics and monitoring',
         'Integration platforms'
       ],
-      opportunities: 'API development tools, integration services, developer portals'
+      opportunities: 'API development toolsintegration servicesdeveloper portals'
     },
     {
       trend: 'Real-Time Everything',
@@ -236,7 +236,7 @@ export default function MarketResearchPage() {
         'Instant notifications',
         'Streaming analytics'
       ],
-      opportunities: 'Real-time platforms, streaming services, live collaboration tools'
+      opportunities: 'Real-time platformstreaming serviceslive collaboration tools'
     }
   ];
 
@@ -256,7 +256,7 @@ export default function MarketResearchPage() {
         'Value measurement challenges',
         'Pricing optimization needed'
       ],
-      bestFor: 'Enterprise solutions, high-value services, ROI-focused products'
+      bestFor: 'Enterprise solutionshigh-value servicesROI-focused products'
     },
     {
       strategy: 'Usage-Based Pricing',
@@ -273,7 +273,7 @@ export default function MarketResearchPage() {
         'Usage optimization needed',
         'Customer cost management'
       ],
-      bestFor: 'API services, storage platforms, compute resources'
+      bestFor: 'API servicestorage platformscompute resources'
     },
     {
       strategy: 'Freemium Model',
@@ -290,7 +290,7 @@ export default function MarketResearchPage() {
         'Support cost management',
         'Feature differentiation needed'
       ],
-      bestFor: 'Consumer tools, productivity apps, collaboration platforms'
+      bestFor: 'Consumer toolsproductivity appscollaboration platforms'
     }
   ];
 
@@ -325,7 +325,7 @@ export default function MarketResearchPage() {
     <>
       <Head>
         <title>Market Research & Industry Insights | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive market research, competitive analysis, and industry insights for micro SaaS services. Data-driven market intelligence to inform your business decisions." />
+        <meta name="description" content="Comprehensive market researchcompetitive analysisand industry insights for micro SaaS services. Data-driven market intelligence to inform your business decisions." />
         <meta property="og:title" content="Market Research & Industry Insights | Zion Tech Group" />
         <meta property="og:description" content="Comprehensive market research and competitive analysis for micro SaaS services." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -346,7 +346,7 @@ export default function MarketResearchPage() {
             Comprehensive Market Research & Industry Insights
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
-            Data-driven market intelligence, competitive analysis, and industry trends to help you make informed decisions about your micro SaaS business strategy and market positioning.
+            Data-driven market intelligencecompetitive analysisand industry trends to help you make informed decisions about your micro SaaS business strategy and market positioning.
           </p>
         </div>
       </section>
@@ -364,7 +364,7 @@ export default function MarketResearchPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {investmentInsights.map((insight, index) => (
+            {investmentInsights.map((insightindex) => (
               <Card
                 key={index}
                 className="card-hover text-center border-gradient-blue"
@@ -393,12 +393,12 @@ export default function MarketResearchPage() {
               Market Segment Analysis
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Detailed analysis of key micro SaaS market segments with market size, growth rates, trends, and opportunities.
+              Detailed analysis of key micro SaaS market segments with market sizegrowth ratestrendsand opportunities.
             </p>
           </div>
 
           <div className="space-y-8">
-            {marketSegments.map((segment, index) => (
+            {marketSegments.map((segmentindex) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue overflow-hidden"
@@ -440,7 +440,7 @@ export default function MarketResearchPage() {
                             Key Trends
                           </h4>
                           <ul className="space-y-2">
-                            {segment.keyTrends.map((trend, trendIndex) => (
+                            {segment.keyTrends.map((trendIndex) => (
                               <li key={trendIndex} className="flex items-start text-gray-300 text-sm">
                                 <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
                                 {trend}
@@ -456,7 +456,7 @@ export default function MarketResearchPage() {
                             Top Players
                           </h4>
                           <ul className="space-y-2">
-                            {segment.topPlayers.map((player, playerIndex) => (
+                            {segment.topPlayers.map((playerIndex) => (
                               <li key={playerIndex} className="flex items-start text-gray-300 text-sm">
                                 <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
                                 {player}
@@ -473,7 +473,7 @@ export default function MarketResearchPage() {
                           Market Opportunities
                         </h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {segment.opportunities.map((opportunity, oppIndex) => (
+                          {segment.opportunities.map((opportunityoppIndex) => (
                             <div key={oppIndex} className="flex items-start text-gray-300 text-sm">
                               <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
                               {opportunity}
@@ -503,7 +503,7 @@ export default function MarketResearchPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {competitiveAnalysis.map((analysis, index) => (
+            {competitiveAnalysis.map((analysisindex) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
@@ -515,7 +515,7 @@ export default function MarketResearchPage() {
                   {/* Examples */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
-                    <div className="text-sm text-gray-300">{analysis.examples.join(', ')}</div>
+                    <div className="text-sm text-gray-300">{analysis.examples.join(')}</div>
                   </div>
 
                   {/* Market Share & Pricing */}
@@ -534,7 +534,7 @@ export default function MarketResearchPage() {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
-                      {analysis.strengths.map((strength, strengthIndex) => (
+                      {analysis.strengths.map((strengthIndex) => (
                         <li key={strengthIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
                           {strength}
@@ -547,7 +547,7 @@ export default function MarketResearchPage() {
                   <div>
                     <h4 className="text-sm font-semibold text-red-400 mb-2">Weaknesses:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
-                      {analysis.weaknesses.map((weakness, weaknessIndex) => (
+                      {analysis.weaknesses.map((weaknessIndex) => (
                         <li key={weaknessIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
                           {weakness}
@@ -575,7 +575,7 @@ export default function MarketResearchPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {marketTrends.map((trend, index) => (
+            {marketTrends.map((trendindex) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
@@ -603,7 +603,7 @@ export default function MarketResearchPage() {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
-                      {trend.examples.map((example, exampleIndex) => (
+                      {trend.examples.map((exampleIndex) => (
                         <li key={exampleIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />
                           {example}
@@ -636,7 +636,7 @@ export default function MarketResearchPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingStrategies.map((strategy, index) => (
+            {pricingStrategies.map((strategyindex) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
@@ -650,7 +650,7 @@ export default function MarketResearchPage() {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Pros:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
-                      {strategy.pros.map((pro, proIndex) => (
+                      {strategy.pros.map((proIndex) => (
                         <li key={proIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
                           {pro}
@@ -663,7 +663,7 @@ export default function MarketResearchPage() {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-red-400 mb-2">Cons:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
-                      {strategy.cons.map((con, conIndex) => (
+                      {strategy.cons.map((conIndex) => (
                         <li key={conIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
                           {con}
@@ -692,7 +692,7 @@ export default function MarketResearchPage() {
             Ready to Apply This Market Intelligence?
           </h2>
           <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Use our market research and competitive analysis to inform your business strategy, pricing decisions, and market positioning.
+            Use our market research and competitive analysis to inform your business strategypricing decisionsand market positioning.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button

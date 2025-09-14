@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const NewContent2025DataRevolutionBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
 
   const contentItems = [
     {
@@ -56,14 +56,14 @@ const NewContent2025DataRevolutionBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentItems.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, [contentItems.length]);
+  }[contentItems.length]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('data-revolution-banner-dismissed', 'true');
+    localStorage.setItem('data-revolution-banner-dismissed'true');
   };
 
   useEffect(() => {
@@ -71,7 +71,7 @@ const NewContent2025DataRevolutionBanner = () => {
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -156,7 +156,7 @@ const NewContent2025DataRevolutionBanner = () => {
                 <h3 className="text-lg font-semibold mb-4">Featured Content</h3>
                 
                 <div className="space-y-4">
-                  {contentItems.map((item, index) => (
+                  {contentItems.map((itemindex) => (
                     <div
                       key={item.id}
                       className={`p-4 rounded-lg transition-all duration-300 cursor-pointer ${
@@ -186,7 +186,7 @@ const NewContent2025DataRevolutionBanner = () => {
 
                 {/* Progress Indicators */}
                 <div className="flex justify-center space-x-2 mt-4">
-                  {contentItems.map((_, index) => (
+                  {contentItems.map((_index) => (
                     <button
                       key={index}
                       className={`w-2 h-2 rounded-full transition-colors ${

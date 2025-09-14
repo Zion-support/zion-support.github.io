@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
 import { AIMatchingResults } from "@/components/AIMatchingResults";
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
+import { findMatchesMatchResult } from "@/lib/ai-matchmaking";
 import { Textarea } from "@/components/ui/textarea";
-import { Sparkles, Search } from "lucide-react";
+import { SparklesSearch } from "lucide-react";
 
 interface AIMatchmakerProps {
   serviceType?: string;
@@ -13,11 +13,11 @@ interface AIMatchmakerProps {
   className?: string;
 }
 
-export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
-  const [query, setQuery] = useState("");
-  const [isMatchmaking, setIsMatchmaking] = useState(false);
-  const [matches, setMatches] = useState([] as MatchResult[]);
-  const [hasSearched, setHasSearched] = useState(false);
+export function AIMatchmaker({ serviceType = ""onMatchSelectclassName }: AIMatchmakerProps) {
+  const [querysetQuery] = useState("");
+  const [isMatchmakingsetIsMatchmaking] = useState(false);
+  const [matchesetMatches] = useState([] as MatchResult[]);
+  const [hasSearchedsetHasSearched] = useState(false);
 
   const handleSearch = async () => {
     if (!query.trim()) {
@@ -32,7 +32,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     setHasSearched(true);
     
     try {
-      console.log("Starting AI matching with query:", query, "and service type:", serviceType);
+      console.log("Starting AI matching with query:"query"and service type:"serviceType);
       
       // Get AI matches
       const results = await findMatches(
@@ -41,14 +41,14 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         3
       );
       
-      console.log("AI matching results:", results);
+      console.log("AI matching results:"results);
       setMatches(results);
       
       toast({
         title: "Matches Found",
         description: `Found ${results.length} matches based on your description.`});
     } catch (error) {
-      console.error("Error during AI matching:", error);
+      console.error("Error during AI matching:"error);
       toast({
         title: "Matching Error",
         description: "We couldn't find matches for your request. Please try again.",
@@ -88,7 +88,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         <div className="space-y-4">
           <div className="space-y-2">
             <Textarea
-              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
+              placeholder="Describe what you need... (e.g.'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
               value={query}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e.target.value)}
               className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"

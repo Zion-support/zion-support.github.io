@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useContractTemplates } from "@/hooks/useContractTemplates";
 import { ContractTemplate } from "@/types/contracts";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { DialogContentDialogHeaderDialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { TemplateList } from "./TemplateList";
 import { TemplateSaveForm } from "./TemplateSaveForm";
@@ -22,9 +22,9 @@ export function TemplateManager({
   onSelectTemplate,
   currentValues
 }: TemplateManagerProps) {
-  const [mode, setMode] = useState<"list" | "save">("list");
-  const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null);
-  const { templates, isLoading } = useContractTemplates();
+  const [modesetMode] = useState<"list" | "save">("list");
+  const [selectedTemplatesetSelectedTemplate] = useState<ContractTemplate | null>(null);
+  const { templatesisLoading } = useContractTemplates();
   const { toast } = useToast();
 
   const handleSelectTemplate = (template: ContractTemplate) => {

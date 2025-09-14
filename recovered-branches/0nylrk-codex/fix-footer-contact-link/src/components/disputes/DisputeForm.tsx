@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -18,16 +18,16 @@ import {
   SelectTrigger,
   SelectValue} from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
-import { DisputeReason, disputeReasonLabels } from "@/types/disputes";
+import { DisputeReasondisputeReasonLabels } from "@/types/disputes";
 import { useDisputes } from "@/hooks/useDisputes";
 import { toast } from "sonner";
 import { FileText } from "lucide-react";
 
 const formSchema = z.object({
   reason_code: z.string()
-    .min(1, { message: "Please select a reason for the dispute" }),
+    .min(1{ message: "Please select a reason for the dispute" }),
   description: z.string()
-    .min(20, { message: "Description must be at least 20 characters" }),
+    .min(20{ message: "Description must be at least 20 characters" }),
   attachments: z.array(z.any()).optional()});
 
 type DisputeFormProps = {
@@ -38,14 +38,14 @@ type DisputeFormProps = {
 };
 
 export function DisputeForm({ 
-  projectId, 
-  milestoneId, 
-  onDisputeCreated, 
+  projectId
+  milestoneId
+  onDisputeCreated
   onCancel 
 }: DisputeFormProps) {
   const { createDispute } = useDisputes();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [files, setFiles] = useState<File[]>([]);
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [filesetFiles] = useState<File[]>([]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -57,16 +57,16 @@ export function DisputeForm({
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       const newFiles = Array.from(e.target.files);
-      setFiles(prev => [...prev, ...newFiles]);
-      form.setValue("attachments", [...files, ...newFiles]);
+      setFiles(prev => [...prev...newFiles]);
+      form.setValue("attachments"[...files...newFiles]);
     }
   };
 
   const removeFile = (index: number) => {
     const newFiles = [...files];
-    newFiles.splice(index, 1);
+    newFiles.splice(index1);
     setFiles(newFiles);
-    form.setValue("attachments", newFiles);
+    form.setValue("attachments"newFiles);
   };
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
@@ -93,7 +93,7 @@ export function DisputeForm({
         }
       }
     } catch (error) {
-      console.error("Error submitting dispute:", error);
+      console.error("Error submitting dispute:"error);
       toast.error("Failed to submit dispute. Please try again.");
     } finally {
       setIsSubmitting(false);
@@ -122,7 +122,7 @@ export function DisputeForm({
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    {Object.entries(disputeReasonLabels).map(([value, label]) => (
+                    {Object.entries(disputeReasonLabels).map(([valuelabel]) => (
                       <SelectItem key={value} value={value}>{label}</SelectItem>
                     ))}
                   </SelectContent>
@@ -165,7 +165,7 @@ export function DisputeForm({
                   <div className="space-y-2">
                     <p className="text-sm font-medium">Selected files:</p>
                     <ul className="space-y-1">
-                      {files.map((file, index) => (
+                      {files.map((fileindex) => (
                         <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">
                           <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>
                           <Button 

@@ -30,7 +30,7 @@ export default function AI2025EnterpriseSuccessPromotionBanner() {
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-emerald-100 mb-6 max-w-4xl mx-auto leading-relaxed">
-            Discover how a global manufacturing company transformed their operations, 
+            Discover how a global manufacturing company transformed their operations
             saving $120M annually and achieving unprecedented efficiency gains.
           </p>
 
@@ -62,7 +62,7 @@ export default function AI2025EnterpriseSuccessPromotionBanner() {
               We've achieved results that exceeded our wildest expectations."
             </blockquote>
             <div className="text-sm text-emerald-200">
-              — Sarah Johnson, CTO, Global Manufacturing Corp
+              — Sarah JohnsonCTOGlobal Manufacturing Corp
             </div>
           </div>
 
@@ -86,7 +86,7 @@ export default function AI2025EnterpriseSuccessPromotionBanner() {
           <div className="mt-6 text-sm text-emerald-200">
             <span className="inline-flex items-center">
               <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-              Real results from real companies - no fluff, just proven success
+              Real results from real companies - no fluffjust proven success
             </span>
           </div>
         </div>

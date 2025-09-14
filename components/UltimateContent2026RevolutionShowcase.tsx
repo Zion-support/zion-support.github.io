@@ -64,13 +64,13 @@ const UltimateContent2026RevolutionShowcase = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the most advanced AI technologies, breakthrough innovations, and future-ready solutions 
+            Discover the most advanced AI technologiesbreakthrough innovationsand future-ready solutions 
             that will define the next era of digital transformation.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {contentItems.map((item, index) => (
+          {contentItems.map((itemindex) => (
             <div
               key={index}
               className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${

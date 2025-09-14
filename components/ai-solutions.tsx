@@ -7,8 +7,8 @@ export default function AISolutionsPage() {
     {
       id: 'machine-learning',
       title: 'Machine Learning Solutions',
-      description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
-      features: ['Predictive Analytics', 'Pattern Recognition', 'Anomaly Detection', 'Recommendation Systems'],
+      description: 'Custom ML models for predictive analyticspattern recognitionand intelligent decision making.',
+      features: ['Predictive Analytics'Pattern Recognition'Anomaly Detection'Recommendation Systems'],
       icon: '🧠',
       category: 'Core AI',
       complexity: 'Advanced'
@@ -16,8 +16,8 @@ export default function AISolutionsPage() {
     {
       id: 'natural-language-processing',
       title: 'Natural Language Processing',
-      description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.',
-      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],
+      description: 'Advanced NLP solutions for text analysisentiment analysisand language understanding.',
+      features: ['Text Analysis'Sentiment Analysis'Language Translation'Chatbot Development'],
       icon: '💬',
       category: 'Language AI',
       complexity: 'Advanced'
@@ -25,8 +25,8 @@ export default function AISolutionsPage() {
     {
       id: 'computer-vision',
       title: 'Computer Vision',
-      description: 'Computer vision solutions for image recognition, object detection, and visual analytics.',
-      features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Quality Control'],
+      description: 'Computer vision solutions for image recognitionobject detectionand visual analytics.',
+      features: ['Image Recognition'Object Detection'Facial Recognition'Quality Control'],
       icon: '👁️',
       category: 'Visual AI',
       complexity: 'Advanced'
@@ -35,7 +35,7 @@ export default function AISolutionsPage() {
       id: 'autonomous-systems',
       title: 'Autonomous Systems',
       description: 'Self-operating systems that can make decisions and take actions independently.',
-      features: ['Decision Making', 'Self-Learning', 'Adaptive Behavior', 'Continuous Improvement'],
+      features: ['Decision Making'Self-Learning'Adaptive Behavior'Continuous Improvement'],
       icon: '🤖',
       category: 'Autonomy',
       complexity: 'Expert'
@@ -44,7 +44,7 @@ export default function AISolutionsPage() {
       id: 'predictive-analytics',
       title: 'Predictive Analytics',
       description: 'Data-driven insights that help predict future trends and behaviors.',
-      features: ['Trend Analysis', 'Risk Assessment', 'Forecasting', 'Behavioral Prediction'],
+      features: ['Trend Analysis'Risk Assessment'Forecasting'Behavioral Prediction'],
       icon: '📊',
       category: 'Analytics',
       complexity: 'Intermediate'
@@ -53,7 +53,7 @@ export default function AISolutionsPage() {
       id: 'ai-automation',
       title: 'AI-Powered Automation',
       description: 'Intelligent automation that learns and improves over time.',
-      features: ['Process Automation', 'Workflow Optimization', 'Intelligent Routing', 'Adaptive Workflows'],
+      features: ['Process Automation'Workflow Optimization'Intelligent Routing'Adaptive Workflows'],
       icon: '⚡',
       category: 'Automation',
       complexity: 'Intermediate'
@@ -63,37 +63,37 @@ export default function AISolutionsPage() {
   const useCases = [
     {
       industry: 'Manufacturing',
-      solutions: ['Quality Control', 'Predictive Maintenance', 'Supply Chain Optimization'],
+      solutions: ['Quality Control'Predictive Maintenance'Supply Chain Optimization'],
       icon: '🏭'
     },
     {
       industry: 'Healthcare',
-      solutions: ['Diagnostic Support', 'Patient Care Optimization', 'Drug Discovery'],
+      solutions: ['Diagnostic Support'Patient Care Optimization'Drug Discovery'],
       icon: '🏥'
     },
     {
       industry: 'Finance',
-      solutions: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading'],
+      solutions: ['Fraud Detection'Risk Assessment'Algorithmic Trading'],
       icon: '💳'
     },
     {
       industry: 'Retail',
-      solutions: ['Customer Segmentation', 'Inventory Management', 'Personalized Marketing'],
+      solutions: ['Customer Segmentation'Inventory Management'Personalized Marketing'],
       icon: '🛍️'
     }
   ];
 
   const technologies = [
-    'TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenAI GPT', 'BERT', 'YOLO', 'Keras', 'Pandas'
+    'TensorFlow'PyTorch'Scikit-learn'OpenAI GPT'BERT'YOLO'Keras'Pandas'
   ];
 
   return (
     <>
       <Head>
         <title>AI Solutions | Zion Tech Group - Advanced AI & Machine Learning</title>
-        <meta name="description" content="Explore Zion Tech Group's comprehensive AI solutions including machine learning, NLP, computer vision, and autonomous systems." />
+        <meta name="description" content="Explore Zion Tech Group's comprehensive AI solutions including machine learningNLPcomputer visionand autonomous systems." />
         <meta property="og:title" content="AI Solutions | Zion Tech Group" />
-        <meta property="og:description" content="Advanced AI solutions for machine learning, natural language processing, computer vision, and autonomous systems." />
+        <meta property="og:description" content="Advanced AI solutions for machine learningnatural language processingcomputer visionand autonomous systems." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
@@ -113,7 +113,7 @@ export default function AISolutionsPage() {
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Our AI Solutions</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {aiSolutions.map((solution, index) => (
+                {aiSolutions.map((solutionindex) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                     <div className="text-4xl mb-4">{solution.icon}</div>
                     <div className="flex items-center gap-2 mb-3">
@@ -123,7 +123,7 @@ export default function AISolutionsPage() {
                     <h3 className="text-xl font-bold mb-3 text-white">{solution.title}</h3>
                     <p className="text-white/70 mb-4">{solution.description}</p>
                     <ul className="space-y-1 mb-4">
-                      {solution.features.map((feature, featureIndex) => (
+                      {solution.features.map((featureIndex) => (
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">
                           <span className="text-cyan-400 mr-2">•</span>
                           {feature}
@@ -145,12 +145,12 @@ export default function AISolutionsPage() {
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Industry Applications</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {useCases.map((useCase, index) => (
+                {useCases.map((useCaseindex) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">
                     <div className="text-4xl mb-4">{useCase.icon}</div>
                     <h3 className="text-xl font-bold mb-4 text-white">{useCase.industry}</h3>
                     <ul className="space-y-2">
-                      {useCase.solutions.map((solution, solutionIndex) => (
+                      {useCase.solutions.map((solutionIndex) => (
                         <li key={solutionIndex} className="text-sm text-white/70">
                           {solution}
                         </li>
@@ -166,7 +166,7 @@ export default function AISolutionsPage() {
               <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Technologies We Use</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
                 <div className="flex flex-wrap justify-center gap-4">
-                  {technologies.map((tech, index) => (
+                  {technologies.map((techindex) => (
                     <span 
                       key={index}
                       className="px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20"

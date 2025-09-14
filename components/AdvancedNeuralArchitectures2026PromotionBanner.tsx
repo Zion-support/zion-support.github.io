@@ -19,8 +19,8 @@ export default function AdvancedNeuralArchitectures2026PromotionBanner() {
             Advanced Neural Architectures 2026
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Experience the next generation of neural networks with self-optimizing capabilities, 
-            multi-modal learning, and cognitive computing that mimics human intelligence.
+            Experience the next generation of neural networks with self-optimizing capabilities
+            multi-modal learningand cognitive computing that mimics human intelligence.
           </p>
         </div>
 
@@ -38,7 +38,7 @@ export default function AdvancedNeuralArchitectures2026PromotionBanner() {
             <div className="text-3xl mb-4">👁️</div>
             <h3 className="text-xl font-bold mb-3">Multi-Modal Learning</h3>
             <p className="text-gray-300 text-sm">
-              Process and understand multiple data types simultaneously - text, images, audio, and video.
+              Process and understand multiple data types simultaneously - textimagesaudioand video.
             </p>
           </div>
 

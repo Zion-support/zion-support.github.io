@@ -10,7 +10,7 @@ const UltimateAutonomousEnterpriseBanner = () => {
             Ultimate Autonomous Enterprise
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-purple-100">
-            Experience the future of business with fully autonomous AI systems that manage, optimize, and transform your enterprise operations without human intervention.
+            Experience the future of business with fully autonomous AI systems that manageoptimizeand transform your enterprise operations without human intervention.
           </p>
         </div>
         

@@ -8,7 +8,7 @@ interface ExportToCSVProps {
   filename?: string;
 }
 
-export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
+export const ExportToCSV = ({ quotesfilename = "quote-requests" }: ExportToCSVProps) => {
   const handleExport = () => {
     // Define CSV Headers
     const headers = [
@@ -50,18 +50,18 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
         row.map(cell => 
           // Escape commas and quotes in cell values
           typeof cell === 'string' && (cell.includes(',') || cell.includes('"')) 
-            ? `"${cell.replace(/"/g, '""')}"` 
+            ? `"${cell.replace(/"/g'""')}"` 
             : cell
         ).join(',')
       )
     ].join('\n');
     
     // Create download link
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const blob = new Blob([csvContent]{ type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.setAttribute('href', url);
-    link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`);
+    link.setAttribute('href'url);
+    link.setAttribute('download'`${filename}-${new Date().toISOString().split('T')[0]}.csv`);
     document.body.appendChild(link);
     
     // Download file and clean up
@@ -69,7 +69,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     setTimeout(() => {
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
-    }, 100);
+    }100);
   };
   
   return (

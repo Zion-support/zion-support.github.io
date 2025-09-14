@@ -1,13 +1,13 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { X, Shield, Zap, TrendingUp, CheckCircle } from 'lucide-react';
+XShieldZapTrendingUpCheckCircle
 
 const NewContent2025CybersecurityBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   useEffect(() => {
     // Check if banner was previously dismissed
@@ -15,12 +15,12 @@ const NewContent2025CybersecurityBanner: React.FC = () => {
     if (!dismissed) {
       setIsVisible(true);
     }
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsVisible(false);
     setIsDismissed(true);
-    localStorage.setItem('cybersecurity-banner-dismissed', 'true');
+    localStorage.setItem('cybersecurity-banner-dismissed'true');
   };
 
   if (!isVisible || isDismissed) return null;
@@ -51,8 +51,8 @@ const NewContent2025CybersecurityBanner: React.FC = () => {
             </h2>
             
             <p className="text-lg mb-4 opacity-90 max-w-3xl">
-              Discover how AI is transforming enterprise security with 89% incident reduction, 
-              340% faster threat detection, and $2.8M average savings. Learn from real Fortune 500 success stories.
+              Discover how AI is transforming enterprise security with 89% incident reduction
+              340% faster threat detectionand $2.8M average savings. Learn from real Fortune 500 success stories.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-4">

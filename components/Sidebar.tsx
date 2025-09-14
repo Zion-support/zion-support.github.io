@@ -20,7 +20,7 @@
                   onClick={onClose};
               {/* Navigation */};
               <nav className="space-y-4">,
-                {Object.entries(navigation).map(([title, links]) => (,
+                {Object.entries(navigation).map(([titlelinks]) => (,
                   <div key={title}>,
                     <button,
                       onClick={() => handleDropdownToggle(title)};
@@ -50,10 +50,10 @@
 import Link from 'next/link';
 import { useMemo } from 'react';
 import { 
-  Home, Rocket, Brain, Atom, Monitor, Shield, 
-  Users, FileText, Settings, Cog, Database, 
-  Network, Cloud, Lock, Code, Globe, Star,
-  TrendingUp, BarChart3, Zap, Target, CheckCircle
+  HomeRocketBrainAtomMonitorShield
+  UsersFileTextSettingsCogDatabase
+  NetworkCloudLockCodeGlobeStar,
+  TrendingUpBarChart3ZapTargetCheckCircle
 } from 'lucide-react';
 
 interface NavLink {
@@ -75,54 +75,54 @@ export default function Sidebar() {
       {
         title: 'Core Pages',
         links: [
-          { href: '/', label: 'Home', icon: Home, description: 'Main homepage' },
-          { href: '/about', label: 'About Us', icon: Users, description: 'Company information' },
-          { href: '/contact', label: 'Contact', icon: Users, description: 'Get in touch' },
-          { href: '/team', label: 'Team', icon: Users, description: 'Leadership team' }
+          { href: '/'label: 'Home'icon: Homedescription: 'Main homepage' },
+          { href: '/about'label: 'About Us'icon: Usersdescription: 'Company information' },
+          { href: '/contact'label: 'Contact'icon: Usersdescription: 'Get in touch' },
+          { href: '/team'label: 'Team'icon: Usersdescription: 'Leadership team' }
         ]
       },
       {
         title: 'Services & Solutions',
         links: [
-          { href: '/services', label: 'All Services', icon: Rocket, description: 'Complete services overview', badge: 'Featured' },
-          { href: '/solutions', label: 'Solutions', icon: Target, description: 'Technology solutions' },
-          { href: '/ai-services', label: 'AI Services', icon: Brain, description: 'Artificial intelligence solutions' },
-          { href: '/quantum-technology', label: 'Quantum Tech', icon: Atom, description: 'Quantum computing solutions' },
-          { href: '/it-infrastructure', label: 'IT Infrastructure', icon: Monitor, description: 'IT infrastructure services' },
-          { href: '/cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security solutions' },
-          { href: '/cloud-solutions', label: 'Cloud Solutions', icon: Cloud, description: 'Cloud computing services' },
-          { href: '/blockchain-solutions', label: 'Blockchain', icon: Database, description: 'Blockchain technology' },
-          { href: '/iot-platforms', label: 'IoT Platforms', icon: Network, description: 'Internet of Things' }
+          { href: '/services'label: 'All Services'icon: Rocketdescription: 'Complete services overview'badge: 'Featured' },
+          { href: '/solutions'label: 'Solutions'icon: Targetdescription: 'Technology solutions' },
+          { href: '/ai-services'label: 'AI Services'icon: Braindescription: 'Artificial intelligence solutions' },
+          { href: '/quantum-technology'label: 'Quantum Tech'icon: Atomdescription: 'Quantum computing solutions' },
+          { href: '/it-infrastructure'label: 'IT Infrastructure'icon: Monitordescription: 'IT infrastructure services' },
+          { href: '/cybersecurity'label: 'Cybersecurity'icon: Shieldescription: 'Security solutions' },
+          { href: '/cloud-solutions'label: 'Cloud Solutions'icon: Cloudescription: 'Cloud computing services' },
+          { href: '/blockchain-solutions'label: 'Blockchain'icon: Databasedescription: 'Blockchain technology' },
+          { href: '/iot-platforms'label: 'IoT Platforms'icon: Networkdescription: 'Internet of Things' }
         ]
       },
       {
         title: 'Resources & Insights',
         links: [
-          { href: '/blog', label: 'Blog & Articles', icon: FileText, description: 'Latest insights' },
-          { href: '/technology-insights', label: 'Tech Insights', icon: TrendingUp, description: 'Technology trends' },
-          { href: '/case-studies', label: 'Case Studies', icon: Star, description: 'Success stories' },
-          { href: '/white-papers', label: 'White Papers', icon: FileText, description: 'Research & analysis' },
-          { href: '/docs', label: 'Documentation', icon: Code, description: 'Technical docs' },
-          { href: '/api', label: 'API Reference', icon: Code, description: 'API documentation' }
+          { href: '/blog'label: 'Blog & Articles'icon: FileTextdescription: 'Latest insights' },
+          { href: '/technology-insights'label: 'Tech Insights'icon: TrendingUpdescription: 'Technology trends' },
+          { href: '/case-studies'label: 'Case Studies'icon: Stardescription: 'Success stories' },
+          { href: '/white-papers'label: 'White Papers'icon: FileTextdescription: 'Research & analysis' },
+          { href: '/docs'label: 'Documentation'icon: Codescription: 'Technical docs' },
+          { href: '/api'label: 'API Reference'icon: Codescription: 'API documentation' }
         ]
       },
       {
         title: 'Company & Support',
         links: [
-          { href: '/careers', label: 'Careers', icon: Users, description: 'Join our team' },
-          { href: '/support', label: 'Support', icon: Cog, description: 'Get help' },
-          { href: '/privacy', label: 'Privacy Policy', icon: Lock, description: 'Data protection' },
-          { href: '/terms', label: 'Terms of Service', icon: FileText, description: 'Legal terms' },
-          { href: '/cookies', label: 'Cookie Policy', icon: FileText, description: 'Cookie information' }
+          { href: '/careers'label: 'Careers'icon: Usersdescription: 'Join our team' },
+          { href: '/support'label: 'Support'icon: Cogdescription: 'Get help' },
+          { href: '/privacy'label: 'Privacy Policy'icon: Lockdescription: 'Data protection' },
+          { href: '/terms'label: 'Terms of Service'icon: FileTextdescription: 'Legal terms' },
+          { href: '/cookies'label: 'Cookie Policy'icon: FileTextdescription: 'Cookie information' }
         ]
       },
       {
         title: 'Specialized Services',
         links: [
-          { href: '/quantum-neural-network-platform', label: 'Quantum Neural Networks', icon: Atom, description: 'Quantum AI platform', badge: 'New' },
-          { href: '/autonomous-business-operations-platform', label: 'Autonomous Business', icon: Brain, description: 'AI business automation', badge: 'New' },
-          { href: '/ai-powered-it-asset-management', label: 'IT Asset Management', icon: Monitor, description: 'AI-powered IT management', badge: 'New' },
-          { href: '/ai-consciousness-evolution-2029', label: 'AI Consciousness', icon: Brain, description: 'AI consciousness evolution', badge: 'Featured' }
+          { href: '/quantum-neural-network-platform'label: 'Quantum Neural Networks'icon: Atomdescription: 'Quantum AI platform'badge: 'New' },
+          { href: '/autonomous-business-operations-platform'label: 'Autonomous Business'icon: Braindescription: 'AI business automation'badge: 'New' },
+          { href: '/ai-powered-it-asset-management'label: 'IT Asset Management'icon: Monitordescription: 'AI-powered IT management'badge: 'New' },
+          { href: '/ai-consciousness-evolution-2029'label: 'AI Consciousness'icon: Braindescription: 'AI consciousness evolution'badge: 'Featured' }
         ]
       }
     ],
@@ -131,9 +131,9 @@ export default function Sidebar() {
 
   const utilityLinks: NavLink[] = useMemo(
     () => [
-      { href: '/site-health', label: 'Site Health', icon: CheckCircle, description: 'Website health monitoring' },
-      { href: '/sitemap', label: 'Sitemap', icon: Globe, description: 'Site structure overview' },
-      { href: '/search', label: 'Search', icon: BarChart3, description: 'Search functionality' }
+      { href: '/site-health'label: 'Site Health'icon: CheckCircledescription: 'Website health monitoring' },
+      { href: '/sitemap'label: 'Sitemap'icon: Globedescription: 'Site structure overview' },
+      { href: '/search'label: 'Search'icon: BarChart3description: 'Search functionality' }
     ],
     []
   );
@@ -158,13 +158,13 @@ export default function Sidebar() {
 
       {/* Navigation Sections */}
       <div className="space-y-8">
-        {navigationSections.map((section, sectionIndex) => (
+        {navigationSections.map((sectionIndex) => (
           <div key={sectionIndex}>
             <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 px-2">
               {section.title}
             </h3>
             <div className="space-y-1">
-              {section.links.map((link, linkIndex) => (
+              {section.links.map((linkIndex) => (
                 <Link
                   key={linkIndex}
                   href={link.href}
@@ -202,7 +202,7 @@ export default function Sidebar() {
             Utilities
           </h3>
           <div className="space-y-1">
-            {utilityLinks.map((link, index) => (
+            {utilityLinks.map((linkindex) => (
               <Link
                 key={index}
                 href={link.href}

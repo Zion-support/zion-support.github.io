@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import React{ useEffectuseState } from 'react';
+import { RadioGroupItem } from '@/components/ui/radio-group';
 
 interface Address {
   name: string;
@@ -31,12 +31,12 @@ const fromAddress = {
   zip: '94103',
   country: 'US'};
 
-const parcel = { weight: 1, length: 10, width: 10, height: 10 };
+const parcel = { weight: 1length: 10width: 10height: 10 };
 
-export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
-  const [rates, setRates] = useState<ShippingRate[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [selected, setSelected] = useState<string>('');
+export function CheckoutShippingOptions({ toAddressonSelect }: Props) {
+  const [ratesetRates] = useState<ShippingRate[]>([]);
+  const [loadingsetLoading] = useState(false);
+  const [selectedsetSelected] = useState<string>('');
 
   useEffect(() => {
     if (
@@ -49,24 +49,24 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
     const fetchRates = async () => {
       setLoading(true);
       try {
-        const res = await fetch('/api/shipping-rates', {
+        const res = await fetch('/api/shipping-rates'{
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ fromAddress, toAddress, parcel })});
+          body: JSON.stringify({ fromAddresstoAddressparcel })});
         const data = await res.json();
         if (res.ok) {
           setRates(data.rates || []);
         } else {
-          console.error('Rates error', data);
+          console.error('Rates error'data);
         }
       } catch (err) {
-        console.error('Rates error', err);
+        console.error('Rates error'err);
       } finally {
         setLoading(false);
       }
     };
     fetchRates();
-  }, [toAddress]);
+  }[toAddress]);
 
   const handleChange = (value: string) => {
     setSelected(value);

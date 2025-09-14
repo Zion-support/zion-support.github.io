@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 import { 
   MagnifyingGlassIcon,
@@ -28,7 +28,7 @@ const contentItems: ContentItem[] = [
     title: 'AI Automation Revolution 2025',
     description: 'Comprehensive guide to implementing AI automation across enterprise operations with real-world case studies and ROI analysis.',
     category: 'Automation',
-    tags: ['AI', 'Automation', 'Enterprise', 'ROI'],
+    tags: ['AI'Automation'Enterprise'ROI'],
     readTime: '12 min read',
     publishedDate: '2025-01-15',
     featured: true,
@@ -38,9 +38,9 @@ const contentItems: ContentItem[] = [
   {
     id: 'neural-architectures-2025',
     title: 'Advanced Neural Architectures',
-    description: 'Deep dive into cutting-edge neural network architectures including transformers, GANs, and reinforcement learning models.',
+    description: 'Deep dive into cutting-edge neural network architectures including transformersGANsand reinforcement learning models.',
     category: 'AI Research',
-    tags: ['Neural Networks', 'Deep Learning', 'AI Research', 'Algorithms'],
+    tags: ['Neural Networks'Deep Learning'AI Research'Algorithms'],
     readTime: '15 min read',
     publishedDate: '2025-01-12',
     featured: true,
@@ -52,7 +52,7 @@ const contentItems: ContentItem[] = [
     title: 'Quantum AI Breakthrough',
     description: 'Exploring the intersection of quantum computing and artificial intelligence for unprecedented computational capabilities.',
     category: 'Quantum Computing',
-    tags: ['Quantum Computing', 'AI', 'Breakthrough', 'Future Tech'],
+    tags: ['Quantum Computing'AI'Breakthrough'Future Tech'],
     readTime: '18 min read',
     publishedDate: '2025-01-10',
     featured: true,
@@ -62,9 +62,9 @@ const contentItems: ContentItem[] = [
   {
     id: 'business-intelligence-2025',
     title: 'AI-Powered Business Intelligence',
-    description: 'Transform your business intelligence with AI-driven analytics, predictive modeling, and automated insights generation.',
+    description: 'Transform your business intelligence with AI-driven analyticspredictive modelingand automated insights generation.',
     category: 'Business Intelligence',
-    tags: ['Business Intelligence', 'Analytics', 'Predictive Modeling', 'Data Science'],
+    tags: ['Business Intelligence'Analytics'Predictive Modeling'Data Science'],
     readTime: '10 min read',
     publishedDate: '2025-01-08',
     featured: false,
@@ -74,9 +74,9 @@ const contentItems: ContentItem[] = [
   {
     id: 'cloud-ai-infrastructure',
     title: 'Cloud AI Infrastructure',
-    description: 'Build scalable AI infrastructure on the cloud with best practices, optimization strategies, and cost management.',
+    description: 'Build scalable AI infrastructure on the cloud with best practicesoptimization strategiesand cost management.',
     category: 'Infrastructure',
-    tags: ['Cloud Computing', 'Infrastructure', 'Scalability', 'DevOps'],
+    tags: ['Cloud Computing'Infrastructure'Scalability'DevOps'],
     readTime: '14 min read',
     publishedDate: '2025-01-05',
     featured: false,
@@ -86,9 +86,9 @@ const contentItems: ContentItem[] = [
   {
     id: 'ai-security-best-practices',
     title: 'AI Security Best Practices',
-    description: 'Essential security measures for AI systems, protecting against adversarial attacks and ensuring data privacy.',
+    description: 'Essential security measures for AI systemsprotecting against adversarial attacks and ensuring data privacy.',
     category: 'Security',
-    tags: ['Security', 'AI Safety', 'Privacy', 'Best Practices'],
+    tags: ['Security'AI Safety'Privacy'Best Practices'],
     readTime: '8 min read',
     publishedDate: '2025-01-03',
     featured: false,
@@ -97,13 +97,13 @@ const contentItems: ContentItem[] = [
   }
 ];
 
-const categories = ['All', 'Automation', 'AI Research', 'Quantum Computing', 'Business Intelligence', 'Infrastructure', 'Security'];
+const categories = ['All'Automation'AI Research'Quantum Computing'Business Intelligence'Infrastructure'Security'];
 
 const InteractiveContentDiscovery2025: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [filteredContent, setFilteredContent] = useState(contentItems);
-  const [isSearching, setIsSearching] = useState(false);
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('All');
+  const [filteredContentsetFilteredContent] = useState(contentItems);
+  const [isSearchingsetIsSearching] = useState(false);
 
   useEffect(() => {
     setIsSearching(true);
@@ -126,10 +126,10 @@ const InteractiveContentDiscovery2025: React.FC = () => {
 
       setFilteredContent(filtered);
       setIsSearching(false);
-    }, 300);
+    }300);
 
     return () => clearTimeout(timer);
-  }, [searchTerm, selectedCategory]);
+  }[searchTermselectedCategory]);
 
   return (
     <section className="py-20 bg-gradient-to-b from-white to-gray-50">
@@ -143,8 +143,8 @@ const InteractiveContentDiscovery2025: React.FC = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Use our intelligent discovery tool to find the most relevant AI insights, 
-            case studies, and implementation guides for your specific needs.
+            Use our intelligent discovery tool to find the most relevant AI insights
+            case studiesand implementation guides for your specific needs.
           </p>
         </div>
 
@@ -157,7 +157,7 @@ const InteractiveContentDiscovery2025: React.FC = () => {
                 <MagnifyingGlassIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
-                  placeholder="Search for AI topics, technologies, or use cases..."
+                  placeholder="Search for AI topicstechnologiesor use cases..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
@@ -240,7 +240,7 @@ const InteractiveContentDiscovery2025: React.FC = () => {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag) => (
+                  {item.tags.slice(03).map((tag) => (
                     <span
                       key={tag}
                       className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-700"

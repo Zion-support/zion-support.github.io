@@ -22,7 +22,7 @@ export default function AI2025NewContentPromotionBanner() {
             Revolutionary AI 2025 Content
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover the future of AI with our latest predictions, breakthrough case studies, 
+            Discover the future of AI with our latest predictionsbreakthrough case studies
             and comprehensive implementation guides. Expert insights to accelerate your transformation in 2025.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

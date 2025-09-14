@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
+import React{ useEffectuseRef } from 'react';
 import { motion } from 'framer-motion';
 
 interface EnhancedFuturisticBackgroundProps {
@@ -27,48 +27,48 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       primary: '#00ffff',
       secondary: '#ff00ff',
       accent: '#ffff00',
-      background: 'rgba(0, 0, 0, 0.85)',
-      particles: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080', '#8000ff'],
+      background: 'rgba(00.85)',
+      particles: ['#00ffff'#ff00ff'#ffff00'#00ff00'#ff0080'#8000ff'],
       glow: '#00ffff'
     },
     cyberpunk: {
       primary: '#ff0080',
       secondary: '#00ffff',
       accent: '#ffff00',
-      background: 'rgba(20, 0, 40, 0.9)',
-      particles: ['#ff0080', '#00ffff', '#ffff00', '#ff4000', '#8000ff', '#00ff80'],
+      background: 'rgba(2040.9)',
+      particles: ['#ff0080'#00ffff'#ffff00'#ff4000'#8000ff'#00ff80'],
       glow: '#ff0080'
     },
     holographic: {
       primary: '#00ffff',
       secondary: '#ff00ff',
       accent: '#ffff00',
-      background: 'rgba(0, 20, 40, 0.85)',
-      particles: ['#00ffff', '#ff00ff', '#ffff00', '#00ff80', '#ff8000', '#8000ff'],
+      background: 'rgba(02040.85)',
+      particles: ['#00ffff'#ff00ff'#ffff00'#00ff80'#ff8000'#8000ff'],
       glow: '#00ffff'
     },
     neural: {
       primary: '#00ff80',
       secondary: '#ff0080',
       accent: '#ffff00',
-      background: 'rgba(0, 40, 20, 0.9)',
-      particles: ['#00ff80', '#ff0080', '#ffff00', '#00ffff', '#ff8000', '#8000ff'],
+      background: 'rgba(04020.9)',
+      particles: ['#00ff80'#ff0080'#ffff00'#00ffff'#ff8000'#8000ff'],
       glow: '#00ff80'
     },
     cosmic: {
       primary: '#ff6b6b',
       secondary: '#4ecdc4',
       accent: '#45b7d1',
-      background: 'rgba(10, 10, 30, 0.9)',
-      particles: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3'],
+      background: 'rgba(1030.9)',
+      particles: ['#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'#feca57'#ff9ff3'],
       glow: '#4ecdc4'
     }
   };
 
   const intensitySettings = {
-    low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25 },
-    medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45 },
-    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
+    low: { particleCount: 40speed: 0.45size: 2opacity: 0.25 },
+    medium: { particleCount: 90speed: 0.9size: 3opacity: 0.45 },
+    high: { particleCount: 160speed: 1.25size: 3.5opacity: 0.6 }
   };
 
   useEffect(() => {
@@ -84,7 +84,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     };
 
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('resize'resizeCanvas);
 
     const colors = colorSchemes[colorScheme];
     const settings = intensitySettings[intensity];
@@ -135,13 +135,13 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         ctx.globalAlpha = this.opacity;
         
         // Create gradient for particle
-        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
-        gradient.addColorStop(0, this.color);
-        gradient.addColorStop(1, 'transparent');
+        const gradient = ctx.createRadialGradient(this.xthis.y0this.xthis.ythis.size);
+        gradient.addColorStop(0this.color);
+        gradient.addColorStop(1'transparent');
         
         ctx.fillStyle = gradient;
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.arc(this.xthis.ythis.size0Math.PI * 2);
         ctx.fill();
         
         ctx.restore();
@@ -158,7 +158,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       p2: Particle;
       opacity: number;
 
-      constructor(p1: Particle, p2: Particle) {
+      constructor(p1: Particlep2: Particle) {
         this.p1 = p1;
         this.p2 = p2;
         this.opacity = 0.1;
@@ -166,7 +166,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 
       draw() {
         const distance = Math.sqrt(
-          Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
+          Math.pow(this.p1.x - this.p2.x2) + Math.pow(this.p1.y - this.p2.y2)
         );
 
         if (distance < 150) {
@@ -175,8 +175,8 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           ctx.strokeStyle = colors.glow;
           ctx.lineWidth = 0.5;
           ctx.beginPath();
-          ctx.moveTo(this.p1.x, this.p1.y);
-          ctx.lineTo(this.p2.x, this.p2.y);
+          ctx.moveTo(this.p1.xthis.p1.y);
+          ctx.lineTo(this.p2.xthis.p2.y);
           ctx.stroke();
           ctx.restore();
         }
@@ -203,15 +203,15 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       }
 
       const drawMatrix = () => {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = 'rgba(00.06)';
+        ctx.fillRect(0canvas.widthcanvas.height);
 
         ctx.fillStyle = colors.primary;
         ctx.font = `${fontSize}px monospace`;
 
         for (let i = 0; i < drops.length; i++) {
           const text = characters[Math.floor(Math.random() * characters.length)];
-          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+          ctx.fillText(texti * fontSizedrops[i] * fontSize);
 
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0;
@@ -229,7 +229,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     const animate = () => {
       // Clear canvas with fade effect
       ctx.fillStyle = colors.background;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0canvas.widthcanvas.height);
 
       // Draw matrix rain
       drawMatrix();
@@ -251,11 +251,11 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const distance = Math.sqrt(
-            Math.pow(particles[i].x - particles[j].x, 2) + 
-            Math.pow(particles[i].y - particles[j].y, 2)
+            Math.pow(particles[i].x - particles[j].x2) + 
+            Math.pow(particles[i].y - particles[j].y2)
           );
           if (distance < 150) {
-            connections.push(new Connection(particles[i], particles[j]));
+            connections.push(new Connection(particles[i]particles[j]));
           }
         }
       }
@@ -277,14 +277,14 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         if (Math.random() < 0.5) {
           // Draw triangle
           ctx.beginPath();
-          ctx.moveTo(x, y - size);
-          ctx.lineTo(x - size, y + size);
-          ctx.lineTo(x + size, y + size);
+          ctx.moveTo(xy - size);
+          ctx.lineTo(x - sizey + size);
+          ctx.lineTo(x + sizey + size);
           ctx.closePath();
           ctx.stroke();
         } else {
           // Draw square
-          ctx.strokeRect(x - size, y - size, size * 2, size * 2);
+          ctx.strokeRect(x - sizey - size * 2size * 2);
         }
         
         ctx.restore();
@@ -296,7 +296,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         // Slow down updates
         setTimeout(() => {
           animationRef.current = requestAnimationFrame(animate);
-        }, 100);
+        }100);
       } else {
         animationRef.current = requestAnimationFrame(animate);
       }
@@ -308,9 +308,9 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize'resizeCanvas);
     };
-  }, [colorScheme, intensity, particleCount, animationSpeed]);
+  }[colorSchemeintensityparticleCountanimationSpeed]);
 
   return (
     <div className={`relative min-h-screen ${className}`}>
@@ -324,7 +324,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       <div 
         className="fixed inset-0 pointer-events-none z-0"
         style={{
-          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
+          background: `radial-gradient(circle at 50% 50%transparent 0%rgba(0,0,0,0.3) 100%)`
         }}
       />
       

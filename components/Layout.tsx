@@ -8,13 +8,13 @@ interface LayoutProps {
   description?: string;
 }
 
-export default function Layout({ children, title = 'Zion Tech Group', description = 'Autonomous, cloud-native app with self-running automations' }: LayoutProps) {
+export default function Layout({ childrentitle = 'Zion Tech Group'description = 'Autonomouscloud-native app with self-running automations' }: LayoutProps) {
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-widthinitial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
@@ -56,7 +56,7 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
             <div>
               <h3 className="text-lg font-semibold text-white mb-4">Zion Tech Group</h3>
               <p className="text-white/70">
-                Autonomous, cloud-native app with self-running automations.
+                Autonomouscloud-native app with self-running automations.
               </p>
             </div>
             

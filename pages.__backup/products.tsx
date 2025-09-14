@@ -2,8 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Brain, Zap, Shield, Globe, Rocket, 
-  Cpu, Database, Lock, Cloud, BarChart3
+  BrainZapShieldGlobeRocket
+  CpuDatabaseLockCloudBarChart3
 } from 'lucide-react';
 
 export default function ProductsPage() {
@@ -34,7 +34,7 @@ export default function ProductsPage() {
     },
     {
       name: 'Cloud & Infrastructure',
-      description: 'Scalable, secure, and high-performance cloud solutions',
+      description: 'Scalablesecureand high-performance cloud solutions',
       icon: Cloud,
       color: 'from-green-400 to-emerald-500',
       products: [
@@ -167,9 +167,9 @@ export default function ProductsPage() {
     <>
       <Head>
         <title>Products - Zion Tech Group</title>
-        <meta name="description" content="Explore Zion Tech Group's cutting-edge technology products including AI platforms, quantum computing solutions, cybersecurity tools, and more." />
+        <meta name="description" content="Explore Zion Tech Group's cutting-edge technology products including AI platformsquantum computing solutionscybersecurity toolsand more." />
         <meta property="og:title" content="Products - Zion Tech Group" />
-        <meta property="og:description" content="Explore Zion Tech Group's cutting-edge technology products including AI platforms, quantum computing solutions, cybersecurity tools, and more." />
+        <meta property="og:description" content="Explore Zion Tech Group's cutting-edge technology products including AI platformsquantum computing solutionscybersecurity toolsand more." />
         <link rel="canonical" href="https://ziontechgroup.com/products" />
       </Head>
 
@@ -179,26 +179,26 @@ export default function ProductsPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
           <div className="relative z-10 container mx-auto px-6 text-center">
             <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"
             >
               Our Products
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.2 }}
               className="text-xl text-white/80 max-w-4xl mx-auto mb-8"
             >
               Revolutionary technology products designed to transform your business operations 
-              and drive unprecedented growth through AI, quantum computing, and intelligent automation.
+              and drive unprecedented growth through AIquantum computingand intelligent automation.
             </motion.p>
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.4 }}
               className="flex flex-wrap justify-center gap-4"
             >
               <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
@@ -215,8 +215,8 @@ export default function ProductsPage() {
         <section className="py-20">
           <div className="container mx-auto px-6">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -230,12 +230,12 @@ export default function ProductsPage() {
             </motion.div>
             
             <div className="grid lg:grid-cols-3 gap-8">
-              {featuredProducts.map((product, index) => (
+              {featuredProducts.map((productindex) => (
                 <motion.div
                   key={product.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-cyan-400/30 transition-all duration-300"
                 >
@@ -256,7 +256,7 @@ export default function ProductsPage() {
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {product.features.map((feature, idx) => (
+                      {product.features.map((featureidx) => (
                         <li key={idx} className="flex items-center text-white/70">
                           <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3" />
                           {feature}
@@ -280,8 +280,8 @@ export default function ProductsPage() {
         <section className="py-20">
           <div className="container mx-auto px-6">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -295,12 +295,12 @@ export default function ProductsPage() {
             </motion.div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {productCategories.map((category, index) => (
+              {productCategories.map((categoryindex) => (
                 <motion.div
                   key={category.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/30 transition-all duration-300"
                 >
@@ -313,7 +313,7 @@ export default function ProductsPage() {
                   <div className="mb-4">
                     <h4 className="text-white font-semibold mb-2">Products:</h4>
                     <ul className="space-y-1">
-                      {category.products.map((product, idx) => (
+                      {category.products.map((productidx) => (
                         <li key={idx} className="text-sm text-white/70 flex items-center">
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
                           {product}
@@ -337,8 +337,8 @@ export default function ProductsPage() {
         <section className="py-20">
           <div className="container mx-auto px-6">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -352,12 +352,12 @@ export default function ProductsPage() {
             </motion.div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {productBenefits.map((benefit, index) => (
+              {productBenefits.map((benefitindex) => (
                 <motion.div
                   key={benefit.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
                 >
@@ -376,8 +376,8 @@ export default function ProductsPage() {
         <section className="py-20">
           <div className="container mx-auto px-6 text-center">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

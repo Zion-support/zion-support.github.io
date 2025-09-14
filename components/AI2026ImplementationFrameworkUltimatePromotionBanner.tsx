@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, BookOpen, CheckCircle, Clock, Target, TrendingUp, Users, Zap, Brain, Award } from 'lucide-react';
+ArrowRightBookOpenCheckCircleClockTargetTrendingUpUsersZapBrainAward
 
 const AI2026ImplementationFrameworkUltimatePromotionBanner = () => {
   return (
@@ -22,7 +22,7 @@ const AI2026ImplementationFrameworkUltimatePromotionBanner = () => {
           </h2>
           <p className="text-xl md:text-2xl text-purple-100 max-w-4xl mx-auto leading-relaxed">
             The comprehensive framework for implementing next-generation AI technologies in 2026. 
-            Step-by-step guide with proven methodologies, tools, and best practices for guaranteed success.
+            Step-by-step guide with proven methodologiestoolsand best practices for guaranteed success.
           </p>
         </div>
 
@@ -34,7 +34,7 @@ const AI2026ImplementationFrameworkUltimatePromotionBanner = () => {
             </div>
             <h3 className="text-lg font-bold mb-2">Strategic Foundation</h3>
             <p className="text-purple-100 text-sm mb-4">
-              Vision, strategy, and comprehensive readiness assessment to ensure successful AI transformation
+              Visionstrategyand comprehensive readiness assessment to ensure successful AI transformation
             </p>
             <div className="text-xs text-purple-300">
               ✓ Executive alignment • ✓ Use case identification • ✓ Stakeholder engagement
@@ -60,7 +60,7 @@ const AI2026ImplementationFrameworkUltimatePromotionBanner = () => {
             </div>
             <h3 className="text-lg font-bold mb-2">Solution Development</h3>
             <p className="text-purple-100 text-sm mb-4">
-              AI model creation, validation, and deployment architecture for optimal performance
+              AI model creationvalidationand deployment architecture for optimal performance
             </p>
             <div className="text-xs text-purple-300">
               ✓ Data preparation • ✓ Model training • ✓ Deployment strategy
@@ -99,7 +99,7 @@ const AI2026ImplementationFrameworkUltimatePromotionBanner = () => {
             </div>
             <h3 className="text-lg font-bold mb-2">Continuous Optimization</h3>
             <p className="text-purple-100 text-sm mb-4">
-              Ongoing improvement, monitoring, and scaling for sustained AI success and ROI
+              Ongoing improvementmonitoringand scaling for sustained AI success and ROI
             </p>
             <div className="text-xs text-purple-300">
               ✓ Performance monitoring • ✓ Continuous improvement • ✓ Scaling
@@ -178,7 +178,7 @@ const AI2026ImplementationFrameworkUltimatePromotionBanner = () => {
                 <span className="text-2xl font-bold">1-4</span>
               </div>
               <h4 className="text-lg font-bold mb-2">Strategic Foundation</h4>
-              <p className="text-purple-100 text-sm">Vision, strategy, and readiness assessment</p>
+              <p className="text-purple-100 text-sm">Visionstrategyand readiness assessment</p>
               <div className="text-xs text-purple-300 mt-2">Weeks 1-4</div>
             </div>
             <div className="text-center">
@@ -202,7 +202,7 @@ const AI2026ImplementationFrameworkUltimatePromotionBanner = () => {
                 <span className="text-2xl font-bold">17-32</span>
               </div>
               <h4 className="text-lg font-bold mb-2">Deploy & Scale</h4>
-              <p className="text-purple-100 text-sm">Pilot, rollout, and optimization</p>
+              <p className="text-purple-100 text-sm">Pilotrolloutand optimization</p>
               <div className="text-xs text-purple-300 mt-2">Weeks 17-32</div>
             </div>
           </div>
@@ -219,7 +219,7 @@ const AI2026ImplementationFrameworkUltimatePromotionBanner = () => {
                 <div className="text-sm text-purple-300">$2.1B cost savings and revenue increase</div>
               </div>
               <p className="text-purple-100 text-sm">
-                "The framework provided clear guidance for our AI transformation, resulting in unprecedented ROI and operational excellence."
+                "The framework provided clear guidance for our AI transformationresulting in unprecedented ROI and operational excellence."
               </p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">

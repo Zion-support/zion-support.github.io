@@ -10,8 +10,8 @@ interface MobileFilterDrawerProps {
 }
 
 export function MobileFilterDrawer({ 
-  isMobileFilterOpen, 
-  setIsMobileFilterOpen, 
+  isMobileFilterOpen
+  setIsMobileFilterOpen
   filterProps
 }: MobileFilterDrawerProps) {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Users, CheckCircle } from 'lucide-react';
+ArrowRightStarTrendingUpUsersCheckCircle
 
 const SuccessStoriesShowcase2026PromotionBanner = () => {
   return (
@@ -14,7 +14,7 @@ const SuccessStoriesShowcase2026PromotionBanner = () => {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Real Results, Real Businesses
+            Real ResultsReal Businesses
           </h2>
           
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">

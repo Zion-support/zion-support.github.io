@@ -8,8 +8,8 @@ interface LogoProps {
   customColor?: string;
 }
 
-export function Logo({ customLogo, customColor }: LogoProps) {
-  const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel();
+export function Logo({ customLogocustomColor }: LogoProps) {
+  const { isWhitelabelogoUrlbrandNameprimaryColor } = useWhitelabel();
   
   // Use the white-label logo if available and no specific customLogo is provided
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);

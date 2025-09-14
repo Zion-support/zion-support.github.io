@@ -6,21 +6,21 @@ import { z } from "zod";
 import { WorkExperience } from "@/types/resume";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { FormControlFormFieldFormItemFormLabelFormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { Switch } from "@/components/ui/switch";
 import { format } from "date-fns";
-import { CalendarIcon, Loader2 } from "lucide-react";
+import { CalendarIconLoader2 } from "lucide-react";
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
 
 // Define form schema
 const formSchema = z.object({
-  company_name: z.string().min(1, "Company name is required"),
-  role_title: z.string().min(1, "Role title is required"),
+  company_name: z.string().min(1"Company name is required"),
+  role_title: z.string().min(1"Role title is required"),
   start_date: z.date({
     required_error: "Start date is required"}),
   end_date: z.date().optional(),
@@ -40,7 +40,7 @@ export function WorkExperienceItemForm({
   initialData,
   onSubmit,
   onCancel}: WorkExperienceItemFormProps) {
-  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
+  const [isEnhancementDialogOpensetIsEnhancementDialogOpen] = useState(false);
 
   // Set up form
   const form = useForm<FormValues>({
@@ -63,20 +63,20 @@ export function WorkExperienceItemForm({
     // Create a properly typed WorkExperience object with all required fields
     const workExperience: WorkExperience = {
       id: initialData?.id,
-      company_name: values.company_name,  // Required
-      role_title: values.role_title,      // Required
-      start_date: values.start_date,      // Required
-      end_date: values.end_date,          // Optional
-      is_current: values.is_current,      // Required
-      description: values.description,    // Optional
-      location: values.location,          // Optional
+      company_name: values.company_name // Required
+      role_title: values.role_title     // Required
+      start_date: values.start_date     // Required
+      end_date: values.end_date         // Optional
+      is_current: values.is_current     // Required
+      description: values.description   // Optional
+      location: values.location         // Optional
     };
     
     await onSubmit(workExperience);
   };
 
   const handleAIEnhancement = (content: string) => {
-    form.setValue("description", content, { shouldDirty: true });
+    form.setValue("description"content{ shouldDirty: true });
     setIsEnhancementDialogOpen(false);
   };
 
@@ -122,7 +122,7 @@ export function WorkExperienceItemForm({
                 <FormItem>
                   <FormLabel>Location</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g. New York, NY (Remote)" {...field} />
+                    <Input placeholder="e.g. New YorkNY (Remote)" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -169,7 +169,7 @@ export function WorkExperienceItemForm({
                           )}
                         >
                           {field.value ? (
-                            format(field.value, "MMM yyyy")
+                            format(field.value"MMM yyyy")
                           ) : (
                             <span>Select date</span>
                           )}
@@ -212,7 +212,7 @@ export function WorkExperienceItemForm({
                             )}
                           >
                             {field.value ? (
-                              format(field.value, "MMM yyyy")
+                              format(field.value"MMM yyyy")
                             ) : (
                               <span>Select date</span>
                             )}
@@ -254,7 +254,7 @@ export function WorkExperienceItemForm({
                         content: field.value || "",
                         context: `${watchRoleTitle} at ${watchCompanyName}`
                       }}
-                      onEnhanced={(content) => form.setValue("description", content, { shouldDirty: true })}
+                      onEnhanced={(content) => form.setValue("description"content{ shouldDirty: true })}
                       buttonText="Enhance with AI"
                     />
                     <Button
@@ -270,7 +270,7 @@ export function WorkExperienceItemForm({
                 </div>
                 <FormControl>
                   <Textarea
-                    placeholder="Describe your responsibilities, achievements, and skills used in this role..."
+                    placeholder="Describe your responsibilitiesachievementsand skills used in this role..."
                     className="min-h-[150px]"
                     {...field}
                   />

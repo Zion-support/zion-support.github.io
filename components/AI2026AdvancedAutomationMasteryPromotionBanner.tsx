@@ -17,7 +17,7 @@ const AI2026AdvancedAutomationMasteryPromotionBanner: React.FC = () => {
           </h2>
           
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-4xl mx-auto">
-            Master the future of business automation with AI-powered solutions that learn, adapt, and evolve. 
+            Master the future of business automation with AI-powered solutions that learnadaptand evolve. 
             Transform your operations with intelligent automation for unprecedented efficiency.
           </p>
           

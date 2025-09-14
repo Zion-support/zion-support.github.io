@@ -1,8 +1,8 @@
 
 export const metadata = {
   title: "Documentation - Zion Tech Group | Technical Guides & Resources",
-  description: "Access comprehensive technical documentation, guides, and resources for Zion Tech Group's products and services. Find API docs, tutorials, and best practices.",
-  keywords: "documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources",
+  description: "Access comprehensive technical documentationguidesand resources for Zion Tech Group's products and services. Find API docstutorialsand best practices.",
+  keywords: "documentationtechnical guidesAPI docstutorialsZion Tech Groupdeveloper resourcestechnical resources",
 };
 
 export default function DocumentationPage() {
@@ -15,7 +15,7 @@ export default function DocumentationPage() {
             <span className="gradient-text">Documentation</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Comprehensive technical documentation, guides, and resources to help you 
+            Comprehensive technical documentationguidesand resources to help you 
             get the most out of Zion Tech Group's products and services
           </p>
         </div>
@@ -254,7 +254,7 @@ export default function DocumentationPage() {
             <div className="card">
               <h3 className="text-xl font-semibold mb-4">REST API Reference</h3>
               <p className="text-gray-400 mb-4">
-                Complete REST API documentation with examples, authentication, 
+                Complete REST API documentation with examplesauthentication
                 and error handling for all Zion Tech Group services.
               </p>
               <div className="space-y-2 mb-6 text-sm text-gray-400">

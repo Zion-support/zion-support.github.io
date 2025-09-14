@@ -13,7 +13,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       timeframe: '6 months',
       description: 'Complete AI transformation of manufacturing operations with autonomous quality control and predictive maintenance.',
       image: '/images/case-studies/manufacturing-transformation.jpg',
-      tags: ['AI Automation', 'Predictive Analytics', 'Quality Control'],
+      tags: ['AI Automation'Predictive Analytics'Quality Control'],
       metrics: {
         efficiency: '+340%',
         costReduction: '-68%',
@@ -27,9 +27,9 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       client: 'International Bank',
       roi: '1,800%',
       timeframe: '8 months',
-      description: 'Revolutionary AI implementation in risk management, fraud detection, and customer service automation.',
+      description: 'Revolutionary AI implementation in risk managementfraud detectionand customer service automation.',
       image: '/images/case-studies/financial-transformation.jpg',
-      tags: ['Risk Management', 'Fraud Detection', 'Customer Service'],
+      tags: ['Risk Management'Fraud Detection'Customer Service'],
       metrics: {
         processingSpeed: '+450%',
         accuracy: '+98%',
@@ -45,7 +45,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       timeframe: '12 months',
       description: 'AI-powered diagnostic systems that reduced diagnosis time by 85% while improving accuracy to 98.7%.',
       image: '/images/case-studies/healthcare-ai.jpg',
-      tags: ['Medical AI', 'Diagnostic Systems', 'Patient Care'],
+      tags: ['Medical AI'Diagnostic Systems'Patient Care'],
       metrics: {
         diagnosisSpeed: '+850%',
         accuracy: '+98.7%',
@@ -59,9 +59,9 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       client: 'International Retail Chain',
       roi: '2,100%',
       timeframe: '9 months',
-      description: 'Complete retail ecosystem transformation with AI-powered inventory management, customer insights, and personalized experiences.',
+      description: 'Complete retail ecosystem transformation with AI-powered inventory managementcustomer insightsand personalized experiences.',
       image: '/images/case-studies/retail-transformation.jpg',
-      tags: ['Inventory Management', 'Customer Analytics', 'Personalization'],
+      tags: ['Inventory Management'Customer Analytics'Personalization'],
       metrics: {
         salesGrowth: '+156%',
         inventoryEfficiency: '+234%',
@@ -75,9 +75,9 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       client: 'International Logistics Company',
       roi: '2,800%',
       timeframe: '10 months',
-      description: 'Revolutionary logistics optimization with AI-driven route planning, predictive maintenance, and autonomous operations.',
+      description: 'Revolutionary logistics optimization with AI-driven route planningpredictive maintenanceand autonomous operations.',
       image: '/images/case-studies/logistics-ai.jpg',
-      tags: ['Route Optimization', 'Predictive Maintenance', 'Autonomous Operations'],
+      tags: ['Route Optimization'Predictive Maintenance'Autonomous Operations'],
       metrics: {
         deliverySpeed: '+290%',
         fuelEfficiency: '+67%',
@@ -91,9 +91,9 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       client: 'Investment Bank',
       roi: '4,500%',
       timeframe: '18 months',
-      description: 'Breakthrough quantum AI implementation for portfolio optimization and risk analysis, delivering unprecedented returns.',
+      description: 'Breakthrough quantum AI implementation for portfolio optimization and risk analysisdelivering unprecedented returns.',
       image: '/images/case-studies/quantum-finance.jpg',
-      tags: ['Quantum Computing', 'Portfolio Optimization', 'Risk Analysis'],
+      tags: ['Quantum Computing'Portfolio Optimization'Risk Analysis'],
       metrics: {
         portfolioReturns: '+340%',
         riskReduction: '-78%',
@@ -113,7 +113,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -127,8 +127,8 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -138,7 +138,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Discover how leading enterprises achieved unprecedented transformation with our AI solutions. 
-            Real results, real impact, real ROI.
+            Real resultsreal impactreal ROI.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <div className="bg-blue-600/20 px-6 py-3 rounded-full border border-blue-400/30">
@@ -160,7 +160,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {caseStudies.map((study, index) => (
+          {caseStudies.map((studyindex) => (
             <motion.div
               key={study.id}
               variants={itemVariants}
@@ -186,7 +186,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
 
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {study.tags.map((tag, tagIndex) => (
+                  {study.tags.map((tagIndex) => (
                     <span
                       key={tagIndex}
                       className="bg-gray-700/50 px-3 py-1 rounded-full text-xs text-gray-300"
@@ -197,11 +197,11 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-3 gap-4 mb-6">
-                  {Object.entries(study.metrics).map(([key, value], metricIndex) => (
+                  {Object.entries(study.metrics).map(([keyvalue]metricIndex) => (
                     <div key={metricIndex} className="text-center">
                       <div className="text-lg font-bold text-green-400">{value}</div>
                       <div className="text-xs text-gray-400 capitalize">
-                        {key.replace(/([A-Z])/g, ' $1').trim()}
+                        {key.replace(/([A-Z])/g' $1').trim()}
                       </div>
                     </div>
                   ))}
@@ -228,10 +228,10 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="text-center mt-16"
         >
           <Link

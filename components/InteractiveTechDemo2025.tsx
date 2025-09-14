@@ -1,16 +1,16 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Settings, 
-  Zap, 
-  Brain, 
-  Cpu, 
+  Play
+  Pause
+  RotateCcw
+  Settings
+  Zap
+  Brain
+  Cpu
   Database,
   Cloud,
   Smartphone,
@@ -39,15 +39,15 @@ import {
 } from 'lucide-react';
 
 const InteractiveTechDemo2025 = () => {
-  const [activeDemo, setActiveDemo] = useState('ai-consciousness');
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [selectedFeature, setSelectedFeature] = useState(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeDemosetActiveDemo] = useState('ai-consciousness');
+  const [isPlayingsetIsPlaying] = useState(false);
+  const [progressetProgress] = useState(0);
+  const [selectedFeaturesetSelectedFeature] = useState(null);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   useEffect(() => {
     let interval;
@@ -60,10 +60,10 @@ const InteractiveTechDemo2025 = () => {
           }
           return prev + 2;
         });
-      }, 100);
+      }100);
     }
     return () => clearInterval(interval);
-  }, [isPlaying]);
+  }[isPlaying]);
 
   const demos = {
     'ai-consciousness': {
@@ -72,10 +72,10 @@ const InteractiveTechDemo2025 = () => {
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       features: [
-        { name: 'Neural Pattern Recognition', value: 99.7, unit: '%' },
-        { name: 'Consciousness Index', value: 8.9, unit: '/10' },
-        { name: 'Learning Rate', value: 0.95, unit: 'α' },
-        { name: 'Memory Retention', value: 99.9, unit: '%' }
+        { name: 'Neural Pattern Recognition'value: 99.7unit: '%' },
+        { name: 'Consciousness Index'value: 8.9unit: '/10' },
+        { name: 'Learning Rate'value: 0.95unit: 'α' },
+        { name: 'Memory Retention'value: 99.9unit: '%' }
       ],
       visualization: 'neural-network'
     },
@@ -85,10 +85,10 @@ const InteractiveTechDemo2025 = () => {
       icon: Atom,
       color: 'from-indigo-500 to-purple-500',
       features: [
-        { name: 'Qubit Coherence', value: 99.8, unit: '%' },
-        { name: 'Processing Speed', value: 1000, unit: 'x' },
-        { name: 'Error Rate', value: 0.001, unit: '%' },
-        { name: 'Quantum Volume', value: 64, unit: 'QV' }
+        { name: 'Qubit Coherence'value: 99.8unit: '%' },
+        { name: 'Processing Speed'value: 1000unit: 'x' },
+        { name: 'Error Rate'value: 0.001unit: '%' },
+        { name: 'Quantum Volume'value: 64unit: 'QV' }
       ],
       visualization: 'quantum-circuit'
     },
@@ -98,10 +98,10 @@ const InteractiveTechDemo2025 = () => {
       icon: Cpu,
       color: 'from-green-500 to-teal-500',
       features: [
-        { name: 'Signal Accuracy', value: 99.9, unit: '%' },
-        { name: 'Response Time', value: 12, unit: 'ms' },
-        { name: 'Bandwidth', value: 1.2, unit: 'Gbps' },
-        { name: 'Neural Channels', value: 1024, unit: 'ch' }
+        { name: 'Signal Accuracy'value: 99.9unit: '%' },
+        { name: 'Response Time'value: 12unit: 'ms' },
+        { name: 'Bandwidth'value: 1.2unit: 'Gbps' },
+        { name: 'Neural Channels'value: 1024unit: 'ch' }
       ],
       visualization: 'neural-signals'
     },
@@ -111,10 +111,10 @@ const InteractiveTechDemo2025 = () => {
       icon: Network,
       color: 'from-blue-500 to-cyan-500',
       features: [
-        { name: 'Latency Reduction', value: 95, unit: '%' },
-        { name: 'Processing Nodes', value: 10000, unit: '+' },
-        { name: 'Data Throughput', value: 50, unit: 'TB/s' },
-        { name: 'Energy Efficiency', value: 85, unit: '%' }
+        { name: 'Latency Reduction'value: 95unit: '%' },
+        { name: 'Processing Nodes'value: 10000unit: '+' },
+        { name: 'Data Throughput'value: 50unit: 'TB/s' },
+        { name: 'Energy Efficiency'value: 85unit: '%' }
       ],
       visualization: 'edge-network'
     }
@@ -145,7 +145,7 @@ const InteractiveTechDemo2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -161,8 +161,8 @@ const InteractiveTechDemo2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: -30 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -182,19 +182,19 @@ const InteractiveTechDemo2025 = () => {
           </h1>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Interact with cutting-edge AI technologies, quantum computing systems, and neural interfaces 
+            Interact with cutting-edge AI technologiesquantum computing systemsand neural interfaces 
             in real-time. See the future of technology in action.
           </p>
         </motion.div>
 
         {/* Demo Selector */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {Object.entries(demos).map(([key, demo]) => {
+          {Object.entries(demos).map(([keydemo]) => {
             const Icon = demo.icon;
             return (
               <button
@@ -226,7 +226,7 @@ const InteractiveTechDemo2025 = () => {
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center">
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${currentDemo.color} flex items-center justify-center mr-4`}>
-                    {React.createElement(currentDemo.icon, { className: "w-6 h-6 text-white" })}
+                    {React.createElement(currentDemo.icon{ className: "w-6 h-6 text-white" })}
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">{currentDemo.title}</h3>
@@ -247,12 +247,12 @@ const InteractiveTechDemo2025 = () => {
                 {currentDemo.visualization === 'neural-network' && (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="grid grid-cols-4 gap-4">
-                      {[...Array(16)].map((_, i) => (
+                      {[...Array(16)].map((_i) => (
                         <motion.div
                           key={i}
                           animate={{
-                            scale: isPlaying ? [1, 1.2, 1] : 1,
-                            opacity: isPlaying ? [0.5, 1, 0.5] : 0.7
+                            scale: isPlaying ? [1.21] : 1,
+                            opacity: isPlaying ? [0.510.5] : 0.7
                           }}
                           transition={{
                             duration: 2,
@@ -269,12 +269,12 @@ const InteractiveTechDemo2025 = () => {
                 {currentDemo.visualization === 'quantum-circuit' && (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="relative">
-                      {[...Array(8)].map((_, i) => (
+                      {[...Array(8)].map((_i) => (
                         <motion.div
                           key={i}
                           animate={{
                             rotate: isPlaying ? 360 : 0,
-                            scale: isPlaying ? [1, 1.1, 1] : 1
+                            scale: isPlaying ? [1.1] : 1
                           }}
                           transition={{
                             duration: 3,
@@ -295,12 +295,12 @@ const InteractiveTechDemo2025 = () => {
                 {currentDemo.visualization === 'neural-signals' && (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-full h-32 relative">
-                      {[...Array(5)].map((_, i) => (
+                      {[...Array(5)].map((_i) => (
                         <motion.div
                           key={i}
                           animate={{
-                            scaleY: isPlaying ? [1, 2, 1] : 1,
-                            opacity: isPlaying ? [0.5, 1, 0.5] : 0.7
+                            scaleY: isPlaying ? [121] : 1,
+                            opacity: isPlaying ? [0.510.5] : 0.7
                           }}
                           transition={{
                             duration: 1.5,
@@ -321,12 +321,12 @@ const InteractiveTechDemo2025 = () => {
                 {currentDemo.visualization === 'edge-network' && (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="grid grid-cols-3 gap-4">
-                      {[...Array(9)].map((_, i) => (
+                      {[...Array(9)].map((_i) => (
                         <motion.div
                           key={i}
                           animate={{
-                            scale: isPlaying ? [1, 1.3, 1] : 1,
-                            opacity: isPlaying ? [0.6, 1, 0.6] : 0.8
+                            scale: isPlaying ? [1.31] : 1,
+                            opacity: isPlaying ? [0.610.6] : 0.8
                           }}
                           transition={{
                             duration: 2,
@@ -377,12 +377,12 @@ const InteractiveTechDemo2025 = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Real-Time Metrics</h3>
               
               <div className="space-y-4">
-                {currentDemo.features.map((feature, index) => (
+                {currentDemo.features.map((featureindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    initial={{ opacity: 0x: 20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    transition={{ duration: 0.5delay: index * 0.1 }}
                     className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
                     onClick={() => setSelectedFeature(feature)}
                   >
@@ -393,7 +393,7 @@ const InteractiveTechDemo2025 = () => {
                           className="h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
                           initial={{ width: 0 }}
                           animate={{ width: `${(feature.value / 100) * 100}%` }}
-                          transition={{ duration: 1, delay: index * 0.2 }}
+                          transition={{ duration: 1delay: index * 0.2 }}
                         />
                       </div>
                     </div>
@@ -435,9 +435,9 @@ const InteractiveTechDemo2025 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/20">

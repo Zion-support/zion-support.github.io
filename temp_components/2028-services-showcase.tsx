@@ -3,10 +3,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-  DollarSign, Shield, Mail, MapPin, Brain, Sparkles,
-  Globe, Heart, Leaf, GraduationCap, BarChart3,
-  Building, Settings, Camera, Video, Music, Gamepad2
+  CheckCircleArrowRightStarTrendingUpPhoneZap
+  DollarSignShieldMailMapPinBrainSparkles,
+  GlobeHeartLeafGraduationCapBarChart3,
+  BuildingSettingsCameraVideoMusicGamepad2
 } from 'lucide-react';
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
@@ -26,42 +26,42 @@ const serviceCategories = [
     description: 'Beyond the future of technology',
     icon: Zap,
     color: 'from-violet-600 to-purple-600',
-    services: futuristic2028Services.slice(0, 4)
+    services: futuristic2028Services.slice(04)
   },
   {
     title: '🏙️ Smart City & Infrastructure',
     description: 'Intelligent urban solutions',
     icon: Building,
     color: 'from-blue-600 to-cyan-600',
-    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0, 4)
+    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(04)
   },
   {
     title: '⚛️ Quantum & Advanced Tech',
     description: 'Quantum computing and beyond',
     icon: Shield,
     color: 'from-indigo-600 to-blue-600',
-    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
+    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(04)
   },
   {
     title: '🤖 AI & Machine Learning',
     description: 'Next-generation AI solutions',
     icon: Brain,
     color: 'from-emerald-600 to-teal-600',
-    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
+    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(04)
   },
   {
     title: '⛓️ Blockchain & Web3',
     description: 'Decentralized solutions',
     icon: Globe,
     color: 'from-orange-600 to-red-600',
-    services: emergingTech2028Services.filter(s => s.category.includes('Blockchain')).slice(0, 4)
+    services: emergingTech2028Services.filter(s => s.category.includes('Blockchain')).slice(04)
   },
   {
     title: '🚗 Autonomous & Mobility',
     description: 'Self-driving and mobility solutions',
     icon: Building,
     color: 'from-red-600 to-pink-600',
-    services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)
+    services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(04)
   }
 ];
 
@@ -70,10 +70,10 @@ export default function ServicesShowcase2028() {
     <>
       <Head>
         <title>2028 Futuristic Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations. Transform your business with next-generation technology." />
-        <meta name="keywords" content="2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group" />
+        <meta name="description" content="Explore our cutting-edge 2028 services including AIquantum computingautonomous systemsand futuristic innovations. Transform your business with next-generation technology." />
+        <meta name="keywords" content="2028 technologyAI servicesquantum computingautonomous systemsfuturistic innovationsZion Tech Group" />
         <meta property="og:title" content="2028 Futuristic Services Showcase - Zion Tech Group" />
-        <meta property="og:description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations." />
+        <meta property="og:description" content="Explore our cutting-edge 2028 services including AIquantum computingautonomous systemsand futuristic innovations." />
         <meta property="og:url" content="https://ziontechgroup.com/2028-services-showcase" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/2028-services-showcase" />
@@ -92,8 +92,8 @@ export default function ServicesShowcase2028() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
@@ -112,7 +112,7 @@ export default function ServicesShowcase2028() {
 
             <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed">
               Experience the future of technology with our cutting-edge 2028 services. 
-              From AI consciousness to quantum internet, we're building tomorrow's solutions today.
+              From AI consciousness to quantum internetwe're building tomorrow's solutions today.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -169,12 +169,12 @@ export default function ServicesShowcase2028() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((category, index) => (
+            {serviceCategories.map((categoryindex) => (
               <motion.div
                 key={category.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 30 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="group relative"
               >
@@ -190,7 +190,7 @@ export default function ServicesShowcase2028() {
                     <p className="text-purple-300 mb-6">{category.description}</p>
 
                     <div className="space-y-3 mb-6">
-                      {category.services.slice(0, 3).map((service) => (
+                      {category.services.slice(03).map((service) => (
                         <div key={service.id} className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-purple-200 text-sm">{service.name}</span>
@@ -199,7 +199,7 @@ export default function ServicesShowcase2028() {
                     </div>
 
                     <Link
-                      href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
+                      href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g'-')}`}
                       className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"
                     >
                       <span>Explore More</span>
@@ -226,12 +226,12 @@ export default function ServicesShowcase2028() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {futuristic2028Services.slice(0, 6).map((service, index) => (
+            {futuristic2028Services.slice(06).map((serviceindex) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="group relative"
               >
@@ -298,8 +298,8 @@ export default function ServicesShowcase2028() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
@@ -307,7 +307,7 @@ export default function ServicesShowcase2028() {
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>
               <p className="text-purple-300 mb-6">
-                Our services target markets with exponential growth potential, 
+                Our services target markets with exponential growth potential
                 with some sectors growing at 300-800% annually.
               </p>
               <div className="text-3xl font-bold text-green-400">500%+</div>
@@ -315,9 +315,9 @@ export default function ServicesShowcase2028() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.2 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
             >
@@ -332,9 +332,9 @@ export default function ServicesShowcase2028() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.4 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
             >
@@ -355,8 +355,8 @@ export default function ServicesShowcase2028() {
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="space-y-8"

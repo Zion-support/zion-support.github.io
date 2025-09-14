@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Sparkles, BookOpen, FileText, ArrowRight, Star, Clock, Cog } from 'lucide-react';
+SparklesBookOpenFileTextArrowRightStarClockCog
 
 export default function NewContent2026ShowcaseBanner() {
   return (
@@ -15,7 +15,7 @@ export default function NewContent2026ShowcaseBanner() {
             Revolutionary AI Content for 2026
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover cutting-edge insights, breakthrough case studies, and ultimate implementation guides that are reshaping the future of enterprise AI and quantum computing.
+            Discover cutting-edge insightsbreakthrough case studiesand ultimate implementation guides that are reshaping the future of enterprise AI and quantum computing.
           </p>
         </div>
 

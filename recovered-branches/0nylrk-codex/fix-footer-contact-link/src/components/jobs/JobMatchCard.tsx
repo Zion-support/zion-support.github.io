@@ -1,9 +1,9 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react";
+import { CardContent } from "@/components/ui/card";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
+import { BuildingMapPinClockDollarSignStar } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { JobMatch } from "@/types/jobs";
 
@@ -24,18 +24,18 @@ interface JobMatchProps {
 }
 
 export function JobMatchCard({ 
-  matchId, 
-  talentId, 
-  name, 
-  title, 
-  company, 
-  avatar, 
-  location, 
-  category, 
-  matchPercent, 
+  matchId
+  talentId
+  name
+  title
+  company
+  avatar
+  location
+  category
+  matchPercent
   skills,
-  onApply, 
-  onViewDetails, 
+  onApply
+  onViewDetails
   onInvite 
 }: JobMatchProps) {
   const handleApply = () => {
@@ -70,7 +70,7 @@ export function JobMatchCard({
             <span className="font-medium">{matchPercent}% Match</span>
           </div>
           <Badge variant="outline" className="bg-background">
-            {formatDistanceToNow(postedDate, { addSuffix: true })}
+            {formatDistanceToNow(postedDate{ addSuffix: true })}
           </Badge>
         </div>
         
@@ -110,7 +110,7 @@ export function JobMatchCard({
           </div>
           
           <div className="flex flex-wrap gap-1 mb-4">
-            {skills?.slice(0, 5).map((skill) => (
+            {skills?.slice(05).map((skill) => (
               <Badge key={skill} variant="secondary" className="text-xs">
                 {skill}
               </Badge>

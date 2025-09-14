@@ -68,11 +68,11 @@ export const SkeletonCard: React.FC<{ className?: string }> = ({ className = '' 
 );
 
 export const SkeletonText: React.FC<{ lines?: number; className?: string }> = ({ 
-  lines = 3, 
+  lines = 3
   className = '' 
 }) => (
   <div className={`animate-pulse ${className}`}>
-    {Array.from({ length: lines }).map((_, i) => (
+    {Array.from({ length: lines }).map((_i) => (
       <div
         key={i}
         className={`h-3 bg-gray-200 rounded mb-2 ${
@@ -93,17 +93,17 @@ export const ProgressiveLoader: React.FC<{
   children: React.ReactNode;
   fallback?: React.ReactNode;
   delay?: number;
-}> = ({ isLoading, children, fallback, delay = 200 }) => {
-  const [showLoader, setShowLoader] = React.useState(false);
+}> = ({ isLoadingchildrenfallbackdelay = 200 }) => {
+  const [showLoadersetShowLoader] = React.useState(false);
 
   React.useEffect(() => {
     if (isLoading) {
-      const timer = setTimeout(() => setShowLoader(true), delay);
+      const timer = setTimeout(() => setShowLoader(true)delay);
       return () => clearTimeout(timer);
     } else {
       setShowLoader(false);
     }
-  }, [isLoading, delay]);
+  }[isLoadingdelay]);
 
   if (isLoading && showLoader) {
     return <>{fallback || <AdvancedLoadingSpinner text="Loading..." />}</>;
@@ -133,7 +133,7 @@ export const ContentLoader: React.FC<{ type: 'card' | 'list' | 'grid' | 'text' }
     case 'list':
       return (
         <div className="space-y-3">
-          {Array.from({ length: 5 }).map((_, i) => (
+          {Array.from({ length: 5 }).map((_i) => (
             <div key={i} className="flex items-center space-x-3">
               <SkeletonImage className="w-10 h-10 rounded-full" />
               <div className="flex-1">
@@ -146,7 +146,7 @@ export const ContentLoader: React.FC<{ type: 'card' | 'list' | 'grid' | 'text' }
     case 'grid':
       return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {Array.from({ length: 6 }).map((_, i) => (
+          {Array.from({ length: 6 }).map((_i) => (
             <SkeletonCard key={i} className="h-40" />
           ))}
         </div>

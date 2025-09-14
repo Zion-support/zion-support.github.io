@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Globe, 
-  Cpu, 
-  Database, 
-  Shield, 
-  Rocket, 
+  Brain
+  Zap
+  Globe
+  Cpu
+  Database
+  Shield
+  Rocket
   Star,
   TrendingUp,
   Users,
@@ -24,52 +24,52 @@ import {
 } from 'lucide-react';
 
 const AI2026_2030UltimatePredictionsShowcase = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [currentPrediction, setCurrentPrediction] = useState(0);
+  const [activeTabsetActiveTab] = useState('overview');
+  const [currentPredictionsetCurrentPrediction] = useState(0);
 
   const predictions = [
     {
       year: '2026',
       title: 'Neural Interface Revolution',
-      description: 'Direct brain-computer interfaces become commercially viable, enabling thought-controlled computing and enhanced cognitive capabilities.',
+      description: 'Direct brain-computer interfaces become commercially viablenabling thought-controlled computing and enhanced cognitive capabilities.',
       impact: 'Transform human-computer interaction forever',
-      technologies: ['Neural Implants', 'Brain-Computer Interfaces', 'Cognitive Enhancement'],
+      technologies: ['Neural Implants'Brain-Computer Interfaces'Cognitive Enhancement'],
       icon: Brain,
       color: 'from-purple-500 to-pink-500'
     },
     {
       year: '2027',
       title: 'Quantum AI Fusion',
-      description: 'Quantum computing and AI merge to create unprecedented problem-solving capabilities, revolutionizing cryptography and optimization.',
+      description: 'Quantum computing and AI merge to create unprecedented problem-solving capabilitiesrevolutionizing cryptography and optimization.',
       impact: 'Solve previously impossible computational challenges',
-      technologies: ['Quantum AI', 'Quantum Machine Learning', 'Quantum Optimization'],
+      technologies: ['Quantum AI'Quantum Machine Learning'Quantum Optimization'],
       icon: Atom,
       color: 'from-blue-500 to-cyan-500'
     },
     {
       year: '2028',
       title: 'Autonomous Everything',
-      description: 'AI systems achieve full autonomy across industries, from self-managing cities to completely automated supply chains.',
+      description: 'AI systems achieve full autonomy across industriesfrom self-managing cities to completely automated supply chains.',
       impact: 'Eliminate human intervention in routine operations',
-      technologies: ['Autonomous Systems', 'Self-Managing Infrastructure', 'AI Governance'],
+      technologies: ['Autonomous Systems'Self-Managing Infrastructure'AI Governance'],
       icon: Cpu,
       color: 'from-green-500 to-emerald-500'
     },
     {
       year: '2029',
       title: 'Emotional AI Mastery',
-      description: 'AI achieves true emotional intelligence, understanding and responding to human emotions with unprecedented accuracy.',
+      description: 'AI achieves true emotional intelligenceunderstanding and responding to human emotions with unprecedented accuracy.',
       impact: 'Revolutionize human-AI relationships and therapy',
-      technologies: ['Emotional AI', 'Empathetic Computing', 'AI Therapy'],
+      technologies: ['Emotional AI'Empathetic Computing'AI Therapy'],
       icon: Users,
       color: 'from-orange-500 to-red-500'
     },
     {
       year: '2030',
       title: 'Consciousness Integration',
-      description: 'AI systems develop forms of consciousness, leading to new ethical frameworks and collaborative human-AI societies.',
+      description: 'AI systems develop forms of consciousnessleading to new ethical frameworks and collaborative human-AI societies.',
       impact: 'Redefine what it means to be conscious and intelligent',
-      technologies: ['Artificial Consciousness', 'AI Rights', 'Human-AI Collaboration'],
+      technologies: ['Artificial Consciousness'AI Rights'Human-AI Collaboration'],
       icon: Lightbulb,
       color: 'from-yellow-500 to-orange-500'
     }
@@ -109,18 +109,18 @@ const AI2026_2030UltimatePredictionsShowcase = () => {
   ];
 
   const stats = [
-    { label: 'AI Adoption Rate', value: '95%', icon: TrendingUp },
-    { label: 'Job Transformation', value: '80%', icon: Users },
-    { label: 'Productivity Increase', value: '300%', icon: BarChart3 },
-    { label: 'New Industries', value: '50+', icon: Network }
+    { label: 'AI Adoption Rate'value: '95%'icon: TrendingUp },
+    { label: 'Job Transformation'value: '80%'icon: Users },
+    { label: 'Productivity Increase'value: '300%'icon: BarChart3 },
+    { label: 'New Industries'value: '50+'icon: Network }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPrediction((prev) => (prev + 1) % predictions.length);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -129,8 +129,8 @@ const AI2026_2030UltimatePredictionsShowcase = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -145,12 +145,12 @@ const AI2026_2030UltimatePredictionsShowcase = () => {
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  transition={{ delay: index * 0.1duration: 0.5 }}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center min-w-[150px]"
                 >
                   <stat.icon className="w-8 h-8 mx-auto mb-2 text-purple-400" />
@@ -168,14 +168,14 @@ const AI2026_2030UltimatePredictionsShowcase = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
+          transition={{ delay: 0.5duration: 0.8 }}
           className="text-center mb-16"
         >
           <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Revolutionary Predictions
           </h3>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Each year brings unprecedented breakthroughs that will fundamentally change how we live, work, and think
+            Each year brings unprecedented breakthroughs that will fundamentally change how we liveworkand think
           </p>
         </motion.div>
 
@@ -183,9 +183,9 @@ const AI2026_2030UltimatePredictionsShowcase = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentPrediction}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0x: 100 }}
+              animate={{ opacity: 1x: 0 }}
+              exit={{ opacity: 0x: -100 }}
               transition={{ duration: 0.5 }}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12"
             >
@@ -211,7 +211,7 @@ const AI2026_2030UltimatePredictionsShowcase = () => {
                   </div>
                   
                   <div className="flex flex-wrap gap-2">
-                    {predictions[currentPrediction].technologies.map((tech, index) => (
+                    {predictions[currentPrediction].technologies.map((techindex) => (
                       <span
                         key={index}
                         className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium"
@@ -226,7 +226,7 @@ const AI2026_2030UltimatePredictionsShowcase = () => {
           </AnimatePresence>
           
           <div className="flex justify-center mt-8 gap-2">
-            {predictions.map((_, index) => (
+            {predictions.map((_index) => (
               <button
                 key={index}
                 onClick={() => setCurrentPrediction(index)}
@@ -242,33 +242,33 @@ const AI2026_2030UltimatePredictionsShowcase = () => {
       {/* Key Trends Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.8 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ delay: 0.7duration: 0.8 }}
           className="text-center mb-16"
         >
           <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
             Key Trends by Category
           </h3>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Understanding the broader implications across technology, business, and society
+            Understanding the broader implications across technologybusinessand society
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {keyTrends.map((category, categoryIndex) => (
+          {keyTrends.map((categoryIndex) => (
             <motion.div
               key={categoryIndex}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 + categoryIndex * 0.1, duration: 0.5 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ delay: 0.8 + categoryIndex * 0.1duration: 0.5 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
             >
               <h4 className="text-2xl font-bold text-white mb-6 text-center">
                 {category.category}
               </h4>
               <ul className="space-y-3">
-                {category.trends.map((trend, trendIndex) => (
+                {category.trends.map((trendIndex) => (
                   <li key={trendIndex} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-300">{trend}</span>
@@ -283,9 +283,9 @@ const AI2026_2030UltimatePredictionsShowcase = () => {
       {/* Call to Action */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ delay: 1duration: 0.8 }}
           className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-12"
         >
           <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">

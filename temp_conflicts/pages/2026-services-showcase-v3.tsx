@@ -22,17 +22,17 @@ export default function ServicesShowcase2026V3() {
     >
       <Head>
         <title>Revolutionary 2026 Services Showcase | Zion Tech Group</title>
-        <meta name="description" content="Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions. Transform your business with revolutionary services designed for the future." />
-        <meta name="keywords" content="2026 services, AI services, quantum computing, micro SAAS, emerging technology, blockchain, metaverse, autonomous systems, biotech AI, climate AI" />
-        <meta name="robots" content="index, follow" />
+        <meta name="description" content="Discover our cutting-edge 2026 micro SAASAIand emerging technology solutions. Transform your business with revolutionary services designed for the future." />
+        <meta name="keywords" content="2026 servicesAI servicesquantum computingmicro SAASemerging technologyblockchainmetaverseautonomous systemsbiotech AIclimate AI" />
+        <meta name="robots" content="indexfollow" />
         <meta property="og:title" content="Revolutionary 2026 Services Showcase | Zion Tech Group" />
-        <meta property="og:description" content="Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions. Transform your business with revolutionary services designed for the future." />
+        <meta property="og:description" content="Discover our cutting-edge 2026 micro SAASAIand emerging technology solutions. Transform your business with revolutionary services designed for the future." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-v3" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image-2026-services.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Revolutionary 2026 Services Showcase | Zion Tech Group" />
-        <meta name="twitter:description" content="Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions." />
+        <meta name="twitter:description" content="Discover our cutting-edge 2026 micro SAASAIand emerging technology solutions." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image-2026-services.jpg" />
         <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase-v3" />
       </Head>
@@ -45,15 +45,15 @@ export default function ServicesShowcase2026V3() {
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
                 Revolutionary 2026 Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-                Experience the future of technology with our cutting-edge micro SAAS, AI, and emerging technology solutions. 
+                Experience the future of technology with our cutting-edge micro SAASAIand emerging technology solutions. 
                 Transform your business with services designed for tomorrow&apos;s challenges.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -87,8 +87,8 @@ export default function ServicesShowcase2026V3() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >

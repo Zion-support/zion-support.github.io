@@ -37,12 +37,12 @@ const QuantumAIContentShowcase2026 = () => {
             Quantum AI 2026 Content
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-            Explore the revolutionary world of quantum AI and discover how it's transforming business intelligence, decision-making, and optimization.
+            Explore the revolutionary world of quantum AI and discover how it's transforming business intelligencedecision-makingand optimization.
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {contentItems.map((item, index) => (
+          {contentItems.map((itemindex) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center justify-between mb-6">
                 <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-black px-4 py-2 rounded-full text-sm font-bold">

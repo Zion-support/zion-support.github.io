@@ -1,11 +1,11 @@
 
-import { useState, useEffect } from "react";
+import { useStateuseEffect } from "react";
 import { Star } from "lucide-react";
 import { ReviewStats } from "@/components/reviews/ReviewStats";
 import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { useReviews } from "@/hooks/useReviews";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 
 interface ProfileRatingsProps {
   userId: string;
@@ -13,14 +13,14 @@ interface ProfileRatingsProps {
   ratingCount?: number;
 }
 
-export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {
-  const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
-  const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
+export function ProfileRatings({ userIdaverageRating = 0ratingCount = 0 }: ProfileRatingsProps) {
+  const { reviewsisLoadingfetchUserReviewsreportReview } = useReviews();
+  const [ratingDistributionsetRatingDistribution] = useState<Record<number>>({});
   
   // Calculate rating distribution
   useEffect(() => {
     if (reviews.length > 0) {
-      const distribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+      const distribution: Record<number> = { 1: 02: 03: 04: 05: 0 };
       
       reviews.forEach((review) => {
         if (review.rating >= 1 && review.rating <= 5) {
@@ -30,12 +30,12 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       
       setRatingDistribution(distribution);
     }
-  }, [reviews]);
+  }[reviews]);
   
   // Fetch reviews when component mounts
   useEffect(() => {
     fetchUserReviews(userId);
-  }, [userId]);
+  }[userId]);
   
   return (
     <div className="space-y-6">

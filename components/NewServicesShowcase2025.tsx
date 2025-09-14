@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, DollarSign, Users, Zap, Target, CheckCircle } from 'lucide-react';
+ArrowRightTrendingUpDollarSignUsersZapTargetCheckCircle
 
 export default function NewServicesShowcase2025() {
   const newServices = [
@@ -8,25 +8,25 @@ export default function NewServicesShowcase2025() {
       title: "Generative AI Enterprise Transformation",
       description: "Transform your enterprise with comprehensive AI solutions achieving 40% cost reduction and 300% productivity gains.",
       price: "$2,999/month",
-      features: ["Customer personalization", "Content generation", "Process automation", "Analytics insights"],
+      features: ["Customer personalization"Content generation"Process automation"Analytics insights"],
       link: "/blog/ai-2025-generative-ai-enterprise-transformation",
       icon: TrendingUp,
       color: "from-cyan-500 to-blue-500"
     },
     {
       title: "Retail AI Transformation Suite",
-      description: "Complete retail transformation with AI-powered customer experience, inventory management, and dynamic pricing.",
+      description: "Complete retail transformation with AI-powered customer experienceinventory managementand dynamic pricing.",
       price: "$1,999/month",
-      features: ["Customer personalization", "Inventory optimization", "Dynamic pricing", "Customer service AI"],
+      features: ["Customer personalization"Inventory optimization"Dynamic pricing"Customer service AI"],
       link: "/case-studies/ai-2025-global-retail-transformation-breakthrough",
       icon: DollarSign,
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "AI Implementation Mastery Program",
-      description: "Complete implementation guide with step-by-step roadmap, ROI frameworks, and expert consultation.",
+      description: "Complete implementation guide with step-by-step roadmapROI frameworksand expert consultation.",
       price: "$1,499/month",
-      features: ["Strategic planning", "Implementation roadmap", "ROI frameworks", "Expert consultation"],
+      features: ["Strategic planning"Implementation roadmap"ROI frameworks"Expert consultation"],
       link: "/resources/ai-2025-complete-implementation-master-guide",
       icon: Target,
       color: "from-green-500 to-emerald-500"
@@ -45,14 +45,14 @@ export default function NewServicesShowcase2025() {
             Revolutionary AI Services for 2025
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our latest AI-powered services designed to transform your business operations, 
-            reduce costs, and drive unprecedented growth. Proven results with measurable ROI.
+            Discover our latest AI-powered services designed to transform your business operations
+            reduce costsand drive unprecedented growth. Proven results with measurable ROI.
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {newServices.map((service, index) => {
+          {newServices.map((serviceindex) => {
             const IconComponent = service.icon;
             return (
               <div
@@ -81,7 +81,7 @@ export default function NewServicesShowcase2025() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Features:</h4>
                   <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map((featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>

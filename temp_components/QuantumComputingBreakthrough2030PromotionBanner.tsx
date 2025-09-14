@@ -29,8 +29,8 @@ export default function QuantumComputingBreakthrough2030PromotionBanner() {
 
           {/* Description */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Revolutionary quantum computing breakthroughs featuring error-corrected quantum computers, 
-            quantum internet, and 50,000% processing improvements that will transform everything.
+            Revolutionary quantum computing breakthroughs featuring error-corrected quantum computers
+            quantum internetand 50,000% processing improvements that will transform everything.
           </p>
 
           {/* Key highlights */}

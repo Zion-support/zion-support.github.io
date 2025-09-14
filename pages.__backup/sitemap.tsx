@@ -37,7 +37,7 @@ export default function SitemapPage() {
                 <a href="/about" className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
                   <div className="text-2xl font-bold text-fuchsia-400 mb-2">ℹ️</div>
                   <h3 className="text-lg font-semibold mb-2">About Us</h3>
-                  <p className="text-sm text-white/70">Company mission, vision, and story</p>
+                  <p className="text-sm text-white/70">Company missionvisionand story</p>
                 </a>
                 <a href="/services" className="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
                   <div className="text-2xl font-bold text-green-400 mb-2">⚙️</div>

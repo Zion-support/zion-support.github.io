@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Phone, Mail, MapPin, Globe, 
-  Twitter, Linkedin, Facebook, Instagram,
-  ArrowRight, Rocket, Brain, Cpu, Shield,
-  Star, Users, TrendingUp, Zap
+  PhoneMailMapPinGlobe
+  TwitterLinkedinFacebookInstagram,
+  ArrowRightRocketBrainCpuShield,
+  StarUsersTrendingUpZap
 } from 'lucide-react';
 
 const contactInfo = {
@@ -18,54 +18,54 @@ const serviceCategories = [
   {
     title: 'Next-Generation AI',
     services: [
-      { name: 'AI Multimodal Fusion', href: '/ai-multimodal-fusion-platform' },
-      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine' },
-      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' },
-      { name: 'AI Quantum Hybrid Computing', href: '/ai-quantum-hybrid-computing' }
+      { name: 'AI Multimodal Fusion'href: '/ai-multimodal-fusion-platform' },
+      { name: 'AI Autonomous Decision Engine'href: '/ai-autonomous-decision-engine' },
+      { name: 'AI Emotional Intelligence'href: '/ai-emotional-intelligence-platform' },
+      { name: 'AI Quantum Hybrid Computing'href: '/ai-quantum-hybrid-computing' }
     ]
   },
   {
     title: 'Cutting-Edge IT',
     services: [
-      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
-      { name: '5G Private Networks', href: '/5g-private-network-solutions' },
-      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' }
+      { name: 'Zero Trust Architecture'href: '/zero-trust-network-architecture' },
+      { name: 'Edge Computing Orchestration'href: '/edge-computing-orchestration' },
+      { name: '5G Private Networks'href: '/5g-private-network-solutions' },
+      { name: 'Blockchain Infrastructure'href: '/blockchain-infrastructure-platform' }
     ]
   },
   {
     title: 'Innovative SaaS',
     services: [
-      { name: 'AI Brand Personality', href: '/ai-brand-personality-generator' },
-      { name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform' },
-      { name: 'AI Meeting Transcriber', href: '/ai-meeting-transcriber-pro' },
-      { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion' }
+      { name: 'AI Brand Personality'href: '/ai-brand-personality-generator' },
+      { name: 'Virtual Event Holograms'href: '/virtual-event-hologram-platform' },
+      { name: 'AI Meeting Transcriber'href: '/ai-meeting-transcriber-pro' },
+      { name: 'AI Mental Health Companion'href: '/ai-mental-health-companion' }
     ]
   }
 ];
 
 const companyLinks = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'News', href: '/news' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Resources', href: '/resources' }
+  { name: 'About Us'href: '/about' },
+  { name: 'Careers'href: '/careers' },
+  { name: 'News'href: '/news' },
+  { name: 'Case Studies'href: '/case-studies' },
+  { name: 'Blog'href: '/blog' },
+  { name: 'Resources'href: '/resources' }
 ];
 
 const supportLinks = [
-  { name: 'Contact Support', href: '/contact' },
-  { name: 'Documentation', href: '/docs' },
-  { name: 'API Reference', href: '/api' },
-  { name: 'Status Page', href: '/status' },
-  { name: 'Security', href: '/security' },
-  { name: 'Privacy Policy', href: '/privacy' }
+  { name: 'Contact Support'href: '/contact' },
+  { name: 'Documentation'href: '/docs' },
+  { name: 'API Reference'href: '/api' },
+  { name: 'Status Page'href: '/status' },
+  { name: 'Security'href: '/security' },
+  { name: 'Privacy Policy'href: '/privacy' }
 ];
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
-  { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Globe }];
+  { name: 'LinkedIn'href: 'https://www.linkedin.com/company/zion-tech-group'icon: Linkedin },
+  { name: 'Instagram'href: 'https://www.instagram.com/ziontechgroup'icon: Instagram },
+  { name: 'GitHub'href: 'https://github.com/Zion-Holdings'icon: Globe }];
 
 export default function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
@@ -78,8 +78,8 @@ export default function EnhancedFooter() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -96,7 +96,7 @@ export default function EnhancedFooter() {
               </div>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Leading provider of 600+ revolutionary AI, quantum computing, and IT services. 
+                Leading provider of 600+ revolutionary AIquantum computingand IT services. 
                 Delivering 1000% ROI through cutting-edge solutions that transform businesses.
               </p>
               
@@ -118,12 +118,12 @@ export default function EnhancedFooter() {
           </div>
 
           {/* Service Categories */}
-          {serviceCategories.map((category, index) => (
+          {serviceCategories.map((categoryindex) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               viewport={{ once: true }}
             >
               <h3 className="text-lg font-semibold text-white mb-6">{category.title}</h3>
@@ -149,9 +149,9 @@ export default function EnhancedFooter() {
           {/* Company & Support Links */}
           <div className="grid grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.2 }}
               viewport={{ once: true }}
             >
               <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
@@ -170,9 +170,9 @@ export default function EnhancedFooter() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.3 }}
               viewport={{ once: true }}
             >
               <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
@@ -194,9 +194,9 @@ export default function EnhancedFooter() {
           {/* Stats & Social */}
           <div className="grid grid-cols-1 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.4 }}
               viewport={{ once: true }}
             >
               <h4 className="text-lg font-semibold text-white mb-4">Our Impact</h4>
@@ -221,9 +221,9 @@ export default function EnhancedFooter() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.5 }}
               viewport={{ once: true }}
             >
               <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
@@ -247,9 +247,9 @@ export default function EnhancedFooter() {
 
         {/* Newsletter Signup */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
           viewport={{ once: true }}
           className="mt-12 pt-12 border-t border-gray-700/50"
         >
@@ -258,7 +258,7 @@ export default function EnhancedFooter() {
               Stay Updated with Latest Innovations
             </h3>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              Get exclusive insights into the latest AI, quantum computing, and IT innovations. 
+              Get exclusive insights into the latest AIquantum computingand IT innovations. 
               Be the first to know about new services and breakthrough technologies.
             </p>
             

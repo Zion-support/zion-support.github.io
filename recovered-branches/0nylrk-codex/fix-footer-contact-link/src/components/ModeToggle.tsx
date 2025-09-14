@@ -1,5 +1,5 @@
 
-import { Moon, Sun } from "lucide-react"
+import { MoonSun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 // Create a simplified theme hook for offline mode
@@ -9,7 +9,7 @@ const useTheme = () => ({
 });
 
 export function ModeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { themesetTheme } = useTheme();
 
   return (
     <Button

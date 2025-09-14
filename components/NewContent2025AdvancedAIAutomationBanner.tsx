@@ -10,14 +10,14 @@ const NewContent2025AdvancedAIAutomationBanner = () => {
             Advanced AI Automation 2025
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-pink-100">
-            Transform your business with advanced AI automation that streamlines operations, reduces costs, and maximizes efficiency across all business functions.
+            Transform your business with advanced AI automation that streamlines operationsreduces costsand maximizes efficiency across all business functions.
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
             <h3 className="text-2xl font-bold mb-4 text-rose-400">Intelligent Automation</h3>
-            <p className="text-pink-100">AI-powered systems that learn, adapt, and optimize continuously</p>
+            <p className="text-pink-100">AI-powered systems that learnadaptand optimize continuously</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
             <h3 className="text-2xl font-bold mb-4 text-rose-400">Complete Integration</h3>

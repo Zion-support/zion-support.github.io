@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
@@ -22,7 +22,7 @@ const contentItems: ContentItem[] = [
     url: '/ai-trends-2025-2030',
     icon: '🔮',
     featured: true,
-    tags: ['quantum AI', 'neural interfaces', 'autonomous AI']
+    tags: ['quantum AI'neural interfaces'autonomous AI']
   },
   {
     id: 'quantum-computing-breakthroughs',
@@ -32,17 +32,17 @@ const contentItems: ContentItem[] = [
     url: '/quantum-computing-breakthroughs-2030',
     icon: '⚛️',
     featured: true,
-    tags: ['quantum AI', 'quantum cryptography', 'quantum simulation']
+    tags: ['quantum AI'quantum cryptography'quantum simulation']
   },
   {
     id: 'neural-interface-revolution',
     title: 'Neural Interface Revolution 2030',
-    description: 'Direct brain-computer interfaces that will transform how we think, communicate, and interact with technology.',
+    description: 'Direct brain-computer interfaces that will transform how we thinkcommunicateand interact with technology.',
     category: 'Neural Technology',
     url: '/neural-interface-revolution-2030',
     icon: '🧠',
     featured: true,
-    tags: ['BCI', 'thought control', 'memory enhancement']
+    tags: ['BCI'thought control'memory enhancement']
   },
   {
     id: 'autonomous-business-ai',
@@ -52,7 +52,7 @@ const contentItems: ContentItem[] = [
     url: '/autonomous-business-ai',
     icon: '🤖',
     featured: false,
-    tags: ['autonomous AI', 'business automation', 'self-managing systems']
+    tags: ['autonomous AI'business automation'self-managing systems']
   },
   {
     id: 'emotional-ai-platform',
@@ -62,7 +62,7 @@ const contentItems: ContentItem[] = [
     url: '/emotional-ai-platform',
     icon: '💝',
     featured: false,
-    tags: ['emotional AI', 'empathy', 'human interaction']
+    tags: ['emotional AI'empathy'human interaction']
   },
   {
     id: 'synthetic-intelligence',
@@ -72,16 +72,16 @@ const contentItems: ContentItem[] = [
     url: '/synthetic-intelligence',
     icon: '🔬',
     featured: false,
-    tags: ['artificial consciousness', 'synthetic minds', 'AI creativity']
+    tags: ['artificial consciousness'synthetic minds'AI creativity']
   }
 ];
 
 export default function InteractiveContentDiscoveryWidget2030() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [filteredContent, setFilteredContent] = useState<ContentItem[]>(contentItems);
+  const [selectedCategorysetSelectedCategory] = useState<string>('All');
+  const [searchTermsetSearchTerm] = useState<string>('');
+  const [filteredContentsetFilteredContent] = useState<ContentItem[]>(contentItems);
 
-  const categories = ['All', ...Array.from(new Set(contentItems.map(item => item.category)))];
+  const categories = ['All'...Array.from(new Set(contentItems.map(item => item.category)))];
 
   useEffect(() => {
     let filtered = contentItems;
@@ -101,7 +101,7 @@ export default function InteractiveContentDiscoveryWidget2030() {
     }
 
     setFilteredContent(filtered);
-  }, [selectedCategory, searchTerm]);
+  }[selectedCategorysearchTerm]);
 
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -125,7 +125,7 @@ export default function InteractiveContentDiscoveryWidget2030() {
             <div className="flex-1">
               <input
                 type="text"
-                placeholder="Search content, tags, or keywords..."
+                placeholder="Search contentagsor keywords..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
@@ -189,7 +189,7 @@ export default function InteractiveContentDiscoveryWidget2030() {
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-6">
-                {item.tags.slice(0, 3).map((tag) => (
+                {item.tags.slice(03).map((tag) => (
                   <span
                     key={tag}
                     className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full"
@@ -245,7 +245,7 @@ export default function InteractiveContentDiscoveryWidget2030() {
               Ready to Explore More Revolutionary Content?
             </h3>
             <p className="text-lg mb-6 opacity-90">
-              Discover our complete library of AI insights, technology predictions, and future innovations.
+              Discover our complete library of AI insightstechnology predictionsand future innovations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

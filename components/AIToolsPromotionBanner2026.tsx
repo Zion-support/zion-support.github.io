@@ -1,16 +1,16 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
-  Zap, 
-  Brain, 
-  Rocket, 
-  Star, 
-  TrendingUp, 
-  Users, 
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  Star
+  TrendingUp
+  Users
   Award,
   ChevronRight,
   Play,
@@ -35,8 +35,8 @@ import {
 } from 'lucide-react';
 
 const AIToolsPromotionBanner2026 = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentTool, setCurrentTool] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentToolsetCurrentTool] = useState(0);
 
   const featuredTools = [
     {
@@ -83,9 +83,9 @@ const AIToolsPromotionBanner2026 = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTool((prev) => (prev + 1) % featuredTools.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentFeature = featuredTools[currentTool];
 
@@ -94,9 +94,9 @@ const AIToolsPromotionBanner2026 = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0y: -100 }}
+        animate={{ opacity: 1y: 0 }}
+        exit={{ opacity: 0y: -100 }}
         transition={{ duration: 0.5 }}
         className="relative overflow-hidden"
       >
@@ -108,8 +108,8 @@ const AIToolsPromotionBanner2026 = () => {
               <div className="flex items-center gap-4 flex-1">
                 <motion.div
                   key={currentTool}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
                   transition={{ duration: 0.3 }}
                   className="flex items-center gap-3"
                 >
@@ -129,7 +129,7 @@ const AIToolsPromotionBanner2026 = () => {
 
               {/* Center Benefits */}
               <div className="hidden lg:flex items-center gap-6">
-                {benefits.map((benefit, index) => (
+                {benefits.map((benefitindex) => (
                   <div key={index} className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400" />
                     <span className="text-sm text-gray-300">{benefit}</span>
@@ -164,14 +164,14 @@ const AIToolsPromotionBanner2026 = () => {
             key={currentTool}
             initial={{ x: '-100%' }}
             animate={{ x: '100%' }}
-            transition={{ duration: 3, ease: 'linear' }}
+            transition={{ duration: 3ease: 'linear' }}
             className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
           />
         </div>
 
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
-          {[...Array(8)].map((_, i) => (
+          {[...Array(8)].map((_i) => (
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400/40 rounded-full"
@@ -180,9 +180,9 @@ const AIToolsPromotionBanner2026 = () => {
                 top: '50%',
               }}
               animate={{
-                y: [0, -15, 0],
-                opacity: [0.3, 0.8, 0.3],
-                scale: [0.5, 1, 0.5],
+                y: [0-150],
+                opacity: [0.30.80.3],
+                scale: [0.510.5],
               }}
               transition={{
                 duration: 2 + i * 0.3,

@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector";
@@ -9,7 +9,7 @@ import { SignUpForm } from "../components/onboarding/SignUpForm";
 type OnboardingStep = "language" | "role" | "signup";
 
 export function MobileOnboarding() {
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
+  const [currentStepsetCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
   
   const goToNextStep = () => {

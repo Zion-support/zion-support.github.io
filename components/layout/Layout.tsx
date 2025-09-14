@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactNode } from 'react';
+import React{ ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
 
@@ -23,7 +23,7 @@ export default Layout;
       {children};
     </div>)
 };
-import React, { useState } from 'react';
+import React{ useState } from 'react';
       {/* Top Contact Bar */}
       <TopContactBar />
       
@@ -76,7 +76,7 @@ import React, { useState } from 'react';
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            transition={{ type: 'spring'damping: 25stiffness: 200 }}
             className="absolute left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/20 overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
@@ -240,10 +240,10 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Back to top button */}
       <motion.button
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0y: 100 }}
+        animate={{ opacity: 1y: 0 }}
         transition={{ delay: 1 }}
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        onClick={() => window.scrollTo({ top: 0behavior: 'smooth' })}
         className="fixed bottom-8 right-8 z-40 p-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-cyan-300/50"
         aria-label="Back to top"
       >

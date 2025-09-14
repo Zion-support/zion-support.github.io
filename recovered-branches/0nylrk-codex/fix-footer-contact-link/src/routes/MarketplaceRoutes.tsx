@@ -1,5 +1,5 @@
 
-import { Route, Routes } from "react-router-dom";
+import { Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Marketplace from "@/pages/Marketplace";
 import Categories from "@/pages/Categories";

@@ -1,7 +1,7 @@
 
 import { Droppable } from "react-beautiful-dnd";
 import { JobApplication } from "@/types/jobs";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CandidateCard } from "./CandidateCard";
 
@@ -66,7 +66,7 @@ export function KanbanColumn({
               {...provided.droppableProps}
               className="min-h-full space-y-2"
             >
-              {applications.map((application, index) => (
+              {applications.map((applicationindex) => (
                 <CandidateCard 
                   key={application.id}
                   application={application}

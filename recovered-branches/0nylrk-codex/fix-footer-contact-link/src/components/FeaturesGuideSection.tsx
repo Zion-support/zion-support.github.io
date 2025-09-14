@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { GradientHeading } from "./GradientHeading";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { Button } from "./ui/button";
 import { 
-  Users, 
-  Zap, 
-  Settings, 
-  MessageSquare, 
+  Users
+  Zap
+  Settings
+  MessageSquare
   Sparkles,
   ArrowRight,
   BarChart3,
@@ -33,11 +33,11 @@ export function FeaturesGuideSection() {
     {
       id: "talent-directory",
       title: "Talent Directory",
-      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",
+      description: "Browse our curated collection of AI and tech specialistsfiltered by expertiseavailabilityand ratings.",
       icon: <Users className="h-10 w-10 text-zion-purple" />,
       instructions: [
         "Access the talent directory from the main navigation",
-        "Use filters to narrow down by skills, experience, and pricing",
+        "Use filters to narrow down by skillsexperienceand pricing",
         "Save favorite profiles for future reference",
         "Contact talents directly or request quotes through their profiles"
       ],
@@ -47,7 +47,7 @@ export function FeaturesGuideSection() {
     {
       id: "services",
       title: "Services Marketplace",
-      description: "Discover professional services for your AI and tech needs, from development to consulting.",
+      description: "Discover professional services for your AI and tech needsfrom development to consulting.",
       icon: <Zap className="h-10 w-10 text-zion-cyan" />,
       instructions: [
         "Browse service categories on the marketplace",
@@ -75,7 +75,7 @@ export function FeaturesGuideSection() {
     {
       id: "analytics",
       title: "Marketplace Analytics",
-      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",
+      description: "Gain insights into industry trendspricing benchmarksand marketplace activity.",
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
       instructions: [
         "Access analytics from your user dashboard",
@@ -89,7 +89,7 @@ export function FeaturesGuideSection() {
     {
       id: "ai-assistant",
       title: "Zion AI Assistant",
-      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",
+      description: "Get real-time helprecommendationsand marketplace guidance from our AI assistant.",
       icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,
       instructions: [
         "Click on the chat icon in the bottom right corner",
@@ -109,7 +109,7 @@ export function FeaturesGuideSection() {
       instructions: [
         "Create or log in to your account",
         "Navigate to 'Create Listing' in your dashboard",
-        "Choose between talent profile, service, or equipment listing",
+        "Choose between talent profileserviceor equipment listing",
         "Complete the guided form and publish your listing"
       ],
       link: "/create-profile",
@@ -118,7 +118,7 @@ export function FeaturesGuideSection() {
     {
       id: "help-center",
       title: "Help & Resources",
-      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",
+      description: "Access guidestutorialsand support resources to maximize your marketplace experience.",
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,
       instructions: [
         "Visit our comprehensive knowledge base",
@@ -144,7 +144,7 @@ export function FeaturesGuideSection() {
 
         <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">
-            {features.slice(0, 4).map(feature => (
+            {features.slice(04).map(feature => (
               <TabsTrigger 
                 key={feature.id} 
                 value={feature.id}
@@ -189,7 +189,7 @@ export function FeaturesGuideSection() {
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
                   <ol className="list-decimal list-inside space-y-3 pl-4">
-                    {feature.instructions.map((instruction, idx) => (
+                    {feature.instructions.map((instructionidx) => (
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
                         {instruction}

@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react';
+PhoneMailMapPinCheckArrowRightEye
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 

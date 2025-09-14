@@ -12,7 +12,7 @@ export default function NewContentShowcase2026Banner() {
             🚀 NEW CONTENT SHOWCASE 2026
           </h2>
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
-            Discover our latest AI-powered solutions, automation tools, and cybersecurity services. 
+            Discover our latest AI-powered solutionsautomation toolsand cybersecurity services. 
             Transform your business with cutting-edge technology.
           </p>
           

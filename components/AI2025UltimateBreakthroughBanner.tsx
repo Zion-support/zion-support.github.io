@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const AI2025UltimateBreakthroughBanner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   const content = [
     {
@@ -54,21 +54,21 @@ const AI2025UltimateBreakthroughBanner = () => {
     
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, [isDismissed, content.length]);
+  }[isDismissedcontent.length]);
 
   useEffect(() => {
     const dismissed = localStorage.getItem('ai2025-ultimate-breakthrough-banner-dismissed');
     if (dismissed === 'true') {
       setIsDismissed(true);
     }
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
-    localStorage.setItem('ai2025-ultimate-breakthrough-banner-dismissed', 'true');
+    localStorage.setItem('ai2025-ultimate-breakthrough-banner-dismissed'true');
   };
 
   if (isDismissed) return null;
@@ -156,7 +156,7 @@ const AI2025UltimateBreakthroughBanner = () => {
 
         {/* Progress indicators */}
         <div className="flex justify-center space-x-2 mt-4">
-          {content.map((_, index) => (
+          {content.map((_index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}

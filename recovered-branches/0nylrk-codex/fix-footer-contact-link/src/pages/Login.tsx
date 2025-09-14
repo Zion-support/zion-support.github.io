@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 import { LoginContent } from "@/components/auth/login";
 
 export default function Login() {
-  const { isAuthenticated, user } = useAuth();
+  const { isAuthenticateduser } = useAuth();
   
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {

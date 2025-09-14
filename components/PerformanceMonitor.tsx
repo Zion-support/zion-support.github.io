@@ -1,7 +1,6 @@
-"use client";
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffectuseState } from 'react';
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -13,7 +12,7 @@ interface PerformanceMetrics {
 }
 
 export default function PerformanceMonitor() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metricsetMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
@@ -30,16 +29,16 @@ export default function PerformanceMonitor() {
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'paint') {
           if (entry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            setMetrics(prev => ({ ...prevfcp: entry.startTime }));
           }
         } else if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+          setMetrics(prev => ({ ...prevlcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+          setMetrics(prev => ({ ...prevfid: entry.processingStart - entry.startTime }));
         } else if (entry.entryType === 'layout-shift') {
           if (!(entry as any).hadRecentInput) {
             setMetrics(prev => ({ 
-              ...prev, 
+              ...prev
               cls: (prev.cls || 0) + (entry as any).value 
             }));
           }
@@ -49,7 +48,7 @@ export default function PerformanceMonitor() {
 
     // Observe different types of performance entries
     try {
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+      observer.observe({ entryTypes: ['paint'largest-contentful-paint'first-input'layout-shift'] });
     } catch (e) {
       // Fallback for browsers that don't support all entry types
       observer.observe({ entryTypes: ['paint'] });
@@ -59,7 +58,7 @@ export default function PerformanceMonitor() {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigation) {
       setMetrics(prev => ({ 
-        ...prev, 
+        ...prev
         ttfb: navigation.responseStart - navigation.requestStart 
       }));
     }
@@ -68,23 +67,23 @@ export default function PerformanceMonitor() {
     const paintEntries = performance.getEntriesByType('paint');
     const fmpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
     if (fmpEntry) {
-      setMetrics(prev => ({ ...prev, fmp: fmpEntry.startTime }));
+      setMetrics(prev => ({ ...prevfmp: fmpEntry.startTime }));
     }
 
     // Cleanup
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }[]);
 
   // Send metrics to analytics (if in production)
   useEffect(() => {
     if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
       // Send to Google Analytics or other analytics service
       if (typeof gtag !== 'undefined') {
-        Object.entries(metrics).forEach(([key, value]) => {
+        Object.entries(metrics).forEach(([keyvalue]) => {
           if (value !== null) {
-            gtag('event', 'performance_metric', {
+            gtag('event'performance_metric'{
               metric_name: key,
               metric_value: Math.round(value),
               event_category: 'Performance',
@@ -93,7 +92,7 @@ export default function PerformanceMonitor() {
         });
       }
     }
-  }, [metrics]);
+  }[metrics]);
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {

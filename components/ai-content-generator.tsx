@@ -2,14 +2,14 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles } from 'lucide-react';
+BrainZapShieldBarChart3UsersClockCheckCircleStarArrowRightPlayDownloadCodeGlobeLockSparkles
 
 export default function AIContentGeneratorPage() {
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-white" />,
       title: 'AI-Powered Content Creation',
-      description: 'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.',
+      description: 'Generate high-qualityengaging content using advanced language models trained on millions of articlesblogsand marketing copy.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
       gradient: 'from-purple-400 to-indigo-500'},
     {
@@ -27,7 +27,7 @@ export default function AIContentGeneratorPage() {
     {
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'SEO Optimization',
-      description: 'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.',
+      description: 'Built-in SEO tools that analyze keywordsuggest improvementsand optimize content for search engines.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500'},
     {
@@ -39,7 +39,7 @@ export default function AIContentGeneratorPage() {
     {
       icon: <Clock className="w-8 h-8 text-white" />,
       title: '24/7 Availability',
-      description: 'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.',
+      description: 'Access our AI content generator anytimeanywhere. No downtimeno waitinginstant results.',
       color: 'bg-gradient-to-br from-teal-500 to-blue-600',
       gradient: 'from-teal-400 to-blue-500'}];
 
@@ -105,46 +105,46 @@ export default function AIContentGeneratorPage() {
   const useCases = [
     {
       title: 'Blog Writing',
-      description: 'Generate engaging blog posts, articles, and long-form content in minutes.',
+      description: 'Generate engaging blog postsarticlesand long-form content in minutes.',
       icon: '📝',
-      examples: ['Tech reviews', 'How-to guides', 'Industry insights', 'Product comparisons']
+      examples: ['Tech reviews'How-to guides'Industry insights'Product comparisons']
     },
     {
       title: 'Marketing Copy',
-      description: 'Create compelling ad copy, landing pages, and marketing materials.',
+      description: 'Create compelling ad copylanding pagesand marketing materials.',
       icon: '🎯',
-      examples: ['Facebook ads', 'Google ads', 'Landing pages', 'Email campaigns']
+      examples: ['Facebook ads'Google ads'Landing pages'Email campaigns']
     },
     {
       title: 'Social Media',
-      description: 'Generate engaging social media posts, captions, and hashtag suggestions.',
+      description: 'Generate engaging social media postscaptionsand hashtag suggestions.',
       icon: '📱',
-      examples: ['Instagram posts', 'Twitter threads', 'LinkedIn articles', 'TikTok captions']
+      examples: ['Instagram posts'Twitter threads'LinkedIn articles'TikTok captions']
     },
     {
       title: 'E-commerce',
-      description: 'Write product descriptions, category pages, and promotional content.',
+      description: 'Write product descriptionscategory pagesand promotional content.',
       icon: '🛍️',
-      examples: ['Product descriptions', 'Category pages', 'Promotional emails', 'FAQ sections']
+      examples: ['Product descriptions'Category pages'Promotional emails'FAQ sections']
     }
   ];
 
   const integrations = [
-    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
-    { name: 'Shopify', icon: '🛒', description: 'E-commerce content automation' },
-    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },
-    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
-    { name: 'Slack', icon: '💬', description: 'Team collaboration' },
-    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
+    { name: 'WordPress'icon: '🔌'description: 'Direct plugin integration' },
+    { name: 'Shopify'icon: '🛒'description: 'E-commerce content automation' },
+    { name: 'HubSpot'icon: '📊'description: 'Marketing automation sync' },
+    { name: 'Mailchimp'icon: '📧'description: 'Email campaign content' },
+    { name: 'Slack'icon: '💬'description: 'Team collaboration' },
+    { name: 'Zapier'icon: '⚡'description: '500+ app integrations' }
   ];
 
   return (
     <>
       <Head>
         <title>AI Content Generator | Zion Tech Group - Advanced AI-Powered Content Creation</title>
-        <meta name="description" content="Generate high-quality, SEO-optimized content in seconds with our advanced AI content generator. Support for 50+ languages, plagiarism-free writing, and real-time generation." />
+        <meta name="description" content="Generate high-qualitySEO-optimized content in seconds with our advanced AI content generator. Support for 50+ languagesplagiarism-free writingand real-time generation." />
         <meta property="og:title" content="AI Content Generator | Zion Tech Group" />
-        <meta property="og:description" content="Advanced AI-powered content creation with real-time generation, SEO optimization, and multi-language support." />
+        <meta property="og:description" content="Advanced AI-powered content creation with real-time generationSEO optimizationand multi-language support." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -167,7 +167,7 @@ export default function AIContentGeneratorPage() {
             AI Content Generator
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">
-            Create engaging, SEO-optimized content in seconds with the world's most advanced AI writing assistant
+            Create engagingSEO-optimized content in seconds with the world's most advanced AI writing assistant
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
@@ -225,7 +225,7 @@ export default function AIContentGeneratorPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
@@ -261,7 +261,7 @@ export default function AIContentGeneratorPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCaseindex) => (
               <Card
                 key={index}
                 className="group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300"
@@ -276,7 +276,7 @@ export default function AIContentGeneratorPage() {
                       {useCase.description}
                     </p>
                     <div className="grid grid-cols-2 gap-2">
-                      {useCase.examples.map((example, exampleIndex) => (
+                      {useCase.examples.map((exampleIndex) => (
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {example}
@@ -296,7 +296,7 @@ export default function AIContentGeneratorPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-              Simple, Transparent Pricing
+              SimpleTransparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the plan that fits your content creation needs
@@ -304,7 +304,7 @@ export default function AIContentGeneratorPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((planindex) => (
               <Card
                 key={index}
                 className={`relative group ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''} border ${plan.color} hover:border-purple-500/50 transition-all duration-300`}
@@ -326,7 +326,7 @@ export default function AIContentGeneratorPage() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -361,7 +361,7 @@ export default function AIContentGeneratorPage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
+            {integrations.map((integrationindex) => (
               <Card
                 key={index}
                 className="text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300"

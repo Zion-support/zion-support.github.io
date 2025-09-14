@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React{ useEffectuseState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Rocket, Target, CheckCircle } from 'lucide-react'
+import { ArrowRightBrainCloudShieldZapDatabaseServerLockBarChart3UsersGlobeCodeRocketTargetCheckCircle } from 'lucide-react'
 import PageTransition from '../src/components/PageTransition'
 
 export default function Services() {
 	const title = 'Services — Zion Tech Group'
-	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
-	const [isVisible, setIsVisible] = useState(false)
+	const description = 'AI autonomous systemscloud platformscybersecurityand micro SaaS delivery.'
+	const [isVisiblesetIsVisible] = useState(false)
 
 	useEffect(() => {
 		setIsVisible(true)
-	}, [])
+	}[])
 
 	return (
 		<PageTransition>
@@ -23,7 +23,7 @@ export default function Services() {
 								Our Services
 							</h1>
 							<p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-								From strategy to production, we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business.
+								From strategy to productionwe deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business.
 							</p>
 						</div>
 					</div>
@@ -96,7 +96,7 @@ export default function Services() {
 									<h2 className="text-xl font-semibold text-gray-900 dark:text-white">Cloud Platforms</h2>
 								</div>
 								<p className="mt-4 text-gray-600 dark:text-gray-300 mb-6">
-									Build scalable, resilient cloud infrastructure that grows with your business.
+									Build scalableresilient cloud infrastructure that grows with your business.
 								</p>
 								<ul className="space-y-3 mb-6">
 									<li className="flex items-center gap-x-3 group/item">

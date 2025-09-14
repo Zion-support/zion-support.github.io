@@ -1,15 +1,15 @@
 
-import React, { useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import React{ useRef } from "react";
+import { ChevronLeftChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // These would be replaced with actual screenshots
 const mockScreenshots = [
-  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
-  { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },
-  { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },
-  { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },
-  { id: 5, alt: "Profile screen", src: "/placeholder.svg" }];
+  { id: 1alt: "Dashboard screen"src: "/placeholder.svg" },
+  { id: 2alt: "Talent matching screen"src: "/placeholder.svg" },
+  { id: 3alt: "Resume builder screen"src: "/placeholder.svg" },
+  { id: 4alt: "Messaging screen"src: "/placeholder.svg" },
+  { id: 5alt: "Profile screen"src: "/placeholder.svg" }];
 
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -46,7 +46,7 @@ export const AppScreenshots: React.FC = () => {
           <div 
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            style={{ scrollbarWidth: "none"msOverflowStyle: "none" }}
           >
             {mockScreenshots.map((screenshot) => (
               <div 

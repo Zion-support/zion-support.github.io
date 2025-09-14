@@ -1,7 +1,7 @@
 
 import React from "react";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
+import { CardHeaderCardTitleCardDescription } from "@/components/ui/card";
+import { AlertTriangleAlertCircleShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
 
 interface FraudStatsCardsProps {

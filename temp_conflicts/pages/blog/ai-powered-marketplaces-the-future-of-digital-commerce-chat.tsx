@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
-const FeedbackWidget = dynamic(() => import('../../components/feedback/FeedbackWidget'), { ssr: false });
+const FeedbackWidget = dynamic(() => import('../../components/feedback/FeedbackWidget'){ ssr: false });
 
 const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat: NextPage = () => {
   return (

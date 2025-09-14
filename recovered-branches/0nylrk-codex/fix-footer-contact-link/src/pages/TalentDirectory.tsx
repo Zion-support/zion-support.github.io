@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { TalentGrid } from "@/components/talent/TalentGrid";
@@ -62,7 +62,7 @@ export default function TalentDirectory() {
           <div>
             <h1 className="text-3xl font-bold text-white mb-2">AI & Tech Talent Directory</h1>
             <p className="text-zion-slate-light">
-              Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
+              Connect with expert AI developersdata scientistsML engineersand tech professionals for your projects.
             </p>
           </div>
           

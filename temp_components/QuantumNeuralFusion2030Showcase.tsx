@@ -30,10 +30,10 @@ const QuantumNeuralFusion2030Showcase: React.FC = () => {
   ];
 
   const performanceMetrics = [
-    { metric: "10^15", label: "Quantum Operations/Second", icon: "⚡" },
-    { metric: "99.99%", label: "Quantum Coherence", icon: "🔮" },
-    { metric: "∞", label: "Parallel Dimensions", icon: "🌐" },
-    { metric: "0ms", label: "Quantum Latency", icon: "🚀" }
+    { metric: "10^15"label: "Quantum Operations/Second"icon: "⚡" },
+    { metric: "99.99%"label: "Quantum Coherence"icon: "🔮" },
+    { metric: "∞"label: "Parallel Dimensions"icon: "🌐" },
+    { metric: "0ms"label: "Quantum Latency"icon: "🚀" }
   ];
 
   const applications = [
@@ -78,14 +78,14 @@ const QuantumNeuralFusion2030Showcase: React.FC = () => {
             Beyond Reality
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the fusion of quantum computing and neural networks, creating AI systems 
+            Experience the fusion of quantum computing and neural networkscreating AI systems 
             that operate across infinite dimensions and process information beyond the limits of classical physics.
           </p>
         </div>
 
         {/* Performance Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {performanceMetrics.map((metric, index) => (
+          {performanceMetrics.map((metricindex) => (
             <div key={index} className="text-center p-6 bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-2xl border border-purple-400/30 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-500">
               <div className="text-3xl mb-2">{metric.icon}</div>
               <div className="text-3xl font-bold text-cyan-400 mb-2">{metric.metric}</div>
@@ -96,7 +96,7 @@ const QuantumNeuralFusion2030Showcase: React.FC = () => {
 
         {/* Quantum Features */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {quantumFeatures.map((feature, index) => (
+          {quantumFeatures.map((featureindex) => (
             <div key={index} className="group relative p-8 bg-gradient-to-br from-purple-800/30 to-pink-800/30 rounded-2xl border border-purple-400/20 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-500">
               <div className="flex items-start space-x-4">
                 <div className="text-4xl animate-pulse">{feature.icon}</div>
@@ -121,7 +121,7 @@ const QuantumNeuralFusion2030Showcase: React.FC = () => {
             Quantum Applications
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {applications.map((app, index) => (
+            {applications.map((appindex) => (
               <div key={index} className="text-center p-6 bg-gradient-to-br from-purple-700/50 to-pink-700/50 rounded-xl hover:from-cyan-700/50 hover:to-purple-700/50 transition-all duration-500">
                 <h4 className="text-lg font-bold mb-2 text-white">{app.title}</h4>
                 <p className="text-sm text-gray-300 mb-3">{app.description}</p>
@@ -141,7 +141,7 @@ const QuantumNeuralFusion2030Showcase: React.FC = () => {
               Quantum Neural Network Visualization
             </h3>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Watch as quantum states collapse and reform in real-time, creating infinite processing 
+              Watch as quantum states collapse and reform in real-timecreating infinite processing 
               possibilities across multiple dimensions of reality.
             </p>
           </div>

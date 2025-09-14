@@ -10,7 +10,7 @@ const AdvancedPredictiveAnalyticsBanner2025 = () => {
             Advanced Predictive Analytics 2025
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-purple-100">
-            Harness the power of advanced predictive analytics to forecast market trends, optimize operations, and make data-driven decisions with 99.7% accuracy.
+            Harness the power of advanced predictive analytics to forecast market trendsoptimize operationsand make data-driven decisions with 99.7% accuracy.
           </p>
         </div>
         

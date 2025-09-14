@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { Check, X, User, Star, MoreHorizontal } from "lucide-react";
+import { CheckXUserStarMoreHorizontal } from "lucide-react";
 import { format } from "date-fns";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { Review, ReviewStatus } from "@/types/reviews";
+import { ReviewStatus } from "@/types/reviews";
 
 import {
   Table,
@@ -13,7 +13,7 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import {
   Dialog,
   DialogContent,
@@ -39,10 +39,10 @@ export function ReviewsModerationTable({
   reviews,
   isLoading,
   onRefresh}: ReviewsModerationTableProps) {
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
+  const [selectedReviewsetSelectedReview] = useState<Review | null>(null);
+  const [viewDetailsOpensetViewDetailsOpen] = useState(false);
 
-  const { mutate: updateReviewStatus, isPending } = useMutation({
+  const { mutate: updateReviewStatusisPending } = useMutation({
     mutationFn: async ({
       reviewId,
       status}: {
@@ -52,10 +52,10 @@ export function ReviewsModerationTable({
       const { error } = await supabase
         .from("reviews")
         .update({ status })
-        .eq("id", reviewId);
+        .eq("id"reviewId);
 
       if (error) throw error;
-      return { reviewId, status };
+      return { reviewIdstatus };
     },
     onSuccess: (data) => {
       toast({
@@ -113,11 +113,11 @@ export function ReviewsModerationTable({
   }
 
   const handleApprove = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "approved" });
+    updateReviewStatus({ reviewIdstatus: "approved" });
   };
 
   const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "rejected" });
+    updateReviewStatus({ reviewIdstatus: "rejected" });
   };
 
   const handleViewDetails = (review: Review) => {
@@ -128,7 +128,7 @@ export function ReviewsModerationTable({
   const renderStars = (rating: number) => {
     return (
       <div className="flex">
-        {[1, 2, 3, 4, 5].map((star) => (
+        {[12345].map((star) => (
           <Star
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
@@ -183,7 +183,7 @@ export function ReviewsModerationTable({
               </TableCell>
               <TableCell>{renderStars(review.rating)}</TableCell>
               <TableCell>
-                {format(new Date(review.created_at), "MMM d, yyyy")}
+                {format(new Date(review.created_at)"MMM dyyyy")}
               </TableCell>
               <TableCell>
                 <Badge
@@ -239,12 +239,12 @@ export function ReviewsModerationTable({
                         View details
                       </DropdownMenuItem>
                       {review.status === "approved" && (
-                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.idstatus: "rejected" })}>
                           Mark as rejected
                         </DropdownMenuItem>
                       )}
                       {review.status === "rejected" && (
-                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.idstatus: "approved" })}>
                           Mark as approved
                         </DropdownMenuItem>
                       )}
@@ -264,7 +264,7 @@ export function ReviewsModerationTable({
               <DialogTitle>Review Details</DialogTitle>
               <DialogDescription>
                 Review submitted on{" "}
-                {format(new Date(selectedReview.created_at), "MMMM d, yyyy")}
+                {format(new Date(selectedReview.created_at)"MMMM dyyyy")}
               </DialogDescription>
             </DialogHeader>
 
@@ -363,7 +363,7 @@ export function ReviewsModerationTable({
               {selectedReview.status === "approved" && (
                 <Button
                   variant="destructive"
-                  onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: "rejected" })}
+                  onClick={() => updateReviewStatus({ reviewId: selectedReview.idstatus: "rejected" })}
                   disabled={isPending}
                 >
                   Mark as Rejected
@@ -371,7 +371,7 @@ export function ReviewsModerationTable({
               )}
               {selectedReview.status === "rejected" && (
                 <Button
-                  onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: "approved" })}
+                  onClick={() => updateReviewStatus({ reviewId: selectedReview.idstatus: "approved" })}
                   disabled={isPending}
                 >
                   Mark as Approved

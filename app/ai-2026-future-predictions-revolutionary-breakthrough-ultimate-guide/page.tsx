@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-// import ErrorBoundary from '../../components/ErrorBoundary';
 import BlogPostLayout from '../../components/BlogPostLayout';
 import ContentPromotionBanner from '../../components/ContentPromotionBanner';
 import RelatedContentWidget from '../../components/RelatedContentWidget';

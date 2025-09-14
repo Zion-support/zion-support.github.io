@@ -30,7 +30,7 @@ const BusinessTransformationGuide2025PromotionBanner = () => {
           {/* Description */}
           <p className="text-lg md:text-xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Transform your business for the digital age with our comprehensive guide. 
-            Master AI implementation, digital strategy, and change management to achieve unprecedented growth.
+            Master AI implementationdigital strategyand change management to achieve unprecedented growth.
           </p>
 
           {/* Framework Phases */}

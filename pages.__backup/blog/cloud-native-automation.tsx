@@ -6,9 +6,9 @@ export default function CloudNativeAutomation() {
     <>
       <Head>
         <title>Building Cloud-Native Automation Infrastructure | Zion Tech Group</title>
-        <meta name="description" content="A deep dive into our cloud-native approach to building scalable, reliable automation systems." />
+        <meta name="description" content="A deep dive into our cloud-native approach to building scalablereliable automation systems." />
         <meta property="og:title" content="Building Cloud-Native Automation Infrastructure" />
-        <meta property="og:description" content="A deep dive into our cloud-native approach to building scalable, reliable automation systems." />
+        <meta property="og:description" content="A deep dive into our cloud-native approach to building scalablereliable automation systems." />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content="2025-01-12T00:00:00.000Z" />
         <meta property="article:author" content="Zion Tech Group" />
@@ -30,7 +30,7 @@ export default function CloudNativeAutomation() {
                 <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full border border-blue-400/30">
                   Infrastructure
                 </span>
-                <span className="text-white/60 text-sm">January 12, 2025</span>
+                <span className="text-white/60 text-sm">January 12025</span>
                 <span className="text-white/60 text-sm">•</span>
                 <span className="text-white/60 text-sm">10 min read</span>
               </div>
@@ -38,7 +38,7 @@ export default function CloudNativeAutomation() {
                 Building Cloud-Native Automation Infrastructure
               </h1>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Discover how Zion Tech Group leverages cloud-native technologies to create robust, scalable, 
+                Discover how Zion Tech Group leverages cloud-native technologies to create robustscalable
                 and resilient automation systems that can handle any workload.
               </p>
             </header>
@@ -47,8 +47,8 @@ export default function CloudNativeAutomation() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-cyan-400">The Cloud-Native Advantage</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  In today's rapidly evolving digital landscape, traditional monolithic automation systems 
-                  simply can't keep up. Cloud-native architecture provides the flexibility, scalability, 
+                  In today's rapidly evolving digital landscapetraditional monolithic automation systems 
+                  simply can't keep up. Cloud-native architecture provides the flexibilityscalability
                   and resilience needed for modern automation infrastructure.
                 </p>
                 <div className="bg-white/10 rounded-xl p-6 mb-6">
@@ -79,24 +79,24 @@ export default function CloudNativeAutomation() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Our Architecture Philosophy</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  At Zion Tech Group, we believe in building automation systems that are not just cloud-native, 
+                  At Zion Tech Groupwe believe in building automation systems that are not just cloud-native
                   but truly cloud-optimized. Our architecture follows microservices principles with a focus on 
                   resilience and maintainability.
                 </p>
                 <div className="space-y-6 mb-6">
                   <div className="bg-white/5 rounded-xl p-4">
                     <h3 className="text-lg font-semibold mb-2 text-cyan-400">Microservices Architecture</h3>
-                    <p className="text-white/70">Each automation component operates as an independent service, 
-                    allowing for isolated development, testing, and deployment cycles.</p>
+                    <p className="text-white/70">Each automation component operates as an independent service
+                    allowing for isolated developmentestingand deployment cycles.</p>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4">
                     <h3 className="text-lg font-semibold mb-2 text-fuchsia-400">Event-Driven Design</h3>
-                    <p className="text-white/70">Our systems communicate through asynchronous events, 
+                    <p className="text-white/70">Our systems communicate through asynchronous events
                     ensuring loose coupling and high scalability.</p>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4">
                     <h3 className="text-lg font-semibold mb-2 text-green-400">Container Orchestration</h3>
-                    <p className="text-white/70">Leveraging Kubernetes for automated deployment, scaling, 
+                    <p className="text-white/70">Leveraging Kubernetes for automated deploymentscaling
                     and management of containerized automation services.</p>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ export default function CloudNativeAutomation() {
                 <h2 className="text-3xl font-bold mb-6 text-blue-400">Automation Patterns & Best Practices</h2>
                 <p className="text-lg text-white/80 mb-6">
                   We've developed proven patterns and practices that ensure our cloud-native automation 
-                  systems are robust, maintainable, and scalable.
+                  systems are robustmaintainableand scalable.
                 </p>
                 <div className="bg-white/10 rounded-xl p-6">
                   <h3 className="text-xl font-semibold mb-3 text-purple-400">Core Automation Patterns:</h3>
@@ -207,11 +207,11 @@ export default function CloudNativeAutomation() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-green-400">Network Security</h4>
-                      <p className="text-sm text-white/70">VPCs, firewalls, and DDoS protection</p>
+                      <p className="text-sm text-white/70">VPCsfirewallsand DDoS protection</p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-blue-400">Compliance Frameworks</h4>
-                      <p className="text-sm text-white/70">SOC 2, ISO 27001, and industry-specific standards</p>
+                      <p className="text-sm text-white/70">SOC 2ISO 27001and industry-specific standards</p>
                     </div>
                   </div>
                 </div>
@@ -220,7 +220,7 @@ export default function CloudNativeAutomation() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Performance Optimization</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  Our cloud-native automation systems are designed for optimal performance, with 
+                  Our cloud-native automation systems are designed for optimal performancewith 
                   continuous optimization and tuning to ensure the best possible user experience.
                 </p>
                 <div className="bg-white/10 rounded-xl p-6">
@@ -248,8 +248,8 @@ export default function CloudNativeAutomation() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-green-400">The Results</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  Our cloud-native automation infrastructure has delivered exceptional results, 
-                  providing the foundation for scalable, reliable automation systems.
+                  Our cloud-native automation infrastructure has delivered exceptional results
+                  providing the foundation for scalablereliable automation systems.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-white/5 rounded-xl p-4">

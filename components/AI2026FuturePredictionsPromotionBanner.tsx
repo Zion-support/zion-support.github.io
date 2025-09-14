@@ -23,7 +23,7 @@ export default function AI2026FuturePredictionsPromotionBanner() {
             AI 2026 Future Predictions
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary Breakthrough Ultimate Guide - Discover the quantum AI revolution, autonomous business systems, 
+            Revolutionary Breakthrough Ultimate Guide - Discover the quantum AI revolutionautonomous business systems
             and transformative technologies that will reshape industries in 2026.
           </p>
         </div>
@@ -110,7 +110,7 @@ export default function AI2026FuturePredictionsPromotionBanner() {
                 <span className="text-white font-bold text-lg">Q1</span>
               </div>
               <h4 className="font-semibold mb-2">Foundation Building</h4>
-              <p className="text-gray-300 text-sm">Infrastructure modernization, data strategy, and team training</p>
+              <p className="text-gray-300 text-sm">Infrastructure modernizationdata strategyand team training</p>
             </div>
             
             <div className="text-center">

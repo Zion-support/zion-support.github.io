@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react";
+import { useStateuseEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { SelectValueSelectTriggerSelectContentSelectItem } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
-import { ProductListing, ListingView } from "@/types/listings";
-import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
+import { ProductListingView } from "@/types/listings";
+import { SearchFilterLayoutGridListStar } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 interface PriceRange {
@@ -31,33 +31,33 @@ export function DynamicListingPage({
   categorySlug,
   listings: allListings,
   categoryFilters,
-  initialPrice = { min: 0, max: 10000 }
+  initialPrice = { min: 0max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [view, setView] = useState<ListingView>("grid");
-  const [isLoading, setIsLoading] = useState(false);
-  const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
+  const [searchQuerysetSearchQuery] = useState("");
+  const [selectedCategorysetSelectedCategory] = useState("all");
+  const [viewsetView] = useState<ListingView>("grid");
+  const [isLoadingsetIsLoading] = useState(false);
+  const [priceRangesetPriceRange] = useState<PriceRange>(initialPrice);
 
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+  const [selectedRatingsetSelectedRating] = useState<number | null>(null);
 
   useEffect(() => {
     const listingsWithPrice = allListings.filter(l => l.price !== null);
     if (listingsWithPrice.length > 0) {
       const min = Math.min(...listingsWithPrice.map(l => l.price || 0));
       const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
-      setPriceRange({ min, max });
+      setPriceRange({ minmax });
     }
-  }, [allListings]);
+  }[allListings]);
 
-  const [currentPriceFilter, setCurrentPriceFilter] = useState<[number, number]>([
+  const [currentPriceFiltersetCurrentPriceFilter] = useState<[number]>([
     initialPrice.min,
     initialPrice.max
   ]);
 
   const handleSliderChange = (values: number[]) => {
-    setCurrentPriceFilter([values[0], values[1]]);
+    setCurrentPriceFilter([values[0]values[1]]);
   };
 
   const filteredListings = allListings.filter(listing => {
@@ -93,9 +93,9 @@ export function DynamicListingPage({
           description: `Your quote request for ${listing.title} has been sent.`
         });
         
-        navigate("/request-quote", {
+        navigate("/request-quote"{
           state: { 
-            serviceType: categorySlug, 
+            serviceType: categorySlug
             specificItem: {
               id: listing.id,
               title: listing.title,
@@ -105,7 +105,7 @@ export function DynamicListingPage({
           }
         });
       }
-    }, 500);
+    }500);
   };
 
   return (
@@ -132,7 +132,7 @@ export function DynamicListingPage({
                 <Select 
                   value={selectedCategory} 
                   onValueChange={(value: string) => {
-                    console.log("Category selected:", value);
+                    console.log("Category selected:"value);
                     setSelectedCategory(value);
                   }}
                 >
@@ -156,7 +156,7 @@ export function DynamicListingPage({
                 </label>
                 <div className="mt-6 px-2">
                   <Slider
-                    defaultValue={[priceRange.min, priceRange.max]}
+                    defaultValue={[priceRange.minpriceRange.max]}
                     min={priceRange.min}
                     max={priceRange.max}
                     step={(priceRange.max - priceRange.min) / 100}
@@ -176,13 +176,13 @@ export function DynamicListingPage({
                   Minimum Rating
                 </label>
                 <div className="flex flex-wrap gap-2">
-                  {[null, 3, 4, 5].map((rating) => (
+                  {[null345].map((rating) => (
                     <Button
                       key={rating === null ? 'any' : rating}
                       variant="outline"
                       size="sm"
                       onClick={() => {
-                        console.log("Rating selected:", rating);
+                        console.log("Rating selected:"rating);
                         setSelectedRating(rating);
                       }}
                       className={`${
@@ -195,7 +195,7 @@ export function DynamicListingPage({
                         "Any"
                       ) : (
                         <div className="flex items-center">
-                          {[...Array(rating)].map((_, i) => (
+                          {[...Array(rating)].map((_i) => (
                             <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />
                           ))}
                           <span className="ml-1">& Up</span>
@@ -213,7 +213,7 @@ export function DynamicListingPage({
                   console.log("Resetting filters");
                   setSearchQuery("");
                   setSelectedCategory("all");
-                  setCurrentPriceFilter([priceRange.min, priceRange.max]);
+                  setCurrentPriceFilter([priceRange.minpriceRange.max]);
                   setSelectedRating(null);
                 }}
               >
@@ -232,7 +232,7 @@ export function DynamicListingPage({
                     placeholder="Search listings..."
                     value={searchQuery}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                      console.log("Search query:", e.target.value);
+                      console.log("Search query:"e.target.value);
                       setSearchQuery(e.target.value);
                     }}
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
@@ -270,7 +270,7 @@ export function DynamicListingPage({
 
             {isLoading ? (
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
-                {[1, 2, 3, 4].map((i) => (
+                {[1234].map((i) => (
                   <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">
                     <Skeleton className="h-48 w-full bg-zion-blue-light/20" />
                     <div className="p-4">
@@ -306,7 +306,7 @@ export function DynamicListingPage({
                   onClick={() => {
                     setSearchQuery("");
                     setSelectedCategory("all");
-                    setCurrentPriceFilter([priceRange.min, priceRange.max]);
+                    setCurrentPriceFilter([priceRange.minpriceRange.max]);
                     setSelectedRating(null);
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"

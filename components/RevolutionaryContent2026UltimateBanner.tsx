@@ -13,7 +13,7 @@ const RevolutionaryContent2026UltimateBanner = () => {
             Revolutionary AI & Technology Content
           </h2>
           <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Discover the cutting-edge technologies and strategies that will define the future of business. Expert insights, real-world case studies, and actionable strategies.
+            Discover the cutting-edge technologies and strategies that will define the future of business. Expert insightsreal-world case studiesand actionable strategies.
           </p>
         </div>
 
