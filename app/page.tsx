@@ -32,6 +32,7 @@ import NewContent2026Showcase from '../components/NewContent2026Showcase';
 import NewContent2025ShowcaseBanner from '../components/NewContent2025ShowcaseBanner';
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
+import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
@@ -56,6 +57,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Revolutionary Content 2025 Banner */}
+        <RevolutionaryContent2025Banner />
+        
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
         
@@ -161,9 +165,9 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <UltimateContentShowcase2025 />
         <NewContent2025PromotionBanner />
         <LatestContentShowcase2025 />
-        <UltimateContentShowcase2025 />
         <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
         <RevolutionaryContent2026Banner />
