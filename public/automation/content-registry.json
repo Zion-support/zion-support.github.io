@@ -141,10 +141,6 @@
       "route": "/blog/ai-automation-trends-2025"
     },
     {
-      "file": "pages/events/index.tsx",
-      "route": "/events"
-    },
-    {
       "file": "pages/automation/index.tsx",
       "route": "/automation"
     },
