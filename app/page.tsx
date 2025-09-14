@@ -1,359 +1,361 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Zap, BookOpen, Users, Target, CheckCircle, Globe, Award } from 'lucide-react';
+import FeaturedContent from './components/FeaturedContent';
+import Testimonials from './components/Testimonials';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className='min-h-screen bg-white'>
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
-              <Star className="w-4 h-4 mr-2" />
-              AI 2025 Revolution - Now Available
+      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+              <span className="text-sm font-medium">🚀 AI & TECHNOLOGY SOLUTIONS</span>
             </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              Transform Your Enterprise with
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> AI 2025</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Transform Your Business with AI
             </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
-              Discover the revolutionary AI technologies that are transforming enterprises in 2025. 
-              From edge computing to quantum AI, unlock unprecedented opportunities for growth and innovation.
+            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Cutting-edge AI, cloud infrastructure, and micro SaaS solutions. 
+              Expert consulting and implementation services for enterprise success.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/blog/ai-2025-edge-computing-revolution-enterprise-transformation"
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
+              <Link
+                href="/services"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Explore AI 2025 Revolution
-                <ArrowRight className="w-5 h-5 ml-2" />
+                Explore Services
               </Link>
-              <Link 
-                href="/resources/ai-2025-implementation-master-guide-ultimate-roadmap"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-lg"
+              <Link
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                Get Implementation Guide
-                <BookOpen className="w-5 h-5 ml-2" />
+                Get Started
               </Link>
-            </div>
-          </div>
-
-          {/* Key Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-            <div className="bg-white p-6 rounded-xl shadow-sm border text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">340%</div>
-              <div className="text-gray-600">Average ROI</div>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm border text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">89%</div>
-              <div className="text-gray-600">Faster Implementation</div>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm border text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">234%</div>
-              <div className="text-gray-600">Success Rate Improvement</div>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm border text-center">
-              <div className="text-3xl font-bold text-orange-600 mb-2">156%</div>
-              <div className="text-gray-600">Competitive Advantage</div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Revolutionary Content Showcase */}
+      <section className="py-16 bg-gradient-to-r from-green-500 via-blue-500 to-purple-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+              <span className="text-sm font-medium">🚀 REVOLUTIONARY CONTENT RELEASE</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Master the AI Revolution: 2025-2026
+            </h2>
+            <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
+              Exclusive access to breakthrough AI strategies, quantum computing insights, and proven transformation methodologies that are reshaping entire industries.
+            </p>
+          </div>
+          
+          {/* Featured Content Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* Ultimate AI Guide */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-xl font-bold mb-3">Ultimate AI Automation Mastery</h3>
+              <p className="text-sm opacity-90 mb-4">
+                Complete implementation guide with 340% ROI strategies, 90-day transformation roadmap, and enterprise-ready solutions.
+              </p>
+              <Link
+                href="/blog/ai-2025-ultimate-business-automation-mastery-complete-guide"
+                className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm"
+              >
+                Read Guide →
+              </Link>
+            </div>
+
+            {/* Quantum AI Breakthrough */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="text-4xl mb-4">⚛️</div>
+              <h3 className="text-xl font-bold mb-3">Quantum AI Revolution 2026</h3>
+              <p className="text-sm opacity-90 mb-4">
+                Discover how quantum-enhanced AI is revolutionizing enterprise operations with 1000x faster processing and breakthrough capabilities.
+              </p>
+              <Link
+                href="/blog/quantum-ai-2026-revolutionary-breakthrough-enterprise-transformation"
+                className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm"
+              >
+                Explore Quantum AI →
+              </Link>
+            </div>
+
+            {/* Success Story */}
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="text-4xl mb-4">🏆</div>
+              <h3 className="text-xl font-bold mb-3">340% ROI Success Story</h3>
+              <p className="text-sm opacity-90 mb-4">
+                How a Fortune 500 retail giant achieved $2.3B additional revenue and market leadership through AI transformation.
+              </p>
+              <Link
+                href="/case-studies/global-retail-ai-transformation-2025-ultimate-success"
+                className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm"
+              >
+                View Case Study →
+              </Link>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/blog"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Explore All Content
+              </Link>
+              <Link
+                href="/case-studies"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                View Success Stories
+              </Link>
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-colors"
+              >
+                Get Free Consultation
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Statistics */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-3xl font-bold text-purple-600 mb-2">500+</div>
+              <div className="text-gray-600">Projects Delivered</div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
+              <div className="text-gray-600">Client Satisfaction</div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-3xl font-bold text-green-600 mb-2">340%</div>
+              <div className="text-gray-600">Average ROI Increase</div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
+              <div className="text-gray-600">Support Available</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Content Spotlight Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-6">
+              <span className="text-sm font-medium">📚 EXCLUSIVE CONTENT</span>
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Latest Insights & Breakthrough Strategies
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Stay ahead of the AI revolution with our cutting-edge research, proven methodologies, and real-world success stories.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Latest Blog Posts */}
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8">Latest AI Insights</h3>
+              
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl border border-blue-100">
+                <div className="flex items-center mb-4">
+                  <div className="bg-blue-500 text-white rounded-full p-2 mr-4">
+                    <span className="text-sm font-bold">NEW</span>
+                  </div>
+                  <span className="text-sm text-gray-600">January 15, 2025</span>
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">
+                  AI 2025: Ultimate Business Automation Mastery
+                </h4>
+                <p className="text-gray-600 mb-4">
+                  Complete implementation guide with 340% ROI strategies, 90-day transformation roadmap, and enterprise-ready solutions that are transforming businesses worldwide.
+                </p>
+                <div className="flex items-center justify-between">
+                  <Link
+                    href="/blog/ai-2025-ultimate-business-automation-mastery-complete-guide"
+                    className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
+                  >
+                    Read Full Guide →
+                  </Link>
+                  <span className="text-sm text-gray-500">15 min read</span>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl border border-green-100">
+                <div className="flex items-center mb-4">
+                  <div className="bg-green-500 text-white rounded-full p-2 mr-4">
+                    <span className="text-sm font-bold">HOT</span>
+                  </div>
+                  <span className="text-sm text-gray-600">January 15, 2025</span>
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">
+                  Quantum AI 2026: Revolutionary Breakthrough
+                </h4>
+                <p className="text-gray-600 mb-4">
+                  Discover how quantum-enhanced AI is revolutionizing enterprise operations with 1000x faster processing and breakthrough capabilities that were impossible before.
+                </p>
+                <div className="flex items-center justify-between">
+                  <Link
+                    href="/blog/quantum-ai-2026-revolutionary-breakthrough-enterprise-transformation"
+                    className="text-green-600 font-semibold hover:text-green-800 transition-colors"
+                  >
+                    Explore Quantum AI →
+                  </Link>
+                  <span className="text-sm text-gray-500">18 min read</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Success Stories */}
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8">Success Stories</h3>
+              
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-xl border border-purple-100">
+                <div className="flex items-center mb-4">
+                  <div className="bg-purple-500 text-white rounded-full p-2 mr-4">
+                    <span className="text-sm font-bold">🏆</span>
+                  </div>
+                  <span className="text-sm text-gray-600">January 15, 2025</span>
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">
+                  Global Retail Giant: 340% ROI Achievement
+                </h4>
+                <p className="text-gray-600 mb-4">
+                  How a Fortune 500 retail corporation achieved $2.3 billion in additional revenue and market leadership through comprehensive AI transformation.
+                </p>
+                <div className="flex items-center justify-between">
+                  <Link
+                    href="/case-studies/global-retail-ai-transformation-2025-ultimate-success"
+                    className="text-purple-600 font-semibold hover:text-purple-800 transition-colors"
+                  >
+                    View Case Study →
+                  </Link>
+                  <span className="text-sm text-gray-500">12 min read</span>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-xl border border-orange-100">
+                <div className="flex items-center mb-4">
+                  <div className="bg-orange-500 text-white rounded-full p-2 mr-4">
+                    <span className="text-sm font-bold">⭐</span>
+                  </div>
+                  <span className="text-sm text-gray-600">Coming Soon</span>
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">
+                  Manufacturing Revolution: 85% Efficiency Gains
+                </h4>
+                <p className="text-gray-600 mb-4">
+                  Exclusive case study: How a global manufacturer transformed operations with AI automation, achieving unprecedented efficiency and cost savings.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-orange-600 font-semibold">
+                    Coming Soon →
+                  </span>
+                  <span className="text-sm text-gray-500">TBD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/blog"
+              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-colors"
+            >
+              Explore All Content
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">AI Automation</h3>
+              <p className="text-gray-600 mb-4">
+                Intelligent automation solutions that streamline operations and boost productivity across your organization.
+              </p>
+              <Link href="/services/ai-automation" className="text-purple-600 font-semibold hover:text-purple-800">
+                Learn More →
+              </Link>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">☁️</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Cloud Infrastructure</h3>
+              <p className="text-gray-600 mb-4">
+                Scalable, secure cloud solutions designed to support your business growth and digital transformation.
+              </p>
+              <Link href="/services/cloud-infrastructure" className="text-purple-600 font-semibold hover:text-purple-800">
+                Learn More →
+              </Link>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">💼</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Micro SaaS</h3>
+              <p className="text-gray-600 mb-4">
+                Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.
+              </p>
+              <Link href="/services/micro-saas" className="text-purple-600 font-semibold hover:text-purple-800">
+                Learn More →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Featured Content Section */}
-      <div className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Featured AI 2025 Content
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our latest insights, case studies, and implementation guides 
-              that are transforming enterprises worldwide.
-            </p>
-          </div>
+      <FeaturedContent />
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            {/* Edge Computing Article */}
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 border border-blue-200">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <span className="text-blue-600 font-semibold text-sm">Featured Article</span>
-                  <div className="flex items-center text-yellow-500">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-              
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                AI 2025: Edge Computing Revolution
-              </h3>
-              
-              <p className="text-gray-600 mb-6">
-                Discover how edge computing is revolutionizing enterprise AI in 2025, enabling real-time 
-                decision-making and autonomous operations at unprecedented scale.
-              </p>
-              
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center text-sm text-gray-500">
-                  <Users className="w-4 h-4 mr-2" />
-                  16 min read
-                </div>
-                <div className="flex items-center text-sm text-gray-500">
-                  <TrendingUp className="w-4 h-4 mr-2" />
-                  Trending
-                </div>
-              </div>
-              
-              <Link 
-                href="/blog/ai-2025-edge-computing-revolution-enterprise-transformation"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
-              >
-                Read Full Article
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
+      {/* Testimonials Section */}
+      <Testimonials />
 
-            {/* Quantum AI Article */}
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8 border border-purple-200">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
-                  <Globe className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <span className="text-purple-600 font-semibold text-sm">Breakthrough Technology</span>
-                  <div className="flex items-center text-yellow-500">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-              
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Quantum AI Breakthrough 2025
-              </h3>
-              
-              <p className="text-gray-600 mb-6">
-                Explore the revolutionary convergence of quantum computing and AI in 2025, unlocking 
-                unprecedented computational power for autonomous enterprise systems.
-              </p>
-              
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center text-sm text-gray-500">
-                  <BookOpen className="w-4 h-4 mr-2" />
-                  20 min read
-                </div>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Award className="w-4 h-4 mr-2" />
-                  Award Winning
-                </div>
-              </div>
-              
-              <Link 
-                href="/blog/quantum-ai-breakthrough-2025-next-generation-autonomy"
-                className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold"
-              >
-                Explore Quantum AI
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-
-            {/* Implementation Guide */}
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 border border-green-200">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
-                  <Target className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <span className="text-green-600 font-semibold text-sm">Master Guide</span>
-                  <div className="flex items-center text-yellow-500">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-              
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                AI 2025 Implementation Master Guide
-              </h3>
-              
-              <p className="text-gray-600 mb-6">
-                Comprehensive guide to implementing AI transformation in 2025, covering strategy, 
-                technology, processes, and best practices for maximum ROI.
-              </p>
-              
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center text-sm text-gray-500">
-                  <BookOpen className="w-4 h-4 mr-2" />
-                  25 min read
-                </div>
-                <div className="flex items-center text-sm text-gray-500">
-                  <CheckCircle className="w-4 h-4 mr-2" />
-                  Complete Guide
-                </div>
-              </div>
-              
-              <Link 
-                href="/resources/ai-2025-implementation-master-guide-ultimate-roadmap"
-                className="inline-flex items-center text-green-600 hover:text-green-800 font-semibold"
-              >
-                Get Master Guide
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Success Stories Section */}
-      <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Real Success Stories
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how leading organizations are achieving remarkable results with AI transformation.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Logistics Case Study */}
-            <div className="bg-white rounded-xl shadow-sm border p-8">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                  <TrendingUp className="w-8 h-8 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900">Global Logistics Transformation</h3>
-                  <p className="text-gray-600">Fortune 500 Company Success Story</p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">340%</div>
-                  <div className="text-sm text-gray-600">ROI in 18 months</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">89%</div>
-                  <div className="text-sm text-gray-600">Reduction in delays</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">234%</div>
-                  <div className="text-sm text-gray-600">Customer satisfaction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-orange-600">$2.3B</div>
-                  <div className="text-sm text-gray-600">Annual savings</div>
-                </div>
-              </div>
-              
-              <p className="text-gray-600 mb-6">
-                Discover how a leading global logistics company achieved unprecedented results through 
-                comprehensive AI transformation, revolutionizing supply chain operations and customer satisfaction.
-              </p>
-              
-              <Link 
-                href="/case-studies/global-logistics-ai-transformation-2025-ultimate-success"
-                className="inline-flex items-center text-green-600 hover:text-green-800 font-semibold"
-              >
-                Read Success Story
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-
-            {/* More Case Studies */}
-            <div className="space-y-6">
-              <div className="bg-white rounded-xl shadow-sm border p-6">
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Manufacturing AI Revolution</h4>
-                <p className="text-gray-600 text-sm mb-4">
-                  How a Fortune 500 manufacturer achieved 600% ROI through autonomous systems and predictive maintenance.
-                </p>
-                <Link href="/case-studies/fortune-500-manufacturing-ai-transformation-2025" className="text-blue-600 hover:text-blue-800 font-semibold text-sm">
-                  View Case Study →
-                </Link>
-              </div>
-              
-              <div className="bg-white rounded-xl shadow-sm border p-6">
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Healthcare AI Breakthrough</h4>
-                <p className="text-gray-600 text-sm mb-4">
-                  A healthcare system improved patient outcomes by 800% using AI-powered diagnostics and treatment optimization.
-                </p>
-                <Link href="/case-studies/healthcare-ai-transformation-2025-success" className="text-blue-600 hover:text-blue-800 font-semibold text-sm">
-                  View Case Study →
-                </Link>
-              </div>
-              
-              <div className="bg-white rounded-xl shadow-sm border p-6">
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Financial Services AI</h4>
-                <p className="text-gray-600 text-sm mb-4">
-                  Global bank achieved 500% improvement in fraud detection and 67% reduction in false positives.
-                </p>
-                <Link href="/case-studies/global-financial-services-ai-revolution" className="text-blue-600 hover:text-blue-800 font-semibold text-sm">
-                  View Case Study →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Enterprise?
+      {/* Call to Action Section */}
+      <section className="py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Ready to Transform Your Business with AI?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Join thousands of organizations already achieving remarkable results with AI 2025. 
-            Start your transformation journey today.
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Join hundreds of companies already benefiting from our AI solutions. 
+            Get started with a free consultation and see how we can help you achieve your goals.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
+              Get Free Consultation
             </Link>
-            <Link 
-              href="/resources/ai-2025-implementation-master-guide-ultimate-roadmap"
-              className="inline-flex items-center px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold text-lg"
+            <Link
+              href="/case-studies"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Download Master Guide
-              <BookOpen className="w-5 h-5 ml-2" />
+              View Success Stories
             </Link>
-          </div>
-          
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">15,000+</div>
-              <div className="text-blue-100">Organizations Transformed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">340%</div>
-              <div className="text-blue-100">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-blue-100">Success Rate</div>
-            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
