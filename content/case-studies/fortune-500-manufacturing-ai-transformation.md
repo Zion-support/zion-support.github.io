@@ -1,5 +1,9 @@
 ---
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-60fa
+<<<<<<< HEAD
 <<<<<<< HEAD
 title: "Fortune 500 Manufacturing: $50M AI Transformation Success Story"
 description: "Discover how a Fortune 500 manufacturing company achieved $50M in cost savings and 340% ROI through comprehensive AI transformation."
@@ -490,7 +494,13 @@ The success of this transformation demonstrates that AI is not just a technology
 
 <<<<<<< HEAD
 *This case study demonstrates Zion Tech Group's expertise in manufacturing AI transformation. Contact us to learn how we can help your organization achieve similar results.*
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 *This case study demonstrates Zion Tech Group's expertise in manufacturing AI transformation. Contact us to learn how we can help your organization achieve similar results.*
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-040d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-510b
+>>>>>>> cursor/create-and-deploy-new-content-60fa

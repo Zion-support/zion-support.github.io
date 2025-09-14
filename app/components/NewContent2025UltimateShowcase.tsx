@@ -1,6 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-60fa
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { ArrowRight, Star, TrendingUp, Users, Award, Zap } from 'lucide-react';
 
@@ -356,6 +360,15 @@ const NewContent2025UltimateShowcase = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-040d
+>>>>>>> 786cfaaf0d2bc00b11a733dfcf6fcdeaa815440e
+=======
+
+  return (
+>>>>>>> cursor/create-and-deploy-new-content-510b
+>>>>>>> cursor/create-and-deploy-new-content-60fa
   );
 };
 
