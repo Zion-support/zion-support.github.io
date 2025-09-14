@@ -211,41 +211,56 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
-<<<<<<< HEAD
-    - id: "ai-2025-enterprise-data-revolution-ultimate-guide"
+    - id: "ai-2025-ultimate-business-transformation-revolution"
       type: "blog"
-      title: "AI 2025: The Enterprise Data Revolution - Ultimate Guide to 800% ROI"
-      file_path: "/content/blog/ai-2025-enterprise-data-revolution-ultimate-guide.md"
-      url: "/blog/ai-2025-enterprise-data-revolution-ultimate-guide"
+      title: "AI 2025: The Ultimate Business Transformation Revolution - 1,500% ROI Through Intelligent Automation"
+      file_path: "/content/blog/ai-2025-ultimate-business-transformation-revolution.md"
+      url: "/blog/ai-2025-ultimate-business-transformation-revolution"
       status: "published"
       created: "2025-01-17"
-      tags: ["AI", "Data Revolution", "Enterprise", "ROI", "Fortune 500", "Data Analytics", "Machine Learning"]
+      tags: ["AI Revolution", "Business Transformation", "ROI", "Fortune 500", "Intelligent Automation", "1,500% ROI"]
       featured: true
       is_new: true
       metrics:
-        roi: "800%"
-        savings: "$4.2M"
-        timeframe: "18 months"
-        accuracy: "99.8%"
-      reading_time: "18 min read"
+        roi: "1,500%"
+        savings: "$2.8B"
+        efficiency: "890%"
+        satisfaction: "99.7%"
+      reading_time: "25 min read"
       
-    - id: "ai-2025-autonomous-operations-revolution"
-      type: "blog"
-      title: "AI 2025: The Autonomous Operations Revolution - 1,200% ROI Through Intelligent Automation"
-      file_path: "/content/blog/ai-2025-autonomous-operations-revolution.md"
-      url: "/blog/ai-2025-autonomous-operations-revolution"
+    - id: "fortune-500-ai-transformation-1500-roi-ultimate-success"
+      type: "case-study"
+      title: "Fortune 500 AI Transformation: $12.8B Company Achieves 1,500% ROI with Revolutionary AI Automation"
+      file_path: "/content/case-studies/fortune-500-ai-transformation-1500-roi-ultimate-success.md"
+      url: "/case-studies/fortune-500-ai-transformation-1500-roi-ultimate-success"
       status: "published"
       created: "2025-01-17"
-      tags: ["AI", "Autonomous Operations", "Intelligent Automation", "ROI", "Fortune 500", "Business Transformation"]
+      tags: ["Fortune 500", "AI Transformation", "ROI", "Case Study", "Success Story", "1,500% ROI", "Manufacturing"]
       featured: true
       is_new: true
       metrics:
-        roi: "1,200%"
-        savings: "$15.8M"
-        timeframe: "24 months"
-        efficiency: "450%"
-      reading_time: "15 min read"
-=======
+        roi: "1,500%"
+        savings: "$2.8B"
+        efficiency: "340%"
+        satisfaction: "99.2%"
+      reading_time: "22 min read"
+      
+    - id: "ai-implementation-ultimate-roadmap-2025-comprehensive"
+      type: "resource"
+      title: "AI Implementation Ultimate Roadmap 2025: From Strategy to 1,500% ROI in 18 Months"
+      file_path: "/content/resources/ai-implementation-ultimate-roadmap-2025-comprehensive.md"
+      url: "/resources/ai-implementation-ultimate-roadmap-2025-comprehensive"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Implementation", "Strategy", "ROI", "Roadmap", "1,500% ROI", "18 Months", "Framework"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,500%"
+        timeframe: "18 months"
+        success: "89%"
+        companies: "500+"
+      reading_time: "35 min read"
     - id: "enterprise-automation-revolution-ultimate-breakthrough"
       type: "blog"
       title: "AI 2025: The Enterprise Automation Revolution - Ultimate Breakthrough Guide"
