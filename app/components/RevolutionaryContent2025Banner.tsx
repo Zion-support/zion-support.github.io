@@ -122,7 +122,7 @@ const RevolutionaryContent2025Banner = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
