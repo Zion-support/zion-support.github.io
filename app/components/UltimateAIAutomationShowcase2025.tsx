@@ -2,200 +2,99 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { 
-  ChevronRightIcon, 
-  ChartBarIcon, 
-  ClockIcon, 
-  CheckCircleIcon,
-  SparklesIcon,
-  TrophyIcon,
-  CurrencyDollarIcon,
-  TrendingUpIcon
-} from '@heroicons/react/24/outline';
 
 const UltimateAIAutomationShowcase2025 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const contentCategories = [
-    { id: 'all', name: 'All Content', count: 12 },
-    { id: 'blog', name: 'Blog Posts', count: 5 },
-    { id: 'case-study', name: 'Case Studies', count: 4 },
-    { id: 'resource', name: 'Resources', count: 3 }
-  ];
-
-  const featuredContent = [
+  const content = [
     {
-      id: 'advanced-automation-mastery',
-      title: 'AI 2025: Advanced Automation Mastery - Ultimate Success Guide',
-      description: 'Transform your business with cutting-edge AI automation solutions. Achieve 1,200% ROI with our proven framework.',
-      url: '/blog/ai-2025-advanced-automation-mastery-ultimate-success-guide',
-      type: 'blog',
-      category: 'Blog Post',
+      id: 'ai-automation-mastery',
+      title: 'AI 2025: Advanced AI Automation Enterprise Mastery',
+      description: 'Ultimate Guide to 2,000% ROI - Transform your enterprise with cutting-edge AI automation that delivers unprecedented results',
+      url: '/blog/ai-2025-advanced-ai-automation-enterprise-mastery-ultimate-guide',
+      type: 'Blog Post',
+      category: 'AI Automation',
       metrics: {
-        roi: '1,200%',
-        savings: '$2.8B',
-        efficiency: '340%',
+        roi: '2,000%',
+        savings: '$8.2B+',
+        efficiency: '95%',
         accuracy: '99.7%'
       },
-      readingTime: '18 min read',
-      isNew: true,
+      readingTime: '28 min read',
       featured: true
     },
     {
-      id: 'fortune-500-transformation',
-      title: 'Fortune 500 AI Automation Transformation: $2.8B Annual Savings',
-      description: 'How a global manufacturing giant achieved 1,200% ROI with comprehensive AI automation implementation.',
-      url: '/case-studies/fortune-500-ai-automation-transformation-ultimate-success',
-      type: 'case-study',
-      category: 'Case Study',
+      id: 'fortune-500-success',
+      title: 'Fortune 500 AI Automation Transformation',
+      description: '$8.2B Annual Savings - 2,000% ROI Success Story - How a global manufacturing giant achieved unprecedented results',
+      url: '/case-studies/fortune-500-ai-automation-transformation-2000-roi-success-story',
+      type: 'Case Study',
+      category: 'Success Stories',
       metrics: {
-        roi: '1,200%',
-        savings: '$2.8B',
-        efficiency: '340%',
-        accuracy: '99.7%'
+        roi: '2,000%',
+        savings: '$8.2B',
+        efficiency: '95%',
+        uptime: '99.9%'
       },
-      readingTime: '15 min read',
-      isNew: true,
+      readingTime: '22 min read',
       featured: true
     },
     {
-      id: 'implementation-framework',
-      title: 'AI Automation Implementation Ultimate Framework 2025',
-      description: 'The complete guide to achieving 1,200% ROI with enterprise AI automation. Proven methodology from 500+ implementations.',
-      url: '/resources/ai-automation-implementation-ultimate-framework-2025',
-      type: 'resource',
-      category: 'Resource',
+      id: 'implementation-guide',
+      title: 'AI Automation Implementation Master Guide 2025',
+      description: 'Complete Roadmap from Strategy to 2,000% ROI - The definitive guide for enterprise transformation',
+      url: '/resources/ai-automation-master-guide-2025',
+      type: 'Resource',
+      category: 'Implementation',
       metrics: {
-        roi: '1,200%',
-        savings: '$2.8B',
-        efficiency: '340%',
-        accuracy: '99.7%'
+        roi: '2,000%',
+        timeline: '18 months',
+        success: '94%',
+        projects: '1,000+'
       },
-      readingTime: '25 min read',
-      isNew: true,
+      readingTime: '35 min read',
       featured: true
-    },
-    {
-      id: 'enterprise-automation-revolution',
-      title: 'AI 2025: The Enterprise Automation Revolution - 500% ROI',
-      description: 'Discover how enterprise automation is transforming businesses with 500% ROI and 340% efficiency gains.',
-      url: '/blog/ai-2025-enterprise-automation-revolution',
-      type: 'blog',
-      category: 'Blog Post',
-      metrics: {
-        roi: '500%',
-        savings: '$200M',
-        efficiency: '340%',
-        accuracy: '98%'
-      },
-      readingTime: '12 min read',
-      isNew: false,
-      featured: false
-    },
-    {
-      id: 'retail-transformation',
-      title: 'Retail AI Transformation 2025: $500M Company Achieves 280% ROI',
-      description: 'Learn how a $500M retail company achieved 280% ROI with AI-powered operations and customer experience.',
-      url: '/case-studies/retail-ai-transformation-2025-ultimate-success',
-      type: 'case-study',
-      category: 'Case Study',
-      metrics: {
-        roi: '280%',
-        savings: '$45M',
-        efficiency: '78%',
-        accuracy: '99.2%'
-      },
-      readingTime: '10 min read',
-      isNew: false,
-      featured: false
-    },
-    {
-      id: 'ai-implementation-guide',
-      title: 'AI Implementation Master Guide 2025: From Strategy to 500% ROI',
-      description: 'Complete implementation guide with proven strategies for achieving 500% ROI in AI automation projects.',
-      url: '/resources/ai-implementation-master-guide-2025',
-      type: 'resource',
-      category: 'Resource',
-      metrics: {
-        roi: '500%',
-        savings: '$2.8B',
-        efficiency: '67%',
-        accuracy: '94%'
-      },
-      readingTime: '20 min read',
-      isNew: false,
-      featured: false
     }
   ];
 
-  const filteredContent = activeCategory === 'all' 
-    ? featuredContent 
-    : featuredContent.filter(content => content.type === activeCategory);
+  const categories = [
+    { id: 'all', name: 'All Content', count: content.length },
+    { id: 'AI Automation', name: 'AI Automation', count: content.filter(c => c.category === 'AI Automation').length },
+    { id: 'Success Stories', name: 'Success Stories', count: content.filter(c => c.category === 'Success Stories').length },
+    { id: 'Implementation', name: 'Implementation', count: content.filter(c => c.category === 'Implementation').length }
+  ];
 
-  const totalMetrics = {
-    roi: '1,200%',
-    savings: '$2.8B+',
-    efficiency: '340%',
-    accuracy: '99.7%',
-    projects: '500+',
-    satisfaction: '98%'
-  };
+  const filteredContent = activeCategory === 'all' 
+    ? content 
+    : content.filter(item => item.category === activeCategory);
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-4">
-            <SparklesIcon className="h-8 w-8 text-purple-600 mr-3" />
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-              AI 2025: Advanced Automation Mastery
-            </h2>
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-bold">🚀 NEW 2025 CONTENT</span>
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Transform your business with cutting-edge AI automation solutions. 
-            Achieve <span className="text-purple-600 font-bold">1,200% ROI</span> with our proven framework.
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Ultimate AI Automation Content Showcase
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Discover the latest AI automation strategies, success stories, and implementation guides 
+            that are delivering <span className="font-bold text-purple-600">2,000% ROI</span> for Fortune 500 companies.
           </p>
         </div>
 
-        {/* Success Metrics */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
-          <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-            <div className="text-2xl font-bold text-purple-600 mb-2">{totalMetrics.roi}</div>
-            <div className="text-sm text-gray-600">Average ROI</div>
-          </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-            <div className="text-2xl font-bold text-green-600 mb-2">{totalMetrics.savings}</div>
-            <div className="text-sm text-gray-600">Total Savings</div>
-          </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-            <div className="text-2xl font-bold text-blue-600 mb-2">{totalMetrics.efficiency}</div>
-            <div className="text-sm text-gray-600">Efficiency Gain</div>
-          </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-            <div className="text-2xl font-bold text-orange-600 mb-2">{totalMetrics.accuracy}</div>
-            <div className="text-sm text-gray-600">Accuracy</div>
-          </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-            <div className="text-2xl font-bold text-indigo-600 mb-2">{totalMetrics.projects}</div>
-            <div className="text-sm text-gray-600">Success Stories</div>
-          </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-            <div className="text-2xl font-bold text-pink-600 mb-2">{totalMetrics.satisfaction}</div>
-            <div className="text-sm text-gray-600">Satisfaction</div>
-          </div>
-        </div>
-
         {/* Category Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-          {contentCategories.map((category) => (
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-medium transition-colors ${
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeCategory === category.id
-                  ? 'bg-purple-600 text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
+                  ? 'bg-purple-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-purple-50 hover:text-purple-700'
               }`}
             >
               {category.name} ({category.count})
@@ -204,126 +103,111 @@ const UltimateAIAutomationShowcase2025 = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {filteredContent.map((content) => (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          {filteredContent.map((item) => (
             <div
-              key={content.id}
-              className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow ${
-                content.featured ? 'ring-2 ring-purple-500' : ''
-              }`}
+              key={item.id}
+              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group"
             >
-              <div className="p-6">
+              {/* Content Header */}
+              <div className="p-8">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm font-semibold rounded-full">
-                      {content.category}
+                  <div className="flex items-center space-x-3">
+                    <span className={`px-3 py-1 rounded-full text-sm font-bold ${
+                      item.featured 
+                        ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
+                        : 'bg-gray-100 text-gray-700'
+                    }`}>
+                      {item.featured ? 'FEATURED' : item.type}
                     </span>
-                    {content.isNew && (
-                      <span className="px-3 py-1 bg-green-100 text-green-800 text-sm font-semibold rounded-full">
-                        NEW
-                      </span>
-                    )}
-                    {content.featured && (
-                      <span className="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm font-semibold rounded-full">
-                        FEATURED
-                      </span>
-                    )}
+                    <span className="text-sm text-gray-500">{item.category}</span>
                   </div>
-                  <div className="flex items-center text-sm text-gray-500">
-                    <ClockIcon className="h-4 w-4 mr-1" />
-                    {content.readingTime}
-                  </div>
+                  <span className="text-sm text-gray-500">{item.readingTime}</span>
                 </div>
 
-                <h3 className="text-lg font-semibold text-gray-900 mb-3 line-clamp-2">
-                  {content.title}
+                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                  {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                  {content.description}
+
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {item.description}
                 </p>
 
-                {/* Content Metrics */}
-                <div className="grid grid-cols-2 gap-3 mb-4">
-                  <div className="text-center p-2 bg-purple-50 rounded-lg">
-                    <div className="text-lg font-bold text-purple-600">{content.metrics.roi}</div>
-                    <div className="text-xs text-gray-600">ROI</div>
-                  </div>
-                  <div className="text-center p-2 bg-green-50 rounded-lg">
-                    <div className="text-lg font-bold text-green-600">{content.metrics.savings}</div>
-                    <div className="text-xs text-gray-600">Savings</div>
-                  </div>
+                {/* Success Metrics */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  {Object.entries(item.metrics).map(([key, value]) => (
+                    <div key={key} className="text-center p-3 bg-gray-50 rounded-lg">
+                      <div className="text-lg font-bold text-purple-600">{value}</div>
+                      <div className="text-xs text-gray-600 capitalize">{key.replace('_', ' ')}</div>
+                    </div>
+                  ))}
                 </div>
 
                 <Link
-                  href={content.url}
-                  className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium text-sm"
+                  href={item.url}
+                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center block"
                 >
-                  Read More
-                  <ChevronRightIcon className="ml-1 h-4 w-4" />
+                  Read Full Content →
                 </Link>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-center text-white">
-          <div className="max-w-3xl mx-auto">
-            <TrophyIcon className="h-12 w-12 mx-auto mb-4 text-yellow-400" />
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to Achieve 1,200% ROI with AI Automation?
-            </h3>
-            <p className="text-lg mb-6 opacity-90">
-              Join 500+ companies that have transformed their business with our proven AI automation framework.
+        {/* Success Metrics Summary */}
+        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold mb-4">Proven Results Across All Content</h3>
+            <p className="text-xl opacity-90">
+              Our AI automation strategies deliver measurable results for enterprises worldwide
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/consultation"
-                className="inline-flex items-center justify-center px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
-              >
-                <SparklesIcon className="h-5 w-5 mr-2" />
-                Get Free Consultation
-              </Link>
-              <Link
-                href="/tools/ai-automation-roi-calculator"
-                className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                <ChartBarIcon className="h-5 w-5 mr-2" />
-                Calculate Your ROI
-              </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-yellow-300 mb-2">2,000%</div>
+              <div className="text-lg font-semibold">Average ROI</div>
+              <div className="text-sm opacity-90">Within 18 months</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-yellow-300 mb-2">$8.2B+</div>
+              <div className="text-lg font-semibold">Annual Savings</div>
+              <div className="text-sm opacity-90">Fortune 500 companies</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-yellow-300 mb-2">95%</div>
+              <div className="text-lg font-semibold">Efficiency Improvement</div>
+              <div className="text-sm opacity-90">Operational excellence</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-yellow-300 mb-2">99.7%</div>
+              <div className="text-lg font-semibold">Accuracy Rate</div>
+              <div className="text-sm opacity-90">Automated processes</div>
             </div>
           </div>
         </div>
 
-        {/* Additional Resources */}
-        <div className="mt-12">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
-            Additional Resources
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <h3 className="text-3xl font-bold text-gray-900 mb-6">
+            Ready to Achieve 2,000% ROI?
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join the Fortune 500 companies that are transforming their operations with AI automation. 
+            Get expert guidance and implementation support.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/tools/ai-automation-roi-calculator"
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center"
+              href="/services"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
             >
-              <ChartBarIcon className="h-8 w-8 mx-auto mb-3 text-purple-600" />
-              <h4 className="font-semibold text-gray-900 mb-2">ROI Calculator</h4>
-              <p className="text-sm text-gray-600">Calculate your potential ROI with AI automation</p>
+              Start Your Transformation
             </Link>
             <Link
-              href="/resources/ai-automation-technology-guide"
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center"
+              href="/contact"
+              className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-purple-600 hover:text-white transition-all duration-300"
             >
-              <TrendingUpIcon className="h-8 w-8 mx-auto mb-3 text-blue-600" />
-              <h4 className="font-semibold text-gray-900 mb-2">Technology Guide</h4>
-              <p className="text-sm text-gray-600">Compare AI automation platforms and solutions</p>
-            </Link>
-            <Link
-              href="/resources/ai-automation-change-management"
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center"
-            >
-              <CheckCircleIcon className="h-8 w-8 mx-auto mb-3 text-green-600" />
-              <h4 className="font-semibold text-gray-900 mb-2">Change Management</h4>
-              <p className="text-sm text-gray-600">Ensure successful AI automation adoption</p>
+              Schedule Consultation
             </Link>
           </div>
         </div>

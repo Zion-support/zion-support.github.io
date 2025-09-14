@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag, Share2, Download, BookOpen, CheckCircle,  Zap, Award } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User,  Share2, Download, BookOpen, CheckCircle,  Zap, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI 2026 Implementation: Ultimate Master Guide - Complete Roadmap to Success',

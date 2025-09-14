@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag, Share2, BookOpen, Download, TrendingUp,  Zap, Award } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User,  Share2, BookOpen, Download, TrendingUp,  Zap, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI 2025: The Ultimate Enterprise Transformation Complete Guide',
@@ -57,7 +57,7 @@ export default function UltimateTransformationGuide() {
           <div className="flex flex-wrap gap-2 mb-8">
             {['AI 2025', 'Enterprise Transformation', 'ROI', 'Fortune 500', 'Complete Guide', 'Revolutionary AI'].map((tag) => (
               <span key={tag} className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">
-                <Tag className="w-3 h-3 mr-1 inline" />
+                <Award className="w-3 h-3 mr-1 inline" />
                 {tag}
               </span>
             ))}

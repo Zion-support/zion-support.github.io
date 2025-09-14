@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Tag, Clock, Share2,  Zap, Database, Award } from 'lucide-react';
+import { ArrowLeft, Calendar, User,  Clock, Share2,  Zap, Database, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Quantum Computing Business Applications: The 2025 Revolution | Zion Tech Group',

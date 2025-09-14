@@ -180,8 +180,11 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group"
-    },
-import { ProductListing } from "@/types/listings";
+    }
+  }
+];
+
+interface ProductListing {
   subcategory: string;
   price: number;
   currency: string;
@@ -277,6 +280,9 @@ export const searchServices = (query: string) => {
     service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
   );
 };
+
+export const categories = [
+  {
     id: "cybersecurity",
     name: "Cybersecurity",
     description: "Advanced security solutions for modern digital threats",
@@ -397,6 +403,8 @@ export const MARKET_PRICING = {
     competitors: ["Tableau", "Power BI", "Looker"]
   }
 };
+
+export const serviceCategories = [
   { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' },
   { label: 'Cybersecurity', value: 'cybersecurity' },
   { label: 'Data & Analytics', value: 'data-analytics' },
@@ -423,4 +431,3 @@ export const CONTACT_INFO = {
   address: "364 E Main St STE 1008 Middletown DE 19709",
   website: "https://ziontechgroup.com"
 };
-];
