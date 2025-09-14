@@ -1,7 +1,3 @@
-import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide-react";
-=======
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -41,9 +37,6 @@ function TalentDashboardContent() {
         onboardingStatus.availabilitySet &&
         onboardingStatus.matchReceived;
     return (<>
-      <SEO title="Talent Dashboard | Zion AI Marketplace" description="Your personalized talent dashboard with job matches and professional opportunities."/>
-      
-=======
       <SEO 
         title="Talent Dashboard | Zion AI Marketplace" 
         description="Your personalized talent dashboard with job matches and professional opportunities." 

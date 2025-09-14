@@ -22,7 +22,7 @@ import { AppLayout } from './layout/AppLayout';
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
-import { registerServiceWorker } from './serviceWorkerRegistration';
+import { register as registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
