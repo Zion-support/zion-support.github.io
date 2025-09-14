@@ -15,7 +15,7 @@ try {
   process.chdir(__dirname + '/..');
   
   console.log('📦 Installing dependencies...');
-  execSync('yarn install --production=false --frozen-lockfile', { stdio: 'inherit' });
+  execSync('npm ci --production=false', { stdio: 'inherit' });
   
   // Check if Vite is available
   console.log('🔍 Checking if Vite is available...');
