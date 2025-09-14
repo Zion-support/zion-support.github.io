@@ -56,6 +56,27 @@ import GenerativeAI2025Banner from '../components/GenerativeAI2025Banner';
 import PredictiveAnalyticsRevolutionBanner2025 from '../components/PredictiveAnalyticsRevolutionBanner2025';
 import EdgeComputingRevolutionShowcase2025 from '../components/EdgeComputingRevolutionShowcase2025';
 
+// Import AI 2030 promotional components
+import AI2030ContentShowcaseBanner from '../components/AI2030ContentShowcaseBanner';
+import AI2030ContentNavigation from '../components/AI2030ContentNavigation';
+
+// Import new neural interface promotional components
+import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRevolutionBanner2025';
+import NeuralInterfaceContentShowcase2025 from '../components/NeuralInterfaceContentShowcase2025';
+
+// Import new 2026 ultimate promotional components
+import AI2026QuantumRevolutionUltimateBanner from '../components/AI2026QuantumRevolutionUltimateBanner';
+import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
+import RevolutionaryAIContent2026Banner from '../components/RevolutionaryAIContent2026Banner';
+
+// Import new 2025 advanced automation promotional components
+import NewContent2025AdvancedAutomationBanner from '../components/NewContent2025AdvancedAutomationBanner';
+import AdvancedAutomationContentShowcase2025 from '../components/AdvancedAutomationContentShowcase2025';
+
+// Import new 2025 analytics promotional components
+import NewContent2025AnalyticsRevolutionBanner from '../components/NewContent2025AnalyticsRevolutionBanner';
+import AnalyticsContentShowcase2025 from '../components/AnalyticsContentShowcase2025';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -73,8 +94,26 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Neural Interface Revolution Banner 2025 - NEW FEATURED */}
+        <NeuralInterfaceRevolutionBanner2025 />
+        
+        {/* Neural Interface Content Showcase 2025 - NEW FEATURED */}
+        <NeuralInterfaceContentShowcase2025 />
+        
+        {/* AI 2030 Content Showcase Banner - FEATURED */}
+        <AI2030ContentShowcaseBanner />
+        
         {/* Predictive Analytics Revolution Banner 2025 - LATEST */}
         <PredictiveAnalyticsRevolutionBanner2025 />
+        
+        {/* Edge Computing Revolution Showcase 2025 - NEW */}
+        <EdgeComputingRevolutionShowcase2025 />
+        
+        {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
+        <NewContent2025AnalyticsRevolutionBanner />
+        
+        {/* Revolutionary Content Showcase 2025 - FEATURED */}
+        <RevolutionaryContentShowcase2025 />
         
         {/* Edge Computing Revolution Showcase 2025 - NEW */}
         <EdgeComputingRevolutionShowcase2025 />
@@ -96,6 +135,9 @@ export default function HomePage() {
         
         {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
+        
+        {/* AI 2030 Content Navigation - COMPREHENSIVE DISCOVERY */}
+        <AI2030ContentNavigation />
         
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
