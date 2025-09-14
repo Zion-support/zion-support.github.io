@@ -1,40 +1,29 @@
 #!/bin/bash
 
-# Batch merge script for handling multiple PRs efficiently
+# Small batch test for PR merging
 set -e
 
-echo "🚀 Starting batch PR merge process..."
+echo "🧪 Testing small batch PR merge process..."
 
-# Get all cursor branches, sorted by creation date (most recent first)
-BRANCHES=$(git branch -r | grep "cursor/" | grep -v "HEAD" | sed 's/origin\///' | sort -u)
+# Get the 3 most recent cursor branches
+RECENT_BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | tail -3 | sed 's/origin\///')
 
-echo "📋 Found $(echo "$BRANCHES" | wc -l) branches to process"
-
-# Process in batches of 10
-BATCH_SIZE=10
-BATCH_NUM=1
-TOTAL_BRANCHES=$(echo "$BRANCHES" | wc -l)
-PROCESSED=0
+echo "📋 Testing with branches:"
+echo "$RECENT_BRANCHES"
 
 # Counter for tracking
 SUCCESS_COUNT=0
 CONFLICT_COUNT=0
 ERROR_COUNT=0
 
-echo "📊 Processing $TOTAL_BRANCHES branches in batches of $BATCH_SIZE"
-
-# Process branches in batches
-echo "$BRANCHES" | while IFS= read -r branch; do
+# Process each branch
+for branch in $RECENT_BRANCHES; do
     if [ -z "$branch" ]; then
         continue
     fi
     
-    # Calculate batch info
-    PROCESSED=$((PROCESSED + 1))
-    CURRENT_BATCH=$(((PROCESSED - 1) / BATCH_SIZE + 1))
-    
     echo ""
-    echo "🔄 [$PROCESSED/$TOTAL_BRANCHES] Processing branch: $branch (Batch $CURRENT_BATCH)"
+    echo "🔄 Processing branch: $branch"
     
     # Check if branch exists locally
     if git show-ref --verify --quiet refs/heads/$branch; then
@@ -96,24 +85,14 @@ echo "$BRANCHES" | while IFS= read -r branch; do
     git branch -D $branch 2>/dev/null || true
     
     echo "  ✅ Completed processing $branch"
-    
-    # Push changes every 5 successful merges
-    if [ $((SUCCESS_COUNT % 5)) -eq 0 ] && [ $SUCCESS_COUNT -gt 0 ]; then
-        echo "  📤 Pushing changes to remote..."
-        git push origin main
-    fi
 done
 
 echo ""
-echo "📊 Batch Merge Process Summary:"
+echo "📊 Small Batch Test Summary:"
 echo "  ✅ Successful merges: $SUCCESS_COUNT"
 echo "  ⚠️  Conflicts resolved: $CONFLICT_COUNT"
 echo "  ❌ Errors: $ERROR_COUNT"
 echo "  📋 Total processed: $((SUCCESS_COUNT + CONFLICT_COUNT + ERROR_COUNT))"
 
-# Final push
-echo "  📤 Final push to remote..."
-git push origin main
-
 echo ""
-echo "🎉 Batch PR merge process completed!"
+echo "🎉 Small batch test completed!"
