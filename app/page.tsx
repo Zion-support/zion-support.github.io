@@ -66,6 +66,10 @@ import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025Ul
 import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 import AIImplementationGuideBanner from '../components/AIImplementationGuideBanner';
 
+// Import new ultimate success content components
+import NewContent2025UltimateSuccessBanner from '../components/NewContent2025UltimateSuccessBanner';
+import UltimateSuccessShowcase2025 from '../components/UltimateSuccessShowcase2025';
+
 // Import new enhanced components
 import AITrends2025_2030FuturePredictionsBanner from '../components/AITrends2025_2030FuturePredictionsBanner';
 import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';
@@ -124,6 +128,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New Content 2025 Ultimate Success Banner - NEW FEATURED */}
+        <NewContent2025UltimateSuccessBanner />
+        
         {/* New Resource 2025 Implementation Roadmap Banner - NEW FEATURED */}
         <NewResource2025ImplementationRoadmapBanner />
         
@@ -264,6 +271,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Ultimate Success Showcase 2025 - NEW */}
+        <UltimateSuccessShowcase2025 />
+        
         {/* Ultimate Content Showcase 2025 - NEW */}
         <UltimateContentShowcase2025 />
         
