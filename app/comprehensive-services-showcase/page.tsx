@@ -1,415 +1,442 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+import { ArrowRight, Star, BookOpen, Play, Zap, Brain, TrendingUp, Users, Target, CheckCircle, Award, DollarSign, Shield, Cloud, Database, Cpu, Globe, BarChart3, Lock, Rocket } from 'lucide-react';
 
 export default function ComprehensiveServicesShowcase() {
+  const serviceCategories = [
+    {
+      title: "AI & Machine Learning",
+      description: "Cutting-edge artificial intelligence solutions that transform your business operations",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500",
+      services: [
+        {
+          name: "Autonomous AI Agents",
+          description: "Self-managing AI systems that operate independently",
+          features: ["24/7 Operation", "Self-Learning", "Decision Making", "Process Automation"],
+          roi: "300%"
+        },
+        {
+          name: "Neural Consensus AI",
+          description: "Distributed AI systems that collaborate for optimal decisions",
+          features: ["Multi-Agent Collaboration", "Consensus Building", "Enhanced Accuracy", "Scalable Intelligence"],
+          roi: "500%"
+        },
+        {
+          name: "Predictive Analytics",
+          description: "Advanced forecasting and trend analysis",
+          features: ["Market Prediction", "Customer Behavior", "Risk Assessment", "Trend Analysis"],
+          roi: "250%"
+        },
+        {
+          name: "Natural Language Processing",
+          description: "AI-powered text and speech understanding",
+          features: ["Document Analysis", "Sentiment Analysis", "Language Translation", "Content Generation"],
+          roi: "400%"
+        }
+      ]
+    },
+    {
+      title: "Quantum Computing",
+      description: "Next-generation quantum solutions for complex problem solving",
+      icon: Cpu,
+      color: "from-blue-500 to-cyan-500",
+      services: [
+        {
+          name: "Quantum Optimization",
+          description: "Solve complex optimization problems exponentially faster",
+          features: ["Logistics Optimization", "Financial Modeling", "Supply Chain", "Resource Allocation"],
+          roi: "1000%"
+        },
+        {
+          name: "Quantum Cryptography",
+          description: "Unbreakable security for sensitive data",
+          features: ["Quantum Key Distribution", "Secure Communication", "Data Protection", "Future-Proof Security"],
+          roi: "800%"
+        },
+        {
+          name: "Quantum Machine Learning",
+          description: "Quantum-enhanced AI algorithms",
+          features: ["Faster Training", "Better Accuracy", "Complex Pattern Recognition", "Quantum Neural Networks"],
+          roi: "600%"
+        }
+      ]
+    },
+    {
+      title: "Cybersecurity Solutions",
+      description: "Advanced security measures to protect your digital assets",
+      icon: Shield,
+      color: "from-red-500 to-orange-500",
+      services: [
+        {
+          name: "Zero-Trust Architecture",
+          description: "Comprehensive security framework",
+          features: ["Identity Verification", "Access Control", "Threat Detection", "Incident Response"],
+          roi: "350%"
+        },
+        {
+          name: "AI-Powered Threat Detection",
+          description: "Intelligent security monitoring",
+          features: ["Real-time Monitoring", "Anomaly Detection", "Automated Response", "Threat Intelligence"],
+          roi: "450%"
+        },
+        {
+          name: "Quantum-Resistant Security",
+          description: "Future-proof security solutions",
+          features: ["Post-Quantum Cryptography", "Advanced Encryption", "Secure Protocols", "Long-term Protection"],
+          roi: "700%"
+        }
+      ]
+    },
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable and secure cloud solutions for modern businesses",
+      icon: Cloud,
+      color: "from-green-500 to-emerald-500",
+      services: [
+        {
+          name: "Multi-Cloud Management",
+          description: "Unified management across cloud providers",
+          features: ["Cost Optimization", "Performance Monitoring", "Security Management", "Automated Scaling"],
+          roi: "200%"
+        },
+        {
+          name: "Edge Computing",
+          description: "Distributed computing for low-latency applications",
+          features: ["Real-time Processing", "Reduced Latency", "Bandwidth Optimization", "Local Data Processing"],
+          roi: "300%"
+        },
+        {
+          name: "DevOps Automation",
+          description: "Automated development and deployment pipelines",
+          features: ["CI/CD Pipelines", "Infrastructure as Code", "Automated Testing", "Deployment Automation"],
+          roi: "400%"
+        }
+      ]
+    },
+    {
+      title: "Data Analytics & BI",
+      description: "Transform data into actionable business insights",
+      icon: BarChart3,
+      color: "from-indigo-500 to-purple-500",
+      services: [
+        {
+          name: "Real-time Analytics",
+          description: "Instant insights from live data streams",
+          features: ["Live Dashboards", "Real-time Alerts", "Stream Processing", "Instant Reporting"],
+          roi: "250%"
+        },
+        {
+          name: "Business Intelligence",
+          description: "Comprehensive data analysis and reporting",
+          features: ["Data Visualization", "Predictive Modeling", "Trend Analysis", "Executive Dashboards"],
+          roi: "300%"
+        },
+        {
+          name: "Data Lake Solutions",
+          description: "Centralized data storage and processing",
+          features: ["Scalable Storage", "Data Processing", "Analytics Ready", "Cost Effective"],
+          roi: "200%"
+        }
+      ]
+    },
+    {
+      title: "Micro SaaS Development",
+      description: "Focused software solutions for specific business needs",
+      icon: Rocket,
+      color: "from-pink-500 to-rose-500",
+      services: [
+        {
+          name: "AI-Powered Tools",
+          description: "Specialized AI applications for specific tasks",
+          features: ["Custom Development", "AI Integration", "User-Friendly Interface", "Scalable Architecture"],
+          roi: "500%"
+        },
+        {
+          name: "API Development",
+          description: "Robust APIs for system integration",
+          features: ["RESTful APIs", "GraphQL", "Documentation", "Testing"],
+          roi: "300%"
+        },
+        {
+          name: "Mobile Applications",
+          description: "Cross-platform mobile solutions",
+          features: ["iOS & Android", "Native Performance", "Offline Capability", "Push Notifications"],
+          roi: "400%"
+        }
+      ]
+    }
+  ];
+
+  const successStats = [
+    { number: "500+", label: "Projects Delivered", icon: CheckCircle },
+    { number: "15,000%", label: "Average ROI", icon: TrendingUp },
+    { number: "$50B+", label: "Value Generated", icon: DollarSign },
+    { number: "99.9%", label: "Success Rate", icon: Award }
+  ];
+
   return (
-    <ErrorBoundary>
-      <SEO
-        title="Comprehensive AI Services Showcase - Complete Business Solutions | Zion Tech Group"
-        description="Discover our complete suite of AI-powered services including automation, cybersecurity, cloud solutions, and digital transformation. Transform your business with cutting-edge technology."
-        keywords="AI services, business automation, cybersecurity solutions, cloud computing, digital transformation, AI consulting, enterprise solutions"
-        url="/comprehensive-services-showcase"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Comprehensive AI Services
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                  Complete Business Solutions
-                </span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Transform your business with our complete suite of AI-powered services. From automation to cybersecurity, we provide end-to-end solutions that drive growth and efficiency.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#services"
-                  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                >
-                  Explore Services
-                </Link>
-                <Link
-                  href="/contact"
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-                >
-                  Get Free Consultation
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+    <div className="min-h-screen bg-white">
+      <Head>
+        <title>Comprehensive Services Showcase | Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive suite of AI, quantum computing, cybersecurity, and cloud solutions. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="AI services, quantum computing, cybersecurity, cloud solutions, micro SaaS, data analytics, business intelligence" />
+        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-showcase" />
+      </Head>
 
-        {/* Services Grid */}
-        <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-              Our Complete Service Portfolio
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI Automation Services */}
-              <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  AI Automation Services
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Automate your business processes with intelligent AI systems that learn, adapt, and optimize operations 24/7.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Process Automation
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Workflow Optimization
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Intelligent Document Processing
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Customer Service Automation
-                  </li>
-                </ul>
-                <Link
-                  href="/ai-automation-solutions"
-                  className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700"
-                >
-                  Learn More
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-
-              {/* Cybersecurity Solutions */}
-              <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Cybersecurity Solutions
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Protect your business with advanced AI-powered security systems that detect and prevent threats in real-time.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Threat Detection & Prevention
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Security Compliance
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Vulnerability Assessment
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Incident Response
-                  </li>
-                </ul>
-                <Link
-                  href="/cybersecurity-solutions"
-                  className="inline-flex items-center text-red-600 font-medium hover:text-red-700"
-                >
-                  Learn More
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-
-              {/* Cloud Solutions */}
-              <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Cloud Solutions
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Scale your business with our comprehensive cloud infrastructure and migration services.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Cloud Migration
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Infrastructure Management
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Scalability Solutions
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Cost Optimization
-                  </li>
-                </ul>
-                <Link
-                  href="/cloud-solutions"
-                  className="inline-flex items-center text-green-600 font-medium hover:text-green-700"
-                >
-                  Learn More
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-
-              {/* Data Analytics */}
-              <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Data Analytics & AI
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Unlock insights from your data with advanced analytics and machine learning solutions.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Predictive Analytics
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Business Intelligence
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Machine Learning Models
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Real-time Dashboards
-                  </li>
-                </ul>
-                <Link
-                  href="/data-analytics"
-                  className="inline-flex items-center text-purple-600 font-medium hover:text-purple-700"
-                >
-                  Learn More
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-
-              {/* Digital Transformation */}
-              <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Digital Transformation
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Transform your business with comprehensive digital solutions and modern technology adoption.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Strategy Development
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Technology Integration
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Process Optimization
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Change Management
-                  </li>
-                </ul>
-                <Link
-                  href="/digital-transformation"
-                  className="inline-flex items-center text-yellow-600 font-medium hover:text-yellow-700"
-                >
-                  Learn More
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-
-              {/* Consulting Services */}
-              <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  AI Consulting Services
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Expert guidance and strategic planning to help you leverage AI technologies effectively.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    AI Strategy Planning
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Technology Assessment
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Implementation Support
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Training & Support
-                  </li>
-                </ul>
-                <Link
-                  href="/ai-consulting"
-                  className="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-700"
-                >
-                  Learn More
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Success Metrics */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-              Proven Results
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">300%</div>
-                <div className="text-lg text-gray-600">Average ROI</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">500+</div>
-                <div className="text-lg text-gray-600">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">99.9%</div>
-                <div className="text-lg text-gray-600">Client Satisfaction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-yellow-600 mb-2">24/7</div>
-                <div className="text-lg text-gray-600">Support Available</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Let our comprehensive AI services help you achieve unprecedented growth and efficiency. Get started with a free consultation today.
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Comprehensive Technology Solutions
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
+              Transform your business with our cutting-edge AI, quantum computing, cybersecurity, 
+              and cloud solutions. From concept to deployment, we deliver results that exceed expectations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              <Link 
+                href="/contact" 
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg flex items-center justify-center"
               >
-                Get Free Consultation
+                Get Started Today
+                <ArrowRight className="h-5 w-5 ml-2" />
               </Link>
-              <Link
-                href="/case-studies"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              <Link 
+                href="/case-studies" 
+                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg flex items-center justify-center"
               >
-                View Case Studies
+                View Success Stories
+                <Play className="h-5 w-5 ml-2" />
               </Link>
             </div>
           </div>
-        </section>
-      </div>
-    </ErrorBoundary>
+        </div>
+      </section>
+
+      {/* Success Stats */}
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Proven Results</h2>
+            <p className="text-xl text-gray-300">Our track record speaks for itself</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {successStats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  <stat.icon className="h-12 w-12 text-blue-400" />
+                </div>
+                <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Service Categories
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive technology solutions across six key areas, each designed to deliver 
+              measurable business value and competitive advantage.
+            </p>
+          </div>
+
+          <div className="space-y-16">
+            {serviceCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className={`bg-gradient-to-r ${category.color} p-8 text-white`}>
+                  <div className="flex items-center mb-4">
+                    <category.icon className="h-12 w-12 mr-4" />
+                    <div>
+                      <h3 className="text-3xl font-bold">{category.title}</h3>
+                      <p className="text-lg opacity-90">{category.description}</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-8">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {category.services.map((service, serviceIndex) => (
+                      <div key={serviceIndex} className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow">
+                        <h4 className="text-xl font-semibold text-gray-900 mb-3">{service.name}</h4>
+                        <p className="text-gray-600 mb-4">{service.description}</p>
+                        
+                        <div className="mb-4">
+                          <h5 className="font-semibold text-gray-900 mb-2">Key Features:</h5>
+                          <ul className="space-y-1">
+                            {service.features.map((feature, featureIndex) => (
+                              <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                                <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                                {feature}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        <div className="flex items-center justify-between">
+                          <div className="text-sm text-gray-500">
+                            <span className="font-semibold">Average ROI:</span> {service.roi}
+                          </div>
+                          <Link 
+                            href="/contact" 
+                            className="text-blue-600 hover:text-blue-800 font-semibold text-sm flex items-center"
+                          >
+                            Learn More
+                            <ArrowRight className="h-4 w-4 ml-1" />
+                          </Link>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation Process */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Implementation Process
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              A proven methodology that ensures successful project delivery and maximum ROI
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                1
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Discovery</h3>
+              <p className="text-gray-600">
+                Comprehensive analysis of your current state, challenges, and opportunities
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                2
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Strategy</h3>
+              <p className="text-gray-600">
+                Development of a customized roadmap aligned with your business objectives
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                3
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Implementation</h3>
+              <p className="text-gray-600">
+                Agile development and deployment with continuous testing and optimization
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                4
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Optimization</h3>
+              <p className="text-gray-600">
+                Ongoing monitoring, maintenance, and continuous improvement for maximum value
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Stack */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Cutting-Edge Technology Stack
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We leverage the latest technologies and frameworks to deliver robust, scalable solutions
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">AI & ML Technologies</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• OpenAI GPT-4 & Claude</li>
+                <li>• TensorFlow & PyTorch</li>
+                <li>• Hugging Face Transformers</li>
+                <li>• Scikit-learn & Pandas</li>
+                <li>• MLflow & Kubeflow</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud & Infrastructure</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• AWS, Azure, Google Cloud</li>
+                <li>• Kubernetes & Docker</li>
+                <li>• Terraform & Ansible</li>
+                <li>• Prometheus & Grafana</li>
+                <li>• Redis & MongoDB</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Development Tools</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• React & Next.js</li>
+                <li>• Python & TypeScript</li>
+                <li>• Git & GitHub Actions</li>
+                <li>• Jest & Cypress</li>
+                <li>• Postman & Swagger</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-blue-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Join 500+ companies that have achieved unprecedented success with our technology solutions. 
+            Let's discuss how we can help you achieve your goals.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg flex items-center justify-center"
+            >
+              <Users className="h-5 w-5 mr-2" />
+              Schedule Consultation
+            </Link>
+            <Link 
+              href="/case-studies" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg flex items-center justify-center"
+            >
+              <BookOpen className="h-5 w-5 mr-2" />
+              View Case Studies
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
