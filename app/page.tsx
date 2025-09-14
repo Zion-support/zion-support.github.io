@@ -119,6 +119,10 @@ import RevolutionaryNewsletterSignup from '../components/RevolutionaryNewsletter
 import AI2025_2026UltimateBreakthroughBanner from '../components/AI2025_2026UltimateBreakthroughBanner';
 import RevolutionaryContent2025_2026Showcase from '../components/RevolutionaryContent2025_2026Showcase';
 
+// Import new Ultimate Business Intelligence components
+import AI2025UltimateBusinessIntelligenceRevolutionBanner from '../components/AI2025UltimateBusinessIntelligenceRevolutionBanner';
+import AI2025UltimateBusinessIntelligenceShowcase from '../components/AI2025UltimateBusinessIntelligenceShowcase';
+
 // Import new breakthrough promotional components
 import QuantumNeuralSuperintelligenceBanner from '../components/QuantumNeuralSuperintelligenceBanner';
 import UltimateBreakthrough2025Banner from '../components/UltimateBreakthrough2025Banner';
@@ -190,11 +194,7 @@ import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import RevolutionaryTechTrends2025 from '../components/RevolutionaryTechTrends2025';
 import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscoveryWidget';
 import InteractiveContentPromotionBanner from '../components/InteractiveContentPromotionBanner';
->>>>>>> 0b0d9635540987b86bfe293a34b043aefc21b256
-=======
-import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import SuccessStoriesBanner2025 from '../components/SuccessStoriesBanner2025';
->>>>>>> cursor/create-and-deploy-new-content-8671
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -213,8 +213,8 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* AI BUSINESS INTELLIGENCE 2025 BANNER - NEWEST FEATURED */}
-        <AIBusinessIntelligence2025Banner />
+        {/* AI 2025 ULTIMATE BUSINESS INTELLIGENCE REVOLUTION BANNER - NEWEST FEATURED */}
+        <AI2025UltimateBusinessIntelligenceRevolutionBanner />
         
         {/* NEW CONTENT 2025 ULTIMATE BREAKTHROUGH BANNER - NEWEST FEATURED */}
         <NewContent2025UltimateBreakthroughBanner />
@@ -460,6 +460,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* AI 2025 Ultimate Business Intelligence Showcase - NEWEST FEATURED */}
+        <AI2025UltimateBusinessIntelligenceShowcase />
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
