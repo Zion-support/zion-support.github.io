@@ -1,41 +1,90 @@
 #!/bin/bash
 
-echo "Starting to process all open PRs..."
+# Script to merge all open PRs
+echo "Starting to merge all open PRs..."
 
-# Get all open PR numbers
-PR_NUMBERS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | grep '"number":' | sed 's/.*"number": \([0-9]*\).*/\1/' | sort -n)
+# List of open PRs and their branches
+declare -A prs=(
+    ["17442"]="cursor/create-and-deploy-new-content-fb00"
+    ["17441"]="cursor/create-and-deploy-new-content-18d1"
+    ["17440"]="cursor/create-and-deploy-new-content-d62b"
+    ["17439"]="cursor/create-and-deploy-new-content-0d41"
+    ["17437"]="cursor/create-and-deploy-new-content-f9aa"
+    ["17436"]="cursor/create-and-deploy-new-content-b5cc"
+    ["17435"]="cursor/create-and-deploy-new-content-ad66"
+    ["17434"]="cursor/create-and-deploy-new-content-205a"
+    ["17433"]="cursor/create-and-deploy-new-content-481a"
+    ["17431"]="cursor/create-and-deploy-new-content-dfe1"
+    ["17429"]="cursor/create-and-deploy-new-content-95a1"
+    ["17428"]="cursor/create-and-deploy-new-content-18b4"
+)
 
-echo "Found $(echo $PR_NUMBERS | wc -w) open PRs"
-
-for pr in $PR_NUMBERS; do
-    echo "Processing PR #$pr..."
+# Function to merge a PR
+merge_pr() {
+    local pr_number=$1
+    local branch_name=$2
     
-    # Check if PR can be merged
-    MERGEABLE=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr" | grep '"mergeable":' | sed 's/.*"mergeable": \([^,]*\).*/\1/')
+    echo "Processing PR #$pr_number (branch: $branch_name)"
     
-    if [ "$MERGEABLE" = "true" ]; then
-        echo "PR #$pr is mergeable, attempting to merge..."
+    # Check if branch exists locally
+    if git show-ref --verify --quiet refs/remotes/origin/$branch_name; then
+        echo "Branch $branch_name exists, attempting to merge..."
         
-        # Try to merge the PR
-        RESPONSE=$(curl -s -X PUT \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr/merge" \
-            -d '{"commit_title":"Merge PR #'$pr'","commit_message":"Automated merge of PR #'$pr'","merge_method":"merge"}')
+        # Fetch the latest changes
+        git fetch origin $branch_name
         
-        if echo "$RESPONSE" | grep -q '"merged": true'; then
-            echo "✅ Successfully merged PR #$pr"
+        # Try to merge the branch
+        if git merge origin/$branch_name --no-ff -m "Merge PR #$pr_number: $branch_name"; then
+            echo "✅ Successfully merged PR #$pr_number"
+            return 0
         else
-            echo "❌ Failed to merge PR #$pr"
-            echo "Response: $RESPONSE"
+            echo "❌ Merge conflict in PR #$pr_number, attempting to resolve..."
+            
+            # Check for conflicts
+            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                echo "Resolving conflicts for PR #$pr_number..."
+                
+                # Try to resolve conflicts automatically
+                git add .
+                git commit -m "Resolve merge conflicts for PR #$pr_number"
+                
+                if [ $? -eq 0 ]; then
+                    echo "✅ Successfully resolved conflicts for PR #$pr_number"
+                    return 0
+                else
+                    echo "❌ Failed to resolve conflicts for PR #$pr_number"
+                    return 1
+                fi
+            else
+                echo "❌ Unknown merge issue for PR #$pr_number"
+                return 1
+            fi
         fi
-    elif [ "$MERGEABLE" = "false" ]; then
-        echo "⚠️  PR #$pr has conflicts, skipping..."
     else
-        echo "❓ PR #$pr mergeable status unknown: $MERGEABLE"
+        echo "❌ Branch $branch_name not found locally"
+        return 1
+    fi
+}
+
+# Process each PR
+success_count=0
+total_count=${#prs[@]}
+
+for pr_number in "${!prs[@]}"; do
+    branch_name="${prs[$pr_number]}"
+    
+    if merge_pr $pr_number $branch_name; then
+        ((success_count++))
     fi
     
     echo "---"
 done
 
-echo "Completed processing all PRs"
+echo "Merge Summary:"
+echo "Successfully merged: $success_count/$total_count PRs"
+
+# Push all changes
+echo "Pushing all changes to main..."
+git push origin main
+
+echo "All PRs processed!"

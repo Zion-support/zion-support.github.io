@@ -1,241 +1,314 @@
+'use client';
+
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { ArrowLeft, Calculator, TrendingUp, DollarSign, CheckCircle, Users, Clock } from 'lucide-react';
 
-const AIROICalculator2025 = () => {
+export default function AIROICalculator() {
   const [inputs, setInputs] = useState({
-    currentCosts: '',
+    annualRevenue: '',
+    employees: '',
+    currentEfficiency: '',
     expectedEfficiency: '',
     implementationCost: '',
-    timeline: '12',
-    riskFactor: 'medium'
+    maintenanceCost: '',
+    trainingCost: ''
   });
 
-  const [results, setResults] = useState(null);
+  const [results, setResults] = useState({
+    annualSavings: 0,
+    totalCosts: 0,
+    netBenefit: 0,
+    roi: 0,
+    paybackPeriod: 0
+  });
+
+  const handleInputChange = (field: string, value: string) => {
+    setInputs(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
 
   const calculateROI = () => {
-    const currentCosts = parseFloat(inputs.currentCosts) || 0;
-    const efficiency = parseFloat(inputs.expectedEfficiency) || 0;
-    const implementationCost = parseFloat(inputs.implementationCost) || 0;
-    const timeline = parseInt(inputs.timeline) || 12;
-    const riskMultiplier = inputs.riskFactor === 'low' ? 0.9 : inputs.riskFactor === 'high' ? 1.2 : 1.0;
+    const revenue = parseFloat(inputs.annualRevenue) || 0;
+    const employees = parseFloat(inputs.employees) || 0;
+    const currentEff = parseFloat(inputs.currentEfficiency) || 0;
+    const expectedEff = parseFloat(inputs.expectedEfficiency) || 0;
+    const implCost = parseFloat(inputs.implementationCost) || 0;
+    const maintCost = parseFloat(inputs.maintenanceCost) || 0;
+    const trainCost = parseFloat(inputs.trainingCost) || 0;
 
-    const annualSavings = currentCosts * (efficiency / 100);
-    const totalSavings = annualSavings * (timeline / 12);
-    const netSavings = totalSavings - implementationCost;
-    const roi = implementationCost > 0 ? ((netSavings / implementationCost) * 100) : 0;
-    const paybackPeriod = annualSavings > 0 ? implementationCost / annualSavings : 0;
+    // Calculate efficiency improvement
+    const efficiencyGain = (expectedEff - currentEff) / 100;
+    
+    // Calculate annual savings from efficiency improvement
+    const annualSavings = revenue * efficiencyGain;
+    
+    // Calculate total costs
+    const totalCosts = implCost + maintCost + trainCost;
+    
+    // Calculate net benefit
+    const netBenefit = annualSavings - totalCosts;
+    
+    // Calculate ROI
+    const roi = totalCosts > 0 ? (netBenefit / totalCosts) * 100 : 0;
+    
+    // Calculate payback period (in months)
+    const paybackPeriod = annualSavings > 0 ? (totalCosts / annualSavings) * 12 : 0;
 
     setResults({
-      annualSavings: annualSavings * riskMultiplier,
-      totalSavings: totalSavings * riskMultiplier,
-      netSavings: (totalSavings - implementationCost) * riskMultiplier,
-      roi: roi * riskMultiplier,
-      paybackPeriod: paybackPeriod / riskMultiplier
+      annualSavings,
+      totalCosts,
+      netBenefit,
+      roi,
+      paybackPeriod
     });
   };
 
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(amount);
+  };
+
+  const formatPercentage = (value: number) => {
+    return `${value.toFixed(1)}%`;
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 AI ROI CALCULATOR 2025</span>
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-100">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="bg-white rounded-2xl shadow-xl p-8">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+              <Calculator className="w-8 h-8 text-green-600" />
+            </div>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">AI ROI Calculator 2025</h1>
+            <p className="text-gray-600">Calculate the potential return on investment for your AI implementation</p>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            AI Implementation ROI Calculator
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Calculate the potential return on investment for your AI implementation project. 
-            Get accurate projections based on industry benchmarks and real-world data.
-          </p>
-        </div>
 
-        {/* Calculator Form */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Project Parameters</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Current Annual Operational Costs ($)
-              </label>
-              <input
-                type="number"
-                value={inputs.currentCosts}
-                onChange={(e) => setInputs({...inputs, currentCosts: e.target.value})}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                placeholder="1000000"
-              />
-              <p className="text-sm text-gray-500 mt-1">Total costs for the process you want to optimize</p>
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Input Form */}
+            <div className="space-y-6">
+              <h2 className="text-xl font-semibold text-gray-900 mb-4">Business Information</h2>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Annual Revenue ($)
+                </label>
+                <input
+                  type="number"
+                  value={inputs.annualRevenue}
+                  onChange={(e) => handleInputChange('annualRevenue', e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  placeholder="Enter your annual revenue"
+                />
+              </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Expected Efficiency Improvement (%)
-              </label>
-              <input
-                type="number"
-                value={inputs.expectedEfficiency}
-                onChange={(e) => setInputs({...inputs, expectedEfficiency: e.target.value})}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                placeholder="30"
-              />
-              <p className="text-sm text-gray-500 mt-1">Industry average: 25-40%</p>
-            </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Number of Employees
+                </label>
+                <input
+                  type="number"
+                  value={inputs.employees}
+                  onChange={(e) => handleInputChange('employees', e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  placeholder="Enter number of employees"
+                />
+              </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                AI Implementation Cost ($)
-              </label>
-              <input
-                type="number"
-                value={inputs.implementationCost}
-                onChange={(e) => setInputs({...inputs, implementationCost: e.target.value})}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                placeholder="200000"
-              />
-              <p className="text-sm text-gray-500 mt-1">One-time implementation costs</p>
-            </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Current Efficiency (%)
+                </label>
+                <input
+                  type="number"
+                  value={inputs.currentEfficiency}
+                  onChange={(e) => handleInputChange('currentEfficiency', e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  placeholder="Enter current efficiency percentage"
+                />
+              </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Implementation Timeline (Months)
-              </label>
-              <select
-                value={inputs.timeline}
-                onChange={(e) => setInputs({...inputs, timeline: e.target.value})}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Expected Efficiency After AI (%)
+                </label>
+                <input
+                  type="number"
+                  value={inputs.expectedEfficiency}
+                  onChange={(e) => handleInputChange('expectedEfficiency', e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  placeholder="Enter expected efficiency percentage"
+                />
+              </div>
+
+              <h2 className="text-xl font-semibold text-gray-900 mb-4 mt-8">Cost Information</h2>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Implementation Cost ($)
+                </label>
+                <input
+                  type="number"
+                  value={inputs.implementationCost}
+                  onChange={(e) => handleInputChange('implementationCost', e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  placeholder="Enter implementation cost"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Annual Maintenance Cost ($)
+                </label>
+                <input
+                  type="number"
+                  value={inputs.maintenanceCost}
+                  onChange={(e) => handleInputChange('maintenanceCost', e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  placeholder="Enter annual maintenance cost"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Training Cost ($)
+                </label>
+                <input
+                  type="number"
+                  value={inputs.trainingCost}
+                  onChange={(e) => handleInputChange('trainingCost', e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  placeholder="Enter training cost"
+                />
+              </div>
+
+              <button
+                onClick={calculateROI}
+                className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
               >
-                <option value="6">6 months</option>
-                <option value="12">12 months</option>
-                <option value="18">18 months</option>
-                <option value="24">24 months</option>
-              </select>
+                Calculate ROI
+              </button>
             </div>
 
-            <div className="md:col-span-2">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Risk Factor
-              </label>
-              <div className="grid grid-cols-3 gap-4">
-                <label className="flex items-center">
-                  <input
-                    type="radio"
-                    name="riskFactor"
-                    value="low"
-                    checked={inputs.riskFactor === 'low'}
-                    onChange={(e) => setInputs({...inputs, riskFactor: e.target.value})}
-                    className="mr-2"
-                  />
-                  <span className="text-sm">Low Risk</span>
-                </label>
-                <label className="flex items-center">
-                  <input
-                    type="radio"
-                    name="riskFactor"
-                    value="medium"
-                    checked={inputs.riskFactor === 'medium'}
-                    onChange={(e) => setInputs({...inputs, riskFactor: e.target.value})}
-                    className="mr-2"
-                  />
-                  <span className="text-sm">Medium Risk</span>
-                </label>
-                <label className="flex items-center">
-                  <input
-                    type="radio"
-                    name="riskFactor"
-                    value="high"
-                    checked={inputs.riskFactor === 'high'}
-                    onChange={(e) => setInputs({...inputs, riskFactor: e.target.value})}
-                    className="mr-2"
-                  />
-                  <span className="text-sm">High Risk</span>
-                </label>
+            {/* Results */}
+            <div className="space-y-6">
+              <h2 className="text-xl font-semibold text-gray-900 mb-4">ROI Analysis Results</h2>
+              
+              <div className="grid grid-cols-1 gap-4">
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <DollarSign className="w-5 h-5 text-green-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">Annual Savings</span>
+                    </div>
+                    <span className="text-lg font-bold text-green-600">
+                      {formatCurrency(results.annualSavings)}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <DollarSign className="w-5 h-5 text-red-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">Total Costs</span>
+                    </div>
+                    <span className="text-lg font-bold text-red-600">
+                      {formatCurrency(results.totalCosts)}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <TrendingUp className="w-5 h-5 text-blue-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">Net Benefit</span>
+                    </div>
+                    <span className="text-lg font-bold text-blue-600">
+                      {formatCurrency(results.netBenefit)}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-purple-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">ROI</span>
+                    </div>
+                    <span className="text-lg font-bold text-purple-600">
+                      {formatPercentage(results.roi)}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <Clock className="w-5 h-5 text-orange-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">Payback Period</span>
+                    </div>
+                    <span className="text-lg font-bold text-orange-600">
+                      {results.paybackPeriod.toFixed(1)} months
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* ROI Interpretation */}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">ROI Interpretation</h3>
+                <div className="space-y-2 text-sm text-gray-700">
+                  {results.roi > 300 && (
+                    <p className="text-green-600 font-medium">Excellent ROI - Highly recommended for implementation</p>
+                  )}
+                  {results.roi >= 100 && results.roi <= 300 && (
+                    <p className="text-blue-600 font-medium">Good ROI - Recommended with proper planning</p>
+                  )}
+                  {results.roi >= 50 && results.roi < 100 && (
+                    <p className="text-yellow-600 font-medium">Moderate ROI - Consider pilot implementation first</p>
+                  )}
+                  {results.roi < 50 && results.roi > 0 && (
+                    <p className="text-orange-600 font-medium">Low ROI - Review costs and expected benefits</p>
+                  )}
+                  {results.roi <= 0 && (
+                    <p className="text-red-600 font-medium">Negative ROI - Not recommended at current parameters</p>
+                  )}
+                </div>
+              </div>
+
+              {/* Recommendations */}
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Recommendations</h3>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• Start with pilot projects to validate assumptions</li>
+                  <li>• Focus on high-impact use cases first</li>
+                  <li>• Invest in team training and change management</li>
+                  <li>• Monitor and measure results continuously</li>
+                  <li>• Scale successful implementations gradually</li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <button
-            onClick={calculateROI}
-            className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 mt-6"
-          >
-            Calculate ROI
-          </button>
-        </div>
-
-        {/* Results */}
-        {results && (
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">ROI Analysis Results</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-xl">
-                <div className="text-3xl font-bold mb-2">
-                  {results.roi.toFixed(0)}%
-                </div>
-                <div className="text-sm opacity-90">Return on Investment</div>
-              </div>
-              
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-xl">
-                <div className="text-3xl font-bold mb-2">
-                  ${(results.annualSavings / 1000).toFixed(0)}K
-                </div>
-                <div className="text-sm opacity-90">Annual Savings</div>
-              </div>
-              
-              <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-6 rounded-xl">
-                <div className="text-3xl font-bold mb-2">
-                  ${(results.totalSavings / 1000).toFixed(0)}K
-                </div>
-                <div className="text-sm opacity-90">Total Savings</div>
-              </div>
-              
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-6 rounded-xl">
-                <div className="text-3xl font-bold mb-2">
-                  {results.paybackPeriod.toFixed(1)}
-                </div>
-                <div className="text-sm opacity-90">Payback Period (Years)</div>
-              </div>
-            </div>
-
-            <div className="mt-8 p-6 bg-gray-50 rounded-xl">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Analysis Summary</h3>
-              <div className="space-y-2 text-sm text-gray-600">
-                <p>• <strong>Net Savings:</strong> ${(results.netSavings / 1000).toFixed(0)}K over {inputs.timeline} months</p>
-                <p>• <strong>ROI Rating:</strong> {results.roi > 200 ? 'Excellent' : results.roi > 100 ? 'Good' : results.roi > 50 ? 'Moderate' : 'Low'}</p>
-                <p>• <strong>Risk-Adjusted:</strong> Results adjusted for {inputs.riskFactor} risk level</p>
-                <p>• <strong>Recommendation:</strong> {results.roi > 100 ? 'Proceed with implementation' : 'Consider pilot project first'}</p>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Additional Resources */}
-        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
-          <h3 className="text-2xl font-bold mb-4">Ready to Start Your AI Journey?</h3>
-          <p className="text-lg opacity-90 mb-6">
-            Get expert guidance and support for your AI implementation. Our team of specialists 
-            can help you achieve even better results than projected.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="mt-8 text-center">
             <Link
               href="/contact"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
             >
               Get Expert Consultation
-            </Link>
-            <Link
-              href="/blog/ai-2025-enterprise-transformation-complete-guide"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              Read Implementation Guide
             </Link>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default AIROICalculator2025;
+}

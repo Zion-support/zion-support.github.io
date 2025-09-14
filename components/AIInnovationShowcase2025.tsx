@@ -1,3 +1,4 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -5,12 +6,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, 
   Zap, 
-<<<<<<< HEAD
-  Cpu, 
-  Database, 
-  Shield, 
-=======
->>>>>>> main
   Globe, 
   Rocket, 
   Target,
