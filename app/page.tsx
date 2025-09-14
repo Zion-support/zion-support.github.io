@@ -209,6 +209,10 @@ import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import ROICalculatorWidget from '../components/ROICalculatorWidget';
 
+// Import new Ultimate Autonomous AI Revolution components
+import UltimateAutonomousAIRevolutionBanner from '../components/UltimateAutonomousAIRevolutionBanner';
+import UltimateAutonomousAIContentShowcase from '../components/UltimateAutonomousAIContentShowcase';
+
 // Import new Advanced Neural Architectures 2026 components
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
