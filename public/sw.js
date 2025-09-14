@@ -1,15 +1,10 @@
-const CACHE_NAME = 'zion-tech-group-v1';
+// Service Worker for PWA functionality
+const CACHE_NAME = 'zion-tech-v1';
 const urlsToCache = [
   '/',
-  '/ai-services-2025',
-  '/quantum-computing-solutions-2025',
-  '/case-studies',
-  '/resources',
-  '/images/logo.png',
-  '/images/hero-bg.jpg',
-  '/images/ai-2025-banner.jpg',
-  '/_next/static/css/',
-  '/_next/static/js/'
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+  '/manifest.json'
 ];
 
 // Install event
@@ -29,26 +24,7 @@ self.addEventListener('fetch', (event) => {
     caches.match(event.request)
       .then((response) => {
         // Return cached version or fetch from network
-        if (response) {
-          return response;
-        }
-        
-        return fetch(event.request).then((response) => {
-          // Check if we received a valid response
-          if (!response || response.status !== 200 || response.type !== 'basic') {
-            return response;
-          }
-
-          // Clone the response
-          const responseToCache = response.clone();
-
-          caches.open(CACHE_NAME)
-            .then((cache) => {
-              cache.put(event.request, responseToCache);
-            });
-
-          return response;
-        });
+        return response || fetch(event.request);
       })
   );
 });
@@ -67,55 +43,4 @@ self.addEventListener('activate', (event) => {
       );
     })
   );
-});
-
-// Background sync for offline functionality
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'background-sync') {
-    event.waitUntil(
-      // Handle background sync
-      console.log('Background sync triggered')
-    );
-  }
-});
-
-// Push notifications
-self.addEventListener('push', (event) => {
-  const options = {
-    body: event.data ? event.data.text() : 'New update available!',
-    icon: '/images/logo.png',
-    badge: '/images/badge.png',
-    vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'Explore',
-        icon: '/images/explore.png'
-      },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/images/close.png'
-      }
-    ]
-  };
-
-  event.waitUntil(
-    self.registration.showNotification('Zion Tech Group', options)
-  );
-});
-
-// Notification click
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-
-  if (event.action === 'explore') {
-    event.waitUntil(
-      clients.openWindow('/')
-    );
-  }
 });

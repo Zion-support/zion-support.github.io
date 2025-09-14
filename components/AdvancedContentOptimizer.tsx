@@ -1,99 +1,110 @@
 import React, { useState, useEffect } from 'react';
-import { Search, TrendingUp, Eye, Clock, Star, Zap, Target, BarChart3 } from 'lucide-react';
+import { Search, TrendingUp, Users, Clock, Star, Target, BarChart3, Zap } from 'lucide-react';
 
 const AdvancedContentOptimizer = () => {
-  const [optimizationMetrics, setOptimizationMetrics] = useState({
+  const [contentMetrics, setContentMetrics] = useState({
     engagement: 0,
-    performance: 0,
-    seo: 0,
-    accessibility: 0
+    readability: 0,
+    seoScore: 0,
+    conversionRate: 0
   });
 
-  const [contentStats, setContentStats] = useState({
-    totalPages: 0,
-    optimizedPages: 0,
-    loadTime: 0,
-    bounceRate: 0
-  });
+  const [optimizations, setOptimizations] = useState([
+    {
+      id: 'headline-optimization',
+      name: 'Headline Optimization',
+      description: 'Craft compelling headlines that drive engagement',
+      impact: 'High',
+      status: 'active',
+      icon: Target,
+      metrics: { before: 2.1, after: 4.7, unit: 'CTR%' }
+    },
+    {
+      id: 'content-structure',
+      name: 'Content Structure',
+      description: 'Optimize content hierarchy and readability',
+      impact: 'High',
+      status: 'active',
+      icon: BarChart3,
+      metrics: { before: 6.2, after: 8.9, unit: 'Readability' }
+    },
+    {
+      id: 'keyword-optimization',
+      name: 'Keyword Optimization',
+      description: 'Strategic keyword placement and density',
+      impact: 'Medium',
+      status: 'active',
+      icon: Search,
+      metrics: { before: 65, after: 89, unit: 'SEO Score' }
+    },
+    {
+      id: 'visual-optimization',
+      name: 'Visual Optimization',
+      description: 'Optimize images and visual elements',
+      impact: 'Medium',
+      status: 'active',
+      icon: Zap,
+      metrics: { before: 3.2, after: 4.8, unit: 'Engagement' }
+    },
+    {
+      id: 'conversion-optimization',
+      name: 'Conversion Optimization',
+      description: 'Optimize for user actions and conversions',
+      impact: 'High',
+      status: 'active',
+      icon: TrendingUp,
+      metrics: { before: 2.3, after: 5.1, unit: 'Conversion%' }
+    },
+    {
+      id: 'user-experience',
+      name: 'User Experience',
+      description: 'Enhance overall user experience and flow',
+      impact: 'High',
+      status: 'active',
+      icon: Users,
+      metrics: { before: 7.1, after: 9.2, unit: 'UX Score' }
+    }
+  ]);
 
   useEffect(() => {
-    // Simulate real-time optimization metrics
-    const interval = setInterval(() => {
-      setOptimizationMetrics({
-        engagement: Math.floor(Math.random() * 20) + 80,
-        performance: Math.floor(Math.random() * 15) + 85,
-        seo: Math.floor(Math.random() * 10) + 90,
-        accessibility: Math.floor(Math.random() * 5) + 95
+    // Simulate content metrics collection
+    const collectMetrics = () => {
+      setContentMetrics({
+        engagement: 87,
+        readability: 92,
+        seoScore: 89,
+        conversionRate: 5.1
       });
+    };
 
-      setContentStats({
-        totalPages: 150 + Math.floor(Math.random() * 10),
-        optimizedPages: 140 + Math.floor(Math.random() * 8),
-        loadTime: 1.2 + Math.random() * 0.5,
-        bounceRate: 25 + Math.random() * 10
-      });
-    }, 2000);
-
-    return () => clearInterval(interval);
+    collectMetrics();
   }, []);
 
-  const optimizationFeatures = [
-    {
-      icon: Search,
-      title: "SEO Optimization",
-      description: "Advanced keyword optimization and meta tag enhancement",
-      status: "active",
-      impact: "High"
-    },
-    {
-      icon: Zap,
-      title: "Performance Boost",
-      description: "Image optimization and code splitting for faster loading",
-      status: "active",
-      impact: "High"
-    },
-    {
-      icon: Eye,
-      title: "Accessibility",
-      description: "WCAG 2.1 AA compliance and screen reader optimization",
-      status: "active",
-      impact: "Medium"
-    },
-    {
-      icon: Target,
-      title: "Content Strategy",
-      description: "AI-powered content recommendations and A/B testing",
-      status: "active",
-      impact: "High"
-    }
-  ];
-
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 py-16">
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-blue-900 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-blue-500 text-white text-sm font-medium mb-6">
-            <BarChart3 className="w-4 h-4 mr-2" />
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium mb-6">
+            <Target className="w-4 h-4 mr-2" />
             Advanced Content Optimization
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Intelligent
-            <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent"> Content</span>
-            <br />Optimization
+            Content That
+            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"> Converts</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our AI-powered content optimization system continuously improves your website's performance, 
-            engagement, and search rankings in real-time.
+            Our advanced content optimization techniques ensure your content engages users, 
+            drives conversions, and delivers measurable results.
           </p>
         </div>
 
-        {/* Metrics Dashboard */}
+        {/* Content Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="flex items-center justify-between mb-4">
-              <TrendingUp className="w-8 h-8 text-green-400" />
-              <span className="text-2xl font-bold text-white">{optimizationMetrics.engagement}%</span>
+              <Users className="w-8 h-8 text-purple-400" />
+              <span className="text-2xl font-bold text-white">{contentMetrics.engagement}%</span>
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">Engagement</h3>
             <p className="text-gray-300 text-sm">User interaction rate</p>
@@ -101,17 +112,17 @@ const AdvancedContentOptimizer = () => {
 
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="flex items-center justify-between mb-4">
-              <Zap className="w-8 h-8 text-blue-400" />
-              <span className="text-2xl font-bold text-white">{optimizationMetrics.performance}%</span>
+              <BarChart3 className="w-8 h-8 text-blue-400" />
+              <span className="text-2xl font-bold text-white">{contentMetrics.readability}</span>
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Performance</h3>
-            <p className="text-gray-300 text-sm">Page speed score</p>
+            <h3 className="text-lg font-semibold text-white mb-2">Readability</h3>
+            <p className="text-gray-300 text-sm">Content clarity score</p>
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="flex items-center justify-between mb-4">
-              <Search className="w-8 h-8 text-purple-400" />
-              <span className="text-2xl font-bold text-white">{optimizationMetrics.seo}%</span>
+              <Search className="w-8 h-8 text-green-400" />
+              <span className="text-2xl font-bold text-white">{contentMetrics.seoScore}</span>
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">SEO Score</h3>
             <p className="text-gray-300 text-sm">Search optimization</p>
@@ -119,96 +130,82 @@ const AdvancedContentOptimizer = () => {
 
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="flex items-center justify-between mb-4">
-              <Eye className="w-8 h-8 text-yellow-400" />
-              <span className="text-2xl font-bold text-white">{optimizationMetrics.accessibility}%</span>
+              <TrendingUp className="w-8 h-8 text-yellow-400" />
+              <span className="text-2xl font-bold text-white">{contentMetrics.conversionRate}%</span>
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Accessibility</h3>
-            <p className="text-gray-300 text-sm">WCAG compliance</p>
+            <h3 className="text-lg font-semibold text-white mb-2">Conversion</h3>
+            <p className="text-gray-300 text-sm">Action completion rate</p>
           </div>
         </div>
 
-        {/* Content Statistics */}
+        {/* Optimizations */}
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-12">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">Content Statistics</h3>
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">Content Optimizations</h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">{contentStats.totalPages}</div>
-              <div className="text-white font-semibold mb-1">Total Pages</div>
-              <div className="text-gray-300 text-sm">Active content</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">{contentStats.optimizedPages}</div>
-              <div className="text-white font-semibold mb-1">Optimized</div>
-              <div className="text-gray-300 text-sm">AI-enhanced</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">{contentStats.loadTime.toFixed(1)}s</div>
-              <div className="text-white font-semibold mb-1">Load Time</div>
-              <div className="text-gray-300 text-sm">Average speed</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">{contentStats.bounceRate.toFixed(1)}%</div>
-              <div className="text-white font-semibold mb-1">Bounce Rate</div>
-              <div className="text-gray-300 text-sm">User retention</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Optimization Features */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {optimizationFeatures.map((feature, index) => (
-            <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300">
-              <div className="flex items-center justify-between mb-4">
-                <div className="p-3 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl">
-                  <feature.icon className="w-6 h-6 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {optimizations.map((optimization) => (
+              <div key={optimization.id} className="group bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl">
+                    <optimization.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                    optimization.impact === 'High' ? 'bg-red-500' :
+                    optimization.impact === 'Medium' ? 'bg-yellow-500' :
+                    'bg-green-500'
+                  } text-white`}>
+                    {optimization.impact} Impact
+                  </span>
                 </div>
-                <span className={`px-3 py-1 rounded-full text-xs font-bold ${
-                  feature.impact === 'High' ? 'bg-red-500' :
-                  feature.impact === 'Medium' ? 'bg-yellow-500' :
-                  'bg-green-500'
-                } text-white`}>
-                  {feature.impact} Impact
-                </span>
+                
+                <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                  {optimization.name}
+                </h4>
+                
+                <p className="text-gray-300 text-sm mb-4">
+                  {optimization.description}
+                </p>
+
+                <div className="flex items-center justify-between text-sm">
+                  <div className="text-gray-400">
+                    Before: {optimization.metrics.before}{optimization.metrics.unit}
+                  </div>
+                  <div className="text-green-400 font-semibold">
+                    After: {optimization.metrics.after}{optimization.metrics.unit}
+                  </div>
+                </div>
+
+                <div className="mt-2 flex items-center text-green-400 text-sm">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                  {optimization.status === 'active' ? 'Active' : 'Inactive'}
+                </div>
               </div>
-              
-              <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-green-300 transition-colors">
-                {feature.title}
-              </h4>
-              
-              <p className="text-gray-300 text-sm mb-4">
-                {feature.description}
-              </p>
-              
-              <div className="flex items-center text-green-400 text-sm">
-                <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                {feature.status === 'active' ? 'Active' : 'Inactive'}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        {/* Performance Benefits */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-green-400 mb-2">45%</div>
-            <div className="text-white font-semibold mb-2">Faster Load Times</div>
-            <div className="text-gray-300 text-sm">Compared to industry average</div>
-          </div>
+        {/* Content Performance */}
+        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">Content Performance</h3>
           
-          <div className="text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">60%</div>
-            <div className="text-white font-semibold mb-2">Higher Engagement</div>
-            <div className="text-gray-300 text-sm">User interaction improvement</div>
-          </div>
-          
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">85%</div>
-            <div className="text-white font-semibold mb-2">SEO Improvement</div>
-            <div className="text-gray-300 text-sm">Search ranking boost</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-2">3.2x</div>
+              <div className="text-white font-semibold mb-2">Higher Engagement</div>
+              <div className="text-gray-300 text-sm">Compared to unoptimized content</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-400 mb-2">2.1x</div>
+              <div className="text-white font-semibold mb-2">Better Conversion</div>
+              <div className="text-gray-300 text-sm">Optimized content performance</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-400 mb-2">45%</div>
+              <div className="text-white font-semibold mb-2">Faster Loading</div>
+              <div className="text-gray-300 text-sm">Optimized content delivery</div>
+            </div>
           </div>
         </div>
       </div>
