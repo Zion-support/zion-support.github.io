@@ -228,6 +228,57 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
+    - id: "ai-2025-autonomous-business-intelligence-revolution"
+      type: "blog"
+      title: "AI 2025: The Autonomous Business Intelligence Revolution - 1,800% ROI Through Self-Managing Analytics"
+      file_path: "/content/blog/ai-2025-autonomous-business-intelligence-revolution.md"
+      url: "/blog/ai-2025-autonomous-business-intelligence-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Autonomous BI", "AI Analytics", "Business Intelligence", "ROI", "Enterprise AI", "Data Analytics", "Predictive Analytics", "Machine Learning"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,800%"
+        savings: "$51M"
+        accuracy: "94.8%"
+        speed: "1,680% faster"
+      reading_time: "28 min read"
+      
+    - id: "fortune-500-autonomous-bi-1800-roi-success"
+      type: "case-study"
+      title: "Fortune 500 Autonomous BI Success: $51M Annual Savings with 1,800% ROI"
+      file_path: "/content/case-studies/fortune-500-autonomous-bi-1800-roi-success.md"
+      url: "/case-studies/fortune-500-autonomous-bi-1800-roi-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Autonomous BI", "Fortune 500", "ROI", "Business Intelligence", "AI Transformation", "Manufacturing", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,800%"
+        savings: "$51M"
+        timeline: "18 months"
+        reliability: "99.7%"
+      reading_time: "22 min read"
+      
+    - id: "autonomous-bi-implementation-master-guide-2025"
+      type: "resource"
+      title: "Autonomous BI Implementation Master Guide 2025: Complete Roadmap to 1,800% ROI"
+      file_path: "/content/resources/autonomous-bi-implementation-master-guide-2025.md"
+      url: "/resources/autonomous-bi-implementation-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "Autonomous BI", "Business Intelligence", "ROI", "Enterprise AI", "Data Analytics", "Strategy", "Best Practices"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,800%"
+        success: "98%"
+        timeline: "18 months"
+        savings: "$51M+"
+      reading_time: "35 min read"
+      
     - id: "ai-2025-ultimate-business-transformation-revolution"
       type: "blog"
       title: "AI 2025: The Ultimate Business Transformation Revolution - 1,200% ROI in 8 Months"
