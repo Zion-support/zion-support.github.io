@@ -8,15 +8,15 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { HelmetProvider } from 'react-helmet-async';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { SnackbarProvider } from 'notistack';
-import { captureException } from '@/utils/sentry';
+import { captureException } from './utils/sentry';
 import { useTranslation } from 'react-i18next';
 // Removed ToastInitializer import as it doesn't exist
 
 // Import i18n configuration
 import './i18n';
-import { LanguageProvider } from '@/context/LanguageContext';
-import { WhitelabelProvider } from '@/context/WhitelabelContext';
-import { AppLayout } from '@/layout/AppLayout';
+import { LanguageProvider } from './context/LanguageContext';
+import { WhitelabelProvider } from './context/WhitelabelContext';
+import { AppLayout } from './layout/AppLayout';
 
 // Removed NotificationProvider import as it doesn't exist
 
