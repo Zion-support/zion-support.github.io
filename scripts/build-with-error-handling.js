@@ -14,8 +14,17 @@ try {
   // Ensure we're in the right directory
   process.chdir(__dirname + '/..');
   
-  console.log('📦 Installing dependencies...');
-  execSync('npm ci --production=false', { stdio: 'inherit' });
+  console.log('📦 Cleaning and installing dependencies...');
+  
+  // Clean any existing node_modules to avoid conflicts
+  try {
+    execSync('rm -rf node_modules', { stdio: 'pipe' });
+  } catch (error) {
+    // Ignore if node_modules doesn't exist
+  }
+  
+  // Install dependencies with legacy peer deps to avoid conflicts
+  execSync('npm install --legacy-peer-deps', { stdio: 'inherit' });
   
   // Check if Vite is available
   console.log('🔍 Checking if Vite is available...');
