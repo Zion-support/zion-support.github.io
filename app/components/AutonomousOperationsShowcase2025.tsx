@@ -10,7 +10,6 @@ import {
   Star, 
   Clock, 
   Users, 
-  Target,
   CheckCircle,
   BarChart3,
   Cpu,
