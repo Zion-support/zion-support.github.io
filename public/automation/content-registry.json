@@ -17869,10 +17869,6 @@
       "route": "/reports/blueprints/blueprint-2025-08-14-212855"
     },
     {
-      "file": "pages/main/front/index.tsx",
-      "route": "/main/front"
-    },
-    {
       "file": "pages/reports/guides/guide-2025-08-17-220057.tsx",
       "route": "/reports/guides/guide-2025-08-17-220057"
     },
@@ -22787,6 +22783,10 @@
     {
       "file": "pages/reports/updates/update-2025-08-17-1910.tsx",
       "route": "/reports/updates/update-2025-08-17-1910"
+    },
+    {
+      "file": "pages/reports/updates/update-2025-08-17-1902.tsx",
+      "route": "/reports/updates/update-2025-08-17-1902"
     },
     {
       "file": "pages/reports/updates/update-2025-08-17-1901.tsx",
