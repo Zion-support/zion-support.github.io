@@ -34,6 +34,8 @@ export interface EnhancedMicroSaasService {
 
 export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   // Quantum AI & Computing Services
   {
     id: 'quantum-ai-orchestrator',
@@ -71,6 +73,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     marketSize: '$1.2B emerging market',
     growthRate: '200% annual growth',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   // AI & Machine Learning Services
   {
     id: 'ai-content-generator-pro',
@@ -107,7 +110,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly'],
     marketSize: '$1.2B global market',
     growthRate: '25% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e0c7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -115,6 +121,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     }
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   
   // Edge AI & IoT Services
@@ -198,6 +206,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     marketSize: '$2.1B global market',
     growthRate: '250% annual growth',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'ai-video-editor-pro',
     name: 'AI Video Editor Pro',
@@ -233,7 +242,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['Runway', 'Descript', 'Synthesia', 'Lumen5'],
     marketSize: '$2.1B global market',
     growthRate: '30% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e0c7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -241,6 +253,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     }
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   // Neuromorphic Computing
@@ -590,6 +604,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     growthRate: '500% annual growth',
     variant: 'quantum-space',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'ai-chatbot-platform',
     name: 'AI Chatbot Platform',
@@ -625,7 +640,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['Intercom', 'Drift', 'MobileMonkey', 'Chatfuel'],
     marketSize: '$1.5B global market',
     growthRate: '28% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e0c7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -634,6 +652,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     }
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'neural-quantum-finance-engine',
     name: 'Neural Quantum Finance Engine',
@@ -898,6 +918,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     growthRate: '300% annual growth',
     variant: 'quantum-holographic',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'ai-seo-optimizer',
     name: 'AI SEO Optimizer',
     tagline: 'Intelligent SEO optimization powered by AI',
@@ -932,7 +953,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['Ahrefs', 'SEMrush', 'Moz', 'Ubersuggest'],
     marketSize: '$1.8B global market',
     growthRate: '22% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e0c7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -941,6 +965,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     }
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'neural-quantum-education-platform',
     name: 'Neural Quantum Education Platform',
@@ -980,6 +1006,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     growthRate: '250% annual growth',
     variant: 'neural-quantum-cyberpunk',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'ai-data-analytics',
     name: 'AI Data Analytics Platform',
     tagline: 'Intelligent business intelligence and analytics',
@@ -1057,7 +1084,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['Terraform Cloud', 'AWS CloudFormation', 'Azure Resource Manager', 'Pulumi'],
     marketSize: '$3.2B global market',
     growthRate: '26% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e0c7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1066,6 +1096,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     }
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'quantum-energy-optimization-platform',
     name: 'Quantum Energy Optimization Platform',
@@ -1085,6 +1117,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       'Cost optimization',
       'Sustainability reporting'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'serverless-platform',
     name: 'Serverless Development Platform',
     tagline: 'Build and deploy serverless applications effortlessly',
@@ -1100,12 +1133,17 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       'Database integration',
       'CI/CD pipeline',
       'Cost optimization'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e0c7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '⚡',
     color: 'from-yellow-500 to-orange-600',
     textColor: 'text-yellow-400',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/quantum-energy-optimization',
     marketPosition: 'Leading quantum AI energy platform with 40% cost reduction',
@@ -1123,6 +1161,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     growthRate: '350% annual growth',
     variant: 'quantum-cyberpunk',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/serverless-platform',
     marketPosition: 'Competitive with AWS Lambda, Azure Functions, and Google Cloud Functions',
     targetAudience: 'Developers, startups, and businesses building modern applications',
@@ -1180,7 +1219,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['CrowdStrike', 'SentinelOne', 'Cylance', 'Carbon Black'],
     marketSize: '$4.1B global market',
     growthRate: '29% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e0c7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1189,6 +1231,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     }
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'autonomous-agriculture-intelligence',
     name: 'Autonomous Agriculture Intelligence',
@@ -1228,6 +1272,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     growthRate: '300% annual growth',
     variant: 'neural-cyberpunk',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'zero-trust-security',
     name: 'Zero Trust Security Platform',
     tagline: 'Never trust, always verify security model',
@@ -1948,7 +1993,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['Expedia', 'Booking.com', 'Kayak', 'Skyscanner'],
     marketSize: '$2.0B global market',
     growthRate: '24% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e0c7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1959,6 +2007,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
 ];
 
 export const serviceCategories = [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   'Quantum AI & Computing',
   'Edge AI & IoT',
@@ -1974,6 +2024,7 @@ export const serviceCategories = [
 
 export const getServicesByCategory = (category: string) => {
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'All',
   'AI & Machine Learning',
   'Cloud & Infrastructure',
@@ -2009,7 +2060,10 @@ export const getServicesByCategory = (category: string) => {
 
 export const getServicesByCategory = (category: string) => {
   if (category === 'All') return enhancedMicroSaasServices;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e0c7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   return enhancedMicroSaasServices.filter(service => service.category === category);
 };
 
@@ -2025,5 +2079,9 @@ export const getServicesByPriceRange = (min: number, max: number) => {
 <<<<<<< HEAD
 };
 =======
+<<<<<<< HEAD
+};
+=======
 };
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e0c7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

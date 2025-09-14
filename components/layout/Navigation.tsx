@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, Home, Brain, Cpu, Rocket, 
-  Phone, Mail, MapPin, Globe, ChevronDown
+  Phone, Mail, MapPin, Globe, ChevronDown,
+  BookOpen, FileText, TrendingUp, Users
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -35,6 +36,18 @@ const Navigation: React.FC = () => {
         { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Enterprise IT solutions' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Rocket, description: 'Specialized software solutions' },
         { name: 'Innovative Showcase', href: '/innovative-services-showcase', icon: Globe, description: 'Cutting-edge technology' }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '/content-showcase',
+      icon: BookOpen,
+      dropdown: [
+        { name: 'Content Showcase', href: '/content-showcase', icon: BookOpen, description: 'All our latest content' },
+        { name: 'Blog Posts', href: '/blog', icon: FileText, description: 'Latest insights and trends' },
+        { name: 'Case Studies', href: '/case-studies', icon: TrendingUp, description: 'Success stories and ROI' },
+        { name: 'Resources', href: '/resources', icon: FileText, description: 'Guides and whitepapers' },
+        { name: 'Tools', href: '/tools', icon: Cpu, description: 'Calculators and utilities' }
       ]
     },
     {

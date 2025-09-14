@@ -714,6 +714,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
   },
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     id: 'metaverse-commerce-platform',
     name: 'Metaverse Commerce Platform',
     tagline: 'Complete metaverse business solution',
@@ -767,6 +769,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'API-first architecture',
       'Enterprise SLA guarantees'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'quantum-blockchain-oracle',
     name: 'Quantum Blockchain Oracle',
     tagline: 'Quantum-secured blockchain data verification platform',
@@ -782,13 +785,18 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Enterprise-grade security compliance',
       '24/7 quantum computing monitoring',
       'Advanced fraud detection'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🔗',
     color: 'from-purple-500 to-indigo-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-blockchain-oracle',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     marketPosition: 'First quantum-secured blockchain oracle, 100% tamper-proof data verification',
     targetAudience: 'DeFi platforms, blockchain enterprises, smart contract developers, financial institutions',
@@ -802,6 +810,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     roi: '800% average ROI in 18 months',
     competitors: ['Chainlink', 'Pyth Network', 'API3', 'Band Protocol'],
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     marketPosition: 'First quantum-secured blockchain oracle, 99.99% uptime guarantee',
     targetAudience: 'DeFi platforms, smart contract developers, enterprise blockchain companies',
     trialDays: 7,
@@ -813,11 +822,16 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     useCases: ['DeFi protocols', 'Smart contract automation', 'Cross-chain data verification', 'Enterprise blockchain'],
     roi: '600% average ROI in 18 months',
     competitors: ['Chainlink', 'Band Protocol', 'API3', 'Pyth Network'],
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     marketSize: '$1.2B oracle market',
     growthRate: '200% annual growth'
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'quantum-simulation-platform',
     name: 'Quantum Simulation Platform',
@@ -1646,6 +1660,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$2.8B global market',
     growthRate: '40% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'ai-biomedical-research-platform',
     name: 'AI Biomedical Research Platform',
     tagline: 'AI-powered drug discovery and medical research automation',
@@ -2724,7 +2739,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['OpenAI API', 'Hugging Face', 'Algorithmia', 'Model Zoo'],
     marketSize: '$2.1B AI marketplace market',
     growthRate: '220% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

@@ -1293,9 +1293,12 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT'],
     marketSize: '$1.8B global market',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     growthRate: '40% annual growth'
   },
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '40% annual growth'
   },
   // Cybersecurity & Zero Trust Services
@@ -1372,7 +1375,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     growthRate: '30% annual growth'
   },
   // Data Analytics & Business Intelligence
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fc05
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   {
     id: 'biometric-authentication-pro',
     name: 'Biometric Authentication Pro',
@@ -1411,6 +1417,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
   },
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     id: 'ai-supply-chain-optimizer',
     name: 'AI Supply Chain Optimizer',
     tagline: 'Intelligent supply chain management',
@@ -1439,6 +1447,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     category: 'Business Intelligence',
     realService: true,
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'ai-data-analytics-platform',
     name: 'AI Data Analytics Platform',
     tagline: 'Intelligent business intelligence',
@@ -1502,7 +1511,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     setupTime: '20 minutes',
     category: 'Business Intelligence',
     realService: true,
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fc05
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['AI/ML', 'Predictive Analytics', 'IoT', 'Blockchain'],
     integrations: ['ERP systems', 'WMS', 'TMS', 'E-commerce platforms'],
     useCases: ['Inventory management', 'Demand planning', 'Logistics optimization'],
@@ -1512,6 +1524,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     growthRate: '45% annual growth'
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'quantum-cryptography-vault',
     name: 'Quantum Cryptography Vault',
@@ -1657,6 +1671,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     growthRate: '250% annual growth'
   },
   {
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'ai-financial-advisor',
     name: 'AI Financial Advisor',
     tagline: 'Intelligent investment platform',
@@ -1700,6 +1715,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     period: '/month',
     description: 'AI-powered legal research platform that analyzes case law, generates legal documents, and provides legal insights for professionals and businesses.',
     features: [
+<<<<<<< HEAD
+=======
 =======
     id: 'ai-financial-advisor',
     name: 'AI Financial Advisor',
@@ -1745,6 +1762,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     description: 'AI-powered legal research platform that analyzes case law, generates legal documents, and provides legal insights for professionals and businesses.',
     features: [
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fc05
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       'Legal research automation',
       'Document generation',
       'Case law analysis',
@@ -1833,6 +1851,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     link: 'https://ziontechgroup.com/ai-customer-service',
     marketPosition: 'Advanced AI customer service',
     targetAudience: 'E-commerce, SaaS companies, customer service teams',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     trialDays: 14,
     setupTime: '15 minutes',
@@ -2638,6 +2658,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$30B global market',
     growthRate: '180% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     trialDays: 14,
     setupTime: '15 minutes',
     category: 'AI & Machine Learning',
@@ -3117,7 +3138,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Waymo', 'Cruise', 'Aurora'],
     marketSize: '$1.2B development market',
     growthRate: '250% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fc05
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

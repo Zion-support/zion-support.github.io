@@ -8,9 +8,12 @@ interface FuturisticCardProps {
   hoverEffect?: boolean;
   onClick?: () => void;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   style?: React.CSSProperties;
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-f757
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }
 
 export default function FuturisticCard({ 
@@ -19,11 +22,15 @@ export default function FuturisticCard({
   variant = 'default',
   hoverEffect = true,
 <<<<<<< HEAD
+  onClick 
+=======
+<<<<<<< HEAD
   onClick,
   style
 =======
   onClick 
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-f757
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }: FuturisticCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -67,9 +74,12 @@ export default function FuturisticCard({
     <motion.div
       className={`${baseClasses} ${variants[variant]}`}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       style={style}
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-f757
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       onClick={onClick}
@@ -176,10 +186,14 @@ export function FeatureCard({
   title: string;
   description: string;
 <<<<<<< HEAD
+  icon: string;
+=======
+<<<<<<< HEAD
   icon: string | React.ReactElement;
 =======
   icon: string;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-f757
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   className?: string;
   onClick?: () => void;
 }) {
@@ -190,12 +204,16 @@ export function FeatureCard({
       onClick={onClick}
     >
 <<<<<<< HEAD
+      <div className="text-5xl mb-4">{icon}</div>
+=======
+<<<<<<< HEAD
       <div className="text-5xl mb-4">
         {typeof icon === 'string' ? icon : icon}
       </div>
 =======
       <div className="text-5xl mb-4">{icon}</div>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-f757
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
       <p className="text-gray-300">{description}</p>
     </FuturisticCard>

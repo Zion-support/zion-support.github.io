@@ -462,6 +462,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     growthRate: '300% annual growth'
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   {
     id: 'ai-supply-chain-optimizer',
     name: 'AI Supply Chain Optimizer',
@@ -3636,6 +3638,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$2.8B global market',
     growthRate: '40% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   // New Innovative Services
   {
     id: 'ai-powered-legal-assistant',
@@ -4068,7 +4071,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Rigetti'],
     marketSize: '$400M emerging market',
     growthRate: '300% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8601
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

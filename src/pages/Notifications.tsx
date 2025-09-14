@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useNotifications } from '@/context/notifications/NotificationContext';
 import {
   NotificationType,
-  NotificationContextType} from '@/context/notifications';
+  NotificationContextType,
+} from '@/context/notifications';
 import { formatDistanceToNow } from 'date-fns';
 import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings, Package } from 'lucide-react'
 import { Button } from '@/components/ui/button';
@@ -113,7 +114,8 @@ const NotificationCard: React.FC<{
                 {getNotificationTypeBadge(notification.type)}
                 <span className="text-xs text-zion-slate-light">
                   {formatDistanceToNow(new Date(notification.created_at), {
-                    addSuffix: true})}
+                    addSuffix: true,
+                  })}
                 </span>
                 {!notification.read && (
                   <Badge
@@ -178,7 +180,13 @@ export default function NotificationsPage() {
     dismissNotification,
     loading,
     filter,
-    setFilter} = useNotifications() as NotificationContextType;
+    const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications();
+    return (<>
+      <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace."/>
+      
+=======
+    setFilter,
+  } = useNotifications() as NotificationContextType;
 
   return (
     <>

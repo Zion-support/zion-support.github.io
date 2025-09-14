@@ -1,0 +1,224 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+<<<<<<< HEAD
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  text?: string;
+  showText?: boolean;
+  className?: string;
+}
+
+export default function LoadingSpinner({ 
+  size = 'md', 
+  text = 'Loading amazing experiences...',
+  showText = true,
+  className = ''
+}: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-16 h-16',
+    md: 'w-24 h-24',
+    lg: 'w-32 h-32',
+    xl: 'w-40 h-40'
+  };
+
+  const textSizes = {
+    sm: 'text-xs',
+    md: 'text-sm',
+    lg: 'text-base',
+    xl: 'text-lg'
+  };
+
+  return (
+    <div className={`flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 ${className}`}>
+      <div className="relative">
+        {/* Outer ring */}
+        <motion.div 
+          className={`${sizeClasses[size]} border-4 border-cyan-400/20 rounded-full`}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+        />
+        
+        {/* Inner spinning ring */}
+        <motion.div 
+          className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-cyan-400 border-t-transparent rounded-full`}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        />
+        
+        {/* Zion logo in center */}
+        <motion.div 
+          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold ${textSizes[size]}`}
+          animate={{ 
+            scale: [1, 1.1, 1],
+            opacity: [0.8, 1, 0.8]
+          }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        >
+          ZION
+        </motion.div>
+        
+        {/* Loading text */}
+        {showText && (
+          <motion.div 
+            className="mt-4 text-center"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <motion.div 
+              className={`text-cyan-400 ${textSizes[size]} animate-pulse`}
+              animate={{ opacity: [0.5, 1, 0.5] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              {text}
+            </motion.div>
+          </motion.div>
+        )}
+        
+        {/* Floating particles */}
+        <motion.div
+          className="absolute -top-2 -right-2 w-2 h-2 bg-blue-400 rounded-full opacity-60"
+          animate={{ 
+            y: [0, -10, 0],
+            opacity: [0.6, 1, 0.6]
+          }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute -bottom-2 -left-2 w-1.5 h-1.5 bg-purple-400 rounded-full opacity-60"
+          animate={{ 
+            y: [0, 10, 0],
+            opacity: [0.6, 1, 0.6]
+          }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+        />
+      </div>
+    </div>
+  );
+}
+// Skeleton loading component for content
+export function SkeletonLoader({ className, lines = 3, height = 'h-4' }) {
+    return (<div className={cn('space-y-3', className)}>
+      {Array.from({ length: lines }).map((_, index) => (<motion.div key={index} className={cn('bg-zion-slate-light/20 rounded animate-pulse', height)} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }}/>))}
+    </div>);
+}
+=======
+import { Loader2 } from 'lucide-react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'default' | 'pulse' | 'dots' | 'bars';
+  text?: string;
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  variant = 'default',
+  text,
+  className = ''
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
+
+  const renderSpinner = () => {
+    switch (variant) {
+      case 'pulse':
+        return (
+          <div className={`${sizeClasses[size]} relative`}>
+            <motion.div
+              className="absolute inset-0 bg-zion-cyan rounded-full"
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+            />
+            <motion.div
+              className="absolute inset-0 bg-zion-purple rounded-full"
+              animate={{ scale: [1.2, 1, 1.2] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+            />
+          </div>
+        );
+
+      case 'dots':
+        return (
+          <div className="flex space-x-1">
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={i}
+                className="w-2 h-2 bg-zion-cyan rounded-full"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 0.6, repeat: Infinity, delay: i * 0.2 }}
+              />
+            ))}
+          </div>
+        );
+
+      case 'bars':
+        return (
+          <div className="flex space-x-1">
+            {[0, 1, 2, 3].map((i) => (
+              <motion.div
+                key={i}
+                className="w-1 bg-zion-cyan rounded-full"
+                style={{ height: `${(i + 1) * 8}px` }}
+                animate={{ scaleY: [1, 2, 1] }}
+                transition={{ duration: 0.8, repeat: Infinity, delay: i * 0.1 }}
+              />
+            ))}
+          </div>
+        );
+
+      default:
+        return (
+          <motion.div
+            className={`${sizeClasses[size]} border-2 border-zion-slate-light/20 border-t-zion-cyan rounded-full`}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+          />
+        );
+    }
+  };
+
+  return (
+    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+      {renderSpinner()}
+      {text && (
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="text-zion-cyan text-sm font-medium text-center"
+        >
+          {text}
+        </motion.p>
+      )}
+    </div>
+  );
+};
+
+// Full screen loading overlay
+export const LoadingOverlay: React.FC<{ text?: string; className?: string }> = ({
+  text = 'Loading...',
+  className = ''
+}) => (
+  <div className={`fixed inset-0 bg-zion-slate-dark/80 backdrop-blur-sm flex items-center justify-center z-50 ${className}`}>
+    <LoadingSpinner size="xl" text={text} />
+  </div>
+);
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5da1
+// Page loading component
+export const PageLoader: React.FC<{ text?: string; className?: string }> = ({
+  text = 'Loading page...',
+  className = ''
+}) => (
+  <div className={`min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center ${className}`}>
+    <LoadingSpinner size="xl" text={text} />
+  </div>
+);
+
+export default LoadingSpinner;

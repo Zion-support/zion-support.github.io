@@ -1256,6 +1256,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     targetAudience: 'DeFi users, crypto investors, financial institutions, and developers',
     trialDays: 7,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     setupTime: '1-2 days',
     category: 'Blockchain & Web3',
     realService: true,
@@ -1267,6 +1269,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$20B global DeFi market',
     growthRate: '50% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     setupTime: '4 hours',
     category: 'Emerging Technologies',
     realService: true,
@@ -1529,7 +1532,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Chainlink', 'Pyth Network', 'API3', 'Band Protocol'],
     marketSize: '$1.2B oracle market',
     growthRate: '200% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-17dc
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     id: 'quantum-simulation-platform',
@@ -1740,6 +1746,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     category: 'Data & Analytics',
     realService: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     technology: ['Machine Learning', 'Data Analytics', 'Natural Language Processing', 'Predictive Modeling'],
     integrations: ['Databases', 'Cloud services', 'CRM systems', 'ERP systems', 'Marketing platforms'],
     useCases: ['Business analytics', 'Performance monitoring', 'Predictive insights', 'Decision support'],
@@ -1748,6 +1756,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$28B global business intelligence market',
     growthRate: '30% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['Machine Learning', 'Adaptive Learning', 'Educational AI', 'Analytics'],
     integrations: ['LMS platforms', 'Student information systems', 'Content management', 'Assessment tools'],
     useCases: ['Personalized learning', 'Student assessment', 'Progress tracking', 'Content delivery'],
@@ -2115,7 +2124,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne', 'Darktrace'],
     marketSize: '$2.1B quantum security market',
     growthRate: '280% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-17dc
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

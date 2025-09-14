@@ -36,6 +36,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
   // AI & Machine Learning Services
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     id: 'ai-content-generator-pro',
     name: 'AI Content Generator Pro',
     tagline: 'Professional AI-powered content creation',
@@ -433,6 +435,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       'Custom algorithm development',
       'Academic partnerships'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'quantum-ai-optimizer-pro',
     name: 'Quantum AI Optimizer Pro',
     tagline: 'Next-generation AI optimization using quantum algorithms',
@@ -448,13 +451,18 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       'Quantum-safe encryption',
       'Enterprise-grade security',
       '24/7 quantum computing access'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4f94
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '⚛️',
     color: 'from-cyan-500 to-blue-600',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/quantum-ai-optimizer',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     marketPosition: 'Competitive with IBM Quantum, Google Quantum AI, and D-Wave Systems',
     targetAudience: 'Research institutions, pharmaceutical companies, financial institutions, and logistics companies',
@@ -470,6 +478,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     marketSize: '$1.1B global market',
     growthRate: '35% annual growth',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     marketPosition: 'Premium quantum AI solution, 40% more efficient than traditional AI platforms',
     targetAudience: 'AI researchers, data scientists, enterprise ML teams, and tech companies',
     trialDays: 14,
@@ -483,7 +492,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum'],
     marketSize: '$500M emerging market',
     growthRate: '150% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4f94
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -492,6 +504,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     }
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'blockchain-nft-marketplace',
     name: 'Blockchain NFT Marketplace',
@@ -613,6 +627,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     marketSize: '$2.7B global market',
     growthRate: '31% annual growth',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'ai-cybersecurity-sentinel-enterprise',
     name: 'AI Cybersecurity Sentinel Enterprise',
     tagline: 'Intelligent threat detection and prevention',
@@ -647,7 +662,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['Darktrace', 'CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
     marketSize: '$2.5B global market',
     growthRate: '120% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4f94
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -655,6 +673,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     }
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   // Business Automation
   {
@@ -736,6 +756,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     marketSize: '$2.4B global market',
     growthRate: '26% annual growth',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   // New Innovative AI Services
   {
     id: 'ai-content-factory-pro',
@@ -772,7 +793,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'ContentBot'],
     marketSize: '$1.2B global market',
     growthRate: '180% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4f94
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -780,6 +804,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     }
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   // Financial Technology Services
   {
@@ -818,6 +844,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     marketSize: '$3.8B global market',
     growthRate: '28% annual growth',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   // IT Services
   {
     id: 'cloud-cost-optimizer-enterprise',
@@ -854,7 +881,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['CloudHealth', 'CloudCheckr', 'AWS Cost Explorer', 'Azure Cost Management'],
     marketSize: '$3.8B global market',
     growthRate: '140% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4f94
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -862,6 +892,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     }
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   // Healthcare Technology Services
   {
@@ -1244,6 +1276,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     marketSize: '$2.0B global market',
     growthRate: '24% annual growth',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   // Emerging Technology Services
   {
     id: 'quantum-blockchain-security',
@@ -1280,7 +1313,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     competitors: ['IBM Blockchain', 'Microsoft Azure Blockchain', 'Amazon Managed Blockchain'],
     marketSize: '$800M emerging market',
     growthRate: '200% annual growth',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4f94
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1291,6 +1327,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
 ];
 
 export const serviceCategories = [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   'All',
   'AI & Machine Learning',
@@ -1328,6 +1366,7 @@ export const serviceCategories = [
 export const getServicesByCategory = (category: string) => {
   if (category === 'All') return enhancedMicroSaasServices;
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'AI & Machine Learning',
   'IT Services',
   'Emerging Technology',
@@ -1341,7 +1380,10 @@ export const getServicesByCategory = (category: string) => {
 ];
 
 export const getServicesByCategory = (category: string) => {
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4f94
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   return enhancedMicroSaasServices.filter(service => service.category === category);
 };
 
@@ -1353,6 +1395,11 @@ export const getServicesByPriceRange = (min: number, max: number) => {
   return enhancedMicroSaasServices.filter(service => {
     const price = parseFloat(service.price.replace('$', ''));
 <<<<<<< HEAD
+    return price >= min && (max === Infinity ? true : price <= max);
+  });
+};
+=======
+<<<<<<< HEAD
     return price >= min && (max === Infinity || price <= max);
   });
 };
@@ -1361,3 +1408,4 @@ export const getServicesByPriceRange = (min: number, max: number) => {
   });
 };
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4f94
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

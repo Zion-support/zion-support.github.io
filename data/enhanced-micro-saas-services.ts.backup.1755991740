@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+export interface MicroSaasService {
+=======
+<<<<<<< HEAD
 export interface EnhancedMicroSaasService {
 =======
 export interface MicroSaasService {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-51a7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   id: string;
   name: string;
   tagline: string;
@@ -28,6 +32,8 @@ export interface MicroSaasService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   contactInfo: {
     mobile: string;
@@ -252,6 +258,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       website: 'https://ziontechgroup.com'
     }
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }
 
 export const enhancedMicroSaasServices: MicroSaasService[] = [
@@ -839,11 +846,16 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Epic', 'Cerner', 'Allscripts', 'Athenahealth'],
     marketSize: '$4.8B global market',
     growthRate: '28% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-51a7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
 export const serviceCategories = [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   'AI & Machine Learning',
   'IT Services',
@@ -859,6 +871,7 @@ export const serviceCategories = [
 
 export const getServicesByCategory = (category: string) => {
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'All',
   'AI & Machine Learning',
   'Cloud & Infrastructure',
@@ -873,7 +886,10 @@ export const getServicesByCategory = (category: string) => {
 
 export const getServicesByCategory = (category: string) => {
   if (category === 'All') return enhancedMicroSaasServices;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-51a7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   return enhancedMicroSaasServices.filter(service => service.category === category);
 };
 
@@ -885,6 +901,11 @@ export const getServicesByPriceRange = (min: number, max: number) => {
   return enhancedMicroSaasServices.filter(service => {
     const price = parseFloat(service.price.replace('$', ''));
 <<<<<<< HEAD
+    return price >= min && (max === Infinity || price <= max);
+  });
+};
+=======
+<<<<<<< HEAD
     return price >= min && (max === Infinity ? true : price <= max);
   });
 };
@@ -893,3 +914,4 @@ export const getServicesByPriceRange = (min: number, max: number) => {
   });
 };
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-51a7
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

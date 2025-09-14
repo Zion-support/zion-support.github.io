@@ -3,6 +3,8 @@
     "totalFiles": 1,
     "filesWithIssues": 1,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     "totalIssues": 3,
     "totalWarnings": 1,
     "buildBreakingFiles": 1,
@@ -41,6 +43,7 @@
           "code": "PAGE_TOO_SHORT",
           "message": "Page content seems too short, may be incomplete",
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     "totalIssues": 0,
     "totalWarnings": 1,
     "buildBreakingFiles": 0,
@@ -55,13 +58,24 @@
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-494d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
           "line": 0,
           "severity": "warning"
         }
       ]
     }
   ],
+<<<<<<< HEAD
+  "results": [],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-21T03:41:49.504Z"
+=======
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-19T18:31:39.368Z"
+=======
 <<<<<<< HEAD
   "buildBreakingFiles": [
     "pages/services-enhanced.tsx"
@@ -76,4 +90,5 @@
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T18:31:39.368Z"
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-494d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 }

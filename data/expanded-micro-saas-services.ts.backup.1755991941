@@ -3309,6 +3309,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     category: 'AI & Machine Learning',
     realService: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     technology: ['AI/ML', 'NLP', 'Sentiment Analysis', 'Conversational AI'],
     integrations: ['CRM systems', 'Help desk software', 'Live chat platforms', 'Knowledge bases'],
     useCases: ['Customer support', 'Lead qualification', 'FAQ handling'],
@@ -3713,6 +3715,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$2.8B global market',
     growthRate: '40% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['Digital Twin', 'IoT', 'Machine Learning', '3D Modeling', 'Real-time Analytics'],
     integrations: ['PLM systems', 'IoT platforms', 'CAD software', 'SCADA systems', 'Cloud platforms'],
     useCases: ['Asset monitoring', 'Predictive maintenance', 'Performance optimization', 'Virtual commissioning', 'Training simulation'],
@@ -3900,7 +3903,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Neuralink', 'Kernel', 'CTRL-labs'],
     marketSize: '$200M emerging market',
     growthRate: '500% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c9ab
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

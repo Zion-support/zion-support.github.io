@@ -1284,12 +1284,15 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     },
     realImplementation: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     implementationDetails: 'Complete quantum internet infrastructure with quantum networks, encryption, and global connectivity.',
     launchDate: '2024-02-01',
     customers: 6,
     rating: 4.8,
     reviews: 23
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     implementationDetails: 'Event bus + rules + actions + comms templates.',
     launchDate: '2025-03-08',
     customers: 70,
@@ -2485,7 +2488,10 @@ export const injectedAdditionalServices: EnhancedRealMicroSaasService[] = [
     customers: 24,
     rating: 4.7,
     reviews: 11
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-316d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

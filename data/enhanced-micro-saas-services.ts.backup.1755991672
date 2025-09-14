@@ -2,6 +2,8 @@ export interface EnhancedMicroSaasService {
   id: string;
   name: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   tagline?: string;
   price: string;
   period: string;
@@ -68,6 +70,7 @@ export function getServicesByPriceRange(min: number, max: number) {
   });
 }
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   tagline: string;
   description: string;
   category: string;
@@ -472,4 +475,7 @@ export const getServicesByPriceRange = (min: number, max: number) => {
     service.price.monthly >= min && service.price.monthly <= max
   );
 };
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1f3e
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

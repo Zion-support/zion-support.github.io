@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
-  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
-  Building, Factory, Camera, Video, Music, Gamepad2
+  DollarSign, Shield, Mail, MapPin, Brain, Sparkles,
+  Globe, Heart, Leaf, GraduationCap, BarChart3,
+  Building, Settings, Camera, Video, Music, Gamepad2
 } from 'lucide-react';
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
@@ -24,7 +24,7 @@ const serviceCategories = [
   {
     title: '🚀 2028 Futuristic Innovations',
     description: 'Beyond the future of technology',
-    icon: Rocket,
+    icon: Zap,
     color: 'from-violet-600 to-purple-600',
     services: futuristic2028Services.slice(0, 4)
   },
@@ -38,7 +38,7 @@ const serviceCategories = [
   {
     title: '⚛️ Quantum & Advanced Tech',
     description: 'Quantum computing and beyond',
-    icon: Atom,
+    icon: Shield,
     color: 'from-indigo-600 to-blue-600',
     services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
   },
@@ -59,7 +59,7 @@ const serviceCategories = [
   {
     title: '🚗 Autonomous & Mobility',
     description: 'Self-driving and mobility solutions',
-    icon: Car,
+    icon: Building,
     color: 'from-red-600 to-pink-600',
     services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)
   }

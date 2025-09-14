@@ -304,6 +304,8 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
     color: 'from-red-500 to-pink-600',
     textColor: 'text-red-400',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-threat-detection',
     marketPosition: 'Competitive with CrowdStrike ($8.99-15.99), SentinelOne ($3.50-7.50), and Darktrace ($1000+)',
     targetAudience: 'Cybersecurity teams, IT managers, and compliance officers',
@@ -613,6 +615,7 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$4.8B global market',
     growthRate: '28% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/ai-cybersecurity',
     marketPosition: 'Leading AI cybersecurity solution with 99.9% threat detection rate',
     targetAudience: 'Enterprise security teams, financial institutions, healthcare organizations, government agencies',
@@ -1130,13 +1133,18 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7a5d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
 export const serviceCategories = [
   'All',
   'AI & Machine Learning',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   'Cloud & Infrastructure',
   'Cybersecurity',
@@ -1147,6 +1155,7 @@ export const serviceCategories = [
   'FinTech',
   'Healthcare Technology'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Cybersecurity',
   'Healthcare & Life Sciences',
   'Transportation & Mobility',
@@ -1158,7 +1167,10 @@ export const serviceCategories = [
   'Education & Training',
   'Creative & Media',
   'Blockchain & Web3'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7a5d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];
 
 export const getServicesByCategory = (category: string) => {
