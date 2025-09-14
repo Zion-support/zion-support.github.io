@@ -64,6 +64,8 @@ import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBa
 import AI2025AutonomousSystemsRevolutionBanner from '../components/AI2025AutonomousSystemsRevolutionBanner';
 import AI2026QuantumConsciousnessBreakthroughBanner from '../components/AI2026QuantumConsciousnessBreakthroughBanner';
 import AI2030SingularityPredictionsBanner from '../components/AI2030SingularityPredictionsBanner';
+import AI2025EnterpriseAutomationMasteryBanner from '../components/AI2025EnterpriseAutomationMasteryBanner';
+import AI2026NeuralInterfaceRevolutionBanner from '../components/AI2026NeuralInterfaceRevolutionBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -82,22 +84,26 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
-        {/* New Content 2025 Ultimate Banner - LATEST */}
-        <NewContent2025UltimateBanner />
-=======
         {/* AI 2030 Singularity Predictions Banner - ULTIMATE FEATURED */}
         <AI2030SingularityPredictionsBanner />
+        
+        {/* AI 2026 Neural Interface Revolution Banner - CONSCIOUSNESS REVOLUTION */}
+        <AI2026NeuralInterfaceRevolutionBanner />
         
         {/* AI 2026 Quantum Consciousness Breakthrough Banner - REVOLUTIONARY */}
         <AI2026QuantumConsciousnessBreakthroughBanner />
         
+        {/* AI 2025 Enterprise Automation Mastery Banner - MASTERY */}
+        <AI2025EnterpriseAutomationMasteryBanner />
+        
         {/* AI 2025 Autonomous Systems Revolution Banner - BREAKTHROUGH */}
         <AI2025AutonomousSystemsRevolutionBanner />
         
+        {/* New Content 2025 Ultimate Banner - LATEST */}
+        <NewContent2025UltimateBanner />
+        
         {/* Revolutionary Content 2025 Banner - NEW FEATURED */}
         <RevolutionaryContent2025Banner />
->>>>>>> cursor/create-and-deploy-new-content-41b2
         
         {/* Ultimate Content Showcase 2025 */}
         <UltimateContentShowcase2025 />
