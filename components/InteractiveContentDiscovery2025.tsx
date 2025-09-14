@@ -1,347 +1,216 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const InteractiveContentDiscovery2025 = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedROI, setSelectedROI] = useState('all');
-  const [isSearching, setIsSearching] = useState(false);
-
-  const categories = [
-    { id: 'all', label: 'All Categories', count: 45 },
-    { id: 'ai-revolution', label: 'AI Revolution', count: 12 },
-    { id: 'autonomous-systems', label: 'Autonomous Systems', count: 8 },
-    { id: 'quantum-computing', label: 'Quantum Computing', count: 6 },
-    { id: 'neural-networks', label: 'Neural Networks', count: 7 },
-    { id: 'business-intelligence', label: 'Business Intelligence', count: 5 },
-    { id: 'digital-transformation', label: 'Digital Transformation', count: 7 }
-  ];
-
-  const roiRanges = [
-    { id: 'all', label: 'All ROI Ranges', min: 0, max: 50000 },
-    { id: 'high', label: 'High ROI (10,000%+)', min: 10000, max: 50000 },
-    { id: 'medium', label: 'Medium ROI (1,000-10,000%)', min: 1000, max: 10000 },
-    { id: 'proven', label: 'Proven ROI (100-1,000%)', min: 100, max: 1000 }
-  ];
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   const contentItems = [
     {
-      id: 'ai-2025-ultimate-autonomous-enterprise-revolution',
-      title: 'AI 2025: The Ultimate Autonomous Enterprise Revolution',
-      category: 'ai-revolution',
-      roi: 7500,
-      savings: '$25.8B+',
-      readingTime: '35 min read',
-      description: 'Complete guide to achieving 7,500% ROI through autonomous enterprise systems',
-      url: '/blog/ai-2025-ultimate-autonomous-enterprise-revolution-ultimate-breakthrough',
-      tags: ['AI Revolution', 'Autonomous Enterprise', 'ROI', 'Fortune 500'],
-      featured: true
+      id: 1,
+      title: "AI 2025-2026 Content Revolution: 50,000% ROI Success",
+      category: "case-study",
+      type: "Case Study",
+      description: "Fortune 100 media conglomerate achieves unprecedented ROI with AI content platform",
+      image: "🚀",
+      featured: true,
+      metrics: "50,000% ROI"
     },
     {
-      id: 'quantum-neural-fusion-revolution',
-      title: 'AI 2025: Quantum-Neural Fusion Revolution',
-      category: 'quantum-computing',
-      roi: 25000,
-      savings: '$500B+',
-      readingTime: '35 min read',
-      description: 'Revolutionary quantum-neural fusion technology transforming business operations',
-      url: '/blog/ai-2025-quantum-neural-fusion-revolution-ultimate-breakthrough',
-      tags: ['Quantum Computing', 'Neural Networks', 'AI Revolution', 'ROI'],
-      featured: true
+      id: 2,
+      title: "Ultimate Content Revolution Breakthrough Guide",
+      category: "blog",
+      type: "Blog Post",
+      description: "Discover the latest AI technologies revolutionizing content creation",
+      image: "🧠",
+      featured: true,
+      metrics: "500% Engagement"
     },
     {
-      id: 'neural-superintelligence-revolution',
-      title: 'AI 2025-2026: The Ultimate Neural Superintelligence Revolution',
-      category: 'neural-networks',
-      roi: 12000,
-      savings: '$45.8B+',
-      readingTime: '35 min read',
-      description: 'Complete guide to 12,000% ROI through next-generation AI consciousness',
-      url: '/blog/ai-2025-2026-ultimate-neural-superintelligence-revolution',
-      tags: ['Neural Superintelligence', 'AI Revolution', 'ROI', 'Fortune 500'],
-      featured: true
+      id: 3,
+      title: "Quantum-Neural Content Generation Platform",
+      category: "technology",
+      type: "Technology",
+      description: "Revolutionary platform combining quantum computing with neural networks",
+      image: "⚡",
+      featured: false,
+      metrics: "1000x Faster"
     },
     {
-      id: 'advanced-neural-architectures',
-      title: 'AI 2025: Advanced Neural Architectures Revolution',
-      category: 'neural-networks',
-      roi: 2800,
-      savings: '$4.2B+',
-      readingTime: '25 min read',
-      description: 'Next-generation neural architectures delivering unprecedented business results',
-      url: '/blog/ai-2025-advanced-neural-architectures-revolution',
-      tags: ['Neural Architectures', 'AI Revolution', 'ROI', 'Breakthrough'],
-      featured: false
+      id: 4,
+      title: "Autonomous Content Ecosystem Implementation",
+      category: "solution",
+      type: "Solution",
+      description: "Self-evolving content platforms that adapt and improve automatically",
+      image: "🤖",
+      featured: false,
+      metrics: "95% Cost Reduction"
     },
     {
-      id: 'ultimate-digital-transformation',
-      title: 'AI 2025: Ultimate Digital Transformation Revolution',
-      category: 'digital-transformation',
-      roi: 35000,
-      savings: '$500B+',
-      readingTime: '40 min read',
-      description: 'Complete digital transformation guide achieving unprecedented ROI results',
-      url: '/blog/ai-2025-ultimate-digital-transformation-revolution-ultimate-breakthrough',
-      tags: ['Digital Transformation', 'AI Revolution', 'ROI', 'Breakthrough'],
-      featured: true
+      id: 5,
+      title: "Neural Interface Content Creation",
+      category: "innovation",
+      type: "Innovation",
+      description: "Direct thought-to-content creation using advanced neural interfaces",
+      image: "🔮",
+      featured: true,
+      metrics: "Real-time"
     },
     {
-      id: 'business-intelligence-revolution',
-      title: 'AI 2025: Ultimate Business Intelligence Revolution',
-      category: 'business-intelligence',
-      roi: 18000,
-      savings: '$89.2B+',
-      readingTime: '35 min read',
-      description: 'Revolutionary business intelligence solutions delivering massive ROI improvements',
-      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
-      tags: ['Business Intelligence', 'AI Revolution', 'ROI', 'Data Analytics'],
-      featured: false
+      id: 6,
+      title: "Multi-Modal Content Optimization",
+      category: "technology",
+      type: "Technology",
+      description: "Advanced algorithms for optimizing content across all formats and platforms",
+      image: "🎯",
+      featured: false,
+      metrics: "300% Improvement"
     }
   ];
 
-  const [filteredContent, setFilteredContent] = useState(contentItems);
+  const categories = [
+    { id: 'all', name: 'All Content', count: contentItems.length },
+    { id: 'case-study', name: 'Case Studies', count: contentItems.filter(item => item.category === 'case-study').length },
+    { id: 'blog', name: 'Blog Posts', count: contentItems.filter(item => item.category === 'blog').length },
+    { id: 'technology', name: 'Technology', count: contentItems.filter(item => item.category === 'technology').length },
+    { id: 'solution', name: 'Solutions', count: contentItems.filter(item => item.category === 'solution').length },
+    { id: 'innovation', name: 'Innovations', count: contentItems.filter(item => item.category === 'innovation').length }
+  ];
 
-  useEffect(() => {
-    setIsSearching(true);
-    
-    const timeout = setTimeout(() => {
-      let filtered = contentItems;
-
-      // Filter by search term
-      if (searchTerm) {
-        filtered = filtered.filter(item =>
-          item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-        );
-      }
-
-      // Filter by category
-      if (selectedCategory !== 'all') {
-        filtered = filtered.filter(item => item.category === selectedCategory);
-      }
-
-      // Filter by ROI range
-      if (selectedROI !== 'all') {
-        const roiRange = roiRanges.find(range => range.id === selectedROI);
-        if (roiRange) {
-          filtered = filtered.filter(item => 
-            item.roi >= roiRange.min && item.roi <= roiRange.max
-          );
-        }
-      }
-
-      setFilteredContent(filtered);
-      setIsSearching(false);
-    }, 300);
-
-    return () => clearTimeout(timeout);
-  }, [searchTerm, selectedCategory, selectedROI]);
-
-  const getCategoryColor = (category: string) => {
-    const colors = {
-      'ai-revolution': 'bg-purple-500',
-      'autonomous-systems': 'bg-blue-500',
-      'quantum-computing': 'bg-green-500',
-      'neural-networks': 'bg-orange-500',
-      'business-intelligence': 'bg-indigo-500',
-      'digital-transformation': 'bg-pink-500'
-    };
-    return colors[category as keyof typeof colors] || 'bg-gray-500';
-  };
-
-  const getROIColor = (roi: number) => {
-    if (roi >= 10000) return 'text-red-600';
-    if (roi >= 1000) return 'text-orange-600';
-    if (roi >= 100) return 'text-green-600';
-    return 'text-blue-600';
-  };
+  const filteredItems = activeCategory === 'all' 
+    ? contentItems 
+    : contentItems.filter(item => item.category === activeCategory);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Interactive Content Discovery
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
+            🔍 INTERACTIVE CONTENT DISCOVERY
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Explore Our Latest
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
+              AI Content Revolution
+            </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Find the perfect AI content for your business needs. Search, filter, and discover 
-            breakthrough technologies with proven ROI results.
+            Discover cutting-edge content, case studies, and breakthrough technologies that are transforming businesses worldwide.
           </p>
         </div>
 
-        {/* Search and Filters */}
-        <div className="bg-gray-50 rounded-2xl p-8 mb-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Search Bar */}
-            <div className="lg:col-span-2">
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Search Content
-              </label>
-              <div className="relative">
-                <input
-                  type="text"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  placeholder="Search by title, description, or tags..."
-                  className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                />
-                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            {/* ROI Filter */}
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                ROI Range
-              </label>
-              <select
-                value={selectedROI}
-                onChange={(e) => setSelectedROI(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-              >
-                {roiRanges.map((range) => (
-                  <option key={range.id} value={range.id}>
-                    {range.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          {/* Category Filters */}
-          <div className="mt-6">
-            <label className="block text-sm font-semibold text-gray-700 mb-3">
-              Categories
-            </label>
-            <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
-                    selectedCategory === category.id
-                      ? 'bg-purple-600 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-purple-50 border border-gray-200'
-                  }`}
-                >
-                  {category.label} ({category.count})
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Results */}
-        <div className="mb-8">
-          <div className="flex items-center justify-between">
-            <h3 className="text-2xl font-bold text-gray-900">
-              {isSearching ? 'Searching...' : `Found ${filteredContent.length} Results`}
-            </h3>
-            {isSearching && (
-              <div className="flex items-center space-x-2 text-purple-600">
-                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600"></div>
-                <span className="text-sm font-medium">Searching...</span>
-              </div>
-            )}
-          </div>
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                activeCategory === category.id
+                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg transform scale-105'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+              }`}
+            >
+              {category.name}
+              <span className="ml-2 px-2 py-1 bg-white bg-opacity-20 rounded-full text-xs">
+                {category.count}
+              </span>
+            </button>
+          ))}
         </div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((content) => (
+          {filteredItems.map((item) => (
             <div
-              key={content.id}
-              className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
-                content.featured ? 'ring-2 ring-purple-500' : ''
+              key={item.id}
+              className={`relative bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
+                item.featured ? 'ring-2 ring-purple-500 ring-opacity-50' : ''
               }`}
+              onMouseEnter={() => setHoveredItem(item.id)}
+              onMouseLeave={() => setHoveredItem(null)}
             >
-              {content.featured && (
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 text-center font-semibold">
+              {/* Featured Badge */}
+              {item.featured && (
+                <div className="absolute top-4 left-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold z-10">
                   ⭐ FEATURED
                 </div>
               )}
-              
+
+              {/* Content */}
               <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <span className={`px-3 py-1 rounded-full text-white text-xs font-semibold ${getCategoryColor(content.category)}`}>
-                      {categories.find(cat => cat.id === content.category)?.label}
-                    </span>
-                  </div>
-                  <span className="text-sm text-gray-500">{content.readingTime}</span>
+                {/* Icon */}
+                <div className="text-4xl mb-4">{item.image}</div>
+                
+                {/* Type Badge */}
+                <div className="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                  {item.type}
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
-                  {content.title}
+                {/* Title */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  {item.title}
                 </h3>
 
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  {content.description}
+                {/* Description */}
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {item.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {content.tags.slice(0, 3).map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
+                {/* Metrics */}
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex space-x-4">
-                    <div className="text-center">
-                      <div className={`text-lg font-bold ${getROIColor(content.roi)}`}>
-                        {content.roi.toLocaleString()}%
-                      </div>
-                      <div className="text-xs text-gray-500">ROI</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-blue-600">{content.savings}</div>
-                      <div className="text-xs text-gray-500">Savings</div>
-                    </div>
+                  <div className="text-sm font-semibold text-purple-600">
+                    {item.metrics}
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    {item.category.toUpperCase()}
                   </div>
                 </div>
 
+                {/* CTA Button */}
                 <Link
-                  href={content.url}
-                  className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all"
+                  href={`/${item.category}/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  className={`w-full py-3 px-4 rounded-lg font-semibold text-center transition-all duration-300 ${
+                    hoveredItem === item.id
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white transform scale-105'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
                 >
-                  Read Full Article
+                  {item.type === 'Case Study' ? 'View Case Study' : 
+                   item.type === 'Blog Post' ? 'Read Article' : 
+                   'Learn More'}
                 </Link>
               </div>
+
+              {/* Hover Effect Overlay */}
+              {hoveredItem === item.id && (
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-5 pointer-events-none"></div>
+              )}
             </div>
           ))}
         </div>
 
-        {filteredContent.length === 0 && !isSearching && (
-          <div className="text-center py-12">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">No Results Found</h3>
-            <p className="text-gray-600 mb-6">
-              Try adjusting your search terms or filters to find more content.
-            </p>
-            <button
-              onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-                setSelectedROI('all');
-              }}
-              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+        {/* Bottom CTA */}
+        <div className="text-center mt-12">
+          <p className="text-gray-600 mb-6">
+            Can't find what you're looking for? Let us help you discover the perfect solution.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
-              Clear All Filters
-            </button>
+              Get Custom Recommendations
+            </Link>
+            <Link
+              href="/services"
+              className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300"
+            >
+              View All Services
+            </Link>
           </div>
-        )}
+        </div>
       </div>
     </section>
   );
