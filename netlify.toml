@@ -1,6 +1,7 @@
 [build]
   # Build command with error handling
   command = "bash scripts/netlify-build.sh"
+  # Alternative: command = "bash scripts/netlify-build-npm.sh"
   
   # Directory to publish
   publish = "dist"
@@ -22,7 +23,7 @@
   # Yarn configuration - optimized for reliable builds
   YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
   YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
-  YARN_FLAGS = "--frozen-lockfile --network-timeout 1000000"
+  YARN_FLAGS = "--network-timeout 1000000 --ignore-engines"
   
   # Install devDependencies for build tools
   YARN_INSTALL_DEV = "true"
@@ -39,6 +40,14 @@
   # Additional build optimizations
   CI = "true"
   GENERATE_SOURCEMAP = "false"
+  
+  # Yarn specific optimizations
+  YARN_ENABLE_NETWORK = "true"
+  YARN_ENABLE_PROGRESS_BARS = "false"
+  YARN_ENABLE_VERBOSE_LOGGING = "false"
+  
+  # Node.js optimizations
+  NODE_OPTIONS = "--max-old-space-size=6144 --max-semi-space-size=1024"
 
 # Cache configuration to prevent dependency issues
 [build.cache]
