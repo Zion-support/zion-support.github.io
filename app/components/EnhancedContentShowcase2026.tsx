@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Users, Clock, Star, BookOpen, BarChart3, FileText, ExternalLink } from 'lucide-react';
+import { ArrowRight, TrendingUp, Users, Clock, Star, BookOpen, BarChart3, FileText, ExternalLink, ArrowRight } from 'lucide-react';
 
 interface ContentItem {
   id: string;
@@ -233,7 +233,7 @@ const EnhancedContentShowcase2026: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Users */}
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.slice(0, 3).map((tag, index) => (
                     <span

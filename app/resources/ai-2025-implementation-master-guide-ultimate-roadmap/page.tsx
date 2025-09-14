@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Share2, BookOpen, TrendingUp, Zap,  CheckCircle } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Clock, Share2, BookOpen, TrendingUp, Zap, CheckCircle, ArrowRight, Brain } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI 2025 Implementation Master Guide: Ultimate Roadmap for Enterprise Transformation',
@@ -56,7 +56,7 @@ export default function AIImplementationMasterGuidePage() {
       <div className="max-w-4xl mx-auto px-6 py-12">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium mb-6">
-            <Award className="w-4 h-4 mr-2" />
+            <ArrowRight className="w-4 h-4 mr-2" />
             Master Implementation Guide
           </div>
           

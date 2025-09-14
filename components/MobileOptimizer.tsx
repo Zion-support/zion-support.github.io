@@ -1,157 +1,311 @@
+"use client";
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const MobileOptimizer = () => {
+interface MobileOptimizerProps {
+  children: React.ReactNode;
+}
+
+const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false);
-  const [isTouch, setIsTouch] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+  const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait');
 
   useEffect(() => {
-    // Detect mobile device
-    const checkMobile = () => {
-      const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
-      const isMobileDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
-      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const checkDevice = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
       
-      setIsMobile(isMobileDevice);
-      setIsTouch(isTouchDevice);
+      setIsMobile(width < 768);
+      setIsTablet(width >= 768 && width < 1024);
+      setOrientation(height > width ? 'portrait' : 'landscape');
     };
 
-    // Optimize for mobile
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+    window.addEventListener('orientationchange', checkDevice);
+
+    // Add mobile-specific optimizations
     const optimizeForMobile = () => {
-      if (isMobile || isTouch) {
-        // Add mobile-specific classes
-        document.body.classList.add('mobile-optimized');
+      // Prevent zoom on input focus (iOS)
+      const viewport = document.querySelector('meta[name="viewport"]');
+      if (viewport) {
+        viewport.setAttribute('content', 
+          'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+        );
+      }
+
+      // Add touch-friendly styles
+      const style = document.createElement('style');
+      style.textContent = `
+        /* Mobile-optimized touch targets */
+        @media (max-width: 767px) {
+          button, a, input, select, textarea {
+            min-height: 44px;
+            min-width: 44px;
+          }
+          
+          /* Improve touch scrolling */
+          * {
+            -webkit-overflow-scrolling: touch;
+          }
+          
+          /* Optimize text size for mobile */
+          body {
+            font-size: 16px;
+            line-height: 1.5;
+          }
+          
+          /* Stack elements vertically on mobile */
+          .mobile-stack {
+            flex-direction: column !important;
+          }
+          
+          /* Hide non-essential elements on mobile */
+          .mobile-hide {
+            display: none !important;
+          }
+          
+          /* Show mobile-specific elements */
+          .mobile-show {
+            display: block !important;
+          }
+          
+          /* Optimize spacing for mobile */
+          .mobile-padding {
+            padding: 1rem !important;
+          }
+          
+          .mobile-margin {
+            margin: 0.5rem !important;
+          }
+        }
         
-        // Optimize touch interactions
-        const touchElements = document.querySelectorAll('button, a, [role="button"]');
-        touchElements.forEach(element => {
-          element.classList.add('touch-optimized');
+        /* Tablet optimizations */
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .tablet-optimize {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+          }
+          
+          .tablet-half {
+            flex: 1 1 calc(50% - 0.5rem);
+          }
+        }
+        
+        /* Orientation-specific styles */
+        @media (orientation: landscape) and (max-height: 500px) {
+          .landscape-compact {
+            padding: 0.5rem !important;
+            margin: 0.25rem !important;
+          }
+          
+          .landscape-hide {
+            display: none !important;
+          }
+        }
+        
+        /* High DPI display optimizations */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          .high-dpi-optimize {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Add mobile-specific event listeners
+      const addMobileEventListeners = () => {
+        // Prevent double-tap zoom
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', (e) => {
+          const now = new Date().getTime();
+          if (now - lastTouchEnd <= 300) {
+            e.preventDefault();
+          }
+          lastTouchEnd = now;
+        }, false);
+
+        // Add swipe gestures
+        let startX = 0;
+        let startY = 0;
+        
+        document.addEventListener('touchstart', (e) => {
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
         });
 
-        // Optimize images for mobile
+        document.addEventListener('touchend', (e) => {
+          if (!startX || !startY) return;
+          
+          const endX = e.changedTouches[0].clientX;
+          const endY = e.changedTouches[0].clientY;
+          
+          const diffX = startX - endX;
+          const diffY = startY - endY;
+          
+          // Horizontal swipe
+          if (Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX > 50) {
+              // Swipe left
+              document.dispatchEvent(new CustomEvent('swipeLeft'));
+            } else if (diffX < -50) {
+              // Swipe right
+              document.dispatchEvent(new CustomEvent('swipeRight'));
+            }
+          }
+          
+          // Vertical swipe
+          if (Math.abs(diffY) > Math.abs(diffX)) {
+            if (diffY > 50) {
+              // Swipe up
+              document.dispatchEvent(new CustomEvent('swipeUp'));
+            } else if (diffY < -50) {
+              // Swipe down
+              document.dispatchEvent(new CustomEvent('swipeDown'));
+            }
+          }
+          
+          startX = 0;
+          startY = 0;
+        });
+
+        // Add pull-to-refresh prevention
+        document.addEventListener('touchstart', (e) => {
+          if (window.scrollY === 0) {
+            e.preventDefault();
+          }
+        }, { passive: false });
+      };
+
+      addMobileEventListeners();
+
+      // Optimize images for mobile
+      const optimizeImages = () => {
         const images = document.querySelectorAll('img');
         images.forEach(img => {
-          if (img.width > 400) {
-            img.style.maxWidth = '100%';
-            img.style.height = 'auto';
+          // Add loading="lazy" for better performance
+          if (!img.loading) {
+            img.loading = 'lazy';
+          }
+          
+          // Add responsive image attributes
+          if (!img.sizes) {
+            img.sizes = '(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw';
+          }
+          
+          // Add alt text if missing
+          if (!img.alt) {
+            img.alt = 'Image';
           }
         });
+      };
 
-        // Optimize text for mobile reading
-        const textElements = document.querySelectorAll('p, span, div');
-        textElements.forEach(element => {
-          if (element.textContent && element.textContent.length > 100) {
-            element.classList.add('mobile-text-optimized');
+      optimizeImages();
+
+      // Add mobile navigation enhancements
+      const enhanceMobileNavigation = () => {
+        // Add hamburger menu if not present
+        const nav = document.querySelector('nav');
+        if (nav && !nav.querySelector('.mobile-menu-toggle')) {
+          const toggle = document.createElement('button');
+          toggle.className = 'mobile-menu-toggle';
+          toggle.innerHTML = '☰';
+          toggle.setAttribute('aria-label', 'Toggle mobile menu');
+          toggle.style.cssText = `
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+          `;
+          
+          if (isMobile) {
+            toggle.style.display = 'block';
           }
-        });
-      }
+          
+          nav.insertBefore(toggle, nav.firstChild);
+          
+          // Add mobile menu functionality
+          toggle.addEventListener('click', () => {
+            const menu = nav.querySelector('ul');
+            if (menu) {
+              menu.classList.toggle('mobile-menu-open');
+            }
+          });
+        }
+      };
+
+      enhanceMobileNavigation();
     };
 
-    // Handle viewport changes
-    const handleResize = () => {
-      checkMobile();
-      optimizeForMobile();
-    };
-
-    // Initialize
-    checkMobile();
     optimizeForMobile();
 
-    // Add event listeners
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('orientationchange', handleResize);
-
-    // Cleanup
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('orientationchange', handleResize);
+      window.removeEventListener('resize', checkDevice);
+      window.removeEventListener('orientationchange', checkDevice);
     };
-  }, [isMobile, isTouch]);
+  }, [isMobile, isTablet, orientation]);
 
-  // Add mobile-specific styles
-  useEffect(() => {
-    const style = document.createElement('style');
-    style.textContent = `
-      .mobile-optimized {
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-        text-size-adjust: 100%;
-      }
+  return (
+    <div className={`mobile-optimizer ${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} ${orientation}`}>
+      {children}
       
-      .touch-optimized {
-        min-height: 44px;
-        min-width: 44px;
-        padding: 12px 16px;
-        touch-action: manipulation;
-      }
-      
-      .mobile-text-optimized {
-        line-height: 1.6;
-        font-size: 16px;
-        word-spacing: 0.1em;
-      }
-      
-      @media (max-width: 768px) {
-        .mobile-optimized h1 {
-          font-size: 2rem;
-          line-height: 1.2;
+      <style jsx>{`
+        .mobile-optimizer {
+          width: 100%;
+          min-height: 100vh;
         }
         
-        .mobile-optimized h2 {
-          font-size: 1.5rem;
-          line-height: 1.3;
+        .mobile-optimizer.mobile {
+          /* Mobile-specific styles */
         }
         
-        .mobile-optimized h3 {
-          font-size: 1.25rem;
-          line-height: 1.4;
+        .mobile-optimizer.tablet {
+          /* Tablet-specific styles */
         }
         
-        .mobile-optimized p {
-          font-size: 16px;
-          line-height: 1.6;
-          margin-bottom: 1rem;
+        .mobile-optimizer.portrait {
+          /* Portrait orientation styles */
         }
         
-        .mobile-optimized .container {
-          padding-left: 1rem;
-          padding-right: 1rem;
+        .mobile-optimizer.landscape {
+          /* Landscape orientation styles */
         }
         
-        .mobile-optimized .grid {
-          gap: 1rem;
+        /* Mobile menu styles */
+        :global(.mobile-menu-open) {
+          display: flex !important;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: white;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          z-index: 1000;
         }
         
-        .mobile-optimized .card {
-          padding: 1rem;
-          margin-bottom: 1rem;
+        @media (max-width: 767px) {
+          :global(.mobile-menu-toggle) {
+            display: block !important;
+          }
+          
+          :global(nav ul) {
+            display: none;
+          }
+          
+          :global(.mobile-menu-open) {
+            display: flex !important;
+          }
         }
-      }
-      
-      @media (max-width: 480px) {
-        .mobile-optimized h1 {
-          font-size: 1.75rem;
-        }
-        
-        .mobile-optimized h2 {
-          font-size: 1.25rem;
-        }
-        
-        .mobile-optimized .container {
-          padding-left: 0.75rem;
-          padding-right: 0.75rem;
-        }
-      }
-    `;
-    document.head.appendChild(style);
-
-    return () => {
-      document.head.removeChild(style);
-    };
-  }, []);
-
-  return null;
+      `}</style>
+    </div>
+  );
 };
 
 export default MobileOptimizer;

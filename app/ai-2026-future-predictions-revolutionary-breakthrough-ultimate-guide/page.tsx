@@ -2,7 +2,9 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
+// import ErrorBoundary from '../../components/ErrorBoundary';
 import BlogPostLayout from '../../components/BlogPostLayout';
+import ContentPromotionBanner from '../../components/ContentPromotionBanner';
 import RelatedContentWidget from '../../components/RelatedContentWidget';
 import SocialShareButtons from '../../components/SocialShareButtons';
 
@@ -155,6 +157,8 @@ export default function AI2026FuturePredictionsPage() {
       />
       
       <div className="min-h-screen bg-white">
+        {/* Content Promotion Banner */}
+        <ContentPromotionBanner />
 
         {/* Main Content */}
         <BlogPostLayout

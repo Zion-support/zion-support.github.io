@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function SyntheticIntelligencePage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="Synthetic Intelligence Revolution 2025-2026 | Zion Tech Group"
         description="Discover the revolutionary world of synthetic intelligence achieving 2,500% ROI for Fortune 500 companies. Self-evolving algorithms, quantum-enhanced neural networks, and autonomous business transformation."
@@ -277,6 +277,6 @@ export default function SyntheticIntelligencePage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }

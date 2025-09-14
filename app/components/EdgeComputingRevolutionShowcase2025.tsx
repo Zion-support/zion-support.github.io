@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Shield, DollarSign, Clock, TrendingUp, CheckCircle } from 'lucide-react';
+import { ArrowRight, Zap, Shield, DollarSign, Clock, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 
 const EdgeComputingRevolutionShowcase2025 = () => {
   const [activeTab, setActiveTab] = useState('overview');
