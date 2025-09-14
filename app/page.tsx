@@ -8,6 +8,10 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import NeuralSuperintelligence2025Banner from '../components/NeuralSuperintelligence2025Banner';
 import UltimateNeuralSuperintelligenceShowcase from '../components/UltimateNeuralSuperintelligenceShowcase';
 
+// Import Consciousness AI Revolution components - NEWEST BREAKTHROUGH
+import ConsciousnessAI2025RevolutionBanner from '../components/ConsciousnessAI2025RevolutionBanner';
+import ConsciousnessAI2025Showcase from '../components/ConsciousnessAI2025Showcase';
+
 // Import new AI Revolution 2025-2026 components
 import AIRevolution2025Banner from '../components/AIRevolution2025Banner';
 import AIRevolutionContentShowcase from '../components/AIRevolutionContentShowcase';
@@ -320,6 +324,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* CONSCIOUSNESS AI REVOLUTION BANNER - NEWEST BREAKTHROUGH */}
+        <ConsciousnessAI2025RevolutionBanner />
+        
         {/* AI 2025-2026 CONTENT REVOLUTION 50,000% ROI BANNER - NEWEST BREAKTHROUGH */}
         <AI2025_2026ContentRevolution50000ROIBanner />
         
@@ -614,6 +621,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Consciousness AI Revolution Showcase - NEWEST FEATURED */}
+        <ConsciousnessAI2025Showcase />
 
         {/* AI 2025 Ultimate Business Intelligence Showcase - NEWEST FEATURED */}
         <AI2025UltimateBusinessIntelligenceShowcase />
