@@ -36,6 +36,55 @@ content_index:
       featured: true
       is_new: true
 
+  new_2025_content_latest:
+    - id: "ai-cybersecurity-revolution"
+      type: "blog"
+      title: "AI 2025: The Cybersecurity Revolution - How AI is Transforming Digital Defense"
+      file_path: "/content/blog/ai-2025-cybersecurity-revolution.md"
+      url: "/blog/ai-2025-cybersecurity-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Cybersecurity", "Digital Defense", "Enterprise Security", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        reduction: "95%"
+        savings: "$50M+"
+        accuracy: "94%"
+        projects: "500+"
+        
+    - id: "ai-healthcare-transformation"
+      type: "case-study"
+      title: "AI Healthcare Transformation 2025: How a Regional Hospital System Achieved 400% ROI"
+      file_path: "/content/case-studies/ai-healthcare-transformation-2025-success.md"
+      url: "/case-studies/ai-healthcare-transformation-2025-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Healthcare", "AI Transformation", "ROI", "Patient Safety", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "400%"
+        reduction: "67%"
+        satisfaction: "95%"
+        savings: "$25.8M"
+        
+    - id: "ai-implementation-ultimate-guide"
+      type: "resource"
+      title: "AI Implementation Ultimate Guide 2025: From Strategy to ROI - The Complete Blueprint"
+      file_path: "/content/resources/ai-implementation-ultimate-guide-2025.md"
+      url: "/resources/ai-implementation-ultimate-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2025", "Blueprint"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        projects: "500+"
+        accuracy: "89%"
+        reduction: "67%"
+
   new_2026_content:
     - id: "ai-2026-enterprise-automation"
       type: "blog"
