@@ -75,17 +75,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Quantum AI Revolution Banner - NEW */}
-        <QuantumAIRevolutionBanner2025 />
+        {/* Revolutionary AI 2026 Content Banner - NEW */}
+        <RevolutionaryAI2026ContentBanner />
         
-        {/* New Content 2025 Ultimate Banner */}
+        {/* New Content 2025 Ultimate Banner - NEW */}
         <NewContent2025UltimateBanner />
+        
+        {/* Quantum AI Revolution Banner */}
+        <QuantumAIRevolutionBanner2025 />
         
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
-        
-        {/* Revolutionary AI 2026 Content Banner */}
-        <RevolutionaryAI2026ContentBanner />
         
         {/* New Content 2026 Ultimate Showcase */}
         <NewContent2026UltimateShowcase />
