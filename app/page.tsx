@@ -259,6 +259,14 @@ import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent
 import AI2025_2026UltimateBusinessTransformationRevolutionBanner from '../components/AI2025_2026UltimateBusinessTransformationRevolutionBanner';
 import UltimateBusinessTransformationShowcase2025 from '../components/UltimateBusinessTransformationShowcase2025';
 
+// Import new AI 2028 future vision components
+import AI2028FutureVisionBanner from '../components/AI2028FutureVisionBanner';
+import InteractiveTechDemo2027 from '../components/InteractiveTechDemo2027';
+
+// Import new AI 2030 future tech components
+import AI2030FutureTechPreview from '../components/AI2030FutureTechPreview';
+import RevolutionaryTechShowcase2030 from '../components/RevolutionaryTechShowcase2030';
+
 // Import new Ultimate Content 2026 components
 import AI2026BreakthroughRevolutionBanner from '../components/AI2026BreakthroughRevolutionBanner';
 import QuantumComputing2026UltimateBanner from '../components/QuantumComputing2026UltimateBanner';
@@ -325,6 +333,15 @@ export default function HomePage() {
         
         {/* INTERACTIVE TECH DEMO 2027 - EXPERIENCE THE FUTURE */}
         <InteractiveTechDemo2027 />
+        
+        {/* AI 2028 FUTURE VISION BANNER - NEXT EVOLUTION */}
+        <AI2028FutureVisionBanner />
+        
+        {/* AI 2030 FUTURE TECH PREVIEW - BEYOND IMAGINATION */}
+        <AI2030FutureTechPreview />
+        
+        {/* REVOLUTIONARY TECH SHOWCASE 2030 - THE FUTURE OF INTELLIGENCE */}
+        <RevolutionaryTechShowcase2030 />
         
         {/* ULTIMATE CONTENT SHOWCASE 2026 - COMPREHENSIVE COLLECTION */}
         <UltimateContentShowcase2026 />
