@@ -1,8 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
 import SEO from '../../../components/SEO';
 import ErrorBoundary from '../../../components/ErrorBoundary';
 
@@ -27,7 +25,6 @@ export default function AI2025EnterpriseTransformationPage() {
         title="AI 2025 Enterprise Transformation: Complete Guide to Digital Revolution"
         description="Discover how AI is revolutionizing enterprise operations in 2025. Complete guide to implementation, ROI, and success strategies."
         keywords="AI, Enterprise, Digital Transformation, Automation, ROI"
->>>>>>> cursor/create-and-deploy-new-content-040d
         url="/blog/ai-2025-enterprise-transformation-complete-guide"
       />
       
