@@ -43,7 +43,6 @@ export function AppHeader() {
     setSearchOpen(false);
   }, [location.pathname]);
 
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   const navigationItems = [
     { name: 'Home', path: '/', icon: null },
     { 
