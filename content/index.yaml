@@ -361,6 +361,57 @@ content_index:
         payback: "3.8 months"
 
   new_2025_content_latest:
+    - id: "ultimate-business-transformation"
+      type: "blog"
+      title: "AI 2025: The Ultimate Business Transformation Revolution - 950% ROI Breakthrough"
+      file_path: "/content/blog/ai-2025-ultimate-business-transformation-revolution.md"
+      url: "/blog/ai-2025-ultimate-business-transformation-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Revolution", "ROI", "Enterprise", "Transformation", "2025", "Business Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "950%"
+        savings: "$4.2B"
+        satisfaction: "99.8%"
+        success: "98%"
+      reading_time: "25 min read"
+      
+    - id: "ultimate-enterprise-transformation-success"
+      type: "case-study"
+      title: "AI 2025 Ultimate Enterprise Transformation: $2.8B Company Achieves 950% ROI in 18 Months"
+      file_path: "/content/case-studies/ai-2025-ultimate-enterprise-transformation-success-story.md"
+      url: "/case-studies/ai-2025-ultimate-enterprise-transformation-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 100", "Manufacturing", "ROI", "Success Story", "Enterprise Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "950%"
+        savings: "$1.2B"
+        efficiency: "99.9%"
+        timeline: "18 months"
+      reading_time: "20 min read"
+      
+    - id: "ultimate-implementation-master-guide"
+      type: "resource"
+      title: "AI 2025 Ultimate Implementation Master Guide: From Strategy to 950% ROI in 18 Months"
+      file_path: "/content/resources/ai-2025-ultimate-implementation-master-guide.md"
+      url: "/resources/ai-2025-ultimate-implementation-master-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Framework", "Best Practices", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "950%"
+        success: "98%"
+        savings: "$4.2B"
+        timeline: "18 months"
+      reading_time: "45 min read"
+
     - id: "advanced-automation-revolution"
       type: "blog"
       title: "AI 2025: The Advanced Automation Revolution - Ultimate Guide to 600% ROI"

@@ -36,6 +36,7 @@ import InteractiveROICalculator from '../components/InteractiveROICalculator';
 import ComprehensiveContentShowcase2025 from '../components/ComprehensiveContentShowcase2025';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+import UltimateTransformationBanner2025 from '../components/UltimateTransformationBanner2025';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -54,6 +55,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate Transformation Banner 2025 - NEW FEATURED */}
+        <UltimateTransformationBanner2025 />
+        
+        {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
+        <UltimateContentShowcase2025 />
+        
         {/* Revolutionary Content 2025 Banner - NEW FEATURED */}
         <RevolutionaryContent2025Banner />
         
