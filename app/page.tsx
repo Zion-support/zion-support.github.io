@@ -196,6 +196,11 @@ import UltimateContentShowcase2025Banner from './components/UltimateContentShowc
 import AI2025UltimateBreakthroughContentBanner from '../components/AI2025UltimateBreakthroughContentBanner';
 import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
 
+// Import new 2026 content promotional components
+import SyntheticIntelligence2026RevolutionBanner from './components/SyntheticIntelligence2026RevolutionBanner';
+import QuantumComputing2026UltimateBanner from './components/QuantumComputing2026UltimateBanner';
+import UltimateContent2026Showcase from './components/UltimateContent2026Showcase';
+
 // Import new autonomous enterprise components
 import UltimateAutonomousEnterpriseBanner2025 from '../components/UltimateAutonomousEnterpriseBanner2025';
 import RevolutionaryContent2026UltimateShowcase from '../components/RevolutionaryContent2026UltimateShowcase';
@@ -224,6 +229,11 @@ import RevolutionaryContent2026Showcase from '../components/RevolutionaryContent
 // Import new 2025-2026 synthetic intelligence components
 import SyntheticIntelligence2025Banner from '../components/SyntheticIntelligence2025Banner';
 import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
+
+// Import new 2025 promotional banners
+import NewContent2025UltimateSecurityBanner from '../components/NewContent2025UltimateSecurityBanner';
+import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
+import AI2025EnterpriseAutomationBanner from '../components/AI2025EnterpriseAutomationBanner';
 
 // Import new 2025 advanced analytics promotional components
 import NewContent2025AdvancedAnalyticsBanner from '../components/NewContent2025AdvancedAnalyticsBanner';
@@ -272,14 +282,21 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2025 CONTENT BANNERS - LATEST FEATURED */}
+        <NewContent2025UltimateSecurityBanner />
+        <QuantumAI2026BreakthroughBanner />
+        <AI2025EnterpriseAutomationBanner />
         {/* NEW ULTIMATE CONTENT 2026 - TOP PRIORITY FEATURED */}
         <UltimateContent2026Showcase />
         
-        {/* AI 2026 BREAKTHROUGH REVOLUTION BANNER - NEWEST FEATURED */}
-        <AI2026BreakthroughRevolutionBanner />
+        {/* SYNTHETIC INTELLIGENCE 2026 REVOLUTION BANNER - NEWEST FEATURED */}
+        <SyntheticIntelligence2026RevolutionBanner />
         
         {/* QUANTUM COMPUTING 2026 ULTIMATE BANNER - NEWEST FEATURED */}
         <QuantumComputing2026UltimateBanner />
+        
+        {/* AI 2026 BREAKTHROUGH REVOLUTION BANNER - NEWEST FEATURED */}
+        <AI2026BreakthroughRevolutionBanner />
         
         {/* NEURAL INTERFACE REVOLUTION 2026 BANNER - NEWEST FEATURED */}
         <NeuralInterfaceRevolution2026Banner />
@@ -388,18 +405,19 @@ export default function HomePage() {
         <AI2025_2026UltimateBusinessIntelligenceShowcase />
         
         {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER - LATEST FEATURED */}
+        {/* NEW CONTENT 2025 ULTIMATE BREAKTHROUGH BANNER - LATEST FEATURED */}
         <NewContent2025UltimateBreakthroughBanner />
         
         {/* Revolutionary Content 2025 Showcase - NEW FEATURED */}
         <RevolutionaryContent2025Showcase />
         
-        {/* Quantum AI 2026 Breakthrough Banner */}
-        <QuantumAI2026BreakthroughBanner />
-        
-        {/* AI 2025-2026 Ultimate Business Transformation Revolution Banner - FEATURED */}
+        {/* AI 2025-2026 Ultimate Business Transformation Revolution Banner - NEWEST FEATURED */}
         <AI2025_2026UltimateBusinessTransformationRevolutionBanner />
         
-        {/* Ultimate Business Transformation Showcase 2025 - FEATURED */}
+        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER - NEWEST FEATURED */}
+        <AI2025RevolutionaryBreakthroughBanner />
+        
+        {/* Ultimate Business Transformation Showcase 2025 - NEW FEATURED */}
         <UltimateBusinessTransformationShowcase2025 />
         
         {/* Ultimate Autonomous Enterprise Banner 2025 - LATEST FEATURED */}
