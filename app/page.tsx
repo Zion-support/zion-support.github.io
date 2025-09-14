@@ -7,6 +7,14 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import AIRevolution2025Banner from '../components/AIRevolution2025Banner';
 import AIRevolutionContentShowcase from '../components/AIRevolutionContentShowcase';
 
+// Import new Revolutionary AI Automation 2025 components
+import RevolutionaryAIAutomationBanner2025 from '../components/RevolutionaryAIAutomationBanner2025';
+import RevolutionaryAIAutomationShowcase2025 from '../components/RevolutionaryAIAutomationShowcase2025';
+
+// Import new Ultimate Business Intelligence 2025 components
+import UltimateBusinessIntelligence2025Banner from '../components/UltimateBusinessIntelligence2025Banner';
+import UltimateBusinessIntelligenceShowcase2025 from '../components/UltimateBusinessIntelligenceShowcase2025';
+
 // Import new Ultimate Content 2025 Revolutionary components
 import UltimateContent2025RevolutionaryBanner from '../components/UltimateContent2025RevolutionaryBanner';
 import UltimateContent2025Showcase from '../components/UltimateContent2025Showcase';
@@ -193,8 +201,14 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate Business Intelligence 2025 Banner - NEW ULTIMATE FEATURED */}
+        <UltimateBusinessIntelligence2025Banner />
+        
         {/* AI Revolution 2025-2026 Banner - NEWEST ULTIMATE FEATURED */}
         <AIRevolution2025Banner />
+        
+        {/* Revolutionary AI Automation Banner 2025 - NEW ULTIMATE FEATURED */}
+        <RevolutionaryAIAutomationBanner2025 />
         
         {/* AI Revolution Content Showcase - NEWEST FEATURED */}
         <AIRevolutionContentShowcase />
@@ -224,6 +238,9 @@ export default function HomePage() {
         
         {/* AI 2026 BREAKTHROUGH REVOLUTION BANNER - NEWEST FEATURED */}
         <AI2026BreakthroughRevolutionBanner />
+        
+        {/* Ultimate Business Intelligence Showcase 2025 - NEW ULTIMATE FEATURED */}
+        <UltimateBusinessIntelligenceShowcase2025 />
         
         {/* Revolutionary AI Automation Showcase 2025 - NEW FEATURED */}
         <RevolutionaryAIAutomationShowcase2025 />
