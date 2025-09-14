@@ -1,19 +1,9 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen, TrendingUp, Target } from 'lucide-react';
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-18b4
-import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
-  title: 'AI 2025: The Complete Enterprise Transformation Guide | Zion Tech Group',
-  description: 'Discover how AI is revolutionizing enterprise operations in 2025. Learn about cutting-edge AI technologies, implementation strategies, and real-world success stories.',
-  keywords: ['AI', 'Enterprise', 'Transformation', 'Automation', '2025', 'ROI', 'Business Strategy'],
-=======
   title: 'AI 2025: Complete Enterprise Transformation Guide | Zion Tech Group',
   description: 'Comprehensive guide to AI transformation in 2025. Learn how to implement AI solutions, measure ROI, and transform your enterprise with cutting-edge technology.',
   keywords: ['AI Implementation', 'Enterprise Transformation', '2025', 'AI Strategy', 'ROI', 'Digital Transformation'],
@@ -25,7 +15,6 @@ export const metadata: Metadata = {
     authors: ['Zion Tech Group'],
     tags: ['AI Implementation', 'Enterprise Transformation', '2025', 'AI Strategy', 'ROI'],
   },
->>>>>>> origin/cursor/create-and-deploy-new-content-18b4
 };
 
 export default function AI2025EnterpriseTransformationGuide() {
@@ -44,11 +33,7 @@ export default function AI2025EnterpriseTransformationGuide() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-<<<<<<< HEAD
-                <span className="text-sm font-medium">🚀 AI IMPLEMENTATION GUIDE</span>
-=======
                 <span className="text-sm font-medium">🚀 ENTERPRISE TRANSFORMATION</span>
->>>>>>> origin/cursor/create-and-deploy-new-content-18b4
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 AI 2025: Complete Enterprise Transformation Guide
@@ -61,11 +46,7 @@ export default function AI2025EnterpriseTransformationGuide() {
                   href="#guide-content"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-<<<<<<< HEAD
-                  Read Guide
-=======
                   Read Full Guide
->>>>>>> origin/cursor/create-and-deploy-new-content-18b4
                 </Link>
                 <Link
                   href="/contact"
@@ -78,7 +59,6 @@ export default function AI2025EnterpriseTransformationGuide() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Content Section */}
         <section id="guide-content" className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,7 +99,6 @@ export default function AI2025EnterpriseTransformationGuide() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg max-w-none">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">The AI Transformation Revolution</h2>
->>>>>>> origin/cursor/create-and-deploy-new-content-18b4
               
               <h3>Key Transformation Areas</h3>
               <ul>
@@ -178,15 +157,12 @@ export default function AI2025EnterpriseTransformationGuide() {
                   Contact Zion Tech Group today for a comprehensive assessment and 
                   implementation roadmap tailored to your organization's needs.
                 </p>
-<<<<<<< HEAD
                 <Link
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors"
                 >
                   Get Free Consultation
                 </Link>
-=======
-                <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/contact"
                     className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center"
@@ -200,7 +176,6 @@ export default function AI2025EnterpriseTransformationGuide() {
                     Download Resources
                   </Link>
                 </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-18b4
               </div>
             </div>
           </div>

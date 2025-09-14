@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronRight, X, TrendingUp, Zap, Target, Award } from 'lucide-react';
+import { ChevronRight, X, TrendingUp, Zap, Award } from 'lucide-react';
 
 const AutonomousAIRevolutionBanner2025 = () => {
   const [isVisible, setIsVisible] = useState(true);
