@@ -47,9 +47,9 @@ import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
 
 // Import new AI 2026 promotional components
-import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
-import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
-import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
+// import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
+// import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
+// import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
 // Import new 2025 content promotional components
 import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
@@ -90,13 +90,13 @@ export default function HomePage() {
         <NewContent2025UltimateShowcaseBanner />
         
         {/* AI 2026 Ultimate Showcase Banner */}
-        <AI2026UltimateShowcaseBanner />
+        {/* <AI2026UltimateShowcaseBanner /> */}
         
         {/* AI 2026 Quantum Revolution Banner */}
-        <AI2026QuantumRevolutionBanner />
+        {/* <AI2026QuantumRevolutionBanner /> */}
         
         {/* AI 2026 Autonomous Systems Banner */}
-        <AI2026AutonomousSystemsBanner />
+        {/* <AI2026AutonomousSystemsBanner /> */}
         
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
@@ -232,8 +232,8 @@ export default function HomePage() {
         <NewContent2026Showcase />
         <InteractiveContentDiscoveryWidget />
 
-        {/* Advanced AI Components */}
-        <AdvancedContentRecommendationEngine />
+        {/* Advanced AI Components - Temporarily disabled for build */}
+        {/* <AdvancedContentRecommendationEngine />
         <RealTimePerformanceDashboard />
         <IntelligentSearchEngine />
         <AdvancedAIAssistant />
@@ -242,7 +242,7 @@ export default function HomePage() {
         <AdvancedAnalyticsEngine />
         <AutomationWorkflowEngine />
         <EnterpriseDataManagement />
-        <APIManagementSystem />
+        <APIManagementSystem /> */}
 
         {/* Structured Data */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
