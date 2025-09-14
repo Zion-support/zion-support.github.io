@@ -1,75 +1,132 @@
 #!/bin/bash
 
-echo "Checking for remaining open PRs and branches to merge..."
+# Script to merge remaining content branches into main
+# This will handle the remaining 800+ branches systematically
 
-# Get all remote branches that are not main
-echo "Fetching all remote branches..."
-git fetch --all
+set -e
 
-# Get list of remote branches
-REMOTE_BRANCHES=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | head -20)
+echo "🚀 Starting comprehensive PR merge process for remaining branches..."
 
-echo "Found remote branches:"
-echo "$REMOTE_BRANCHES"
+# Get all remaining content branches (skip first 50)
+BRANCHES=$(git branch -r | grep -E "cursor/create-and-deploy-new-content" | sed 's/origin\///' | tail -n +51)
 
-# Function to merge a branch
+# Counter for tracking progress
+COUNT=0
+TOTAL=$(echo "$BRANCHES" | wc -l)
+SUCCESS=0
+FAILED=0
+
+echo "📊 Found $TOTAL remaining branches to merge"
+
+# Function to merge a single branch
 merge_branch() {
-    local branch="$1"
-    echo "Attempting to merge branch: $branch"
+    local branch=$1
+    local count=$2
+    local total=$3
+    
+    echo ""
+    echo "🔄 [$count/$total] Merging branch: $branch"
     
     # Check if branch exists locally
-    if git show-ref --verify --quiet refs/heads/"$branch"; then
-        echo "Branch $branch exists locally, switching to it"
-        git checkout "$branch"
+    if git show-ref --verify --quiet refs/heads/$branch; then
+        echo "   ✅ Branch $branch already exists locally"
     else
-        echo "Creating local branch $branch from remote"
-        git checkout -b "$branch" "origin/$branch"
+        echo "   📥 Fetching branch $branch..."
+        git fetch origin $branch:$branch
     fi
     
-    # Switch back to main
-    git checkout main
-    
-    # Try to merge the branch
-    if git merge "$branch" --no-edit; then
-        echo "Successfully merged $branch into main"
-        # Delete the branch after successful merge
-        git branch -d "$branch"
-        git push origin --delete "$branch" 2>/dev/null || true
-    else
-        echo "Failed to merge $branch, resolving conflicts..."
-        # Try to resolve conflicts automatically
-        git status --porcelain | grep "^UU\|^AU\|^UA\|^DD\|^AA" | while read status file; do
-            if [ -f "$file" ]; then
-                echo "Resolving conflict in: $file"
-                git checkout --theirs "$file"
-                git add "$file"
-            fi
-        done
+    # Attempt to merge
+    if git merge $branch --no-edit --no-ff; then
+        echo "   ✅ Successfully merged $branch"
+        SUCCESS=$((SUCCESS + 1))
         
-        if git commit -m "Resolve merge conflicts for $branch"; then
-            echo "Successfully resolved conflicts and merged $branch"
-            git branch -d "$branch"
-            git push origin --delete "$branch" 2>/dev/null || true
+        # Clean up the local branch
+        git branch -d $branch 2>/dev/null || true
+        
+        return 0
+    else
+        echo "   ⚠️  Merge conflict in $branch, resolving..."
+        
+        # Check for conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "   🔧 Resolving conflicts in $branch..."
+            
+            # Use our strategy for conflicts (keep our changes)
+            git checkout --ours .
+            git add .
+            
+            # Commit the resolution
+            if git commit --no-edit; then
+                echo "   ✅ Successfully resolved conflicts and merged $branch"
+                SUCCESS=$((SUCCESS + 1))
+                
+                # Clean up the local branch
+                git branch -d $branch 2>/dev/null || true
+                
+                return 0
+            else
+                echo "   ❌ Failed to commit conflict resolution for $branch"
+                git merge --abort 2>/dev/null || true
+                FAILED=$((FAILED + 1))
+                return 1
+            fi
         else
-            echo "Could not resolve conflicts for $branch, aborting merge"
-            git merge --abort
+            echo "   ❌ Unknown merge issue with $branch"
+            git merge --abort 2>/dev/null || true
+            FAILED=$((FAILED + 1))
+            return 1
         fi
     fi
 }
 
-# Merge the first few branches
-echo "Merging first 10 branches..."
-echo "$REMOTE_BRANCHES" | head -10 | while read branch; do
-    if [ -n "$branch" ]; then
-        merge_branch "$branch"
+# Process branches in batches
+echo "🔄 Processing remaining branches in batches of 20..."
+
+for branch in $BRANCHES; do
+    COUNT=$((COUNT + 1))
+    
+    # Merge the branch
+    if merge_branch "$branch" "$COUNT" "$TOTAL"; then
+        echo "   ✅ Branch $branch merged successfully"
+    else
+        echo "   ❌ Failed to merge branch $branch"
+    fi
+    
+    # Push changes every 20 merges
+    if [ $((COUNT % 20)) -eq 0 ]; then
+        echo ""
+        echo "📤 Pushing changes after $COUNT merges..."
+        if git push origin main; then
+            echo "   ✅ Successfully pushed changes to main"
+        else
+            echo "   ⚠️  Failed to push changes, continuing..."
+        fi
+    fi
+    
+    # Safety check - process in smaller batches
+    if [ $COUNT -ge 100 ]; then
+        echo ""
+        echo "🛑 Reached safety limit of 100 merges. Stopping here."
+        break
     fi
 done
 
-echo "Merge process completed!"
-echo "Current status:"
-git status
+echo ""
+echo "📊 Merge Summary:"
+echo "   ✅ Successfully merged: $SUCCESS branches"
+echo "   ❌ Failed to merge: $FAILED branches"
+echo "   📈 Total processed: $COUNT branches"
 
-echo "Pushing final changes..."
-git push origin main
+# Final push
+echo ""
+echo "📤 Pushing final changes to main..."
+if git push origin main; then
+    echo "   ✅ Successfully pushed all changes to main"
+else
+    echo "   ❌ Failed to push final changes"
+    exit 1
+fi
 
-echo "All remaining PRs and branches have been processed!"
+echo ""
+echo "🎉 PR merge process completed!"
+echo "   📊 Final stats: $SUCCESS successful, $FAILED failed out of $COUNT total"

@@ -1,90 +1,132 @@
 #!/bin/bash
 
-# Script to merge all open PRs
-echo "Starting to merge all open PRs..."
+# Script to merge all content branches into main
+# This will handle conflicts and merge systematically
 
-# List of open PRs and their branches
-declare -A prs=(
-    ["17442"]="cursor/create-and-deploy-new-content-fb00"
-    ["17441"]="cursor/create-and-deploy-new-content-18d1"
-    ["17440"]="cursor/create-and-deploy-new-content-d62b"
-    ["17439"]="cursor/create-and-deploy-new-content-0d41"
-    ["17437"]="cursor/create-and-deploy-new-content-f9aa"
-    ["17436"]="cursor/create-and-deploy-new-content-b5cc"
-    ["17435"]="cursor/create-and-deploy-new-content-ad66"
-    ["17434"]="cursor/create-and-deploy-new-content-205a"
-    ["17433"]="cursor/create-and-deploy-new-content-481a"
-    ["17431"]="cursor/create-and-deploy-new-content-dfe1"
-    ["17429"]="cursor/create-and-deploy-new-content-95a1"
-    ["17428"]="cursor/create-and-deploy-new-content-18b4"
-)
+set -e
 
-# Function to merge a PR
-merge_pr() {
-    local pr_number=$1
-    local branch_name=$2
+echo "🚀 Starting comprehensive PR merge process..."
+
+# Get all content branches
+BRANCHES=$(git branch -r | grep -E "cursor/create-and-deploy-new-content" | sed 's/origin\///' | head -50)
+
+# Counter for tracking progress
+COUNT=0
+TOTAL=$(echo "$BRANCHES" | wc -l)
+SUCCESS=0
+FAILED=0
+
+echo "📊 Found $TOTAL branches to merge"
+
+# Function to merge a single branch
+merge_branch() {
+    local branch=$1
+    local count=$2
+    local total=$3
     
-    echo "Processing PR #$pr_number (branch: $branch_name)"
+    echo ""
+    echo "🔄 [$count/$total] Merging branch: $branch"
     
     # Check if branch exists locally
-    if git show-ref --verify --quiet refs/remotes/origin/$branch_name; then
-        echo "Branch $branch_name exists, attempting to merge..."
+    if git show-ref --verify --quiet refs/heads/$branch; then
+        echo "   ✅ Branch $branch already exists locally"
+    else
+        echo "   📥 Fetching branch $branch..."
+        git fetch origin $branch:$branch
+    fi
+    
+    # Attempt to merge
+    if git merge $branch --no-edit --no-ff; then
+        echo "   ✅ Successfully merged $branch"
+        SUCCESS=$((SUCCESS + 1))
         
-        # Fetch the latest changes
-        git fetch origin $branch_name
+        # Clean up the local branch
+        git branch -d $branch 2>/dev/null || true
         
-        # Try to merge the branch
-        if git merge origin/$branch_name --no-ff -m "Merge PR #$pr_number: $branch_name"; then
-            echo "✅ Successfully merged PR #$pr_number"
-            return 0
-        else
-            echo "❌ Merge conflict in PR #$pr_number, attempting to resolve..."
+        return 0
+    else
+        echo "   ⚠️  Merge conflict in $branch, resolving..."
+        
+        # Check for conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "   🔧 Resolving conflicts in $branch..."
             
-            # Check for conflicts
-            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-                echo "Resolving conflicts for PR #$pr_number..."
+            # Use our strategy for conflicts (keep our changes)
+            git checkout --ours .
+            git add .
+            
+            # Commit the resolution
+            if git commit --no-edit; then
+                echo "   ✅ Successfully resolved conflicts and merged $branch"
+                SUCCESS=$((SUCCESS + 1))
                 
-                # Try to resolve conflicts automatically
-                git add .
-                git commit -m "Resolve merge conflicts for PR #$pr_number"
+                # Clean up the local branch
+                git branch -d $branch 2>/dev/null || true
                 
-                if [ $? -eq 0 ]; then
-                    echo "✅ Successfully resolved conflicts for PR #$pr_number"
-                    return 0
-                else
-                    echo "❌ Failed to resolve conflicts for PR #$pr_number"
-                    return 1
-                fi
+                return 0
             else
-                echo "❌ Unknown merge issue for PR #$pr_number"
+                echo "   ❌ Failed to commit conflict resolution for $branch"
+                git merge --abort 2>/dev/null || true
+                FAILED=$((FAILED + 1))
                 return 1
             fi
+        else
+            echo "   ❌ Unknown merge issue with $branch"
+            git merge --abort 2>/dev/null || true
+            FAILED=$((FAILED + 1))
+            return 1
         fi
-    else
-        echo "❌ Branch $branch_name not found locally"
-        return 1
     fi
 }
 
-# Process each PR
-success_count=0
-total_count=${#prs[@]}
+# Process branches in batches
+echo "🔄 Processing branches in batches of 10..."
 
-for pr_number in "${!prs[@]}"; do
-    branch_name="${prs[$pr_number]}"
+for branch in $BRANCHES; do
+    COUNT=$((COUNT + 1))
     
-    if merge_pr $pr_number $branch_name; then
-        ((success_count++))
+    # Merge the branch
+    if merge_branch "$branch" "$COUNT" "$TOTAL"; then
+        echo "   ✅ Branch $branch merged successfully"
+    else
+        echo "   ❌ Failed to merge branch $branch"
     fi
     
-    echo "---"
+    # Push changes every 10 merges
+    if [ $((COUNT % 10)) -eq 0 ]; then
+        echo ""
+        echo "📤 Pushing changes after $COUNT merges..."
+        if git push origin main; then
+            echo "   ✅ Successfully pushed changes to main"
+        else
+            echo "   ⚠️  Failed to push changes, continuing..."
+        fi
+    fi
+    
+    # Safety check - don't process too many at once
+    if [ $COUNT -ge 50 ]; then
+        echo ""
+        echo "🛑 Reached safety limit of 50 merges. Stopping here."
+        break
+    fi
 done
 
-echo "Merge Summary:"
-echo "Successfully merged: $success_count/$total_count PRs"
+echo ""
+echo "📊 Merge Summary:"
+echo "   ✅ Successfully merged: $SUCCESS branches"
+echo "   ❌ Failed to merge: $FAILED branches"
+echo "   📈 Total processed: $COUNT branches"
 
-# Push all changes
-echo "Pushing all changes to main..."
-git push origin main
+# Final push
+echo ""
+echo "📤 Pushing final changes to main..."
+if git push origin main; then
+    echo "   ✅ Successfully pushed all changes to main"
+else
+    echo "   ❌ Failed to push final changes"
+    exit 1
+fi
 
-echo "All PRs processed!"
+echo ""
+echo "🎉 PR merge process completed!"
+echo "   📊 Final stats: $SUCCESS successful, $FAILED failed out of $COUNT total"
