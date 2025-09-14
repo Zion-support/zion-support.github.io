@@ -3,6 +3,183 @@ export interface EnhancedService {
   title: string;
   description: string;
   category: string;
+  pricing: string;
+  price: number;
+  pricingModel: string;
+  userLimit: string;
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  tags: string[];
+  contactInfo: ServiceContact;
+  marketPrice: string;
+  competitors: string[];
+  roi: string;
+  setupTime: string;
+  integrations: string[];
+}
+
+export interface ITService {
+  id: number;
+  name: string;
+  category: string;
+  description: string;
+  hourlyRate: number;
+  projectRate: number;
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  tags: string[];
+  contactInfo: ServiceContact;
+  marketPrice: string;
+  responseTime: string;
+  sla: string;
+  certifications: string[];
+}
+
+export interface AIService {
+  id: number;
+  name: string;
+  category: string;
+  description: string;
+  pricing: string;
+  price: number;
+  pricingModel: string;
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  tags: string[];
+  contactInfo: ServiceContact;
+  marketPrice: string;
+  aiModels: string[];
+  accuracy: string;
+  trainingData: string;
+  compliance: string[];
+}
+
+// Enhanced Micro SAAS Services
+export const enhancedMicroSaasServices: MicroSaasService[] = [
+  {
+      "Intelligent document processing with 99.9% accuracy",
+      "Automated workflow orchestration",
+      "Real-time analytics dashboard",
+      "Custom AI model training",
+      "Integration with 100+ business tools",
+      "24/7 monitoring and alerts"
+    ],
+    benefits: [
+      "Reduce manual processing time by 80%",
+      "Improve accuracy and compliance",
+      "Scale operations without adding staff",
+      "Real-time process insights",
+      "Cost savings through efficiency gains"
+    ],
+    useCases: [
+      "Invoice processing automation",
+      "Customer service automation",
+      "HR process optimization",
+      "Supply chain management",
+      "Quality control automation"
+    ],
+    marketPrice: "$2,500 - $8,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    tags: ["AI", "Automation", "Process Optimization", "Machine Learning", "Workflow"],
+    id: "ai-ml-1",
+    title: "AI-Powered Customer Service Automation",
+    description: "Implement intelligent chatbots and automated customer service solutions using advanced NLP and machine learning to handle 80% of customer inquiries automatically.",
+    category: "AI & Machine Learning",
+    subcategory: "Customer Service",
+    price: 2500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Multi-language support",
+      "24/7 availability",
+      "Seamless human handoff",
+      "Analytics dashboard",
+      "Custom training on your data",
+      "Integration with CRM systems"
+    ],
+    benefits: [
+      "Reduce customer service costs by 60%",
+      "Improve response time from hours to seconds",
+      "Handle unlimited customer inquiries simultaneously",
+      "Provide consistent service quality",
+      "Gather valuable customer insights"
+    ],
+    useCases: [
+      "E-commerce customer support",
+      "SaaS product help desks",
+      "Financial services inquiries",
+      "Healthcare appointment scheduling",
+      "Real estate lead qualification"
+    ],
+    marketPrice: "$2,000 - $5,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-customer-service"
+    },
+    tags: ["AI", "Chatbot", "NLP", "Customer Service", "Automation"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+    },
+    images: ["https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z",
+    aiScore: 95,
+    rating: 4.9,
+    reviewCount: 156,
+    availability: "1-2 weeks",
+    supportLevel: "premium"
+  },
+  {
+    id: "ai-ml-2",
+    title: "Predictive Analytics & Business Intelligence",
+    description: "Transform your business data into actionable insights with advanced predictive analytics, forecasting models, and real-time business intelligence dashboards.",
+    category: "AI & Machine Learning",
+    subcategory: "Analytics",
+    price: 3500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time data processing",
+      "Custom ML model development",
+      "Interactive dashboards",
+      "Automated reporting",
+      "Anomaly detection",
+      "Forecasting algorithms"
+    ],
+    benefits: [
+      "Increase revenue by 15-25% through better decision making",
+      "Reduce operational costs by identifying inefficiencies",
+      "Predict market trends and customer behavior",
+      "Optimize inventory and resource allocation",
+      "Improve customer retention strategies"
+    ],
+    useCases: [
+      "Sales forecasting and pipeline analysis",
+      "Inventory optimization",
+      "Customer churn prediction",
+      "Market trend analysis",
+      "Operational efficiency optimization"
+    ],
+    marketPrice: "$3,000 - $8,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/predictive-analytics"
+    },
+    tags: ["AI", "Analytics", "Business Intelligence", "Machine Learning", "Forecasting"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group"
+    },
 import { ProductListing } from "@/types/listings";
   subcategory: string;
   price: number;

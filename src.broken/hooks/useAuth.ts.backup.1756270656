@@ -1,0 +1,146 @@
+import { useState, useEffect } from 'react';
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'user' | 'admin' | 'moderator';
+  userType?: string;
+  displayName?: string;
+  avatarUrl?: string;
+}
+
+<<<<<<< HEAD:src/hooks/useAuth.ts
+interface AuthState {
+  user: User | null;
+  isAuthenticated: boolean;
+  isLoading: boolean;
+}
+
+=======
+export function useAuth() {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+=======
+>>>>>>> a0be7e94aaaafe2323ab481fcde7bd525c89a136:src.broken/hooks/useAuth.ts.backup.1756270656
+export const useAuth = () => {
+  const [authState, setAuthState] = useState<AuthState>({
+    user: null,
+    isAuthenticated: false,
+    isLoading: true,
+  });
+
+  useEffect(() => {
+    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+    const checkAuth = () => {
+      const storedUser = localStorage.getItem('zion_user');
+      if (storedUser) {
+        try {
+<<<<<<< HEAD:src/hooks/useAuth.ts
+          setAuthState({
+            user: JSON.parse(storedUser),
+=======
+          const user = JSON.parse(storedUser);
+          setAuthState({
+            user,
+>>>>>>> a0be7e94aaaafe2323ab481fcde7bd525c89a136:src.broken/hooks/useAuth.ts.backup.1756270656
+            isAuthenticated: true,
+            isLoading: false,
+          });
+        } catch (error) {
+          console.error('Error parsing stored user:', error);
+<<<<<<< HEAD:src/hooks/useAuth.ts
+          setAuthState(prev => ({ ...prev, isLoading: false }));
+        }
+      } else {
+        setAuthState(prev => ({ ...prev, isLoading: false }));
+=======
+          setAuthState({
+            user: null,
+            isAuthenticated: false,
+            isLoading: false,
+          });
+        }
+      } else {
+        setAuthState({
+          user: null,
+          isAuthenticated: false,
+          isLoading: false,
+        });
+>>>>>>> a0be7e94aaaafe2323ab481fcde7bd525c89a136:src.broken/hooks/useAuth.ts.backup.1756270656
+      }
+    };
+
+    checkAuth();
+  }, []);
+
+  const login = async (email: string, _password: string) => {
+    // In a real app, you would make an API call to your backend
+    const mockUser: User = {
+      id: '1',
+      email,
+      name: 'John Doe',
+      role: 'user',
+      userType: 'creator',
+    };
+    
+    setAuthState({
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false,
+    });
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken', 'dummy-token');
+    return mockUser;
+  };
+
+  const logout = () => {
+    setAuthState({
+      user: null,
+      isAuthenticated: false,
+      isLoading: false,
+    });
+    localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken');
+  };
+
+  const register = async (email: string, password: string, name: string) => {
+    // Implement actual registration logic here
+    const mockUser: User = {
+      id: '1',
+      email,
+      name,
+      role: 'user'
+    };
+    
+    setAuthState({
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false,
+    });
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    return mockUser;
+  };
+
+  return {
+    user: authState.user,
+<<<<<<< HEAD:src/hooks/useAuth.ts
+    isAuthenticated: authState.isAuthenticated,
+    isLoading: authState.isLoading,
+    login,
+    logout,
+    register,
+    isAdmin: authState.user?.role === 'admin'
+  };
+};
+=======
+    loading: authState.isLoading,
+    login,
+    logout,
+    register,
+    isAuthenticated: authState.isAuthenticated,
+    isLoading: authState.isLoading,
+    isAdmin: authState.user?.role === 'admin'
+  };
+};
+>>>>>>> a0be7e94aaaafe2323ab481fcde7bd525c89a136:src.broken/hooks/useAuth.ts.backup.1756270656

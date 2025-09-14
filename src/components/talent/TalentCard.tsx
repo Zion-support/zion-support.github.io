@@ -2,13 +2,13 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Heart, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { useToast } from "@/hooks/use-toast";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { FavoriteButton } from "@/components/FavoriteButton";
 import { TalentProfile } from "@/types/talent";
-import { useAppDispatch } from "@/store/hooks";
-import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
+import { RatingStars } from '@/components/RatingStars';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { useCart } from '@/context/CartContext';
 
 export interface TalentCardProps {
   talent: TalentProfile;
@@ -22,11 +22,8 @@ const TalentCardComponent = ({
   onViewProfile,
   onRequestHire,
   isAuthenticated
-}: TalentCardProps) {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { toast } = useToast();
-  const dispatch = useAppDispatch();
+}: TalentCardProps) => {
+  const router = useRouter();
   
   const handleViewProfile = () => {
     // Navigate directly to the talent profile
@@ -46,31 +43,6 @@ const TalentCardComponent = ({
     }
   };
 
-  const handleToggleSave = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (!isAuthenticated) {
-      toast({
-        title: "Authentication required",
-        description: "Please log in to save talents to your favorites",
-        variant: "destructive"
-      });
-      const next = encodeURIComponent(location.pathname + location.search);
-      navigate(`/login?next=${next}`);
-      return;
-    }
-
-    if (onToggleSave) {
-      onToggleSave(talent.id, !isSaved);
-    }
-
-    dispatch(addToWishlist({ id: talent.id, type: 'talent', data: talent }));
-    fetch(`${getApiUrl()}/wishlist`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: talent.id, type: 'talent' })
-    }).catch(() => {});
-  };
 
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [];
@@ -110,16 +82,7 @@ const TalentCardComponent = ({
           <div className="flex-1">
             <div className="flex justify-between items-start">
               <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
-              <Button
-                variant="ghost"
-                size="sm"
-                aria-label="save-to-wishlist"
-                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
-                onClick={handleToggleSave}
-              >
-                <Heart className={`h-5 w-5 ${isSaved ? 'fill-red-500 text-red-500' : ''}`} />
-                <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
-              </Button>
+              <FavoriteButton itemId={talent.id} className="-mt-1" />
             </div>
             <p className="text-white font-medium">{talent.professional_title}</p>
             

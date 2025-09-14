@@ -1,13 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offline - ZionTech Group</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+          Cantarell, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+
+      .offline-container {
+        text-align: center;
+        max-width: 500px;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      }
+
+      .offline-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        opacity: 0.8;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 300;
+      }
+
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        line-height: 1.6;
+      }
+
+      .retry-button {
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .retry-button:hover {
+        background: rgba(255, 255, 255, 0.3);
+        border-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-2px);
+      }
+
+      .status-indicator {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background: #ff6b6b;
+        border-radius: 50%;
+        margin-right: 8px;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          opacity: 1;
         }
 
         body {
@@ -46,135 +125,89 @@
             .offline-container {
             }
         }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .features {
+        margin-top: 2rem;
+        text-align: left;
+      }
+
+      .features h3 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .features ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .features li {
+        padding: 0.5rem 0;
+        opacity: 0.8;
+      }
+
+      .features li:before {
+        content: '✓';
+        color: #4caf50;
+        font-weight: bold;
+        margin-right: 10px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="offline-container">
-        <div class="logo">ZION</div>
-        <div class="offline-icon">📡</div>
-        
-        <h1>You're Offline</h1>
-        <p class="subtitle">
-            Don't worry! Zion Tech Group is here to help you get back online and continue exploring our cutting-edge AI solutions.
-        </p>
+      <div class="offline-icon">📡</div>
+      <h1>You're Offline</h1>
+      <p>
+        <span class="status-indicator"></span>
+        It looks like you've lost your internet connection. Don't worry, some
+        features are still available offline.
+      </p>
 
-        <div class="message">
-            <h2>What Happened?</h2>
-            <p>
-                It looks like you've lost your internet connection. This can happen due to network issues, 
-                server maintenance, or temporary connectivity problems.
-            </p>
-        </div>
+      <a href="/" class="retry-button" onclick="window.location.reload()">
+        Try Again
+      </a>
 
-        <div class="features">
-            <div class="feature">
-                <h3>🚀 AI Solutions</h3>
-                <p>Explore our autonomous AI systems and intelligent business solutions</p>
-            </div>
-            <div class="feature">
-                <h3>💻 Technology Services</h3>
-                <p>Comprehensive IT infrastructure and cybersecurity services</p>
-            </div>
-            <div class="feature">
-                <h3>🌐 Global Reach</h3>
-                <p>Serving businesses worldwide with innovative technology solutions</p>
-            </div>
-        </div>
-
-        <button class="retry-button" onclick="window.location.reload()">
-            🔄 Try Again
-        </button>
-
-        <div class="contact-info">
-            <h3>Need Immediate Assistance?</h3>
-            <div class="contact-details">
-                <div class="contact-item">
-                    <span class="contact-icon">📞</span>
-                    <span>+1 302 464 0950</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">✉️</span>
-                    <span>kleber@ziontechgroup.com</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">📍</span>
-                    <span>364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <h1>You're Offline</h1>
-    <p>
-      It looks like you've lost your internet connection. Don't worry - Zion Tech Group is designed to work offline too!
-    </p>
-    
-    <button class="retry-button" onclick="retryConnection()">
-      🔄 Try Again
-    </button>
-    
-    <div class="offline-features">
-      <h3>Available Offline:</h3>
-      <ul class="feature-list">
-        <li>Browse cached content</li>
-        <li>View your saved searches</li>
-        <li>Access your profile</li>
-        <li>Review saved services</li>
-      </ul>
-    </div>
-    
-    <div class="connection-status">
-      <span class="status-indicator"></span>
-      <span>No internet connection detected</span>
-      
-      <div class="network-info">
-        <p>Check your:</p>
-        <ul style="margin-left: 1rem; margin-top: 0.5rem;">
-          <li>Wi-Fi connection</li>
-          <li>Mobile data</li>
-          <li>Network settings</li>
+      <div class="features">
+        <h3>Available Offline:</h3>
+        <ul>
+          <li>Browse previously visited pages</li>
+          <li>View cached content</li>
+          <li>Access saved data</li>
+          <li>Use basic app features</li>
         </ul>
       </div>
     </div>
-  </div>
 
     <script>
-        // Check connection status periodically
-        function checkConnection() {
-            if (navigator.onLine) {
-                // If we're back online, redirect to the main page
-                window.location.href = '/';
-            }
+      // Check connection status
+      function updateConnectionStatus() {
+        if (navigator.onLine) {
+          // Connection restored, redirect to home
+          window.location.href = '/';
         }
+      }
 
-        // Check connection every 5 seconds
-        setInterval(checkConnection, 5000);
+      // Listen for online event
+      window.addEventListener('online', updateConnectionStatus);
 
-        // Listen for online/offline events
-        window.addEventListener('online', () => {
-            window.location.href = '/';
-        });
+      // Check connection periodically
+      setInterval(updateConnectionStatus, 5000);
 
-        // Add some interactive elements
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add click handlers for contact information
-            const contactItems = document.querySelectorAll('.contact-item');
-            contactItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    item.style.transform = 'scale(1.05)';
-                    setTimeout(() => {
-                        item.style.transform = 'scale(1)';
-                    }, 200);
-                });
-            });
-
-            // Add keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    document.querySelector('.retry-button').click();
-                }
-            });
+      // Retry button functionality
+      document
+        .querySelector('.retry-button')
+        .addEventListener('click', function (e) {
+          e.preventDefault();
+          window.location.reload();
         });
     </script>
-</body>
+  </body>
 </html>

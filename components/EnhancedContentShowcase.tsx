@@ -1,337 +1,187 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  SparklesIcon, 
-  StarIcon, 
-  ArrowRightIcon,
-  BookOpenIcon,
-  PlayIcon,
-  DocumentTextIcon,
-  ChartBarIcon
-} from '@heroicons/react/24/outline';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
-export default function EnhancedContentShowcase() {
-  const [activeTab, setActiveTab] = useState('featured');
+const EnhancedContentShowcase = () => {
+  const [activeTab, setActiveTab] = useState('breakthroughs');
+  const [isVisible, setIsVisible] = useState(false);
 
-  const featuredContent = [
-    {
-      id: 1,
-      title: "AI 2025 Revolutionary Breakthroughs: Transforming Industries Worldwide",
-      description: "Discover the groundbreaking AI innovations revolutionizing industries in 2025. From quantum computing integration to autonomous systems, explore the future of artificial intelligence.",
-      href: "/ai-2025-revolutionary-breakthroughs",
-      category: "Revolutionary Breakthroughs",
-      readTime: "25 min read",
-      icon: "🚀",
-      badge: "NEW",
-      badgeColor: "bg-purple-600",
-      metrics: "2,500% ROI",
-      gradient: "from-purple-100 to-pink-100",
-      featured: true,
-      rating: 5,
-      reviews: 847
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const contentCategories = {
+    breakthroughs: {
+      title: 'AI 2025 Breakthroughs',
+      description: 'Revolutionary AI technologies transforming industries',
+      items: [
+        {
+          title: 'AI 2025 Ultimate Breakthrough Revolution',
+          description: '10,000% ROI with quantum-AI fusion technology',
+          href: '/ai-2025-ultimate-breakthrough-revolution',
+          icon: '🚀',
+          featured: true
+        },
+        {
+          title: 'AI 2026 Quantum-Neural Fusion',
+          description: '15,000% ROI with next-gen neural interfaces',
+          href: '/ai-2026-quantum-neural-fusion-revolutionary-breakthrough',
+          icon: '⚛️',
+          featured: true
+        },
+        {
+          title: 'AI 2030 Transcendent Intelligence',
+          description: 'Beyond human-level AI capabilities',
+          href: '/ai-2030-transcendent-intelligence',
+          icon: '🧠',
+          featured: false
+        }
+      ]
     },
-    {
-      id: 2,
-      title: "AI Startup Funding Playbook 2025: From Seed to Series A",
-      description: "Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI funding, with real examples and pitch templates.",
-      href: "/ai-startup-funding-playbook-2025",
-      category: "Startup Strategy",
-      readTime: "22 min read",
-      icon: "💰",
-      badge: "HOT",
-      badgeColor: "bg-green-600",
-      metrics: "$47B+ Funding",
-      gradient: "from-green-100 to-blue-100",
-      featured: true,
-      rating: 5,
-      reviews: 623
+    caseStudies: {
+      title: 'Success Stories',
+      description: 'Real-world transformations with proven results',
+      items: [
+        {
+          title: 'Global Manufacturing Transformation',
+          description: '$2.4B annual savings with 850% ROI',
+          href: '/case-studies/ai-2025-global-manufacturing-transformation-breakthrough',
+          icon: '🏭',
+          featured: true
+        },
+        {
+          title: 'Fortune 500 Enterprise Success',
+          description: '1,500% ROI in 6 months',
+          href: '/case-studies/ai-2025-fortune-500-transformation-breakthrough',
+          icon: '🏢',
+          featured: true
+        },
+        {
+          title: 'Financial Services Revolution',
+          description: '99.9% accuracy with AI automation',
+          href: '/case-studies/ai-2025-global-finance-transformation-breakthrough',
+          icon: '💰',
+          featured: false
+        }
+      ]
     },
-    {
-      id: 3,
-      title: "Enterprise AI Transformation: $100M Revenue Impact Case Study",
-      description: "Discover how a Fortune 500 company achieved $100M revenue impact through comprehensive AI transformation. Learn the strategies, challenges, and results.",
-      href: "/ai-enterprise-transformation-success",
-      category: "Case Study",
-      readTime: "18 min read",
-      icon: "🏆",
-      badge: "SUCCESS",
-      badgeColor: "bg-blue-600",
-      metrics: "$100M Impact",
-      gradient: "from-blue-100 to-cyan-100",
-      featured: true,
-      rating: 5,
-      reviews: 432
-    }
-  ];
-
-  const trendingContent = [
-    {
-      id: 4,
-      title: "The Generative AI Revolution: Transforming Business in 2025",
-      description: "Explore how generative AI is revolutionizing business operations, from content creation to customer service automation with practical implementation strategies.",
-      href: "/ai-2025-generative-ai-revolution",
-      category: "Generative AI",
-      readTime: "22 min read",
-      icon: "🎨",
-      badge: "TRENDING",
-      badgeColor: "bg-orange-600",
-      metrics: "10x Content Output",
-      gradient: "from-orange-100 to-red-100",
-      trending: true,
-      rating: 5,
-      reviews: 156
-    },
-    {
-      id: 5,
-      title: "Ethical AI Governance: Building Trust in the Age of AI",
-      description: "Navigate the complex landscape of AI ethics and governance. Learn how to implement responsible AI practices and build trustworthy AI systems.",
-      href: "/ai-2025-ethical-ai-governance",
-      category: "AI Ethics",
-      readTime: "25 min read",
-      icon: "⚖️",
-      badge: "TRENDING",
-      badgeColor: "bg-emerald-600",
-      metrics: "95% Trust Score",
-      gradient: "from-emerald-100 to-teal-100",
-      trending: true,
-      rating: 5,
-      reviews: 234
-    }
-  ];
-
-  const latestContent = [
-    {
-      id: 6,
-      title: "AI Implementation Master Guide 2025: Complete 150+ Page Resource",
-      description: "Master AI implementation with our comprehensive guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
-      href: "/ai-implementation-master-guide-2025",
-      category: "Implementation Guide",
-      readTime: "45 min read",
-      icon: "📚",
-      badge: "FREE",
-      badgeColor: "bg-purple-600",
-      metrics: "150+ Pages",
-      gradient: "from-purple-100 to-indigo-100",
-      isNew: true,
-      rating: 5,
-      reviews: 1.2
-    },
-    {
-      id: 7,
-      title: "Edge Computing Revolution: Bringing AI to the Edge in 2025",
-      description: "Discover how edge computing is revolutionizing AI deployment, enabling real-time processing and unlocking new possibilities for IoT and smart cities.",
-      href: "/ai-2025-edge-computing-revolution",
-      category: "Edge Computing",
-      readTime: "20 min read",
-      icon: "⚡",
-      badge: "NEW",
-      badgeColor: "bg-cyan-600",
-      metrics: "90% Latency Reduction",
-      gradient: "from-cyan-100 to-blue-100",
-      isNew: true,
-      rating: 5,
-      reviews: 89
-    }
-  ];
-
-  const tabs = [
-    { id: 'featured', label: 'Featured', count: featuredContent.length },
-    { id: 'trending', label: 'Trending', count: trendingContent.length },
-    { id: 'latest', label: 'Latest', count: latestContent.length }
-  ];
-
-  const getCurrentContent = () => {
-    switch (activeTab) {
-      case 'featured': return featuredContent;
-      case 'trending': return trendingContent;
-      case 'latest': return latestContent;
-      default: return featuredContent;
-    }
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
+    resources: {
+      title: 'Implementation Guides',
+      description: 'Step-by-step guides for AI transformation',
+      items: [
+        {
+          title: 'AI Implementation Master Guide',
+          description: '150+ pages of comprehensive strategies',
+          href: '/resources/ai-2025-implementation-master-guide',
+          icon: '📚',
+          featured: true
+        },
+        {
+          title: 'Synthetic Intelligence Guide',
+          description: 'Breakthrough implementation strategies',
+          href: '/resources/ai-2025-synthetic-intelligence-implementation-guide',
+          icon: '🔬',
+          featured: true
+        },
+        {
+          title: 'Revolutionary Implementation Toolkit',
+          description: 'Complete toolkit for AI transformation',
+          href: '/resources/ai-2025-revolutionary-implementation-guide',
+          icon: '🛠️',
+          featured: false
+        }
+      ]
     }
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <section className={`py-20 bg-gradient-to-br from-gray-50 to-blue-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 rounded-full px-6 py-3 mb-6">
-            <SparklesIcon className="h-5 w-5 mr-2" />
-            <span className="text-sm font-bold">🔥 TRENDING CONTENT</span>
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">✨ ENHANCED CONTENT SHOWCASE</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent mb-6">
-            Latest AI Insights & Expert Analysis
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Discover Revolutionary AI Content
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Stay ahead with our latest articles on AI breakthroughs, implementation strategies, 
-            and revolutionary technology insights. Fresh content published weekly.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore our comprehensive collection of AI breakthroughs, success stories, and implementation guides designed to transform your business.
           </p>
-        </motion.div>
+        </div>
 
         {/* Tab Navigation */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="flex justify-center mb-12"
-        >
-          <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-100">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                  activeTab === tab.id
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg transform scale-105'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                }`}
-              >
-                {tab.label} ({tab.count})
-              </button>
-            ))}
-          </div>
-        </motion.div>
+        <div className="flex flex-wrap justify-center mb-12">
+          {Object.entries(contentCategories).map(([key, category]) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`px-6 py-3 mx-2 mb-4 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === key
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+              }`}
+            >
+              {category.title}
+            </button>
+          ))}
+        </div>
 
         {/* Content Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {getCurrentContent().map((item, index) => (
-            <motion.div key={item.id} variants={itemVariants}>
-              <Link href={item.href} className="group block">
-                <article className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-purple-200 transform hover:-translate-y-2">
-                  {/* Image/Icon Header */}
-                  <div className={`aspect-video bg-gradient-to-br ${item.gradient} flex items-center justify-center relative overflow-hidden`}>
-                    <div className="text-8xl animate-pulse">{item.icon}</div>
-                    <div className={`absolute top-4 left-4 ${item.badgeColor} text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg`}>
-                      {item.badge}
-                    </div>
-                    {item.featured && (
-                      <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
-                        ⭐ FEATURED
-                      </div>
-                    )}
-                    {item.trending && (
-                      <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
-                        🔥 TRENDING
-                      </div>
-                    )}
-                    {item.isNew && (
-                      <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                        ✨ NEW
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-8">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="bg-gray-100 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">
-                        {item.category}
-                      </span>
-                      <span className="text-gray-500 text-sm">{item.readTime}</span>
-                      <div className="flex items-center gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <StarIcon key={i} className="h-4 w-4 text-yellow-400 fill-current" />
-                        ))}
-                        <span className="text-sm text-gray-500 ml-1">
-                          {item.reviews > 1000 ? `${(item.reviews / 1000).toFixed(1)}k` : item.reviews}
-                        </span>
-                      </div>
-                    </div>
-
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors leading-tight">
-                      {item.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-6 leading-relaxed line-clamp-3">
-                      {item.description}
-                    </p>
-
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full flex items-center justify-center">
-                          <span className="text-purple-600 font-bold text-sm">ZT</span>
-                        </div>
-                        <div>
-                          <p className="text-sm font-medium text-gray-900">Zion Tech Group</p>
-                          <p className="text-xs text-gray-500">{item.metrics}</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center gap-2 text-purple-600 font-semibold group-hover:gap-4 transition-all">
-                        <span>Read More</span>
-                        <ArrowRightIcon className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    </div>
-                  </div>
-                </article>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {contentCategories[activeTab as keyof typeof contentCategories].items.map((item, index) => (
+            <div
+              key={index}
+              className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 ${
+                item.featured ? 'ring-2 ring-blue-500 ring-opacity-50' : ''
+              }`}
+            >
+              <div className="flex items-center mb-4">
+                <div className="text-3xl mr-3">{item.icon}</div>
+                {item.featured && (
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full">
+                    FEATURED
+                  </span>
+                )}
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+              <p className="text-gray-600 mb-6">{item.description}</p>
+              <Link
+                href={item.href}
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200"
+              >
+                Explore Now →
               </Link>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Transform Your Business with AI?
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Join thousands of businesses already using our proven AI strategies and tools to achieve breakthrough results.
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
+            <p className="text-lg mb-6 opacity-90">
+              Join thousands of companies already achieving unprecedented success with our AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/blog" 
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              <Link
+                href="/contact"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                <BookOpenIcon className="h-5 w-5" />
-                View All Articles
+                Get Started Today
               </Link>
-              <Link 
-                to="/resources" 
-                className="inline-flex items-center gap-2 bg-white text-purple-600 border-2 border-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-purple-50 transition-all duration-300"
+              <Link
+                href="/resources"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
-                <DocumentTextIcon className="h-5 w-5" />
-                Free Resources
+                View All Resources
               </Link>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default EnhancedContentShowcase;

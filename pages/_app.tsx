@@ -2,14 +2,13 @@ import React from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
 import { Provider as ReduxProvider } from 'react-redux';
-import { store } from '@/store/store';
-import { I18nextProvider } from 'react-i18next';
-import i18n from '@/i18n/index';
+// import { store } from '@/store/store';
+// import { I18nextProvider } from 'react-i18next';
+// import i18n from '@/i18n/index';
 import { Inter, Poppins } from 'next/font/google';
 import Head from 'next/head';
-import '../src/index.css';
+// import '../app/globals.css';
 import * as Sentry from '@sentry/nextjs';
-import '../styles/globals.css';
 
 // Initialize Sentry
 Sentry.init({
@@ -39,8 +38,8 @@ const queryClient = new QueryClient({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
-      <ReduxProvider store={store}>
-        <I18nextProvider i18n={i18n}>
+      {/* <ReduxProvider store={store}> */}
+        {/* <I18nextProvider i18n={i18n}> */}
           <Head>
             <title>Zion Tech Group - AI & Technology Solutions</title>
             <meta name="description" content="Pioneering the future with cutting-edge AI solutions, quantum technology, and innovative IT services." />
@@ -50,8 +49,8 @@ export default function App({ Component, pageProps }: AppProps) {
           <main className={`${inter.className} ${poppins.className}`}>
             <Component {...pageProps} />
           </main>
-        </I18nextProvider>
-      </ReduxProvider>
+        {/* </I18nextProvider> */}
+      {/* </ReduxProvider> */}
     </QueryClientProvider>
   );
 }

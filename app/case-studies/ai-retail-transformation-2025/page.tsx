@@ -1994,6 +1994,7 @@ export default function AIRetailTransformation2025() {
         </section>
       </div>
       </article>
+      </article>
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Your AI Transformation

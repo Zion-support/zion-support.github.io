@@ -16,6 +16,21 @@ import { ProductListing } from "@/types/listings";
   estimatedDelivery: string;
   supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
   marketPrice: string;
+  technology: string[];
+  integrations: string[];
+}
+
+export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
+  {
+    id: "quantum-optimization-suite",
+    title: "Quantum Optimization Suite",
+    description: "Advanced quantum computing platform for complex optimization problems",
+    category: "AI & Quantum Computing",
+    subcategory: "Optimization",
+    price: 2999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
       "Quantum annealing algorithms",
       "Hybrid quantum-classical computing",
       "Real-time optimization dashboard",

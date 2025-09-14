@@ -29,8 +29,7 @@ def resolve_conflicts_in_file(file_path):
                     head_content = []
                     branch_content = []
                 elif in_conflict:
-                    if line.strip() == '=======':
-                        # Switch to branch content
+                    if line.strip() == '                        # Switch to branch content
                         pass
                     else:
                         branch_content.append(line)
@@ -72,8 +71,7 @@ def main():
                 try:
                     with open(file_path, 'r', encoding='utf-8') as f:
                         content = f.read()
-                        if '<<<<<<< HEAD' in content:
-                            conflict_files.append(file_path)
+                        if '                            conflict_files.append(file_path)
                 except:
                     continue
     
@@ -96,8 +94,7 @@ def main():
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
-                if '<<<<<<< HEAD' in content:
-                    remaining_conflicts.append(file_path)
+                if '                    remaining_conflicts.append(file_path)
         except:
             continue
     

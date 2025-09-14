@@ -23,6 +23,8 @@ export interface Service {
   reviewCount: number;
   aiScore: number;
   featured: boolean;
+}
+
 export interface ComprehensiveService {
   id: string;
   title: string;
@@ -116,6 +118,64 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     },
     images: ['https://picsum.photos/400/300?random=2'],
     rating: 4.9,
+    reviewCount: 89,
+    featured: true,
+    aiScore: 93,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Mobile & Web Development Services
+  {
+    id: "mobile-web-1",
+    title: "Progressive Web App Development",
+    description: "Modern progressive web app development with offline capabilities, push notifications, and native app-like experience. Optimized for performance and user engagement.",
+    category: "Mobile & Web Development",
+    subcategory: "PWA Development",
+    price: 3200,
+    currency: "$",
+    pricingModel: "project-based",
+    features: [
+      "Progressive Web App (PWA)",
+      "Offline functionality",
+      "Push notifications",
+      "Responsive design",
+      "Performance optimization",
+      "SEO optimization",
+      "Analytics integration",
+      "Cross-platform compatibility"
+    ],
+    benefits: [
+      "Reduce development costs by 40%",
+      "Better user engagement",
+      "Faster loading times",
+      "Improved SEO performance",
+      "Native app-like experience"
+    ],
+    marketPrice: "$3,200 - $12,000",
+    deliveryTime: "4-8 weeks",
+    tags: ["PWA", "Web Development", "Mobile", "Performance", "SEO"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-01T09:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 167,
+    featured: false,
+    aiScore: 88,
+    location: "Global",
+    availability: "Available",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
 import { ProductListing } from "@/types/listings";
   }
 ];

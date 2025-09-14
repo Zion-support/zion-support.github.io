@@ -1,3 +1,4 @@
+export default {};
 export interface APIDocumentation {
   id: string;
   name: string;

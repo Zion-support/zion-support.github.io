@@ -1,22 +1,28 @@
 import React from 'react';
+import { Card, CardContent } from './Card';
 
 interface FeatureCardProps {
+  icon: React.ReactNode;
   title: string;
   description: string;
-  icon: React.ReactNode;
   className?: string;
 }
 
-export function FeatureCard({ title, description, icon, className = '' }: FeatureCardProps) {
+export const FeatureCard: React.FC<FeatureCardProps> = ({
+  icon,
+  title,
+  description,
+  className
+}) => {
   return (
-    <div className={`bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 ${className}`}>
-      <div className="flex items-center space-x-3 mb-4">
-        <div className="text-zion-cyan text-xl">
+    <Card className={`text-center p-6 hover:shadow-lg transition-shadow ${className}`}>
+      <CardContent>
+        <div className="flex justify-center mb-4">
           {icon}
         </div>
-        <h3 className="text-lg font-semibold text-zion-slate-light">{title}</h3>
-      </div>
-      <p className="text-zion-slate text-sm leading-relaxed">{description}</p>
-    </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+        <p className="text-gray-600">{description}</p>
+      </CardContent>
+    </Card>
   );
-}
+};

@@ -32,8 +32,7 @@ resolve_conflicts() {
     cp "$file" "${file}.backup.$(date +%s)"
     
     # Remove conflict markers and keep both versions where possible
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "⚠️  Found conflicts in $file, resolving..."
+    if grep -q "        echo "⚠️  Found conflicts in $file, resolving..."
         
         # Different strategies for different file types
         case "$file" in
@@ -69,8 +68,7 @@ resolve_conflicts() {
 
 # Get all files with conflicts
 echo "🔍 Finding files with merge conflicts..."
-CONFLICTED_FILES=$(find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.json" -o -name "*.md" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || echo "")
-
+CONFLICTED_FILES=$(find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.json" -o -name "*.md" | xargs grep -l "
 if [ -n "$CONFLICTED_FILES" ]; then
     echo "📋 Found conflicted files: $CONFLICTED_FILES"
     

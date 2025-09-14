@@ -1,5 +1,5 @@
 
-
+export interface AIService {
   id: string;
   name: string;
   tagline: string;

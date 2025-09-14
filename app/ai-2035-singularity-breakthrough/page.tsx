@@ -1,6 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI 2035 Singularity Breakthrough - Zion Tech Group',
+  description: 'Experience the AI singularity breakthrough that will transcend human limitations in 2035. Revolutionary consciousness-level AI with infinite ROI potential.',
+  keywords: ['AI 2035', 'Singularity', 'Consciousness AI', 'Transcendent Intelligence', 'Infinite ROI', 'Revolutionary Breakthrough'],
 };
 
 export default function AI2035SingularityBreakthrough() {

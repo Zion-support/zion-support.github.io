@@ -6,8 +6,7 @@
 set -e
 
 echo "🚀 Starting Comprehensive PR Merge Process"
-echo "=========================================="
-
+echo "
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -107,8 +106,7 @@ resolve_conflicts() {
     # Common conflict resolution strategies
     if [ -f "app/page.tsx" ]; then
         # For page.tsx, prefer the main branch version but integrate new components
-        if grep -q "content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> [^\n]*', '', content, flags=re.DOTALL)
-
+        if grep -q "content = re.sub(r'
 # Clean up extra whitespace
 content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
 

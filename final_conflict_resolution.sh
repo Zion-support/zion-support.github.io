@@ -1,17 +1,14 @@
 #!/bin/bash
 
 echo "🚀 Final Conflict Resolution and PR Merge Process"
-echo "================================================"
-
+echo "
 # Function to resolve conflicts in a file
 resolve_file_conflicts() {
     local file="$1"
     echo "Resolving conflicts in: $file"
     
     # Remove conflict markers and keep the content
-    sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> /d' "$file" 2>/dev/null || true
-    sed -i '/^=======$/d' "$file" 2>/dev/null || true
-    
+    sed -i '/^    sed -i '/^    
     echo "✅ Processed: $file"
 }
 
@@ -20,15 +17,13 @@ echo "📋 Step 1: Resolving conflicts in critical files..."
 
 # Main application files
 for file in app/page.tsx app/layout.tsx components/*.tsx; do
-    if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-        resolve_file_conflicts "$file"
+    if [ -f "$file" ] && grep -q "        resolve_file_conflicts "$file"
     fi
 done
 
 # Configuration files
 for file in package.json tsconfig.json tailwind.config.ts next.config.*; do
-    if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-        resolve_file_conflicts "$file"
+    if [ -f "$file" ] && grep -q "        resolve_file_conflicts "$file"
     fi
 done
 
