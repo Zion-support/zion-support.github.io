@@ -59,6 +59,10 @@ import QuantumAIContentShowcase2026 from './components/QuantumAIContentShowcase2
 
 // Import new AI 2026 promotional components
 
+// Import new ultimate AI breakthrough components
+import UltimateAIBreakthrough2025Banner from './components/UltimateAIBreakthrough2025Banner';
+import UltimateContentShowcase2025Banner from './components/UltimateContentShowcase2025Banner';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -76,8 +80,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate AI Breakthrough 2025 Banner - NEW FEATURED */}
+        <UltimateAIBreakthrough2025Banner />
+        
+        {/* Ultimate Content Showcase 2025 Banner - NEW FEATURED */}
+        <UltimateContentShowcase2025Banner />
+        
         {/* Ultimate Content 2025 Mastery Banner - LATEST */}
         <UltimateContent2025MasteryBanner />
+        
+        {/* New Content 2025 Multimodal Banner - NEW FEATURED */}
+        <NewContent2025MultimodalBanner />
         
         {/* Revolutionary Content 2025 Ultimate Showcase - FEATURED */}
         <RevolutionaryContent2025UltimateShowcase />
