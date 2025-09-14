@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 6
+  total_content_pieces: 9
   
   new_2025_content:
     - id: "autonomous-systems-revolution"
@@ -14,6 +14,22 @@ content_index:
       featured: true
       is_new: true
       
+    - id: "enterprise-automation-revolution"
+      type: "blog"
+      title: "AI 2025: The Enterprise Automation Revolution - 500% ROI in 60 Days"
+      file_path: "/content/blog/ai-2025-enterprise-automation-revolution.md"
+      url: "/blog/ai-2025-enterprise-automation-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Enterprise Automation", "ROI", "Business Transformation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        timeframe: "60 days"
+        word_count: "8,500"
+        reading_time: "12 min read"
+      
     - id: "global-enterprise-success"
       type: "case-study"
       title: "Global Enterprise AI Transformation: $2.8B Ultimate Success Story"
@@ -24,6 +40,23 @@ content_index:
       tags: ["Case Study", "AI Transformation", "Enterprise", "Success Story"]
       featured: true
       is_new: true
+      
+    - id: "ai-transformation-2025-ultimate-success"
+      type: "case-study"
+      title: "AI Transformation 2025: $50M Annual Savings in 6 Months - Ultimate Success Story"
+      file_path: "/content/case-studies/ai-transformation-2025-ultimate-success.md"
+      url: "/case-studies/ai-transformation-2025-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "AI Transformation", "Fortune 500", "Cost Savings", "ROI", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        annual_savings: "$50M"
+        roi: "1,200%"
+        timeframe: "6 months"
+        word_count: "12,000"
+        reading_time: "15 min read"
       
     - id: "autonomous-systems-guide"
       type: "resource"
@@ -68,6 +101,22 @@ content_index:
       tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2026"]
       featured: true
       is_new: true
+      
+    - id: "ai-implementation-master-guide-2025"
+      type: "resource"
+      title: "AI Implementation Master Guide 2025: From Strategy to 500% ROI"
+      file_path: "/content/resources/ai-implementation-master-guide-2025.md"
+      url: "/resources/ai-implementation-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2025", "Enterprise AI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        word_count: "15,000"
+        reading_time: "20 min read"
+        difficulty: "Intermediate to Advanced"
 
   new_2026_content:
     - id: "ai-2026-enterprise-automation"
