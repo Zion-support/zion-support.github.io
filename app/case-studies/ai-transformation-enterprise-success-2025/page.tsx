@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, Bookmark, Share2, Award, TrendingUp, DollarSign, Users, CheckCircle, Star } from 'lucide-react';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'Enterprise AI Transformation Success: 340% ROI in 6 Months',

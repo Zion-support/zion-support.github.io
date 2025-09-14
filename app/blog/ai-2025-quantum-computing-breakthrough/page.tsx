@@ -1,23 +1,9 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
-  title: 'AI 2025: The Quantum Computing Breakthrough That\'s Reshaping Enterprise',
-  description: 'Discover how quantum computing breakthroughs in 2025 are revolutionizing AI capabilities and creating unprecedented opportunities for enterprise transformation.',
-  keywords: ['quantum computing', 'AI', 'enterprise', 'breakthrough', '2025'],
-};
-
-export default function AI2025QuantumComputingPage() {
-  return (
-    <>
-      <SEO
-        title="AI 2025: The Quantum Computing Breakthrough That's Reshaping Enterprise"
-        description="Discover how quantum computing breakthroughs in 2025 are revolutionizing AI capabilities and creating unprecedented opportunities for enterprise transformation."
-        keywords="quantum computing, AI, enterprise, breakthrough, 2025"
-=======
   title: 'AI 2025 Quantum Computing Breakthrough: The Next Frontier',
   description: 'Explore the revolutionary intersection of AI and quantum computing in 2025. Discover breakthrough applications and enterprise opportunities.',
   keywords: ['Quantum Computing', 'AI', 'Breakthrough', 'Enterprise', 'Innovation'],
@@ -38,17 +24,12 @@ export default function AI2025QuantumComputingBreakthroughPage() {
         title="AI 2025 Quantum Computing Breakthrough: The Next Frontier"
         description="Explore the revolutionary intersection of AI and quantum computing in 2025. Discover breakthrough applications and enterprise opportunities."
         keywords="quantum computing, AI, breakthrough, enterprise, innovation"
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
         url="/blog/ai-2025-quantum-computing-breakthrough"
       />
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
-=======
         <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20">
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
@@ -71,18 +52,12 @@ export default function AI2025QuantumComputingBreakthroughPage() {
                   href="/resources/ai-implementation-guide-2025"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-<<<<<<< HEAD
-                  Download Implementation Guide
-=======
                   Get Consultation
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
                 </Link>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
@@ -176,7 +151,6 @@ export default function AI2025QuantumComputingBreakthroughPage() {
             </div>
           </div>
         </section>
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
       </div>
     </>
   );

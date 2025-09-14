@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
+import SEO from '../../components/SEO';
+import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'AI 2025 Ultimate Automation Revolution: 50,000% ROI | Zion Tech Group',

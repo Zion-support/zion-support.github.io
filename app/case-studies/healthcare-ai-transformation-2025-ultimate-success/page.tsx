@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User,  Share2, Building, DollarSign, TrendingUp, Users, CheckCircle, Award } from 'lucide-react';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'Healthcare AI Transformation 2025: $50M Annual Savings & 95% Patient Satisfaction',
