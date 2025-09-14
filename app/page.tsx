@@ -37,6 +37,11 @@ import UltimateContentShowcase2026 from '../components/UltimateContentShowcase20
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
 
+// Import new 2025-2026 promotional components
+import AI2025_2026UltimateEnterpriseTransformationBanner from '../components/AI2025_2026UltimateEnterpriseTransformationBanner';
+import QuantumAI2026BreakthroughPromotionBanner from '../components/QuantumAI2026BreakthroughPromotionBanner';
+import NewContentShowcase2025_2026 from '../components/NewContentShowcase2025_2026';
+
 // Import new AI 2027 breakthrough components
 import AI2027UltimateBreakthroughBanner from '../components/AI2027UltimateBreakthroughBanner';
 import NewContent2027Showcase from '../components/NewContent2027Showcase';
@@ -314,6 +319,15 @@ export default function HomePage() {
         
         {/* AI 2028 Future Vision Banner - NEXT EVOLUTION */}
         <AI2028FutureVisionBanner />
+        
+        {/* AI 2025-2026 Ultimate Enterprise Transformation Banner - NEWEST BREAKTHROUGH */}
+        <AI2025_2026UltimateEnterpriseTransformationBanner />
+        
+        {/* Quantum AI 2026 Breakthrough Promotion Banner - REVOLUTIONARY TECHNOLOGY */}
+        <QuantumAI2026BreakthroughPromotionBanner />
+        
+        {/* New Content Showcase 2025-2026 - LATEST FEATURED CONTENT */}
+        <NewContentShowcase2025_2026 />
         
         {/* AI 2025-2026 Ultimate Business Intelligence Revolution Banner - NEW ULTIMATE BREAKTHROUGH */}
         <AI2025_2026UltimateBusinessIntelligenceRevolutionBanner />
