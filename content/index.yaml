@@ -3,6 +3,22 @@ content_index:
   total_content_pieces: 12
   
   new_2025_content:
+    - id: "enterprise-automation-revolution"
+      type: "blog"
+      title: "AI 2025: The Enterprise Automation Revolution - 500% ROI in 60 Days"
+      file_path: "/content/blog/ai-2025-enterprise-automation-revolution.md"
+      url: "/blog/ai-2025-enterprise-automation-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Enterprise Automation", "ROI", "Digital Transformation", "Business Process Automation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        savings: "$2.8B"
+        efficiency: "340%"
+        satisfaction: "98%"
+        
     - id: "autonomous-systems-revolution"
       type: "blog"
       title: "AI 2025: The Next Generation Autonomous Systems Revolution"
@@ -52,6 +68,22 @@ content_index:
         efficiency: "67%"
         satisfaction: "100%"
       
+    - id: "retail-transformation-ultimate-success"
+      type: "case-study"
+      title: "Retail AI Transformation 2025: How a $500M Company Achieved 600% ROI in 45 Days"
+      file_path: "/content/case-studies/retail-ai-transformation-2025-ultimate-success.md"
+      url: "/case-studies/retail-ai-transformation-2025-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Retail", "AI Transformation", "ROI", "Customer Experience", "Inventory Optimization"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        savings: "$180M"
+        efficiency: "95%"
+        satisfaction: "95%"
+        
     - id: "fintech-transformation"
       type: "case-study"
       title: "Fintech AI Transformation 2025: How a $100M Company Achieved 450% ROI"
@@ -68,6 +100,22 @@ content_index:
         efficiency: "78%"
         satisfaction: "89%"
       
+    - id: "ai-implementation-master-guide-2025-complete"
+      type: "resource"
+      title: "AI Implementation Master Guide 2025: From Strategy to 500% ROI"
+      file_path: "/content/resources/ai-implementation-master-guide-2025-complete.md"
+      url: "/resources/ai-implementation-master-guide-2025-complete"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "Digital Transformation", "Enterprise AI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        savings: "$2.8B"
+        efficiency: "340%"
+        satisfaction: "98%"
+        
     - id: "ai-implementation-roadmap"
       type: "resource"
       title: "AI Implementation Roadmap 2025: Complete Guide to Successful AI Deployment"
