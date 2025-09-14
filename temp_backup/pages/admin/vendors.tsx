@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react';
-import type { Vendor } from '../../utils/vendor-types';
+import { useEffect, useState } from 'react',
+import type { Vendor } from '../../utils/vendor-types',
 
 export default function AdminVendorsPage() {
-  const [vendors, setVendors] = useState<Vendor[]>([]);
+  const [vendors, setVendors] = useState<Vendor[]>([]),
 
   async function load() {
-    const res = await fetch('/api/vendors');
-    const data = await res.json();
-    setVendors(data.vendors || []);
+    const res = await fetch('/api/vendors'),
+    const data = await res.json(),
+    setVendors(data.vendors || []),
   }
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => { load(), }, []),
 
   async function call(action: string, vendorId: string, value?: any) {
     await fetch('/api/admin/vendors', {
@@ -35,7 +35,7 @@ export default function AdminVendorsPage() {
               </div>
               <div className="text-xs text-gray-500">Team: {v.teamSize || 0}</div>
             </div>
-            <div className="text-sm text-gray-500">Services: {v.servicesOffered?.join(', ') || '—'}</div>
+            <div className="text-sm text-gray-500">Services: {v.servicesOffered?.join() || '—'}</div>
             <div className="flex items-center gap-2 text-sm">
               <button onClick={() => call(v.verified ? 'revoke' : 'approve', v.id)} className="px-3 py-1 rounded border">{v.verified ? 'Revoke' : 'Approve'}</button>
               <button onClick={() => call(v.suspended ? 'unsuspend' : 'suspend', v.id)} className="px-3 py-1 rounded border">{v.suspended ? 'Unsuspend' : 'Suspend'}</button>
@@ -50,5 +50,5 @@ export default function AdminVendorsPage() {
       </div>
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
-  );
+  ),
 }

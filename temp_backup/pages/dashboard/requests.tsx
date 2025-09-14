@@ -1,50 +1,50 @@
-import { useMemo, useState } from 'react';
-import Head from 'next/head';
-import type { GetServerSideProps } from 'next';
-import { MailCheck, UserRound, CalendarDays, BadgeDollarSign, Eye, Check } from 'lucide-react';
-import { QUOTE_REQUESTS } from '../../data/quote-requests';
-import type { QuoteRequest, TalentQuoteStatus } from '../../utils/types/quote';
-import { TALENT_PROFILES } from '../../data/talent';
+import { useMemo, useState } from 'react',
+import Head from 'next/head',
+import type { GetServerSideProps } from 'next',
+import { MailCheck, UserRound, CalendarDays, BadgeDollarSign, Eye, Check } from 'lucide-react',
+import { QUOTE_REQUESTS } from '../../data/quote-requests',
+import type { QuoteRequest, TalentQuoteStatus } from '../../utils/types/quote',
+import { TALENT_PROFILES } from '../../data/talent',
 
 function formatDate(iso: string) {
-  const d = new Date(iso);
-  return d.toLocaleDateString();
+  const d = new Date(iso),
+  return d.toLocaleDateString()
 }
 
-const TALENT_STATUSES: TalentQuoteStatus[] = ['New', 'Viewed', 'Replied'];
+const TALENT_STATUSES: TalentQuoteStatus[] = ['NewViewed', 'Replied'],
 
-type ServerProps = { role: 'admin' | 'talent' | 'guest'; userId?: string | null; talentSlug?: string | null };
+type ServerProps = { role: 'admin' | 'talent' | 'guest', userId?: string | null, talentSlug?: string | null },
 
 export const getServerSideProps: GetServerSideProps<ServerProps> = async ({ req }) => {
-  const cookies = (req.headers.cookie || '').split(';').reduce<Record<string,string>>((acc, cur) => {
-    const [k, v] = cur.trim().split('=');
-    if (k && v) acc[k] = decodeURIComponent(v);
-    return acc;
-  }, {});
-  const role = (cookies['role'] as ServerProps['role']) || 'guest';
-  const userId = cookies['userId'] || null;
-  const talentSlug = cookies['talentSlug'] || null;
-  return { props: { role, userId, talentSlug } };
-};
+  const cookies = (req.headers.cookie || '').split().reduce<Record<stringstring>>((acc, cur) => {
+    const [k, v] = cur.trim().split('='),
+    if (k && v) acc[k] = decodeURIComponent(v),
+    return acc,
+  }, {}),
+  const role = (cookies['role'] as ServerProps['role']) || 'guest',
+  const userId = cookies['userId'] || null,
+  const talentSlug = cookies['talentSlug'] || null,
+  return { props: { role, userId, talentSlug } },
+},
 
 export default function TalentRequestsPage({ role, talentSlug }: ServerProps) {
-  const [statusFilter, setStatusFilter] = useState<TalentQuoteStatus | 'All'>('All');
-  const [dateFilter, setDateFilter] = useState<{ start: string | null; end: string | null }>({ start: null, end: null });
-  const [rows, setRows] = useState<QuoteRequest[]>(QUOTE_REQUESTS);
+  const [statusFilter, setStatusFilter] = useState<TalentQuoteStatus | 'All'>('All'),
+  const [dateFilter, setDateFilter] = useState<{ start: string | null, end: string | null }>({ start: null, end: null }),
+  const [rows, setRows] = useState<QuoteRequest[]>(QUOTE_REQUESTS),
 
-  const currentTalent = TALENT_PROFILES.find(t => t.slug === talentSlug || '');
+  const currentTalent = TALENT_PROFILES.find(t => t.slug === talentSlug || ''),
 
   const visibleRows = useMemo(() => {
     return rows.filter(r => {
-      if (r.archived) return false;
-      if (!talentSlug) return false;
-      if (r.talentSlug !== talentSlug) return false;
-      if (statusFilter !== 'All' && r.talentStatus !== statusFilter) return false;
-      if (dateFilter.start && new Date(r.createdAt) < new Date(dateFilter.start)) return false;
-      if (dateFilter.end && new Date(r.createdAt) > new Date(dateFilter.end)) return false;
-      return true;
-    });
-  }, [rows, statusFilter, dateFilter, talentSlug]);
+      if (r.archived) return false,
+      if (!talentSlug) return false,
+      if (r.talentSlug !== talentSlug) return false,
+      if (statusFilter !== 'All' && r.talentStatus !== statusFilter) return false,
+      if (dateFilter.start && new Date(r.createdAt) < new Date(dateFilter.start)) return false,
+      if (dateFilter.end && new Date(r.createdAt) > new Date(dateFilter.end)) return false,
+      return true,
+    }),
+  }, [rows, statusFilter, dateFilter, talentSlug]),
 
   if (role !== 'talent' || !talentSlug) {
     return (
@@ -60,7 +60,7 @@ export default function TalentRequestsPage({ role, talentSlug }: ServerProps) {
           <p className="text-sm">No access. Go to <a className="text-blue-600 underline" href="/auth">Login</a>.</p>
         </div>
       </div>
-    );
+    ),
   }
 
   return (
@@ -137,5 +137,5 @@ export default function TalentRequestsPage({ role, talentSlug }: ServerProps) {
         </div>
       </div>
     </div>
-  );
+  ),
 }

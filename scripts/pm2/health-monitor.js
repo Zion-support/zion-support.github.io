@@ -162,7 +162,7 @@
         loadAverage: os.loadavg(),
       };,
     } catch (error) {}
-      this.error(`Failed to get resource usage: ${error.message}`);,
+      this.error(`Failed to get resource usage: ${error.message}`);
       return {}
         memoryUsage: 0,
         cpuUsage: 0,
@@ -172,9 +172,12 @@
   }
   async getDiskUsage() {}
     try {}
-      const dfOutput = execSync('df -h /', { encoding: 'utf8' });',
-      const lines = dfOutput.split('\n');';,
-      const dataLine = lines[1]; // Skip header;,
+  // TODO: Implement;
+}
+      const dfOutput = execSync('df -h /', { encoding: 'utf8' }
+});''
+      const lines = dfOutput.split('\n');'
+      const dataLine = lines[1]; // Skip header;
       if (dataLine) {}
         const parts = dataLine.trim().split(/\s+/);,
         const usageStr = parts[4]; // e.g., "45%"",

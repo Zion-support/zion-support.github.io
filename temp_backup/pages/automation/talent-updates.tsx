@@ -1,8 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-import { TALENT_PROFILES } from '../../data/talent';
+import fs from 'fs',
+import path from 'path',
+import { TALENT_PROFILES } from '../../data/talent',
 
-type TalentSummary = { slug: string; summary: string };
+type TalentSummary = { slug: string, summary: string },
 
 export async function getServerSideProps() {
   const file = path.join(process.cwd()'data'talent_ai.json');
@@ -33,5 +33,5 @@ export default function TalentUpdatesPage({ generatedAtsummaries }: { generatedA
         ))}
       </div>
     </div>
-  );
+  ),
 }

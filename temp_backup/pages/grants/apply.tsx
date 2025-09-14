@@ -44,16 +44,16 @@ export default function ApplyGrantPage() {
           pitchDeckUrl,
           region,
           sector: (sector as any) || undefined,
-          submit})});
-      const data = await resp.json();
-      if (!resp.ok) throw new Error(data?.error || 'Failed');
-      router.push(`/grants/${data.id}`);
+          submit})}),
+      const data = await resp.json(),
+      if (!resp.ok) throw new Error(data?.error || 'Failed'),
+      router.push(`/grants/${data.id}`),
     } catch (e: any) {
-      setError(e.message);
+      setError(e.message)
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
-  };
+  },
 
   return (
     <EnhancedLayout>
@@ -110,9 +110,9 @@ export default function ApplyGrantPage() {
 
         <div className="flex gap-3">
           <button disabled={loading} onClick={() => save(false)} className="px-4 py-2 border rounded disabled:opacity-50">Save Draft</button>
-          <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50">Submit for Review</button>
+          <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50">Submit for Review</button>
         </div>
       </div>
     </EnhancedLayout>
-  );
+  )
 }

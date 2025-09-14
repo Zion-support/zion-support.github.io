@@ -283,7 +283,7 @@ export default function BlogPost() {;
                       >
                         <Linkedin className="h-4 w-4 mr-2" />
                         <span>LinkedIn</span>
-                      </Link>
+                      </a>
                     </div>
 
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">;

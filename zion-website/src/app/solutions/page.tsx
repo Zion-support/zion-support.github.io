@@ -192,8 +192,8 @@ function SolutionsPage() {
             delivering measurable results and competitive advantages.
           </p>
         </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <dl className=&quot;grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2&quot;>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
             {industryApplications.map((industry) => (
 
               <div key={industry.name} className=&quot;flex flex-col group&quot;>
@@ -285,15 +285,15 @@ function SolutionsPage() {
             {implementationSteps.map((stepindex) => (
               <div key={step.step} className=&quot;relative&quot;>
                 {index < implementationSteps.length - 1 && (
-                  <div className=&quot;hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700&quot;></div>
+                  <div className="hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700"></div>
                 )}
-                <div className=&quot;bg-white/5 p-6 rounded-2xl backdrop-blur-sm text-center hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
-                  <div className=&quot;mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-600/20 mb-4&quot;>
-                    <step.icon className=&quot;h-8 w-8 text-blue-400&quot; />
+                <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm text-center hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-600/20 mb-4">
+                    <step.icon className="h-8 w-8 text-blue-400" />
                   </div>
-                  <div className=&quot;text-sm font-semibold text-blue-400 mb-2&quot;>{step.step}</div>
-                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>{step.title}</h3>
-                  <p className=&quot;text-sm text-gray-300&quot;>{step.description}</p>
+                  <div className="text-sm font-semibold text-blue-400 mb-2">{step.step}</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
+                  <p className="text-sm text-gray-300">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -369,16 +369,16 @@ function SolutionsPage() {
 
             competitive edge in your industry.
           </p>
-          <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
-              href=&quot;/contact&quot;
-              className=&quot;rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105&quot;
+              href="/contact"
+              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
             >
               Get Started
-            </Link>
-            <a href=&quot;/services&quot; className=&quot;text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200&quot;>
-              View Services <span aria-hidden=&quot;true&quot;>→</span>
-            </Link>
+            </a>
+            <a href="/services" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              View Services <span aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
       </div>

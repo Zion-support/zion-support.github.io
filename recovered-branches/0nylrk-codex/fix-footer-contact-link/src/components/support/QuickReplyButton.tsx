@@ -19,7 +19,7 @@
 
 interface QuickReplyButtonProps {
   text: string;
-  onClick: () => void
+  onClick: () => void;
 }
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 

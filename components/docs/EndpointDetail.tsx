@@ -247,12 +247,12 @@ export default function EndpointDetail(): any ({;
       </div>
 
       <div>
-        <div className=&quot;font-medium mb-2&quot;>Code Examples</div>
+        <div className="font-medium mb-2">Code Examples</div>
         <CodeSamples samples={endpoint.samples} />
       </div>
 
       <div>
-        <div className=&quot;font-medium mb-2&quot;>Try It</div>
+        <div className="font-medium mb-2">Try It</div>
         <TryItConsole method={endpoint.method} path={endpoint.path} requiresAuth={(endpoint.auth || []).includes('jwt') || (endpoint.auth || []).includes('wallet')} />
       </div>
 

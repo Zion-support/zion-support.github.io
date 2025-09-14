@@ -73,7 +73,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
           </a>
         )}
             {message.attachment_name || 'Attachment'}
-          </Link>
+          </a>
         )}
         
 

@@ -1,30 +1,30 @@
-import { useMemo, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useMemo, useState } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 
 interface FileData {
-  name: string;
-  type: string;
-  size: number;
-  base64: string; // data URL
+  name: string,
+  type: string,
+  size: number,
+  base64: string, // data URL
 }
 
 interface OnboardingFormData {
-  fullName: string;
-  professionalTitle: string;
-  profilePicture?: FileData | null;
+  fullName: string,
+  professionalTitle: string,
+  profilePicture?: FileData | null,
 
-  bio: string;
-  projects: string;
-  yearsOfExperience: string; // keep as string for input, convert on submit
+  bio: string,
+  projects: string,
+  yearsOfExperience: string, // keep as string for input, convert on submit
 
-  skills: string;
-  tools: string;
+  skills: string,
+  tools: string,
 
-  availability: 'Full-time' | 'Part-time' | 'Project-based' | '';
-  timezone: string;
-  hourlyRate?: string;
-  portfolioLinks?: string;
-  cvFile?: FileData | null;
+  availability: 'Full-time' | 'Part-time' | 'Project-based' | '',
+  timezone: string,
+  hourlyRate?: string,
+  portfolioLinks?: string,
+  cvFile?: FileData | null
 }
 
 const steps = [
@@ -34,7 +34,7 @@ const steps = [
   'Availability',
 ] as const;
 
-type StepKey = typeof steps[number];
+type StepKey = typeof steps[number],
 
 const containerVariants = {
   initial: { opacity: 0, y: 16 },
@@ -63,12 +63,12 @@ function useInitialFormState(): OnboardingFormData {
 async function fileToBase64(file: File): Promise<FileData> {
   const toBase64 = (fileInner: File) =>
     new Promise<string>((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(fileInner);
-      reader.onload = () => resolve(reader.result as string);
-      reader.onerror = (error) => reject(error);
-    });
-  const base64 = await toBase64(file);
+      const reader = new FileReader(),
+      reader.readAsDataURL(fileInner),
+      reader.onload = () => resolve(reader.result as string),
+      reader.onerror = (error) => reject(error),
+    }),
+  const base64 = await toBase64(file),
   return {
     name: file.name,
     type: file.type,
@@ -78,53 +78,53 @@ async function fileToBase64(file: File): Promise<FileData> {
 }
 
 export default function TalentOnboardingPage() {
-  const [stepIndex, setStepIndex] = useState(0);
-  const [formData, setFormData] = useState<OnboardingFormData>(useInitialFormState);
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [stepIndex, setStepIndex] = useState(0),
+  const [formData, setFormData] = useState<OnboardingFormData>(useInitialFormState),
+  const [submitting, setSubmitting] = useState(false),
+  const [submitted, setSubmitted] = useState(false),
+  const [errorMessage, setErrorMessage] = useState<string | null>(null),
 
-  const currentStep: StepKey = steps[stepIndex];
-  const progressPercent = useMemo(() => ((stepIndex + 1) / steps.length) * 100, [stepIndex]);
+  const currentStep: StepKey = steps[stepIndex],
+  const progressPercent = useMemo(() => ((stepIndex + 1) / steps.length) * 100, [stepIndex]),
 
   function nextStep() {
-    if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1);
+    if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1),
   }
   function prevStep() {
-    if (stepIndex > 0) setStepIndex(stepIndex - 1);
+    if (stepIndex > 0) setStepIndex(stepIndex - 1),
   }
 
   function update<K extends keyof OnboardingFormData>(key: K, value: OnboardingFormData[K]) {
-    setFormData((prev) => ({ ...prev, [key]: value }));
+    setFormData((prev) => ({ ...prev, [key]: value })),
   }
 
   function requiredMissingForStep(): string | null {
     if (currentStep === 'Basic Info') {
-      if (!formData.fullName.trim()) return 'Full Name is required.';
-      if (!formData.professionalTitle.trim()) return 'Professional Title is required.';
+      if (!formData.fullName.trim()) return 'Full Name is required.',
+      if (!formData.professionalTitle.trim()) return 'Professional Title is required.',
     }
     if (currentStep === 'Experience') {
-      if (!formData.bio.trim()) return 'Short Bio is required.';
-      if (!formData.yearsOfExperience.trim()) return 'Years of Experience is required.';
+      if (!formData.bio.trim()) return 'Short Bio is required.',
+      if (!formData.yearsOfExperience.trim()) return 'Years of Experience is required.',
     }
     if (currentStep === 'Skills & Tech') {
-      if (!formData.skills.trim()) return 'Please list at least one skill.';
+      if (!formData.skills.trim()) return 'Please list at least one skill.',
     }
     if (currentStep === 'Availability') {
-      if (!formData.availability) return 'Please select your current availability.';
-      if (!formData.timezone.trim()) return 'Preferred Timezone is required.';
+      if (!formData.availability) return 'Please select your current availability.',
+      if (!formData.timezone.trim()) return 'Preferred Timezone is required.',
     }
-    return null;
+    return null,
   }
 
   async function handleSubmit() {
-    const missing = requiredMissingForStep();
+    const missing = requiredMissingForStep(),
     if (missing) {
-      setErrorMessage(missing);
-      return;
+      setErrorMessage(missing),
+      return,
     }
-    setErrorMessage(null);
-    setSubmitting(true);
+    setErrorMessage(null),
+    setSubmitting(true),
     try {
       const response = await fetch('/api/talent/onboard', {
         method: 'POST',
@@ -134,9 +134,9 @@ export default function TalentOnboardingPage() {
       if (!response.ok) throw new Error('Submission failed');
       setSubmitted(true);
     } catch (err) {
-      setErrorMessage('Submission failed. Please try again.');
+      setErrorMessage('Submission failed. Please try again.'),
     } finally {
-      setSubmitting(false);
+      setSubmitting(false),
     }
   }
 
@@ -145,12 +145,12 @@ export default function TalentOnboardingPage() {
       <div className="min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-6">
         <div className="max-w-xl w-full bg-glass/60 rounded-2xl p-8 shadow-xl border border-[var(--border-primary)] animate-fade-in">
           <div className="text-center space-y-3">
-            <h1 className="text-2xl md:text-3xl font-semibold text-high-contrast">Thanks! We’re using AI to optimize your profile.</h1>
+            <h1 className="text-2xl md: text-3xl font-semibold text-high-contrast">Thanks! We’re using AI to optimize your profile.</h1>
             <p className="text-high-contrast-secondary">You’ll appear in search results shortly.</p>
           </div>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -325,15 +325,15 @@ export default function TalentOnboardingPage() {
             {stepIndex < steps.length - 1 ? (
               <button
                 type="button"
-                className="px-6 py-2 rounded-lg bg-[var(--text-accent)] text-black font-medium shadow-md hover:shadow-lg transition-all disabled:opacity-50"
+                className="px-6 py-2 rounded-lg bg-[var(--text-accent)] text-black font-medium shadow-md hover: shadow-lg transition-all disabled:opacity-50"
                 onClick={() => {
-                  const missing = requiredMissingForStep();
+                  const missing = requiredMissingForStep(),
                   if (missing) {
-                    setErrorMessage(missing);
-                    return;
+                    setErrorMessage(missing),
+                    return
                   }
-                  setErrorMessage(null);
-                  nextStep();
+                  setErrorMessage(null),
+                  nextStep(),
                 }}
               >
                 Next
@@ -352,20 +352,20 @@ export default function TalentOnboardingPage() {
         </div>
       </div>
     </div>
-  );
+  ),
 }
 
 function FloatingInput(props: {
-  id: string;
-  label: string;
-  value: string;
-  onChange: (value: string) => void;
-  placeholder?: string;
-  type?: string;
-  min?: number;
-  required?: boolean;
+  id: string,
+  label: string,
+  value: string,
+  onChange: (value: string) => void,
+  placeholder?: string,
+  type?: string,
+  min?: number,
+  required?: boolean
 }) {
-  const { id, label, value, onChange, placeholder, type = 'text', min, required } = props;
+  const { id, label, value, onChange, placeholder, type = 'text', min, required } = props,
   return (
     <div className="relative">
       <input
@@ -383,18 +383,18 @@ function FloatingInput(props: {
         {label}
       </label>
     </div>
-  );
+  ),
 }
 
 function FloatingTextarea(props: {
-  id: string;
-  label: string;
-  value: string;
-  onChange: (value: string) => void;
-  placeholder?: string;
-  required?: boolean;
+  id: string,
+  label: string,
+  value: string,
+  onChange: (value: string) => void,
+  placeholder?: string,
+  required?: boolean
 }) {
-  const { id, label, value, onChange, placeholder, required } = props;
+  const { id, label, value, onChange, placeholder, required } = props,
   return (
     <div className="relative">
       <textarea
@@ -411,18 +411,18 @@ function FloatingTextarea(props: {
         {label}
       </label>
     </div>
-  );
+  ),
 }
 
 function FileUpload(props: {
-  id: string;
-  label: string;
-  accept?: string;
-  fileData: FileData | null | undefined;
-  onFileChange: (file: FileData | null) => void;
+  id: string,
+  label: string,
+  accept?: string,
+  fileData: FileData | null | undefined,
+  onFileChange: (file: FileData | null) => void
 }) {
-  const { id, label, accept, fileData, onFileChange } = props;
-  const [localError, setLocalError] = useState<string | null>(null);
+  const { id, label, accept, fileData, onFileChange } = props,
+  const [localError, setLocalError] = useState<string | null>(null),
 
   return (
     <div>
@@ -431,19 +431,19 @@ function FileUpload(props: {
         id={id}
         type="file"
         accept={accept}
-        className="block w-full text-sm text-high-contrast-secondary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-[var(--text-accent)] file:text-black hover:file:bg-[var(--text-accent)]/90"
+        className="block w-full text-sm text-high-contrast-secondary file: mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-[var(--text-accent)] file:text-black hover:file:bg-[var(--text-accent)]/90"
         onChange={async (e) => {
-          const file = e.target.files?.[0];
+          const file = e.target.files?.[0],
           if (!file) {
-            onFileChange(null);
-            return;
+            onFileChange(null),
+            return
           }
           try {
-            const base64 = await fileToBase64(file);
-            onFileChange(base64);
-            setLocalError(null);
+            const base64 = await fileToBase64(file),
+            onFileChange(base64),
+            setLocalError(null),
           } catch (err) {
-            setLocalError('Failed to read file.');
+            setLocalError('Failed to read file.'),
           }
         }}
       />
@@ -454,5 +454,5 @@ function FileUpload(props: {
         <p className="mt-1 text-xs text-high-contrast-error">{localError}</p>
       )}
     </div>
-  );
+  ),
 }

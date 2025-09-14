@@ -1,8 +1,8 @@
-import React, { useMemo, useRef, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import SimulatorForm from '../../components/economy/SimulatorForm';
-import SimulatorCharts from '../../components/economy/SimulatorCharts';
-import SimulatorExports from '../../components/economy/SimulatorExports';
+import React, { useMemo, useRef, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import SimulatorForm from '../../components/economy/SimulatorForm',
+import SimulatorCharts from '../../components/economy/SimulatorCharts',
+import SimulatorExports from '../../components/economy/SimulatorExports',
 import {
   SimulatorInputs,
   simulateEconomy,
@@ -25,22 +25,22 @@ export default function EconomySimulatorPage() {
 
   const [operatorPrompt, setOperatorPrompt] = useState(
     'Analyze the impact of increasing ZION$ staking rewards by 2x over 6 months with 10K active users and weekly emission cap.'
-  );
-  const [analysis, setAnalysis] = useState<string>('');
-  const [loadingAnalysis, setLoadingAnalysis] = useState<boolean>(false);
+  ),
+  const [analysis, setAnalysis] = useState<string>(''),
+  const [loadingAnalysis, setLoadingAnalysis] = useState<boolean>(false),
 
   const handleScenario = (scenario: ScenarioKey) => {
-    setInputs((prev) => applyScenario(prev, scenario));
-  };
+    setInputs((prev) => applyScenario(prev, scenario)),
+  },
 
-  const series = useMemo(() => simulateEconomy(inputs), [inputs]);
+  const series = useMemo(() => simulateEconomy(inputs), [inputs]),
 
-  const containerId = 'zion-simulator-container';
+  const containerId = 'zion-simulator-container',
 
   const onAnalyze = async () => {
     try {
-      setLoadingAnalysis(true);
-      setAnalysis('');
+      setLoadingAnalysis(true),
+      setAnalysis(''),
       const res = await fetch('/api/economy/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -50,11 +50,11 @@ export default function EconomySimulatorPage() {
       if ('analysis' in json) setAnalysis(json.analysis as string);
       else setAnalysis('Failed to analyze.');
     } catch (e) {
-      setAnalysis('Failed to analyze.');
+      setAnalysis('Failed to analyze.'),
     } finally {
-      setLoadingAnalysis(false);
+      setLoadingAnalysis(false),
     }
-  };
+  },
 
   return (
     <EnhancedLayout>
@@ -112,5 +112,5 @@ export default function EconomySimulatorPage() {
         </div>
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

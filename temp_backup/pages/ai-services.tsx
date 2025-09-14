@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react';
-import SEO from '../components/SEO';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react',
+import SEO from '../components/SEO',
 
 const aiServices = [
   {
@@ -9,44 +9,44 @@ const aiServices = [
     description: 'Advanced AI systems with evolving consciousness and emotional intelligence',
     icon: <Brain className="w-8 h-8 text-cyan-400" />,
     href: '/ai-consciousness-evolution-2029',
-    features: ['Emotional Intelligence', 'Consciousness Development', 'Ethical AI Framework']
+    features: ['Emotional IntelligenceConsciousness Development', 'Ethical AI Framework']
   },
   {
     title: 'AI Autonomous Research',
     description: 'Self-directed AI research assistants for breakthrough discoveries',
     icon: <Target className="w-8 h-8 text-purple-400" />,
     href: '/ai-autonomous-research-assistant',
-    features: ['Independent Research', 'Data Analysis', 'Hypothesis Generation']
+    features: ['Independent ResearchData Analysis', 'Hypothesis Generation']
   },
   {
     title: 'AI Predictive Maintenance',
     description: 'Predictive analytics for industrial equipment and systems',
     icon: <Zap className="w-8 h-8 text-yellow-400" />,
     href: '/ai-predictive-maintenance-platform',
-    features: ['Equipment Monitoring', 'Failure Prediction', 'Cost Optimization']
+    features: ['Equipment MonitoringFailure Prediction', 'Cost Optimization']
   },
   {
     title: 'AI Content Personalization',
     description: 'Dynamic content adaptation based on user behavior and preferences',
     icon: <Users className="w-8 h-8 text-green-400" />,
     href: '/ai-content-personalization-engine',
-    features: ['User Profiling', 'Dynamic Content', 'Engagement Optimization']
+    features: ['User ProfilingDynamic Content', 'Engagement Optimization']
   },
   {
     title: 'AI Autonomous Business Operations',
     description: 'End-to-end automation of business processes and decision-making',
     icon: <Rocket className="w-8 h-8 text-blue-400" />,
     href: '/autonomous-business-operations-platform',
-    features: ['Process Automation', 'Decision Intelligence', 'Operational Efficiency']
+    features: ['Process AutomationDecision Intelligence', 'Operational Efficiency']
   },
   {
     title: 'AI Ethics & Governance',
     description: 'Framework for responsible AI development and deployment',
     icon: <Shield className="w-8 h-8 text-red-400" />,
     href: '/ai-ethics-governance-framework',
-    features: ['Ethical Guidelines', 'Governance Framework', 'Compliance Monitoring']
+    features: ['Ethical GuidelinesGovernance Framework', 'Compliance Monitoring']
   }
-];
+],
 
 export default function AIServices() {
   return (
@@ -171,7 +171,7 @@ export default function AIServices() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-cyan-500 hover:text-white transition-all duration-300"
                 >
                   View Case Studies
                 </motion.button>
@@ -181,5 +181,5 @@ export default function AIServices() {
         </section>
       </div>
     </>
-  );
+  )
 }

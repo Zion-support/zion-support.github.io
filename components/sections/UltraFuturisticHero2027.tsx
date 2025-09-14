@@ -1140,8 +1140,8 @@ function UltraFuturisticHero2027() {
     </section>);      <div className="absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - cyan - 500 / 20 via - transparent to - transparent pointer - events - none" />;
     </section>);
                 >
-                  <div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3&quot;>
-                    <Shield className=&quot;w-8 h-8 text-cyan-400&quot; />
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                    <Shield className="w-8 h-8 text-cyan-400" />
                   </div>
                   <div className=&quot;text-cyan-300 font-medium&quot;>{trust}</div>
 

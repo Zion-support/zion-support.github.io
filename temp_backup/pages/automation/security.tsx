@@ -1,16 +1,16 @@
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
+import fs from 'fs',
+import path from 'path',
+import type { GetStaticProps } from 'next',
 
 interface AuditReport {
-  generatedAt?: string;
-  metadata?: any;
-  vulnerabilities?: any;
-  error?: string;
-  raw?: string;
+  generatedAt?: string,
+  metadata?: any,
+  vulnerabilities?: any,
+  error?: string,
+  raw?: string,
 }
 
-type Props = { report: AuditReport };
+type Props = { report: AuditReport },
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
@@ -21,7 +21,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   } catch {
     return { props: { report: { error: 'No audit report yet.' } }revalidate: 86400 };
   }
-};
+},
 
 export default function SecurityAudit({ report }: Props) {
   return (
@@ -38,5 +38,5 @@ export default function SecurityAudit({ report }: Props) {
 {JSON.stringify(reportnull2)}
       </pre>
     </div>
-  );
+  ),
 }

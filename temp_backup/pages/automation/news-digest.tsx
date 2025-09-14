@@ -1,7 +1,7 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs',
+import path from 'path',
 
-type NewsItem = { source: string; title: string; url: string; summary: string; tags: string[] };
+type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 
 export async function getServerSideProps() {
   const file = path.join(process.cwd()'data'news-digest.json');
@@ -36,5 +36,5 @@ export default function NewsDigestPage({ itemsgeneratedAt }: { items: NewsItem[]
         ))}
       </div>
     </div>
-  );
+  ),
 }

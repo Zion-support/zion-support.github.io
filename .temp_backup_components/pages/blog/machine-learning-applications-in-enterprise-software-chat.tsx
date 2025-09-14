@@ -16,7 +16,7 @@ const MachineLearningApplicationsInEnterpriseSoftwareChat: NextPage = () => {
         <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default MachineLearningApplicationsInEnterpriseSoftwareChat;
+export default MachineLearningApplicationsInEnterpriseSoftwareChat,

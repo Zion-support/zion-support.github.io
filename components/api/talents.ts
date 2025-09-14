@@ -136,7 +136,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     email,
     skills: skills || [],
     programTrack: programTrack || null,
-    certificationStatus: certificationStatus || &quot;pending&quot;,
+    certificationStatus: certificationStatus || "pending",
     partnerId: auth.partner.id,
     createdAt: now},
   records.push(record),

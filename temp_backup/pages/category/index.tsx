@@ -4,5 +4,5 @@ export default function CategoryIndexPage() {
       <h1 className="text-2xl font-semibold">Categories</h1>
       <p className="mt-2 text-gray-600">Browse AI categories. Content coming soon.</p>
     </div>
-  );
+  ),
 }

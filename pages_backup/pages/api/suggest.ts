@@ -77,7 +77,6 @@ const SAMPLE_QUERIES = [
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
-  }
   const { q = "" } = req.query;
 
   if (req && req.method !== "GET") {

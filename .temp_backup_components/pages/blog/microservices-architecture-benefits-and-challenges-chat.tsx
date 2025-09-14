@@ -16,7 +16,7 @@ const MicroservicesArchitectureBenefitsAndChallengesChat: NextPage = () => {
         <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default MicroservicesArchitectureBenefitsAndChallengesChat;
+export default MicroservicesArchitectureBenefitsAndChallengesChat,

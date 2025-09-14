@@ -17,14 +17,14 @@ export default function TokenIntegrationsPage() {
 
   async function syncDepin() {
     if (!account) {
-      await connect();
-      return;
+      await connect(),
+      return,
     }
-    setDepinsSyncing(true);
-    const acts = await fetchDepinActivities(account);
-    const r = calculateRewards(acts);
-    setRewards(r);
-    setDepinsSyncing(false);
+    setDepinsSyncing(true),
+    const acts = await fetchDepinActivities(account),
+    const r = calculateRewards(acts),
+    setRewards(r),
+    setDepinsSyncing(false),
   }
 
   async function runOperator() {
@@ -101,5 +101,5 @@ export default function TokenIntegrationsPage() {
         </ul>
       </section>
     </div>
-  );
+  ),
 }

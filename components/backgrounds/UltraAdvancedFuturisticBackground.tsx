@@ -813,25 +813,25 @@ if ( {) {
   }, [intensity, theme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]),
 
   return (
-    <div className=&quot;relative min-h-screen&quot;>
+    <div className="relative min-h-screen">
       <canvas
         ref={canvasRef}
-        className=&quot;fixed inset-0 w-full h-full pointer-events-none&quot;
+        className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
       />
       
       {/* Additional futuristic overlay effects */}
       {enableHolographic && (
-        <div className=&quot;fixed inset-0 pointer-events-none&quot; style={{ zIndex: -1 }}>
-          <div className=&quot;absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5&quot; />
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0.03),transparent_50%)]&quot; />
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.03),transparent_50%)]&quot; />
+        <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0.03),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.03),transparent_50%)]" />
         </div>
       )}
       
       {enableQuantumEffects && (
-        <div className=&quot;fixed inset-0 pointer-events-none&quot; style={{ zIndex: -1 }}>
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.02),transparent_70%)]&quot; />
+        <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.02),transparent_70%)]" />
         </div>
       )}
       

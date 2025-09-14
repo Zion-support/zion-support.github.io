@@ -1,22 +1,26 @@
-export type Innovative2037MicroSaasService = {
+export interface Innovative2037MicroSaasService {
   id: string;
   name: string;
   tagline: string;
   description: string;
   category: string;
-  pricing: {
-    starter: string;
-    pro: string;
-    enterprise: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string;
   };
   features: string[];
   benefits: string[];
+  targetAudience: string[];
+  marketPosition: string;
+  competitors: string[];
+  techStack: string[];
+  realImplementation: boolean;
+  implementationDetails: string;
+  roi: string;
   useCases: string[];
-  marketPrice: string;
-  link: string;
-  launchDate: string;
-  rating: number;
-  technology: string[];
   integrations: string[];
   compliance: string[];
   // Enhanced properties for component compatibility
@@ -69,7 +73,8 @@ const getIconForCategory = (category: string): string => {
   return '🚀'; // Default icon
 };
 
-export const innovative2037MicroSaasServices = [
+export const innovative2037MicroSaasServices: Innovative2037MicroSaasService[] = [
+  // AI-Powered Customer Success Automation
   {
     id: 'ai-autonomous-customer-success-platform',
     name: 'AI Autonomous Customer Success Platform',

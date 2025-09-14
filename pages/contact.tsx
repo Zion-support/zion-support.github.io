@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -79,6 +79,7 @@ const ContactPage: React.FC = () => {
     { day: 'Sunday', hours: 'Closed' }
   ];
 
+export default function Contact() {
   return (
     <Layout>
       <Head>
@@ -370,7 +371,7 @@ const ContactPage: React.FC = () => {
               </div>
             </motion.div>
           </div>
-        </section>
+        </div>
       </div>
     </Layout>
   );

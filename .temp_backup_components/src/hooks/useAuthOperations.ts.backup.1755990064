@@ -30,6 +30,26 @@ interface EthereumProvider {
   request: (args: { method: string; params?: unknown[] }) => Promise<unknown>;
 }
 
+// Define Props and Return Types FIRST
+export interface SignupProps {
+  email: string;
+  password: string;
+  display_name: string;
+}
+
+export interface AuthOperations {
+  login: ({ email, password }: { email: string; password: string }) => Promise<{ data: any; error: string | null }>;
+  signup: (props: SignupProps) => Promise<{ data: any; error: string | null }>;
+  logout: () => Promise<void>;
+  resetPassword: (email: string) => Promise<{ data: any; error: string | null }>;
+  updateProfile: (profileData: Partial<UserProfile>) => Promise<{ error: string | null }>;
+  loginWithGoogle: () => Promise<void>;
+  loginWithFacebook: () => Promise<void>;
+  loginWithTwitter: () => Promise<void>;
+  loginWithWeb3: () => Promise<void>;
+}
+
+// THEN define the hook
 export function useAuthOperations(
   setUser: React.Dispatch<React.SetStateAction<UserDetails | null>>,
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>,
@@ -44,7 +64,6 @@ export function useAuthOperations(
   const signIn = async ({ email, password }: { email: string; password: string }) => {
     setIsLoading(true);
     try {
-      // Clean up any stale auth state before login
       cleanupAuthState();
       if (!supabase) throw new Error('Supabase client not initialized');
       const { data, error } = await supabase.auth.signInWithPassword({
@@ -61,12 +80,7 @@ export function useAuthOperations(
         });
         return { data: null, error: error instanceof Error ? error.message : String(error) };
       }
-
-      toast({
-        title: "Login successful!",
-        description: `Welcome back, ${email}!`,
-      });
-
+      toast({ title: "Login successful!", description: `Welcome back, ${email}!` });
       return { data, error: null };
     } catch (error: unknown) {
       toast({
@@ -89,11 +103,7 @@ export function useAuthOperations(
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
-        options: {
-          data: {
-            display_name: display_name,
-          },
-        },
+        options: { data: { display_name } },
       });
       console.log('signup signUp', { status: !error ? 201 : error?.status, data });
 
@@ -132,12 +142,7 @@ export function useAuthOperations(
         }
         mutate('user');
       }
-
-      toast({
-        title: "Signup successful!",
-        description: `Welcome, ${display_name}! Please check your email to verify your account.`,
-      });
-
+      toast({ title: "Signup successful!", description: `Welcome, ${display_name}! Please check your email to verify your account.` });
       return { data, error: null };
     } catch (error: unknown) {
       showApiError(error, "Failed to sign up. Please try again.", () => signUp({ email, password, display_name }));
@@ -147,12 +152,11 @@ export function useAuthOperations(
     }
   };
 
-  const logout = async () => {
+  const logout = async (): Promise<void> => {
     setIsLoading(true);
     try {
       if (!supabase) throw new Error('Supabase client not initialized');
       const { error } = await supabase.auth.signOut();
-
       if (error) {
         toast({
           variant: "destructive",
@@ -160,18 +164,14 @@ export function useAuthOperations(
           description: error instanceof Error ? error.message : String(error),
         });
       } else {
-        setUser(null); // Clear the user state upon successful logout
+        setUser(null);
         setAvatarUrl(null);
         try {
-          // Clear authToken cookie on backend
           await fetch('/api/auth/logout', { method: 'POST' });
         } catch (cookieErr) {
           logWarn('useAuthOperations.logout: failed to clear auth cookie', { data:  { data: cookieErr } });
         }
-        toast({
-          title: "Logout successful!",
-          description: "You have been successfully logged out.",
-        });
+        toast({ title: "Logout successful!", description: "You have been successfully logged out." });
       }
     } catch (error: unknown) {
       logErrorToProduction('Logout failed:', { data: error });
@@ -185,14 +185,13 @@ export function useAuthOperations(
     }
   };
 
-  const resetPassword = async (email: string) => {
+  const resetPassword = async (email: string): Promise<{ data: any; error: string | null }> => {
     setIsLoading(true);
     try {
       if (!supabase) throw new Error('Supabase client not initialized');
       const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo: `${window.location.origin}/update-password`,
       });
-
       if (error) {
         toast({
           variant: "destructive",
@@ -201,12 +200,7 @@ export function useAuthOperations(
         });
         return { data: null, error: error instanceof Error ? error.message : String(error) };
       }
-
-      toast({
-        title: "Password reset email sent!",
-        description: `Please check your email (${email}) for instructions on how to reset your password.`,
-      });
-
+      toast({ title: "Password reset email sent!", description: `Please check your email (${email}) for instructions on how to reset your password.` });
       return { data, error: null };
     } catch (error: unknown) {
       toast({
@@ -220,7 +214,7 @@ export function useAuthOperations(
     }
   };
 
-  const updateProfile = async (profileData: Partial<UserProfile>) => {
+  const updateProfile = async (profileData: Partial<UserProfile>): Promise<{ error: string | null }> => {
     setIsLoading(true);
     try {
       if (!profileData || !profileData.id) {
@@ -240,7 +234,6 @@ export function useAuthOperations(
           preferred_categories: profileData.preferredCategories,
         })
         .eq("id", profileData.id);
-
       if (error) {
         toast({
           variant: "destructive",
@@ -249,20 +242,8 @@ export function useAuthOperations(
         });
         return { error: error instanceof Error ? error.message : String(error) };
       }
-
-      // Optimistically update the local user state
-      setUser((prevUser) => {
-        if (prevUser) {
-          return { ...prevUser, ...profileData };
-        }
-        return prevUser;
-      });
-
-      toast({
-        title: "Profile updated!",
-        description: "Your profile has been successfully updated.",
-      });
-
+      setUser((prevUser) => prevUser ? { ...prevUser, ...profileData } : prevUser);
+      toast({ title: "Profile updated!", description: "Your profile has been successfully updated." });
       return { error: null };
     } catch (error: unknown) {
       logErrorToProduction('Profile update failed:', { data: error });
@@ -277,7 +258,7 @@ export function useAuthOperations(
     }
   };
 
-  const loginWithGoogle = async () => {
+  const loginWithGoogle = async (): Promise<void> => {
     setIsLoading(true);
     try {
       if (!supabase) throw new Error('Supabase client not initialized');
@@ -317,7 +298,7 @@ export function useAuthOperations(
     }
   };
 
-  const loginWithFacebook = async () => {
+  const loginWithFacebook = async (): Promise<void> => {
     setIsLoading(true);
     try {
       if (!supabase) throw new Error('Supabase client not initialized');
@@ -337,7 +318,7 @@ export function useAuthOperations(
     }
   };
 
-  const loginWithTwitter = async () => {
+  const loginWithTwitter = async (): Promise<void> => {
     setIsLoading(true);
     try {
       if (!supabase) throw new Error('Supabase client not initialized');
@@ -357,7 +338,7 @@ export function useAuthOperations(
     }
   };
 
-  const loginWithWeb3 = async () => {
+  const loginWithWeb3 = async (): Promise<void> => {
     setIsLoading(true);
     try {
       const ethereum = (window as unknown as { ethereum?: EthereumProvider }).ethereum;

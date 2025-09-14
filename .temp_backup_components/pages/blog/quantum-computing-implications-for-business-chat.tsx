@@ -16,7 +16,7 @@ const QuantumComputingImplicationsForBusinessChat: NextPage = () => {
         <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default QuantumComputingImplicationsForBusinessChat;
+export default QuantumComputingImplicationsForBusinessChat,

@@ -105,10 +105,10 @@ export default function FuturisticBackground() {_return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
 
       {/* Animated gradient background */}
-      <div className=&quot;futuristic-bg absolute -inset-20&quot; />
+      <div className="futuristic-bg absolute -inset-20" />
 
       {/* Moving grid overlay */}
-      <div className=&quot;grid-overlay absolute inset-0 opacity-20&quot; />
+      <div className="grid-overlay absolute inset-0 opacity-20" />
 
       {/* Glow orbs */}
 
