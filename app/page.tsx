@@ -69,6 +69,7 @@ import EnterpriseSuccessBanner from '../components/EnterpriseSuccessBanner';
 import FutureTechPreviewBanner from '../components/FutureTechPreviewBanner';
 import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
 import NewContent2025UltimateBreakthroughShowcase from '../components/NewContent2025UltimateBreakthroughShowcase';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import UltimateAISuccess2025Banner from '../components/UltimateAISuccess2025Banner';
 import UltimateAISuccess2025Showcase from '../components/UltimateAISuccess2025Showcase';
 =======
@@ -182,8 +183,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
-=======
+        {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER - FEATURED PROMINENTLY */}
+        <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 - COMPREHENSIVE COLLECTION */}
+        <UltimateContentShowcase2025 />
+        
         {/* Ultimate AI Success 2025 Banner - NEW FEATURED */}
         <UltimateAISuccess2025Banner />
         
@@ -196,60 +201,11 @@ export default function HomePage() {
         {/* AI 2025 Advanced Automation Mastery Banner - NEW FEATURED */}
         <AI2025AdvancedAutomationMasteryBanner />
         
-        {/* Ultimate AI Breakthrough 2025 Banner - NEW FEATURED */}
-        <UltimateAIBreakthrough2025Banner />
-        
-        {/* Revolutionary Content 2025 Ultimate Banner - NEW */}
-        <RevolutionaryContent2025UltimateBanner />
-        
-        {/* Ultimate Content Showcase 2025 Banner - NEW */}
-        <UltimateContentShowcase2025Banner />
-        
-        {/* Ultimate AI Transformation 2025 Banner - NEW */}
-        <UltimateAITransformation2025Banner />
-        
-        {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
-        <NewContent2025UltimateBreakthroughBanner />
-        
-        {/* NEW ULTIMATE BREAKTHROUGH CONTENT SHOWCASE */}
-        <NewContent2025UltimateBreakthroughShowcase />
-        
-        {/* NEW 2025 ENHANCED CONTENT - TOP PRIORITY */}
-        <AIInnovationPromotionBanner2025 />
-        
-        {/* New Resource 2025 Implementation Roadmap Banner - NEW FEATURED */}
-        <NewResource2025ImplementationRoadmapBanner />
-        
-        {/* New Content 2025 Enterprise Automation Banner - NEW FEATURED */}
-        <NewContent2025EnterpriseAutomationBanner />
-        
-        {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
-        <NewContent2025AnalyticsRevolutionBanner />
-        
-        {/* Revolutionary AI 2025 Banner - LATEST */}
-        <RevolutionaryAI2025Banner />
-        
-        {/* Ultimate Content 2025 Banner - NEW FEATURED */}
-        <UltimateContent2025Banner />
-        
-        {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
-        <NewContent2025UltimateShowcaseBanner />
-=======
-        {/* Next-Generation Autonomous Systems Banner - NEW FEATURED */}
-        <NextGenAutonomousSystemsBanner />
-        
-        {/* AI 2025 Advanced Automation Mastery Banner - NEW FEATURED */}
-        <AI2025AdvancedAutomationMasteryBanner />
-        
         {/* Revolutionary Content 2025 Banner - NEW FEATURED */}
         <RevolutionaryContent2025Banner />
         
         {/* New Resource 2025 Implementation Roadmap Banner - NEW FEATURED */}
         <NewResource2025ImplementationRoadmapBanner />
-        
-        {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
-        <UltimateContentShowcase2025 />
->>>>>>> cursor/create-and-deploy-new-content-a52b
         
         {/* AI 2030 Content Showcase Banner - FEATURED */}
         <AI2030ContentShowcaseBanner />
