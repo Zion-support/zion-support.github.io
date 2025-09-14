@@ -10,141 +10,11 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedSEO from '../components/EnhancedSEO';
 import AdvancedPerformanceMonitor2026 from '../components/AdvancedPerformanceMonitor2026';
 import UltimateAIAssistant2026 from '../components/UltimateAIAssistant2026';
+import PerformanceOptimizations from '../components/PerformanceOptimizations';
 
 export const metadata = {
-  title: {
-    default: 'Zion Tech Group - Revolutionary AI 2025 Autonomous Operations & Technology Services',
-    template: '%s | Zion Tech Group'
-  },
-  description: 'Leading provider of revolutionary AI 2025-2030 autonomous operations, quantum computing breakthroughs, and advanced automation solutions. Ultimate content revolution: AI predictions, quantum supremacy, error-corrected quantum computers, intelligent process automation, and transcendent intelligence delivering 2,500-5,000% ROI.',
-  metadataBase: new URL('https://zion.tech'),
-  applicationName: 'Zion Tech Group',
-  generator: 'Next.js',
-  authors: [{ name: 'Zion Tech Group', url: 'https://zion.tech' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  keywords: [
-    'AI 2025',
-    'AI 2026',
-    'AI 2027',
-    'AI 2028',
-    'AI 2029',
-    'AI 2030',
-    'Ultimate Content Revolution',
-    'Revolutionary Technology 2026',
-    'Autonomous Operations',
-    'AI Implementation Guide',
-    'Business Automation',
-    'ROI 2500%',
-    '99.9% Accuracy',
-    '10,000x Faster Processing',
-    'AI solutions',
-    'Artificial Intelligence',
-    'Quantum Computing',
-    'Quantum Machine Learning',
-    'Quantum Supremacy',
-    'Error-Corrected Quantum',
-    'Quantum Internet',
-    'Quantum-AI Fusion',
-    'Advanced Automation',
-    'Intelligent Process Automation',
-    'Autonomous Decision Systems',
-    'Predictive Maintenance AI',
-    'Smart Resource Management',
-    'Space Technology',
-    'Neural Interfaces',
-    'Machine Learning',
-    'Neural Networks',
-    'Digital Transformation',
-    'Edge Computing',
-    'Autonomous Systems',
-    'AI Consulting',
-    'Technology Services',
-    'Case Studies',
-    'Implementation Guide',
-    'ROI Calculator',
-    'Revolutionary Technology',
-    'Breakthrough Solutions',
-    'Content Discovery',
-    'Technology Showcase',
-    'AI Predictions',
-    'Future Technology',
-    'Quantum Breakthroughs',
-    'Automation Solutions'
-  ],
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://zion.tech',
-    siteName: 'Zion Tech Group',
-    title: 'Zion Tech Group - Revolutionary AI Solutions & Technology Services',
-    description: 'Leading provider of revolutionary AI solutions, quantum computing breakthroughs, and digital transformation services.',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - Revolutionary AI Solutions',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Revolutionary AI Solutions',
-    description: 'Leading provider of revolutionary AI solutions and digital transformation services.',
-    images: ['/og-image.png'],
-    creator: '@ziontechgroup',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
-  },
-  alternates: {
-    canonical: 'https://zion.tech',
-  },
-  category: 'Technology',
-  classification: 'AI Solutions Provider',
-  referrer: 'origin-when-cross-origin',
-  colorScheme: 'light dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#000000' },
-  ],
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-  },
-  icons: {
-    icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-    other: [
-      { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#5bbad5' },
-    ],
-  },
-  manifest: '/site.webmanifest',
-  other: {
-    'msapplication-TileColor': '#da532c',
-    'msapplication-config': '/browserconfig.xml',
-  },
+  title: 'Zion Tech Group - AI & Technology Solutions',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
 };
 
 function Header() {
@@ -1387,6 +1257,9 @@ export default function RootLayout({
         {/* DNS prefetch for performance */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        
+        {/* Performance Optimizations */}
+        <PerformanceOptimizations />
         
         {/* Structured Data */}
         <script

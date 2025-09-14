@@ -160,10 +160,63 @@ const HomePage: React.FC = () => {
             <div className="container">
               <div className="promo-card">
                 <div className="promo-content">
-                  <h2 className="section-title">New in September 2025</h2>
-                  <p className="promo-text">Explore fresh offerings like AI RFP Response Copilot, SEO Change Monitor, and more—priced and packaged for fast ROI.</p>
+                  <h2 className="section-title">Revolutionary AI & Quantum Computing Content</h2>
+                  <p className="promo-text">Discover our latest comprehensive guides on Generative AI Revolution, Quantum AI Superintelligence, and Fortune 500 transformation success stories—featuring $5B+ ROI case studies and cutting-edge implementation strategies.</p>
                 </div>
-                <a href="/services-advertising" className="btn btn-primary">See What's New →</a>
+                <div className="promo-actions">
+                  <a href="/blog/ai-2025-generative-intelligence-revolution-complete-guide" className="btn btn-primary">AI Revolution Guide →</a>
+                  <a href="/resources/quantum-ai-superintelligence-implementation-master-guide-2025" className="btn btn-secondary">Quantum AI Guide →</a>
+                  <a href="/case-studies/fortune-500-quantum-ai-transformation-2025-ultimate-success-story-5-billion-roi" className="btn btn-accent">$5B ROI Case Study →</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </AnimatedSection>
+
+        <AnimatedSection animation="scale" delay={400}>
+          <section className="featured-content-section">
+            <div className="container">
+              <h2 className="section-title">Featured Content: AI & Quantum Computing Mastery</h2>
+              <div className="content-grid">
+                <AnimatedSection animation="fadeIn" delay={600}>
+                  <div className="content-card featured">
+                    <div className="content-badge">Latest</div>
+                    <h3>AI 2025: Generative Intelligence Revolution</h3>
+                    <p>Complete implementation guide covering the paradigm shift from reactive to proactive AI systems, with real-world applications across healthcare, finance, and manufacturing.</p>
+                    <div className="content-metrics">
+                      <span className="metric">60% faster drug discovery</span>
+                      <span className="metric">99.7% fraud detection accuracy</span>
+                      <span className="metric">50% downtime reduction</span>
+                    </div>
+                    <a href="/blog/ai-2025-generative-intelligence-revolution-complete-guide" className="content-link">Read Full Guide →</a>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection animation="fadeIn" delay={800}>
+                  <div className="content-card featured">
+                    <div className="content-badge">Advanced</div>
+                    <h3>Quantum AI Superintelligence Implementation</h3>
+                    <p>Master guide for implementing quantum-enhanced AI systems with 1000x speedup in optimization problems and enterprise-grade reliability.</p>
+                    <div className="content-metrics">
+                      <span className="metric">1000x ML training speedup</span>
+                      <span className="metric">99.9% accuracy in simulations</span>
+                      <span className="metric">50% computational cost reduction</span>
+                    </div>
+                    <a href="/resources/quantum-ai-superintelligence-implementation-master-guide-2025" className="content-link">Access Master Guide →</a>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection animation="fadeIn" delay={1000}>
+                  <div className="content-card featured">
+                    <div className="content-badge">Success Story</div>
+                    <h3>Fortune 500: $5.2B ROI Transformation</h3>
+                    <p>Complete case study of a global manufacturing conglomerate achieving unprecedented success through quantum AI transformation in just 18 months.</p>
+                    <div className="content-metrics">
+                      <span className="metric">$5.2B total ROI</span>
+                      <span className="metric">35% efficiency improvement</span>
+                      <span className="metric">15 new materials discovered</span>
+                    </div>
+                    <a href="/case-studies/fortune-500-quantum-ai-transformation-2025-ultimate-success-story-5-billion-roi" className="content-link">View Case Study →</a>
+                  </div>
+                </AnimatedSection>
               </div>
             </div>
           </section>
