@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock, TrendingUp, DollarSign, Users, CheckCircle, BarChart3, Target } from 'lucide-react';
-import SEO from '../../components/SEO';
+import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'Retail AI Transformation 2025: How a $500M Company Achieved 600% ROI in 45 Days',
