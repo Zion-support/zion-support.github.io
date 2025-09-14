@@ -1,3 +1,4 @@
+"use client";
 import React, { useMemo, useState } from 'react'
 import { useUser } from '../../providers/UserProvider'
 import { useToast } from '../ui/ToastProvider'
