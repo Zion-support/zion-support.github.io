@@ -78,4 +78,4 @@ export function InlineLoader({ size = 'sm', variant = 'default' }: LoadingSpinne
       <span className="text-sm text-gray-600">Loading...</span>
     </div>
   );
-}
+};

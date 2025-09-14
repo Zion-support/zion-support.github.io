@@ -69,14 +69,14 @@ export default function PricingPage() {
     };
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
-        <div className="container mx-auto px-4 text-center">
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Transparent Pricing
+            Transparent Pricing Plans
           </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Choose the perfect plan for your business. All our micro SAAS services come with 
-            enterprise-grade features at startup-friendly prices.
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            Choose the perfect plan for your business needs. All plans include our core features 
+            with flexible scaling options.
           </p>
           
           {/* Billing Toggle */}
@@ -94,7 +94,7 @@ export default function PricingPage() {
             </Button>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Pricing Tiers */}
       <section className="py-20 bg-white">
@@ -304,18 +304,13 @@ export default function PricingPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-zion-blue mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Get in touch with our team to discuss your needs and find the perfect plan for your business
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <section className="bg-gray-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-8">Need a Custom Quote?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Contact us for custom pricing plans tailored to your specific business requirements.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="text-2xl font-bold text-zion-blue mb-6">Contact Information</h3>
               <div className="space-y-4">
@@ -351,38 +346,13 @@ export default function PricingPage() {
                 </div>
               </div>
             </div>
-            
             <div>
-              <h3 className="text-2xl font-bold text-zion-blue mb-6">Quick Actions</h3>
-              <div className="space-y-4">
-                <Link to="/request-quote">
-                  <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
-                    Request Custom Quote
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">
-                    Schedule Consultation
-                  </Button>
-                </Link>
-                <Link to="/micro-saas-services">
-                  <Button variant="outline" className="w-full border-zion-blue text-zion-blue hover:bg-zion-blue hover:text-white">
-                    View All Services
-                  </Button>
-                </Link>
-              </div>
-              
-              <div className="mt-8 p-6 bg-zion-blue/5 rounded-lg border border-zion-blue/20">
-                <h4 className="font-medium text-zion-blue mb-2">What's Included:</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• 24/7 Technical Support</li>
-                  <li>• 99.9% Uptime Guarantee</li>
-                  <li>• SOC 2 Type II Compliant</li>
-                  <li>• 30-Day Money Back Guarantee</li>
-                  <li>• Free Migration Support</li>
-                  <li>• Custom Integration Services</li>
-                </ul>
-              </div>
+              <h3 className="text-xl font-semibold mb-2">Email</h3>
+              <p>{CONTACT_INFO.email}</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Address</h3>
+              <p>{CONTACT_INFO.address}</p>
             </div>
           </div>
           
