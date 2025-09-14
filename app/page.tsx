@@ -224,6 +224,12 @@ import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import ROICalculatorWidget from '../components/ROICalculatorWidget';
 
+// Import new 2025 promotional components
+import RevolutionaryTech2025PromotionBanner from '../components/RevolutionaryTech2025PromotionBanner';
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
+import SuccessMetricsShowcase2025 from '../components/SuccessMetricsShowcase2025';
+
 // Import new Advanced Neural Architectures 2026 components
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
@@ -257,6 +263,18 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT 2025 ULTIMATE BREAKTHROUGH BANNER - NEWEST FEATURED */}
         <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* REVOLUTIONARY TECH 2025 PROMOTION BANNER - NEWEST FEATURED */}
+        <RevolutionaryTech2025PromotionBanner />
+        
+        {/* NEW CONTENT 2025 ULTIMATE SHOWCASE - NEWEST FEATURED */}
+        <NewContent2025UltimateShowcase />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2025 - NEW FEATURED */}
+        <InteractiveContentDiscovery2025 />
+        
+        {/* SUCCESS METRICS SHOWCASE 2025 - NEW FEATURED */}
+        <SuccessMetricsShowcase2025 />
         
         {/* ULTIMATE CONTENT SHOWCASE 2025 BANNER - NEWEST FEATURED */}
         <UltimateContentShowcase2025Banner />
