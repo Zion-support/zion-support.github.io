@@ -17,8 +17,6 @@ export const metadata = {
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
 };
 
-<<<<<<< HEAD
-=======
 function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
@@ -1266,7 +1264,6 @@ function Footer() {
   );
 }
 
->>>>>>> origin/cursor/create-and-deploy-new-content-18b4
 export default function RootLayout({
   children,
 }: {
