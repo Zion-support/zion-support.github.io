@@ -161,7 +161,7 @@ const QuantumAIContentShowcase2025 = () => {
                   ))}
                 </div>
 
-                {/* Users */}
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {content.tags.slice(0, 3).map((tag) => (
                     <span

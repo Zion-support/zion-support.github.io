@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, Award, BookOpen, Zap, TrendingUp,  Clock, Users } from 'lucide-react';
+import { Brain, Award, BookOpen, Zap, TrendingUp, Clock, Users, Brain } from 'lucide-react';
 
 const NeuralNetworksContentShowcase2025 = () => {
   const [activeCategory, setActiveCategory] = useState('all');

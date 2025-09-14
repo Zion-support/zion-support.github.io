@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ArrowRight, Star, Clock, TrendingUp, Users, Award, CheckCircle, Zap } from 'lucide-react';
+import { ArrowRight, Star, Clock, TrendingUp, Users, Award, CheckCircle, Zap, ArrowRight } from 'lucide-react';
 
 const IntelligentWorkflowShowcase = () => {
   const [activeTab, setActiveTab] = useState('all');
@@ -238,7 +238,7 @@ const IntelligentWorkflowShowcase = () => {
                   {item.description}
                 </p>
 
-                {/* Users */}
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.slice(0, 3).map((tag) => (
                     <span

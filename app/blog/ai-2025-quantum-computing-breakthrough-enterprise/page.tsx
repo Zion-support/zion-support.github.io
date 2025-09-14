@@ -1,7 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import SEO from '../../../components/SEO';
-import { ArrowLeft, Calendar, Clock, User,  TrendingUp, Zap, CheckCircle } from 'lucide-react';
+// import ErrorBoundary from '../../../components/ErrorBoundary';
+import { ArrowLeft, ArrowRight, Calendar, Clock, User, TrendingUp, Zap, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -278,7 +279,7 @@ export default function QuantumComputingBreakthroughPage() {
                   className="inline-flex items-center justify-center space-x-2 bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   <span>Contact Us Today</span>
-                  <span className="w-4 h-4">→</span>
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/quantum-computing-solutions"

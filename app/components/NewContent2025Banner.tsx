@@ -14,7 +14,7 @@ import {
   BookOpen,
   FileText,
   Lightbulb,
-  
+  Target,
   Zap,
   X
 } from 'lucide-react';

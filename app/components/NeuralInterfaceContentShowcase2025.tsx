@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Brain, Zap,  TrendingUp, Clock, Users, ArrowRight, ExternalLink } from 'lucide-react';
+import { Brain, Zap, TrendingUp, Clock, Users, ArrowRight, ExternalLink, ArrowRight, Brain } from 'lucide-react';
 
 const NeuralInterfaceContentShowcase2025 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -98,7 +98,7 @@ const NeuralInterfaceContentShowcase2025 = () => {
             <div className="text-sm text-gray-600">Average ROI</div>
           </div>
           <div className="bg-white rounded-xl p-6 text-center shadow-lg">
-            <Award className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+            <ArrowRight className="w-8 h-8 text-blue-600 mx-auto mb-3" />
             <div className="text-3xl font-bold text-gray-900 mb-1">{totalMetrics.totalSavings}</div>
             <div className="text-sm text-gray-600">Annual Savings</div>
           </div>

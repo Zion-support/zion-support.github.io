@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, Zap, TrendingUp, Clock, CheckCircle } from 'lucide-react';
+import { X, ArrowRight, Zap, TrendingUp, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 
 const QuantumComputingBreakthroughBanner2025 = () => {
   const [isVisible, setIsVisible] = useState(false);

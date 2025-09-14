@@ -148,9 +148,9 @@ const PersonalizedContentRecommendations = () => {
           score += 50;
         }
         
-        // User matching
-        const matchingUsers = content.tags.filter(tag => userInterests.includes(tag));
-        score += matchingUsers.length * 20;
+        // Tag matching
+        const matchingTags = content.tags.filter(tag => userInterests.includes(tag));
+        score += matchingTags.length * 20;
         
         // Featured content bonus
         if (content.featured) {
