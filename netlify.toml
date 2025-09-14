@@ -1,6 +1,6 @@
 [build]
   # Build command
-  command = "npm run build:netlify"
+  command = "npm run build"
   
   # Directory to publish
   publish = "dist"
@@ -28,6 +28,10 @@
   
   # Ensure Vite is available
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+  
+  # Vite-specific environment variables
+  VITE_BUILD = "true"
+  SKIP_REACT_VERSION_CHECK = "true"
 
 # Cache configuration to prevent dependency issues
 [build.cache]
@@ -37,13 +41,8 @@
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
-[[plugins]]
-  package = "./netlify/plugins/run-functions-and-rerun"
-  [plugins.inputs]
-    include = ""
-    exclude = ""
-    concurrency = 6
-    timeoutMs = 180000
+# Note: This is a Vite-based project, not Next.js
+# The @netlify/plugin-nextjs should be disabled in Netlify UI if present
 
 # Static redirects for exported site
 [[redirects]]
@@ -63,6 +62,12 @@
 # Cache static assets
 [[headers]]
   for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache Vite assets
+[[headers]]
+  for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
