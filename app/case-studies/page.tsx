@@ -7,6 +7,8 @@ export default function CaseStudies() {
     {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
       id: 1,
       title: "AI 2025 Global Enterprise Transformation",
       company: "Fortune 100 Global Manufacturing",
@@ -25,6 +27,7 @@ export default function CaseStudies() {
     },
     {
 >>>>>>> cursor/create-and-deploy-new-content-e336
+>>>>>>> cursor/create-and-deploy-new-content-6178
       id: 'manufacturing-giant',
       title: 'Global Manufacturing Transformation',
       company: 'Fortune 500 Manufacturing Company',

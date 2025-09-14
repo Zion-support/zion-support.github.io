@@ -1,270 +1,98 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Sparkles, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Brain, 
-  Globe,
-  Rocket,
-  TrendingUp,
-  X,
-  ChevronDown
-} from 'lucide-react';
 
-const NewContentPromotionBanner2026 = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [showDetails, setShowDetails] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const features = [
-    { icon: Brain, text: 'Multimodal AI Revolution', color: 'text-purple-400' },
-    { icon: Zap, text: 'Quantum Computing Breakthroughs', color: 'text-blue-400' },
-    { icon: Globe, text: 'Green Tech Solutions', color: 'text-green-400' },
-    { icon: Rocket, text: 'Advanced Automation', color: 'text-orange-400' }
-  ];
-
-  const stats = [
-    { number: '25+', label: 'New Articles' },
-    { number: '15+', label: 'Case Studies' },
-    { number: '8+', label: 'Implementation Guides' },
-    { number: '5+', label: 'Video Tutorials' }
-  ];
-
-  if (isDismissed) return null;
-
+export default function NewContentPromotionBanner2026() {
   return (
-    <motion.div
-      className="relative overflow-hidden"
-      initial={{ opacity: 0, y: -50 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-    >
-      {/* Background with animated gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600">
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent opacity-10 animate-pulse"></div>
-        </div>
+    <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
       </div>
-
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-white rounded-full opacity-30"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 0.8, 0.3],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
+      
+      <div className="relative px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-7xl mx-auto">
-          {/* Dismiss button */}
-          <button
-            onClick={() => setIsDismissed(true)}
-            className="absolute top-4 right-4 text-white hover:text-gray-200 transition-colors z-20"
-          >
-            <X className="w-5 h-5" />
-          </button>
-
           <div className="text-center">
             {/* Badge */}
-            <motion.div
-              className="inline-flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 mb-6"
-              initial={{ scale: 0 }}
-              animate={isVisible ? { scale: 1 } : { scale: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-            >
-              <Sparkles className="w-4 h-4 mr-2 text-yellow-300" />
-              <span className="text-sm font-bold text-white">🚀 NEW CONTENT ALERT</span>
-            </motion.div>
-
-            {/* Main heading */}
-            <motion.h1
-              className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-            >
-              Revolutionary Content Just Dropped! 🎉
-            </motion.h1>
-
-            {/* Subheading */}
-            <motion.p
-              className="text-lg md:text-xl text-white opacity-90 mb-8 max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-            >
-              Discover 25+ groundbreaking articles, case studies, and implementation guides covering 
-              the latest in AI, quantum computing, sustainability, and automation.
-            </motion.p>
-
-            {/* Features grid */}
-            <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-            >
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
-                return (
-                  <div
-                    key={index}
-                    className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 text-center"
-                  >
-                    <Icon className={`w-6 h-6 mx-auto mb-2 ${feature.color}`} />
-                    <p className="text-sm text-white font-medium">{feature.text}</p>
-                  </div>
-                );
-              })}
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-            >
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                    {stat.number}
-                  </div>
-                  <div className="text-sm text-white opacity-80">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-
-            {/* CTA Buttons */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.7, duration: 0.6 }}
-            >
-              <Link
-                href="/content-showcase"
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
-              >
-                Explore New Content
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                href="/ai-2026-multimodal-revolution"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
-              >
-                Read Featured Article
-                <Star className="w-5 h-5 ml-2" />
-              </Link>
-            </motion.div>
-
-            {/* Toggle details */}
-            <motion.button
-              onClick={() => setShowDetails(!showDetails)}
-              className="text-white opacity-80 hover:opacity-100 transition-opacity inline-flex items-center"
-              initial={{ opacity: 0 }}
-              animate={isVisible ? { opacity: 0.8 } : { opacity: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-            >
-              <span className="mr-2">
-                {showDetails ? 'Show Less' : 'Show More Details'}
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
+              <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+              NEW CONTENT 2026
+            </div>
+            
+            {/* Main Heading */}
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Revolutionary AI Solutions
+              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                Available Now
               </span>
-              <ChevronDown
-                className={`w-4 h-4 transition-transform duration-300 ${
-                  showDetails ? 'rotate-180' : ''
-                }`}
-              />
-            </motion.button>
-          </div>
-
-          {/* Expandable details */}
-          <motion.div
-            className="mt-8 overflow-hidden"
-            initial={false}
-            animate={{
-              height: showDetails ? 'auto' : 0,
-              opacity: showDetails ? 1 : 0
-            }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">What's New This Week:</h3>
-                  <ul className="space-y-2 text-white opacity-90">
-                    <li className="flex items-center">
-                      <Star className="w-4 h-4 mr-2 text-yellow-300" />
-                      Multimodal AI Revolution: Beyond Text and Images
-                    </li>
-                    <li className="flex items-center">
-                      <Zap className="w-4 h-4 mr-2 text-blue-300" />
-                      Quantum Computing Breakthroughs 2026
-                    </li>
-                    <li className="flex items-center">
-                      <Globe className="w-4 h-4 mr-2 text-green-300" />
-                      Green AI: Sustainable Technology Solutions
-                    </li>
-                    <li className="flex items-center">
-                      <Rocket className="w-4 h-4 mr-2 text-orange-300" />
-                      Autonomous Business Operations Guide
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Why This Matters:</h3>
-                  <ul className="space-y-2 text-white opacity-90">
-                    <li className="flex items-center">
-                      <TrendingUp className="w-4 h-4 mr-2 text-green-300" />
-                      Stay ahead of industry trends
-                    </li>
-                    <li className="flex items-center">
-                      <Brain className="w-4 h-4 mr-2 text-purple-300" />
-                      Implement cutting-edge solutions
-                    </li>
-                    <li className="flex items-center">
-                      <Star className="w-4 h-4 mr-2 text-yellow-300" />
-                      Access expert insights and case studies
-                    </li>
-                    <li className="flex items-center">
-                      <Rocket className="w-4 h-4 mr-2 text-orange-300" />
-                      Transform your business operations
-                    </li>
-                  </ul>
-                </div>
+            </h2>
+            
+            {/* Description */}
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Discover cutting-edge AI automation solutions and quantum computing breakthroughs. 
+              Transform your business with technology that's years ahead of the competition.
+            </p>
+            
+            {/* Feature Pills */}
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+                🚀 Advanced Automation
+              </span>
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+                ⚡ Quantum Computing
+              </span>
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+                🧠 Neural Networks
+              </span>
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+                🔒 Enhanced Security
+              </span>
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/ai-2026-advanced-automation-solutions"
+                className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg text-lg font-semibold hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                <span className="mr-2">🚀</span>
+                Explore AI Solutions
+              </Link>
+              <Link 
+                href="/quantum-ai-breakthrough-2026"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white rounded-lg text-lg font-semibold hover:border-white/50 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+              >
+                <span className="mr-2">⚡</span>
+                Quantum Technology
+              </Link>
+            </div>
+            
+            {/* Stats */}
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">10,000x</div>
+                <div className="text-blue-100">Faster Processing</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+                <div className="text-blue-100">Accuracy Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">24/7</div>
+                <div className="text-blue-100">Continuous Operation</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.div>
+      
+      {/* Animated Elements */}
+      <div className="absolute top-4 left-4 w-8 h-8 bg-yellow-400/30 rounded-full animate-bounce"></div>
+      <div className="absolute top-8 right-8 w-6 h-6 bg-blue-400/30 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-4 left-1/4 w-4 h-4 bg-purple-400/30 rounded-full animate-ping"></div>
+      <div className="absolute bottom-8 right-1/4 w-10 h-10 bg-indigo-400/20 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
+    </div>
   );
 };
 
