@@ -30,7 +30,8 @@ export interface AuthContextType {
     loginWithFacebook: () => Promise<void>;
     loginWithTwitter: () => Promise<void>;
     loginWithWeb3: () => Promise<void>;
-=======
+}
+
 interface AuthContextType {
   user: any;
   setUser: (user: any) => void;
@@ -54,7 +55,7 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export const useAuth = () => {
+export const useAuth = (): AuthContextType => {
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error('useAuth must be used within an AuthProvider');
@@ -62,14 +63,4 @@ export const useAuth = () => {
   return context;
 };
 
-export const useAuth = (): AuthContextType => {
-    const context = useContext(AuthContext);
-    if (context === undefined) {
-        throw new Error('useAuth must be used within an AuthProvider');
-    }
-    return context;
-};
-
-export { AuthContext };
-=======
 export { AuthContext };
