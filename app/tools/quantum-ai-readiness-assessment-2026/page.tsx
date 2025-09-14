@@ -1,10 +1,12 @@
+<<<<<<< HEAD
+"use client";
+=======
 'use client';
 
+>>>>>>> origin/cursor/create-and-deploy-new-content-ad66
 import React, { useState, useEffect } from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
 
-// Metadata moved to parent component
 
 interface AssessmentResults {
   overallScore: number;
