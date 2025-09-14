@@ -1,3 +1,5 @@
+'use client';
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
@@ -23,7 +25,16 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo);
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    // Log error to external service (e.g., Sentry)
+    if (typeof window !== 'undefined' && (window as any).Sentry) {
+      (window as any).Sentry.captureException(error, { extra: errorInfo });
+    }
   }
 
   render() {
@@ -41,16 +52,12 @@ class ErrorBoundary extends Component<Props, State> {
             >
               Reload Page
             </button>
-    console.error('Error caught by boundary:', error, errorInfo);
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to external service (e.g., Sentry)
-    if (typeof window !== 'undefined' && (window as any).Sentry) {
-      (window as any).Sentry.captureException(error, { extra: errorInfo });
+          </div>
+        </div>
+      );
     }
+
+    return this.props.children;
   }
 
   handleReload = () => {
