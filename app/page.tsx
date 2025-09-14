@@ -236,6 +236,13 @@ import NewResource2025ImplementationRoadmapBanner from '../components/NewResourc
 import AI2030ContentShowcaseBanner from '../components/AI2030ContentShowcaseBanner';
 import AI2030ContentNavigation from '../components/AI2030ContentNavigation';
 
+// Import new content components
+import LatestAITrends2025 from '../components/LatestAITrends2025';
+import SuccessStoriesShowcase from '../components/SuccessStoriesShowcase';
+import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
+import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+import ROICalculatorWidget from '../components/ROICalculatorWidget';
+
 // Import new Advanced Neural Architectures 2026 components
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
@@ -257,6 +264,21 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED */}
+        <UltimateContentPromotionBanner2025 />
+        
+        {/* LATEST AI TRENDS 2025 - NEW CONTENT */}
+        <LatestAITrends2025 />
+        
+        {/* SUCCESS STORIES SHOWCASE - NEW CONTENT */}
+        <SuccessStoriesShowcase />
+        
+        {/* INTERACTIVE DEMO WIDGET - NEW CONTENT */}
+        <InteractiveDemoWidget />
+        
+        {/* ROI CALCULATOR WIDGET - NEW CONTENT */}
+        <ROICalculatorWidget />
+        
 <<<<<<< HEAD
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER - NEWEST FEATURED */}
         <AI2025RevolutionaryBreakthroughBanner />
