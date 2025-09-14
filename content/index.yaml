@@ -36,6 +36,58 @@ content_index:
       featured: true
       is_new: true
 
+  new_2025_content_latest:
+    - id: "ai-2025-enterprise-automation-revolution"
+      type: "blog"
+      title: "AI 2025: The Enterprise Automation Revolution That's Reshaping Business"
+      file_path: "/content/blog/ai-2025-enterprise-automation-revolution.md"
+      url: "/blog/ai-2025-enterprise-automation-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Enterprise Automation", "Business Transformation", "ROI", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        satisfaction: "98%"
+        projects: "500+"
+        savings: "$2.8B"
+      reading_time: "12 min read"
+      
+    - id: "healthcare-ai-transformation-2025"
+      type: "case-study"
+      title: "Healthcare AI Transformation 2025: How a $200M Health System Achieved 300% ROI"
+      file_path: "/content/case-studies/healthcare-ai-transformation-2025-success.md"
+      url: "/case-studies/healthcare-ai-transformation-2025-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Healthcare", "AI Transformation", "ROI", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "300%"
+        savings: "$18.7M"
+        satisfaction: "95%"
+        projects: "1 Major Implementation"
+      reading_time: "15 min read"
+      
+    - id: "ai-automation-implementation-guide-2025"
+      type: "resource"
+      title: "AI Automation Implementation Guide 2025: From Strategy to ROI"
+      file_path: "/content/resources/ai-automation-implementation-guide-2025.md"
+      url: "/resources/ai-automation-implementation-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "300-500%"
+        projects: "500+ Success Stories"
+        satisfaction: "98%"
+        implementation_time: "18-24 months"
+      reading_time: "25 min read"
+
   new_2026_content:
     - id: "ai-2026-enterprise-automation"
       type: "blog"
