@@ -522,8 +522,6 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
     rating: 4.8;
     reviews: 89;
 
-
-<<<<<<< HEAD
   // AI-Powered Metaverse Development Studio
   {
     id: 'ai-metaverse-development-studio',

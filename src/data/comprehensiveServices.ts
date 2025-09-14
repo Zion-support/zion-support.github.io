@@ -120,12 +120,9 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     },
     images: ['https://picsum.photos/400/300?random=2'],
     rating: 4.9,
-<<<<<<< HEAD
     reviewCount: 89,
     featured: true,
     aiScore: 93,
-    location: "Global",
-    availability: "Available",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -642,7 +639,6 @@ export const PRICING_TIERS = [
 ];
 
 export const CONTACT_INFO = {
-<<<<<<< HEAD
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709",

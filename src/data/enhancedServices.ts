@@ -1879,7 +1879,6 @@ export const enhancedServices: EnhancedService[] = [
     roi: "250% ROI within 6 months",
     competitors: ["Tableau", "Looker", "Microsoft Power BI", "Qlik"]
   }
-<<<<<<< HEAD
 ];
 
 export const getServicesByCategory = (category: string) => {
