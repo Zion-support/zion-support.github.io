@@ -1,204 +1,209 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 const RevolutionaryContentShowcase2025 = () => {
-  const contentItems = [
-    {
-      title: "AI Automation Success Story",
-      description: "Fortune 500 company achieves 500% ROI through intelligent automation",
-      category: "Case Study",
-      readTime: "8 min read",
-      featured: true,
-      href: "/blog/ai-automation-success-story-2025",
-      icon: "🤖",
-      stats: "500% ROI"
+  const [activeTab, setActiveTab] = useState('ai-breakthroughs');
+
+  const contentSections = {
+    'ai-breakthroughs': {
+      title: 'AI Breakthroughs',
+      icon: '🧠',
+      color: 'from-purple-500 to-indigo-500',
+      content: [
+        {
+          title: 'Neural Architecture Revolution',
+          description: 'Next-generation neural networks with 99.9% accuracy',
+          stats: '500% faster processing',
+          category: 'Machine Learning'
+        },
+        {
+          title: 'Quantum-Enhanced AI',
+          description: 'Quantum computing integration for exponential speed',
+          stats: '1000x performance boost',
+          category: 'Quantum Computing'
+        },
+        {
+          title: 'Conscious AI Systems',
+          description: 'Self-aware AI with emotional intelligence',
+          stats: 'Human-level reasoning',
+          category: 'Artificial Consciousness'
+        }
+      ]
     },
-    {
-      title: "Quantum Computing Business Applications",
-      description: "Revolutionary applications transforming industries in 2025",
-      category: "Technology",
-      readTime: "12 min read",
-      featured: true,
-      href: "/blog/quantum-computing-business-applications-2025",
-      icon: "⚛️",
-      stats: "2025 Ready"
+    'quantum-tech': {
+      title: 'Quantum Technology',
+      icon: '⚛️',
+      color: 'from-cyan-500 to-blue-500',
+      content: [
+        {
+          title: 'Quantum Supremacy',
+          description: 'Achieving computational superiority over classical computers',
+          stats: 'Exponential speed increase',
+          category: 'Quantum Computing'
+        },
+        {
+          title: 'Quantum Cryptography',
+          description: 'Unbreakable encryption using quantum principles',
+          stats: '100% secure communication',
+          category: 'Security'
+        },
+        {
+          title: 'Quantum Machine Learning',
+          description: 'AI algorithms running on quantum processors',
+          stats: 'Revolutionary optimization',
+          category: 'Quantum AI'
+        }
+      ]
     },
-    {
-      title: "Neural Interface Revolution",
-      description: "Brain-computer interfaces transforming business operations",
-      category: "Innovation",
-      readTime: "10 min read",
-      featured: true,
-      href: "/case-studies/neural-interface-revolution-2025",
-      icon: "🧠",
-      stats: "Revolutionary"
+    'neural-interfaces': {
+      title: 'Neural Interfaces',
+      icon: '🔗',
+      color: 'from-emerald-500 to-teal-500',
+      content: [
+        {
+          title: 'Brain-Computer Interface',
+          description: 'Direct neural communication with AI systems',
+          stats: 'Thought-to-action in <1ms',
+          category: 'Neural Tech'
+        },
+        {
+          title: 'Memory Enhancement',
+          description: 'Augmented cognitive capabilities through neural interfaces',
+          stats: '300% memory improvement',
+          category: 'Cognitive Enhancement'
+        },
+        {
+          title: 'Predictive Neural Networks',
+          description: 'AI that anticipates your needs before you think them',
+          stats: '95% prediction accuracy',
+          category: 'Predictive AI'
+        }
+      ]
     },
-    {
-      title: "Advanced AI Solutions",
-      description: "Cutting-edge AI implementations for enterprise success",
-      category: "AI Solutions",
-      readTime: "6 min read",
-      featured: false,
-      href: "/services/ai-solutions",
-      icon: "🚀",
-      stats: "Enterprise"
-    },
-    {
-      title: "Cloud Infrastructure Optimization",
-      description: "Scalable cloud solutions for modern businesses",
-      category: "Cloud",
-      readTime: "7 min read",
-      featured: false,
-      href: "/services/cloud-infrastructure",
-      icon: "☁️",
-      stats: "Scalable"
-    },
-    {
-      title: "Micro SaaS Development",
-      description: "Custom micro SaaS applications solving business challenges",
-      category: "Development",
-      readTime: "5 min read",
-      featured: false,
-      href: "/services/micro-saas",
-      icon: "💼",
-      stats: "Custom"
+    'autonomous-systems': {
+      title: 'Autonomous Systems',
+      icon: '🤖',
+      color: 'from-orange-500 to-red-500',
+      content: [
+        {
+          title: 'Self-Managing AI',
+          description: 'Fully autonomous systems requiring zero human intervention',
+          stats: '24/7 autonomous operation',
+          category: 'Autonomous AI'
+        },
+        {
+          title: 'Adaptive Learning',
+          description: 'Systems that evolve and improve continuously',
+          stats: 'Real-time optimization',
+          category: 'Self-Learning'
+        },
+        {
+          title: 'Global AI Network',
+          description: 'Interconnected AI systems across the globe',
+          stats: 'Worldwide coordination',
+          category: 'Distributed AI'
+        }
+      ]
     }
-  ];
+  };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">📚 REVOLUTIONARY CONTENT 2025</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm border border-purple-400/30">
+            <span className="text-sm font-medium">🚀 REVOLUTIONARY CONTENT SHOWCASE 2025</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Discover the Future of Technology
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
+            The Future of Technology
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Explore groundbreaking case studies, cutting-edge technology insights, 
-            and transformative business applications that will reshape your industry.
+          <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
+            Explore groundbreaking innovations that are reshaping our world and creating unprecedented opportunities for growth and advancement.
           </p>
         </div>
 
-        {/* Featured Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {contentItems.map((item, index) => (
-            <div 
-              key={index}
-              className={`group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden ${
-                item.featured ? 'ring-2 ring-purple-500' : ''
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {Object.entries(contentSections).map(([key, section]) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === key
+                  ? `bg-gradient-to-r ${section.color} text-white shadow-lg transform scale-105`
+                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white'
               }`}
             >
-              {/* Featured Badge */}
-              {item.featured && (
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-1 text-sm font-medium">
-                  ⭐ FEATURED
-                </div>
-              )}
-              
-              <div className="p-6">
-                {/* Icon and Category */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-3xl">{item.icon}</div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
-                      {item.category}
-                    </span>
-                    <span className="text-xs text-gray-500">{item.readTime}</span>
-                  </div>
-                </div>
-
-                {/* Title and Description */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                  {item.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {item.description}
-                </p>
-
-                {/* Stats and Link */}
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-purple-600">
-                    {item.stats}
-                  </span>
-                  <Link 
-                    href={item.href}
-                    className="text-purple-600 hover:text-purple-800 font-semibold text-sm group-hover:underline"
-                  >
-                    Read More →
-                  </Link>
-                </div>
-              </div>
-            </div>
+              <span className="mr-2">{section.icon}</span>
+              {section.title}
+            </button>
           ))}
         </div>
 
-        {/* Additional Content Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-            <div className="text-2xl mb-3">📊</div>
-            <h4 className="font-bold text-gray-900 mb-2">Analytics</h4>
-            <p className="text-gray-600 text-sm mb-4">Advanced analytics and insights</p>
-            <Link href="/analytics" className="text-purple-600 text-sm font-semibold">
-              Explore →
-            </Link>
-          </div>
-          
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-            <div className="text-2xl mb-3">🔒</div>
-            <h4 className="font-bold text-gray-900 mb-2">Security</h4>
-            <p className="text-gray-600 text-sm mb-4">Cybersecurity solutions</p>
-            <Link href="/security" className="text-purple-600 text-sm font-semibold">
-              Learn More →
-            </Link>
-          </div>
-          
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-            <div className="text-2xl mb-3">⚡</div>
-            <h4 className="font-bold text-gray-900 mb-2">Performance</h4>
-            <p className="text-gray-600 text-sm mb-4">Optimization strategies</p>
-            <Link href="/performance" className="text-purple-600 text-sm font-semibold">
-              Discover →
-            </Link>
-          </div>
-          
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-            <div className="text-2xl mb-3">🎯</div>
-            <h4 className="font-bold text-gray-900 mb-2">Strategy</h4>
-            <p className="text-gray-600 text-sm mb-4">Business transformation</p>
-            <Link href="/strategy" className="text-purple-600 text-sm font-semibold">
-              Plan →
-            </Link>
+        {/* Content Display */}
+        <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {contentSections[activeTab as keyof typeof contentSections].content.map((item, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-gray-700/50 to-gray-800/50 p-6 rounded-xl border border-gray-600/30 hover:border-purple-400/50 transition-all duration-300 group hover:transform hover:scale-105"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs font-semibold text-purple-400 bg-purple-400/10 px-3 py-1 rounded-full">
+                    {item.category}
+                  </span>
+                  <span className="text-lg">{contentSections[activeTab as keyof typeof contentSections].icon}</span>
+                </div>
+                
+                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-purple-300 transition-colors">
+                  {item.title}
+                </h3>
+                
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                  {item.description}
+                </p>
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-semibold text-green-400 bg-green-400/10 px-3 py-1 rounded-full">
+                    {item.stats}
+                  </span>
+                  <Link
+                    href={`/${activeTab}/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="text-purple-400 hover:text-purple-300 text-sm font-semibold transition-colors"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12 text-white">
-          <h3 className="text-3xl font-bold mb-4">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Join thousands of forward-thinking companies leveraging cutting-edge technology 
-            to achieve unprecedented success.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Get Started Today
-            </Link>
-            <Link
-              href="/resources"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              Download Resources
-            </Link>
+        <div className="text-center mt-12">
+          <div className="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 p-8 rounded-2xl backdrop-blur-sm border border-purple-400/20">
+            <h3 className="text-2xl font-bold mb-4">Ready to Experience the Future?</h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Join thousands of innovators who are already leveraging these revolutionary technologies to transform their businesses and achieve unprecedented success.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/revolutionary-tech-2025"
+                className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Explore All Innovations
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >
+                Get Started Today
+              </Link>
+            </div>
           </div>
         </div>
       </div>
