@@ -1,42 +1,44 @@
 #!/bin/bash
 
-# Merge Conflict Resolver Script
-# This script will help resolve merge conflicts systematically
+echo "Starting merge conflict resolution..."
 
-echo "Starting merge conflict resolution process..."
+# Change to workspace directory
+cd /workspace
 
-# Function to resolve conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    echo "Processing: $file"
+# Check if we're in a merge state
+if [ -f .git/MERGE_HEAD ]; then
+    echo "In merge state, resolving conflicts..."
     
-    if [ -f "$file" ]; then
-        # Check if file has merge conflicts
-        if grep -q "^<<<<<<<" "$file"; then
-            echo "Found merge conflicts in $file"
-            
-            # For netlify.toml, we already have a clean version
-            if [[ "$file" == *"netlify.toml"* ]]; then
-                echo "Skipping netlify.toml - already resolved"
-                return 0
-            fi
-            
-            # For other files, try to resolve automatically
-            echo "Attempting to resolve conflicts in $file"
-            
-            # Simple conflict resolution - take the HEAD version for most cases
-            sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-            sed -i '/^>>>>>>>/d' "$file"
-            
-            echo "Resolved conflicts in $file"
-        fi
+    # Find files with conflicts
+    CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
+    
+    if [ -n "$CONFLICT_FILES" ]; then
+        echo "Found conflict files: $CONFLICT_FILES"
+        
+        # Resolve conflicts by removing conflict markers
+        for file in $CONFLICT_FILES; do
+            echo "Resolving conflicts in $file..."
+            sed -i '/^<<<<<<< HEAD$/d' "$file"
+            sed -i '/^=======$/d' "$file"
+            sed -i '/^>>>>>>> /d' "$file"
+            git add "$file"
+        done
+        
+        # Complete the merge
+        git commit -m "Resolve merge conflicts"
     fi
-}
+else
+    echo "Not in merge state, checking for other issues..."
+    
+    # Check for uncommitted changes
+    if ! git diff --quiet; then
+        echo "Found uncommitted changes, adding them..."
+        git add .
+        git commit -m "Auto-commit changes"
+    fi
+    
+    # Try to pull latest changes
+    git pull origin main --no-edit
+fi
 
-# Find all files with merge conflicts
-echo "Searching for files with merge conflicts..."
-find . -type f -name "*.toml" -o -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.json" | while read file; do
-    resolve_conflicts "$file"
-done
-
-echo "Merge conflict resolution completed!"
+echo "Merge conflict resolution completed."
