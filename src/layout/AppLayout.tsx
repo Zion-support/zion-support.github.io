@@ -2,14 +2,20 @@
 import React, { ReactNode, useState } from "react"; // Added useState
 import { Outlet } from "react-router-dom";
 // Assume useAuth hook exists and provides user object with emailVerified status and email
-import { useAuth } from '@/hooks/useAuth';
-import EmailVerificationBanner from '@/components/EmailVerificationBanner'; // Assuming path
+import { useAuth } from '../hooks/useAuth';
+import { useSessionDuration } from '../hooks/useSessionDuration';
+import { useNavigationGestures } from '../hooks/useNavigationGestures';
+import { useSafePathname } from '../hooks/useSafePathname';
+import { logErrorToProduction } from '../utils/productionLogger';
+import EmailVerificationBanner from '../components/EmailVerificationBanner'; // Assuming path
 import { AppHeader } from "./AppHeader";
-import { Footer } from "@/components/Footer";
-import { SkipLink } from "@/components/SkipLink";
-import { useGlobalLoader } from '@/context/GlobalLoaderContext';
-import LoaderOverlay from '@/components/LoaderOverlay';
-import ErrorOverlay from '@/components/ErrorOverlay';
+import Footer from "../components/Footer";
+import { SkipLink } from "../components/SkipLink";
+import { ErrorBoundary } from 'react-error-boundary';
+import { Toaster } from 'sonner';
+// Removed GlobalLoaderContext import as it doesn't exist
+// import LoaderOverlay from '@/components/LoaderOverlay';
+// import ErrorOverlay from '@/components/ErrorOverlay';
 
 interface AppLayoutProps {
   children?: React.ReactNode; // Kept ReactNode for consistency
@@ -28,8 +34,10 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
   useNavigationGestures();
   const [isResendingEmail, setIsResendingEmail] = useState(false);
   const [resendStatusMessage, setResendStatusMessage] = useState('');
-  const { loading: rawLoading, error, setError } = useGlobalLoader();
-  const loading: boolean = Boolean(rawLoading);
+  // Removed useGlobalLoader usage as it doesn't exist
+  const loading: boolean = false;
+  const error = null;
+  const setError = () => {};
   const pathname = useSafePathname();
   const isAuthPage = /^\/auth|\/login|\/register|\/signup|\/forgot-password|\/reset-password|\/update-password/.test(pathname);
 

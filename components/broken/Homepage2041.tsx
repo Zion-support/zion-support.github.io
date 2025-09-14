@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
@@ -104,8 +105,7 @@ const Homepage2041: React.FC = () => {
                     x: [0, 60, 0],
                     y: [0, -60, 0],
                     opacity: [0, 0.7, 0],
-                    scale: [0.5, 1, 0.5],
-                  }}
+                    scale: [0.5, 1, 0.5]}}
                   transition={{
                     duration: 5 + i * 0.3,
                     repeat: Infinity,
@@ -114,8 +114,7 @@ const Homepage2041: React.FC = () => {
                   }}
                   style={{
                     left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                  }}
+                    top: `${Math.random() * 100}%`}}
                 />
               ))}
             </div>

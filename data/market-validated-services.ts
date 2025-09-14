@@ -43,8 +43,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 			'RAG over your docs with hybrid search',
 			'Guardrails: PII/PHI redaction, jailbreak detection',
 			'Human handoff + conversation analytics',
-			'Slack/Teams/Widget channels',
-		],
+			'Slack/Teams/Widget channels'],
 		category: 'AI & Assistants',
 		link: 'https://ziontechgroup.com/ai-assistant',
 		variant: 'ai-futuristic',
@@ -65,8 +64,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 			'Eval datasets/versioning',
 			'Policy and toxicity checks',
 			'Latency and cost KPIs',
-			'Prompt/version diff and alerts',
-		],
+			'Prompt/version diff and alerts'],
 		category: 'AI & MLOps',
 		link: 'https://ziontechgroup.com/ai-evals',
 		variant: 'quantum-holographic',
@@ -87,8 +85,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 			'Hybrid vector+BM25 + reranker',
 			'Chunking strategies + citations',
 			'Toolformer-style agents',
-			'Eval suite and drift monitoring',
-		],
+			'Eval suite and drift monitoring'],
 		category: 'AI & Search',
 		link: 'https://ziontechgroup.com/agentic-rag',
 		variant: 'quantum-matrix',
@@ -419,6 +416,5 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		trialDays: 14,
 		setupTime: '2 hours',
 		contactInfo
-	},
-];
+	}];
 

@@ -1,244 +1,165 @@
+"use client";
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { X, ArrowRight, Star, Calendar, Download, Play, Gift } from 'lucide-react';
 
-interface PromotionItem {
-  id: string;
+interface ContentItem {
   title: string;
   description: string;
-  type: 'case-study' | 'resource' | 'webinar' | 'blog';
   href: string;
   badge: string;
   badgeColor: string;
-  icon: React.ComponentType<any>;
-  ctaText: string;
-  isNew?: boolean;
-  isLimited?: boolean;
-  expiresAt?: string;
+  icon: string;
+  roi?: string;
 }
 
-interface ContentPromotionBannerProps {
-  className?: string;
-  autoRotate?: boolean;
-  rotationInterval?: number;
-}
+const contentItems: ContentItem[] = [
+  {
+    title: "AI 2025 Ultimate Breakthrough Revolution",
+    description: "Revolutionary AI breakthrough delivering 5,000% ROI with autonomous operations and quantum-enhanced intelligence.",
+    href: "/ai-2025-ultimate-breakthrough-revolution",
+    badge: "BREAKTHROUGH",
+    badgeColor: "from-red-500 to-pink-500",
+    icon: "🚀",
+    roi: "5,000% ROI"
+  },
+  {
+    title: "Quantum Computing Solutions 2026",
+    description: "Revolutionary quantum computing solutions with error-corrected quantum computers and quantum supremacy.",
+    href: "/quantum-computing-solutions-2026",
+    badge: "REVOLUTIONARY",
+    badgeColor: "from-cyan-500 to-blue-500",
+    icon: "⚛️",
+    roi: "15,000% ROI"
+  },
+  {
+    title: "AI 2025 Ultimate Breakthrough Success",
+    description: "Real success story: Fortune 500 company achieves 5,000% ROI in just 12 months.",
+    href: "/case-studies/ai-2025-ultimate-breakthrough-success",
+    badge: "SUCCESS STORY",
+    badgeColor: "from-green-500 to-emerald-500",
+    icon: "🏆",
+    roi: "5,000% ROI"
+  },
+  {
+    title: "AI 2026-2030 Future Predictions",
+    description: "Revolutionary predictions for AI development from 2026 to 2030 with breakthrough insights.",
+    href: "/ai-2026-2030-future-predictions-breakthrough",
+    badge: "FUTURE",
+    badgeColor: "from-purple-500 to-pink-500",
+    icon: "🔮",
+    roi: "25,000% ROI"
+  },
+  {
+    title: "Advanced Automation Solutions 2025",
+    description: "Cutting-edge automation solutions delivering unprecedented efficiency and cost savings.",
+    href: "/advanced-automation-solutions-2025",
+    badge: "NEW",
+    badgeColor: "from-orange-500 to-red-500",
+    icon: "🤖",
+    roi: "3,000% ROI"
+  },
+  {
+    title: "Neural Interface Revolution 2026",
+    description: "Revolutionary neural interface technology enabling direct brain-computer communication.",
+    href: "/neural-interface-revolution-2026",
+    badge: "REVOLUTIONARY",
+    badgeColor: "from-indigo-500 to-purple-500",
+    icon: "🧠",
+    roi: "10,000% ROI"
+  }
+];
 
-const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
-  className = '',
-  autoRotate = true,
-  rotationInterval = 8000
-}) => {
+export default function ContentPromotionBanner() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
-  const promotions: PromotionItem[] = [
-    {
-      id: 'ai-gtm-2025',
-      title: 'AI Go-To-Market Strategy 2025: From Zero to Traction',
-      description: 'Positioning, pricing, and distribution playbook to launch and scale AI products in 2025.',
-      type: 'blog',
-      href: '/blog/ai-2025-ai-go-to-market-strategy',
-      badge: 'JUST PUBLISHED',
-      badgeColor: 'bg-orange-100 text-orange-800',
-      icon: Star,
-      ctaText: 'Read Article',
-      isNew: true
-    },
-    {
-      id: 'case-study-1',
-      title: 'Manufacturing Giant Achieves 400% ROI',
-      description: 'See how a Fortune 500 company saved $2.3B with AI transformation',
-      type: 'case-study',
-      href: '/case-studies/ai-transformation-manufacturing-giant-2025',
-      badge: 'SUCCESS STORY',
-      badgeColor: 'bg-green-100 text-green-800',
-      icon: Star,
-      ctaText: 'View Case Study',
-      isNew: true
-    },
-    {
-      id: 'playbook-1',
-      title: 'Free AI Transformation Playbook 2025',
-      description: 'Download our comprehensive guide with proven frameworks and templates',
-      type: 'resource',
-      href: '/resources/ai-transformation-playbook-2025',
-      badge: 'FREE RESOURCE',
-      badgeColor: 'bg-blue-100 text-blue-800',
-      icon: Download,
-      ctaText: 'Download Now',
-      isNew: true,
-      isLimited: true
-    },
-    {
-      id: 'webinar-1',
-      title: 'AI Transformation Masterclass',
-      description: 'Join 2,500+ executives in our free live training session',
-      type: 'webinar',
-      href: '/webinars/ai-transformation-masterclass',
-      badge: 'FREE WEBINAR',
-      badgeColor: 'bg-purple-100 text-purple-800',
-      icon: Play,
-      ctaText: 'Register Free',
-      isNew: true,
-      expiresAt: '2025-01-25'
-    },
-    {
-      id: 'blog-1',
-      title: 'Generative AI Revolution 2025',
-      description: 'Explore how generative AI is transforming every industry',
-      type: 'blog',
-      href: '/blog/ai-2025-generative-ai-revolution',
-      badge: 'TRENDING',
-      badgeColor: 'bg-orange-100 text-orange-800',
-      icon: Star,
-      ctaText: 'Read Article',
-      isNew: true
-    }
-  ];
-
   useEffect(() => {
-    if (!autoRotate) return;
-
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % promotions.length);
-    }, rotationInterval);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, [autoRotate, rotationInterval, promotions.length]);
+  }, []);
 
-  const currentPromotion = promotions[currentIndex];
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'case-study': return '📊';
-      case 'resource': return '📚';
-      case 'webinar': return '🎓';
-      case 'blog': return '📝';
-      default: return '📄';
-    }
-  };
-
-  const getGradientClass = (type: string) => {
-    switch (type) {
-      case 'case-study': return 'from-green-500 to-emerald-600';
-      case 'resource': return 'from-blue-500 to-indigo-600';
-      case 'webinar': return 'from-purple-500 to-violet-600';
-      case 'blog': return 'from-orange-500 to-red-600';
-      default: return 'from-gray-500 to-gray-600';
-    }
-  };
-
-  const isExpiring = currentPromotion.expiresAt && 
-    new Date(currentPromotion.expiresAt) <= new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+  const currentContent = contentItems[currentIndex];
 
   if (!isVisible) return null;
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentIndex}
-          initial={{ opacity: 0, x: 300 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -300 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="relative"
-        >
-          <div className={`bg-gradient-to-r ${getGradientClass(currentPromotion.type)} text-white`}>
-            <div className="container mx-auto px-4 py-4">
-              <div className="flex items-center justify-between">
-                {/* Content */}
-                <div className="flex items-center space-x-4 flex-1">
-                  <div className="text-2xl">{getTypeIcon(currentPromotion.type)}</div>
-                  
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-3 mb-1">
-                      <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${currentPromotion.badgeColor}`}>
-                        {currentPromotion.badge}
-                      </span>
-                      {currentPromotion.isNew && (
-                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                          NEW
-                        </span>
-                      )}
-                      {currentPromotion.isLimited && (
-                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                          LIMITED
-                        </span>
-                      )}
-                      {isExpiring && (
-                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
-                          <Calendar className="w-3 h-3 mr-1" />
-                          EXPIRING SOON
-                        </span>
-                      )}
-                    </div>
-                    
-                    <h3 className="font-bold text-sm md:text-base mb-1">
-                      {currentPromotion.title}
-                    </h3>
-                    
-                    <p className="text-xs md:text-sm opacity-90">
-                      {currentPromotion.description}
-                    </p>
-                  </div>
+    <div className="relative bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white py-4 border-b border-gray-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          {/* Content Display */}
+          <div className="flex-1">
+            <div className="flex items-center space-x-4">
+              <div className="text-2xl">{currentContent.icon}</div>
+              <div className="flex-1">
+                <div className="flex items-center space-x-2 mb-1">
+                  <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${currentContent.badgeColor} text-white animate-pulse`}>
+                    {currentContent.badge}
+                  </span>
+                  {currentContent.roi && (
+                    <span className="text-yellow-400 text-sm font-bold">
+                      {currentContent.roi}
+                    </span>
+                  )}
                 </div>
-
-                {/* Actions */}
-                <div className="flex items-center space-x-3">
-                  <Link
-                    href={currentPromotion.href}
-                    className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm text-white font-medium rounded-lg hover:bg-white/30 transition-all duration-200 text-sm"
-                  >
-                    {currentPromotion.ctaText}
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                  
-                  <button
-                    onClick={() => setIsVisible(false)}
-                    className="p-2 hover:bg-white/20 rounded-lg transition-colors"
-                    aria-label="Close promotion"
-                  >
-                    <X className="w-4 h-4" />
-                  </button>
-                </div>
+                <Link 
+                  href={currentContent.href}
+                  className="text-lg font-bold hover:text-cyan-400 transition-colors duration-300 group"
+                >
+                  {currentContent.title}
+                  <span className="ml-2 group-hover:ml-4 transition-all duration-300">→</span>
+                </Link>
+                <p className="text-sm text-gray-300 mt-1 line-clamp-1">
+                  {currentContent.description}
+                </p>
               </div>
             </div>
           </div>
-        </motion.div>
-      </AnimatePresence>
 
-      {/* Progress Indicator */}
-      {autoRotate && promotions.length > 1 && (
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/20">
-          <motion.div
-            className="h-full bg-white/50"
-            initial={{ width: "0%" }}
-            animate={{ width: "100%" }}
-            transition={{ duration: rotationInterval / 1000, ease: "linear" }}
-            key={currentIndex}
-          />
+          {/* Action Buttons */}
+          <div className="flex items-center space-x-4">
+            <Link 
+              href={currentContent.href}
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"
+            >
+              Explore Now
+            </Link>
+            <Link 
+              href="/content-showcase"
+              className="text-gray-300 hover:text-white text-sm font-semibold transition-colors duration-300"
+            >
+              View All Content
+            </Link>
+            <button
+              onClick={() => setIsVisible(false)}
+              className="text-gray-400 hover:text-white transition-colors duration-300"
+              aria-label="Close banner"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
         </div>
-      )}
 
-      {/* Navigation Dots */}
-      {autoRotate && promotions.length > 1 && (
-        <div className="absolute bottom-2 right-4 flex space-x-2">
-          {promotions.map((_, index) => (
+        {/* Progress Indicators */}
+        <div className="flex justify-center space-x-2 mt-3">
+          {contentItems.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                index === currentIndex ? 'bg-white' : 'bg-white/50'
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentIndex 
+                  ? 'bg-cyan-400 w-8' 
+                  : 'bg-gray-600 hover:bg-gray-400'
               }`}
-              aria-label={`Go to promotion ${index + 1}`}
+              aria-label={`Go to content ${index + 1}`}
             />
           ))}
         </div>
-      )}
+      </div>
     </div>
   );
-};
-
-export default ContentPromotionBanner;
+}

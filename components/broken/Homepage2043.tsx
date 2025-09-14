@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState, useCallback } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -173,8 +174,7 @@ const Homepage2043: React.FC = () => {
                     x: [0, 150, 0],
                     y: [0, -150, 0],
                     opacity: [0, 1, 0],
-                    scale: [0, 1.5, 0],
-                  }}
+                    scale: [0, 1.5, 0]}}
                   transition={{
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
@@ -183,8 +183,7 @@ const Homepage2043: React.FC = () => {
                   }}
                   style={{
                     left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                  }}
+                    top: `${Math.random() * 100}%`}}
                 />
               ))}
             </div>

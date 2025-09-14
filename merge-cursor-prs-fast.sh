@@ -49,13 +49,7 @@ resolve_conflicts_quick() {
     log_message "🔧 Quick resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        log_message "⚠️  Found conflicts in $file, quick resolving..."
-        
-        # Quick strategy: Remove all conflict markers and keep main version
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
-        
+    if grep -q "        
         log_message "✅ Quick resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
     fi

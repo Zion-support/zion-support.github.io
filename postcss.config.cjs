@@ -1,16 +1,12 @@
-<<<<<<< HEAD
-export default {
+};
+module.exports = {
   plugins: {
-    "@tailwindcss/postcss": {},
+    tailwindcss: {},
+    autoprefixer: {}}};
 =======
 module.exports = {
   plugins: {
-<<<<<<< HEAD
-    '@tailwindcss/postcss': {},
-=======
     tailwindcss: {},
->>>>>>> cursor/create-and-deploy-new-content-d63f
->>>>>>> origin/content/blog-sept12
     autoprefixer: {},
   },
 };

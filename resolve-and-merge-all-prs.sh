@@ -41,28 +41,12 @@ resolve_conflicts() {
     echo "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-        echo "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
-        cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Strategy: Keep both versions where possible, prefer main branch for critical files
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            echo "📦 Critical file detected, keeping main version and merging dependencies..."
-            # For package files, we'll need special handling
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "vite.config.ts" ]]; then
+    if grep -q "        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "vite.config.ts" ]]; then
             echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        else
+            sed -i '/        else
             echo "📝 Regular file, attempting to merge both versions..."
             # Remove conflict markers and try to keep both versions
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        fi
+            sed -i '/        fi
         
         echo "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))

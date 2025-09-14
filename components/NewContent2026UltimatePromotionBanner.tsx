@@ -1,99 +1,102 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import { ArrowRight, Sparkles, Brain, Zap, Calendar, TrendingUp } from 'lucide-react';
 
 export default function NewContent2026UltimatePromotionBanner() {
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 animate-pulse"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 py-16">
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 text-white">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-cyan-400/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-purple-400/20 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-pink-400/20 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-yellow-400/20 rounded-full animate-pulse delay-500"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-bold mb-6 animate-bounce">
-            🚀 ULTIMATE BREAKTHROUGH CONTENT 2026
+          {/* Main heading */}
+          <div className="flex items-center justify-center mb-6">
+            <Sparkles className="w-8 h-8 text-yellow-400 mr-3 animate-pulse" />
+            <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              NEW 2026 ULTIMATE CONTENT
+            </h2>
+            <Sparkles className="w-8 h-8 text-yellow-400 ml-3 animate-pulse" />
           </div>
           
-          {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Revolutionary AI & Technology
-            <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Breakthrough Showcase
-            </span>
-          </h1>
-          
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover the most advanced AI breakthroughs, quantum computing solutions, and neural interface 
-            technologies delivering unprecedented ROI and competitive advantage.
+          <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
+            Discover the most comprehensive AI predictions, breakthrough innovations, and revolutionary technologies that will shape the future of humanity.
           </p>
-          
-          {/* Key Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">⚛️</div>
-              <h3 className="text-lg font-bold text-white mb-2">Quantum Computing</h3>
-              <p className="text-gray-300 text-sm">10,000x performance boost with quantum supremacy</p>
+
+          {/* Content highlights */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="bg-gradient-to-br from-cyan-800/30 to-blue-800/30 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300">
+              <Brain className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+              <h3 className="text-lg font-bold text-cyan-300 mb-2">Neural Consciousness</h3>
+              <p className="text-sm text-gray-400">Breakthrough AI consciousness predictions</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">🧠</div>
-              <h3 className="text-lg font-bold text-white mb-2">Neural Interfaces</h3>
-              <p className="text-gray-300 text-sm">95% accuracy brain-computer integration</p>
+            
+            <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 backdrop-blur-sm rounded-lg p-6 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300">
+              <Zap className="w-8 h-8 text-purple-400 mx-auto mb-3" />
+              <h3 className="text-lg font-bold text-purple-300 mb-2">Quantum AI</h3>
+              <p className="text-sm text-gray-400">Revolutionary quantum computing integration</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">🤖</div>
-              <h3 className="text-lg font-bold text-white mb-2">AI 2026</h3>
-              <p className="text-gray-300 text-sm">15,000% ROI with quantum-neural fusion</p>
+            
+            <div className="bg-gradient-to-br from-green-800/30 to-teal-800/30 backdrop-blur-sm rounded-lg p-6 border border-green-500/30 hover:border-green-400/60 transition-all duration-300">
+              <Calendar className="w-8 h-8 text-green-400 mx-auto mb-3" />
+              <h3 className="text-lg font-bold text-green-300 mb-2">Future Timeline</h3>
+              <p className="text-sm text-gray-400">Detailed 2026 technology roadmap</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-orange-800/30 to-red-800/30 backdrop-blur-sm rounded-lg p-6 border border-orange-500/30 hover:border-orange-400/60 transition-all duration-300">
+              <TrendingUp className="w-8 h-8 text-orange-400 mx-auto mb-3" />
+              <h3 className="text-lg font-bold text-orange-300 mb-2">Market Trends</h3>
+              <p className="text-sm text-gray-400">Comprehensive market predictions</p>
             </div>
           </div>
-          
-          {/* CTA Buttons */}
+
+          {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/ai-2026-ultimate-breakthrough-showcase"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/ai-2025-ultimate-innovation-showcase" 
+              className="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
             >
-              🚀 Explore Breakthrough Content
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
+              Explore Innovation Showcase
+              <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
+            
             <Link 
-              href="/quantum-computing-solutions-advanced"
-              className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20"
+              href="/ai-2026-future-predictions-ultimate" 
+              className="group border-2 border-pink-400 hover:bg-pink-400 hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
-              ⚛️ Quantum Solutions
-            </Link>
-            <Link 
-              href="/neural-interface-solutions"
-              className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20"
-            >
-              🧠 Neural Interfaces
+              View Future Predictions
+              <Calendar className="inline-block ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
-          
-          {/* Success Metrics */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-1">15,000%</div>
-              <div className="text-sm text-gray-300">Max ROI Achieved</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-1">99.9%</div>
-              <div className="text-sm text-gray-300">Accuracy Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-1">10,000x</div>
-              <div className="text-sm text-gray-300">Performance Boost</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-1">500+</div>
-              <div className="text-sm text-gray-300">Success Stories</div>
-            </div>
+
+          {/* Additional content links */}
+          <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
+            <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              Latest Blog Posts
+            </Link>
+            <span className="text-gray-500">•</span>
+            <Link href="/case-studies" className="text-purple-400 hover:text-purple-300 transition-colors">
+              Success Stories
+            </Link>
+            <span className="text-gray-500">•</span>
+            <Link href="/guides" className="text-pink-400 hover:text-pink-300 transition-colors">
+              Implementation Guides
+            </Link>
+            <span className="text-gray-500">•</span>
+            <Link href="/contact" className="text-green-400 hover:text-green-300 transition-colors">
+              Get Expert Consultation
+            </Link>
           </div>
         </div>
       </div>
+
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/50 to-transparent"></div>
     </div>
   );
 }

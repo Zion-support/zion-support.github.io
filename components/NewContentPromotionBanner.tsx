@@ -1,155 +1,146 @@
+"use client";
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowRight, Star, Calendar, BookOpen, Users, Zap, Brain } from 'lucide-react';
+import { ArrowRight, X, Star, Zap, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 
-interface ContentItem {
-  id: string;
-  title: string;
-  description: string;
-  type: 'blog' | 'case-study' | 'service';
-  href: string;
-  icon: React.ComponentType<any>;
-  color: string;
-  featured?: boolean;
-}
-
-const NewContentPromotionBanner: React.FC = () => {
+const NewContentPromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const contentItems: ContentItem[] = [
+  useEffect(() => {
+    // Show banner after 2 seconds
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    // Auto-rotate slides every 5 seconds
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % promotions.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const promotions = [
     {
-      id: 'ai-quantum-breakthrough',
-      title: 'Revolutionary AI-Quantum Breakthrough 2025',
-      description: 'Discover our latest quantum AI consciousness platform revolutionizing business intelligence',
-      type: 'blog',
-      href: '/blog/ai-quantum-breakthrough-2025',
-      icon: Brain,
-      color: 'from-cyan-500 to-blue-600',
-      featured: true
+      id: 1,
+      title: "🚀 New AI Innovation Showcase 2025",
+      description: "Discover revolutionary AI breakthroughs and cutting-edge technologies",
+      link: "/ai-innovation-showcase-2025",
+      color: "from-purple-500 to-pink-500",
+      bgColor: "from-purple-500/10 to-pink-500/10",
+      borderColor: "border-purple-500/30"
     },
     {
-      id: 'fortune-500-case-study',
-      title: 'Fortune 500 AI Transformation',
-      description: 'See how a Fortune 500 company achieved 300% efficiency increase and $50M+ savings',
-      type: 'case-study',
-      href: '/case-studies/fortune-500-ai-transformation',
-      icon: Users,
-      color: 'from-purple-500 to-pink-600'
+      id: 2,
+      title: "✨ Success Stories & Case Studies",
+      description: "See how companies achieved 500%+ ROI with our AI solutions",
+      link: "/success-stories-2025",
+      color: "from-blue-500 to-cyan-500",
+      bgColor: "from-blue-500/10 to-cyan-500/10",
+      borderColor: "border-blue-500/30"
     },
     {
-      id: 'ai-quantum-platform',
-      title: 'AI-Quantum Consciousness Platform',
-      description: 'The world\'s first fully conscious AI system powered by quantum computing',
-      type: 'service',
-      href: '/services/ai-quantum-consciousness-platform',
-      icon: Zap,
-      color: 'from-emerald-500 to-teal-600'
+      id: 3,
+      title: "🔮 Future Technology Predictions",
+      description: "Explore AI trends and predictions for 2025-2030",
+      link: "/ai-2025-2030-ultimate-predictions",
+      color: "from-green-500 to-emerald-500",
+      bgColor: "from-green-500/10 to-emerald-500/10",
+      borderColor: "border-green-500/30"
     }
   ];
 
-  useEffect(() => {
-    // Check if banner was previously dismissed
-    const dismissed = localStorage.getItem('content-promotion-banner-dismissed');
-    if (!dismissed) {
-      setIsVisible(true);
-    }
+  const currentPromotion = promotions[currentSlide];
 
-    // Auto-rotate content every 8 seconds
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % contentItems.length);
-    }, 8000);
-
-    return () => clearInterval(interval);
-  }, [contentItems.length]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-    localStorage.setItem('content-promotion-banner-dismissed', 'true');
-  };
-
-  const currentContent = contentItems[currentIndex];
-
-  if (isDismissed || !isVisible) return null;
+  if (!isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-cyan-500/95 to-purple-600/95 backdrop-blur-lg border-b border-cyan-400/30"
-      >
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4 flex-1">
-              {/* Content Indicator */}
-              <div className="flex gap-2">
-                {contentItems.map((_, index) => (
-                  <div
-                    key={index}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentIndex ? 'bg-white' : 'bg-white/50'
-                    }`}
-                  />
-                ))}
-              </div>
+    <div className="fixed top-0 left-0 right-0 z-50 p-4">
+      <div className={`max-w-6xl mx-auto bg-gradient-to-r ${currentPromotion.bgColor} backdrop-blur-sm border ${currentPromotion.borderColor} rounded-2xl shadow-2xl overflow-hidden`}>
+        <div className="relative">
+          {/* Close Button */}
+          <button
+            onClick={() => setIsVisible(false)}
+            className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          >
+            <X className="w-4 h-4 text-white" />
+          </button>
 
-              {/* Content Display */}
-              <div className="flex items-center gap-4 flex-1">
-                <div className={`w-12 h-12 bg-gradient-to-r ${currentContent.color} rounded-xl flex items-center justify-center`}>
-                  <currentContent.icon className="w-6 h-6 text-white" />
-                </div>
-                
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="bg-white/20 text-white text-xs px-2 py-1 rounded-full font-medium">
-                      {currentContent.type === 'blog' ? 'New Blog Post' : 
-                       currentContent.type === 'case-study' ? 'Case Study' : 'New Service'}
-                    </span>
-                    {currentContent.featured && (
-                      <span className="bg-yellow-500/20 text-yellow-300 text-xs px-2 py-1 rounded-full font-medium flex items-center gap-1">
-                        <Star className="w-3 h-3" />
-                        Featured
-                      </span>
-                    )}
+          {/* Content */}
+          <div className="p-6 pr-16">
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <div className="flex items-center space-x-3 mb-2">
+                  <div className="flex items-center space-x-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
                   </div>
-                  <h3 className="text-white font-bold text-lg mb-1">
-                    {currentContent.title}
-                  </h3>
-                  <p className="text-white/90 text-sm">
-                    {currentContent.description}
-                  </p>
+                  <span className="text-sm text-white/80 font-medium">NEW CONTENT</span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-2">
+                  {currentPromotion.title}
+                </h3>
+                
+                <p className="text-white/80 mb-4 max-w-2xl">
+                  {currentPromotion.description}
+                </p>
+
+                <div className="flex items-center space-x-4">
+                  <Link
+                    href={currentPromotion.link}
+                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${currentPromotion.color} text-white font-semibold rounded-lg hover:opacity-90 transition-all duration-300 group`}
+                  >
+                    Explore Now
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  
+                  <div className="flex items-center space-x-2 text-white/60">
+                    <Zap className="w-4 h-4" />
+                    <span className="text-sm">Limited Time</span>
+                  </div>
                 </div>
               </div>
 
-              {/* Action Buttons */}
-              <div className="flex items-center gap-3">
-                <Link href={currentContent.href}>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4" />
-                  </motion.button>
-                </Link>
-                
-                <button
-                  onClick={handleDismiss}
-                  className="text-white/70 hover:text-white transition-colors p-2"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+              {/* Visual Element */}
+              <div className="hidden md:block ml-8">
+                <div className="relative">
+                  <div className="w-32 h-32 bg-gradient-to-br from-white/20 to-white/5 rounded-full flex items-center justify-center">
+                    <TrendingUp className="w-16 h-16 text-white/60" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm font-bold">!</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          {/* Progress Indicators */}
+          <div className="flex justify-center space-x-2 pb-4">
+            {promotions.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-white' : 'bg-white/30'
+                }`}
+              />
+            ))}
+          </div>
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    </div>
   );
 };
 

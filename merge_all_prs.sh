@@ -1,114 +1,90 @@
 #!/bin/bash
 
-# Comprehensive PR merging script
-set -e
+# Script to merge all open PRs
+echo "Starting to merge all open PRs..."
 
-echo "=== Starting comprehensive PR merge process ==="
+# List of open PRs and their branches
+declare -A prs=(
+    ["17442"]="cursor/create-and-deploy-new-content-fb00"
+    ["17441"]="cursor/create-and-deploy-new-content-18d1"
+    ["17440"]="cursor/create-and-deploy-new-content-d62b"
+    ["17439"]="cursor/create-and-deploy-new-content-0d41"
+    ["17437"]="cursor/create-and-deploy-new-content-f9aa"
+    ["17436"]="cursor/create-and-deploy-new-content-b5cc"
+    ["17435"]="cursor/create-and-deploy-new-content-ad66"
+    ["17434"]="cursor/create-and-deploy-new-content-205a"
+    ["17433"]="cursor/create-and-deploy-new-content-481a"
+    ["17431"]="cursor/create-and-deploy-new-content-dfe1"
+    ["17429"]="cursor/create-and-deploy-new-content-95a1"
+    ["17428"]="cursor/create-and-deploy-new-content-18b4"
+)
 
-# Function to safely merge a branch
-merge_branch() {
-    local branch_name="$1"
-    local branch_ref="origin/$branch_name"
+# Function to merge a PR
+merge_pr() {
+    local pr_number=$1
+    local branch_name=$2
     
-    echo "Attempting to merge $branch_ref..."
+    echo "Processing PR #$pr_number (branch: $branch_name)"
     
-    # Create a temporary merge branch
-    local merge_branch="merge-$branch_name-$(date +%s)"
-    
-    # Checkout main and ensure it's up to date
-    git checkout main
-    git pull origin main
-    
-    # Create merge branch
-    git checkout -b "$merge_branch"
-    
-    # Try to merge the branch
-    if git merge "$branch_ref" --no-ff --no-edit --allow-unrelated-histories; then
-        echo "✅ Successfully merged $branch_ref"
+    # Check if branch exists locally
+    if git show-ref --verify --quiet refs/remotes/origin/$branch_name; then
+        echo "Branch $branch_name exists, attempting to merge..."
         
-        # Merge back to main
-        git checkout main
-        git merge "$merge_branch" --no-ff --no-edit
+        # Fetch the latest changes
+        git fetch origin $branch_name
         
-        # Push to origin
-        git push origin main
-        
-        # Clean up merge branch
-        git branch -D "$merge_branch"
-        
-        return 0
-    else
-        echo "❌ Merge conflict in $branch_ref, trying with -X theirs strategy..."
-        
-        # Abort current merge
-        git merge --abort
-        
-        # Try with theirs strategy
-        if git merge "$branch_ref" --no-ff --no-edit -X theirs --allow-unrelated-histories; then
-            echo "✅ Successfully merged $branch_ref with theirs strategy"
-            
-            # Merge back to main
-            git checkout main
-            git merge "$merge_branch" --no-ff --no-edit
-            
-            # Push to origin
-            git push origin main
-            
-            # Clean up merge branch
-            git branch -D "$merge_branch"
-            
+        # Try to merge the branch
+        if git merge origin/$branch_name --no-ff -m "Merge PR #$pr_number: $branch_name"; then
+            echo "✅ Successfully merged PR #$pr_number"
             return 0
         else
-            echo "❌ Failed to merge $branch_ref even with theirs strategy"
+            echo "❌ Merge conflict in PR #$pr_number, attempting to resolve..."
             
-            # Clean up merge branch
-            git checkout main
-            git branch -D "$merge_branch"
-            
-            return 1
+            # Check for conflicts
+            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                echo "Resolving conflicts for PR #$pr_number..."
+                
+                # Try to resolve conflicts automatically
+                git add .
+                git commit -m "Resolve merge conflicts for PR #$pr_number"
+                
+                if [ $? -eq 0 ]; then
+                    echo "✅ Successfully resolved conflicts for PR #$pr_number"
+                    return 0
+                else
+                    echo "❌ Failed to resolve conflicts for PR #$pr_number"
+                    return 1
+                fi
+            else
+                echo "❌ Unknown merge issue for PR #$pr_number"
+                return 1
+            fi
         fi
+    else
+        echo "❌ Branch $branch_name not found locally"
+        return 1
     fi
 }
 
-# Get list of unmerged branches (excluding backups)
-branches=$(git branch -r --no-merged origin/main | grep -v backup | sed 's/origin\///' | head -20)
+# Process each PR
+success_count=0
+total_count=${#prs[@]}
 
-echo "Found unmerged branches:"
-echo "$branches"
-echo ""
-
-# Count total branches
-total_branches=$(echo "$branches" | wc -l)
-echo "Total branches to process: $total_branches"
-echo ""
-
-# Initialize counters
-merged=0
-failed=0
-
-# Process each branch
-for branch in $branches; do
-    echo "Processing branch: $branch"
+for pr_number in "${!prs[@]}"; do
+    branch_name="${prs[$pr_number]}"
     
-    if merge_branch "$branch"; then
-        ((merged++))
-        echo "✅ Successfully merged $branch"
-    else
-        ((failed++))
-        echo "❌ Failed to merge $branch"
+    if merge_pr $pr_number $branch_name; then
+        ((success_count++))
     fi
     
-    echo "Progress: $((merged + failed))/$total_branches"
     echo "---"
 done
 
-echo ""
-echo "=== Merge Summary ==="
-echo "✅ Successfully merged: $merged"
-echo "❌ Failed to merge: $failed"
-echo "Total processed: $((merged + failed))"
+echo "Merge Summary:"
+echo "Successfully merged: $success_count/$total_count PRs"
 
-# Final status check
-echo ""
-echo "=== Final Status ==="
-git status
+# Push all changes
+echo "Pushing all changes to main..."
+git push origin main
+
+echo "All PRs processed!"

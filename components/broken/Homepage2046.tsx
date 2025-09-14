@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -28,8 +29,7 @@ const QuantumLoadingFallback = () => (
             x: [0, Math.random() * 1200],
             y: [0, Math.random() * 800],
             opacity: [0, 1, 0],
-            scale: [0, 1, 0],
-          }}
+            scale: [0, 1, 0]}}
           transition={{
             duration: Math.random() * 4 + 3,
             repeat: Infinity,
@@ -37,8 +37,7 @@ const QuantumLoadingFallback = () => (
           }}
           style={{
             left: Math.random() * 100 + '%',
-            top: Math.random() * 100 + '%',
-          }}
+            top: Math.random() * 100 + '%'}}
         />
       ))}
     </div>
@@ -169,8 +168,7 @@ const Homepage2046: React.FC = () => {
               animate={{
                 x: [0, Math.random() * 100 - 50],
                 y: [0, Math.random() * 100 - 50],
-                opacity: [0.3, 0.8, 0.3],
-              }}
+                opacity: [0.3, 0.8, 0.3]}}
               transition={{
                 duration: Math.random() * 10 + 10,
                 repeat: Infinity,
@@ -178,8 +176,7 @@ const Homepage2046: React.FC = () => {
               }}
               style={{
                 left: Math.random() * 100 + '%',
-                top: Math.random() * 100 + '%',
-              }}
+                top: Math.random() * 100 + '%'}}
             />
           ))}
         </div>

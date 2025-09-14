@@ -1,3 +1,4 @@
+"use client";
 import React, { Suspense, lazy, useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import Link from 'next/link';
@@ -174,8 +175,7 @@ const Homepage2040: React.FC = () => {
                   }}
                   animate={{
                     scale: [0, 1, 0],
-                    opacity: [0, 1, 0],
-                  }}
+                    opacity: [0, 1, 0]}}
                   transition={{
                     duration: 3,
                     repeat: Infinity,

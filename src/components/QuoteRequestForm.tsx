@@ -21,8 +21,7 @@ export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | 
 
 const serviceStepSchema = z.object({
   serviceType: z.string().min(1),
-  specificItem: z.object({ id: z.string() }),
-});
+  specificItem: z.object({ id: z.string() })});
 
 export function QuoteRequestForm() {
   const router = useRouter();
@@ -65,14 +64,12 @@ export function QuoteRequestForm() {
       case "service": {
         const result = serviceStepSchema.safeParse({
           serviceType: formData.serviceType,
-          specificItem: formData.specificItem,
-        });
+          specificItem: formData.specificItem});
         if (!result.success) {
           toast({
             title: "Service Required",
             description: "Please select a service before continuing.",
-            variant: "destructive",
-          });
+            variant: "destructive"});
           return;
         }
         setCurrentStep("details");
@@ -123,8 +120,7 @@ export function QuoteRequestForm() {
       
       toast({
         title: "Quote Request Submitted",
-        description: "We've received your request and will get back to you soon.",
-      });
+        description: "We've received your request and will get back to you soon."});
       
       // Redirect to confirmation page or homepage
       router.push("/");
@@ -132,8 +128,7 @@ export function QuoteRequestForm() {
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your request. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     } finally {
       setIsSubmitting(false);
     }
@@ -145,8 +140,7 @@ export function QuoteRequestForm() {
       const res = await fetch("/api/openai/match", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ projectDescription: description }),
-      });
+        body: JSON.stringify({ projectDescription: description })});
       if (!res.ok) throw new Error("Request failed");
       const { category, itemId, timeline, budget } = await res.json();
       updateFormData({
@@ -157,8 +151,7 @@ export function QuoteRequestForm() {
           ? { id: itemId, title: "AI Selected Item", category }
           : formData.specificItem,
         timeline: timeline || formData.timeline,
-        budget: { ...formData.budget, ...(budget || {}) },
-      });
+        budget: { ...formData.budget, ...(budget || {}) }});
       setCurrentStep("summary");
       setAutoFillOpen(false);
     } catch (err) {
@@ -166,8 +159,7 @@ export function QuoteRequestForm() {
       toast({
         title: "Auto-fill Failed",
         description: "We couldn't process your request. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     } finally {
       setAutoFillLoading(false);
     }

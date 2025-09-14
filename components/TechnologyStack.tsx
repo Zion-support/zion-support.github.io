@@ -1,24 +1,31 @@
 import React from 'react';
 
-export default function TechnologyStack() {
+const TechnologyStack: React.FC = () => {
   const technologies = [
-    'React', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'AWS', 'Docker', 'Kubernetes',
-    'PostgreSQL', 'MongoDB', 'Redis', 'GraphQL', 'REST APIs', 'Microservices', 'AI/ML', 'TensorFlow'
+    { name: 'Next.js', category: 'Framework', description: 'React framework for production' },
+    { name: 'React', category: 'Library', description: 'JavaScript library for building user interfaces' },
+    { name: 'TypeScript', category: 'Language', description: 'Typed superset of JavaScript' },
+    { name: 'Tailwind CSS', category: 'Styling', description: 'Utility-first CSS framework' },
+    { name: 'Node.js', category: 'Runtime', description: 'JavaScript runtime for server-side development' },
+    { name: 'AI/ML', category: 'Technology', description: 'Artificial Intelligence and Machine Learning' },
   ];
 
   return (
-    <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl border border-white border-opacity-20">
-      <h3 className="text-lg font-semibold mb-4 text-white">Technology Stack</h3>
-      <div className="flex flex-wrap gap-2">
-        {technologies.map((tech, index) => (
-          <span
-            key={index}
-            className="px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm text-white"
-          >
-            {tech}
-          </span>
-        ))}
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Technology Stack</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {technologies.map((tech, index) => (
+            <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">{tech.name}</h3>
+              <p className="text-sm text-gray-600 mb-2">{tech.category}</p>
+              <p className="text-gray-700">{tech.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default TechnologyStack;

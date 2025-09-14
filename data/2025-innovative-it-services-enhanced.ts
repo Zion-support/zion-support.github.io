@@ -618,7 +618,10 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     marketSize: '$45.2B cybersecurity market',
     growthRate: '12% annual growth',
     variant: 'quantum-comm-enterprise',
-=======
+  };
+  };
+  },
+
   // Cloud-Native Application Development Platform
   {
     id: 'cloud-native-app-development-platform',

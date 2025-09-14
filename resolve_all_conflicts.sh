@@ -1,26 +1,11 @@
 #!/bin/bash
 
-# Comprehensive script to resolve all merge conflicts
-echo "Resolving all merge conflicts..."
+echo "🔧 Resolving all merge conflicts..."
 
 # Find all files with merge conflicts
-conflict_files=$(find . -name "*.tsx" -type f -exec grep -l "<<<<<<< HEAD" {} \;)
-
-for file in $conflict_files; do
-    echo "Processing: $file"
-    
-    # Check if this is a main app file (not in disabled directories)
-    if [[ "$file" == "./app/"* ]] || [[ "$file" == "./components/"* ]] || [[ "$file" == "./pages/"* ]]; then
-        # Remove all conflict markers and keep the corrected version
-        # First, remove all conflict markers
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/=======/,/>>>>>>> cursor\/install-project-dependencies-and-build-c39f/d' "$file"
-        
+conflict_files=$(find . -name "*.tsx" -type f -exec grep -l "        
         # Remove any remaining conflict markers
-        sed -i '/<<<<<<< HEAD/d' "$file"
-        sed -i '/=======/d' "$file"
-        sed -i '/>>>>>>> cursor\/install-project-dependencies-and-build-c39f/d' "$file"
-        
+        sed -i '/        
         # Fix duplicate SEO imports
         sed -i '/import SEO from "\.\.\/\.\.\/components\/SEO";/N;s/import SEO from "\.\.\/\.\.\/components\/SEO";\nimport SEO from "\.\.\/\.\.\/components\/SEO";/import SEO from "..\/..\/components\/SEO";/' "$file"
         
@@ -30,17 +15,23 @@ for file in $conflict_files; do
 done
 
 # Also handle other file types
-conflict_files_other=$(find . -name "*.json" -o -name "*.js" -o -name "*.ts" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+conflict_files_other=$(find . -name "*.json" -o -name "*.js" -o -name "*.ts" | xargs grep -l "    sed -i '/done
+conflict_files=$(grep -r "
+echo "Found conflict files: $conflict_files"
 
-for file in $conflict_files_other; do
-    echo "Processing other file: $file"
+# For each file with conflicts, resolve by keeping the HEAD version
+for file in $conflict_files; do
+    echo "Resolving conflicts in: $file"
     
-    # Remove all conflict markers
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/=======/,/>>>>>>> cursor\/install-project-dependencies-and-build-c39f/d' "$file"
-    sed -i '/<<<<<<< HEAD/d' "$file"
-    sed -i '/=======/d' "$file"
-    sed -i '/>>>>>>> cursor\/install-project-dependencies-and-build-c39f/d' "$file"
+    # Remove conflict markers and keep HEAD version
+    sed -i '/    sed -i '/    
+    echo "✅ Resolved conflicts in: $file"
 done
 
-echo "All conflicts resolved!"
+echo "🎉 All merge conflicts resolved!"
+
+# Check git status
+echo "📊 Git status:"
+git status --porcelain
+
+echo "🚀 Ready to commit and merge!"

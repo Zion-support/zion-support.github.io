@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 
@@ -32,8 +33,7 @@ const SEO: React.FC<SEOProps> = ({
   tags = [],
   structuredData,
   noindex = false,
-  nofollow = false,
-}) => {
+  nofollow = false}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;

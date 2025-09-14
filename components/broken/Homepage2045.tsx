@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -125,8 +126,7 @@ const Homepage2045: React.FC = () => {
               animate={{
                 rotate: [0, 360],
                 scale: [1, 1.1, 1],
-                opacity: [0.3, 0.6, 0.3],
-              }}
+                opacity: [0.3, 0.6, 0.3]}}
               transition={{
                 duration: 8,
                 repeat: Infinity,
@@ -138,8 +138,7 @@ const Homepage2045: React.FC = () => {
               animate={{
                 rotate: [360, 0],
                 scale: [1, 1.2, 1],
-                opacity: [0.3, 0.7, 0.3],
-              }}
+                opacity: [0.3, 0.7, 0.3]}}
               transition={{
                 duration: 6,
                 repeat: Infinity,
@@ -151,8 +150,7 @@ const Homepage2045: React.FC = () => {
               animate={{
                 rotate: [45, 405],
                 scale: [1, 1.15, 1],
-                opacity: [0.3, 0.5, 0.3],
-              }}
+                opacity: [0.3, 0.5, 0.3]}}
               transition={{
                 duration: 10,
                 repeat: Infinity,

@@ -1,169 +1,190 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function NewContentDiscoveryWidget2025() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeCategory, setActiveCategory] = useState('all');
 
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
-    return () => {
-      clearTimeout(timer);
-      clearInterval(interval);
-    };
-  }, []);
+  const contentCategories = [
+    { id: 'all', name: 'All Content', icon: '🚀' },
+    { id: 'ai-2025', name: 'AI 2025', icon: '🧠' },
+    { id: 'ai-2026-2030', name: 'AI 2026-2030', icon: '🔮' },
+    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️' },
+    { id: 'case-studies', name: 'Case Studies', icon: '🏆' },
+    { id: 'breakthroughs', name: 'Breakthroughs', icon: '💡' }
+  ];
 
-  const featuredContent = [
+  const contentItems = [
     {
-      title: "AI 2025 Ultimate Breakthrough Revolution",
-      description: "Experience revolutionary AI breakthroughs delivering 2000%+ ROI across industries",
-      link: "/ai-2025-ultimate-breakthrough-revolution",
-      image: "🚀",
-      category: "BREAKTHROUGH",
-      stats: "2000%+ ROI • 99.7% Success",
-      gradient: "from-red-500 to-pink-500",
-      bgGradient: "from-red-50 to-pink-50"
+      id: 1,
+      title: 'AI 2025 Ultimate Breakthrough Revolution',
+      description: 'Revolutionary AI technologies delivering 15,000% ROI with quantum-AI fusion and neural synthesis.',
+      category: 'ai-2025',
+      type: 'breakthrough',
+      roi: '15,000%',
+      accuracy: '99.9%',
+      url: '/ai-2025-ultimate-breakthrough-revolution',
+      featured: true
     },
     {
-      title: "AI 2026-2030 Future Predictions",
-      description: "Discover revolutionary AI technologies that will reshape humanity by 2030",
-      link: "/ai-2026-2030-future-predictions-showcase",
-      image: "🔮",
-      category: "FUTURE",
-      stats: "95% Accuracy • ∞ ROI Potential",
-      gradient: "from-purple-500 to-pink-500",
-      bgGradient: "from-purple-50 to-pink-50"
+      id: 2,
+      title: 'AI 2026-2030 Future Predictions',
+      description: 'Most accurate predictions for the next decade featuring quantum consciousness and transcendent technologies.',
+      category: 'ai-2026-2030',
+      type: 'predictions',
+      roi: '∞',
+      accuracy: '95%',
+      url: '/ai-2026-2030-future-predictions-breakthrough',
+      featured: true
     },
     {
-      title: "Advanced Quantum Computing Solutions",
-      description: "Revolutionary quantum computing delivering 15,000% ROI with breakthrough algorithms",
-      link: "/quantum-computing-solutions-advanced",
-      image: "⚛️",
-      category: "QUANTUM",
-      stats: "15,000% ROI • 99.9% Accuracy",
-      gradient: "from-indigo-500 to-purple-500",
-      bgGradient: "from-indigo-50 to-purple-50"
+      id: 3,
+      title: 'Quantum Computing Solutions 2025',
+      description: 'Revolutionary quantum computing delivering 10,000x faster processing and quantum supremacy.',
+      category: 'quantum',
+      type: 'technology',
+      roi: '10,000x',
+      accuracy: '99.9%',
+      url: '/quantum-computing-solutions-2025',
+      featured: true
+    },
+    {
+      id: 4,
+      title: 'AI 2025 Ultimate Breakthrough Success',
+      description: 'Fortune 500 company achieves 15,000% ROI in 6 months using breakthrough AI technologies.',
+      category: 'case-studies',
+      type: 'success-story',
+      roi: '15,000%',
+      accuracy: '99.9%',
+      url: '/case-studies/ai-2025-ultimate-breakthrough-success',
+      featured: true
+    },
+    {
+      id: 5,
+      title: 'Quantum-AI Fusion Technology',
+      description: 'Revolutionary fusion of quantum computing and AI delivering unprecedented processing power.',
+      category: 'breakthroughs',
+      type: 'technology',
+      roi: '15,000%',
+      accuracy: '99.9%',
+      url: '/quantum-ai-fusion-2025',
+      featured: false
+    },
+    {
+      id: 6,
+      title: 'Neural Synthesis Breakthrough',
+      description: 'Advanced neural networks with 99.9% accuracy and 1,000x faster learning capabilities.',
+      category: 'ai-2025',
+      type: 'breakthrough',
+      roi: '12,000%',
+      accuracy: '99.7%',
+      url: '/neural-synthesis-2025',
+      featured: false
     }
   ];
 
-  const quickLinks = [
-    { title: "AI 2025 Revolution", link: "/ai-2025-ultimate-breakthrough-revolution", icon: "🚀" },
-    { title: "Future Predictions", link: "/ai-2026-2030-future-predictions-showcase", icon: "🔮" },
-    { title: "Quantum Solutions", link: "/quantum-computing-solutions-advanced", icon: "⚛️" },
-    { title: "All Content", link: "/content-showcase", icon: "📚" }
-  ];
-
-  if (!isVisible) return null;
+  const filteredContent = activeCategory === 'all' 
+    ? contentItems 
+    : contentItems.filter(item => item.category === activeCategory);
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 max-w-sm">
-      <div className="bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden">
-        {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="font-bold text-lg">New Content Discovery</h3>
-              <p className="text-sm opacity-90">Revolutionary AI breakthroughs</p>
-            </div>
-            <button 
-              onClick={() => setIsVisible(false)}
-              className="text-white/80 hover:text-white transition-colors"
-              aria-label="Close widget"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
+    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Discover Revolutionary Content
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore our latest breakthrough technologies, case studies, and future predictions 
+            that are transforming businesses worldwide.
+          </p>
         </div>
 
-        {/* Featured Content Carousel */}
-        <div className="relative">
-          <div className="overflow-hidden">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {contentCategories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                activeCategory === category.id
+                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+              }`}
             >
-              {featuredContent.map((content, index) => (
-                <div key={index} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${content.bgGradient} p-6`}>
-                    <div className="flex items-start space-x-4">
-                      <div className="text-4xl">{content.image}</div>
-                      <div className="flex-1">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <span className={`bg-gradient-to-r ${content.gradient} text-white px-3 py-1 rounded-full text-xs font-bold`}>
-                            {content.category}
-                          </span>
-                        </div>
-                        <h4 className="font-bold text-gray-900 mb-2 line-clamp-2">
-                          {content.title}
-                        </h4>
-                        <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                          {content.description}
-                        </p>
-                        <div className="text-xs text-gray-500 mb-3">
-                          {content.stats}
-                        </div>
-                        <Link 
-                          href={content.link}
-                          className={`inline-flex items-center bg-gradient-to-r ${content.gradient} text-white px-4 py-2 rounded-lg text-sm font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
-                        >
-                          Explore Now
-                          <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </Link>
-                      </div>
-                    </div>
+              <span className="mr-2">{category.icon}</span>
+              {category.name}
+            </button>
+          ))}
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredContent.map((item) => (
+            <div
+              key={item.id}
+              className={`bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 ${
+                item.featured ? 'ring-2 ring-blue-500' : ''
+              }`}
+            >
+              {item.featured && (
+                <div className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-sm font-semibold mb-4">
+                  ⭐ Featured
+                </div>
+              )}
+              
+              <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                {item.title}
+              </h3>
+              
+              <p className="text-gray-600 mb-4 line-clamp-3">
+                {item.description}
+              </p>
+              
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center space-x-4">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-green-600">{item.roi}</div>
+                    <div className="text-xs text-gray-500">ROI</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-blue-600">{item.accuracy}</div>
+                    <div className="text-xs text-gray-500">Accuracy</div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Carousel Indicators */}
-          <div className="flex justify-center space-x-2 p-4">
-            {featuredContent.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? 'bg-blue-600' : 'bg-gray-300'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Quick Links */}
-        <div className="p-4 bg-gray-50">
-          <h4 className="font-semibold text-gray-900 mb-3">Quick Access</h4>
-          <div className="grid grid-cols-2 gap-2">
-            {quickLinks.map((link, index) => (
+                <div className="text-sm text-gray-500 capitalize">
+                  {item.type.replace('-', ' ')}
+                </div>
+              </div>
+              
               <Link
-                key={index}
-                href={link.link}
-                className="flex items-center space-x-2 p-3 bg-white rounded-lg hover:bg-gray-50 transition-colors border border-gray-200"
+                href={item.url}
+                className="block w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white text-center py-3 rounded-lg font-semibold hover:scale-105 transition-transform"
               >
-                <span className="text-lg">{link.icon}</span>
-                <span className="text-sm font-medium text-gray-700">{link.title}</span>
+                Explore Content
               </Link>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
-        {/* Footer */}
-        <div className="p-4 bg-gray-100 border-t border-gray-200">
-          <div className="flex items-center justify-between text-xs text-gray-500">
-            <span>Powered by Zion Tech Group</span>
-            <div className="flex items-center space-x-1">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              <span>Live Updates</span>
-            </div>
+        {/* Call to Action */}
+        <div className="text-center mt-12">
+          <p className="text-lg text-gray-600 mb-6">
+            Can't find what you're looking for? Let us help you discover the perfect solution.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform"
+            >
+              Get Personalized Recommendations
+            </Link>
+            <Link
+              href="/resources"
+              className="border-2 border-blue-500 text-blue-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-500 hover:text-white transition-colors"
+            >
+              Browse All Resources
+            </Link>
           </div>
         </div>
       </div>

@@ -1,114 +1,93 @@
-import { useState, useEffect, createContext, useContext } from 'react';
+import { useState, useEffect } from 'react';
 
 interface User {
   id: string;
-  name: string;
   email: string;
-  role: string;
+  emailVerified: boolean;
+  name?: string;
+  avatar?: string;
 }
 
-interface AuthContextType {
+interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
+  isLoading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
-  signup: (email: string, password: string, name: string) => Promise<void>;
+  register: (email: string, password: string, name?: string) => Promise<void>;
 }
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
-
-export function useAuth() {
-  const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
-}
-
-export function AuthProvider({ children }: { children: React.ReactNode }) {
+export function useAuth(): AuthState {
   const [user, setUser] = useState<User | null>(null);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check for existing session
-    const token = localStorage.getItem('auth_token');
-    if (token) {
-      // In a real app, validate token with backend
-      const savedUser = localStorage.getItem('user');
-      if (savedUser) {
-        try {
-          const userData = JSON.parse(savedUser);
-          setUser(userData);
-          setIsAuthenticated(true);
-        } catch (error) {
-          console.error('Error parsing user data:', error);
-          localStorage.removeItem('auth_token');
-          localStorage.removeItem('user');
-        }
+    // Check for existing auth state in localStorage
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      try {
+        setUser(JSON.parse(storedUser));
+      } catch (error) {
+        console.error('Error parsing stored user:', error);
+        localStorage.removeItem('user');
       }
     }
+    setIsLoading(false);
   }, []);
 
-  const login = async (email: string, password: string) => {
+  const login = async (email: string, password: string): Promise<void> => {
+    setIsLoading(true);
     try {
-      // In a real app, make API call to backend
-      // For now, simulate successful login
+      // Mock login - in production, this would make an API call
       const mockUser: User = {
         id: '1',
-        name: 'Demo User',
         email,
-        role: 'user'
+        emailVerified: true,
+        name: email.split('@')[0],
       };
       
       setUser(mockUser);
-      setIsAuthenticated(true);
-      localStorage.setItem('auth_token', 'mock_token');
       localStorage.setItem('user', JSON.stringify(mockUser));
     } catch (error) {
-      console.error('Login failed:', error);
+      console.error('Login error:', error);
       throw error;
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  const signOut = async () => {
+  const logout = (): void => {
     setUser(null);
-    setIsAuthenticated(false);
-    localStorage.removeItem('auth_token');
     localStorage.removeItem('user');
   };
 
-  const signup = async (email: string, password: string, name: string) => {
+  const register = async (email: string, password: string, name?: string): Promise<void> => {
+    setIsLoading(true);
     try {
-      // In a real app, make API call to backend
-      // For now, simulate successful signup
+      // Mock registration - in production, this would make an API call
       const mockUser: User = {
         id: '1',
-        name,
         email,
-        role: 'user'
+        emailVerified: false,
+        name: name || email.split('@')[0],
       };
       
       setUser(mockUser);
-      setIsAuthenticated(true);
-      localStorage.setItem('auth_token', 'mock_token');
       localStorage.setItem('user', JSON.stringify(mockUser));
     } catch (error) {
-      console.error('Signup failed:', error);
+      console.error('Registration error:', error);
       throw error;
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  const value: AuthContextType = {
+  return {
     user,
-    isAuthenticated,
+    isAuthenticated: !!user,
+    isLoading,
     login,
     logout,
-    signup
+    register,
   };
-
-  return (
-    <AuthContext.Provider value={value}>
-      {children}
-    </AuthContext.Provider>
-  );
 }

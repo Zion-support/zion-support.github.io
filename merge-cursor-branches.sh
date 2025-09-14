@@ -99,9 +99,7 @@ for branch in "${CURSOR_BRANCHES[@]}"; do
                 if [ -f "$file" ]; then
                     echo "🔧 Resolving conflicts in $file..."
                     # Remove conflict markers
-                    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-                    sed -i '/>>>>>>> /d' "$file"
-                fi
+                    sed -i '/                fi
             done
             
             # Add resolved files

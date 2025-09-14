@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
@@ -236,8 +237,7 @@ const Homepage2044: React.FC = () => {
                     x: [0, 150, 0],
                     y: [0, -150, 0],
                     opacity: [0, 1, 0],
-                    scale: [0, 1.5, 0],
-                  }}
+                    scale: [0, 1.5, 0]}}
                   transition={{
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
@@ -246,8 +246,7 @@ const Homepage2044: React.FC = () => {
                   }}
                   style={{
                     left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                  }}
+                    top: `${Math.random() * 100}%`}}
                 />
               ))}
             </div>
@@ -266,8 +265,7 @@ const Homepage2044: React.FC = () => {
               animate={{
                 rotate: [45, 405],
                 scale: [1, 1.2, 1],
-                opacity: [0.3, 0.8, 0.3],
-              }}
+                opacity: [0.3, 0.8, 0.3]}}
               transition={{
                 duration: 10,
                 repeat: Infinity as any,
@@ -278,8 +276,7 @@ const Homepage2044: React.FC = () => {
               className="absolute bottom-32 left-32 w-16 h-16 border border-purple-400/30 rounded-full"
               animate={{
                 scale: [1, 1.5, 1],
-                opacity: [0.3, 0.8, 0.3],
-              }}
+                opacity: [0.3, 0.8, 0.3]}}
               transition={{
                 duration: 8,
                 repeat: Infinity as any,

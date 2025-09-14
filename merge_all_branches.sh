@@ -1,84 +1,110 @@
 #!/bin/bash
 
-# Script to merge all branches into main
-# This will attempt to merge branches and resolve conflicts automatically
-
+# Script to merge all open branches and resolve conflicts
 set -e
 
-echo "🚀 Starting bulk merge process..."
+echo "🚀 Starting comprehensive branch merge process..."
 
-# Get all remote branches that are not main
-branches=$(git branch -r | grep -v "origin/main" | grep -v "origin/HEAD" | sed 's/origin\///' | head -50)
+# Get all cursor branches
+BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | head -50)
 
-echo "📋 Found $(echo "$branches" | wc -l) branches to process"
+# Counter for tracking progress
+count=0
+total=$(echo "$BRANCHES" | wc -l)
+successful_merges=0
+failed_merges=0
 
-# Track successful merges
-successful_merges=()
-failed_merges=()
+echo "📊 Found $total branches to process"
 
-# Function to attempt merge
-attempt_merge() {
+# Function to merge a single branch
+merge_branch() {
     local branch=$1
-    echo "🔄 Attempting to merge: $branch"
+    local branch_name=$(echo "$branch" | sed 's/origin\///')
+    
+    echo "🔄 Processing branch: $branch_name ($((++count))/$total)"
     
     # Checkout the branch
-    if git checkout "origin/$branch" 2>/dev/null; then
-        # Try to merge into main
-        if git checkout main 2>/dev/null; then
-            # Check if merge would be fast-forward or create conflicts
-            if git merge --no-ff --no-commit "origin/$branch" 2>/dev/null; then
-                # If merge succeeds, commit it
-                git commit -m "Merge branch '$branch' into main" 2>/dev/null || true
-                echo "✅ Successfully merged: $branch"
-                successful_merges+=("$branch")
-                return 0
-            else
-                echo "⚠️  Merge conflict in: $branch"
-                git merge --abort 2>/dev/null || true
-                failed_merges+=("$branch")
-                return 1
-            fi
-        fi
+    if ! git checkout -b "$branch_name" "$branch" 2>/dev/null; then
+        echo "⚠️  Branch $branch_name already exists locally, switching to it"
+        git checkout "$branch_name" 2>/dev/null || {
+            echo "❌ Failed to checkout $branch_name"
+            return 1
+        }
     fi
     
-    echo "❌ Failed to merge: $branch"
-    failed_merges+=("$branch")
-    return 1
+    # Try to merge with main
+    if git merge main --no-ff -m "Merge $branch_name into main" 2>/dev/null; then
+        echo "✅ Successfully merged $branch_name"
+        ((successful_merges++))
+        
+        # Push the merged changes
+        git push origin main 2>/dev/null || {
+            echo "⚠️  Failed to push merged changes for $branch_name"
+        }
+        
+        # Switch back to main
+        git checkout main
+        
+        # Delete the local branch
+        git branch -D "$branch_name" 2>/dev/null || true
+        
+    else
+        echo "⚠️  Merge conflict in $branch_name, attempting to resolve..."
+        
+        # Check for conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "🔧 Resolving conflicts in $branch_name..."
+            
+            # Use our version for common conflict files
+            git checkout --ours . 2>/dev/null || true
+            git add . 2>/dev/null || true
+            
+            # Try to commit the resolved conflicts
+            if git commit -m "Resolve merge conflicts in $branch_name" 2>/dev/null; then
+                echo "✅ Resolved conflicts in $branch_name"
+                ((successful_merges++))
+                
+                # Push the resolved changes
+                git push origin main 2>/dev/null || {
+                    echo "⚠️  Failed to push resolved changes for $branch_name"
+                }
+            else
+                echo "❌ Failed to resolve conflicts in $branch_name"
+                git merge --abort 2>/dev/null || true
+                ((failed_merges++))
+            fi
+        else
+            echo "❌ Unknown merge issue with $branch_name"
+            git merge --abort 2>/dev/null || true
+            ((failed_merges++))
+        fi
+        
+        # Switch back to main
+        git checkout main
+        
+        # Delete the local branch
+        git branch -D "$branch_name" 2>/dev/null || true
+    fi
+    
+    echo "---"
 }
 
 # Process each branch
-for branch in $branches; do
-    attempt_merge "$branch" || true
+for branch in $BRANCHES; do
+    merge_branch "$branch"
+    
+    # Add a small delay to avoid overwhelming the system
+    sleep 1
 done
 
-echo ""
-echo "📊 Merge Summary:"
-echo "✅ Successfully merged: ${#successful_merges[@]} branches"
-echo "❌ Failed to merge: ${#failed_merges[@]} branches"
+echo "🎉 Merge process completed!"
+echo "📈 Results:"
+echo "   ✅ Successful merges: $successful_merges"
+echo "   ❌ Failed merges: $failed_merges"
+echo "   📊 Total processed: $count"
 
-if [ ${#successful_merges[@]} -gt 0 ]; then
-    echo ""
-    echo "✅ Successfully merged branches:"
-    for branch in "${successful_merges[@]}"; do
-        echo "  - $branch"
-    done
-fi
+# Final status check
+echo "🔍 Final git status:"
+git status
 
-if [ ${#failed_merges[@]} -gt 0 ]; then
-    echo ""
-    echo "❌ Failed to merge branches:"
-    for branch in "${failed_merges[@]}"; do
-        echo "  - $branch"
-    done
-fi
-
-# Push changes if there were successful merges
-if [ ${#successful_merges[@]} -gt 0 ]; then
-    echo ""
-    echo "🚀 Pushing changes to origin/main..."
-    git push origin main
-    echo "✅ Changes pushed successfully!"
-fi
-
-echo ""
-echo "🎉 Bulk merge process completed!"
+echo "🏁 Script completed successfully!"

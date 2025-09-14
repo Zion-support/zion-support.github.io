@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from 'react';
 
 interface UltraAdvancedFuturisticBackgroundProps {
@@ -36,6 +37,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       vx: number;
       vy: number;
       size: number;
+      opacity: number;
       color: string;
       type: 'quantum' | 'holographic' | 'neon' | 'fusion';
     }> = [];

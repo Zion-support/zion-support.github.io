@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -52,8 +53,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
         opacity: Math.random() * 0.5 + 0.3,
         color: colors[Math.floor(Math.random() * colors.length)],
         life: Math.random() * 100 + 50,
-        maxLife: Math.random() * 100 + 50,
-      };
+        maxLife: Math.random() * 100 + 50};
     };
 
     // Initialize particles
@@ -139,8 +139,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
           className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
+            opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 8,
             repeat: Infinity,
@@ -153,8 +152,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
           className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.4, 0.7, 0.4],
-          }}
+            opacity: [0.4, 0.7, 0.4]}}
           transition={{
             duration: 10,
             repeat: Infinity,
@@ -168,8 +166,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
           className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
-            opacity: [0.2, 0.5, 0.2],
-          }}
+            opacity: [0.2, 0.5, 0.2]}}
           transition={{
             duration: 12,
             repeat: Infinity,
@@ -183,8 +180,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
           className="absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1.3, 1, 1.3],
-            opacity: [0.3, 0.6, 0.3],
-          }}
+            opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 9,
             repeat: Infinity,
@@ -197,8 +193,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
           className="absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.4, 1],
-            opacity: [0.4, 0.7, 0.4],
-          }}
+            opacity: [0.4, 0.7, 0.4]}}
           transition={{
             duration: 11,
             repeat: Infinity,
@@ -229,8 +224,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
           className="absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45"
           animate={{
             rotate: [45, 405],
-            opacity: [0.2, 0.6, 0.2],
-          }}
+            opacity: [0.2, 0.6, 0.2]}}
           transition={{
             duration: 20,
             repeat: Infinity,
@@ -243,8 +237,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
           className="absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20"
           animate={{
             rotate: [0, 360],
-            scale: [1, 1.2, 1],
-          }}
+            scale: [1, 1.2, 1]}}
           transition={{
             duration: 15,
             repeat: Infinity,
@@ -257,8 +250,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
           className="absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full"
           animate={{
             scale: [1, 1.5, 1],
-            opacity: [0.3, 0.8, 0.3],
-          }}
+            opacity: [0.3, 0.8, 0.3]}}
           transition={{
             duration: 8,
             repeat: Infinity,
@@ -276,8 +268,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
             className="absolute inset-0 border border-cyan-500/10 rounded-full"
             animate={{
               scale: [1, 1.5, 2, 2.5],
-              opacity: [0.3, 0.2, 0.1, 0],
-            }}
+              opacity: [0.3, 0.2, 0.1, 0]}}
             transition={{
               duration: 6,
               repeat: Infinity,
@@ -298,8 +289,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
               x: [0, Math.random() * 200 - 100],
               y: [0, Math.random() * 200 - 100],
               opacity: [0, 1, 0],
-              scale: [0, 1, 0],
-            }}
+              scale: [0, 1, 0]}}
             transition={{
               duration: 4 + Math.random() * 4,
               repeat: Infinity,
@@ -308,8 +298,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
             }}
             style={{
               left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
+              top: `${Math.random() * 100}%`}}
           />
         ))}
       </div>
@@ -319,8 +308,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5"
           animate={{
-            opacity: [0.3, 0.6, 0.3],
-          }}
+            opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 10,
             repeat: Infinity,

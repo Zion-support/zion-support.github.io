@@ -1,147 +1,227 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
 
-export default function AI2025BreakthroughContentShowcase() {
-  const breakthroughContent = [
+const AI2025BreakthroughContentShowcase = () => {
+  const [activeTab, setActiveTab] = useState('all');
+
+  const content = [
     {
-      id: 1,
-      title: "AI 2025 Breakthrough Revolution",
-      description: "Discover the revolutionary AI breakthroughs of 2025 that are transforming industries and creating unprecedented opportunities for growth and innovation.",
-      type: "Featured Page",
-      category: "Breakthrough",
-      image: "🧠",
-      link: "/ai-2025-breakthrough-revolution",
-      badge: "BREAKTHROUGH",
-      badgeColor: "bg-red-500",
-      stats: "5000% ROI"
+      id: 'enterprise-automation',
+      title: 'AI 2025: The Enterprise Automation Revolution - Ultimate Breakthrough Guide',
+      type: 'blog',
+      url: '/blog/ai-2025-enterprise-automation-revolution-ultimate-breakthrough',
+      metrics: {
+        roi: '750%',
+        savings: '$3.2B',
+        efficiency: '89%',
+        accuracy: '99.7%'
+      },
+      description: 'Transform your business with revolutionary AI automation achieving unprecedented returns',
+      featured: true,
+      readingTime: '28 min read',
+      tags: ['AI Automation', 'Enterprise', 'ROI', 'Breakthrough']
     },
     {
-      id: 2,
-      title: "Global Transformation Success Story",
-      description: "How a Fortune 500 company achieved 10,000% ROI through AI 2025 breakthrough technologies, transforming their entire operation in just 6 months.",
-      type: "Case Study",
-      category: "Success Story",
-      image: "🏆",
-      link: "/case-studies/ai-2025-global-transformation-breakthrough",
-      badge: "10,000% ROI",
-      badgeColor: "bg-green-500",
-      stats: "Fortune 500"
+      id: 'fortune-500-success',
+      title: 'Fortune 500 AI Transformation: $4.2B Company Achieves 850% ROI',
+      type: 'case-study',
+      url: '/case-studies/fortune-500-ai-transformation-ultimate-success-2025',
+      metrics: {
+        roi: '850%',
+        savings: '$3.8B',
+        efficiency: '89%',
+        accuracy: '99.7%'
+      },
+      description: 'Real-world success story of comprehensive AI transformation',
+      featured: true,
+      readingTime: '22 min read',
+      tags: ['Fortune 500', 'Case Study', 'ROI', 'Success Story']
     },
     {
-      id: 3,
-      title: "Ultimate Implementation Guide",
-      description: "The complete blueprint for successfully implementing AI 2025 breakthrough technologies in your organization with proven strategies and real-world examples.",
-      type: "Guide",
-      category: "Implementation",
-      image: "📚",
-      link: "/blog/ai-2025-ultimate-implementation-guide",
-      badge: "50+ Pages",
-      badgeColor: "bg-blue-500",
-      stats: "Step-by-Step"
+      id: 'implementation-roadmap',
+      title: 'AI Implementation Ultimate Roadmap 2025: From Strategy to 900% ROI',
+      type: 'resource',
+      url: '/resources/ai-implementation-ultimate-roadmap-2025-comprehensive',
+      metrics: {
+        roi: '900%',
+        timeline: '18 months',
+        success: '99%',
+        savings: '$173.7M'
+      },
+      description: 'Step-by-step guide to achieving unprecedented AI success',
+      featured: true,
+      readingTime: '35 min read',
+      tags: ['Implementation', 'Strategy', 'ROI', 'Roadmap']
     },
     {
-      id: 4,
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer interfaces that enable seamless communication between human thought and AI systems, achieving 10x faster decision-making.",
-      type: "Technology",
-      category: "Breakthrough",
-      image: "🧠",
-      link: "/blog/neural-interface-revolution-2025",
-      badge: "NEW",
-      badgeColor: "bg-purple-500",
-      stats: "10x Faster"
+      id: 'quantum-computing',
+      title: 'AI 2025: The Quantum Computing Business Revolution - Ultimate Guide',
+      type: 'blog',
+      url: '/blog/ai-2025-quantum-computing-business-revolution-ultimate-guide',
+      metrics: {
+        roi: '500%',
+        market: '$100B',
+        speed: '1000x',
+        accuracy: '99.9%'
+      },
+      description: 'Revolutionary quantum AI transforming enterprise operations',
+      featured: false,
+      readingTime: '30 min read',
+      tags: ['Quantum Computing', 'AI Revolution', 'Business Transformation']
     },
     {
-      id: 5,
-      title: "Quantum AI Acceleration",
-      description: "Quantum-enhanced machine learning algorithms that process complex data 1000x faster than traditional systems, enabling real-time analysis.",
-      type: "Technology",
-      category: "Breakthrough",
-      image: "⚛️",
-      link: "/blog/quantum-ai-acceleration-2025",
-      badge: "BREAKTHROUGH",
-      badgeColor: "bg-indigo-500",
-      stats: "1000x Speed"
-    },
-    {
-      id: 6,
-      title: "Autonomous Enterprise Agents",
-      description: "Self-managing AI agents that handle complex business processes autonomously, reducing operational costs by 80% while improving accuracy.",
-      type: "Solution",
-      category: "Automation",
-      image: "🤖",
-      link: "/blog/autonomous-enterprise-agents-2025",
-      badge: "HOT",
-      badgeColor: "bg-orange-500",
-      stats: "-80% Costs"
+      id: 'fortune-500-650',
+      title: 'Fortune 500 AI Transformation: $3.2B Company Achieves 650% ROI',
+      type: 'case-study',
+      url: '/case-studies/ai-transformation-fortune-500-ultimate-success-2025',
+      metrics: {
+        roi: '650%',
+        savings: '$2.8B',
+        efficiency: '78%',
+        accuracy: '99.7%'
+      },
+      description: 'Comprehensive AI transformation delivering exceptional results',
+      featured: false,
+      readingTime: '22 min read',
+      tags: ['Fortune 500', 'AI Transformation', 'ROI', 'Manufacturing']
     }
   ];
 
+  const tabs = [
+    { id: 'all', label: 'All Content', count: content.length },
+    { id: 'blog', label: 'Blog Posts', count: content.filter(c => c.type === 'blog').length },
+    { id: 'case-study', label: 'Case Studies', count: content.filter(c => c.type === 'case-study').length },
+    { id: 'resource', label: 'Resources', count: content.filter(c => c.type === 'resource').length }
+  ];
+
+  const filteredContent = activeTab === 'all' 
+    ? content 
+    : content.filter(c => c.type === activeTab);
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return '📝';
+      case 'case-study':
+        return '📊';
+      case 'resource':
+        return '📚';
+      default:
+        return '📄';
+    }
+  };
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'bg-blue-100 text-blue-800';
+      case 'case-study':
+        return 'bg-green-100 text-green-800';
+      case 'resource':
+        return 'bg-purple-100 text-purple-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
+    }
+  };
+
   return (
-    <div className="py-16 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto">
+    <div className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            AI 2025 Breakthrough
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              Content Showcase
-            </span>
+          <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-4">
+            <span className="text-sm font-medium">🚀 AI 2025 BREAKTHROUGH CONTENT</span>
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Revolutionary AI Content That Delivers Results
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our comprehensive collection of AI 2025 breakthrough content, 
-            featuring revolutionary technologies, success stories, and implementation guides.
+            Discover the strategies, case studies, and implementation guides that are helping 
+            Fortune 500 companies achieve 750%+ ROI and transform their operations.
           </p>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {breakthroughContent.map((content) => (
-            <div 
-              key={content.id}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center mb-8">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+                activeTab === tab.id
+                  ? 'bg-purple-600 text-white shadow-lg'
+                  : 'bg-white text-gray-600 hover:bg-gray-100'
+              }`}
             >
-              {/* Content Header */}
-              <div className="p-6 border-b border-gray-100">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-4xl">{content.image}</div>
-                  <div className="flex gap-2">
-                    <span className={`px-3 py-1 text-xs font-semibold text-white rounded-full ${content.badgeColor}`}>
-                      {content.badge}
-                    </span>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
-                  {content.title}
-                </h3>
-                <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <span className="px-2 py-1 bg-gray-100 rounded text-xs">{content.type}</span>
-                  <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded text-xs">{content.category}</span>
-                </div>
-              </div>
+              {tab.label} ({tab.count})
+            </button>
+          ))}
+        </div>
 
-              {/* Content Body */}
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredContent.map((item) => (
+            <div
+              key={item.id}
+              className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl hover:scale-105 ${
+                item.featured ? 'ring-2 ring-purple-500' : ''
+              }`}
+            >
+              {item.featured && (
+                <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 text-sm font-semibold text-center">
+                  ⭐ FEATURED CONTENT
+                </div>
+              )}
+              
               <div className="p-6">
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {content.description}
-                </p>
-                
-                {/* Stats */}
+                {/* Type Badge */}
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-sm font-semibold text-gray-500">
-                    Impact:
-                  </div>
-                  <div className="text-sm font-bold text-green-600">
-                    {content.stats}
-                  </div>
+                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${getTypeColor(item.type)}`}>
+                    {getTypeIcon(item.type)} {item.type.replace('-', ' ').toUpperCase()}
+                  </span>
+                  <span className="text-sm text-gray-500">{item.readingTime}</span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                  {item.description}
+                </p>
+
+                {/* Metrics */}
+                <div className="grid grid-cols-2 gap-2 mb-4">
+                  {Object.entries(item.metrics).map(([key, value]) => (
+                    <div key={key} className="bg-gray-50 rounded-lg p-2 text-center">
+                      <div className="text-sm font-bold text-purple-600">{value}</div>
+                      <div className="text-xs text-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-1 mb-4">
+                  {item.tags.slice(0, 3).map((tag) => (
+                    <span
+                      key={tag}
+                      className="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
 
                 {/* CTA Button */}
-                <Link 
-                  href={content.link}
-                  className="w-full block text-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                <Link
+                  href={item.url}
+                  className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all"
                 >
-                  Explore Now →
+                  Read {item.type === 'blog' ? 'Article' : item.type === 'case-study' ? 'Case Study' : 'Guide'}
                 </Link>
               </div>
             </div>
@@ -149,27 +229,26 @@ export default function AI2025BreakthroughContentShowcase() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <div className="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Transform Your Business with AI 2025?
+        <div className="mt-12 text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Transform Your Business with AI?
             </h3>
-            <p className="text-gray-600 mb-6">
-              Join thousands of companies already leveraging these breakthrough technologies 
-              to achieve unprecedented growth and innovation.
+            <p className="text-purple-100 mb-6 text-lg">
+              Join 500+ companies achieving 750%+ ROI with our proven AI strategies
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
                 href="/contact"
-                className="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started Today
               </Link>
-              <Link 
-                href="/ai-services-2025"
-                className="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+              <Link
+                href="/resources"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                View Our Services
+                Explore All Resources
               </Link>
             </div>
           </div>
@@ -177,4 +256,6 @@ export default function AI2025BreakthroughContentShowcase() {
       </div>
     </div>
   );
-}
+};
+
+export default AI2025BreakthroughContentShowcase;

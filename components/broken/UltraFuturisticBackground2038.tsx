@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -304,12 +305,10 @@ export default function UltraFuturisticBackground2038({
                 className="absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20"
                 style={{
                   left: `${(i * 5) % 100}%`,
-                  top: `${(i * 3) % 100}%`,
-                }}
+                  top: `${(i * 3) % 100}%`}}
                 animate={{
                   height: [32, 64, 32],
-                  opacity: [0.2, 0.6, 0.2],
-                }}
+                  opacity: [0.2, 0.6, 0.2]}}
                 transition={{
                   duration: 3 + i * 0.2,
                   repeat: Infinity,
@@ -328,11 +327,9 @@ export default function UltraFuturisticBackground2038({
                 key={i}
                 className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
                 style={{
-                  top: `${(i * 7) % 100}%`,
-                }}
+                  top: `${(i * 7) % 100}%`}}
                 animate={{
-                  opacity: [0.3, 0.8, 0.3],
-                }}
+                  opacity: [0.3, 0.8, 0.3]}}
                 transition={{
                   duration: 4 + i * 0.3,
                   repeat: Infinity,
@@ -352,12 +349,10 @@ export default function UltraFuturisticBackground2038({
                 className="absolute w-96 h-96 border border-pink-500/20 rounded-full"
                 style={{
                   left: `${(i * 12) % 100}%`,
-                  top: `${(i * 8) % 100}%`,
-                }}
+                  top: `${(i * 8) % 100}%`}}
                 animate={{
                   scale: [1, 1.5, 1],
-                  opacity: [0.2, 0.6, 0.2],
-                }}
+                  opacity: [0.2, 0.6, 0.2]}}
                 transition={{
                   duration: 6 + i * 0.5,
                   repeat: Infinity,

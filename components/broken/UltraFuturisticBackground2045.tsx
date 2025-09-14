@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -154,8 +155,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             backgroundSize: '50px 50px'
           }}
           animate={{
-            backgroundPosition: ['0px 0px', '50px 50px'],
-          }}
+            backgroundPosition: ['0px 0px', '50px 50px']}}
           transition={{
             duration: 20,
             repeat: Infinity,
@@ -169,8 +169,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           animate={{
             rotate: [0, 360],
             scale: [1, 1.1, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
+            opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 8,
             repeat: Infinity,
@@ -183,8 +182,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           animate={{
             rotate: [360, 0],
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.7, 0.3],
-          }}
+            opacity: [0.3, 0.7, 0.3]}}
           transition={{
             duration: 6,
             repeat: Infinity,
@@ -197,8 +195,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           animate={{
             rotate: [45, 405],
             scale: [1, 1.15, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
+            opacity: [0.3, 0.5, 0.3]}}
           transition={{
             duration: 10,
             repeat: Infinity,
@@ -211,8 +208,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full"
           animate={{
             y: [0, -20, 0],
-            opacity: [0.2, 0.5, 0.2],
-          }}
+            opacity: [0.2, 0.5, 0.2]}}
           transition={{
             duration: 4,
             repeat: Infinity,
@@ -224,8 +220,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 transform rotate-12"
           animate={{
             rotate: [12, 372],
-            scale: [1, 1.1, 1],
-          }}
+            scale: [1, 1.1, 1]}}
           transition={{
             duration: 12,
             repeat: Infinity,
@@ -239,8 +234,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           animate={{
             scale: [1, 1.5, 1],
             opacity: [0.5, 1, 0.5],
-            y: [0, -10, 0],
-          }}
+            y: [0, -10, 0]}}
           transition={{
             duration: 3,
             repeat: Infinity,
@@ -253,8 +247,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
           animate={{
             scale: [1, 1.8, 1],
             opacity: [0.4, 0.9, 0.4],
-            x: [0, 15, 0],
-          }}
+            x: [0, 15, 0]}}
           transition={{
             duration: 4,
             repeat: Infinity,
@@ -283,8 +276,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             backgroundSize: '200% 100%'
           }}
           animate={{
-            backgroundPosition: ['-200% 0', '200% 0'],
-          }}
+            backgroundPosition: ['-200% 0', '200% 0']}}
           transition={{
             duration: 15,
             repeat: Infinity,

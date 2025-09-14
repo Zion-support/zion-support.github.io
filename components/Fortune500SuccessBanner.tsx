@@ -1,70 +1,127 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function Fortune500SuccessBanner() {
+const Fortune500SuccessBanner: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white py-6 px-4 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>
-          <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full translate-x-12 translate-y-12"></div>
-          <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-white rounded-full -translate-x-8 -translate-y-8"></div>
-        </div>
-      </div>
-      
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="bg-yellow-400 text-green-900 px-3 py-1 rounded-full text-sm font-bold animate-pulse">
-                🏆 BREAKTHROUGH SUCCESS
-              </span>
-              <span className="text-sm opacity-90">Fortune 500 Case Study</span>
-            </div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-2">
-              900% ROI in 12 Months
-            </h2>
-            <p className="text-base md:text-lg opacity-90 mb-3">
-              Discover how a Fortune 500 company achieved $2.3B in savings through comprehensive AI transformation
-            </p>
-            <div className="flex flex-wrap gap-4 text-sm">
-              <div className="flex items-center gap-1">
-                <span className="text-yellow-300">💰</span>
-                <span>$2.3B Savings</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="text-yellow-300">📈</span>
-                <span>900% ROI</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="text-yellow-300">⚡</span>
-                <span>75% Error Reduction</span>
-              </div>
-            </div>
+    <div className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          {/* Badge */}
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm">
+            <span className="text-sm font-medium">🏆 SUCCESS STORY</span>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Link 
-              href="/case-studies/ai-2026-fortune-500-transformation-breakthrough"
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
-            >
-              Read Case Study
-            </Link>
-            <Link 
-              href="/contact"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
-            >
-              Get Similar Results
-            </Link>
+          {/* Main Heading */}
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Fortune 500 Manufacturing Giant
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
+              Achieves 340% ROI
+            </span>
+          </h2>
+          
+          {/* Subheading */}
+          <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
+            See how a leading manufacturer reduced costs by <span className="font-bold">45%</span> and increased 
+            efficiency by <span className="font-bold">340%</span> through strategic AI implementation.
+          </p>
+        </div>
+
+        {/* Results Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 text-center">
+            <div className="text-3xl font-bold text-yellow-300 mb-2">340%</div>
+            <div className="text-sm opacity-80">Return on Investment</div>
+          </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 text-center">
+            <div className="text-3xl font-bold text-green-300 mb-2">45%</div>
+            <div className="text-sm opacity-80">Cost Reduction</div>
+          </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 text-center">
+            <div className="text-3xl font-bold text-blue-300 mb-2">78%</div>
+            <div className="text-sm opacity-80">Quality Improvement</div>
+          </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 text-center">
+            <div className="text-3xl font-bold text-purple-300 mb-2">60%</div>
+            <div className="text-sm opacity-80">Downtime Reduction</div>
           </div>
         </div>
+
+        {/* Key Achievements */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
+            <h3 className="text-xl font-bold mb-4">🎯 What We Achieved</h3>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-start">
+                <span className="text-green-400 mr-2">✓</span>
+                <span>Predictive maintenance with 95% accuracy</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-400 mr-2">✓</span>
+                <span>Automated quality control reducing defects by 78%</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-400 mr-2">✓</span>
+                <span>Intelligent supply chain optimization</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-400 mr-2">✓</span>
+                <span>Real-time business intelligence platform</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
+            <h3 className="text-xl font-bold mb-4">💰 Financial Impact</h3>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-start">
+                <span className="text-yellow-400 mr-2">$</span>
+                <span>$1.26B in annual cost savings</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-yellow-400 mr-2">$</span>
+                <span>$340M in revenue increase</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-yellow-400 mr-2">$</span>
+                <span>3.4 months payback period</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-yellow-400 mr-2">$</span>
+                <span>Total investment: $4.8M</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+            <Link
+              href="/case-studies/fortune-500-ai-success-story"
+              className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+            >
+              Read Full Case Study
+            </Link>
+            <Link
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+            >
+              Start Your Success Story
+            </Link>
+          </div>
+          
+          {/* Testimonial */}
+          <blockquote className="max-w-3xl mx-auto text-lg italic opacity-90">
+            "Working with Zion Tech Group transformed our business beyond our expectations. 
+            The 340% ROI we achieved in just 18 months exceeded all projections."
+            <footer className="mt-2 text-sm not-italic opacity-75">
+              — Chief Technology Officer, Fortune 500 Manufacturing Company
+            </footer>
+          </blockquote>
+        </div>
       </div>
-      
-      {/* Floating Elements */}
-      <div className="absolute top-4 right-8 text-3xl opacity-20 animate-bounce">💎</div>
-      <div className="absolute bottom-4 left-8 text-2xl opacity-20 animate-pulse">🚀</div>
-      <div className="absolute top-1/2 right-16 text-xl opacity-20 animate-ping">⭐</div>
     </div>
   );
-}
+};
+
+export default Fortune500SuccessBanner;

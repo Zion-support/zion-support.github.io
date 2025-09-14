@@ -209,7 +209,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
->>>>>>> origin/content/blog-sept12
   },
   {
     id: 'ai-data-analytics-platform',
@@ -274,7 +273,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Integration with job boards',
       'Mobile app access'
     ],
->>>>>>> origin/content/blog-sept12
     popular: true,
     icon: '👥',
     color: 'from-indigo-500 to-purple-600',
@@ -938,7 +936,6 @@ export const getServicesByPriceRange = (min: number, max: number) => {
   });
 };
 
->>>>>>> origin/content/blog-sept12
 export const getPopularServices = () => {
   return realMicroSaasServices.filter(service => service.popular);
 };
@@ -970,4 +967,3 @@ export const serviceCategories = [
   'Education Technology',
   'Enterprise IT'
 ];
->>>>>>> origin/content/blog-sept12

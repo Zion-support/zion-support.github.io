@@ -1,102 +1,103 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
-const QuantumComputingBreakthroughBanner = () => {
+export default function QuantumComputingBreakthroughBanner() {
   return (
-    <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-blue-900 text-white overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-blue-600/20 animate-pulse"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-cyan-900 text-white">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 animate-pulse"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(59,130,246,0.3),transparent_50%)]"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 py-20 sm:py-28">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
           {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-black text-lg font-bold mb-8 animate-bounce">
-            ⚛️ QUANTUM COMPUTING BREAKTHROUGH 2028
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-bold mb-6 animate-pulse">
+            ⚛️ QUANTUM BREAKTHROUGH
           </div>
           
-          {/* Main Headline */}
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Quantum Computing
-            <br />
-            <span className="text-4xl sm:text-5xl lg:text-6xl">Revolution</span>
-          </h1>
+          {/* Main heading */}
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-purple-200 bg-clip-text text-transparent">
+            Quantum Computing Breakthroughs 2025
+          </h2>
           
-          {/* Subheadline */}
-          <p className="text-2xl sm:text-3xl lg:text-4xl mb-12 text-gray-200 max-w-5xl mx-auto leading-relaxed">
-            Experience the future of computing with <span className="text-cyan-400 font-bold">quantum-AI fusion</span> that delivers <span className="text-yellow-400 font-bold">8000% ROI</span> and solves impossible problems
+          {/* Subheading */}
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience the most revolutionary quantum computing breakthroughs in history. 
+            <span className="text-cyan-400 font-bold"> 10,000x faster processing</span>, 
+            <span className="text-purple-400 font-bold"> error-corrected quantum computers</span>, and 
+            <span className="text-yellow-400 font-bold"> quantum supremacy</span> achievements.
           </p>
           
-          {/* Key Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="text-6xl mb-4">⚛️</div>
-              <h3 className="text-2xl font-bold mb-4 text-cyan-400">Quantum-AI Fusion</h3>
-              <p className="text-gray-200 text-lg">Revolutionary integration of quantum computing with artificial intelligence for unprecedented processing power</p>
+          {/* Features grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-cyan-800/30 to-blue-800/30 p-6 rounded-xl border border-cyan-500/20">
+              <div className="text-3xl mb-3">⚛️</div>
+              <h3 className="text-lg font-bold mb-2">Error-Corrected Quantum</h3>
+              <p className="text-sm text-gray-300">99.9% accuracy, 10,000x faster</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="text-6xl mb-4">🚀</div>
-              <h3 className="text-2xl font-bold mb-4 text-blue-400">8000% ROI</h3>
-              <p className="text-gray-200 text-lg">Proven return on investment with quantum computing solutions in enterprise environments</p>
+            <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 p-6 rounded-xl border border-purple-500/20">
+              <div className="text-3xl mb-3">🌐</div>
+              <h3 className="text-lg font-bold mb-2">Quantum Internet</h3>
+              <p className="text-sm text-gray-300">Perfect security, instant communication</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="text-6xl mb-4">🧠</div>
-              <h3 className="text-2xl font-bold mb-4 text-purple-400">Quantum Algorithms</h3>
-              <p className="text-gray-200 text-lg">Advanced quantum algorithms that solve complex optimization problems in seconds</p>
+            <div className="bg-gradient-to-br from-green-800/30 to-emerald-800/30 p-6 rounded-xl border border-green-500/20">
+              <div className="text-3xl mb-3">🧠</div>
+              <h3 className="text-lg font-bold mb-2">Quantum Machine Learning</h3>
+              <p className="text-sm text-gray-300">99.9% accuracy in predictions</p>
             </div>
           </div>
           
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <Link
-              to="/quantum-computing-implementation-guide"
-              className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-10 py-5 rounded-full font-bold text-xl hover:from-cyan-300 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          {/* CTA buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/quantum-computing-breakthroughs-2025"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              Get Implementation Guide
+              Explore Quantum Breakthroughs
             </Link>
-            <Link
-              to="/quantum-computing-roi-calculator"
-              className="bg-white/20 backdrop-blur-sm text-white px-10 py-5 rounded-full font-bold text-xl border border-white/30 hover:bg-white/30 transition-all duration-300 transform hover:scale-105"
+            <Link 
+              href="/case-studies/quantum-computing-15000-roi-success"
+              className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 shadow-lg"
             >
-              Calculate Quantum ROI
+              View Success Stories
             </Link>
-            <Link
-              to="/quantum-computing-demo"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-5 rounded-full font-bold text-xl hover:from-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105"
+            <Link 
+              href="/resources/quantum-computing-implementation-guide"
+              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg"
             >
-              Watch Demo
+              Implementation Guide
             </Link>
           </div>
           
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400">8000%</div>
-              <div className="text-lg text-gray-300">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400">1000x</div>
-              <div className="text-lg text-gray-300">Faster Processing</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400">99.9%</div>
-              <div className="text-lg text-gray-300">Accuracy Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400">24/7</div>
-              <div className="text-lg text-gray-300">Quantum Support</div>
-            </div>
+          {/* Additional content links */}
+          <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
+            <Link 
+              href="/ai-2025-ultimate-breakthrough-revolution"
+              className="text-red-400 hover:text-red-300 transition-colors"
+            >
+              🚀 AI 2025 Breakthrough
+            </Link>
+            <Link 
+              href="/ai-2026-2030-ultimate-content-revolution"
+              className="text-purple-400 hover:text-purple-300 transition-colors"
+            >
+              🔮 Future Predictions
+            </Link>
+            <Link 
+              href="/case-studies"
+              className="text-green-400 hover:text-green-300 transition-colors"
+            >
+              🏆 Case Studies
+            </Link>
+            <Link 
+              href="/webinars/quantum-computing-breakthroughs-2025"
+              className="text-yellow-400 hover:text-yellow-300 transition-colors"
+            >
+              🔥 Quantum Webinars
+            </Link>
           </div>
         </div>
       </div>
-      
-      {/* Floating Quantum Elements */}
-      <div className="absolute top-20 left-10 w-24 h-24 bg-cyan-400/20 rounded-full animate-pulse"></div>
-      <div className="absolute top-40 right-20 w-20 h-20 bg-blue-400/20 rounded-full animate-pulse delay-1000"></div>
-      <div className="absolute bottom-20 left-20 w-16 h-16 bg-purple-400/20 rounded-full animate-pulse delay-2000"></div>
-      <div className="absolute bottom-40 right-10 w-12 h-12 bg-pink-400/20 rounded-full animate-pulse delay-3000"></div>
     </div>
   );
-};
-
-export default QuantumComputingBreakthroughBanner;
+}

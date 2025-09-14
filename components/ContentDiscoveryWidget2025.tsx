@@ -1,203 +1,281 @@
+"use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { Search, Filter, BookOpen, Target, Users, TrendingUp, ArrowRight, Star, Zap, Clock } from 'lucide-react';
 
-export default function ContentDiscoveryWidget2025() {
+interface ContentItem {
+  id: string;
+  title: string;
+  type: 'blog' | 'case-study' | 'resource' | 'webinar';
+  category: string;
+  readTime: string;
+  featured: boolean;
+  url: string;
+  excerpt: string;
+  tags: string[];
+}
+
+const ContentDiscoveryWidget2025: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedType, setSelectedType] = useState('all');
 
-  const contentItems = [
+  const contentItems: ContentItem[] = [
     {
-      id: 1,
-      title: "AI 2025 Breakthrough Content Showcase",
-      description: "Interactive demos, case studies, and revolutionary technologies",
-      category: "showcase",
-      type: "Interactive Demo",
-      link: "/ai-2025-breakthrough-content-showcase",
-      badge: "NEW",
-      color: "from-red-500 to-pink-500",
-      icon: "🚀",
-      rating: 5,
-      views: "12.5K"
+      id: '1',
+      title: 'Generative AI 2025: Business Transformation Revolution',
+      type: 'blog',
+      category: 'AI Innovation',
+      readTime: '12 min read',
+      featured: true,
+      url: '/blog/ai-2025-generative-ai-business-transformation',
+      excerpt: 'Explore how generative AI is revolutionizing business operations in 2025, from content creation to customer service automation.',
+      tags: ['Generative AI', 'Business Transformation', 'AI 2025']
     },
     {
-      id: 2,
-      title: "15,000% ROI Finance Transformation",
-      description: "Revolutionary success story with detailed metrics and implementation",
-      category: "case-study",
-      type: "Case Study",
-      link: "/case-studies/ai-2025-global-finance-transformation-breakthrough",
-      badge: "BREAKTHROUGH",
-      color: "from-green-500 to-blue-500",
-      icon: "💰",
-      rating: 5,
-      views: "8.7K"
+      id: '2',
+      title: 'Quantum Computing 2025: Revolutionary Business Applications',
+      type: 'blog',
+      category: 'Quantum Technology',
+      readTime: '15 min read',
+      featured: true,
+      url: '/blog/quantum-computing-2025-business-applications',
+      excerpt: 'Discover how quantum computing is revolutionizing business operations in 2025, from optimization problems to advanced cryptography.',
+      tags: ['Quantum Computing', 'Business Applications', 'Optimization']
     },
     {
-      id: 3,
-      title: "AI 2026 Future Predictions Interactive",
-      description: "Explore revolutionary AI breakthroughs with interactive timeline",
-      category: "predictions",
-      type: "Interactive Timeline",
-      link: "/ai-2026-future-predictions-interactive",
-      badge: "FUTURE",
-      color: "from-purple-500 to-cyan-500",
-      icon: "🔮",
-      rating: 5,
-      views: "15.2K"
+      id: '3',
+      title: 'AI Automation in Manufacturing: 500% Productivity Increase',
+      type: 'case-study',
+      category: 'Manufacturing',
+      readTime: '20 min read',
+      featured: true,
+      url: '/case-studies/ai-automation-manufacturing-success-2025',
+      excerpt: 'How a leading manufacturing company achieved 500% productivity increase through comprehensive AI automation.',
+      tags: ['AI Automation', 'Manufacturing', 'Productivity']
     },
     {
-      id: 4,
-      title: "Quantum Computing Solutions Showcase",
-      description: "Interactive demos and revolutionary quantum AI technologies",
-      category: "quantum",
-      type: "Technology Showcase",
-      link: "/quantum-computing-solutions-showcase",
-      badge: "REVOLUTIONARY",
-      color: "from-indigo-500 to-purple-500",
-      icon: "⚛️",
-      rating: 5,
-      views: "9.8K"
+      id: '4',
+      title: 'AI Implementation Checklist 2025: Complete Guide',
+      type: 'resource',
+      category: 'Implementation Guide',
+      readTime: '25 min read',
+      featured: true,
+      url: '/resources/ai-implementation-checklist-2025',
+      excerpt: 'Comprehensive checklist for successful AI implementation in 2025, covering strategy, technology, and change management.',
+      tags: ['AI Implementation', 'Checklist', 'Strategy']
     },
     {
-      id: 5,
-      title: "AI 2025 Neural Interface Revolution",
-      description: "Breakthrough neural interface technology achieving 99.7% accuracy",
-      category: "technology",
-      type: "Technology Guide",
-      link: "/blog/ai-2025-neural-interface-revolution",
-      badge: "BREAKTHROUGH",
-      color: "from-orange-500 to-red-500",
-      icon: "🧠",
-      rating: 4,
-      views: "6.3K"
+      id: '5',
+      title: 'Enterprise AI Transformation: A $50M Success Story',
+      type: 'case-study',
+      category: 'Enterprise',
+      readTime: '18 min read',
+      featured: true,
+      url: '/case-studies/enterprise-ai-transformation-success-story',
+      excerpt: 'Discover how a Fortune 500 company achieved unprecedented success through comprehensive AI transformation.',
+      tags: ['AI Transformation', 'Enterprise Success', 'ROI']
     },
     {
-      id: 6,
-      title: "Enterprise Automation Mastery 2025",
-      description: "Complete guide to implementing AI automation in enterprise environments",
-      category: "guide",
-      type: "Implementation Guide",
-      link: "/resources/enterprise-automation-mastery-2025",
-      badge: "ESSENTIAL",
-      color: "from-teal-500 to-green-500",
-      icon: "🤖",
-      rating: 5,
-      views: "11.4K"
+      id: '6',
+      title: 'AI 2025: Autonomous Business Operations Revolution',
+      type: 'blog',
+      category: 'AI Innovation',
+      readTime: '8 min read',
+      featured: false,
+      url: '/blog/ai-2025-autonomous-business-operations',
+      excerpt: 'Discover how AI-powered autonomous operations are transforming businesses in 2025.',
+      tags: ['AI 2025', 'Autonomous Operations', 'Business Automation']
     }
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length },
-    { id: 'showcase', name: 'Showcases', count: contentItems.filter(item => item.category === 'showcase').length },
-    { id: 'case-study', name: 'Case Studies', count: contentItems.filter(item => item.category === 'case-study').length },
-    { id: 'predictions', name: 'Predictions', count: contentItems.filter(item => item.category === 'predictions').length },
-    { id: 'quantum', name: 'Quantum', count: contentItems.filter(item => item.category === 'quantum').length },
-    { id: 'technology', name: 'Technology', count: contentItems.filter(item => item.category === 'technology').length },
-    { id: 'guide', name: 'Guides', count: contentItems.filter(item => item.category === 'guide').length }
-  ];
+  const categories = ['all', 'AI Innovation', 'Quantum Technology', 'Manufacturing', 'Enterprise', 'Implementation Guide'];
+  const types = ['all', 'blog', 'case-study', 'resource', 'webinar'];
 
   const filteredContent = contentItems.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         item.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
+    const matchesType = selectedType === 'all' || item.type === selectedType;
+    
+    return matchesSearch && matchesCategory && matchesType;
   });
 
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog': return <BookOpen className="w-4 h-4" />;
+      case 'case-study': return <Target className="w-4 h-4" />;
+      case 'resource': return <Users className="w-4 h-4" />;
+      case 'webinar': return <TrendingUp className="w-4 h-4" />;
+      default: return <BookOpen className="w-4 h-4" />;
+    }
+  };
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog': return 'bg-blue-100 text-blue-800 border-blue-200';
+      case 'case-study': return 'bg-green-100 text-green-800 border-green-200';
+      case 'resource': return 'bg-purple-100 text-purple-800 border-purple-200';
+      case 'webinar': return 'bg-orange-100 text-orange-800 border-orange-200';
+      default: return 'bg-gray-100 text-gray-800 border-gray-200';
+    }
+  };
+
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-8">
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Discover New Content</h2>
-        <p className="text-gray-600 mb-6">Explore our latest AI breakthroughs, case studies, and revolutionary technologies</p>
-        
-        {/* Search Bar */}
-        <div className="relative mb-6">
-          <input
-            type="text"
-            placeholder="Search content..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-          <svg className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
+    <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-6">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">Discover Latest Content</h3>
+          <p className="text-gray-600">Explore our comprehensive library of AI insights, case studies, and implementation guides</p>
         </div>
-        
-        {/* Category Filter */}
-        <div className="flex flex-wrap gap-2">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                selectedCategory === category.id
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              {category.name} ({category.count})
-            </button>
-          ))}
+        <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full">
+          <Star className="w-4 h-4 fill-current" />
+          <span className="text-sm font-semibold">NEW 2025</span>
         </div>
       </div>
-      
+
+      {/* Search and Filters */}
+      <div className="mb-6 space-y-4">
+        {/* Search Bar */}
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          <input
+            type="text"
+            placeholder="Search content, tags, or categories..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+        </div>
+
+        {/* Filters */}
+        <div className="flex flex-wrap gap-3">
+          {/* Category Filter */}
+          <div className="flex items-center space-x-2">
+            <Filter className="w-4 h-4 text-gray-500" />
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              {categories.map(category => (
+                <option key={category} value={category}>
+                  {category === 'all' ? 'All Categories' : category}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Type Filter */}
+          <select
+            value={selectedType}
+            onChange={(e) => setSelectedType(e.target.value)}
+            className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
+            {types.map(type => (
+              <option key={type} value={type}>
+                {type === 'all' ? 'All Types' : type.charAt(0).toUpperCase() + type.slice(1).replace('-', ' ')}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+
       {/* Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredContent.map((item) => (
-          <div key={item.id} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-            <div className="flex items-start justify-between mb-4">
-              <div className="text-3xl">{item.icon}</div>
-              <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${item.color} text-white`}>
-                {item.badge}
-              </span>
-            </div>
-            
-            <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
-              {item.title}
-            </h3>
-            
-            <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-              {item.description}
-            </p>
-            
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded">
-                {item.type}
-              </span>
-              <div className="flex items-center space-x-2">
-                <div className="flex items-center">
-                  {[...Array(5)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className={`w-4 h-4 ${i < item.rating ? 'text-yellow-400' : 'text-gray-300'}`}
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <span className="text-xs text-gray-500">{item.views} views</span>
+          <Link
+            key={item.id}
+            href={item.url}
+            className="group bg-gray-50 hover:bg-white border border-gray-200 hover:border-blue-300 rounded-xl p-6 transition-all duration-300 hover:shadow-lg"
+          >
+            {/* Header */}
+            <div className="flex items-start justify-between mb-3">
+              <div className={`flex items-center space-x-2 px-3 py-1 rounded-full border text-xs font-medium ${getTypeColor(item.type)}`}>
+                {getTypeIcon(item.type)}
+                <span>{item.type.replace('-', ' ')}</span>
               </div>
+              {item.featured && (
+                <div className="flex items-center space-x-1 text-yellow-600">
+                  <Star className="w-4 h-4 fill-current" />
+                </div>
+              )}
             </div>
-            
-            <Link
-              href={item.link}
-              className="block w-full text-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
-            >
-              Explore Content
-            </Link>
-          </div>
+
+            {/* Title */}
+            <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+              {item.title}
+            </h4>
+
+            {/* Excerpt */}
+            <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+              {item.excerpt}
+            </p>
+
+            {/* Meta Info */}
+            <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
+              <span className="flex items-center space-x-1">
+                <Clock className="w-3 h-3" />
+                <span>{item.readTime}</span>
+              </span>
+              <span>{item.category}</span>
+            </div>
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-1 mb-4">
+              {item.tags.slice(0, 3).map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full"
+                >
+                  {tag}
+                </span>
+              ))}
+              {item.tags.length > 3 && (
+                <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                  +{item.tags.length - 3} more
+                </span>
+              )}
+            </div>
+
+            {/* CTA */}
+            <div className="flex items-center justify-between">
+              <span className="text-blue-600 text-sm font-medium group-hover:text-blue-700">
+                Read More
+              </span>
+              <ArrowRight className="w-4 h-4 text-blue-600 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </Link>
         ))}
       </div>
-      
+
+      {/* No Results */}
       {filteredContent.length === 0 && (
         <div className="text-center py-12">
-          <div className="text-6xl mb-4">🔍</div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">No content found</h3>
-          <p className="text-gray-600">Try adjusting your search or filter criteria</p>
+          <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Search className="w-8 h-8 text-gray-400" />
+          </div>
+          <h4 className="text-lg font-semibold text-gray-900 mb-2">No content found</h4>
+          <p className="text-gray-600">Try adjusting your search terms or filters</p>
+        </div>
+      )}
+
+      {/* View All CTA */}
+      {filteredContent.length > 0 && (
+        <div className="mt-8 text-center">
+          <Link
+            href="/content-library"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+          >
+            <span>View All Content</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       )}
     </div>
   );
-}
+};
+
+export default ContentDiscoveryWidget2025;
