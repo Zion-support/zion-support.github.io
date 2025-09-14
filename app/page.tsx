@@ -281,6 +281,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2027 Ultimate Breakthrough Banner - NEWEST FEATURED */}
+        <AI2027UltimateBreakthroughBanner />
+        
+        {/* Revolutionary Tech Trends 2027 Banner - NEW FEATURED */}
+        <RevolutionaryTechTrends2027Banner />
+        
+        {/* New Content 2027 Showcase - LATEST FEATURED */}
+        <NewContent2027Showcase />
+        
         {/* AI 2025-2026 Ultimate Business Intelligence Revolution Banner - NEW ULTIMATE BREAKTHROUGH */}
         <AI2025_2026UltimateBusinessIntelligenceRevolutionBanner />
         
@@ -298,6 +307,12 @@ export default function HomePage() {
         
         {/* Content Navigation 2025 - IMPROVED DISCOVERY */}
         <ContentNavigation2025 />
+        
+        {/* AI 2025-2026 Ultimate Business Intelligence Revolution Banner - NEW ULTIMATE BREAKTHROUGH */}
+        <AI2025_2026UltimateBusinessIntelligenceRevolutionBanner />
+        
+        {/* AI 2025-2026 Ultimate Business Intelligence Showcase - NEW FEATURED */}
+        <AI2025_2026UltimateBusinessIntelligenceShowcase />
         
         {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER - LATEST FEATURED */}
         <NewContent2025UltimateBreakthroughBanner />
@@ -341,9 +356,6 @@ export default function HomePage() {
         {/* Ultimate AI Revolution 2025 Banner - NEW ULTIMATE FEATURED */}
         <UltimateAIRevolution2025Banner />
         
-        {/* Revolutionary Content 2025 Ultimate Showcase - NEW ULTIMATE FEATURED */}
-        <RevolutionaryContent2025UltimateShowcase />
-        
         {/* Ultimate Content 2026 Breakthrough Banner - FEATURED */}
         <UltimateContent2026BreakthroughBanner />
         
@@ -358,9 +370,6 @@ export default function HomePage() {
         
         {/* Ultimate Business Transformation 2025-2026 Banner - NEW ULTIMATE BREAKTHROUGH */}
         <UltimateBusinessTransformation2025Banner />
-        
-        {/* Revolutionary Content 2025 Showcase - NEW FEATURED */}
-        <RevolutionaryContent2025Showcase />
         
         {/* New Content 2025 Advanced AI Automation Banner - LATEST FEATURED */}
         <NewContent2025AdvancedAIAutomationBanner />
