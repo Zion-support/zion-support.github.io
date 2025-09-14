@@ -192,6 +192,11 @@ import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI202
 import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
 
+// Import new content showcase components
+import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
+import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+
 // Import new 2026 AI breakthrough promotional components
 import AI2026RevolutionaryBreakthroughUltimatePromotionBanner from '../components/AI2026RevolutionaryBreakthroughUltimatePromotionBanner';
 import AI2026GlobalTransformation800ROISuccessBanner from '../components/AI2026GlobalTransformation800ROISuccessBanner';
@@ -408,6 +413,15 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER - NEWEST FEATURED */}
         <NewContent2025UltimateBreakthroughPromotionBanner />
+        
+        {/* NEW CONTENT 2025 ULTIMATE SHOWCASE BANNER - NEWEST FEATURED */}
+        <NewContent2025UltimateShowcaseBanner />
+        
+        {/* REVOLUTIONARY CONTENT 2025 SHOWCASE - NEWEST FEATURED */}
+        <RevolutionaryContent2025Showcase />
+        
+        {/* ULTIMATE CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED */}
+        <UltimateContentPromotionBanner2025 />
         
         {/* AI 2025-2026 ULTIMATE TRANSFORMATION 50,000% ROI PROMOTION BANNER - LATEST FEATURED */}
         <AI2025_2026UltimateTransformation50000ROIPromotionBanner />
