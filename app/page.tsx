@@ -318,6 +318,10 @@ import InteractiveROICalculator from '../components/InteractiveROICalculator';
 import TestimonialShowcase from '../components/TestimonialShowcase';
 import NewsletterSignup2025 from '../components/NewsletterSignup2025';
 
+// Import new AI 2025 Trends promotional components
+import AI2025TrendsRevolutionaryBanner from '../components/AI2025TrendsRevolutionaryBanner';
+import AI2025TrendsShowcase from '../components/AI2025TrendsShowcase';
+
 // Import new Advanced Neural Architectures 2026 components
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
@@ -353,6 +357,7 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+<<<<<<< HEAD
         {/* NEW CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED */}
         <NewContentPromotionBanner2025 />
         
@@ -486,6 +491,12 @@ export default function HomePage() {
         
         {/* AI 2025 ULTIMATE REVOLUTION BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
         <AI2025UltimateRevolutionBanner />
+        
+        {/* AI 2025 TRENDS REVOLUTIONARY BANNER - NEWEST FEATURED */}
+        <AI2025TrendsRevolutionaryBanner />
+        
+        {/* NEW CONTENT NAVIGATION BANNER - FEATURED */}
+        <NewContentNavigationBanner />
         
         {/* AI CONTENT REVOLUTION 2025 BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
         <AIContentRevolution2025Banner />
@@ -708,6 +719,7 @@ export default function HomePage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* NEW CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
         <NewContentShowcase2025 />
         
@@ -731,6 +743,9 @@ export default function HomePage() {
 
         {/* New Content Discovery Widget - NEWEST FEATURED */}
         <NewContentDiscoveryWidget />
+        
+        {/* AI 2025 Trends Showcase - NEWEST FEATURED */}
+        <AI2025TrendsShowcase />
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
