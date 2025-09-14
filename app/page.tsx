@@ -1,10 +1,14 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
 import ErrorBoundary from '../components/ErrorBoundary';
-import SEO from '../components/SEO';
+import EnhancedSEO from '../components/EnhancedSEO';
 import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import EnhancedAnalytics from '../components/EnhancedAnalytics';
+import MobileOptimizedNav from '../components/MobileOptimizedNav';
+import InteractiveContentWidget from '../components/InteractiveContentWidget';
 
-// Import new advanced AI components
+// Core AI components
 import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
 import RealTimePerformanceDashboard from '../components/RealTimePerformanceDashboard';
 import IntelligentSearchEngine from '../components/IntelligentSearchEngine';
@@ -16,292 +20,290 @@ import AutomationWorkflowEngine from '../components/AutomationWorkflowEngine';
 import EnterpriseDataManagement from '../components/EnterpriseDataManagement';
 import APIManagementSystem from '../components/APIManagementSystem';
 
-// Lazy load heavy components
+// Lazy load heavy components for better performance
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
 const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
-// Import key promotional components
-import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
-import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
-import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
-import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
-import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
-import NewContent2026Showcase from '../components/NewContent2026Showcase';
-import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
-import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
-import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
-import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
-
-// Import new 2026 promotional components
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
-import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-
-// Import new 2025 revolutionary content components
-import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-
-// Import additional promotional components
-import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
-import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
-import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
-
-// Import new 2025 breakthrough promotional components
-import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI2025BreakthroughPromotionBanner';
-import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
-import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
-
-// Import new ultimate AI transformation promotional components
-import UltimateAITransformationBanner2025 from '../components/UltimateAITransformationBanner2025';
-
-// Import new 2025 autonomous systems promotional components
-import AutonomousSystemsRevolutionBanner2025 from '../components/AutonomousSystemsRevolutionBanner2025';
-
-// Import new ultimate content showcase banners
+// Key promotional components - organized by priority
+import UltimateContent2025ShowcaseBanner from '../components/UltimateContent2025ShowcaseBanner';
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
-import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
-import AIImplementationGuideBanner from '../components/AIImplementationGuideBanner';
-
-// Import new enhanced components
-import AITrends2025_2030FuturePredictionsBanner from '../components/AITrends2025_2030FuturePredictionsBanner';
-import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';
-import InteractiveAIAssistant from '../components/InteractiveAIAssistant';
-
-// Import new 2025 promotional components
-import UltimateContent2025Banner from '../components/UltimateContent2025Banner';
-import RevolutionaryAI2025Banner from '../components/RevolutionaryAI2025Banner';
-import AITransformation2025SuccessBanner from '../components/AITransformation2025SuccessBanner';
-
-// Import new AI 2026 promotional components
-import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
-import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
-import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
-import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
-import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
-import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
-
-// Import new 2026 ultimate promotional components
-import AI2026QuantumRevolutionUltimateBanner from '../components/AI2026QuantumRevolutionUltimateBanner';
-import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
-import RevolutionaryAIContent2026Banner from '../components/RevolutionaryAIContent2026Banner';
-
-// Import new 2025 advanced automation promotional components
-import NewContent2025AdvancedAutomationBanner from '../components/NewContent2025AdvancedAutomationBanner';
-import AdvancedAutomationContentShowcase2025 from '../components/AdvancedAutomationContentShowcase2025';
-
-// Import new 2025 analytics promotional components
+import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
+import QuantumAIRevolutionBanner2025 from '../components/QuantumAIRevolutionBanner2025';
 import NewContent2025AnalyticsRevolutionBanner from '../components/NewContent2025AnalyticsRevolutionBanner';
 import AnalyticsContentShowcase2025 from '../components/AnalyticsContentShowcase2025';
-
-// Import new ultimate success components
-import UltimateSuccessShowcase2025 from '../components/UltimateSuccessShowcase2025';
-import NewContent2025UltimateSuccessBanner from '../components/NewContent2025UltimateSuccessBanner';
-
-// Import new content showcase components
-import NewContent2025ShowcaseBanner from '../components/NewContent2025ShowcaseBanner';
-
-// Import new 2026 content promotion components
-import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
-import LatestContentPromotionBanner2026 from '../components/LatestContentPromotionBanner2026';
-
-// Import comprehensive improvements showcase
-import ComprehensiveImprovementsShowcase2026 from '../components/ComprehensiveImprovementsShowcase2026';
+import NeuralInterfaceRevolution2025Banner from '../components/NeuralInterfaceRevolution2025Banner';
+import NeuralInterfaceContentShowcase2025 from '../components/NeuralInterfaceContentShowcase2025';
 
 export const metadata = {
-  title: 'Zion Tech Group - AI & Technology Solutions',
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords: ['AI automation', 'cloud computing', 'micro SaaS', 'technology consulting', 'enterprise solutions', 'digital transformation'],
+  title: 'Zion Tech Group - AI & Technology Solutions | 500%+ ROI Guaranteed',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services with proven 500%+ ROI results.',
+  keywords: ['AI automation', 'cloud computing', 'micro SaaS', 'technology consulting', 'enterprise solutions', 'digital transformation', '500% ROI', 'AI implementation'],
+  openGraph: {
+    title: 'Zion Tech Group - AI & Technology Solutions',
+    description: 'Transform your business with cutting-edge AI solutions. Proven 500%+ ROI results.',
+    type: 'website',
+    url: 'https://zion.app',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - AI Solutions',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - AI & Technology Solutions',
+    description: 'Transform your business with cutting-edge AI solutions. Proven 500%+ ROI results.',
+    images: ['/og-image.jpg'],
+  },
 };
 
 export default function HomePage() {
+  // Sample content data for the interactive widget
+  const sampleContent = [
+    {
+      id: 'ai-2025-enterprise-revolution',
+      title: 'AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
+      type: 'blog' as const,
+      url: '/blog/ai-2025-enterprise-ai-revolution-ultimate-breakthrough',
+      description: 'Discover how Fortune 500 companies are achieving 500%+ ROI with advanced AI automation and machine learning solutions.',
+      tags: ['AI', 'Enterprise', 'ROI', 'Digital Transformation'],
+      readingTime: '18 min read',
+      featured: true,
+      metrics: {
+        roi: '500%',
+        savings: '$2.8B',
+        satisfaction: '98%'
+      }
+    },
+    {
+      id: 'fortune-500-ai-transformation',
+      title: 'Fortune 500 AI Transformation: $2.8B Annual Savings in 18 Months',
+      type: 'case-study' as const,
+      url: '/case-studies/fortune-500-ai-transformation-ultimate-success-2025',
+      description: 'Real-world case study showing how a Fortune 500 manufacturing company achieved 567% ROI through comprehensive AI implementation.',
+      tags: ['Case Study', 'Fortune 500', 'AI Transformation', 'ROI'],
+      readingTime: '22 min read',
+      featured: true,
+      metrics: {
+        roi: '567%',
+        savings: '$2.8B',
+        satisfaction: '99.2%'
+      }
+    },
+    {
+      id: 'quantum-computing-business-revolution',
+      title: 'AI 2025: The Quantum Computing Business Revolution - $100B Market Transformation',
+      type: 'blog' as const,
+      url: '/blog/ai-2025-quantum-computing-business-revolution',
+      description: 'Explore the quantum computing revolution and its potential to transform business operations with 1,200% ROI opportunities.',
+      tags: ['Quantum AI', 'Quantum Computing', 'Business Revolution', 'ROI'],
+      readingTime: '20 min read',
+      featured: true,
+      metrics: {
+        roi: '1,200%',
+        market: '$100B',
+        accuracy: '99.97%'
+      }
+    }
+  ];
+
   return (
     <ErrorBoundary>
-      <SEO
-        title="Zion Tech Group - AI & Technology Solutions"
-        description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
-        keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
-        url="/"
+      <EnhancedSEO
+        title="Zion Tech Group - AI & Technology Solutions | 500%+ ROI Guaranteed"
+        description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services with proven 500%+ ROI results."
+        keywords={['AI automation', 'cloud computing', 'micro SaaS', 'technology consulting', 'enterprise solutions', 'digital transformation', '500% ROI', 'AI implementation']}
+        canonicalUrl="https://zion.app"
+        ogImage="/og-image.jpg"
       />
       
-      <div className='min-h-screen bg-white'>
-        {/* Comprehensive Improvements Showcase 2026 - NEWEST */}
-        <ComprehensiveImprovementsShowcase2026 />
-        
-        {/* Latest Content Promotion Banner 2026 - NEWEST */}
-        <LatestContentPromotionBanner2026 />
-        
-        {/* Ultimate Content Showcase 2026 - FEATURED */}
-        <UltimateContentShowcase2026 />
-        
-        {/* Revolutionary Content Showcase 2025 - FEATURED */}
-        <RevolutionaryContentShowcase2025 />
-        
-        {/* New Content 2025 Ultimate Banner - NEW */}
-        <NewContent2025UltimateShowcaseBanner />
-        
-        {/* Quantum AI 2026 Breakthrough Banner */}
-        <QuantumAI2026BreakthroughBanner />
-        
-        {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
-        
-        {/* Revolutionary Content 2025 Banner - NEW CONTENT */}
-        <RevolutionaryContent2025Banner />
-        
+      <EnhancedAnalytics />
+      <PerformanceMonitor />
+      <MobileOptimizedNav />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 pt-16">
+        {/* Hero Section with Ultimate Content Showcase */}
+        <section className="relative overflow-hidden">
+          <UltimateContent2025ShowcaseBanner />
+        </section>
+
+        {/* Neural Interface Revolution Banner */}
+        <section className="py-16 bg-gradient-to-r from-purple-50 to-indigo-50">
+          <NeuralInterfaceRevolution2025Banner />
+        </section>
+
+        {/* New Content 2025 Ultimate Showcase */}
+        <section className="py-16 bg-white">
+          <NewContent2025UltimateShowcaseBanner />
+        </section>
+
+        {/* Revolutionary Content 2025 Banner */}
+        <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
+          <RevolutionaryContent2025Banner />
+        </section>
+
+        {/* Ultimate Content Showcase 2025 */}
+        <section className="py-20 bg-white">
+          <UltimateContentShowcase2025 />
+        </section>
+
+        {/* New Content 2025 Ultimate Banner */}
+        <section className="py-16 bg-gradient-to-r from-purple-50 to-pink-50">
+          <NewContent2025UltimateBanner />
+        </section>
+
         {/* AI 2025 Breakthrough Banner */}
-        <AI2025BreakthroughBanner />
-        
-        {/* Enhanced Content Promotion Banner */}
-        <EnhancedContentPromotionBanner />
-        
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-                <span className="text-sm font-medium">🚀 AI & TECHNOLOGY SOLUTIONS</span>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Transform Your Business with AI
-              </h1>
-              <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Cutting-edge AI, cloud infrastructure, and micro SaaS solutions. 
-                Expert consulting and implementation services for enterprise success.
+        <section className="py-16 bg-white">
+          <AI2025BreakthroughBanner />
+        </section>
+
+        {/* Quantum AI Revolution Banner */}
+        <section className="py-16 bg-gradient-to-r from-cyan-50 to-blue-50">
+          <QuantumAIRevolutionBanner2025 />
+        </section>
+
+        {/* Analytics Revolution Banner */}
+        <section className="py-16 bg-white">
+          <NewContent2025AnalyticsRevolutionBanner />
+        </section>
+
+        {/* Analytics Content Showcase */}
+        <section className="py-20 bg-gradient-to-r from-green-50 to-emerald-50">
+          <AnalyticsContentShowcase2025 />
+        </section>
+
+        {/* Neural Interface Content Showcase */}
+        <section className="py-20 bg-white">
+          <NeuralInterfaceContentShowcase2025 />
+        </section>
+
+        {/* Core Services Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Comprehensive AI Solutions
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                From advanced analytics to autonomous systems, we provide end-to-end AI solutions 
+                that deliver measurable results and competitive advantages.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/services"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Explore Services
-                </Link>
-                <Link
-                  href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-                >
-                  Get Started
-                </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Advanced AI Assistant */}
+              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <AdvancedAIAssistant />
+              </div>
+
+              {/* Business Intelligence Dashboard */}
+              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <BusinessIntelligenceDashboard />
+              </div>
+
+              {/* Advanced Analytics Engine */}
+              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <AdvancedAnalyticsEngine />
+              </div>
+
+              {/* Automation Workflow Engine */}
+              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <AutomationWorkflowEngine />
+              </div>
+
+              {/* Enterprise Data Management */}
+              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <EnterpriseDataManagement />
+              </div>
+
+              {/* API Management System */}
+              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <APIManagementSystem />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Key Statistics */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-purple-600 mb-2">500+</div>
-                <div className="text-gray-600">Projects Delivered</div>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
-                <div className="text-gray-600">Client Satisfaction</div>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-green-600 mb-2">340%</div>
-                <div className="text-gray-600">Average ROI Increase</div>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
-                <div className="text-gray-600">Support Available</div>
-              </div>
+        {/* ROI Calculator Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">
+                Calculate Your AI ROI Potential
+              </h2>
+              <p className="text-xl opacity-90">
+                See how much your business could save and earn with our AI solutions
+              </p>
             </div>
+            
+            <Suspense fallback={<LoadingSpinner />}>
+              <ROICalculator />
+            </Suspense>
           </div>
         </section>
 
-        {/* Services Section */}
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">AI Automation</h3>
-                <p className="text-gray-600 mb-4">
-                  Intelligent automation solutions that streamline operations and boost productivity across your organization.
-                </p>
-                <Link href="/services/ai-automation" className="text-purple-600 font-semibold hover:text-purple-800">
-                  Learn More →
-                </Link>
-              </div>
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-4xl mb-4">☁️</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Cloud Infrastructure</h3>
-                <p className="text-gray-600 mb-4">
-                  Scalable, secure cloud solutions designed to support your business growth and digital transformation.
-                </p>
-                <Link href="/services/cloud-infrastructure" className="text-purple-600 font-semibold hover:text-purple-800">
-                  Learn More →
-                </Link>
-              </div>
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-4xl mb-4">💼</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Micro SaaS</h3>
-                <p className="text-gray-600 mb-4">
-                  Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.
-                </p>
-                <Link href="/services/micro-saas" className="text-purple-600 font-semibold hover:text-purple-800">
-                  Learn More →
-                </Link>
-              </div>
-            </div>
+        {/* Performance Metrics Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Suspense fallback={<LoadingSpinner />}>
+              <PerformanceMetrics />
+            </Suspense>
           </div>
         </section>
 
-        {/* Content Promotion Banners */}
-        <RevolutionaryContent2026Banner />
-        <NewContent2025PromotionBanner />
-        <LatestContentShowcase2025 />
-        <EnhancedContentPromotionBanner2026 />
-        <ComprehensiveContentShowcase2026 />
-        <NewContentPromotionBanner />
-        <ComprehensiveSolutionsBanner2025 />
-        <NewServicesShowcase2025 />
-        <NewContent2026Showcase />
-        <InteractiveContentDiscoveryWidget />
+        {/* Technology Stack Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Suspense fallback={<LoadingSpinner />}>
+              <TechnologyStack />
+            </Suspense>
+          </div>
+        </section>
 
-        {/* Advanced AI Components */}
-        <AdvancedContentRecommendationEngine />
-        <RealTimePerformanceDashboard />
-        <IntelligentSearchEngine />
-        <AdvancedAIAssistant />
-        <BusinessIntelligenceDashboard />
-        <AdvancedSecurityMonitor />
-        <AdvancedAnalyticsEngine />
-        <AutomationWorkflowEngine />
-        <EnterpriseDataManagement />
-        <APIManagementSystem />
+        {/* Interactive Content Discovery Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <InteractiveContentWidget contentItems={sampleContent} maxItems={6} />
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl mb-8 opacity-90">
+              Join hundreds of companies achieving 500%+ ROI with our proven AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                href="/case-studies"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+              >
+                View Success Stories
+              </Link>
+            </div>
+          </div>
+        </section>
 
         {/* Structured Data */}
-        <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
-          <StructuredData 
-            type="Organization" 
-            data={{
-              name: "Zion Tech Group",
-              description: "Transforming businesses through cutting-edge technology solutions",
-              url: "https://zion.app",
-              logo: "https://zion.app/images/zion-tech-group-logo.png",
-              sameAs: [
-                "https://twitter.com/ZionTechGroup",
-                "https://linkedin.com/company/zion-tech-group"
-              ]
-            }} 
-          />
-          <StructuredData 
-            type="WebSite" 
-            data={{
-              name: "Zion Tech Group",
-              url: "https://zion.app",
-              potentialAction: {
-                "@type": "SearchAction",
-                "target": "https://zion.app/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }} 
-          />
+        <Suspense fallback={<LoadingSpinner />}>
+          <StructuredData />
         </Suspense>
       </div>
     </ErrorBoundary>
