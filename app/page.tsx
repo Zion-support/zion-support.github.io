@@ -29,16 +29,12 @@ import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutio
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
 import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
 import NewContent2026Showcase from '../components/NewContent2026Showcase';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
-// Import new 2026 promotional components
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
-import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-// Import new 2025 revolutionary content components
-import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 
 // Import new 2026 promotional components
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
@@ -46,6 +42,7 @@ import UltimateContentShowcase2026 from '../components/UltimateContentShowcase20
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
 
 // Import new ultimate content showcase banner
+
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
@@ -63,53 +60,12 @@ import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBann
 
 // Import new ultimate content showcase banners
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
-import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
-import AIImplementationGuideBanner from '../components/AIImplementationGuideBanner';
 
-// Import new ultimate success content components
-import NewContent2025UltimateSuccessBanner from '../components/NewContent2025UltimateSuccessBanner';
-import UltimateSuccessShowcase2025 from '../components/UltimateSuccessShowcase2025';
-
-// Import new enhanced components
-import AITrends2025_2030FuturePredictionsBanner from '../components/AITrends2025_2030FuturePredictionsBanner';
-import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';
-import InteractiveAIAssistant from '../components/InteractiveAIAssistant';
-
-// Import new 2025 promotional components
-import UltimateContent2025Banner from '../components/UltimateContent2025Banner';
-import RevolutionaryAI2025Banner from '../components/RevolutionaryAI2025Banner';
-import AITransformation2025SuccessBanner from '../components/AITransformation2025SuccessBanner';
-
-// Import new AI 2026 promotional components
-import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
-import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
-import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
-import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
-import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
-import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
-
-// Import new 2026 ultimate promotional components
-import AI2026QuantumRevolutionUltimateBanner from '../components/AI2026QuantumRevolutionUltimateBanner';
-import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
-import RevolutionaryAIContent2026Banner from '../components/RevolutionaryAIContent2026Banner';
-
-// Import new 2025 advanced automation promotional components
-import NewContent2025AdvancedAutomationBanner from '../components/NewContent2025AdvancedAutomationBanner';
-import AdvancedAutomationContentShowcase2025 from '../components/AdvancedAutomationContentShowcase2025';
-
-// Import new 2025 analytics promotional components
-import NewContent2025AnalyticsRevolutionBanner from '../components/NewContent2025AnalyticsRevolutionBanner';
-import AnalyticsContentShowcase2025 from '../components/AnalyticsContentShowcase2025';
-
-// Import new 2025 enterprise automation promotional components
-import NewContent2025EnterpriseAutomationBanner from '../components/NewContent2025EnterpriseAutomationBanner';
-
-// Import new 2025 implementation roadmap promotional components
-import NewResource2025ImplementationRoadmapBanner from '../components/NewResource2025ImplementationRoadmapBanner';
-
-// Import AI 2030 promotional components
-import AI2030ContentShowcaseBanner from '../components/AI2030ContentShowcaseBanner';
-import AI2030ContentNavigation from '../components/AI2030ContentNavigation';
+// Import new content components
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import RevolutionaryTechTrends2025 from '../components/RevolutionaryTechTrends2025';
+import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscoveryWidget';
+import InteractiveContentPromotionBanner from '../components/InteractiveContentPromotionBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -128,50 +84,31 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* New Content 2025 Ultimate Success Banner - NEW FEATURED */}
-        <NewContent2025UltimateSuccessBanner />
         
-        {/* New Resource 2025 Implementation Roadmap Banner - NEW FEATURED */}
-        <NewResource2025ImplementationRoadmapBanner />
+        {/* Interactive Content Promotion Banner */}
+        <InteractiveContentPromotionBanner />
         
-        {/* New Content 2025 Enterprise Automation Banner - NEW FEATURED */}
-        <NewContent2025EnterpriseAutomationBanner />
-        
-        {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
-        <NewContent2025AnalyticsRevolutionBanner />
-        
-        {/* Revolutionary AI 2025 Banner - LATEST */}
-        <RevolutionaryAI2025Banner />
-        
-        {/* Ultimate Content 2025 Banner - NEW FEATURED */}
-        <UltimateContent2025Banner />
-        
-        {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
+        {/* New Content 2025 Ultimate Showcase Banner */}
         <NewContent2025UltimateShowcaseBanner />
         
-        {/* AI 2030 Content Showcase Banner - FEATURED */}
-        <AI2030ContentShowcaseBanner />
+        {/* New Content Showcase 2025 */}
+        <NewContentShowcase2025 />
         
-        {/* Revolutionary Content Showcase 2025 - FEATURED */}
-        <RevolutionaryContentShowcase2025 />
+        {/* Revolutionary Tech Trends 2025 */}
+        <RevolutionaryTechTrends2025 />
         
-        {/* Quantum AI 2026 Breakthrough Banner */}
-        <QuantumAI2026BreakthroughBanner />
-        
-        {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
+        {/* Ultimate Content Discovery Widget */}
+        <UltimateContentDiscoveryWidget />
         
         {/* AI 2025 Ultimate Breakthrough Banner - NEW */}
         <AI2025UltimateBreakthroughBanner />
         
-        {/* Revolutionary Content 2025 Banner - NEW CONTENT */}
+        {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
-        
-        {/* AI 2030 Content Navigation - COMPREHENSIVE DISCOVERY */}
-        <AI2030ContentNavigation />
         
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
+        
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -271,9 +208,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Ultimate Success Showcase 2025 - NEW */}
-        <UltimateSuccessShowcase2025 />
-        
         {/* Ultimate Content Showcase 2025 - NEW */}
         <UltimateContentShowcase2025 />
         
@@ -283,9 +217,10 @@ export default function HomePage() {
         <AI1000ROISuccessStoryBanner />
         
         {/* Content Promotion Banners */}
+        <UltimateContentShowcase2025 />
+        
+        
         <RevolutionaryContent2026Banner />
-        <NewContent2025PromotionBanner />
-        <LatestContentShowcase2025 />
         <FeaturedContentShowcase2026 />
         <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
