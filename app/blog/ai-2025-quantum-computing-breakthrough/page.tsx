@@ -32,14 +32,8 @@ export default function QuantumComputingBreakthroughPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/resources/ai-implementation-guide-2025"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Implementation Guide
-                </Link>
-                <Link
                   href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Expert Consultation
                 </Link>
@@ -93,18 +87,42 @@ export default function QuantumComputingBreakthroughPage() {
                 Quantum AI is enabling breakthrough applications in drug discovery, financial modeling, logistics optimization, and materials science that were previously impossible with classical computing.
               </p>
 
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Real-World Applications Transforming Business</h3>
-              
-              <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-8">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">Financial Services Revolution</h4>
-                <p className="text-blue-800 mb-4">
-                  Quantum-AI systems are now capable of real-time risk assessment across millions of transactions simultaneously.
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Breakthrough Areas</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-gradient-to-br from-purple-50 to-blue-50 p-6 rounded-xl">
+                  <h4 className="text-xl font-bold text-gray-900 mb-3">Quantum Machine Learning</h4>
+                  <p className="text-gray-600">
+                    Quantum algorithms that can process exponentially more data and identify patterns impossible for classical computers.
+                  </p>
+                </div>
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
+                  <h4 className="text-xl font-bold text-gray-900 mb-3">Quantum Optimization</h4>
+                  <p className="text-gray-600">
+                    Solving complex optimization problems in seconds that would take classical computers years to complete.
+                  </p>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Applications</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-700 mb-8">
+                <li>Financial modeling and risk assessment</li>
+                <li>Drug discovery and pharmaceutical research</li>
+                <li>Supply chain optimization</li>
+                <li>Cryptographic security</li>
+                <li>Climate modeling and environmental analysis</li>
+              </ul>
+
+              <div className="bg-gradient-to-r from-purple-100 to-blue-100 p-8 rounded-xl mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Explore Quantum AI?</h3>
+                <p className="text-lg text-gray-700 mb-6">
+                  Contact Zion Tech Group to learn how quantum AI can transform your business operations and create unprecedented competitive advantages.
                 </p>
-                <ul className="text-blue-800 space-y-2">
-                  <li>• 99.7% accuracy in fraud detection</li>
-                  <li>• 40% reduction in false positives</li>
-                  <li>• Real-time portfolio optimization across global markets</li>
-                </ul>
+                <Link
+                  href="/contact"
+                  className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                >
+                  Schedule Quantum AI Consultation
+                </Link>
               </div>
 
               <div className="bg-green-50 border-l-4 border-green-400 p-6 mb-8">

@@ -386,352 +386,136 @@ export default function ResourceGuide() {
       </div>
 <<<<<<< HEAD
 
-      {/* Checklist Content */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="prose prose-lg max-w-none">
-          {/* Introduction */}
-          <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-8 mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Introduction</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Implementing AI in your organization can be transformative, but it requires careful planning and execution. 
-              This comprehensive checklist ensures you don't miss any critical steps in your AI transformation journey. 
-              Based on our experience with 500+ successful AI implementations.
-            </p>
-          </div>
-
-          {/* Pre-Implementation Phase */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Pre-Implementation Phase</h2>
-            
-            <div className="space-y-6">
-              <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <CheckCircle className="w-6 h-6 mr-3 text-green-600" />
-                  Strategic Planning
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Business Objectives</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Define clear business objectives for AI implementation</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Identify specific problems AI will solve</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Set measurable success metrics and KPIs</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Establish timeline and budget constraints</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Get executive buy-in and sponsorship</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">ROI Planning</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Calculate expected return on investment</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Identify cost savings opportunities</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Project revenue increase potential</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Set realistic ROI expectations (300-500% achievable)</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Plan for long-term value creation</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <AlertCircle className="w-6 h-6 mr-3 text-blue-600" />
-                  Readiness Assessment
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Current State Analysis</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Audit existing technology infrastructure</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Evaluate data quality and availability</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Assess current business processes</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Identify integration points and dependencies</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Data Assessment</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Inventory all data sources and formats</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Evaluate data quality and completeness</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Identify data silos and integration needs</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Assess data governance and security</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Skills Assessment</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Evaluate current AI/ML expertise in team</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Identify skill gaps and training needs</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Plan for hiring or external expertise</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-600">Create training and development roadmap</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Implementation Planning Phase */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Implementation Planning Phase</h2>
-            
-            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <CheckCircle className="w-6 h-6 mr-3 text-purple-600" />
-                Technology Selection
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">AI Platform Evaluation</h4>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-600">Research and compare AI platforms (AWS, Google Cloud, Azure)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-600">Evaluate on-premise vs. cloud solutions</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-600">Consider hybrid cloud architectures</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-600">Assess scalability and performance requirements</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Infrastructure Planning</h4>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-600">Design cloud architecture and networking</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-600">Plan for data storage and processing</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-600">Design security and access controls</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-600">Plan for disaster recovery and backup</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Success Metrics */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Success Metrics to Track</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-2 text-green-600" />
-                  Financial Metrics
-                </h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Return on Investment (ROI)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Cost savings achieved</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Revenue increase</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Profit margin improvement</span>
-                  </li>
-                </ul>
-              </div>
+        {/* Checklist Content */}
+        <section className="py-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="prose prose-lg max-w-none">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Phase 1: Foundation (Months 1-3)</h2>
               
-              <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-2 text-blue-600" />
-                  Operational Metrics
-                </h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Process efficiency gains</span>
+              <div className="bg-gray-50 p-6 rounded-xl mb-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Pre-Implementation Checklist</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-purple-600 text-sm">1</span>
+                    </div>
+                    <span className="text-gray-700">Conduct AI readiness assessment</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Error rate reduction</span>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-purple-600 text-sm">2</span>
+                    </div>
+                    <span className="text-gray-700">Define AI strategy and objectives</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Response time improvement</span>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-purple-600 text-sm">3</span>
+                    </div>
+                    <span className="text-gray-700">Identify high-impact use cases</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Customer satisfaction scores</span>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-purple-600 text-sm">4</span>
+                    </div>
+                    <span className="text-gray-700">Assess data quality and availability</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-purple-600 text-sm">5</span>
+                    </div>
+                    <span className="text-gray-700">Establish cross-functional AI team</span>
                   </li>
                 </ul>
               </div>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Phase 2: Implementation (Months 4-12)</h2>
               
-              <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                  <CheckCircle className="w-5 h-5 mr-2 text-purple-600" />
-                  Technical Metrics
-                </h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">System uptime and availability</span>
+              <div className="bg-gray-50 p-6 rounded-xl mb-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Implementation Checklist</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-blue-600 text-sm">6</span>
+                    </div>
+                    <span className="text-gray-700">Select and deploy AI technology stack</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Model accuracy and performance</span>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-blue-600 text-sm">7</span>
+                    </div>
+                    <span className="text-gray-700">Develop and train AI models</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Data processing speed</span>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-blue-600 text-sm">8</span>
+                    </div>
+                    <span className="text-gray-700">Integrate AI with existing systems</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Integration success rate</span>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-blue-600 text-sm">9</span>
+                    </div>
+                    <span className="text-gray-700">Conduct pilot testing and validation</span>
                   </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Timeline Recommendations */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Timeline Recommendations</h2>
-            
-            <div className="space-y-6">
-              <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Month 1-3: Planning and Preparation</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Strategic planning and readiness assessment</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Technology selection and infrastructure planning</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Team formation and initial training</span>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-blue-600 text-sm">10</span>
+                    </div>
+                    <span className="text-gray-700">Train end-users and stakeholders</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Month 4-6: Foundation Building</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Infrastructure deployment and setup</span>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Phase 3: Optimization (Months 13-18)</h2>
+              
+              <div className="bg-gray-50 p-6 rounded-xl mb-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Optimization Checklist</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-green-600 text-sm">11</span>
+                    </div>
+                    <span className="text-gray-700">Monitor and measure AI performance</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Data preparation and governance</span>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-green-600 text-sm">12</span>
+                    </div>
+                    <span className="text-gray-700">Optimize and fine-tune models</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Initial pilot project planning</span>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-green-600 text-sm">13</span>
+                    </div>
+                    <span className="text-gray-700">Scale AI across organization</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-green-600 text-sm">14</span>
+                    </div>
+                    <span className="text-gray-700">Establish continuous improvement processes</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-green-600 text-sm">15</span>
+                    </div>
+                    <span className="text-gray-700">Plan for future AI capabilities</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Month 7-12: Pilot Implementation</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Pilot project execution</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Model development and testing</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">Initial integration and validation</span>
-                  </li>
-                </ul>
+              <div className="bg-gradient-to-r from-purple-100 to-blue-100 p-8 rounded-xl mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Need Help with Implementation?</h3>
+                <p className="text-lg text-gray-700 mb-6">
+                  Our AI experts can guide you through every step of the implementation process, 
+                  ensuring successful AI transformation for your organization.
+                </p>
+                <Link
+                  href="/contact"
+                  className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                >
+                  Get Expert Implementation Support
+                </Link>
               </div>
             </div>
           </section>

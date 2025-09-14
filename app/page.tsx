@@ -84,6 +84,10 @@ import AdvancedAutomationContentShowcase2025 from '../components/AdvancedAutomat
 import NewContent2025AnalyticsRevolutionBanner from '../components/NewContent2025AnalyticsRevolutionBanner';
 import AnalyticsContentShowcase2025 from '../components/AnalyticsContentShowcase2025';
 
+// Import new 2026 promotional components
+import AI2026FuturePredictionsPromotionBanner from '../components/AI2026FuturePredictionsPromotionBanner';
+import QuantumAI2026BusinessTransformationBanner from '../components/QuantumAI2026BusinessTransformationBanner';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
