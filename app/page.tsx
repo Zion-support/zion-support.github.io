@@ -96,10 +96,6 @@ import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026
 import NewContent2025UltimateBreakthroughBanner from './components/NewContent2025UltimateBreakthroughBanner';
 import UltimateBreakthroughContentShowcase2025 from './components/UltimateBreakthroughContentShowcase2025';
 
-// Import new Ultimate Business Automation Revolution components
-import UltimateBusinessAutomationRevolutionBanner from './components/UltimateBusinessAutomationRevolutionBanner';
-import UltimateBusinessAutomationShowcase from './components/UltimateBusinessAutomationShowcase';
-
 // Import additional promotional components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
@@ -121,6 +117,10 @@ import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryC
 // Import new 2027 breakthrough promotional components
 import AI2027BreakthroughPromotionBanner from '../components/AI2027BreakthroughPromotionBanner';
 import QuantumComputingShowcase2027 from '../components/QuantumComputingShowcase2027';
+
+// Import new Ultimate Autonomous AI Revolution components
+import UltimateAutonomousAIRevolutionBanner from '../components/UltimateAutonomousAIRevolutionBanner';
+import UltimateAutonomousAIContentShowcase from '../components/UltimateAutonomousAIContentShowcase';
 
 // Import new neural interface and autonomous AI promotional components
 import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRevolutionBanner2025';
@@ -203,10 +203,6 @@ import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import ROICalculatorWidget from '../components/ROICalculatorWidget';
 
-// Import new Ultimate Autonomous Enterprise Revolution components
-import UltimateAutonomousEnterpriseRevolutionBanner from '../components/UltimateAutonomousEnterpriseRevolutionBanner';
-import UltimateAutonomousEnterpriseShowcase from '../components/UltimateAutonomousEnterpriseShowcase';
-
 // Import new Advanced Neural Architectures 2026 components
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
@@ -238,17 +234,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Ultimate Business Automation Revolution Banner - NEWEST ULTIMATE FEATURED */}
-        <UltimateBusinessAutomationRevolutionBanner />
+        {/* ULTIMATE AUTONOMOUS AI REVOLUTION BANNER - NEWEST ULTIMATE FEATURED */}
+        <UltimateAutonomousAIRevolutionBanner />
         
         {/* AI Revolution 2025-2026 Banner - NEWEST ULTIMATE FEATURED */}
         <AIRevolution2025Banner />
-        
-        {/* ULTIMATE AUTONOMOUS ENTERPRISE REVOLUTION BANNER - NEWEST ULTIMATE FEATURED */}
-        <UltimateAutonomousEnterpriseRevolutionBanner />
-        
-        {/* ULTIMATE AUTONOMOUS ENTERPRISE SHOWCASE - NEWEST ULTIMATE FEATURED */}
-        <UltimateAutonomousEnterpriseShowcase />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED */}
         <UltimateContentPromotionBanner2025 />
@@ -270,9 +260,6 @@ export default function HomePage() {
         {/* AI AUTOMATION ROI CALCULATOR - INTERACTIVE TOOL */}
         <AIAutomationROICalculator />
         
-        {/* Ultimate Business Automation Showcase - NEW FEATURED */}
-        <UltimateBusinessAutomationShowcase />
-        
         {/* NEW CONTENT 2025 ULTIMATE SHOWCASE - FEATURED */}
         <NewContent2025UltimateShowcase />
         
@@ -284,6 +271,9 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2025 - FEATURED */}
         <UltimateContentShowcase2025 />
+        
+        {/* ULTIMATE AUTONOMOUS AI CONTENT SHOWCASE - NEWEST FEATURED */}
+        <UltimateAutonomousAIContentShowcase />
         
         {/* SUCCESS STORIES SHOWCASE - NEW CONTENT */}
         <SuccessStoriesShowcase />
