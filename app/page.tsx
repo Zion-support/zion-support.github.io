@@ -36,10 +36,10 @@ import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContent
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 <<<<<<< HEAD
-// Import new 2026 promotional components
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
+// Import new 2025 promotional components
+import NewContent2025ShowcaseBanner from '../components/NewContent2025ShowcaseBanner';
+import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
-import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
@@ -49,8 +49,6 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
 import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
-=======
->>>>>>> dc89c58f58dbd387047878ee5691a22997309a80
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -69,23 +67,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* New Content 2025 Ultimate Banner */}
-        <NewContent2025UltimateBanner />
-        
-        {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
-        
-        {/* Revolutionary Content 2025 Banner */}
-        <RevolutionaryContent2025Banner />
-        
-        {/* AI 2025 Breakthrough Banner */}
-        <AI2025BreakthroughBanner />
-        
         {/* New Content 2025 Showcase Banner */}
         <NewContent2025ShowcaseBanner />
         
         {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
+        
+        {/* Ultimate Content Showcase 2026 */}
+        <UltimateContentShowcase2026 />
+        
+        {/* AI 2025 Breakthrough Banner */}
+        <AI2025BreakthroughBanner />
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
