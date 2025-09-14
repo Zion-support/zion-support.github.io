@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-09-14T10:43:58.207Z",
+  "generatedAt": "2025-09-14T06:48:30.556Z",
   "items": [
     {
       "url": "https://ziontechgroup.netlify.app/ai-consciousness-evolution-2025",
@@ -20,6 +20,11 @@
       "url": "https://ziontechgroup.netlify.app/help",
       "route": "/help",
       "title": "help"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/index",
+      "route": "/index",
+      "title": "index"
     },
     {
       "url": "https://ziontechgroup.netlify.app/micro-saas",
@@ -140,6 +145,11 @@
       "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1849",
       "route": "/reports/updates/update-2025-08-17-1849",
       "title": "reports · updates · update-2025-08-17-1849"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/resources",
+      "route": "/resources",
+      "title": "resources"
     }
   ]
 }
