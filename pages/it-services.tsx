@@ -23,7 +23,8 @@ import {
   Mail,
   Package,
   DollarSign,
-  Settings
+  Settings,
+  Brain
 } from 'lucide-react';
 import Layout from '../components/Layout';
 

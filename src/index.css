@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-@import './styles/enhanced-futuristic.css';
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
-@import './styles/accessibility.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -853,16 +848,9 @@
   }
 }
 
-/* Accessibility Styles */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-=======
 /* Reset and base styles */
 * {
   margin: 0;
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   padding: 0;
   box-sizing: border-box;
 }
@@ -969,8 +957,4 @@ body {
     padding: 0.625rem 1.25rem;
     font-size: 0.875rem;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
