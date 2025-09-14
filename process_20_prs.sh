@@ -1,40 +1,29 @@
 #!/bin/bash
 
-# Batch merge script for handling multiple PRs efficiently
+# Process 20 most recent PRs
 set -e
 
-echo "🚀 Starting batch PR merge process..."
+echo "🚀 Processing 20 most recent PRs..."
 
-# Get all cursor branches, sorted by creation date (most recent first)
-BRANCHES=$(git branch -r | grep "cursor/" | grep -v "HEAD" | sed 's/origin\///' | sort -u)
+# Get the 20 most recent cursor branches
+RECENT_BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | tail -20 | sed 's/origin\///')
 
-echo "📋 Found $(echo "$BRANCHES" | wc -l) branches to process"
-
-# Process in batches of 10
-BATCH_SIZE=10
-BATCH_NUM=1
-TOTAL_BRANCHES=$(echo "$BRANCHES" | wc -l)
-PROCESSED=0
+echo "📋 Processing branches:"
+echo "$RECENT_BRANCHES"
 
 # Counter for tracking
 SUCCESS_COUNT=0
 CONFLICT_COUNT=0
 ERROR_COUNT=0
 
-echo "📊 Processing $TOTAL_BRANCHES branches in batches of $BATCH_SIZE"
-
-# Process branches in batches
-echo "$BRANCHES" | while IFS= read -r branch; do
+# Process each branch
+for branch in $RECENT_BRANCHES; do
     if [ -z "$branch" ]; then
         continue
     fi
     
-    # Calculate batch info
-    PROCESSED=$((PROCESSED + 1))
-    CURRENT_BATCH=$(((PROCESSED - 1) / BATCH_SIZE + 1))
-    
     echo ""
-    echo "🔄 [$PROCESSED/$TOTAL_BRANCHES] Processing branch: $branch (Batch $CURRENT_BATCH)"
+    echo "🔄 Processing branch: $branch"
     
     # Check if branch exists locally
     if git show-ref --verify --quiet refs/heads/$branch; then
@@ -105,7 +94,7 @@ echo "$BRANCHES" | while IFS= read -r branch; do
 done
 
 echo ""
-echo "📊 Batch Merge Process Summary:"
+echo "📊 20 PRs Processing Summary:"
 echo "  ✅ Successful merges: $SUCCESS_COUNT"
 echo "  ⚠️  Conflicts resolved: $CONFLICT_COUNT"
 echo "  ❌ Errors: $ERROR_COUNT"
@@ -116,4 +105,4 @@ echo "  📤 Final push to remote..."
 git push origin main
 
 echo ""
-echo "🎉 Batch PR merge process completed!"
+echo "🎉 20 PRs processing completed!"
