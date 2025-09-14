@@ -1,26 +1,27 @@
+"use client";
 'use client';
 
-import React, { useState } from 'react';
-import { Mail, Send, CheckCircle, Star, TrendingUp, Users, Zap, ArrowRight } from 'lucide-react';
+import React{ useState } from 'react';
+MailSendCheckCircleStarTrendingUpUsersZapArrowRight
 
 export default function AI2025NewsletterSignup() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
+  const [emailsetEmail] = useState('');
+  const [isSubscribedsetIsSubscribed] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);
+  const [selectedInterestsetSelectedInterests] = useState<string[]>([]);
 
   const interests = [
-    { id: 'ai-innovation', label: 'AI Innovation', icon: Star },
-    { id: 'ai-tools', label: 'AI Tools & Utilities', icon: Zap },
-    { id: 'future-tech', label: 'Future Technology', icon: TrendingUp },
-    { id: 'community', label: 'Community Updates', icon: Users }
+    { id: 'ai-innovation'label: 'AI Innovation'icon: Star },
+    { id: 'ai-tools'label: 'AI Tools & Utilities'icon: Zap },
+    { id: 'future-tech'label: 'Future Technology'icon: TrendingUp },
+    { id: 'community'label: 'Community Updates'icon: Users }
   ];
 
   const handleInterestToggle = (interestId: string) => {
     setSelectedInterests(prev => 
       prev.includes(interestId) 
         ? prev.filter(id => id !== interestId)
-        : [...prev, interestId]
+        : [...previnterestId]
     );
   };
 
@@ -31,7 +32,7 @@ export default function AI2025NewsletterSignup() {
     setIsLoading(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve2000));
     
     setIsSubscribed(true);
     setIsLoading(false);
@@ -48,8 +49,8 @@ export default function AI2025NewsletterSignup() {
           Welcome to the Future!
         </h3>
         <p className="text-green-300 mb-6">
-          You've successfully subscribed to our AI newsletter. Get ready for exclusive content, 
-          early access to new tools, and insights into the future of technology.
+          You've successfully subscribed to our AI newsletter. Get ready for exclusive content
+          early access to new toolsand insights into the future of technology.
         </p>
         
         <div className="bg-white/10 rounded-lg p-4 mb-6">
@@ -84,7 +85,7 @@ export default function AI2025NewsletterSignup() {
           Stay Ahead of the AI Revolution
         </h2>
         <p className="text-blue-100 text-lg">
-          Get exclusive access to the latest AI innovations, tools, and future predictions
+          Get exclusive access to the latest AI innovationstoolsand future predictions
         </p>
       </div>
 
@@ -191,7 +192,7 @@ export default function AI2025NewsletterSignup() {
             </div>
             <div className="flex items-center gap-2">
               <Zap className="w-4 h-4" />
-              <span>No Spam, Ever</span>
+              <span>No SpamEver</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4" />
@@ -206,7 +207,7 @@ export default function AI2025NewsletterSignup() {
             Join <span className="text-blue-400 font-semibold">50,000+</span> innovators already subscribed
           </p>
           <div className="flex justify-center gap-1">
-            {[...Array(5)].map((_, i) => (
+            {[...Array(5)].map((_i) => (
               <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
             ))}
             <span className="text-gray-400 text-sm ml-2">4.9/5 rating</span>

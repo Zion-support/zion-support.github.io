@@ -1,10 +1,10 @@
 
-import { useState, useEffect } from 'react';
+import { useStateuseEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+import { TableBodyTableCellTableHeaderTableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react";
+import { Loader2RefreshCwPlayCheckCircleAlertCircle } from "lucide-react";
 import { supabase } from '@/integrations/supabase/client';
 import { ModelConfig } from '@/utils/zion-gpt';
 
@@ -14,22 +14,22 @@ interface ModelVersionData extends ModelConfig {
 }
 
 export function ZionGPTModelManager() {
-  const [models, setModels] = useState<ModelVersionData[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({});
+  const [modelsetModels] = useState<ModelVersionData[]>([]);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [activeJobsetActiveJobs] = useState<{[key: string]: boolean}>({});
 
   // Fetch model data on component mount
   useEffect(() => {
     fetchModels();
-  }, []);
+  }[]);
 
   const fetchModels = async () => {
     try {
       setIsLoading(true);
-      const { data, error } = await supabase
+      const { dataerror } = await supabase
         .from('model_versions')
         .select('*')
-        .order('createdAt', { ascending: false });
+        .order('createdAt'{ ascending: false });
       
       if (error) throw error;
       
@@ -45,7 +45,7 @@ export function ZionGPTModelManager() {
         errorMessage: model.error_message
       })));
     } catch (error) {
-      console.error('Error fetching models:', error);
+      console.error('Error fetching models:'error);
     } finally {
       setIsLoading(false);
     }
@@ -53,10 +53,10 @@ export function ZionGPTModelManager() {
 
   const checkTrainingStatus = async (modelId: string) => {
     try {
-      setActiveJobs(prev => ({ ...prev, [modelId]: true }));
+      setActiveJobs(prev => ({ ...prev[modelId]: true }));
       
       // Call an edge function that checks the OpenAI fine-tuning job status
-      const { data, error } = await supabase.functions.invoke('check-training-status', {
+      const { dataerror } = await supabase.functions.invoke('check-training-status'{
         body: { modelId }
       });
       
@@ -66,7 +66,7 @@ export function ZionGPTModelManager() {
       setModels(prev => 
         prev.map(model => 
           model.id === modelId 
-            ? { ...model, trainingStatus: data.status, errorMessage: data.error || null } 
+            ? { ...modeltrainingStatus: data.statuserrorMessage: data.error || null } 
             : model
         )
       );
@@ -77,38 +77,38 @@ export function ZionGPTModelManager() {
         .update({
           training_status: data.status,
           error_message: data.error || null,
-          // If training succeeded, automatically set to active
+          // If training succeededautomatically set to active
           ...(data.status === 'succeeded' ? { active: true } : {})
         })
-        .eq('id', modelId);
+        .eq('id'modelId);
       
     } catch (error) {
-      console.error(`Error checking status for model ${modelId}:`, error);
+      console.error(`Error checking status for model ${modelId}:`error);
     } finally {
-      setActiveJobs(prev => ({ ...prev, [modelId]: false }));
+      setActiveJobs(prev => ({ ...prev[modelId]: false }));
     }
   };
 
-  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
+  const toggleModelActive = async (modelId: stringcurrentActive: booleanpurpose: string) => {
     try {
-      // If activating, deactivate all other models with the same purpose
+      // If activatingdeactivate all other models with the same purpose
       if (!currentActive) {
         await supabase
           .from('model_versions')
           .update({ active: false })
-          .eq('purpose', purpose);
+          .eq('purpose'purpose);
       }
       
       // Update this model
       await supabase
         .from('model_versions')
         .update({ active: !currentActive })
-        .eq('id', modelId);
+        .eq('id'modelId);
       
       // Refresh the model list
       fetchModels();
     } catch (error) {
-      console.error('Error toggling model active state:', error);
+      console.error('Error toggling model active state:'error);
     }
   };
 
@@ -182,7 +182,7 @@ export function ZionGPTModelManager() {
                       <Button
                         variant={model.active ? "outline" : "default"}
                         size="sm"
-                        onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
+                        onClick={() => toggleModelActive(model.idmodel.activemodel.purpose)}
                       >
                         {model.active ? (
                           <>

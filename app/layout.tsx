@@ -2,9 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import './globals.css';
 import '../styles/optimizations.css';
-import PerformanceMonitor from '../components/PerformanceMonitor';
+// import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import ErrorBoundary from '../components/ErrorBoundary';
 import NewContentBanner from '../components/NewContentBanner';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -334,6 +333,7 @@ function Header() {
                 </Link>
                 <Link href="/tools/ai-2029-roi-calculator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">
                   🧮 AI 2029 ROI Calculator (NEW)
+                </Link>
                 <Link href="/ai-2029-breakthrough-showcase" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500">
                   🚀 AI 2029 Breakthrough Showcase (REVOLUTIONARY)
                 </Link>
@@ -1338,11 +1338,10 @@ export default function RootLayout({
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body className="antialiased bg-white text-gray-900">
-        <ErrorBoundary>
-          <PerformanceMonitor>
-            <AccessibilityEnhancer>
-              <AdvancedPerformanceMonitor2026 />
-              <UltimateAIAssistant2026 />
+        <div>
+          <AccessibilityEnhancer>
+            <AdvancedPerformanceMonitor2026 />
+            <UltimateAIAssistant2026 />
               {/* Skip to main content for accessibility */}
               <a 
                 href="#main-content" 
@@ -1405,9 +1404,8 @@ export default function RootLayout({
                   </div>
                 </div>
               </footer>
-            </AccessibilityEnhancer>
-          </PerformanceMonitor>
-        </ErrorBoundary>
+          </AccessibilityEnhancer>
+        </div>
       </body>
     </html>
   );

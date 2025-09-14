@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useState } from 'react';
+"use client";
+import React{ useCallbackuseEffectuseState } from 'react';
 import dynamic from 'next/dynamic';
 
 const isClient = typeof window !== 'undefined';
@@ -9,16 +10,16 @@ type Web3LoginModalProps = {
   onLoggedIn?: (user: { address: string; chain: 'evm' | 'sol'; displayName?: string }) => void;
 };
 
-function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+function ModalInner({ isOpenonCloseonLoggedIn }: Web3LoginModalProps) {
+  const [loadingsetLoading] = useState(false);
+  const [errorsetError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!isOpen) {
       setError(null);
       setLoading(false);
     }
-  }, [isOpen]);
+  }[isOpen]);
 
   const handleEvmConnect = useCallback(async () => {
     setError(null);
@@ -53,13 +54,13 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
 
       const signature = await signer.signMessage(siweMessage);
 
-      const verifyRes = await fetch('/api/auth/verify-evm', {
+      const verifyRes = await fetch('/api/auth/verify-evm'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: siweMessage, signature, address, chainId: network.chainId })});
+        body: JSON.stringify({ message: siweMessagesignatureaddresschainId: network.chainId })});
       if (!verifyRes.ok) throw new Error('Failed to verify signature');
 
-      onLoggedIn?.({ address, chain: 'evm' });
+      onLoggedIn?.({ addresschain: 'evm' });
       onClose();
     } catch (e: any) {
       console.error(e);
@@ -67,7 +68,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     } finally {
       setLoading(false);
     }
-  }, [onClose, onLoggedIn]);
+  }[onCloseonLoggedIn]);
 
   const handlePhantomConnect = useCallback(async () => {
     setError(null);
@@ -86,16 +87,16 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       const statement = 'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;
       const encodedMessage = new TextEncoder().encode(message);
-      const { signature } = await provider.signMessage(encodedMessage, 'utf8');
+      const { signature } = await provider.signMessage(encodedMessage'utf8');
       const bs58 = (await import('bs58')).default;
 
-      const verifyRes = await fetch('/api/auth/verify-sol', {
+      const verifyRes = await fetch('/api/auth/verify-sol'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message, signature: bs58.encode(signature), publicKey })});
+        body: JSON.stringify({ messagesignature: bs58.encode(signature)publicKey })});
       if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
 
-      onLoggedIn?.({ address: publicKey, chain: 'sol' });
+      onLoggedIn?.({ address: publicKeychain: 'sol' });
       onClose();
     } catch (e: any) {
       console.error(e);
@@ -103,7 +104,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     } finally {
       setLoading(false);
     }
-  }, [onClose, onLoggedIn]);
+  }[onCloseonLoggedIn]);
 
   if (!isOpen) return null;
 

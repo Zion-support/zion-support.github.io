@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+'use client';
+
+import React{ useStateuseEffect } from 'react';
 
 interface Metric {
   id: string;
@@ -32,20 +34,20 @@ interface BusinessInsight {
 }
 
 const BusinessIntelligenceDashboard: React.FC = () => {
-  const [metrics, setMetrics] = useState<Metric[]>([]);
-  const [insights, setInsights] = useState<BusinessInsight[]>([]);
-  const [selectedPeriod, setSelectedPeriod] = useState('30d');
-  const [isLoading, setIsLoading] = useState(true);
+  const [metricsetMetrics] = useState<Metric[]>([]);
+  const [insightsetInsights] = useState<BusinessInsight[]>([]);
+  const [selectedPeriodsetSelectedPeriod] = useState('30d');
+  const [isLoadingsetIsLoading] = useState(true);
 
   useEffect(() => {
     generateMockData();
-  }, [selectedPeriod]);
+  }[selectedPeriod]);
 
   const generateMockData = async () => {
     setIsLoading(true);
     
     // Simulate data loading
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve1000));
 
     const mockMetrics: Metric[] = [
       {
@@ -114,7 +116,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
       {
         id: '1',
         title: 'High-Value Customer Segment Growth',
-        description: 'Premium tier customers have increased by 23% this quarter, driving 67% of revenue growth.',
+        description: 'Premium tier customers have increased by 23% this quarterdriving 67% of revenue growth.',
         impact: 'high',
         category: 'revenue',
         recommendation: 'Increase investment in premium customer acquisition and retention programs.',
@@ -132,7 +134,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
       {
         id: '3',
         title: 'Customer Satisfaction Improvement',
-        description: 'Customer satisfaction scores have improved to 4.7/5, indicating successful service improvements.',
+        description: 'Customer satisfaction scores have improved to 4.7/5indicating successful service improvements.',
         impact: 'high',
         category: 'growth',
         recommendation: 'Leverage positive feedback for marketing campaigns and case studies.',
@@ -201,9 +203,9 @@ const BusinessIntelligenceDashboard: React.FC = () => {
     }
   };
 
-  const formatValue = (value: number, unit: string) => {
+  const formatValue = (value: numberunit: string) => {
     if (unit === '$') {
-      return new Intl.NumberFormat('en-US', {
+      return new Intl.NumberFormat('en-US'{
         style: 'currency',
         currency: 'USD',
         minimumFractionDigits: 0,
@@ -225,7 +227,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
         <div className="animate-pulse">
           <div className="h-8 bg-gray-200 rounded w-1/3 mb-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map(i => (
+            {[123456].map(i => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
                 <div className="h-8 bg-gray-200 rounded w-1/3 mb-2"></div>
@@ -279,11 +281,11 @@ const BusinessIntelligenceDashboard: React.FC = () => {
             
             <div className="flex items-baseline mb-4">
               <span className="text-3xl font-bold text-gray-900">
-                {formatValue(metric.value, metric.unit)}
+                {formatValue(metric.valuemetric.unit)}
               </span>
               {metric.target && (
                 <span className="text-sm text-gray-500 ml-2">
-                  / {formatValue(metric.target, metric.unit)}
+                  / {formatValue(metric.targetmetric.unit)}
                 </span>
               )}
             </div>
@@ -303,7 +305,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
               <div className="mt-4">
                 <div className="flex justify-between text-sm text-gray-600 mb-1">
                   <span>Progress</span>
-                  <span>{Math.min(100, (metric.value / metric.target * 100)).toFixed(0)}%</span>
+                  <span>{Math.min(100(metric.value / metric.target * 100)).toFixed(0)}%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div 
@@ -311,7 +313,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
                       metric.value >= metric.target ? 'bg-green-500' : 
                       metric.value >= metric.target * 0.8 ? 'bg-yellow-500' : 'bg-red-500'
                     }`}
-                    style={{ width: `${Math.min(100, (metric.value / metric.target * 100))}%` }}
+                    style={{ width: `${Math.min(100(metric.value / metric.target * 100))}%` }}
                   ></div>
                 </div>
               </div>
@@ -362,7 +364,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
           <div className="text-6xl mb-4">📊</div>
           <h4 className="text-xl font-semibold text-gray-900 mb-2">Interactive Performance Charts</h4>
           <p className="text-gray-600 mb-6">
-            Revenue, customer growth, and conversion rate trends over time
+            Revenuecustomer growthand conversion rate trends over time
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg p-4 shadow-sm">

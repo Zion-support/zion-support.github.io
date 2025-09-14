@@ -1,10 +1,11 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
+"use client";
+import React{ useEffectuseStateuseCallbackuseMemo } from 'react';
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
-  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity,
-  ChevronDown, CheckCircle, Users, Award, Clock
+  ArrowRightPlayTrendingUpBrainShieldRocketGlobeCpuDatabaseAtomTargetStarSparkles as SparklesIcon,
+  Brain as BrainIconAtom as AtomIconShield as ShieldIconRocket as RocketIconZapEyeHeartInfinity,
+  ChevronDownCheckCircleUsersAwardClock
 } from 'lucide-react';
 import { Service } from '../types';
 
@@ -51,22 +52,22 @@ interface Service {
 }
 
 const Homepage2044: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isLoading, setIsLoading] = useState(true);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentServiceIndexsetCurrentServiceIndex] = useState(0);
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [mousePositionsetMousePosition] = useState({ x: 0y: 0 });
+  const [isLoadingsetIsLoading] = useState(true);
+  const [scrollProgressetScrollProgress] = useState(0);
   
   // Memoize expensive computations
   const allRevolutionaryServices = useMemo(() => [
     ...revolutionary2044AdvancedMicroSaas,
     ...revolutionary2044ITServices,
     ...revolutionary2044AIServices
-  ], []);
+  ][]);
 
   const featuredServices = useMemo(() => 
-    allRevolutionaryServices.slice(0, 6), [allRevolutionaryServices]
+    allRevolutionaryServices.slice(06)[allRevolutionaryServices]
   );
 
   const getFilteredServices = useCallback(() => {
@@ -75,64 +76,64 @@ const Homepage2044: React.FC = () => {
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       service.type.toLowerCase().includes(selectedCategory.toLowerCase())
     );
-  }, [selectedCategory, allRevolutionaryServices]);
+  }[selectedCategoryallRevolutionaryServices]);
 
   const categories = useMemo(() => [
-    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500' },
-    { id: 'ai', name: 'AI & Consciousness', icon: BrainIcon, color: 'from-cyan-500 to-blue-500' },
-    { id: 'quantum', name: 'Quantum Technology', icon: AtomIcon, color: 'from-blue-500 to-indigo-500' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500' },
-    { id: 'space', name: 'Space Technology', icon: RocketIcon, color: 'from-indigo-500 to-purple-500' },
-    { id: 'business', name: 'Business Solutions', icon: Target, color: 'from-emerald-500 to-teal-500' }
-  ], []);
+    { id: 'all'name: 'All Services'icon: SparklesIconcolor: 'from-purple-500 to-pink-500' },
+    { id: 'ai'name: 'AI & Consciousness'icon: BrainIconcolor: 'from-cyan-500 to-blue-500' },
+    { id: 'quantum'name: 'Quantum Technology'icon: AtomIconcolor: 'from-blue-500 to-indigo-500' },
+    { id: 'cybersecurity'name: 'Cybersecurity'icon: ShieldIconcolor: 'from-red-500 to-orange-500' },
+    { id: 'space'name: 'Space Technology'icon: RocketIconcolor: 'from-indigo-500 to-purple-500' },
+    { id: 'business'name: 'Business Solutions'icon: Targetcolor: 'from-emerald-500 to-teal-500' }
+  ][]);
 
   const features = useMemo(() => [
-    { icon: Brain, title: "AI Consciousness Evolution 2044", description: "Next-generation AI consciousness with emotional intelligence", href: "/ai-consciousness-evolution-2044", color: "from-purple-500 to-pink-500" },
-    { icon: Atom, title: "Quantum Neural Networks 2044", description: "Quantum-powered AI with consciousness integration", href: "/quantum-neural-network-platform-2044", color: "from-blue-500 to-cyan-500" },
-    { icon: Shield, title: "Quantum Cybersecurity 2044", description: "Quantum-resistant security with AI consciousness", href: "/quantum-cybersecurity-platform-2044", color: "from-red-500 to-orange-500" },
-    { icon: Rocket, title: "Space Resource Intelligence 2044", description: "AI-powered space exploration with consciousness", href: "/space-resource-intelligence-2044", color: "from-indigo-500 to-purple-500" },
-    { icon: Cpu, title: "Autonomous Business Intelligence 2044", description: "Fully autonomous AI business intelligence", href: "/ai-autonomous-business-intelligence-2044", color: "from-emerald-500 to-teal-500" },
-    { icon: Database, title: "Quantum Cloud Infrastructure 2044", description: "Quantum-powered cloud with consciousness", href: "/quantum-cloud-infrastructure-2044", color: "from-yellow-500 to-orange-500" }
+    { icon: Braintitle: "AI Consciousness Evolution 2044"description: "Next-generation AI consciousness with emotional intelligence"href: "/ai-consciousness-evolution-2044"color: "from-purple-500 to-pink-500" },
+    { icon: Atomtitle: "Quantum Neural Networks 2044"description: "Quantum-powered AI with consciousness integration"href: "/quantum-neural-network-platform-2044"color: "from-blue-500 to-cyan-500" },
+    { icon: Shieldtitle: "Quantum Cybersecurity 2044"description: "Quantum-resistant security with AI consciousness"href: "/quantum-cybersecurity-platform-2044"color: "from-red-500 to-orange-500" },
+    { icon: Rocketitle: "Space Resource Intelligence 2044"description: "AI-powered space exploration with consciousness"href: "/space-resource-intelligence-2044"color: "from-indigo-500 to-purple-500" },
+    { icon: Cputitle: "Autonomous Business Intelligence 2044"description: "Fully autonomous AI business intelligence"href: "/ai-autonomous-business-intelligence-2044"color: "from-emerald-500 to-teal-500" },
+    { icon: Databasetitle: "Quantum Cloud Infrastructure 2044"description: "Quantum-powered cloud with consciousness"href: "/quantum-cloud-infrastructure-2044"color: "from-yellow-500 to-orange-500" }
   ];
 
   const stats = useMemo(() => [
-    { number: "2000+", label: "Revolutionary Services", icon: Star, description: "Cutting-edge solutions" },
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, description: "Reliable performance" },
-    { number: "24/7", label: "AI Support Available", icon: Brain, description: "Always there for you" },
-    { number: "200+", label: "Countries Served", icon: Globe, description: "Global reach" }
-  ], []);
+    { number: "2000+"label: "Revolutionary Services"icon: Stardescription: "Cutting-edge solutions" },
+    { number: "99.99%"label: "Uptime Guarantee"icon: TrendingUpdescription: "Reliable performance" },
+    { number: "24/7"label: "AI Support Available"icon: Braindescription: "Always there for you" },
+    { number: "200+"label: "Countries Served"icon: Globedescription: "Global reach" }
+  ][]);
 
   const handleGetStarted = useCallback(() => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'cta_click', { cta_type: 'get_started' });
+      (window as any).gtag('event'cta_click'{ cta_type: 'get_started' });
     }
     window.location.href = '/revolutionary-2044-pricing-showcase';
-  }, []);
+  }[]);
 
   const handleWatchDemo = useCallback(() => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'cta_click', { cta_type: 'explore_services' });
+      (window as any).gtag('event'cta_click'{ cta_type: 'explore_services' });
     }
     window.location.href = '/services';
-  }, []);
+  }[]);
 
   const handleServiceClick = useCallback((service: any) => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'service_click', { service_name: service.name });
+      (window as any).gtag('event'service_click'{ service_name: service.name });
     }
     window.location.href = service.slug;
-  }, []);
+  }[]);
 
   const handleCategoryChange = useCallback((categoryId: string) => {
     setSelectedCategory(categoryId);
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'category_filter', { category: categoryId });
+      (window as any).gtag('event'category_filter'{ category: categoryId });
     }
-  }, []);
+  }[]);
 
   useEffect(() => {
     // Performance optimization: Use requestIdleCallback for non-critical operations
@@ -144,27 +145,27 @@ const Homepage2044: React.FC = () => {
     if ('requestIdleCallback' in window) {
       (window as any).requestIdleCallback(initializePage);
     } else {
-      setTimeout(initializePage, 100);
+      setTimeout(initializePage100);
     }
     
     // Auto-rotate featured services with better performance
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }, 6000);
+    }6000);
     
     // Track mouse movement for parallax effects with throttling
     let ticking = false;
     const handleMouseMove = (e: MouseEvent) => {
       if (!ticking) {
         requestAnimationFrame(() => {
-          setMousePosition({ x: e.clientX, y: e.clientY });
+          setMousePosition({ x: e.clientXy: e.clientY });
           ticking = false;
         });
         ticking = true;
       }
     };
     
-    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    window.addEventListener('mousemove'handleMouseMove{ passive: true });
     
     // Track scroll progress for performance monitoring
     const handleScroll = () => {
@@ -174,14 +175,14 @@ const Homepage2044: React.FC = () => {
       setScrollProgress(scrollPercent);
     };
     
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll'handleScroll{ passive: true });
     
     return () => {
       clearInterval(interval);
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove'handleMouseMove);
+      window.removeEventListener('scroll'handleScroll);
     };
-  }, []);
+  }[]);
 
   // Loading state
   if (isLoading) {
@@ -228,15 +229,15 @@ const Homepage2044: React.FC = () => {
             
             {/* Optimized animated particles - reduced count for better performance */}
             <div className="absolute inset-0">
-              {[...Array(10)].map((_, i) => (
+              {[...Array(10)].map((_i) => (
                 <motion.div
                   key={i}
                   className="absolute w-2 h-2 bg-cyan-400/40 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.8)]"
                   animate={{
-                    x: [0, 150, 0],
-                    y: [0, -150, 0],
-                    opacity: [0, 1, 0],
-                    scale: [0, 1.5, 0]}}
+                    x: [0150],
+                    y: [0-150],
+                    opacity: [010],
+                    scale: [01.50]}}
                   transition={{
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
@@ -253,7 +254,7 @@ const Homepage2044: React.FC = () => {
             {/* Grid pattern with neon glow */}
             <div className="absolute inset-0 opacity-20">
               <div className="absolute inset-0" style={{
-                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6,182,212,0.3) 1px, transparent 0)`,
+                backgroundImage: `radial-gradient(circle at 1px 1pxrgba(6,182,212,0.3) 1pxtransparent 0)`,
                 backgroundSize: '60px 60px'
               }}></div>
             </div>
@@ -262,9 +263,9 @@ const Homepage2044: React.FC = () => {
             <motion.div
               className="absolute top-32 right-32 w-24 h-24 border border-cyan-400/30 rotate-45"
               animate={{
-                rotate: [45, 405],
-                scale: [1, 1.2, 1],
-                opacity: [0.3, 0.8, 0.3]}}
+                rotate: [45405],
+                scale: [1.21],
+                opacity: [0.30.80.3]}}
               transition={{
                 duration: 10,
                 repeat: Infinity as any,
@@ -274,8 +275,8 @@ const Homepage2044: React.FC = () => {
             <motion.div
               className="absolute bottom-32 left-32 w-16 h-16 border border-purple-400/30 rounded-full"
               animate={{
-                scale: [1, 1.5, 1],
-                opacity: [0.3, 0.8, 0.3]}}
+                scale: [1.51],
+                opacity: [0.30.80.3]}}
               transition={{
                 duration: 8,
                 repeat: Infinity as any,
@@ -292,23 +293,23 @@ const Homepage2044: React.FC = () => {
     <>
       <Head>
         <title>Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title>
-        <meta name="description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group." />
-        <meta name="keywords" content="AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group" />
+        <meta name="description" content="Pioneering the future of technology with revolutionary AI consciousnessquantum computingand autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group." />
+        <meta name="keywords" content="AI consciousnessquantum computingspace technologycybersecurityautonomous solutionsbusiness intelligenceZion Tech Group" />
         <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="indexfollow" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/" />
         <meta property="og:title" content="Zion Tech Group - Revolutionary 2044 Technology Solutions" />
-        <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions." />
+        <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousnessquantum computingand autonomous solutions." />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://ziontechgroup.com/" />
         <meta property="twitter:title" content="Zion Tech Group - Revolutionary 2044 Technology Solutions" />
-        <meta property="twitter:description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions." />
+        <meta property="twitter:description" content="Pioneering the future of technology with revolutionary AI consciousnessquantum computingand autonomous solutions." />
         <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         
         {/* Structured Data */}
@@ -319,7 +320,7 @@ const Homepage2044: React.FC = () => {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Zion Tech Group",
-              "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions",
+              "description": "Pioneering the future of technology with revolutionary AI consciousnessquantum computingand autonomous solutions",
               "url": "https://ziontechgroup.com",
               "logo": "https://ziontechgroup.com/logo.png",
               "sameAs": [
@@ -345,9 +346,9 @@ const Homepage2044: React.FC = () => {
             <motion.h1
               id="hero-heading"
               className="text-7xl md:text-9xl lg:text-[12rem] font-black mb-10 leading-none"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8ease: "easeOut" }}
             >
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(6,182,212,0.5)]">
                 Zion Tech Group
@@ -356,18 +357,18 @@ const Homepage2044: React.FC = () => {
             
             <motion.p
               className="text-3xl md:text-4xl text-gray-300 mb-16 max-w-6xl mx-auto leading-relaxed font-light"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8delay: 0.2ease: "easeOut" }}
             >
-              Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.
+              Pioneering the future of technology with revolutionary AI consciousnessquantum computingand autonomous solutions that transform businesses worldwide.
             </motion.p>
 
             <motion.div
               className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8delay: 0.4ease: "easeOut" }}
             >
               <button 
                 className="group px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-3xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_50px_rgba(6,182,212,0.4)] focus:outline-none focus:ring-4 focus:ring-cyan-500/50 text-xl relative overflow-hidden"
@@ -395,19 +396,19 @@ const Homepage2044: React.FC = () => {
             {/* Enhanced Stats Section */}
             <motion.div
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-20"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8delay: 0.6ease: "easeOut" }}
             >
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <motion.div
                   key={stat.label}
                   className="text-center group cursor-pointer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+                  transition={{ duration: 0.5delay: 0.8 + index * 0.1 }}
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300">
                     <stat.icon className="w-8 h-8 text-cyan-400" />
@@ -428,9 +429,9 @@ const Homepage2044: React.FC = () => {
             {/* Featured Service Showcase */}
             <motion.div
               className="max-w-6xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8delay: 0.6ease: "easeOut" }}
             >
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-white mb-4">
@@ -460,7 +461,7 @@ const Homepage2044: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {getFilteredServices().slice(0, 6).map((service, index) => (
+                {getFilteredServices().slice(06).map((serviceindex) => (
                   <motion.div
                     key={service.id}
                     className={`relative group cursor-pointer ${
@@ -469,9 +470,9 @@ const Homepage2044: React.FC = () => {
                     onClick={() => handleServiceClick(service)}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    initial={{ opacity: 0y: 20 }}
+                    animate={{ opacity: 1y: 0 }}
+                    transition={{ duration: 0.5delay: index * 0.1 }}
                   >
                     <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
                       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -501,8 +502,8 @@ const Homepage2044: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -515,13 +516,13 @@ const Homepage2044: React.FC = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((featureindex) => (
                 <motion.div
                   key={feature.title}
                   className="group relative"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
                 >
@@ -560,8 +561,8 @@ const Homepage2044: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

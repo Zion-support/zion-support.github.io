@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
-  Zap, 
-  Brain, 
-  Rocket, 
-  Star, 
-  TrendingUp, 
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  Star
+  TrendingUp
   ArrowRight,
   Play,
   X,
@@ -19,13 +20,13 @@ import {
 } from 'lucide-react';
 
 const UltimateContentShowcase2027PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const features = [
     {
@@ -55,18 +56,18 @@ const UltimateContentShowcase2027PromotionBanner = () => {
   ];
 
   const stats = [
-    { value: '2.5M+', label: 'Active Users' },
-    { value: '500%', label: 'ROI Increase' },
-    { value: '99.8%', label: 'Success Rate' },
-    { value: '10M+', label: 'Hours Saved' }
+    { value: '2.5M+'label: 'Active Users' },
+    { value: '500%'label: 'ROI Increase' },
+    { value: '99.8%'label: 'Success Rate' },
+    { value: '10M+'label: 'Hours Saved' }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (isDismissed) return null;
 
@@ -74,10 +75,10 @@ const UltimateContentShowcase2027PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0y: -100 }}
+          animate={{ opacity: 1y: 0 }}
+          exit={{ opacity: 0y: -100 }}
+          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/30"
         >
           {/* Animated Background */}
@@ -86,13 +87,13 @@ const UltimateContentShowcase2027PromotionBanner = () => {
               className="absolute inset-0 opacity-30"
               animate={{
                 background: [
-                  'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
-                  'radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%)',
-                  'radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%)',
-                  'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
+                  'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 40% 80%rgba(1202192550.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
                 ]
               }}
-              transition={{ duration: 8, repeat: Infinity }}
+              transition={{ duration: 8repeat: Infinity }}
             />
           </div>
 
@@ -106,7 +107,7 @@ const UltimateContentShowcase2027PromotionBanner = () => {
                     <span className="text-purple-300 text-sm font-medium">NEW 2027</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
+                    {[...Array(5)].map((_i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -119,7 +120,7 @@ const UltimateContentShowcase2027PromotionBanner = () => {
                 </h2>
                 
                 <p className="text-gray-300 text-sm lg:text-base mb-4 max-w-2xl">
-                  Experience revolutionary AI innovations, automation mastery, and next-generation 
+                  Experience revolutionary AI innovationsautomation masteryand next-generation 
                   solutions transforming businesses worldwide. Join 2.5M+ users achieving 500% ROI increases.
                 </p>
 
@@ -128,9 +129,9 @@ const UltimateContentShowcase2027PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentFeature}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      exit={{ opacity: 0x: -20 }}
                       transition={{ duration: 0.5 }}
                       className="flex items-center gap-2"
                     >
@@ -151,7 +152,7 @@ const UltimateContentShowcase2027PromotionBanner = () => {
 
                 {/* Stats */}
                 <div className="flex flex-wrap items-center gap-4 text-xs">
-                  {stats.map((stat, index) => (
+                  {stats.map((statindex) => (
                     <div key={index} className="flex items-center gap-1">
                       <TrendingUp className="w-3 h-3 text-green-400" />
                       <span className="text-white font-semibold">{stat.value}</span>

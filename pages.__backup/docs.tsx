@@ -9,9 +9,9 @@ const DocumentationPage: React.FC = () => {
       description: "Quick start guide for new users",
       icon: "🚀",
       links: [
-        { name: "Installation", href: "#installation", description: "Set up Zion App in minutes" },
-        { name: "Quick Start", href: "#quick-start", description: "Build your first automation" },
-        { name: "Configuration", href: "#configuration", description: "Customize your setup" }
+        { name: "Installation"href: "#installation"description: "Set up Zion App in minutes" },
+        { name: "Quick Start"href: "#quick-start"description: "Build your first automation" },
+        { name: "Configuration"href: "#configuration"description: "Customize your setup" }
       ]
     },
     {
@@ -19,9 +19,9 @@ const DocumentationPage: React.FC = () => {
       description: "Understanding the fundamentals",
       icon: "🧠",
       links: [
-        { name: "Automations", href: "#automations", description: "How autonomous workflows work" },
-        { name: "AI Integration", href: "#ai-integration", description: "Leveraging artificial intelligence" },
-        { name: "Monitoring", href: "#monitoring", description: "Real-time system health" }
+        { name: "Automations"href: "#automations"description: "How autonomous workflows work" },
+        { name: "AI Integration"href: "#ai-integration"description: "Leveraging artificial intelligence" },
+        { name: "Monitoring"href: "#monitoring"description: "Real-time system health" }
       ]
     },
     {
@@ -29,9 +29,9 @@ const DocumentationPage: React.FC = () => {
       description: "Complete API documentation",
       icon: "🔌",
       links: [
-        { name: "REST API", href: "#rest-api", description: "HTTP endpoints and methods" },
-        { name: "Webhooks", href: "#webhooks", description: "Event-driven integrations" },
-        { name: "SDK", href: "#sdk", description: "Client libraries and tools" }
+        { name: "REST API"href: "#rest-api"description: "HTTP endpoints and methods" },
+        { name: "Webhooks"href: "#webhooks"description: "Event-driven integrations" },
+        { name: "SDK"href: "#sdk"description: "Client libraries and tools" }
       ]
     },
     {
@@ -39,9 +39,9 @@ const DocumentationPage: React.FC = () => {
       description: "Building custom automations",
       icon: "⚙️",
       links: [
-        { name: "Workflow Builder", href: "#workflow-builder", description: "Visual automation designer" },
-        { name: "Triggers", href: "#triggers", description: "Event-based automation" },
-        { name: "Actions", href: "#actions", description: "Available automation steps" }
+        { name: "Workflow Builder"href: "#workflow-builder"description: "Visual automation designer" },
+        { name: "Triggers"href: "#triggers"description: "Event-based automation" },
+        { name: "Actions"href: "#actions"description: "Available automation steps" }
       ]
     },
     {
@@ -49,9 +49,9 @@ const DocumentationPage: React.FC = () => {
       description: "Production deployment guide",
       icon: "🌐",
       links: [
-        { name: "Netlify", href: "#netlify", description: "Deploy to Netlify" },
-        { name: "Vercel", href: "#vercel", description: "Deploy to Vercel" },
-        { name: "Docker", href: "#docker", description: "Containerized deployment" }
+        { name: "Netlify"href: "#netlify"description: "Deploy to Netlify" },
+        { name: "Vercel"href: "#vercel"description: "Deploy to Vercel" },
+        { name: "Docker"href: "#docker"description: "Containerized deployment" }
       ]
     },
     {
@@ -59,9 +59,9 @@ const DocumentationPage: React.FC = () => {
       description: "Common issues and solutions",
       icon: "🔧",
       links: [
-        { name: "FAQ", href: "#faq", description: "Frequently asked questions" },
-        { name: "Debugging", href: "#debugging", description: "Debug common issues" },
-        { name: "Support", href: "#support", description: "Get help when needed" }
+        { name: "FAQ"href: "#faq"description: "Frequently asked questions" },
+        { name: "Debugging"href: "#debugging"description: "Debug common issues" },
+        { name: "Support"href: "#support"description: "Get help when needed" }
       ]
     }
   ];
@@ -89,7 +89,7 @@ jobs:
       language: "javascript",
       code: `// AI-powered content generation
 const generateContent = async (prompt) => {
-  const response = await fetch('/api/ai/generate', {
+  const response = await fetch('/api/ai/generate'{
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ prompt })
@@ -120,8 +120,8 @@ const monitorPerformance = async (): Promise<PerformanceMetrics> => {
 // Real-time monitoring
 setInterval(async () => {
   const metrics = await monitorPerformance();
-  console.log('Performance:', metrics);
-}, 60000); // Every minute`
+  console.log('Performance:'metrics);
+}60000); // Every minute`
     }
   ];
 
@@ -129,8 +129,8 @@ setInterval(async () => {
     <>
       <Head>
         <title>Documentation - Zion App</title>
-        <meta name="description" content="Comprehensive documentation for Zion App - learn how to use autonomous cloud automations, AI-powered features, and advanced monitoring." />
-        <meta name="keywords" content="documentation, API, automation, AI, monitoring, deployment" />
+        <meta name="description" content="Comprehensive documentation for Zion App - learn how to use autonomous cloud automationsAI-powered featuresand advanced monitoring." />
+        <meta name="keywords" content="documentationAPIautomationAImonitoringdeployment" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
@@ -152,7 +152,7 @@ setInterval(async () => {
         {/* Documentation Sections */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sections.map((section, index) => (
+            {sections.map((sectionindex) => (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300"
@@ -161,7 +161,7 @@ setInterval(async () => {
                 <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
                 <p className="text-blue-200 mb-6">{section.description}</p>
                 <div className="space-y-3">
-                  {section.links.map((link, linkIndex) => (
+                  {section.links.map((linkIndex) => (
                     <div key={linkIndex} className="border-l-2 border-blue-400 pl-4">
                       <a
                         href={link.href}
@@ -184,7 +184,7 @@ setInterval(async () => {
             Code Examples
           </h2>
           <div className="space-y-8">
-            {codeExamples.map((example, index) => (
+            {codeExamples.map((exampleindex) => (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"

@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+"use client";
+import React{ useEffectuseRef } from 'react';
 import { motion } from 'framer-motion';
 
 interface UltraFuturisticBackground2028Props {
@@ -37,14 +38,14 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         vx: (Math.random() - 0.5) * 0.5,
         vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 2 + 1,
-        color: ['#8b5cf6', '#3b82f6', '#06b6d4', '#10b981'][Math.floor(Math.random() * 4)],
+        color: ['#8b5cf6'#3b82f6'#06b6d4'#10b981'][Math.floor(Math.random() * 4)],
         opacity: Math.random() * 0.5 + 0.3
       });
     }
 
     // Animation loop
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0canvas.widthcanvas.height);
 
       // Update and draw particles
       particles.forEach((particle) => {
@@ -59,7 +60,7 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
 
         // Draw particle
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.arc(particle.xparticle.yparticle.size0Math.PI * 2);
         ctx.fillStyle = particle.color;
         ctx.globalAlpha = particle.opacity;
         ctx.fill();
@@ -72,8 +73,8 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
 
           if (distance < 100) {
             ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.moveTo(particle.xparticle.y);
+            ctx.lineTo(otherParticle.xotherParticle.y);
             ctx.strokeStyle = particle.color;
             ctx.globalAlpha = (100 - distance) / 100 * 0.1;
             ctx.lineWidth = 1;
@@ -93,12 +94,12 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
       canvas.height = window.innerHeight;
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize'handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize'handleResize);
     };
-  }, []);
+  }[]);
 
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
@@ -121,9 +122,9 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-purple-500/30 rotate-45"
           animate={{
-            rotate: [45, 405],
-            scale: [1, 1.1, 1],
-            opacity: [0.3, 0.6, 0.3]
+            rotate: [45405],
+            scale: [1.1],
+            opacity: [0.30.60.3]
           }}
           transition={{
             duration: 8,
@@ -135,9 +136,9 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-blue-500/30 rotate-45"
           animate={{
-            rotate: [45, -315],
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.5, 0.2]
+            rotate: [45-315],
+            scale: [1.21],
+            opacity: [0.20.50.2]
           }}
           transition={{
             duration: 10,
@@ -149,9 +150,9 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         <motion.div
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotate-45"
           animate={{
-            rotate: [45, 405],
-            scale: [1, 1.15, 1],
-            opacity: [0.25, 0.55, 0.25]
+            rotate: [45405],
+            scale: [1.151],
+            opacity: [0.250.550.25]
           }}
           transition={{
             duration: 12,
@@ -164,8 +165,8 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         <motion.div
           className="absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full"
           animate={{
-            y: [0, -20, 0],
-            opacity: [0.3, 0.6, 0.3]
+            y: [0-20],
+            opacity: [0.30.60.3]
           }}
           transition={{
             duration: 6,
@@ -177,8 +178,8 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         <motion.div
           className="absolute top-2/3 right-1/4 w-20 h-20 border border-blue-400/40 rounded-full"
           animate={{
-            y: [0, 25, 0],
-            opacity: [0.2, 0.5, 0.2]
+            y: [0250],
+            opacity: [0.20.50.2]
           }}
           transition={{
             duration: 7,
@@ -190,8 +191,8 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         <motion.div
           className="absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rounded-full"
           animate={{
-            y: [0, -15, 0],
-            opacity: [0.25, 0.55, 0.25]
+            y: [0-150],
+            opacity: [0.250.550.25]
           }}
           transition={{
             duration: 5,
@@ -206,8 +207,8 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         <motion.div
           className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"
           animate={{
-            y: [0, 1000],
-            opacity: [0, 1, 0]
+            y: [01000],
+            opacity: [010]
           }}
           transition={{
             duration: 4,
@@ -219,8 +220,8 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         <motion.div
           className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent"
           animate={{
-            y: [0, 1000],
-            opacity: [0, 1, 0]
+            y: [01000],
+            opacity: [010]
           }}
           transition={{
             duration: 6,
@@ -233,8 +234,8 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         <motion.div
           className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
           animate={{
-            y: [0, 1000],
-            opacity: [0, 1, 0]
+            y: [01000],
+            opacity: [010]
           }}
           transition={{
             duration: 8,
@@ -247,7 +248,7 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
 
       {/* Quantum Particles */}
       <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 4 }}>
-        {[...Array(20)].map((_, i) => (
+        {[...Array(20)].map((_i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-purple-400 rounded-full"
@@ -256,8 +257,8 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
               top: `${Math.random() * 100}%`
             }}
             animate={{
-              scale: [0, 1, 0],
-              opacity: [0, 1, 0]
+              scale: [010],
+              opacity: [010]
             }}
             transition={{
               duration: 3 + Math.random() * 2,

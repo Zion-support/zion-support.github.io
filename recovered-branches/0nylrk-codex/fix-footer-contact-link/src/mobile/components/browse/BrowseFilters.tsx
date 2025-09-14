@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { X, Filter } from "lucide-react";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet";
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
+import { XFilter } from "lucide-react";
+import { SheetContentSheetHeaderSheetTitleSheetFooterSheetTrigger } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 
@@ -14,11 +14,11 @@ interface BrowseFiltersProps {
 }
 
 export function BrowseFilters({ type }: BrowseFiltersProps) {
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
+  const [activeFiltersetActiveFilters] = useState<string[]>([]);
   
   const addFilter = (filter: string) => {
     if (!activeFilters.includes(filter)) {
-      setActiveFilters([...activeFilters, filter]);
+      setActiveFilters([...activeFiltersfilter]);
     }
   };
   
@@ -79,7 +79,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
                       <Slider 
-                        defaultValue={[0, 10]} 
+                        defaultValue={[010]} 
                         max={20} 
                         step={1} 
                         className="my-4"

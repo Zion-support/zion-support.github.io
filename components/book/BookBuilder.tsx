@@ -1,7 +1,8 @@
-import React, { useMemo, useState } from 'react';
-import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react';
+"use client";
+import React{ useMemouseState } from 'react';
+DownloadImage as ImageIconFileTypeBookOpenSettingsWand2
 import { buildPrintableHtml } from '../../utils/export/buildHtml';
-import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
+import type { BookProjectBookChapterVisualAsset } from '../../utils/book/bookTypes';
 import { defaultChapters } from '../../utils/book/defaultOutline';
 
 const initialProject: BookProject = {
@@ -17,10 +18,10 @@ const initialProject: BookProject = {
     daoVoteCharts: [],
     uiScreens: [],
     quoteCallouts: [
-      { text: 'The marketplace is the new operating system.', attribution: 'Founder' }]}};
+      { text: 'The marketplace is the new operating system.'attribution: 'Founder' }]}};
 
 function fileToBase64(file: File): Promise<string> {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolvereject) => {
     const reader = new FileReader();
     reader.onload = () => resolve(reader.result as string);
     reader.onerror = reject;
@@ -29,9 +30,9 @@ function fileToBase64(file: File): Promise<string> {
 }
 
 export default function BookBuilder() {
-  const [project, setProject] = useState<BookProject>(initialProject);
-  const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER');
-  const [busy, setBusy] = useState<boolean>(false);
+  const [projectsetProject] = useState<BookProject>(initialProject);
+  const [pageSizesetPageSize] = useState<'A4' | 'LETTER'>('LETTER');
+  const [busysetBusy] = useState<boolean>(false);
 
   const coverPreview = useMemo(() => {
     return (
@@ -53,18 +54,18 @@ export default function BookBuilder() {
         </div>
       </div>
     );
-  }, [project]);
+  }[project]);
 
   async function handleGenerateWithAI() {
     setBusy(true);
     try {
-      const res = await fetch('/api/book/generate', {
+      const res = await fetch('/api/book/generate'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ meta: project.meta, chapters: project.chapters })});
+        body: JSON.stringify({ meta: project.metachapters: project.chapters })});
       const data = await res.json();
       if (data?.chapters) {
-        setProject((p) => ({ ...p, chapters: data.chapters }));
+        setProject((p) => ({ ...pchapters: data.chapters }));
       }
     } finally {
       setBusy(false);
@@ -75,10 +76,10 @@ export default function BookBuilder() {
     setBusy(true);
     try {
       const html = buildPrintableHtml(project);
-      const res = await fetch('/api/book/export/pdf', {
+      const res = await fetch('/api/book/export/pdf'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ html, pageSize })});
+        body: JSON.stringify({ htmlpageSize })});
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
@@ -94,7 +95,7 @@ export default function BookBuilder() {
   async function handleExportEpub() {
     setBusy(true);
     try {
-      const res = await fetch('/api/book/export/epub', {
+      const res = await fetch('/api/book/export/epub'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ project })});
@@ -110,14 +111,14 @@ export default function BookBuilder() {
     }
   }
 
-  async function onUploadImages(files: FileList | null, target: keyof VisualAsset[]) {
+  async function onUploadImages(files: FileList | nulltarget: keyof VisualAsset[]) {
     if (!files) return;
     const arr = await Promise.all(Array.from(files).map(fileToBase64));
     setProject((p) => ({
       ...p,
       visuals: {
         ...p.visuals,
-        [target as any]: [...(p.visuals[target as any] as string[]), ...arr]}}));
+        [target as any]: [...(p.visuals[target as any] as string[])...arr]}}));
   }
 
   return (
@@ -156,7 +157,7 @@ export default function BookBuilder() {
               <input
                 className="w-full border rounded px-3 py-2"
                 value={project.meta.title}
-                onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}
+                onChange={(e) => setProject({ ...projectmeta: { ...project.metatitle: e.target.value } })}
               />
             </label>
             <label className="space-y-1">
@@ -164,7 +165,7 @@ export default function BookBuilder() {
               <input
                 className="w-full border rounded px-3 py-2"
                 value={project.meta.subtitle}
-                onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}
+                onChange={(e) => setProject({ ...projectmeta: { ...project.metasubtitle: e.target.value } })}
               />
             </label>
             <label className="space-y-1">
@@ -172,7 +173,7 @@ export default function BookBuilder() {
               <input
                 className="w-full border rounded px-3 py-2"
                 value={project.meta.author}
-                onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}
+                onChange={(e) => setProject({ ...projectmeta: { ...project.metauthor: e.target.value } })}
               />
             </label>
             <label className="space-y-1">
@@ -181,7 +182,7 @@ export default function BookBuilder() {
                 className="w-full border rounded px-3 py-2"
                 placeholder="9781234567897"
                 value={project.meta.isbn}
-                onChange={(e) => setProject({ ...project, meta: { ...project.meta, isbn: e.target.value } })}
+                onChange={(e) => setProject({ ...projectmeta: { ...project.metaisbn: e.target.value } })}
               />
             </label>
           </div>
@@ -195,18 +196,18 @@ export default function BookBuilder() {
           <div className="space-y-3">
             <label className="block">
               <span className="text-sm opacity-70">Timeline images</span>
-              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.files, 'timelineImages' as any)} />
+              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.files'timelineImages' as any)} />
             </label>
             <label className="block">
               <span className="text-sm opacity-70">DAO vote charts</span>
-              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.files, 'daoVoteCharts' as any)} />
+              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.files'daoVoteCharts' as any)} />
             </label>
             <label className="block">
               <span className="text-sm opacity-70">Figma UI screenshots</span>
-              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.files, 'uiScreens' as any)} />
+              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.files'uiScreens' as any)} />
             </label>
             <div className="grid grid-cols-3 gap-2">
-              {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(0, 6).map((src, i) => (
+              {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(06).map((srci) => (
                 <div key={i} className="aspect-video bg-gray-100 rounded flex items-center justify-center overflow-hidden">
                   <img src={src} alt="visual" className="object-cover w-full h-full" />
                 </div>
@@ -219,7 +220,7 @@ export default function BookBuilder() {
       <section className="space-y-4">
         <h2 className="font-semibold">Chapters</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {project.chapters.map((ch, idx) => (
+          {project.chapters.map((chidx) => (
             <div key={idx} className="border rounded-lg p-4 space-y-2">
               <div className="font-medium">{ch.title}</div>
               <textarea
@@ -227,8 +228,8 @@ export default function BookBuilder() {
                 value={ch.content}
                 onChange={(e) => {
                   const chapters: BookChapter[] = [...project.chapters];
-                  chapters[idx] = { ...chapters[idx], content: e.target.value };
-                  setProject({ ...project, chapters });
+                  chapters[idx] = { ...chapters[idx]content: e.target.value };
+                  setProject({ ...projectchapters });
                 }}
               />
             </div>
@@ -239,15 +240,15 @@ export default function BookBuilder() {
       <section className="space-y-2">
         <h2 className="font-semibold">Quote Callouts</h2>
         <div className="space-y-2">
-          {project.visuals.quoteCallouts.map((q, i) => (
+          {project.visuals.quoteCallouts.map((qi) => (
             <div key={i} className="grid grid-cols-1 md:grid-cols-3 gap-2">
               <input
                 className="border rounded px-2 py-1"
                 value={q.text}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts];
-                  quoteCallouts[i] = { ...quoteCallouts[i], text: e.target.value };
-                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } });
+                  quoteCallouts[i] = { ...quoteCallouts[i]text: e.target.value };
+                  setProject({ ...projectvisuals: { ...project.visualsquoteCallouts } });
                 }}
               />
               <input
@@ -255,8 +256,8 @@ export default function BookBuilder() {
                 value={q.attribution ?? ''}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts];
-                  quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value };
-                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } });
+                  quoteCallouts[i] = { ...quoteCallouts[i]attribution: e.target.value };
+                  setProject({ ...projectvisuals: { ...project.visualsquoteCallouts } });
                 }}
                 placeholder="Attribution"
               />

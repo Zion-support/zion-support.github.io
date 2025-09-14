@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  Rocket, 
-  ArrowRight, 
+  TrendingUp
+  Brain
+  Zap
+  Rocket
+  ArrowRight
   X,
   BarChart3,
   Target,
@@ -20,9 +21,9 @@ import {
 } from 'lucide-react';
 
 const AITrends2026PredictionsPromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentPrediction, setCurrentPrediction] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentPredictionsetCurrentPrediction] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -30,10 +31,10 @@ const AITrends2026PredictionsPromotionBanner = () => {
     // Auto-rotate predictions
     const interval = setInterval(() => {
       setCurrentPrediction((prev) => (prev + 1) % predictions.length);
-    }, 4000);
+    }4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const predictions = [
     {
@@ -63,9 +64,9 @@ const AITrends2026PredictionsPromotionBanner = () => {
   ];
 
   const stats = [
-    { label: 'Predictions', value: '50+', icon: Target },
-    { label: 'Expert Analysts', value: '200+', icon: Users },
-    { label: 'Updated Weekly', value: '24/7', icon: Clock }
+    { label: 'Predictions'value: '50+'icon: Target },
+    { label: 'Expert Analysts'value: '200+'icon: Users },
+    { label: 'Updated Weekly'value: '24/7'icon: Clock }
   ];
 
   if (isDismissed) return null;
@@ -74,10 +75,10 @@ const AITrends2026PredictionsPromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0y: -100 }}
+          animate={{ opacity: 1y: 0 }}
+          exit={{ opacity: 0y: -100 }}
+          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 overflow-hidden"
         >
           {/* Background Pattern */}
@@ -86,7 +87,7 @@ const AITrends2026PredictionsPromotionBanner = () => {
           
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            {[...Array(20)].map((_, i) => (
+            {[...Array(20)].map((_i) => (
               <motion.div
                 key={i}
                 className="absolute w-1 h-1 bg-white rounded-full opacity-40"
@@ -95,8 +96,8 @@ const AITrends2026PredictionsPromotionBanner = () => {
                   top: `${Math.random() * 100}%`,
                 }}
                 animate={{
-                  y: [0, -30, 0],
-                  opacity: [0.4, 0.8, 0.4],
+                  y: [0-30],
+                  opacity: [0.40.80.4],
                 }}
                 transition={{
                   duration: 3 + Math.random() * 2,
@@ -112,9 +113,9 @@ const AITrends2026PredictionsPromotionBanner = () => {
               {/* Left Content */}
               <div className="flex-1 text-center lg:text-left">
                 <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  initial={{ opacity: 0x: -30 }}
+                  animate={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.2 }}
                   className="mb-6"
                 >
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-bold mb-4">
@@ -138,9 +139,9 @@ const AITrends2026PredictionsPromotionBanner = () => {
                 {/* Rotating Predictions */}
                 <motion.div
                   key={currentPrediction}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
+                  initial={{ opacity: 0y: 20 }}
+                  animate={{ opacity: 1y: 0 }}
+                  exit={{ opacity: 0y: -20 }}
                   transition={{ duration: 0.5 }}
                   className="flex items-center justify-center lg:justify-start mb-6"
                 >
@@ -166,12 +167,12 @@ const AITrends2026PredictionsPromotionBanner = () => {
 
                 {/* Stats */}
                 <div className="flex flex-wrap gap-6 justify-center lg:justify-start mb-8">
-                  {stats.map((stat, index) => (
+                  {stats.map((statindex) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                      initial={{ opacity: 0scale: 0.8 }}
+                      animate={{ opacity: 1scale: 1 }}
+                      transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                       className="text-center"
                     >
                       <div className="flex items-center justify-center w-12 h-12 bg-white/10 rounded-full mb-2">
@@ -206,18 +207,18 @@ const AITrends2026PredictionsPromotionBanner = () => {
 
               {/* Right Content - Prediction Cards */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                initial={{ opacity: 0x: 30 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.4 }}
                 className="flex-shrink-0 w-full lg:w-96"
               >
                 <div className="grid grid-cols-1 gap-4">
-                  {predictions.map((prediction, index) => (
+                  {predictions.map((predictionindex) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
+                      transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
                       className={`p-4 rounded-xl bg-gradient-to-r ${prediction.color} bg-opacity-20 backdrop-blur-lg border border-white/20 hover:border-white/40 transition-all duration-300 ${
                         currentPrediction === index ? 'ring-2 ring-indigo-400 ring-opacity-50' : ''
                       }`}

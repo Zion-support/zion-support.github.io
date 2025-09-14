@@ -1,52 +1,71 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function NewContent2025AdvancedAutomationBanner() {
+const NewContent2025AdvancedAutomationBanner = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-500 via-purple-600 to-indigo-700 text-white py-8 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className="flex-1 mb-6 lg:mb-0">
-            <div className="flex items-center mb-4">
-              <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-bold mr-3">
-                🚀 NEW CONTENT
-              </span>
-              <span className="bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">
-                BREAKTHROUGH
-              </span>
-            </div>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              AI 2025 Advanced Automation Mastery
-            </h2>
-            <p className="text-xl mb-6 text-blue-100">
-              Master cutting-edge AI automation techniques and achieve 2,500-5,000% ROI with our comprehensive implementation guide.
-            </p>
-            <div className="flex flex-wrap gap-4 text-sm">
-              <span className="bg-white/20 px-3 py-1 rounded-full">📚 Complete Guide</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full">🎯 2,500-5,000% ROI</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full">⚡ 10,000x Faster</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full">🎯 99.9% Accuracy</span>
-            </div>
+    <section className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-16 relative overflow-hidden">
+      <div className="absolute inset-0 bg-black opacity-10"></div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">⚡ ADVANCED AUTOMATION</span>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
-              href="/blog/ai-2025-advanced-automation-mastery"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            Advanced Automation 2025
+          </h2>
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Transform your business operations with intelligent automation that learnsadapts
+            and scales. Reduce costs by 60% while increasing productivity by 300%.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/ai-2025-advanced-automation"
+              className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Read Complete Guide
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
+              Explore Automation Solutions
             </Link>
-            <Link 
-              href="/resources/ai-2025-ultimate-implementation-toolkit"
-              className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300"
+            <Link
+              href="/demo/automation"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
             >
-              Get Implementation Toolkit
+              Watch Demo
             </Link>
           </div>
         </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center">
+            <div className="text-4xl mb-4">🤖</div>
+            <h3 className="text-lg font-bold mb-2">RPA Bots</h3>
+            <p className="text-sm opacity-90">
+              Intelligent robotic process automation for repetitive tasks
+            </p>
+          </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center">
+            <div className="text-4xl mb-4">🧠</div>
+            <h3 className="text-lg font-bold mb-2">AI Decision Making</h3>
+            <p className="text-sm opacity-90">
+              Autonomous decision-making systems with human oversight
+            </p>
+          </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center">
+            <div className="text-4xl mb-4">🔄</div>
+            <h3 className="text-lg font-bold mb-2">Workflow Automation</h3>
+            <p className="text-sm opacity-90">
+              End-to-end workflow automation with intelligent routing
+            </p>
+          </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center">
+            <div className="text-4xl mb-4">📊</div>
+            <h3 className="text-lg font-bold mb-2">Process Intelligence</h3>
+            <p className="text-sm opacity-90">
+              Continuous process optimization and performance monitoring
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default NewContent2025AdvancedAutomationBanner;

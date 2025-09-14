@@ -4,27 +4,27 @@ import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useState, useEffect } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star, AlertTriangle } from "lucide-react";
+import { useStateuseEffect } from "react";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+import { StarAlertTriangle } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 
 function ReviewsModerationContent() {
-  const [activeTab, setActiveTab] = useState("pending");
-  const [reviews, setReviews] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [activeTabsetActiveTab] = useState("pending");
+  const [reviewsetReviews] = useState([]);
+  const [isLoadingsetIsLoading] = useState(true);
   
   const fetchReviews = async () => {
     setIsLoading(true);
     try {
-      // In a real application, you would fetch reviews from an API
-      // For now, let's simulate a delay and return empty data
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // In a real applicationyou would fetch reviews from an API
+      // For nowlet's simulate a delay and return empty data
+      await new Promise(resolve => setTimeout(resolve1000));
       setReviews([]);
       setIsLoading(false);
     } catch (error) {
-      console.error("Error fetching reviews:", error);
+      console.error("Error fetching reviews:"error);
       toast({
         title: "Error",
         description: "Failed to load reviews. Please try again later.",
@@ -35,7 +35,7 @@ function ReviewsModerationContent() {
 
   useEffect(() => {
     fetchReviews();
-  }, [activeTab]);
+  }[activeTab]);
 
   const handleRefresh = () => {
     fetchReviews();
@@ -52,7 +52,7 @@ function ReviewsModerationContent() {
         <div className="flex justify-between items-center mb-8">
           <div>
             <h1 className="text-3xl font-bold">Review Moderation</h1>
-            <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>
+            <p className="text-muted-foreground mt-1">Manageapproveor reject reviews</p>
           </div>
         </div>
         

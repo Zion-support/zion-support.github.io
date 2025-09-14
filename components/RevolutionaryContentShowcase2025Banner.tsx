@@ -1,13 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Video, FileText, Users, TrendingUp, Play, Award } from 'lucide-react';
+ArrowRightBookOpenVideoFileTextUsersTrendingUpPlayAward
 
 export default function RevolutionaryContentShowcase2025Banner() {
   const contentTypes = [
-    { icon: BookOpen, name: "Articles", count: "150+", color: "blue" },
-    { icon: Video, name: "Videos", count: "75+", color: "purple" },
-    { icon: FileText, name: "Guides", count: "50+", color: "green" },
-    { icon: Users, name: "Community", count: "200+", color: "yellow" }
+    { icon: BookOpename: "Articles"count: "150+"color: "blue" },
+    { icon: Videoname: "Videos"count: "75+"color: "purple" },
+    { icon: FileTextname: "Guides"count: "50+"color: "green" },
+    { icon: Usersname: "Community"count: "200+"color: "yellow" }
   ];
 
   return (
@@ -30,13 +30,13 @@ export default function RevolutionaryContentShowcase2025Banner() {
             </h2>
             
             <p className="text-lg text-gray-300 mb-6 max-w-2xl">
-              Immerse yourself in 500+ pieces of premium AI content including breakthrough articles, 
-              video tutorials, implementation guides, and community insights from industry experts.
+              Immerse yourself in 500+ pieces of premium AI content including breakthrough articles
+              video tutorialsimplementation guidesand community insights from industry experts.
             </p>
 
             {/* Content Types */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-              {contentTypes.map((type, index) => {
+              {contentTypes.map((typeindex) => {
                 const IconComponent = type.icon;
                 const colorClasses = {
                   blue: "text-blue-400 bg-blue-500/20",

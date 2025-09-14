@@ -19,12 +19,12 @@ interface ListingScoreCardProps {
 }
 
 export function ListingScoreCard({ 
-  title, 
-  description, 
-  image, 
-  category, 
+  title
+  description
+  image
+  category
   tags,
-  author, 
+  author
   authorImage,
   aiScore = 0,
   rating = 0,
@@ -64,11 +64,11 @@ export function ListingScoreCard({
         {rating > 0 && (
           <div className="flex items-center gap-1 mb-4">
             <div className="flex">
-              {[1, 2, 3, 4, 5].map((star) => (
+              {[12345].map((star) => (
                 <StarIcon 
                   key={star}
                   className={cn(
-                    "h-4 w-4", 
+                    "h-4 w-4"
                     star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
@@ -84,7 +84,7 @@ export function ListingScoreCard({
         
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag, i) => (
+            {tags.map((tagi) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
               </Badge>

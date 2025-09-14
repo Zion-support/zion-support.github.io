@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
 
-import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+DatabaseLinkGaugeCheckPhoneMailMapPinRocket
 
 export default function AgenticRAGPage() {
 	const contactInfo = {
@@ -13,16 +13,16 @@ export default function AgenticRAGPage() {
 	};
 
 	const plans = [
-		{ name: 'Starter', price: '$199/month', items: ['100K tokens/month', 'Web/PDF ingestion', 'Basic reranker', 'CSV export'] },
-		{ name: 'Pro', price: '$599/month', items: ['2M tokens/month', 'GitHub/S3 connectors', 'Hybrid search + rerank', 'Eval kits'] },
-		{ name: 'Enterprise', price: 'Custom', items: ['Siloed indexes', 'SOC2/ISO support', 'Private VPC', 'SAML/SSO'] },
+		{ name: 'Starter'price: '$199/month'items: ['100K tokens/month'Web/PDF ingestion'Basic reranker'CSV export'] },
+		{ name: 'Pro'price: '$599/month'items: ['2M tokens/month'GitHub/S3 connectors'Hybrid search + rerank'Eval kits'] },
+		{ name: 'Enterprise'price: 'Custom'items: ['Siloed indexes'SOC2/ISO support'Private VPC'SAML/SSO'] },
 	];
 
 	return (
 		<UltraFuturisticMatrixBackground>
 			<Head>
 				<title>Agentic RAG Platform | Zion Tech Group</title>
-				<meta name="description" content="High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in." />
+				<meta name="description" content="High-accuracy retrieval augmented generation with ingestionindexingrerankingand evaluation built-in." />
 				<link rel="canonical" href="https://ziontechgroup.com/agentic-rag" />
 			</Head>
 
@@ -54,7 +54,7 @@ export default function AgenticRAGPage() {
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
 						<div className="text-gray-400 text-sm mb-2">Ingestion</div>
 						<div className="text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-cyan-400"><Link /> Connectors</div>
-						<p className="text-gray-400 mt-2 text-sm">Web, PDFs, DOCX, Markdown, GitHub, and cloud storage with auto-chunking.</p>
+						<p className="text-gray-400 mt-2 text-sm">WebPDFsDOCXMarkdownGitHuband cloud storage with auto-chunking.</p>
 					</div>
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
 						<div className="text-gray-400 text-sm mb-2">Indexing</div>
@@ -64,7 +64,7 @@ export default function AgenticRAGPage() {
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
 						<div className="text-gray-400 text-sm mb-2">Evaluation</div>
 						<div className="text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-rose-400"><Gauge /> Accuracy & Sources</div>
-						<p className="text-gray-400 mt-2 text-sm">Evals with reference answers, source grounding checks, and hallucination detection.</p>
+						<p className="text-gray-400 mt-2 text-sm">Evals with reference answersource grounding checksand hallucination detection.</p>
 					</div>
 				</div>
 

@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 
 interface ChatMessageProps {
   role: 'user' | 'assistant';
@@ -8,7 +8,7 @@ interface ChatMessageProps {
   key?: string | number;
 }
 
-export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
+export function ChatMessage({ rolemessagetimestamp }: ChatMessageProps) {
   const isUser = role === 'user';
   
   return (
@@ -40,7 +40,7 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
         <div className="whitespace-pre-wrap">{message}</div>
         {timestamp && (
           <div className="text-xs text-zion-slate mt-1 text-right">
-            {timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+            {timestamp.toLocaleTimeString([]{ hour: '2-digit'minute: '2-digit' })}
           </div>
         )}
       </div>

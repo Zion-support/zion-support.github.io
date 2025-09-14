@@ -1,6 +1,6 @@
 
 import { GradientHeading } from "@/components/GradientHeading";
-import { Clock, Map, DollarSign } from "lucide-react";
+import { ClockMapDollarSign } from "lucide-react";
 
 export function PageHero() {
   return (

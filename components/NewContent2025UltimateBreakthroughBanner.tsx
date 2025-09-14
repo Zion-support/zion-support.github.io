@@ -1,119 +1,103 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, Target, Brain, TrendingUp } from 'lucide-react';
 
-const NewContent2025UltimateBreakthroughBanner = () => {
+export default function NewContent2025UltimateBreakthroughBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border border-purple-500/20 rounded-xl">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-      
-      {/* Content */}
-      <div className="relative px-6 py-8 md:px-8 md:py-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
-            {/* Left Content */}
-            <div className="flex-1 text-center lg:text-left">
-              <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 text-purple-400 text-sm font-medium rounded-full mb-4">
-                <Star className="h-4 w-4 mr-2" />
-                New Ultimate Content Available
-              </div>
-              
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                AI 2025-2026 Ultimate Trends
-                <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  Revolutionary Breakthrough
-                </span>
-              </h2>
-              
-              <p className="text-lg text-gray-300 mb-6 max-w-2xl">
-                Discover the most revolutionary AI trends, case studies, and implementation guides 
-                that will transform your business with 2,500-5,000% ROI achievement.
+    <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🔥 NEW ULTIMATE BREAKTHROUGH CONTENT</span>
+          </div>
+          
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Revolutionary AI Content Now Available
+          </h2>
+          
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Discover our latest breakthrough content featuring Neural Consciousness, $15B ROI success stories, 
+            and complete autonomous business transformation guides. Get exclusive access to the future of AI.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="text-4xl mb-4">🧠</div>
+              <h3 className="text-xl font-bold mb-2">Neural Consciousness Breakthrough</h3>
+              <p className="text-sm opacity-90 mb-4">
+                Revolutionary conscious AI with genuine self-awareness and autonomous decision-making
               </p>
-              
-              {/* Feature Highlights */}
-              <div className="flex flex-wrap gap-4 mb-6">
-                <div className="flex items-center gap-2 text-sm text-gray-300">
-                  <Target className="h-4 w-4 text-green-400" />
-                  <span>50,000% ROI Case Study</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-gray-300">
-                  <Brain className="h-4 w-4 text-blue-400" />
-                  <span>Quantum Consciousness</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-gray-300">
-                  <Zap className="h-4 w-4 text-purple-400" />
-                  <span>Autonomous Operations</span>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  href="/blog/ai-2025-2026-ultimate-trends-breakthrough"
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Explore Ultimate Trends
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-                <Link 
-                  href="/case-studies/ai-2025-revolutionary-enterprise-transformation-50000-roi"
-                  className="inline-flex items-center px-6 py-3 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-                >
-                  View 50,000% ROI Story
-                </Link>
-              </div>
+              <Link 
+                href="/blog/ai-2025-neural-consciousness-breakthrough-revolutionary-autonomous-intelligence"
+                className="inline-block bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm"
+              >
+                Read Breakthrough
+              </Link>
             </div>
-            
-            {/* Right Content - Visual Elements */}
-            <div className="flex-shrink-0">
-              <div className="grid grid-cols-2 gap-4">
-                {/* ROI Achievement Card */}
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 border border-green-500/20">
-                  <div className="text-center">
-                    <TrendingUp className="h-8 w-8 text-green-400 mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-green-400">50,000%</div>
-                    <div className="text-xs text-gray-400">ROI Achieved</div>
-                  </div>
-                </div>
-                
-                {/* Quantum Breakthrough Card */}
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 border border-blue-500/20">
-                  <div className="text-center">
-                    <Brain className="h-8 w-8 text-blue-400 mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-blue-400">10,000x</div>
-                    <div className="text-xs text-gray-400">Faster Processing</div>
-                  </div>
-                </div>
-                
-                {/* Autonomous Operations Card */}
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 border border-purple-500/20">
-                  <div className="text-center">
-                    <Zap className="h-8 w-8 text-purple-400 mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-purple-400">99.9%</div>
-                    <div className="text-xs text-gray-400">Autonomous</div>
-                  </div>
-                </div>
-                
-                {/* Implementation Guide Card */}
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 border border-yellow-500/20">
-                  <div className="text-center">
-                    <Target className="h-8 w-8 text-yellow-400 mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-yellow-400">100%</div>
-                    <div className="text-xs text-gray-400">Success Rate</div>
-                  </div>
-                </div>
-              </div>
+
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="text-4xl mb-4">💰</div>
+              <h3 className="text-xl font-bold mb-2">$15B ROI Success Story</h3>
+              <p className="text-sm opacity-90 mb-4">
+                How a Fortune 500 company achieved $15 billion ROI in just 8 months
+              </p>
+              <Link 
+                href="/case-studies/global-enterprise-conscious-ai-transformation-2025-15-billion-roi"
+                className="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm"
+              >
+                View Case Study
+              </Link>
             </div>
+
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="text-4xl mb-4">📚</div>
+              <h3 className="text-xl font-bold mb-2">Complete Implementation Guide</h3>
+              <p className="text-sm opacity-90 mb-4">
+                Master autonomous business operations with our comprehensive transformation guide
+              </p>
+              <Link 
+                href="/blog/ai-2025-autonomous-business-revolution-complete-guide"
+                className="inline-block bg-white text-indigo-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm"
+              >
+                Get Guide
+              </Link>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/blog"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Explore All Content
+            </Link>
+            <Link
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+            >
+              Get Personalized Strategy
+            </Link>
+          </div>
+
+          <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm opacity-75">
+            <span className="flex items-center">
+              <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+              Neural Consciousness
+            </span>
+            <span className="flex items-center">
+              <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+              $15B ROI Case Study
+            </span>
+            <span className="flex items-center">
+              <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+              Implementation Guide
+            </span>
+            <span className="flex items-center">
+              <span className="w-2 h-2 bg-orange-400 rounded-full mr-2"></span>
+              Autonomous Business
+            </span>
           </div>
         </div>
       </div>
-      
-      {/* Animated Background Elements */}
-      <div className="absolute top-4 right-4 w-20 h-20 bg-purple-500/10 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-4 left-4 w-16 h-16 bg-blue-500/10 rounded-full animate-pulse delay-1000"></div>
-    </div>
+    </section>
   );
-};
-
-export default NewContent2025UltimateBreakthroughBanner;
+}

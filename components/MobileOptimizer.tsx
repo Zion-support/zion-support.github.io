@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React{ useEffectuseState } from 'react';
 
 interface MobileOptimizerProps {
   children: React.ReactNode;
 }
 
 const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);
-  const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait');
+  const [isMobilesetIsMobile] = useState(false);
+  const [isTabletsetIsTablet] = useState(false);
+  const [orientationsetOrientation] = useState<'portrait' | 'landscape'>('portrait');
 
   useEffect(() => {
     const checkDevice = () => {
@@ -22,16 +23,16 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
     };
 
     checkDevice();
-    window.addEventListener('resize', checkDevice);
-    window.addEventListener('orientationchange', checkDevice);
+    window.addEventListener('resize'checkDevice);
+    window.addEventListener('orientationchange'checkDevice);
 
     // Add mobile-specific optimizations
     const optimizeForMobile = () => {
       // Prevent zoom on input focus (iOS)
       const viewport = document.querySelector('meta[name="viewport"]');
       if (viewport) {
-        viewport.setAttribute('content', 
-          'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+        viewport.setAttribute('content'
+          'width=device-widthinitial-scale=1.0maximum-scale=1.0user-scalable=no'
         );
       }
 
@@ -40,7 +41,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
       style.textContent = `
         /* Mobile-optimized touch targets */
         @media (max-width: 767px) {
-          button, a, input, select, textarea {
+          buttonainputselectextarea {
             min-height: 44px;
             min-width: 44px;
           }
@@ -107,7 +108,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
         }
         
         /* High DPI display optimizations */
-        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        @media (-webkit-min-device-pixel-ratio: 2)(min-resolution: 192dpi) {
           .high-dpi-optimize {
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
@@ -120,24 +121,24 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
       const addMobileEventListeners = () => {
         // Prevent double-tap zoom
         let lastTouchEnd = 0;
-        document.addEventListener('touchend', (e) => {
+        document.addEventListener('touchend'(e) => {
           const now = new Date().getTime();
           if (now - lastTouchEnd <= 300) {
             e.preventDefault();
           }
           lastTouchEnd = now;
-        }, false);
+        }false);
 
         // Add swipe gestures
         let startX = 0;
         let startY = 0;
         
-        document.addEventListener('touchstart', (e) => {
+        document.addEventListener('touchstart'(e) => {
           startX = e.touches[0].clientX;
           startY = e.touches[0].clientY;
         });
 
-        document.addEventListener('touchend', (e) => {
+        document.addEventListener('touchend'(e) => {
           if (!startX || !startY) return;
           
           const endX = e.changedTouches[0].clientX;
@@ -173,11 +174,11 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
         });
 
         // Add pull-to-refresh prevention
-        document.addEventListener('touchstart', (e) => {
+        document.addEventListener('touchstart'(e) => {
           if (window.scrollY === 0) {
             e.preventDefault();
           }
-        }, { passive: false });
+        }{ passive: false });
       };
 
       addMobileEventListeners();
@@ -193,7 +194,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
           
           // Add responsive image attributes
           if (!img.sizes) {
-            img.sizes = '(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw';
+            img.sizes = '(max-width: 767px) 100vw(max-width: 1023px) 50vw33vw';
           }
           
           // Add alt text if missing
@@ -213,7 +214,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
           const toggle = document.createElement('button');
           toggle.className = 'mobile-menu-toggle';
           toggle.innerHTML = '☰';
-          toggle.setAttribute('aria-label', 'Toggle mobile menu');
+          toggle.setAttribute('aria-label'Toggle mobile menu');
           toggle.style.cssText = `
             display: none;
             background: none;
@@ -227,10 +228,10 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
             toggle.style.display = 'block';
           }
           
-          nav.insertBefore(toggle, nav.firstChild);
+          nav.insertBefore(togglenav.firstChild);
           
           // Add mobile menu functionality
-          toggle.addEventListener('click', () => {
+          toggle.addEventListener('click'() => {
             const menu = nav.querySelector('ul');
             if (menu) {
               menu.classList.toggle('mobile-menu-open');
@@ -245,10 +246,10 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
     optimizeForMobile();
 
     return () => {
-      window.removeEventListener('resize', checkDevice);
-      window.removeEventListener('orientationchange', checkDevice);
+      window.removeEventListener('resize'checkDevice);
+      window.removeEventListener('orientationchange'checkDevice);
     };
-  }, [isMobile, isTablet, orientation]);
+  }[isMobileisTabletorientation]);
 
   return (
     <div className={`mobile-optimizer ${isMobile ? 'mobile' : ''} ${isTablet ? 'tablet' : ''} ${orientation}`}>
@@ -285,7 +286,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
           left: 0;
           right: 0;
           background: white;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(00.1);
           z-index: 1000;
         }
         

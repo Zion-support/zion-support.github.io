@@ -1,13 +1,14 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
-  Rocket, 
-  Zap, 
-  Brain, 
-  Globe, 
+  Sparkles
+  Rocket
+  Zap
+  Brain
+  Globe
   Target,
   ArrowRight,
   Play,
@@ -18,24 +19,24 @@ import {
 } from 'lucide-react';
 
 const RevolutionaryContentBanner2025 = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }4000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const slides = [
     {
       id: 1,
       title: "AI-Powered Content Revolution",
       subtitle: "Transform Your Digital Presence",
-      description: "Experience the future of content creation with our revolutionary AI technology that generates, optimizes, and personalizes content at scale.",
-      features: ["Automated content generation", "Real-time optimization", "Multi-platform distribution", "Performance analytics"],
+      description: "Experience the future of content creation with our revolutionary AI technology that generatesoptimizesand personalizes content at scale.",
+      features: ["Automated content generation"Real-time optimization"Multi-platform distribution"Performance analytics"],
       color: "from-blue-600 via-purple-600 to-pink-600",
       icon: Brain
     },
@@ -44,7 +45,7 @@ const RevolutionaryContentBanner2025 = () => {
       title: "Quantum Content Intelligence",
       subtitle: "Next-Generation Processing",
       description: "Harness the power of quantum computing to process and analyze content with unprecedented speed and accuracy.",
-      features: ["Quantum processing", "Instant analysis", "Predictive insights", "Global scalability"],
+      features: ["Quantum processing"Instant analysis"Predictive insights"Global scalability"],
       color: "from-purple-600 via-pink-600 to-red-600",
       icon: Zap
     },
@@ -52,18 +53,18 @@ const RevolutionaryContentBanner2025 = () => {
       id: 3,
       title: "Autonomous Content Ecosystem",
       subtitle: "Self-Managing Digital Assets",
-      description: "Create a fully autonomous content ecosystem that manages, updates, and optimizes itself without human intervention.",
-      features: ["Self-optimization", "Automatic updates", "Smart distribution", "Continuous learning"],
+      description: "Create a fully autonomous content ecosystem that managesupdatesand optimizes itself without human intervention.",
+      features: ["Self-optimization"Automatic updates"Smart distribution"Continuous learning"],
       color: "from-green-600 via-teal-600 to-cyan-600",
       icon: Globe
     }
   ];
 
   const stats = [
-    { label: "Content Generated", value: "1M+", icon: Target },
-    { label: "Active Users", value: "500K+", icon: Users },
-    { label: "Performance Boost", value: "300%", icon: TrendingUp },
-    { label: "Success Rate", value: "99.9%", icon: Award }
+    { label: "Content Generated"value: "1M+"icon: Target },
+    { label: "Active Users"value: "500K+"icon: Users },
+    { label: "Performance Boost"value: "300%"icon: TrendingUp },
+    { label: "Success Rate"value: "99.9%"icon: Award }
   ];
 
   const containerVariants = {
@@ -78,7 +79,7 @@ const RevolutionaryContentBanner2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -120,8 +121,8 @@ const RevolutionaryContentBanner2025 = () => {
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the most advanced content creation and management platform 
-            powered by cutting-edge AI technology that transforms how you create, 
-            distribute, and optimize digital content.
+            powered by cutting-edge AI technology that transforms how you create
+            distributeand optimize digital content.
           </p>
         </motion.div>
 
@@ -130,11 +131,11 @@ const RevolutionaryContentBanner2025 = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
           variants={itemVariants}
         >
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <motion.div
               key={index}
               className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"
-              whileHover={{ scale: 1.05, y: -5 }}
+              whileHover={{ scale: 1.05y: -5 }}
               transition={{ duration: 0.3 }}
             >
               <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-3" />
@@ -154,9 +155,9 @@ const RevolutionaryContentBanner2025 = () => {
               <motion.div
                 key={currentSlide}
                 className={`absolute inset-0 bg-gradient-to-br ${slides[currentSlide].color} flex items-center`}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
+                initial={{ opacity: 0x: 100 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: -100 }}
                 transition={{ duration: 0.5 }}
               >
                 <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -164,8 +165,8 @@ const RevolutionaryContentBanner2025 = () => {
                   <div className="text-white">
                     <motion.div
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-6"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
                       transition={{ delay: 0.2 }}
                     >
                       <slides[currentSlide].icon className="w-5 h-5" />
@@ -174,8 +175,8 @@ const RevolutionaryContentBanner2025 = () => {
                     
                     <motion.h2
                       className="text-4xl md:text-6xl font-bold mb-6"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
                       transition={{ delay: 0.3 }}
                     >
                       {slides[currentSlide].title}
@@ -183,8 +184,8 @@ const RevolutionaryContentBanner2025 = () => {
                     
                     <motion.p
                       className="text-xl text-white/90 mb-8 leading-relaxed"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
                       transition={{ delay: 0.4 }}
                     >
                       {slides[currentSlide].description}
@@ -192,11 +193,11 @@ const RevolutionaryContentBanner2025 = () => {
                     
                     <motion.div
                       className="space-y-3 mb-8"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
                       transition={{ delay: 0.5 }}
                     >
-                      {slides[currentSlide].features.map((feature, idx) => (
+                      {slides[currentSlide].features.map((featureidx) => (
                         <div key={idx} className="flex items-center gap-3">
                           <Star className="w-5 h-5 text-yellow-400" />
                           <span className="text-white/90">{feature}</span>
@@ -206,8 +207,8 @@ const RevolutionaryContentBanner2025 = () => {
                     
                     <motion.div
                       className="flex flex-col sm:flex-row gap-4"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
                       transition={{ delay: 0.6 }}
                     >
                       <motion.button
@@ -237,9 +238,9 @@ const RevolutionaryContentBanner2025 = () => {
                   {/* Visual Element */}
                   <motion.div
                     className="relative"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.4, duration: 0.6 }}
+                    initial={{ opacity: 0scale: 0.8 }}
+                    animate={{ opacity: 1scale: 1 }}
+                    transition={{ delay: 0.4duration: 0.6 }}
                   >
                     <div className="relative w-full h-80 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8">
                       <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl"></div>
@@ -258,7 +259,7 @@ const RevolutionaryContentBanner2025 = () => {
             
             {/* Navigation Dots */}
             <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3">
-              {slides.map((_, index) => (
+              {slides.map((_index) => (
                 <button
                   key={index}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
@@ -283,7 +284,7 @@ const RevolutionaryContentBanner2025 = () => {
               Ready to Revolutionize Your Content?
             </h3>
             <p className="text-gray-300 text-xl mb-8 max-w-3xl mx-auto">
-              Join thousands of creators, marketers, and businesses who are already 
+              Join thousands of creatorsmarketersand businesses who are already 
               using our revolutionary AI technology to create extraordinary content 
               and achieve unprecedented results.
             </p>

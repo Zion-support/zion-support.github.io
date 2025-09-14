@@ -6,7 +6,7 @@ export default function HealthcareAISolutions() {
 		<ServiceLanding
 			title="Healthcare AI Solutions"
 			slug="healthcare-ai-solutions"
-			description="Deploy AI for diagnostics assistance, care management, operational optimization, and compliance workflows. Improve outcomes while protecting patient privacy."
+			description="Deploy AI for diagnostics assistancecare managementoperational optimizationand compliance workflows. Improve outcomes while protecting patient privacy."
 			subtitle="Clinically aware AI that augments providers and reduces administrative burden."
 			pricePerMonthUSD={2999}
 			implementationWeeks="Implementation: 6–12 weeks"
@@ -17,9 +17,9 @@ export default function HealthcareAISolutions() {
 				"Prior auth automation and appeals drafts",
 				"Capacity forecasting and staffing optimization",
 				"HIPAA-compliant data pipelines and audit",
-				"EHR integrations: HL7/FHIR, Epic, Cerner"
+				"EHR integrations: HL7/FHIREpicCerner"
 			]}
-			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}
+			industries={["Hospitals"Clinics"Payers"HealthTech"]}
 			canonical="https://ziontechgroup.com/healthcare-ai-solutions"
 		/>
 	);

@@ -15,7 +15,7 @@ export default function AI2026FuturePredictionsBreakthroughPromotionBanner() {
             </h2>
             <p className="text-lg text-purple-100 mb-4 max-w-2xl">
               Discover the most revolutionary AI breakthroughs predicted for 2026. 
-              Quantum-neural fusion, consciousness AI, and transcendent intelligence 
+              Quantum-neural fusionconsciousness AIand transcendent intelligence 
               delivering unprecedented 15,000% ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">

@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+"use client";
+import React{ useEffectuseState } from 'react';
 
 export default function MobileResponsivenessEnhancer() {
-  const [isMobile, setIsMobile] = useState(false);
-  const [viewportWidth, setViewportWidth] = useState(0);
+  const [isMobilesetIsMobile] = useState(false);
+  const [viewportWidthsetViewportWidth] = useState(0);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -12,7 +13,7 @@ export default function MobileResponsivenessEnhancer() {
     };
 
     checkMobile();
-    window.addEventListener('resize', checkMobile);
+    window.addEventListener('resize'checkMobile);
 
     // Apply mobile-specific optimizations
     if (isMobile) {
@@ -28,12 +29,12 @@ export default function MobileResponsivenessEnhancer() {
             transition-duration: 0.3s !important;
           }
           
-          .banner, .showcase {
+          .banner.showcase {
             padding: 1rem !important;
             margin: 0.5rem 0 !important;
           }
           
-          .text-4xl, .text-5xl, .text-6xl {
+          .text-4xl.text-5xl.text-6xl {
             font-size: 2rem !important;
             line-height: 1.2 !important;
           }
@@ -51,9 +52,9 @@ export default function MobileResponsivenessEnhancer() {
     }
 
     return () => {
-      window.removeEventListener('resize', checkMobile);
+      window.removeEventListener('resize'checkMobile);
     };
-  }, [isMobile]);
+  }[isMobile]);
 
   return null;
 }

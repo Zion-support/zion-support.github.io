@@ -1,13 +1,14 @@
+"use client";
 'use client';
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useState } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  BookOpen, 
-  Video, 
-  FileText, 
-  Headphones, 
-  Download, 
+  BookOpen
+  Video
+  FileText
+  Headphones
+  Download
   ExternalLink,
   Play,
   Clock,
@@ -21,17 +22,17 @@ import {
 } from 'lucide-react';
 
 const UltimateContentHub2026 = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [viewMode, setViewMode] = useState('grid');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategorysetActiveCategory] = useState('all');
+  const [viewModesetViewMode] = useState('grid');
+  const [searchQuerysetSearchQuery] = useState('');
 
   const categories = [
-    { id: 'all', name: 'All Content', count: 156 },
-    { id: 'ai', name: 'AI & Automation', count: 45 },
-    { id: 'tech', name: 'Technology', count: 38 },
-    { id: 'business', name: 'Business Strategy', count: 32 },
-    { id: 'case-studies', name: 'Case Studies', count: 28 },
-    { id: 'tutorials', name: 'Tutorials', count: 13 }
+    { id: 'all'name: 'All Content'count: 156 },
+    { id: 'ai'name: 'AI & Automation'count: 45 },
+    { id: 'tech'name: 'Technology'count: 38 },
+    { id: 'business'name: 'Business Strategy'count: 32 },
+    { id: 'case-studies'name: 'Case Studies'count: 28 },
+    { id: 'tutorials'name: 'Tutorials'count: 13 }
   ];
 
   const contentItems = [
@@ -146,8 +147,8 @@ const UltimateContentHub2026 = () => {
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -158,16 +159,16 @@ const UltimateContentHub2026 = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Access our comprehensive library of cutting-edge content, guides, and resources 
+            Access our comprehensive library of cutting-edge contentguidesand resources 
             to stay ahead in the AI revolution.
           </p>
         </motion.div>
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="mb-12"
         >
           <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
@@ -228,7 +229,7 @@ const UltimateContentHub2026 = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           className={`grid gap-8 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
@@ -236,16 +237,16 @@ const UltimateContentHub2026 = () => {
           }`}
         >
           <AnimatePresence>
-            {filteredContent.map((item, index) => {
+            {filteredContent.map((itemindex) => {
               const TypeIcon = getTypeIcon(item.type);
               
               return (
                 <motion.div
                   key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  animate={{ opacity: 1y: 0 }}
+                  exit={{ opacity: 0y: -20 }}
+                  transition={{ duration: 0.3delay: index * 0.1 }}
                   className={`group bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 ${
                     viewMode === 'list' ? 'flex' : ''
                   } ${item.featured ? 'ring-2 ring-blue-500' : ''}`}
@@ -318,9 +319,9 @@ const UltimateContentHub2026 = () => {
 
         {/* Load More */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
           className="text-center mt-12"
         >
           <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all">

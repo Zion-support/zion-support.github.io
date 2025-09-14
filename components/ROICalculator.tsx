@@ -1,17 +1,18 @@
+"use client";
 'use client';
 
-import React, { useState } from 'react';
-import { Calculator, TrendingUp, DollarSign, Clock } from 'lucide-react';
+import React{ useState } from 'react';
+CalculatorTrendingUpDollarSignClock
 
 const ROICalculator = () => {
-  const [inputs, setInputs] = useState({
+  const [inputsetInputs] = useState({
     currentCost: '',
     timeSpent: '',
     errorRate: '',
     automationCost: '',
   });
 
-  const [results, setResults] = useState(null);
+  const [resultsetResults] = useState(null);
 
   const calculateROI = () => {
     const currentCost = parseFloat(inputs.currentCost) || 0;
@@ -33,8 +34,8 @@ const ROICalculator = () => {
     });
   };
 
-  const handleInputChange = (field, value) => {
-    setInputs(prev => ({ ...prev, [field]: value }));
+  const handleInputChange = (fieldvalue) => {
+    setInputs(prev => ({ ...prev[field]: value }));
   };
 
   return (
@@ -64,7 +65,7 @@ const ROICalculator = () => {
                 <input
                   type="number"
                   value={inputs.currentCost}
-                  onChange={(e) => handleInputChange('currentCost', e.target.value)}
+                  onChange={(e) => handleInputChange('currentCost'e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   placeholder="Enter current cost"
                 />
@@ -77,7 +78,7 @@ const ROICalculator = () => {
                 <input
                   type="number"
                   value={inputs.timeSpent}
-                  onChange={(e) => handleInputChange('timeSpent', e.target.value)}
+                  onChange={(e) => handleInputChange('timeSpent'e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   placeholder="Enter hours spent"
                 />
@@ -90,7 +91,7 @@ const ROICalculator = () => {
                 <input
                   type="number"
                   value={inputs.errorRate}
-                  onChange={(e) => handleInputChange('errorRate', e.target.value)}
+                  onChange={(e) => handleInputChange('errorRate'e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   placeholder="Enter error rate"
                 />
@@ -103,7 +104,7 @@ const ROICalculator = () => {
                 <input
                   type="number"
                   value={inputs.automationCost}
-                  onChange={(e) => handleInputChange('automationCost', e.target.value)}
+                  onChange={(e) => handleInputChange('automationCost'e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   placeholder="Enter automation cost"
                 />

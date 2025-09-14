@@ -1,158 +1,235 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Brain, TrendingUp, Shield, Users } from 'lucide-react';
 
 const QuantumAIRevolutionBanner2025 = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const quantumContent = [
+    {
+      id: 'quantum-computing-revolution',
+      title: 'AI 2025: The Quantum Computing Revolution',
+      description: 'Discover how quantum computing is revolutionizing enterprise AI with 1000% performance improvements and $50B+ market opportunities.',
+      url: '/blog/ai-2025-quantum-computing-revolution-enterprise-breakthrough',
+      type: 'blog',
+      metrics: {
+        performance: '1000%',
+        accuracy: '99.9%',
+        market: '$50B+',
+        roi: '1,200%'
+      },
+      readingTime: '18 min read',
+      featured: true
+    },
+    {
+      id: 'fortune-500-quantum-success',
+      title: 'Fortune 500 Quantum AI Transformation: 1,200% ROI',
+      description: 'How a $2.1B company achieved unprecedented efficiency with quantum AI, saving $180M annually.',
+      url: '/case-studies/fortune-500-quantum-ai-transformation-2025-ultimate-success',
+      type: 'case-study',
+      metrics: {
+        roi: '1,200%',
+        savings: '$180M',
+        efficiency: '78%',
+        accuracy: '99.9%'
+      },
+      readingTime: '15 min read',
+      featured: true
+    },
+    {
+      id: 'quantum-implementation-guide',
+      title: 'Quantum AI Implementation Master Guide 2025',
+      description: 'Complete guide to implementing quantum AI in your enterprise, with proven strategies and ROI optimization techniques.',
+      url: '/resources/quantum-ai-implementation-master-guide-2025',
+      type: 'resource',
+      metrics: {
+        roi: '1,200%',
+        performance: '1000%',
+        accuracy: '99.9%',
+        timeline: '18 months'
+      },
+      readingTime: '25 min read',
+      featured: true
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % quantumContent.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    localStorage.setItem('quantum-ai-banner-dismissed', 'true');
+  };
+
+  useEffect(() => {
+    const dismissed = localStorage.getItem('quantum-ai-banner-dismissed');
+    if (dismissed === 'true') {
+      setIsVisible(false);
+    }
+  }, []);
+
+  if (!isVisible) return null;
+
+  const currentContent = quantumContent[currentSlide];
+
   return (
-    <section className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
+        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500/30 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-24 h-24 bg-blue-500/30 rounded-full blur-xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-10 left-1/3 w-40 h-40 bg-indigo-500/30 rounded-full blur-xl animate-pulse delay-2000"></div>
       </div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <Zap className="w-5 h-5 mr-2" />
-            <span className="text-sm font-medium">🚀 QUANTUM AI BREAKTHROUGH 2025</span>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center space-x-3">
+            <div className="flex items-center justify-center w-12 h-12 bg-white/20 rounded-full">
+              <span className="text-2xl">⚛️</span>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold">Quantum AI Revolution 2025</h2>
+              <p className="text-purple-200 text-sm">Breakthrough Performance & 1,200% ROI</p>
+            </div>
           </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-cyan-400 bg-clip-text text-transparent">
-            The Quantum-AI Revolution
-          </h2>
-          
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover how quantum computing and AI are transforming enterprise operations with 
-            <span className="font-bold text-yellow-400"> 10,000x faster processing</span> and 
-            <span className="font-bold text-cyan-400"> $150M+ annual savings</span>
-          </p>
+          <button
+            onClick={handleDismiss}
+            className="text-white/70 hover:text-white transition-colors p-2"
+            aria-label="Dismiss banner"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
 
-        {/* Key Benefits Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-            <div className="flex items-center mb-4">
-              <Brain className="w-8 h-8 text-yellow-400 mr-3" />
-              <h3 className="text-xl font-bold">Quantum Intelligence</h3>
-            </div>
-            <p className="text-gray-200 mb-4">
-              Leverage quantum computing for exponential problem-solving capabilities and unprecedented AI performance.
-            </p>
-            <div className="text-2xl font-bold text-yellow-400">10,000x Faster</div>
-          </div>
-
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-            <div className="flex items-center mb-4">
-              <TrendingUp className="w-8 h-8 text-cyan-400 mr-3" />
-              <h3 className="text-xl font-bold">Massive ROI</h3>
-            </div>
-            <p className="text-gray-200 mb-4">
-              Achieve extraordinary returns with quantum-powered optimization and AI-driven efficiency gains.
-            </p>
-            <div className="text-2xl font-bold text-cyan-400">1,000%+ ROI</div>
-          </div>
-
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-            <div className="flex items-center mb-4">
-              <Shield className="w-8 h-8 text-green-400 mr-3" />
-              <h3 className="text-xl font-bold">Future-Proof</h3>
-            </div>
-            <p className="text-gray-200 mb-4">
-              Build competitive advantages that will define the next decade of business success.
-            </p>
-            <div className="text-2xl font-bold text-green-400">2025-2035</div>
-          </div>
-        </div>
-
-        {/* Featured Content */}
-        <div className="bg-white bg-opacity-5 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20 mb-12">
-          <h3 className="text-2xl font-bold mb-6 text-center">Featured Quantum-AI Content</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl p-6">
-              <div className="flex items-center mb-3">
-                <Zap className="w-6 h-6 text-yellow-400 mr-2" />
-                <h4 className="font-bold">Generative AI Revolution</h4>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Content Showcase */}
+          <div className="space-y-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <div className="flex items-center justify-between mb-4">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-500/30 text-purple-200">
+                  {currentContent.type === 'blog' ? '📝 Blog Post' : 
+                   currentContent.type === 'case-study' ? '📊 Case Study' : '📚 Resource'}
+                </span>
+                <span className="text-sm text-purple-200">{currentContent.readingTime}</span>
               </div>
-              <p className="text-sm text-gray-200 mb-4">
-                How Generative AI is transforming enterprise operations with 340% productivity gains.
+              
+              <h3 className="text-xl font-bold mb-3 text-white">
+                {currentContent.title}
+              </h3>
+              
+              <p className="text-purple-100 mb-4 leading-relaxed">
+                {currentContent.description}
               </p>
-              <Link 
-                href="/blog/ai-2025-generative-ai-revolution-enterprise-transformation"
-                className="inline-flex items-center text-yellow-400 hover:text-yellow-300 font-semibold text-sm"
+
+              {/* Metrics Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                {Object.entries(currentContent.metrics).map(([key, value]) => (
+                  <div key={key} className="text-center">
+                    <div className="text-2xl font-bold text-white">{value}</div>
+                    <div className="text-xs text-purple-200 capitalize">
+                      {key.replace(/([A-Z])/g, ' $1').trim()}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                href={currentContent.url}
+                className="inline-flex items-center px-6 py-3 bg-white text-purple-900 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
               >
-                Read More <ArrowRight className="w-4 h-4 ml-1" />
+                Read Full Article
+                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl p-6">
-              <div className="flex items-center mb-3">
-                <Brain className="w-6 h-6 text-cyan-400 mr-2" />
-                <h4 className="font-bold">Quantum Computing Guide</h4>
-              </div>
-              <p className="text-sm text-gray-200 mb-4">
-                Complete implementation guide for enterprise quantum computing and AI integration.
+            {/* Slide Indicators */}
+            <div className="flex justify-center space-x-2">
+              {quantumContent.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentSlide ? 'bg-white' : 'bg-white/30'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Success Metrics */}
+          <div className="space-y-6">
+            <div className="text-center lg:text-left">
+              <h3 className="text-3xl font-bold mb-4">Quantum AI Success Metrics</h3>
+              <p className="text-purple-200 text-lg">
+                Join industry leaders achieving breakthrough performance with quantum AI
               </p>
-              <Link 
-                href="/resources/ai-2025-quantum-implementation-complete-guide"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold text-sm"
-              >
-                Download Guide <ArrowRight className="w-4 h-4 ml-1" />
-              </Link>
             </div>
 
-            <div className="bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl p-6">
-              <div className="flex items-center mb-3">
-                <TrendingUp className="w-6 h-6 text-green-400 mr-2" />
-                <h4 className="font-bold">$150M Success Story</h4>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <div className="text-4xl font-bold text-white mb-2">1,200%</div>
+                <div className="text-purple-200 text-sm">Average ROI</div>
               </div>
-              <p className="text-sm text-gray-200 mb-4">
-                Fortune 500 manufacturing company achieves massive savings with quantum optimization.
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <div className="text-4xl font-bold text-white mb-2">1000%</div>
+                <div className="text-purple-200 text-sm">Performance Boost</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <div className="text-4xl font-bold text-white mb-2">99.9%</div>
+                <div className="text-purple-200 text-sm">Accuracy Rate</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <div className="text-4xl font-bold text-white mb-2">$50B+</div>
+                <div className="text-purple-200 text-sm">Market Opportunity</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-6 text-center">
+              <h4 className="text-xl font-bold mb-2">Ready for Quantum AI?</h4>
+              <p className="text-purple-100 mb-4">
+                Get expert guidance on your quantum AI transformation
               </p>
-              <Link 
-                href="/case-studies/ai-2025-manufacturing-transformation-quantum-optimization-success"
-                className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold text-sm"
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 bg-white text-purple-900 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
               >
-                View Case Study <ArrowRight className="w-4 h-4 ml-1" />
+                Start Your Journey
+                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
             </div>
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Start Your Quantum Journey
-            </Link>
-            <Link
-              href="/resources/ai-2025-quantum-implementation-complete-guide"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
-            >
-              Download Complete Guide
-            </Link>
+        {/* Progress Bar */}
+        <div className="mt-8">
+          <div className="flex items-center justify-between text-sm text-purple-200 mb-2">
+            <span>Quantum AI Content</span>
+            <span>{currentSlide + 1} of {quantumContent.length}</span>
           </div>
-          
-          <div className="mt-8 flex items-center justify-center space-x-8 text-sm opacity-80">
-            <div className="flex items-center">
-              <Users className="w-4 h-4 mr-2" />
-              <span>500+ Companies Transformed</span>
-            </div>
-            <div className="flex items-center">
-              <TrendingUp className="w-4 h-4 mr-2" />
-              <span>1,000%+ Average ROI</span>
-            </div>
-            <div className="flex items-center">
-              <Shield className="w-4 h-4 mr-2" />
-              <span>Quantum-Safe Security</span>
-            </div>
+          <div className="w-full bg-white/20 rounded-full h-2">
+            <div 
+              className="bg-gradient-to-r from-purple-500 to-blue-500 h-2 rounded-full transition-all duration-500"
+              style={{ width: `${((currentSlide + 1) / quantumContent.length) * 100}%` }}
+            />
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

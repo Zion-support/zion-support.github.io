@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileConversationList } from "../components/messaging/MobileConversationList";
@@ -63,7 +63,7 @@ const mockMessages: Message[] = [
     status: "read"},
   {
     id: "4",
-    content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",
+    content: "YesI'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",
     timestamp: "10:40 AM",
     isMe: true,
     status: "read"},
@@ -75,8 +75,8 @@ const mockMessages: Message[] = [
     status: "read"}];
 
 export function MobileMessages() {
-  const [activeConversation, setActiveConversation] = useState<string | null>(null);
-  const [messages, setMessages] = useState<Message[]>(mockMessages);
+  const [activeConversationsetActiveConversation] = useState<string | null>(null);
+  const [messagesetMessages] = useState<Message[]>(mockMessages);
   
   const handleSelectConversation = (id: string) => {
     setActiveConversation(id);
@@ -93,7 +93,7 @@ export function MobileMessages() {
       timestamp: "Just now",
       isMe: true,
       status: "sent"};
-    setMessages([...messages, newMessage]);
+    setMessages([...messagesnewMessage]);
   };
   
   const currentContact = mockConversations.find(c => c.id === activeConversation);

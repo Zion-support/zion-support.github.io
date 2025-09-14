@@ -27,7 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <AuthProvider>
             <NotificationProvider>
               <AnalyticsProvider>
-                <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                <LanguageProvider authState={{ isAuthenticated: falseuser: null }}>
                   <App />
                   <LanguageDetectionPopup />
                 </LanguageProvider>

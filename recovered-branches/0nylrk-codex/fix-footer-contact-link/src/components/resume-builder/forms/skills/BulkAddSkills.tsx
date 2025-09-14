@@ -1,17 +1,17 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Loader2, Sparkles } from 'lucide-react';
+Loader2Sparkles
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 import { useResume } from '@/hooks/useResume';
 import { BulkAddSkillsProps } from './types';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import { AlertDescription } from '@/components/ui/alert';
 import { Textarea } from '@/components/ui/textarea';
 
-export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
-  const [bulkSkills, setBulkSkills] = useState('');
-  const [error, setError] = useState<string | null>(null);
-  const { enhanceContent, isEnhancing } = useResumeEnhancer();
+export const BulkAddSkills = ({ resumeIdonSuccess }: BulkAddSkillsProps) => {
+  const [bulkSkillsetBulkSkills] = useState('');
+  const [errorsetError] = useState<string | null>(null);
+  const { enhanceContentisEnhancing } = useResumeEnhancer();
   const { addSkill } = useResume();
 
   const handleCategorizeSkills = async () => {
@@ -33,10 +33,10 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           const categorizedSkills = JSON.parse(enhancedContent);
           
           // Add the categorized skills
-          for (const [category, skillsList] of Object.entries(categorizedSkills)) {
+          for (const [categoryskillsList] of Object.entries(categorizedSkills)) {
             if (Array.isArray(skillsList)) {
               for (const skillName of skillsList as string[]) {
-                await addSkill(resumeId, {
+                await addSkill(resumeId{
                   name: skillName,
                   category: category,
                   proficiency: 3});
@@ -66,7 +66,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
           <Textarea 
             className="min-h-24"
-            placeholder="Python, React, TypeScript, Project Management, Communication..."
+            placeholder="PythonReactTypeScriptProject ManagementCommunication..."
             value={bulkSkills}
             onChange={(e) => setBulkSkills(e.target.value)}
           />

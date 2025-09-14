@@ -2,7 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { SORT_OPTIONS } from "@/data/sortOptions";
-import { SortDesc, ChevronDown } from "lucide-react";
+import { SortDescChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,7 +14,7 @@ interface SortDropdownProps {
   setSortOption: (option: string) => void;
 }
 
-export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
+export function SortDropdown({ sortOptionsetSortOption }: SortDropdownProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

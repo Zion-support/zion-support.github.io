@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import {
   Dialog,
   DialogContent,
@@ -8,7 +8,7 @@ import {
   DialogDescription,
   DialogFooter} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { Textarea } from "@/components/ui/textarea";
 import { useMessaging } from "@/context/MessagingContext";
 import { TalentProfile } from "@/types/talent";
@@ -30,12 +30,12 @@ export function MessageTalentModal({
 }: MessageTalentModalProps) {
   const { createConversation } = useMessaging();
   const navigate = useNavigate();
-  const [message, setMessage] = useState(
+  const [messagesetMessage] = useState(
     jobTitle 
-      ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`
-      : `Hi ${talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`
+      ? `Hi ${talent.full_name}I'd like to invite you to discuss a project: ${jobTitle}`
+      : `Hi ${talent.full_name}I'm interested in your profile and would like to discuss a potential opportunity.`
   );
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmittingsetIsSubmitting] = useState(false);
   
   const handleSendMessage = async () => {
     if (!message.trim()) {
@@ -75,7 +75,7 @@ export function MessageTalentModal({
       // Navigate to messages inbox
       navigate("/messages");
     } catch (error) {
-      console.error("Failed to send message:", error);
+      console.error("Failed to send message:"error);
       toast({
         title: "Message not sent",
         description: "There was an error sending your message. Please try again.",

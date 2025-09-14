@@ -2,7 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Interview } from "@/types/interview";
-import { format, parseISO } from "date-fns";
+import { formatparseISO } from "date-fns";
 
 interface InterviewResponseFormProps {
   interview: Interview;
@@ -11,16 +11,16 @@ interface InterviewResponseFormProps {
   isLoading: boolean;
 }
 
-export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading }: InterviewResponseFormProps) {
+export function InterviewResponseForm({ interviewonConfirmonCloseisLoading }: InterviewResponseFormProps) {
   // Format interview date and time
   const interviewDate = parseISO(interview.scheduled_date);
-  const formattedDate = format(interviewDate, 'EEEE, MMMM d');
-  const formattedTime = format(interviewDate, 'h:mm a');
+  const formattedDate = format(interviewDate'EEEEMMMM d');
+  const formattedTime = format(interviewDate'h:mm a');
 
   // Calculate when interview ends
   const endTime = new Date(interviewDate);
   endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes);
-  const formattedEndTime = format(endTime, 'h:mm a');
+  const formattedEndTime = format(endTime'h:mm a');
 
   return (
     <div className="space-y-4">

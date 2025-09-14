@@ -2,29 +2,29 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Home, Search, ArrowLeft, AlertTriangle, Map, Users, Rocket } from 'lucide-react';
+HomeSearchArrowLeftAlertTriangleMapUsersRocket
 
 export default function Custom404() {
   const quickLinks = [
-    { href: '/', label: '🏠 Home', icon: Home },
-    { href: '/services', label: '🚀 Services', icon: Rocket },
-    { href: '/explore', label: '🔍 Explore', icon: Search },
-    { href: '/about', label: '👥 About', icon: Users },
-    { href: '/sitemap', label: '🗺️ Sitemap', icon: Map }];
+    { href: '/'label: '🏠 Home'icon: Home },
+    { href: '/services'label: '🚀 Services'icon: Rocket },
+    { href: '/explore'label: '🔍 Explore'icon: Search },
+    { href: '/about'label: '👥 About'icon: Users },
+    { href: '/sitemap'label: '🗺️ Sitemap'icon: Map }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center px-6">
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="description" content="The page you're looking for doesn't exist. Navigate back to Zion Tech Group's main services and solutions." />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="noindexnofollow" />
       </Head>
 
       <div className="max-w-4xl mx-auto text-center">
         {/* 404 Icon and Title */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0scale: 0.8 }}
+          animate={{ opacity: 1scale: 1 }}
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
@@ -39,27 +39,27 @@ export default function Custom404() {
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
             The page you're looking for doesn't exist or has been moved. 
-            Don't worry, we've got plenty of amazing content for you to explore.
+            Don't worrywe've got plenty of amazing content for you to explore.
           </p>
         </motion.div>
 
         {/* Quick Navigation */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="mb-12"
         >
           <h3 className="text-xl font-semibold text-white mb-6">
             Quick Navigation
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-2xl mx-auto">
-            {quickLinks.map((link, index) => (
+            {quickLinks.map((linkindex) => (
               <motion.div
                 key={link.href}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.4delay: 0.3 + index * 0.1 }}
               >
                 <Link
                   href={link.href}
@@ -75,9 +75,9 @@ export default function Custom404() {
 
         {/* Popular Services Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           className="mb-12"
         >
           <h3 className="text-xl font-semibold text-white mb-6">
@@ -85,14 +85,14 @@ export default function Custom404() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {[
-              { href: '/ai-business-intelligence', label: 'AI Business Intelligence', desc: 'Transform data into actionable insights' },
-              { href: '/quantum-cybersecurity', label: 'Quantum Cybersecurity', desc: 'Future-proof security solutions' },
-              { href: '/edge-computing-orchestration', label: 'Edge Computing', desc: 'Advanced edge optimization platform' }].map((service, index) => (
+              { href: '/ai-business-intelligence'label: 'AI Business Intelligence'desc: 'Transform data into actionable insights' },
+              { href: '/quantum-cybersecurity'label: 'Quantum Cybersecurity'desc: 'Future-proof security solutions' },
+              { href: '/edge-computing-orchestration'label: 'Edge Computing'desc: 'Advanced edge optimization platform' }].map((serviceindex) => (
               <motion.div
                 key={service.href}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.4delay: 0.5 + index * 0.1 }}
               >
                 <Link
                   href={service.href}
@@ -108,9 +108,9 @@ export default function Custom404() {
 
         {/* Action Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Link
@@ -131,9 +131,9 @@ export default function Custom404() {
 
         {/* Help Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.8 }}
           className="mt-12 pt-8 border-t border-white/10"
         >
           <p className="text-white/60 mb-4">

@@ -1,10 +1,10 @@
 
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import React{ useState } from 'react';
+import { CardContentCardDescriptionCardHeaderCardTitle } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
-import { ShieldAlert, Info } from 'lucide-react';
+ShieldAlertInfo
 import {
   Accordion,
   AccordionContent,
@@ -16,25 +16,25 @@ import { useAuth } from '@/hooks/useAuth';
 
 export function FraudDetectionSettings() {
   const { user } = useAuth();
-  const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
-  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
-  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
-  const [isSaving, setIsSaving] = useState(false);
+  const [messageScanningEnabledsetMessageScanningEnabled] = useState(true);
+  const [activityMonitoringEnabledsetActivityMonitoringEnabled] = useState(true);
+  const [aiAnalysisEnabledsetAiAnalysisEnabled] = useState(true);
+  const [isSavingsetIsSaving] = useState(false);
   
   const handleSavePreferences = async () => {
     if (!user?.id) return;
     
     setIsSaving(true);
     try {
-      // In a real implementation, we would save these preferences to the database
-      // For now, we'll just simulate a successful save
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // In a real implementationwe would save these preferences to the database
+      // For nowe'll just simulate a successful save
+      await new Promise(resolve => setTimeout(resolve1000));
       
       toast({
         title: "Settings saved",
         description: "Your fraud detection preferences have been updated."});
     } catch (error) {
-      console.error('Error saving preferences:', error);
+      console.error('Error saving preferences:'error);
       toast({
         title: "Error",
         description: "Failed to save your preferences. Please try again.",
@@ -125,7 +125,7 @@ export function FraudDetectionSettings() {
                   <li>Monitoring for suspicious account activities</li>
                 </ul>
                 <p>
-                  You can opt out of some of these protections, but this may limit your ability to use certain platform features. 
+                  You can opt out of some of these protectionsbut this may limit your ability to use certain platform features. 
                   We prioritize keeping our marketplace safe while respecting your privacy.
                 </p>
               </AccordionContent>

@@ -1,10 +1,11 @@
+"use client";
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 export default function RevolutionaryPromoSection() {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [hoveredCardsetHoveredCard] = useState<number | null>(null);
 
   const promoItems = [
     {
@@ -77,13 +78,13 @@ export default function RevolutionaryPromoSection() {
             Discover the Future of AI
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore revolutionary AI technologies, breakthrough predictions, and success stories that are transforming industries worldwide
+            Explore revolutionary AI technologiesbreakthrough predictionsand success stories that are transforming industries worldwide
           </p>
         </div>
 
         {/* Promotional Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {promoItems.map((item, index) => (
+          {promoItems.map((itemindex) => (
             <div
               key={item.id}
               className={`relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl ${

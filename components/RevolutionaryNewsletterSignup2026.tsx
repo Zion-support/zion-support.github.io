@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 
 export default function RevolutionaryNewsletterSignup2026() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [emailsetEmail] = useState('');
+  const [isSubscribedsetIsSubscribed] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve2000));
     
     setIsSubscribed(true);
     setIsLoading(false);
@@ -62,8 +63,8 @@ export default function RevolutionaryNewsletterSignup2026() {
             Get Revolutionary AI Content
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join our exclusive community and get access to breakthrough AI content, 
-            <span className="text-cyan-400 font-bold"> 25,000% ROI opportunities</span>, 
+            Join our exclusive community and get access to breakthrough AI content
+            <span className="text-cyan-400 font-bold"> 25,000% ROI opportunities</span>
             and revolutionary technology insights.
           </p>
         </div>

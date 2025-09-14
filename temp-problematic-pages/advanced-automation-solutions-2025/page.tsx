@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Settings, Bot, Zap, Target, TrendingUp, Users, Award, CheckCircle, Star, Cpu, Shield, Globe } from 'lucide-react';
+ArrowRightSettingsBotZapTargetTrendingUpUsersAwardCheckCircleStarCpuShieldGlobe
 
 export const metadata = {
   title: 'Advanced Automation Solutions 2025 - Revolutionary Business Automation',
-  description: 'Discover cutting-edge automation solutions: intelligent process automation, autonomous operations, and AI-powered business transformation delivering 2,500-4,000% ROI.',
-  keywords: ['Automation Solutions 2025', 'Intelligent Process Automation', 'Business Automation', 'AI Automation', 'Autonomous Operations', 'ROI 2500%'],
+  description: 'Discover cutting-edge automation solutions: intelligent process automationautonomous operationsand AI-powered business transformation delivering 2,500-4,000% ROI.',
+  keywords: ['Automation Solutions 2025'Intelligent Process Automation'Business Automation'AI Automation'Autonomous Operations'ROI 2500%'],
 };
 
 export default function AdvancedAutomationSolutions2025() {
@@ -27,7 +27,7 @@ export default function AdvancedAutomationSolutions2025() {
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
             Transform your business with revolutionary automation solutions. 
-            Intelligent process automation, autonomous operations, and AI-powered transformation delivering unprecedented efficiency gains.
+            Intelligent process automationautonomous operationsand AI-powered transformation delivering unprecedented efficiency gains.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -79,7 +79,7 @@ export default function AdvancedAutomationSolutions2025() {
               Revolutionary Automation Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Harness the power of intelligent automation to transform your business operations, reduce costs, and achieve unprecedented efficiency gains.
+              Harness the power of intelligent automation to transform your business operationsreduce costsand achieve unprecedented efficiency gains.
             </p>
           </div>
 
@@ -93,7 +93,7 @@ export default function AdvancedAutomationSolutions2025() {
                 <h3 className="text-2xl font-bold text-gray-900">Intelligent Process Automation</h3>
               </div>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                AI-powered automation that learns, adapts, and optimizes business processes in real-time, delivering 10,000x efficiency improvements.
+                AI-powered automation that learnsadaptsand optimizes business processes in real-timedelivering 10,000x efficiency improvements.
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-3">
@@ -123,7 +123,7 @@ export default function AdvancedAutomationSolutions2025() {
                 <h3 className="text-2xl font-bold text-gray-900">Autonomous Operations</h3>
               </div>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Fully autonomous business operations that run 24/7 without human intervention, reducing operational costs by 95% while maintaining 99.9% accuracy.
+                Fully autonomous business operations that run 24/7 without human interventionreducing operational costs by 95% while maintaining 99.9% accuracy.
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-3">
@@ -153,7 +153,7 @@ export default function AdvancedAutomationSolutions2025() {
                 <h3 className="text-2xl font-bold text-gray-900">AI-Powered Workflow Automation</h3>
               </div>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Advanced workflow automation powered by artificial intelligence, creating intelligent processes that adapt and improve over time.
+                Advanced workflow automation powered by artificial intelligencecreating intelligent processes that adapt and improve over time.
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-3">
@@ -183,7 +183,7 @@ export default function AdvancedAutomationSolutions2025() {
                 <h3 className="text-2xl font-bold text-gray-900">Enterprise Automation Platform</h3>
               </div>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Comprehensive enterprise automation platform that integrates all business processes, providing unified control and optimization across the organization.
+                Comprehensive enterprise automation platform that integrates all business processesproviding unified control and optimization across the organization.
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-3">
@@ -303,7 +303,7 @@ export default function AdvancedAutomationSolutions2025() {
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
-                "Autonomous operations transformed our back-office processes, achieving 99.9% accuracy and 2,800% ROI. Revolutionary technology!"
+                "Autonomous operations transformed our back-office processesachieving 99.9% accuracy and 2,800% ROI. Revolutionary technology!"
               </p>
               <div className="flex items-center gap-2">
                 <Star className="w-5 h-5 text-yellow-500 fill-current" />
@@ -354,7 +354,7 @@ export default function AdvancedAutomationSolutions2025() {
               Revolutionary Automation Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our advanced automation solutions combine AI, machine learning, and intelligent workflows to deliver unprecedented business transformation.
+              Our advanced automation solutions combine AImachine learningand intelligent workflows to deliver unprecedented business transformation.
             </p>
           </div>
           
@@ -380,7 +380,7 @@ export default function AdvancedAutomationSolutions2025() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Autonomous Systems</h3>
               <p className="text-gray-300 mb-6">
-                Self-managing systems that learn, adapt, and optimize operations without human intervention.
+                Self-managing systems that learnadaptand optimize operations without human intervention.
               </p>
               <ul className="text-gray-300 space-y-2">
                 <li>• 24/7 autonomous operation</li>

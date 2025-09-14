@@ -1,12 +1,12 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useStateuseEffect } from "react";
 import { X } from "lucide-react";
 
 export function FloatingCTA() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isClosed, setIsClosed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isClosedsetIsClosed] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +20,11 @@ export function FloatingCTA() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll"handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll"handleScroll);
     };
-  }, [isClosed]);
+  }[isClosed]);
 
   const handleClose = () => {
     setIsClosed(true);

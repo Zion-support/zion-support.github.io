@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Star, TrendingUp, Zap, Brain, Rocket, Shield, 
-  DollarSign, Users, Clock, CheckCircle, ArrowRight,
-  Phone, Mail, MapPin, ExternalLink, Search, Filter,
-  Grid, List, ChevronDown, ChevronUp, Sparkles,
-  Crown, Award, Target, Globe, Cpu, Database
+  StarTrendingUpZapBrainRocketShield
+  DollarSignUsersClockCheckCircleArrowRight,
+  PhoneMailMapPinExternalLinkSearchFilter,
+  GridListChevronDownChevronUpSparkles,
+  CrownAwardTargetGlobeCpuDatabase
 } from 'lucide-react';
 import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
@@ -21,10 +22,10 @@ import { realMarketServices } from '../data/real-market-services';
 import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025';
 
 export default function EnhancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<string>('name');
+  const [selectedCategorysetSelectedCategory] = useState<string>('all');
+  const [searchTermsetSearchTerm] = useState('');
+  const [viewModesetViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBysetSortBy] = useState<string>('name');
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -47,21 +48,21 @@ export default function EnhancedServicesShowcase() {
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'next-gen-ai', name: 'ArrowRight-Gen AI', icon: '🧠', count: nextGenerationAIServices.length },
-    { id: 'cutting-edge-it', name: 'Cutting-Edge IT', icon: '⚡', count: cuttingEdgeITServices.length },
-    { id: 'innovative-saas', name: 'Innovative SaaS', icon: '💻', count: innovativeMicroSaasV2Services.length },
-    { id: 'quantum-space', name: 'Quantum & Space', icon: '⚛️', count: quantumSpaceServices.length },
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length }
+    { id: 'all'name: 'All Services'icon: '🚀'count: allServices.length },
+    { id: 'next-gen-ai'name: 'ArrowRight-Gen AI'icon: '🧠'count: nextGenerationAIServices.length },
+    { id: 'cutting-edge-it'name: 'Cutting-Edge IT'icon: '⚡'count: cuttingEdgeITServices.length },
+    { id: 'innovative-saas'name: 'Innovative SaaS'icon: '💻'count: innovativeMicroSaasV2Services.length },
+    { id: 'quantum-space'name: 'Quantum & Space'icon: '⚛️'count: quantumSpaceServices.length },
+    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: enterpriseITServices.length }
   ];
 
   const sortOptions = [
-    { id: 'name', name: 'Name A-Z' },
-    { id: 'price-low', name: 'Price Low to High' },
-    { id: 'price-high', name: 'Price High to Low' },
-    { id: 'rating', name: 'Rating' },
-    { id: 'customers', name: 'Customer Count' },
-    { id: 'popularity', name: 'Popularity' }
+    { id: 'name'name: 'Name A-Z' },
+    { id: 'price-low'name: 'Price Low to High' },
+    { id: 'price-high'name: 'Price High to Low' },
+    { id: 'rating'name: 'Rating' },
+    { id: 'customers'name: 'Customer Count' },
+    { id: 'popularity'name: 'Popularity' }
   ];
 
   // Filter and sort services
@@ -85,29 +86,29 @@ export default function EnhancedServicesShowcase() {
     // Sort services
     switch (sortBy) {
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
+        filtered.sort((ab) => a.name.localeCompare(b.name));
         break;
       case 'price-low':
-        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, '')));
+        filtered.sort((ab) => parseFloat(a.price.replace(/[$]/g'')) - parseFloat(b.price.replace(/[$]/g'')));
         break;
       case 'price-high':
-        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, '')));
+        filtered.sort((ab) => parseFloat(b.price.replace(/[$]/g'')) - parseFloat(a.price.replace(/[$]/g'')));
         break;
       case 'rating':
-        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        filtered.sort((ab) => (b.rating || 0) - (a.rating || 0));
         break;
       case 'customers':
-        filtered.sort((a, b) => (b.customers || 0) - (a.customers || 0));
+        filtered.sort((ab) => (b.customers || 0) - (a.customers || 0));
         break;
       case 'popularity':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
+        filtered.sort((ab) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
         break;
       default:
         break;
     }
 
     return filtered;
-  }, [allServices, selectedCategory, searchTerm, sortBy]);
+  }[allServiceselectedCategorysearchTermsortBy]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -121,7 +122,7 @@ export default function EnhancedServicesShowcase() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -136,19 +137,19 @@ export default function EnhancedServicesShowcase() {
     {
       title: '🚀 ArrowRight-Generation AI Services',
       description: 'Revolutionary AI platforms that push the boundaries of what\'s possible',
-      services: nextGenerationAIServices.slice(0, 3),
+      services: nextGenerationAIServices.slice(03),
       color: 'from-purple-500 to-pink-600'
     },
     {
       title: '⚡ Cutting-Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions for the modern enterprise',
-      services: cuttingEdgeITServices.slice(0, 3),
+      services: cuttingEdgeITServices.slice(03),
       color: 'from-blue-500 to-cyan-600'
     },
     {
       title: '💻 Innovative Micro SaaS Solutions',
       description: 'Creative and practical SaaS tools for every business need',
-      services: innovativeMicroSaasV2Services.slice(0, 3),
+      services: innovativeMicroSaasV2Services.slice(03),
       color: 'from-green-500 to-emerald-600'
     }
   ];
@@ -158,8 +159,8 @@ export default function EnhancedServicesShowcase() {
       <div className="min-h-screen">
         <Head>
           <title>Enhanced Services Showcase - Zion Tech Group | 600+ Revolutionary Solutions</title>
-          <meta name="description" content="Discover our comprehensive portfolio of 600+ revolutionary AI, quantum computing, and IT services. Achieve 1000% ROI with cutting-edge solutions. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="AI services, quantum computing, IT services, micro SaaS, cybersecurity, cloud migration, neural interface, quantum internet, cutting-edge technology" />
+          <meta name="description" content="Discover our comprehensive portfolio of 600+ revolutionary AIquantum computingand IT services. Achieve 1000% ROI with cutting-edge solutions. Contact: +1 302 464 0950" />
+          <meta name="keywords" content="AI servicesquantum computingIT servicesmicro SaaScybersecuritycloud migrationeural interfacequantum internetcutting-edge technology" />
           <meta property="og:title" content="Enhanced Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="600+ cutting-edge technology services showcase" />
           <meta property="og:url" content="https://ziontechgroup.com/enhanced-services-showcase" />
@@ -171,18 +172,18 @@ export default function EnhancedServicesShowcase() {
         <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
                 Enhanced Services Showcase
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                600+ Revolutionary AI, Quantum Computing & IT Services
+                600+ Revolutionary AIQuantum Computing & IT Services
               </p>
               <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
-                From next-generation AI to cutting-edge infrastructure, discover solutions that deliver 1000% ROI and transform your business.
+                From next-generation AI to cutting-edge infrastructurediscover solutions that deliver 1000% ROI and transform your business.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -207,8 +208,8 @@ export default function EnhancedServicesShowcase() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -222,12 +223,12 @@ export default function EnhancedServicesShowcase() {
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {featuredServices.map((category, index) => (
+              {featuredServices.map((categoryindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.2 }}
                   viewport={{ once: true }}
                   className="relative"
                 >
@@ -238,7 +239,7 @@ export default function EnhancedServicesShowcase() {
                       <p className="text-lg mb-6 opacity-90">{category.description}</p>
                       
                       <div className="space-y-3">
-                        {category.services.map((service, serviceIndex) => (
+                        {category.services.map((serviceIndex) => (
                           <div key={serviceIndex} className="flex items-center space-x-3 bg-white/10 rounded-lg p-3">
                             <span className="text-2xl">{service.icon}</span>
                             <div className="flex-1">
@@ -251,7 +252,7 @@ export default function EnhancedServicesShowcase() {
                       </div>
                       
                       <Button 
-                        href={`#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        href={`#${category.title.toLowerCase().replace(/\s+/g'-')}`}
                         variant="secondary"
                         className="mt-6 w-full"
                       >
@@ -356,7 +357,7 @@ export default function EnhancedServicesShowcase() {
                 : 'space-y-6'
               }
             >
-              {filteredServices.map((service, index) => (
+              {filteredServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
@@ -510,8 +511,8 @@ export default function EnhancedServicesShowcase() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -567,11 +568,11 @@ export default function EnhancedServicesShowcase() {
 
 // Button component (if not imported)
 const Button = ({ 
-  href, 
-  variant = 'primary', 
-  size = 'md', 
-  className = '', 
-  children, 
+  href
+  variant = 'primary'
+  size = 'md'
+  className = ''
+  children
   onClick 
 }: {
   href?: string;

@@ -1,30 +1,31 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const AdvancedServices2025PromotionBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentService, setCurrentService] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentServicesetCurrentService] = useState(0);
 
   const services = [
     {
       title: "AI Strategy Consulting",
       icon: "🤖",
       description: "Comprehensive AI strategy development",
-      features: ["Strategic Planning", "ROI Optimization"],
+      features: ["Strategic Planning"ROI Optimization"],
       color: "from-emerald-500 to-teal-600"
     },
     {
       title: "Machine Learning Development",
       icon: "🧠",
       description: "Custom ML models and algorithms",
-      features: ["Custom Models", "Advanced Analytics"],
+      features: ["Custom Models"Advanced Analytics"],
       color: "from-blue-500 to-indigo-600"
     },
     {
       title: "Intelligent Automation",
       icon: "⚡",
       description: "End-to-end automation solutions",
-      features: ["Process Automation", "95% Efficiency Gain"],
+      features: ["Process Automation"95% Efficiency Gain"],
       color: "from-purple-500 to-pink-600"
     }
   ];
@@ -34,10 +35,10 @@ const AdvancedServices2025PromotionBanner: React.FC = () => {
     
     const interval = setInterval(() => {
       setCurrentService((prev) => (prev + 1) % services.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -79,7 +80,7 @@ const AdvancedServices2025PromotionBanner: React.FC = () => {
                   {services[currentService].description}
                 </p>
                 <div className="flex flex-wrap gap-3 mb-6">
-                  {services[currentService].features.map((feature, index) => (
+                  {services[currentService].features.map((featureindex) => (
                     <span 
                       key={index}
                       className={`px-4 py-2 bg-gradient-to-r ${services[currentService].color} text-white font-semibold rounded-full text-sm`}
@@ -122,7 +123,7 @@ const AdvancedServices2025PromotionBanner: React.FC = () => {
 
         {/* Service dots indicator */}
         <div className="flex justify-center gap-3 mb-8">
-          {services.map((_, index) => (
+          {services.map((_index) => (
             <button
               key={index}
               onClick={() => setCurrentService(index)}

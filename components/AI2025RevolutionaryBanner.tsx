@@ -26,9 +26,9 @@ export default function AI2025RevolutionaryBanner() {
         
         {/* Subtitle */}
         <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
-          Experience the most revolutionary AI breakthrough in history, delivering 
+          Experience the most revolutionary AI breakthrough in historydelivering 
           <span className="text-yellow-400 font-bold"> 10,000% ROI</span> through 
-          quantum computing supremacy, neural interfaces, and autonomous operations.
+          quantum computing supremacyneural interfacesand autonomous operations.
         </p>
         
         {/* Key Metrics */}

@@ -1,16 +1,17 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Rocket, 
-  Target, 
-  TrendingUp, 
-  Users, 
-  Globe, 
+  Brain
+  Zap
+  Rocket
+  Target
+  TrendingUp
+  Users
+  Globe
   Shield,
   ChevronRight,
   Star,
@@ -25,8 +26,8 @@ import {
 } from 'lucide-react';
 
 const UltimateContentRevolution2025 = () => {
-  const [activeTab, setActiveTab] = useState('breakthroughs');
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeTabsetActiveTab] = useState('breakthroughs');
+  const [currentSlidesetCurrentSlide] = useState(0);
 
   const contentSections = {
     breakthroughs: {
@@ -69,7 +70,7 @@ const UltimateContentRevolution2025 = () => {
       items: [
         {
           title: "Financial Services AI",
-          description: "Automated trading, risk assessment, and fraud detection systems",
+          description: "Automated tradingrisk assessmentand fraud detection systems",
           icon: BarChart3,
           metrics: "2,500% ROI",
           color: "from-green-500 to-teal-500"
@@ -136,14 +137,14 @@ const UltimateContentRevolution2025 = () => {
   const testimonials = [
     {
       name: "Sarah Chen",
-      role: "CTO, Fortune 500 Company",
+      role: "CTOFortune 500 Company",
       content: "Zion Tech's AI solutions increased our operational efficiency by 300% and reduced costs by $50M annually.",
       avatar: "SC",
       rating: 5
     },
     {
       name: "Michael Rodriguez",
-      role: "CEO, Global Manufacturing",
+      role: "CEOGlobal Manufacturing",
       content: "The quantum-neural fusion technology revolutionized our production line. ROI exceeded 2,500% in the first year.",
       avatar: "MR",
       rating: 5
@@ -158,18 +159,18 @@ const UltimateContentRevolution2025 = () => {
   ];
 
   const stats = [
-    { label: "Enterprise Clients", value: "500+", icon: Users },
-    { label: "Average ROI", value: "2,500%", icon: TrendingUp },
-    { label: "Countries Served", value: "50+", icon: Globe },
-    { label: "Success Rate", value: "99.9%", icon: CheckCircle }
+    { label: "Enterprise Clients"value: "500+"icon: Users },
+    { label: "Average ROI"value: "2,500%"icon: TrendingUp },
+    { label: "Countries Served"value: "50+"icon: Globe },
+    { label: "Success Rate"value: "99.9%"icon: CheckCircle }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -178,8 +179,8 @@ const UltimateContentRevolution2025 = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -190,7 +191,7 @@ const UltimateContentRevolution2025 = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover the most advanced AI technologies, breakthrough innovations, and future predictions 
+              Discover the most advanced AI technologiesbreakthrough innovationsand future predictions 
               that are reshaping industries and transforming the world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -217,12 +218,12 @@ const UltimateContentRevolution2025 = () => {
       <div className="py-16 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((statindex) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4">
@@ -269,18 +270,18 @@ const UltimateContentRevolution2025 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              exit={{ opacity: 0y: -20 }}
               transition={{ duration: 0.5 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
-              {contentSections[activeTab].items.map((item, index) => (
+              {contentSections[activeTab].items.map((itemindex) => (
                 <motion.div
                   key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 group hover:transform hover:scale-105"
                 >
                   <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${item.color} rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -311,9 +312,9 @@ const UltimateContentRevolution2025 = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0x: 50 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: -50 }}
                 transition={{ duration: 0.5 }}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
               >
@@ -325,7 +326,7 @@ const UltimateContentRevolution2025 = () => {
                     <h3 className="text-xl font-semibold text-white">{testimonials[currentSlide].name}</h3>
                     <p className="text-gray-400">{testimonials[currentSlide].role}</p>
                     <div className="flex">
-                      {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
+                      {[...Array(testimonials[currentSlide].rating)].map((_i) => (
                         <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                       ))}
                     </div>
@@ -337,7 +338,7 @@ const UltimateContentRevolution2025 = () => {
 
             {/* Testimonial Navigation */}
             <div className="flex justify-center mt-8 space-x-2">
-              {testimonials.map((_, index) => (
+              {testimonials.map((_index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}

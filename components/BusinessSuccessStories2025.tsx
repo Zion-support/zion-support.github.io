@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Users, 
-  Zap, 
-  Shield, 
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  Zap
+  Shield
   Brain,
   Globe,
   Target,
@@ -25,12 +26,12 @@ import {
 } from 'lucide-react';
 
 const BusinessSuccessStories2025 = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeStory, setActiveStory] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [activeStorysetActiveStory] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const successStories = [
     {
@@ -65,7 +66,7 @@ const BusinessSuccessStories2025 = () => {
         incidents: '0 breaches',
         compliance: '100%'
       },
-      testimonial: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementation, and our compliance scores are perfect.',
+      testimonial: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementationand our compliance scores are perfect.',
       author: 'Michael Chen',
       role: 'CTO',
       rating: 5,
@@ -112,19 +113,19 @@ const BusinessSuccessStories2025 = () => {
   ];
 
   const overallStats = [
-    { label: 'Projects Completed', value: '1,200+', icon: Target },
-    { label: 'Average ROI', value: '300%', icon: TrendingUp },
-    { label: 'Client Satisfaction', value: '99.8%', icon: Star },
-    { label: 'Cost Savings', value: '$50M+', icon: DollarSign }
+    { label: 'Projects Completed'value: '1,200+'icon: Target },
+    { label: 'Average ROI'value: '300%'icon: TrendingUp },
+    { label: 'Client Satisfaction'value: '99.8%'icon: Star },
+    { label: 'Cost Savings'value: '$50M+'icon: DollarSign }
   ];
 
   const industries = [
-    { name: 'Technology', count: 45, icon: Brain },
-    { name: 'Finance', count: 32, icon: DollarSign },
-    { name: 'Healthcare', count: 28, icon: Shield },
-    { name: 'Manufacturing', count: 25, icon: Building2 },
-    { name: 'Retail', count: 20, icon: Globe },
-    { name: 'Education', count: 15, icon: BookOpen }
+    { name: 'Technology'count: 45icon: Brain },
+    { name: 'Finance'count: 32icon: DollarSign },
+    { name: 'Healthcare'count: 28icon: Shield },
+    { name: 'Manufacturing'count: 25icon: Building2 },
+    { name: 'Retail'count: 20icon: Globe },
+    { name: 'Education'count: 15icon: BookOpen }
   ];
 
   return (
@@ -132,8 +133,8 @@ const BusinessSuccessStories2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0y: 20 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -147,12 +148,12 @@ const BusinessSuccessStories2025 = () => {
 
         {/* Overall Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
-          {overallStats.map((stat, index) => (
+          {overallStats.map((statindex) => (
             <div key={index} className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full mb-4">
                 <stat.icon className="w-8 h-8 text-white" />
@@ -165,12 +166,12 @@ const BusinessSuccessStories2025 = () => {
 
         {/* Success Stories Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {successStories.map((story, index) => (
+          {successStories.map((storyindex) => (
             <motion.div
               key={story.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
               className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300"
             >
               {/* Company Header */}
@@ -185,7 +186,7 @@ const BusinessSuccessStories2025 = () => {
                   </div>
                 </div>
                 <div className="flex items-center space-x-1">
-                  {[...Array(story.rating)].map((_, i) => (
+                  {[...Array(story.rating)].map((_i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -205,10 +206,10 @@ const BusinessSuccessStories2025 = () => {
 
               {/* Results */}
               <div className="grid grid-cols-2 gap-4 mb-6">
-                {Object.entries(story.results).map(([key, value]) => (
+                {Object.entries(story.results).map(([keyvalue]) => (
                   <div key={key} className="text-center p-3 bg-gradient-to-br from-green-50 to-blue-50 rounded-lg">
                     <div className="text-2xl font-bold text-gray-900">{value}</div>
-                    <div className="text-sm text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                    <div className="text-sm text-gray-600 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</div>
                   </div>
                 ))}
               </div>
@@ -217,7 +218,7 @@ const BusinessSuccessStories2025 = () => {
               <div className="border-l-4 border-green-500 pl-4 mb-4">
                 <p className="text-gray-700 italic mb-2">"{story.testimonial}"</p>
                 <div className="text-sm text-gray-600">
-                  <span className="font-semibold">{story.author}</span>, {story.role}
+                  <span className="font-semibold">{story.author}</span>{story.role}
                 </div>
               </div>
 
@@ -235,21 +236,21 @@ const BusinessSuccessStories2025 = () => {
 
         {/* Industries Served */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.6delay: 0.8 }}
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Industries We Serve
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {industries.map((industry, index) => (
+            {industries.map((industryindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isVisible ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                transition={{ duration: 0.5delay: 0.9 + index * 0.1 }}
                 className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-full mb-4">
@@ -265,9 +266,9 @@ const BusinessSuccessStories2025 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 1.0 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.6delay: 1.0 }}
           className="text-center bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-12 text-white"
         >
           <h3 className="text-3xl font-bold mb-4">

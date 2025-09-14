@@ -1,13 +1,13 @@
 import React from 'react';
 import { 
-  Zap, 
-  Users, 
-  FileText, 
-  BarChart3, 
-  Calendar, 
-  CreditCard, 
-  MessageSquare, 
-  CheckCircle, 
+  Zap
+  Users
+  FileText
+  BarChart3
+  Calendar
+  CreditCard
+  MessageSquare
+  CheckCircle
   Star,
   ExternalLink,
   ArrowRight,
@@ -28,7 +28,7 @@ export default function MicroSAASServicesPage() {
   const microSAASServices = [
     {
       name: "Project Management Hub",
-      description: "Lightweight, intuitive project management tool designed for small teams and startups. Streamline workflows, track progress, and collaborate effectively.",
+      description: "Lightweightintuitive project management tool designed for small teams and startups. Streamline workflowstrack progressand collaborate effectively.",
       icon: <Users className="w-12 h-12 text-blue-500" />,
       features: [
         "Task management and assignment",
@@ -46,7 +46,7 @@ export default function MicroSAASServicesPage() {
         enterprise: "$99/month"
       },
       marketPrice: "$50-100/month",
-      useCases: ["Small teams", "Startups", "Freelancers", "Agencies", "Remote teams"],
+      useCases: ["Small teams"Startups"Freelancers"Agencies"Remote teams"],
       benefits: [
         "50% cost savings vs competitors",
         "Easy onboarding and adoption",
@@ -60,7 +60,7 @@ export default function MicroSAASServicesPage() {
     },
     {
       name: "Invoice & Billing System",
-      description: "Automated invoicing and payment processing platform with recurring billing, financial analytics, and tax calculations.",
+      description: "Automated invoicing and payment processing platform with recurring billingfinancial analyticsand tax calculations.",
       icon: <CreditCard className="w-12 h-12 text-green-500" />,
       features: [
         "Automated invoice generation",
@@ -78,7 +78,7 @@ export default function MicroSAASServicesPage() {
         enterprise: "$149/month"
       },
       marketPrice: "$60-120/month",
-      useCases: ["Freelancers", "Small businesses", "Consultants", "Service providers", "E-commerce"],
+      useCases: ["Freelancers"Small businesses"Consultants"Service providers"E-commerce"],
       benefits: [
         "Faster payment collection",
         "Reduced administrative overhead",
@@ -92,10 +92,10 @@ export default function MicroSAASServicesPage() {
     },
     {
       name: "Social Media Scheduler",
-      description: "AI-powered social media management platform with content optimization, multi-platform posting, and performance analytics.",
+      description: "AI-powered social media management platform with content optimizationmulti-platform postingand performance analytics.",
       icon: <MessageSquare className="w-12 h-12 text-purple-500" />,
       features: [
-        "Multi-platform posting (Instagram, Twitter, LinkedIn, Facebook)",
+        "Multi-platform posting (InstagramTwitterLinkedInFacebook)",
         "AI content optimization",
         "Content calendar management",
         "Performance analytics dashboard",
@@ -110,7 +110,7 @@ export default function MicroSAASServicesPage() {
         enterprise: "$199/month"
       },
       marketPrice: "$80-150/month",
-      useCases: ["Marketing teams", "Influencers", "Small businesses", "Agencies", "Content creators"],
+      useCases: ["Marketing teams"Influencers"Small businesses"Agencies"Content creators"],
       benefits: [
         "Save 10+ hours per week",
         "Improve engagement rates",
@@ -124,7 +124,7 @@ export default function MicroSAASServicesPage() {
     },
     {
       name: "Customer Relationship Manager",
-      description: "Simple yet powerful CRM designed for growing businesses. Manage leads, track sales, and nurture customer relationships.",
+      description: "Simple yet powerful CRM designed for growing businesses. Manage leadstrack salesand nurture customer relationships.",
       icon: <BarChart3 className="w-12 h-12 text-orange-500" />,
       features: [
         "Lead management and scoring",
@@ -142,7 +142,7 @@ export default function MicroSAASServicesPage() {
         enterprise: "$199/month"
       },
       marketPrice: "$100-200/month",
-      useCases: ["Sales teams", "Small businesses", "Startups", "Consultants", "Real estate"],
+      useCases: ["Sales teams"Small businesses"Startups"Consultants"Real estate"],
       benefits: [
         "Increase sales by 25%",
         "Better lead conversion",
@@ -156,7 +156,7 @@ export default function MicroSAASServicesPage() {
     },
     {
       name: "Email Marketing Platform",
-      description: "Professional email marketing solution with automation, segmentation, and advanced analytics for better campaign performance.",
+      description: "Professional email marketing solution with automationsegmentationand advanced analytics for better campaign performance.",
       icon: <Mail className="w-12 h-12 text-indigo-500" />,
       features: [
         "Drag-and-drop email builder",
@@ -174,7 +174,7 @@ export default function MicroSAASServicesPage() {
         enterprise: "$249/month"
       },
       marketPrice: "$120-250/month",
-      useCases: ["E-commerce", "Marketing teams", "Small businesses", "Newsletters", "Online courses"],
+      useCases: ["E-commerce"Marketing teams"Small businesses"Newsletters"Online courses"],
       benefits: [
         "Higher open and click rates",
         "Automated customer journeys",
@@ -188,7 +188,7 @@ export default function MicroSAASServicesPage() {
     },
     {
       name: "Analytics Dashboard",
-      description: "Comprehensive business analytics platform with real-time insights, custom reports, and data visualization tools.",
+      description: "Comprehensive business analytics platform with real-time insightscustom reportsand data visualization tools.",
       icon: <TrendingUp className="w-12 h-12 text-pink-500" />,
       features: [
         "Real-time data visualization",
@@ -206,7 +206,7 @@ export default function MicroSAASServicesPage() {
         enterprise: "$299/month"
       },
       marketPrice: "$150-300/month",
-      useCases: ["Business owners", "Marketing teams", "Analysts", "Startups", "E-commerce"],
+      useCases: ["Business owners"Marketing teams"Analysts"Startups"E-commerce"],
       benefits: [
         "Data-driven decision making",
         "Time savings on reporting",
@@ -229,13 +229,13 @@ export default function MicroSAASServicesPage() {
     },
     {
       name: "Knowledge Base Platform",
-      description: "Create and manage documentation, FAQs, and help articles for your customers and team.",
+      description: "Create and manage documentationFAQsand help articles for your customers and team.",
       pricing: "$39/month",
       icon: <FileText className="w-8 h-8 text-green-400" />
     },
     {
       name: "Survey & Feedback Tool",
-      description: "Collect customer feedback, conduct surveys, and gather insights to improve your products and services.",
+      description: "Collect customer feedbackconduct surveysand gather insights to improve your products and services.",
       pricing: "$29/month",
       icon: <MessageSquare className="w-8 h-8 text-purple-400" />
     },
@@ -248,10 +248,10 @@ export default function MicroSAASServicesPage() {
   ];
 
   const stats = [
-    { label: "Active Users", value: "10,000+" },
-    { label: "Cost Savings", value: "40-60%" },
-    { label: "Setup Time", value: "< 2 hours" },
-    { label: "Customer Satisfaction", value: "96%" }
+    { label: "Active Users"value: "10,000+" },
+    { label: "Cost Savings"value: "40-60%" },
+    { label: "Setup Time"value: "< 2 hours" },
+    { label: "Customer Satisfaction"value: "96%" }
   ];
 
   const whyChooseUs = [
@@ -291,7 +291,7 @@ export default function MicroSAASServicesPage() {
               Micro SAAS Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Affordable, scalable software solutions that grow with your business. Professional-grade tools at startup-friendly prices.
+              Affordablescalable software solutions that grow with your business. Professional-grade tools at startup-friendly prices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
@@ -316,7 +316,7 @@ export default function MicroSAASServicesPage() {
       {/* Stats Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <div key={index} className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">{stat.value}</div>
               <div className="text-gray-300 text-sm">{stat.label}</div>
@@ -337,7 +337,7 @@ export default function MicroSAASServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {whyChooseUs.map((feature, index) => (
+          {whyChooseUs.map((featureindex) => (
             <div key={index} className="text-center space-y-4">
               <div className="flex justify-center">
                 {feature.icon}
@@ -361,7 +361,7 @@ export default function MicroSAASServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {microSAASServices.map((service, index) => (
+          {microSAASServices.map((serviceindex) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-yellow-400/50 transition-all duration-300 hover:transform hover:scale-105">
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
@@ -375,7 +375,7 @@ export default function MicroSAASServicesPage() {
                   <div>
                     <h4 className="text-lg font-semibold text-yellow-400 mb-3">Key Features:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((featureIndex) => (
                         <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           {feature}
@@ -388,7 +388,7 @@ export default function MicroSAASServicesPage() {
                     <div>
                       <h4 className="text-sm font-semibold text-yellow-400 mb-2">Pricing Plans:</h4>
                       <div className="space-y-1">
-                        {Object.entries(service.pricing).map(([plan, price]) => (
+                        {Object.entries(service.pricing).map(([planprice]) => (
                           <div key={plan} className="flex justify-between text-sm">
                             <span className="text-gray-400 capitalize">{plan}:</span>
                             <span className="text-green-400 font-semibold">{price}</span>
@@ -408,7 +408,7 @@ export default function MicroSAASServicesPage() {
                       </div>
                       <h4 className="text-sm font-semibold text-yellow-400 mb-2 mt-3">Best For:</h4>
                       <ul className="space-y-1">
-                        {service.useCases.map((useCase, useCaseIndex) => (
+                        {service.useCases.map((useCaseIndex) => (
                           <li key={useCaseIndex} className="text-xs text-gray-300">• {useCase}</li>
                         ))}
                       </ul>
@@ -418,7 +418,7 @@ export default function MicroSAASServicesPage() {
                   <div>
                     <h4 className="text-sm font-semibold text-yellow-400 mb-2">Key Benefits:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-1">
-                      {service.benefits.map((benefit, benefitIndex) => (
+                      {service.benefits.map((benefitIndex) => (
                         <li key={benefitIndex} className="text-xs text-gray-300">• {benefit}</li>
                       ))}
                     </ul>
@@ -460,7 +460,7 @@ export default function MicroSAASServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {additionalMicroSAAS.map((service, index) => (
+          {additionalMicroSAAS.map((serviceindex) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-yellow-400/50 transition-all duration-300">
               <div className="text-center space-y-4">
                 <div className="flex justify-center">
@@ -559,7 +559,7 @@ export default function MicroSAASServicesPage() {
               Ready to Scale Your Business?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Start with our affordable micro SAAS solutions and scale up as your business grows. No long-term contracts, no hidden fees.
+              Start with our affordable micro SAAS solutions and scale up as your business grows. No long-term contractsno hidden fees.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -587,7 +587,7 @@ export default function MicroSAASServicesPage() {
                 </div>
                 <h3 className="text-lg font-semibold text-white">Visit Us</h3>
                 <p className="text-gray-300">364 E Main St STE 1008</p>
-                <p className="text-sm text-gray-400">Middletown, DE 19709</p>
+                <p className="text-sm text-gray-400">MiddletownDE 19709</p>
               </div>
             </div>
 

@@ -1,16 +1,17 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Rocket, 
-  Star, 
-  TrendingUp, 
+  Brain
+  Zap
+  Shield
+  Globe
+  Rocket
+  Star
+  TrendingUp
   Users,
   ChevronRight,
   ExternalLink,
@@ -19,12 +20,12 @@ import {
 } from 'lucide-react';
 
 const NewContentShowcase2026 = () => {
-  const [activeTab, setActiveTab] = useState('ai-breakthroughs');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState('ai-breakthroughs');
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const contentCategories = {
     'ai-breakthroughs': {
@@ -61,12 +62,12 @@ const NewContentShowcase2026 = () => {
     'ai-breakthroughs': [
       {
         title: 'Multimodal AI Revolution: Beyond Text and Images',
-        description: 'Explore how AI systems are integrating vision, audio, and text processing to create more intelligent and context-aware applications.',
+        description: 'Explore how AI systems are integrating visionaudioand text processing to create more intelligent and context-aware applications.',
         readTime: '12 min read',
         category: 'AI Research',
         featured: true,
         href: '/ai-2026-multimodal-revolution',
-        stats: { views: '2.3k', likes: '187' }
+        stats: { views: '2.3k'likes: '187' }
       },
       {
         title: 'Neural Architecture Search: Automating AI Design',
@@ -75,7 +76,7 @@ const NewContentShowcase2026 = () => {
         category: 'AI Engineering',
         featured: false,
         href: '/ai-2026-neural-architecture-search',
-        stats: { views: '1.8k', likes: '142' }
+        stats: { views: '1.8k'likes: '142' }
       },
       {
         title: 'AI Consciousness: The Next Frontier',
@@ -84,7 +85,7 @@ const NewContentShowcase2026 = () => {
         category: 'AI Philosophy',
         featured: true,
         href: '/ai-2026-consciousness-frontier',
-        stats: { views: '3.1k', likes: '256' }
+        stats: { views: '3.1k'likes: '256' }
       }
     ],
     'quantum-computing': [
@@ -95,7 +96,7 @@ const NewContentShowcase2026 = () => {
         category: 'Quantum AI',
         featured: true,
         href: '/quantum-ai-2026-future',
-        stats: { views: '1.9k', likes: '134' }
+        stats: { views: '1.9k'likes: '134' }
       },
       {
         title: 'Quantum Machine Learning Algorithms',
@@ -104,7 +105,7 @@ const NewContentShowcase2026 = () => {
         category: 'Quantum ML',
         featured: false,
         href: '/quantum-ml-algorithms-2026',
-        stats: { views: '1.2k', likes: '98' }
+        stats: { views: '1.2k'likes: '98' }
       }
     ],
     'sustainability': [
@@ -115,7 +116,7 @@ const NewContentShowcase2026 = () => {
         category: 'Green Tech',
         featured: true,
         href: '/green-ai-sustainability-2026',
-        stats: { views: '2.1k', likes: '178' }
+        stats: { views: '2.1k'likes: '178' }
       },
       {
         title: 'Carbon-Neutral AI Infrastructure',
@@ -124,7 +125,7 @@ const NewContentShowcase2026 = () => {
         category: 'Sustainability',
         featured: false,
         href: '/carbon-neutral-ai-infrastructure',
-        stats: { views: '1.5k', likes: '123' }
+        stats: { views: '1.5k'likes: '123' }
       }
     ],
     'automation': [
@@ -135,7 +136,7 @@ const NewContentShowcase2026 = () => {
         category: 'Business Automation',
         featured: true,
         href: '/autonomous-business-ops-2026',
-        stats: { views: '2.7k', likes: '201' }
+        stats: { views: '2.7k'likes: '201' }
       },
       {
         title: 'Intelligent Process Automation',
@@ -144,13 +145,13 @@ const NewContentShowcase2026 = () => {
         category: 'Process Automation',
         featured: false,
         href: '/intelligent-process-automation-2026',
-        stats: { views: '1.6k', likes: '145' }
+        stats: { views: '1.6k'likes: '145' }
       }
     ]
   };
 
   const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -162,8 +163,8 @@ const NewContentShowcase2026 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+    hidden: { opacity: 0y: 20 },
+    visible: { opacity: 1y: 0 }
   };
 
   return (
@@ -184,14 +185,14 @@ const NewContentShowcase2026 = () => {
             Revolutionary Content Just Dropped
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the latest breakthroughs in AI, quantum computing, sustainability, and automation. 
+            Discover the latest breakthroughs in AIquantum computingsustainabilityand automation. 
             Stay ahead with cutting-edge insights and practical implementations.
           </p>
         </motion.div>
 
         {/* Category Tabs */}
         <motion.div className="flex flex-wrap justify-center gap-4 mb-12" variants={itemVariants}>
-          {Object.entries(contentCategories).map(([key, category]) => {
+          {Object.entries(contentCategories).map(([keycategory]) => {
             const Icon = category.icon;
             return (
               <button
@@ -215,7 +216,7 @@ const NewContentShowcase2026 = () => {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
         >
-          {featuredContent[activeTab as keyof typeof featuredContent]?.map((content, index) => {
+          {featuredContent[activeTab as keyof typeof featuredContent]?.map((contentindex) => {
             const category = contentCategories[activeTab as keyof typeof contentCategories];
             const Icon = category.icon;
             

@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  Globe, 
-  Shield, 
-  Users, 
-  BarChart3, 
+  TrendingUp
+  Brain
+  Zap
+  Globe
+  Shield
+  Users
+  BarChart3
   Cpu,
   Database,
   Cloud,
@@ -22,35 +23,35 @@ import {
 } from 'lucide-react';
 
 const AI2025TrendsInnovationShowcase = () => {
-  const [activeTrend, setActiveTrend] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTrendsetActiveTrend] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setActiveTrend((prev) => (prev + 1) % trends.length);
-    }, 4000);
+    }4000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const trends = [
     {
       id: 1,
       title: "Generative AI Revolution",
-      description: "Transform your business with cutting-edge generative AI that creates content, automates processes, and drives innovation.",
+      description: "Transform your business with cutting-edge generative AI that creates contentautomates processesand drives innovation.",
       icon: Brain,
       stats: "85% efficiency increase",
       color: "from-purple-500 to-pink-500",
-      features: ["Content Generation", "Process Automation", "Creative Solutions"]
+      features: ["Content Generation"Process Automation"Creative Solutions"]
     },
     {
       id: 2,
       title: "Edge AI Computing",
-      description: "Deploy AI directly on devices for real-time processing, reduced latency, and enhanced privacy.",
+      description: "Deploy AI directly on devices for real-time processingreduced latencyand enhanced privacy.",
       icon: Cpu,
       stats: "60% faster processing",
       color: "from-blue-500 to-cyan-500",
-      features: ["Real-time Processing", "Privacy Protection", "Reduced Latency"]
+      features: ["Real-time Processing"Privacy Protection"Reduced Latency"]
     },
     {
       id: 3,
@@ -59,7 +60,7 @@ const AI2025TrendsInnovationShowcase = () => {
       icon: BarChart3,
       stats: "300% better insights",
       color: "from-green-500 to-emerald-500",
-      features: ["Predictive Analytics", "Trend Analysis", "Performance Optimization"]
+      features: ["Predictive Analytics"Trend Analysis"Performance Optimization"]
     },
     {
       id: 4,
@@ -68,7 +69,7 @@ const AI2025TrendsInnovationShowcase = () => {
       icon: Zap,
       stats: "1000x faster computation",
       color: "from-yellow-500 to-orange-500",
-      features: ["Quantum Computing", "Exponential Speed", "Complex Problem Solving"]
+      features: ["Quantum Computing"Exponential Speed"Complex Problem Solving"]
     }
   ];
 
@@ -100,10 +101,10 @@ const AI2025TrendsInnovationShowcase = () => {
   ];
 
   const benefits = [
-    { icon: TrendingUp, text: "Increased Revenue", value: "+150%" },
-    { icon: Users, text: "Customer Satisfaction", value: "95%" },
-    { icon: Shield, text: "Security Enhancement", value: "99.9%" },
-    { icon: Globe, text: "Global Reach", value: "200+" }
+    { icon: TrendingUptext: "Increased Revenue"value: "+150%" },
+    { icon: Userstext: "Customer Satisfaction"value: "95%" },
+    { icon: Shieldtext: "Security Enhancement"value: "99.9%" },
+    { icon: Globetext: "Global Reach"value: "200+" }
   ];
 
   return (
@@ -114,8 +115,8 @@ const AI2025TrendsInnovationShowcase = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -141,7 +142,7 @@ const AI2025TrendsInnovationShowcase = () => {
             {/* Trends Navigation */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white mb-6">Key AI Trends 2025</h3>
-              {trends.map((trend, index) => (
+              {trends.map((trendindex) => (
                 <motion.div
                   key={trend.id}
                   className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${
@@ -172,9 +173,9 @@ const AI2025TrendsInnovationShowcase = () => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTrend}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -50 }}
+                  initial={{ opacity: 0x: 50 }}
+                  animate={{ opacity: 1x: 0 }}
+                  exit={{ opacity: 0x: -50 }}
                   transition={{ duration: 0.5 }}
                   className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20"
                 >
@@ -193,7 +194,7 @@ const AI2025TrendsInnovationShowcase = () => {
                   </p>
                   
                   <div className="space-y-3">
-                    {trends[activeTrend].features.map((feature, index) => (
+                    {trends[activeTrend].features.map((featureindex) => (
                       <div key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-400" />
                         <span className="text-gray-300">{feature}</span>
@@ -210,12 +211,12 @@ const AI2025TrendsInnovationShowcase = () => {
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Revolutionary Innovations</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {innovations.map((innovation, index) => (
+            {innovations.map((innovationindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 30 }}
+                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -243,12 +244,12 @@ const AI2025TrendsInnovationShowcase = () => {
         <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/20">
           <h3 className="text-2xl font-bold text-white text-center mb-8">Proven Results</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefitindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isVisible ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mb-4">
@@ -263,9 +264,9 @@ const AI2025TrendsInnovationShowcase = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="text-center mt-16"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">

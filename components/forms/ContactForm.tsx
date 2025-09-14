@@ -1,11 +1,12 @@
+"use client";
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+MailPhoneMapPinSendCheckCircleAlertCircle
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const [formDatasetFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -14,8 +15,8 @@ const ContactForm: React.FC = () => {
     message: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [submitStatusetSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -30,7 +31,7 @@ const ContactForm: React.FC = () => {
     
     // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve2000));
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -73,7 +74,7 @@ const ContactForm: React.FC = () => {
     {
       icon: MapPin,
       title: 'Visit Us',
-      content: '123 Tech Street, Innovation City, IC 12345',
+      content: '123 Tech StreetInnovation CityIC 12345',
       href: '#'
     }
   ];
@@ -89,8 +90,8 @@ const ContactForm: React.FC = () => {
       <div className="relative container mx-auto px-4">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -111,9 +112,9 @@ const ContactForm: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
           {/* Contact Information */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0x: -30 }}
+            whileInView={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             viewport={{ once: true }}
             className="space-y-8"
           >
@@ -127,13 +128,13 @@ const ContactForm: React.FC = () => {
 
             {/* Contact Details */}
             <div className="space-y-6">
-              {contactInfo.map((info, index) => (
+              {contactInfo.map((infoindex) => (
                 <motion.a
                   key={info.title}
                   href={info.href}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  initial={{ opacity: 0x: -20 }}
+                  whileInView={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
                   viewport={{ once: true }}
                   className="flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group"
                 >
@@ -152,9 +153,9 @@ const ContactForm: React.FC = () => {
 
             {/* Additional Info */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.6 }}
               viewport={{ once: true }}
               className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6"
             >
@@ -182,16 +183,16 @@ const ContactForm: React.FC = () => {
 
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0x: 30 }}
+            whileInView={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.8delay: 0.4 }}
             viewport={{ once: true }}
             className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
           >
             {submitStatus === 'success' ? (
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={{ opacity: 1scale: 1 }}
                 className="text-center py-12"
               >
                 <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
@@ -312,8 +313,8 @@ const ContactForm: React.FC = () => {
 
                 {submitStatus === 'error' && (
                   <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0y: -10 }}
+                    animate={{ opacity: 1y: 0 }}
                     className="flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4"
                   >
                     <AlertCircle className="w-5 h-5" />

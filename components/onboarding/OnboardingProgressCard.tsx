@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
+CheckCircle2CirclePartyPopper
 
 export type OnboardingStep = {
   id: string;
@@ -22,7 +22,7 @@ function computePercentage(steps: OnboardingStep[]): number {
   return Math.round((completedCount / steps.length) * 100);
 }
 
-export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {
+export default function OnboardingProgressCard({ titlestepshighlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
 

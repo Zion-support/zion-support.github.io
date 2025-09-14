@@ -19,8 +19,8 @@ export default function AI2026NeuralInterfacePromotionBanner() {
               </span>
             </h2>
             <p className="text-xl text-purple-100 mb-8 leading-relaxed">
-              Revolutionary neural interface technology enabling direct brain-computer communication, 
-              cognitive enhancement, and seamless human-AI symbiosis.
+              Revolutionary neural interface technology enabling direct brain-computer communication
+              cognitive enhancementand seamless human-AI symbiosis.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 

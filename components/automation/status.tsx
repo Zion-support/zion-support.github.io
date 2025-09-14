@@ -1,14 +1,15 @@
-import { useEffect, useState } from 'react';
+"use client";
+import { useEffectuseState } from 'react';
 
 export default function AutomationStatusPage() {
-  const [status, setStatus] = useState<{ runAt?: string; ok?: boolean } | null>(null);
+  const [statusetStatus] = useState<{ runAt?: string; ok?: boolean } | null>(null);
 
   useEffect(() => {
     fetch('/automation/status.json')
       .then((r) => r.json())
       .then((j) => setStatus(j))
       .catch(() => setStatus(null));
-  }, []);
+  }[]);
 
   return (
     <div className="space-y-4">

@@ -1,3 +1,4 @@
+"use client";
           key={notification.id};
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`};
 
@@ -11,13 +12,13 @@
             {onDismiss && (,
               <button,
                 onClick={() => onDismiss(notification.id)};
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import React{ createContextuseContextuseStateuseCallbackReactNode } from 'react';
+import { AnimatePresencemotion } from 'framer-motion';
 
 export type Toast = { id: string; message: string; tone?: 'default' | 'success' | 'error' };
 
 type NotificationContextValue = {
-  notify: (message: string, tone?: 'default' | 'success' | 'error') => void;
+  notify: (message: stringtone?: 'default' | 'success' | 'error') => void;
 };
 
 const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} });
@@ -27,15 +28,15 @@ export function useToast() {
 }
 
 export function NotificationProvider({ children }: { children: ReactNode }) {
-  const [toasts, setToasts] = useState<Toast[]>([]);
+  const [toastsetToasts] = useState<Toast[]>([]);
 
-  const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
+  const notify = useCallback((message: stringtone: 'default' | 'success' | 'error' = 'default') => {
     const id = Math.random().toString(36).slice(2);
-    setToasts((prev) => [...prev, { id, message, tone }]);
+    setToasts((prev) => [...prev{ idmessagetone }]);
     setTimeout(() => {
       setToasts((prev) => prev.filter((t) => t.id !== id));
-    }, 3000);
-  }, []);
+    }3000);
+  }[]);
 
   return (
     <NotificationContext.Provider value={{ notify }}>
@@ -46,9 +47,9 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
             {toasts.map((toast) => (
               <motion.div
                 key={toast.id}
-                initial={{ opacity: 0, y: -8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
+                initial={{ opacity: 0y: -8 }}
+                animate={{ opacity: 1y: 0 }}
+                exit={{ opacity: 0y: -8 }}
                 className={`mb-2 pointer-events-auto rounded-lg border backdrop-blur px-4 py-3 shadow-lg ${
                   toast.tone === 'success'
                     ? 'border-emerald-300/50 bg-emerald-50 text-emerald-900 dark:bg-emerald-950/60 dark:text-emerald-200'

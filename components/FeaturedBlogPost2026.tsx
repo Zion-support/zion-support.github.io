@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Users, 
-  Zap, 
-  Shield, 
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  Zap
+  Shield
   Globe,
   Brain,
   Database,
@@ -65,30 +66,30 @@ import {
 } from 'lucide-react';
 
 const FeaturedBlogPost2026 = () => {
-  const [currentPost, setCurrentPost] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentPostsetCurrentPost] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentPost((prev) => (prev + 1) % 3);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const blogPosts = [
     {
       id: 1,
       title: 'The Future of AI: 2026 Predictions and Breakthrough Technologies',
-      excerpt: 'Explore the revolutionary AI technologies that will reshape industries in 2026, from quantum neural networks to synthetic intelligence platforms.',
-      content: 'Artificial Intelligence is evolving at an unprecedented pace, and 2026 promises to be a landmark year for breakthrough technologies. From quantum-enhanced machine learning to synthetic intelligence platforms, we\'re witnessing the dawn of a new era in computing...',
+      excerpt: 'Explore the revolutionary AI technologies that will reshape industries in 2026from quantum neural networks to synthetic intelligence platforms.',
+      content: 'Artificial Intelligence is evolving at an unprecedented paceand 2026 promises to be a landmark year for breakthrough technologies. From quantum-enhanced machine learning to synthetic intelligence platformswe\'re witnessing the dawn of a new era in computing...',
       author: 'Dr. Sarah Chen',
       authorRole: 'Chief AI Scientist',
       authorImage: '/api/placeholder/60/60',
       publishDate: '2026-01-15',
       readTime: '8 min read',
       category: 'AI Research',
-      tags: ['AI', 'Machine Learning', 'Quantum Computing', 'Future Tech'],
+      tags: ['AI'Machine Learning'Quantum Computing'Future Tech'],
       image: '/api/placeholder/800/400',
       views: 12500,
       likes: 890,
@@ -100,14 +101,14 @@ const FeaturedBlogPost2026 = () => {
       id: 2,
       title: 'Building Scalable AI Infrastructure: A Complete Guide for 2026',
       excerpt: 'Learn how to design and implement robust AI infrastructure that can handle enterprise-scale workloads and future growth.',
-      content: 'Building scalable AI infrastructure requires careful planning and consideration of multiple factors. In this comprehensive guide, we\'ll explore the key components, best practices, and emerging technologies that will shape AI infrastructure in 2026...',
+      content: 'Building scalable AI infrastructure requires careful planning and consideration of multiple factors. In this comprehensive guidewe\'ll explore the key componentsbest practicesand emerging technologies that will shape AI infrastructure in 2026...',
       author: 'Michael Rodriguez',
       authorRole: 'Senior Cloud Architect',
       authorImage: '/api/placeholder/60/60',
       publishDate: '2026-01-12',
       readTime: '12 min read',
       category: 'Infrastructure',
-      tags: ['Cloud Computing', 'AI Infrastructure', 'Scalability', 'DevOps'],
+      tags: ['Cloud Computing'AI Infrastructure'Scalability'DevOps'],
       image: '/api/placeholder/800/400',
       views: 8900,
       likes: 567,
@@ -119,14 +120,14 @@ const FeaturedBlogPost2026 = () => {
       id: 3,
       title: 'Quantum Computing Meets AI: The Next Frontier in Technology',
       excerpt: 'Discover how quantum computing is revolutionizing artificial intelligence and what this means for the future of technology.',
-      content: 'The intersection of quantum computing and artificial intelligence represents one of the most exciting frontiers in technology today. As quantum computers become more accessible, we\'re seeing unprecedented opportunities for AI advancement...',
+      content: 'The intersection of quantum computing and artificial intelligence represents one of the most exciting frontiers in technology today. As quantum computers become more accessiblewe\'re seeing unprecedented opportunities for AI advancement...',
       author: 'Dr. Alex Thompson',
       authorRole: 'Quantum Computing Researcher',
       authorImage: '/api/placeholder/60/60',
       publishDate: '2026-01-10',
       readTime: '10 min read',
       category: 'Quantum Computing',
-      tags: ['Quantum Computing', 'AI', 'Research', 'Innovation'],
+      tags: ['Quantum Computing'AI'Research'Innovation'],
       image: '/api/placeholder/800/400',
       views: 15600,
       likes: 1200,
@@ -137,19 +138,19 @@ const FeaturedBlogPost2026 = () => {
   ];
 
   const categories = [
-    { name: 'AI Research', count: 24, color: 'from-blue-600 to-purple-600' },
-    { name: 'Infrastructure', count: 18, color: 'from-green-600 to-teal-600' },
-    { name: 'Quantum Computing', count: 12, color: 'from-orange-600 to-red-600' },
-    { name: 'Machine Learning', count: 31, color: 'from-purple-600 to-pink-600' },
-    { name: 'Automation', count: 15, color: 'from-cyan-600 to-blue-600' },
-    { name: 'Cloud Computing', count: 22, color: 'from-indigo-600 to-purple-600' }
+    { name: 'AI Research'count: 24color: 'from-blue-600 to-purple-600' },
+    { name: 'Infrastructure'count: 18color: 'from-green-600 to-teal-600' },
+    { name: 'Quantum Computing'count: 12color: 'from-orange-600 to-red-600' },
+    { name: 'Machine Learning'count: 31color: 'from-purple-600 to-pink-600' },
+    { name: 'Automation'count: 15color: 'from-cyan-600 to-blue-600' },
+    { name: 'Cloud Computing'count: 22color: 'from-indigo-600 to-purple-600' }
   ];
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
+    return date.toLocaleDateString('en-US'{ 
+      year: 'numeric'
+      month: 'long'
       day: 'numeric' 
     });
   };
@@ -159,8 +160,8 @@ const FeaturedBlogPost2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -177,7 +178,7 @@ const FeaturedBlogPost2026 = () => {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay ahead of the curve with our expert analysis, breakthrough research, and cutting-edge insights into the world of AI, quantum computing, and emerging technologies.
+            Stay ahead of the curve with our expert analysisbreakthrough researchand cutting-edge insights into the world of AIquantum computingand emerging technologies.
           </p>
         </motion.div>
 
@@ -185,9 +186,9 @@ const FeaturedBlogPost2026 = () => {
           {/* Featured Post */}
           <div className="lg:col-span-2">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.1 }}
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
             >
               {/* Post Image */}
@@ -278,7 +279,7 @@ const FeaturedBlogPost2026 = () => {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {blogPosts[currentPost].tags.map((tag, index) => (
+                  {blogPosts[currentPost].tags.map((tagindex) => (
                     <span
                       key={index}
                       className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
@@ -301,14 +302,14 @@ const FeaturedBlogPost2026 = () => {
           <div className="space-y-8">
             {/* Categories */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.2 }}
               className="bg-white rounded-2xl shadow-lg p-6"
             >
               <h3 className="text-xl font-bold text-gray-900 mb-6">Categories</h3>
               <div className="space-y-3">
-                {categories.map((category, index) => (
+                {categories.map((categoryindex) => (
                   <button
                     key={index}
                     className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors group"
@@ -329,14 +330,14 @@ const FeaturedBlogPost2026 = () => {
 
             {/* Popular Posts */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.3 }}
               className="bg-white rounded-2xl shadow-lg p-6"
             >
               <h3 className="text-xl font-bold text-gray-900 mb-6">Popular Posts</h3>
               <div className="space-y-4">
-                {blogPosts.slice(0, 3).map((post, index) => (
+                {blogPosts.slice(03).map((postindex) => (
                   <div key={post.id} className="flex space-x-4 group cursor-pointer">
                     <img
                       src={post.image}
@@ -360,9 +361,9 @@ const FeaturedBlogPost2026 = () => {
 
             {/* Newsletter Signup */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.4 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white"
             >
               <h3 className="text-xl font-bold mb-4">Stay Updated</h3>
@@ -385,9 +386,9 @@ const FeaturedBlogPost2026 = () => {
 
         {/* View All Posts CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.5 }}
           className="text-center mt-16"
         >
           <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center mx-auto">

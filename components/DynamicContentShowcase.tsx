@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 export default function DynamicContentShowcase() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isAutoPlayingsetIsAutoPlaying] = useState(true);
 
   const showcaseItems = [
     {
@@ -84,10 +85,10 @@ export default function DynamicContentShowcase() {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
-      }, 5000);
+      }5000);
       return () => clearInterval(interval);
     }
-  }, [isAutoPlaying, showcaseItems.length]);
+  }[isAutoPlayingshowcaseItems.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
@@ -225,7 +226,7 @@ export default function DynamicContentShowcase() {
 
         {/* Slide Indicators */}
         <div className="flex justify-center gap-2 mb-12">
-          {showcaseItems.map((_, index) => (
+          {showcaseItems.map((_index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
@@ -238,7 +239,7 @@ export default function DynamicContentShowcase() {
 
         {/* Quick Access Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {showcaseItems.map((item, index) => (
+          {showcaseItems.map((itemindex) => (
             <button
               key={item.id}
               onClick={() => goToSlide(index)}

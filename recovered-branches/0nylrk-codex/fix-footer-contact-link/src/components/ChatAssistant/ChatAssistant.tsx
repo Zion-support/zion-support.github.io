@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef, ReactNode } from 'react';
+import React{ useStateuseEffectuseRefReactNode } from 'react';
 import { ChatMessage } from './ChatMessage';
 import { ChatInput } from './ChatInput';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 
@@ -24,7 +24,7 @@ export interface ChatAssistantProps {
   };
   conversationId?: string;
   initialMessages?: Message[];
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>;
+  onSendMessage: (message: stringconversationId?: string) => Promise<void>;
   contextHeader?: ReactNode;
 }
 
@@ -37,18 +37,18 @@ export function ChatAssistant({
   onSendMessage,
   contextHeader
 }: ChatAssistantProps) {
-  const [messages, setMessages] = useState<Message[]>(initialMessages);
+  const [messagesetMessages] = useState<Message[]>(initialMessages);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   
   useEffect(() => {
     if (initialMessages.length > 0) {
       setMessages(initialMessages);
     }
-  }, [initialMessages]);
+  }[initialMessages]);
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }[messages]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -65,10 +65,10 @@ export function ChatAssistant({
       timestamp: new Date()
     };
     
-    setMessages((prev: Message[]) => [...prev, newMessage]);
+    setMessages((prev: Message[]) => [...prevnewMessage]);
     
     // Send message to recipient via the provided handler
-    await onSendMessage(message, conversationId);
+    await onSendMessage(messageconversationId);
   };
 
   if (!isOpen) return null;

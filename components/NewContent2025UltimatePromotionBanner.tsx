@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const NewContent2025UltimatePromotionBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentContent, setCurrentContent] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentContentsetCurrentContent] = useState(0);
 
   const newContentItems = [
     {
@@ -33,9 +34,9 @@ const NewContent2025UltimatePromotionBanner: React.FC = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentContent((prev) => (prev + 1) % newContentItems.length);
-    }, 4000);
+    }4000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   return (
     <div className={`fixed top-4 right-4 z-50 transition-all duration-500 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
@@ -58,7 +59,7 @@ const NewContent2025UltimatePromotionBanner: React.FC = () => {
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentContent * 100}%)` }}
           >
-            {newContentItems.map((item, index) => (
+            {newContentItems.map((itemindex) => (
               <div key={index} className="w-full flex-shrink-0">
                 <div className={`bg-gradient-to-r ${item.gradient} p-4 rounded-xl text-white`}>
                   <div className="flex items-center mb-3">
@@ -81,7 +82,7 @@ const NewContent2025UltimatePromotionBanner: React.FC = () => {
         </div>
 
         <div className="flex justify-center mt-4 space-x-2">
-          {newContentItems.map((_, index) => (
+          {newContentItems.map((_index) => (
             <button
               key={index}
               onClick={() => setCurrentContent(index)}

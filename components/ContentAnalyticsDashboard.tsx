@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { BarChart3, TrendingUp, Users, Eye, Clock, Star, Share2, BookOpen } from 'lucide-react';
+"use client";
+import React{ useStateuseEffect } from 'react';
+BarChart3TrendingUpUsersEyeClockStarShare2BookOpen
 
 const ContentAnalyticsDashboard = () => {
-  const [analytics, setAnalytics] = useState({
+  const [analyticsetAnalytics] = useState({
     totalViews: 0,
     engagementRate: 0,
     averageReadTime: 0,
@@ -11,7 +12,7 @@ const ContentAnalyticsDashboard = () => {
     socialShares: 0
   });
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     // Simulate analytics data loading
@@ -21,11 +22,11 @@ const ContentAnalyticsDashboard = () => {
         engagementRate: 85 + Math.floor(Math.random() * 10),
         averageReadTime: 4.2 + Math.random() * 1.5,
         topContent: [
-          { title: "AI 2025 Revolutionary Automation", views: 45000, engagement: 92 },
-          { title: "Quantum Computing Breakthroughs", views: 38000, engagement: 88 },
-          { title: "Fortune 500 Success Stories", views: 32000, engagement: 95 },
-          { title: "Neural Interface Revolution", views: 28000, engagement: 87 },
-          { title: "Edge Computing Solutions", views: 25000, engagement: 90 }
+          { title: "AI 2025 Revolutionary Automation"views: 45000engagement: 92 },
+          { title: "Quantum Computing Breakthroughs"views: 38000engagement: 88 },
+          { title: "Fortune 500 Success Stories"views: 32000engagement: 95 },
+          { title: "Neural Interface Revolution"views: 28000engagement: 87 },
+          { title: "Edge Computing Solutions"views: 25000engagement: 90 }
         ],
         userGrowth: 45 + Math.floor(Math.random() * 15),
         socialShares: 12500 + Math.floor(Math.random() * 5000)
@@ -36,9 +37,9 @@ const ContentAnalyticsDashboard = () => {
     setIsVisible(true);
     
     // Update analytics every 30 seconds
-    const interval = setInterval(loadAnalytics, 30000);
+    const interval = setInterval(loadAnalytics30000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const metrics = [
     {
@@ -97,13 +98,13 @@ const ContentAnalyticsDashboard = () => {
             Content Performance Analytics
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Real-time insights into content performance, user engagement, and growth metrics
+            Real-time insights into content performanceuser engagementand growth metrics
           </p>
         </div>
 
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {metrics.map((metric, index) => (
+          {metrics.map((metricindex) => (
             <div
               key={index}
               className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-gray-800/70 transition-all duration-300 transform hover:scale-105"
@@ -130,7 +131,7 @@ const ContentAnalyticsDashboard = () => {
           </h3>
           
           <div className="space-y-4">
-            {analytics.topContent.map((content, index) => (
+            {analytics.topContent.map((contentindex) => (
               <div
                 key={index}
                 className="bg-gray-700/50 rounded-lg p-4 hover:bg-gray-700/70 transition-all duration-300"

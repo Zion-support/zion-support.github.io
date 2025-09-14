@@ -18,18 +18,18 @@ interface ListingCardProps {
 
 export function ListingCard({ 
   id,
-  title, 
-  description, 
-  image, 
-  category, 
-  tags, 
-  author, 
-  authorImage, 
+  title
+  description
+  image
+  category
+  tags
+  author
+  authorImage
   className,
   profileType = 'service'
 }: ListingCardProps) {
   // Generate a profile ID based on the listing data
-  // In a real app, this would be a proper ID from the database
+  // In a real appthis would be a proper ID from the database
   const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
 
   return (
@@ -60,7 +60,7 @@ export function ListingCard({
         
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag, i) => (
+            {tags.map((tagi) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
               </Badge>

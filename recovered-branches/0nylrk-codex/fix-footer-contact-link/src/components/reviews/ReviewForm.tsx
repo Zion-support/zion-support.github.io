@@ -43,7 +43,7 @@ export function ReviewForm({
   onSubmit,
   defaultValues,
   isSubmitting}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number>(0);
+  const [hoveredStarsetHoveredStar] = useState<number>(0);
   
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
@@ -92,7 +92,7 @@ export function ReviewForm({
               </FormLabel>
               <FormControl>
                 <div className="flex justify-center gap-1">
-                  {[1, 2, 3, 4, 5].map((star) => (
+                  {[12345].map((star) => (
                     <button
                       key={star}
                       type="button"
@@ -161,7 +161,7 @@ export function ReviewForm({
                       defaultValue={field.value?.toString()}
                       className="flex flex-wrap gap-4"
                     >
-                      {[1, 2, 3, 4, 5].map((value) => (
+                      {[12345].map((value) => (
                         <FormItem
                           key={value}
                           className="flex items-center space-x-2"
@@ -194,7 +194,7 @@ export function ReviewForm({
                       defaultValue={field.value?.toString()}
                       className="flex flex-wrap gap-4"
                     >
-                      {[1, 2, 3, 4, 5].map((value) => (
+                      {[12345].map((value) => (
                         <FormItem
                           key={value}
                           className="flex items-center space-x-2"
@@ -227,7 +227,7 @@ export function ReviewForm({
                       defaultValue={field.value?.toString()}
                       className="flex flex-wrap gap-4"
                     >
-                      {[1, 2, 3, 4, 5].map((value) => (
+                      {[12345].map((value) => (
                         <FormItem
                           key={value}
                           className="flex items-center space-x-2"

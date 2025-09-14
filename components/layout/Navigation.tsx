@@ -1,25 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+"use client";
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Menu, X, Home, Brain, Cpu, Rocket, 
-  Phone, Mail, MapPin, Globe, ChevronDown,
-  BookOpen, FileText, TrendingUp, Users
+  MenuXHomeBrainCpuRocket
+  PhoneMailMapPinGlobeChevronDown,
+  BookOpenFileTextTrendingUpUsers
 } from 'lucide-react';
 import Link from 'next/link';
 
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpensetIsOpen] = useState(false);
+  const [isScrolledsetIsScrolled] = useState(false);
+  const [activeDropdownsetActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll'handleScroll);
+    return () => window.removeEventListener('scroll'handleScroll);
+  }[]);
 
   const navigationItems = [
     {
@@ -32,10 +33,10 @@ const Navigation: React.FC = () => {
       href: '/services',
       icon: Rocket,
       dropdown: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Revolutionary AI solutions' },
-        { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Enterprise IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: Rocket, description: 'Specialized software solutions' },
-        { name: 'Innovative Showcase', href: '/innovative-services-showcase', icon: Globe, description: 'Cutting-edge technology' }
+        { name: 'AI Services'href: '/ai-services'icon: Braindescription: 'Revolutionary AI solutions' },
+        { name: 'IT Services'href: '/it-services'icon: Cpudescription: 'Enterprise IT solutions' },
+        { name: 'Micro SaaS'href: '/micro-saas'icon: Rocketdescription: 'Specialized software solutions' },
+        { name: 'Innovative Showcase'href: '/innovative-services-showcase'icon: Globedescription: 'Cutting-edge technology' }
       ]
     },
     {
@@ -43,11 +44,11 @@ const Navigation: React.FC = () => {
       href: '/content-showcase',
       icon: BookOpen,
       dropdown: [
-        { name: 'Content Showcase', href: '/content-showcase', icon: BookOpen, description: 'All our latest content' },
-        { name: 'Blog Posts', href: '/blog', icon: FileText, description: 'Latest insights and trends' },
-        { name: 'Case Studies', href: '/case-studies', icon: TrendingUp, description: 'Success stories and ROI' },
-        { name: 'Resources', href: '/resources', icon: FileText, description: 'Guides and whitepapers' },
-        { name: 'Tools', href: '/tools', icon: Cpu, description: 'Calculators and utilities' }
+        { name: 'Content Showcase'href: '/content-showcase'icon: BookOpendescription: 'All our latest content' },
+        { name: 'Blog Posts'href: '/blog'icon: FileTextdescription: 'Latest insights and trends' },
+        { name: 'Case Studies'href: '/case-studies'icon: TrendingUpdescription: 'Success stories and ROI' },
+        { name: 'Resources'href: '/resources'icon: FileTextdescription: 'Guides and whitepapers' },
+        { name: 'Tools'href: '/tools'icon: Cpudescription: 'Calculators and utilities' }
       ]
     },
     {
@@ -122,9 +123,9 @@ const Navigation: React.FC = () => {
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
-                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                            initial={{ opacity: 0y: 10scale: 0.95 }}
+                            animate={{ opacity: 1y: 0scale: 1 }}
+                            exit={{ opacity: 0y: 10scale: 0.95 }}
                             transition={{ duration: 0.2 }}
                             className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4"
                           >
@@ -199,9 +200,9 @@ const Navigation: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            initial={{ opacity: 0x: '100%' }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: '100%' }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 lg:hidden"
           >

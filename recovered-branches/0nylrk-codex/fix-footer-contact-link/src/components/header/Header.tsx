@@ -22,19 +22,19 @@ export interface HeaderProps {
   };
 }
 
-export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
+export function Header({ hideLogin = falsecustomLogocustomTheme }: HeaderProps) {
   const { user } = useAuth();
-  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const { isWhitelabelprimaryColor } = useWhitelabel();
   const navigate = useNavigate();
-  const [query, setQuery] = useState("");
+  const [querysetQuery] = useState("");
   const searchSuggestions = generateSearchSuggestions();
   
   // If we have a white-label tenant and no specific customTheme is provided,
   // use the tenant's primary color
   const effectiveTheme = customTheme || (isWhitelabel ? {
     primaryColor,
-    backgroundColor: '#0f172a', // Default dark background
-    textColor: '#ffffff', // Default light text
+    backgroundColor: '#0f172a'// Default dark background
+    textColor: '#ffffff'// Default light text
   } : undefined);
   
   const headerStyle = effectiveTheme ? {

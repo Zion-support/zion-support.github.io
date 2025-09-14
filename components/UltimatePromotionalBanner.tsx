@@ -1,13 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Zap, Star, TrendingUp, Users, Award, Clock, CheckCircle } from 'lucide-react';
+ArrowRightZapStarTrendingUpUsersAwardClockCheckCircle
 
 export default function UltimatePromotionalBanner() {
   return (
     <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0y: 50 }}
+      animate={{ opacity: 1y: 0 }}
       transition={{ duration: 0.8 }}
       className="py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden"
     >
@@ -24,7 +24,7 @@ export default function UltimatePromotionalBanner() {
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            transition={{ delay: 0.2type: "spring"stiffness: 200 }}
             className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6"
           >
             <Star className="w-4 h-4 mr-2" />
@@ -33,8 +33,8 @@ export default function UltimatePromotionalBanner() {
 
           {/* Main heading */}
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ delay: 0.4 }}
             className="text-3xl md:text-5xl font-bold mb-6 leading-tight"
           >
@@ -45,8 +45,8 @@ export default function UltimatePromotionalBanner() {
 
           {/* Subheading */}
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ delay: 0.6 }}
             className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed"
           >
@@ -56,8 +56,8 @@ export default function UltimatePromotionalBanner() {
 
           {/* Benefits Grid */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ delay: 0.8 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
           >
@@ -81,8 +81,8 @@ export default function UltimatePromotionalBanner() {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ delay: 1 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
           >

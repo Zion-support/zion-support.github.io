@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Users, 
-  Zap, 
-  Shield, 
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  Zap
+  Shield
   Brain,
   Globe,
   Target,
@@ -23,8 +24,8 @@ import {
 } from 'lucide-react';
 
 const NewContentShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -32,10 +33,10 @@ const NewContentShowcase2025PromotionBanner = () => {
     // Rotate features every 3 seconds
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % 3);
-    }, 3000);
+    }3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const features = [
     {
@@ -59,10 +60,10 @@ const NewContentShowcase2025PromotionBanner = () => {
   ];
 
   const stats = [
-    { label: 'New Features', value: '50+', icon: Sparkles },
-    { label: 'Success Rate', value: '99.8%', icon: Award },
-    { label: 'Client Satisfaction', value: '5.0★', icon: Star },
-    { label: 'ROI Increase', value: '300%', icon: TrendingUp }
+    { label: 'New Features'value: '50+'icon: Sparkles },
+    { label: 'Success Rate'value: '99.8%'icon: Award },
+    { label: 'Client Satisfaction'value: '5.0★'icon: Star },
+    { label: 'ROI Increase'value: '300%'icon: TrendingUp }
   ];
 
   return (
@@ -78,16 +79,16 @@ const NewContentShowcase2025PromotionBanner = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0x: -50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="text-white"
           >
             {/* Badge */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.2 }}
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-sm font-medium mb-6"
             >
               <Sparkles className="w-4 h-4 mr-2" />
@@ -96,9 +97,9 @@ const NewContentShowcase2025PromotionBanner = () => {
 
             {/* Main Heading */}
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.3 }}
               className="text-4xl md:text-5xl font-bold mb-6"
             >
               Discover Our Latest{' '}
@@ -109,20 +110,20 @@ const NewContentShowcase2025PromotionBanner = () => {
 
             {/* Subheading */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.4 }}
               className="text-xl text-gray-300 mb-8"
             >
-              Explore cutting-edge AI solutions, intelligent automation, and advanced cybersecurity 
+              Explore cutting-edge AI solutionsintelligent automationand advanced cybersecurity 
               designed to revolutionize your business operations and drive unprecedented growth.
             </motion.p>
 
             {/* Rotating Feature */}
             <motion.div
               key={currentFeature}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.5 }}
               className="mb-8"
             >
@@ -143,12 +144,12 @@ const NewContentShowcase2025PromotionBanner = () => {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.5 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
             >
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <div key={index} className="text-center">
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-gray-300">{stat.label}</div>
@@ -158,9 +159,9 @@ const NewContentShowcase2025PromotionBanner = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link
@@ -183,9 +184,9 @@ const NewContentShowcase2025PromotionBanner = () => {
 
           {/* Right Content - Visual */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="relative"
           >
             {/* Main Visual Card */}
@@ -202,12 +203,12 @@ const NewContentShowcase2025PromotionBanner = () => {
 
               {/* Feature Cards */}
               <div className="space-y-4">
-                {features.map((feature, index) => (
+                {features.map((featureindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                    initial={{ opacity: 0x: 20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    transition={{ duration: 0.5delay: 0.8 + index * 0.1 }}
                     className={`p-4 rounded-xl border transition-all duration-300 ${
                       index === currentFeature
                         ? 'bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-400/50'
@@ -247,7 +248,7 @@ const NewContentShowcase2025PromotionBanner = () => {
                     className="bg-gradient-to-r from-purple-600 to-blue-600 h-2 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: '100%' }}
-                    transition={{ duration: 2, delay: 1 }}
+                    transition={{ duration: 2delay: 1 }}
                   />
                 </div>
               </div>
@@ -255,15 +256,15 @@ const NewContentShowcase2025PromotionBanner = () => {
 
             {/* Floating Elements */}
             <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              animate={{ y: [0-10] }}
+              transition={{ duration: 2repeat: Infinity }}
               className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
             >
               <Star className="w-4 h-4 text-white" />
             </motion.div>
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+              animate={{ y: [010] }}
+              transition={{ duration: 2repeat: Infinitydelay: 1 }}
               className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center"
             >
               <CheckCircle className="w-3 h-3 text-white" />

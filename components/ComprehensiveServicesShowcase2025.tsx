@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Cpu, 
-  Database, 
-  Shield, 
-  Zap, 
+  Brain
+  Cpu
+  Database
+  Shield
+  Zap
   Globe,
   ArrowRight,
   Play,
@@ -30,8 +31,8 @@ import {
 } from 'lucide-react';
 
 const ComprehensiveServicesShowcase2025 = () => {
-  const [activeService, setActiveService] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeServicesetActiveService] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   const services = [
     {
@@ -57,7 +58,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       ],
       pricing: 'Starting at $299/month',
       href: '/ai-business-intelligence',
-      stats: { users: '15,000+', rating: 4.9, projects: '2,500+' }
+      stats: { users: '15,000+'rating: 4.9projects: '2,500+' }
     },
     {
       id: 2,
@@ -82,7 +83,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       ],
       pricing: 'Starting at $199/month',
       href: '/enterprise-automation',
-      stats: { users: '25,000+', rating: 4.8, projects: '5,000+' }
+      stats: { users: '25,000+'rating: 4.8projects: '5,000+' }
     },
     {
       id: 3,
@@ -107,7 +108,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       ],
       pricing: 'Starting at $999/month',
       href: '/quantum-computing-solutions',
-      stats: { users: '2,000+', rating: 4.9, projects: '500+' }
+      stats: { users: '2,000+'rating: 4.9projects: '500+' }
     },
     {
       id: 4,
@@ -132,12 +133,12 @@ const ComprehensiveServicesShowcase2025 = () => {
       ],
       pricing: 'Starting at $149/month',
       href: '/cybersecurity-solutions',
-      stats: { users: '30,000+', rating: 4.9, projects: '8,000+' }
+      stats: { users: '30,000+'rating: 4.9projects: '8,000+' }
     },
     {
       id: 5,
       title: 'Cloud Infrastructure & DevOps',
-      description: 'Scalable, secure, and efficient cloud solutions with automated deployment pipelines.',
+      description: 'Scalablesecureand efficient cloud solutions with automated deployment pipelines.',
       icon: <Globe className="w-8 h-8" />,
       color: 'from-orange-500 to-red-500',
       bgColor: 'bg-orange-50',
@@ -157,7 +158,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       ],
       pricing: 'Starting at $399/month',
       href: '/cloud-infrastructure',
-      stats: { users: '20,000+', rating: 4.8, projects: '3,000+' }
+      stats: { users: '20,000+'rating: 4.8projects: '3,000+' }
     },
     {
       id: 6,
@@ -182,7 +183,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       ],
       pricing: 'Starting at $249/month',
       href: '/data-management',
-      stats: { users: '18,000+', rating: 4.7, projects: '2,200+' }
+      stats: { users: '18,000+'rating: 4.7projects: '2,200+' }
     }
   ];
 
@@ -190,9 +191,9 @@ const ComprehensiveServicesShowcase2025 = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setActiveService((prev) => (prev + 1) % services.length);
-    }, 6000);
+    }6000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentService = services[activeService];
 
@@ -202,17 +203,17 @@ const ComprehensiveServicesShowcase2025 = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           >
             Comprehensive Services Showcase
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.6delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto mb-8"
           >
             Discover our full range of cutting-edge technology solutions designed to 
@@ -221,9 +222,9 @@ const ComprehensiveServicesShowcase2025 = () => {
           
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.6delay: 0.4 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
             <div className="text-center">
@@ -247,12 +248,12 @@ const ComprehensiveServicesShowcase2025 = () => {
 
         {/* Service Navigation */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.3 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {services.map((service, index) => (
+          {services.map((serviceindex) => (
             <button
               key={service.id}
               onClick={() => setActiveService(index)}
@@ -275,9 +276,9 @@ const ComprehensiveServicesShowcase2025 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeService}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
+            exit={{ opacity: 0y: -20 }}
             transition={{ duration: 0.5 }}
             className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16"
           >
@@ -311,7 +312,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                 <div className="mb-8">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Features</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {currentService.features.map((feature, index) => (
+                    {currentService.features.map((featureindex) => (
                       <div key={index} className="flex items-center gap-3">
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>
@@ -324,7 +325,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                 <div className="mb-8">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Proven Benefits</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {currentService.benefits.map((benefit, index) => (
+                    {currentService.benefits.map((benefitindex) => (
                       <div key={index} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
                         <TrendingUp className="w-5 h-5 text-blue-500 flex-shrink-0" />
                         <span className="text-gray-700 font-medium">{benefit}</span>
@@ -381,17 +382,17 @@ const ComprehensiveServicesShowcase2025 = () => {
 
         {/* All Services Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.5 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {services.map((service, index) => (
+          {services.map((serviceindex) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.5delay: index * 0.1 }}
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
               <div className={`p-6 bg-gradient-to-r ${service.color} text-white`}>
@@ -410,7 +411,7 @@ const ComprehensiveServicesShowcase2025 = () => {
               
               <div className="p-6">
                 <div className="space-y-3 mb-6">
-                  {service.features.slice(0, 3).map((feature, idx) => (
+                  {service.features.slice(03).map((featureidx) => (
                     <div key={idx} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                       <span className="text-sm text-gray-600">{feature}</span>
@@ -444,9 +445,9 @@ const ComprehensiveServicesShowcase2025 = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white">
@@ -454,8 +455,8 @@ const ComprehensiveServicesShowcase2025 = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of companies already using our solutions to drive innovation, 
-              efficiency, and growth in the digital age.
+              Join thousands of companies already using our solutions to drive innovation
+              efficiencyand growth in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

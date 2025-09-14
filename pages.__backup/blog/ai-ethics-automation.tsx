@@ -30,7 +30,7 @@ export default function AIEthicsAutomation() {
                 <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30">
                   AI Ethics
                 </span>
-                <span className="text-white/60 text-sm">January 10, 2025</span>
+                <span className="text-white/60 text-sm">January 102025</span>
                 <span className="text-white/60 text-sm">•</span>
                 <span className="text-white/60 text-sm">7 min read</span>
               </div>
@@ -38,7 +38,7 @@ export default function AIEthicsAutomation() {
                 Ethical Considerations in Autonomous AI Systems
               </h1>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                As AI systems become more autonomous, the importance of ethical considerations and responsible 
+                As AI systems become more autonomousthe importance of ethical considerations and responsible 
                 development practices has never been greater. Discover how we approach these critical challenges.
               </p>
             </header>
@@ -47,8 +47,8 @@ export default function AIEthicsAutomation() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-cyan-400">The Ethical Imperative</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  With the rapid advancement of autonomous AI systems, we're entering uncharted ethical territory. 
-                  As these systems make increasingly important decisions, we must ensure they operate in ways that 
+                  With the rapid advancement of autonomous AI systemswe're entering uncharted ethical territory. 
+                  As these systems make increasingly important decisionswe must ensure they operate in ways that 
                   align with human values and societal well-being.
                 </p>
                 <div className="bg-white/10 rounded-xl p-6 mb-6">
@@ -65,23 +65,23 @@ export default function AIEthicsAutomation() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Core Ethical Principles</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  At Zion Tech Group, we've established a comprehensive ethical framework that guides all 
+                  At Zion Tech Groupwe've established a comprehensive ethical framework that guides all 
                   our AI development and deployment decisions.
                 </p>
                 <div className="space-y-6 mb-6">
                   <div className="bg-white/5 rounded-xl p-4">
                     <h3 className="text-lg font-semibold mb-2 text-cyan-400">1. Transparency & Explainability</h3>
-                    <p className="text-white/70">Our AI systems provide clear explanations for their decisions, 
+                    <p className="text-white/70">Our AI systems provide clear explanations for their decisions
                     enabling users to understand how and why specific outcomes were reached.</p>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4">
                     <h3 className="text-lg font-semibold mb-2 text-fuchsia-400">2. Fairness & Non-Discrimination</h3>
-                    <p className="text-white/70">We actively work to identify and eliminate biases in our AI systems, 
+                    <p className="text-white/70">We actively work to identify and eliminate biases in our AI systems
                     ensuring fair treatment across all demographic groups.</p>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4">
                     <h3 className="text-lg font-semibold mb-2 text-green-400">3. Privacy & Data Protection</h3>
-                    <p className="text-white/70">User privacy is paramount, with robust data protection measures 
+                    <p className="text-white/70">User privacy is paramountwith robust data protection measures 
                     and minimal data collection principles.</p>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4">
@@ -123,7 +123,7 @@ export default function AIEthicsAutomation() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-blue-400">Explainable AI & Interpretability</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  For AI systems to be truly ethical, they must be explainable. Users need to understand 
+                  For AI systems to be truly ethicalthey must be explainable. Users need to understand 
                   how decisions are made to build trust and enable meaningful human oversight.
                 </p>
                 <div className="bg-white/10 rounded-xl p-6">
@@ -179,7 +179,7 @@ export default function AIEthicsAutomation() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-cyan-400">Human Oversight & Control</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  While AI systems can operate autonomously, human oversight remains essential. We design 
+                  While AI systems can operate autonomouslyhuman oversight remains essential. We design 
                   our systems to maintain human control and enable meaningful intervention when needed.
                 </p>
                 <div className="bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-xl p-6">
@@ -208,7 +208,7 @@ export default function AIEthicsAutomation() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Continuous Ethical Monitoring</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  Ethical AI is not a one-time implementation—it requires continuous monitoring, evaluation, 
+                  Ethical AI is not a one-time implementation—it requires continuous monitoringevaluation
                   and improvement to ensure systems remain aligned with evolving ethical standards.
                 </p>
                 <div className="bg-white/10 rounded-xl p-6">
@@ -236,7 +236,7 @@ export default function AIEthicsAutomation() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-green-400">Looking Forward</h2>
                 <p className="text-lg text-white/80 mb-6">
-                  As AI technology continues to evolve, so too must our ethical frameworks. We're committed 
+                  As AI technology continues to evolveso too must our ethical frameworks. We're committed 
                   to staying at the forefront of AI ethics research and implementation.
                 </p>
                 <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6">

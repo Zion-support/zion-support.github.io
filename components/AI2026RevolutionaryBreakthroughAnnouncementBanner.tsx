@@ -24,7 +24,7 @@ const AI2026RevolutionaryBreakthroughAnnouncementBanner: React.FC = () => {
               AI 2026 Revolutionary Breakthrough
             </h2>
             <p className="text-white text-opacity-90 text-sm md:text-base">
-              Experience <strong>10,000x performance</strong>, <strong>99.99% accuracy</strong>, and <strong>$100B market transformation</strong>
+              Experience <strong>10,000x performance</strong><strong>99.99% accuracy</strong>and <strong>$100B market transformation</strong>
             </p>
           </div>
           

@@ -1,14 +1,15 @@
-import { useEffect, useState } from 'react';
+"use client";
+import { useEffectuseState } from 'react';
 import Head from 'next/head';
 
 export default function AutomationInsightsPage() {
-  const [intel, setIntel] = useState<any>(null);
-  const [talentMd, setTalentMd] = useState<string>('');
+  const [intelsetIntel] = useState<any>(null);
+  const [talentMdsetTalentMd] = useState<string>('');
 
   useEffect(() => {
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {});
-  }, []);
+  }[]);
 
   return (
     <div>
@@ -24,7 +25,7 @@ export default function AutomationInsightsPage() {
             <div className="mt-3">
               <h3 className="font-medium">Top Keywords</h3>
               <ul className="list-disc list-inside">
-                {Object.entries(intel.insights.keywordCounts).map(([k, v]: any) => (
+                {Object.entries(intel.insights.keywordCounts).map(([kv]: any) => (
                   <li key={k}>{k}: {v as any}</li>
                 ))}
               </ul>

@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+MenuXPhoneMailFacebookTwitterLinkedinInstagram
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpensetIsMenuOpen] = useState(false);
 
   return (
     <header className="bg-white shadow-lg">

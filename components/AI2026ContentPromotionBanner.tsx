@@ -1,19 +1,20 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const AI2026ContentPromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % 4);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const features = [
     {
@@ -68,14 +69,14 @@ const AI2026ContentPromotionBanner = () => {
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto">
-            Discover the most advanced AI content, breakthrough technologies, 
+            Discover the most advanced AI contentbreakthrough technologies
             and revolutionary solutions that will define the future
           </p>
         </div>
 
         {/* Feature Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {features.map((featureindex) => (
             <div
               key={index}
               className={`relative group cursor-pointer transition-all duration-500 ${

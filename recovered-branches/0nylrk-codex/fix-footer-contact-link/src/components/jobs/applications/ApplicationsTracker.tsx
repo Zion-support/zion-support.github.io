@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
 
 export function ApplicationsTracker() {
-  const { applications, isLoading, error } = useJobApplications();
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');
+  const { applicationsisLoadingerror } = useJobApplications();
+  const [statusFiltersetStatusFilter] = useState<ApplicationStatus | 'all'>('all');
   
   if (isLoading) {
     return <LoadingState />;
