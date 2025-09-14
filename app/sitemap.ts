@@ -94,6 +94,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
+    },
+    // New 2026 Content
+    {
+      url: `${baseUrl}/blog/ai-2026-trends-predictions-ultimate-guide`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies/ai-transformation-2026-ultimate-success-story`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
     }
   ]
 }
