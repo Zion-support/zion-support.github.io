@@ -11,10 +11,10 @@ concurrency:
   group: test-\${{ github.ref }}
   cancel-in-progress: false
 jobs:
-  main:
-    name: Main Job
+  test-runner:
+    name: Test Runner
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
