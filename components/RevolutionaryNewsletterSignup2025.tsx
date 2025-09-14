@@ -1,17 +1,16 @@
-"use client";
-import React{ useState } from 'react';
+import React, { useState } from 'react';
 
-export default function RevolutionaryNewsletterSignup2025() {
-  const [emailsetEmail] = useState('');
-  const [isSubscribedsetIsSubscribed] = useState(false);
-  const [isLoadingsetIsLoading] = useState(false);
+const RevolutionaryNewsletterSignup2025 = () => {
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve2000));
+    await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubscribed(true);
     setIsLoading(false);
@@ -20,169 +19,194 @@ export default function RevolutionaryNewsletterSignup2025() {
 
   if (isSubscribed) {
     return (
-      <div className="py-20 bg-gradient-to-r from-green-900 via-emerald-900 to-teal-900 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-12 rounded-2xl">
-            <div className="text-6xl mb-6">🎉</div>
-            <h2 className="text-4xl font-bold mb-6 text-white">
-              Welcome to the Revolution!
-            </h2>
-            <p className="text-xl text-gray-200 mb-8">
-              You've successfully joined the most exclusive AI revolution newsletter. 
-              Get ready for infinite insightsbreakthrough updatesand revolutionary content.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div className="bg-white/20 p-6 rounded-xl">
-                <div className="text-2xl mb-2">🚀</div>
-                <div className="font-bold">Breakthrough Updates</div>
-                <div className="text-sm text-gray-200">Latest AI 2025 developments</div>
+      <section className="py-20 bg-gradient-to-r from-green-500 to-emerald-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="text-6xl mb-6">🎉</div>
+          <h2 className="text-4xl font-bold mb-4">Welcome to the Revolution!</h2>
+          <p className="text-xl mb-8">
+            You're now part of our exclusive community. Check your email for a special welcome gift!
+          </p>
+          <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-4">What's Next?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+              <div className="flex items-start gap-3">
+                <div className="text-2xl">📧</div>
+                <div>
+                  <div className="font-bold">Weekly Insights</div>
+                  <div className="text-sm opacity-90">Latest AI trends and breakthroughs</div>
+                </div>
               </div>
-              <div className="bg-white/20 p-6 rounded-xl">
-                <div className="text-2xl mb-2">⚡</div>
-                <div className="font-bold">Exclusive Content</div>
-                <div className="text-sm text-gray-200">Revolutionary insights only</div>
+              <div className="flex items-start gap-3">
+                <div className="text-2xl">🎁</div>
+                <div>
+                  <div className="font-bold">Exclusive Content</div>
+                  <div className="text-sm opacity-90">Case studies and implementation guides</div>
+                </div>
               </div>
-              <div className="bg-white/20 p-6 rounded-xl">
-                <div className="text-2xl mb-2">🎯</div>
-                <div className="font-bold">Early Access</div>
-                <div className="text-sm text-gray-200">Be the first to know</div>
+              <div className="flex items-start gap-3">
+                <div className="text-2xl">🚀</div>
+                <div>
+                  <div className="font-bold">Early Access</div>
+                  <div className="text-sm opacity-90">Be first to try new features</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 
   return (
-    <div className="py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Content */}
-          <div>
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-lg mb-8 animate-pulse">
-              📧 REVOLUTIONARY NEWSLETTER
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              Join the AI Revolution
-            </h2>
-            
-            <p className="text-xl text-gray-300 mb-8">
-              Get exclusive access to the most revolutionary AI contentbreakthrough updates
-              and infinite ROI strategies. Be among the first to experience the future of AI.
-            </p>
+    <section className="py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
+        <div className="absolute top-40 right-32 w-24 h-24 bg-blue-500 rounded-full opacity-30 animate-bounce"></div>
+        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-indigo-500 rounded-full opacity-25 animate-ping"></div>
+        <div className="absolute bottom-20 right-1/3 w-16 h-16 bg-pink-500 rounded-full opacity-20 animate-pulse"></div>
+      </div>
 
-            {/* Benefits */}
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center space-x-4">
-                <div className="w-6 h-6 bg-green-500 rounded-full flex-shrink-0"></div>
-                <span className="text-gray-300">Exclusive breakthrough updates and revolutionary insights</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-6 h-6 bg-blue-500 rounded-full flex-shrink-0"></div>
-                <span className="text-gray-300">Early access to AI 2025 implementation guides</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-6 h-6 bg-purple-500 rounded-full flex-shrink-0"></div>
-                <span className="text-gray-300">Infinite ROI strategies and success stories</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-6 h-6 bg-pink-500 rounded-full flex-shrink-0"></div>
-                <span className="text-gray-300">Quantum-neural fusion technology updates</span>
-              </div>
-            </div>
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
+            📧 REVOLUTIONARY NEWSLETTER
+          </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">50,000+</div>
-                <div className="text-gray-300 text-sm">Revolutionary Subscribers</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">99.9%</div>
-                <div className="text-gray-300 text-sm">Satisfaction Rate</div>
-              </div>
+          {/* Main Headline */}
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Join the AI Revolution
+            <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              Get Exclusive Insights
+            </span>
+          </h2>
+
+          {/* Subheadline */}
+          <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed opacity-90">
+            Stay ahead of the curve with our exclusive newsletter featuring the latest AI breakthroughs, 
+            case studies, and implementation strategies that are transforming businesses worldwide.
+          </p>
+
+          {/* Benefits Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-bold mb-2">Weekly AI Insights</h3>
+              <p className="text-sm opacity-90">Latest trends, breakthroughs, and predictions from industry experts</p>
+            </div>
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-xl font-bold mb-2">Exclusive Case Studies</h3>
+              <p className="text-sm opacity-90">Real success stories and ROI data from our client implementations</p>
+            </div>
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+              <div className="text-4xl mb-4">🎁</div>
+              <h3 className="text-xl font-bold mb-2">Special Offers</h3>
+              <p className="text-sm opacity-90">Early access to new features, discounts, and exclusive content</p>
             </div>
           </div>
 
-          {/* Right side - Form */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-8 rounded-2xl border border-purple-500/30">
-              <div className="text-center mb-8">
-                <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  Get Revolutionary Updates
-                </h3>
-                <p className="text-gray-300">
-                  Join the most exclusive AI revolution newsletter
-                </p>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email address"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    required
-                  />
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <input
-                    type="checkbox"
-                    id="terms"
-                    className="mt-1 w-4 h-4 text-cyan-500 bg-white/10 border-white/30 rounded focus:ring-cyan-500"
-                    required
-                  />
-                  <label htmlFor="terms" className="text-sm text-gray-300">
-                    I agree to receive revolutionary AI updates and breakthrough content. 
-                    I understand that this will transform my understanding of reality itself.
-                  </label>
-                </div>
-
+          {/* Newsletter Signup Form */}
+          <div className="max-w-2xl mx-auto">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email address"
+                  className="flex-1 px-6 py-4 rounded-lg text-gray-900 text-lg placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-opacity-50"
+                  required
+                />
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-lg rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   {isLoading ? (
-                    <div className="flex items-center justify-center">
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                      Joining Revolution...
+                    <div className="flex items-center gap-2">
+                      <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
+                      Subscribing...
                     </div>
                   ) : (
-                    'Join the Revolution'
+                    'Subscribe Now'
                   )}
                 </button>
-              </form>
-
-              {/* Trust indicators */}
-              <div className="mt-8 text-center">
-                <div className="text-sm text-gray-400 mb-4">
-                  Trusted by 50,000+ revolutionary leaders
-                </div>
-                <div className="flex justify-center space-x-6 text-xs text-gray-500">
-                  <span>🔒 Secure</span>
-                  <span>⚡ Instant</span>
-                  <span>🎯 Targeted</span>
-                </div>
               </div>
-            </div>
+              
+              <p className="text-sm opacity-75">
+                Join 10,000+ business leaders who trust our insights. 
+                No spam, unsubscribe anytime.
+              </p>
+            </form>
+          </div>
 
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-bounce"></div>
-            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-cyan-400 rounded-full animate-bounce delay-1000"></div>
+          {/* Social Proof */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 opacity-80">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-400 mb-2">10,000+</div>
+              <div className="text-sm">Subscribers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">98%</div>
+              <div className="text-sm">Satisfaction Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-400 mb-2">Weekly</div>
+              <div className="text-sm">Fresh Content</div>
+            </div>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="mt-12 flex flex-wrap justify-center items-center gap-8 opacity-60">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span className="text-sm">Fortune 500 Companies</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+              <span className="text-sm">Industry Leaders</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+              <span className="text-sm">Proven Results</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Floating Elements */}
+      <div className="absolute top-1/4 left-10 text-6xl opacity-10 animate-float">📧</div>
+      <div className="absolute top-1/3 right-10 text-5xl opacity-10 animate-float-delayed">🚀</div>
+      <div className="absolute bottom-1/4 left-1/4 text-4xl opacity-10 animate-float-slow">💡</div>
+      <div className="absolute bottom-1/3 right-1/4 text-5xl opacity-10 animate-float">⚡</div>
+
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        @keyframes float-delayed {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-15px); }
+        }
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+          animation: float-delayed 8s ease-in-out infinite;
+        }
+        .animate-float-slow {
+          animation: float-slow 10s ease-in-out infinite;
+        }
+      `}</style>
+    </section>
   );
-}
+};
+
+export default RevolutionaryNewsletterSignup2025;
