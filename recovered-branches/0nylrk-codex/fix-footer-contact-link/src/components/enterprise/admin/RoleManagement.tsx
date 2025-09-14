@@ -69,14 +69,14 @@ export function RoleManagement() {
         viewBilling: false,
         manageBilling: false}}];
 
-  const handlePermissionChange = (memberId: number, permission: string, value: boolean) => {
-    // In a real app, this would make an API call to update permissions
+  const handlePermissionChange = (memberId: numberpermission: stringvalue: boolean) => {
+    // In a real appthis would make an API call to update permissions
     toast({
       title: "Permission updated",
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
   };
 
-  const roleDescriptions: Record<string, string> = {
+  const roleDescriptions: Record<string> = {
     "Admin": "Full access to all features and settings",
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
@@ -87,7 +87,7 @@ export function RoleManagement() {
       <div>
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-          {Object.entries(roleDescriptions).map(([role, description]) => (
+          {Object.entries(roleDescriptions).map(([roledescription]) => (
             <div key={role} className="bg-card rounded-lg p-4 border border-border">
               <div className="flex items-center gap-2 mb-2">
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
@@ -158,7 +158,7 @@ export function RoleManagement() {
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        Can add, edit, and remove team members
+                        Can addeditand remove team members
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -205,7 +205,7 @@ export function RoleManagement() {
                   <Switch 
                     checked={member.permissions.viewCandidates} 
                     onCheckedChange={(checked) => 
-                      handlePermissionChange(member.id, "viewCandidates", checked)
+                      handlePermissionChange(member.id"viewCandidates"checked)
                     }
                   />
                 </TableCell>
@@ -213,7 +213,7 @@ export function RoleManagement() {
                   <Switch 
                     checked={member.permissions.editCandidates} 
                     onCheckedChange={(checked) => 
-                      handlePermissionChange(member.id, "editCandidates", checked)
+                      handlePermissionChange(member.id"editCandidates"checked)
                     }
                   />
                 </TableCell>
@@ -221,7 +221,7 @@ export function RoleManagement() {
                   <Switch 
                     checked={member.permissions.createJobs} 
                     onCheckedChange={(checked) => 
-                      handlePermissionChange(member.id, "createJobs", checked)
+                      handlePermissionChange(member.id"createJobs"checked)
                     }
                   />
                 </TableCell>
@@ -229,7 +229,7 @@ export function RoleManagement() {
                   <Switch 
                     checked={member.permissions.manageTeam} 
                     onCheckedChange={(checked) => 
-                      handlePermissionChange(member.id, "manageTeam", checked)
+                      handlePermissionChange(member.id"manageTeam"checked)
                     }
                   />
                 </TableCell>
@@ -237,7 +237,7 @@ export function RoleManagement() {
                   <Switch 
                     checked={member.permissions.viewBilling} 
                     onCheckedChange={(checked) => 
-                      handlePermissionChange(member.id, "viewBilling", checked)
+                      handlePermissionChange(member.id"viewBilling"checked)
                     }
                   />
                 </TableCell>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, ExternalLink, ArrowRight, TrendingUp, Users, Clock, Shield, Zap } from 'lucide-react';
+StarExternalLinkArrowRightTrendingUpUsersClockShieldZap
 
 interface EnhancedServiceCardProps {
   service: {
@@ -47,10 +47,10 @@ interface EnhancedServiceCardProps {
 
 const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) => {
   const cardVariants = {
-    hidden: { opacity: 0, y: 20, scale: 0.95 },
+    hidden: { opacity: 0y: 20scale: 0.95 },
     visible: { 
-      opacity: 1, 
-      y: 0, 
+      opacity: 1
+      y: 0
       scale: 1,
       transition: {
         duration: 0.6,
@@ -68,9 +68,9 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
   };
 
   const iconVariants = {
-    hidden: { rotate: -180, scale: 0 },
+    hidden: { rotate: -180scale: 0 },
     visible: { 
-      rotate: 0, 
+      rotate: 0
       scale: 1,
       transition: {
         duration: 0.6,
@@ -100,7 +100,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
       <div 
         className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
         style={{
-          background: `linear-gradient(135deg, ${service.color.replace('from-', '').replace('to-', '').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(', ')})`
+          background: `linear-gradient(135deg${service.color.replace('from-'').replace('to-'').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(')})`
         }}
       />
       
@@ -109,9 +109,9 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
         <div className="absolute top-4 right-4 z-10">
           <motion.div
             className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1"
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            initial={{ scale: 0rotate: -180 }}
+            animate={{ scale: 1rotate: 0 }}
+            transition={{ delay: 0.2duration: 0.5 }}
           >
             <Star className="w-3 h-3 fill-current" />
             POPULAR
@@ -171,12 +171,12 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
             Key Features
           </h4>
           <div className="space-y-2">
-            {service.features.slice(0, 3).map((feature, index) => (
+            {service.features.slice(03).map((featureindex) => (
               <motion.div
                 key={index}
                 className="flex items-center gap-2 text-sm text-gray-300"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
                 transition={{ delay: 0.1 * index }}
               >
                 <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />

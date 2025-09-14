@@ -3,9 +3,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Satellite, ArrowRight, CheckCircle, Star, TrendingUp, 
-  Globe, Zap, Shield, Users, Rocket, 
-  Phone, Mail, MapPin, Brain, Sparkles
+  SatelliteArrowRightCheckCircleStarTrendingUp
+  GlobeZapShieldUsersRocket
+  PhoneMailMapPinBrainSparkles
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
@@ -41,15 +41,15 @@ export default function SpaceTechnologyAIPlatform() {
   ];
 
   const integrations = [
-    'NASA APIs', 'ESA APIs', 'Satellite ground stations', 
-    'GIS systems', 'Slack', 'Microsoft Teams', 'Custom applications'
+    'NASA APIs'ESA APIs'Satellite ground stations'
+    'GIS systems'Slack'Microsoft Teams'Custom applications'
   ];
 
   const competitors = [
     'Maxar ($5000-50000/month)',
     'Planet Labs ($1000-10000/month)',
     'Airbus Defence ($10000-100000/month)',
-    'Lockheed Martin', 'Boeing', 'Northrop Grumman'
+    'Lockheed Martin'Boeing'Northrop Grumman'
   ];
 
   return (
@@ -65,8 +65,8 @@ export default function SpaceTechnologyAIPlatform() {
       <div className="min-h-screen">
         <Head>
           <title>Space Technology AI Platform - Zion Tech Group</title>
-          <meta name="description" content="Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis." />
-          <meta name="keywords" content="space technology, AI space exploration, satellite operations, space data analytics, autonomous space systems" />
+          <meta name="description" content="Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space explorationsatellite operationsand space data analysis." />
+          <meta name="keywords" content="space technologyAI space explorationsatellite operationspace data analyticsautonomous space systems" />
           <meta name="author" content="Zion Tech Group" />
           <meta property="og:title" content="Space Technology AI Platform - Zion Tech Group" />
           <meta property="og:description" content="AI-powered space exploration and satellite operations" />
@@ -81,8 +81,8 @@ export default function SpaceTechnologyAIPlatform() {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-indigo-900/30"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -101,7 +101,7 @@ export default function SpaceTechnologyAIPlatform() {
               
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
                 Revolutionary AI platform that combines space technology with artificial intelligence to enable 
-                autonomous space exploration, satellite operations, and space data analysis.
+                autonomous space explorationsatellite operationsand space data analysis.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
@@ -146,8 +146,8 @@ export default function SpaceTechnologyAIPlatform() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -163,12 +163,12 @@ export default function SpaceTechnologyAIPlatform() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((featureindex) => (
                 <motion.div
                   key={feature}
-                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0scale: 0.8y: 20 }}
+                  whileInView={{ opacity: 1scale: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -192,8 +192,8 @@ export default function SpaceTechnologyAIPlatform() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -210,15 +210,15 @@ export default function SpaceTechnologyAIPlatform() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0x: -20 }}
+                whileInView={{ opacity: 1x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="space-y-6"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Analysis</h3>
                 <div className="space-y-4">
-                  {competitors.map((competitor, index) => (
+                  {competitors.map((competitorindex) => (
                     <div key={index} className="flex items-center space-x-3 p-4 bg-black/20 rounded-xl border border-gray-700">
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                       <span className="text-gray-300">{competitor}</span>
@@ -228,14 +228,14 @@ export default function SpaceTechnologyAIPlatform() {
                 <div className="p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl border border-green-500/30">
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-green-300 font-semibold">Our Advantage: AI integration, comprehensive platform, affordable pricing</span>
+                    <span className="text-green-300 font-semibold">Our Advantage: AI integrationcomprehensive platformaffordable pricing</span>
                   </div>
                 </div>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0x: 20 }}
+                whileInView={{ opacity: 1x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="space-y-6"
@@ -268,8 +268,8 @@ export default function SpaceTechnologyAIPlatform() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -285,12 +285,12 @@ export default function SpaceTechnologyAIPlatform() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
+              {useCases.map((useCaseindex) => (
                 <motion.div
                   key={useCase}
-                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0scale: 0.8y: 20 }}
+                  whileInView={{ opacity: 1scale: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -314,8 +314,8 @@ export default function SpaceTechnologyAIPlatform() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >

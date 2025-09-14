@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useAdminQuotes } from "@/hooks/useAdminQuotes";
@@ -8,7 +8,7 @@ import {
   Card,
   CardContent
 } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { Navigate } from "react-router-dom";
 import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
@@ -24,8 +24,8 @@ export default function QuoteManager() {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
   
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
+  const [selectedQuotesetSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetailsetShowDetails] = useState(false);
 
   const {
     quotes,
@@ -62,7 +62,7 @@ export default function QuoteManager() {
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
-    setDateRange({ from: undefined, to: undefined });
+    setDateRange({ from: undefinedto: undefined });
   };
 
   if (!isAdmin) {

@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Download } from 'lucide-react';
+Download
 import { Resume } from "@/types/resume";
 
 interface ResumePreviewCardProps {
@@ -12,7 +12,7 @@ interface ResumePreviewCardProps {
   isLoading: boolean;
 }
 
-export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
+export function ResumePreviewCard({ resumeonDownloadisLoading }: ResumePreviewCardProps) {
   return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
       <CardContent className="p-4">
@@ -43,7 +43,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
-            {resume.skills.slice(0, 5).map((skill, index) => (
+            {resume.skills.slice(05).map((skillindex) => (
               <Badge 
                 key={index} 
                 variant="outline"

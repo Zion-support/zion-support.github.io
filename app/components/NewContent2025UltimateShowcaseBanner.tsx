@@ -1,211 +1,268 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Brain, Cpu, Database, Shield, Zap, Target } from 'lucide-react';
 
 const NewContent2025UltimateShowcaseBanner = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const newContent = [
+    {
+      id: 'ai-automation-mastery',
+      type: 'Blog Post',
+      title: 'AI 2025: Advanced Automation Mastery - Ultimate Success Guide',
+      description: 'Transform your business with cutting-edge AI automation that delivers 500%+ ROI',
+      url: '/blog/ai-2025-advanced-automation-mastery-ultimate-success-guide',
+      metrics: {
+        roi: '500%+',
+        savings: '$2.8B',
+        satisfaction: '98%',
+        automation: '89%'
+      },
+      badge: 'NEW 2025',
+      featured: true
+    },
+    {
+      id: 'fortune-500-success',
+      type: 'Case Study',
+      title: 'Fortune 500 AI Transformation: $2.8B Annual Savings',
+      description: 'How a global manufacturing giant achieved 1,200% ROI with comprehensive AI implementation',
+      url: '/case-studies/fortune-500-ai-transformation-ultimate-success-story',
+      metrics: {
+        roi: '1,200%',
+        savings: '$2.8B',
+        timeline: '18 months',
+        automation: '89%'
+      },
+      badge: 'SUCCESS STORY',
+      featured: true
+    },
+    {
+      id: 'quantum-computing-revolution',
+      type: 'Blog Post',
+      title: 'AI 2025: The Quantum Computing Business Revolution',
+      description: 'How Quantum AI is transforming enterprise operations with 1,200% ROI',
+      url: '/blog/ai-2025-quantum-computing-business-revolution',
+      metrics: {
+        roi: '1,200%',
+        market: '$100B',
+        accuracy: '99.97%',
+        speed: '1,200%'
+      },
+      badge: 'BREAKTHROUGH',
+      featured: true
+    },
+    {
+      id: 'healthcare-transformation',
+      type: 'Case Study',
+      title: 'Healthcare AI Transformation: $180M Annual Savings',
+      description: 'Major health system achieves 450% ROI with comprehensive AI implementation',
+      url: '/case-studies/healthcare-ai-transformation-ultimate-success-2025',
+      metrics: {
+        roi: '450%',
+        savings: '$180M',
+        satisfaction: '94%',
+        errors: '89% reduction'
+      },
+      badge: 'HEALTHCARE',
+      featured: true
+    },
+    {
+      id: 'implementation-framework',
+      type: 'Resource',
+      title: 'AI Implementation Framework 2025',
+      description: 'Proven methodology for achieving 500%+ ROI with AI implementation',
+      url: '/resources/ai-implementation-framework-2025',
+      metrics: {
+        roi: '500%+',
+        success: '98%',
+        timeline: '18 months',
+        savings: '$2.8B'
+      },
+      badge: 'FRAMEWORK',
+      featured: true
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % newContent.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [newContent.length]);
+
+  useEffect(() => {
+    const dismissed = localStorage.getItem('newContent2025UltimateShowcaseBanner');
+    if (dismissed) {
+      setIsVisible(false);
+    }
+  }, []);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    localStorage.setItem('newContent2025UltimateShowcaseBanner', 'true');
+  };
+
+  if (!isVisible) return null;
+
+  const currentContent = newContent[currentSlide];
+
   return (
-    <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-24 overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full opacity-10 animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-purple-500 rounded-full opacity-10 animate-pulse delay-1000"></div>
-        <div className="absolute bottom-32 left-1/3 w-20 h-20 bg-pink-500 rounded-full opacity-10 animate-pulse delay-2000"></div>
-        <div className="absolute bottom-20 right-1/4 w-16 h-16 bg-cyan-500 rounded-full opacity-10 animate-pulse delay-3000"></div>
+    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-8 overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+        <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
       </div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-400 text-black rounded-full px-8 py-3 mb-8">
-            <Sparkles className="w-6 h-6 mr-3" />
-            <span className="text-lg font-bold">🌟 NEW CONTENT 2025 ULTIMATE SHOWCASE</span>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Dismiss Button */}
+        <button
+          onClick={handleDismiss}
+          className="absolute top-0 right-4 text-white hover:text-gray-300 text-2xl font-bold z-10"
+          aria-label="Dismiss banner"
+        >
+          ×
+        </button>
+
+        <div className="text-center mb-6">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+            <span className="text-sm font-bold">🚀 NEW 2025 CONTENT SHOWCASE</span>
           </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
-            Revolutionary AI Content
-          </h1>
-          
-          <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Discover the most advanced AI transformation guides, breakthrough technologies, 
-            and success stories that are reshaping the future of enterprise operations.
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+            Revolutionary AI Content Collection
+          </h2>
+          <p className="text-lg opacity-90">
+            Discover our latest success stories, implementation guides, and breakthrough insights
           </p>
         </div>
 
-        {/* Featured Content Showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-          {/* Left Column - Main Features */}
-          <div className="space-y-8">
-            {/* Generative AI Revolution */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-500 group">
-              <div className="flex items-start mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
-                  <Brain className="w-8 h-8 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2">Generative AI Enterprise Revolution</h3>
-                  <p className="text-sm opacity-80 mb-4">Ultimate Breakthrough Guide</p>
-                  <p className="text-lg opacity-90 leading-relaxed">
-                    Discover how generative AI is revolutionizing enterprise operations with unprecedented 
-                    automation, creativity, and efficiency gains across all business functions.
-                  </p>
-                </div>
+        {/* Content Showcase */}
+        <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Content Information */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                  currentContent.badge === 'NEW 2025' ? 'bg-green-500' :
+                  currentContent.badge === 'SUCCESS STORY' ? 'bg-blue-500' :
+                  currentContent.badge === 'BREAKTHROUGH' ? 'bg-purple-500' :
+                  currentContent.badge === 'HEALTHCARE' ? 'bg-red-500' :
+                  'bg-orange-500'
+                }`}>
+                  {currentContent.badge}
+                </span>
+                <span className="text-sm opacity-75">{currentContent.type}</span>
               </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-4">
-                  <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">NEW</span>
-                  <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">FEATURED</span>
-                </div>
-                <Link href="/blog/ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough" 
-                      className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 flex items-center">
-                  Read Guide <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
+              
+              <h3 className="text-2xl font-bold mb-3">{currentContent.title}</h3>
+              <p className="text-lg opacity-90 mb-6">{currentContent.description}</p>
+              
+              {/* Metrics Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                {Object.entries(currentContent.metrics).map(([key, value]) => (
+                  <div key={key} className="text-center">
+                    <div className="text-2xl font-bold text-yellow-400">{value}</div>
+                    <div className="text-sm opacity-75 capitalize">{key.replace('_', ' ')}</div>
+                  </div>
+                ))}
               </div>
+
+              <Link
+                href={currentContent.url}
+                className="inline-flex items-center bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Read Full Story
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
 
-            {/* Edge Computing Revolution */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-500 group">
-              <div className="flex items-start mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
-                  <Cpu className="w-8 h-8 text-white" />
+            {/* Visual Element */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl p-8 text-center">
+                <div className="text-6xl mb-4">
+                  {currentContent.type === 'Case Study' ? '📊' : 
+                   currentContent.type === 'Blog Post' ? '📝' : '🔧'}
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2">Edge Computing Revolution</h3>
-                  <p className="text-sm opacity-80 mb-4">Real-Time Intelligence Guide</p>
-                  <p className="text-lg opacity-90 leading-relaxed">
-                    Explore how edge computing enables real-time processing, reduced latency, 
-                    and unprecedented scalability across enterprise environments.
-                  </p>
+                <div className="text-2xl font-bold mb-2">Featured Content</div>
+                <div className="text-lg opacity-90">{currentContent.type}</div>
+                
+                {/* Success Indicators */}
+                <div className="mt-6 flex justify-center space-x-4">
+                  <div className="flex items-center">
+                    <div className="w-3 h-3 bg-green-400 rounded-full mr-2"></div>
+                    <span className="text-sm">High ROI</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-3 h-3 bg-yellow-400 rounded-full mr-2"></div>
+                    <span className="text-sm">Proven Results</span>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-4">
-                  <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">HOT</span>
-                  <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">TRENDING</span>
-                </div>
-                <Link href="/blog/ai-2025-edge-computing-revolution-ultimate-guide" 
-                      className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 flex items-center">
-                  Read Guide <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
               </div>
             </div>
           </div>
 
-          {/* Right Column - Success Stories */}
-          <div className="space-y-8">
-            {/* Fortune 500 Success Story */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-500 group">
-              <div className="flex items-start mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2">Fortune 500 Success Story</h3>
-                  <p className="text-sm opacity-80 mb-4">400% ROI Transformation</p>
-                  <p className="text-lg opacity-90 leading-relaxed">
-                    Learn how a Fortune 500 manufacturing company achieved 400% ROI and 90% latency 
-                    reduction through comprehensive edge computing implementation.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-4">
-                  <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">CASE STUDY</span>
-                  <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">400% ROI</span>
-                </div>
-                <Link href="/case-studies/ai-2025-fortune-500-edge-computing-transformation-ultimate-success" 
-                      className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 flex items-center">
-                  Read Story <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Additional Success Metrics */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8 border border-white border-opacity-20">
-              <h3 className="text-2xl font-bold mb-6 text-center">Success Metrics</h3>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-yellow-400 mb-2">500+</div>
-                  <div className="text-sm opacity-80">Projects Delivered</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-green-400 mb-2">98%</div>
-                  <div className="text-sm opacity-80">Client Satisfaction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-400 mb-2">340%</div>
-                  <div className="text-sm opacity-80">Average ROI</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
-                  <div className="text-sm opacity-80">Expert Support</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Technology Stack Showcase */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center mb-12">Cutting-Edge Technologies</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Brain className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-lg font-bold mb-2">Generative AI</h3>
-              <p className="text-sm opacity-80">Advanced AI models for content creation and automation</p>
-            </div>
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Cpu className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-lg font-bold mb-2">Edge Computing</h3>
-              <p className="text-sm opacity-80">Real-time processing at the edge of networks</p>
-            </div>
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Database className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-lg font-bold mb-2">Big Data Analytics</h3>
-              <p className="text-sm opacity-80">Advanced analytics for business intelligence</p>
-            </div>
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Shield className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-lg font-bold mb-2">Cybersecurity</h3>
-              <p className="text-sm opacity-80">Advanced security for enterprise systems</p>
-            </div>
+          {/* Progress Indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {newContent.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-30'
+                }`}
+              />
+            ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-            <Link
-              href="/blog"
-              className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-10 py-5 rounded-2xl font-bold text-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 flex items-center justify-center group"
-            >
-              <Zap className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform duration-300" />
-              Explore All Content
-            </Link>
-            <Link
-              href="/case-studies"
-              className="border-2 border-white text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 flex items-center justify-center group"
-            >
-              <Target className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform duration-300" />
-              View Success Stories
-            </Link>
+        <div className="text-center mt-8">
+          <div className="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+            <h3 className="text-xl font-bold mb-2">Ready to Transform Your Business?</h3>
+            <p className="opacity-90 mb-4">
+              Join 500+ companies achieving extraordinary results with AI
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors"
+              >
+                Get Free Consultation
+              </Link>
+              <Link
+                href="/resources"
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
+              >
+                Explore All Resources
+              </Link>
+            </div>
           </div>
-          
-          <p className="text-lg opacity-80 max-w-3xl mx-auto leading-relaxed">
-            Join thousands of enterprise leaders who have transformed their organizations 
-            using our proven AI strategies, implementation guides, and cutting-edge technologies.
-          </p>
         </div>
       </div>
-    </section>
+
+      <style jsx>{`
+        @keyframes blob {
+          0% { transform: translate(0px, 0px) scale(1); }
+          33% { transform: translate(30px, -50px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
+          100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+          animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+      `}</style>
+    </div>
   );
 };
 

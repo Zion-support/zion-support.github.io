@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ChevronLeft, ChevronRight, TrendingUp, Users, Zap, Target } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, TrendingUp, Users, Zap, ArrowRight } from 'lucide-react';
 
 interface ContentItem {
   id: string;
@@ -135,7 +135,7 @@ const NewContent2025IntelligenceBanner: React.FC = () => {
     switch (type) {
       case 'blog': return <TrendingUp className="w-4 h-4" />;
       case 'case-study': return <Users className="w-4 h-4" />;
-      case 'resource': return <Target className="w-4 h-4" />;
+      case 'resource': return <ArrowRight className="w-4 h-4" />;
       default: return <Zap className="w-4 h-4" />;
     }
   };

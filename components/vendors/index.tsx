@@ -30,7 +30,7 @@ export default function VendorsPage({ vendors }: Props) {
                     {v.name}
                     {v.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}
                   </div>
-                  <div className="text-xs text-gray-500">Services: {v.servicesOffered?.join(', ') || '—'}</div>
+                  <div className="text-xs text-gray-500">Services: {v.servicesOffered?.join(') || '—'}</div>
                 </div>
               </div>
             </a>

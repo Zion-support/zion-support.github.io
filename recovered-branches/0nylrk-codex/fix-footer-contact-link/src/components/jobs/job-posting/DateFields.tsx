@@ -3,7 +3,7 @@ import React from 'react';
 import { format } from 'date-fns';
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
@@ -15,7 +15,7 @@ interface DateFieldsProps {
   setEndDate: (date: Date | undefined) => void;
 }
 
-export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {
+export function DateFields({ startDatesetStartDatendDatesetEndDate }: DateFieldsProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
@@ -31,7 +31,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                 )}
               >
                 {startDate ? (
-                  format(startDate, "PPP")
+                  format(startDate"PPP")
                 ) : (
                   <span>Pick a date</span>
                 )}
@@ -65,7 +65,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                 )}
               >
                 {endDate ? (
-                  format(endDate, "PPP")
+                  format(endDate"PPP")
                 ) : (
                   <span>Pick a date</span>
                 )}

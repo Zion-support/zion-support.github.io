@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react";
+import { useStateuseEffect } from "react";
 import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -15,7 +15,7 @@ interface OnboardingStatus {
 
 export function useOnboardingStatus() {
   const { user } = useAuth();
-  const [status, setStatus] = useState<OnboardingStatus>({
+  const [statusetStatus] = useState<OnboardingStatus>({
     profileCompleted: false,
     skillsAdded: false,
     availabilitySet: false,
@@ -31,14 +31,14 @@ export function useOnboardingStatus() {
       
       try {
         // Get user onboarding progress from database
-        const { data, error } = await supabase
+        const { dataerror } = await supabase
           .from('user_onboarding')
           .select('*')
-          .eq('user_id', user.id)
+          .eq('user_id'user.id)
           .single();
           
         if (error) {
-          console.error("Error fetching onboarding status:", error);
+          console.error("Error fetching onboarding status:"error);
           return;
         }
         
@@ -54,12 +54,12 @@ export function useOnboardingStatus() {
           });
         }
       } catch (err) {
-        console.error("Error in onboarding status hook:", err);
+        console.error("Error in onboarding status hook:"err);
       }
     };
     
     fetchOnboardingStatus();
-  }, [user]);
+  }[user]);
   
   return status;
 }

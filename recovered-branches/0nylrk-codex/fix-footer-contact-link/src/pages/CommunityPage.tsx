@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { SEO } from "@/components/SEO";
 import { AppLayout } from "@/layout/AppLayout";
 import ForumCategories from "@/components/community/ForumCategories";
@@ -21,7 +21,7 @@ const featuredPosts: ForumPost[] = [
     authorAvatar: "https://i.pravatar.cc/150?img=3",
     authorRole: "Verified Talent",
     categoryId: "ai-tools",
-    tags: ["machine-learning", "fine-tuning", "gpt"],
+    tags: ["machine-learning"fine-tuning"gpt"],
     createdAt: "2025-04-01T12:00:00Z",
     updatedAt: "2025-04-01T12:00:00Z",
     upvotes: 48,
@@ -38,7 +38,7 @@ const featuredPosts: ForumPost[] = [
     authorName: "Sarah Chen",
     authorAvatar: "https://i.pravatar.cc/150?img=5",
     categoryId: "getting-hired",
-    tags: ["profile", "tips", "hiring"],
+    tags: ["profile"tips"hiring"],
     createdAt: "2025-04-03T09:15:00Z",
     updatedAt: "2025-04-03T09:15:00Z",
     upvotes: 32,
@@ -58,7 +58,7 @@ const recentPosts: ForumPost[] = [
     authorId: "user3",
     authorName: "Michael Wong",
     categoryId: "project-help",
-    tags: ["testing", "automation", "ci-cd"],
+    tags: ["testing"automation"ci-cd"],
     createdAt: "2025-04-10T14:30:00Z",
     updatedAt: "2025-04-10T14:30:00Z",
     upvotes: 5,
@@ -72,7 +72,7 @@ const recentPosts: ForumPost[] = [
     authorId: "user4",
     authorName: "Emma Davis",
     categoryId: "feedback",
-    tags: ["feature-request", "teams", "collaboration"],
+    tags: ["feature-request"teams"collaboration"],
     createdAt: "2025-04-09T18:45:00Z",
     updatedAt: "2025-04-09T18:45:00Z",
     upvotes: 12,
@@ -86,7 +86,7 @@ const recentPosts: ForumPost[] = [
     authorId: "user5",
     authorName: "David Lin",
     categoryId: "project-help",
-    tags: ["client-management", "scope", "projects"],
+    tags: ["client-management"scope"projects"],
     createdAt: "2025-04-08T10:20:00Z",
     updatedAt: "2025-04-08T10:20:00Z",
     upvotes: 24,
@@ -98,14 +98,14 @@ const recentPosts: ForumPost[] = [
 
 export default function CommunityPage() {
   const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("categories");
+  const [activeTabsetActiveTab] = useState("categories");
   
   return (
     <AppLayout>
       <SEO 
         title="Community Forum | Zion AI Marketplace"
-        description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
-        keywords="community, forum, discussion, AI marketplace, questions, answers"
+        description="Join the Zion AI Marketplace community forum. Ask questionshare knowledgeand connect with other AI professionals."
+        keywords="communityforumdiscussionAI marketplacequestionsanswers"
       />
       
       <div className="container py-8">
@@ -113,7 +113,7 @@ export default function CommunityPage() {
           <div>
             <h1 className="text-3xl font-bold">Community Forum</h1>
             <p className="text-muted-foreground mt-2">
-              Join the conversation, ask questions, and share your knowledge
+              Join the conversationask questionsand share your knowledge
             </p>
           </div>
           

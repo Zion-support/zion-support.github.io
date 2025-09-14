@@ -1,5 +1,5 @@
 import React from 'react';
-import { ApiDocsSpec, Visibility } from '../../data/api-docs/types';
+import { ApiDocsSpecVisibility } from '../../data/api-docs/types';
 
 interface SidebarProps {
   spec: ApiDocsSpec;
@@ -11,7 +11,7 @@ interface SidebarProps {
   onChangeVisibility: (v: Visibility | 'all') => void;
 }
 
-export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, selectedVersion, onChangeVersion, visibilityFilter, onChangeVisibility }: SidebarProps) {
+export default function Sidebar({ specactiveEndpointIdonSelectEndpointselectedVersionChangeVersionvisibilityFilteronChangeVisibility }: SidebarProps) {
   return (
     <aside className="w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary">
       <div>

@@ -38,7 +38,7 @@ export default function Custom500() {
             </Link>
             
             <div className="text-sm text-gray-400 mt-6">
-              <p>If the problem persists, please contact our support team.</p>
+              <p>If the problem persistsplease contact our support team.</p>
               <Link href="/contact" className="text-red-400 hover:text-red-300 transition-colors">Contact Support</Link>
             </div>
           </div>

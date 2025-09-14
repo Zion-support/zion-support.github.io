@@ -1,7 +1,7 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -11,12 +11,12 @@ import {
   SelectTrigger,
   SelectValue} from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
-import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react";
+import { ChevronRightPlusZapTrash2 } from "lucide-react";
 
 type ResumeStep = "basics" | "experience" | "education" | "skills";
 
 export function MobileResumeBuilder() {
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
+  const [currentStepsetCurrentStep] = useState<ResumeStep>("basics");
   
   const renderStepContent = () => {
     switch (currentStep) {
@@ -101,7 +101,7 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="location">Location</Label>
-          <Input id="location" placeholder="City, Country" />
+          <Input id="location" placeholder="CityCountry" />
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
@@ -117,11 +117,11 @@ function BasicsStep() {
 }
 
 function ExperienceStep() {
-  const [experiences, setExperiences] = useState([{ id: '1' }]);
+  const [experiencesetExperiences] = useState([{ id: '1' }]);
   
   const addExperience = () => {
     const newId = (experiences.length + 1).toString();
-    setExperiences([...experiences, { id: newId }]);
+    setExperiences([...experiences{ id: newId }]);
   };
   
   const removeExperience = (id: string) => {
@@ -130,7 +130,7 @@ function ExperienceStep() {
   
   return (
     <div className="space-y-4">
-      {experiences.map((exp, index) => (
+      {experiences.map((expindex) => (
         <Card key={exp.id}>
           <CardContent className="p-4 space-y-4">
             <div className="flex justify-between items-center">
@@ -188,11 +188,11 @@ function ExperienceStep() {
 }
 
 function EducationStep() {
-  const [educations, setEducations] = useState([{ id: '1' }]);
+  const [educationsetEducations] = useState([{ id: '1' }]);
   
   const addEducation = () => {
     const newId = (educations.length + 1).toString();
-    setEducations([...educations, { id: newId }]);
+    setEducations([...educations{ id: newId }]);
   };
   
   const removeEducation = (id: string) => {
@@ -201,7 +201,7 @@ function EducationStep() {
   
   return (
     <div className="space-y-4">
-      {educations.map((edu, index) => (
+      {educations.map((eduindex) => (
         <Card key={edu.id}>
           <CardContent className="p-4 space-y-4">
             <div className="flex justify-between items-center">
@@ -255,22 +255,22 @@ function EducationStep() {
 }
 
 function SkillsStep() {
-  const [skills, setSkills] = useState([
-    { id: '1', name: "", proficiency: "beginner" }
+  const [skillsetSkills] = useState([
+    { id: '1'name: ""proficiency: "beginner" }
   ]);
   
   const addSkill = () => {
     const newId = (skills.length + 1).toString();
-    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }]);
+    setSkills([...skills{ id: newIdname: ""proficiency: "beginner" }]);
   };
   
   const removeSkill = (id: string) => {
     setSkills(skills.filter(skill => skill.id !== id));
   };
   
-  const updateSkill = (id: string, field: string, value: string) => {
+  const updateSkill = (id: stringfield: stringvalue: string) => {
     setSkills(skills.map(skill => 
-      skill.id === id ? { ...skill, [field]: value } : skill
+      skill.id === id ? { ...skill[field]: value } : skill
     ));
   };
   
@@ -282,14 +282,14 @@ function SkillsStep() {
             {skills.map((skill) => (
               <div key={skill.id} className="flex items-center gap-2">
                 <Input
-                  placeholder="Skill (e.g. JavaScript, Figma)"
+                  placeholder="Skill (e.g. JavaScriptFigma)"
                   value={skill.name}
-                  onChange={(e) => updateSkill(skill.id, "name", e.target.value)}
+                  onChange={(e) => updateSkill(skill.id"name"e.target.value)}
                   className="flex-1"
                 />
                 <Select
                   value={skill.proficiency}
-                  onValueChange={(value) => updateSkill(skill.id, "proficiency", value)}
+                  onValueChange={(value) => updateSkill(skill.id"proficiency"value)}
                 >
                   <SelectTrigger className="w-[130px]">
                     <SelectValue placeholder="Level" />

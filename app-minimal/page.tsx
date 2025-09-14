@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2025 Trends & Predictions: The Future of Artificial Intelligence',
-  description: 'Discover the most important AI trends and predictions for 2025. From quantum computing breakthroughs to neural interfaces, explore what the future holds for artificial intelligence.',
-  keywords: ['AI 2025', 'AI trends', 'AI predictions', 'artificial intelligence', 'quantum computing', 'neural interfaces', 'machine learning'],
+  description: 'Discover the most important AI trends and predictions for 2025. From quantum computing breakthroughs to neural interfacesexplore what the future holds for artificial intelligence.',
+  keywords: ['AI 2025'AI trends'AI predictions'artificial intelligence'quantum computing'neural interfaces'machine learning'],
 };
 
 export default function AI2025TrendsPage() {
@@ -22,7 +22,7 @@ export default function AI2025TrendsPage() {
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
               The most comprehensive analysis of AI trends and predictions for 2025. 
-              Discover breakthrough technologies, market insights, and implementation strategies.
+              Discover breakthrough technologiesmarket insightsand implementation strategies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -79,8 +79,8 @@ export default function AI2025TrendsPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Neural Interface Revolution</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Brain-computer interfaces are becoming mainstream, enabling direct communication between human minds and AI systems. 
-                This breakthrough technology is expected to revolutionize healthcare, education, and workplace productivity.
+                Brain-computer interfaces are becoming mainstreamenabling direct communication between human minds and AI systems. 
+                This breakthrough technology is expected to revolutionize healthcareducationand workplace productivity.
               </p>
               <div className="bg-purple-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-purple-800 mb-2">Key Developments:</h4>
@@ -122,7 +122,7 @@ export default function AI2025TrendsPage() {
               </div>
               <p className="text-gray-600 mb-4">
                 Self-operating AI agents that can perform complex tasks without human intervention are becoming the norm. 
-                These agents can learn, adapt, and execute multi-step processes across various domains.
+                These agents can learnadaptand execute multi-step processes across various domains.
               </p>
               <div className="bg-green-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-green-800 mb-2">Capabilities:</h4>
@@ -142,7 +142,7 @@ export default function AI2025TrendsPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Edge AI Computing</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                AI processing is moving closer to data sources, enabling real-time decision making and reducing latency. 
+                AI processing is moving closer to data sourcesenabling real-time decision making and reducing latency. 
                 Edge AI is transforming industries by bringing intelligence to IoT devices and mobile applications.
               </p>
               <div className="bg-orange-50 p-4 rounded-lg">
@@ -272,7 +272,7 @@ export default function AI2025TrendsPage() {
                   AI Trends Report 2025
                 </h3>
                 <p className="text-gray-600">
-                  Comprehensive research report with market analysis, technology insights, and future predictions.
+                  Comprehensive research report with market analysistechnology insightsand future predictions.
                 </p>
               </div>
             </Link>

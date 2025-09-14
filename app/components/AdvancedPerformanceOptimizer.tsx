@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Zap, TrendingUp, Clock, Cpu, Database, Globe, 
+  Zap, TrendingUp, Clock, Database, Globe, 
   Shield, CheckCircle, AlertCircle, Loader,
-  BarChart3, Activity, Gauge, Target
+  BarChart3, Activity, Gauge
 } from 'lucide-react';
 
 interface PerformanceMetric {
@@ -207,7 +207,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
               <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Cpu className="w-8 h-8 text-blue-600" />
+                <Brain className="w-8 h-8 text-blue-600" />
               </div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Code Optimization</h4>
               <p className="text-gray-600 text-sm">Intelligent code splitting and bundling optimization</p>
@@ -328,7 +328,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           
           <div className="text-center">
             <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Target className="w-8 h-8 text-orange-600" />
+              <ArrowRight className="w-8 h-8 text-orange-600" />
             </div>
             <h4 className="text-lg font-semibold text-gray-900 mb-2">Goal Oriented</h4>
             <p className="text-gray-600 text-sm">Optimization aligned with business objectives</p>

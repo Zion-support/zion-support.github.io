@@ -2,191 +2,173 @@ import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
+export const metadata = {
+  title: 'Resources - Zion Tech Group',
+  description: 'Access our comprehensive library of AI guides, case studies, whitepapers, and technical resources.',
+  keywords: ['resources', 'AI guides', 'case studies', 'whitepapers', 'technical resources', 'downloads'],
+};
+
 export default function ResourcesPage() {
   const resources = [
     {
-      category: 'AI Transformation Guides',
+      category: 'Success Stories',
       items: [
         {
-          title: 'AI 2025: Enterprise AI Transformation Complete Guide',
-          description: 'Comprehensive roadmap for enterprise AI transformation with implementation strategies and success stories.',
-          type: 'Complete Guide',
-          readTime: '15 min read',
-          link: '/blog/ai-2025-enterprise-ai-transformation-complete-guide',
+          title: 'Fortune 500 AI Transformation: 800% ROI Success Story',
+          description: 'How a leading manufacturing company achieved unprecedented returns through AI transformation.',
+          type: 'Case Study',
+          link: '/blog/ai-2025-ultimate-business-transformation-success-story',
           featured: true
         },
         {
-          title: 'AI 2025: Quantum Computing Business Revolution',
-          description: 'Explore how quantum computing is revolutionizing business operations with practical applications.',
-          type: 'Revolution Guide',
-          readTime: '12 min read',
-          link: '/blog/ai-2025-quantum-computing-business-revolution',
-          featured: true
-        },
-        {
-          title: 'AI 2025: Autonomous Systems Enterprise Implementation',
-          description: 'Master autonomous AI systems implementation with strategies and best practices.',
-          type: 'Implementation Guide',
-          readTime: '14 min read',
-          link: '/blog/ai-2025-autonomous-systems-enterprise-implementation',
+          title: 'Neural Interface Implementation: 500% Productivity Increase',
+          description: 'Revolutionary neural interface technology delivering massive productivity gains.',
+          type: 'Case Study',
+          link: '/case-studies/neural-interface-enterprise-implementation-success',
           featured: true
         }
       ]
     },
     {
-      category: 'Case Studies',
+      category: 'Technology Guides',
       items: [
         {
-          title: 'AI Transformation Success: 400% ROI Achievement',
-          description: 'Global manufacturing company achieves 400% ROI and $50M annual savings through AI implementation.',
-          type: 'Success Story',
-          readTime: '8 min read',
-          link: '/case-studies/ai-transformation-global-manufacturing-success',
+          title: 'Quantum Computing 2025: Ultimate Business Breakthrough Guide',
+          description: 'Comprehensive guide to quantum computing applications and business implementation.',
+          type: 'Guide',
+          link: '/blog/quantum-computing-2025-business-breakthrough-ultimate-guide',
           featured: true
+        },
+        {
+          title: 'AI 2025-2026 Ultimate Business Intelligence Revolution',
+          description: 'Complete guide to AI transformation and business intelligence implementation.',
+          type: 'Guide',
+          link: '/blog/ai-2025-2026-ultimate-business-intelligence-revolution',
+          featured: false
         }
       ]
     },
     {
-      category: 'Interactive Tools',
+      category: 'Technical Resources',
       items: [
         {
-          title: 'AI Transformation Readiness Assessment',
-          description: 'Assess your organization\'s readiness for AI transformation with personalized recommendations.',
-          type: 'Assessment Tool',
-          readTime: '5 min',
-          link: '/tools/ai-transformation-readiness-assessment',
-          featured: true
+          title: 'AI Implementation Framework 2025',
+          description: 'Step-by-step framework for successful AI implementation in enterprise environments.',
+          type: 'Framework',
+          link: '/resources/ai-implementation-framework-2025',
+          featured: false
         },
         {
-          title: 'AI Transformation ROI Calculator',
-          description: 'Calculate the potential ROI of your AI transformation project.',
-          type: 'Calculator',
-          readTime: '3 min',
-          link: '/tools/ai-transformation-roi-calculator-2025',
-          featured: true
+          title: 'Quantum Computing Readiness Assessment',
+          description: 'Comprehensive assessment tool to evaluate your organization\'s quantum computing readiness.',
+          type: 'Tool',
+          link: '/resources/quantum-computing-readiness-assessment',
+          featured: false
+        }
+      ]
+    },
+    {
+      category: 'Industry Reports',
+      items: [
+        {
+          title: 'AI Trends 2025-2030: Future Predictions Report',
+          description: 'Comprehensive analysis of AI trends and predictions for the next decade.',
+          type: 'Report',
+          link: '/resources/ai-trends-2025-2030-report',
+          featured: false
+        },
+        {
+          title: 'Neural Interface Technology Market Analysis',
+          description: 'In-depth market analysis of neural interface technology and business applications.',
+          type: 'Report',
+          link: '/resources/neural-interface-market-analysis',
+          featured: false
         }
       ]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
       <SEO
-        title="AI Resources - Comprehensive Guides, Tools & Case Studies"
-        description="Access our comprehensive collection of AI resources including guides, tools, case studies, and implementation strategies for 2025."
-        keywords="AI resources, AI guides, AI tools, AI case studies, AI transformation, enterprise AI"
+        title="Resources - Zion Tech Group"
+        description="Access our comprehensive library of AI guides, case studies, whitepapers, and technical resources."
+        keywords="resources, AI guides, case studies, whitepapers, technical resources, downloads"
+        url="/resources"
       />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Resources Hub
+              Resources
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive guides, tools, and case studies to accelerate your AI transformation journey
+            <p className="text-xl md:text-2xl opacity-90 mb-8">
+              Access our comprehensive library of guides, case studies, 
+              and technical resources to accelerate your transformation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="#guides"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Explore Guides
-              </Link>
-              <Link
-                href="#tools"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                Try Tools
-              </Link>
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Featured Resources */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        {/* Featured Resources */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               Featured Resources
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our most popular and comprehensive resources for AI transformation success
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {resources.flatMap(category => 
-              category.items.filter(item => item.featured)
-            ).map((resource, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="h-48 bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center">
-                  <div className="text-6xl">
-                    {resource.type === 'Complete Guide' ? '📚' :
-                     resource.type === 'Revolution Guide' ? '⚛️' :
-                     resource.type === 'Implementation Guide' ? '🤖' :
-                     resource.type === 'Success Story' ? '🏭' :
-                     resource.type === 'Assessment Tool' ? '📊' :
-                     resource.type === 'Calculator' ? '💰' : '📄'}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center mb-2">
-                    <span className="bg-purple-100 text-purple-800 text-xs font-medium px-2 py-1 rounded-full">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {resources.flatMap(cat => cat.items).filter(item => item.featured).map((resource, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                  <div className="flex items-center mb-4">
+                    <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
                       {resource.type}
                     </span>
-                    <span className="ml-2 text-sm text-gray-500">{resource.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
                     {resource.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 mb-6">
                     {resource.description}
                   </p>
                   <Link
                     href={resource.link}
-                    className="text-purple-600 font-semibold hover:text-purple-800"
+                    className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                   >
                     Access Resource →
                   </Link>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* All Resources by Category */}
-      <section id="guides" className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        {/* All Resources by Category */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
               All Resources
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Browse our complete collection of AI resources organized by category
-            </p>
-          </div>
-
-          <div className="space-y-16">
-            {resources.map((category, categoryIndex) => (
-              <div key={categoryIndex}>
-                <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-                  {category.category}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.items.map((resource, itemIndex) => (
-                    <div key={itemIndex} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                      <div className="p-6">
-                        <div className="flex items-center mb-3">
-                          <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">
+            <div className="space-y-16">
+              {resources.map((category, categoryIndex) => (
+                <div key={categoryIndex}>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-8 border-b-2 border-purple-600 pb-2">
+                    {category.category}
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {category.items.map((resource, resourceIndex) => (
+                      <div key={resourceIndex} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                        <div className="flex items-center justify-between mb-4">
+                          <span className="bg-gray-100 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">
                             {resource.type}
                           </span>
-                          <span className="ml-2 text-sm text-gray-500">{resource.readTime}</span>
+                          {resource.featured && (
+                            <span className="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">
+                              Featured
+                            </span>
+                          )}
                         </div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                        <h4 className="text-lg font-bold text-gray-900 mb-3">
                           {resource.title}
                         </h4>
                         <p className="text-gray-600 mb-4 text-sm">
@@ -194,45 +176,61 @@ export default function ResourcesPage() {
                         </p>
                         <Link
                           href={resource.link}
-                          className="text-blue-600 font-semibold hover:text-blue-800 text-sm"
+                          className="text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                         >
-                          {resource.type === 'Assessment Tool' || resource.type === 'Calculator' ? 'Try Tool' : 'Read More'} →
+                          Read More →
                         </Link>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Organization?
-          </h2>
-          <p className="text-xl opacity-90 mb-8">
-            Get personalized AI transformation guidance and implementation support from our experts
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        {/* Newsletter Signup */}
+        <section className="bg-purple-600 py-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Stay Updated with Latest Resources
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Get access to our latest guides, case studies, and industry insights 
+              delivered directly to your inbox.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-300"
+              />
+              <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gray-50 py-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Need Custom Resources?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              Our experts can create custom guides, assessments, and frameworks 
+              tailored to your specific business needs.
+            </p>
             <Link
               href="/contact"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
-              Get Free Consultation
-            </Link>
-            <Link
-              href="/services"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              Explore Services
+              Request Custom Resources
             </Link>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }

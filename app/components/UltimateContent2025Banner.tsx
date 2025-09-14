@@ -2,211 +2,242 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronRight, X, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
 const UltimateContent2025Banner = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isDismissed, setIsDismissed] = useState(false);
-
-  useEffect(() => {
-    const dismissed = localStorage.getItem('ultimate-content-2025-banner-dismissed');
-    if (!dismissed) {
-      setIsVisible(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (isVisible && !isDismissed) {
-      const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % contentItems.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isVisible, isDismissed]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-    setIsVisible(false);
-    localStorage.setItem('ultimate-content-2025-banner-dismissed', 'true');
-  };
 
   const contentItems = [
     {
-      id: 'ultimate-business-transformation',
-      title: 'AI 2025: The Ultimate Business Transformation Complete Guide',
-      description: 'Discover how Fortune 500 companies are achieving unprecedented 1000% ROI with AI transformation strategies.',
+      id: 'enterprise-ai-revolution',
+      title: 'AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
+      description: 'Discover how Fortune 500 companies are achieving 800% ROI with revolutionary AI implementations.',
+      url: '/blog/ai-2025-enterprise-ai-revolution-ultimate-breakthrough',
       type: 'Blog Post',
-      url: '/blog/ai-2025-ultimate-business-transformation-complete-guide',
       metrics: {
-        roi: '1000%',
-        savings: '$2.8B',
-        accuracy: '99.7%',
-        satisfaction: '99.7%'
+        roi: '800%',
+        savings: '$4.8B',
+        satisfaction: '99%'
       },
-      readingTime: '35 min read',
-      featured: true
+      readingTime: '28 min read',
+      isNew: true
     },
     {
-      id: 'fortune-500-success-story',
-      title: 'Fortune 500 AI Transformation: $5B Company Achieves 1000% ROI',
-      description: 'Complete case study with implementation details, challenges, and results from real-world success.',
+      id: 'ai-transformation-success',
+      title: 'AI Transformation 2025: $15B Company Achieves 800% ROI - Ultimate Success Story',
+      description: 'Real case study showing how a Fortune 500 manufacturing giant achieved 800% ROI in 18 months.',
+      url: '/case-studies/ai-transformation-2025-ultimate-success-story',
       type: 'Case Study',
-      url: '/case-studies/fortune-500-ai-transformation-1000-percent-roi-ultimate-success',
       metrics: {
-        roi: '1000%',
-        savings: '$850M',
-        timeline: '12 months',
-        efficiency: '89%'
+        roi: '800%',
+        savings: '$4.8B',
+        efficiency: '300%'
       },
-      readingTime: '25 min read',
-      featured: true
+      readingTime: '22 min read',
+      isNew: true
     },
     {
       id: 'implementation-roadmap',
-      title: 'AI 2025 Implementation Ultimate Roadmap: From Strategy to 1000% ROI',
-      description: 'Complete step-by-step roadmap for achieving 1000% ROI through AI implementation.',
-      type: 'Resource',
-      url: '/resources/ai-2025-implementation-ultimate-roadmap-1000-percent-roi',
+      title: 'AI Implementation Ultimate Roadmap 2025: From Strategy to 800% ROI in 18 Months',
+      description: 'Complete step-by-step guide to achieving 800% ROI with AI implementation.',
+      url: '/resources/ai-implementation-ultimate-roadmap-2025',
+      type: 'Resource Guide',
       metrics: {
-        roi: '1000%',
-        success: '99.7%',
-        timeline: '12 months',
-        projects: '500+'
+        roi: '800%',
+        success_rate: '99%',
+        timeline: '18 months'
       },
-      readingTime: '45 min read',
-      featured: true
+      readingTime: '35 min read',
+      isNew: true
     }
   ];
 
-  if (!isVisible || isDismissed) return null;
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % contentItems.length);
+    }, 5000);
 
-  const currentContent = contentItems[currentSlide];
+    return () => clearInterval(interval);
+  }, [contentItems.length]);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    localStorage.setItem('ultimateContent2025BannerDismissed', 'true');
+  };
+
+  useEffect(() => {
+    const dismissed = localStorage.getItem('ultimateContent2025BannerDismissed');
+    if (dismissed === 'true') {
+      setIsVisible(false);
+    }
+  }, []);
+
+  if (!isVisible) return null;
+
+  const currentItem = contentItems[currentSlide];
 
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
-      {/* Animated background elements */}
+      {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 to-blue-600/20 animate-pulse"></div>
-        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-bounce"></div>
-        <div className="absolute top-20 right-20 w-16 h-16 bg-blue-400/20 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-purple-400/20 rounded-full animate-bounce"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
+        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500/10 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-10 right-10 w-24 h-24 bg-blue-500/10 rounded-full animate-bounce delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-indigo-500/10 rounded-full animate-bounce delay-500"></div>
       </div>
 
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex items-center justify-between">
-            <div className="flex-1">
-              {/* Header */}
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="flex items-center space-x-1 bg-white/20 rounded-full px-3 py-1">
-                  <Star className="w-4 h-4 text-yellow-400" />
-                  <span className="text-sm font-medium">NEW 2025 CONTENT</span>
-                </div>
-                <div className="flex items-center space-x-1 bg-green-500/20 rounded-full px-3 py-1">
-                  <TrendingUp className="w-4 h-4 text-green-400" />
-                  <span className="text-sm font-medium">1000% ROI</span>
-                </div>
-              </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center bg-white/20 rounded-full px-6 py-2 mb-4">
+            <span className="text-sm font-medium">🚀 NEW 2025 CONTENT</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ultimate AI Content Collection 2025
+          </h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Discover the revolutionary AI content that's helping Fortune 500 companies achieve 800% ROI
+          </p>
+        </div>
 
-              {/* Main content */}
-              <div className="mb-6">
-                <h2 className="text-2xl md:text-3xl font-bold mb-2">
-                  🚀 Ultimate AI 2025 Content Collection
-                </h2>
-                <p className="text-lg text-blue-100 mb-4">
-                  Discover the complete guide to achieving 1000% ROI through AI transformation
-                </p>
-              </div>
+        {/* Content Showcase */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center space-x-4">
+              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                {currentItem.type}
+              </span>
+              <span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                NEW
+              </span>
+              <span className="text-sm opacity-75">
+                {currentItem.readingTime}
+              </span>
+            </div>
+            <button
+              onClick={handleDismiss}
+              className="text-white/70 hover:text-white transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
 
-              {/* Content showcase */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
-                      <Zap className="w-6 h-6 text-white" />
-                    </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Content Details */}
+            <div>
+              <h3 className="text-2xl font-bold mb-4 leading-tight">
+                {currentItem.title}
+              </h3>
+              <p className="text-lg opacity-90 mb-6 leading-relaxed">
+                {currentItem.description}
+              </p>
+              
+              {/* Metrics */}
+              <div className="grid grid-cols-3 gap-4 mb-6">
+                <div className="bg-white/20 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-green-400">
+                    {currentItem.metrics.roi}
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <span className="text-sm font-medium text-blue-200">{currentContent.type}</span>
-                      <span className="text-xs bg-white/20 rounded-full px-2 py-1">
-                        {currentContent.readingTime}
-                      </span>
-                      {currentContent.featured && (
-                        <span className="text-xs bg-yellow-500/20 text-yellow-300 rounded-full px-2 py-1">
-                          FEATURED
-                        </span>
-                      )}
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">{currentContent.title}</h3>
-                    <p className="text-blue-100 text-sm mb-4">{currentContent.description}</p>
-                    
-                    {/* Metrics */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-                      {Object.entries(currentContent.metrics).map(([key, value]) => (
-                        <div key={key} className="text-center">
-                          <div className="text-lg font-bold text-white">{value}</div>
-                          <div className="text-xs text-blue-200 capitalize">{key.replace('_', ' ')}</div>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Action buttons */}
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Link
-                        href={currentContent.url}
-                        className="inline-flex items-center px-6 py-3 bg-white text-purple-900 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                      >
-                        Read Now
-                        <ChevronRight className="w-4 h-4 ml-2" />
-                      </Link>
-                      <Link
-                        href="/case-studies"
-                        className="inline-flex items-center px-6 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
-                      >
-                        View All Case Studies
-                      </Link>
-                    </div>
+                  <div className="text-sm opacity-75">ROI</div>
+                </div>
+                <div className="bg-white/20 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-blue-400">
+                    {currentItem.metrics.savings}
+                  </div>
+                  <div className="text-sm opacity-75">Savings</div>
+                </div>
+                <div className="bg-white/20 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-purple-400">
+                    {currentItem.metrics.satisfaction || currentItem.metrics.success_rate || currentItem.metrics.efficiency}
+                  </div>
+                  <div className="text-sm opacity-75">
+                    {currentItem.metrics.satisfaction ? 'Satisfaction' : 
+                     currentItem.metrics.success_rate ? 'Success Rate' : 'Efficiency'}
                   </div>
                 </div>
               </div>
 
-              {/* Progress indicators */}
-              <div className="flex items-center space-x-2 mb-4">
-                {contentItems.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-2 h-2 rounded-full transition-colors ${
-                      index === currentSlide ? 'bg-white' : 'bg-white/40'
-                    }`}
-                  />
-                ))}
-              </div>
-
-              {/* Additional content links */}
-              <div className="flex flex-wrap gap-4 text-sm">
-                <Link href="/blog" className="text-blue-200 hover:text-white transition-colors">
-                  All Blog Posts →
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href={currentItem.url}
+                  className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                >
+                  Read Full Content
                 </Link>
-                <Link href="/resources" className="text-blue-200 hover:text-white transition-colors">
-                  Implementation Guides →
-                </Link>
-                <Link href="/tools/ai-roi-calculator" className="text-blue-200 hover:text-white transition-colors">
-                  ROI Calculator →
+                <Link
+                  href="/contact"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors text-center"
+                >
+                  Get Consultation
                 </Link>
               </div>
             </div>
 
-            {/* Dismiss button */}
+            {/* Content Preview */}
+            <div className="bg-white/5 rounded-xl p-6">
+              <h4 className="text-lg font-semibold mb-4">Content Preview</h4>
+              <div className="space-y-3 text-sm opacity-90">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  <span>Fortune 500 success stories with real ROI data</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <span>Step-by-step implementation frameworks</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                  <span>Advanced AI technologies and applications</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                  <span>Change management and training strategies</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                  <span>Risk management and mitigation plans</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation Dots */}
+        <div className="flex justify-center space-x-2 mb-8">
+          {contentItems.map((_, index) => (
             <button
-              onClick={handleDismiss}
-              className="ml-4 p-2 hover:bg-white/10 rounded-lg transition-colors"
-              aria-label="Dismiss banner"
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="inline-flex items-center space-x-6">
+            <Link
+              href="/blog"
+              className="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg font-semibold transition-colors"
             >
-              <X className="w-5 h-5" />
-            </button>
+              View All Blog Posts
+            </Link>
+            <Link
+              href="/case-studies"
+              className="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Explore Case Studies
+            </Link>
+            <Link
+              href="/resources"
+              className="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Browse Resources
+            </Link>
           </div>
         </div>
       </div>

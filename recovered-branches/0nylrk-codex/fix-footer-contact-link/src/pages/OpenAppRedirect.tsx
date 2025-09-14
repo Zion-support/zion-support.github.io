@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React{ useEffectuseState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 // This component handles deep linking to the mobile app
 const OpenAppRedirect: React.FC = () => {
   const navigate = useNavigate();
-  const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting');
+  const [statusetStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting');
   
   useEffect(() => {
     const attemptAppOpen = async () => {
@@ -33,20 +33,20 @@ const OpenAppRedirect: React.FC = () => {
           } else if (isiOS) {
             window.location.href = iosAppUrl;
           }
-        }, 2500); // Wait 2.5 seconds before redirecting to store
+        }2500); // Wait 2.5 seconds before redirecting to store
         
         // Try to open the app
         window.location.href = appScheme;
       } else {
-        // Not on mobile, redirect to mobile launch page
+        // Not on mobileredirect to mobile launch page
         setStatus('failed');
         setTimeout(() => {
           navigate(fallbackUrl);
-        }, 1500);
+        }1500);
       }
       
       // Clear timeout if page visibility changes (meaning app opened successfully)
-      document.addEventListener("visibilitychange", () => {
+      document.addEventListener("visibilitychange"() => {
         if (document.hidden && timeout) {
           clearTimeout(timeout);
         }
@@ -54,7 +54,7 @@ const OpenAppRedirect: React.FC = () => {
     };
     
     attemptAppOpen();
-  }, [navigate]);
+  }[navigate]);
   
   return (
     <div className="min-h-screen flex items-center justify-center bg-zion-blue">
@@ -70,7 +70,7 @@ const OpenAppRedirect: React.FC = () => {
           <>
             <h1 className="text-2xl font-bold mb-2">Opening Zion App...</h1>
             <p className="text-gray-300">
-              If nothing happens, download the app first.
+              If nothing happensdownload the app first.
             </p>
           </>
         )}

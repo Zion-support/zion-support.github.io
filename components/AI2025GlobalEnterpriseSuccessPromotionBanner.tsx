@@ -25,7 +25,7 @@ export default function AI2025GlobalEnterpriseSuccessPromotionBanner() {
           
           <p className="text-lg md:text-xl opacity-90 mb-6 max-w-4xl mx-auto">
             Discover how a global manufacturing leader achieved $180M annual savings and 95% efficiency gains 
-            through our advanced AI automation solutions. Real results, proven strategies, complete implementation details.
+            through our advanced AI automation solutions. Real resultsproven strategiescomplete implementation details.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 max-w-5xl mx-auto">

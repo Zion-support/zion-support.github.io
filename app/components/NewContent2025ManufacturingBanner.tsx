@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, Factory, TrendingUp, Shield, Zap } from 'lucide-react';
+import { X, ArrowRight, Factory, TrendingUp, Shield, Zap, ArrowRight } from 'lucide-react';
 
 const NewContent2025ManufacturingBanner = () => {
   const [isVisible, setIsVisible] = useState(false);

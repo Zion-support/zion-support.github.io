@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Calendar, 
-  ArrowRight, 
+  Brain
+  Zap
+  Calendar
+  ArrowRight
   Star,
   TrendingUp,
   Clock,
@@ -16,8 +16,8 @@ import {
 } from 'lucide-react';
 
 const AI2026_2030UltimatePredictionsPromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   const features = [
     {
@@ -45,17 +45,17 @@ const AI2026_2030UltimatePredictionsPromotionBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -50 }}
+      initial={{ opacity: 0y: -50 }}
+      animate={{ opacity: 1y: 0 }}
+      exit={{ opacity: 0y: -50 }}
       transition={{ duration: 0.5 }}
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900"
     >
@@ -71,9 +71,9 @@ const AI2026_2030UltimatePredictionsPromotionBanner = () => {
           {/* Left side - Main content */}
           <div className="flex-1 text-center lg:text-left">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
+              initial={{ opacity: 0x: -20 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ delay: 0.2duration: 0.6 }}
               className="mb-4"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white mb-4">
@@ -101,9 +101,9 @@ const AI2026_2030UltimatePredictionsPromotionBanner = () => {
             {/* Rotating features */}
             <motion.div
               key={currentFeature}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0y: 10 }}
+              animate={{ opacity: 1y: 0 }}
+              exit={{ opacity: 0y: -10 }}
               transition={{ duration: 0.3 }}
               className="flex items-center gap-3 mb-6"
             >
@@ -137,19 +137,19 @@ const AI2026_2030UltimatePredictionsPromotionBanner = () => {
           {/* Right side - Visual elements */}
           <div className="flex-shrink-0">
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
+              initial={{ opacity: 0scale: 0.8 }}
+              animate={{ opacity: 1scale: 1 }}
+              transition={{ delay: 0.4duration: 0.6 }}
               className="relative"
             >
               {/* Animated prediction cards */}
               <div className="grid grid-cols-2 gap-4">
-                {[0, 1, 2, 3].map((index) => (
+                {[0123].map((index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
+                    initial={{ opacity: 0y: 20 }}
+                    animate={{ opacity: 1y: 0 }}
+                    transition={{ delay: 0.6 + index * 0.1duration: 0.5 }}
                     className={`p-4 rounded-lg bg-gradient-to-br ${features[index].color} bg-opacity-20 backdrop-blur-sm border border-white/20`}
                   >
                     <features[index].icon className="w-8 h-8 text-white mb-2" />
@@ -163,8 +163,8 @@ const AI2026_2030UltimatePredictionsPromotionBanner = () => {
               {/* Floating elements */}
               <motion.div
                 animate={{ 
-                  y: [0, -10, 0],
-                  rotate: [0, 5, 0]
+                  y: [0-10],
+                  rotate: [050]
                 }}
                 transition={{ 
                   duration: 3,
@@ -178,8 +178,8 @@ const AI2026_2030UltimatePredictionsPromotionBanner = () => {
               
               <motion.div
                 animate={{ 
-                  y: [0, 10, 0],
-                  rotate: [0, -5, 0]
+                  y: [010],
+                  rotate: [0-50]
                 }}
                 transition={{ 
                   duration: 4,

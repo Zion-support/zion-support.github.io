@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, TrendingUp, DollarSign, Clock, Users } from 'lucide-react';
+import { X, ArrowRight, TrendingUp, DollarSign, Clock, Users, ArrowRight } from 'lucide-react';
 
 const UltimateAITransformationBanner2025 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

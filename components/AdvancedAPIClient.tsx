@@ -1,11 +1,12 @@
+"use client";
 'use client';
 
-import React, { useState, useCallback, useRef } from 'react';
+import React{ useStateuseCallbackuseRef } from 'react';
 
 interface APIRequest {
   url: string;
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string>;
+  headers?: Record<string>;
   body?: any;
   timeout?: number;
 }
@@ -14,7 +15,7 @@ interface APIResponse<T = any> {
   data: T;
   status: number;
   statusText: string;
-  headers: Record<string, string>;
+  headers: Record<string>;
   success: boolean;
   error?: string;
 }
@@ -29,10 +30,10 @@ interface APIClientConfig {
 }
 
 const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [requests, setRequests] = useState<APIRequest[]>([]);
-  const [responses, setResponses] = useState<APIResponse[]>([]);
+  const [isLoadingsetIsLoading] = useState(false);
+  const [errorsetError] = useState<string | null>(null);
+  const [requestsetRequests] = useState<APIRequest[]>([]);
+  const [responsesetResponses] = useState<APIResponse[]>([]);
   
   const config = useRef<APIClientConfig>({
     baseURL: process.env.NEXT_PUBLIC_API_URL || '/api',
@@ -43,22 +44,22 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
     enableLogging: true,
   });
 
-  const cache = useRef<Map<string, { data: any; timestamp: number; ttl: number }>>(new Map());
+  const cache = useRef<Map<string{ data: any; timestamp: number; ttl: number }>>(new Map());
 
-  const logRequest = useCallback((request: APIRequest, response?: APIResponse) => {
+  const logRequest = useCallback((request: APIRequestresponse?: APIResponse) => {
     if (!config.current.enableLogging) return;
 
     console.group(`🌐 API ${request.method} ${request.url}`);
-    console.log('Request:', request);
+    console.log('Request:'request);
     if (response) {
-      console.log('Response:', response);
+      console.log('Response:'response);
     }
     console.groupEnd();
-  }, []);
+  }[]);
 
   const getCacheKey = useCallback((request: APIRequest): string => {
     return `${request.method}:${request.url}:${JSON.stringify(request.body || {})}`;
-  }, []);
+  }[]);
 
   const getCachedResponse = useCallback((request: APIRequest): any => {
     if (!config.current.enableCaching) return null;
@@ -75,18 +76,18 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
     }
     
     return null;
-  }, [getCacheKey]);
+  }[getCacheKey]);
 
-  const setCachedResponse = useCallback((request: APIRequest, data: any, ttl: number = 300000) => {
+  const setCachedResponse = useCallback((request: APIRequestdata: anyttl: number = 300000) => {
     if (!config.current.enableCaching) return;
 
     const key = getCacheKey(request);
-    cache.current.set(key, {
+    cache.current.set(key{
       data,
       timestamp: Date.now(),
       ttl,
     });
-  }, [getCacheKey]);
+  }[getCacheKey]);
 
   const makeRequest = useCallback(async <T = any>(
     request: APIRequest
@@ -110,17 +111,17 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
     }
 
     // Add request to history
-    setRequests(prev => [...prev, request]);
+    setRequests(prev => [...prevrequest]);
 
     const fullUrl = request.url.startsWith('http') 
       ? request.url 
       : `${config.current.baseURL}${request.url}`;
 
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), request.timeout || config.current.timeout);
+    const timeoutId = setTimeout(() => controller.abort()request.timeout || config.current.timeout);
 
     try {
-      const response = await fetch(fullUrl, {
+      const response = await fetch(fullUrl{
         method: request.method,
         headers: {
           'Content-Type': 'application/json',
@@ -144,11 +145,11 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
 
       // Cache successful GET requests
       if (request.method === 'GET' && response.ok) {
-        setCachedResponse(request, data);
+        setCachedResponse(requestdata);
       }
 
-      setResponses(prev => [...prev, apiResponse]);
-      logRequest(request, apiResponse);
+      setResponses(prev => [...prevapiResponse]);
+      logRequest(requestapiResponse);
 
       if (!response.ok) {
         setError(apiResponse.error || 'Request failed');
@@ -172,42 +173,42 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
         error: errorMessage,
       };
 
-      setResponses(prev => [...prev, errorResponse]);
-      logRequest(request, errorResponse);
+      setResponses(prev => [...preverrorResponse]);
+      logRequest(requesterrorResponse);
       
       setIsLoading(false);
       return errorResponse;
     }
-  }, [getCachedResponse, setCachedResponse, logRequest]);
+  }[getCachedResponsetCachedResponselogRequest]);
 
-  const get = useCallback(<T = any>(url: string, options?: Partial<APIRequest>): Promise<APIResponse<T>> => {
-    return makeRequest<T>({ url, method: 'GET', ...options });
-  }, [makeRequest]);
+  const get = useCallback(<T = any>(url: stringoptions?: Partial<APIRequest>): Promise<APIResponse<T>> => {
+    return makeRequest<T>({ urlmethod: 'GET'...options });
+  }[makeRequest]);
 
-  const post = useCallback(<T = any>(url: string, body?: any, options?: Partial<APIRequest>): Promise<APIResponse<T>> => {
-    return makeRequest<T>({ url, method: 'POST', body, ...options });
-  }, [makeRequest]);
+  const post = useCallback(<T = any>(url: stringbody?: anyoptions?: Partial<APIRequest>): Promise<APIResponse<T>> => {
+    return makeRequest<T>({ urlmethod: 'POST'body...options });
+  }[makeRequest]);
 
-  const put = useCallback(<T = any>(url: string, body?: any, options?: Partial<APIRequest>): Promise<APIResponse<T>> => {
-    return makeRequest<T>({ url, method: 'PUT', body, ...options });
-  }, [makeRequest]);
+  const put = useCallback(<T = any>(url: stringbody?: anyoptions?: Partial<APIRequest>): Promise<APIResponse<T>> => {
+    return makeRequest<T>({ urlmethod: 'PUT'body...options });
+  }[makeRequest]);
 
-  const del = useCallback(<T = any>(url: string, options?: Partial<APIRequest>): Promise<APIResponse<T>> => {
-    return makeRequest<T>({ url, method: 'DELETE', ...options });
-  }, [makeRequest]);
+  const del = useCallback(<T = any>(url: stringoptions?: Partial<APIRequest>): Promise<APIResponse<T>> => {
+    return makeRequest<T>({ urlmethod: 'DELETE'...options });
+  }[makeRequest]);
 
-  const patch = useCallback(<T = any>(url: string, body?: any, options?: Partial<APIRequest>): Promise<APIResponse<T>> => {
-    return makeRequest<T>({ url, method: 'PATCH', body, ...options });
-  }, [makeRequest]);
+  const patch = useCallback(<T = any>(url: stringbody?: anyoptions?: Partial<APIRequest>): Promise<APIResponse<T>> => {
+    return makeRequest<T>({ urlmethod: 'PATCH'body...options });
+  }[makeRequest]);
 
   const clearCache = useCallback(() => {
     cache.current.clear();
-  }, []);
+  }[]);
 
   const clearHistory = useCallback(() => {
     setRequests([]);
     setResponses([]);
-  }, []);
+  }[]);
 
   return {
     isLoading,
@@ -250,7 +251,7 @@ export const APIDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible = fa
 
   if (!api || !isVisible) return null;
 
-  const { isLoading, error, requests, responses, clearHistory } = api;
+  const { isLoadingerrorequestsresponsesclearHistory } = api;
 
   return (
     <div className="fixed top-4 right-4 z-50 bg-white rounded-lg shadow-xl p-4 w-96 max-h-96 overflow-y-auto border">
@@ -280,7 +281,7 @@ export const APIDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible = fa
           {requests.length === 0 ? (
             <div className="text-sm text-gray-500">No requests yet</div>
           ) : (
-            requests.slice(-5).map((request, index) => {
+            requests.slice(-5).map((requestindex) => {
               const response = responses[index];
               return (
                 <div key={index} className="p-2 rounded text-xs bg-gray-50">

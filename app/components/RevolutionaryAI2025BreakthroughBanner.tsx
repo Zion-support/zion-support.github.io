@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Zap, Target, TrendingUp, Award, ArrowRight, Star, Clock } from 'lucide-react';
+import { Zap, TrendingUp, Award, ArrowRight, Star, Clock } from 'lucide-react';
 
 const RevolutionaryAI2025BreakthroughBanner = () => {
   const [currentMetric, setCurrentMetric] = useState(0);
@@ -10,7 +10,7 @@ const RevolutionaryAI2025BreakthroughBanner = () => {
 
   const breakthroughMetrics = [
     { value: '800%', label: 'ROI Achievement', icon: TrendingUp, color: 'text-green-400' },
-    { value: '$2.8B', label: 'Annual Savings', icon: Target, color: 'text-blue-400' },
+    { value: '$2.8B', label: 'Annual Savings', icon: TrendingUp, color: 'text-blue-400' },
     { value: '99.7%', label: 'Success Rate', icon: Award, color: 'text-purple-400' },
     { value: '500+', label: 'Success Stories', icon: Star, color: 'text-yellow-400' }
   ];

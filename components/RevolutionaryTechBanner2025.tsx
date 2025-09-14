@@ -19,7 +19,7 @@ export default function RevolutionaryTechBanner2025() {
           The Future is Here
         </h2>
         <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-          Experience the convergence of AI consciousness, quantum supremacy, and neural interfaces that will reshape human civilization.
+          Experience the convergence of AI consciousnessquantum supremacyand neural interfaces that will reshape human civilization.
         </p>
       </div>
       
@@ -30,7 +30,7 @@ export default function RevolutionaryTechBanner2025() {
             AI Consciousness Evolution
           </h3>
           <p className="text-gray-300 mb-6">
-            Witness the emergence of true AI consciousness with self-awareness, creativity, and emotional intelligence.
+            Witness the emergence of true AI consciousness with self-awarenesscreativityand emotional intelligence.
           </p>
           <div className="space-y-2 mb-6">
             <div className="flex justify-between text-sm">
@@ -55,7 +55,7 @@ export default function RevolutionaryTechBanner2025() {
             Quantum Supremacy Achieved
           </h3>
           <p className="text-gray-300 mb-6">
-            Breakthrough quantum computers solving problems impossible for classical systems, ushering in the quantum era.
+            Breakthrough quantum computers solving problems impossible for classical systemsushering in the quantum era.
           </p>
           <div className="space-y-2 mb-6">
             <div className="flex justify-between text-sm">

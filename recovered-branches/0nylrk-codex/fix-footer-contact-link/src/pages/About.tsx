@@ -10,7 +10,7 @@ export default function About() {
       <SEO 
         title="About Zion - The Future of AI & Tech Marketplace" 
         description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
-        keywords="about Zion, AI marketplace, tech platform, mission, vision, team"
+        keywords="about ZionAI marketplacetech platformissionvisionteam"
         canonical="https://app.ziontechgroup.com/about"
       />
       <Header />
@@ -27,15 +27,15 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
               <p className="text-zion-slate-light text-lg mb-6">
-                At Zion, we're on a mission to democratize access to cutting-edge AI and technology solutions. 
+                At Zionwe're on a mission to democratize access to cutting-edge AI and technology solutions. 
                 We believe that innovation thrives when barriers are removed and connections are made.
               </p>
               <p className="text-zion-slate-light text-lg mb-6">
-                Our platform brings together talented AI specialists, innovative companies, and the latest 
+                Our platform brings together talented AI specialistsinnovative companiesand the latest 
                 technological solutions in one seamless ecosystem.
               </p>
               <p className="text-zion-slate-light text-lg">
-                By connecting talent with opportunity and innovation with implementation, we're creating 
+                By connecting talent with opportunity and innovation with implementationwe're creating 
                 a global community where the future of technology is being built today.
               </p>
             </div>
@@ -52,17 +52,17 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
               <p className="text-zion-slate-light text-lg mb-6">
-                We envision a world where AI and technology are accessible to all, regardless of geographical 
+                We envision a world where AI and technology are accessible to allregardless of geographical 
                 or financial constraints. A world where the best minds can collaborate to solve the most 
                 challenging problems.
               </p>
               <p className="text-zion-slate-light text-lg mb-6">
-                Zion is building that world by creating a transparent, ethical, and inclusive platform 
+                Zion is building that world by creating a transparentethicaland inclusive platform 
                 that puts people at the center of technological advancement.
               </p>
               <p className="text-zion-slate-light text-lg">
-                Our goal is to become the premier destination for AI and tech innovation, fostering 
-                a community that shapes the future of how we live, work, and interact with technology.
+                Our goal is to become the premier destination for AI and tech innovationfostering 
+                a community that shapes the future of how we liveworkand interact with technology.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden lg:order-first">
@@ -109,7 +109,7 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Trust</h3>
                 <p className="text-zion-slate-light">
-                  We maintain the highest standards of integrity, transparency, and ethical practices in everything we do.
+                  We maintain the highest standards of integritytransparencyand ethical practices in everything we do.
                 </p>
               </div>
             </div>

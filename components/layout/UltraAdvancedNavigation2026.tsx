@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
-  BookOpen, MessageCircle 
+  MenuXChevronDownSearchPhoneMailMapPin
+  RocketBrainAtomGlobeZapSparklesShield
+  MicroscopeDollarSignHomeUsersBriefcase
+  BookOpenMessageCircle 
 } from 'lucide-react';
 
 const contactInfo = {
@@ -22,10 +23,10 @@ const serviceCategories = [
     color: 'from-purple-600 to-pink-600',
     description: 'Next-generation AI solutions',
     services: [
-      { name: 'AI Consciousness Simulation', href: '/ai-consciousness-simulation-platform', description: 'Simulate human consciousness', price: '$4,999/month' },
-      { name: 'Autonomous AI Agents', href: '/autonomous-ai-agents-platform-2026', description: 'Create autonomous AI agents', price: '$199/month' },
-      { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion-2026', description: 'Revolutionary healthcare AI', price: '$399/month' },
-      { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution', description: 'Unlimited AI content generation', price: '$599/month' }
+      { name: 'AI Consciousness Simulation'href: '/ai-consciousness-simulation-platform'description: 'Simulate human consciousness'price: '$4,999/month' },
+      { name: 'Autonomous AI Agents'href: '/autonomous-ai-agents-platform-2026'description: 'Create autonomous AI agents'price: '$199/month' },
+      { name: 'AI Healthcare Companion'href: '/ai-healthcare-companion-2026'description: 'Revolutionary healthcare AI'price: '$399/month' },
+      { name: 'AI Content Creation Revolution'href: '/ai-content-creation-revolution'description: 'Unlimited AI content generation'price: '$599/month' }
     ]
   },
   {
@@ -34,10 +35,10 @@ const serviceCategories = [
     color: 'from-blue-600 to-cyan-600',
     description: 'Quantum-powered solutions',
     services: [
-      { name: 'Quantum Neural Interface', href: '/quantum-neural-interface-platform', description: 'Brain-computer interface', price: '$8,999/month' },
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Unbreakable encryption', price: '$3,999/month' },
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-algorithm-platform', description: 'Quantum trading algorithms', price: '$12,999/month' },
-      { name: 'Quantum Internet Infrastructure', href: '/quantum-internet-infrastructure-platform', description: 'Build the quantum internet', price: '$15,999/month' }
+      { name: 'Quantum Neural Interface'href: '/quantum-neural-interface-platform'description: 'Brain-computer interface'price: '$8,999/month' },
+      { name: 'Quantum Internet Security'href: '/quantum-internet-security-gateway'description: 'Unbreakable encryption'price: '$3,999/month' },
+      { name: 'Quantum Financial Trading'href: '/quantum-financial-trading-algorithm-platform'description: 'Quantum trading algorithms'price: '$12,999/month' },
+      { name: 'Quantum Internet Infrastructure'href: '/quantum-internet-infrastructure-platform'description: 'Build the quantum internet'price: '$15,999/month' }
     ]
   },
   {
@@ -46,10 +47,10 @@ const serviceCategories = [
     color: 'from-green-600 to-emerald-600',
     description: 'Cutting-edge innovations',
     services: [
-      { name: 'Holographic Metaverse', href: '/holographic-metaverse-development-platform', description: '3D holographic experiences', price: '$2,999/month' },
-      { name: 'Space Debris Management', href: '/space-debris-management-ai-platform', description: 'AI space safety', price: '$5,999/month' },
-      { name: 'AI Climate Prediction', href: '/ai-climate-prediction-platform', description: 'Climate change prediction', price: '$1,999/month' },
-      { name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing-ai-platform', description: 'Self-optimizing manufacturing', price: '$3,499/month' }
+      { name: 'Holographic Metaverse'href: '/holographic-metaverse-development-platform'description: '3D holographic experiences'price: '$2,999/month' },
+      { name: 'Space Debris Management'href: '/space-debris-management-ai-platform'description: 'AI space safety'price: '$5,999/month' },
+      { name: 'AI Climate Prediction'href: '/ai-climate-prediction-platform'description: 'Climate change prediction'price: '$1,999/month' },
+      { name: 'Autonomous Manufacturing'href: '/autonomous-manufacturing-ai-platform'description: 'Self-optimizing manufacturing'price: '$3,499/month' }
     ]
   },
   {
@@ -58,10 +59,10 @@ const serviceCategories = [
     color: 'from-red-600 to-orange-600',
     description: 'Enterprise-grade solutions',
     services: [
-      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture-2026', description: 'Next-gen security', price: 'Custom pricing' },
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2026', description: 'Intelligent edge computing', price: 'Custom pricing' },
-      { name: '5G Private Networks', href: '/5g-private-network-solutions-2026', description: 'Enterprise 5G', price: 'Custom pricing' },
-      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform-2026', description: 'Enterprise blockchain', price: 'Custom pricing' }
+      { name: 'Zero Trust Architecture'href: '/zero-trust-network-architecture-2026'description: 'Next-gen security'price: 'Custom pricing' },
+      { name: 'Edge Computing Orchestration'href: '/edge-computing-orchestration-2026'description: 'Intelligent edge computing'price: 'Custom pricing' },
+      { name: '5G Private Networks'href: '/5g-private-network-solutions-2026'description: 'Enterprise 5G'price: 'Custom pricing' },
+      { name: 'Blockchain Infrastructure'href: '/blockchain-infrastructure-platform-2026'description: 'Enterprise blockchain'price: 'Custom pricing' }
     ]
   },
   {
@@ -70,10 +71,10 @@ const serviceCategories = [
     color: 'from-teal-600 to-cyan-600',
     description: 'Healthcare innovation',
     services: [
-      { name: 'AI Drug Discovery', href: '/ai-drug-discovery-platform', description: 'Accelerate drug development', price: '$4,999/month' },
-      { name: 'Autonomous Healthcare AI', href: '/autonomous-healthcare-ai-platform', description: 'Self-learning healthcare', price: '$2,499/month' },
-      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', description: 'Quantum AI research', price: '$6,999/month' },
-      { name: 'AI Legal Research', href: '/ai-legal-research-platform', description: 'Revolutionary legal tech', price: '$899/month' }
+      { name: 'AI Drug Discovery'href: '/ai-drug-discovery-platform'description: 'Accelerate drug development'price: '$4,999/month' },
+      { name: 'Autonomous Healthcare AI'href: '/autonomous-healthcare-ai-platform'description: 'Self-learning healthcare'price: '$2,499/month' },
+      { name: 'Quantum Machine Learning'href: '/quantum-machine-learning-platform'description: 'Quantum AI research'price: '$6,999/month' },
+      { name: 'AI Legal Research'href: '/ai-legal-research-platform'description: 'Revolutionary legal tech'price: '$899/month' }
     ]
   },
   {
@@ -82,39 +83,39 @@ const serviceCategories = [
     color: 'from-emerald-600 to-green-600',
     description: 'Fintech solutions',
     services: [
-      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization-ai', description: 'AI supply chain optimization', price: '$899/month' },
-      { name: 'Autonomous Marketing AI', href: '/autonomous-marketing-ai-platform', description: 'Self-optimizing marketing', price: '$1,499/month' },
-      { name: 'AI Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-gen security', price: '$2,999/month' },
-      { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
+      { name: 'Autonomous Supply Chain'href: '/autonomous-supply-chain-optimization-ai'description: 'AI supply chain optimization'price: '$899/month' },
+      { name: 'Autonomous Marketing AI'href: '/autonomous-marketing-ai-platform'description: 'Self-optimizing marketing'price: '$1,499/month' },
+      { name: 'AI Cybersecurity'href: '/ai-cybersecurity-platform'description: 'Next-gen security'price: '$2,999/month' },
+      { name: 'AI Business Intelligence'href: '/autonomous-business-intelligence-network'description: 'Self-evolving BI'price: '$1,299/month' }
     ]
   }
 ];
 
 const companyLinks = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: '2026 Services', href: '/2026-services-showcase', icon: Rocket },
-  { name: 'Innovative 2026', href: '/2026-innovative-services-showcase', icon: Zap },
-  { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Sparkles },
-  { name: '2026 Pricing', href: '/revolutionary-2026-pricing', icon: DollarSign },
-  { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
-  { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: 'Careers', href: '/careers', icon: Users },
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
+  { name: 'Home'href: '/'icon: Home },
+  { name: 'About Us'href: '/about'icon: Users },
+  { name: '2026 Services'href: '/2026-services-showcase'icon: Rocket },
+  { name: 'Innovative 2026'href: '/2026-innovative-services-showcase'icon: Zap },
+  { name: 'Ultimate 2026'href: '/ultimate-2026-services-showcase'icon: Sparkles },
+  { name: '2026 Pricing'href: '/revolutionary-2026-pricing'icon: DollarSign },
+  { name: 'Case Studies'href: '/case-studies'icon: Briefcase },
+  { name: 'Blog & Resources'href: '/blog'icon: BookOpen },
+  { name: 'Careers'href: '/careers'icon: Users },
+  { name: 'Contact'href: '/contact'icon: MessageCircle }
 ];
 
 const UltraAdvancedNavigation2026 = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpensetIsOpen] = useState(false);
+  const [isScrolledsetIsScrolled] = useState(false);
+  const [activeDropdownsetActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll'handleScroll);
+    return () => window.removeEventListener('scroll'handleScroll);
+  }[]);
 
   const navigationItems = [
     {
@@ -124,12 +125,12 @@ const UltraAdvancedNavigation2026 = () => {
       color: 'from-blue-500 to-cyan-500',
       description: 'Autonomous AI systems and consciousness interfaces',
       subItems: [
-        { name: 'AI Autonomous Agents', href: '/services?category=ai-autonomous', description: 'Fully autonomous AI systems' },
-        { name: 'AI Consciousness', href: '/services?category=ai-consciousness', description: 'Consciousness simulation and interfaces' },
-        { name: 'AI Healthcare', href: '/services?category=ai-healthcare', description: 'Medical AI and diagnostics' },
-        { name: 'AI Education', href: '/services?category=ai-education', description: 'Educational AI systems' },
-        { name: 'AI Legal', href: '/services?category=ai-legal', description: 'Legal AI and compliance' },
-        { name: 'AI Creative', href: '/services?category=ai-creative', description: 'Creative AI and content generation' }
+        { name: 'AI Autonomous Agents'href: '/services?category=ai-autonomous'description: 'Fully autonomous AI systems' },
+        { name: 'AI Consciousness'href: '/services?category=ai-consciousness'description: 'Consciousness simulation and interfaces' },
+        { name: 'AI Healthcare'href: '/services?category=ai-healthcare'description: 'Medical AI and diagnostics' },
+        { name: 'AI Education'href: '/services?category=ai-education'description: 'Educational AI systems' },
+        { name: 'AI Legal'href: '/services?category=ai-legal'description: 'Legal AI and compliance' },
+        { name: 'AI Creative'href: '/services?category=ai-creative'description: 'Creative AI and content generation' }
       ]
     },
     {
@@ -139,10 +140,10 @@ const UltraAdvancedNavigation2026 = () => {
       color: 'from-purple-500 to-indigo-500',
       description: 'Quantum computing and space technology',
       subItems: [
-        { name: 'Quantum Space Tech', href: '/services?category=quantum-space', description: 'Space exploration and communication' },
-        { name: 'Quantum Computing', href: '/services?category=quantum-computing', description: 'Advanced quantum systems' },
-        { name: 'Quantum AI', href: '/services?category=quantum-ai', description: 'Quantum-powered AI' },
-        { name: 'Quantum Security', href: '/services?category=quantum-security', description: 'Quantum encryption and security' }
+        { name: 'Quantum Space Tech'href: '/services?category=quantum-space'description: 'Space exploration and communication' },
+        { name: 'Quantum Computing'href: '/services?category=quantum-computing'description: 'Advanced quantum systems' },
+        { name: 'Quantum AI'href: '/services?category=quantum-ai'description: 'Quantum-powered AI' },
+        { name: 'Quantum Security'href: '/services?category=quantum-security'description: 'Quantum encryption and security' }
       ]
     },
     {
@@ -152,10 +153,10 @@ const UltraAdvancedNavigation2026 = () => {
       color: 'from-pink-500 to-rose-500',
       description: 'Virtual worlds and digital reality',
       subItems: [
-        { name: 'Metaverse Platforms', href: '/services?category=metaverse-platforms', description: 'Virtual world platforms' },
-        { name: 'Digital Reality', href: '/services?category=digital-reality', description: 'Immersive experiences' },
-        { name: 'Holographic Tech', href: '/services?category=holographic', description: '3D holographic systems' },
-        { name: 'Consciousness Interface', href: '/services?category=consciousness-interface', description: 'Brain-computer interfaces' }
+        { name: 'Metaverse Platforms'href: '/services?category=metaverse-platforms'description: 'Virtual world platforms' },
+        { name: 'Digital Reality'href: '/services?category=digital-reality'description: 'Immersive experiences' },
+        { name: 'Holographic Tech'href: '/services?category=holographic'description: '3D holographic systems' },
+        { name: 'Consciousness Interface'href: '/services?category=consciousness-interface'description: 'Brain-computer interfaces' }
       ]
     },
     {
@@ -165,10 +166,10 @@ const UltraAdvancedNavigation2026 = () => {
       color: 'from-green-500 to-emerald-500',
       description: 'Enterprise solutions and infrastructure',
       subItems: [
-        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },
-        { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },
-        { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },
-        { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
+        { name: 'Cloud Solutions'href: '/services?category=cloud'description: 'Cloud infrastructure and services' },
+        { name: 'Cybersecurity'href: '/services?category=security'description: 'Advanced security solutions' },
+        { name: 'Data Analytics'href: '/services?category=analytics'description: 'Business intelligence and analytics' },
+        { name: 'DevOps'href: '/services?category=devops'description: 'Development and operations' }
       ]
     }
   ];
@@ -224,9 +225,9 @@ const UltraAdvancedNavigation2026 = () => {
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        initial={{ opacity: 0y: 10scale: 0.95 }}
+                        animate={{ opacity: 1y: 0scale: 1 }}
+                        exit={{ opacity: 0y: 10scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl overflow-hidden"
                       >
@@ -327,7 +328,7 @@ const UltraAdvancedNavigation2026 = () => {
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ duration: 0.3, ease: 'easeOut' }}
+              transition={{ duration: 0.3ease: 'easeOut' }}
               className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-purple-500/20 p-6 overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -364,7 +365,7 @@ const UltraAdvancedNavigation2026 = () => {
                     
                     {/* Mobile Sub-items */}
                     <div className="mt-3 ml-11 space-y-2">
-                      {item.subItems.slice(0, 3).map((subItem) => (
+                      {item.subItems.slice(03).map((subItem) => (
                         <Link
                           key={subItem.name}
                           href={subItem.href}

@@ -1,5 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
+"use client";
+import React{ useEffectuseMemouseState } from 'react';
+import { LineChartBarChartDonutChart } from '../components/salary/InsightCharts';
 
 type InsightResponse = {
   recommendedHourlyUsd: number;
@@ -15,16 +16,16 @@ type InsightResponse = {
 };
 
 export default function SalaryInsightsPage() {
-  const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
-  const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
-  const [region, setRegion] = useState('Remote, Global');
-  const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
-  const [remote, setRemote] = useState(true);
-  const [employmentType, setEmploymentType] = useState<'contract' | 'freelance' | 'full-time'>('contract');
-  const [loading, setLoading] = useState(false);
-  const [data, setData] = useState<InsightResponse | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [roleTitlesetRoleTitle] = useState('Senior AI Engineer');
+  const [skillsetSkills] = useState('OpenAIRAGTypeScript');
+  const [regionsetRegion] = useState('RemoteGlobal');
+  const [experienceLevelsetExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
+  const [remotesetRemote] = useState(true);
+  const [employmentTypesetEmploymentType] = useState<'contract' | 'freelance' | 'full-time'>('contract');
+  const [loadingsetLoading] = useState(false);
+  const [datasetData] = useState<InsightResponse | null>(null);
+  const [errorsetError] = useState<string | null>(null);
+  const [isLoggedInsetIsLoggedIn] = useState(false);
 
   useEffect(() => {
     // Lightweight login check via Supabase client if available; otherwise public mode
@@ -37,13 +38,13 @@ export default function SalaryInsightsPage() {
         setIsLoggedIn(false);
       }
     })();
-  }, []);
+  }[]);
 
   async function fetchInsights() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('/api/salary-insights', {
+      const res = await fetch('/api/salary-insights'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -66,10 +67,10 @@ export default function SalaryInsightsPage() {
   useEffect(() => {
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }[]);
 
   function saveInsight() {
-    const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data };
+    const payload = { createdAt: new Date().toISOString()input: { roleTitleskillsregionexperienceLevelremotemploymentType }output: data };
     (async () => {
       try {
         const { supabase } = await import('../utils/supabase/client');
@@ -89,7 +90,7 @@ export default function SalaryInsightsPage() {
         const key = 'zion.salary-insights.history';
         const history = JSON.parse(localStorage.getItem(key) || '[]');
         history.unshift(payload);
-        localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
+        localStorage.setItem(keyJSON.stringify(history.slice(050)));
         alert('Insight saved locally');
       } catch {}
     })();
@@ -100,13 +101,13 @@ export default function SalaryInsightsPage() {
     const min = data.minHourlyUsd;
     const median = data.medianHourlyUsd;
     const max = data.maxHourlyUsd;
-    const lower = Math.max(0, median - min);
-    const upper = Math.max(0, max - median);
+    const lower = Math.max(0median - min);
+    const upper = Math.max(0max - median);
     return [
-      { label: 'Below Median', value: lower || 1 },
-      { label: 'Median', value: median || 1 },
-      { label: 'Above Median', value: upper || 1 }];
-  }, [data]);
+      { label: 'Below Median'value: lower || 1 },
+      { label: 'Median'value: median || 1 },
+      { label: 'Above Median'value: upper || 1 }];
+  }[data]);
 
   return (
     <div>
@@ -123,13 +124,13 @@ export default function SalaryInsightsPage() {
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h2 className="font-medium mb-3">Filters</h2>
             <label className="block text-sm mb-2">Role title</label>
-            <input value={roleTitle} onChange={(e) => setRoleTitle(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="e.g., Senior AI Engineer" />
+            <input value={roleTitle} onChange={(e) => setRoleTitle(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="e.g.Senior AI Engineer" />
 
             <label className="block text-sm mt-3 mb-2">Skills</label>
             <input value={skills} onChange={(e) => setSkills(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="Comma-separated" />
 
             <label className="block text-sm mt-3 mb-2">Region</label>
-            <input value={region} onChange={(e) => setRegion(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="City, Country" />
+            <input value={region} onChange={(e) => setRegion(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="CityCountry" />
 
             <div className="grid grid-cols-2 gap-3 mt-3">
               <div>
@@ -210,7 +211,7 @@ export default function SalaryInsightsPage() {
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-3">Regional comparison</h3>
               {data ? (
-                <BarChart data={data.regionalComparison.map((r) => ({ label: r.region, value: r.medianHourlyUsd }))} />
+                <BarChart data={data.regionalComparison.map((r) => ({ label: r.regionvalue: r.medianHourlyUsd }))} />
               ) : (
                 <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
               )}
@@ -238,7 +239,7 @@ export default function SalaryInsightsPage() {
               <h3 className="font-medium mb-3">Distribution</h3>
               {data ? (
                 <div className="flex flex-col items-center gap-3">
-                  <DonutChart slices={donutData.map((d, i) => ({ label: d.label, value: d.value })) as any} />
+                  <DonutChart slices={donutData.map((di) => ({ label: d.labelvalue: d.value })) as any} />
                   <div className="flex gap-2 flex-wrap justify-center text-xs">
                     {donutData.map((d) => (
                       <span key={d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5">{d.label}</span>

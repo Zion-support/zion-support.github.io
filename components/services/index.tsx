@@ -1,3 +1,4 @@
+"use client";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -29,11 +30,11 @@ const mapLocalToServiceItem = (item: any): ServiceItem => ({
   rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10});
 
 const ServicesPage: NextPage = () => {
-  const [services, setServices] = React.useState<ServiceItem[]>([]);
-  const [filtered, setFiltered] = React.useState<ServiceItem[]>([]);
-  const [filters, setFilters] = React.useState<Filters>({ categories: [] });
-  const [modalOpen, setModalOpen] = React.useState(false);
-  const [selected, setSelected] = React.useState<ServiceItem | null>(null);
+  const [servicesetServices] = React.useState<ServiceItem[]>([]);
+  const [filteredsetFiltered] = React.useState<ServiceItem[]>([]);
+  const [filtersetFilters] = React.useState<Filters>({ categories: [] });
+  const [modalOpensetModalOpen] = React.useState(false);
+  const [selectedsetSelected] = React.useState<ServiceItem | null>(null);
 
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
@@ -51,10 +52,10 @@ export default function ServicesIndexPage() {
       realServicesQ12025 as any[],
       newVerifiedServicesQ22025 as any[]
     );
-  const byCategory: Record<string, unknown[]> = {};
+  const byCategory: Record<stringunknown[]> = {};
   for (const c of categories) byCategory[c] = [];
   // Normalize various category labels into our main buckets
-  const categoryAliases: Record<string, string> = {
+  const categoryAliases: Record<string> = {
     'AI & Data': 'AI & Data',
     'AI & Machine Learning': 'AI & Data',
     'GenAI': 'AI & Data',
@@ -91,13 +92,13 @@ export default function ServicesIndexPage() {
       return true;
     });
     setFiltered(next);
-  }, [filters, services]);
+  }[filterservices]);
 
   const availableCategories = React.useMemo(() => {
     const set = new Set<string>();
     services.forEach((s) => s.categories.forEach((c) => set.add(c)));
     return Array.from(set);
-  }, [services]);
+  }[services]);
 
   const handleRequestQuote = (service: ServiceItem) => {
     setSelected(service);
@@ -105,13 +106,13 @@ export default function ServicesIndexPage() {
   };
 
   const handleSubmit = async (values: QuoteFormValues) => {
-    const res = await fetch('/api/quote-request', {
+    const res = await fetch('/api/quote-request'{
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         service: values.serviceTitle,
         description: values.projectDescription,
-        timeline: { start: values.timelineStart, end: values.timelineEnd },
+        timeline: { start: values.timelineStartend: values.timelineEnd },
         budgetRange: values.budgetRange,
         email: values.email})});
     if (!res.ok) {

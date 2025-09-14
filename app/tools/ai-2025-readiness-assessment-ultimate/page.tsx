@@ -1,10 +1,11 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../../components/ui/card';
-import { Button } from '../../../components/ui/button';
-import { Badge } from '../../../components/ui/badge';
-import { CheckCircle, XCircle, AlertCircle, TrendingUp, Target, Zap } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
+import { Badge } from '@/components/ui/badge';
+import { CheckCircle, XCircle, AlertCircle, TrendingUp, Zap, ArrowRight } from 'lucide-react';
 
 interface AssessmentQuestion {
   id: string;
@@ -323,7 +324,7 @@ export default function AI2025ReadinessAssessment() {
       case 'Medium': return <AlertCircle className="w-5 h-5" />;
       case 'High': return <TrendingUp className="w-5 h-5" />;
       case 'Critical': return <XCircle className="w-5 h-5" />;
-      default: return <Target className="w-5 h-5" />;
+      default: return <ArrowRight className="w-5 h-5" />;
     }
   };
 
@@ -356,12 +357,7 @@ export default function AI2025ReadinessAssessment() {
                 <div className={`text-6xl font-bold mb-4 ${getScoreColor(result.overallScore)}`}>
                   {result.overallScore}%
                 </div>
-                <div className="w-full bg-gray-200 rounded-full h-4 mb-4">
-                  <div 
-                    className="bg-gradient-to-r from-blue-500 to-purple-600 h-4 rounded-full transition-all duration-500" 
-                    style={{width: `${result.overallScore}%`}}
-                  ></div>
-                </div>
+                <Progress value={result.overallScore} className="h-4 mb-4" />
                 <p className="text-gray-600">
                   {result.overallScore >= 80 
                     ? "Excellent! You're well-prepared for AI transformation."
@@ -392,12 +388,7 @@ export default function AI2025ReadinessAssessment() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="w-full bg-gray-200 rounded-full h-3">
-                    <div 
-                      className="bg-gradient-to-r from-green-400 to-blue-500 h-3 rounded-full transition-all duration-300" 
-                      style={{width: `${score}%`}}
-                    ></div>
-                  </div>
+                  <Progress value={score} className="h-3" />
                 </CardContent>
               </Card>
             ))}
@@ -427,7 +418,7 @@ export default function AI2025ReadinessAssessment() {
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Target className="w-6 h-6" />
+                <ArrowRight className="w-6 h-6" />
                 Recommended Next Steps
               </CardTitle>
             </CardHeader>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Settings, ChevronRight, Star, Clock, DollarSign, Target, Zap } from 'lucide-react';
+SettingsChevronRightStarClockDollarSignTargetZap
 
 const BusinessAutomationMastery2026PromotionBanner = () => {
   return (
@@ -25,7 +25,7 @@ const BusinessAutomationMastery2026PromotionBanner = () => {
             </h2>
             
             <p className="text-lg text-gray-300 mb-6 max-w-2xl">
-              Unlock the full potential of business automation in 2026. Learn advanced strategies, tools, and implementation techniques that drive unprecedented efficiency and growth.
+              Unlock the full potential of business automation in 2026. Learn advanced strategiestoolsand implementation techniques that drive unprecedented efficiency and growth.
             </p>
 
             {/* Key Benefits */}

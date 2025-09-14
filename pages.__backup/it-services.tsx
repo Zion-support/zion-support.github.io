@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { Cloud, Cpu, Server, Database, Settings, Shield, Phone, Mail, MapPin, Check } from 'lucide-react';
+CloudCpuServerDatabaseSettingsShieldPhoneMailMapPinCheck
 import Layout from '../components/layout/Layout';
 
 import ServiceAds from '../components/sections/ServiceAds';
@@ -14,50 +14,50 @@ export default function ITServicesPage() {
   };
 
   const offerings = [
-    { icon: <Cloud className="w-6 h-6 text-cyan-400" />, title: 'Cloud Platform Engineering', desc: 'Landing zones, multi-account architectures, and secure-by-default foundations on AWS, Azure, and GCP.' },
-    { icon: <Cpu className="w-6 h-6 text-purple-400" />, title: 'DevOps & Platform Ops', desc: 'CI/CD, IaC (Terraform/Pulumi), GitOps (ArgoCD/Flux), golden images, internal platforms.' },
-    { icon: <Server className="w-6 h-6 text-amber-400" />, title: 'SRE & Reliability', desc: 'SLOs/SLIs, error budgets, incident response, chaos testing, capacity planning and autoscaling.' },
-    { icon: <Database className="w-6 h-6 text-emerald-400" />, title: 'Data & Observability', desc: 'ELK/Opensearch, Prometheus/Grafana, OpenTelemetry, cost-aware logging and tracing.' },
-    { icon: <Settings className="w-6 h-6 text-rose-400" />, title: 'FinOps & Cost Optimization', desc: 'Rightsizing, savings plans, K8s bin-packing, storage lifecycle, multi-cloud egress control.' },
-    { icon: <Shield className="w-6 h-6 text-blue-400" />, title: 'Governance & Compliance', desc: 'SOC 2, ISO 27001, HIPAA baselines, policy-as-code with OPA/Conftest and drift detection.' },
+    { icon: <Cloud className="w-6 h-6 text-cyan-400" />title: 'Cloud Platform Engineering'desc: 'Landing zonesmulti-account architecturesand secure-by-default foundations on AWSAzureand GCP.' },
+    { icon: <Cpu className="w-6 h-6 text-purple-400" />title: 'DevOps & Platform Ops'desc: 'CI/CDIaC (Terraform/Pulumi)GitOps (ArgoCD/Flux)golden imagesinternal platforms.' },
+    { icon: <Server className="w-6 h-6 text-amber-400" />title: 'SRE & Reliability'desc: 'SLOs/SLIserror budgetsincident responsechaos testingcapacity planning and autoscaling.' },
+    { icon: <Database className="w-6 h-6 text-emerald-400" />title: 'Data & Observability'desc: 'ELK/OpensearchPrometheus/GrafanaOpenTelemetrycost-aware logging and tracing.' },
+    { icon: <Settings className="w-6 h-6 text-rose-400" />title: 'FinOps & Cost Optimization'desc: 'Rightsizingsavings plansK8s bin-packingstorage lifecyclemulti-cloud egress control.' },
+    { icon: <Shield className="w-6 h-6 text-blue-400" />title: 'Governance & Compliance'desc: 'SOC 2ISO 27001HIPAA baselinespolicy-as-code with OPA/Conftest and drift detection.' },
   ];
 
   const packages = [
-    { name: 'Kickstart', price: '$4,900 fixed', items: ['Cloud baseline review', 'CI/CD quickstart', 'Observability lite', 'Cost 30-day plan'] },
-    { name: 'Scale', price: '$9,900 fixed', items: ['Secure landing zone', 'GitOps platform', 'SLOs + alerts', 'FinOps automation'] },
-    { name: 'Managed', price: 'From $2,000/month', items: ['Ops on-call 24/7', 'Release & env mgmt', 'Weekly tune-ups', 'Monthly executive report'] },
+    { name: 'Kickstart'price: '$4,900 fixed'items: ['Cloud baseline review'CI/CD quickstart'Observability lite'Cost 30-day plan'] },
+    { name: 'Scale'price: '$9,900 fixed'items: ['Secure landing zone'GitOps platform'SLOs + alerts'FinOps automation'] },
+    { name: 'Managed'price: 'From $2,000/month'items: ['Ops on-call 24/7'Release & env mgmt'Weekly tune-ups'Monthly executive report'] },
   ];
 
   const featuredITAds = [
     {
       title: '💸 Cloud Cost Optimizer Pro',
-      description: 'Rightsizing, storage lifecycle, anomaly detection and K8s bin-packing insights.',
+      description: 'Rightsizingstorage lifecycleanomaly detection and K8s bin-packing insights.',
       price: 'Starting at $99/month',
-      features: ['Rightsizing & schedules', 'Lifecycle policies', 'Anomaly alerts', 'IaC outputs'],
+      features: ['Rightsizing & schedules'Lifecycle policies'Anomaly alerts'IaC outputs'],
       link: 'https://ziontechgroup.com/cloud-cost-optimizer',
       contactInfo
     },
     {
       title: '🗄️ Database Performance Monitor',
-      description: 'Slow query capture, AI index suggestions, capacity forecasting for Postgres/MySQL.',
+      description: 'Slow query captureAI index suggestionscapacity forecasting for Postgres/MySQL.',
       price: 'Starting at $79/month',
-      features: ['Slow query ranking', 'AI index advice', 'Pool tuning', 'SLA/SLO dashboards'],
+      features: ['Slow query ranking'AI index advice'Pool tuning'SLA/SLO dashboards'],
       link: 'https://ziontechgroup.com/database-performance-monitor',
       contactInfo
     },
     {
       title: '🔐 API Security Scanner',
-      description: 'Automated OpenAPI/GraphQL scanning, auth/Z checks, and dependency audit.',
+      description: 'Automated OpenAPI/GraphQL scanningauth/Z checksand dependency audit.',
       price: 'Starting at $59/month',
-      features: ['Auth/Z misconfig checks', 'OWASP top-10 tests', 'CI gate', 'Fix guidance'],
+      features: ['Auth/Z misconfig checks'OWASP top-10 tests'CI gate'Fix guidance'],
       link: 'https://ziontechgroup.com/api-security-scanner',
       contactInfo
     },
     {
       title: '📈 API Observability & SLA Guard',
-      description: 'OpenTelemetry-based tracing, error budgets, and SLO enforcement for services.',
+      description: 'OpenTelemetry-based tracingerror budgetsand SLO enforcement for services.',
       price: 'Starting at $69/month',
-      features: ['OTel traces/metrics/logs', 'SLOs & error budgets', 'Alerting', 'Dashboards'],
+      features: ['OTel traces/metrics/logs'SLOs & error budgets'Alerting'Dashboards'],
       link: 'https://ziontechgroup.com/api-observability',
       contactInfo
     }
@@ -67,7 +67,7 @@ export default function ITServicesPage() {
     <Layout>
       <Head>
         <title>IT Services | Zion Tech Group</title>
-        <meta name="description" content="Cloud engineering, DevOps, SRE, FinOps, and governance delivered with measurable outcomes and transparent pricing." />
+        <meta name="description" content="Cloud engineeringDevOpsSREFinOpsand governance delivered with measurable outcomes and transparent pricing." />
         <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Head>
 
@@ -75,7 +75,7 @@ export default function ITServicesPage() {
         <ServiceAds heading="Featured IT Services" subheading="Production-grade solutions with clear pricing." items={featuredITAds} />
         <div className="text-center max-w-4xl mx-auto mb-12">
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Modern IT Services</h1>
-          <p className="text-xl text-gray-300">Outcome-driven cloud, platform, and reliability engineering to accelerate delivery and reduce costs.</p>
+          <p className="text-xl text-gray-300">Outcome-driven cloudplatformand reliability engineering to accelerate delivery and reduce costs.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">

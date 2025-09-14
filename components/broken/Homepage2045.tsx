@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Layout from './layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
-  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
+  ArrowRightPlayStarUsersAwardTrendingUpBrainShieldRocket
+  Loader2ChevronDownZapGlobeLockCpuDatabaseCloudPaletteHeart,
+  PhoneMailMapPinSearchGridListAtomTargetSparkles
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -18,8 +19,8 @@ import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
     <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0scale: 0.5 }}
+      animate={{ opacity: 1scale: 1 }}
       transition={{ duration: 0.5 }}
       className="text-center"
     >
@@ -34,19 +35,19 @@ const LoadingFallback = () => (
 );
 
 const Homepage2045: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
+  const [isLoadingsetIsLoading] = useState(true);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [activeSectionsetActiveSection] = useState('hero');
 
   useEffect(() => {
     // Simulate content loading with better timing
     const timer = setTimeout(() => {
       setIsLoading(false);
       setIsVisible(true);
-    }, 800);
+    }800);
 
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   // Intersection Observer for better performance
   useEffect(() => {
@@ -59,7 +60,7 @@ const Homepage2045: React.FC = () => {
             }
           });
         },
-        { threshold: 0.3, rootMargin: '-100px' }
+        { threshold: 0.3rootMargin: '-100px' }
       );
 
       const sections = document.querySelectorAll('section[id]');
@@ -67,12 +68,12 @@ const Homepage2045: React.FC = () => {
 
       return () => observer.disconnect();
     }
-  }, []);
+  }[]);
 
   const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" }
+    initial: { opacity: 0y: 60 },
+    animate: { opacity: 1y: 0 },
+    transition: { duration: 0.6ease: "easeOut" }
   };
 
   const staggerContainer = {
@@ -85,9 +86,9 @@ const Homepage2045: React.FC = () => {
   };
 
   const backgroundVariants = {
-    initial: { opacity: 0, scale: 0.8 },
-    animate: { opacity: 1, scale: 1 },
-    transition: { duration: 1.2, ease: "easeOut" }
+    initial: { opacity: 0scale: 0.8 },
+    animate: { opacity: 1scale: 1 },
+    transition: { duration: 1.2ease: "easeOut" }
   };
 
   const getColorClasses = (index: number) => {
@@ -123,9 +124,9 @@ const Homepage2045: React.FC = () => {
             <motion.div
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
               animate={{
-                rotate: [0, 360],
-                scale: [1, 1.1, 1],
-                opacity: [0.3, 0.6, 0.3]}}
+                rotate: [0360],
+                scale: [1.1],
+                opacity: [0.30.60.3]}}
               transition={{
                 duration: 8,
                 repeat: Infinity,
@@ -135,9 +136,9 @@ const Homepage2045: React.FC = () => {
             <motion.div
               className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
               animate={{
-                rotate: [360, 0],
-                scale: [1, 1.2, 1],
-                opacity: [0.3, 0.7, 0.3]}}
+                rotate: [360],
+                scale: [1.21],
+                opacity: [0.30.70.3]}}
               transition={{
                 duration: 6,
                 repeat: Infinity,
@@ -147,9 +148,9 @@ const Homepage2045: React.FC = () => {
             <motion.div
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
               animate={{
-                rotate: [45, 405],
-                scale: [1, 1.15, 1],
-                opacity: [0.3, 0.5, 0.3]}}
+                rotate: [45405],
+                scale: [1.151],
+                opacity: [0.30.50.3]}}
               transition={{
                 duration: 10,
                 repeat: Infinity,
@@ -161,15 +162,15 @@ const Homepage2045: React.FC = () => {
           {/* Hero Content */}
           <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: 0.2 }}
                 className="text-5xl md:text-7xl font-bold mb-6"
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -177,20 +178,20 @@ const Homepage2045: React.FC = () => {
                 </span>
               </motion.h1>
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: 0.4 }}
                 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
               >
-                Transform your business with Zion Tech Group's revolutionary AI services, quantum computing, and cutting-edge emerging technologies. Leading the future of technology innovation.
+                Transform your business with Zion Tech Group's revolutionary AI servicesquantum computingand cutting-edge emerging technologies. Leading the future of technology innovation.
               </motion.p>
             </motion.div>
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <Link
@@ -209,9 +210,9 @@ const Homepage2045: React.FC = () => {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.8 }}
               className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
             >
               <div className="text-center">
@@ -234,8 +235,8 @@ const Homepage2045: React.FC = () => {
         <section id="featured-services" className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -295,12 +296,12 @@ const Homepage2045: React.FC = () => {
                   color: "from-yellow-400 to-orange-500",
                   href: "/emerging-tech"
                 }
-              ].map((service, index) => (
+              ].map((serviceindex) => (
                 <motion.div
                   key={service.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group"
                 >
@@ -327,8 +328,8 @@ const Homepage2045: React.FC = () => {
         <section id="latest-innovations" className="py-20 relative bg-gray-900/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -345,12 +346,12 @@ const Homepage2045: React.FC = () => {
 
             {/* Featured New Services */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {revolutionary2043AdvancedServices.slice(0, 4).map((service, index) => (
+              {revolutionary2043AdvancedServices.slice(04).map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0x: index % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group"
                 >
@@ -383,8 +384,8 @@ const Homepage2045: React.FC = () => {
 
             {/* View All Services CTA */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mt-12"
@@ -404,8 +405,8 @@ const Homepage2045: React.FC = () => {
         <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

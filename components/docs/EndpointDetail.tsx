@@ -30,8 +30,8 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
         <div>
           <div className="font-medium mb-2">Rate Limits</div>
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
-            {endpoint.rateLimits.map((r, idx) => (
-              <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
+            {endpoint.rateLimits.map((ridx) => (
+              <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `burst ${r.burst}` : ''}</li>
             ))}
           </ul>
         </div>

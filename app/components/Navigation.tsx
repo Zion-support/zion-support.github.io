@@ -1,9 +1,24 @@
+'use client';
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'AI 2025', href: '/ai-2025', featured: true },
+    { name: 'AI 2026', href: '/ai-2026', featured: true },
+    { name: 'Services', href: '/services' },
+    { name: 'Analytics', href: '/analytics', new: true },
+    { name: 'Automation', href: '/automation', new: true },
+    { name: 'Neural Networks', href: '/neural-networks', new: true },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Resources', href: '/resources' },
+    { name: 'Contact', href: '/contact' },
+  ];
   return (
     <nav className="bg-white shadow-lg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,27 +32,28 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-purple-600 font-medium">
-              Home
-            </Link>
-            <Link href="/services" className="text-gray-700 hover:text-purple-600 font-medium">
-              Services
-            </Link>
-            <Link href="/blog" className="text-gray-700 hover:text-purple-600 font-medium">
-              Blog
-            </Link>
-            <Link href="/case-studies" className="text-gray-700 hover:text-purple-600 font-medium">
-              Case Studies
-            </Link>
-            <Link href="/resources" className="text-gray-700 hover:text-purple-600 font-medium">
-              Resources
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-purple-600 font-medium">
-              Contact
-            </Link>
-            <Link 
-              href="/contact" 
-              className="bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors relative"
+              >
+                {item.name}
+                {item.featured && (
+                  <span className="absolute -top-1 -right-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full">
+                    Featured
+                  </span>
+                )}
+                {item.new && (
+                  <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
+                    New
+                  </span>
+                )}
+              </Link>
+            ))}
+            <Link
+              href="/contact"
+              className="bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
             >
               Get Started
             </Link>
@@ -64,27 +80,30 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
-              <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">
-                Home
-              </Link>
-              <Link href="/services" className="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">
-                Services
-              </Link>
-              <Link href="/blog" className="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">
-                Blog
-              </Link>
-              <Link href="/case-studies" className="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">
-                Case Studies
-              </Link>
-              <Link href="/resources" className="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">
-                Resources
-              </Link>
-              <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium">
-                Contact
-              </Link>
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 font-medium"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                  {item.featured && (
+                    <span className="ml-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full">
+                      Featured
+                    </span>
+                  )}
+                  {item.new && (
+                    <span className="ml-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
+                      New
+                    </span>
+                  )}
+                </Link>
+              ))}
               <Link 
                 href="/contact" 
                 className="block px-3 py-2 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center"
+                onClick={() => setIsOpen(false)}
               >
                 Get Started
               </Link>

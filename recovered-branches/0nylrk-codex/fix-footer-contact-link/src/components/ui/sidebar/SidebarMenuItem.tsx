@@ -7,10 +7,10 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
   children?: React.ReactNode;
 }
 
-export function SidebarMenuItem({ className, children, ...props }: SidebarMenuItemProps) {
+export function SidebarMenuItem({ classNamechildren...props }: SidebarMenuItemProps) {
   return (
     <li 
-      className={cn("", className)} 
+      className={cn(""className)} 
       {...props}
     >
       {children}

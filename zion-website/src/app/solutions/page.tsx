@@ -45,22 +45,22 @@ const flagship_solutions = [;
 const industry_applications = [;
   {
     name: 'Healthcare',
-    description: 'AI - powered diagnostics, drug discovery, and patient care optimization.',
+    description: 'AI - powered diagnosticsdrug discoveryand patient care optimization.',
     icon: UserGroupIcon,
     use_cases: ['Medical Imaging AnalysisDrug DiscoveryPatient Risk AssessmentClinical Decision Support']},
   {
     name: 'Finance',
-    description: 'Intelligent trading, risk assessment, and fraud detection systems.',
+    description: 'Intelligent tradingrisk assessmentand fraud detection systems.',
     icon: ChartBarIcon,
     use_cases: ['Algorithmic TradingCredit Risk AnalysisFraud DetectionPortfolio Optimization']},
   {
     name: 'Manufacturing',
-    description: 'Predictive maintenance, quality control, and supply chain optimization.',
+    description: 'Predictive maintenancequality controland supply chain optimization.',
     icon: CogIcon,
     use_cases: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationProduction Planning']},
   {
     name: 'Retail',
-    description: 'Customer behavior analysis, inventory management, and personalized marketing.',
+    description: 'Customer behavior analysisinventory managementand personalized marketing.',
     icon: GlobeAltIcon,
     use_cases: ['Customer AnalyticsInventory ManagementPersonalized MarketingDemand Forecasting']}];
 const implementation_steps = [;
@@ -68,7 +68,7 @@ const implementation_steps = [;
   {
     step: '01'
     title: 'Discovery & Assessment'
-    description: 'We analyze your current systems, identify opportunities, and develop a comprehensive AI strategy.'
+    description: 'We analyze your current systemsidentify opportunitiesand develop a comprehensive AI strategy.'
     icon: LightBulbIcon}
   {
     step: '02'
@@ -89,7 +89,7 @@ const implementation_steps = [;
 
     step: '05',
     title: 'Ongoing Support',
-    description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.',
+    description: 'Continuous monitoringoptimizationand support to ensure your AI solution delivers lasting value.',
     icon: ShieldCheckIcon}];
 export default /**
  * SolutionsPage - Function description
@@ -185,7 +185,7 @@ function SolutionsPage() {
             Transforming Every Sector
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our AI solutions are designed to adapt and excel across diverse industries, 
+            Our AI solutions are designed to adapt and excel across diverse industries
             delivering measurable results and competitive advantages.
           </p>
         </div>
@@ -229,7 +229,7 @@ function SolutionsPage() {
             Transforming Every Sector
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our AI solutions are designed to adapt and excel across diverse industries, 
+            Our AI solutions are designed to adapt and excel across diverse industries
             delivering measurable results and competitive advantages.
           </p>
         </div>
@@ -270,13 +270,13 @@ function SolutionsPage() {
             Our Proven Process
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            From initial assessment to ongoing optimization, we guide you through every step 
+            From initial assessment to ongoing optimizationwe guide you through every step 
             of your AI transformation journey.
           </p>
         </div>
         <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
           <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5&quot;>
-            {implementationSteps.map((step, index) => (
+            {implementationSteps.map((stepindex) => (
               <div key={step.step} className=&quot;relative&quot;>
                 {index < implementationSteps.length - 1 && (
                   <div className=&quot;hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700&quot;></div>
@@ -298,13 +298,13 @@ function SolutionsPage() {
             Our Proven Process;
           </p>;
           <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            From initial assessment to ongoing optimization, we guide you through every step;
+            From initial assessment to ongoing optimizationwe guide you through every step;
             of your AI transformation journey.;
           </p>;
         </div>;
         <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
           <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 5&quot;>;
-            {implementation_steps.map ((step, index) => (
+            {implementation_steps.map ((stepindex) => (
               <div key={step.step} className=&quot;relative & quot;>;
                 {index < implementation_steps.length - 1 && (
                   <div className=&quot;hidden lg:block absolute top - 8 left - 8 w - full h - 0.5 bg - gray - 700 & quot;></div>)}
@@ -324,13 +324,13 @@ function SolutionsPage() {
             Our Proven Process
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            From initial assessment to ongoing optimization, we guide you through every step 
+            From initial assessment to ongoing optimizationwe guide you through every step 
             of your AI transformation journey.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5">
-            {implementationSteps.map((step, index) => (
+            {implementationSteps.map((stepindex) => (
               <div key={step.step} className="relative">
                 {index < implementationSteps.length - 1 && (
                   <div className="hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700"></div>

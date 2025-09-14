@@ -7,7 +7,7 @@ type Props = {
   onReport?: (id: string) => void;
 };
 
-const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
+const ReviewCard: React.FC<Props> = ({ reviewonReport }) => {
   return (
     <div className="enhanced-card hover:shadow-lg transition-shadow">
       <div className="flex items-center justify-between mb-2">

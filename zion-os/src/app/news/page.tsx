@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "News & Insights - Zion Tech Group | Latest Technology Updates",
-  description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.",
-  keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group",
+  description: "Stay updated with the latest newsinsightsand thought leadership from Zion Tech Group. Discover industry trendscompany updatesand technology innovations.",
+  keywords: "newsinsightstechnology updatesAI newsquantum computingcybersecurityZion Tech Group",
 };
 
 export default function NewsPage() {
@@ -16,7 +16,7 @@ export default function NewsPage() {
             <span className="gradient-text">News & Insights</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Stay ahead with the latest technology trends, company updates, and industry insights 
+            Stay ahead with the latest technology trendscompany updatesand industry insights 
             from Zion Tech Group
           </p>
         </div>
@@ -32,14 +32,14 @@ export default function NewsPage() {
                   <span className="bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full mr-3">
                     FEATURED
                   </span>
-                  <span className="text-gray-400 text-sm">December 15, 2024</span>
+                  <span className="text-gray-400 text-sm">December 152024</span>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                   Zion Tech Group Launches Revolutionary AI-Powered Business Intelligence Platform
                 </h2>
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">
                   Our new AI platform transforms how businesses analyze data and make decisions. 
-                  Using advanced machine learning algorithms, it provides real-time insights and 
+                  Using advanced machine learning algorithmsit provides real-time insights and 
                   predictive analytics that drive strategic growth.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -143,7 +143,7 @@ export default function NewsPage() {
                 <span className="bg-purple-500/20 text-purple-400 text-xs font-bold px-2 py-1 rounded-full mr-3">
                   QUANTUM
                 </span>
-                <span className="text-gray-400 text-sm">December 12, 2024</span>
+                <span className="text-gray-400 text-sm">December 12024</span>
               </div>
               <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
                 Quantum Computing Breakthrough: New Algorithm Reduces Error Rates by 60%
@@ -168,7 +168,7 @@ export default function NewsPage() {
                 <span className="bg-green-500/20 text-green-400 text-xs font-bold px-2 py-1 rounded-full mr-3">
                   SECURITY
                 </span>
-                <span className="text-gray-400 text-sm">December 10, 2024</span>
+                <span className="text-gray-400 text-sm">December 102024</span>
               </div>
               <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
                 New Cybersecurity Framework Addresses AI-Powered Threats
@@ -193,14 +193,14 @@ export default function NewsPage() {
                 <span className="bg-red-500/20 text-red-400 text-xs font-bold px-2 py-1 rounded-full mr-3">
                   COMPANY
                 </span>
-                <span className="text-gray-400 text-sm">December 8, 2024</span>
+                <span className="text-gray-400 text-sm">December 82024</span>
               </div>
               <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
                 Zion Tech Group Expands to European Market
               </h3>
               <p className="text-gray-400 mb-4 leading-relaxed">
                 We're excited to announce our expansion into the European market with new 
-                offices in London, Berlin, and Paris to better serve our international clients.
+                offices in LondonBerlinand Paris to better serve our international clients.
               </p>
               <Link href="/news/european-market-expansion" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
                 Read More →
@@ -218,7 +218,7 @@ export default function NewsPage() {
                 <span className="bg-blue-500/20 text-blue-400 text-xs font-bold px-2 py-1 rounded-full mr-3">
                   SPACE TECH
                 </span>
-                <span className="text-gray-400 text-sm">December 5, 2024</span>
+                <span className="text-gray-400 text-sm">December 52024</span>
               </div>
               <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
                 Satellite Communication Technology Advances
@@ -243,14 +243,14 @@ export default function NewsPage() {
                 <span className="bg-indigo-500/20 text-indigo-400 text-xs font-bold px-2 py-1 rounded-full mr-3">
                   AI
                 </span>
-                <span className="text-gray-400 text-sm">December 3, 2024</span>
+                <span className="text-gray-400 text-sm">December 32024</span>
               </div>
               <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
                 AI Content Generation: Balancing Creativity and Ethics
               </h3>
               <p className="text-gray-400 mb-4 leading-relaxed">
                 Our AI ethics team explores the challenges and opportunities in AI-generated 
-                content, ensuring responsible development and deployment.
+                contentensuring responsible development and deployment.
               </p>
               <Link href="/news/ai-content-generation-ethics" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
                 Read More →
@@ -268,13 +268,13 @@ export default function NewsPage() {
                 <span className="bg-yellow-500/20 text-yellow-400 text-xs font-bold px-2 py-1 rounded-full mr-3">
                   RESEARCH
                 </span>
-                <span className="text-gray-400 text-sm">November 30, 2024</span>
+                <span className="text-gray-400 text-sm">November 302024</span>
               </div>
               <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
                 Research Partnership with Leading Universities
               </h3>
               <p className="text-gray-400 mb-4 leading-relaxed">
-                Zion Tech Group announces strategic research partnerships with MIT, Stanford, 
+                Zion Tech Group announces strategic research partnerships with MITStanford
                 and Cambridge to advance AI and quantum computing technologies.
               </p>
               <Link href="/news/university-research-partnerships" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
@@ -293,7 +293,7 @@ export default function NewsPage() {
               Stay Updated
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Subscribe to our newsletter for the latest news, insights, and technology updates
+              Subscribe to our newsletter for the latest newsinsightsand technology updates
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input

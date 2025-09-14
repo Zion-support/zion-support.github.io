@@ -1,17 +1,17 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Zap, 
-  Gauge, 
-  Clock, 
-  Database, 
-  Network, 
-  Cpu, 
-  HardDrive, 
-  Wifi, 
-  Shield, 
+  Zap
+  Gauge
+  Clock
+  Database
+  Network
+  Cpu
+  HardDrive
+  Wifi
+  Shield
   TrendingUp,
   CheckCircle,
   AlertTriangle,
@@ -32,10 +32,10 @@ import {
 } from 'lucide-react';
 
 const PerformanceOptimization2029 = () => {
-  const [activeMetric, setActiveMetric] = useState('speed');
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationProgress, setOptimizationProgress] = useState(0);
-  const [currentTest, setCurrentTest] = useState(0);
+  const [activeMetricsetActiveMetric] = useState('speed');
+  const [isOptimizingsetIsOptimizing] = useState(false);
+  const [optimizationProgressetOptimizationProgress] = useState(0);
+  const [currentTestsetCurrentTest] = useState(0);
 
   const metrics = {
     speed: {
@@ -179,10 +179,10 @@ const PerformanceOptimization2029 = () => {
   ];
 
   const realTimeMetrics = [
-    { label: 'Active Users', value: '2.3M', change: '+12%', trend: 'up' },
-    { label: 'Response Time', value: '45ms', change: '-23%', trend: 'down' },
-    { label: 'Uptime', value: '99.98%', change: '+0.1%', trend: 'up' },
-    { label: 'Error Rate', value: '0.02%', change: '-45%', trend: 'down' }
+    { label: 'Active Users'value: '2.3M'change: '+12%'trend: 'up' },
+    { label: 'Response Time'value: '45ms'change: '-23%'trend: 'down' },
+    { label: 'Uptime'value: '99.98%'change: '+0.1%'trend: 'up' },
+    { label: 'Error Rate'value: '0.02%'change: '-45%'trend: 'down' }
   ];
 
   useEffect(() => {
@@ -195,17 +195,17 @@ const PerformanceOptimization2029 = () => {
           }
           return prev + 2;
         });
-      }, 100);
+      }100);
       return () => clearInterval(interval);
     }
-  }, [isOptimizing]);
+  }[isOptimizing]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTest(prev => (prev + 1) % performanceTests.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const startOptimization = () => {
     setIsOptimizing(true);
@@ -219,15 +219,15 @@ const PerformanceOptimization2029 = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="flex items-center justify-center gap-3 mb-6">
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 3repeat: Infinityease: "linear" }}
                 className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center"
               >
                 <Rocket className="w-6 h-6 text-white" />
@@ -241,7 +241,7 @@ const PerformanceOptimization2029 = () => {
               Lightning-Fast Performance
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience the fastest, most efficient, and most reliable web applications 
+              Experience the fastestmost efficientand most reliable web applications 
               powered by cutting-edge optimization technologies.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -286,12 +286,12 @@ const PerformanceOptimization2029 = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {realTimeMetrics.map((metric, index) => (
+            {realTimeMetrics.map((metricindex) => (
               <motion.div
                 key={metric.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 text-center"
               >
                 <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
@@ -318,7 +318,7 @@ const PerformanceOptimization2029 = () => {
 
           {/* Metric Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {Object.entries(metrics).map(([key, metric]) => (
+            {Object.entries(metrics).map(([keymetric]) => (
               <motion.button
                 key={key}
                 whileHover={{ scale: 1.05 }}
@@ -340,9 +340,9 @@ const PerformanceOptimization2029 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeMetric}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              exit={{ opacity: 0y: -20 }}
               transition={{ duration: 0.5 }}
               className="space-y-8"
             >
@@ -404,12 +404,12 @@ const PerformanceOptimization2029 = () => {
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8">
                 <h4 className="text-2xl font-bold mb-6">Optimization Strategies</h4>
                 <div className="grid md:grid-cols-2 gap-4">
-                  {metrics[activeMetric].improvements.map((improvement, index) => (
+                  {metrics[activeMetric].improvements.map((improvementindex) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      initial={{ opacity: 0x: -20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      transition={{ duration: 0.5delay: index * 0.1 }}
                       className="flex items-center gap-3 p-4 bg-gray-700/50 rounded-lg"
                     >
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -435,9 +435,9 @@ const PerformanceOptimization2029 = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentTest}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0x: 50 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: -50 }}
                 transition={{ duration: 0.5 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto"
               >
@@ -489,7 +489,7 @@ const PerformanceOptimization2029 = () => {
 
             {/* Test Navigation */}
             <div className="flex justify-center mt-8 space-x-2">
-              {performanceTests.map((_, index) => (
+              {performanceTests.map((_index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentTest(index)}
@@ -512,12 +512,12 @@ const PerformanceOptimization2029 = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {optimizationFeatures.map((feature, index) => (
+            {optimizationFeatures.map((featureindex) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 hover:bg-gray-800/70 transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">

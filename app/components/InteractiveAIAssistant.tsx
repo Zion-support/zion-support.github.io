@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MessageCircle, Send, Bot, User, Loader, 
   X, Minimize2, Maximize2, HelpCircle,
-  Lightbulb, Target, Zap, BookOpen, TrendingUp
+  Lightbulb, Zap, BookOpen, TrendingUp
 } from 'lucide-react';
 
 interface Message {
@@ -94,7 +94,7 @@ const InteractiveAIAssistant: React.FC = () => {
   };
 
   const quickActions = [
-    { icon: <Target className="w-4 h-4" />, label: "AI Strategy", action: "Help me develop an AI strategy" },
+    { icon: <ArrowRight className="w-4 h-4" />, label: "AI Strategy", action: "Help me develop an AI strategy" },
     { icon: <TrendingUp className="w-4 h-4" />, label: "ROI Analysis", action: "Calculate AI ROI for my business" },
     { icon: <BookOpen className="w-4 h-4" />, label: "Implementation", action: "Guide me through AI implementation" },
     { icon: <Zap className="w-4 h-4" />, label: "Optimization", action: "Optimize my current AI systems" }

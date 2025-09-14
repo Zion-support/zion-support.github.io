@@ -10,7 +10,7 @@ export function ApiGettingStarted() {
 
   const quickStartJs = `import axios from 'axios';
 
-const response = await axios.get('https://api.zionai.com/v1/jobs', {
+const response = await axios.get('https://api.zionai.com/v1/jobs'{
   headers: {
     Authorization: \`Bearer \${API_KEY}\`
   }
@@ -25,8 +25,8 @@ console.log(response.data);`;
         
         <h2>Overview</h2>
         <p>
-          The Zion AI Marketplace API provides programmatic access to jobs, talent profiles, 
-          quotes, and projects. Our RESTful API lets you integrate Zion's features into your 
+          The Zion AI Marketplace API provides programmatic access to jobstalent profiles
+          quotesand projects. Our RESTful API lets you integrate Zion's features into your 
           own applications and workflows.
         </p>
 

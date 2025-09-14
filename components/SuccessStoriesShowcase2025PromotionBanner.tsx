@@ -1,12 +1,13 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Award, 
-  TrendingUp, 
-  DollarSign, 
-  Users, 
+  Award
+  TrendingUp
+  DollarSign
+  Users
   ArrowRight,
   X,
   CheckCircle,
@@ -15,30 +16,30 @@ import {
 } from 'lucide-react';
 
 const SuccessStoriesShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentStat, setCurrentStat] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentStatsetCurrentStat] = useState(0);
 
   const stats = [
-    { value: "500+", label: "Companies Transformed", icon: Users },
-    { value: "$50M+", label: "Total Savings", icon: DollarSign },
-    { value: "95%", label: "Efficiency Gain", icon: TrendingUp },
-    { value: "99%", label: "Satisfaction Rate", icon: Star }
+    { value: "500+"label: "Companies Transformed"icon: Users },
+    { value: "$50M+"label: "Total Savings"icon: DollarSign },
+    { value: "95%"label: "Efficiency Gain"icon: TrendingUp },
+    { value: "99%"label: "Satisfaction Rate"icon: Star }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentStat((prev) => (prev + 1) % stats.length);
-    }, 2500);
+    }2500);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -50 }}
+      initial={{ opacity: 0y: -50 }}
+      animate={{ opacity: 1y: 0 }}
+      exit={{ opacity: 0y: -50 }}
       className="relative bg-gradient-to-r from-green-600 via-blue-600 to-indigo-600 text-white overflow-hidden"
     >
       {/* Background Pattern */}
@@ -60,7 +61,7 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
                 >
                   <Award className="w-3 h-3" />
@@ -78,9 +79,9 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {
                 <span className="text-lg opacity-90">Featuring:</span>
                 <motion.div
                   key={currentStat}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
+                  initial={{ opacity: 0y: 10 }}
+                  animate={{ opacity: 1y: 0 }}
+                  exit={{ opacity: 0y: -10 }}
                   className="flex items-center gap-2"
                 >
                   <stats[currentStat].icon className="w-4 h-4" />
@@ -108,7 +109,7 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {
 
             {/* Center - Rotating Stats */}
             <div className="hidden md:flex items-center gap-8">
-              {stats.map((stat, index) => {
+              {stats.map((statindex) => {
                 const Icon = stat.icon;
                 return (
                   <motion.div
@@ -168,7 +169,7 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {
             className="h-full bg-white"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
-            transition={{ duration: 12, ease: "linear" }}
+            transition={{ duration: 12ease: "linear" }}
           />
         </div>
       </div>

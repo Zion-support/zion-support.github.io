@@ -2,15 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 import './globals.css';
 import '../styles/optimizations.css';
-import PerformanceMonitor from '../components/PerformanceMonitor';
+// import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import ErrorBoundary from '../components/ErrorBoundary';
 import NewContentBanner from '../components/NewContentBanner';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedSEO from '../components/EnhancedSEO';
 import AdvancedPerformanceMonitor2026 from '../components/AdvancedPerformanceMonitor2026';
 import UltimateAIAssistant2026 from '../components/UltimateAIAssistant2026';
 import PerformanceOptimizations from '../components/PerformanceOptimizations';
+import AdvancedSEOOptimizer from '../components/AdvancedSEOOptimizer';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -1283,6 +1283,9 @@ export default function RootLayout({
         {/* Performance Optimizations */}
         <PerformanceOptimizations />
         
+        {/* Advanced SEO Optimizer */}
+        <AdvancedSEOOptimizer />
+        
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -1339,11 +1342,10 @@ export default function RootLayout({
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body className="antialiased bg-white text-gray-900">
-        <ErrorBoundary>
-          <PerformanceMonitor>
-            <AccessibilityEnhancer>
-              <AdvancedPerformanceMonitor2026 />
-              <UltimateAIAssistant2026 />
+        <div>
+          <AccessibilityEnhancer>
+            <AdvancedPerformanceMonitor2026 />
+            <UltimateAIAssistant2026 />
               {/* Skip to main content for accessibility */}
               <a 
                 href="#main-content" 
@@ -1406,9 +1408,8 @@ export default function RootLayout({
                   </div>
                 </div>
               </footer>
-            </AccessibilityEnhancer>
-          </PerformanceMonitor>
-        </ErrorBoundary>
+          </AccessibilityEnhancer>
+        </div>
       </body>
     </html>
   );

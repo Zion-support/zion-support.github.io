@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+"use client";
+import React{ useCallbackuseEffectuseMemouseState } from 'react';
 
 export type AIAssistantProps = {
   buttonLabel?: string;
@@ -16,22 +17,22 @@ export default function AIAssistant({
   systemPrompt,
   onAccept,
   authorizationToken}: AIAssistantProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [prompt, setPrompt] = useState(defaultPrompt);
-  const [output, setOutput] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [isOpensetIsOpen] = useState(false);
+  const [promptsetPrompt] = useState(defaultPrompt);
+  const [outputsetOutput] = useState('');
+  const [loadingsetLoading] = useState(false);
+  const [isEditingsetIsEditing] = useState(false);
+  const [errorsetError] = useState<string | null>(null);
 
   useEffect(() => {
     setPrompt(defaultPrompt);
-  }, [defaultPrompt]);
+  }[defaultPrompt]);
 
   const callOperator = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('/api/ai/operator', {
+      const res = await fetch('/api/ai/operator'{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -40,7 +41,7 @@ export default function AIAssistant({
             : process.env.NEXT_PUBLIC_OPERATOR_TOKEN
             ? { Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}` }
             : {})},
-        body: JSON.stringify({ prompt, system: systemPrompt })
+        body: JSON.stringify({ promptsystem: systemPrompt })
       });
       const data = await res.json();
       if (!res.ok) {
@@ -53,24 +54,24 @@ export default function AIAssistant({
     } finally {
       setLoading(false);
     }
-  }, [authorizationToken, prompt, systemPrompt]);
+  }[authorizationTokenpromptsystemPrompt]);
 
   const onCopy = useCallback(async () => {
     try {
       await navigator.clipboard.writeText(output);
     } catch {}
-  }, [output]);
+  }[output]);
 
   const onOpen = useCallback(() => {
     setIsOpen(true);
     setOutput('');
     setIsEditing(false);
     setError(null);
-  }, []);
+  }[]);
 
-  const onClose = useCallback(() => setIsOpen(false), []);
+  const onClose = useCallback(() => setIsOpen(false)[]);
 
-  const canAccept = useMemo(() => (output && output.trim().length > 0), [output]);
+  const canAccept = useMemo(() => (output && output.trim().length > 0)[output]);
 
   return (
     <>

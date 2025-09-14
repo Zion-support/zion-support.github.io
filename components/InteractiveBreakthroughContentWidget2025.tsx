@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 interface BreakthroughContent {
@@ -26,7 +27,7 @@ const breakthroughContent: BreakthroughContent[] = [
   {
     id: 'ai-2026-quantum-neural-fusion',
     title: 'AI 2026 Quantum-Neural Fusion',
-    description: 'First successful fusion of quantum computing and neural networks, achieving 20,000% ROI and quantum consciousness.',
+    description: 'First successful fusion of quantum computing and neural networksachieving 20,000% ROI and quantum consciousness.',
     roi: '20,000%',
     category: 'Breakthrough',
     icon: '⚛️',
@@ -36,7 +37,7 @@ const breakthroughContent: BreakthroughContent[] = [
   {
     id: 'ai-2030-transcendent-intelligence',
     title: 'AI 2030 Transcendent Intelligence',
-    description: 'First AI system to transcend human limitations, achieving infinite ROI through consciousness upload and reality manipulation.',
+    description: 'First AI system to transcend human limitationsachieving infinite ROI through consciousness upload and reality manipulation.',
     roi: '∞',
     category: 'Transcendent',
     icon: '🌟',
@@ -76,10 +77,10 @@ const breakthroughContent: BreakthroughContent[] = [
 ];
 
 export default function InteractiveBreakthroughContentWidget2025() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [selectedCategorysetSelectedCategory] = useState<string>('All');
+  const [searchTermsetSearchTerm] = useState<string>('');
 
-  const categories = ['All', 'Revolutionary', 'Breakthrough', 'Transcendent', 'Predictions', 'Quantum', 'Neural'];
+  const categories = ['All'Revolutionary'Breakthrough'Transcendent'Predictions'Quantum'Neural'];
 
   const filteredContent = breakthroughContent.filter(content => {
     const matchesCategory = selectedCategory === 'All' || content.category === selectedCategory;

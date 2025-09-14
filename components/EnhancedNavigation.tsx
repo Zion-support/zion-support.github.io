@@ -31,7 +31,7 @@ const EnhancedNavigation: React.FC = () => {
   const navigationItems = [
     { name: 'Home', href: '/' },
     { 
-      name: 'Services', 
+      name: 'Services',
       href: '/services',
       dropdown: [
         { name: 'AI Solutions', href: '/services/ai' },
@@ -41,7 +41,7 @@ const EnhancedNavigation: React.FC = () => {
       ]
     },
     { 
-      name: 'Content', 
+      name: 'Content',
       href: '/blog',
       dropdown: [
         { name: 'Latest Blog Posts', href: '/blog' },
@@ -64,7 +64,7 @@ const EnhancedNavigation: React.FC = () => {
       ]
     },
     { 
-      name: 'AI Tools', 
+      name: 'AI Tools',
       href: '/ai-tools',
       dropdown: [
         { name: 'Interactive AI Demo Center', href: '/ai-tools/interactive-ai-demo-center' },

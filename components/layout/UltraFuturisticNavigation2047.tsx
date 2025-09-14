@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Menu, ChevronDown, X, Phone, Mail, ArrowRight,
-  Brain, Rocket, Target, Atom, Shield,
-  DollarSign, BarChart3, Globe, Grid, Heart, Database,
-  Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor,
-  Zap, Eye, Infinity, Sparkles, Users, Lock, Code, Server, Layers, Globe2,
-  Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon,
-  Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon,
-  Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin
+  MenuChevronDownXPhoneMailArrowRight,
+  BrainRocketTargetAtomShield,
+  DollarSignBarChart3GlobeGridHeartDatabase,
+  CpuPaletteCloudNetworkTrendingUpShoppingCartSettingsBuildingMonitor,
+  ZapEyeInfinitySparklesUsersLockCodeServerLayersGlobe2,
+  StarAwardClockCheckCircleZap as ZapIconPhone as PhoneIcon,
+  SearchUserBellCogLogOutHomeInfoFileTextUsers as UsersIcon,
+  BotMessageCircleLinkedinTwitterGithubYoutubeMapPin
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -35,30 +36,30 @@ const navigationItems: NavigationItem[] = [
     color: 'from-emerald-500 to-cyan-500',
     children: [
       { 
-        name: 'Home', 
-        href: '/', 
+        name: 'Home'
+        href: '/'
         description: 'Main homepage',
         icon: <Home className="w-4 h-4" />,
         color: 'from-emerald-500 to-cyan-500',
         featured: true
       },
       { 
-        name: 'About Us', 
-        href: '/about', 
+        name: 'About Us'
+        href: '/about'
         description: 'Company information and mission',
         icon: <Info className="w-4 h-4" />,
         color: 'from-blue-500 to-cyan-500'
       },
       { 
-        name: 'Contact', 
-        href: '/contact', 
+        name: 'Contact'
+        href: '/contact'
         description: 'Get in touch with our team',
         icon: <Mail className="w-4 h-4" />,
         color: 'from-purple-500 to-pink-500'
       },
       { 
-        name: 'Team', 
-        href: '/team', 
+        name: 'Team'
+        href: '/team'
         description: 'Meet our leadership team',
         icon: <Users className="w-4 h-4" />,
         color: 'from-orange-500 to-red-500'
@@ -75,38 +76,38 @@ const navigationItems: NavigationItem[] = [
     color: 'from-purple-500 to-pink-500',
     children: [
       { 
-        name: 'All Services', 
-        href: '/services', 
+        name: 'All Services'
+        href: '/services'
         description: 'Complete services overview',
         icon: <Grid className="w-4 h-4" />,
         featured: true
       },
       { 
-        name: 'AI Consciousness Evolution', 
-        href: '/ai-consciousness-evolution-2029', 
+        name: 'AI Consciousness Evolution'
+        href: '/ai-consciousness-evolution-2029'
         description: 'Next-generation AI consciousness',
         icon: <Brain className="w-4 h-4" />,
         color: 'from-purple-500 to-pink-500',
         featured: true
       },
       { 
-        name: 'Quantum Neural Networks', 
-        href: '/quantum-neural-network-platform', 
+        name: 'Quantum Neural Networks'
+        href: '/quantum-neural-network-platform'
         description: 'Quantum-powered AI neural networks',
         icon: <Atom className="w-4 h-4" />,
         color: 'from-blue-500 to-cyan-500',
         featured: true
       },
       { 
-        name: 'Autonomous Business Operations', 
-        href: '/autonomous-business-operations-platform', 
+        name: 'Autonomous Business Operations'
+        href: '/autonomous-business-operations-platform'
         description: 'AI-powered business automation',
         icon: <Bot className="w-4 h-4" />,
         color: 'from-emerald-500 to-teal-500'
       },
       { 
-        name: 'IT Asset Management', 
-        href: '/ai-powered-it-asset-management', 
+        name: 'IT Asset Management'
+        href: '/ai-powered-it-asset-management'
         description: 'AI-powered IT infrastructure management',
         icon: <Monitor className="w-4 h-4" />,
         color: 'from-indigo-500 to-purple-500'
@@ -122,29 +123,29 @@ const navigationItems: NavigationItem[] = [
     color: 'from-blue-500 to-cyan-500',
     children: [
       { 
-        name: 'Solutions Overview', 
-        href: '/solutions', 
+        name: 'Solutions Overview'
+        href: '/solutions'
         description: 'Complete solutions overview',
         icon: <Rocket className="w-4 h-4" />,
         featured: true
       },
       { 
-        name: 'Blockchain Solutions', 
-        href: '/blockchain-solutions', 
+        name: 'Blockchain Solutions'
+        href: '/blockchain-solutions'
         description: 'Advanced blockchain technology',
         icon: <Database className="w-4 h-4" />,
         color: 'from-emerald-500 to-teal-500'
       },
       { 
-        name: 'IoT Platforms', 
-        href: '/iot-platforms', 
+        name: 'IoT Platforms'
+        href: '/iot-platforms'
         description: 'Internet of Things solutions',
         icon: <Network className="w-4 h-4" />,
         color: 'from-blue-500 to-cyan-500'
       },
       { 
-        name: 'Space Technology', 
-        href: '/space-tech', 
+        name: 'Space Technology'
+        href: '/space-tech'
         description: 'Space technology innovations',
         icon: <Globe2 className="w-4 h-4" />,
         color: 'from-purple-500 to-pink-500'
@@ -160,29 +161,29 @@ const navigationItems: NavigationItem[] = [
     color: 'from-orange-500 to-red-500',
     children: [
       { 
-        name: 'Blog & Articles', 
-        href: '/blog', 
+        name: 'Blog & Articles'
+        href: '/blog'
         description: 'Latest insights and articles',
         icon: <FileText className="w-4 h-4" />,
         featured: true
       },
       { 
-        name: 'Technology Insights', 
-        href: '/technology-insights', 
+        name: 'Technology Insights'
+        href: '/technology-insights'
         description: 'Technology trends and analysis',
         icon: <TrendingUp className="w-4 h-4" />,
         color: 'from-blue-500 to-cyan-500'
       },
       { 
-        name: 'Case Studies', 
-        href: '/case-studies', 
+        name: 'Case Studies'
+        href: '/case-studies'
         description: 'Success stories and implementations',
         icon: <Star className="w-4 h-4" />,
         color: 'from-yellow-500 to-orange-500'
       },
       { 
-        name: 'White Papers', 
-        href: '/white-papers', 
+        name: 'White Papers'
+        href: '/white-papers'
         description: 'In-depth research and analysis',
         icon: <FileText className="w-4 h-4" />,
         color: 'from-gray-500 to-slate-500'
@@ -198,29 +199,29 @@ const navigationItems: NavigationItem[] = [
     color: 'from-gray-500 to-slate-500',
     children: [
       { 
-        name: 'About Zion Tech Group', 
-        href: '/about', 
+        name: 'About Zion Tech Group'
+        href: '/about'
         description: 'Our story and mission',
         icon: <Info className="w-4 h-4" />,
         featured: true
       },
       { 
-        name: 'Careers', 
-        href: '/careers', 
+        name: 'Careers'
+        href: '/careers'
         description: 'Join our team',
         icon: <Users className="w-4 h-4" />,
         color: 'from-green-500 to-emerald-500'
       },
       { 
-        name: 'Support', 
-        href: '/support', 
+        name: 'Support'
+        href: '/support'
         description: 'Get help and support',
         icon: <MessageCircle className="w-4 h-4" />,
         color: 'from-blue-500 to-cyan-500'
       },
       { 
-        name: 'Privacy Policy', 
-        href: '/privacy', 
+        name: 'Privacy Policy'
+        href: '/privacy'
         description: 'Privacy and data protection',
         icon: <Shield className="w-4 h-4" />,
         color: 'from-red-500 to-pink-500'
@@ -237,15 +238,15 @@ const contactInfo = {
 };
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
+  { name: 'LinkedIn'href: 'https://linkedin.com/company/ziontechgroup'icon: Linkedincolor: 'hover:text-blue-400' },
+  { name: 'Twitter'href: 'https://twitter.com/ziontechgroup'icon: Twittercolor: 'hover:text-sky-400' },
+  { name: 'GitHub'href: 'https://github.com/Zion-Holdings'icon: Githubcolor: 'hover:text-gray-400' },
+  { name: 'YouTube'href: 'https://youtube.com/@ziontechgroup'icon: Youtubecolor: 'hover:text-red-500' }
 ];
 
 const UltraFuturisticNavigation2047 = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpensetIsOpen] = useState(false);
+  const [activeDropdownsetActiveDropdown] = useState<string | null>(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -262,9 +263,9 @@ const UltraFuturisticNavigation2047 = () => {
       }
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    window.addEventListener('resize'handleResize);
+    return () => window.removeEventListener('resize'handleResize);
+  }[]);
 
   return (
     <nav className="relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50">
@@ -298,9 +299,9 @@ const UltraFuturisticNavigation2047 = () => {
                 <AnimatePresence>
                   {activeDropdown === item.name && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0y: 10 }}
+                      animate={{ opacity: 1y: 0 }}
+                      exit={{ opacity: 0y: 10 }}
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50"
                     >
@@ -374,9 +375,9 @@ const UltraFuturisticNavigation2047 = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0height: 0 }}
+            animate={{ opacity: 1height: 'auto' }}
+            exit={{ opacity: 0height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50"
           >
@@ -397,9 +398,9 @@ const UltraFuturisticNavigation2047 = () => {
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
+                        initial={{ opacity: 0height: 0 }}
+                        animate={{ opacity: 1height: 'auto' }}
+                        exit={{ opacity: 0height: 0 }}
                         transition={{ duration: 0.2 }}
                         className="ml-4 mt-2 space-y-1"
                       >

@@ -1,5 +1,5 @@
-"use client";
-import React, { useState, useEffect } from 'react';
+'use client';
+import React{ useStateuseEffect } from 'react';
 
 interface APIEndpoint {
   id: string;
@@ -40,11 +40,11 @@ interface APIMetric {
 }
 
 const APIManagementSystem: React.FC = () => {
-  const [endpoints, setEndpoints] = useState<APIEndpoint[]>([]);
-  const [apiKeys, setApiKeys] = useState<APIKey[]>([]);
-  const [metrics, setMetrics] = useState<APIMetric[]>([]);
-  const [selectedView, setSelectedView] = useState<'overview' | 'endpoints' | 'keys' | 'analytics'>('overview');
-  const [isLoading, setIsLoading] = useState(true);
+  const [endpointsetEndpoints] = useState<APIEndpoint[]>([]);
+  const [apiKeysetApiKeys] = useState<APIKey[]>([]);
+  const [metricsetMetrics] = useState<APIMetric[]>([]);
+  const [selectedViewsetSelectedView] = useState<'overview' | 'endpoints' | 'keys' | 'analytics'>('overview');
+  const [isLoadingsetIsLoading] = useState(true);
 
   useEffect(() => {
     generateMockData();
@@ -52,15 +52,15 @@ const APIManagementSystem: React.FC = () => {
     // Simulate real-time updates
     const interval = setInterval(() => {
       updateRealTimeData();
-    }, 3000);
+    }3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const generateMockData = async () => {
     setIsLoading(true);
     
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve1000));
 
     const mockEndpoints: APIEndpoint[] = [
       {
@@ -141,7 +141,7 @@ const APIManagementSystem: React.FC = () => {
         name: 'Mobile App Key',
         key: 'sk_live_...abc123',
         status: 'active',
-        permissions: ['read:users', 'read:products', 'write:orders'],
+        permissions: ['read:users'read:products'write:orders'],
         usage: 45678,
         limit: 100000,
         createdAt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
@@ -153,7 +153,7 @@ const APIManagementSystem: React.FC = () => {
         name: 'Web Dashboard Key',
         key: 'sk_live_...def456',
         status: 'active',
-        permissions: ['read:*', 'write:*'],
+        permissions: ['read:*'write:*'],
         usage: 123456,
         limit: 500000,
         createdAt: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000),
@@ -164,7 +164,7 @@ const APIManagementSystem: React.FC = () => {
         name: 'Partner Integration',
         key: 'sk_live_...ghi789',
         status: 'active',
-        permissions: ['read:products', 'read:orders'],
+        permissions: ['read:products'read:orders'],
         usage: 23456,
         limit: 50000,
         createdAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
@@ -176,7 +176,7 @@ const APIManagementSystem: React.FC = () => {
         name: 'Test Environment',
         key: 'sk_test_...jkl012',
         status: 'revoked',
-        permissions: ['read:*', 'write:*'],
+        permissions: ['read:*'write:*'],
         usage: 1234,
         limit: 10000,
         createdAt: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000),
@@ -258,8 +258,8 @@ const APIManagementSystem: React.FC = () => {
     // Update endpoint metrics
     setEndpoints(prev => prev.map(endpoint => ({
       ...endpoint,
-      responseTime: Math.max(50, endpoint.responseTime + Math.floor(Math.random() * 20 - 10)),
-      requestsPerMinute: Math.max(0, endpoint.requestsPerMinute + Math.floor(Math.random() * 100 - 50))
+      responseTime: Math.max(50endpoint.responseTime + Math.floor(Math.random() * 20 - 10)),
+      requestsPerMinute: Math.max(0endpoint.requestsPerMinute + Math.floor(Math.random() * 100 - 50))
     })));
   };
 
@@ -305,7 +305,7 @@ const APIManagementSystem: React.FC = () => {
     return `${Math.floor(diffInMinutes / 1440)}d ago`;
   };
 
-  const formatValue = (value: number, unit: string) => {
+  const formatValue = (value: numberunit: string) => {
     if (unit === 'ms') return `${value}ms`;
     if (unit === '%') return `${value.toFixed(1)}%`;
     if (unit === '') return value.toLocaleString();
@@ -318,7 +318,7 @@ const APIManagementSystem: React.FC = () => {
         <div className="animate-pulse">
           <div className="h-8 bg-gray-200 rounded w-1/3 mb-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map(i => (
+            {[123456].map(i => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
                 <div className="h-8 bg-gray-200 rounded w-1/3 mb-2"></div>
@@ -339,7 +339,7 @@ const APIManagementSystem: React.FC = () => {
             🔌 API Management System
           </h2>
           <p className="text-xl text-gray-600">
-            Comprehensive API gateway, monitoring, and developer portal management
+            Comprehensive API gatewaymonitoringand developer portal management
           </p>
         </div>
         <div className="flex items-center space-x-4">
@@ -356,10 +356,10 @@ const APIManagementSystem: React.FC = () => {
       {/* Navigation Tabs */}
       <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg mb-8">
         {[
-          { id: 'overview', label: 'Overview', icon: '📊' },
-          { id: 'endpoints', label: 'Endpoints', icon: '🔗' },
-          { id: 'keys', label: 'API Keys', icon: '🔑' },
-          { id: 'analytics', label: 'Analytics', icon: '📈' }
+          { id: 'overview'label: 'Overview'icon: '📊' },
+          { id: 'endpoints'label: 'Endpoints'icon: '🔗' },
+          { id: 'keys'label: 'API Keys'icon: '🔑' },
+          { id: 'analytics'label: 'Analytics'icon: '📈' }
         ].map((tab) => (
           <button
             key={tab.id}
@@ -394,7 +394,7 @@ const APIManagementSystem: React.FC = () => {
                 </div>
                 
                 <div className="text-3xl font-bold text-gray-900 mb-2">
-                  {formatValue(metric.value, metric.unit)}
+                  {formatValue(metric.valuemetric.unit)}
                 </div>
                 
                 <div className="text-sm text-gray-500">
@@ -528,7 +528,7 @@ const APIManagementSystem: React.FC = () => {
               <div>
                 <span className="text-sm text-gray-600 mb-2 block">Permissions:</span>
                 <div className="flex flex-wrap gap-1">
-                  {key.permissions.map((permission, index) => (
+                  {key.permissions.map((permissionindex) => (
                     <span key={index} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
                       {permission}
                     </span>
@@ -556,7 +556,7 @@ const APIManagementSystem: React.FC = () => {
               <div className="text-6xl mb-4">📊</div>
               <h4 className="text-xl font-semibold text-gray-900 mb-2">Real-time API Analytics</h4>
               <p className="text-gray-600 mb-6">
-                Request volume, response times, and error rates over time
+                Request volumeresponse timesand error rates over time
               </p>
               <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200">
                 View Detailed Analytics
@@ -569,9 +569,9 @@ const APIManagementSystem: React.FC = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">🔥 Top Performing Endpoints</h3>
             <div className="space-y-4">
               {endpoints
-                .sort((a, b) => b.requestsPerMinute - a.requestsPerMinute)
-                .slice(0, 5)
-                .map((endpoint, index) => (
+                .sort((ab) => b.requestsPerMinute - a.requestsPerMinute)
+                .slice(05)
+                .map((endpointindex) => (
                 <div key={endpoint.id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                   <div className="flex items-center space-x-4">
                     <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">

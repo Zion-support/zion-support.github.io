@@ -4,8 +4,8 @@ export default function SiteHealth() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
-        <title>Site Health — A11y, Performance, Links</title>
-        <meta name="description" content="Dashboards and audits for accessibility, performance, and link integrity." />
+        <title>Site Health — A11yPerformanceLinks</title>
+        <meta name="description" content="Dashboards and audits for accessibilityperformanceand link integrity." />
       </Head>
 
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
@@ -37,13 +37,13 @@ export default function SiteHealth() {
         <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center">
           <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
-            Real‑time health signals: A11y, Performance, Links
+            Real‑time health signals: A11yPerformanceLinks
           </div>
           <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
             <span className="gradient-text">Site Health</span>
           </h1>
           <p className="mx-auto mt-5 max-w-3xl text-lg text-white/80">
-            Dashboards, audits, and guardrails that keep your experience fast, accessible, and reliable.
+            Dashboardsauditsand guardrails that keep your experience fastaccessibleand reliable.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a href="/site-health" target="_blank" rel="noopener" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Live Pipelines</a>
@@ -55,9 +55,9 @@ export default function SiteHealth() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Dashboards</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: 'Accessibility', desc: 'WCAG checks with actionable fixes and reports.', href: '/reports/seo' },
-              { title: 'Performance', desc: 'Core Web Vitals and performance budgets.', href: '/reports/seo' },
-              { title: 'Link Integrity', desc: 'Broken links identified and prevented.', href: '/reports/links' }].map((card) => (
+              { title: 'Accessibility'desc: 'WCAG checks with actionable fixes and reports.'href: '/reports/seo' },
+              { title: 'Performance'desc: 'Core Web Vitals and performance budgets.'href: '/reports/seo' },
+              { title: 'Link Integrity'desc: 'Broken links identified and prevented.'href: '/reports/links' }].map((card) => (
               <Link key={card.title} href={card.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />

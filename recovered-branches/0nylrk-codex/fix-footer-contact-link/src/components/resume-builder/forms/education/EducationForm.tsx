@@ -9,19 +9,19 @@ import { EducationList } from './EducationList';
 import { EducationFormFields } from './EducationFormFields';
 
 export function EducationForm({ 
-  resumeId, 
-  educationEntries, 
-  onComplete, 
+  resumeId
+  educationEntries
+  onComplete
   onBack 
 }: EducationFormProps) {
-  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
-  const [editingId, setEditingId] = useState<string | null>(null);
+  const { addEducationupdateEducationdeleteEducationisLoading } = useResume();
+  const [editingIdsetEditingId] = useState<string | null>(null);
   
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue;
-    return format(dateValue, 'yyyy-MM-dd');
+    return format(dateValue'yyyy-MM-dd');
   };
 
   const handleAddOrUpdate = async (data: any) => {
@@ -37,9 +37,9 @@ export function EducationForm({
 
     let success;
     if (editingId) {
-      success = await updateEducation(editingId, educationData);
+      success = await updateEducation(editingIdeducationData);
     } else {
-      success = await addEducation(resumeId, educationData);
+      success = await addEducation(resumeIdeducationData);
     }
 
     if (success) {

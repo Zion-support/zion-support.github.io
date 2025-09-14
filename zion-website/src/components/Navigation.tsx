@@ -6,33 +6,33 @@ import React from 'react';
 
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3IconXMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
-  { name: 'Home', href: '/' }
-  { name: 'About', href: '/about' }
-  { name: 'Services', href: '/services' }
-  { name: 'Solutions', href: '/solutions' }
-  { name: 'Research', href: '/research' }
-  { name: 'Contact', href: '/contact' }]
+  { name: 'Home'href: '/' }
+  { name: 'About'href: '/about' }
+  { name: 'Services'href: '/services' }
+  { name: 'Solutions'href: '/solutions' }
+  { name: 'Research'href: '/research' }
+  { name: 'Contact'href: '/contact' }]
 export default function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpensetMobileMenuOpen] = useState(false)
 
 'use client';
 import { useState } from 'react';
 import { Dialog } from '@headlessui / react';
-import { Bars3Icon, XMarkIcon } from '@heroicons / react / 24 / outline';
+import { Bars3IconXMarkIcon } from '@heroicons / react / 24 / outline';
 const navigation = [;
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Research', href: '/research' },
-  { name: 'Contact', href: '/contact' }];
+  { name: 'Home'href: '/' },
+  { name: 'About'href: '/about' },
+  { name: 'Services'href: '/services' },
+  { name: 'Solutions'href: '/solutions' },
+  { name: 'Research'href: '/research' },
+  { name: 'Contact'href: '/contact' }];
 export default /**
  * Navigation - Function description
  */
 function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState (false);
+  const [mobileMenuOpensetMobileMenuOpen] = useState (false);
 
 
 ;
@@ -136,16 +136,16 @@ import React from 'react';
 
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3IconXMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
-  { name: 'Home', href: '/' }
-  { name: 'About', href: '/about' }
-  { name: 'Services', href: '/services' }
-  { name: 'Solutions', href: '/solutions' }
-  { name: 'Research', href: '/research' }
-  { name: 'Contact', href: '/contact' }]
+  { name: 'Home'href: '/' }
+  { name: 'About'href: '/about' }
+  { name: 'Services'href: '/services' }
+  { name: 'Solutions'href: '/solutions' }
+  { name: 'Research'href: '/research' }
+  { name: 'Contact'href: '/contact' }]
 export default function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpensetMobileMenuOpen] = useState(false)
 ;
   return (;
     <header className=&quot;fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10&quot;>

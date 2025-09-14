@@ -82,7 +82,7 @@ const AutonomousBusinessOperationsPromotionBanner = () => {
                 <span className="text-2xl font-bold">1</span>
               </div>
               <h4 className="text-lg font-semibold mb-2">Foundation Building</h4>
-              <p className="text-sm opacity-80">Assessment, preparation, and pilot program design</p>
+              <p className="text-sm opacity-80">Assessmentpreparationand pilot program design</p>
             </div>
             <div className="text-center">
               <div className="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">

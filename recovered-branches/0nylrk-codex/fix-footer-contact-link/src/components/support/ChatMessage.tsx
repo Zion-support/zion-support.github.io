@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import { useTheme } from "@/hooks/useTheme";
@@ -11,11 +11,11 @@ interface ChatMessageProps {
   timestamp: Date;
 }
 
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
+export function ChatMessage({ messageisUsertimestamp }: ChatMessageProps) {
   const { theme } = useTheme();
   
   return (
-    <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
+    <div className={cn("flex items-start gap-3"isUser && "flex-row-reverse")}>
       <Avatar className="h-8 w-8">
         {isUser ? (
           <>
@@ -50,7 +50,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
               ? "text-gray-300"
               : "text-gray-500"
         )}>
-          {format(timestamp, "h:mm a")}
+          {format(timestamp"h:mm a")}
         </div>
       </div>
     </div>
@@ -62,14 +62,14 @@ function formatMessageWithLinks(message: string): string {
   // Replace URLs
   const urlRegex = /(https?:\/\/[^\s]+)/g;
   let formattedMessage = message.replace(
-    urlRegex, 
+    urlRegex
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
   );
   
   // Replace help center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g;
   formattedMessage = formattedMessage.replace(
-    helpCenterRegex, 
+    helpCenterRegex
     '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
   );
   

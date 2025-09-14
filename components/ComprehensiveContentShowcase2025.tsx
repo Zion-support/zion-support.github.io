@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Shield, Cloud, Zap, TrendingUp, CheckCircle, ArrowRight, Star } from 'lucide-react';
+ShieldCloudZapTrendingUpCheckCircleArrowRightStar
 
 const ComprehensiveContentShowcase2025: React.FC = () => {
   const newContent = [
@@ -85,7 +85,7 @@ const ComprehensiveContentShowcase2025: React.FC = () => {
             Revolutionary AI Content for 2025
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover cutting-edge AI solutions with proven ROI. From cybersecurity to cloud optimization, 
+            Discover cutting-edge AI solutions with proven ROI. From cybersecurity to cloud optimization
             learn how leading companies are achieving unprecedented success.
           </p>
         </div>
@@ -123,11 +123,11 @@ const ComprehensiveContentShowcase2025: React.FC = () => {
                 {/* Metrics */}
                 <div className="p-6">
                   <div className="grid grid-cols-2 gap-4 mb-6">
-                    {Object.entries(content.metrics).map(([key, value]) => (
+                    {Object.entries(content.metrics).map(([keyvalue]) => (
                       <div key={key} className="text-center">
                         <div className="text-2xl font-bold text-gray-900">{value}</div>
                         <div className="text-sm text-gray-600 capitalize">
-                          {key.replace(/([A-Z])/g, ' $1').trim()}
+                          {key.replace(/([A-Z])/g' $1').trim()}
                         </div>
                       </div>
                     ))}

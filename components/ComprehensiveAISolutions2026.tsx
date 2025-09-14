@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Rocket, 
-  Shield, 
-  BarChart3, 
-  Users, 
-  Globe, 
+  Brain
+  Zap
+  Rocket
+  Shield
+  BarChart3
+  Users
+  Globe
   Cpu,
   Database,
   Cloud,
@@ -27,12 +28,12 @@ import {
 } from 'lucide-react';
 
 const ComprehensiveAISolutions2026 = () => {
-  const [activeSolution, setActiveSolution] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeSolutionsetActiveSolution] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const solutions = [
     {
@@ -138,32 +139,32 @@ const ComprehensiveAISolutions2026 = () => {
   ];
 
   const industries = [
-    { name: 'Healthcare', icon: Users, count: '500+', color: 'from-blue-500 to-cyan-500' },
-    { name: 'Finance', icon: BarChart3, count: '300+', color: 'from-green-500 to-emerald-500' },
-    { name: 'Manufacturing', icon: Settings, count: '400+', color: 'from-orange-500 to-red-500' },
-    { name: 'Retail', icon: Globe, count: '600+', color: 'from-purple-500 to-pink-500' },
-    { name: 'Education', icon: Lightbulb, count: '200+', color: 'from-indigo-500 to-blue-500' },
-    { name: 'Government', icon: Shield, count: '100+', color: 'from-gray-500 to-slate-500' }
+    { name: 'Healthcare'icon: Userscount: '500+'color: 'from-blue-500 to-cyan-500' },
+    { name: 'Finance'icon: BarChart3count: '300+'color: 'from-green-500 to-emerald-500' },
+    { name: 'Manufacturing'icon: Settingscount: '400+'color: 'from-orange-500 to-red-500' },
+    { name: 'Retail'icon: Globecount: '600+'color: 'from-purple-500 to-pink-500' },
+    { name: 'Education'icon: Lightbulbcount: '200+'color: 'from-indigo-500 to-blue-500' },
+    { name: 'Government'icon: Shieldcount: '100+'color: 'from-gray-500 to-slate-500' }
   ];
 
   const testimonials = [
     {
       name: 'Sarah Johnson',
-      role: 'CTO, TechCorp',
+      role: 'CTOTechCorp',
       content: 'The AI platform transformed our operations completely. We achieved 90% automation and reduced costs by 60%.',
       rating: 5,
       company: 'TechCorp'
     },
     {
       name: 'Michael Chen',
-      role: 'CEO, InnovateLabs',
+      role: 'CEOInnovateLabs',
       content: 'Quantum AI fusion gave us capabilities we never thought possible. Our research speed increased 1000x.',
       rating: 5,
       company: 'InnovateLabs'
     },
     {
       name: 'Emily Rodriguez',
-      role: 'VP Engineering, DataFlow',
+      role: 'VP EngineeringDataFlow',
       content: 'The security platform prevented 99.8% of threats. Our security team can now focus on strategy.',
       rating: 5,
       company: 'DataFlow'
@@ -178,8 +179,8 @@ const ComprehensiveAISolutions2026 = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -198,20 +199,20 @@ const ComprehensiveAISolutions2026 = () => {
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Transform your business with our comprehensive suite of AI solutions, 
+            Transform your business with our comprehensive suite of AI solutions
             from enterprise platforms to quantum computing integration.
           </p>
         </motion.div>
 
         {/* Solutions Navigation */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {solutions.map((solution, index) => (
+            {solutions.map((solutionindex) => (
               <button
                 key={solution.id}
                 onClick={() => setActiveSolution(index)}
@@ -233,9 +234,9 @@ const ComprehensiveAISolutions2026 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeSolution}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0x: 20 }}
+              animate={{ opacity: 1x: 0 }}
+              exit={{ opacity: 0x: -20 }}
               transition={{ duration: 0.3 }}
               className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10"
             >
@@ -254,7 +255,7 @@ const ComprehensiveAISolutions2026 = () => {
                   <div>
                     <h4 className="text-xl font-semibold text-white mb-4">Key Features</h4>
                     <div className="grid grid-cols-1 gap-3">
-                      {solutions[activeSolution].features.map((feature, index) => (
+                      {solutions[activeSolution].features.map((featureindex) => (
                         <div key={index} className="flex items-center gap-3">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-gray-300">{feature}</span>
@@ -266,7 +267,7 @@ const ComprehensiveAISolutions2026 = () => {
                   <div>
                     <h4 className="text-xl font-semibold text-white mb-4">Use Cases</h4>
                     <div className="flex flex-wrap gap-2">
-                      {solutions[activeSolution].useCases.map((useCase, index) => (
+                      {solutions[activeSolution].useCases.map((useCaseindex) => (
                         <span
                           key={index}
                           className="px-3 py-1 bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-blue-300 rounded-full text-sm border border-blue-400/30"
@@ -283,7 +284,7 @@ const ComprehensiveAISolutions2026 = () => {
                   <div>
                     <h4 className="text-xl font-semibold text-white mb-6">Performance Metrics</h4>
                     <div className="grid grid-cols-2 gap-4">
-                      {Object.entries(solutions[activeSolution].metrics).map(([key, value], index) => (
+                      {Object.entries(solutions[activeSolution].metrics).map(([keyvalue]index) => (
                         <div key={index} className="bg-white/10 rounded-2xl p-4 text-center">
                           <div className="text-2xl font-bold text-white mb-1">{value}</div>
                           <div className="text-gray-400 text-sm capitalize">{key}</div>
@@ -317,21 +318,21 @@ const ComprehensiveAISolutions2026 = () => {
 
         {/* Industries Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Trusted by Industry Leaders
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {industries.map((industry, index) => (
+            {industries.map((industryindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isVisible ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                transition={{ duration: 0.5delay: 0.5 + index * 0.1 }}
                 className="text-center group"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -346,25 +347,25 @@ const ComprehensiveAISolutions2026 = () => {
 
         {/* Testimonials */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             What Our Clients Say
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonialindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                transition={{ duration: 0.5delay: 0.7 + index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
               >
                 <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map((_i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -381,9 +382,9 @@ const ComprehensiveAISolutions2026 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 border border-blue-400/30">

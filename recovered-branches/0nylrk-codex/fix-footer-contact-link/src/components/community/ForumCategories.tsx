@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { CardContentCardHeaderCardTitleCardDescription } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
 import {
   MessageSquare,
@@ -9,13 +9,13 @@ import {
   FileText,
   Megaphone
 } from "@/components/icons";
-import { ForumCategory, ForumCategoryInfo } from "@/types/community";
+import { ForumCategoryInfo } from "@/types/community";
 
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
     name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.",
+    description: "Tipstrategiesand questions about getting hired on the platform.",
     adminOnly: false,
     icon: "Briefcase"
   },
@@ -29,7 +29,7 @@ const categories: ForumCategoryInfo[] = [
   {
     id: "ai-tools",
     name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices.",
+    description: "Discuss AI toolsframeworksand best practices.",
     adminOnly: false,
     icon: "Code"
   },

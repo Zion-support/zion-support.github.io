@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
+PhoneMailMapPinCheckArrowRightStar
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -36,7 +36,7 @@ export default function QuantumAICognitivePage() {
               <h2 className="text-2xl font-semibold mb-4">What you get</h2>
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0, 12).map((feat, i) => (
+                {service.features.slice(012).map((feati) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200">
                     <Check className="w-5 h-5 text-purple-400 mt-0.5" />
                     <span>{feat}</span>
@@ -53,7 +53,7 @@ export default function QuantumAICognitivePage() {
                 </div>
                 <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>
               </div>
-              <div className="text-slate-300 text-sm mb-4">Market: {service.marketSize}, Growth: {service.growthRate}</div>
+              <div className="text-slate-300 text-sm mb-4">Market: {service.marketSize}Growth: {service.growthRate}</div>
               <Link href="/contact" variant="quantum" size="lg" className="w-full">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />

@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
+ArrowRightStarZapTrendingUpUsersAwardPhoneMailMapPin
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -18,10 +18,10 @@ export default function Revolutionary2030ServicesPage() {
   return (
     <UltraFuturisticBackground2030>
       <Head>
-        <title>2030 Revolutionary Technology Services | Zion Tech Group | AI Consciousness, Quantum Computing, Space Mining</title>
-        <meta name="description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing, we&apos;re building tomorrow&apos;s solutions today." />
-        <meta name="keywords" content="2030 technology, AI consciousness, quantum computing, space mining, DNA computing, revolutionary services, Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>2030 Revolutionary Technology Services | Zion Tech Group | AI ConsciousnessQuantum ComputingSpace Mining</title>
+        <meta name="description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computingwe&apos;re building tomorrow&apos;s solutions today." />
+        <meta name="keywords" content="2030 technologyAI consciousnessquantum computingspace miningDNA computingrevolutionary servicesZion Tech Group" />
+        <meta name="viewport" content="width=device-widthinitial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         
         {/* Open Graph */}
@@ -49,7 +49,7 @@ export default function Revolutionary2030ServicesPage() {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Zion Tech Group",
-              "description": "Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing",
+              "description": "Leading provider of revolutionary 2030 technology services including AI consciousnessquantum computingspace miningand DNA computing",
               "url": "https://ziontechgroup.com",
               "logo": "https://ziontechgroup.com/logo.png",
               "contactPoint": {
@@ -81,8 +81,8 @@ export default function Revolutionary2030ServicesPage() {
       <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -95,9 +95,9 @@ export default function Revolutionary2030ServicesPage() {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight"
           >
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -110,19 +110,19 @@ export default function Revolutionary2030ServicesPage() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
           >
             Experience the next generation of revolutionary technology services. From AI consciousness 
-            and quantum computing to space mining and DNA computing, we&apos;re building the future today.
+            and quantum computing to space mining and DNA computingwe&apos;re building the future today.
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group">
@@ -141,8 +141,8 @@ export default function Revolutionary2030ServicesPage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-20"
@@ -165,12 +165,12 @@ export default function Revolutionary2030ServicesPage() {
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
-            {innovative2030Services.map((service, index) => (
+            {innovative2030Services.map((serviceindex) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 30 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
                 className="group cursor-pointer"
@@ -199,7 +199,7 @@ export default function Revolutionary2030ServicesPage() {
 
                   {/* Features */}
                   <div className="grid grid-cols-2 gap-3 mb-6">
-                    {service.features.slice(0, 6).map((feature, featureIndex) => (
+                    {service.features.slice(06).map((featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-400">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full" />
                         <span>{feature}</span>
@@ -245,8 +245,8 @@ export default function Revolutionary2030ServicesPage() {
 
           {/* Call to Action */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center"
@@ -276,8 +276,8 @@ export default function Revolutionary2030ServicesPage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >

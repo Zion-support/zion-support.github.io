@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import React{ createContextuseContextuseEffectReactNode } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { useNotificationOperations } from './useNotificationOperations';
@@ -44,15 +44,15 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
     if (user) {
       const channel = supabase
         .channel('notifications-changes')
-        .on('postgres_changes', 
+        .on('postgres_changes'
           {
-            event: '*', 
+            event: '*'
             schema: 'public',
             table: 'notifications',
             filter: `user_id=eq.${user.id}`
           },
           (payload) => {
-            console.log('Notification change received:', payload);
+            console.log('Notification change received:'payload);
             notificationOps.fetchNotifications();
           }
         )
@@ -62,7 +62,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
         supabase.removeChannel(channel);
       };
     }
-  }, [user]);
+  }[user]);
   
   return (
     <NotificationContext.Provider value={notificationOps}>

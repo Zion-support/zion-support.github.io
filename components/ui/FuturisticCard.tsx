@@ -6,7 +6,7 @@ type Props = {
   cta?: React.ReactNode;
 };
 
-export default function FuturisticCard({ title, description, cta }: Props) {
+export default function FuturisticCard({ titledescriptioncta }: Props) {
   return (
     <div className="futuristic-card">
       <div className="futuristic-card-glow" />

@@ -4,8 +4,8 @@ import { UseFormReturn } from "react-hook-form";
 import { AppMetadataValues } from "./MetadataManager";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { CardHeaderCardTitleCardContent } from "@/components/ui/card";
+import { FormControlFormDescriptionFormFieldFormItemFormLabelFormMessage } from "@/components/ui/form";
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
 
@@ -14,7 +14,7 @@ interface MetadataFormProps {
 }
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
-  const { control, register, watch, setValue } = form;
+  const { controlregisterwatchsetValue } = form;
   const keywords = watch("keywords");
   const platform = watch("platform");
   
@@ -24,7 +24,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       const value = e.currentTarget.value.trim();
       
       if (value && !keywords.includes(value)) {
-        setValue("keywords", [...keywords, value]);
+        setValue("keywords"[...keywordsvalue]);
         e.currentTarget.value = "";
       }
     }
@@ -119,7 +119,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
               />
               
               <div className="flex flex-wrap gap-2 mt-2">
-                {keywords.map((keyword, index) => (
+                {keywords.map((keywordindex) => (
                   <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
                     {keyword}
                     <button 
@@ -145,7 +145,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
                     <Input 
-                      placeholder="e.g., 1.0.0"
+                      placeholder="e.g.1.0.0"
                       {...field}
                     />
                   </FormControl>

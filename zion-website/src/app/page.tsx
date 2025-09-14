@@ -3,8 +3,8 @@
 import React from 'react';
 import { 
   LightBulbIcon,
-  CpuChipIcon, 
-  GlobeAltIcon, 
+  CpuChipIcon
+  GlobeAltIcon
   ShieldCheckIcon,
   ChartBarIcon,
   UserGroupIcon;
@@ -46,10 +46,10 @@ const features = [
   }
 ];
 const stats = [
-  { name: 'Research Papers Published', value: '150+' }
-  { name: 'AI Models Deployed', value: '500+' }
-  { name: 'Global Clients', value: '1000+' }
-  { name: 'Patents Filed', value: '25+' }
+  { name: 'Research Papers Published'value: '150+' }
+  { name: 'AI Models Deployed'value: '500+' }
+  { name: 'Global Clients'value: '1000+' }
+  { name: 'Patents Filed'value: '25+' }
 ];
 const solutions = [
   {
@@ -93,8 +93,8 @@ const features = [;
 import React from 'react';
 import { 
   LightBulbIcon,
-  CpuChipIcon, 
-  GlobeAltIcon, 
+  CpuChipIcon
+  GlobeAltIcon
   ShieldCheckIcon,
   ChartBarIcon,
   UserGroupIcon;
@@ -135,10 +135,10 @@ const features = [
 ];
 ;
 const stats = [;
-  { name: 'Research Papers Published', value: '150+' },
-  { name: 'AI Models Deployed', value: '500+' },
-  { name: 'Global Clients', value: '1000+' },
-  { name: 'Patents Filed', value: '25+' }
+  { name: 'Research Papers Published'value: '150+' },
+  { name: 'AI Models Deployed'value: '500+' },
+  { name: 'Global Clients'value: '1000+' },
+  { name: 'Patents Filed'value: '25+' }
 ];
 ;
 const solutions = [;
@@ -178,7 +178,7 @@ function HomePage() {
               Leading the Future of{' '}
 
 
-              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
+              Transform your business with cutting-edge artificial intelligencequantum computingand autonomous solutions. 
 
 
               Join the revolution that's reshaping industries worldwide.
@@ -270,7 +270,7 @@ function HomePage() {
               </span>;
             </h1>;
             <p className="mt - 6 text - lg leading - 8 text - gray - 300">;
-              Transform your business with cutting - edge artificial intelligence, quantum computing, and autonomous solutions.;
+              Transform your business with cutting - edge artificial intelligencequantum computingand autonomous solutions.;
               Join the revolution that's reshaping industries worldwide.;
             </p>;
             <div className="mt - 10 flex items - center justify - center gap - x-6">;

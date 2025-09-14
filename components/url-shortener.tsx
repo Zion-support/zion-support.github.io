@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
+LinkCopyBarChart3ArrowRightRefreshCwCheckCircleExternalLinkQrCodeSettingsTrash2
 
 export default function URLShortenerPage() {
-  const [longUrl, setLongUrl] = useState('');
-  const [customAlias, setCustomAlias] = useState('');
-  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]);
-  const [isShortening, setIsShortening] = useState(false);
-  const [showQR, setShowQR] = useState<string | null>(null);
+  const [longUrlsetLongUrl] = useState('');
+  const [customAliasetCustomAlias] = useState('');
+  const [shortenedUrlsetShortenedUrls] = useState<any[]>([]);
+  const [isShorteningsetIsShortening] = useState(false);
+  const [showQRsetShowQR] = useState<string | null>(null);
 
   const generateShortUrl = async () => {
     if (!longUrl.trim()) return;
@@ -17,7 +18,7 @@ export default function URLShortenerPage() {
     setIsShortening(true);
     
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve1000));
     
     const alias = customAlias.trim() || generateRandomAlias();
     const shortUrl = `https://zion.tech/${alias}`;
@@ -32,7 +33,7 @@ export default function URLShortenerPage() {
       qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
     };
     
-    setShortenedUrls(prev => [newShortUrl, ...prev]);
+    setShortenedUrls(prev => [newShortUrl...prev]);
     setLongUrl('');
     setCustomAlias('');
     setIsShortening(false);
@@ -54,7 +55,7 @@ export default function URLShortenerPage() {
   const incrementClicks = (id: number) => {
     setShortenedUrls(prev => 
       prev.map(url => 
-        url.id === id ? { ...url, clicks: url.clicks + 1 } : url
+        url.id === id ? { ...urlclicks: url.clicks + 1 } : url
       )
     );
   };
@@ -75,7 +76,7 @@ export default function URLShortenerPage() {
     <>
       <Head>
         <title>URL Shortener - Zion Tech Group</title>
-        <meta name="description" content="Create short, memorable URLs with our professional URL shortening service. Track clicks, generate QR codes, and manage your links efficiently." />
+        <meta name="description" content="Create shortmemorable URLs with our professional URL shortening service. Track clicksgenerate QR codesand manage your links efficiently." />
         <meta property="og:title" content="URL Shortener - Zion Tech Group" />
         <meta property="og:description" content="Professional URL shortening service with analytics and QR code generation." />
       </Head>
@@ -93,8 +94,8 @@ export default function URLShortenerPage() {
             URL Shortener
           </h1>
           <p className="text-xl text-orange-200 max-w-4xl mx-auto leading-relaxed">
-            Transform long URLs into short, memorable links with our professional shortening service. 
-            Track clicks, generate QR codes, and manage your links efficiently with advanced analytics.
+            Transform long URLs into shortmemorable links with our professional shortening service. 
+            Track clicksgenerate QR codesand manage your links efficiently with advanced analytics.
           </p>
         </div>
       </section>
@@ -107,7 +108,7 @@ export default function URLShortenerPage() {
               Create Short URLs Instantly
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our advanced shortening engine creates professional, trackable links in seconds.
+              Our advanced shortening engine creates professionaltrackable links in seconds.
             </p>
           </div>
 
@@ -175,7 +176,7 @@ export default function URLShortenerPage() {
                 </Button>
 
                 <div className="text-sm text-gray-400">
-                  <p>• Professional, branded short URLs</p>
+                  <p>• Professionalbranded short URLs</p>
                   <p>• Click tracking and analytics</p>
                   <p>• QR code generation</p>
                   <p>• Custom aliases available</p>
@@ -216,7 +217,7 @@ export default function URLShortenerPage() {
                 ) : (
                   <div className="space-y-3">
                     <h4 className="text-lg font-semibold text-white mb-3">Recent URLs</h4>
-                    {shortenedUrls.slice(0, 3).map((url) => (
+                    {shortenedUrls.slice(03).map((url) => (
                       <div key={url.id} className="p-3 bg-gray-700 rounded-lg">
                         <div className="flex items-center justify-between">
                           <div className="flex-1 min-w-0">
@@ -363,7 +364,7 @@ export default function URLShortenerPage() {
               Professional URL Shortening Features
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Everything you need to create, manage, and track your shortened URLs effectively.
+              Everything you need to createmanageand track your shortened URLs effectively.
             </p>
           </div>
 
@@ -372,7 +373,7 @@ export default function URLShortenerPage() {
               <div className="text-4xl mb-4">🔗</div>
               <h3 className="text-xl font-bold text-white mb-4">Custom Aliases</h3>
               <p className="text-gray-400">
-                Create memorable, branded short URLs with custom aliases that reflect your brand.
+                Create memorablebranded short URLs with custom aliases that reflect your brand.
               </p>
             </Card>
 
@@ -380,7 +381,7 @@ export default function URLShortenerPage() {
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-xl font-bold text-white mb-4">Click Analytics</h3>
               <p className="text-gray-400">
-                Track clicks, engagement, and performance metrics for all your shortened URLs.
+                Track clicksengagementand performance metrics for all your shortened URLs.
               </p>
             </Card>
 
@@ -412,7 +413,7 @@ export default function URLShortenerPage() {
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-xl font-bold text-white mb-4">Easy Management</h3>
               <p className="text-gray-400">
-                Simple dashboard to manage, edit, and delete your shortened URLs as needed.
+                Simple dashboard to manageditand delete your shortened URLs as needed.
               </p>
             </Card>
           </div>
@@ -427,7 +428,7 @@ export default function URLShortenerPage() {
               Perfect For Every Business Need
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From marketing campaigns to social media, our URL shortener serves all your link management needs.
+              From marketing campaigns to social mediaour URL shortener serves all your link management needs.
             </p>
           </div>
 
@@ -436,7 +437,7 @@ export default function URLShortenerPage() {
               <div className="text-4xl mb-4">📢</div>
               <h3 className="text-2xl font-bold text-white mb-4">Marketing Campaigns</h3>
               <p className="text-gray-400 mb-6">
-                Create trackable links for email marketing, social media campaigns, and advertising to measure ROI and engagement.
+                Create trackable links for email marketingsocial media campaignsand advertising to measure ROI and engagement.
               </p>
               <ul className="space-y-2 text-gray-300">
                 <li>• Track campaign performance</li>
@@ -449,7 +450,7 @@ export default function URLShortenerPage() {
               <div className="text-4xl mb-4">📱</div>
               <h3 className="text-2xl font-bold text-white mb-4">Social Media</h3>
               <p className="text-gray-400 mb-6">
-                Share concise, professional links on social platforms with built-in analytics to understand audience engagement.
+                Share conciseprofessional links on social platforms with built-in analytics to understand audience engagement.
               </p>
               <ul className="space-y-2 text-gray-300">
                 <li>• Professional appearance</li>
@@ -462,7 +463,7 @@ export default function URLShortenerPage() {
               <div className="text-4xl mb-4">📧</div>
               <h3 className="text-2xl font-bold text-white mb-4">Email Marketing</h3>
               <p className="text-gray-400 mb-6">
-                Include short, trackable URLs in newsletters and promotional emails to monitor subscriber engagement.
+                Include shortrackable URLs in newsletters and promotional emails to monitor subscriber engagement.
               </p>
               <ul className="space-y-2 text-gray-300">
                 <li>• Clean email design</li>
@@ -475,7 +476,7 @@ export default function URLShortenerPage() {
               <div className="text-4xl mb-4">🏢</div>
               <h3 className="text-2xl font-bold text-white mb-4">Business Presentations</h3>
               <p className="text-gray-400 mb-6">
-                Use short URLs in presentations, business cards, and printed materials for easy access and tracking.
+                Use short URLs in presentationsbusiness cardsand printed materials for easy access and tracking.
               </p>
               <ul className="space-y-2 text-gray-300">
                 <li>• Professional branding</li>

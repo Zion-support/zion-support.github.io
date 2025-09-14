@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Search, TrendingUp, Users, Clock, Star, Target, BarChart3, Zap } from 'lucide-react';
+"use client";
+import React{ useStateuseEffect } from 'react';
+SearchTrendingUpUsersClockStarTargetBarChart3Zap
 
 const AdvancedContentOptimizer = () => {
-  const [contentMetrics, setContentMetrics] = useState({
+  const [contentMetricsetContentMetrics] = useState({
     engagement: 0,
     readability: 0,
     seoScore: 0,
     conversionRate: 0
   });
 
-  const [optimizations, setOptimizations] = useState([
+  const [optimizationsetOptimizations] = useState([
     {
       id: 'headline-optimization',
       name: 'Headline Optimization',
@@ -17,7 +18,7 @@ const AdvancedContentOptimizer = () => {
       impact: 'High',
       status: 'active',
       icon: Target,
-      metrics: { before: 2.1, after: 4.7, unit: 'CTR%' }
+      metrics: { before: 2.1after: 4.7unit: 'CTR%' }
     },
     {
       id: 'content-structure',
@@ -26,7 +27,7 @@ const AdvancedContentOptimizer = () => {
       impact: 'High',
       status: 'active',
       icon: BarChart3,
-      metrics: { before: 6.2, after: 8.9, unit: 'Readability' }
+      metrics: { before: 6.2after: 8.9unit: 'Readability' }
     },
     {
       id: 'keyword-optimization',
@@ -35,7 +36,7 @@ const AdvancedContentOptimizer = () => {
       impact: 'Medium',
       status: 'active',
       icon: Search,
-      metrics: { before: 65, after: 89, unit: 'SEO Score' }
+      metrics: { before: 65after: 89unit: 'SEO Score' }
     },
     {
       id: 'visual-optimization',
@@ -44,7 +45,7 @@ const AdvancedContentOptimizer = () => {
       impact: 'Medium',
       status: 'active',
       icon: Zap,
-      metrics: { before: 3.2, after: 4.8, unit: 'Engagement' }
+      metrics: { before: 3.2after: 4.8unit: 'Engagement' }
     },
     {
       id: 'conversion-optimization',
@@ -53,7 +54,7 @@ const AdvancedContentOptimizer = () => {
       impact: 'High',
       status: 'active',
       icon: TrendingUp,
-      metrics: { before: 2.3, after: 5.1, unit: 'Conversion%' }
+      metrics: { before: 2.3after: 5.1unit: 'Conversion%' }
     },
     {
       id: 'user-experience',
@@ -62,7 +63,7 @@ const AdvancedContentOptimizer = () => {
       impact: 'High',
       status: 'active',
       icon: Users,
-      metrics: { before: 7.1, after: 9.2, unit: 'UX Score' }
+      metrics: { before: 7.1after: 9.2unit: 'UX Score' }
     }
   ]);
 
@@ -78,7 +79,7 @@ const AdvancedContentOptimizer = () => {
     };
 
     collectMetrics();
-  }, []);
+  }[]);
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-blue-900 py-16">
@@ -94,8 +95,8 @@ const AdvancedContentOptimizer = () => {
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"> Converts</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our advanced content optimization techniques ensure your content engages users, 
-            drives conversions, and delivers measurable results.
+            Our advanced content optimization techniques ensure your content engages users
+            drives conversionsand delivers measurable results.
           </p>
         </div>
 

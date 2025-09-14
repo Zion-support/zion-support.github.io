@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, TrendingUp, BarChart3, Target, Zap, ArrowRight } from 'lucide-react';
+import { X, TrendingUp, BarChart3, Zap, ArrowRight } from 'lucide-react';
 
 const AdvancedAnalyticsPromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -143,7 +143,7 @@ const AdvancedAnalyticsPromotionBanner = () => {
                 href={currentContent.link}
                 className="inline-flex items-center space-x-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
               >
-                <Target className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5" />
                 <span>{currentContent.cta}</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>

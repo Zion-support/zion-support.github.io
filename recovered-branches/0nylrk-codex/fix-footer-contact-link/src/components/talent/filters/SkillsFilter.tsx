@@ -1,5 +1,5 @@
 
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDownChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
@@ -24,7 +24,7 @@ const POPULAR_SKILLS = [
   "Security"
 ];
 
-export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
+export function SkillsFilter({ selectedSkillstoggleSkillexpandedtoggleSectionisMobileFilterOpen }: SkillsFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button

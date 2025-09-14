@@ -26,8 +26,8 @@ export function PaymentButton({
   className,
   onPaymentInitiated,
   redirectUrl}: PaymentButtonProps) {
-  const [isProcessing, setIsProcessing] = useState(false);
-  const { isAuthenticated, user } = useAuth();
+  const [isProcessingsetIsProcessing] = useState(false);
+  const { isAuthenticateduser } = useAuth();
   const navigate = useNavigate();
   
   const handlePaymentClick = async () => {
@@ -36,7 +36,7 @@ export function PaymentButton({
         title: "Authentication required",
         description: "Please sign in to make a purchase."});
       
-      navigate("/login", { 
+      navigate("/login"{ 
         state: { from: window.location.pathname } 
       });
       return;
@@ -50,7 +50,7 @@ export function PaymentButton({
       }
       
       // Call the create-checkout edge function
-      const { data, error } = await supabase.functions.invoke("create-checkout", {
+      const { dataerror } = await supabase.functions.invoke("create-checkout"{
         body: {
           amount,
           serviceId,
@@ -65,13 +65,13 @@ export function PaymentButton({
       
       if (data?.url) {
         // Open Stripe checkout in a new tab
-        window.open(data.url, '_blank');
+        window.open(data.url'_blank');
       } else {
         throw new Error("No checkout URL returned");
       }
       
     } catch (error) {
-      console.error("Payment error:", error);
+      console.error("Payment error:"error);
       toast({
         title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
@@ -80,7 +80,7 @@ export function PaymentButton({
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false);
-      }, 1500);
+      }1500);
     }
   };
   

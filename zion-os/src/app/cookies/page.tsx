@@ -22,7 +22,7 @@ export default function CookiesPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-4">What Are Cookies?</h2>
               <p className="text-white/80 mb-4">
-                Cookies are small text files that are stored on your device (computer, tablet, or mobile phone) when you visit a website. They help websites remember information about your visit, such as your preferred language and other settings, which can make your next visit easier and more useful.
+                Cookies are small text files that are stored on your device (computertabletor mobile phone) when you visit a website. They help websites remember information about your visitsuch as your preferred language and other settingswhich can make your next visit easier and more useful.
               </p>
               <p className="text-white/80">
                 Cookies are widely used to make websites work more efficiently and to provide information to website owners.
@@ -51,30 +51,30 @@ export default function CookiesPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Essential Cookies</h3>
                   <p className="text-white/70 mb-2">
-                    These cookies are necessary for the website to function properly. They enable basic functions like page navigation, access to secure areas, and form submissions.
+                    These cookies are necessary for the website to function properly. They enable basic functions like page navigationaccess to secure areasand form submissions.
                   </p>
                   <p className="text-white/60 text-sm">
-                    Examples: Authentication cookies, security cookies, session cookies
+                    Examples: Authentication cookiesecurity cookiesession cookies
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Performance Cookies</h3>
                   <p className="text-white/70 mb-2">
-                    These cookies collect information about how visitors use our website, such as which pages are visited most often and if users get error messages.
+                    These cookies collect information about how visitors use our websitesuch as which pages are visited most often and if users get error messages.
                   </p>
                   <p className="text-white/60 text-sm">
-                    Examples: Google Analytics cookies, website performance monitoring
+                    Examples: Google Analytics cookieswebsite performance monitoring
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Functionality Cookies</h3>
                   <p className="text-white/70 mb-2">
-                    These cookies allow the website to remember choices you make and provide enhanced, more personal features.
+                    These cookies allow the website to remember choices you make and provide enhancedmore personal features.
                   </p>
                   <p className="text-white/60 text-sm">
-                    Examples: Language preferences, region settings, user preferences
+                    Examples: Language preferencesregion settingsuser preferences
                   </p>
                 </div>
 
@@ -84,7 +84,7 @@ export default function CookiesPage() {
                     These cookies are used to track visitors across websites to display relevant and engaging advertisements.
                   </p>
                   <p className="text-white/60 text-sm">
-                    Examples: Social media cookies, advertising network cookies
+                    Examples: Social media cookiesadvertising network cookies
                   </p>
                 </div>
               </div>
@@ -188,12 +188,12 @@ export default function CookiesPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>
               <p className="text-white/80 mb-4">
-                If you have any questions about our use of cookies or this Cookie Policy, please contact us:
+                If you have any questions about our use of cookies or this Cookie Policyplease contact us:
               </p>
               <div className="space-y-2 text-white/70">
                 <p><strong>Email:</strong> privacy@ziontechgroup.com</p>
                 <p><strong>Phone:</strong> +1 (302) 464-0950</p>
-                <p><strong>Address:</strong> Zion Tech Group, Global Operations</p>
+                <p><strong>Address:</strong> Zion Tech GroupGlobal Operations</p>
               </div>
               <p className="text-white/80 mt-4">
                 We will respond to your inquiry within 30 days of receipt.

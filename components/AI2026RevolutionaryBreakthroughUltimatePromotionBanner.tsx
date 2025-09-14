@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Target, TrendingUp, Users, Globe, Award } from 'lucide-react';
+ArrowRightBrainZapTargetTrendingUpUsersGlobeAward
 
 const AI2026RevolutionaryBreakthroughUltimatePromotionBanner = () => {
   return (
@@ -64,7 +64,7 @@ const AI2026RevolutionaryBreakthroughUltimatePromotionBanner = () => {
             </div>
             <h3 className="text-lg font-bold mb-2">Multi-Modal Intelligence</h3>
             <p className="text-blue-100 text-sm">
-              Integrated AI platforms combining NLP, computer vision, and predictive analytics
+              Integrated AI platforms combining NLPcomputer visionand predictive analytics
             </p>
           </div>
         </div>
@@ -98,7 +98,7 @@ const AI2026RevolutionaryBreakthroughUltimatePromotionBanner = () => {
                 <h4 className="text-xl font-bold">Manufacturing 4.0</h4>
               </div>
               <p className="text-blue-100 mb-4">
-                Smart factories with autonomous production lines, predictive maintenance, and 99.99% quality control accuracy
+                Smart factories with autonomous production linespredictive maintenanceand 99.99% quality control accuracy
               </p>
               <div className="text-sm text-green-400 font-semibold">
                 ✓ 95% reduction in equipment failures
@@ -142,7 +142,7 @@ const AI2026RevolutionaryBreakthroughUltimatePromotionBanner = () => {
                 <span className="text-2xl font-bold">1</span>
               </div>
               <h4 className="text-lg font-bold mb-2">Foundation</h4>
-              <p className="text-blue-100 text-sm">Infrastructure assessment, data preparation, and team training</p>
+              <p className="text-blue-100 text-sm">Infrastructure assessmentdata preparationand team training</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
