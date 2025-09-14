@@ -31,8 +31,13 @@ const handleApiResponse = async (res: Response) => {
 };
 
 const TalentPage: React.FC = () => {
+<<<<<<< HEAD:temp_backup/pages/talent/[id].tsx.backup.1755989869
   const router = useRouter();
   const { id } = router.query as { id?: string };
+=======
+  const params = useParams();
+  const id = params.id as string;
+>>>>>>> origin/merge-open-prs-batch96:pages/talent/[id].tsx
 
 <<<<<<< HEAD
   const { data, error, isLoading } = useSWR<TalentProfile | null>(

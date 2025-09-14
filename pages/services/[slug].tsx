@@ -10,7 +10,48 @@ import { additionalEnhancedServices } from '../../data/additional-real-services'
 import { newRealServices } from '../../data/new-real-services',
 import { marketReadyServices } from '../../data/market-ready-services',
 
+<<<<<<< HEAD
 type Service = typeof enhancedRealMicroSaasServices[number],
+=======
+const ServicePage: React.FC = () => {
+  const params = useParams();
+  const slug = params.slug as string;
+  const service = React.useMemo(
+    () => SERVICES.find((s) => slugify(s.title) === slug) || null,
+    [slug]
+  );
+  if (!service) {
+    return <Custom404 />;
+  }
+  const serviceLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: service.description,
+    offers: {
+      "@type": "Offer",
+      price: service.price,
+      priceCurrency: service.currency,
+    },
+  };
+  return (
+    <>
+      <NextSeo
+        title={service.title}
+        description={service.description}
+        openGraph={{ title: service.title, description: service.description }}
+      />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(serviceLd)}</script>
+      </Helmet>
+      <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
+        <h1>{service.title}</h1>
+        <p>{service.description}</p>
+      </main>
+    </>
+  );
+};
+>>>>>>> origin/merge-open-prs-batch96
 
 const contactInfo = {
 	mobile: '+1 302 464 0950',
