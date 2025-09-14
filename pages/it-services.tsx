@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
 import { 
   Server, 
   Cloud, 
@@ -25,7 +26,6 @@ import {
   DollarSign,
   Settings
 } from 'lucide-react';
-import Layout from '../components/Layout';
 
 const itServices = [
   {
