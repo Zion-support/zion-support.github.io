@@ -125,7 +125,7 @@ const NewContent2025UltimateBanner: React.FC = () => {
                 Read Full Guide →
               </Link>
 =======
-import { ArrowRight, Star, TrendingUp, Users, Zap } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Users, Zap, ArrowRight } from 'lucide-react';
 >>>>>>> cf2e8fd4f820d723a1dd9a365b571dabe768cfcc
 
 const NewContent2025UltimateBanner = () => {

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, CheckCircle, TrendingUp, DollarSign, Users, Zap, ArrowRight, Star, Award, Target } from 'lucide-react';
+import { X, CheckCircle, TrendingUp, DollarSign, Users, Zap, ArrowRight, Star, Award } from 'lucide-react';
 
 const AITransformation2025SuccessBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -113,7 +113,7 @@ const AITransformation2025SuccessBanner: React.FC = () => {
               <span className="text-sm font-semibold">PROVEN SUCCESS</span>
             </div>
             <div className="hidden sm:flex items-center space-x-2 bg-white/20 rounded-full px-4 py-2">
-              <Target className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4" />
               <span className="text-sm font-semibold">600% ROI ACHIEVED</span>
             </div>
           </div>
@@ -214,7 +214,7 @@ const AITransformation2025SuccessBanner: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-yellow-300" />
+                <ArrowRight className="w-8 h-8 text-yellow-300" />
               </div>
               <h4 className="font-semibold mb-2">Proven Framework</h4>
               <p className="text-sm text-emerald-100">Battle-tested strategies from 500+ successful implementations</p>

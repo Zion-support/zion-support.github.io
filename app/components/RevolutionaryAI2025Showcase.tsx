@@ -9,7 +9,7 @@ import {
   Users, 
   Award, 
   Zap, 
-  Target, 
+  
   CheckCircle,
   BookOpen,
   FileText,
@@ -142,7 +142,7 @@ const RevolutionaryAI2025Showcase: React.FC = () => {
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Target className="w-8 h-8 text-white" />
+              <ArrowRight className="w-8 h-8 text-white" />
             </div>
             <div className="text-3xl font-bold text-gray-900 mb-2">94%</div>
             <div className="text-sm text-gray-600">Success Rate</div>

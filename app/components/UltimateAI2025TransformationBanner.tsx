@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, TrendingUp, DollarSign, Clock, CheckCircle } from 'lucide-react';
+import { X, ArrowRight, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 
 const UltimateAI2025TransformationBanner = () => {
   const [isVisible, setIsVisible] = useState(true);

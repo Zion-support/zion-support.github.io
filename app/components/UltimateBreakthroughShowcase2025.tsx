@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Zap, Target, Clock, Users, Award } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Zap, Clock, Users, Award, ArrowRight } from 'lucide-react';
 
 const UltimateBreakthroughShowcase2025 = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -79,7 +79,7 @@ const UltimateBreakthroughShowcase2025 = () => {
     switch (type) {
       case 'blog': return <Zap className="w-5 h-5" />;
       case 'case-study': return <Award className="w-5 h-5" />;
-      case 'resource': return <Target className="w-5 h-5" />;
+      case 'resource': return <ArrowRight className="w-5 h-5" />;
       default: return <Star className="w-5 h-5" />;
     }
   };
@@ -238,7 +238,7 @@ const UltimateBreakthroughShowcase2025 = () => {
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-purple-600 font-bold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
-                <Target className="w-5 h-5 mr-2" />
+                <ArrowRight className="w-5 h-5 mr-2" />
                 Get Your 1000% ROI Assessment
               </Link>
               <Link

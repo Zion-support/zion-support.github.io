@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronRight, X, Star, TrendingUp, Zap, Target } from 'lucide-react';
+import { ChevronRight, X, Star, TrendingUp, Zap, ArrowRight } from 'lucide-react';
 
 const UltimateBreakthrough2025Banner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -153,7 +153,7 @@ const UltimateBreakthrough2025Banner = () => {
                   href="/contact"
                   className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
                 >
-                  <Target className="w-5 h-5 mr-2" />
+                  <ArrowRight className="w-5 h-5 mr-2" />
                   Get Your 1000% ROI Assessment
                 </Link>
               </div>

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle, AlertCircle, TrendingUp, Target, Users, DollarSign } from 'lucide-react';
+import { ArrowLeft, CheckCircle, AlertCircle, TrendingUp, Users, DollarSign, ArrowRight } from 'lucide-react';
 
 export default function AutonomousEnterpriseReadinessAssessment() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -207,7 +207,7 @@ export default function AutonomousEnterpriseReadinessAssessment() {
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-              <Target className="w-8 h-8 text-blue-600" />
+              <ArrowRight className="w-8 h-8 text-blue-600" />
             </div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Autonomous Enterprise Readiness Assessment</h1>
             <p className="text-gray-600">Evaluate your organization's readiness for autonomous enterprise transformation</p>

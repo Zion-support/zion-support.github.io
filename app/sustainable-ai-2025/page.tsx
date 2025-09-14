@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+// import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Sustainable AI 2025 - Zion Tech Group',
@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function SustainableAI2025Page() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Sustainable AI 2025 - Zion Tech Group"
         description="Green AI solutions achieving 85% carbon reduction and 300% ROI through sustainable technology. Achieve carbon neutrality with AI."
@@ -254,6 +254,6 @@ export default function SustainableAI2025Page() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

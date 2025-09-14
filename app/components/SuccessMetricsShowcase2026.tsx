@@ -281,7 +281,7 @@ const SuccessMetricsShowcase2026: React.FC = () => {
               AI-powered process optimization delivers the highest ROI when combined with change management and employee training.
             </p>
             <div className="flex items-center text-blue-600 font-semibold">
-              <Target className="w-4 h-4 mr-2" />
+              <ArrowRight className="w-4 h-4 mr-2" />
               Up to 500% efficiency gains
             </div>
           </div>

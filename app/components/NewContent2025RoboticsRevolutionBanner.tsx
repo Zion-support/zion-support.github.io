@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowRight, TrendingUp, Zap, Shield, Target } from 'lucide-react';
+import { X, ArrowRight, TrendingUp, Zap, Shield, ArrowRight } from 'lucide-react';
 
 const NewContent2025RoboticsRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -134,7 +134,7 @@ const NewContent2025RoboticsRevolutionBanner = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white bg-opacity-10 rounded-lg p-4">
                   <div className="flex items-center space-x-2 mb-2">
-                    <Target className="w-5 h-5 text-yellow-400" />
+                    <ArrowRight className="w-5 h-5 text-yellow-400" />
                     <span className="text-sm font-medium">Average ROI</span>
                   </div>
                   <div className="text-2xl font-bold text-yellow-400">800%</div>

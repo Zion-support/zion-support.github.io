@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
-import ErrorBoundary from '../components/ErrorBoundary';
+// // import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 
@@ -34,7 +34,7 @@ import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase20
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 
 // Import new 2026 promotional components
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
@@ -43,8 +43,12 @@ import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026
 
 // Import new ultimate content showcase banner
 
+// Import new ultimate breakthrough promotional components
+import NewContent2025UltimateBreakthroughBanner from './components/NewContent2025UltimateBreakthroughBanner';
+import UltimateBreakthroughContentShowcase2025 from './components/UltimateBreakthroughContentShowcase2025';
+
 // Import additional promotional components
-import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
+// import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
@@ -75,7 +79,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
         description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
@@ -87,6 +91,9 @@ export default function HomePage() {
         
         {/* Interactive Content Promotion Banner */}
         <InteractiveContentPromotionBanner />
+        
+        {/* New Content 2025 Ultimate Breakthrough Banner - NEW */}
+        <NewContent2025UltimateBreakthroughBanner />
         
         {/* New Content 2025 Ultimate Showcase Banner */}
         <NewContent2025UltimateShowcaseBanner />
@@ -107,7 +114,7 @@ export default function HomePage() {
         <RevolutionaryContent2025Banner />
         
         {/* AI 2025 Breakthrough Banner */}
-        <AI2025BreakthroughBanner />
+        {/* <AI2025BreakthroughBanner /> */}
         
         
         {/* Enhanced Content Promotion Banner */}
@@ -211,6 +218,9 @@ export default function HomePage() {
         {/* Ultimate Content Showcase 2025 - NEW */}
         <UltimateContentShowcase2025 />
         
+        {/* Ultimate Breakthrough Content Showcase 2025 - NEW */}
+        <UltimateBreakthroughContentShowcase2025 />
+        
         {/* New 2025 Breakthrough Content Promotions */}
         <QuantumAI2025BreakthroughPromotionBanner />
         <AutonomousBusinessOperationsPromotionBanner />
@@ -271,6 +281,6 @@ export default function HomePage() {
           />
         </Suspense>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

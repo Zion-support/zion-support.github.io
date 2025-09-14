@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, TrendingUp, Clock, CheckCircle, Star, BookOpen, FileText, Users } from 'lucide-react';
+import { ArrowRight, Zap, TrendingUp, Clock, CheckCircle, Star, BookOpen, FileText, Users, ArrowRight } from 'lucide-react';
 
 const QuantumContentShowcase2025 = () => {
   const [activeFilter, setActiveFilter] = useState('all');

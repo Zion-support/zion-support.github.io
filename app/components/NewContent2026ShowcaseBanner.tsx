@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Calendar, Users, TrendingUp, Award, Zap, Brain, Target } from 'lucide-react';
+import { ArrowRight, Calendar, Users, TrendingUp, Award, Zap, Brain, ArrowRight, Brain } from 'lucide-react';
 
 const NewContent2026ShowcaseBanner = () => {
   return (
@@ -139,7 +139,7 @@ const NewContent2026ShowcaseBanner = () => {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-white" />
+                <ArrowRight className="w-8 h-8 text-white" />
               </div>
               <h4 className="text-lg font-semibold mb-2">10,000x Faster</h4>
               <p className="text-sm text-gray-400">Quantum computing breakthroughs</p>

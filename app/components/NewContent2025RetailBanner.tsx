@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, ShoppingBag, Heart, Users, BarChart3 } from 'lucide-react';
+import { X, ArrowRight, ShoppingBag, Heart, Users, BarChart3, ArrowRight } from 'lucide-react';
 
 const NewContent2025RetailBanner = () => {
   const [isVisible, setIsVisible] = useState(false);

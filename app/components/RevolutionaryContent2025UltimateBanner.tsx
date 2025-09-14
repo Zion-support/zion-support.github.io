@@ -28,7 +28,7 @@ interface BannerContent {
   type: 'blog' | 'case-study' | 'resource';
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-18b4
-import { X, ChevronRight, Star, TrendingUp, Zap, Target } from 'lucide-react';
+import { X, ChevronRight, Star, TrendingUp, Zap } from 'lucide-react';
 
 interface ContentItem {
   id: string;
