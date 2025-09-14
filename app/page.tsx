@@ -51,6 +51,10 @@ import RevolutionaryAI2026Banner from '../components/RevolutionaryAI2026Banner';
 import AI2026RevolutionaryBanner from '../components/AI2026RevolutionaryBanner';
 import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
 
+// Import new Ultimate Business Intelligence components
+import UltimateBusinessIntelligence2025Banner from '../components/UltimateBusinessIntelligence2025Banner';
+import UltimateBusinessIntelligenceShowcase2025 from '../components/UltimateBusinessIntelligenceShowcase2025';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -68,6 +72,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate Business Intelligence 2025 Banner */}
+        <UltimateBusinessIntelligence2025Banner />
+        
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
         
@@ -188,6 +195,7 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <UltimateBusinessIntelligenceShowcase2025 />
         <NewContent2026PromotionBanner />
         <QuantumAI2026BreakthroughBanner />
         <NewContentShowcase2026 />
