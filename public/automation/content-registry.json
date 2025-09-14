@@ -196,6 +196,10 @@
       "route": "/reports/updates/update-2025-08-18T03-11"
     },
     {
+      "file": "pages/reports/updates/update-2025-08-18-0408.tsx",
+      "route": "/reports/updates/update-2025-08-18-0408"
+    },
+    {
       "file": "pages/reports/updates/update-2025-08-18-0407.tsx",
       "route": "/reports/updates/update-2025-08-18-0407"
     },
