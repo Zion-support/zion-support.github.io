@@ -1,27 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Metadata } from 'next';
->>>>>>> origin/main
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 import ErrorBoundary from '../../../components/ErrorBoundary';
 
-<<<<<<< HEAD
-export const metadata = {
-  title: 'AI 2025: The Quantum Computing Breakthrough That\'s Reshaping Enterprise',
-  description: 'Discover how quantum computing breakthroughs in 2025 are revolutionizing AI capabilities and creating unprecedented opportunities for enterprise transformation.',
-  keywords: ['quantum computing', 'AI', 'enterprise', 'breakthrough', '2025'],
-};
-
-export default function QuantumComputingBreakthroughPage() {
-  return (
-    <ErrorBoundary>
-      <SEO
-        title="AI 2025: The Quantum Computing Breakthrough That's Reshaping Enterprise"
-        description="Discover how quantum computing breakthroughs in 2025 are revolutionizing AI capabilities and creating unprecedented opportunities for enterprise transformation."
-        keywords="quantum computing, AI, enterprise, breakthrough, 2025"
-=======
 export const metadata: Metadata = {
   title: 'AI 2025 Quantum Computing Breakthrough: The Next Frontier',
   description: 'Explore the revolutionary intersection of AI and quantum computing in 2025. Discover breakthrough applications and enterprise opportunities.',

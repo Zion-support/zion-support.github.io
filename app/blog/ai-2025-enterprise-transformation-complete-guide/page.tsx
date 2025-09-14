@@ -1,32 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-<<<<<<< HEAD
-import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
-
-export const metadata: Metadata = {
-  title: 'AI 2025: Complete Enterprise Transformation Guide | Zion Tech Group',
-  description: 'Comprehensive guide to AI transformation in 2025. Learn how to implement AI solutions, measure ROI, and transform your enterprise with cutting-edge technology.',
-  keywords: ['AI Implementation', 'Enterprise Transformation', '2025', 'AI Strategy', 'ROI', 'Digital Transformation'],
-  openGraph: {
-    title: 'AI 2025: Complete Enterprise Transformation Guide',
-    description: 'Comprehensive guide to AI transformation in 2025. Learn how to implement AI solutions, measure ROI, and transform your enterprise with cutting-edge technology.',
-    type: 'article',
-    publishedTime: '2025-01-15T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-    tags: ['AI Implementation', 'Enterprise Transformation', '2025', 'AI Strategy', 'ROI'],
-  },
-};
-
-export default function AI2025EnterpriseTransformationGuide() {
-  return (
-    <ErrorBoundary>
-      <SEO
-        title="AI 2025: Complete Enterprise Transformation Guide"
-        description="Comprehensive guide to AI transformation in 2025. Learn how to implement AI solutions, measure ROI, and transform your enterprise with cutting-edge technology."
-        keywords="AI Implementation, Enterprise Transformation, 2025, AI Strategy, ROI, Digital Transformation"
-=======
 import SEO from '../../../components/SEO';
 import ErrorBoundary from '../../../components/ErrorBoundary';
 
