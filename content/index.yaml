@@ -537,6 +537,60 @@ content_index:
       - "Implemented interactive content discovery and filtering"
 
   new_content_january_2025:
+    - id: "autonomous-enterprise-revolution-ultimate-breakthrough"
+      type: "blog"
+      title: "AI 2025: The Autonomous Enterprise Revolution - Ultimate Breakthrough Guide"
+      file_path: "/content/blog/ai-2025-autonomous-enterprise-revolution-ultimate-breakthrough.md"
+      url: "/blog/ai-2025-autonomous-enterprise-revolution-ultimate-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Autonomous Systems", "Enterprise", "ROI", "Digital Transformation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        savings: "$2.8B"
+        uptime: "99.9%"
+        efficiency: "78%"
+        accuracy: "99.7%"
+      reading_time: "18 min read"
+      
+    - id: "fortune-500-autonomous-transformation-500-percent-roi"
+      type: "case-study"
+      title: "Fortune 500 Autonomous Transformation: $2.8B Annual Savings with 500% ROI Success Story"
+      file_path: "/content/case-studies/fortune-500-autonomous-transformation-500-percent-roi-success.md"
+      url: "/case-studies/fortune-500-autonomous-transformation-500-percent-roi-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "Autonomous AI", "ROI", "Manufacturing", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        savings: "$2.8B"
+        uptime: "99.9%"
+        efficiency: "78%"
+        projects: "200+ Facilities"
+      reading_time: "12 min read"
+      
+    - id: "autonomous-enterprise-implementation-master-guide"
+      type: "resource"
+      title: "AI 2025 Autonomous Enterprise Implementation Master Guide: Complete Roadmap to 500% ROI"
+      file_path: "/content/resources/ai-2025-autonomous-enterprise-implementation-master-guide.md"
+      url: "/resources/ai-2025-autonomous-enterprise-implementation-master-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "Autonomous AI", "Enterprise", "ROI", "Strategy", "Best Practices"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        savings: "$2.8B"
+        uptime: "99.9%"
+        efficiency: "78%"
+        projects: "500+ Success Stories"
+      reading_time: "25 min read"
+      
     - id: "enterprise-automation-ultimate-guide"
       type: "blog"
       title: "AI 2025 Enterprise Automation Revolution: The Ultimate Guide to Transforming Your Business"
