@@ -141,6 +141,10 @@ import EdgeComputingRevolutionBanner2025 from '../components/EdgeComputingRevolu
 import AIBusinessIntelligence2025Banner from '../components/AIBusinessIntelligence2025Banner';
 import AIBusinessIntelligenceShowcase2025 from '../components/AIBusinessIntelligenceShowcase2025';
 
+// Import new AI 2026 Ultimate Implementation Framework components
+import AI2026UltimateImplementationFrameworkBanner from '../components/AI2026UltimateImplementationFrameworkBanner';
+import Fortune500AI600ROICaseStudyBanner from '../components/Fortune500AI600ROICaseStudyBanner';
+
 // Import new AI automation promotional components
 import NewContent2025AdvancedAIAutomationBanner from '../components/NewContent2025AdvancedAIAutomationBanner';
 import UltimateAIAutomationShowcase2025 from '../components/UltimateAIAutomationShowcase2025';
@@ -213,6 +217,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2026 ULTIMATE IMPLEMENTATION FRAMEWORK BANNER - NEWEST FEATURED */}
+        <AI2026UltimateImplementationFrameworkBanner />
+        
+        {/* FORTUNE 500 AI 600% ROI CASE STUDY BANNER - NEWEST FEATURED */}
+        <Fortune500AI600ROICaseStudyBanner />
+        
         {/* AI BUSINESS INTELLIGENCE 2025 BANNER - NEWEST FEATURED */}
         <AIBusinessIntelligence2025Banner />
         
