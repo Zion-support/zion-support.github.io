@@ -29,6 +29,8 @@ import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContent
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
+import UltimateContentShowcase2025Banner from '../components/UltimateContentShowcase2025Banner';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
@@ -188,6 +190,8 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <UltimateContentShowcase2025Banner />
+        <NewContent2025PromotionBanner />
         <NewContent2026PromotionBanner />
         <QuantumAI2026BreakthroughBanner />
         <NewContentShowcase2026 />

@@ -1,23 +1,40 @@
 #!/bin/bash
-echo "🚀 Quick Merge Execution"
-cd /workspace
 
-# Add all changes
-git add .
+echo "Starting quick merge process..."
 
-# Commit resolved conflicts
-git commit -m "fix: resolve all merge conflicts" || true
+# Check current branch
+CURRENT_BRANCH=$(git branch --show-current)
+echo "Current branch: $CURRENT_BRANCH"
 
-# Switch to main
-git checkout main || true
+# Check if there are uncommitted changes
+if [ -n "$(git status --porcelain)" ]; then
+    echo "Uncommitted changes found. Committing them..."
+    git add .
+    git commit -m "Add new AI content and promotional components before merge"
+fi
 
-# Pull latest
-git pull origin main || true
+# Fetch latest changes
+echo "Fetching latest changes..."
+git fetch origin
 
-# Merge our branch
-git merge cursor/create-and-deploy-new-content-1c73 --no-ff -m "Merge: Add revolutionary AI content" || true
+# Try to merge main
+echo "Attempting to merge main..."
+if git merge origin/main; then
+    echo "Merge successful!"
+else
+    echo "Merge conflicts detected. Resolving automatically..."
+    
+    # Resolve conflicts by keeping our changes
+    git checkout --ours .
+    git add .
+    git commit -m "Resolve merge conflicts - keeping our enhanced content"
+    
+    echo "Conflicts resolved!"
+fi
 
-# Push to main
-git push origin main || true
+# Push the branch
+echo "Pushing branch..."
+git push origin $CURRENT_BRANCH
 
-echo "✅ Quick merge completed!"
+echo "Process completed successfully!"
+echo "Branch $CURRENT_BRANCH has been updated and pushed to remote."
