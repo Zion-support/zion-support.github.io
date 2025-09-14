@@ -3,6 +3,70 @@ content_index:
   total_content_pieces: 12
   
   new_2025_content:
+    - id: "generative-ai-revolution"
+      type: "blog"
+      title: "AI 2025: The Generative AI Enterprise Revolution - $2.3T Market Transformation"
+      file_path: "/content/blog/ai-2025-generative-ai-enterprise-revolution.md"
+      url: "/blog/ai-2025-generative-ai-enterprise-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Generative AI", "Enterprise", "ROI", "Digital Transformation", "AI Strategy"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        savings: "$180M"
+        accuracy: "99.7%"
+        satisfaction: "98%"
+        
+    - id: "mlops-breakthrough"
+      type: "blog"
+      title: "AI 2025: MLOps Breakthrough - 99.9% Model Reliability with 67% Faster Deployment"
+      file_path: "/content/blog/ai-2025-machine-learning-operations-mlops-breakthrough.md"
+      url: "/blog/ai-2025-machine-learning-operations-mlops-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["MLOps", "Machine Learning", "DevOps", "AI Operations", "Model Deployment"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        deployment_speed: "67%"
+        savings: "$2.1B"
+        efficiency: "89%"
+        
+    - id: "retail-transformation"
+      type: "case-study"
+      title: "Retail AI Transformation 2025: $500M Company Achieves 280% ROI with AI-Powered Operations"
+      file_path: "/content/case-studies/retail-ai-transformation-2025-ultimate-success.md"
+      url: "/case-studies/retail-ai-transformation-2025-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Retail", "AI Transformation", "ROI", "Case Study", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "280%"
+        savings: "$45M"
+        satisfaction: "99.2%"
+        efficiency: "78%"
+        
+    - id: "ai-implementation-master-guide"
+      type: "resource"
+      title: "AI 2025 Implementation Master Guide: From Strategy to 500% ROI in 12 Months"
+      file_path: "/content/resources/ai-2025-implementation-master-guide.md"
+      url: "/resources/ai-2025-implementation-master-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Implementation", "Strategy", "ROI", "Guide", "Best Practices"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        timeline: "12 months"
+        success_rate: "94%"
+        savings: "$2.8B"
+        
     - id: "cybersecurity-revolution"
       type: "blog"
       title: "AI 2025: The Cybersecurity Revolution That's Protecting Enterprises"
