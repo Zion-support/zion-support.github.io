@@ -69,23 +69,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* New Content 2025 Ultimate Banner */}
-        <NewContent2025UltimateBanner />
-        
-        {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
-        
-        {/* Revolutionary Content 2025 Banner */}
+        {/* Revolutionary Content 2025 Banner - NEW CONTENT */}
         <RevolutionaryContent2025Banner />
+        
+        {/* New Content 2025 Showcase Banner - FEATURED */}
+        <NewContent2025ShowcaseBanner />
         
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
         
-        {/* New Content 2025 Showcase Banner */}
-        <NewContent2025ShowcaseBanner />
-        
-        {/* Revolutionary Content 2025 Banner */}
-        <RevolutionaryContent2025Banner />
+        {/* Revolutionary AI Content Banner */}
+        <RevolutionaryAIContentBanner />
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
