@@ -624,7 +624,7 @@ export default function MainFrontIndex() {
               </article>
             ))}
           </div>
-        </motion.section>
+        </section>
 
         {/* Get Started */}
         <motion.section
