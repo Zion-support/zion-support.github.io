@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-// Ensure this file is treated as an ES module
 import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
