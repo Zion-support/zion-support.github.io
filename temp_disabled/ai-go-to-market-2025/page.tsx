@@ -99,9 +99,6 @@ export default function AIGoToMarket2025() {
         </div>
 
         {/* Article Content */}
-<<<<<<< HEAD:app/blog/ai-go-to-market-2025/page.tsx
-        <div className="prose prose-lg max-w-none">
-=======
         <div className="prose prose-lg max-w-none">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">1. Nail The ICP And Job-To-Be-Done</h2>
           <p className="text-gray-700 mb-6 leading-relaxed">
@@ -276,4 +273,3 @@ export default function AIGoToMarket2025() {
   );
 }
 
->>>>>>> b4e3760f673b9a0ebd21d19bf68a3d1562958df6:temp_disabled/ai-go-to-market-2025/page.tsx

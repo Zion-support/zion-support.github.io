@@ -88,66 +88,8 @@ const RevolutionaryContent2025Banner: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-repeat"></div>
-      </div>
-
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-white rounded-full opacity-20"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -100, 0],
-              opacity: [0.2, 0.8, 0.2],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full px-6 py-2 mb-6">
-            <Star className="w-5 h-5 mr-2" />
-            <span className="text-sm font-bold">REVOLUTIONARY CONTENT 2025</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            The Future of AI is
-            <span className="block bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
-              Here Today
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-            Discover cutting-edge AI insights, proven strategies, and actionable frameworks 
-            that are transforming businesses worldwide in 2025.
 =======
 =======
->>>>>>> origin/main
-=======
->>>>>>> cursor/create-and-deploy-new-content-60fa
     <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -160,172 +102,9 @@ const RevolutionaryContent2025Banner: React.FC = () => {
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Explore groundbreaking insights, real-world case studies, and comprehensive resources 
             that will revolutionize your understanding of AI in 2025.
->>>>>>> origin/main
           </p>
         </motion.div>
 
-<<<<<<< HEAD
-        {/* Main Content Slider */}
-        <div className="relative mb-16">
-          <div className="overflow-hidden rounded-3xl">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                className={`bg-gradient-to-r ${slides[currentSlide].color} p-12 rounded-3xl`}
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                  <div>
-                    <div className="flex items-center mb-6">
-                      {slides[currentSlide].icon}
-                      <span className="ml-3 text-2xl font-bold">
-                        {slides[currentSlide].title}
-                      </span>
-                    </div>
-                    
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                      {slides[currentSlide].subtitle}
-                    </h2>
-                    
-                    <p className="text-xl opacity-90 mb-6 leading-relaxed">
-                      {slides[currentSlide].description}
-                    </p>
-                    
-                    <div className="flex items-center mb-8">
-                      <TrendingUp className="w-6 h-6 mr-2" />
-                      <span className="text-lg font-semibold">
-                        {slides[currentSlide].stats}
-                      </span>
-                    </div>
-                    
-                    <Link
-                      href={slides[currentSlide].href}
-                      className="inline-flex items-center bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-                    >
-                      {slides[currentSlide].cta}
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Link>
-                  </div>
-                  
-                  <div className="relative">
-                    <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8">
-                      <div className="text-center">
-                        <div className="text-6xl font-bold mb-4">
-                          {currentSlide === 0 ? "340%" : currentSlide === 1 ? "10^12" : "85%"}
-                        </div>
-                        <div className="text-xl opacity-90">
-                          {currentSlide === 0 ? "Average ROI" : currentSlide === 1 ? "Speedup Factor" : "Automation Rate"}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Slide Indicators */}
-          <div className="flex justify-center mt-8 space-x-3">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  currentSlide === index
-                    ? 'bg-white scale-125'
-                    : 'bg-white bg-opacity-50 hover:bg-opacity-75'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Features Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
-        >
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-              className="text-center group"
-            >
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 group-hover:bg-opacity-20 transition-all duration-300">
-                <div className="text-yellow-400 mb-4 flex justify-center">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="opacity-90">{feature.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 mb-16"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-yellow-400 mb-2">50+</div>
-              <div className="text-lg opacity-90">Expert Articles</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-pink-400 mb-2">25+</div>
-              <div className="text-lg opacity-90">Case Studies</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-400 mb-2">15+</div>
-              <div className="text-lg opacity-90">Downloadable Resources</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-green-400 mb-2">100K+</div>
-              <div className="text-lg opacity-90">Monthly Readers</div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-yellow-400 to-pink-500 rounded-3xl p-8 text-black">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI frameworks 
-              to achieve unprecedented growth and efficiency.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-black text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-colors flex items-center justify-center"
-              >
-                <Play className="w-5 h-5 mr-2" />
-                Start Your Journey
-              </Link>
-              <Link
-                href="/resources"
-                className="border-2 border-black text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-black hover:text-white transition-colors flex items-center justify-center"
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Download Resources
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {/* Blog Posts */}
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
@@ -425,13 +204,7 @@ const RevolutionaryContent2025Banner: React.FC = () => {
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
               >
                 Schedule Consultation
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> origin/main
               </Link>
-<<<<<<< HEAD
-=======
 =======
     <div className="relative overflow-hidden">
       {/* Background with animated gradient */}
@@ -541,8 +314,6 @@ const RevolutionaryContent2025Banner: React.FC = () => {
                   </div>
                 </div>
               </div>
->>>>>>> cursor/create-and-deploy-new-content-510b
->>>>>>> cursor/create-and-deploy-new-content-60fa
             </div>
           </div>
         </motion.div>
