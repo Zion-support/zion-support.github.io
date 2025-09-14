@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 >>>>>>> 786cfaaf0d2bc00b11a733dfcf6fcdeaa815440e
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 const NewContent2025UltimateShowcase = () => {
@@ -474,6 +475,10 @@ const NewContent2025UltimateShowcase = () => {
     </section>
 >>>>>>> cursor/create-and-deploy-new-content-040d
 >>>>>>> 786cfaaf0d2bc00b11a733dfcf6fcdeaa815440e
+=======
+
+  return (
+>>>>>>> cursor/create-and-deploy-new-content-510b
   );
 };
 
