@@ -107,7 +107,6 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
 
       {/* New Features */}
       <section className="py-16">
