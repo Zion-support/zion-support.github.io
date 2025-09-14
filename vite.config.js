@@ -24,9 +24,11 @@ export default defineConfig({
       registerType: 'autoUpdate',
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,avif}'],
+        globIgnores: ['**/reports/**', '**/node_modules/**'],
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
         runtimeCaching: [
           {
-            urlPattern: /^https://api\./,
+            urlPattern: /^https:\/\/api\./,
             handler: 'NetworkFirst',
             options: {
               cacheName: 'api-cache',
