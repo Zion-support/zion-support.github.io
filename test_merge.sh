@@ -1,14 +1,15 @@
 #!/bin/bash
 
-# Script to merge all open PRs and resolve conflicts
+# Test script to merge a few recent branches
 set -e
 
-echo "🚀 Starting comprehensive PR merge process..."
+echo "🧪 Testing merge process with recent branches..."
 
-# Get all cursor branches
-BRANCHES=$(git branch -r | grep "cursor/" | grep -v "HEAD" | sed 's/origin\///' | sort -u)
+# Get the 5 most recent cursor branches
+RECENT_BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | tail -5 | sed 's/origin\///')
 
-echo "📋 Found $(echo "$BRANCHES" | wc -l) branches to process"
+echo "📋 Testing with branches:"
+echo "$RECENT_BRANCHES"
 
 # Counter for tracking
 SUCCESS_COUNT=0
@@ -16,7 +17,7 @@ CONFLICT_COUNT=0
 ERROR_COUNT=0
 
 # Process each branch
-for branch in $BRANCHES; do
+for branch in $RECENT_BRANCHES; do
     echo ""
     echo "🔄 Processing branch: $branch"
     
@@ -38,10 +39,6 @@ for branch in $BRANCHES; do
         echo "  ✅ Successfully merged $branch"
         ((SUCCESS_COUNT++))
         
-        # Push the changes
-        echo "  📤 Pushing changes to remote..."
-        git push origin main
-        
     else
         echo "  ⚠️  Merge conflict detected in $branch"
         ((CONFLICT_COUNT++))
@@ -61,10 +58,6 @@ for branch in $BRANCHES; do
         if git commit -m "Merge $branch into main - conflicts resolved" --no-edit; then
             echo "  ✅ Successfully resolved conflicts and merged $branch"
             ((SUCCESS_COUNT++))
-            
-            # Push the changes
-            echo "  📤 Pushing resolved changes to remote..."
-            git push origin main
         else
             echo "  ❌ Failed to commit resolved merge for $branch"
             ((ERROR_COUNT++))
@@ -82,11 +75,11 @@ for branch in $BRANCHES; do
 done
 
 echo ""
-echo "📊 Merge Process Summary:"
+echo "📊 Test Merge Summary:"
 echo "  ✅ Successful merges: $SUCCESS_COUNT"
 echo "  ⚠️  Conflicts resolved: $CONFLICT_COUNT"
 echo "  ❌ Errors: $ERROR_COUNT"
 echo "  📋 Total processed: $((SUCCESS_COUNT + CONFLICT_COUNT + ERROR_COUNT))"
 
 echo ""
-echo "🎉 PR merge process completed!"
+echo "🎉 Test merge process completed!"
