@@ -177,10 +177,7 @@ export default function HomePage() {
           <EnhancedContentPromotionBanner2026 />
           <ComprehensiveContentShowcase2026 />
         </Suspense>
-      
-            {/* EnhancedSEO / */}
-            <EnhancedSEO />
-            </div>
+      </div>
     </EnhancedErrorBoundary>
   );
 }
