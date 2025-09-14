@@ -69,8 +69,6 @@ import EnterpriseSuccessBanner from '../components/EnterpriseSuccessBanner';
 import FutureTechPreviewBanner from '../components/FutureTechPreviewBanner';
 import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
 import NewContent2025UltimateBreakthroughShowcase from '../components/NewContent2025UltimateBreakthroughShowcase';
-=======
->>>>>>> 37d015f531208ae6fae69d4af3de909c50a3bafc
 
 // Import new advanced AI components
 import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
@@ -91,7 +89,6 @@ const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics')
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
 // Import key promotional components
-import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
