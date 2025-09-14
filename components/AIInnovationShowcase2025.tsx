@@ -3,341 +3,401 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Lightbulb, 
-  Cpu, 
   Brain, 
   Zap, 
-  Globe, 
+  Cpu, 
+  Database, 
   Shield, 
-  Rocket,
-  Sparkles,
+  Globe, 
+  Rocket, 
+  Target,
   TrendingUp,
   Users,
-  Target,
-  ArrowRight,
   CheckCircle,
-  Star
+  ArrowRight,
+  Star,
+  Lightbulb,
+  Code,
+  BarChart3,
+  Lock,
+  RefreshCw,
+  Sparkles
 } from 'lucide-react';
 
-const AIInnovationShowcase2025 = () => {
-  const [activeInnovation, setActiveInnovation] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+interface Innovation {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  impact: string;
+  status: 'released' | 'beta' | 'coming-soon';
+  features: string[];
+  icon: React.ComponentType<any>;
+  color: string;
+  metrics: {
+    efficiency: number;
+    accuracy: number;
+    adoption: number;
+  };
+}
 
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setActiveInnovation((prev) => (prev + 1) % innovations.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+const innovations: Innovation[] = [
+  {
+    id: 'neural-consensus',
+    title: 'Neural Consensus Engine',
+    description: 'Revolutionary AI system that achieves consensus across distributed neural networks, enabling unprecedented decision-making capabilities.',
+    category: 'AI Architecture',
+    impact: 'High',
+    status: 'released',
+    features: ['Distributed Learning', 'Consensus Algorithms', 'Real-time Adaptation', 'Scalable Architecture'],
+    icon: Brain,
+    color: 'from-purple-500 to-pink-500',
+    metrics: { efficiency: 95, accuracy: 98, adoption: 87 }
+  },
+  {
+    id: 'quantum-ai-fusion',
+    title: 'Quantum-AI Fusion Platform',
+    description: 'Breakthrough integration of quantum computing with artificial intelligence, delivering exponential performance improvements.',
+    category: 'Quantum Computing',
+    impact: 'Revolutionary',
+    status: 'beta',
+    features: ['Quantum Algorithms', 'AI Optimization', 'Parallel Processing', 'Error Correction'],
+    icon: Cpu,
+    color: 'from-blue-500 to-cyan-500',
+    metrics: { efficiency: 99, accuracy: 99, adoption: 45 }
+  },
+  {
+    id: 'autonomous-systems',
+    title: 'Autonomous Business Systems',
+    description: 'Self-managing AI systems that autonomously optimize business processes, reducing human intervention by 90%.',
+    category: 'Automation',
+    impact: 'High',
+    status: 'released',
+    features: ['Self-Healing', 'Auto-Optimization', 'Predictive Maintenance', 'Adaptive Learning'],
+    icon: RefreshCw,
+    color: 'from-green-500 to-emerald-500',
+    metrics: { efficiency: 92, accuracy: 94, adoption: 78 }
+  },
+  {
+    id: 'neural-interfaces',
+    title: 'Neural Interface Technology',
+    description: 'Direct brain-computer interfaces that enable seamless interaction between human cognition and AI systems.',
+    category: 'Human-AI Interaction',
+    impact: 'Revolutionary',
+    status: 'coming-soon',
+    features: ['Brain-Computer Interface', 'Thought Recognition', 'Neural Feedback', 'Cognitive Enhancement'],
+    icon: Target,
+    color: 'from-orange-500 to-red-500',
+    metrics: { efficiency: 88, accuracy: 91, adoption: 23 }
+  },
+  {
+    id: 'ai-security',
+    title: 'AI-Powered Security Suite',
+    description: 'Advanced AI security systems that detect and prevent threats in real-time with 99.9% accuracy.',
+    category: 'Security',
+    impact: 'High',
+    status: 'released',
+    features: ['Threat Detection', 'Real-time Response', 'Behavioral Analysis', 'Zero-day Protection'],
+    icon: Shield,
+    color: 'from-red-500 to-pink-500',
+    metrics: { efficiency: 97, accuracy: 99, adoption: 82 }
+  },
+  {
+    id: 'global-ai-network',
+    title: 'Global AI Network',
+    description: 'Worldwide distributed AI network that provides intelligent services across all continents.',
+    category: 'Infrastructure',
+    impact: 'High',
+    status: 'released',
+    features: ['Global Coverage', 'Edge Computing', 'Low Latency', 'High Availability'],
+    icon: Globe,
+    color: 'from-indigo-500 to-purple-500',
+    metrics: { efficiency: 94, accuracy: 96, adoption: 91 }
+  }
+];
 
-  const innovations = [
-    {
-      id: 1,
-      title: "Quantum Neural Networks",
-      description: "Revolutionary quantum computing meets artificial intelligence for unprecedented processing power and speed.",
-      icon: Brain,
-      features: ["Quantum entanglement processing", "Exponential speed improvements", "Advanced pattern recognition", "Secure quantum communication"],
-      color: "from-purple-500 to-pink-600",
-      impact: "1000x faster processing",
-      category: "Quantum AI"
-    },
-    {
-      id: 2,
-      title: "Autonomous AI Agents",
-      description: "Self-learning AI systems that can independently make decisions and adapt to new environments.",
-      icon: Cpu,
-      features: ["Self-optimization", "Autonomous decision making", "Continuous learning", "Multi-domain adaptation"],
-      color: "from-blue-500 to-cyan-600",
-      impact: "95% automation rate",
-      category: "Autonomous Systems"
-    },
-    {
-      id: 3,
-      title: "Emotional Intelligence AI",
-      description: "AI systems that understand and respond to human emotions for more natural interactions.",
-      icon: Lightbulb,
-      features: ["Emotion recognition", "Contextual understanding", "Empathetic responses", "Human-AI collaboration"],
-      color: "from-green-500 to-emerald-600",
-      impact: "300% better engagement",
-      category: "Human-AI Interaction"
-    },
-    {
-      id: 4,
-      title: "Edge AI Computing",
-      description: "Distributed AI processing at the edge for real-time decision making and reduced latency.",
-      icon: Zap,
-      features: ["Real-time processing", "Low latency", "Offline capabilities", "Scalable architecture"],
-      color: "from-orange-500 to-red-600",
-      impact: "50ms response time",
-      category: "Edge Computing"
-    },
-    {
-      id: 5,
-      title: "AI-Powered Cybersecurity",
-      description: "Advanced AI systems that predict and prevent cyber threats before they occur.",
-      icon: Shield,
-      features: ["Threat prediction", "Automated response", "Behavioral analysis", "Zero-day protection"],
-      color: "from-red-500 to-pink-600",
-      impact: "99.9% threat prevention",
-      category: "Cybersecurity"
-    },
-    {
-      id: 6,
-      title: "Global AI Network",
-      description: "Worldwide distributed AI infrastructure for seamless global operations and collaboration.",
-      icon: Globe,
-      features: ["Global distribution", "Load balancing", "Multi-region deployment", "Seamless connectivity"],
-      color: "from-cyan-500 to-blue-600",
-      impact: "Global coverage",
-      category: "Infrastructure"
-    }
-  ];
+const categories = ['All', 'AI Architecture', 'Quantum Computing', 'Automation', 'Human-AI Interaction', 'Security', 'Infrastructure'];
 
-  const stats = [
-    { label: "AI Models Deployed", value: "10,000+", icon: Brain },
-    { label: "Global Users", value: "2.5M+", icon: Users },
-    { label: "Processing Power", value: "500 PetaFLOPS", icon: Zap },
-    { label: "Success Rate", value: "99.7%", icon: Target }
-  ];
+export default function AIInnovationShowcase2025() {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedInnovation, setSelectedInnovation] = useState<Innovation | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-      }
+  const filteredInnovations = selectedCategory === 'All' 
+    ? innovations 
+    : innovations.filter(innovation => innovation.category === selectedCategory);
+
+  const handleInnovationClick = (innovation: Innovation) => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setSelectedInnovation(innovation);
+      setIsLoading(false);
+    }, 300);
+  };
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'released': return 'bg-green-100 text-green-800';
+      case 'beta': return 'bg-yellow-100 text-yellow-800';
+      case 'coming-soon': return 'bg-blue-100 text-blue-800';
+      default: return 'bg-gray-100 text-gray-800';
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
+  const getImpactColor = (impact: string) => {
+    switch (impact) {
+      case 'Revolutionary': return 'text-red-600';
+      case 'High': return 'text-orange-600';
+      case 'Medium': return 'text-yellow-600';
+      default: return 'text-gray-600';
     }
   };
 
   return (
-    <motion.div
-      className="relative py-20 px-4 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden"
-      variants={containerVariants}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-    >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
-        <motion.div
-          className="text-center mb-16"
-          variants={itemVariants}
-        >
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Header Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6"
-            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            <Sparkles className="w-5 h-5 text-blue-400" />
-            <span className="text-blue-300 font-medium">AI Innovation Showcase 2025</span>
+            <div className="flex items-center justify-center mb-6">
+              <Sparkles className="h-8 w-8 text-yellow-400 mr-3" />
+              <h1 className="text-4xl md:text-6xl font-bold text-white">
+                AI Innovation Showcase 2025
+              </h1>
+              <Sparkles className="h-8 w-8 text-yellow-400 ml-3" />
+            </div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Discover the most groundbreaking AI innovations that are reshaping the future of technology and business.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3">
+                <div className="flex items-center text-white">
+                  <Rocket className="h-5 w-5 mr-2" />
+                  <span className="font-semibold">6 Revolutionary Technologies</span>
+                </div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3">
+                <div className="flex items-center text-white">
+                  <TrendingUp className="h-5 w-5 mr-2" />
+                  <span className="font-semibold">95% Average Efficiency</span>
+                </div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3">
+                <div className="flex items-center text-white">
+                  <Users className="h-5 w-5 mr-2" />
+                  <span className="font-semibold">67% Global Adoption</span>
+                </div>
+              </div>
+            </div>
           </motion.div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Revolutionary AI Innovations
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Shaping Tomorrow
-            </span>
-          </h2>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover the cutting-edge AI technologies that are revolutionizing industries 
-            and transforming the way we live, work, and interact with technology.
-          </p>
-        </motion.div>
+        </div>
+      </div>
 
-        {/* Stats Section */}
+      {/* Category Filter */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-          variants={itemVariants}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-3 mb-12"
         >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.3 }}
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                selectedCategory === category
+                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg transform scale-105'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+              }`}
             >
-              <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-3" />
-              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-sm text-gray-400">{stat.label}</div>
-            </motion.div>
+              {category}
+            </button>
           ))}
         </motion.div>
 
-        {/* Innovation Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {innovations.map((innovation, index) => (
-            <motion.div
-              key={innovation.id}
-              className={`relative group cursor-pointer ${
-                activeInnovation === index ? 'scale-105 z-10' : 'hover:scale-102'
-              }`}
-              variants={itemVariants}
-              whileHover={{ y: -10 }}
-              onClick={() => setActiveInnovation(index)}
-            >
-              <div className={`relative p-8 rounded-2xl bg-gradient-to-br ${innovation.color} backdrop-blur-sm border border-white/20 transition-all duration-500 ${
-                activeInnovation === index ? 'shadow-2xl shadow-blue-500/25' : 'shadow-lg'
-              }`}>
-                {/* Glow effect for active innovation */}
-                {activeInnovation === index && (
-                  <motion.div
-                    className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 to-transparent"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                )}
-                
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-4">
-                    <innovation.icon className="w-12 h-12 text-white" />
-                    <span className="text-xs font-bold text-white/80 bg-white/20 px-3 py-1 rounded-full">
-                      {innovation.category}
-                    </span>
+        {/* Innovations Grid */}
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <AnimatePresence>
+            {filteredInnovations.map((innovation, index) => (
+              <motion.div
+                key={innovation.id}
+                layout
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group cursor-pointer"
+                onClick={() => handleInnovationClick(innovation)}
+              >
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className={`p-3 rounded-xl bg-gradient-to-r ${innovation.color}`}>
+                      <innovation.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex gap-2">
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(innovation.status)}`}>
+                        {innovation.status.replace('-', ' ')}
+                      </span>
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getImpactColor(innovation.impact)}`}>
+                        {innovation.impact}
+                      </span>
+                    </div>
                   </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-3">
+
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
                     {innovation.title}
                   </h3>
                   
-                  <p className="text-white/90 mb-6 leading-relaxed">
+                  <p className="text-gray-300 mb-4 line-clamp-3">
                     {innovation.description}
                   </p>
-                  
-                  <div className="space-y-2 mb-6">
-                    {innovation.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-white/80">
-                        <CheckCircle className="w-4 h-4 text-green-400" />
-                        <span className="text-sm">{feature}</span>
+
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-400">Efficiency</span>
+                      <div className="flex items-center">
+                        <div className="w-20 bg-gray-700 rounded-full h-2 mr-2">
+                          <div 
+                            className="bg-gradient-to-r from-green-400 to-green-500 h-2 rounded-full transition-all duration-1000"
+                            style={{ width: `${innovation.metrics.efficiency}%` }}
+                          />
+                        </div>
+                        <span className="text-white font-medium">{innovation.metrics.efficiency}%</span>
                       </div>
-                    ))}
+                    </div>
+                    
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-400">Accuracy</span>
+                      <div className="flex items-center">
+                        <div className="w-20 bg-gray-700 rounded-full h-2 mr-2">
+                          <div 
+                            className="bg-gradient-to-r from-blue-400 to-blue-500 h-2 rounded-full transition-all duration-1000"
+                            style={{ width: `${innovation.metrics.accuracy}%` }}
+                          />
+                        </div>
+                        <span className="text-white font-medium">{innovation.metrics.accuracy}%</span>
+                      </div>
+                    </div>
                   </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-semibold text-white/90 bg-white/20 px-3 py-1 rounded-full">
-                      {innovation.impact}
-                    </span>
-                    <ArrowRight className="w-5 h-5 text-white/60 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
+
+                  <div className="mt-4 flex items-center text-purple-300 group-hover:text-purple-200 transition-colors">
+                    <span className="text-sm font-medium">Learn More</span>
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </div>
 
-        {/* Featured Innovation Detail */}
-        <motion.div
-          className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-16"
-          variants={itemVariants}
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Featured Innovation: {innovations[activeInnovation].title}
-            </h3>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              {innovations[activeInnovation].description}
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-4">Key Features</h4>
-                <div className="space-y-3">
-                  {innovations[activeInnovation].features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-3">
-                      <Star className="w-5 h-5 text-yellow-400" />
-                      <span className="text-gray-300">{feature}</span>
+      {/* Innovation Detail Modal */}
+      <AnimatePresence>
+        {selectedInnovation && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedInnovation(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/20"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-start justify-between mb-6">
+                <div className={`p-4 rounded-xl bg-gradient-to-r ${selectedInnovation.color}`}>
+                  <selectedInnovation.icon className="h-12 w-12 text-white" />
+                </div>
+                <button
+                  onClick={() => setSelectedInnovation(null)}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              <h2 className="text-3xl font-bold text-white mb-4">
+                {selectedInnovation.title}
+              </h2>
+              
+              <p className="text-gray-300 mb-6 text-lg">
+                {selectedInnovation.description}
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-white/5 rounded-lg p-4">
+                  <div className="text-sm text-gray-400 mb-2">Efficiency</div>
+                  <div className="text-2xl font-bold text-white">{selectedInnovation.metrics.efficiency}%</div>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4">
+                  <div className="text-sm text-gray-400 mb-2">Accuracy</div>
+                  <div className="text-2xl font-bold text-white">{selectedInnovation.metrics.accuracy}%</div>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4">
+                  <div className="text-sm text-gray-400 mb-2">Adoption</div>
+                  <div className="text-2xl font-bold text-white">{selectedInnovation.metrics.adoption}%</div>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Key Features</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {selectedInnovation.features.map((feature, index) => (
+                    <div key={index} className="flex items-center text-gray-300">
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span>{feature}</span>
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
-            
-            <div className="space-y-6">
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-4">Impact Metrics</h4>
-                <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl p-6 border border-blue-500/30">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-white mb-2">
-                      {innovations[activeInnovation].impact}
-                    </div>
-                    <div className="text-gray-300">
-                      Performance Improvement
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-4">Category</h4>
-                <div className="bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-xl p-4 border border-green-500/30">
-                  <div className="text-center text-lg font-semibold text-white">
-                    {innovations[activeInnovation].category}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
 
-        {/* Call to Action */}
-        <motion.div
-          className="text-center"
-          variants={itemVariants}
-        >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 border border-blue-500/30">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Experience the Future?
-            </h3>
-            <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-              Join thousands of innovators who are already using our AI technologies 
-              to transform their businesses and create extraordinary results.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Rocket className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-                Start Your Innovation Journey
-                <motion.div
-                  className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
-                  whileHover={{ scale: 1.1 }}
-                />
-              </motion.button>
-              
-              <motion.button
-                className="group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent text-white font-semibold rounded-full border-2 border-white/30 hover:border-white/60 hover:bg-white/10 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Lightbulb className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-                Learn More
-              </motion.button>
+              <div className="flex gap-4">
+                <button className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
+                  Get Started
+                </button>
+                <button className="flex-1 bg-white/10 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Loading Overlay */}
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 flex items-center justify-center"
+          >
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+              <div className="flex items-center space-x-3">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-500"></div>
+                <span className="text-white text-lg">Loading innovation details...</span>
+              </div>
             </div>
-          </div>
-        </motion.div>
-      </div>
-    </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
-};
-
-export default AIInnovationShowcase2025;
+}

@@ -1,19 +1,26 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
+  Quote, 
+  Star, 
   TrendingUp, 
   Users, 
-  DollarSign, 
-  Clock, 
-  Target,
-  ArrowRight,
-  Star,
-  CheckCircle,
   Award,
+  ArrowRight,
+  Play,
+  Download,
+  ExternalLink,
+  CheckCircle,
+  BarChart3,
+  DollarSign,
+  Clock,
+  Target,
   Zap,
   Brain,
+  Shield,
   Globe
 } from 'lucide-react';
 
@@ -21,343 +28,424 @@ const SuccessStoriesShowcase2025 = () => {
   const [activeStory, setActiveStory] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
+  const successStories = [
+    {
+      id: 1,
+      company: 'TechCorp Solutions',
+      industry: 'Manufacturing',
+      logo: '/api/placeholder/80/80',
+      challenge: 'Manual quality control processes causing 15% defect rate and production delays',
+      solution: 'AI-powered computer vision system for real-time quality inspection',
+      results: {
+        defectRate: '95% reduction',
+        efficiency: '300% increase',
+        costSavings: '$2.5M annually',
+        timeSaved: '40 hours/week'
+      },
+      testimonial: {
+        text: 'Zion Tech Group transformed our manufacturing process completely. The AI quality control system reduced our defect rate by 95% and saved us $2.5M annually. The ROI was achieved in just 3 months.',
+        author: 'Sarah Johnson',
+        position: 'CEO, TechCorp Solutions',
+        rating: 5
+      },
+      technologies: ['Computer Vision', 'Machine Learning', 'IoT Sensors'],
+      duration: '3 months',
+      teamSize: '50+ employees',
+      href: '/case-studies/techcorp-solutions'
+    },
+    {
+      id: 2,
+      company: 'FinanceFlow Inc',
+      industry: 'Financial Services',
+      logo: '/api/placeholder/80/80',
+      challenge: 'Manual data processing taking 20 hours per week and prone to human errors',
+      solution: 'Intelligent document processing and workflow automation platform',
+      results: {
+        processingTime: '90% reduction',
+        accuracy: '99.8% accuracy',
+        costSavings: '$1.8M annually',
+        timeSaved: '18 hours/week'
+      },
+      testimonial: {
+        text: 'The automation platform from Zion Tech Group revolutionized our document processing. We now process 10x more documents with 99.8% accuracy. Our team can focus on strategic work instead of manual data entry.',
+        author: 'Michael Chen',
+        position: 'CTO, FinanceFlow Inc',
+        rating: 5
+      },
+      technologies: ['OCR', 'Workflow Automation', 'AI Analytics'],
+      duration: '2 months',
+      teamSize: '25+ employees',
+      href: '/case-studies/financeflow-inc'
+    },
+    {
+      id: 3,
+      company: 'HealthTech Innovations',
+      industry: 'Healthcare',
+      logo: '/api/placeholder/80/80',
+      challenge: 'Patient data scattered across multiple systems, leading to delayed diagnoses',
+      solution: 'Unified AI-powered patient data platform with predictive analytics',
+      results: {
+        diagnosisTime: '60% faster',
+        accuracy: '98% improvement',
+        costSavings: '$3.2M annually',
+        timeSaved: '25 hours/week'
+      },
+      testimonial: {
+        text: 'Zion Tech Group\'s AI platform transformed our patient care. We can now diagnose conditions 60% faster with 98% accuracy. This has saved countless lives and significantly improved our operational efficiency.',
+        author: 'Dr. Emily Rodriguez',
+        position: 'Chief Medical Officer, HealthTech Innovations',
+        rating: 5
+      },
+      technologies: ['AI Analytics', 'Data Integration', 'Predictive Modeling'],
+      duration: '4 months',
+      teamSize: '100+ employees',
+      href: '/case-studies/healthtech-innovations'
+    },
+    {
+      id: 4,
+      company: 'RetailMax Global',
+      industry: 'Retail',
+      logo: '/api/placeholder/80/80',
+      challenge: 'Inventory management inefficiencies causing stockouts and overstocking',
+      solution: 'AI-powered demand forecasting and inventory optimization system',
+      results: {
+        stockouts: '80% reduction',
+        overstock: '70% reduction',
+        costSavings: '$4.1M annually',
+        timeSaved: '30 hours/week'
+      },
+      testimonial: {
+        text: 'The inventory optimization system from Zion Tech Group is a game-changer. We reduced stockouts by 80% and overstock by 70%, saving $4.1M annually. Our supply chain is now perfectly optimized.',
+        author: 'David Kim',
+        position: 'Supply Chain Director, RetailMax Global',
+        rating: 5
+      },
+      technologies: ['Demand Forecasting', 'Machine Learning', 'Supply Chain AI'],
+      duration: '3 months',
+      teamSize: '75+ employees',
+      href: '/case-studies/retailmax-global'
+    },
+    {
+      id: 5,
+      company: 'EduTech Academy',
+      industry: 'Education',
+      logo: '/api/placeholder/80/80',
+      challenge: 'Personalized learning paths needed for 10,000+ students across different skill levels',
+      solution: 'AI-powered adaptive learning platform with personalized content delivery',
+      results: {
+        engagement: '250% increase',
+        completionRate: '85% improvement',
+        costSavings: '$1.2M annually',
+        timeSaved: '20 hours/week'
+      },
+      testimonial: {
+        text: 'Zion Tech Group\'s adaptive learning platform transformed our educational approach. Student engagement increased by 250% and completion rates improved by 85%. It\'s like having a personal tutor for every student.',
+        author: 'Prof. Lisa Thompson',
+        position: 'Academic Director, EduTech Academy',
+        rating: 5
+      },
+      technologies: ['Adaptive Learning', 'Personalization AI', 'Learning Analytics'],
+      duration: '5 months',
+      teamSize: '40+ employees',
+      href: '/case-studies/edutech-academy'
+    },
+    {
+      id: 6,
+      company: 'LogiChain Solutions',
+      industry: 'Logistics',
+      logo: '/api/placeholder/80/80',
+      challenge: 'Route optimization and delivery scheduling causing delays and increased costs',
+      solution: 'AI-powered logistics optimization with real-time route planning',
+      results: {
+        deliveryTime: '45% faster',
+        fuelCosts: '35% reduction',
+        costSavings: '$2.8M annually',
+        timeSaved: '35 hours/week'
+      },
+      testimonial: {
+        text: 'The logistics optimization system from Zion Tech Group is incredible. We reduced delivery times by 45% and fuel costs by 35%, saving $2.8M annually. Our customers are much happier with faster deliveries.',
+        author: 'James Wilson',
+        position: 'Operations Manager, LogiChain Solutions',
+        rating: 5
+      },
+      technologies: ['Route Optimization', 'Real-time Analytics', 'IoT Integration'],
+      duration: '2 months',
+      teamSize: '60+ employees',
+      href: '/case-studies/logichain-solutions'
+    }
+  ];
+
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setActiveStory((prev) => (prev + 1) % successStories.length);
-    }, 5000);
+    }, 8000);
     return () => clearInterval(interval);
   }, []);
 
-  const successStories = [
-    {
-      id: 1,
-      company: "TechCorp Global",
-      industry: "Technology",
-      challenge: "Needed to scale AI operations across 50+ countries while maintaining performance and security standards.",
-      solution: "Implemented our Quantum AI Fusion platform with edge computing capabilities and autonomous optimization.",
-      results: {
-        revenue: "+450%",
-        efficiency: "+380%",
-        costReduction: "-65%",
-        timeToMarket: "-80%"
-      },
-      testimonial: "Zion Tech Group transformed our entire AI infrastructure. The results exceeded our wildest expectations.",
-      author: "Sarah Chen",
-      position: "CTO, TechCorp Global",
-      logo: "TC",
-      color: "from-blue-500 to-purple-600"
-    },
-    {
-      id: 2,
-      company: "FinanceFlow Inc",
-      industry: "Financial Services",
-      challenge: "Required real-time fraud detection and risk assessment across millions of transactions daily.",
-      solution: "Deployed our Advanced AI Security Suite with quantum-powered threat detection and predictive analytics.",
-      results: {
-        revenue: "+320%",
-        efficiency: "+290%",
-        costReduction: "-55%",
-        timeToMarket: "-75%"
-      },
-      testimonial: "The AI security solution prevented $50M in potential fraud in just the first quarter. Incredible ROI!",
-      author: "Michael Rodriguez",
-      position: "Head of Security, FinanceFlow Inc",
-      logo: "FF",
-      color: "from-green-500 to-teal-600"
-    },
-    {
-      id: 3,
-      company: "HealthTech Solutions",
-      industry: "Healthcare",
-      challenge: "Needed to process and analyze medical data from 100+ hospitals while ensuring patient privacy.",
-      solution: "Implemented our Neural Network Builder with healthcare-specific AI models and privacy-preserving techniques.",
-      results: {
-        revenue: "+280%",
-        efficiency: "+350%",
-        costReduction: "-70%",
-        timeToMarket: "-85%"
-      },
-      testimonial: "Our diagnostic accuracy improved by 95% while reducing processing time from hours to minutes.",
-      author: "Dr. Emily Watson",
-      position: "Chief Medical Officer, HealthTech Solutions",
-      logo: "HT",
-      color: "from-purple-500 to-pink-600"
-    },
-    {
-      id: 4,
-      company: "RetailMax Worldwide",
-      industry: "Retail & E-commerce",
-      challenge: "Required personalized customer experiences and inventory optimization across 1000+ stores globally.",
-      solution: "Deployed our AI-Powered Analytics platform with real-time personalization and predictive inventory management.",
-      results: {
-        revenue: "+520%",
-        efficiency: "+410%",
-        costReduction: "-60%",
-        timeToMarket: "-70%"
-      },
-      testimonial: "Customer satisfaction increased by 300% and inventory costs dropped by 60%. Game-changing technology!",
-      author: "James Thompson",
-      position: "VP of Operations, RetailMax Worldwide",
-      logo: "RM",
-      color: "from-orange-500 to-red-600"
-    }
-  ];
-
-  const stats = [
-    { label: "Success Stories", value: "500+", icon: Award },
-    { label: "Average ROI", value: "350%", icon: TrendingUp },
-    { label: "Client Satisfaction", value: "99.2%", icon: Star },
-    { label: "Time to Value", value: "30 days", icon: Clock }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
+  const currentStory = successStories[activeStory];
 
   return (
-    <motion.div
-      className="relative py-20 px-4 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 overflow-hidden"
-      variants={containerVariants}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-    >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-green-600/10 via-blue-600/10 to-purple-600/10"></div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
+    <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-green-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          className="text-center mb-16"
-          variants={itemVariants}
-        >
-          <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 mb-6"
-            whileHover={{ scale: 1.05 }}
+        <div className="text-center mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           >
-            <Award className="w-5 h-5 text-green-400" />
-            <span className="text-green-300 font-medium">Success Stories 2025</span>
+            Success Stories & Testimonials
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-gray-600 max-w-3xl mx-auto mb-8"
+          >
+            Discover how leading companies across industries have transformed their 
+            operations and achieved remarkable results with our solutions.
+          </motion.p>
+          
+          {/* Overall Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+          >
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
+              <div className="text-gray-600">Success Stories</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-600 mb-2">$50M+</div>
+              <div className="text-gray-600">Cost Savings</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-600 mb-2">95%</div>
+              <div className="text-gray-600">Success Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-orange-600 mb-2">4.9/5</div>
+              <div className="text-gray-600">Average Rating</div>
+            </div>
           </motion.div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Real Results from
-            <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Real Companies
-            </span>
-          </h2>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover how leading companies across industries are achieving 
-            extraordinary results with our AI-powered solutions.
-          </p>
-        </motion.div>
+        </div>
 
-        {/* Stats Section */}
+        {/* Featured Success Story */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeStory}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+              {/* Left Side - Story Details */}
+              <div className="p-8 lg:p-12">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                    {currentStory.company.charAt(0)}
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">{currentStory.company}</h3>
+                    <p className="text-gray-600">{currentStory.industry} • {currentStory.teamSize}</p>
+                    <div className="flex items-center gap-1 mt-1">
+                      {[...Array(currentStory.testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Challenge</h4>
+                  <p className="text-gray-600">{currentStory.challenge}</p>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Solution</h4>
+                  <p className="text-gray-600">{currentStory.solution}</p>
+                </div>
+
+                {/* Results */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Results</h4>
+                  <div className="grid grid-cols-2 gap-4">
+                    {Object.entries(currentStory.results).map(([key, value], index) => (
+                      <div key={index} className="p-4 bg-green-50 rounded-lg">
+                        <div className="text-2xl font-bold text-green-600 mb-1">{value}</div>
+                        <div className="text-sm text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Technologies */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Technologies Used</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {currentStory.technologies.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <Link
+                  href={currentStory.href}
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+                >
+                  <span>Read Full Case Study</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+
+              {/* Right Side - Testimonial */}
+              <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-8 lg:p-12 text-white">
+                <div className="flex items-center justify-center mb-8">
+                  <Quote className="w-16 h-16 text-white/30" />
+                </div>
+                
+                <blockquote className="text-xl leading-relaxed mb-8 text-center">
+                  "{currentStory.testimonial.text}"
+                </blockquote>
+                
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold">
+                      {currentStory.testimonial.author.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  <div className="font-semibold text-lg">{currentStory.testimonial.author}</div>
+                  <div className="text-blue-100">{currentStory.testimonial.position}</div>
+                  <div className="flex items-center justify-center gap-1 mt-2">
+                    {[...Array(currentStory.testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-8 border-t border-white/20">
+                  <div className="grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold">{currentStory.duration}</div>
+                      <div className="text-sm text-blue-100">Implementation</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold">{currentStory.teamSize}</div>
+                      <div className="text-sm text-blue-100">Team Size</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* All Success Stories Grid */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-          variants={itemVariants}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {stats.map((stat, index) => (
+          {successStories.map((story, index) => (
             <motion.div
-              key={index}
-              className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.3 }}
+              key={story.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
-              <stat.icon className="w-8 h-8 text-green-400 mx-auto mb-3" />
-              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-sm text-gray-400">{stat.label}</div>
+              <div className="p-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                    {story.company.charAt(0)}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">{story.company}</h3>
+                    <p className="text-sm text-gray-600">{story.industry}</p>
+                  </div>
+                </div>
+
+                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                  {story.challenge}
+                </p>
+
+                <div className="space-y-2 mb-4">
+                  {Object.entries(story.results).slice(0, 2).map(([key, value], idx) => (
+                    <div key={idx} className="flex items-center justify-between text-sm">
+                      <span className="text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+                      <span className="font-semibold text-green-600">{value}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-1">
+                    {[...Array(story.testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <span className="text-sm text-gray-500">{story.duration}</span>
+                </div>
+
+                <Link
+                  href={story.href}
+                  className="group/btn inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+                >
+                  <span>Read Story</span>
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Success Stories Carousel */}
+        {/* Bottom CTA */}
         <motion.div
-          className="relative mb-16"
-          variants={itemVariants}
-        >
-          <div className="relative h-auto rounded-3xl overflow-hidden">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeStory}
-                className={`bg-gradient-to-br ${successStories[activeStory].color} p-8 md:p-12`}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="max-w-6xl mx-auto">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    {/* Content */}
-                    <div className="text-white">
-                      <motion.div
-                        className="flex items-center gap-4 mb-6"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                      >
-                        <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-2xl font-bold">
-                          {successStories[activeStory].logo}
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold">{successStories[activeStory].company}</h3>
-                          <p className="text-white/80">{successStories[activeStory].industry}</p>
-                        </div>
-                      </motion.div>
-                      
-                      <motion.div
-                        className="mb-8"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 }}
-                      >
-                        <h4 className="text-lg font-semibold mb-3 text-white/90">Challenge:</h4>
-                        <p className="text-white/80 mb-6">{successStories[activeStory].challenge}</p>
-                        
-                        <h4 className="text-lg font-semibold mb-3 text-white/90">Solution:</h4>
-                        <p className="text-white/80">{successStories[activeStory].solution}</p>
-                      </motion.div>
-                      
-                      <motion.div
-                        className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-6"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4 }}
-                      >
-                        <p className="text-white/90 italic text-lg mb-4">
-                          "{successStories[activeStory].testimonial}"
-                        </p>
-                        <div className="text-white/70">
-                          <div className="font-semibold">{successStories[activeStory].author}</div>
-                          <div className="text-sm">{successStories[activeStory].position}</div>
-                        </div>
-                      </motion.div>
-                    </div>
-                    
-                    {/* Results */}
-                    <motion.div
-                      className="space-y-6"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.4, duration: 0.6 }}
-                    >
-                      <h4 className="text-2xl font-bold text-white text-center">Results Achieved</h4>
-                      
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                          <TrendingUp className="w-8 h-8 text-green-400 mx-auto mb-3" />
-                          <div className="text-2xl font-bold text-white mb-1">
-                            {successStories[activeStory].results.revenue}
-                          </div>
-                          <div className="text-white/70 text-sm">Revenue Growth</div>
-                        </div>
-                        
-                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                          <Zap className="w-8 h-8 text-blue-400 mx-auto mb-3" />
-                          <div className="text-2xl font-bold text-white mb-1">
-                            {successStories[activeStory].results.efficiency}
-                          </div>
-                          <div className="text-white/70 text-sm">Efficiency Gain</div>
-                        </div>
-                        
-                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                          <DollarSign className="w-8 h-8 text-purple-400 mx-auto mb-3" />
-                          <div className="text-2xl font-bold text-white mb-1">
-                            {successStories[activeStory].results.costReduction}
-                          </div>
-                          <div className="text-white/70 text-sm">Cost Reduction</div>
-                        </div>
-                        
-                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                          <Clock className="w-8 h-8 text-orange-400 mx-auto mb-3" />
-                          <div className="text-2xl font-bold text-white mb-1">
-                            {successStories[activeStory].results.timeToMarket}
-                          </div>
-                          <div className="text-white/70 text-sm">Time to Market</div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-            
-            {/* Navigation Dots */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3">
-              {successStories.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    activeStory === index 
-                      ? 'bg-white scale-125' 
-                      : 'bg-white/40 hover:bg-white/60'
-                  }`}
-                  onClick={() => setActiveStory(index)}
-                />
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center"
-          variants={itemVariants}
         >
-          <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-3xl p-12 border border-green-500/30">
-            <h3 className="text-4xl font-bold text-white mb-6">
+          <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-12 text-white">
+            <h3 className="text-3xl font-bold mb-4">
               Ready to Write Your Success Story?
             </h3>
-            <p className="text-gray-300 text-xl mb-8 max-w-3xl mx-auto">
-              Join hundreds of companies that have transformed their operations 
-              and achieved extraordinary results with our AI solutions.
+            <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+              Join hundreds of companies that have already transformed their operations 
+              and achieved remarkable results with our solutions.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <motion.button
-                className="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-full hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-bold rounded-lg hover:bg-gray-100 transition-all duration-300"
               >
-                <Target className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                Start Your Success Journey
-                <motion.div
-                  className="absolute inset-0 rounded-full bg-gradient-to-r from-green-600 to-blue-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
-                  whileHover={{ scale: 1.1 }}
-                />
-              </motion.button>
-              
-              <motion.button
-                className="group relative inline-flex items-center gap-3 px-10 py-5 bg-transparent text-white font-semibold rounded-full border-2 border-white/30 hover:border-white/60 hover:bg-white/10 transition-all duration-300 text-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                <ExternalLink className="w-5 h-5 mr-2" />
+                Start Your Transformation
+              </Link>
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
-                <Users className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
-                View All Case Studies
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </motion.button>
+                <Download className="w-5 h-5 mr-2" />
+                Download All Case Studies
+              </Link>
             </div>
           </div>
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

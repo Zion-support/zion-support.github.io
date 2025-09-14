@@ -2,24 +2,34 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  ArrowRight, 
-  CheckCircle,
-  Code,
-  Database,
-  Lock,
-  Cpu,
-  Globe,
-  BarChart3
+  Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
+  CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
 } from 'lucide-react';
 
-const EnhancedServicesShowcase = () => {
-  const [activeService, setActiveService] = useState(0);
+interface Service {
+  id: string;
+  name: string;
+  tagline: string;
+  category: string;
+  price: string;
+  period: string;
+  setupTime: string;
+  customers: string;
+  features: string[];
+  benefits: string[];
+  roi: string;
+  marketSize: string;
+  growthRate: string;
+  popular?: boolean;
+  icon: React.ComponentType<any>;
+  color: string;
+}
 
-  const services = [
+const EnhancedServicesShowcase: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const services: Service[] = [
     {
       id: 'ai',
       title: 'AI & Machine Learning',
@@ -140,35 +150,67 @@ const EnhancedServicesShowcase = () => {
           </p>
         </motion.div>
 
-        {/* Service Tabs */}
-        <div className="mb-12">
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {services.map((service, index) => (
-              <button
-                key={service.id}
-                onClick={() => setActiveService(index)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  activeService === index
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                }`}
-              >
-                {service.title}
-              </button>
-            ))}
+        {/* Filters */}
+        <div className="flex flex-col md:flex-row gap-4 mb-12 justify-center items-center">
+          {/* Category Filter */}
+          <div className="relative">
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12"
+            >
+              {categories.map((category) => (
+                <option key={category} value={category} className="bg-slate-800 text-white">
+                  {category === 'all' ? 'All Categories' : category}
+                </option>
+              ))}
+            </select>
+            <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none" />
           </div>
 
-          {/* Service Details */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeService}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
+          {/* Search */}
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search services..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
+            />
+            <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
+          </div>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <Star className="w-3 h-3" />
+                    Popular
+                  </div>
+                </div>
+              )}
+
+              {/* Service Content */}
+              <div className="p-8">
+                {/* Icon and Category */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-right">
+                    <div className="text-xs text-white/60 mb-1">{getCategoryIcon(service.category)({ className: 'w-3 h-3' })}</div>
+                    <div className="text-xs text-white/40">{service.category}</div>
+                  </div>
+                </div>
+
                 {/* Service Info */}
                 <div>
                   <div className="flex items-center space-x-4 mb-6">
@@ -212,48 +254,58 @@ const EnhancedServicesShowcase = () => {
                   </div>
                 </div>
 
-                {/* Technologies & CTA */}
-                <div className="space-y-8">
-                  <div>
-                    <h4 className="text-xl font-semibold text-white mb-4">Technologies We Use</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {services[activeService].technologies.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 bg-white/10 text-gray-300 rounded-full text-sm"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                {/* Key Features */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
+                  <div className="space-y-2">
+                    {service.features.slice(0, 3).map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-xs text-white/70">
+                        <CheckCircle className="w-3 h-3 text-green-400" />
+                        {feature}
+                      </div>
+                    ))}
                   </div>
 
-                  <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6">
-                    <h4 className="text-xl font-semibold text-white mb-4">Ready to Get Started?</h4>
-                    <p className="text-gray-300 mb-6">
-                      Let's discuss how our {services[activeService].title.toLowerCase()} solutions 
-                      can transform your business.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Link
-                        href={services[activeService].href}
-                        className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
-                      >
-                        Learn More
-                        <ArrowRight className="w-4 h-4 ml-2 inline" />
-                      </Link>
-                      <Link
-                        href="/contact"
-                        className="flex-1 px-6 py-3 border border-white/20 text-white hover:bg-white/10 font-semibold rounded-lg transition-all duration-300 text-center"
-                      >
-                        Get Quote
-                      </Link>
-                    </div>
+                {/* Benefits */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-3">Key Benefits:</h4>
+                  <div className="space-y-2">
+                    {service.benefits.slice(0, 2).map((benefit, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-xs text-white/70">
+                        <TrendingUp className="w-3 h-3 text-blue-400" />
+                        {benefit}
+                      </div>
+                    ))}
                   </div>
                 </div>
+
+                {/* ROI and Market Info */}
+                <div className="mb-6 p-4 bg-white/5 rounded-lg">
+                  <div className="text-xs text-white/60 mb-2">ROI & Market Position</div>
+                  <div className="text-xs text-white/80 leading-relaxed">{service.roi}</div>
+                  <div className="mt-2 text-xs text-white/60">
+                    Market: {service.marketSize} • Growth: {service.growthRate}
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
+                    className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105"
+                  >
+                    Get Started
+                  </button>
+                  <button
+                    onClick={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject=Demo request for ${service.name}`}
+                    className="px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+                  >
+                    Demo
+                  </button>
+                </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </div>
+          ))}
         </div>
 
         {/* Stats Section */}
@@ -276,14 +328,9 @@ const EnhancedServicesShowcase = () => {
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12">
-            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20">
+            <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
@@ -291,24 +338,23 @@ const EnhancedServicesShowcase = () => {
               with our cutting-edge technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+              <a
+                href="mailto:kleber@ziontechgroup.com?subject=Consultation Request"
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
-                Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </Link>
-              <Link
-                href="/portfolio"
-                className="px-8 py-4 border border-white/20 text-white hover:bg-white/10 font-semibold rounded-lg transition-all duration-300"
+                Schedule Consultation
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
-                View Our Work
-              </Link>
+                Call Now
+              </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

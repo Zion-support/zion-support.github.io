@@ -1,45 +1,35 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import type { ControllerRenderProps } from "react-hook-form";
+import { useForm, ControllerRenderProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-import { FileText } from 'lucide-react';
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+  SelectValue} from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { disputeReasonLabels } from "@/types/disputes";
 import { useDisputes } from "@/hooks/useDisputes";
 import { toast } from "sonner";
-
+import { FileText } from 'lucide-react'
 
 const formSchema = z.object({
-  reason_code: z
-    .string()
-    .nonempty({ message: "Please select a reason for the dispute" }),
-  description: z
-    .string()
-    .nonempty({ message: "Please provide a description of the issue" })
-    .min(20, {
-      message: "Description must be at least 20 characters",
-    }),
-  attachments: z.array(z.any()).optional(),
-});
+  reason_code: z.string()
+    .min(1, { message: "Please select a reason for the dispute" }),
+  description: z.string()
+    .min(20, { message: "Description must be at least 20 characters" }),
+  attachments: z.array(z.any()).optional()});
 
 type DisputeFormProps = {
   projectId: string;
@@ -63,9 +53,7 @@ export function DisputeForm({
     defaultValues: {
       reason_code: "",
       description: "",
-      attachments: [],
-    },
-  });
+      attachments: []}});
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
@@ -88,10 +76,9 @@ export function DisputeForm({
       
       const dispute = await createDispute({
         project_id: projectId,
-        ...(milestoneId ? { milestone_id: milestoneId } : {}),
+        milestone_id: milestoneId,
         reason_code: values.reason_code,
-        description: values.description,
-      });
+        description: values.description});
       
       if (dispute && dispute.id) {
         // Future enhancement: Upload attachments

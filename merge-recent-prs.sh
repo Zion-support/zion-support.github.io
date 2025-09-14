@@ -1,120 +1,88 @@
 #!/bin/bash
+set -euo pipefail
 
-# Merge Recent PRs Script
-# This script will merge the most recent and relevant PRs
+echo "🚀 Merging recent PRs..."
 
-set -e
+# Get the 4 most recent open PRs
+RECENT_PRS=$(curl -s -H "Accept: application/vnd.github.v3+json" \
+    "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=4&sort=created&direction=desc" \
+    | python3 -c "
+import sys, json
+data = json.load(sys.stdin)
+for pr in data:
+    print(f'{pr[\"number\"]}|{pr[\"title\"]}|{pr[\"head\"][\"ref\"]}')
+")
 
-echo "🚀 Starting merge process for recent PRs..."
+echo "Recent PRs to merge:"
+echo "$RECENT_PRS"
 
-# Function to log with timestamp
-log() {
-    echo "[$(date '+%H:%M:%S')] $1"
-}
-
-# Function to check git status
-check_status() {
-    log "Checking git status..."
-    git status --porcelain
-}
-
-# Function to fetch and update
-fetch_update() {
-    log "Fetching latest changes..."
-    git fetch origin --all
-    
-    log "Updating main branch..."
-    git checkout main
-    git pull origin main
-}
-
-# Function to resolve conflicts
-resolve_conflicts() {
-    local branch=$1
-    log "Resolving conflicts for $branch"
-    
-    # Checkout branch
-    git checkout "$branch" 2>/dev/null || {
-        log "Branch $branch not found locally, fetching..."
-        git fetch origin "$branch:$branch"
-        git checkout "$branch"
-    }
-    
-    # Try merge
-    if git merge main --no-commit 2>/dev/null; then
-        log "No conflicts for $branch"
-        git commit -m "Merge main into $branch"
-    else
-        log "Conflicts detected, auto-resolving..."
+# Process each PR
+while IFS='|' read -r pr_number pr_title branch_name; do
+    if [[ -n "$pr_number" ]]; then
+        echo "🔄 Processing PR #$pr_number: $pr_title"
+        echo "   Branch: $branch_name"
         
-        # Auto-resolve conflicts
-        git checkout --ours package.json 2>/dev/null || true
-        git checkout --ours package-lock.json 2>/dev/null || true
-        git rm "*.backup*" 2>/dev/null || true
-        git checkout --ours app/page.tsx 2>/dev/null || true
-        git checkout --ours app/layout.tsx 2>/dev/null || true
-        git checkout --ours components/ 2>/dev/null || true
-        git add .
-        git commit -m "Auto-resolve conflicts in $branch"
+        # Fetch the branch
+        git fetch origin "$branch_name:$branch_name" || {
+            echo "❌ Failed to fetch branch $branch_name"
+            continue
+        }
+        
+        # Switch to main and merge
+        git checkout main
+        git pull origin main
+        
+        # Try to merge
+        if git merge --no-ff "$branch_name" -m "Merge PR #$pr_number: $pr_title"; then
+            echo "✅ Successfully merged PR #$pr_number"
+            
+            # Push to main
+            if git push origin main; then
+                echo "✅ Pushed to main"
+            else
+                echo "❌ Failed to push to main"
+            fi
+            
+            # Clean up
+            git branch -d "$branch_name" 2>/dev/null || true
+        else
+            echo "⚠️  Merge conflict for PR #$pr_number, attempting resolution..."
+            
+            # Try simple conflict resolution
+            git status --porcelain | grep "^UU\|^AA\|^DD" | while read -r status file; do
+                echo "   Resolving conflicts in $file"
+                
+                # Simple strategy: keep the incoming version (after )
+                if [[ -f "$file" ]]; then
+                    # Remove conflict markers and keep the second version
+                    sed -i '//,//d' "$file"
+                fi
+            done
+            
+            # Add resolved files
+            git add .
+            
+            # Check if merge can be completed
+            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                echo "❌ Still have unresolved conflicts, aborting merge"
+                git merge --abort
+            else
+                echo "✅ Conflicts resolved, completing merge"
+                git commit -m "Resolve merge conflicts for PR #$pr_number: $pr_title"
+                
+                if git push origin main; then
+                    echo "✅ Pushed resolved merge to main"
+                else
+                    echo "❌ Failed to push resolved merge to main"
+                fi
+                
+                git branch -d "$branch_name" 2>/dev/null || true
+            fi
+        fi
+        
+        echo "---"
+        sleep 1
     fi
-}
+done <<< "$RECENT_PRS"
 
-# Function to merge PR
-merge_pr() {
-    local branch=$1
-    log "Merging $branch into main"
-    
-    git checkout main
-    if git merge "$branch" --no-ff -m "Merge $branch into main"; then
-        log "Successfully merged $branch"
-        git push origin main
-        git branch -d "$branch" 2>/dev/null || true
-        git push origin --delete "$branch" 2>/dev/null || true
-    else
-        log "Failed to merge $branch"
-    fi
-}
-
-# Function to clean up
-cleanup() {
-    log "Cleaning up..."
-    find . -name "*.backup*" -type f -delete 2>/dev/null || true
-    find . -name "*.bak" -type f -delete 2>/dev/null || true
-    find . -name "*~" -type f -delete 2>/dev/null || true
-}
-
-# Main execution
-main() {
-    log "Starting merge process..."
-    
-    # Check status
-    check_status
-    
-    # Fetch and update
-    fetch_update
-    
-    # Get recent PR branches (last 50)
-    recent_branches=$(git branch -r | grep "cursor/" | tail -50 | sed 's/origin\///' | tr -d ' ')
-    
-    if [ -z "$recent_branches" ]; then
-        log "No recent PR branches found"
-        exit 0
-    fi
-    
-    log "Found recent PR branches: $recent_branches"
-    
-    # Process each PR
-    for branch in $recent_branches; do
-        log "Processing $branch"
-        resolve_conflicts "$branch"
-        merge_pr "$branch"
-    done
-    
-    # Clean up
-    cleanup
-    
-    log "Merge process completed!"
-}
-
-# Run main function
-main "$@"
+echo "🎉 Recent PR merge completed!"
