@@ -398,6 +398,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 ULTIMATE BREAKTHROUGH BANNER - NEWEST FEATURED */}
+        <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* REVOLUTIONARY CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
+        <RevolutionaryContentShowcase2025 />
+        
+        {/* ULTIMATE CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED */}
+        <UltimateContentPromotionBanner2025 />
+        
         {/* AI 2025 ULTIMATE BREAKTHROUGH 100,000% ROI BANNER - NEWEST FEATURED */}
         <AI2025UltimateBreakthrough100000ROIBanner />
         
