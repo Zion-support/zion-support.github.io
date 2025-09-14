@@ -19,13 +19,6 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-import React from 'react';
-const SEO: React.FC<SEOProps> = ({;
-const SEO: React.FC<SEOProps> = ({
-
-
-    <Head>;
-
   title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.',
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics',
@@ -39,10 +32,7 @@ const SEO: React.FC<SEOProps> = ({
   tags = [],
   structuredData,
   noindex = false,
-  nofollow = false,
-}) => {
-    <Head>;
-
+  nofollow = false}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
@@ -51,23 +41,6 @@ const SEO: React.FC<SEOProps> = ({
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <meta name="description" content={description} />
       <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
       <meta name="author" content={author} />
@@ -153,8 +126,20 @@ const SEO: React.FC<SEOProps> = ({
                   "itemOffered": {
                     "@type": "Service",
                     "name": "AI & Machine Learning Solutions"
-
-
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Quantum Computing Services"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Space Technology Solutions"
                   }
                 }
               ]
@@ -164,16 +149,15 @@ const SEO: React.FC<SEOProps> = ({
       />
       
       {/* Canonical URL */}
+      <link rel="canonical" href={fullUrl} />
       
+      {/* Favicon and App Icons */}
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
       
-
-
-
-
-
-
-
-
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -193,22 +177,8 @@ const SEO: React.FC<SEOProps> = ({
           }}
         />
       )}
-    </Head>;
-
-export default SEO;  );
-
-
-export default SEO;
-
-
-
     </Head>
   );
 };
 
-export default SEO;
-    </Head>);
-export default SEO;            __html: JSON.stringify (structured_data);
-    </Head>);
-export default SEO);
 export default SEO;

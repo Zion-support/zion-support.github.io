@@ -1,213 +1,230 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles, 
   ArrowRight, 
-  BookOpen, 
+  Star, 
   Zap, 
-  Brain, 
-  Cloud, 
-  Shield,
   TrendingUp,
+  X,
+  Play,
+  BookOpen,
   Users,
-  Star,
-  ChevronRight,
-  Play
+  Award
 } from 'lucide-react';
 
 const NewContentShowcase2025PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isDismissed, setIsDismissed] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-    
-    // Rotate features every 3 seconds
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
+    const timer = setTimeout(() => setIsVisible(true), 1000);
+    return () => clearTimeout(timer);
   }, []);
 
-  const features = [
-    { icon: Brain, text: 'AI Innovations', color: 'from-purple-500 to-pink-500' },
-    { icon: Zap, text: 'Automation Solutions', color: 'from-blue-500 to-cyan-500' },
-    { icon: Cloud, text: 'Cloud Infrastructure', color: 'from-green-500 to-emerald-500' },
-    { icon: Shield, text: 'Security Innovation', color: 'from-red-500 to-orange-500' }
-  ];
+  const handleDismiss = () => {
+    setIsDismissed(true);
+  };
 
-  const stats = [
-    { number: '50+', label: 'New Articles', icon: BookOpen },
-    { number: '25+', label: 'Case Studies', icon: TrendingUp },
-    { number: '15+', label: 'Tutorials', icon: Play },
-    { number: '10K+', label: 'Readers', icon: Users }
-  ];
+  const containerVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: -100,
+      scale: 0.9
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+        duration: 0.8
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: -100,
+      scale: 0.9,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
 
-  if (!isVisible) return null;
+  const textVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: 0.3,
+        duration: 0.6
+      }
+    }
+  };
+
+  const buttonVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: 0.6,
+        duration: 0.4
+      }
+    }
+  };
+
+  if (isDismissed) return null;
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-2xl animate-pulse" />
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white"
-          >
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-6"
-            >
-              <Sparkles className="w-4 h-4 mr-2 text-yellow-400" />
-              New Content Collection 2025
-            </motion.div>
-
-            {/* Main Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-            >
-              Discover Our Latest
-              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Content Showcase
-              </span>
-            </motion.h1>
-
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-xl text-blue-100 mb-8 leading-relaxed"
-            >
-              Explore cutting-edge insights, tutorials, and case studies covering the latest in AI, automation, cloud computing, and security innovation. Stay ahead with our comprehensive content library.
-            </motion.p>
-
-            {/* Rotating Feature */}
-            <motion.div
-              key={currentFeature}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.5 }}
-              className="flex items-center mb-8"
-            >
-              <div className={`p-3 rounded-xl bg-gradient-to-r ${features[currentFeature].color} bg-opacity-20 mr-4`}>
-                <features[currentFeature].icon className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <p className="text-sm text-blue-200">Featured Category</p>
-                <p className="text-lg font-semibold text-white">{features[currentFeature].text}</p>
-              </div>
-            </motion.div>
-
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <button className="group flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                <BookOpen className="w-5 h-5 mr-2" />
-                Explore Content
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-              
-              <button className="group flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-bold rounded-xl hover:bg-white/20 transition-all duration-300">
-                <Play className="w-5 h-5 mr-2" />
-                Watch Demo
-              </button>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Content - Stats Grid */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 gap-6"
-          >
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 transition-all duration-300"
-                >
-                  <div className="flex justify-center mb-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-r from-blue-500/20 to-purple-500/20">
-                      <Icon className="w-8 h-8 text-white" />
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white shadow-2xl"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between py-4">
+              {/* Left Content */}
+              <motion.div 
+                className="flex items-center space-x-4 flex-1"
+                variants={textVariants}
+              >
+                <div className="flex items-center space-x-2">
+                  <motion.div
+                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  >
+                    <Sparkles className="w-5 h-5 text-white" />
+                  </motion.div>
+                  <div className="hidden sm:block">
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 text-yellow-300" />
+                      <Star className="w-4 h-4 text-yellow-300" />
+                      <Star className="w-4 h-4 text-yellow-300" />
+                      <Star className="w-4 h-4 text-yellow-300" />
+                      <Star className="w-4 h-4 text-yellow-300" />
                     </div>
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-blue-200 text-sm font-medium">{stat.label}</div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </div>
+                </div>
+                
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold mb-1">
+                    🚀 New Content Showcase 2025 is Live!
+                  </h3>
+                  <p className="text-sm opacity-90 hidden sm:block">
+                    Discover revolutionary AI innovations, business solutions, and future technologies
+                  </p>
+                </div>
+              </motion.div>
 
-        {/* Bottom Features */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
-          <div className="text-center">
-            <div className="flex justify-center mb-4">
-              <div className="p-3 rounded-xl bg-gradient-to-r from-green-500/20 to-emerald-500/20">
-                <Star className="w-8 h-8 text-green-400" />
-              </div>
+              {/* Center Stats */}
+              <motion.div 
+                className="hidden md:flex items-center space-x-6"
+                variants={textVariants}
+              >
+                <div className="text-center">
+                  <div className="text-2xl font-bold">500+</div>
+                  <div className="text-xs opacity-80">AI Models</div>
+                </div>
+                <div className="w-px h-8 bg-white/30"></div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold">60%</div>
+                  <div className="text-xs opacity-80">Cost Reduction</div>
+                </div>
+                <div className="w-px h-8 bg-white/30"></div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold">300%</div>
+                  <div className="text-xs opacity-80">ROI Increase</div>
+                </div>
+              </motion.div>
+
+              {/* Right Actions */}
+              <motion.div 
+                className="flex items-center space-x-3"
+                variants={buttonVariants}
+              >
+                <button className="hidden sm:flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all duration-200 backdrop-blur-sm">
+                  <Play className="w-4 h-4" />
+                  <span className="text-sm font-medium">Watch Demo</span>
+                </button>
+                
+                <button className="bg-white text-purple-600 hover:bg-gray-100 px-6 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center space-x-2 shadow-lg">
+                  <span>Explore Now</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                
+                <button 
+                  onClick={handleDismiss}
+                  className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </motion.div>
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">Expert Authored</h3>
-            <p className="text-blue-200">Content written by industry experts and thought leaders</p>
+
+            {/* Mobile Stats */}
+            <motion.div 
+              className="md:hidden flex items-center justify-center space-x-6 py-2 border-t border-white/20"
+              variants={textVariants}
+            >
+              <div className="flex items-center space-x-1">
+                <TrendingUp className="w-4 h-4" />
+                <span className="text-sm">500+ AI Models</span>
+              </div>
+              <div className="w-px h-4 bg-white/30"></div>
+              <div className="flex items-center space-x-1">
+                <Zap className="w-4 h-4" />
+                <span className="text-sm">60% Cost Reduction</span>
+              </div>
+              <div className="w-px h-4 bg-white/30"></div>
+              <div className="flex items-center space-x-1">
+                <Award className="w-4 h-4" />
+                <span className="text-sm">300% ROI</span>
+              </div>
+            </motion.div>
           </div>
-          
-          <div className="text-center">
-            <div className="flex justify-center mb-4">
-              <div className="p-3 rounded-xl bg-gradient-to-r from-yellow-500/20 to-orange-500/20">
-                <TrendingUp className="w-8 h-8 text-yellow-400" />
-              </div>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Always Updated</h3>
-            <p className="text-blue-200">Fresh content published weekly with latest trends</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="flex justify-center mb-4">
-              <div className="p-3 rounded-xl bg-gradient-to-r from-pink-500/20 to-purple-500/20">
-                <Users className="w-8 h-8 text-pink-400" />
-              </div>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Community Driven</h3>
-            <p className="text-blue-200">Join thousands of professionals learning together</p>
+
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <motion.div
+              className="absolute -top-4 -left-4 w-24 h-24 bg-white/10 rounded-full"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.3, 0.6, 0.3]
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            <motion.div
+              className="absolute -bottom-4 -right-4 w-32 h-32 bg-white/5 rounded-full"
+              animate={{
+                scale: [1, 1.3, 1],
+                opacity: [0.2, 0.4, 0.2]
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1
+              }}
+            />
           </div>
         </motion.div>
-      </div>
-    </div>
+      )}
+    </AnimatePresence>
   );
 };
 

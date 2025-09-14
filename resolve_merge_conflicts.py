@@ -97,60 +97,6 @@ def resolve_merge_conflicts(branch_name):
         # Check for conflict markers
         returncode, stdout, stderr = run_command("git status --porcelain")
         if returncode == 0:
-            conflict_files = [line for line in stdout.split('\n') if line.startswith('UU') or '<<<<<<< HEAD' in line]
-            if conflict_files:
-                print(f"Conflict files: {conflict_files}")
-                return resolve_conflicts_automatically()
-        
-        return False
-
-def resolve_conflicts_automatically():
-    """Automatically resolve common merge conflicts"""
-    print("Attempting automatic conflict resolution...")
-    
-    # Find all files with conflict markers
-    returncode, stdout, stderr = run_command("grep -r '<<<<<<< HEAD' . --include='*.tsx' --include='*.ts' --include='*.js' --include='*.jsx' --include='*.json' | cut -d: -f1 | sort | uniq")
-    
-    if returncode == 0:
-        conflict_files = stdout.strip().split('\n')
-        conflict_files = [f for f in conflict_files if f.strip()]
-        
-        for file_path in conflict_files:
-            print(f"Resolving conflicts in: {file_path}")
-            resolve_file_conflicts(file_path)
-    
-    # Add resolved files
-    returncode, stdout, stderr = run_command("git add .")
-    if returncode == 0:
-        # Commit the merge
-        returncode, stdout, stderr = run_command('git commit -m "Resolve merge conflicts automatically"')
-        if returncode == 0:
-            print("Successfully resolved and committed conflicts")
-            return True
-        else:
-            print(f"Failed to commit resolved conflicts: {stderr}")
-    
-    return False
-
-def resolve_file_conflicts(file_path):
-    """Resolve conflicts in a specific file"""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Simple conflict resolution strategies
-        lines = content.split('\n')
-        resolved_lines = []
-        skip_until = None
-        
-        for line in lines:
-            if skip_until:
-                if line.strip().startswith(skip_until):
-                    skip_until = None
-                continue
-            
-            if line.strip().startswith('<<<<<<< HEAD'):
-                skip_until = '======='
                 continue
             elif line.strip().startswith('======='):
                 skip_until = '>>>>>>>'

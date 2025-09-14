@@ -1,123 +1,257 @@
 'use client';
 
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Brain } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Sparkles, 
+  TrendingUp, 
+  Users, 
+  Zap, 
+  Brain, 
+  Rocket,
+  Star,
+  ArrowRight,
+  Play,
+  BookOpen,
+  Lightbulb,
+  Target
+} from 'lucide-react';
 
 const NewContentShowcase2025 = () => {
-  const features = [
+  const [activeTab, setActiveTab] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const contentSections = [
     {
+      id: 'ai-innovations',
+      title: 'AI Innovations 2025',
       icon: Brain,
-      title: "AI-Powered Solutions",
-      description: "Revolutionary AI technologies transforming business operations",
-      color: "from-purple-500 to-pink-500"
+      color: 'from-purple-500 to-pink-500',
+      content: [
+        {
+          title: 'Revolutionary AI Breakthroughs',
+          description: 'Discover the latest AI technologies that are transforming industries worldwide.',
+          stats: '500+ New AI Models',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Quantum AI Integration',
+          description: 'Explore how quantum computing is enhancing AI capabilities.',
+          stats: '10x Performance Boost',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Neural Interface Technology',
+          description: 'The future of human-AI interaction through advanced neural interfaces.',
+          stats: '95% Accuracy Rate',
+          image: '/api/placeholder/400/300'
+        }
+      ]
     },
     {
-      icon: Zap,
-      title: "Lightning Fast Performance",
-      description: "Optimized systems delivering unprecedented speed and efficiency",
-      color: "from-yellow-500 to-orange-500"
+      id: 'business-solutions',
+      title: 'Business Solutions',
+      icon: Target,
+      color: 'from-blue-500 to-cyan-500',
+      content: [
+        {
+          title: 'Enterprise Automation',
+          description: 'Complete automation solutions for modern businesses.',
+          stats: '60% Cost Reduction',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'AI-Powered Analytics',
+          description: 'Advanced analytics powered by artificial intelligence.',
+          stats: '300% ROI Increase',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Smart Workflow Management',
+          description: 'Intelligent workflow optimization for maximum efficiency.',
+          stats: '80% Time Savings',
+          image: '/api/placeholder/400/300'
+        }
+      ]
     },
     {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Military-grade security protecting your most valuable assets",
-      color: "from-green-500 to-teal-500"
-    },
-    {
-      icon: Globe,
-      title: "Global Scalability",
-      description: "Seamlessly scale your operations across the world",
-      color: "from-blue-500 to-cyan-500"
+      id: 'future-tech',
+      title: 'Future Technologies',
+      icon: Rocket,
+      color: 'from-green-500 to-emerald-500',
+      content: [
+        {
+          title: 'Edge Computing Revolution',
+          description: 'Next-generation edge computing for real-time processing.',
+          stats: '50ms Response Time',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Blockchain Integration',
+          description: 'Secure and transparent blockchain solutions.',
+          stats: '99.9% Uptime',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'IoT Smart Systems',
+          description: 'Intelligent Internet of Things solutions.',
+          stats: '1M+ Connected Devices',
+          image: '/api/placeholder/400/300'
+        }
+      ]
     }
   ];
 
-  const stats = [
-    { label: "Active Users", value: "50K+", icon: Users },
-    { label: "Success Rate", value: "99.9%", icon: TrendingUp },
-    { label: "Uptime", value: "99.99%", icon: Shield },
-    { label: "Satisfaction", value: "4.9/5", icon: Star }
-  ];
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <motion.section
+      className="py-20 bg-gradient-to-br from-slate-50 to-blue-50"
+      variants={containerVariants}
+      initial="hidden"
+      animate={isVisible ? "visible" : "hidden"}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6">
-            <Star className="w-4 h-4 mr-2" />
+        <motion.div className="text-center mb-16" variants={itemVariants}>
+          <motion.div
+            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 text-sm font-medium mb-4"
+            whileHover={{ scale: 1.05 }}
+          >
+            <Sparkles className="w-4 h-4 mr-2" />
             New Content 2025
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Revolutionary Technology
-            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Showcase
-            </span>
+          </motion.div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Discover Revolutionary Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the latest innovations in AI, quantum computing, and automation that are reshaping the future of business.
+            Explore cutting-edge innovations, breakthrough technologies, and transformative solutions 
+            that are shaping the future of business and technology.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white mb-4">
-                <stat.icon className="w-8 h-8" />
-              </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="group">
-              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 mb-6">{feature.description}</p>
-                <Link 
-                  href="/ai-solutions" 
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-2 transition-transform duration-300"
+        {/* Tab Navigation */}
+        <motion.div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
+          <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
+            {contentSections.map((section, index) => {
+              const Icon = section.icon;
+              return (
+                <button
+                  key={section.id}
+                  onClick={() => setActiveTab(index)}
+                  className={`flex items-center px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                    activeTab === index
+                      ? `bg-gradient-to-r ${section.color} text-white shadow-lg`
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  }`}
                 >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white">
-          <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
-          <p className="text-xl mb-8 opacity-90">
-            Join thousands of companies already using our cutting-edge solutions
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
-            >
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              href="/demo"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300"
-            >
-              Watch Demo
-            </Link>
+                  <Icon className="w-5 h-5 mr-2" />
+                  {section.title}
+                </button>
+              );
+            })}
           </div>
-        </div>
+        </motion.div>
+
+        {/* Content Display */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {contentSections[activeTab].content.map((item, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group"
+                whileHover={{ y: -5, scale: 1.02 }}
+                variants={itemVariants}
+              >
+                <div className="relative mb-6">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${contentSections[activeTab].color} flex items-center justify-center mb-4`}>
+                    <Star className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    {item.stats}
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  {item.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {item.description}
+                </p>
+                
+                <div className="flex items-center justify-between">
+                  <button className="flex items-center text-purple-600 font-medium hover:text-purple-700 transition-colors">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                  <div className="flex space-x-2">
+                    <button className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
+                      <Play className="w-4 h-4 text-gray-600" />
+                    </button>
+                    <button className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
+                      <BookOpen className="w-4 h-4 text-gray-600" />
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Call to Action */}
+        <motion.div className="text-center mt-16" variants={itemVariants}>
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-lg mb-6 opacity-90">
+              Join thousands of companies already using our revolutionary solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
+                <Lightbulb className="w-5 h-5 mr-2" />
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors flex items-center justify-center">
+                <Users className="w-5 h-5 mr-2" />
+                Schedule Demo
+              </button>
+            </div>
+          </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

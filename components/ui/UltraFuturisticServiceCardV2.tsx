@@ -2,9 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
 
-
-import {;
-
 interface ServiceCardProps {
   service: {
     id: string;
@@ -37,7 +34,14 @@ interface ServiceCardProps {
     icon: string;
     color: string;
     popular: boolean;
-import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
+    launchDate: string;
+    customers: number;
+    rating: number;
+    reviews: number;
+    marketSize?: string;
+    growthRate?: string;
+  };
+  index: number;
 }
 
 const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, index }) => {
@@ -46,7 +50,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
       case 'ai & consciousness':
         return <Zap className="w-5 h-5" />;
       case 'quantum & emerging tech':
-
         return <Rocket className="w-5 h-5" />;
       case 'enterprise it':
         return <Shield className="w-5 h-5" />;
@@ -56,20 +59,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
         return <TrendingUp className="w-5 h-5" />;
       default:
         return <Zap className="w-5 h-5" />;
-
-
-        return <Zap className='w-5 h-5' />;    }
-
     }
   };
 
   const getGradientClass = (color: string) => {
     if (color.includes('from-') && color.includes('to-')) {
-
-
-
-
-
       return color;
     }
     return 'from-cyan-500 to-blue-500';
@@ -112,12 +106,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
                   {getCategoryIcon(service.category)}
                   <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">
                     {service.category}
-
-
-
-
-
-
                   </span>
                 </div>
               </div>
@@ -142,26 +130,10 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
           
           <p className="text-gray-300 text-sm leading-relaxed">
             {service.tagline}
-
-
-
-
-
-
           </p>
         </div>
 
         {/* Stats */}
-
-                <Star className='w - 3 h - 3 fill - current' />                <span > POPULAR</span>                transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-                <Star className="w - 3 h - 3 fill - current" />;
-
-
-
-
-
-
-
         <div className="relative z-10 mb-6">
           <div className="grid grid-cols-3 gap-4">
             <div className="text-center">
@@ -179,6 +151,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
           </div>
         </div>
 
+        {/* Pricing */}
         <div className="relative z-10 mb-6">
           <div className="bg-gray-800/50 rounded-xl p-4 border border-gray-600/30">
             <div className="flex items-center justify-between mb-2">
@@ -203,7 +176,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
                   ${service.price.enterprise}/mo
                 </span>
               </div>
-
             )}
           </div>
         </div>
@@ -218,19 +190,15 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6 + idx * 0.1 }}
-
-
-
-
-
-
-
-
-
-
-
-
-
+                className="flex items-center space-x-2 text-sm"
+              >
+                <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
+                <span className="text-gray-300">{feature}</span>
+              </motion.div>
+            ))}
+            {service.features.length > 3 && (
+              <div className="text-xs text-gray-500 mt-2">
+                +{service.features.length - 3} more features
               </div>
             )}
           </div>
@@ -242,31 +210,18 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
           <div className="space-y-2">
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
-
-
-
-
-
-
-
-
-
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8 + idx * 0.1 }}
                 className="flex items-center space-x-2 text-sm"
               >
-
-
+                <div className="w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full"></div>
+                <span className="text-gray-300">{benefit}</span>
               </motion.div>
             ))}
           </div>
         </div>
-
-
-
-
 
         {/* Market info */}
         {service.marketSize && service.growthRate && (
@@ -284,15 +239,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
           </div>
         )}
 
-
-
-
         {/* CTA Button */}
         <div className="relative z-10">
-
-
-
-
           <motion.a
             href={service.link}
             whileHover={{ scale: 1.05 }}
@@ -309,28 +257,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
           </motion.a>
         </div>
 
-
-              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />;
-
-
-
-
         {/* Hover overlay */}
         <motion.div
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
-
-
-export default UltraFuturisticServiceCardV2;
-
-
-              <ArrowRight className='w - 4 h - 4 group - hover / btn:translate - x-1 transition - transform duration - 200' />;
-              <ArrowRight className="w - 4 h - 4 group - hover / btn:translate - x-1 transition - transform duration - 200" />;
-export default UltraFuturisticServiceCardV2;        />;
-export default UltraFuturisticServiceCardV2;
-
-
-
+          className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none"
         />
       </div>
     </motion.div>
@@ -338,4 +269,3 @@ export default UltraFuturisticServiceCardV2;
 };
 
 export default UltraFuturisticServiceCardV2;
-

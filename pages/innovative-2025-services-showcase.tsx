@@ -1,37 +1,34 @@
 import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
-  Brain, Rocket, Shield, Atom, Cpu, Cloud, Target,
-  ArrowRight, Star, Zap, Users, Award, Globe, Search,
-  Filter, ChevronDown, ExternalLink, Sparkles, Eye,
-  Lock, Clock, CheckCircle, TrendingUp, DollarSign, Phone,
-  Mail, MapPin, Globe as GlobeIcon
+  Brain, Shield, Rocket, Globe, Cpu, Database, 
+  TrendingUp, Users, Star, Zap, Lock, Target,
+  ArrowRight, Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react';
 
-// Import new expanded services
-import { innovative2025MicroSaasExpanded } from '../data/innovative-2025-micro-saas-expanded';
-import { innovative2025ITSolutionsExpanded } from '../data/innovative-2025-it-solutions-expanded';
-import { innovative2025AISolutionsExpanded } from '../data/innovative-2025-ai-solutions-expanded';
+// Import our new innovative services
+import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3';
+import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
+import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
 
 const Innovative2025ServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('popularity');
 
-  // Combine all new innovative services
+  // Combine all innovative services
   const allInnovativeServices = [
-    ...innovative2025MicroSaasExpansions,
-    ...innovative2025ITServiceExpansions,
-    ...innovative2025AIServiceExpansions
+    ...innovativeMicroSaasExpansionV32025,
+    ...innovativeITServicesExpansion2025V3,
+    ...innovativeAIServicesExpansion2025V3
   ];
 
-  // Categories
   const categories = [
-    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allInnovativeServices.length },
-    { id: 'micro-saas', name: 'Micro SAAS', icon: <Rocket className="w-5 h-5" />, count: innovative2025MicroSaasExpansions.length },
-    { id: 'it-services', name: 'IT Services', icon: <Cpu className="w-5 h-5" />, count: innovative2025ITServiceExpansions.length },
-    { id: 'ai-services', name: 'AI Services', icon: <Brain className="w-5 h-5" />, count: innovative2025AIServiceExpansions.length }
+    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: allInnovativeServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },
+    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('Security')).length },
+    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from-blue-500 to-indigo-500', count: allInnovativeServices.filter(s => s.category.includes('Cloud') || s.category.includes('FinOps')).length },
+    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from-green-500 to-teal-500', count: allInnovativeServices.filter(s => s.category.includes('Developer')).length }
   ];
 
   const filteredServices = allInnovativeServices.filter(service => {
@@ -68,13 +65,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
       transition: {
         staggerChildren: 0.1
       }
-    });
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+    }
   };
 
   return (
@@ -121,101 +112,28 @@ const Innovative2025ServicesShowcase: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="max-w-7xl mx-auto">
-              <div className="flex items-center justify-between">
-                <Link href="/" className="flex items-center space-x-2">
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                    <Zap className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    Zion Tech Group
-                  </span>
-                </Link>
-                
-                <nav className="hidden md:flex items-center space-x-8">
-                  <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
-                    Services
-                  </Link>
-                  <Link href="/solutions" className="text-gray-300 hover:text-white transition-colors">
-                    Solutions
-                  </Link>
-                  <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-                    About
-                  </Link>
-                  <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-                    Contact
-                  </Link>
-                </nav>
-
-                <div className="flex items-center space-x-4">
-                  <Link 
-                    href="/contact"
-                    className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
-                  >
-                    Get Started
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </motion.header>
-
-          {/* Hero Section */}
-          <motion.section 
-            className="relative z-20 py-20 px-4 sm:px-6 lg:px-8"
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Innovative 2025
+            </span>
+            <br />
+            <span className="text-white">Services Showcase</span>
+          </motion.h1>
+          
+          <motion.p
+            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="max-w-7xl mx-auto text-center">
-              <motion.h1 
-                className="text-5xl md:text-7xl font-bold mb-8"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                  Innovative 2025
-                </span>
-                <br />
-                <span className="text-white">Services Showcase</span>
-              </motion.h1>
-              
-              <motion.p 
-                className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-                Discover the future of technology with our cutting-edge AI services, advanced IT infrastructure, 
-                and revolutionary micro SAAS platforms designed to transform your business in 2025 and beyond.
-              </motion.p>
+            Experience the future of technology with our revolutionary AI platforms, quantum computing solutions, 
+            autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
+          </motion.p>
 
-              {/* Stats */}
-              <motion.div 
-                className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-              >
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="flex items-center justify-center mb-2">
-                      <stat.icon className="w-8 h-8 text-purple-400" />
-                    </div>
-                    <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
-                    <div className="text-gray-400">{stat.label}</div>
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-          </motion.section>
-
-          {/* Search and Filter Section */}
-          <motion.section 
-            className="relative z-20 py-12 px-4 sm:px-6 lg:px-8"
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="max-w-7xl mx-auto">
               {/* Search Bar */}
@@ -333,7 +251,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
 
                         {/* CTA Button */}
                         <Link
-                          href={(service as any).link || (service as any).website || `/services/${service.id}`}
+                          href={`/services/${service.id}`}
                           className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                         >
                           <span>Learn More</span>

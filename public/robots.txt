@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zion.tech/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
