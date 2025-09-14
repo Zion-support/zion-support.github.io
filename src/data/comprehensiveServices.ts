@@ -23,7 +23,8 @@ export interface Service {
   reviewCount: number;
   aiScore: number;
   featured: boolean;
-<<<<<<< HEAD
+}
+
 export interface ComprehensiveService {
   id: string;
   title: string;

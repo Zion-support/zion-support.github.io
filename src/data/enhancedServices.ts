@@ -3,9 +3,7 @@ export interface EnhancedService {
   title: string;
   description: string;
   category: string;
-<<<<<<< HEAD
   pricing: string;
-  description: string;
   price: number;
   pricingModel: string;
   userLimit: string;
