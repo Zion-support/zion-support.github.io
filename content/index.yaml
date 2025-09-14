@@ -186,6 +186,86 @@ content_index:
     - id: "cybersecurity-revolution"
 
   new_2025_content_latest:
+    - id: "ai-manufacturing-revolution"
+      type: "blog"
+      title: "AI 2025: The Manufacturing Revolution - How Smart Factories Are Achieving 500% ROI"
+      file_path: "/content/blog/ai-2025-manufacturing-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-manufacturing-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Manufacturing", "Smart Factories", "ROI", "Automation", "Industry 4.0"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        efficiency: "78%"
+        defects: "92% reduction"
+        energy: "45% reduction"
+        
+    - id: "fortune-500-manufacturing-transformation"
+      type: "case-study"
+      title: "Fortune 500 Manufacturing AI Transformation: $50M Annual Savings in 8 Months"
+      file_path: "/content/case-studies/fortune-500-manufacturing-ai-transformation-2025.md"
+      url: "/case-studies/fortune-500-manufacturing-ai-transformation-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Manufacturing", "Fortune 500", "AI Transformation", "ROI", "Cost Savings"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "333%"
+        savings: "$50M annually"
+        efficiency: "45% increase"
+        defects: "97% reduction"
+        
+    - id: "ai-manufacturing-implementation-guide"
+      type: "resource"
+      title: "AI Implementation Manufacturing Master Guide 2025: From Strategy to 500% ROI"
+      file_path: "/content/resources/ai-implementation-manufacturing-master-guide-2025.md"
+      url: "/resources/ai-implementation-manufacturing-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "Manufacturing", "AI Strategy", "ROI", "Best Practices", "Industry 4.0"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        efficiency: "78%"
+        defects: "92% reduction"
+        energy: "45% reduction"
+        
+    - id: "ai-retail-transformation"
+      type: "blog"
+      title: "AI 2025: The Retail Transformation Revolution - How Smart Retail is Achieving 400% ROI"
+      file_path: "/content/blog/ai-2025-retail-transformation-ultimate-guide.md"
+      url: "/blog/ai-2025-retail-transformation-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Retail", "Personalization", "ROI", "Customer Experience", "E-commerce"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "400%"
+        satisfaction: "94%"
+        inventory: "67% reduction"
+        personalization: "89% accuracy"
+        
+    - id: "fortune-500-retail-transformation"
+      type: "case-study"
+      title: "Fortune 500 Retail AI Transformation: $75M Revenue Increase in 6 Months"
+      file_path: "/content/case-studies/fortune-500-retail-ai-transformation-2025.md"
+      url: "/case-studies/fortune-500-retail-ai-transformation-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Retail", "Fortune 500", "AI Transformation", "Revenue Growth", "Customer Experience"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "300%"
+        revenue: "$75M increase"
+        satisfaction: "98%"
+        waste: "50% reduction"
+        
     - id: "ai-cybersecurity-revolution"
       type: "blog"
       title: "AI 2025: The Cybersecurity Revolution - How AI is Transforming Digital Defense"

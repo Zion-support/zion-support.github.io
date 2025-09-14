@@ -2,15 +2,15 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, Star, TrendingUp, Users } from 'lucide-react';
+import { X, ArrowRight, ShoppingBag, Heart, Users, BarChart3 } from 'lucide-react';
 
-const EnhancedContentPromotionBanner = () => {
+const NewContent2025RetailBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
   useEffect(() => {
     // Check if banner was previously dismissed
-    const dismissed = localStorage.getItem('enhanced-content-banner-dismissed');
+    const dismissed = localStorage.getItem('retail-banner-dismissed');
     if (!dismissed) {
       setIsVisible(true);
     }
@@ -19,16 +19,16 @@ const EnhancedContentPromotionBanner = () => {
   const handleDismiss = () => {
     setIsVisible(false);
     setIsDismissed(true);
-    localStorage.setItem('enhanced-content-banner-dismissed', 'true');
+    localStorage.setItem('retail-banner-dismissed', 'true');
   };
 
   if (!isVisible || isDismissed) return null;
 
   return (
-    <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden">
+    <div className="relative bg-gradient-to-r from-pink-600 via-rose-600 to-red-600 text-white overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-600/20 via-rose-600/20 to-red-600/20"></div>
         <div className="absolute top-4 left-4 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
         <div className="absolute top-8 right-8 w-3 h-3 bg-white/20 rounded-full animate-pulse delay-1000"></div>
         <div className="absolute bottom-4 left-1/4 w-1 h-1 bg-white/40 rounded-full animate-pulse delay-500"></div>
@@ -40,53 +40,53 @@ const EnhancedContentPromotionBanner = () => {
           <div className="flex-1">
             <div className="flex items-center space-x-3 mb-4">
               <div className="flex items-center space-x-2 bg-white/20 rounded-full px-4 py-2">
-                <Star className="w-5 h-5" />
-                <span className="text-sm font-medium">ENHANCED CONTENT AVAILABLE</span>
+                <ShoppingBag className="w-5 h-5" />
+                <span className="text-sm font-medium">NEW: RETAIL AI TRANSFORMATION</span>
               </div>
               <div className="hidden sm:flex items-center space-x-2 bg-green-500/20 rounded-full px-3 py-1">
-                <TrendingUp className="w-4 h-4" />
-                <span className="text-xs font-medium">300% ROI</span>
+                <BarChart3 className="w-4 h-4" />
+                <span className="text-xs font-medium">400% ROI</span>
               </div>
             </div>
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
-              Discover Our Latest AI Content
-              <span className="block text-yellow-300">Transforming Businesses Worldwide</span>
+              AI 2025: The Retail Revolution
+              <span className="block text-yellow-300">Smart Retail Achieving 400% ROI</span>
             </h2>
 
-            <p className="text-lg sm:text-xl mb-6 text-purple-100 max-w-4xl">
-              Explore our comprehensive collection of AI guides, case studies, and implementation resources 
-              that are helping companies achieve unprecedented success.
+            <p className="text-lg sm:text-xl mb-6 text-pink-100 max-w-4xl">
+              Discover how Fortune 500 retailers are transforming customer experiences with AI, 
+              achieving unprecedented revenue growth and customer satisfaction.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
+                <Heart className="w-5 h-5 text-pink-300" />
+                <span className="text-sm font-medium">98% Customer Satisfaction</span>
+              </div>
+              <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
                 <Users className="w-5 h-5 text-blue-300" />
-                <span className="text-sm font-medium">500+ Success Stories</span>
+                <span className="text-sm font-medium">89% Personalization Accuracy</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
-                <TrendingUp className="w-5 h-5 text-green-300" />
-                <span className="text-sm font-medium">300% Average ROI</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
-                <Star className="w-5 h-5 text-yellow-300" />
-                <span className="text-sm font-medium">98% Client Satisfaction</span>
+                <BarChart3 className="w-5 h-5 text-green-300" />
+                <span className="text-sm font-medium">$75M Revenue Increase</span>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/blog"
-                className="inline-flex items-center space-x-2 bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                href="/blog/ai-2025-retail-transformation-ultimate-guide"
+                className="inline-flex items-center space-x-2 bg-white text-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                <span>Explore Content</span>
+                <span>Read Full Guide</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/case-studies"
-                className="inline-flex items-center space-x-2 border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                href="/case-studies/fortune-500-retail-ai-transformation-2025"
+                className="inline-flex items-center space-x-2 border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors"
               >
-                <span>View Case Studies</span>
+                <span>View Case Study</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -97,20 +97,20 @@ const EnhancedContentPromotionBanner = () => {
               <h3 className="text-lg font-semibold mb-4 text-center">Success Metrics</h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm">Average ROI</span>
-                  <span className="text-yellow-300 font-bold">300%</span>
+                  <span className="text-sm">ROI Achievement</span>
+                  <span className="text-yellow-300 font-bold">400%</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm">Success Stories</span>
-                  <span className="text-blue-300 font-bold">500+</span>
+                  <span className="text-sm">Customer Satisfaction</span>
+                  <span className="text-pink-300 font-bold">98%</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm">Client Satisfaction</span>
-                  <span className="text-green-300 font-bold">98%</span>
+                  <span className="text-sm">Revenue Growth</span>
+                  <span className="text-green-300 font-bold">$75M</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm">Implementation Rate</span>
-                  <span className="text-purple-300 font-bold">94%</span>
+                  <span className="text-sm">Personalization</span>
+                  <span className="text-blue-300 font-bold">89%</span>
                 </div>
               </div>
             </div>
@@ -130,4 +130,4 @@ const EnhancedContentPromotionBanner = () => {
   );
 };
 
-export default EnhancedContentPromotionBanner;
+export default NewContent2025RetailBanner;
