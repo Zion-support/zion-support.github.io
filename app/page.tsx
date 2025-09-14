@@ -51,6 +51,11 @@ import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBann
 import AutonomousSystems2025RevolutionBanner from '../components/AutonomousSystems2025RevolutionBanner';
 import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowcase2025';
 
+// Import new revolutionary breakthrough promotional components
+import RevolutionaryBreakthrough2025Banner from '../components/RevolutionaryBreakthrough2025Banner';
+import QuantumAI2025PromotionBanner from '../components/QuantumAI2025PromotionBanner';
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -68,10 +73,16 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Autonomous Systems 2025 Revolution Banner - NEW */}
+        {/* Revolutionary Breakthrough 2025 Banner - NEW */}
+        <RevolutionaryBreakthrough2025Banner />
+        
+        {/* Quantum AI 2025 Promotion Banner - NEW */}
+        <QuantumAI2025PromotionBanner />
+        
+        {/* Autonomous Systems 2025 Revolution Banner */}
         <AutonomousSystems2025RevolutionBanner />
         
-        {/* AI 2025 Ultimate Breakthrough Banner - NEW */}
+        {/* AI 2025 Ultimate Breakthrough Banner */}
         <AI2025UltimateBreakthroughBanner />
         
         {/* Revolutionary Content 2025 Banner */}
@@ -189,10 +200,13 @@ export default function HomePage() {
         <AutonomousBusinessOperationsPromotionBanner />
         <AI1000ROISuccessStoryBanner />
         
+        {/* New Content Showcase 2025 - NEW */}
+        <NewContentShowcase2025 />
+        
         {/* Content Promotion Banners */}
         <UltimateContentShowcase2025 />
         
-        {/* Autonomous Systems Showcase 2025 - NEW */}
+        {/* Autonomous Systems Showcase 2025 */}
         <AutonomousSystemsShowcase2025 />
         
         <RevolutionaryContent2026Banner />

@@ -58,34 +58,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
-    // New blog posts
+    // New revolutionary content
     {
-<<<<<<< HEAD
-      url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
-=======
-      url: `${baseUrl}/blog/ai-2025-enterprise-integration-revolution`,
->>>>>>> origin/main
+      url: `${baseUrl}/revolutionary-ai-2025-automation`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-<<<<<<< HEAD
-      url: `${baseUrl}/blog/quantum-ai-2026-business-revolution`,
-=======
-      url: `${baseUrl}/blog/ai-2025-smart-automation-breakthrough`,
->>>>>>> origin/main
+      url: `${baseUrl}/blog/ai-2025-revolutionary-breakthrough-ultimate-automation-revolution`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-    // New resources
     {
-<<<<<<< HEAD
-      url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
-=======
-      url: `${baseUrl}/blog/ai-2025-data-intelligence-revolution`,
->>>>>>> origin/main
+      url: `${baseUrl}/blog/quantum-ai-2025-business-transformation-complete-guide`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies/ai-2025-revolutionary-breakthrough-2000-roi-success-story`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies/quantum-ai-fortune-500-transformation-1800-roi-success`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
