@@ -174,6 +174,10 @@ import RevolutionaryContent2026Showcase from '../components/RevolutionaryContent
 import AIInnovationShowcase2025Banner from '../components/AIInnovationShowcase2025Banner';
 import RevolutionaryAIContent2025Showcase from '../components/RevolutionaryAIContent2025Showcase';
 
+// Import new Ultimate Breakthrough components
+import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+
 // Import new ultimate business transformation components
 import UltimateBusinessTransformation2025Banner from '../components/UltimateBusinessTransformation2025Banner';
 import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
@@ -216,6 +220,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 Ultimate Breakthrough Banner - NEWEST FEATURED */}
+        <AI2025UltimateBreakthroughBanner />
+        
         {/* AI 2030 Content Promotion Banner - NEWEST FEATURED */}
         <AI2030ContentPromotionBanner />
         
@@ -427,6 +434,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* New Content 2025 Ultimate Showcase - NEWEST FEATURED */}
+        <NewContent2025UltimateShowcase />
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
