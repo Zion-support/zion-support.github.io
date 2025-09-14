@@ -66,6 +66,10 @@ import UltimateAIBreakthrough2025Banner from './components/UltimateAIBreakthroug
 import UltimateContentShowcase2025Banner from './components/UltimateContentShowcase2025Banner';
 import AI2025UltimateBreakthroughContentBanner from '../components/AI2025UltimateBreakthroughContentBanner';
 
+// Import new autonomous enterprise components
+import UltimateAutonomousEnterpriseBanner2025 from '../components/UltimateAutonomousEnterpriseBanner2025';
+import RevolutionaryContent2026UltimateShowcase from '../components/RevolutionaryContent2026UltimateShowcase';
+
 // Import new 2026 breakthrough content banners
 import AI2026UltimateBreakthroughContentBanner from '../components/AI2026UltimateBreakthroughContentBanner';
 import NewContent2025MultimodalBanner from '../components/NewContent2025MultimodalBanner';
@@ -131,10 +135,16 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Ultimate Content 2026 Breakthrough Banner - LATEST FEATURED */}
+        {/* Ultimate Autonomous Enterprise Banner 2025 - LATEST FEATURED */}
+        <UltimateAutonomousEnterpriseBanner2025 />
+        
+        {/* Revolutionary Content 2026 Ultimate Showcase - NEW FEATURED */}
+        <RevolutionaryContent2026UltimateShowcase />
+        
+        {/* Ultimate Content 2026 Breakthrough Banner - FEATURED */}
         <UltimateContent2026BreakthroughBanner />
         
-        {/* Revolutionary Content 2026 Showcase - NEW FEATURED */}
+        {/* Revolutionary Content 2026 Showcase - FEATURED */}
         <RevolutionaryContent2026Showcase />
         
         {/* Ultimate Business Transformation 2025-2026 Banner - NEW ULTIMATE BREAKTHROUGH */}
