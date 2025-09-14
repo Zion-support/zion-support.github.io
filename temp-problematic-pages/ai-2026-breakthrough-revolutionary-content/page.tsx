@@ -2,14 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'AI 2026 Breakthrough Revolutionary Content - Zion Tech Group',
   description: 'Experience the future of AI with our revolutionary 2026 breakthrough content. Quantum-neural fusion, consciousness integration, and transcendent intelligence delivering infinite possibilities.',
   keywords: 'AI 2026 breakthrough, revolutionary content, quantum neural fusion, consciousness integration, transcendent intelligence, future AI',
-export const metadata: Metadata = {
-  title: 'AI 2026 Breakthrough Revolutionary Content - Zion Tech Group',
-  description: 'Explore the revolutionary AI 2026 breakthrough technologies including quantum-neural fusion, consciousness AI, and transcendent intelligence delivering infinite ROI.',
-  keywords: 'AI 2026, breakthrough, revolutionary, quantum-neural fusion, consciousness AI, transcendent intelligence, infinite ROI',
 };
 
 export default function AI2026BreakthroughRevolutionaryContent() {

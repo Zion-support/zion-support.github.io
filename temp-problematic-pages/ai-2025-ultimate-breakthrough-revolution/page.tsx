@@ -179,13 +179,8 @@ export default function AI2025UltimateBreakthroughRevolution() {
               Real companies achieving unprecedented results with our AI 2025 breakthrough.
             </p>
           </div>
-<<<<<<< HEAD
-          
-=======
         </div>
       </section>
-
->>>>>>> main
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-xl p-8 border border-green-500/30">
               <div className="text-6xl font-bold text-green-400 mb-4">15,000%</div>
