@@ -211,57 +211,6 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
-    - id: "ai-2025-enterprise-ai-transformation-ultimate-guide"
-      type: "blog"
-      title: "AI 2025: The Enterprise AI Transformation Ultimate Guide - 1,000% ROI in 18 Months"
-      file_path: "/content/blog/ai-2025-enterprise-ai-transformation-ultimate-guide.md"
-      url: "/blog/ai-2025-enterprise-ai-transformation-ultimate-guide"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["AI Transformation", "Enterprise", "ROI", "Digital Transformation", "AI Strategy", "Fortune 500"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "1,000%"
-        savings: "$4.2M"
-        timeframe: "18 months"
-        companies: "500+"
-      reading_time: "25 min read"
-      
-    - id: "ai-2025-quantum-computing-business-breakthrough"
-      type: "blog"
-      title: "AI 2025: The Quantum Computing Business Breakthrough - 2,000% ROI Through Quantum AI"
-      file_path: "/content/blog/ai-2025-quantum-computing-business-breakthrough.md"
-      url: "/blog/ai-2025-quantum-computing-business-breakthrough"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["Quantum Computing", "AI", "Business Transformation", "ROI", "Fortune 500", "Quantum AI"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "2,000%"
-        savings: "$12.8M"
-        speed: "1,000x faster"
-        market: "$65B"
-      reading_time: "22 min read"
-      
-    - id: "fortune-500-ai-transformation-2000-roi-success"
-      type: "case-study"
-      title: "Fortune 500 AI Transformation: $5.2B Company Achieves 2,000% ROI in 18 Months"
-      file_path: "/content/case-studies/fortune-500-ai-transformation-2000-roi-success.md"
-      url: "/case-studies/fortune-500-ai-transformation-2000-roi-success"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["Case Study", "Fortune 500", "AI Transformation", "ROI", "Manufacturing", "Success Story"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "2,000%"
-        savings: "$1.2B"
-        efficiency: "450%"
-        satisfaction: "95%"
-      reading_time: "18 min read"
-      
     - id: "ai-2025-enterprise-data-revolution-ultimate-guide"
       type: "blog"
       title: "AI 2025: The Enterprise Data Revolution - Ultimate Guide to 800% ROI"
@@ -516,6 +465,91 @@ content_index:
         payback: "3.8 months"
 
   new_2025_content_latest:
+    - id: "advanced-analytics-revolution-ultimate-guide"
+      type: "blog"
+      title: "AI 2025: The Advanced Analytics Revolution - Ultimate Guide to 900% ROI"
+      file_path: "/content/blog/ai-2025-advanced-analytics-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-advanced-analytics-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Advanced Analytics", "AI", "ROI", "Fortune 500", "Data Intelligence", "Business Intelligence"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "900%"
+        savings: "$8.2M"
+        accuracy: "99.7%"
+        speed: "340%"
+      reading_time: "22 min read"
+      
+    - id: "intelligent-automation-revolution-ultimate-guide"
+      type: "blog"
+      title: "AI 2025: The Intelligent Automation Revolution - Ultimate Guide to 1,100% ROI"
+      file_path: "/content/blog/ai-2025-intelligent-automation-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-intelligent-automation-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Intelligent Automation", "AI", "ROI", "Fortune 500", "Business Process Automation", "RPA"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,100%"
+        savings: "$12.8M"
+        efficiency: "450%"
+        errors: "99.2%"
+      reading_time: "25 min read"
+      
+    - id: "advanced-analytics-900-roi-success-story"
+      type: "case-study"
+      title: "AI 2025 Advanced Analytics Success: $2.1B Company Achieves 900% ROI in 18 Months"
+      file_path: "/content/case-studies/ai-2025-advanced-analytics-900-roi-success-story.md"
+      url: "/case-studies/ai-2025-advanced-analytics-900-roi-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Advanced Analytics", "AI Transformation", "ROI", "Manufacturing", "Fortune 500"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "900%"
+        savings: "$67M"
+        timeframe: "18 months"
+        company: "$2.1B"
+      reading_time: "18 min read"
+      
+    - id: "intelligent-automation-1100-roi-success-story"
+      type: "case-study"
+      title: "AI 2025 Intelligent Automation Success: $3.8B Company Achieves 1,100% ROI in 20 Months"
+      file_path: "/content/case-studies/ai-2025-intelligent-automation-1100-roi-success-story.md"
+      url: "/case-studies/ai-2025-intelligent-automation-1100-roi-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Intelligent Automation", "AI Transformation", "ROI", "Financial Services", "Fortune 500"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,100%"
+        savings: "$156M"
+        timeframe: "20 months"
+        company: "$3.8B"
+      reading_time: "20 min read"
+      
+    - id: "advanced-analytics-implementation-master-guide"
+      type: "resource"
+      title: "AI 2025 Advanced Analytics Implementation Master Guide: From Strategy to 900% ROI"
+      file_path: "/content/resources/ai-2025-advanced-analytics-implementation-master-guide.md"
+      url: "/resources/ai-2025-advanced-analytics-implementation-master-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "Advanced Analytics", "AI Strategy", "ROI", "Master Guide", "Best Practices"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "900%"
+        success: "94%"
+        timeframe: "12-24 months"
+        enterprises: "500+"
+      reading_time: "35 min read"
+      
     - id: "edge-computing-revolution"
       type: "blog"
       title: "AI 2025: The Edge Computing Revolution - Ultimate Guide to 450% ROI"
