@@ -265,21 +265,56 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
+    - id: "ultimate-business-transformation-complete-guide"
       type: "blog"
-      title: "AI 2025: The Enterprise AI Revolution - Ultimate Guide to 500% ROI"
-      file_path: "/content/blog/ai-2025-enterprise-ai-revolution-ultimate-guide.md"
-      url: "/blog/ai-2025-enterprise-ai-revolution-ultimate-guide"
+      title: "AI 2025: The Ultimate Business Transformation Complete Guide - 1000% ROI Revolution"
+      file_path: "/content/blog/ai-2025-ultimate-business-transformation-complete-guide.md"
+      url: "/blog/ai-2025-ultimate-business-transformation-complete-guide"
       status: "published"
       created: "2025-01-17"
-      tags: ["AI", "Enterprise", "ROI", "Digital Transformation", "AI Strategy", "Fortune 500"]
+      tags: ["AI Transformation", "Business Strategy", "ROI", "Fortune 500", "Digital Transformation", "2025"]
       featured: true
       is_new: true
       metrics:
-        roi: "500%"
+        roi: "1000%"
         savings: "$2.8B"
+        accuracy: "99.7%"
         satisfaction: "98%"
+      reading_time: "35 min read"
+      
+    - id: "fortune-100-ai-transformation-1000-percent-roi"
+      type: "case-study"
+      title: "Fortune 100 AI Transformation: $5.2B Company Achieves 1000% ROI in 12 Months"
+      file_path: "/content/case-studies/fortune-100-ai-transformation-1000-percent-roi-success-story.md"
+      url: "/case-studies/fortune-100-ai-transformation-1000-percent-roi-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 100", "AI Transformation", "ROI", "Manufacturing", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1000%"
+        savings: "$1.8B"
+        timeline: "12 months"
+        efficiency: "89%"
+      reading_time: "25 min read"
+      
+    - id: "ai-2025-implementation-ultimate-roadmap-1000-percent-roi"
+      type: "resource"
+      title: "AI 2025 Implementation Ultimate Roadmap: From Strategy to 1000% ROI in 12 Months"
+      file_path: "/content/resources/ai-2025-implementation-ultimate-roadmap-1000-percent-roi.md"
+      url: "/resources/ai-2025-implementation-ultimate-roadmap-1000-percent-roi"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Roadmap", "Best Practices", "Framework", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1000%"
+        timeline: "12 months"
+        success_rate: "99.7%"
         projects: "500+"
-      reading_time: "18 min read"
+      reading_time: "45 min read"
       
       type: "case-study"
       title: "Fortune 500 AI Transformation 2025: $2.8B Annual Savings in 18 Months"

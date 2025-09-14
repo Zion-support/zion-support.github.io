@@ -47,6 +47,10 @@ import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI202
 import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
 
+// Import new ultimate content promotional components
+import UltimateContent2025RevolutionBanner from '../components/UltimateContent2025RevolutionBanner';
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+
 // Import new 2030 revolutionary content promotional components
 import RevolutionaryContent2030PromotionBanner from '../components/RevolutionaryContent2030PromotionBanner';
 import InteractiveContentDiscoveryWidget2030 from '../components/InteractiveContentDiscoveryWidget2030';
@@ -68,7 +72,10 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* AI 2025 Ultimate Breakthrough Banner - NEW */}
+        {/* Ultimate Content 2025 Revolution Banner - NEW */}
+        <UltimateContent2025RevolutionBanner />
+        
+        {/* AI 2025 Ultimate Breakthrough Banner */}
         <AI2025UltimateBreakthroughBanner />
         
         {/* Revolutionary Content 2025 Banner */}
@@ -79,9 +86,6 @@ export default function HomePage() {
         
         {/* New Content 2025 Showcase Banner */}
         <NewContent2025ShowcaseBanner />
-        
-        {/* Revolutionary Content 2025 Banner */}
-        <RevolutionaryContent2025Banner />
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -185,6 +189,9 @@ export default function HomePage() {
         <QuantumAI2025BreakthroughPromotionBanner />
         <AutonomousBusinessOperationsPromotionBanner />
         <AI1000ROISuccessStoryBanner />
+        
+        {/* Revolutionary Content Showcase 2025 - NEW */}
+        <RevolutionaryContentShowcase2025 />
         
         {/* Revolutionary Content 2030 Promotions */}
         <RevolutionaryContent2030PromotionBanner />
