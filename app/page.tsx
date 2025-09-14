@@ -10,6 +10,10 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import InteractiveROICalculatorAdvanced from '../components/InteractiveROICalculatorAdvanced';
 import RevolutionaryNewsletterSignup2025 from '../components/RevolutionaryNewsletterSignup2025';
 
+// Import new AI 2025 Ultimate Breakthrough 100,000% ROI components - NEWEST FEATURED
+import AI2025UltimateBreakthrough100000ROIBanner from '../components/AI2025UltimateBreakthrough100000ROIBanner';
+import UltimateBreakthroughContentShowcase100000ROI from '../components/UltimateBreakthroughContentShowcase100000ROI';
+
 // Import new content promotion components - LATEST FEATURED
 import NewContent2025UltimateDiscoveryBanner from '../components/NewContent2025UltimateDiscoveryBanner';
 import AI2025ContentRevolutionPromotionBanner from '../components/AI2025ContentRevolutionPromotionBanner';
@@ -389,6 +393,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE BREAKTHROUGH 100,000% ROI BANNER - NEWEST FEATURED */}
+        <AI2025UltimateBreakthrough100000ROIBanner />
+        
         {/* NEW CONTENT 2026 PROMOTION BANNER - LATEST BREAKTHROUGH */}
         <NewContent2026PromotionBanner />
         
@@ -818,6 +825,9 @@ export default function HomePage() {
 
         {/* NEW CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
         <NewContentShowcase2025 />
+        
+        {/* ULTIMATE BREAKTHROUGH CONTENT SHOWCASE 100,000% ROI - NEWEST FEATURED */}
+        <UltimateBreakthroughContentShowcase100000ROI />
         
         {/* INTERACTIVE DEMO WIDGET - NEWEST FEATURED */}
         <InteractiveDemoWidget />
