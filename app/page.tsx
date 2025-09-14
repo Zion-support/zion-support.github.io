@@ -235,6 +235,11 @@ import AI2025EnterpriseAutomationBanner from '../components/AI2025EnterpriseAuto
 import NewContent2025AdvancedAnalyticsBanner from '../components/NewContent2025AdvancedAnalyticsBanner';
 import EdgeComputingRevolutionBanner2025 from '../components/EdgeComputingRevolutionBanner2025';
 
+// Import new Ultimate Content 2025 banners
+import UltimateQuantumAI2025RevolutionBanner from '../components/UltimateQuantumAI2025RevolutionBanner';
+import UltimateBusinessRevolution2025Banner from '../components/UltimateBusinessRevolution2025Banner';
+import EnhancedContentDiscovery2025 from '../components/EnhancedContentDiscovery2025';
+
 // Import new AI Business Intelligence 2025 promotional components
 import AIBusinessIntelligence2025Banner from '../components/AIBusinessIntelligence2025Banner';
 import AIBusinessIntelligenceShowcase2025 from '../components/AIBusinessIntelligenceShowcase2025';
@@ -320,6 +325,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE QUANTUM AI 2025 REVOLUTION BANNER - NEWEST BREAKTHROUGH */}
+        <UltimateQuantumAI2025RevolutionBanner />
+        
+        {/* ULTIMATE BUSINESS REVOLUTION 2025 BANNER - NEWEST BREAKTHROUGH */}
+        <UltimateBusinessRevolution2025Banner />
+        
         {/* AI 2025-2026 CONTENT REVOLUTION 50,000% ROI BANNER - NEWEST BREAKTHROUGH */}
         <AI2025_2026ContentRevolution50000ROIBanner />
         
@@ -340,6 +351,9 @@ export default function HomePage() {
         
         {/* NEW CONTENT 2025 ULTIMATE BREAKTHROUGH BANNER - NEWEST FEATURED */}
         <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* ENHANCED CONTENT DISCOVERY 2025 - NEWEST FEATURED */}
+        <EnhancedContentDiscovery2025 />
         
         {/* INTERACTIVE CONTENT DISCOVERY 2025 - NEWEST FEATURED */}
         <InteractiveContentDiscovery2025 />
