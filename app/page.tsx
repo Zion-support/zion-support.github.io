@@ -107,6 +107,10 @@ import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026
 import NewContent2025UltimateBreakthroughBanner from './components/NewContent2025UltimateBreakthroughBanner';
 import UltimateBreakthroughContentShowcase2025 from './components/UltimateBreakthroughContentShowcase2025';
 
+// Import new Ultimate Content Revolution components
+import UltimateContentRevolution2025Banner from '../components/UltimateContentRevolution2025Banner';
+import UltimateContentRevolutionShowcase from '../components/UltimateContentRevolutionShowcase';
+
 // Import new Ultimate Enterprise Transformation components
 import AI2025UltimateEnterpriseTransformationBanner from '../components/AI2025UltimateEnterpriseTransformationBanner';
 import UltimateEnterpriseTransformationShowcase from '../components/UltimateEnterpriseTransformationShowcase';
@@ -247,6 +251,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT REVOLUTION 2025 BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
+        <UltimateContentRevolution2025Banner />
+        
+        {/* ULTIMATE CONTENT REVOLUTION SHOWCASE - NEWEST FEATURED */}
+        <UltimateContentRevolutionShowcase />
+        
         {/* ULTIMATE AUTONOMOUS AI REVOLUTION BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
         <UltimateAutonomousAIRevolutionBanner />
         
