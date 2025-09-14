@@ -48,9 +48,45 @@ import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025Ul
 import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
 
+<<<<<<< HEAD
 // Import AI 2030 promotional components
 import AI2030ContentShowcaseBanner from '../components/AI2030ContentShowcaseBanner';
 import AI2030ContentNavigation from '../components/AI2030ContentNavigation';
+=======
+// Import new 2026 ultimate promotional components
+import AI2026QuantumRevolutionUltimateBanner from '../components/AI2026QuantumRevolutionUltimateBanner';
+import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
+import RevolutionaryAIContent2026Banner from '../components/RevolutionaryAIContent2026Banner';
+
+// Import new 2025 advanced automation promotional components
+import NewContent2025AdvancedAutomationBanner from '../components/NewContent2025AdvancedAutomationBanner';
+import AdvancedAutomationContentShowcase2025 from '../components/AdvancedAutomationContentShowcase2025';
+
+// Import new 2025 analytics promotional components
+import NewContent2025AnalyticsRevolutionBanner from '../components/NewContent2025AnalyticsRevolutionBanner';
+import AnalyticsContentShowcase2025 from '../components/AnalyticsContentShowcase2025';
+
+// Import new 2026 promotional components
+import AI2026FuturePredictionsPromotionBanner from '../components/AI2026FuturePredictionsPromotionBanner';
+import QuantumAI2026BusinessTransformationBanner from '../components/QuantumAI2026BusinessTransformationBanner';
+
+// Import new promotional banners
+import AI2025QuantumBreakthroughPromotionBanner from '../components/AI2025QuantumBreakthroughPromotionBanner';
+import AI2025AutonomousOperationsPromotionBanner from '../components/AI2025AutonomousOperationsPromotionBanner';
+import Fortune500SuccessStoryPromotionBanner from '../components/Fortune500SuccessStoryPromotionBanner';
+
+// Import new robotics promotional components
+import NewContent2025RoboticsRevolutionBanner from '../components/NewContent2025RoboticsRevolutionBanner';
+import RoboticsContentShowcase2025 from '../components/RoboticsContentShowcase2025';
+
+// Import new RPA promotional components
+import NewContent2025RPARevolutionBanner from '../components/NewContent2025RPARevolutionBanner';
+import RPAContentShowcase2025 from '../components/RPAContentShowcase2025';
+
+// Import neural interface promotional components
+import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRevolutionBanner2025';
+import NeuralInterfaceContentShowcase2025 from '../components/NeuralInterfaceContentShowcase2025';
+>>>>>>> cursor/create-and-deploy-new-content-18d1
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -69,6 +105,21 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New Content 2025 Robotics Revolution Banner - NEW FEATURED */}
+        <NewContent2025RoboticsRevolutionBanner />
+        
+        {/* Robotics Content Showcase 2025 - NEW FEATURED */}
+        <RoboticsContentShowcase2025 />
+        
+        {/* New Content 2025 RPA Revolution Banner - NEW FEATURED */}
+        <NewContent2025RPARevolutionBanner />
+        
+        {/* RPA Content Showcase 2025 - NEW FEATURED */}
+        <RPAContentShowcase2025 />
+        
+        {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
+        <NewContent2025AnalyticsRevolutionBanner />
+        
         {/* AI 2030 Content Showcase Banner - FEATURED */}
         <AI2030ContentShowcaseBanner />
         
