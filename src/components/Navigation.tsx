@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, Code, Brain, Globe, Users, Phone, ChevronDown } from 'lucide-react';
 import { Button } from './Button';
 
@@ -8,9 +9,10 @@ interface NavigationProps {
 
 export const Navigation: React.FC<NavigationProps> = ({ className }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navigationItems = [
-    { name: 'Home', href: '#home', icon: Home },
+    { name: 'Home', href: '/', icon: Home },
     { 
       name: 'Services', 
       href: '#services',
@@ -47,8 +49,8 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
         { name: 'AI ROI Calculator', href: '/tools/ai-2025-autonomy-calculator' }
       ]
     },
-    { name: 'About', href: '#about', icon: Users },
-    { name: 'Contact', href: '#contact', icon: Phone }
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Contact', href: '/contact', icon: Phone }
   ];
 
   return (
@@ -57,9 +59,9 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex-shrink-0">
+            <Link to="/" className="flex-shrink-0">
               <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>
-            </div>
+            </Link>
           </div>
           
           {/* Desktop Navigation */}
@@ -91,13 +93,17 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
                     </div>
                   </>
                 ) : (
-                  <a
-                    href={item.href}
-                    className="flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                  <Link
+                    to={item.href}
+                    className={`flex items-center space-x-1 transition-colors duration-200 ${
+                      location.pathname === item.href 
+                        ? 'text-blue-600 font-semibold' 
+                        : 'text-gray-600 hover:text-blue-600'
+                    }`}
                   >
                     <item.icon className="w-4 h-4" />
                     <span className="text-sm font-medium">{item.name}</span>
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}
@@ -150,14 +156,18 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
                     </div>
                   </div>
                 ) : (
-                  <a
-                    href={item.href}
-                    className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                  <Link
+                    to={item.href}
+                    className={`flex items-center space-x-2 transition-colors duration-200 ${
+                      location.pathname === item.href 
+                        ? 'text-blue-600 font-semibold' 
+                        : 'text-gray-600 hover:text-blue-600'
+                    }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <item.icon className="w-4 h-4" />
                     <span>{item.name}</span>
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}
