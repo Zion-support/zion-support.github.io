@@ -35,15 +35,8 @@ import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPro
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
-
-// Import new 2026 promotional components
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
-import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
-import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-
-// Import new ultimate content showcase banner
-
-// Import additional promotional components
+import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
@@ -54,26 +47,24 @@ import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI202
 import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
 
-// Import new ultimate AI transformation promotional components
+// Import new ultimate content promotional components
+import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
 
 // Import new 2025 autonomous systems promotional components
+import AutonomousSystems2025RevolutionBanner from '../components/AutonomousSystems2025RevolutionBanner';
+import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowcase2025';
 
-// Import new ultimate content showcase banners
-import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+// Import new revolutionary content promotional components
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
 
-// Import new robotics revolution promotional components
-import RoboticsRevolution2025Banner from '../components/RoboticsRevolution2025Banner';
-import RoboticsContentShowcase2025 from '../components/RoboticsContentShowcase2025';
+// Import new content revolution components
+import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
+import FutureTechInnovationShowcase2025 from '../components/FutureTechInnovationShowcase2025';
+import EnterpriseTransformationSuccessBanner from '../components/EnterpriseTransformationSuccessBanner';
 
-// Import new AI automation revolution promotional components
-import NewContent2025AutomationRevolutionBanner from '../components/NewContent2025AutomationRevolutionBanner';
-import AutomationRevolutionContentShowcase2025 from '../components/AutomationRevolutionContentShowcase2025';
-
-// Import new content components
-import NewContentShowcase2025 from '../components/NewContentShowcase2025';
-import RevolutionaryTechTrends2025 from '../components/RevolutionaryTechTrends2025';
-import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscoveryWidget';
-import InteractiveContentPromotionBanner from '../components/InteractiveContentPromotionBanner';
+// Import new 2025 multimodal and revolutionary content components
+import NewContent2025MultimodalBanner from './components/NewContent2025MultimodalBanner';
+import RevolutionaryAI2025Showcase from './components/RevolutionaryAI2025Showcase';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -92,27 +83,85 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New Content 2025 Ultimate Breakthrough Banner - NEW FEATURED */}
+        <NewContent2025UltimateBreakthroughBanner />
         
-        {/* Robotics Revolution Banner - NEW */}
-        <RoboticsRevolution2025Banner />
+        {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
+        <UltimateContentShowcase2025 />
         
-        {/* AI Automation Revolution Banner - NEW */}
-        <NewContent2025AutomationRevolutionBanner />
         
-        {/* Interactive Content Promotion Banner */}
-        <InteractiveContentPromotionBanner />
+        {/* Ultimate AI Breakthrough 2025 Banner - NEW FEATURED */}
+        <UltimateAIBreakthrough2025Banner />
         
-        {/* New Content 2025 Ultimate Showcase Banner */}
+        {/* Revolutionary Content 2025 Ultimate Banner - NEW */}
+        <RevolutionaryContent2025UltimateBanner />
+        
+        {/* Ultimate Content Showcase 2025 Banner - NEW */}
+        <UltimateContentShowcase2025 />
+        
+        {/* Ultimate AI Transformation 2025 Banner - NEW */}
+        <UltimateAITransformation2025Banner />
+        
+        {/* AI 2025 Ultimate Content Revolution Banner - NEW FEATURED */}
+        <AI2025UltimateContentRevolutionBanner />
+        
+        {/* Future Tech Innovation Showcase 2025 - NEW FEATURED */}
+        <FutureTechInnovationShowcase2025 />
+        
+        {/* Enterprise Transformation Success Banner - NEW FEATURED */}
+        <EnterpriseTransformationSuccessBanner />
+        
+        {/* Next-Generation Autonomous Systems Banner - NEW FEATURED */}
+        <NextGenAutonomousSystemsBanner />
+        
+        {/* AI 2025 Advanced Automation Mastery Banner - NEW FEATURED */}
+        <AI2025AdvancedAutomationMasteryBanner />
+        
+        {/* Revolutionary Content 2025 Banner - NEW FEATURED */}
+        <RevolutionaryContent2025Banner />
+        
+        {/* NEW QUANTUM AI BREAKTHROUGH BANNER - FEATURED PROMINENTLY */}
+        <NewContent2026QuantumBreakthroughBanner />
+        
+        {/* AI 2026 ENTERPRISE AUTOMATION SHOWCASE - COMPREHENSIVE COLLECTION */}
+        <AI2026EnterpriseAutomationShowcase />
+        
+        {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
+        <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* NEW ULTIMATE BREAKTHROUGH CONTENT SHOWCASE */}
+        <NewContent2025UltimateBreakthroughShowcase />
+        
+        {/* NEW 2025 ENHANCED CONTENT - TOP PRIORITY */}
+        <AIInnovationPromotionBanner2025 />
+        
+        {/* New Resource 2025 Implementation Roadmap Banner - NEW FEATURED */}
+        <NewResource2025ImplementationRoadmapBanner />
+        
+        {/* New Content 2025 Enterprise Automation Banner - NEW FEATURED */}
+        <NewContent2025EnterpriseAutomationBanner />
+        
+        {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
+        <NewContent2025AnalyticsRevolutionBanner />
+        
+        {/* Revolutionary AI 2025 Banner - LATEST */}
+        <RevolutionaryAI2025Banner />
+        
+        {/* Ultimate Content 2025 Banner - NEW FEATURED */}
+        <UltimateContent2025Banner />
+        
+        {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
         
-        {/* New Content Showcase 2025 */}
-        <NewContentShowcase2025 />
+        {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
+        <UltimateContentShowcase2025 />
         
-        {/* Revolutionary Tech Trends 2025 */}
-        <RevolutionaryTechTrends2025 />
+        {/* AI 2030 Content Showcase Banner - FEATURED */}
+        <AI2030ContentShowcaseBanner />
         
-        {/* Ultimate Content Discovery Widget */}
-        <UltimateContentDiscoveryWidget />
+        {/* Revolutionary Content Showcase 2025 - FEATURED */}
+        <RevolutionaryContentShowcase2025 />
+        <RevolutionaryContentShowcase2025 />
         
         {/* AI 2025 Ultimate Breakthrough Banner - NEW */}
         <AI2025UltimateBreakthroughBanner />
@@ -123,6 +172,11 @@ export default function HomePage() {
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
         
+        {/* New Content 2025 Showcase Banner */}
+        <NewContent2025ShowcaseBanner />
+        
+        {/* Revolutionary Content 2025 Banner */}
+        <RevolutionaryContent2025Banner />
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -222,13 +276,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* AI Automation Revolution Content Showcase - NEW */}
-        <AutomationRevolutionContentShowcase2025 />
-        
-        {/* Robotics Content Showcase 2025 - NEW */}
-        <RoboticsContentShowcase2025 />
-        
-        {/* Ultimate Content Showcase 2025 - NEW */}
+        {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
         <UltimateContentShowcase2025 />
         
         {/* New 2025 Breakthrough Content Promotions */}
@@ -236,9 +284,13 @@ export default function HomePage() {
         <AutonomousBusinessOperationsPromotionBanner />
         <AI1000ROISuccessStoryBanner />
         
-        {/* Content Promotion Banners */}
+        {/* Ultimate Content Showcase 2025 - NEW */}
         <UltimateContentShowcase2025 />
         
+        {/* Content Promotion Banners */}
+        
+        {/* Autonomous Systems Showcase 2025 - NEW */}
+        <AutonomousSystemsShowcase2025 />
         
         <RevolutionaryContent2026Banner />
         <FeaturedContentShowcase2026 />
