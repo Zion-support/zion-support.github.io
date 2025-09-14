@@ -1750,7 +1750,7 @@
       "metrics": {
         "totalLines": 55,
         "jobCount": 0,
-        "stepCount": 9,
+        "stepCount": 5,
         "conditionalCount": 0,
         "matrixCount": 0,
         "dependencyCount": 0,
