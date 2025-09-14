@@ -415,6 +415,7 @@ print(data)`
           </TabsContent>
           
           <TabsContent value="quotes" className="space-y-6">
+
             <EndpointSection
               method="POST"
               endpoint="/api/quotes"

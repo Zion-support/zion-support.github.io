@@ -90,6 +90,7 @@ export function InterviewRequestForm({ talentonCloseuserDetails }: InterviewRequ
         title: "Failed to schedule interview",
         description: "An error occurred while scheduling the interview. Please try again.",
         variant: "destructive"});
+
     } finally {
       setIsSubmitting(false);
     }

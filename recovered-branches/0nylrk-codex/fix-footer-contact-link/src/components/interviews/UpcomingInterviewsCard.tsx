@@ -69,6 +69,7 @@ export function UpcomingInterviewsCard() {
     );
   }
 
+
   if (upcomingInterviews.length === 0) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">

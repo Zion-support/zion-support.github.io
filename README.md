@@ -33,7 +33,12 @@ Our AI transformation solutions have delivered:
 - **99.7% system uptime** across all deployments
 - **60% faster time-to-market** for new products and services
 
-## 🛠️ Technology Stack
+### Performance Features
+- **Code Splitting**: Automatic chunk optimization
+- **Lazy Loading**: Component and image lazy loading
+- **Tree Shaking**: Dead code elimination
+- **Compression**: Gzip and Brotli support
+- **Caching**: Intelligent resource caching
 
 - **Frontend**: Next.js 14, React 18, TypeScript, Tailwind CSS
 - **Backend**: Node.js, Express, Prisma ORM

@@ -57,6 +57,10 @@ export default function ChatWidget() {
     } catch {}
   }
 
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate'{
@@ -183,6 +187,7 @@ export default function ChatWidget() {
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' && !e.shiftKey) {
                       e.preventDefault();
+
                       onSend();
                     }
                   }}

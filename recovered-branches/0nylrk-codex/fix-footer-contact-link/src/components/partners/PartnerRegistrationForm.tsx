@@ -303,6 +303,7 @@ export function PartnerRegistrationForm() {
                     <FormControl>
                       <Textarea 
                         placeholder="Tell us about yourself and how you plan to promote Zion AI"
+
                         rows={4} 
                         {...field} 
                       />

@@ -111,3 +111,4 @@ export function MainNavigation({ isAdmin = falseunreadCount = 0className }: Main
     </nav>
   );
 }
+

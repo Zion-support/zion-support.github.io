@@ -207,6 +207,9 @@ export default function APITestingSuitePage() {
             </Button>
           </div>
 
+
+
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               href="#pricing"
@@ -382,6 +385,7 @@ export default function APITestingSuitePage() {
             </div>
 
             {/* Recommendations */}
+
             <Card className="border-gradient-indigo">
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

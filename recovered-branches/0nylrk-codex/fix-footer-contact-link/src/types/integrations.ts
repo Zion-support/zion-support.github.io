@@ -11,6 +11,8 @@ export interface Integration {
   status: IntegrationStatus;
   lastSync?: string;
   type: IntegrationType;
+
+
 }
 
 export interface SyncLog {

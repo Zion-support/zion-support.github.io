@@ -1,4 +1,7 @@
+
 export interface QuantumSpaceService {
+export interface QuantumSpaceService {;
+
   id: string;
   name: string;
   tagline: string;
@@ -11,12 +14,44 @@ export interface QuantumSpaceService {
   contactInfo: {
     mobile: string;
     email: string;
+
+export interface QuantumSpaceService {;
     address: string;
   };
+
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  description: string,;
+  features: string[],;
+  link: string,;
+  category: string,;
+  realImplementation: boolean,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string;
+  }
 }
 
 export const quantumSpaceServices: QuantumSpaceService[] = [
   {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+
     id: "quantum-computing-platform",
     name: "Quantum Computing Platform",
     tagline: "Next-generation quantum computing solutions",
@@ -35,7 +70,11 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+
+
+

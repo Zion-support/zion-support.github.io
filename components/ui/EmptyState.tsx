@@ -28,7 +28,9 @@ export default function EmptyState({ titledescriptioniconprimaryActionsecondaryA
           {secondaryAction && (
             <Link href={secondaryAction.href}>
               <a>
-                <EnhancedButton variant="secondary" size="md">{secondaryAction.label}</EnhancedButton>
+                <EnhancedButton variant='secondary' size='md'>
+                  {secondaryAction.label}
+                </EnhancedButton>              </a>                <EnhancedButton variant="secondary" size="md">{secondaryAction.label}</EnhancedButton>
               </a>
             </Link>
           )}

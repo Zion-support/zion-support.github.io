@@ -177,6 +177,7 @@ export default function ToolComparisonPage() {
     return 'text-gray-400';
   };
 
+
   return (
     <>
       <Head>

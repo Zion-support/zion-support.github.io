@@ -1,16 +1,25 @@
 
+export default function AboutPage() {return (;
 export default function AboutPage() {;
   return (;
-
     <div className="min-h-screen bg-white">;
+
 export default /**
  * AboutPage - Function description
  */
 function AboutPage() {
   return (
     <div className="min - h-screen bg - white">;
+
 export default function AboutPage() {;
   return (;
+=======
+
+
+=======
+export default function AboutPage() {;
+  return (;
+
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - blue - 600 to - indigo - 700 text - white py - 20">;
@@ -32,13 +41,13 @@ export default function AboutPage() {;
                 Leading the AI Revolution;
               </h2>;
               <p className="text - lg text - gray - 600 mb - 6">;
-                Founded with a vision to democratize advanced AI technologyZion Tech Group has been at the forefront of innovation in artificial intelligencequantum computingand autonomous systems.;
+                Founded with a vision to democratize advanced AI technology, Zion Tech Group has been at the forefront of innovation in artificial intelligence, quantum computing, and autonomous systems.;
               </p>;
               <p className="text - lg text - gray - 600 mb - 6">;
-                Our mission is to empower businesses of all sizes with cutting - edge technology solutions that drive growthefficiencyand competitive advantage in an increasingly digital world.;
+                Our mission is to empower businesses of all sizes with cutting - edge technology solutions that drive growth, efficiency, and competitive advantage in an increasingly digital world.;
               </p>;
               <p className="text - lg text - gray - 600">;
-                With a team of world - class engineersresearchersand business strategistswe're building the future of intelligent automation and decision - making systems.;
+                With a team of world - class engineers, researchers, and business strategists, we're building the future of intelligent automation and decision - making systems.;
               </p>;
             </div>;
             <div className="bg - gray - 100 p - 8 rounded - xl">;
@@ -112,7 +121,7 @@ export default function AboutPage() {;
               </div>;
               <h3 className="text - xl font - semibold text - gray - 900 mb - 4">Integrity</h3>;
               <p className="text - gray - 600">;
-                Building trust through transparentethicaland responsible technology development.;
+                Building trust through transparent, ethical, and responsible technology development.;
               </p>;
             </div>;
             <div className="text - center">;
@@ -123,7 +132,7 @@ export default function AboutPage() {;
               </div>;
               <h3 className="text - xl font - semibold text - gray - 900 mb - 4">Collaboration</h3>;
               <p className="text - gray - 600">;
-                Working together with clientspartnersand communities to create lasting impact.;
+                Working together with clients, partners, and communities to create lasting impact.;
               </p>;
             </div>;
           </div>;
@@ -174,7 +183,7 @@ export default function AboutPage() {;
               <h3 className="text - xl font - semibold text - gray - 900 text - center mb - 2">Dr. Sarah Chen</h3>;
               <p className="text - blue - 600 text - center mb - 4">Chief Executive Officer</p>;
               <p className="text - gray - 600 text - center">;
-                Former AI Research Director at GooglePhD in Computer Science from Stanford;
+                Former AI Research Director at Google, PhD in Computer Science from Stanford;
               </p>;
             </div>;
             <div className="bg - white p - 8 rounded - xl shadow - sm">;

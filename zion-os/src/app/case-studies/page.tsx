@@ -1,16 +1,25 @@
 
+export default function CaseStudiesPage() {return (;
 export default function CaseStudiesPage() {;
   return (;
-
     <div className="min-h-screen py-20">;
+
 export default /**
  * CaseStudiesPage - Function description
  */
 function CaseStudiesPage() {
   return (
     <div className="min - h-screen py - 20">;
+
 export default function CaseStudiesPage() {;
   return (;
+=======
+
+
+=======
+export default function CaseStudiesPage() {;
+  return (;
+
     <div className="min-h-screen py-20">;
       {/* Hero Section */}
       <section className="relative mb - 20">;
@@ -62,7 +71,7 @@ export default function CaseStudiesPage() {;
                   href="/case - studies / healthcare - ai - diagnostics";
                   className="inline - flex items - center text - purple - 400 hover:text - purple - 300 font - medium";
                 >;
-                  Read Full Case Study →;
+                  Read Full Case Study ;
                 </a>;
               </div>;
               <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 6 border border - white / 10">;
@@ -121,7 +130,7 @@ export default function CaseStudiesPage() {;
                 </div>;
               </div>;
               <a href="/case - studies / ai - trading - system" className="text - cyan - 400 hover:text - cyan - 300 font - medium text - sm">;
-                Read More →;
+                Read More ;
               </a>;
             </div>;
             {/* Manufacturing */}
@@ -133,7 +142,7 @@ export default function CaseStudiesPage() {;
               </div>;
               <h3 className="text - xl font - semibold text - white mb - 3">Smart Factory Automation</h3>;
               <p className="text - white / 70 mb - 4">;
-                Implemented autonomous robotics and predictive maintenance for a manufacturing companyreducing downtime by 70%.;
+                Implemented autonomous robotics and predictive maintenance for a manufacturing company, reducing downtime by 70%.;
               </p>;
               <div className="flex justify - between items - center mb - 4">;
                 <span className="text - green - 400 text - sm font - medium">Manufacturing</span>;
@@ -150,7 +159,7 @@ export default function CaseStudiesPage() {;
                 </div>;
               </div>;
               <a href="/case - studies / smart - factory - automation" className="text - green - 400 hover:text - green - 300 font - medium text - sm">;
-                Read More →;
+                Read More ;
               </a>;
             </div>;
             {/* Retail */}
@@ -162,7 +171,7 @@ export default function CaseStudiesPage() {;
               </div>;
               <h3 className="text - xl font - semibold text - white mb - 3">Personalized Shopping Experience</h3>;
               <p className="text - white / 70 mb - 4">;
-                Created an AI - powered recommendation engine for an e - commerce platformincreasing sales by 35%.;
+                Created an AI - powered recommendation engine for an e - commerce platform, increasing sales by 35%.;
               </p>;
               <div className="flex justify - between items - center mb - 4">;
                 <span className="text - yellow - 400 text - sm font - medium">Retail</span>;
@@ -179,7 +188,7 @@ export default function CaseStudiesPage() {;
                 </div>;
               </div>;
               <a href="/case - studies / personalized - shopping" className="text - yellow - 400 hover:text - yellow - 300 font - medium text - sm">;
-                Read More →;
+                Read More ;
               </a>;
             </div>;
             {/* Transportation */}
@@ -208,7 +217,7 @@ export default function CaseStudiesPage() {;
                 </div>;
               </div>;
               <a href="/case - studies / autonomous - fleet" className="text - red - 400 hover:text - red - 300 font - medium text - sm">;
-                Read More →;
+                Read More ;
               </a>;
             </div>;
             {/* Energy */}
@@ -220,7 +229,7 @@ export default function CaseStudiesPage() {;
               </div>;
               <h3 className="text - xl font - semibold text - white mb - 3">Smart Grid Optimization</h3>;
               <p className="text - white / 70 mb - 4">;
-                Implemented AI - powered energy management for a utility companyreducing energy waste by 30%.;
+                Implemented AI - powered energy management for a utility company, reducing energy waste by 30%.;
               </p>;
               <div className="flex justify - between items - center mb - 4">;
                 <span className="text - indigo - 400 text - sm font - medium">Energy</span>;
@@ -237,7 +246,7 @@ export default function CaseStudiesPage() {;
                 </div>;
               </div>;
               <a href="/case - studies / smart - grid - optimization" className="text - indigo - 400 hover:text - indigo - 300 font - medium text - sm">;
-                Read More →;
+                Read More ;
               </a>;
             </div>;
             {/* Cybersecurity */}
@@ -266,7 +275,7 @@ export default function CaseStudiesPage() {;
                 </div>;
               </div>;
               <a href="/case - studies / ai - threat - detection" className="text - purple - 400 hover:text - purple - 300 font - medium text - sm">;
-                Read More →;
+                Read More ;
               </a>;
             </div>;
           </div>;
@@ -284,7 +293,7 @@ export default function CaseStudiesPage() {;
                 </div>;
                 <div>;
                   <div className="text - white font - semibold">John Smith</div>;
-                  <div className="text - white / 60 text - sm">CTOHealthTech Inc.</div>;
+                  <div className="text - white / 60 text - sm">CTO, HealthTech Inc.</div>;
                 </div>;
               </div>;
               <p className="text - white / 80 text - sm">;
@@ -298,7 +307,7 @@ export default function CaseStudiesPage() {;
                 </div>;
                 <div>;
                   <div className="text - white font - semibold">Sarah Johnson</div>;
-                  <div className="text - white / 60 text - sm">CEOFinTech Solutions</div>;
+                  <div className="text - white / 60 text - sm">CEO, FinTech Solutions</div>;
                 </div>;
               </div>;
               <p className="text - white / 80 text - sm">;
@@ -312,7 +321,7 @@ export default function CaseStudiesPage() {;
                 </div>;
                 <div>;
                   <div className="text - white font - semibold">Mike Chen</div>;
-                  <div className="text - white / 60 text - sm">Operations DirectorAutoCorp</div>;
+                  <div className="text - white / 60 text - sm">Operations Director, AutoCorp</div>;
                 </div>;
               </div>;
               <p className="text - white / 80 text - sm">;
