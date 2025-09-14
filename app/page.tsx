@@ -299,6 +299,12 @@ import NewContent2026PromotionBanner from '../components/NewContent2026Promotion
 // Import new 2026 ultimate promotional components - NEWEST FEATURED
 // Import new promotional banners for latest content
 import AI2025UltimateTransformation50000ROIBanner from '../components/AI2025UltimateTransformation50000ROIBanner';
+// Import new 2026 content showcase components - LATEST FEATURED
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import UltimateContentShowcase2026Banner from '../components/UltimateContentShowcase2026Banner';
+import InteractiveContentDiscovery2026 from '../components/InteractiveContentDiscovery2026';
+import SuccessStoriesShowcase2026 from '../components/SuccessStoriesShowcase2026';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import AI2025UltimateBusinessRevolutionBanner from '../components/AI2025UltimateBusinessRevolutionBanner';
 import NewContentDiscoveryWidget2025 from '../components/NewContentDiscoveryWidget2025';
 import InteractiveROICalculator2025 from '../components/InteractiveROICalculator2025';
@@ -327,6 +333,10 @@ export default function HomePage() {
         />
         
         <div className='min-h-screen bg-white'>
+          {/* NEW CONTENT 2026 PROMOTION BANNER - LATEST FEATURED */}
+          <NewContent2026PromotionBanner />
+          {/* ULTIMATE CONTENT SHOWCASE 2026 BANNER - NEWEST FEATURED */}
+          <UltimateContentShowcase2026Banner />
           {/* AI 2025 ULTIMATE CONTENT REVOLUTION PROMOTION BANNER - NEWEST FEATURED */}
           <AI2025UltimateContentRevolutionPromotionBanner />
           {/* ULTIMATE AUTOMATION REVOLUTION 50,000% ROI BANNER - NEWEST BREAKTHROUGH */}
@@ -436,6 +446,12 @@ export default function HomePage() {
         <UltimateContentRevolutionShowcase2025 />
         {/* ULTIMATE CONTENT REVOLUTION SHOWCASE - NEWEST FEATURED */}
         <UltimateContentRevolutionShowcase />
+        {/* ULTIMATE CONTENT SHOWCASE 2026 - NEWEST FEATURED */}
+        <UltimateContentShowcase2026 />
+        {/* INTERACTIVE CONTENT DISCOVERY 2026 - NEWEST FEATURED */}
+        <InteractiveContentDiscovery2026 />
+        {/* SUCCESS STORIES SHOWCASE 2026 - NEWEST FEATURED */}
+        <SuccessStoriesShowcase2026 />
         {/* ULTIMATE CONTENT REVOLUTION ROI CALCULATOR - NEWEST FEATURED */}
         <UltimateContentRevolutionROICalculator />
         {/* ULTIMATE CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
