@@ -135,6 +135,57 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
+    - id: "ai-2025-advanced-automation-enterprise-mastery"
+      type: "blog"
+      title: "AI 2025: Advanced Automation Enterprise Mastery - 750% ROI Breakthrough"
+      file_path: "/content/blog/ai-2025-advanced-automation-enterprise-mastery.md"
+      url: "/blog/ai-2025-advanced-automation-enterprise-mastery"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Automation", "Enterprise", "ROI", "Fortune 500", "Digital Transformation", "Advanced AI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "750%"
+        savings: "$3.2B"
+        efficiency: "340%"
+        satisfaction: "94%"
+      reading_time: "22 min read"
+      
+    - id: "fortune-500-ai-automation-transformation-2025"
+      type: "case-study"
+      title: "Fortune 500 AI Automation Transformation: $3.2B Annual Savings with 850% ROI"
+      file_path: "/content/case-studies/fortune-500-ai-automation-transformation-2025.md"
+      url: "/case-studies/fortune-500-ai-automation-transformation-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "AI Automation", "Manufacturing", "ROI", "Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "850%"
+        savings: "$3.2B"
+        efficiency: "340%"
+        satisfaction: "94%"
+      reading_time: "25 min read"
+      
+    - id: "ai-automation-implementation-master-guide-2025"
+      type: "resource"
+      title: "AI Automation Implementation Master Guide 2025: From Strategy to 850% ROI"
+      file_path: "/content/resources/ai-automation-implementation-master-guide-2025.md"
+      url: "/resources/ai-automation-implementation-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Automation", "ROI", "Strategy", "Best Practices", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "850%"
+        success: "98%"
+        timeframe: "18 months"
+        payback: "2.1 months"
+      reading_time: "35 min read"
+      
     - id: "ai-2025-autonomous-enterprise-systems-revolution"
       type: "blog"
       title: "AI 2025: The Autonomous Enterprise Systems Revolution - 600% ROI Breakthrough"
@@ -461,6 +512,26 @@ content_index:
 >>>>>>> pr-17315
 
   promotion_components:
+    - name: "AdvancedAIAutomationBanner2025"
+      file_path: "/app/components/AdvancedAIAutomationBanner2025.tsx"
+      status: "active"
+      features:
+        - "Auto-rotating banner showcasing new advanced AI automation content"
+        - "Features 750% ROI breakthrough content and Fortune 500 case studies"
+        - "Interactive metrics display with real-time animations"
+        - "Dismissible banner with localStorage persistence"
+        - "Call-to-action buttons for content access and consultation"
+        
+    - name: "NewContentShowcase2025Advanced"
+      file_path: "/app/components/NewContentShowcase2025Advanced.tsx"
+      status: "active"
+      features:
+        - "Comprehensive showcase of all new advanced 2025 content"
+        - "Category filtering and content organization"
+        - "Featured content section with detailed metrics"
+        - "Interactive content cards with hover effects"
+        - "Success metrics and ROI highlights throughout"
+        
     - name: "NewContent2025UltimateBanner"
       file_path: "/app/components/NewContent2025UltimateBanner.tsx"
       status: "active"
@@ -513,12 +584,22 @@ content_index:
       - "Implemented interactive content discovery and filtering"
 
   metrics:
-    expected_roi_mentions: 30
-    success_stories: 6
-    implementation_guides: 4
-    blog_posts: 7
-    total_word_count: "~60,000 words"
-    estimated_reading_time: "~240 minutes"
-    new_content_roi_highlights: "500-700% ROI featured prominently"
-    promotional_components: 8
-    homepage_integration: "Complete with comprehensive showcase"
+    expected_roi_mentions: 45
+    success_stories: 8
+    implementation_guides: 5
+    blog_posts: 10
+    total_word_count: "~85,000 words"
+    estimated_reading_time: "~340 minutes"
+    new_content_roi_highlights: "750-850% ROI featured prominently"
+    promotional_components: 10
+    homepage_integration: "Complete with comprehensive showcase and advanced banners"
+    new_advanced_content:
+      - "AI 2025: Advanced Automation Enterprise Mastery - 750% ROI"
+      - "Fortune 500 AI Automation Transformation - $3.2B Savings"
+      - "AI Automation Implementation Master Guide - 850% ROI"
+    featured_metrics:
+      - "750% ROI (Advanced Automation)"
+      - "850% ROI (Fortune 500 Case Study)"
+      - "$3.2B Annual Savings"
+      - "340% Efficiency Improvement"
+      - "98% Success Rate"
