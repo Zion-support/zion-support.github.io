@@ -15,7 +15,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 164
@@ -34,7 +34,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 164
@@ -114,7 +114,7 @@
       "triggers": [
         "push",
         "pull_request",
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 145
@@ -133,7 +133,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 144
@@ -152,7 +152,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 144
@@ -171,7 +171,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 142
@@ -190,7 +190,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 142
@@ -444,7 +444,7 @@
       "triggers": [
         "push",
         "schedule",
-        "workflow_dispatch {}"
+        "workflow_dispatch null"
       ],
       "resourceScore": 120
     },
@@ -599,7 +599,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -618,7 +618,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -637,7 +637,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -656,7 +656,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -675,7 +675,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -694,7 +694,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -713,7 +713,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -732,7 +732,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -751,7 +751,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -770,7 +770,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -789,7 +789,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -808,7 +808,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -827,7 +827,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -846,7 +846,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -865,7 +865,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -884,7 +884,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -903,7 +903,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -922,7 +922,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -941,7 +941,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -960,7 +960,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -979,7 +979,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -998,7 +998,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1017,7 +1017,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1036,7 +1036,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1055,7 +1055,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1074,7 +1074,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1093,7 +1093,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1112,7 +1112,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1131,7 +1131,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1150,7 +1150,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1169,7 +1169,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1188,7 +1188,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1207,7 +1207,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1226,7 +1226,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1245,7 +1245,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1264,7 +1264,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1283,7 +1283,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1302,7 +1302,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1321,7 +1321,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1340,7 +1340,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1359,7 +1359,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1378,7 +1378,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1397,7 +1397,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1416,7 +1416,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1435,7 +1435,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1454,7 +1454,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1473,7 +1473,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1492,7 +1492,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1511,7 +1511,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1530,7 +1530,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1549,7 +1549,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1568,7 +1568,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1587,7 +1587,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1606,7 +1606,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1625,7 +1625,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1644,7 +1644,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1663,7 +1663,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1682,7 +1682,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1701,7 +1701,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1720,7 +1720,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1739,7 +1739,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1758,7 +1758,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1777,7 +1777,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1796,7 +1796,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1834,7 +1834,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1853,7 +1853,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1872,7 +1872,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1891,7 +1891,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1910,7 +1910,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1929,7 +1929,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1948,7 +1948,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1967,7 +1967,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -1986,7 +1986,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2024,7 +2024,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2043,7 +2043,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2062,7 +2062,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2081,7 +2081,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2100,7 +2100,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2119,7 +2119,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2138,7 +2138,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2157,7 +2157,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2176,7 +2176,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2195,7 +2195,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2214,7 +2214,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2233,7 +2233,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2252,7 +2252,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2290,7 +2290,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2309,7 +2309,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2348,7 +2348,7 @@
       "dependencies": [],
       "triggers": [
         "schedule",
-        "workflow_dispatch {}"
+        "workflow_dispatch null"
       ],
       "resourceScore": 114
     },
@@ -2366,7 +2366,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 112
@@ -2692,7 +2692,7 @@
         "workflow_dispatch {}",
         "schedule"
       ],
-      "resourceScore": 112
+      "resourceScore": 111
     },
     {
       "name": "homepage-auto-advertiser.yml",
@@ -3525,7 +3525,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 109
@@ -4086,7 +4086,7 @@
       "dependencies": [],
       "triggers": [
         "schedule",
-        "workflow_dispatch {}"
+        "workflow_dispatch null"
       ],
       "resourceScore": 104
     },
@@ -4204,7 +4204,7 @@
       "dependencies": [],
       "triggers": [
         "schedule",
-        "workflow_dispatch {}"
+        "workflow_dispatch null"
       ],
       "resourceScore": 92
     },
@@ -4305,7 +4305,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 84
