@@ -1,274 +1,238 @@
-import React, { Suspense, lazy } from 'react';
-import Link from 'next/link';
-import ErrorBoundary from '../components/ErrorBoundary';
-import SEO from '../components/SEO';
-import LoadingSpinner from '../components/LoadingSpinner';
-
-// Import new advanced AI components
-import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
-import RealTimePerformanceDashboard from '../components/RealTimePerformanceDashboard';
-import IntelligentSearchEngine from '../components/IntelligentSearchEngine';
-import AdvancedAIAssistant from '../components/AdvancedAIAssistant';
-import BusinessIntelligenceDashboard from '../components/BusinessIntelligenceDashboard';
-import AdvancedSecurityMonitor from '../components/AdvancedSecurityMonitor';
-import AdvancedAnalyticsEngine from '../components/AdvancedAnalyticsEngine';
-import AutomationWorkflowEngine from '../components/AutomationWorkflowEngine';
-import EnterpriseDataManagement from '../components/EnterpriseDataManagement';
-import APIManagementSystem from '../components/APIManagementSystem';
-
-// Lazy load heavy components
-const ROICalculator = lazy(() => import('../components/ROICalculator'));
-const StructuredData = lazy(() => import('../components/StructuredData'));
-const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
-const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
-
-// Import key promotional components
-import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
-import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
-import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
-import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
-import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
-import NewContent2026Showcase from '../components/NewContent2026Showcase';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
-import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
-import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
-import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
-
-// Import new 2026 promotional components
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
-import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
-import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-
-// Import additional promotional components
-import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
-import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
-import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
-import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
-
-// Import new AI 2026 promotional components
-import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
-import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
-import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
-import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
-import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
-import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
-
-// Import new 2026 promotional components
-import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
-import AI2026RevolutionaryBreakthroughBanner from '../components/AI2026RevolutionaryBreakthroughBanner';
-
-export const metadata = {
-  title: 'Zion Tech Group - AI & Technology Solutions',
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords: ['AI automation', 'cloud computing', 'micro SaaS', 'technology consulting', 'enterprise solutions', 'digital transformation'],
-};
+import React from 'react';
+import { ArrowRight, Star, TrendingUp, Users, Clock, CheckCircle, Play } from 'lucide-react';
+import UltimateContent2025Banner from './components/UltimateContent2025Banner';
+import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 
 export default function HomePage() {
   return (
-    <ErrorBoundary>
-      <SEO
-        title="Zion Tech Group - AI & Technology Solutions"
-        description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
-        keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
-        url="/"
-      />
-      
-      <div className='min-h-screen bg-white'>
-        {/* AI 2026 Revolutionary Breakthrough Banner */}
-        <AI2026RevolutionaryBreakthroughBanner />
-        
-        {/* New Content 2026 Ultimate Showcase */}
-        <NewContent2026UltimateShowcase />
-        
-        {/* New Content 2025 Ultimate Banner */}
-        <NewContent2025UltimateBanner />
-        
-        {/* AI 2026 Ultimate Showcase Banner */}
-        <AI2026UltimateShowcaseBanner />
-        
-        {/* Quantum AI 2026 Breakthrough Banner */}
-        <QuantumAI2026BreakthroughBanner />
-        
-        {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
-        
-        {/* AI 2026 Quantum Revolution Banner */}
-        <AI2026QuantumRevolutionBanner />
-        
-        {/* AI 2026 Autonomous Systems Banner */}
-        <AI2026AutonomousSystemsBanner />
-        
-        {/* Revolutionary Content 2025 Banner */}
-        <RevolutionaryContent2025Banner />
-        
-        {/* AI 2025 Breakthrough Banner */}
-        <AI2025BreakthroughBanner />
-        
-        {/* New Content 2025 Showcase Banner */}
-        <NewContent2025PromotionBanner />
-        
-        {/* Revolutionary Content 2025 Banner */}
-        <RevolutionaryContent2025Banner />
-        
-        {/* Enhanced Content Promotion Banner */}
-        <EnhancedContentPromotionBanner />
-        
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-                <span className="text-sm font-medium">🚀 AI & TECHNOLOGY SOLUTIONS</span>
+    <div className="min-h-screen bg-white">
+      {/* Ultimate Content Banner */}
+      <UltimateContent2025Banner />
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              AI 2025: The Ultimate
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-400">
+                Business Revolution
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
+              Join 500+ Fortune 500 companies achieving up to 1,100% ROI through AI transformation. 
+              Discover the complete roadmap to AI success with our proven implementation strategies.
+            </p>
+            
+            {/* Success Metrics */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-400">1,100%</div>
+                <div className="text-sm text-gray-300">Max ROI</div>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Transform Your Business with AI
-              </h1>
-              <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Cutting-edge AI, cloud infrastructure, and micro SaaS solutions. 
-                Expert consulting and implementation services for enterprise success.
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400">$420M</div>
+                <div className="text-sm text-gray-300">Max Savings</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-400">500+</div>
+                <div className="text-sm text-gray-300">Companies</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-yellow-400">12</div>
+                <div className="text-sm text-gray-300">Months</div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-400 to-pink-400 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-pink-300 transition-all duration-200"
+              >
+                <span>Start Your AI Transformation</span>
+                <ArrowRight className="w-5 h-5" />
+              </a>
+              <a
+                href="/resources"
+                className="inline-flex items-center space-x-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors duration-200"
+              >
+                <Play className="w-5 h-5" />
+                <span>View Success Stories</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ultimate Content Showcase */}
+      <UltimateContentShowcase2025 />
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Why Fortune 500 Companies Choose ZionTech Group
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We've helped 500+ companies achieve extraordinary AI transformation results through our proven methodology and comprehensive support.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">Proven ROI</h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Our clients achieve an average ROI of 1,000% within 12 months, with some reaching up to 1,100% ROI through our comprehensive AI implementation strategies.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/services"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Explore Services
-                </Link>
-                <Link
-                  href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-                >
-                  Get Started
-                </Link>
+              <div className="flex items-center space-x-2 text-green-600 font-semibold">
+                <CheckCircle className="w-5 h-5" />
+                <span>98% Success Rate</span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <Users className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">Fortune 500 Expertise</h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                We've successfully transformed 500+ Fortune 500 companies across all industries, delivering measurable results and sustainable competitive advantages.
+              </p>
+              <div className="flex items-center space-x-2 text-blue-600 font-semibold">
+                <CheckCircle className="w-5 h-5" />
+                <span>500+ Companies</span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">Rapid Implementation</h3>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Our streamlined approach delivers results in 12 months or less, with most clients seeing positive ROI within the first 3 months of implementation.
+              </p>
+              <div className="flex items-center space-x-2 text-purple-600 font-semibold">
+                <CheckCircle className="w-5 h-5" />
+                <span>12 Month Average</span>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Key Statistics */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-purple-600 mb-2">500+</div>
-                <div className="text-gray-600">Projects Delivered</div>
+      {/* Success Stories Preview */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Real Success Stories from Fortune 500 Companies
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover how leading companies achieved extraordinary results through AI transformation with our proven methodologies.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-8 border border-green-200">
+              <div className="flex items-center space-x-2 mb-4">
+                <Star className="w-5 h-5 text-yellow-500" />
+                <span className="text-sm font-medium text-green-800">Manufacturing Success</span>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
-                <div className="text-gray-600">Client Satisfaction</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                $3.8B Manufacturing Company
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Achieved 1,100% ROI and $420M in annual savings through comprehensive AI transformation across 47 manufacturing facilities.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-2xl font-bold text-green-600">1,100% ROI</div>
+                <a href="/case-studies/ai-2025-manufacturing-transformation-ultimate-success" className="text-green-600 hover:text-green-700 font-medium">
+                  Read Case Study →
+                </a>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-green-600 mb-2">340%</div>
-                <div className="text-gray-600">Average ROI Increase</div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8 border border-blue-200">
+              <div className="flex items-center space-x-2 mb-4">
+                <Star className="w-5 h-5 text-yellow-500" />
+                <span className="text-sm font-medium text-blue-800">Financial Services</span>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
-                <div className="text-gray-600">Support Available</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                $850M Financial Services
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Achieved 520% ROI and $67M in annual savings through AI-powered intelligent banking and customer experience transformation.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-2xl font-bold text-blue-600">520% ROI</div>
+                <a href="/case-studies" className="text-blue-600 hover:text-blue-700 font-medium">
+                  Read Case Study →
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 border border-purple-200">
+              <div className="flex items-center space-x-2 mb-4">
+                <Star className="w-5 h-5 text-yellow-500" />
+                <span className="text-sm font-medium text-purple-800">Healthcare Transformation</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                $200M Health System
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Achieved 300% ROI and $18.7M in annual savings through AI-powered patient care and operational efficiency improvements.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-2xl font-bold text-purple-600">300% ROI</div>
+                <a href="/case-studies" className="text-purple-600 hover:text-purple-700 font-medium">
+                  Read Case Study →
+                </a>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Services Section */}
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">AI Automation</h3>
-                <p className="text-gray-600 mb-4">
-                  Intelligent automation solutions that streamline operations and boost productivity across your organization.
-                </p>
-                <Link href="/services/ai-automation" className="text-purple-600 font-semibold hover:text-purple-800">
-                  Learn More →
-                </Link>
-              </div>
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-4xl mb-4">☁️</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Cloud Infrastructure</h3>
-                <p className="text-gray-600 mb-4">
-                  Scalable, secure cloud solutions designed to support your business growth and digital transformation.
-                </p>
-                <Link href="/services/cloud-infrastructure" className="text-purple-600 font-semibold hover:text-purple-800">
-                  Learn More →
-                </Link>
-              </div>
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-4xl mb-4">💼</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Micro SaaS</h3>
-                <p className="text-gray-600 mb-4">
-                  Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.
-                </p>
-                <Link href="/services/micro-saas" className="text-purple-600 font-semibold hover:text-purple-800">
-                  Learn More →
-                </Link>
-              </div>
-            </div>
+      {/* Call to Action */}
+      <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Start Your AI Transformation Journey?
+          </h2>
+          <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+            Join 500+ Fortune 500 companies that have already transformed their business with AI. 
+            Get your free consultation and discover how you can achieve up to 1,100% ROI.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="inline-flex items-center space-x-2 bg-white text-indigo-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors duration-200"
+            >
+              <span>Get Free Consultation</span>
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            <a
+              href="/resources"
+              className="inline-flex items-center space-x-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors duration-200"
+            >
+              <span>Download Resources</span>
+              <ArrowRight className="w-5 h-5" />
+            </a>
           </div>
-        </section>
-
-        {/* Content Promotion Banners */}
-        <NewContentShowcase2025 />
-        <UltimateContentShowcase2025 />
-        <RevolutionaryContent2026Banner />
-        <UltimateContentShowcase2026 />
-        <QuantumAIContentShowcase2026 />
-        <NewContent2025PromotionBanner />
-        <LatestContentShowcase2025 />
-        <EnhancedContentPromotionBanner2026 />
-        <ComprehensiveContentShowcase2026 />
-        <FeaturedContentShowcase2026 />
-        <NewContentPromotionBanner />
-        <ComprehensiveSolutionsBanner2025 />
-        <NewServicesShowcase2025 />
-        <NewContent2026Showcase />
-        <InteractiveContentDiscoveryWidget />
-
-        {/* Advanced AI Components */}
-        <AdvancedContentRecommendationEngine />
-        <RealTimePerformanceDashboard />
-        <IntelligentSearchEngine />
-        <AdvancedAIAssistant />
-        <BusinessIntelligenceDashboard />
-        <AdvancedSecurityMonitor />
-        <AdvancedAnalyticsEngine />
-        <AutomationWorkflowEngine />
-        <EnterpriseDataManagement />
-        <APIManagementSystem />
-
-        {/* Structured Data */}
-        <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
-          <StructuredData 
-            type="Organization" 
-            data={{
-              name: "Zion Tech Group",
-              description: "Transforming businesses through cutting-edge technology solutions",
-              url: "https://zion.app",
-              logo: "https://zion.app/images/zion-tech-group-logo.png",
-              sameAs: [
-                "https://twitter.com/ZionTechGroup",
-                "https://linkedin.com/company/zion-tech-group"
-              ]
-            }} 
-          />
-          <StructuredData 
-            type="WebSite" 
-            data={{
-              name: "Zion Tech Group",
-              url: "https://zion.app",
-              potentialAction: {
-                "@type": "SearchAction",
-                "target": "https://zion.app/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }} 
-          />
-        </Suspense>
-      </div>
-    </ErrorBoundary>
+        </div>
+      </section>
+    </div>
   );
 }
