@@ -4,6 +4,8 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 
+// Import new Neural Consciousness Breakthrough components - NEWEST FEATURED
+import NeuralConsciousnessBreakthroughBanner2025 from '../components/NeuralConsciousnessBreakthroughBanner2025';
 // Import new AI 2025 Ultimate Content Revolution components - NEWEST FEATURED
 import AI2025UltimateContentRevolution50000ROIBanner from '../components/AI2025UltimateContentRevolution50000ROIBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
@@ -379,6 +381,8 @@ export default function HomePage() {
         />
         
         <div className='min-h-screen bg-white'>
+        {/* NEURAL CONSCIOUSNESS BREAKTHROUGH BANNER 2025 - NEWEST FEATURED */}
+        <NeuralConsciousnessBreakthroughBanner2025 />
         {/* NEW CONTENT 2025 ULTIMATE SHOWCASE BANNER - NEWEST FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
         {/* AI 2025 ULTIMATE TRENDS SHOWCASE - NEWEST FEATURED */}
