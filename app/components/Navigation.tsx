@@ -5,13 +5,23 @@ import Link from 'next/link';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
 
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Blog', href: '/blog' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Resources', href: '/resources' },
+    { 
+      name: 'Resources', 
+      href: '/resources',
+      dropdown: [
+        { name: 'AI Customer Experience Guide', href: '/resources/ai-customer-experience-implementation-guide-2025' },
+        { name: 'AI Implementation Master Guide', href: '/resources/ai-implementation-master-guide-2025' },
+        { name: 'Quantum AI Implementation', href: '/resources/quantum-ai-implementation-guide-2026' },
+        { name: 'All Resources', href: '/resources' }
+      ]
+    },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -30,13 +40,37 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                {item.name}
-              </Link>
+              <div key={item.name} className="relative">
+                {item.dropdown ? (
+                  <div
+                    className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
+                    onMouseEnter={() => setIsResourcesOpen(true)}
+                    onMouseLeave={() => setIsResourcesOpen(false)}
+                  >
+                    {item.name}
+                    {isResourcesOpen && (
+                      <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg z-50 border">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
             ))}
             <Link
               href="/contact"
