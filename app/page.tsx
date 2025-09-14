@@ -275,7 +275,6 @@ export default function HomePage() {
         
         {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
         <UltimateContentShowcase2025 />
->>>>>>> cursor/create-and-deploy-new-content-a52b
         
         {/* AI 2030 Content Showcase Banner - FEATURED */}
         <AI2030ContentShowcaseBanner />

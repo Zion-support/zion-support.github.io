@@ -620,6 +620,57 @@ content_index:
       - "Implemented interactive content discovery and filtering"
 
   new_content_january_2025:
+    - id: "ai-2025-quantum-machine-learning-revolution-enterprise-guide"
+      type: "blog"
+      title: "AI 2025: Quantum Machine Learning Revolution - Enterprise Guide"
+      file_path: "/content/blog/ai-2025-quantum-machine-learning-revolution-enterprise-guide.md"
+      url: "/blog/ai-2025-quantum-machine-learning-revolution-enterprise-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Quantum ML", "Enterprise AI", "Quantum Computing", "2025", "Revolution"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        speed: "1000x"
+        accuracy: "99.9%"
+        cost_reduction: "95%"
+      reading_time: "16 min read"
+      
+    - id: "fortune-100-quantum-ml-transformation-ultimate-success"
+      type: "case-study"
+      title: "Fortune 100 Quantum ML Transformation: Ultimate Success Story"
+      file_path: "/content/case-studies/fortune-100-quantum-ml-transformation-ultimate-success.md"
+      url: "/case-studies/fortune-100-quantum-ml-transformation-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 100", "Quantum ML", "ROI Success", "Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1200%"
+        savings: "$4.2B"
+        efficiency: "89%"
+        timeline: "15 months"
+      reading_time: "14 min read"
+      
+    - id: "quantum-ml-implementation-master-guide-2025"
+      type: "resource"
+      title: "Quantum ML Implementation Master Guide 2025"
+      file_path: "/content/resources/quantum-ml-implementation-master-guide-2025.md"
+      url: "/resources/quantum-ml-implementation-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "Quantum ML", "Enterprise AI", "ROI Strategy", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        speed: "1000x"
+        accuracy: "99.9%"
+        implementation_time: "18 months"
+      reading_time: "28 min read"
+      
     - id: "ai-2025-enterprise-automation-ultimate-breakthrough-complete-guide"
       type: "blog"
       title: "AI 2025: The Enterprise Automation Ultimate Breakthrough - Complete Guide"
@@ -1163,6 +1214,17 @@ content_index:
         - "Impact statistics and success metrics"
         - "Additional resources and tools promotion"
         - "Multiple call-to-action options"
+        
+    - name: "QuantumMLRevolutionBanner"
+      file_path: "/app/components/QuantumMLRevolutionBanner.tsx"
+      status: "active"
+      features:
+        - "Auto-rotating quantum ML content showcase"
+        - "Dismissible banner with localStorage persistence"
+        - "Animated quantum-themed background elements"
+        - "Real-time success metrics display (800% ROI, 1000x speed)"
+        - "Progress indicators and navigation dots"
+        - "Quantum ML specific branding and colors"
 
   metrics:
     expected_roi_mentions: 35
