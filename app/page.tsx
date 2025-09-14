@@ -138,6 +138,13 @@ import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025Ul
 import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 import AIImplementationGuideBanner from '../components/AIImplementationGuideBanner';
 
+// Import new AI 2025 Advanced Automation Mastery components
+import AI2025AdvancedAutomationMasteryBanner from '../components/AI2025AdvancedAutomationMasteryBanner';
+import UltimateAIAutomationShowcase2025 from '../components/UltimateAIAutomationShowcase2025';
+
+// Import new Next-Generation Autonomous Systems components
+import NextGenAutonomousSystemsBanner from '../components/NextGenAutonomousSystemsBanner';
+import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowcase2025';
 // Import new enhanced components
 import AITrends2025_2030FuturePredictionsBanner from '../components/AITrends2025_2030FuturePredictionsBanner';
 import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';
@@ -209,6 +216,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Next-Generation Autonomous Systems Banner - NEW FEATURED */}
+        <NextGenAutonomousSystemsBanner />
+        
+        {/* AI 2025 Advanced Automation Mastery Banner - NEW FEATURED */}
+        <AI2025AdvancedAutomationMasteryBanner />
+        
         {/* Ultimate AI Breakthrough 2025 Banner - NEW FEATURED */}
         <UltimateAIBreakthrough2025Banner />
         
@@ -247,6 +260,22 @@ export default function HomePage() {
         
         {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
+=======
+        {/* Next-Generation Autonomous Systems Banner - NEW FEATURED */}
+        <NextGenAutonomousSystemsBanner />
+        
+        {/* AI 2025 Advanced Automation Mastery Banner - NEW FEATURED */}
+        <AI2025AdvancedAutomationMasteryBanner />
+        
+        {/* Revolutionary Content 2025 Banner - NEW FEATURED */}
+        <RevolutionaryContent2025Banner />
+        
+        {/* New Resource 2025 Implementation Roadmap Banner - NEW FEATURED */}
+        <NewResource2025ImplementationRoadmapBanner />
+        
+        {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
+        <UltimateContentShowcase2025 />
+>>>>>>> cursor/create-and-deploy-new-content-a52b
         
         {/* AI 2030 Content Showcase Banner - FEATURED */}
         <AI2030ContentShowcaseBanner />
@@ -370,6 +399,12 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Autonomous Systems Showcase 2025 - NEW FEATURED */}
+        <AutonomousSystemsShowcase2025 />
+        
+        {/* Ultimate AI Automation Showcase 2025 - NEW FEATURED */}
+        <UltimateAIAutomationShowcase2025 />
+        
         {/* Ultimate Content Showcase 2025 - NEW */}
         <UltimateContentShowcase2025 />
         
