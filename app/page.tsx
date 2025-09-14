@@ -105,6 +105,7 @@ import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026
 
 // Import new ultimate breakthrough promotional components
 import NewContent2025UltimateBreakthroughBanner from './components/NewContent2025UltimateBreakthroughBanner';
+import UltimateContentShowcase2025Banner from './components/UltimateContentShowcase2025Banner';
 import UltimateBreakthroughContentShowcase2025 from './components/UltimateBreakthroughContentShowcase2025';
 
 // Import new AI Content Revolution promotional components
@@ -303,6 +304,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 ULTIMATE BREAKTHROUGH BANNER - NEWEST FEATURED */}
+        <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 BANNER - NEWEST FEATURED */}
+        <UltimateContentShowcase2025Banner />
+        
         {/* AI INNOVATION SHOWCASE 2025 BANNER - NEWEST FEATURED */}
         <AIInnovationShowcase2025Banner />
         
