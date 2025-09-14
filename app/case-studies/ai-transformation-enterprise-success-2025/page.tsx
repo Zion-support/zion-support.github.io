@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag, Share2, Award, TrendingUp, DollarSign, Users, CheckCircle, Star } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User, Bookmark, Share2, Award, TrendingUp, DollarSign, Users, CheckCircle, Star } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
@@ -75,7 +75,7 @@ export default function EnterpriseAISuccessCaseStudy() {
               12 min read
             </div>
             <div className="flex items-center">
-              <Tag className="w-4 h-4 mr-2" />
+              <Bookmark className="w-4 h-4 mr-2" />
               Fortune 500 Success
             </div>
           </div>
