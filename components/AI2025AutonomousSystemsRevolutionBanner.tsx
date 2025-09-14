@@ -35,7 +35,7 @@ const AI2025AutonomousSystemsRevolutionBanner: React.FC = () => {
             <div className="text-3xl mb-4">🤖</div>
             <h3 className="text-xl font-bold mb-3">Self-Evolving Neural Networks</h3>
             <p className="text-blue-200 mb-4">
-              AI systems that modify their own architecture based on performance, enabling continuous improvement without human intervention.
+              AI systems that modify their own architecture based on performancenabling continuous improvement without human intervention.
             </p>
             <div className="text-yellow-300 font-semibold">→ Learn More</div>
           </div>

@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect, useMemo, useState } from 'react';
+import React{ useEffectuseMemouseState } from 'react';
 
 export type AdminNotesPanelProps = {
-  targetType: string; // e.g., 'user' | 'listing'
+  targetType: string; // e.g.'user' | 'listing'
   targetId: string;   // unique identifier for the target
 };
 
@@ -15,18 +15,18 @@ type Note = {
   createdAt: number;
 };
 
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [adminId, setAdminId] = useState('admin-demo');
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [adding, setAdding] = useState(false);
-  const [text, setText] = useState('');
+export default function AdminNotesPanel({ targetTypetargetId }: AdminNotesPanelProps) {
+  const [isAdminsetIsAdmin] = useState(true);
+  const [adminIdsetAdminId] = useState('admin-demo');
+  const [notesetNotes] = useState<Note[]>([]);
+  const [loadingsetLoading] = useState(false);
+  const [addingsetAdding] = useState(false);
+  const [textsetText] = useState('');
 
   async function fetchNotes() {
     try {
       setLoading(true);
-      const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`, {
+      const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`{
         headers: { 'X-Admin': isAdmin ? 'true' : 'false' }});
       if (!res.ok) {
         setNotes([]);
@@ -41,16 +41,16 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 
   useEffect(() => {
     if (isAdmin) fetchNotes();
-  }, [isAdmin, targetType, targetId]);
+  }[isAdmintargetTypetargetId]);
 
   async function addNote() {
     if (!text.trim()) return;
     setAdding(true);
     try {
-      const res = await fetch('/api/admin/notes', {
+      const res = await fetch('/api/admin/notes'{
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'X-Admin': isAdmin ? 'true' : 'false', 'X-Admin-User': adminId },
-        body: JSON.stringify({ targetType, targetId, text })});
+        headers: { 'Content-Type': 'application/json'X-Admin': isAdmin ? 'true' : 'false'X-Admin-User': adminId },
+        body: JSON.stringify({ targetTypetargetIdtext })});
       if (!res.ok) {
         alert('Failed to add note');
         return;
@@ -88,12 +88,12 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       </div>
 
       <div className="space-y-2">
-        <textarea className="w-full border rounded-md px-3 py-2" rows={3} placeholder="Write a private note (abuse, spam, special support)" value={text} onChange={(e) => setText(e.target.value)} />
+        <textarea className="w-full border rounded-md px-3 py-2" rows={3} placeholder="Write a private note (abusespamspecial support)" value={text} onChange={(e) => setText(e.target.value)} />
         <button disabled={!text.trim() || adding} onClick={addNote} className="px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50">{adding ? 'Adding…' : 'Add Note'}</button>
       </div>
 
       <div className="border-t pt-3">
-        <div className="text-sm opacity-70 mb-2">Notes are private, time-stamped, and include author ID.</div>
+        <div className="text-sm opacity-70 mb-2">Notes are privatetime-stampedand include author ID.</div>
         {loading ? (
           <div className="text-sm">Loading…</div>
         ) : notes.length === 0 ? (

@@ -1,14 +1,14 @@
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
 import { ReferralStats as ReferralStatsType } from "@/types/referrals";
-import { Award, Share, Star, TrendingUp } from "lucide-react";
+import { AwardShareStarTrendingUp } from "lucide-react";
 
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean;
 }
 
-export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
+export function ReferralStats({ statsisLoading }: ReferralStatsProps) {
   const statCards = [
     {
       title: "Total Referrals",
@@ -33,7 +33,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-      {statCards.map((card, i) => (
+      {statCards.map((cardi) => (
         <Card key={i}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">{card.title}</CardTitle>

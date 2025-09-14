@@ -1,8 +1,8 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircle, FileDown, FileText, PieChart, Users } from "lucide-react";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
+import { CheckCircleFileDownFileTextPieChartUsers } from "lucide-react";
 import { useState } from "react";
 import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm";
 import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks";
@@ -13,11 +13,11 @@ import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 
 export default function Partners() {
-  const [activeTab, setActiveTab] = useState("overview");
-  const { user, isAuthenticated } = useAuth();
+  const [activeTabsetActiveTab] = useState("overview");
+  const { userisAuthenticated } = useAuth();
   const navigate = useNavigate();
 
-  // If not authenticated, display partner program info and signup CTA
+  // If not authenticatedisplay partner program info and signup CTA
   if (!isAuthenticated) {
     return (
       <div className="container max-w-6xl py-10">

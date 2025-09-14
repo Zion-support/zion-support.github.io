@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Brain, ChevronRight, Star, Zap, TrendingUp } from 'lucide-react';
+BrainChevronRightStarZapTrendingUp
 
 const AISolutions2026ComprehensivePromotionBanner = () => {
   return (
@@ -25,7 +25,7 @@ const AISolutions2026ComprehensivePromotionBanner = () => {
             </h2>
             
             <p className="text-lg text-gray-300 mb-6 max-w-2xl">
-              Discover our cutting-edge AI solutions designed for 2026. From automation to intelligence, transform your business with comprehensive AI systems that deliver real results.
+              Discover our cutting-edge AI solutions designed for 2026. From automation to intelligencetransform your business with comprehensive AI systems that deliver real results.
             </p>
 
             {/* Features */}

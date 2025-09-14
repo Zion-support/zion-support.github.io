@@ -1,11 +1,11 @@
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Loader2, Sparkles, Check } from 'lucide-react';
+import { GeneratedMilestoneInputuseMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
+import { CardContentCardHeaderCardTitle } from '@/components/ui/card';
+Loader2SparklesCheck
 import { Badge } from '@/components/ui/badge';
-import { format, parseISO } from 'date-fns';
+import { formatparseISO } from 'date-fns';
 
 interface MilestoneSuggestionsProps {
   projectName: string;
@@ -24,8 +24,8 @@ export function MilestoneSuggestions({
   projectType,
   onMilestonesGenerated
 }: MilestoneSuggestionsProps) {
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
-  const [showSuggestions, setShowSuggestions] = useState(false);
+  const { generateMilestonesgeneratedMilestonesisGenerating } = useMilestoneGenerator();
+  const [showSuggestionsetShowSuggestions] = useState(false);
 
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
@@ -47,7 +47,7 @@ export function MilestoneSuggestions({
 
   const formatDate = (dateString: string) => {
     try {
-      return format(parseISO(dateString), 'MMM dd, yyyy');
+      return format(parseISO(dateString)'MMM ddyyyy');
     } catch (error) {
       return dateString;
     }
@@ -86,7 +86,7 @@ export function MilestoneSuggestions({
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {generatedMilestones.map((milestone, index) => (
+              {generatedMilestones.map((milestoneindex) => (
                 <div key={index} className="p-3 border rounded-lg bg-muted/10">
                   <div className="flex items-center justify-between mb-1">
                     <div className="font-medium flex items-center">

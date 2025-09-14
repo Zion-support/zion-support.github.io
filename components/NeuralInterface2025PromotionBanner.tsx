@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
@@ -19,8 +19,8 @@ interface ContentItem {
 }
 
 const NeuralInterface2025PromotionBanner: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentIndexsetCurrentIndex] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
 
   const neuralInterfaceContent: ContentItem[] = [
     {
@@ -70,14 +70,14 @@ const NeuralInterface2025PromotionBanner: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % neuralInterfaceContent.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, [neuralInterfaceContent.length]);
+  }[neuralInterfaceContent.length]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('neural-interface-banner-dismissed', 'true');
+    localStorage.setItem('neural-interface-banner-dismissed'true');
   };
 
   useEffect(() => {
@@ -85,7 +85,7 @@ const NeuralInterface2025PromotionBanner: React.FC = () => {
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -162,7 +162,7 @@ const NeuralInterface2025PromotionBanner: React.FC = () => {
 
               {/* Content indicators */}
               <div className="flex items-center space-x-2">
-                {neuralInterfaceContent.map((_, index) => (
+                {neuralInterfaceContent.map((_index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}

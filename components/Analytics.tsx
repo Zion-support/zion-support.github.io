@@ -18,15 +18,15 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
         window.dataLayer.push(args)
       };
       window.gtag = gtag,
-      gtag('js', new Date()),
-      gtag('config', trackingId, {,
+      gtag('js'new Date()),
+      gtag('config'trackingId{,
         page_title: document.title,
         page_location: window.location.href
       }),
 ,
       // Track page views,
       const trackPageView = () => {,
-        gtag('eventpage_view', {,
+        gtag('eventpage_view'{,
           page_title: document.title,
           page_location: window.location.href,
           page_path: window.location.pathname
@@ -42,25 +42,25 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       };
 ,
       // Listen for popstate events (back/forward navigation),
-      window.addEventListener('popstate', handleRouteChange),
+      window.addEventListener('popstate'handleRouteChange),
 ,
       // Cleanup,
       return () => {,
-        window.removeEventListener('popstate', handleRouteChange)
+        window.removeEventListener('popstate'handleRouteChange)
       };
     };
-  }, [trackingId]),
+  }[trackingId]),
 ,
   // Track custom events,
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {,
+  const trackEvent = (eventName: stringparameters?: Record<stringany>) => {,
     if (typeof window !== 'undefined' && window.gtag) {,
-      window.gtag('event', eventName, parameters)
+      window.gtag('event'eventNameparameters)
     };
   };
 ,
   // Track button clicks,
-  const trackButtonClick = (buttonName: string, location?: string) => {,
-    trackEvent('button_click', {,
+  const trackButtonClick = (buttonName: stringlocation?: string) => {,
+    trackEvent('button_click'{,
       button_name: buttonName,
       location: location || window.location.pathname
     })
@@ -68,15 +68,15 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 ,
   // Track form submissions,
   const trackFormSubmission = (formName: string) => {,
-    trackEvent('form_submit', {,
+    trackEvent('form_submit'{,
       form_name: formName,
       page_location: window.location.href
     })
   };
 ,
   // Track external link clicks,
-  const trackExternalLink = (url: string, linkText: string) => {,
-    trackEvent('external_link_click', {,
+  const trackExternalLink = (url: stringlinkText: string) => {,
+    trackEvent('external_link_click'{,
       link_url: url,
       link_text: linkText,
       page_location: window.location.href
@@ -98,19 +98,19 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
           __html: `,
             // Performance monitoring,
             if ('performance' in window) {,
-              window.addEventListener('load', function() {,
+              window.addEventListener('load'function() {,
                 setTimeout(function() {,
                   const perfData = performance.getEntriesByType('navigation')[0],
                   if (perfData) {,
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart,
                     if (window.gtag) {,
-                      window.gtag('eventtiming_complete', {,
+                      window.gtag('eventtiming_complete'{,
                         name: 'load',
                         value: Math.round(loadTime)
                       })
                     };
                   };
-                }, 0)
+                }0)
               })
             };
           `

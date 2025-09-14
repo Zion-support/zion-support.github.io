@@ -19,7 +19,7 @@ export default function NewContent2025ImplementationToolkitBanner() {
               AI 2025 Ultimate Implementation Toolkit
             </h2>
             <p className="text-xl mb-6 text-purple-100">
-              Everything you need to achieve 2,500-5,000% ROI with AI automation. 47 resources including templates, checklists, frameworks, and step-by-step guides.
+              Everything you need to achieve 2,500-5,000% ROI with AI automation. 47 resources including templateschecklistsframeworksand step-by-step guides.
             </p>
             <div className="flex flex-wrap gap-4 text-sm">
               <span className="bg-white/20 px-3 py-1 rounded-full">📚 47 Resources</span>

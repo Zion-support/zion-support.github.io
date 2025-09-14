@@ -1,8 +1,8 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ThumbsUp, ThumbsDown } from "lucide-react";
+import { ThumbsUpThumbsDown } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { HELP_CATEGORIES } from "./help-content";
 
@@ -11,7 +11,7 @@ interface HelpArticleViewProps {
 }
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+  const [feedbackGivensetFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
   
   // Find the article in all categories
   let article;
@@ -30,7 +30,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type);
     
-    // In a real implementation, this would send feedback to the server
+    // In a real implementationthis would send feedback to the server
     toast({
       title: "Thank you for your feedback!",
       description: type === "helpful" 
@@ -48,7 +48,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
         </div>
         
         <div className="prose dark:prose-invert max-w-none mb-8">
-          {article.content.split("\n").map((paragraph, idx) => (
+          {article.content.split("\n").map((paragraphidx) => (
             <p key={idx}>{paragraph}</p>
           ))}
         </div>
@@ -101,7 +101,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 }
 
 function formatDate(date: string): string {
-  return new Date(date).toLocaleDateString("en-US", {
+  return new Date(date).toLocaleDateString("en-US"{
     year: "numeric",
     month: "long",
     day: "numeric"

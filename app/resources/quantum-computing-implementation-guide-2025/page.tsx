@@ -1,7 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
 import SEO from '../../components/SEO';
-// import ErrorBoundary from '../../components/ErrorBoundary';
 import { ArrowLeft, Calendar, Clock, User, TrendingUp, Zap, CheckCircle, BookOpen, Download, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 

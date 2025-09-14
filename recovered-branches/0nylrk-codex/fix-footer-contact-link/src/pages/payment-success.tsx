@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
-import { CheckCircle2 } from 'lucide-react';
+CheckCircle2
 
 export default function PaymentSuccess() {
   const navigate = useNavigate();

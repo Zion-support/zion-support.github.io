@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useStateuseEffect } from "react";
+import { useParamsuseNavigateLink } from "react-router-dom";
 import { format } from "date-fns";
 import { useAuth } from "@/hooks/useAuth";
 import { useProjects } from "@/hooks/useProjects";
@@ -7,7 +7,7 @@ import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Project, ProjectStatus } from "@/types/projects";
+import { ProjectStatus } from "@/types/projects";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -50,19 +50,19 @@ import {
   XCircle} from "lucide-react";
 
 function ProjectDetailsContent() {
-  // useParams may be untyped in this environment, so avoid passing a
+  // useParams may be untyped in this environmentso avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
   const { projectId } = useParams() as { projectId?: string };
   const { user } = useAuth();
   const navigate = useNavigate();
-  const { getProjectById, updateProjectStatus } = useProjects();
+  const { getProjectByIdupdateProjectStatus } = useProjects();
   
-  const [project, setProject] = useState<Project | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [notes, setNotes] = useState<any[]>([]);
-  const [newNote, setNewNote] = useState("");
-  const [isSubmittingNote, setIsSubmittingNote] = useState(false);
-  const [activeTab, setActiveTab] = useState("details");
+  const [projectsetProject] = useState<Project | null>(null);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [notesetNotes] = useState<any[]>([]);
+  const [newNotesetNewNote] = useState("");
+  const [isSubmittingNotesetIsSubmittingNote] = useState(false);
+  const [activeTabsetActiveTab] = useState("details");
   
   // Load project data
   useEffect(() => {
@@ -89,24 +89,24 @@ function ProjectDetailsContent() {
     }
     
     loadProject();
-  }, [projectId]);
+  }[projectId]);
   
   const fetchProjectNotes = async (projectId: string) => {
     try {
-      const { data, error } = await supabase
+      const { dataerror } = await supabase
         .from("project_notes")
         .select(`
           *,
-          created_by_profile:profiles!user_id(display_name, avatar_url)
+          created_by_profile:profiles!user_id(display_nameavatar_url)
         `)
-        .eq("project_id", projectId)
-        .order("created_at", { ascending: false });
+        .eq("project_id"projectId)
+        .order("created_at"{ ascending: false });
       
       if (error) throw error;
       
       setNotes(data || []);
     } catch (err) {
-      console.error("Error fetching project notes:", err);
+      console.error("Error fetching project notes:"err);
     }
   };
   
@@ -116,7 +116,7 @@ function ProjectDetailsContent() {
     setIsSubmittingNote(true);
     
     try {
-      const { data, error } = await supabase
+      const { dataerror } = await supabase
         .from("project_notes")
         .insert({
           project_id: project.id,
@@ -134,7 +134,7 @@ function ProjectDetailsContent() {
         title: "Note added",
         description: "Your note has been added to the project."});
     } catch (err: any) {
-      console.error("Error adding note:", err);
+      console.error("Error adding note:"err);
       toast({
         title: "Failed to add note",
         description: err.message || "An error occurred while adding your note.",
@@ -147,14 +147,14 @@ function ProjectDetailsContent() {
   const handleStatusChange = async (newStatus: ProjectStatus) => {
     if (!project) return;
     
-    const success = await updateProjectStatus(project.id, newStatus);
+    const success = await updateProjectStatus(project.idnewStatus);
     
     if (success) {
       setProject({
         ...project,
         status: newStatus});
       
-      // If offer was accepted, show a special toast
+      // If offer was acceptedshow a special toast
       if (newStatus === "offer_accepted") {
         toast({
           title: "Offer Accepted! 🎉",
@@ -224,8 +224,8 @@ function ProjectDetailsContent() {
   }
   
   const isOfferPending = project.status === "offer_sent";
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+  const isOfferAccepted = ["offer_accepted"in_progress"completed"].includes(project.status);
+  const isActiveProject = ["offer_accepted"in_progress"].includes(project.status);
   
   return (
     <>
@@ -242,7 +242,7 @@ function ProjectDetailsContent() {
               <div className="flex items-center gap-2 mt-1">
                 {getStatusBadge(project.status)}
                 <span className="text-muted-foreground">
-                  Started on {format(new Date(project.start_date), "PPP")}
+                  Started on {format(new Date(project.start_date)"PPP")}
                 </span>
               </div>
             </div>
@@ -261,7 +261,7 @@ function ProjectDetailsContent() {
                       <AlertDialogHeader>
                         <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle>
                         <AlertDialogDescription>
-                          By accepting this offer, you agree to the project terms and timeline. 
+                          By accepting this offeryou agree to the project terms and timeline. 
                           This will initiate the contract and start the project.
                         </AlertDialogDescription>
                       </AlertDialogHeader>
@@ -321,7 +321,7 @@ function ProjectDetailsContent() {
                 </Button>
               )}
               
-              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
+              {(isClient || isTalent) && ["offer_sent"offer_accepted"in_progress"].includes(project.status) && (
                 <Button 
                   variant="outline" 
                   onClick={() => navigate(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
@@ -395,7 +395,7 @@ function ProjectDetailsContent() {
                         <Calendar className="h-5 w-5 text-primary mt-0.5" />
                         <div>
                           <h3 className="font-semibold">Start Date</h3>
-                          <p>{format(new Date(project.start_date), "PPP")}</p>
+                          <p>{format(new Date(project.start_date)"PPP")}</p>
                         </div>
                       </div>
                       
@@ -481,7 +481,7 @@ function ProjectDetailsContent() {
                                   {note.created_by_profile?.display_name || "User"}
                                 </span>
                                 <span className="text-xs text-muted-foreground">
-                                  {format(new Date(note.created_at), "PPp")}
+                                  {format(new Date(note.created_at)"PPp")}
                                 </span>
                               </div>
                               <p className="text-sm whitespace-pre-wrap">{note.content}</p>
@@ -609,14 +609,14 @@ function ProjectDetailsContent() {
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Creation Date:</span>
                     <span className="text-sm">
-                      {format(new Date(project.created_at), "PPP")}
+                      {format(new Date(project.created_at)"PPP")}
                     </span>
                   </div>
                   
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Start Date:</span>
                     <span className="text-sm">
-                      {format(new Date(project.start_date), "PPP")}
+                      {format(new Date(project.start_date)"PPP")}
                     </span>
                   </div>
                 </div>

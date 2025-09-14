@@ -3,9 +3,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
-  Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award,
-  Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code,
+  CheckCircleArrowRightStarTrendingUpPhoneMailMapPin
+  BrainBarChart3TargetZapShieldGlobeUsersAward,
+  ClockDollarSignCheckArrowUpRightPlayBookOpenCode,
   ShoppingCart
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -138,9 +138,9 @@ const useCases = [
 ];
 
 const integrations = [
-  'WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Google Analytics',
-  'Facebook Ads', 'Google Ads', 'LinkedIn', 'Twitter', 'Instagram',
-  'YouTube', 'TikTok', 'Slack', 'Zapier', 'API Access'
+  'WordPress'Shopify'HubSpot'Mailchimp'Google Analytics',
+  'Facebook Ads'Google Ads'LinkedIn'Twitter'Instagram',
+  'YouTube'TikTok'Slack'Zapier'API Access'
 ];
 
 export default function AIContentIntelligencePlatform() {
@@ -148,8 +148,8 @@ export default function AIContentIntelligencePlatform() {
     <Layout>
       <Head>
         <title>AI Content Intelligence Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your content creation with AI-powered intelligence and analytics. Get real-time insights, optimization suggestions, and predictive performance modeling." />
-        <meta name="keywords" content="AI content intelligence, content optimization, content analytics, AI content marketing, content performance, SEO optimization" />
+        <meta name="description" content="Transform your content creation with AI-powered intelligence and analytics. Get real-time insightsoptimization suggestionsand predictive performance modeling." />
+        <meta name="keywords" content="AI content intelligencecontent optimizationcontent analyticsAI content marketingcontent performanceSEO optimization" />
         <meta property="og:title" content="AI Content Intelligence Platform | Zion Tech Group" />
         <meta property="og:description" content="Transform your content creation with AI-powered intelligence and analytics." />
         <meta property="og:url" content="https://ziontechgroup.com/ai-content-intelligence-platform" />
@@ -163,21 +163,21 @@ export default function AIContentIntelligencePlatform() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.8 }}
             >
               <div className="flex items-center space-x-2 mb-6">
                 <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
                   NEW SERVICE
                 </span>
-                <span className="text-gray-400 text-sm">Launch Date: January 15, 2025</span>
+                <span className="text-gray-400 text-sm">Launch Date: January 152025</span>
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                 AI Content Intelligence Platform
               </h1>
               <p className="text-xl lg:text-2xl text-gray-300 mb-8">
-                Transform content creation with AI-powered intelligence and analytics. Get real-time insights, optimization suggestions, and predictive performance modeling.
+                Transform content creation with AI-powered intelligence and analytics. Get real-time insightsoptimization suggestionsand predictive performance modeling.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -194,9 +194,9 @@ export default function AIContentIntelligencePlatform() {
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0x: 30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.8delay: 0.2 }}
               className="relative"
             >
               <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">
@@ -226,8 +226,8 @@ export default function AIContentIntelligencePlatform() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -236,16 +236,16 @@ export default function AIContentIntelligencePlatform() {
               Powerful Features for Content Success
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Content Intelligence Platform provides everything you need to create, optimize, and scale your content strategy.
+              Our AI Content Intelligence Platform provides everything you need to createoptimizeand scale your content strategy.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="group relative"
               >
@@ -266,8 +266,8 @@ export default function AIContentIntelligencePlatform() {
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -276,16 +276,16 @@ export default function AIContentIntelligencePlatform() {
               Perfect For Every Content Need
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Whether you're a content creator, marketing team, or enterprise organization, our platform adapts to your specific requirements.
+              Whether you're a content creatormarketing teamor enterprise organizationour platform adapts to your specific requirements.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCaseindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
+                initial={{ opacity: 0x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.8delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className="group"
               >
@@ -306,8 +306,8 @@ export default function AIContentIntelligencePlatform() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -320,12 +320,12 @@ export default function AIContentIntelligencePlatform() {
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((planindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
+                initial={{ opacity: 0y: 30 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className={`relative ${plan.popular ? 'scale-105' : ''}`}
               >
@@ -344,7 +344,7 @@ export default function AIContentIntelligencePlatform() {
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -369,8 +369,8 @@ export default function AIContentIntelligencePlatform() {
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -383,12 +383,12 @@ export default function AIContentIntelligencePlatform() {
             </p>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (
+            {integrations.map((integrationindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0scale: 0.8 }}
+                whileInView={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg p-4 text-center hover:bg-white/20 transition-colors duration-300"
               >
@@ -403,8 +403,8 @@ export default function AIContentIntelligencePlatform() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >

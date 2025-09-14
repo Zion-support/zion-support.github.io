@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { TableBodyTableCellTableHeaderTableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { FraudFlag } from "@/types/fraud";
 import { SeverityDisplay } from "./SeverityDisplay";
@@ -12,7 +12,7 @@ interface FraudFlagsTableProps {
   isLoading: boolean;
   hasFilters: boolean;
   resetFilters: () => void;
-  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
+  onAction: (flagId: stringaction: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
 }
 
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
@@ -56,7 +56,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
               <SeverityDisplay severity={flag.severity} />
             </TableCell>
             <TableCell className="font-medium">
-              {flag.user_email || flag.user_id.substring(0, 8)}
+              {flag.user_email || flag.user_id.substring(08)}
             </TableCell>
             <TableCell className="max-w-xs truncate">
               {flag.content_excerpt}

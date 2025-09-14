@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Brain, Zap, Eye, Ear, Hand, Heart, Target, Users, Globe, Shield } from 'lucide-react';
+BrainZapEyeEarHandHeartTargetUsersGlobeShield
 
 const NeuralInterfaceRevolution2035 = () => {
   return (
@@ -16,7 +16,7 @@ const NeuralInterfaceRevolution2035 = () => {
             NEURAL INTERFACE
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the future of human-AI symbiosis with advanced neural interfaces that enable direct brain-computer communication, enhanced cognition, and seamless digital integration
+            Experience the future of human-AI symbiosis with advanced neural interfaces that enable direct brain-computer communicationenhanced cognitionand seamless digital integration
           </p>
         </div>
 
@@ -38,7 +38,7 @@ const NeuralInterfaceRevolution2035 = () => {
               <Eye className="w-8 h-8 text-black" />
             </div>
             <h3 className="text-2xl font-bold mb-4">Enhanced Perception</h3>
-            <p className="text-gray-300 mb-6">Neural augmentation that extends human sensory capabilities with AI-enhanced vision, hearing, and cognitive processing</p>
+            <p className="text-gray-300 mb-6">Neural augmentation that extends human sensory capabilities with AI-enhanced visionhearingand cognitive processing</p>
             <Link href="/neural-interface-perception" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-semibold">
               Discover Enhancement <Zap className="w-4 h-4 ml-2" />
             </Link>

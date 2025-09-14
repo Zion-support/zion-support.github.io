@@ -24,7 +24,7 @@ export default function AI2025_2026UltimateBreakthroughPromotionBanner() {
           {/* Subheading */}
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover the revolutionary AI technologies that will transform your business. 
-            Neural superintelligence, quantum AI fusion, and autonomous systems await.
+            Neural superintelligencequantum AI fusionand autonomous systems await.
           </p>
           
           {/* Key Features */}

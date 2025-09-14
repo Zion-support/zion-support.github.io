@@ -1,11 +1,11 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 
 /**
  * Enhanced UI Components Library
  * 
- * Provides modern, accessible, and performant UI components with:
+ * Provides modernaccessibleand performant UI components with:
  * - Smooth animations
  * - Accessibility features
  * - Dark mode support
@@ -54,8 +54,8 @@ export const EnhancedButton: React.FC<ButtonProps> = ({
       disabled={disabled || loading}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0y: 20 }}
+      animate={{ opacity: 1y: 0 }}
       transition={{ duration: 0.2 }}
     >
       <AnimatePresence mode="wait">
@@ -99,10 +99,10 @@ export const EnhancedCard: React.FC<CardProps> = ({
   return (
     <motion.div
       className={`bg-white rounded-xl shadow-lg border border-gray-200 p-6 ${className}`}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0y: 20 }}
+      animate={{ opacity: 1y: 0 }}
       transition={{ duration: 0.3 }}
-      whileHover={hover ? { y: -5, shadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" } : {}}
+      whileHover={hover ? { y: -5shadow: "0 20px 25px -5px rgba(00.1)" } : {}}
     >
       {children}
     </motion.div>
@@ -135,7 +135,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       className={`animate-spin rounded-full border-2 border-gray-300 ${colors[color as keyof typeof colors]} ${sizes[size]}`}
       style={{ borderTopColor: 'transparent' }}
       animate={{ rotate: 360 }}
-      transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+      transition={{ duration: 1repeat: Infinityease: 'linear' }}
     />
   );
 };
@@ -163,7 +163,7 @@ export const EnhancedModal: React.FC<ModalProps> = ({
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [isOpen]);
+  }[isOpen]);
   
   return (
     <AnimatePresence>
@@ -178,9 +178,9 @@ export const EnhancedModal: React.FC<ModalProps> = ({
           <div className="fixed inset-0 bg-black bg-opacity-50" />
           <motion.div
             className="relative bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto"
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
+            initial={{ scale: 0.9opacity: 0 }}
+            animate={{ scale: 1opacity: 1 }}
+            exit={{ scale: 0.9opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between p-6 border-b border-gray-200">
@@ -218,8 +218,8 @@ export const EnhancedProgressBar: React.FC<ProgressBarProps> = ({
       <motion.div
         className="bg-blue-600 h-2 rounded-full"
         initial={{ width: 0 }}
-        animate={{ width: `${Math.min(progress, 100)}%` }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
+        animate={{ width: `${Math.min(progress100)}%` }}
+        transition={{ duration: 0.5ease: 'easeOut' }}
       />
     </div>
   );
@@ -236,7 +236,7 @@ export const EnhancedTooltip: React.FC<TooltipProps> = ({
   content,
   position = 'top'
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
   
   const positions = {
     top: 'bottom-full left-1/2 transform -translate-x-1/2 mb-2',
@@ -256,9 +256,9 @@ export const EnhancedTooltip: React.FC<TooltipProps> = ({
         {isVisible && (
           <motion.div
             className={`absolute z-10 px-2 py-1 text-sm text-white bg-gray-900 rounded shadow-lg ${positions[position]}`}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0scale: 0.8 }}
+            animate={{ opacity: 1scale: 1 }}
+            exit={{ opacity: 0scale: 0.8 }}
             transition={{ duration: 0.2 }}
           >
             {content}

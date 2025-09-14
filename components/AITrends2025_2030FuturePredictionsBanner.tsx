@@ -37,7 +37,7 @@ const AITrends2025_2030FuturePredictionsBanner: React.FC = () => {
               <h3 className="text-xl font-bold">AI Automation</h3>
             </div>
             <p className="text-sm opacity-80 mb-4">
-              By 2030, 85% of business processes will be automated with AI, creating unprecedented efficiency gains.
+              By 203085% of business processes will be automated with AIcreating unprecedented efficiency gains.
             </p>
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
@@ -66,7 +66,7 @@ const AITrends2025_2030FuturePredictionsBanner: React.FC = () => {
               <h3 className="text-xl font-bold">Quantum AI</h3>
             </div>
             <p className="text-sm opacity-80 mb-4">
-              Quantum computing will revolutionize AI capabilities, solving complex problems 1000x faster.
+              Quantum computing will revolutionize AI capabilitiesolving complex problems 1000x faster.
             </p>
             <div className="space-y-2">
               <div className="flex justify-between text-xs">

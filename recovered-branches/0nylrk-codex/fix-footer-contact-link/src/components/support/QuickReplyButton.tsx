@@ -8,7 +8,7 @@ interface QuickReplyButtonProps {
   onClick: () => void;
 }
 
-export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
+export function QuickReplyButton({ textonClick }: QuickReplyButtonProps) {
   return (
     <Button
       variant="outline"

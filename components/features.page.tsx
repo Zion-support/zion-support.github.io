@@ -1,5 +1,5 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
-import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
+BotGlobe2MonitorSmartphone
 
 export default function FeaturesPage() {
   return (

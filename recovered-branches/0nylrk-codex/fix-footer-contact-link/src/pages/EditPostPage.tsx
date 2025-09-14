@@ -1,12 +1,12 @@
 
-import { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useStateuseEffect } from "react";
+import { LinkuseNavigateuseParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
-import { ForumPost, ForumCategory } from "@/types/community";
+import { ForumPostForumCategory } from "@/types/community";
 import { useAuth } from "@/hooks/useAuth";
 
 interface PostFormValues {
@@ -26,7 +26,7 @@ const mockPost: ForumPost = {
   authorAvatar: "https://i.pravatar.cc/150?img=3",
   authorRole: "Verified Talent",
   categoryId: "ai-tools",
-  tags: ["machine-learning", "fine-tuning", "gpt"],
+  tags: ["machine-learning"fine-tuning"gpt"],
   createdAt: "2025-04-01T12:00:00Z",
   updatedAt: "2025-04-01T12:00:00Z",
   upvotes: 48,
@@ -41,14 +41,14 @@ export default function EditPostPage() {
   const navigate = useNavigate();
   const { toast } = useToast();
   const { user } = useAuth();
-  const [post, setPost] = useState<ForumPost | null>(mockPost);
-  const [isLoading, setIsLoading] = useState(true);
+  const [postsetPost] = useState<ForumPost | null>(mockPost);
+  const [isLoadingsetIsLoading] = useState(true);
   
   useEffect(() => {
-    // In a real app, we would fetch the post data here
-    // For now, we'll just use the mock data
+    // In a real appwe would fetch the post data here
+    // For nowe'll just use the mock data
     setIsLoading(false);
-  }, [postId]);
+  }[postId]);
   
   if (isLoading) {
     return (
@@ -97,13 +97,13 @@ export default function EditPostPage() {
     title: post.title,
     content: post.content,
     categoryId: post.categoryId as ForumCategory,
-    tags: post.tags.join(", ")
+    tags: post.tags.join(")
   };
 
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally update the post in the database
-      // For now, we'll just simulate a successful update
+      // For nowe'll just simulate a successful update
       
       toast({
         title: "Post updated",
@@ -126,7 +126,7 @@ export default function EditPostPage() {
       <SEO 
         title="Edit Post | Community Forum | Zion AI Marketplace"
         description="Edit your discussion post in the Zion AI Marketplace community forum."
-        keywords="community, forum, discussion, edit post"
+        keywords="communityforumdiscussionedit post"
       />
       
       <div className="container py-8">

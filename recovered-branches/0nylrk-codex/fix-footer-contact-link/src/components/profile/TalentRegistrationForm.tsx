@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -16,8 +16,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react";
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+import { XSparklesUploadClockCheckBriefcaseMapPinUserRound } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -25,14 +25,14 @@ import { useAuth } from "@/hooks/useAuth";
 
 // Define form schema
 const talentProfileSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters long"),
-  title: z.string().min(5, "Professional title is required"),
-  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
-  location: z.string().min(2, "Location is required"),
-  skills: z.string().min(2, "Enter at least one skill"),
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
+  name: z.string().min(2"Name must be at least 2 characters long"),
+  title: z.string().min(5"Professional title is required"),
+  bio: z.string().min(50"Bio must be at least 50 characters long").max(1000"Bio cannot exceed 1000 characters"),
+  location: z.string().min(2"Location is required"),
+  skills: z.string().min(2"Enter at least one skill"),
+  hourlyRate: z.string().refine((val) => !isNaN(Number(val)){
     message: "Hourly rate must be a number"}),
-  availability: z.enum(["available", "limited", "unavailable"]),
+  availability: z.enum(["available"limited"unavailable"]),
   enhancedProfile: z.boolean().default(true)});
 
 type TalentFormValues = z.infer<typeof talentProfileSchema>;
@@ -55,11 +55,11 @@ interface EnhancedProfile {
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
   const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [skillTags, setSkillTags] = useState<string[]>([]);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
-  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [skillTagsetSkillTags] = useState<string[]>([]);
+  const [isGeneratingsetIsGenerating] = useState(false);
+  const [generatedContentsetGeneratedContent] = useState<EnhancedProfile | null>(null);
+  const [uploadedAvatarsetUploadedAvatar] = useState<string | null>(null);
   
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
@@ -78,8 +78,8 @@ export function TalentRegistrationForm() {
   const handleAddSkill = () => {
     const skillInput = form.getValues("skills");
     if (skillInput && !skillTags.includes(skillInput)) {
-      setSkillTags([...skillTags, skillInput]);
-      form.setValue("skills", "");
+      setSkillTags([...skillTagskillInput]);
+      form.setValue("skills"");
     }
   };
 
@@ -122,7 +122,7 @@ export function TalentRegistrationForm() {
       setIsGenerating(true);
 
       // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
+      const { dataerror } = await supabase.functions.invoke('talent-profile-enhancer'{
         body: {
           talentData: {
             name: formData.name,
@@ -145,7 +145,7 @@ export function TalentRegistrationForm() {
         description: "AI has created a professional bio and suggested additional skills for your profile."});
       
     } catch (error: any) {
-      console.error("Error generating enhanced profile:", error);
+      console.error("Error generating enhanced profile:"error);
       toast({
         title: "Generation failed",
         description: error.message || "There was an error generating your enhanced profile. Please try again.",
@@ -158,7 +158,7 @@ export function TalentRegistrationForm() {
   // Apply generated content to form
   const applyGeneratedContent = () => {
     if (generatedContent) {
-      form.setValue("bio", generatedContent.summary);
+      form.setValue("bio"generatedContent.summary);
       
       // Extract all skills from categorized skills and properly type cast them
       const allCategorizedSkills = generatedContent.categorizedSkills;
@@ -176,7 +176,7 @@ export function TalentRegistrationForm() {
       });
         
       if (newSkills.length > 0) {
-        setSkillTags([...skillTags, ...newSkills]);
+        setSkillTags([...skillTags...newSkills]);
       }
     }
   };
@@ -194,14 +194,14 @@ export function TalentRegistrationForm() {
   };
 
   // Send notification email
-  const sendEnhancementNotification = async (userId: string, email: string) => {
+  const sendEnhancementNotification = async (userId: stringemail: string) => {
     try {
-      await supabase.functions.invoke('send-email', {
+      await supabase.functions.invoke('send-email'{
         body: {
           to: email,
           subject: "Your Zion Talent Profile Has Been Enhanced",
           html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <div style="font-family: Arialsans-serif; max-width: 600px; margin: 0 auto;">
             <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>
             <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>
             <p>We've added a professional summary and categorized your skills to help you stand out.</p>
@@ -214,7 +214,7 @@ export function TalentRegistrationForm() {
         }
       });
     } catch (error) {
-      console.error("Failed to send notification email:", error);
+      console.error("Failed to send notification email:"error);
     }
   };
 
@@ -242,7 +242,7 @@ export function TalentRegistrationForm() {
       
       if (values.enhancedProfile && !generatedContent) {
         try {
-          const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
+          const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer'{
             body: {
               talentData: {
                 name: values.name,
@@ -272,10 +272,10 @@ export function TalentRegistrationForm() {
             });
             
             // Create a unique set of skills
-            finalSkills = [...new Set([...skillTags, ...aiSkills])];
+            finalSkills = [...new Set([...skillTags...aiSkills])];
           }
         } catch (error) {
-          console.error("Error enhancing profile:", error);
+          console.error("Error enhancing profile:"error);
           // Continue with submission even if enhancement fails
           finalSummary = "";
         }
@@ -288,7 +288,7 @@ export function TalentRegistrationForm() {
       const userEmail = userData.user?.email;
 
       // Create the talent profile
-      // In a real implementation, this would save to Supabase
+      // In a real implementationthis would save to Supabase
       setTimeout(() => {
         toast({
           title: "Profile Created Successfully",
@@ -296,11 +296,11 @@ export function TalentRegistrationForm() {
         
         // Send notification email if we have user email
         if (userEmail && values.enhancedProfile) {
-          sendEnhancementNotification(user.id, userEmail);
+          sendEnhancementNotification(user.iduserEmail);
         }
         
         setIsSubmitting(false);
-      }, 1500);
+      }1500);
 
       // Here would be the actual code to save the profile to Supabase
       /*
@@ -313,7 +313,7 @@ export function TalentRegistrationForm() {
           bio: values.bio,
           summary: finalSummary,
           location: values.location,
-          skills: finalSkills.map(name => ({ name, level: 4 })), // Default skill level
+          skills: finalSkills.map(name => ({ namelevel: 4 }))// Default skill level
           hourly_rate: Number(values.hourlyRate),
           availability_status: values.availability,
           // Other fields would be handled here
@@ -323,7 +323,7 @@ export function TalentRegistrationForm() {
       */
 
     } catch (error: any) {
-      console.error("Error creating profile:", error);
+      console.error("Error creating profile:"error);
       toast({
         title: "Error Creating Profile",
         description: error.message || "There was an error creating your profile. Please try again.",
@@ -384,7 +384,7 @@ export function TalentRegistrationForm() {
                               <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
-                                placeholder="e.g., Senior Software Developer"
+                                placeholder="e.g.Senior Software Developer"
                                 {...field}
                               />
                             </div>
@@ -407,7 +407,7 @@ export function TalentRegistrationForm() {
                               <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
-                                placeholder="City, State/Province, Country"
+                                placeholder="CityState/ProvinceCountry"
                                 {...field}
                               />
                             </div>
@@ -430,7 +430,7 @@ export function TalentRegistrationForm() {
                               <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
                               <Input
                                 className="pl-8 bg-zion-blue border-zion-blue-light text-white"
-                                placeholder="e.g., 85"
+                                placeholder="e.g.85"
                                 {...field}
                               />
                             </div>
@@ -474,7 +474,7 @@ export function TalentRegistrationForm() {
                     </label>
                   </div>
                   <p className="text-sm text-zion-slate">
-                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.
+                    For best resultsuse an image at least 400x400 pixels in JPGPNGor GIF format.
                   </p>
                 </div>
               </div>
@@ -493,7 +493,7 @@ export function TalentRegistrationForm() {
                       <FormControl>
                         <Textarea
                           className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
-                          placeholder="Describe your professional background, expertise, and the value you bring to clients..."
+                          placeholder="Describe your professional backgroundexpertiseand the value you bring to clients..."
                           {...field}
                         />
                       </FormControl>
@@ -574,7 +574,7 @@ export function TalentRegistrationForm() {
                         <div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>
                           <div className="flex flex-wrap gap-2 mt-1">
-                            {Object.entries(generatedContent.categorizedSkills).map(([category, skills]) => (
+                            {Object.entries(generatedContent.categorizedSkills).map(([categoryskills]) => (
                               <div key={category} className="flex items-center gap-2">
                                 <Badge
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
@@ -727,11 +727,11 @@ export function TalentRegistrationForm() {
                   <div className="pt-2">
                     <FormLabel className="text-zion-slate-light">Availability Message</FormLabel>
                     <Textarea
-                      placeholder="Describe your availability, working hours, or when you'll be available next..."
+                      placeholder="Describe your availabilityworking hoursor when you'll be available next..."
                       className="mt-1.5 bg-zion-blue border-zion-blue-light text-white"
                     />
                     <FormDescription className="text-zion-slate mt-1.5 text-sm">
-                      Let clients know about your working hours, time zone, or availability for calls.
+                      Let clients know about your working hourstime zoneor availability for calls.
                     </FormDescription>
                   </div>
                 </div>

@@ -1,8 +1,8 @@
-import React, { useState, useMemo } from 'react';
+import React{ useStateuseMemo } from 'react';
 import Head from 'next/head';
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe } from 'lucide-react';
+import { motionAnimatePresence } from 'framer-motion';
+SearchCheckCircleArrowRightRocketMailPhoneMapPinMessageSquareGlobe
 
 
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
@@ -11,10 +11,10 @@ import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-servi
 import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
 
 export default function Revolutionary2027ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState<string>('all');
+  const [selectedPriceRangesetSelectedPriceRange] = useState<string>('all');
+  const [sortBysetSortBy] = useState<string>('name');
 
   const allServices = [
     ...revolutionary2027AIServices,
@@ -30,28 +30,28 @@ export default function Revolutionary2027ServicesShowcase() {
   const holographicCount = allServices.filter(service => service.category.includes('Holographic')).length;
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },
-    { id: 'quantum', name: 'Quantum Services', icon: '⚛️', count: quantumCount },
-    { id: 'it', name: 'IT Infrastructure', icon: '⚙️', count: itCount },
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
-    { id: 'holographic', name: 'Holographic', icon: '🎭', count: holographicCount }
+    { id: 'all'name: 'All Services'icon: '🚀'count: allServices.length },
+    { id: 'ai'name: 'AI Services'icon: '🧠'count: aiCount },
+    { id: 'quantum'name: 'Quantum Services'icon: '⚛️'count: quantumCount },
+    { id: 'it'name: 'IT Infrastructure'icon: '⚙️'count: itCount },
+    { id: 'micro-saas'name: 'Micro SaaS'icon: '💻'count: microSaasCount },
+    { id: 'holographic'name: 'Holographic'icon: '🎭'count: holographicCount }
   ];
 
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'under-500', name: 'Under $500', range: 'Under $500' },
-    { id: '500-2000', name: '$500 - $2,000', range: '$500 - $2,000' },
-    { id: '2000-10000', name: '$2,000 - $10,000', range: '$2,000 - $10,000' },
-    { id: 'over-10000', name: 'Over $10,000', range: 'Over $10,000' }
+    { id: 'all'name: 'All Prices'range: 'All' },
+    { id: 'under-500'name: 'Under $500'range: 'Under $500' },
+    { id: '500-2000'name: '$500 - $2,000'range: '$500 - $2,000' },
+    { id: '2000-10000'name: '$2,000 - $10,000'range: '$2,000 - $10,000' },
+    { id: 'over-10000'name: 'Over $10,000'range: 'Over $10,000' }
   ];
 
   const sortOptions = [
-    { id: 'name', name: 'Name' },
-    { id: 'price', name: 'Price' },
-    { id: 'rating', name: 'Rating' },
-    { id: 'customers', name: 'Customers' },
-    { id: 'launchDate', name: 'Launch Date' }
+    { id: 'name'name: 'Name' },
+    { id: 'price'name: 'Price' },
+    { id: 'rating'name: 'Rating' },
+    { id: 'customers'name: 'Customers' },
+    { id: 'launchDate'name: 'Launch Date' }
   ];
 
   const filteredServices = useMemo(() => {
@@ -72,7 +72,7 @@ export default function Revolutionary2027ServicesShowcase() {
     // Price range filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
-        const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+        const price = parseInt(service.price.replace(/[^0-9]/g''));
         if (selectedPriceRange === 'under-500') return price < 500;
         if (selectedPriceRange === '500-2000') return price >= 500 && price < 2000;
         if (selectedPriceRange === '2000-10000') return price >= 2000 && price < 10000;
@@ -91,10 +91,10 @@ export default function Revolutionary2027ServicesShowcase() {
     }
 
     // Sort
-    filtered.sort((a, b) => {
+    filtered.sort((ab) => {
       switch (sortBy) {
         case 'price':
-          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+          return parseInt(a.price.replace(/[^0-9]/g'')) - parseInt(b.price.replace(/[^0-9]/g''));
         case 'rating':
           return b.rating - a.rating;
         case 'customers':
@@ -107,7 +107,7 @@ export default function Revolutionary2027ServicesShowcase() {
     });
 
     return filtered;
-  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+  }[allServicesearchTermselectedCategoryselectedPriceRangesortBy]);
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -119,8 +119,8 @@ export default function Revolutionary2027ServicesShowcase() {
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <Head>
-        <title>Revolutionary 2027 Services Showcase - Zion Tech Group | Next-Generation AI, Quantum & Technology Solutions</title>
-        <meta name="description" content="Discover the most revolutionary AI, Quantum, and Technology services of 2027. Cutting-edge solutions with proven ROI and real-world implementation." />
+        <title>Revolutionary 2027 Services Showcase - Zion Tech Group | Next-Generation AIQuantum & Technology Solutions</title>
+        <meta name="description" content="Discover the most revolutionary AIQuantumand Technology services of 2027. Cutting-edge solutions with proven ROI and real-world implementation." />
         <meta property="og:title" content="Revolutionary 2027 Services Showcase - Zion Tech Group" />
         <meta property="og:description" content="Explore the future of technology with our revolutionary 2027 services showcase." />
         <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2027-services-showcase" />
@@ -132,8 +132,8 @@ export default function Revolutionary2027ServicesShowcase() {
       <section className="pt-24 pb-16 px-4 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8">
@@ -143,7 +143,7 @@ export default function Revolutionary2027ServicesShowcase() {
               Services Showcase
             </h2>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of technology with our revolutionary AI, Quantum Computing, and Next-Generation IT services. 
+              Experience the future of technology with our revolutionary AIQuantum Computingand Next-Generation IT services. 
               Each solution delivers measurable ROI and transforms industries.
             </p>
             
@@ -151,21 +151,21 @@ export default function Revolutionary2027ServicesShowcase() {
             <div className="flex flex-wrap items-center justify-center gap-6 text-center mb-8">
               <motion.div className="flex items-center gap-2 text-cyan-400"
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition={{ type: "spring"stiffness: 300 }}
               >
                 <Phone className="w-5 h-5" />
                 <span className="font-semibold">{contactInfo.mobile}</span>
               </motion.div>
               <motion.div className="flex items-center gap-2 text-purple-400"
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition={{ type: "spring"stiffness: 300 }}
               >
                 <Mail className="w-5 h-5" />
                 <span className="font-semibold">{contactInfo.email}</span>
               </motion.div>
               <motion.div className="flex items-center gap-2 text-green-400"
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition={{ type: "spring"stiffness: 300 }}
               >
                 <MapPin className="w-5 h-5" />
                 <span className="text-sm font-semibold">{contactInfo.address}</span>
@@ -267,14 +267,14 @@ export default function Revolutionary2027ServicesShowcase() {
           <AnimatePresence mode="wait">
             {filteredServices.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredServices.map((service, index) => (
+                {filteredServices.map((serviceindex) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -30 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ y: -10, scale: 1.02 }} className="group">
+                    initial={{ opacity: 0y: 30 }}
+                    animate={{ opacity: 1y: 0 }}
+                    exit={{ opacity: 0y: -30 }}
+                    transition={{ duration: 0.5delay: index * 0.1 }}
+                    whileHover={{ y: -10scale: 1.02 }} className="group">
                     <div className="h-full bg-black/40 backdrop-blur-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
                       {/* Service Header */}
                       <div className="p-6">
@@ -309,7 +309,7 @@ export default function Revolutionary2027ServicesShowcase() {
                         <div className="mb-4">
                           <h4 className="text-sm font-semibold text-gray-200 mb-2">Key Features:</h4>
                           <ul className="space-y-1">
-                            {service.features.slice(0, 3).map((feature, idx) => (
+                            {service.features.slice(03).map((featureidx) => (
                               <li key={idx} className="flex items-center gap-2 text-xs text-gray-400">
                                 <CheckCircle className="w-3 h-3 text-emerald-400 flex-shrink-0" />
                                 <span className="line-clamp-1">{feature}</span>
@@ -383,8 +383,8 @@ export default function Revolutionary2027ServicesShowcase() {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }} className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-lg rounded-3xl p-12 border border-cyan-500/30">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

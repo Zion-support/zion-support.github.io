@@ -2,34 +2,34 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react';
+SmartphoneCheckCircleExternalLinkShield
 
 export default function MDMPage() {
   const features = [
-    'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)',
-    'Device posture checks, compliance policies, and remediation',
-    'App management, OS updates, remote lock/wipe, geofencing',
+    'Zero-touch enrollment (Apple DEP/ABMAndroid Zero-Touch)',
+    'Device posture checkscompliance policiesand remediation',
+    'App managementOS updatesremote lock/wipegeofencing',
     'Identity integration (SAML/SCIM) and conditional access',
     'Kiosk/COPE/COBO support with granular restrictions',
   ];
 
   const pricing = [
-    { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' },
-    { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' },
-    { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' },
+    { tier: 'SMB (up to 100 devices)'range: '$300–$1,000/month'note: 'Based on device count and features' },
+    { tier: 'Mid-market (100–1,000 devices)'range: '$1,000–$7,000/month'note: 'Advanced policiesintegrationsupport' },
+    { tier: 'Enterprise (1,000+ devices)'range: 'Custom'note: 'SLAmulti-tenantdedicated support' },
   ];
 
   const references = [
-    { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
-    { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
-    { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' },
+    { name: 'Microsoft Intune pricing'url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
+    { name: 'Jamf pricing'url: 'https://www.jamf.com/pricing/' },
+    { name: 'VMware Workspace ONE pricing'url: 'https://www.vmware.com/products/workspace-one/pricing.html' },
   ];
 
   return (
     <Layout>
       <Head>
         <title>Mobile Device Management (MDM) | Zion Tech Group</title>
-        <meta name="description" content="Modern MDM with zero-touch enrollment, compliance policies, app management, and identity integration." />
+        <meta name="description" content="Modern MDM with zero-touch enrollmentcompliance policiesapp managementand identity integration." />
         <link rel="canonical" href="https://ziontechgroup.com/mobile-device-management" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -39,7 +39,7 @@ export default function MDMPage() {
               <Smartphone className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Mobile Device Management (MDM)</h1>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, compliant device fleets across iOS, Android, macOS, and Windows.</p>
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto">Securecompliant device fleets across iOSAndroidmacOSand Windows.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="/contact" className="px-8 py-4">Talk to an Engineer</a>
               <a href="/market-pricing" className="px-8 py-4">Market Pricing</a>
@@ -69,7 +69,7 @@ export default function MDMPage() {
                 </div>
               ))}
             </div>
-            <div className="text-sm text-gray-400 mt-3 text-center">We align with leading platforms like Intune, Jamf, and Workspace ONE.</div>
+            <div className="text-sm text-gray-400 mt-3 text-center">We align with leading platforms like IntuneJamfand Workspace ONE.</div>
           </section>
 
           <section>
@@ -87,7 +87,7 @@ export default function MDMPage() {
           <section className="text-center">
             <div className="inline-flex items-center justify-center gap-3 text-gray-300">
               <Shield className="w-5 h-5 text-purple-400" />
-              <span>SAML/SCIM, device attestation, and compliance-ready audit logs</span>
+              <span>SAML/SCIMdevice attestationand compliance-ready audit logs</span>
             </div>
           </section>
         </div>

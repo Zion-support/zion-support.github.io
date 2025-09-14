@@ -1,12 +1,12 @@
 
-import { useState, useEffect } from "react";
+import { useStateuseEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
-import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { DialogDescriptionDialogFooterDialogHeaderDialogTitle } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import { TalentProfile } from "@/types/talent";
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
@@ -17,13 +17,13 @@ import { AdditionalClausesFields } from "./AdditionalClausesFields";
 import { DeploymentOptions } from "@/types/smart-contracts";
 
 const formSchema = z.object({
-  projectName: z.string().min(1, "Project name is required"),
-  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),
+  projectName: z.string().min(1"Project name is required"),
+  scopeSummary: z.string().min(10"Scope summary should be at least 10 characters"),
   startDate: z.date({
     required_error: "Start date is required"}),
   endDate: z.date().optional(),
-  paymentTerms: z.enum(["hourly", "fixed", "milestone"]),
-  paymentAmount: z.string().min(1, "Payment amount is required"),
+  paymentTerms: z.enum(["hourly"fixed"milestone"]),
+  paymentAmount: z.string().min(1"Payment amount is required"),
   additionalClauses: z.array(z.string()).default([])});
 
 export type ContractFormValues = z.infer<typeof formSchema>;
@@ -47,8 +47,8 @@ export function ContractForm({
   deployOptions,
   onDeployOptionsChange
 }: ContractFormProps) {
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
+  const [isGeneratingsetIsGenerating] = useState(false);
+  const [generatedMilestonesetGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
 
   const form = useForm<ContractFormValues>({
@@ -59,17 +59,17 @@ export function ContractForm({
       startDate: new Date(),
       paymentTerms: talent.hourly_rate ? "hourly" : "fixed",
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
-      additionalClauses: ["nda", "ip"]}});
+      additionalClauses: ["nda"ip"]}});
   
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
       Object.keys(initialValues).forEach((key) => {
         const typedKey = key as keyof ContractFormValues;
-        form.setValue(typedKey, initialValues[typedKey]);
+        form.setValue(typedKeyinitialValues[typedKey]);
       });
     }
-  }, [initialValues, form]);
+  }[initialValuesform]);
   
   // Track form values for template saving
   useEffect(() => {
@@ -80,14 +80,14 @@ export function ContractForm({
       
       return () => subscription.unsubscribe();
     }
-  }, [form, onFormValuesChange]);
+  }[formonFormValuesChange]);
   
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones);
     
-    // If payment terms isn't already set to milestone, update it
+    // If payment terms isn't already set to milestoneupdate it
     if (form.getValues("paymentTerms") !== "milestone") {
-      form.setValue("paymentTerms", "milestone");
+      form.setValue("paymentTerms"milestone");
     }
     
     toast({
@@ -99,15 +99,15 @@ export function ContractForm({
     setIsGenerating(true);
     try {
       const contract = await generateContract(
-        values, 
-        talent, 
-        clientName, 
+        values
+        talent
+        clientName
         generatedMilestones
       );
       
       onContractGenerated(contract);
     } catch (error) {
-      console.error("Error generating contract:", error);
+      console.error("Error generating contract:"error);
       toast({
         title: "Contract Generation Failed",
         description: error instanceof Error ? error.message : "Something went wrong. Please try again.",

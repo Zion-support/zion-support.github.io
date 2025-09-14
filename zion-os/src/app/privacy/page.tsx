@@ -8,7 +8,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto">
-            Your privacy is important to us. Learn how we collect, use, and protect your personal information.
+            Your privacy is important to us. Learn how we collectuseand protect your personal information.
           </p>
         </div>
       </section>
@@ -20,7 +20,7 @@ export default function PrivacyPage() {
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Last Updated: January 2024</h2>
               <p className="text-gray-600">
-                Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us.
+                Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collectusediscloseand safeguard your information when you visit our websiteuse our servicesor interact with us.
               </p>
             </div>
 
@@ -39,12 +39,12 @@ export default function PrivacyPage() {
                 <li>Participate in surveys or research studies</li>
               </ul>
               <p className="text-gray-600 mb-6">
-                This information may include your name, email address, phone number, company name, job title, and any other information you choose to provide.
+                This information may include your namemail addressphone numbercompany namejob titleand any other information you choose to provide.
               </p>
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Automatically Collected Information</h3>
               <p className="text-gray-600 mb-4">
-                When you visit our website, we automatically collect certain information about your device, including:
+                When you visit our websitewe automatically collect certain information about your deviceincluding:
               </p>
               <ul className="list-disc pl-6 text-gray-600 mb-4">
                 <li>IP address and location data</li>
@@ -59,7 +59,7 @@ export default function PrivacyPage() {
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Use Your Information</h2>
               <p className="text-gray-600 mb-4">
-                We use the information we collect for various purposes, including:
+                We use the information we collect for various purposesincluding:
               </p>
               <ul className="list-disc pl-6 text-gray-600 mb-4">
                 <li>Providing and improving our services</li>
@@ -75,12 +75,12 @@ export default function PrivacyPage() {
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Information Sharing and Disclosure</h2>
               <p className="text-gray-600 mb-4">
-                We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:
+                We do not selltradeor otherwise transfer your personal information to third parties without your consentexcept in the following circumstances:
               </p>
               <ul className="list-disc pl-6 text-gray-600 mb-4">
-                <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our website, conducting business, or servicing you.</li>
-                <li><strong>Legal Requirements:</strong> We may disclose information when required by law or to protect our rights, property, or safety.</li>
-                <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction.</li>
+                <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our websiteconducting businessor servicing you.</li>
+                <li><strong>Legal Requirements:</strong> We may disclose information when required by law or to protect our rightspropertyor safety.</li>
+                <li><strong>Business Transfers:</strong> In the event of a mergeracquisitionor sale of assetsyour information may be transferred as part of the transaction.</li>
                 <li><strong>Consent:</strong> We may share information with your explicit consent.</li>
               </ul>
             </div>
@@ -88,7 +88,7 @@ export default function PrivacyPage() {
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Data Security</h2>
               <p className="text-gray-600 mb-4">
-                We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
+                We implement appropriate technical and organizational security measures to protect your personal information against unauthorized accessalterationdisclosureor destruction. These measures include:
               </p>
               <ul className="list-disc pl-6 text-gray-600 mb-4">
                 <li>Encryption of data in transit and at rest</li>
@@ -98,14 +98,14 @@ export default function PrivacyPage() {
                 <li>Incident response procedures</li>
               </ul>
               <p className="text-gray-600">
-                However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
+                Howeverno method of transmission over the internet or electronic storage is 100% secureand we cannot guarantee absolute security.
               </p>
             </div>
 
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Rights and Choices</h2>
               <p className="text-gray-600 mb-4">
-                Depending on your location, you may have certain rights regarding your personal information:
+                Depending on your locationyou may have certain rights regarding your personal information:
               </p>
               <ul className="list-disc pl-6 text-gray-600 mb-4">
                 <li><strong>Access:</strong> Request access to your personal information</li>
@@ -116,7 +116,7 @@ export default function PrivacyPage() {
                 <li><strong>Withdrawal:</strong> Withdraw consent where processing is based on consent</li>
               </ul>
               <p className="text-gray-600">
-                To exercise these rights, please contact us using the information provided below.
+                To exercise these rightsplease contact us using the information provided below.
               </p>
             </div>
 
@@ -132,14 +132,14 @@ export default function PrivacyPage() {
                 <li>Improve website functionality and performance</li>
               </ul>
               <p className="text-gray-600">
-                You can control cookie settings through your browser preferences. However, disabling certain cookies may affect website functionality.
+                You can control cookie settings through your browser preferences. Howeverdisabling certain cookies may affect website functionality.
               </p>
             </div>
 
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">International Data Transfers</h2>
               <p className="text-gray-600 mb-4">
-                Your information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards, including:
+                Your information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguardsincluding:
               </p>
               <ul className="list-disc pl-6 text-gray-600 mb-4">
                 <li>Standard contractual clauses</li>
@@ -151,7 +151,7 @@ export default function PrivacyPage() {
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Children's Privacy</h2>
               <p className="text-gray-600">
-                Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately.
+                Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13please contact us immediately.
               </p>
             </div>
 
@@ -165,7 +165,7 @@ export default function PrivacyPage() {
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
               <p className="text-gray-600 mb-4">
-                If you have any questions about this Privacy Policy or our data practices, please contact us:
+                If you have any questions about this Privacy Policy or our data practicesplease contact us:
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
                 <p className="text-gray-600 mb-2">
@@ -175,7 +175,7 @@ export default function PrivacyPage() {
                   <strong>Phone:</strong> <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">+1 (302) 464-0950</a>
                 </p>
                 <p className="text-gray-600 mb-2">
-                  <strong>Address:</strong> Zion Tech Group, 123 Innovation Drive, Tech Valley, CA 94000, United States
+                  <strong>Address:</strong> Zion Tech Group123 Innovation DriveTech ValleyCA 94000United States
                 </p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function PrivacyPage() {
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Additional Information for EU Residents</h2>
               <p className="text-gray-600 mb-4">
-                If you are located in the European Union, you have additional rights under the General Data Protection Regulation (GDPR):
+                If you are located in the European Unionyou have additional rights under the General Data Protection Regulation (GDPR):
               </p>
               <ul className="list-disc pl-6 text-gray-600 mb-4">
                 <li>Right to lodge a complaint with a supervisory authority</li>
@@ -192,7 +192,7 @@ export default function PrivacyPage() {
                 <li>Right to be forgotten</li>
               </ul>
               <p className="text-gray-600">
-                Our legal basis for processing your personal information includes consent, contract performance, legal obligations, legitimate interests, and vital interests.
+                Our legal basis for processing your personal information includes consentcontract performancelegal obligationslegitimate interestsand vital interests.
               </p>
             </div>
           </div>

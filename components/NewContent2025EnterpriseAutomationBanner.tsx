@@ -10,7 +10,7 @@ const NewContent2025EnterpriseAutomationBanner = () => {
             Enterprise Automation 2025
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-emerald-100">
-            Transform your enterprise with advanced AI automation that streamlines operations, reduces costs, and maximizes efficiency across all business functions.
+            Transform your enterprise with advanced AI automation that streamlines operationsreduces costsand maximizes efficiency across all business functions.
           </p>
         </div>
         
@@ -21,7 +21,7 @@ const NewContent2025EnterpriseAutomationBanner = () => {
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
             <h3 className="text-2xl font-bold mb-4 text-green-400">Intelligent Systems</h3>
-            <p className="text-emerald-100">AI-powered systems that learn, adapt, and optimize continuously</p>
+            <p className="text-emerald-100">AI-powered systems that learnadaptand optimize continuously</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
             <h3 className="text-2xl font-bold mb-4 text-green-400">Proven Results</h3>

@@ -3,9 +3,9 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
 export function NewsletterForm() {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [emailsetEmail] = useState("");
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [isSubmittedsetIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,7 +16,7 @@ export function NewsletterForm() {
       setIsSubmitting(false);
       setIsSubmitted(true);
       setEmail("");
-    }, 1000);
+    }1000);
   };
 
   return (

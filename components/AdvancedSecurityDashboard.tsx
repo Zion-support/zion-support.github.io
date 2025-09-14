@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 
 const AdvancedSecurityDashboard: React.FC = () => {
-  const [securityMetrics, setSecurityMetrics] = useState({
+  const [securityMetricsetSecurityMetrics] = useState({
     threatsBlocked: 0,
     vulnerabilitiesFixed: 0,
     securityScore: 0,
@@ -18,10 +18,10 @@ const AdvancedSecurityDashboard: React.FC = () => {
         securityScore: Math.floor(Math.random() * 20) + 80,
         lastScan: new Date().toLocaleTimeString()
       });
-    }, 3000);
+    }3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   return (
     <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 rounded-xl p-6 border border-red-500/30">

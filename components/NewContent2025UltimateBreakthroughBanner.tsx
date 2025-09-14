@@ -24,7 +24,7 @@ const NewContent2025UltimateBreakthroughBanner = () => {
           </h2>
           
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover the latest AI success stories, quantum computing breakthroughs, and Fortune 500 transformation case studies that are revolutionizing business in 2025.
+            Discover the latest AI success storiesquantum computing breakthroughsand Fortune 500 transformation case studies that are revolutionizing business in 2025.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ const NewContent2025UltimateBreakthroughBanner = () => {
               Enterprise AI Success Stories
             </h3>
             <p className="text-blue-100 mb-6 text-sm leading-relaxed">
-              Real Fortune 500 case studies showing 400% ROI, 300% efficiency gains, and $500M+ in savings through AI transformation.
+              Real Fortune 500 case studies showing 400% ROI300% efficiency gainsand $500M+ in savings through AI transformation.
             </p>
             <div className="flex items-center justify-between">
               <span className="text-xs bg-green-500/20 text-green-300 px-3 py-1 rounded-full">
@@ -81,7 +81,7 @@ const NewContent2025UltimateBreakthroughBanner = () => {
               Fortune 500 Case Study
             </h3>
             <p className="text-blue-100 mb-6 text-sm leading-relaxed">
-              Complete transformation story: 400% ROI, $335M in savings, and market leadership through comprehensive AI implementation.
+              Complete transformation story: 400% ROI$335M in savingsand market leadership through comprehensive AI implementation.
             </p>
             <div className="flex items-center justify-between">
               <span className="text-xs bg-yellow-500/20 text-yellow-300 px-3 py-1 rounded-full">

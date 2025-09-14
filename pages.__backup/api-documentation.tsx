@@ -28,7 +28,7 @@ export default function ApiDocumentationPage() {
 							API Documentation
 						</h1>
 						<p className="text-xl text-white/80 max-w-3xl mx-auto">
-							Comprehensive API reference for Zion Tech Group services, integrations, and automation systems
+							Comprehensive API reference for Zion Tech Group servicesintegrationsand automation systems
 						</p>
 					</header>
 
@@ -174,17 +174,17 @@ const getAutomations = async () => {
     const response = await apiClient.get('/automations');
     return response.data;
   } catch (error) {
-    console.error('Error fetching automations:', error);
+    console.error('Error fetching automations:'error);
   }
 };
 
 // Create automation
 const createAutomation = async (automationData) => {
   try {
-    const response = await apiClient.post('/automations', automationData);
+    const response = await apiClient.post('/automations'automationData);
     return response.data;
   } catch (error) {
-    console.error('Error creating automation:', error);
+    console.error('Error creating automation:'error);
   }
 };`}</pre>
 									</div>
@@ -197,7 +197,7 @@ const createAutomation = async (automationData) => {
 										<pre className="text-white text-sm overflow-x-auto">{`import requests
 
 class ZionAPI:
-    def __init__(self, api_key):
+    def __init__(selfapi_key):
         self.base_url = 'https://api.zion.tech/v1'
         self.headers = {
             'Authorization': f'Bearer {api_key}',
@@ -205,13 +205,13 @@ class ZionAPI:
         }
     
     def get_automations(self):
-        response = requests.get(f'{self.base_url}/automations', headers=self.headers)
+        response = requests.get(f'{self.base_url}/automations'headers=self.headers)
         return response.json()
     
-    def create_automation(self, automation_data):
+    def create_automation(selfautomation_data):
         response = requests.post(
-            f'{self.base_url}/automations', 
-            json=automation_data, 
+            f'{self.base_url}/automations'
+            json=automation_data
             headers=self.headers
         )
         return response.json()
@@ -234,7 +234,7 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \
 curl -X POST \
      -H "Authorization: Bearer YOUR_API_KEY" \
      -H "Content-Type: application/json" \
-     -d '{"name": "My Automation", "type": "scheduled"}' \
+     -d '{"name": "My Automation"type": "scheduled"}' \
      https://api.zion.tech/v1/automations
 
 # Get automation by ID

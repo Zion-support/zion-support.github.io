@@ -48,7 +48,7 @@ export const PostForm = ({
     }
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmittingsetIsSubmitting] = useState(false);
 
   const handleSubmit = async (values: PostFormValues) => {
     setIsSubmitting(true);
@@ -129,7 +129,7 @@ export const PostForm = ({
                   <FormLabel>Tags (comma-separated)</FormLabel>
                   <FormControl>
                     <Input 
-                      placeholder="e.g. resume, hiring, flutter" 
+                      placeholder="e.g. resumehiringflutter" 
                       {...field} 
                     />
                   </FormControl>

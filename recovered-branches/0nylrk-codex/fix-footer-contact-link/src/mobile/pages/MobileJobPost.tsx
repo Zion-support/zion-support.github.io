@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { Button } from "@/components/ui/button";
@@ -7,20 +7,20 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { 
-  Select, 
+  Select
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue 
 } from "@/components/ui/select";
-import { Zap, ChevronLeft, ChevronRight } from "lucide-react";
+import { ZapChevronLeftChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview";
 
 export function MobileJobPost() {
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+  const [currentStepsetCurrentStep] = useState<JobPostStep>("details");
   
   const goToNextStep = () => {
     if (currentStep === "details") {
@@ -163,14 +163,14 @@ function DetailsStep() {
 }
 
 function RequirementsStep() {
-  const [skills, setSkills] = useState<string[]>([
-    "React", "TypeScript", "Node.js"
+  const [skillsetSkills] = useState<string[]>([
+    "React"TypeScript"Node.js"
   ]);
-  const [newSkill, setNewSkill] = useState("");
+  const [newSkillsetNewSkill] = useState("");
   
   const addSkill = () => {
     if (newSkill && !skills.includes(newSkill)) {
-      setSkills([...skills, newSkill]);
+      setSkills([...skillsnewSkill]);
       setNewSkill("");
     }
   };
@@ -371,7 +371,7 @@ function PreviewStep() {
           
           <div className="space-y-1 text-sm mt-3">
             <p className="font-medium">Application Deadline:</p>
-            <p>December 15, 2023</p>
+            <p>December 152023</p>
           </div>
           
           <div className="mt-4 pt-3 border-t border-border">

@@ -1,8 +1,8 @@
 
 import { formatDistanceToNow } from "date-fns";
-import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ThumbsUpThumbsDownCheckCircle } from "@/components/icons";
+import { CardContentCardFooterCardHeader } from "@/components/ui/card";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ForumReply } from "@/types/community";
@@ -16,12 +16,12 @@ interface ReplyCardProps {
 }
 
 export const ReplyCard = ({ 
-  reply, 
-  onMarkAnswer, 
+  reply
+  onMarkAnswer
   canMarkAnswer = false,
   className
 }: ReplyCardProps) => {
-  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true });
+  const timeAgo = formatDistanceToNow(new Date(reply.createdAt){ addSuffix: true });
 
   return (
     <Card className={cn(

@@ -1,13 +1,13 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 import { 
-  Search, 
-  Filter, 
-  Brain, 
-  Atom, 
-  Bot, 
-  Zap, 
+  Search
+  Filter
+  Brain
+  Atom
+  Bot
+  Zap
   TrendingUp,
   Star,
   ArrowRight,
@@ -21,8 +21,8 @@ import {
 } from 'lucide-react';
 
 const NewContentDiscoveryWidget2026 = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
 
   const contentItems = [
     {
@@ -32,22 +32,22 @@ const NewContentDiscoveryWidget2026 = () => {
       category: "ai-breakthroughs",
       icon: <Brain className="h-6 w-6" />,
       url: "/ai-2026-breakthrough-showcase",
-      tags: ["AI", "Neural Networks", "Quantum AI", "Transcendent Intelligence"],
+      tags: ["AI"Neural Networks"Quantum AI"Transcendent Intelligence"],
       readTime: "8 min read",
       featured: true,
-      stats: { views: "25K", rating: 4.9 }
+      stats: { views: "25K"rating: 4.9 }
     },
     {
       id: 2,
       title: "Quantum Computing Solutions 2026",
-      description: "Explore error-corrected quantum computers, quantum machine learning, and quantum-AI fusion technologies.",
+      description: "Explore error-corrected quantum computersquantum machine learningand quantum-AI fusion technologies.",
       category: "quantum-computing",
       icon: <Atom className="h-6 w-6" />,
       url: "/quantum-computing-solutions-2026",
-      tags: ["Quantum Computing", "Error Correction", "Quantum ML", "Quantum Internet"],
+      tags: ["Quantum Computing"Error Correction"Quantum ML"Quantum Internet"],
       readTime: "12 min read",
       featured: true,
-      stats: { views: "18K", rating: 4.8 }
+      stats: { views: "18K"rating: 4.8 }
     },
     {
       id: 3,
@@ -56,10 +56,10 @@ const NewContentDiscoveryWidget2026 = () => {
       category: "automation",
       icon: <Bot className="h-6 w-6" />,
       url: "/advanced-automation-solutions-2026",
-      tags: ["Automation", "Process Automation", "Autonomous Systems", "Workflow AI"],
+      tags: ["Automation"Process Automation"Autonomous Systems"Workflow AI"],
       readTime: "10 min read",
       featured: true,
-      stats: { views: "22K", rating: 4.9 }
+      stats: { views: "22K"rating: 4.9 }
     },
     {
       id: 4,
@@ -68,10 +68,10 @@ const NewContentDiscoveryWidget2026 = () => {
       category: "quantum-computing",
       icon: <Cpu className="h-6 w-6" />,
       url: "/quantum-ai-fusion-2026-breakthrough",
-      tags: ["Quantum AI", "Hybrid Systems", "Computational Power", "AI Enhancement"],
+      tags: ["Quantum AI"Hybrid Systems"Computational Power"AI Enhancement"],
       readTime: "15 min read",
       featured: false,
-      stats: { views: "12K", rating: 4.7 }
+      stats: { views: "12K"rating: 4.7 }
     },
     {
       id: 5,
@@ -80,10 +80,10 @@ const NewContentDiscoveryWidget2026 = () => {
       category: "ai-breakthroughs",
       icon: <Lightbulb className="h-6 w-6" />,
       url: "/autonomous-business-intelligence-2026",
-      tags: ["Business Intelligence", "Autonomous Systems", "Decision Making", "Self-Evolution"],
+      tags: ["Business Intelligence"Autonomous Systems"Decision Making"Self-Evolution"],
       readTime: "9 min read",
       featured: false,
-      stats: { views: "15K", rating: 4.6 }
+      stats: { views: "15K"rating: 4.6 }
     },
     {
       id: 6,
@@ -92,18 +92,18 @@ const NewContentDiscoveryWidget2026 = () => {
       category: "quantum-computing",
       icon: <Shield className="h-6 w-6" />,
       url: "/quantum-security-revolution-2026",
-      tags: ["Quantum Security", "Cryptography", "Key Distribution", "Unbreakable Encryption"],
+      tags: ["Quantum Security"Cryptography"Key Distribution"Unbreakable Encryption"],
       readTime: "11 min read",
       featured: false,
-      stats: { views: "8K", rating: 4.8 }
+      stats: { views: "8K"rating: 4.8 }
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: <Globe className="h-4 w-4" /> },
-    { id: 'ai-breakthroughs', name: 'AI Breakthroughs', icon: <Brain className="h-4 w-4" /> },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="h-4 w-4" /> },
-    { id: 'automation', name: 'Automation', icon: <Bot className="h-4 w-4" /> }
+    { id: 'all'name: 'All Content'icon: <Globe className="h-4 w-4" /> },
+    { id: 'ai-breakthroughs'name: 'AI Breakthroughs'icon: <Brain className="h-4 w-4" /> },
+    { id: 'quantum-computing'name: 'Quantum Computing'icon: <Atom className="h-4 w-4" /> },
+    { id: 'automation'name: 'Automation'icon: <Bot className="h-4 w-4" /> }
   ];
 
   const filteredContent = contentItems.filter(item => {
@@ -126,7 +126,7 @@ const NewContentDiscoveryWidget2026 = () => {
             Discover Revolutionary Content
           </h2>
           <p className="text-gray-600">
-            Explore the latest AI breakthroughs, quantum computing solutions, and automation technologies
+            Explore the latest AI breakthroughsquantum computing solutionsand automation technologies
           </p>
         </div>
         <div className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium">
@@ -141,7 +141,7 @@ const NewContentDiscoveryWidget2026 = () => {
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
           <input
             type="text"
-            placeholder="Search content, tags, or technologies..."
+            placeholder="Search contentagsor technologies..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -201,7 +201,7 @@ const NewContentDiscoveryWidget2026 = () => {
                   </p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {item.tags.slice(0, 3).map((tag, index) => (
+                    {item.tags.slice(03).map((tagindex) => (
                       <span key={index} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
                         {tag}
                       </span>
@@ -264,7 +264,7 @@ const NewContentDiscoveryWidget2026 = () => {
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex flex-wrap gap-2">
-                        {item.tags.slice(0, 4).map((tag, index) => (
+                        {item.tags.slice(04).map((tagindex) => (
                           <span key={index} className="px-2 py-1 bg-white text-gray-600 text-xs rounded-full border">
                             {tag}
                           </span>

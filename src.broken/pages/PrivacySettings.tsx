@@ -7,12 +7,12 @@ import { Button } from '@/components/ui/button';
 import { useConsent } from '@/context/ConsentContext';
 
 export default function PrivacySettings() {
-  const { consent, updateConsent } = useConsent();
-  const [analytics, setAnalytics] = useState(consent.analytics);
-  const [ads, setAds] = useState(consent.ads);
+  const { consentupdateConsent } = useConsent();
+  const [analyticsetAnalytics] = useState(consent.analytics);
+  const [adsetAds] = useState(consent.ads);
 
   const handleSave = () => {
-    updateConsent({ analytics, ads });
+    updateConsent({ analyticsads });
   };
 
   return (

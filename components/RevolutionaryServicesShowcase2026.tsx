@@ -18,7 +18,7 @@ const services: Service[] = [
     id: 'ai-automation-2026',
     title: 'AI Automation Solutions 2026',
     description: 'Revolutionary AI automation delivering unprecedented efficiency and ROI across all business processes.',
-    features: ['99.9% Accuracy', '10,000x Faster Processing', 'Infinite Scalability', 'Zero Downtime'],
+    features: ['99.9% Accuracy'10,000x Faster Processing'Infinite Scalability'Zero Downtime'],
     roi: '5,000% ROI',
     badge: 'BREAKTHROUGH',
     href: '/services/ai-automation-2026',
@@ -29,7 +29,7 @@ const services: Service[] = [
     id: 'quantum-computing-2026',
     title: 'Quantum Computing Services',
     description: 'Advanced quantum computing solutions delivering transcendent processing power and infinite possibilities.',
-    features: ['Quantum Supremacy', 'Infinite Processing', 'Perfect Security', 'Transcendent Intelligence'],
+    features: ['Quantum Supremacy'Infinite Processing'Perfect Security'Transcendent Intelligence'],
     roi: '15,000% ROI',
     badge: 'REVOLUTIONARY',
     href: '/services/quantum-computing-2026',
@@ -40,7 +40,7 @@ const services: Service[] = [
     id: 'neural-interfaces-2026',
     title: 'Neural Interface Technology',
     description: 'Direct neural interface solutions enabling seamless human-AI collaboration and consciousness sharing.',
-    features: ['Direct Neural Link', 'Consciousness Upload', 'Real-time Processing', 'Perfect Integration'],
+    features: ['Direct Neural Link'Consciousness Upload'Real-time Processing'Perfect Integration'],
     roi: '8,000% ROI',
     badge: 'FUTURE',
     href: '/services/neural-interfaces-2026',
@@ -50,8 +50,8 @@ const services: Service[] = [
   {
     id: 'transcendent-ai-2026',
     title: 'Transcendent AI Systems',
-    description: 'AI systems that transcend human limitations, delivering infinite capabilities and universal intelligence.',
-    features: ['Universal Intelligence', 'Infinite Creativity', 'Perfect Decision Making', 'Transcendent Processing'],
+    description: 'AI systems that transcend human limitationsdelivering infinite capabilities and universal intelligence.',
+    features: ['Universal Intelligence'Infinite Creativity'Perfect Decision Making'Transcendent Processing'],
     roi: '∞ ROI',
     badge: 'TRANSCENDENT',
     href: '/services/transcendent-ai-2026',
@@ -61,8 +61,8 @@ const services: Service[] = [
   {
     id: 'quantum-neural-fusion',
     title: 'Quantum-Neural Fusion',
-    description: 'Revolutionary fusion of quantum computing and neural networks, delivering unprecedented AI capabilities.',
-    features: ['Quantum Consciousness', 'Neural Quantum Processing', 'Infinite Learning', 'Perfect Adaptation'],
+    description: 'Revolutionary fusion of quantum computing and neural networksdelivering unprecedented AI capabilities.',
+    features: ['Quantum Consciousness'Neural Quantum Processing'Infinite Learning'Perfect Adaptation'],
     roi: '20,000% ROI',
     badge: 'SINGULARITY',
     href: '/services/quantum-neural-fusion',
@@ -72,8 +72,8 @@ const services: Service[] = [
   {
     id: 'autonomous-systems-2026',
     title: 'Autonomous Systems 2026',
-    description: 'Fully autonomous AI systems that operate independently, making perfect decisions without human intervention.',
-    features: ['Complete Autonomy', 'Perfect Decision Making', 'Self-Evolution', 'Infinite Optimization'],
+    description: 'Fully autonomous AI systems that operate independentlymaking perfect decisions without human intervention.',
+    features: ['Complete Autonomy'Perfect Decision Making'Self-Evolution'Infinite Optimization'],
     roi: '12,000% ROI',
     badge: 'AUTONOMOUS',
     href: '/services/autonomous-systems-2026',
@@ -154,7 +154,7 @@ export default function RevolutionaryServicesShowcase2026() {
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">Key Features</h4>
                 <div className="grid grid-cols-2 gap-2">
-                  {service.features.map((feature, index) => (
+                  {service.features.map((featureindex) => (
                     <div key={index} className="flex items-center text-sm text-gray-300">
                       <span className="text-green-400 mr-2">✓</span>
                       {feature}

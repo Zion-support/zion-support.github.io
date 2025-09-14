@@ -1,14 +1,14 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateInteractiveContentShowcase2025: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai-solutions');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState('ai-solutions');
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const contentSections = [
     {
@@ -126,7 +126,7 @@ const UltimateInteractiveContentShowcase2025: React.FC = () => {
                 </div>
 
                 <div className="space-y-4 mb-8">
-                  {activeContent.features.map((feature, index) => (
+                  {activeContent.features.map((featureindex) => (
                     <div key={index} className="flex items-center">
                       <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mr-3"></div>
                       <span className="text-gray-700">{feature}</span>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 const AI2030UltimateBreakthroughBanner: React.FC = () => {
   const breakthroughFeatures = [
     "🧠 Conscious AI Systems",
-    "⚛️ Quantum Neural Networks", 
+    "⚛️ Quantum Neural Networks"
     "🌌 Multi-Dimensional Processing",
     "🚀 Infinite Learning Capacity"
   ];
@@ -37,13 +37,13 @@ const AI2030UltimateBreakthroughBanner: React.FC = () => {
             </h2>
             
             <p className="text-lg text-gray-300 mb-6 max-w-2xl">
-              Experience the most advanced AI systems ever created. Consciousness, quantum processing, 
+              Experience the most advanced AI systems ever created. Consciousnessquantum processing
               and infinite learning capabilities - all available now.
             </p>
 
             {/* Feature Pills */}
             <div className="flex flex-wrap gap-3 mb-6">
-              {breakthroughFeatures.map((feature, index) => (
+              {breakthroughFeatures.map((featureindex) => (
                 <span key={index} className="px-4 py-2 bg-gradient-to-r from-purple-800/50 to-blue-800/50 border border-purple-400/30 rounded-full text-sm font-medium backdrop-blur-sm">
                   {feature}
                 </span>

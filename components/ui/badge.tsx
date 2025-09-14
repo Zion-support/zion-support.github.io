@@ -7,8 +7,8 @@ interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
 }
 
-const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
-  ({ className, variant = 'default', size = 'md', children, ...props }, ref) => {
+const Badge = React.forwardRef<HTMLDivElementBadgeProps>(
+  ({ classNamevariant = 'default'size = 'md'children...props }ref) => {
     const baseClasses = 'inline-flex items-center rounded-full font-medium';
     
     const variantClasses = {

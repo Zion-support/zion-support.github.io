@@ -99,12 +99,12 @@ export default function AI2026EnterpriseTransformationPromotionBanner() {
           {/* Testimonial */}
           <div className="mt-12 max-w-4xl mx-auto">
             <blockquote className="text-lg italic text-gray-200 mb-4">
-              "The AI 2026 transformation exceeded all our expectations. We achieved 5,000% ROI in just 12 months, 
+              "The AI 2026 transformation exceeded all our expectations. We achieved 5,000% ROI in just 12 months
               something we never thought possible. This has completely revolutionized our business."
             </blockquote>
             <div className="text-right">
               <div className="font-semibold text-green-400">John Smith</div>
-              <div className="text-gray-300 text-sm">CEO, Fortune 500 Manufacturing</div>
+              <div className="text-gray-300 text-sm">CEOFortune 500 Manufacturing</div>
             </div>
           </div>
           

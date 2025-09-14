@@ -15,7 +15,7 @@ export default function CaseStudiesPage() {
         '95% customer satisfaction rate maintained',
         '24/7 customer support availability'
       ],
-      technologies: ['AI/ML', 'Natural Language Processing', 'Cloud Infrastructure', 'API Integration'],
+      technologies: ['AI/ML'Natural Language Processing'Cloud Infrastructure'API Integration'],
       duration: '3 months',
       roi: '340%',
       featured: true
@@ -24,7 +24,7 @@ export default function CaseStudiesPage() {
       title: 'Quantum Computing for Financial Risk Management',
       company: 'International Investment Bank',
       industry: 'Finance',
-      challenge: 'Complex risk calculations taking days to complete, limiting real-time decision making',
+      challenge: 'Complex risk calculations taking days to completelimiting real-time decision making',
       solution: 'Developed quantum computing algorithms for portfolio optimization and risk assessment',
       results: [
         '99.9% faster risk calculations',
@@ -32,7 +32,7 @@ export default function CaseStudiesPage() {
         '15% improvement in risk-adjusted returns',
         'Enhanced regulatory compliance'
       ],
-      technologies: ['Quantum Computing', 'Financial Algorithms', 'Risk Modeling', 'High-Performance Computing'],
+      technologies: ['Quantum Computing'Financial Algorithms'Risk Modeling'High-Performance Computing'],
       duration: '6 months',
       roi: '280%',
       featured: false
@@ -49,7 +49,7 @@ export default function CaseStudiesPage() {
         'Real-time threat detection and response',
         'Enhanced patient data protection'
       ],
-      technologies: ['Zero Trust Security', 'AI Threat Detection', 'Compliance Management', 'Data Encryption'],
+      technologies: ['Zero Trust Security'AI Threat Detection'Compliance Management'Data Encryption'],
       duration: '4 months',
       roi: '420%',
       featured: false
@@ -66,7 +66,7 @@ export default function CaseStudiesPage() {
         '99.9% uptime achieved',
         'Enhanced disaster recovery capabilities'
       ],
-      technologies: ['Cloud Migration', 'DevOps', 'Containerization', 'Infrastructure as Code'],
+      technologies: ['Cloud Migration'DevOps'Containerization'Infrastructure as Code'],
       duration: '5 months',
       roi: '310%',
       featured: false
@@ -83,7 +83,7 @@ export default function CaseStudiesPage() {
         'Improved inventory accuracy to 99.5%',
         'Enhanced customer satisfaction scores'
       ],
-      technologies: ['AI/ML', 'Predictive Analytics', 'Supply Chain Management', 'Real-time Tracking'],
+      technologies: ['AI/ML'Predictive Analytics'Supply Chain Management'Real-time Tracking'],
       duration: '4 months',
       roi: '380%',
       featured: false
@@ -100,7 +100,7 @@ export default function CaseStudiesPage() {
         'Compliance with government security requirements',
         'Improved competitive positioning'
       ],
-      technologies: ['Quantum Cryptography', 'Post-Quantum Algorithms', 'Security Protocols', 'Compliance Management'],
+      technologies: ['Quantum Cryptography'Post-Quantum Algorithms'Security Protocols'Compliance Management'],
       duration: '7 months',
       roi: '250%',
       featured: false
@@ -124,8 +124,8 @@ export default function CaseStudiesPage() {
     <>
       <Head>
         <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Discover how Zion Tech Group has helped businesses transform their operations with cutting-edge AI, quantum computing, and cybersecurity solutions." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Discover how Zion Tech Group has helped businesses transform their operations with cutting-edge AIquantum computingand cybersecurity solutions." />
+        <meta name="viewport" content="width=device-widthinitial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -174,7 +174,7 @@ export default function CaseStudiesPage() {
                     <div className="mb-6">
                       <h3 className="font-semibold mb-3 text-blue-400">Results:</h3>
                       <ul className="space-y-2">
-                        {featuredCaseStudy.results.map((result, index) => (
+                        {featuredCaseStudy.results.map((resultindex) => (
                           <li key={index} className="text-gray-300 flex items-center">
                             <svg className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -206,7 +206,7 @@ export default function CaseStudiesPage() {
         <section className="py-8 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
-              {industries.map((industry, index) => (
+              {industries.map((industryindex) => (
                 <button
                   key={index}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
@@ -226,7 +226,7 @@ export default function CaseStudiesPage() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {caseStudies.filter(study => !study.featured).map((study, index) => (
+              {caseStudies.filter(study => !study.featured).map((studyindex) => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10 hover:bg-opacity-20 transition-all">
                   <div className="mb-4">
                     <span className="bg-white bg-opacity-20 px-2 py-1 rounded text-xs text-gray-300">
@@ -250,7 +250,7 @@ export default function CaseStudiesPage() {
                   <div className="mb-4">
                     <h4 className="font-semibold mb-2 text-blue-400 text-sm">Key Results:</h4>
                     <ul className="space-y-1">
-                      {study.results.slice(0, 2).map((result, resultIndex) => (
+                      {study.results.slice(02).map((resultIndex) => (
                         <li key={resultIndex} className="text-gray-300 text-sm flex items-center">
                           <svg className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -269,7 +269,7 @@ export default function CaseStudiesPage() {
                   </div>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {study.technologies.slice(0, 3).map((tech, techIndex) => (
+                    {study.technologies.slice(03).map((techIndex) => (
                       <span key={techIndex} className="text-xs bg-blue-600 bg-opacity-20 text-blue-300 px-2 py-1 rounded">
                         {tech}
                       </span>
@@ -277,7 +277,7 @@ export default function CaseStudiesPage() {
                   </div>
                   
                   <Link 
-                    href={`/case-studies/${study.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    href={`/case-studies/${study.title.toLowerCase().replace(/\s+/g'-')}`}
                     className="text-blue-400 hover:text-blue-300 font-medium text-sm"
                   >
                     Read Full Case Study →
@@ -297,9 +297,9 @@ export default function CaseStudiesPage() {
               <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                 <div className="text-yellow-400 mb-4">★★★★★</div>
                 <p className="text-gray-300 mb-4">
-                  "Zion Tech Group transformed our customer service operations with AI, delivering results that exceeded our expectations."
+                  "Zion Tech Group transformed our customer service operations with AIdelivering results that exceeded our expectations."
                 </p>
-                <div className="font-semibold">- Sarah Johnson, CTO</div>
+                <div className="font-semibold">- Sarah JohnsonCTO</div>
                 <div className="text-sm text-gray-400">Global E-commerce Retailer</div>
               </div>
               
@@ -308,7 +308,7 @@ export default function CaseStudiesPage() {
                 <p className="text-gray-300 mb-4">
                   "Their quantum computing expertise gave us a competitive edge in financial risk management."
                 </p>
-                <div className="font-semibold">- Michael Chen, Head of Risk</div>
+                <div className="font-semibold">- Michael ChenHead of Risk</div>
                 <div className="text-sm text-gray-400">International Investment Bank</div>
               </div>
             </div>

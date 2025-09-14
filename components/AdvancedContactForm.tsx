@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 
 interface FormData {
   name: string;
@@ -17,7 +17,7 @@ interface FormData {
 }
 
 const AdvancedContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+  const [formDatasetFormData] = useState<FormData>({
     name: '',
     email: '',
     company: '',
@@ -31,20 +31,20 @@ const AdvancedContactForm: React.FC = () => {
     priority: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [submitStatusetSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { namevalue } = e.target;
+    setFormData(prev => ({ ...prev[name]: value }));
   };
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { value, checked } = e.target;
+    const { valuechecked } = e.target;
     setFormData(prev => ({
       ...prev,
       interests: checked 
-        ? [...prev.interests, value]
+        ? [...prev.interestsvalue]
         : prev.interests.filter(interest => interest !== value)
     }));
   };
@@ -55,10 +55,10 @@ const AdvancedContactForm: React.FC = () => {
     
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve2000));
       
       // Here you would typically send the data to your backend
-      console.log('Form submitted:', formData);
+      console.log('Form submitted:'formData);
       
       setSubmitStatus('success');
       setFormData({
@@ -324,7 +324,7 @@ const AdvancedContactForm: React.FC = () => {
             onChange={handleInputChange}
             rows={4}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-            placeholder="Describe your current challenges, what you're hoping to achieve with AI automation, and any specific requirements..."
+            placeholder="Describe your current challengeswhat you're hoping to achieve with AI automationand any specific requirements..."
           />
         </div>
 
@@ -357,7 +357,7 @@ const AdvancedContactForm: React.FC = () => {
 
         <div className="text-center text-sm text-gray-500">
           <p>
-            By submitting this form, you agree to our privacy policy and terms of service. 
+            By submitting this formyou agree to our privacy policy and terms of service. 
             We'll never share your information with third parties.
           </p>
         </div>

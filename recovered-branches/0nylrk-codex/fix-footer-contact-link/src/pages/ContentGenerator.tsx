@@ -1,15 +1,15 @@
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -18,16 +18,16 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useNavigate } from "react-router-dom";
 
 export default function ContentGenerator() {
-  const { user, isLoading } = useAuth();
+  const { userisLoading } = useAuth();
   const navigate = useNavigate();
-  const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
-  const [customPrompt, setCustomPrompt] = useState('');
-  const [topic, setTopic] = useState('');
-  const [autoPublish, setAutoPublish] = useState(false);
-  const [includeImage, setIncludeImage] = useState(true);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [previewContent, setPreviewContent] = useState<any>(null);
-  const [testEmail, setTestEmail] = useState('');
+  const [contentTypesetContentType] = useState<'blog' | 'newsletter'>('blog');
+  const [customPromptsetCustomPrompt] = useState('');
+  const [topicsetTopic] = useState('');
+  const [autoPublishsetAutoPublish] = useState(false);
+  const [includeImagesetIncludeImage] = useState(true);
+  const [isGeneratingsetIsGenerating] = useState(false);
+  const [previewContentsetPreviewContent] = useState<any>(null);
+  const [testEmailsetTestEmail] = useState('');
 
   // Redirect if not logged in
   React.useEffect(() => {
@@ -35,14 +35,14 @@ export default function ContentGenerator() {
       toast.error("You must be logged in to access this page");
       navigate("/login?redirect=/content-generator");
     }
-  }, [user, isLoading, navigate]);
+  }[userisLoadingnavigate]);
 
   const generateContent = async () => {
     setIsGenerating(true);
     setPreviewContent(null);
     
     try {
-      const { data, error } = await supabase.functions.invoke('generate-content', {
+      const { dataerror } = await supabase.functions.invoke('generate-content'{
         body: {
           contentType,
           prompt: customPrompt || undefined,
@@ -57,7 +57,7 @@ export default function ContentGenerator() {
       setPreviewContent(data);
       toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
     } catch (error) {
-      console.error("Error generating content:", error);
+      console.error("Error generating content:"error);
       toast.error("Failed to generate content. Please try again.");
     } finally {
       setIsGenerating(false);
@@ -76,7 +76,7 @@ export default function ContentGenerator() {
     }
     
     try {
-      const { data, error } = await supabase.functions.invoke('send-newsletter', {
+      const { dataerror } = await supabase.functions.invoke('send-newsletter'{
         body: {
           subject: previewContent.subject,
           previewText: previewContent.previewText,
@@ -90,7 +90,7 @@ export default function ContentGenerator() {
       
       toast.success(`Test newsletter sent to ${testEmail}!`);
     } catch (error) {
-      console.error("Error sending test newsletter:", error);
+      console.error("Error sending test newsletter:"error);
       toast.error("Failed to send test newsletter. Please try again.");
     }
   };
@@ -142,7 +142,7 @@ export default function ContentGenerator() {
                     <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>
                     <Input
                       id="topic"
-                      placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"}
+                      placeholder={contentType === 'blog' ? "e.g.Hiring AI Freelancers" : "e.g.May Platform Updates"}
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       value={topic}
                       onChange={(e) => setTopic(e.target.value)}
@@ -248,11 +248,11 @@ export default function ContentGenerator() {
                                   className="prose prose-invert max-w-none"
                                   dangerouslySetInnerHTML={{ 
                                     __html: previewContent.body
-                                      .replace(/^#{1,6}\s+(.+)$/gm, "<h$1>$2</h$1>")
-                                      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-                                      .replace(/\*(.+?)\*/g, "<em>$1</em>")
-                                      .replace(/^-\s+(.+)$/gm, "<li>$1</li>")
-                                      .replace(/\n\n/g, "<br><br>")
+                                      .replace(/^#{1,6}\s+(.+)$/gm"<h$1>$2</h$1>")
+                                      .replace(/\*\*(.+?)\*\*/g"<strong>$1</strong>")
+                                      .replace(/\*(.+?)\*/g"<em>$1</em>")
+                                      .replace(/^-\s+(.+)$/gm"<li>$1</li>")
+                                      .replace(/\n\n/g"<br><br>")
                                   }}
                                 />
                               </div>
@@ -282,7 +282,7 @@ export default function ContentGenerator() {
                               <div>
                                 <h3 className="text-white font-semibold mb-1">Tags</h3>
                                 <div className="flex flex-wrap gap-2">
-                                  {previewContent.tags.map((tag: string, index: number) => (
+                                  {previewContent.tags.map((tag: stringindex: number) => (
                                     <span 
                                       key={index}
                                       className="bg-zion-blue-light px-2 py-1 rounded-md text-xs text-zion-cyan"

@@ -1,25 +1,25 @@
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
-import { Plus, Loader2 } from 'lucide-react';
+PlusLoader2
 import { useResume } from "@/hooks/useResume";
 import { exportResumeToPDF } from "@/utils/pdfExport";
 import { toast } from "@/components/ui/use-toast";
 import { ResumePreviewCard } from './ResumePreviewCard';
 import { UploadSection } from './UploadSection';
 import { SelectResumeSection } from './SelectResumeSection';
-import { ResumeOption, ResumeSelectorProps } from './types';
+import { ResumeOptionResumeSelectorProps } from './types';
 
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
-  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
-  const [customFile, setCustomFile] = useState<File | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [selectedOptionsetSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
+  const [selectedResumesetSelectedResume] = useState<ResumeOption | null>(null);
+  const [resumeOptionsetResumeOptions] = useState<ResumeOption[]>([]);
+  const [customFilesetCustomFile] = useState<File | null>(null);
+  const [isLoadingsetIsLoading] = useState(false);
   
-  const { resume, fetchResume } = useResume();
+  const { resumefetchResume } = useResume();
   
   // Fetch resume data when component mounts
   useEffect(() => {
@@ -28,14 +28,14 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       try {
         await fetchResume();
       } catch (error) {
-        console.error("Error loading resumes:", error);
+        console.error("Error loading resumes:"error);
       } finally {
         setIsLoading(false);
       }
     };
     
     loadResumes();
-  }, [fetchResume]);
+  }[fetchResume]);
   
   // Update resume options when resume data changes
   useEffect(() => {
@@ -55,7 +55,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         onResumeSelected(options[0]);
       }
     }
-  }, [resume, selectedOption, onResumeSelected]);
+  }[resumeselectedOptionResumeSelected]);
   
   // Handle radio option change
   const handleOptionChange = (value: 'recent' | 'select' | 'upload') => {
@@ -136,7 +136,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         title: "Success!",
         description: "Your resume has been downloaded."});
     } catch (error) {
-      console.error('Error downloading PDF:', error);
+      console.error('Error downloading PDF:'error);
       toast({
         title: "Download failed",
         description: "There was an error downloading your resume.",
@@ -149,7 +149,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   
   // Handle "Generate Resume Now" button
   const handleGenerateResume = () => {
-    window.open('/dashboard/talent/portfolio', '_blank');
+    window.open('/dashboard/talent/portfolio'_blank');
   };
   
   return (

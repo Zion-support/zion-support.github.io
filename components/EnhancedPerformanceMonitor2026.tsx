@@ -1,16 +1,16 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Activity, 
-  Zap, 
-  TrendingUp, 
-  Clock, 
-  Database, 
-  Cpu, 
-  HardDrive, 
+  Activity
+  Zap
+  TrendingUp
+  Clock
+  Database
+  Cpu
+  HardDrive
   Wifi,
   AlertTriangle,
   CheckCircle,
@@ -31,9 +31,9 @@ interface PerformanceMetric {
 }
 
 const EnhancedPerformanceMonitor2026 = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetric[]>([]);
-  const [isMonitoring, setIsMonitoring] = useState(true);
-  const [lastUpdate, setLastUpdate] = useState(new Date());
+  const [metricsetMetrics] = useState<PerformanceMetric[]>([]);
+  const [isMonitoringsetIsMonitoring] = useState(true);
+  const [lastUpdatesetLastUpdate] = useState(new Date());
 
   useEffect(() => {
     const initialMetrics: PerformanceMetric[] = [
@@ -106,16 +106,16 @@ const EnhancedPerformanceMonitor2026 = () => {
         setMetrics(prevMetrics => 
           prevMetrics.map(metric => ({
             ...metric,
-            value: Math.max(0, Math.min(100, metric.value + (Math.random() - 0.5) * 5)),
+            value: Math.max(0Math.min(100metric.value + (Math.random() - 0.5) * 5)),
             trend: Math.random() > 0.5 ? 'up' : 'down' as 'up' | 'down' | 'stable'
           }))
         );
         setLastUpdate(new Date());
-      }, 2000);
+      }2000);
 
       return () => clearInterval(interval);
     }
-  }, [isMonitoring]);
+  }[isMonitoring]);
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -179,13 +179,13 @@ const EnhancedPerformanceMonitor2026 = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <AnimatePresence>
-          {metrics.map((metric, index) => (
+          {metrics.map((metricindex) => (
             <motion.div
               key={metric.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              exit={{ opacity: 0y: -20 }}
+              transition={{ duration: 0.5delay: index * 0.1 }}
               className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
             >
               <div className="flex items-center justify-between mb-3">
@@ -216,7 +216,7 @@ const EnhancedPerformanceMonitor2026 = () => {
                   className={`h-2 rounded-full bg-gradient-to-r ${metric.color}`}
                   initial={{ width: 0 }}
                   animate={{ width: `${metric.value}%` }}
-                  transition={{ duration: 1, delay: index * 0.1 }}
+                  transition={{ duration: 1delay: index * 0.1 }}
                 />
               </div>
             </motion.div>

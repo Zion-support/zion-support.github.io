@@ -5,10 +5,10 @@ import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
   averageRating: number;
   totalReviews: number;
-  ratingDistribution?: Record<number, number>;
+  ratingDistribution?: Record<number>;
 }
 
-export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
+export function ReviewStats({ averageRatingtotalReviewsratingDistribution }: ReviewStatsProps) {
   // Format the average rating to one decimal place
   const formattedRating = averageRating.toFixed(1);
   
@@ -25,7 +25,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
           <h3 className="text-xl font-bold">{formattedRating}</h3>
           <div className="flex items-center">
             <div className="flex mr-2">
-              {[1, 2, 3, 4, 5].map((i) => (
+              {[12345].map((i) => (
                 <Star
                   key={i}
                   className={`h-4 w-4 ${
@@ -43,7 +43,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
       
       {ratingDistribution && (
         <div className="space-y-2">
-          {[5, 4, 3, 2, 1].map((rating) => (
+          {[54321].map((rating) => (
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />

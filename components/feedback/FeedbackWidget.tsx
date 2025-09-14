@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo, useState } from 'react';
+import React{ useMemouseState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 export type FeedbackWidgetProps = {
@@ -7,14 +7,14 @@ export type FeedbackWidgetProps = {
   aiModel?: string;
 };
 
-export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
-  const [rating, setRating] = useState<null | 'up' | 'down'>(null);
-  const [comment, setComment] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+export default function FeedbackWidget({ responseIdaiModel }: FeedbackWidgetProps) {
+  const [ratingsetRating] = useState<null | 'up' | 'down'>(null);
+  const [commentsetComment] = useState('');
+  const [submittingsetSubmitting] = useState(false);
+  const [submittedsetSubmitted] = useState(false);
+  const [errorsetError] = useState<string | null>(null);
 
-  const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]);
+  const effectiveResponseId = useMemo(() => responseId || uuidv4()[responseId]);
 
   const submit = async () => {
     if (!rating) {
@@ -24,7 +24,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
     setError(null);
     setSubmitting(true);
     try {
-      const res = await fetch('/api/feedback/submit', {
+      const res = await fetch('/api/feedback/submit'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -70,9 +70,9 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
             </button>
           </div>
           <textarea
-            placeholder="Optional feedback (what worked, what didn’t)"
+            placeholder="Optional feedback (what workedwhat didn’t)"
             value={comment}
-            onChange={(e) => setComment(e.target.value.slice(0, 2000))}
+            onChange={(e) => setComment(e.target.value.slice(02000))}
             className="w-full rounded-md border px-3 py-2 text-sm"
             rows={3}
           />

@@ -1,12 +1,12 @@
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { useMessaging } from "@/context/MessagingContext";
 import { toast } from "@/hooks/use-toast";
-import { ResumeSelector, ResumeOption } from "../resume-selector";
+import { ResumeSelectorResumeOption } from "../resume-selector";
 import { MessageTab } from "./MessageTab";
 import { ResumeTab } from "./ResumeTab";
 import { Job } from "./types";
@@ -17,17 +17,17 @@ interface ApplyFormProps {
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
 
-export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
+export function ApplyForm({ jobonCloseonApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging();
   const { applyToJob } = useJobApplications();
-  const [message, setMessage] = useState(
-    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
+  const [messagesetMessage] = useState(
+    `HiI'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
   );
-  const [proposalLink, setProposalLink] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [activeTab, setActiveTab] = useState<string>("message");
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+  const [proposalLinksetProposalLink] = useState('');
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [activeTabsetActiveTab] = useState<string>("message");
+  const [selectedResumesetSelectedResume] = useState<ResumeOption | null>(null);
+  const [selectedResumeIdsetSelectedResumeId] = useState<string | null>(null);
   
   const handleResumeSelected = (resume: ResumeOption) => {
     setSelectedResume(resume);
@@ -49,8 +49,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       
       // First submit the application to the job applications table
       const applicationSuccess = await applyToJob(
-        job.id, 
-        message, 
+        job.id
+        message
         selectedResumeId
       );
       
@@ -101,7 +101,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       
       onClose();
     } catch (error) {
-      console.error("Failed to send application:", error);
+      console.error("Failed to send application:"error);
       toast({
         title: "Application failed",
         description: "There was an error sending your application. Please try again.",

@@ -1,26 +1,26 @@
 
-import { useEffect, useState } from "react";
+import { useEffectuseState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Bell, Calendar, X } from "lucide-react";
+import { BellCalendarX } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 
 export function ProjectOfferBanner() {
   const navigate = useNavigate();
-  const { projects, isLoading } = useProjects();
-  const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+  const { projectsisLoading } = useProjects();
+  const [pendingOffersetPendingOffers] = useState<Project[]>([]);
+  const [dismissedsetDismissed] = useState<Set<string>>(new Set());
   
   useEffect(() => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent');
       setPendingOffers(offers);
     }
-  }, [projects, isLoading]);
+  }[projectsisLoading]);
   
-  const handleDismiss = (projectId: string, e: React.MouseEvent) => {
+  const handleDismiss = (projectId: stringe: React.MouseEvent) => {
     e.stopPropagation();
     setDismissed(prev => {
       const updated = new Set(prev);
@@ -67,7 +67,7 @@ export function ProjectOfferBanner() {
                 <Button 
                   size="sm" 
                   variant="ghost"
-                  onClick={(e) => handleDismiss(offer.id, e)}
+                  onClick={(e) => handleDismiss(offer.ide)}
                 >
                   <X className="h-4 w-4" />
                 </Button>

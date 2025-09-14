@@ -1,21 +1,21 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+import { motionAnimatePresence } from 'framer-motion';
+MenuXChevronDownSearchPhoneMailMapPinZapBrainAtomMicroscopeGamepad2ShieldRocketDatabaseTestTubeCarGlobeCodePaletteCloudServerNetworkCpu
 
 export default function UltraAdvancedNavigation2026V2() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpensetIsOpen] = useState(false);
+  const [isScrolledsetIsScrolled] = useState(false);
+  const [activeDropdownsetActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll'handleScroll);
+    return () => window.removeEventListener('scroll'handleScroll);
+  }[]);
 
   const navigationItems = [
     {
@@ -28,22 +28,22 @@ export default function UltraAdvancedNavigation2026V2() {
       href: '/services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI & Machine Learning', href: '/services?category=ai', icon: <Brain className="w-4 h-4" /> },
-        { name: 'Quantum & Space Tech', href: '/services?category=quantum', icon: <Atom className="w-4 h-4" /> },
-        { name: 'Emerging Technologies', href: '/services?category=emerging', icon: <Microscope className="w-4 h-4" /> },
-        { name: 'Micro SaaS', href: '/services?category=micro-saas', icon: <Code className="w-4 h-4" /> },
-        { name: 'Metaverse & VR', href: '/services?category=metaverse', icon: <Gamepad2 className="w-4 h-4" /> },
-        { name: 'Cybersecurity', href: '/services?category=cybersecurity', icon: <Shield className="w-4 h-4" /> },
-        { name: 'Space Technology', href: '/services?category=space', icon: <Rocket className="w-4 h-4" /> },
-        { name: 'Biotech & Healthcare', href: '/services?category=biotech', icon: <TestTube className="w-4 h-4" /> },
-        { name: 'Blockchain & Web3', href: '/services?category=blockchain', icon: <Database className="w-4 h-4" /> },
-        { name: 'Autonomous Vehicles', href: '/services?category=transportation', icon: <Car className="w-4 h-4" /> },
-        { name: 'Cloud & Infrastructure', href: '/services?category=cloud', icon: <Cloud className="w-4 h-4" /> },
-        { name: 'Edge Computing', href: '/services?category=edge', icon: <Server className="w-4 h-4" /> },
-        { name: 'IoT & Connectivity', href: '/services?category=iot', icon: <Network className="w-4 h-4" /> },
-        { name: 'Semiconductor Tech', href: '/services?category=semiconductor', icon: <Cpu className="w-4 h-4" /> },
-        { name: 'Creative & Design', href: '/services?category=creative', icon: <Palette className="w-4 h-4" /> },
-        { name: 'Global Solutions', href: '/services?category=global', icon: <Globe className="w-4 h-4" /> }
+        { name: 'AI & Machine Learning'href: '/services?category=ai'icon: <Brain className="w-4 h-4" /> },
+        { name: 'Quantum & Space Tech'href: '/services?category=quantum'icon: <Atom className="w-4 h-4" /> },
+        { name: 'Emerging Technologies'href: '/services?category=emerging'icon: <Microscope className="w-4 h-4" /> },
+        { name: 'Micro SaaS'href: '/services?category=micro-saas'icon: <Code className="w-4 h-4" /> },
+        { name: 'Metaverse & VR'href: '/services?category=metaverse'icon: <Gamepad2 className="w-4 h-4" /> },
+        { name: 'Cybersecurity'href: '/services?category=cybersecurity'icon: <Shield className="w-4 h-4" /> },
+        { name: 'Space Technology'href: '/services?category=space'icon: <Rocket className="w-4 h-4" /> },
+        { name: 'Biotech & Healthcare'href: '/services?category=biotech'icon: <TestTube className="w-4 h-4" /> },
+        { name: 'Blockchain & Web3'href: '/services?category=blockchain'icon: <Database className="w-4 h-4" /> },
+        { name: 'Autonomous Vehicles'href: '/services?category=transportation'icon: <Car className="w-4 h-4" /> },
+        { name: 'Cloud & Infrastructure'href: '/services?category=cloud'icon: <Cloud className="w-4 h-4" /> },
+        { name: 'Edge Computing'href: '/services?category=edge'icon: <Server className="w-4 h-4" /> },
+        { name: 'IoT & Connectivity'href: '/services?category=iot'icon: <Network className="w-4 h-4" /> },
+        { name: 'Semiconductor Tech'href: '/services?category=semiconductor'icon: <Cpu className="w-4 h-4" /> },
+        { name: 'Creative & Design'href: '/services?category=creative'icon: <Palette className="w-4 h-4" /> },
+        { name: 'Global Solutions'href: '/services?category=global'icon: <Globe className="w-4 h-4" /> }
       ]
     },
     {
@@ -202,9 +202,9 @@ export default function UltraAdvancedNavigation2026V2() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            initial={{ opacity: 0x: '100%' }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: '100%' }}
             transition={{ duration: 0.3 }}
             className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden"
           >

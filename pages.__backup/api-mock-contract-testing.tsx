@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
+FlaskConicalShieldCheckFileCodeGitBranchPhoneMailMapPinCheck
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
 
@@ -16,7 +16,7 @@ export default function ApiMockContractTestingPage() {
   const adItems = [
     {
       title: '🧪 API Mock & Contract Testing Platform',
-      description: 'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.',
+      description: 'Spin up OpenAPI/GraphQL mocks in secondsvalidate breaking changes in CIand gate deployments with contract tests. SDK stubsdata generatorsand snapshot diffs included.',
       price: 'Starting at $69/month',
       features: [
         'OpenAPI/GraphQL import and live mock server',
@@ -30,21 +30,21 @@ export default function ApiMockContractTestingPage() {
   ];
 
   const tiers = [
-    { name: 'Starter', price: '$69/month', items: ['1 project', '5 mocks', 'OpenAPI import', 'CI status checks'] },
-    { name: 'Team', price: '$149/month', items: ['5 projects', 'Unlimited mocks', 'Record/replay', 'Slack alerts'] },
-    { name: 'Enterprise', price: 'Custom', items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support'] }
+    { name: 'Starter'price: '$69/month'items: ['1 project'5 mocks'OpenAPI import'CI status checks'] },
+    { name: 'Team'price: '$149/month'items: ['5 projects'Unlimited mocks'Record/replay'Slack alerts'] },
+    { name: 'Enterprise'price: 'Custom'items: ['SAML/SSO'RBAC'Private cloud/VPC'Premium support'] }
   ];
 
   return (
     <Layout>
       <Head>
         <title>API Mock & Contract Testing | Zion Tech Group</title>
-        <meta name="description" content="OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals." />
+        <meta name="description" content="OpenAPI/GraphQL mock serverscontract tests in CIand deployment gates with snapshot diffs and approvals." />
         <link rel="canonical" href="https://ziontechgroup.com/api-mock-contract-testing" />
       </Head>
 
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-        <ServiceAds heading="API Quality Fast-Track" subheading="Mock, validate, and ship with confidence." items={adItems} />
+        <ServiceAds heading="API Quality Fast-Track" subheading="Mockvalidateand ship with confidence." items={adItems} />
 
         <div className="max-w-5xl mx-auto mt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

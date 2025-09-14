@@ -30,8 +30,8 @@ export default function AI2025BreakthroughContentPromotionBanner() {
           
           {/* Subheading */}
           <p className="text-lg md:text-xl opacity-90 mb-6 max-w-4xl mx-auto leading-relaxed">
-            Discover our latest revolutionary content: Advanced Automation Mastery, Enterprise Transformation 
-            Case Studies, and Next-Gen AI Implementation Guides. Join 100,000+ professionals already transforming 
+            Discover our latest revolutionary content: Advanced Automation MasteryEnterprise Transformation 
+            Case Studiesand Next-Gen AI Implementation Guides. Join 100,000+ professionals already transforming 
             their businesses with our breakthrough insights.
           </p>
 

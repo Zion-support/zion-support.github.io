@@ -1,12 +1,12 @@
 
-import { useState, useEffect } from "react";
+import { useStateuseEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { ITServicePricingTable } from "@/components/services/ITServicePricingTable";
 import { GlobalServiceSection } from "@/components/GlobalServiceSection";
 import { QuoteFormSection } from "@/components/QuoteFormSection";
 import { TrustedBySection } from "@/components/TrustedBySection";
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
+import { CountryPricingonsiteServicePricing } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
 import { PageHero } from "@/components/services/PageSections/PageHero";
 import { CountryTabs } from "@/components/services/PageSections/CountryTabs";
@@ -17,8 +17,8 @@ import { EnterpriseCallToAction } from "@/components/services/PageSections/Enter
 
 export default function ITOnsiteServicesPage() {
   const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCountrysetSelectedCountry] = useState<CountryPricing | null>(null);
+  const [searchQuerysetSearchQuery] = useState("");
   
   // Check for success parameter in URL
   const success = searchParams.get("success");
@@ -30,18 +30,18 @@ export default function ITOnsiteServicesPage() {
         title: "Payment Successful",
         description: "Your IT onsite service request has been received. Our team will contact you shortly."});
     }
-  }, [success]);
+  }[success]);
   
   // Popular countries for the featured cards
-  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
+  const popularCountries = ["United States"United Kingdom"Canada"Germany"Japan"Singapore"];
   
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter(country => 
       country.country.toLowerCase().includes(searchQuery.toLowerCase())
     )
-    .sort((a, b) => {
-      // First, sort by popular status
+    .sort((ab) => {
+      // Firstsort by popular status
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
       
@@ -58,7 +58,7 @@ export default function ITOnsiteServicesPage() {
     // Scroll to the service details section
     setTimeout(() => {
       document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
+    }100);
   };
   
   return (

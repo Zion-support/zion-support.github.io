@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+BrainMailPhoneMapPinGlobeGithubLinkedinTwitter
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -9,39 +9,39 @@ const EnhancedFooter: React.FC = () => {
     {
       title: 'Services',
       links: [
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
-        { name: 'Edge Computing', href: '/edge-computing-orchestration' },
-        { name: 'Space Technology', href: '/space-technology' },
-        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
+        { name: 'AI Business Intelligence'href: '/ai-business-intelligence' },
+        { name: 'Quantum Cybersecurity'href: '/quantum-cybersecurity' },
+        { name: 'Edge Computing'href: '/edge-computing-orchestration' },
+        { name: 'Space Technology'href: '/space-technology' },
+        { name: 'View All Services'href: '/comprehensive-2025-services-showcase' }
       ]
     },
     {
       title: 'Company',
       links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Work', href: '/portfolio' },
-        { name: 'Blog & Insights', href: '/blog' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Contact', href: '/contact' }
+        { name: 'About Us'href: '/about' },
+        { name: 'Our Work'href: '/portfolio' },
+        { name: 'Blog & Insights'href: '/blog' },
+        { name: 'Careers'href: '/careers' },
+        { name: 'Contact'href: '/contact' }
       ]
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Support Center', href: '/support' },
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' }
+        { name: 'Documentation'href: '/docs' },
+        { name: 'API Reference'href: '/api' },
+        { name: 'Support Center'href: '/support' },
+        { name: 'Privacy Policy'href: '/privacy' },
+        { name: 'Terms of Service'href: '/terms' }
       ]
     }
   ];
 
   const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
+    { name: 'GitHub'href: 'https://github.com/Zion-Holdings'icon: Github },
+    { name: 'LinkedIn'href: 'https://linkedin.com/company/ziontechgroup'icon: Linkedin },
+    { name: 'Twitter'href: 'https://twitter.com/ziontechgroup'icon: Twitter }
   ];
 
   return (
@@ -61,7 +61,7 @@ const EnhancedFooter: React.FC = () => {
             </div>
             <p className="text-white/70 mb-6 max-w-md">
               Leading-edge technology solutions and autonomous innovation platform. 
-              Empowering businesses with cutting-edge AI, quantum computing, and digital transformation.
+              Empowering businesses with cutting-edge AIquantum computingand digital transformation.
             </p>
             
             {/* Contact Info */}

@@ -1,12 +1,12 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 export const MobileEmailCapture: React.FC = () => {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [emailsetEmail] = useState("");
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [isSuccessetIsSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -15,17 +15,17 @@ export const MobileEmailCapture: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      // In a real implementation, this would connect to a backend service
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // In a real implementationthis would connect to a backend service
+      // For nowe'll simulate a successful submission
+      await new Promise(resolve => setTimeout(resolve1000));
       setIsSuccess(true);
       setEmail("");
       
       setTimeout(() => {
         setIsSuccess(false);
-      }, 5000);
+      }5000);
     } catch (error) {
-      console.error("Error subscribing:", error);
+      console.error("Error subscribing:"error);
     } finally {
       setIsSubmitting(false);
     }

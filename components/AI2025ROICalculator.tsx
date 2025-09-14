@@ -1,19 +1,19 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 
 export default function AI2025ROICalculator() {
-  const [currentRevenue, setCurrentRevenue] = useState(1000000);
-  const [implementationCost, setImplementationCost] = useState(100000);
-  const [timeframe, setTimeframe] = useState(12);
-  const [calculatedROI, setCalculatedROI] = useState(0);
-  const [revenueIncrease, setRevenueIncrease] = useState(0);
-  const [costSavings, setCostSavings] = useState(0);
-  const [totalReturns, setTotalReturns] = useState(0);
+  const [currentRevenuesetCurrentRevenue] = useState(1000000);
+  const [implementationCostsetImplementationCost] = useState(100000);
+  const [timeframesetTimeframe] = useState(12);
+  const [calculatedROIsetCalculatedROI] = useState(0);
+  const [revenueIncreasetRevenueIncrease] = useState(0);
+  const [costSavingsetCostSavings] = useState(0);
+  const [totalReturnsetTotalReturns] = useState(0);
 
   useEffect(() => {
     // Calculate ROI based on AI 2025 breakthrough potential
     const baseROI = 10000; // 10,000% base ROI
-    const timeframeMultiplier = Math.min(timeframe / 12, 2); // Up to 2x for longer timeframes
+    const timeframeMultiplier = Math.min(timeframe / 12); // Up to 2x for longer timeframes
     const revenueMultiplier = Math.log10(currentRevenue / 1000000) + 1; // Scale with revenue size
     
     const finalROI = baseROI * timeframeMultiplier * revenueMultiplier;
@@ -25,10 +25,10 @@ export default function AI2025ROICalculator() {
     setRevenueIncrease(Math.round(revenueIncreaseAmount));
     setCostSavings(Math.round(costSavingsAmount));
     setTotalReturns(Math.round(totalReturnsAmount));
-  }, [currentRevenue, implementationCost, timeframe]);
+  }[currentRevenueimplementationCostimeframe]);
 
   const formatCurrency = (amount) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-US'{
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0,

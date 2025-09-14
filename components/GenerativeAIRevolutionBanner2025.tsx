@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const GenerativeAIRevolutionBanner2025 = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
 
   const featuredContent = [
     {
@@ -47,7 +47,7 @@ const GenerativeAIRevolutionBanner2025 = () => {
         timeline: '18 months',
         guide: 'Complete'
       },
-      description: 'The complete, step-by-step guide to implementing generative AI in your enterprise.',
+      description: 'The completestep-by-step guide to implementing generative AI in your enterprise.',
       readingTime: '45 min read'
     }
   ];
@@ -55,14 +55,14 @@ const GenerativeAIRevolutionBanner2025 = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('generative-ai-banner-dismissed', 'true');
+    localStorage.setItem('generative-ai-banner-dismissed'true');
   };
 
   useEffect(() => {
@@ -70,7 +70,7 @@ const GenerativeAIRevolutionBanner2025 = () => {
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -182,7 +182,7 @@ const GenerativeAIRevolutionBanner2025 = () => {
 
         {/* Progress Indicators */}
         <div className="flex justify-center mt-8 space-x-2">
-          {featuredContent.map((_, index) => (
+          {featuredContent.map((_index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}

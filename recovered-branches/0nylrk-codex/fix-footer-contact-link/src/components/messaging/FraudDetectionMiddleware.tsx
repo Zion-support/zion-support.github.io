@@ -1,6 +1,6 @@
 
-import React, { useCallback } from 'react';
-import { checkMessage, monitorContent } from '@/services/fraud';
+import React{ useCallback } from 'react';
+import { checkMessagemonitorContent } from '@/services/fraud';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 
@@ -12,7 +12,7 @@ interface FraudDetectionMiddlewareProps {
 // Interface for the context
 interface FraudDetectionContextType {
   scanMessageContent: (
-    userId: string, 
+    userId: string
     messageId: string,
     content: string,
     userEmail?: string
@@ -24,7 +24,7 @@ interface FraudDetectionContextType {
 
 // Create the context. "createContext" can be untyped if React type definitions
 // aren't available. Passing a generic argument to an untyped function causes
-// TS2347, so we cast the default value instead of using a type parameter.
+// TS2347so we cast the default value instead of using a type parameter.
 export const FraudDetectionContext = React.createContext(
   undefined as FraudDetectionContextType | undefined
 );
@@ -41,7 +41,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       // First do a quick local check using the fraud detection service
       const quickCheck = checkMessage(content);
       
-      // If the quick check finds suspicious content, flag it
+      // If the quick check finds suspicious contentflag it
       if (quickCheck.isSuspicious) {
         // Flag the content for review
         await monitorContent(
@@ -52,7 +52,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           content
         );
         
-        // If it's dangerous, show a warning to the user
+        // If it's dangeroushow a warning to the user
         if (quickCheck.severity === 'dangerous') {
           toast({
             title: "Message Flagged",
@@ -68,20 +68,20 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         }
       }
       
-      // For suspicious but not dangerous content, log but let it pass through
+      // For suspicious but not dangerous contentlog but let it pass through
       if (quickCheck.severity === 'suspicious') {
-        console.log('Suspicious content detected but allowed:', content);
+        console.log('Suspicious content detected but allowed:'content);
       }
       
-      // For more complex analysis (in a real app), we would call the edge function
+      // For more complex analysis (in a real app)we would call the edge function
       // This is disabled in this example to avoid unnecessary API calls
       /*
-      const { data, error } = await supabase.functions.invoke('analyze-content-fraud', {
-        body: { content, contentType: 'message' }
+      const { dataerror } = await supabase.functions.invoke('analyze-content-fraud'{
+        body: { contentType: 'message' }
       });
       
       if (error) {
-        console.error('Error analyzing message:', error);
+        console.error('Error analyzing message:'error);
         return { isSafe: true }; // Default to safe on error
       }
       
@@ -101,11 +101,11 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       // Message is considered safe
       return { isSafe: true };
     } catch (error) {
-      console.error('Error in fraud detection:', error);
-      // On error, let the message pass through but log the error
+      console.error('Error in fraud detection:'error);
+      // On errorlet the message pass through but log the error
       return { isSafe: true };
     }
-  }, []);
+  }[]);
 
   // Create the context value
   const contextValue: FraudDetectionContextType = {

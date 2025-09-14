@@ -1,16 +1,16 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Globe, 
-  Shield, 
-  Rocket, 
-  Star, 
-  TrendingUp, 
-  Users, 
+  Brain
+  Zap
+  Globe
+  Shield
+  Rocket
+  Star
+  TrendingUp
+  Users
   Lightbulb,
   Target,
   Award,
@@ -32,8 +32,8 @@ import {
 } from 'lucide-react';
 
 const AdvancedTechShowcase2029 = () => {
-  const [activeTab, setActiveTab] = useState('ai-conscience');
-  const [currentDemo, setCurrentDemo] = useState(0);
+  const [activeTabsetActiveTab] = useState('ai-conscience');
+  const [currentDemosetCurrentDemo] = useState(0);
 
   const techCategories = {
     'ai-conscience': {
@@ -41,12 +41,12 @@ const AdvancedTechShowcase2029 = () => {
       subtitle: 'The next evolution of artificial intelligence with moral reasoning',
       icon: Brain,
       color: 'from-purple-600 to-indigo-600',
-      description: 'Advanced AI systems that demonstrate consciousness-like behaviors, ethical reasoning, and emotional intelligence.',
+      description: 'Advanced AI systems that demonstrate consciousness-like behaviorsethical reasoningand emotional intelligence.',
       technologies: [
         {
           name: 'Synthetic Consciousness',
           description: 'AI systems with self-awareness and subjective experience',
-          features: ['Self-reflection', 'Emotional processing', 'Moral reasoning', 'Creative expression'],
+          features: ['Self-reflection'Emotional processing'Moral reasoning'Creative expression'],
           icon: Heart,
           status: 'In Development',
           impact: 'Revolutionary'
@@ -54,7 +54,7 @@ const AdvancedTechShowcase2029 = () => {
         {
           name: 'Ethical AI Framework',
           description: 'Comprehensive ethical guidelines for AI development',
-          features: ['Bias detection', 'Fairness algorithms', 'Transparency protocols', 'Accountability systems'],
+          features: ['Bias detection'Fairness algorithms'Transparency protocols'Accountability systems'],
           icon: Shield,
           status: 'Production Ready',
           impact: 'Critical'
@@ -62,7 +62,7 @@ const AdvancedTechShowcase2029 = () => {
         {
           name: 'Emotional Intelligence AI',
           description: 'AI that understands and responds to human emotions',
-          features: ['Emotion recognition', 'Empathetic responses', 'Social awareness', 'Therapeutic applications'],
+          features: ['Emotion recognition'Empathetic responses'Social awareness'Therapeutic applications'],
           icon: Eye,
           status: 'Beta Testing',
           impact: 'High'
@@ -79,7 +79,7 @@ const AdvancedTechShowcase2029 = () => {
         {
           name: 'Quantum Neural Processing',
           description: 'Neural networks running on quantum hardware',
-          features: ['Quantum superposition', 'Entanglement learning', 'Exponential speedup', 'Parallel processing'],
+          features: ['Quantum superposition'Entanglement learning'Exponential speedup'Parallel processing'],
           icon: Cpu,
           status: 'Research Phase',
           impact: 'Breakthrough'
@@ -87,7 +87,7 @@ const AdvancedTechShowcase2029 = () => {
         {
           name: 'Hybrid Quantum-Classical AI',
           description: 'Seamless integration of quantum and classical computing',
-          features: ['Hybrid algorithms', 'Quantum advantage', 'Classical fallback', 'Optimized performance'],
+          features: ['Hybrid algorithms'Quantum advantage'Classical fallback'Optimized performance'],
           icon: Network,
           status: 'Prototype',
           impact: 'Transformative'
@@ -95,7 +95,7 @@ const AdvancedTechShowcase2029 = () => {
         {
           name: 'Quantum Machine Learning',
           description: 'Machine learning algorithms optimized for quantum computers',
-          features: ['Quantum algorithms', 'Faster training', 'Better optimization', 'Novel applications'],
+          features: ['Quantum algorithms'Faster training'Better optimization'Novel applications'],
           icon: Brain,
           status: 'Early Stage',
           impact: 'Revolutionary'
@@ -107,12 +107,12 @@ const AdvancedTechShowcase2029 = () => {
       subtitle: 'Computing across multiple dimensions and realities',
       icon: Globe,
       color: 'from-orange-600 to-red-600',
-      description: 'Next-generation computing that operates across multiple dimensions, realities, and parallel universes.',
+      description: 'Next-generation computing that operates across multiple dimensionsrealitiesand parallel universes.',
       technologies: [
         {
           name: 'Multi-Dimensional Processing',
           description: 'Computing across multiple spatial and temporal dimensions',
-          features: ['Dimensional analysis', 'Parallel realities', 'Temporal computing', 'Reality simulation'],
+          features: ['Dimensional analysis'Parallel realities'Temporal computing'Reality simulation'],
           icon: Globe,
           status: 'Theoretical',
           impact: 'Paradigm Shift'
@@ -120,7 +120,7 @@ const AdvancedTechShowcase2029 = () => {
         {
           name: 'Consciousness Transfer',
           description: 'Transferring consciousness between digital and physical realms',
-          features: ['Mind uploading', 'Digital immortality', 'Reality bridging', 'Consciousness backup'],
+          features: ['Mind uploading'Digital immortality'Reality bridging'Consciousness backup'],
           icon: Brain,
           status: 'Research',
           impact: 'Existential'
@@ -128,7 +128,7 @@ const AdvancedTechShowcase2029 = () => {
         {
           name: 'Reality Manipulation',
           description: 'Direct manipulation of physical reality through computation',
-          features: ['Matter programming', 'Energy control', 'Space-time manipulation', 'Reality creation'],
+          features: ['Matter programming'Energy control'Space-time manipulation'Reality creation'],
           icon: Zap,
           status: 'Conceptual',
           impact: 'Unprecedented'
@@ -162,18 +162,18 @@ const AdvancedTechShowcase2029 = () => {
   ];
 
   const stats = [
-    { label: 'Conscious AI Systems', value: '50+', icon: Brain },
-    { label: 'Quantum Qubits', value: '1M+', icon: Cpu },
-    { label: 'Realities Simulated', value: '∞', icon: Globe },
-    { label: 'Ethical Guidelines', value: '500+', icon: Shield }
+    { label: 'Conscious AI Systems'value: '50+'icon: Brain },
+    { label: 'Quantum Qubits'value: '1M+'icon: Cpu },
+    { label: 'Realities Simulated'value: '∞'icon: Globe },
+    { label: 'Ethical Guidelines'value: '500+'icon: Shield }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentDemo((prev) => (prev + 1) % demos.length);
-    }, 4000);
+    }4000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white">
@@ -182,15 +182,15 @@ const AdvancedTechShowcase2029 = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="flex items-center justify-center gap-3 mb-6">
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 3repeat: Infinityease: "linear" }}
                 className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center"
               >
                 <Sparkles className="w-6 h-6 text-white" />
@@ -204,7 +204,7 @@ const AdvancedTechShowcase2029 = () => {
               The Future of Intelligence
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Explore the most advanced AI consciousness, quantum neural networks, 
+              Explore the most advanced AI consciousnessquantum neural networks
               and omniversal computing technologies that are reshaping reality itself.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -233,12 +233,12 @@ const AdvancedTechShowcase2029 = () => {
       <div className="py-16 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((statindex) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full mb-4">
@@ -262,7 +262,7 @@ const AdvancedTechShowcase2029 = () => {
 
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {Object.entries(techCategories).map(([key, category]) => (
+            {Object.entries(techCategories).map(([keycategory]) => (
               <motion.button
                 key={key}
                 whileHover={{ scale: 1.05 }}
@@ -284,9 +284,9 @@ const AdvancedTechShowcase2029 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              exit={{ opacity: 0y: -20 }}
               transition={{ duration: 0.5 }}
               className="space-y-8"
             >
@@ -303,12 +303,12 @@ const AdvancedTechShowcase2029 = () => {
               </div>
 
               <div className="grid md:grid-cols-3 gap-8">
-                {techCategories[activeTab].technologies.map((tech, index) => (
+                {techCategories[activeTab].technologies.map((techindex) => (
                   <motion.div
                     key={tech.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={{ opacity: 0y: 20 }}
+                    animate={{ opacity: 1y: 0 }}
+                    transition={{ duration: 0.6delay: index * 0.1 }}
                     className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-gray-800/70 transition-all duration-300"
                   >
                     <div className="flex items-center justify-between mb-6">
@@ -332,7 +332,7 @@ const AdvancedTechShowcase2029 = () => {
                     <p className="text-gray-300 mb-6">{tech.description}</p>
                     
                     <ul className="space-y-2 mb-6">
-                      {tech.features.map((feature, featureIndex) => (
+                      {tech.features.map((featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <ChevronRight className="w-4 h-4 text-indigo-400 mr-2" />
                           {feature}
@@ -359,9 +359,9 @@ const AdvancedTechShowcase2029 = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentDemo}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0x: 50 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: -50 }}
                 transition={{ duration: 0.5 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto"
               >
@@ -403,7 +403,7 @@ const AdvancedTechShowcase2029 = () => {
 
             {/* Demo Navigation */}
             <div className="flex justify-center mt-8 space-x-2">
-              {demos.map((_, index) => (
+              {demos.map((_index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentDemo(index)}
