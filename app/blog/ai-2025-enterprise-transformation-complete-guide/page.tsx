@@ -1,6 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
 import SEO from '../../../components/SEO';
 import ErrorBoundary from '../../../components/ErrorBoundary';
 
@@ -25,6 +27,7 @@ export default function AI2025EnterpriseTransformationPage() {
         title="AI 2025 Enterprise Transformation: Complete Guide to Digital Revolution"
         description="Discover how AI is revolutionizing enterprise operations in 2025. Complete guide to implementation, ROI, and success strategies."
         keywords="AI, Enterprise, Digital Transformation, Automation, ROI"
+>>>>>>> cursor/create-and-deploy-new-content-040d
         url="/blog/ai-2025-enterprise-transformation-complete-guide"
       />
       
@@ -34,56 +37,28 @@ export default function AI2025EnterpriseTransformationPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-                <span className="text-sm font-medium">🚀 AI & ENTERPRISE TRANSFORMATION</span>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                AI 2025 Enterprise Transformation
-              </h1>
-              <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Complete Guide to Digital Revolution
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#implementation"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  View Implementation Guide
                 </Link>
                 <Link
                   href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Get Expert Consultation
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Key Statistics */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-purple-600 mb-2">87%</div>
-                <div className="text-gray-600">Fortune 500 AI Adoption</div>
+                  </ul>
+                </div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-blue-600 mb-2">$2.9T</div>
-                <div className="text-gray-600">AI Business Value</div>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-green-600 mb-2">340%</div>
-                <div className="text-gray-600">Average ROI</div>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-orange-600 mb-2">65%</div>
-                <div className="text-gray-600">Cost Reduction</div>
+
               </div>
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
         {/* Main Content */}
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -210,6 +185,7 @@ export default function AI2025EnterpriseTransformationPage() {
               >
                 Explore Our Services
               </Link>
+>>>>>>> cursor/create-and-deploy-new-content-040d
             </div>
           </div>
         </section>
