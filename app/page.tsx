@@ -51,6 +51,11 @@ import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025Ul
 import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 import AIImplementationGuideBanner from '../components/AIImplementationGuideBanner';
 
+// Import new enhanced components
+import AITrends2025_2030FuturePredictionsBanner from '../components/AITrends2025_2030FuturePredictionsBanner';
+import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';
+import InteractiveAIAssistant from '../components/InteractiveAIAssistant';
+
 // Import new AI 2026 promotional components
 import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
 import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
@@ -84,6 +89,9 @@ export default function HomePage() {
         
         {/* AI Implementation Guide Banner - NEW RESOURCE */}
         <AIImplementationGuideBanner />
+        
+        {/* AI Trends 2025-2030 Future Predictions Banner - NEW */}
+        <AITrends2025_2030FuturePredictionsBanner />
         
         {/* AI 2026 Ultimate Showcase Banner */}
         <AI2026UltimateShowcaseBanner />
@@ -226,6 +234,9 @@ export default function HomePage() {
         <NewContent2026Showcase />
         <InteractiveContentDiscoveryWidget />
 
+        {/* Advanced Performance Optimizer - NEW */}
+        <AdvancedPerformanceOptimizer />
+
         {/* Advanced AI Components */}
         <AdvancedContentRecommendationEngine />
         <RealTimePerformanceDashboard />
@@ -237,6 +248,9 @@ export default function HomePage() {
         <AutomationWorkflowEngine />
         <EnterpriseDataManagement />
         <APIManagementSystem />
+
+        {/* Interactive AI Assistant - NEW */}
+        <InteractiveAIAssistant />
 
         {/* Structured Data */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
