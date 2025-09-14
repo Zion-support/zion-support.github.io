@@ -157,6 +157,12 @@ import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContent
 // Import new autonomous enterprise components
 import RevolutionaryContent2026UltimateShowcase from '../components/RevolutionaryContent2026UltimateShowcase';
 
+// Import new 2025 content promotional components
+import NewContent2025SyntheticIntelligenceBanner from '../components/NewContent2025SyntheticIntelligenceBanner';
+import NewContent2025QuantumAIBanner from '../components/NewContent2025QuantumAIBanner';
+import NewContent2025AutonomousSystemsBanner from '../components/NewContent2025AutonomousSystemsBanner';
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+
 // Import new 2026 breakthrough content banners
 import AI2026UltimateBreakthroughContentBanner from '../components/AI2026UltimateBreakthroughContentBanner';
 import NewContent2025MultimodalBanner from '../components/NewContent2025MultimodalBanner';
@@ -251,6 +257,18 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 ULTIMATE SHOWCASE - LATEST FEATURED */}
+        <NewContent2025UltimateShowcase />
+        
+        {/* NEW CONTENT 2025 SYNTHETIC INTELLIGENCE BANNER - NEWEST BREAKTHROUGH */}
+        <NewContent2025SyntheticIntelligenceBanner />
+        
+        {/* NEW CONTENT 2025 QUANTUM AI BANNER - NEWEST BREAKTHROUGH */}
+        <NewContent2025QuantumAIBanner />
+        
+        {/* NEW CONTENT 2025 AUTONOMOUS SYSTEMS BANNER - NEWEST BREAKTHROUGH */}
+        <NewContent2025AutonomousSystemsBanner />
+        
         {/* AI CONTENT REVOLUTION 2025 BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
         <AIContentRevolution2025Banner />
         
