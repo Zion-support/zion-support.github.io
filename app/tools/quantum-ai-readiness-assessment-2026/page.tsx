@@ -1,10 +1,7 @@
-'use client';
-
+"use client";
 import React, { useState, useEffect } from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
 
-// Metadata moved to parent component
 
 interface AssessmentResults {
   overallScore: number;
