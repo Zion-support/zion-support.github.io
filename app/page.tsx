@@ -60,6 +60,11 @@ import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBa
 import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
 import AI2026RevolutionaryBreakthroughBanner from '../components/AI2026RevolutionaryBreakthroughBanner';
 
+// Import new advanced 2026 promotional components
+import AI2026NeuralInterfaceRevolutionBanner from '../components/AI2026NeuralInterfaceRevolutionBanner';
+import AI2026SyntheticConsciousnessBreakthroughBanner from '../components/AI2026SyntheticConsciousnessBreakthroughBanner';
+import UltimateContentShowcase2026Advanced from '../components/UltimateContentShowcase2026Advanced';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -77,6 +82,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2026 Neural Interface Revolution Banner */}
+        <AI2026NeuralInterfaceRevolutionBanner />
+        
+        {/* AI 2026 Synthetic Consciousness Breakthrough Banner */}
+        <AI2026SyntheticConsciousnessBreakthroughBanner />
+        
         {/* AI 2026 Revolutionary Breakthrough Banner */}
         <AI2026RevolutionaryBreakthroughBanner />
         
@@ -211,6 +222,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Advanced Content Showcase 2026 */}
+        <UltimateContentShowcase2026Advanced />
+        
         {/* Content Promotion Banners */}
         <NewContentShowcase2025 />
         <UltimateContentShowcase2025 />
