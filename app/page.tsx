@@ -237,13 +237,8 @@ export default function HomePage() {
         <LatestContentShowcase2025 />
         <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
-<<<<<<< HEAD
-        <RevolutionaryContent2026Banner />
         <FeaturedContentShowcase2026 />
         <NewContent2026PromotionBanner />
-=======
-        <FeaturedContentShowcase2026 />
->>>>>>> origin/main
         <NewContentPromotionBanner />
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
