@@ -35035,6 +35035,16 @@
       }
     },
     {
+      "route": "/reports/innovations/insight-2025-08-18-0320",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Blueprint: Agent Ops",
+        "description": "Blueprint: Agent Ops — auto-suggested description"
+      }
+    },
+    {
       "route": "/reports/innovations/insight-2025-08-18T03-11",
       "missing": [
         "og:image"
@@ -64914,6 +64924,16 @@
       "suggestion": {
         "title": "Autonomous Update — 2025-08-18 00:09",
         "description": "Autonomous Update — 2025-08-18 00:09 — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-18-0320",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Playbook — Vision & Multimodal (2025-08-18 03:20 UTC)",
+        "description": "Autonomous Playbook — Vision & Multimodal (2025-08-18 03:20 UTC) — auto-suggested description"
       }
     },
     {
