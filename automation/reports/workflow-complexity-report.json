@@ -1763,7 +1763,7 @@
       "path": "/workspace/.github/workflows/cloud-maintenance.yml"
     },
     "cloud-marketing.yml": {
-      "complexityScore": 20,
+      "complexityScore": 25,
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 69,
