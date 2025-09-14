@@ -79,8 +79,8 @@ import Fortune500CaseStudyBanner from '../components/Fortune500CaseStudyBanner';
 import NewContent2026ComprehensiveShowcase from '../components/NewContent2026ComprehensiveShowcase';
 
 // Import new 2025-2026 ultimate breakthrough components
-import AI2025_2026UltimateBreakthroughBanner from '../components/AI2025-2026UltimateBreakthroughBanner';
-import RevolutionaryContent2025_2026Showcase from '../components/RevolutionaryContent2025-2026Showcase';
+import AI2025_2026UltimateBreakthroughBanner from '../components/AI2025_2026UltimateBreakthroughBanner';
+import RevolutionaryContent2025_2026Showcase from '../components/RevolutionaryContent2025_2026Showcase';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
