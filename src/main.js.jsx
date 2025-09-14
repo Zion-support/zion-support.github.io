@@ -40,7 +40,6 @@ try {
     <React.StrictMode>
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
-=======
         <Provider store={store}>
           <WhitelabelProvider>
             <Router>

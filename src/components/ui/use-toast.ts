@@ -1,30 +1,30 @@
 import { toast as sonnerToast } from 'sonner';
 
-export interface ToastOptions {
+export function toast(options: {
   title?: string;
   description?: string;
-  variant?: 'default' | 'destructive' | 'success';
-}
-
-export function toast(options: ToastOptions) {
+  variant?: 'default' | 'destructive' | 'success' | 'warning' | 'info';
+}) {
   const { title, description, variant = 'default' } = options;
   
-  if (variant === 'destructive') {
-    sonnerToast.error(title || 'Error', {
-      description,
-    });
-  } else if (variant === 'success') {
-    sonnerToast.success(title || 'Success', {
-      description,
-    });
-  } else {
-    sonnerToast(title || 'Notification', {
-      description,
-    });
+  const message = title && description ? `${title}: ${description}` : title || description || '';
+  
+  switch (variant) {
+    case 'destructive':
+      sonnerToast.error(message);
+      break;
+    case 'success':
+      sonnerToast.success(message);
+      break;
+    case 'warning':
+      sonnerToast.warning(message);
+      break;
+    case 'info':
+      sonnerToast.info(message);
+      break;
+    default:
+      sonnerToast(message);
+      break;
   }
 }
-
-export const useToast = () => ({
-  toast,
-});
 
