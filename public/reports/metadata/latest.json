@@ -35405,6 +35405,16 @@
       }
     },
     {
+      "route": "/reports/innovations/insight-2025-08-18-0440",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Pilot Plan: DevSecOps AI",
+        "description": "Pilot Plan: DevSecOps AI — auto-suggested description"
+      }
+    },
+    {
       "route": "/reports/innovations/insight-2025-08-18T03-11",
       "missing": [
         "og:image"
@@ -65794,6 +65804,16 @@
       "suggestion": {
         "title": "Autonomous Blueprint — Evaluation & Safety (2025-08-18 04:30 UTC)",
         "description": "Autonomous Blueprint — Evaluation & Safety (2025-08-18 04:30 UTC) — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-18-0440",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Playbook — Cloud Cost Optimization (2025-08-18 04:40 UTC)",
+        "description": "Autonomous Playbook — Cloud Cost Optimization (2025-08-18 04:40 UTC) — auto-suggested description"
       }
     },
     {
