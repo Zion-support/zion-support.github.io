@@ -1511,6 +1511,7 @@
     yargs "^17.7.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 "@hello-pangea/dnd@^18.0.1":
   version "18.0.1"
@@ -1523,10 +1524,13 @@
     react-redux "^9.2.0"
     redux "^5.0.1"
 
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-18b4
 "@heroicons/react@^2.2.0":
   version "2.2.0"
   resolved "https://registry.npmjs.org/@heroicons/react/-/react-2.2.0.tgz"
   integrity sha512-LMcepvRaS9LYHJGsF0zzmgKCUim/X3N/DQKc4jepAXJ7l8QxJ1PmxJzqplF2Z3FE4PqBAIGyJAQ/w4B5dsqbtQ==
+<<<<<<< HEAD
 
 "@hookform/resolvers@^5.2.1":
   version "5.2.2"
@@ -1534,6 +1538,8 @@
   integrity sha512-A/IxlMLShx3KjV/HeTcTfaMxdwy690+L/ZADoeaTltLx+CVuzkeVIPuybK3jrRfw7YZnmdKsVVHAlEPIAEUNlA==
   dependencies:
     "@standard-schema/utils" "^0.3.0"
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-18b4
 
 >>>>>>> cursor/create-and-deploy-new-content-9c08
 "@humanfs/core@^0.19.1":
@@ -2737,7 +2743,11 @@
     tar-fs "^3.1.0"
     yargs "^17.7.2"
 
+<<<<<<< HEAD
 "@reduxjs/toolkit@1.x.x || 2.x.x", "@reduxjs/toolkit@^2.9.0":
+=======
+"@reduxjs/toolkit@^2.9.0", "@reduxjs/toolkit@1.x.x || 2.x.x":
+>>>>>>> origin/cursor/create-and-deploy-new-content-18b4
   version "2.9.0"
   resolved "https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-2.9.0.tgz"
   integrity sha512-fSfQlSRu9Z5yBkvsNhYF2rPS8cGXn/TZVrlwN1948QyZ8xMZ0JvP50S2acZNaf+o63u6aEeMjipFyksjIcWrog==
@@ -2910,6 +2920,7 @@
   version "4.50.1"
   resolved "https://registry.npmjs.org/@rollup/rollup-linux-x64-musl/-/rollup-linux-x64-musl-4.50.1.tgz"
   integrity sha512-nEvqG+0jeRmqaUMuwzlfMKwcIVffy/9KGbAGyoa26iu6eSngAYQ512bMXuqqPrlTyfqdlB9FVINs93j534UJrg==
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2922,6 +2933,8 @@
   version "4.50.1"
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-arm64-msvc/-/rollup-win32-arm64-msvc-4.50.1.tgz#8ce3d1181644406362cf1e62c90e88ab083e02bb"
   integrity sha512-hpZB/TImk2FlAFAIsoElM3tLzq57uxnGYwplg6WDyAxbYczSi8O2eQ+H2Lx74504rwKtZ3N2g4bCUkiamzS6TQ==
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-18b4
 
 "@rollup/rollup-win32-ia32-msvc@4.50.1":
   version "4.50.1"
@@ -3352,6 +3365,16 @@
   dependencies:
     tslib "^2.4.0"
 
+<<<<<<< HEAD
+=======
+"@swc/helpers@0.5.15":
+  version "0.5.15"
+  resolved "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.15.tgz"
+  integrity sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==
+  dependencies:
+    tslib "^2.8.0"
+
+>>>>>>> origin/cursor/create-and-deploy-new-content-18b4
 "@tanstack/query-core@5.87.4":
   version "5.87.4"
   resolved "https://registry.npmjs.org/@tanstack/query-core/-/query-core-5.87.4.tgz"
@@ -3643,6 +3666,7 @@
     kleur "^3.0.3"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/react@19.1.13":
 =======
 "@types/react-datepicker@^6.2.0":
@@ -3659,6 +3683,9 @@
 >>>>>>> cursor/create-and-deploy-new-content-9c08
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-d62b
+=======
+"@types/react@19.1.13":
+>>>>>>> origin/cursor/create-and-deploy-new-content-18b4
   version "19.1.13"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-19.1.13.tgz#fc650ffa680d739a25a530f5d7ebe00cdd771883"
   integrity sha512-hHkbU/eoO3EG5/MZkuFSKmYqPbSVk5byPFa3e7y/8TybHiLMACgI8seVYlicwk7H5K/rI2px9xrQp/C+AUDTiQ==
@@ -3984,11 +4011,14 @@ agent-base@6:
   dependencies:
     debug "4"
 
+<<<<<<< HEAD
 agent-base@^7.0.2, agent-base@^7.1.0, agent-base@^7.1.2:
   version "7.1.4"
   resolved "https://registry.npmjs.org/agent-base/-/agent-base-7.1.4.tgz"
   integrity sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==
 
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-18b4
 ajv@^6.12.4, ajv@^6.12.6:
   version "6.12.6"
   resolved "https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz"
@@ -5532,6 +5562,7 @@ end-of-stream@^1.1.0, end-of-stream@^1.4.1:
   dependencies:
     once "^1.4.0"
 
+<<<<<<< HEAD
 enquirer@2.3.6:
   version "2.3.6"
   resolved "https://registry.npmjs.org/enquirer/-/enquirer-2.3.6.tgz"
@@ -5539,6 +5570,8 @@ enquirer@2.3.6:
   dependencies:
     ansi-colors "^4.1.1"
 
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-18b4
 enquirer@^2.3.6:
   version "2.4.1"
   resolved "https://registry.npmjs.org/enquirer/-/enquirer-2.4.1.tgz"
@@ -8251,11 +8284,15 @@ minimatch@^9.0.4:
   dependencies:
     brace-expansion "^2.0.1"
 
+<<<<<<< HEAD
 minimist@^1.2.5, minimist@^1.2.8:
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-9c08
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-d62b
+=======
+minimist@^1.2.5:
+>>>>>>> origin/cursor/create-and-deploy-new-content-18b4
   version "1.2.8"
   resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
@@ -9171,10 +9208,14 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.2.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-d62b
 postcss@^8.4.41, postcss@^8.4.47, postcss@^8.5.6:
+=======
+postcss@^8.4.47, postcss@^8.5.6:
+>>>>>>> origin/cursor/create-and-deploy-new-content-18b4
   version "8.5.6"
   resolved "https://registry.npmjs.org/postcss/-/postcss-8.5.6.tgz"
   integrity sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==
