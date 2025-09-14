@@ -2,7 +2,6 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
-import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
@@ -116,7 +115,7 @@ import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscove
 
 export default function HomePage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
         description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
@@ -3115,5 +3114,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

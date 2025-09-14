@@ -1,12 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+'use client';
 
-export const metadata: Metadata = {
-  title: 'AI Transformation ROI Calculator 2025 | Zion Tech Group',
-  description: 'Calculate your potential ROI from AI transformation. Get personalized projections based on your industry, company size, and implementation approach.',
-  keywords: ['AI ROI calculator', 'AI transformation', 'ROI analysis', 'AI investment', 'business tool'],
-};
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 interface ROIResults {
   totalInvestment: number;

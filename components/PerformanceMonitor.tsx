@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react';
+'use client';
+
+import { useEffect, useState, ReactNode } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -7,12 +9,14 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceMonitorProps {
+  children?: ReactNode;
   showMetrics?: boolean;
   logMetrics?: boolean;
   onThresholdExceeded?: (metrics: PerformanceMetrics) => void;
 }
 
 const PerformanceMonitor = ({ 
+  children,
   showMetrics = false, 
   logMetrics = false, 
   onThresholdExceeded 
@@ -20,64 +24,53 @@ const PerformanceMonitor = ({
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
-        
-        if (navigationEntry) {
-          const navEntry = navigationEntry as PerformanceNavigationTiming;
-          const newMetrics = {
-            loadTime: navEntry.loadEventEnd - navEntry.loadEventStart,
-            renderTime: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-            memoryUsage: (window.performance as any).memory?.usedJSHeapSize || 0
-          };
-          setMetrics(newMetrics);
-          
-          if (logMetrics) {
-            console.log('Performance metrics:', newMetrics);
-          }
-          
-          if (onThresholdExceeded) {
-            onThresholdExceeded(newMetrics);
-          }
+    const startTime = performance.now();
+    
+    const measurePerformance = () => {
+      const loadTime = performance.now() - startTime;
+      const renderTime = performance.now() - startTime;
+      
+      // Get memory usage if available
+      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+      
+      const newMetrics = {
+        loadTime,
+        renderTime,
+        memoryUsage
+      };
+      
+      setMetrics(newMetrics);
+      
+      if (logMetrics) {
+        console.log('Performance Metrics:', newMetrics);
+      }
+      
+      if (onThresholdExceeded) {
+        // Check if metrics exceed thresholds
+        if (loadTime > 3000 || renderTime > 1000) {
+          onThresholdExceeded(newMetrics);
         }
-      });
+      }
+    };
 
-      observer.observe({ entryTypes: ['navigation'] });
-
-      return () => observer.disconnect();
-    }
-  }, []);
-
-  if (!showMetrics || !metrics) return null;
+    // Measure after component mounts
+    const timeoutId = setTimeout(measurePerformance, 100);
+    
+    return () => clearTimeout(timeoutId);
+  }, [logMetrics, onThresholdExceeded]);
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
-      <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
-      <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
-      <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
-    </div>
+    <>
+      {children}
+      {showMetrics && metrics && (
+        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded text-xs font-mono">
+          <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
+          <div>Render: {metrics.renderTime.toFixed(0)}ms</div>
+          <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(1)}MB</div>
+        </div>
+      )}
+    </>
   );
 };
 
 export default PerformanceMonitor;
-      };
-    };
-,
-    // Measure performance after page load,
-    if (document.readyState === 'complete') {,
-      measurePerformance()
-    } else {,
-      window.addEventListener('load', measurePerformance)
-    };
-,
-    return () => {,
-      window.removeEventListener('load', measurePerformance)
-    };
-  }, [onPerformanceData]),
-,
-  return null
-};
-,
-export default PerformanceMonitor,

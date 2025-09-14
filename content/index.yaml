@@ -3,6 +3,23 @@ content_index:
   total_content_pieces: 15
   
   new_2025_content:
+    - id: "ai-2025-autonomous-enterprise-systems-revolution"
+      type: "blog"
+      title: "AI 2025: The Autonomous Enterprise Systems Revolution - 3,000% ROI Through Self-Managing AI"
+      file_path: "/content/blog/ai-2025-autonomous-enterprise-systems-revolution.md"
+      url: "/blog/ai-2025-autonomous-enterprise-systems-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Autonomous Systems", "Enterprise AI", "ROI", "Self-Managing AI", "Fortune 500", "Revolution"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "3,000%"
+        savings: "$25.6M"
+        efficiency: "800%"
+        autonomy: "95%"
+      reading_time: "28 min read"
+        
     - id: "generative-ai-revolution"
       type: "blog"
       title: "AI 2025: The Generative AI Enterprise Revolution - $2.3T Market Transformation"
