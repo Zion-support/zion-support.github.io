@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Analytics from './components/Analytics';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import './globals.css';
 import '../styles/optimizations.css';
 // import PerformanceMonitor from '../components/PerformanceMonitor';
