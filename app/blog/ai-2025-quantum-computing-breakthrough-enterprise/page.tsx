@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 import { ArrowLeft, ArrowRight, Calendar, Clock, User, TrendingUp, Zap, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 

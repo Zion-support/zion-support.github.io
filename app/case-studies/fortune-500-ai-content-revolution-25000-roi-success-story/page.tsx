@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
+import SEO from '../../components/SEO';
+import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Fortune 500 AI Content Revolution Success: $500B Annual Savings - 25,000% ROI',

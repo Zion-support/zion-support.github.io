@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI 2025: The Enterprise AI Transformation Ultimate Breakthrough - 1,500% ROI in 6 Months',

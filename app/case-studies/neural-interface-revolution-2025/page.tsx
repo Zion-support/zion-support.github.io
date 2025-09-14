@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'Neural Interface Revolution: Brain-Computer Interfaces in Business | Zion Tech Group',
