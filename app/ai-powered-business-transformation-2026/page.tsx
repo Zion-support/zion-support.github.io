@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Brain, Zap, Shield, TrendingUp, Users, BarChart3, Globe, Rocket, Target } from 'lucide-react';
+import { ArrowLeft, Brain, Zap, Shield, TrendingUp, Users, BarChart3, Globe } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI-Powered Business Transformation 2026: Revolutionize Your Enterprise',
@@ -26,7 +26,7 @@ export default function AIPoweredBusinessTransformation2026() {
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
               <div className="p-3 bg-gradient-to-r from-green-500 to-blue-500 rounded-full">
-                <Target className="h-8 w-8 text-white" />
+                <Brain className="h-8 w-8 text-white" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">

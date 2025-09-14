@@ -43,26 +43,6 @@ const AIRevolution2025Page = () => {
         title="AI Revolution 2025: Next-Generation Artificial Intelligence | Zion Tech Group"
         description="Discover the revolutionary AI technologies that are reshaping industries in 2025. Quantum-AI fusion, neural interfaces, autonomous systems, and conscious AI frameworks."
         keywords="AI revolution 2025, quantum AI, neural interfaces, autonomous AI, conscious AI, artificial intelligence breakthrough, next-gen AI"
-        canonical="https://ziontechgroup.com/ai-revolution-2025"
-        openGraph={{
-          title: 'AI Revolution 2025: Next-Generation Artificial Intelligence',
-          description: 'Experience groundbreaking AI technologies that will reshape industries and enhance human capabilities.',
-          type: 'website',
-          images: [
-            {
-              url: '/images/ai-revolution-2025-og.jpg',
-              width: 1200,
-              height: 630,
-              alt: 'AI Revolution 2025 - Next-Generation Artificial Intelligence'
-            }
-          ]
-        }}
-        twitter={{
-          card: 'summary_large_image',
-          title: 'AI Revolution 2025: Next-Generation Artificial Intelligence',
-          description: 'Discover revolutionary AI technologies reshaping industries in 2025.',
-          images: ['/images/ai-revolution-2025-twitter.jpg']
-        }}
       />
       
       <div className="min-h-screen">

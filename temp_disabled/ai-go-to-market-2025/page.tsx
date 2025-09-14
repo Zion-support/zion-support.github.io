@@ -52,6 +52,11 @@ export default function AIGoToMarket2025() {
             <div>
               <div className="text-3xl font-bold text-pink-600 mb-2">7</div>
               <div className="text-gray-600">Distribution Plays</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <header className="mb-12">

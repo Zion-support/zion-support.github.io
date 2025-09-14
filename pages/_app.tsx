@@ -7,9 +7,8 @@ import { Provider as ReduxProvider } from 'react-redux';
 // import i18n from '@/i18n/index';
 import { Inter, Poppins } from 'next/font/google';
 import Head from 'next/head';
-import '../src/index.css';
+// import '../app/globals.css';
 import * as Sentry from '@sentry/nextjs';
-import '../styles/globals.css';
 
 // Initialize Sentry
 Sentry.init({
