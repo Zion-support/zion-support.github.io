@@ -2,8 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 
 interface SEOProps {
-<<<<<<< HEAD
-=======
   title?: string;
   description?: string;
   keywords?: string;
@@ -47,4 +45,3 @@ const SEO: React.FC<SEOProps> = ({
 };
 
 export default SEO;
->>>>>>> cursor/create-and-deploy-new-content-040d

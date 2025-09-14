@@ -58,17 +58,55 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+    // New blog posts
     {
-      url: `${baseUrl}/blog/ai-2025-ultimate-breakthrough-revolutionary-autonomous-systems`,
+<<<<<<< HEAD
+      url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
+=======
+      url: `${baseUrl}/blog/ai-2025-enterprise-integration-revolution`,
+>>>>>>> origin/main
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/case-studies/global-enterprise-ai-2025-autonomous-transformation-ultimate-success`,
+<<<<<<< HEAD
+      url: `${baseUrl}/blog/quantum-ai-2026-business-revolution`,
+=======
+      url: `${baseUrl}/blog/ai-2025-smart-automation-breakthrough`,
+>>>>>>> origin/main
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
+    },
+    // New resources
+    {
+<<<<<<< HEAD
+      url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
+=======
+      url: `${baseUrl}/blog/ai-2025-data-intelligence-revolution`,
+>>>>>>> origin/main
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies/global-manufacturing-ai-transformation`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies/financial-services-ai-revolution`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/resources/ai-implementation-guide-2025`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
     }
   ]
 }

@@ -3,8 +3,6 @@ import Link from 'next/link';
 
 const NewContent2025UltimateBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-=======
     <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
@@ -126,7 +124,6 @@ const NewContent2025UltimateBanner: React.FC = () => {
             >
               Get Custom Consultation
             </Link>
->>>>>>> cursor/create-and-deploy-new-content-040d
           </div>
         </div>
       </div>
