@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 3
+  total_content_pieces: 6
   
   new_2025_content:
     - id: "autonomous-systems-revolution"
@@ -36,6 +36,40 @@ content_index:
       featured: true
       is_new: true
 
+  new_2026_content:
+    - id: "enterprise-automation-breakthrough"
+      type: "blog"
+      title: "AI 2026: Enterprise Automation Breakthrough - 400% ROI in 90 Days"
+      file_path: "/content/blog/ai-2026-enterprise-automation-breakthrough.md"
+      url: "/blog/ai-2026-enterprise-automation-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Enterprise Automation", "ROI", "Business Transformation", "2026"]
+      featured: true
+      is_new: true
+      
+    - id: "fortune-500-transformation"
+      type: "case-study"
+      title: "Fortune 500 AI Transformation: $5.2B Revenue Increase in 12 Months"
+      file_path: "/content/case-studies/fortune-500-ai-transformation-2026.md"
+      url: "/case-studies/fortune-500-ai-transformation-2026"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "AI Transformation", "Revenue Growth", "Enterprise"]
+      featured: true
+      is_new: true
+      
+    - id: "ai-implementation-master-guide"
+      type: "resource"
+      title: "AI Implementation Master Guide 2026: Complete Roadmap to 400% ROI"
+      file_path: "/content/resources/ai-implementation-master-guide-2026.md"
+      url: "/resources/ai-implementation-master-guide-2026"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2026"]
+      featured: true
+      is_new: true
+
   promotion_components:
     - name: "NewContent2025PromotionBanner"
       file_path: "/src/components/NewContent2025PromotionBanner.tsx"
@@ -66,9 +100,17 @@ content_index:
       - "Updated layout to include promotional content"
 
   metrics:
-    expected_roi_mentions: 3
-    success_stories: 1
-    implementation_guides: 1
-    blog_posts: 1
-    total_word_count: "~8,500 words"
-    estimated_reading_time: "~35 minutes"
+    expected_roi_mentions: 9
+    success_stories: 2
+    implementation_guides: 2
+    blog_posts: 2
+    total_word_count: "~25,000 words"
+    estimated_reading_time: "~100 minutes"
+    
+  content_highlights:
+    - "400% ROI achievement in 90 days"
+    - "$5.2B revenue increase case study"
+    - "Complete AI implementation roadmap"
+    - "Fortune 500 transformation success"
+    - "Enterprise automation breakthrough"
+    - "Comprehensive master guide"
