@@ -188,14 +188,9 @@ export default function HomePage() {
         
         {/* Content Promotion Banners */}
         <UltimateContentShowcase2025 />
-        <RevolutionaryContent2026Banner />
-        <FeaturedContentShowcase2026 />
-        <EnhancedContentPromotionBanner2026 />
-        <ComprehensiveContentShowcase2026 />
         <NewContentPromotionBanner />
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
-        <NewContent2026Showcase />
         <InteractiveContentDiscoveryWidget />
 
         {/* Advanced AI Components */}
