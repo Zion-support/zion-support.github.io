@@ -1,43 +1,20 @@
 #!/bin/bash
 
-echo "Resolving merge conflicts systematically..."
+echo "Resolving merge conflicts..."
 
-# Keep our version for important content and navigation files
-echo "Keeping our version for content and navigation files..."
-git checkout --ours app/ai-innovation-showcase-2025/page.tsx
-git checkout --ours app/ai-innovation-showcase-2026/page.tsx
-git checkout --ours app/content-showcase/page.tsx
-git checkout --ours app/case-studies/page.tsx
-git checkout --ours app/sitemap.ts
-git checkout --ours app/sitemap.xml
+# Find all files with conflicts
+conflict_files=$(git diff --name-only --diff-filter=U)
 
-# Keep our version for enhanced components
-echo "Keeping our version for enhanced components..."
-git checkout --ours components/*.tsx
-git checkout --ours src/components/*.tsx
+for file in $conflict_files; do
+    echo "Resolving conflicts in $file"
+    
+    # Remove conflict markers and keep both versions where possible
+    sed -i '/^<<<<<<< HEAD$/d' "$file"
+    sed -i '/^=======$/d' "$file"
+    sed -i '/^>>>>>>> [a-f0-9]*$/d' "$file"
+    
+    # Remove duplicate lines that might have been created
+    awk '!seen[$0]++' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
+done
 
-# Keep our version for blog and case study content
-echo "Keeping our version for blog and case study content..."
-git checkout --ours src/pages/blog/*.md
-git checkout --ours src/pages/case-studies/*.md
-git checkout --ours src/pages/resources/*.md
-
-# Keep remote version for generated files and reports
-echo "Keeping remote version for generated files..."
-git checkout --theirs auto-heal-report.md
-git checkout --theirs data/marketing/*.json
-git checkout --theirs public/search/index.json
-git checkout --theirs public/reports/metadata/*.html
-git checkout --theirs public/reports/metadata/*.json
-
-# Handle add/add conflicts by removing one version
-echo "Handling add/add conflicts..."
-git rm -f components/AdvancedPerformanceOptimizer.tsx 2>/dev/null || true
-git rm -f public/reports/metadata/index.html 2>/dev/null || true
-git rm -f public/reports/metadata/latest.json 2>/dev/null || true
-
-# Handle rename conflicts by keeping the newer version
-echo "Handling rename conflicts..."
-git rm -f "components/NewContent2026UltimateShowcase.tsx" 2>/dev/null || true
-
-echo "Conflict resolution completed!"
+echo "All conflicts resolved!"
