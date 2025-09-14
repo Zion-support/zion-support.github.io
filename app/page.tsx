@@ -27,10 +27,30 @@ import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
+import NewContent2026Showcase from '../components/NewContent2026Showcase';
+import NewContent2025ShowcaseBanner from '../components/NewContent2025ShowcaseBanner';
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
+import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+// Import new 2026 promotional components
+import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
+
+// Import new revolutionary 2026 content banners
 import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
-import NewContentShowcase2026 from '../components/NewContentShowcase2026';
+import AutonomousEnterprise2026Banner from '../components/AutonomousEnterprise2026Banner';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+
+// Import additional promotional components
+import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
+import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -49,6 +69,30 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Revolutionary Content 2026 Banner */}
+        <RevolutionaryContent2026Banner />
+        
+        {/* Quantum AI 2026 Breakthrough Banner */}
+        <QuantumAI2026BreakthroughBanner />
+        
+        {/* Autonomous Enterprise 2026 Banner */}
+        <AutonomousEnterprise2026Banner />
+        
+        {/* Ultimate Promotion Banner */}
+        <UltimatePromotionBanner2026 />
+        
+        {/* Revolutionary Content 2025 Banner */}
+        <RevolutionaryContent2025Banner />
+        
+        {/* AI 2025 Breakthrough Banner */}
+        <AI2025BreakthroughBanner />
+        
+        {/* New Content 2025 Showcase Banner */}
+        <NewContent2025ShowcaseBanner />
+        
+        {/* Revolutionary AI Content Banner */}
+        <RevolutionaryAIContentBanner />
+        
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
         
@@ -147,11 +191,45 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Tools Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Interactive Tools</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="text-4xl mb-4">⚛️</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Quantum AI ROI Calculator</h3>
+                <p className="text-gray-600 mb-4">
+                  Calculate the potential ROI of implementing quantum AI in your organization. 
+                  Based on real-world data from Fortune 500 implementations.
+                </p>
+                <Link href="/tools/quantum-ai-roi-calculator-2026" className="text-purple-600 font-semibold hover:text-purple-800">
+                  Try Calculator →
+                </Link>
+              </div>
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="text-4xl mb-4">🔍</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Autonomous Enterprise Assessment</h3>
+                <p className="text-gray-600 mb-4">
+                  Evaluate your organization's readiness for autonomous AI systems and get 
+                  personalized recommendations for successful implementation.
+                </p>
+                <Link href="/tools/autonomous-enterprise-readiness-assessment" className="text-purple-600 font-semibold hover:text-purple-800">
+                  Take Assessment →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Content Promotion Banners */}
-        <QuantumAI2026BreakthroughBanner />
-        <NewContentShowcase2026 />
+        <UltimateContentShowcase2025 />
+        <NewContent2025PromotionBanner />
+        <LatestContentShowcase2025 />
         <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
+        <RevolutionaryContent2026Banner />
+        <FeaturedContentShowcase2026 />
         <NewContentPromotionBanner />
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
