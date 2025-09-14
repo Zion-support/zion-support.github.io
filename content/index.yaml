@@ -70,6 +70,7 @@ content_index:
       featured: true
       is_new: true
       
+<<<<<<< HEAD
     - id: "healthcare-ai-transformation"
       type: "case-study"
       title: "Healthcare AI Transformation 2025: How a Regional Hospital System Achieved 400% ROI"
@@ -87,6 +88,19 @@ content_index:
         diagnostic_accuracy: "35% improvement"
         patient_satisfaction: "94%"
         
+=======
+    - id: "enterprise-automation-revolution"
+      type: "blog"
+      title: "AI 2025: The Enterprise Automation Revolution - 500% ROI in 60 Days"
+      file_path: "/content/blog/ai-2025-enterprise-automation-revolution.md"
+      url: "/blog/ai-2025-enterprise-automation-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Enterprise Automation", "ROI", "Business Transformation", "2025"]
+      featured: true
+      is_new: true
+      
+>>>>>>> cursor/create-and-deploy-new-content-c76f
     - id: "global-enterprise-success"
       type: "case-study"
       title: "Global Enterprise AI Transformation: $2.8B Ultimate Success Story"
@@ -98,6 +112,7 @@ content_index:
       featured: true
       is_new: true
       
+<<<<<<< HEAD
     - id: "ai-implementation-roadmap"
       type: "resource"
       title: "AI Implementation Roadmap 2025: Your Complete Guide to Enterprise AI Success"
@@ -114,6 +129,19 @@ content_index:
         implementation_time: "67% faster"
         cost_reduction: "45% average"
         
+=======
+    - id: "ai-transformation-2025-ultimate-success"
+      type: "case-study"
+      title: "AI Transformation 2025: $50M Annual Savings in 6 Months - Ultimate Success Story"
+      file_path: "/content/case-studies/ai-transformation-2025-ultimate-success.md"
+      url: "/case-studies/ai-transformation-2025-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "AI Transformation", "Fortune 500", "Cost Savings", "ROI", "Success Story"]
+      featured: true
+      is_new: true
+      
+>>>>>>> cursor/create-and-deploy-new-content-c76f
     - id: "autonomous-systems-guide"
       type: "resource"
       title: "AI 2025 Autonomous Systems Implementation Master Guide"
