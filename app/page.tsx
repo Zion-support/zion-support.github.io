@@ -49,6 +49,12 @@ import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase
 import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBanner';
 import RevolutionaryAI2026Banner from '../components/RevolutionaryAI2026Banner';
 
+// Import new 2026 promotional components
+import RevolutionaryQuantumSecurityBanner2026 from '../components/RevolutionaryQuantumSecurityBanner2026';
+import AutonomousEnterpriseRevolutionBanner2026 from '../components/AutonomousEnterpriseRevolutionBanner2026';
+import QuantumNeuralBreakthroughBanner2026 from '../components/QuantumNeuralBreakthroughBanner2026';
+import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -66,6 +72,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New 2026 Revolutionary Banners */}
+        <RevolutionaryQuantumSecurityBanner2026 />
+        <AutonomousEnterpriseRevolutionBanner2026 />
+        <QuantumNeuralBreakthroughBanner2026 />
+        
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
         
@@ -185,6 +196,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Interactive Content Discovery */}
+        <InteractiveContentDiscoveryWidget2026 />
+        
         {/* Content Promotion Banners */}
         <NewContent2026PromotionBanner />
         <QuantumAI2026BreakthroughBanner />
