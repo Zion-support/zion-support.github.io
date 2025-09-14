@@ -40,6 +40,10 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import AdvancedAnalyticsPromotionBanner from '../components/AdvancedAnalyticsPromotionBanner';
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 
+// Import neural interface promotional components
+import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRevolutionBanner2025';
+import NeuralInterfaceContentShowcase2025 from '../components/NeuralInterfaceContentShowcase2025';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -58,6 +62,9 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
         
+        {/* Neural Interface Revolution Banner - NEW CONTENT */}
+        <NeuralInterfaceRevolutionBanner2025 />
+        
         {/* Advanced Analytics Promotion Banner */}
         <AdvancedAnalyticsPromotionBanner />
         
@@ -66,6 +73,9 @@ export default function HomePage() {
         
         {/* New Content Showcase 2025 */}
         <NewContentShowcase2025 />
+        
+        {/* Neural Interface Content Showcase - NEW CONTENT */}
+        <NeuralInterfaceContentShowcase2025 />
         
         {/* Additional content sections can be added here */}
         
