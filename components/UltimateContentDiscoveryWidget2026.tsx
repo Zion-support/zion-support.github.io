@@ -3,6 +3,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, Star, Clock, TrendingUp, BookOpen, Video, FileText, Users, Zap } from 'lucide-react';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
 import { 
   Search, 
   Filter, 
@@ -34,6 +38,7 @@ import Link from 'next/link';
 const UltimateContentDiscoveryWidget2026 = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+<<<<<<< HEAD
   const [selectedSort, setSelectedSort] = useState('trending');
   const [showFilters, setShowFilters] = useState(false);
   const [favorites, setFavorites] = useState(new Set());
@@ -55,6 +60,8 @@ const UltimateContentDiscoveryWidget2026 = () => {
     { id: 'newest', name: 'Newest', icon: Clock },
     { id: 'popular', name: 'Most Popular', icon: Star },
     { id: 'relevance', name: 'Most Relevant', icon: Search }
+=======
+>>>>>>> main
   const [isSearching, setIsSearching] = useState(false);
 
   const categories = [
@@ -64,6 +71,10 @@ const UltimateContentDiscoveryWidget2026 = () => {
     { id: 'automation', name: 'Automation', icon: <Users className="w-4 h-4" /> },
     { id: 'tutorials', name: 'Tutorials', icon: <Video className="w-4 h-4" /> },
     { id: 'case-studies', name: 'Case Studies', icon: <FileText className="w-4 h-4" /> }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
   const [viewMode, setViewMode] = useState('grid');
   const [sortBy, setSortBy] = useState('trending');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -80,13 +91,17 @@ const UltimateContentDiscoveryWidget2026 = () => {
     { id: 'future-tech', name: 'Future Tech', icon: Rocket, color: 'from-orange-500 to-red-500' },
     { id: 'tutorials', name: 'Tutorials', icon: BookOpen, color: 'from-indigo-500 to-purple-500' },
     { id: 'case-studies', name: 'Case Studies', icon: TrendingUp, color: 'from-pink-500 to-rose-500' }
+<<<<<<< HEAD
     { id: 'popular', name: 'Most Popular', icon: Users },
     { id: 'relevance', name: 'Most Relevant', icon: Star }
+=======
+>>>>>>> main
   ];
 
   const contentItems = [
     {
       id: 1,
+<<<<<<< HEAD
       title: 'AI 2026-2030 Ultimate Predictions',
       description: 'Comprehensive analysis of revolutionary AI breakthroughs that will reshape our world over the next five years.',
       category: 'ai-predictions',
@@ -163,6 +178,8 @@ const UltimateContentDiscoveryWidget2026 = () => {
       thumbnail: '/api/placeholder/400/250',
       featured: true,
       publishedAt: '2025-01-10'
+=======
+>>>>>>> main
       title: "AI-Powered Business Transformation Guide 2026",
       category: 'ai',
       type: 'guide',
@@ -238,12 +255,15 @@ const UltimateContentDiscoveryWidget2026 = () => {
       duration: '60 min',
       views: '2.8M',
       rating: 4.8,
+<<<<<<< HEAD
       duration: '18 min video',
       views: '7.4k',
       featured: false,
       description: "Understanding quantum encryption and security protocols for modern applications."
       views: '2.8M',
       rating: 4.8,
+=======
+>>>>>>> main
       trending: true,
       thumbnail: '/api/placeholder/400/225',
       tags: ['Space', 'AI', 'Exploration', 'Communication']
@@ -260,6 +280,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
     return matchesSearch && matchesCategory;
   });
 
+<<<<<<< HEAD
   const sortedContent = [...filteredContent].sort((a, b) => {
     switch (selectedSort) {
       case 'newest':
@@ -272,12 +293,18 @@ const UltimateContentDiscoveryWidget2026 = () => {
         return (b.views + b.likes) - (a.views + a.likes);
     }
   });
+=======
+>>>>>>> main
   const handleSearch = async (query: string) => {
     setSearchQuery(query);
     setIsSearching(true);
     // Simulate search delay
     setTimeout(() => setIsSearching(false), 1000);
   };
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
 
   const toggleFavorite = (id) => {
     setFavorites(prev => {
@@ -393,9 +420,12 @@ const UltimateContentDiscoveryWidget2026 = () => {
           </p>
         </div>
 
+<<<<<<< HEAD
         {/* Search and Filter Interface */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20">
           <div className="flex flex-col lg:flex-row gap-4 mb-6">
+=======
+>>>>>>> main
         {/* Search and Filters */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 mb-8">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -406,14 +436,21 @@ const UltimateContentDiscoveryWidget2026 = () => {
               </div>
               <input
                 type="text"
+<<<<<<< HEAD
                 placeholder="Search content, tags, or topics..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+=======
+>>>>>>> main
                 placeholder="Search for content, tutorials, guides..."
                 value={searchQuery}
                 onChange={(e) => handleSearch(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
                 placeholder="Search for content, topics, or technologies..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -426,7 +463,10 @@ const UltimateContentDiscoveryWidget2026 = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
+<<<<<<< HEAD
                 className="appearance-none bg-white/10 border border-white/20 rounded-lg px-4 py-3 pr-8 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+=======
+>>>>>>> main
                 className="appearance-none bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white pr-8 focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 {categories.map(category => (
@@ -437,6 +477,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
               </select>
               <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
             </div>
+<<<<<<< HEAD
 
             {/* Sort Options */}
             <div className="relative">
@@ -659,12 +700,18 @@ const UltimateContentDiscoveryWidget2026 = () => {
         </motion.div>
       </div>
     </div>
+=======
+>>>>>>> main
             {/* Filter Button */}
             <button className="flex items-center px-6 py-4 bg-white/20 border border-white/30 rounded-xl text-white hover:bg-white/30 transition-colors">
               <Filter className="w-5 h-5 mr-2" />
               Filters
             </button>
           </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
 
             {/* Sort Options */}
             <div className="relative">
@@ -701,6 +748,44 @@ const UltimateContentDiscoveryWidget2026 = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+          {/* Category Pills */}
+          <div className="flex flex-wrap gap-2 mt-4">
+            {categories.map(category => {
+              const Icon = category.icon;
+              return (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                  }`}
+                >
+                  <Icon className="w-4 h-4" />
+                  {category.name}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+=======
+  );
+};
+
+        {/* Results Count */}
+        <div className="flex items-center justify-between mb-6">
+          <p className="text-gray-300">
+            Showing {sortedContent.length} of {contentItems.length} results
+          </p>
+          <div className="flex items-center gap-2 text-sm text-gray-400">
+            <TrendingUp className="w-4 h-4" />
+            <span>Real-time updates</span>
+          </div>
+>>>>>>> main
         </div>
 
         {/* Content Grid */}
@@ -824,9 +909,13 @@ const UltimateContentDiscoveryWidget2026 = () => {
           </motion.div>
         )}
       </div>
+<<<<<<< HEAD
     </section>
     </motion.div>
     </div>
+=======
+    </motion.div>
+>>>>>>> main
   );
 };
 

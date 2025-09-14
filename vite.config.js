@@ -68,13 +68,15 @@ export default defineConfig(async ({ mode }) => {
     plugins,
     build: {
       rollupOptions: {
+        external: [],
         output: {
           manualChunks: {
             vendor: ['react', 'react-dom'],
             ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
             utils: ['axios', 'framer-motion', 'clsx', 'tailwind-merge'],
             charts: ['recharts'],
-            forms: ['react-hook-form', '@hookform/resolvers']
+            forms: ['react-hook-form', '@hookform/resolvers'],
+            helmet: ['react-helmet-async']
           },
         },
       },
@@ -109,7 +111,7 @@ export default defineConfig(async ({ mode }) => {
       },
     },
     optimizeDeps: {
-      include: ['react', 'react-dom', 'framer-motion'],
+      include: ['react', 'react-dom', 'framer-motion', 'react-helmet-async'],
       exclude: ['@vite/client', '@vite/env']
     }
   };

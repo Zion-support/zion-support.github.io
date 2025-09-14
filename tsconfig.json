@@ -1,19 +1,24 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
     "lib": [
       "dom",
       "dom.iterable",
       "es6",
-      "es2017"
+      "es2017",
+      "es2018",
+      "es2019",
+      "es2020",
+      "es2021"
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -21,14 +26,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@/store/*": ["./store/*"],
-      "@/i18n/*": ["./i18n/*"]
-    },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+      "@/components/*": ["./components/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
