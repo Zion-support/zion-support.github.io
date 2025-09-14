@@ -36,6 +36,8 @@ import InteractiveROICalculator from '../components/InteractiveROICalculator';
 import ComprehensiveContentShowcase2025 from '../components/ComprehensiveContentShowcase2025';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+import NeuralInterfaceRevolutionBanner from '../components/NeuralInterfaceRevolutionBanner';
+import AdvancedContentShowcase2025 from '../components/AdvancedContentShowcase2025';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -54,6 +56,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Neural Interface Revolution Banner - NEW FEATURED */}
+        <NeuralInterfaceRevolutionBanner />
+        
+        {/* Advanced Content Showcase 2025 - NEW FEATURED */}
+        <AdvancedContentShowcase2025 />
+        
         {/* Revolutionary Content 2025 Banner - NEW FEATURED */}
         <RevolutionaryContent2025Banner />
         
