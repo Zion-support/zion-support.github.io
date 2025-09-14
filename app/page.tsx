@@ -180,6 +180,17 @@ import EnhancedContentDiscovery2025 from '../components/EnhancedContentDiscovery
 import AdvancedAI2025BreakthroughBanner from '../components/AdvancedAI2025BreakthroughBanner';
 import UltimateContentShowcase2025Enhanced from '../components/UltimateContentShowcase2025Enhanced';
 
+// Import new Neural Consciousness AI 2025 components
+import NeuralConsciousnessAI2025RevolutionBanner from '../components/NeuralConsciousnessAI2025RevolutionBanner';
+import UltimateAI2026FutureBanner from '../components/UltimateAI2026FutureBanner';
+import InteractiveAIConsciousnessDemo2025 from '../components/InteractiveAIConsciousnessDemo2025';
+import UltimateAIRevolutionShowcase2025 from '../components/UltimateAIRevolutionShowcase2025';
+
+// Import new Transcendent AI 2026 components
+import TranscendentAI2026Banner from '../components/TranscendentAI2026Banner';
+import UltimateROICalculator2026 from '../components/UltimateROICalculator2026';
+import UltimateAIAchievementSummary2025 from '../components/UltimateAIAchievementSummary2025';
+
 // Import new AI Business Intelligence 2025 promotional components
 import AIBusinessIntelligence2025Banner from '../components/AIBusinessIntelligence2025Banner';
 import AIBusinessIntelligenceShowcase2025 from '../components/AIBusinessIntelligenceShowcase2025';
@@ -310,6 +321,15 @@ export default function HomePage() {
         />
         
         <div className='min-h-screen bg-white'>
+        {/* TRANSCENDENT AI 2026 BANNER - NEWEST BREAKTHROUGH */}
+        <TranscendentAI2026Banner />
+        
+        {/* NEURAL CONSCIOUSNESS AI 2025 REVOLUTION BANNER - NEWEST BREAKTHROUGH */}
+        <NeuralConsciousnessAI2025RevolutionBanner />
+        
+        {/* ULTIMATE AI 2026 FUTURE BANNER - NEWEST BREAKTHROUGH */}
+        <UltimateAI2026FutureBanner />
+        
         {/* ADVANCED AI 2025 BREAKTHROUGH BANNER - NEWEST BREAKTHROUGH */}
         <AdvancedAI2025BreakthroughBanner />
         
@@ -323,7 +343,3 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 - NEWEST FEATURED */}
         <UltimateContentDiscoveryWidget2025 />
-        </div>
-      </ErrorBoundary>
-    );
-  }
