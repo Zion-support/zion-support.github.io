@@ -162,6 +162,54 @@ content_index:
         time: "6-12 months"
 
   new_2025_content_ultimate:
+    - id: "enterprise-ai-revolution-ultimate"
+      type: "blog"
+      title: "AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough"
+      file_path: "/content/blog/ai-2025-enterprise-ai-revolution-ultimate-breakthrough.md"
+      url: "/blog/ai-2025-enterprise-ai-revolution-ultimate-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Enterprise", "ROI", "Breakthrough", "Fortune 500"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,200%"
+        savings: "$500M+"
+        accuracy: "99.97%"
+        satisfaction: "98%"
+        
+    - id: "fortune-500-ultimate-success"
+      type: "case-study"
+      title: "Fortune 500 AI Transformation 2025: $750M Annual Savings - Ultimate Success Story"
+      file_path: "/content/case-studies/fortune-500-ai-transformation-2025-ultimate-success.md"
+      url: "/case-studies/fortune-500-ai-transformation-2025-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Fortune 500", "AI Transformation", "ROI", "Success Story", "Manufacturing"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,500%"
+        savings: "$750M"
+        efficiency: "156%"
+        uptime: "99.9%"
+        
+    - id: "ai-implementation-ultimate-guide-2025"
+      type: "resource"
+      title: "AI Implementation Ultimate Guide 2025: Complete Roadmap to 1,500% ROI"
+      file_path: "/content/resources/ai-implementation-ultimate-guide-2025-complete-roadmap.md"
+      url: "/resources/ai-implementation-ultimate-guide-2025-complete-roadmap"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Roadmap", "Best Practices"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,500%"
+        payback: "2.4 months"
+        success: "98%"
+        savings: "$200M+"
+        
     - id: "cybersecurity-revolution"
       type: "blog"
       title: "AI 2025: The Cybersecurity Revolution - Ultimate Guide"
