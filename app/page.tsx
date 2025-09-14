@@ -27,6 +27,11 @@ import InteractiveContentDiscovery2025 from '../components/InteractiveContentDis
 import AITrends2025PromotionalBanner from '../components/AITrends2025PromotionalBanner';
 import AIAutomationROICalculator from '../components/AIAutomationROICalculator';
 
+// Import new 2025 content showcase components
+import AI2025UltimateInnovationShowcaseBanner from '../components/AI2025UltimateInnovationShowcaseBanner';
+import InteractiveROICalculator2025 from '../components/InteractiveROICalculator2025';
+import SuccessStoriesShowcase2025 from '../components/SuccessStoriesShowcase2025';
+
 // Import new 2025 Innovation Showcase components
 import AI2025InnovationShowcase from '../components/AI2025InnovationShowcase';
 import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
@@ -296,6 +301,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE INNOVATION SHOWCASE BANNER - NEWEST CONTENT */}
+        <AI2025UltimateInnovationShowcaseBanner />
+        
+        {/* INTERACTIVE ROI CALCULATOR 2025 - NEW INTERACTIVE TOOL */}
+        <InteractiveROICalculator2025 />
+        
+        {/* SUCCESS STORIES SHOWCASE 2025 - NEW SUCCESS STORIES */}
+        <SuccessStoriesShowcase2025 />
+        
         {/* AI 2026 FUTURE PREDICTIONS ULTIMATE BREAKTHROUGH BANNER - NEWEST BREAKTHROUGH */}
         <AI2026FuturePredictionsUltimateBreakthroughBanner />
         
