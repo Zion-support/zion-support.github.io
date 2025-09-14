@@ -1,91 +1,133 @@
-# Netlify Build Fix for Yarn Cache Issues
+# Netlify Build Fix - Comprehensive Solution
 
-## Problem
+## Problem Summary
+
 The Netlify build was failing with the following error:
 ```
-Error: ENOENT: no such file or directory, copyfile '/opt/buildhome/.yarn_cache/v6/npm-arg-5.0.2-c81433cc427c92c4dcf4865142dbca6f15acd59c-integrity/node_modules/arg/LICENSE.md' -> '/opt/build/repo/node_modules/tailwindcss/node_modules/arg/LICENSE.md'
+error Error: EEXIST: file already exists, mkdir '/opt/build/repo/node_modules/critters/node_modules'
 ```
 
-This is a common issue with Yarn cache corruption on Netlify where dependency files are missing from the cache.
+## Root Causes Identified
 
-## Solution Implemented
+1. **Duplicate Dependency**: The `critters` package was listed in both `dependencies` and `devDependencies` in `package.json`
+2. **Missing Peer Dependencies**: OpenTelemetry packages were missing the required `@opentelemetry/api` peer dependency
+3. **Yarn Configuration Issues**: Yarn immutable installs and frozen lockfile settings were causing conflicts
 
-### 1. Updated `netlify.toml`
-- Added custom build command that runs our fix script
-- Configured Yarn environment variables to prevent cache issues
-- Added cache directory configuration
+## Solutions Implemented
 
-### 2. Created `scripts/netlify-build-fix.sh`
-A comprehensive build script that:
-- Clears problematic caches
-- Forces clean dependency installation
-- Verifies critical dependencies
-- Handles missing files (like the arg LICENSE.md)
-- Provides detailed logging
+### 1. Fixed Package.json Dependencies
 
-### 3. Added `.yarnrc.yml`
-Configuration file that:
-- Disables immutable installs
-- Sets appropriate timeouts
-- Configures cache settings to prevent corruption
-- Enables better error handling
+**Removed duplicate critters dependency:**
+- Removed `critters` from `dependencies` (kept in `devDependencies` only)
+- Added missing `@opentelemetry/api@^1.9.0` to resolve peer dependency warnings
 
-### 4. Updated `package.json`
-Added `build:netlify-fix` script as an alternative build method.
+### 2. Enhanced Netlify Configuration
 
-## How to Use
-
-### Option 1: Automatic (Recommended)
-The fix is now automatically applied through the `netlify.toml` configuration. Just trigger a new deployment.
-
-### Option 2: Manual
-If you need to manually trigger the fix:
-```bash
-bash scripts/netlify-build-fix.sh
-```
-
-### Option 3: Alternative Build Command
-Use the alternative build script:
-```bash
-yarn build:netlify-fix
-```
-
-## What the Fix Does
-
-1. **Cache Clearing**: Removes corrupted cache files that cause ENOENT errors
-2. **Force Reinstall**: Uses `--force` and `--no-cache` flags to ensure clean installation
-3. **Dependency Verification**: Checks for critical packages and reinstalls if missing
-4. **Missing File Recovery**: Creates missing files (like LICENSE.md) when possible
-5. **Detailed Logging**: Provides clear feedback on what's happening during the build
-
-## Environment Variables Set
-
-- `YARN_CACHE_FOLDER`: Sets explicit cache location
-- `YARN_ENABLE_IMMUTABLE_INSTALLS`: Disables immutable installs to allow recovery
-- `NODE_OPTIONS`: Maintains existing memory and OpenSSL settings
-
-## Testing
-
-To test the fix locally:
-```bash
-# Simulate the Netlify environment
-export NODE_ENV=production
-export YARN_CACHE_FOLDER=.yarn_cache
-bash scripts/netlify-build-fix.sh
-```
-
-## Rollback
-
-If needed, you can revert to the original build command by updating `netlify.toml`:
+**Updated `netlify.toml` with optimized settings:**
 ```toml
-[build]
-  functions = "netlify/functions"
-  command = "yarn build"
+[build.environment]
+  # Yarn configuration - optimized for conflict resolution
+  YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
+  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
+  YARN_DEDUPE = "false"
+  YARN_FROZEN_LOCKFILE = "false"
+  
+  # Handle peer dependencies
+  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+  NPM_CONFIG_FORCE = "true"
+  
+  # Additional optimizations
+  CI = "true"
+  GENERATE_SOURCEMAP = "false"
 ```
 
-## Additional Notes
+### 3. Created Robust Build Script
 
-- The fix is designed to be idempotent (safe to run multiple times)
-- It preserves your existing build configuration
-- All changes are backward compatible
-- The script includes error handling and will fail fast if critical issues occur
+**New build script: `scripts/build-with-error-handling.js`**
+- Handles dependency conflicts gracefully
+- Provides detailed error reporting
+- Falls back to npm if yarn fails
+- Includes build verification
+- Optimized for Netlify environment
+
+### 4. Added Yarn Configuration
+
+**Created `.yarnrc` with conflict resolution settings:**
+```
+--install.enable-immutable-installs false
+--install.frozen-lockfile false
+--network-timeout 600000
+--install.dedupe false
+```
+
+### 5. Updated Build Commands
+
+**Enhanced package.json scripts:**
+- `build:netlify`: Uses the new error-handling build script
+- `build:clean`: Clean install option for local development
+
+## Files Modified
+
+1. `package.json` - Fixed dependencies and added build scripts
+2. `netlify.toml` - Optimized build environment settings
+3. `scripts/build-with-error-handling.js` - New robust build script
+4. `.yarnrc` - Yarn configuration for conflict resolution
+
+## Testing the Fix
+
+### Local Testing
+```bash
+# Test the new build script locally
+npm run build:netlify
+
+# Test clean build
+npm run build:clean
+```
+
+### Netlify Deployment
+The build should now succeed with:
+- Proper dependency resolution
+- No EEXIST errors
+- Resolved peer dependency warnings
+- Better error reporting if issues occur
+
+## Additional Optimizations
+
+### Performance Improvements
+- Disabled sourcemap generation for production builds
+- Optimized cache settings
+- Reduced build time with better dependency management
+
+### Error Handling
+- Comprehensive error reporting
+- Fallback strategies for dependency installation
+- Build verification steps
+
+## Monitoring
+
+After deployment, monitor:
+1. Build success rate
+2. Build duration
+3. Any remaining dependency warnings
+4. Performance metrics
+
+## Rollback Plan
+
+If issues persist:
+1. Revert to original `package.json` dependencies
+2. Use standard `npm run build` command
+3. Remove custom build script
+4. Use basic Netlify configuration
+
+## Next Steps
+
+1. **Deploy and Test**: Push changes to trigger Netlify build
+2. **Monitor**: Watch build logs for any remaining issues
+3. **Optimize**: Further tune settings based on build performance
+4. **Document**: Update deployment procedures with new build process
+
+---
+
+**Created**: $(date)
+**Status**: Ready for deployment
+**Priority**: High - Fixes critical build failure

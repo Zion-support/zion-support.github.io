@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+import React, { useEffect, useState } from 'react';
+import { Zap, TrendingUp, Clock, Shield, Globe, Activity } from 'lucide-react';
+>>>>>>> main
 
 const AdvancedPerformanceOptimizer = () => {
   const [metrics, setMetrics] = useState({
