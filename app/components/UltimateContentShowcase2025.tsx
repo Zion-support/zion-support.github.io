@@ -13,7 +13,7 @@ import {
   ArrowRight,
   Star,
   Clock,
-  Target
+  Award
 } from 'lucide-react';
 
 interface ContentItem {
@@ -97,7 +97,7 @@ const UltimateContentShowcase2025: React.FC = () => {
     switch (type) {
       case 'blog': return <TrendingUp className="w-5 h-5" />;
       case 'case-study': return <Users className="w-5 h-5" />;
-      case 'resource': return <Target className="w-5 h-5" />;
+      case 'resource': return <Award className="w-5 h-5" />;
       default: return <Star className="w-5 h-5" />;
     }
   };

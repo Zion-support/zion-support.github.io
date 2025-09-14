@@ -13,7 +13,7 @@ import {
   ArrowRight,
   Star,
   Clock,
-  Target,
+  Award,
   X
 } from 'lucide-react';
 
@@ -25,7 +25,7 @@ const AI2025BreakthroughBanner: React.FC = () => {
     { value: '$500M+', label: 'Average ROI', icon: DollarSign, color: 'text-green-400' },
     { value: '99.8%', label: 'Success Rate', icon: CheckCircle, color: 'text-blue-400' },
     { value: '340%', label: 'ROI Increase', icon: TrendingUp, color: 'text-purple-400' },
-    { value: '500+', label: 'Projects', icon: Target, color: 'text-pink-400' }
+    { value: '500+', label: 'Projects', icon: Award, color: 'text-pink-400' }
   ];
 
   const contentHighlights = [
@@ -47,7 +47,7 @@ const AI2025BreakthroughBanner: React.FC = () => {
       title: 'Enterprise Implementation Guide',
       description: 'Complete framework for $500M+ ROI in 24 months',
       url: '/resources/ai-implementation-enterprise-guide-2025',
-      icon: Target,
+      icon: Award,
       color: 'from-purple-500 to-pink-500'
     }
   ];
@@ -128,7 +128,7 @@ const AI2025BreakthroughBanner: React.FC = () => {
             >
               <div className="flex items-center gap-4">
                 <div className={`p-3 rounded-full bg-gradient-to-r ${metrics[currentMetric].color.replace('text-', 'from-').replace('-400', '-500')} to-${metrics[currentMetric].color.replace('text-', '').replace('-400', '-600')}`}>
-                  <metrics[currentMetric].icon className="w-6 h-6 text-white" />
+                  {React.createElement(metrics[currentMetric].icon, { className: "w-6 h-6 text-white" })}
                 </div>
                 <div>
                   <div className="text-3xl font-bold">{metrics[currentMetric].value}</div>
@@ -172,7 +172,7 @@ const AI2025BreakthroughBanner: React.FC = () => {
                 <Link href={highlight.url} className="block">
                   <div className="flex items-start gap-4">
                     <div className={`p-3 rounded-full bg-gradient-to-r ${highlight.color}`}>
-                      <highlight.icon className="w-6 h-6 text-white" />
+                      {React.createElement(highlight.icon, { className: "w-6 h-6 text-white" })}
                     </div>
                     <div className="flex-1">
                       <h3 className="text-lg font-bold mb-2 hover:text-blue-400 transition-colors">

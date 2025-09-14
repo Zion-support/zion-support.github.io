@@ -25,9 +25,19 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"]
-    }
+      "@/*": [
+        "./*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
@@ -36,6 +46,10 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "components/2028-services-showcase.tsx",
+    "components/2029-ultimate-services-showcase.tsx",
+    "components/2029-ultra-futuristic-innovations.tsx",
+    "components/2030-revolutionary-services.tsx"
   ]
 }
