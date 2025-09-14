@@ -144,6 +144,10 @@ import QuantumComputingShowcase2027 from './components/QuantumComputingShowcase2
 import BreakthroughTechnologies2025PromotionBanner from '../components/BreakthroughTechnologies2025PromotionBanner';
 import BreakthroughTechnologies2025Showcase from '../components/BreakthroughTechnologies2025Showcase';
 
+// Import new Next-Generation Autonomous Systems promotional components
+import NextGenerationAutonomousSystems2025PromotionBanner from '../components/NextGenerationAutonomousSystems2025PromotionBanner';
+import NextGenerationAutonomousSystemsShowcase2025 from '../components/NextGenerationAutonomousSystemsShowcase2025';
+
 // Import new Ultimate Autonomous AI Revolution components
 import UltimateAutonomousAIRevolutionBanner from '../components/UltimateAutonomousAIRevolutionBanner';
 import UltimateAutonomousAIContentShowcase from '../components/UltimateAutonomousAIContentShowcase';
@@ -251,6 +255,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEXT-GENERATION AUTONOMOUS SYSTEMS 2025 BANNER - NEWEST REVOLUTIONARY BREAKTHROUGH */}
+        <NextGenerationAutonomousSystems2025PromotionBanner />
+        
         {/* AI CONTENT REVOLUTION 2025 BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
         <AIContentRevolution2025Banner />
         
@@ -344,6 +351,9 @@ export default function HomePage() {
         
         {/* BREAKTHROUGH TECHNOLOGIES 2025 SHOWCASE - NEWEST ULTIMATE FEATURED */}
         <BreakthroughTechnologies2025Showcase />
+        
+        {/* NEXT-GENERATION AUTONOMOUS SYSTEMS 2025 SHOWCASE - NEWEST REVOLUTIONARY FEATURED */}
+        <NextGenerationAutonomousSystemsShowcase2025 />
         
         {/* AI Revolution Content Showcase - NEWEST FEATURED */}
         <AIRevolutionContentShowcase />
