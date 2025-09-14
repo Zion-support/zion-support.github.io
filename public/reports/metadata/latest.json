@@ -8160,6 +8160,16 @@
       }
     },
     {
+      "route": "/reports/blueprints/blueprint-2025-08-18-042101",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Reference Architecture — Autonomous Content Mesh",
+        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
+      }
+    },
+    {
       "route": "/reports/case-studies/ai-automation-success",
       "missing": [
         "og:image"
@@ -65648,6 +65658,16 @@
     },
     {
       "route": "/reports/updates/update-2025-08-18-0121",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-18 01:21",
+        "description": "Autonomous Update — 2025-08-18 01:21 — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-18-0122",
       "missing": [
         "og:title",
         "og:description",
