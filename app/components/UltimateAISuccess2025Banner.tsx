@@ -12,7 +12,7 @@ import { ChevronRightIcon, XMarkIcon, StarIcon, ChartBarIcon, CurrencyDollarIcon
 
 const UltimateAISuccess2025Banner = () => {
   const [isVisible, setIsVisible] = useState(true);
->>>>>>> cursor/create-and-deploy-new-content-6a2f
+>>>>>>> cursor/create-and-deploy-new-content-c9c3
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isDismissed, setIsDismissed] = useState(false);
 
@@ -27,7 +27,7 @@ const UltimateAISuccess2025Banner = () => {
     if (dismissed === 'true') {
       setIsDismissed(true);
       setIsVisible(false);
->>>>>>> cursor/create-and-deploy-new-content-6a2f
+>>>>>>> cursor/create-and-deploy-new-content-c9c3
     }
   }, []);
 
@@ -36,7 +36,7 @@ const UltimateAISuccess2025Banner = () => {
     if (isVisible) {
 =======
     if (!isDismissed) {
->>>>>>> cursor/create-and-deploy-new-content-6a2f
+>>>>>>> cursor/create-and-deploy-new-content-c9c3
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
       }, 5000);
@@ -160,7 +160,7 @@ const UltimateAISuccess2025Banner = () => {
     }
   ];
 
->>>>>>> cursor/create-and-deploy-new-content-6a2f
+>>>>>>> cursor/create-and-deploy-new-content-c9c3
   const currentContent = featuredContent[currentSlide];
 
   return (
@@ -458,7 +458,7 @@ const UltimateAISuccess2025Banner = () => {
                 </div>
                 <div className="text-sm text-white/70">Success Rate</div>
               </div>
->>>>>>> cursor/create-and-deploy-new-content-6a2f
+>>>>>>> cursor/create-and-deploy-new-content-c9c3
             </div>
           </div>
         </div>
@@ -531,7 +531,7 @@ const UltimateAISuccess2025Banner = () => {
             >
               AI Tools
             </Link>
->>>>>>> cursor/create-and-deploy-new-content-6a2f
+>>>>>>> cursor/create-and-deploy-new-content-c9c3
           </div>
         </div>
       </div>
