@@ -47,18 +47,17 @@ import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase20
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
-<<<<<<< HEAD
-import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
+import AIImplementationGuideBanner from '../components/AIImplementationGuideBanner';
 
 // Import new AI 2026 promotional components
 import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
 import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
 import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
-=======
 import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
 import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
->>>>>>> cursor/create-and-deploy-new-content-4254
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -77,16 +76,23 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
+        {/* New Content 2025 Ultimate Showcase Banner - LATEST */}
+        <NewContent2025UltimateShowcaseBanner />
+        
+        {/* Fortune 500 Success Banner - FEATURED */}
+        <Fortune500SuccessBanner />
+        
+        {/* AI Implementation Guide Banner - NEW RESOURCE */}
+        <AIImplementationGuideBanner />
+        
         {/* AI 2026 Ultimate Showcase Banner */}
         <AI2026UltimateShowcaseBanner />
-=======
+        
         {/* Quantum AI 2026 Breakthrough Banner */}
         <QuantumAI2026BreakthroughBanner />
         
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
->>>>>>> cursor/create-and-deploy-new-content-4254
         
         {/* AI 2026 Quantum Revolution Banner */}
         <AI2026QuantumRevolutionBanner />
