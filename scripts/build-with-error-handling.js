@@ -70,17 +70,25 @@ function installDependencies() {
   process.env.YARN_DEDUPE = 'false';
   process.env.NPM_CONFIG_LEGACY_PEER_DEPS = 'true';
   process.env.NPM_CONFIG_FORCE = 'true';
+  process.env.YARN_NETWORK_TIMEOUT = '600000';
   
   try {
-    // Try yarn install first
-    runCommand('yarn install --no-frozen-lockfile --network-timeout 600000', 'Install dependencies with Yarn');
+    // Try yarn install with specific flags to handle the arg package issue
+    runCommand('yarn install --no-frozen-lockfile --network-timeout 600000 --ignore-engines --ignore-optional', 'Install dependencies with Yarn');
   } catch (yarnError) {
-    log(`${colors.yellow}⚠️  Yarn install failed, trying npm install${colors.reset}`);
+    log(`${colors.yellow}⚠️  Yarn install failed, trying with cache cleanup${colors.reset}`);
     try {
-      runCommand('npm ci --legacy-peer-deps --force', 'Install dependencies with npm');
-    } catch (npmError) {
-      log(`${colors.red}❌ Both Yarn and npm installation failed${colors.reset}`);
-      throw new Error(`Dependency installation failed:\nYarn: ${yarnError.message}\nNPM: ${npmError.message}`);
+      // Clear yarn cache and try again
+      runCommand('yarn cache clean', 'Clear Yarn cache');
+      runCommand('yarn install --no-frozen-lockfile --network-timeout 600000 --ignore-engines --ignore-optional', 'Retry Yarn install after cache clear');
+    } catch (yarnRetryError) {
+      log(`${colors.yellow}⚠️  Yarn retry failed, trying npm install${colors.reset}`);
+      try {
+        runCommand('npm ci --legacy-peer-deps --force', 'Install dependencies with npm');
+      } catch (npmError) {
+        log(`${colors.red}❌ All installation methods failed${colors.reset}`);
+        throw new Error(`Dependency installation failed:\nYarn: ${yarnError.message}\nYarn Retry: ${yarnRetryError.message}\nNPM: ${npmError.message}`);
+      }
     }
   }
 }
