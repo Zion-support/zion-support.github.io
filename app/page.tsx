@@ -23,8 +23,7 @@ import UltimateContent2025Banner from '../components/UltimateContent2025Banner';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import ContentNavigation2025 from '../components/ContentNavigation2025';
-=======
->>>>>>> cursor/create-and-deploy-new-content-5291
+
 // Import new Ultimate Content 2025 Revolutionary components
 import UltimateContent2025RevolutionaryBanner from '../components/UltimateContent2025RevolutionaryBanner';
 import UltimateContent2025Showcase from '../components/UltimateContent2025Showcase';
@@ -194,6 +193,12 @@ import UltimateContent2026Showcase from '../components/UltimateContent2026Showca
 import UltimateContent2025RevolutionaryBanner from '../components/UltimateContent2025RevolutionaryBanner';
 import UltimateContent2025Showcase from '../components/UltimateContent2025Showcase';
 
+// Import new AI 2030 promotional components
+import AI2030ContentPromotionBanner from '../components/AI2030ContentPromotionBanner';
+import QuantumAI2030PromotionBanner from '../components/QuantumAI2030PromotionBanner';
+import UltimateContentShowcase2030 from '../components/UltimateContentShowcase2030';
+import SyntheticIntelligence2030PromotionBanner from '../components/SyntheticIntelligence2030PromotionBanner';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -211,6 +216,18 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2030 Content Promotion Banner - NEWEST FEATURED */}
+        <AI2030ContentPromotionBanner />
+        
+        {/* Quantum AI 2030 Promotion Banner - NEWEST FEATURED */}
+        <QuantumAI2030PromotionBanner />
+        
+        {/* Ultimate Content Showcase 2030 - NEWEST FEATURED */}
+        <UltimateContentShowcase2030 />
+        
+        {/* Synthetic Intelligence 2030 Promotion Banner - NEWEST FEATURED */}
+        <SyntheticIntelligence2030PromotionBanner />
+        
         {/* Ultimate Enterprise Transformation 2025 Banner - NEW ULTIMATE FEATURED */}
         <UltimateEnterpriseTransformation2025Banner />
         
