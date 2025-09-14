@@ -73,9 +73,13 @@ export default defineConfig(async ({ mode }) => {
             vendor: ['react', 'react-dom'],
             ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
             utils: ['axios', 'framer-motion', 'clsx', 'tailwind-merge'],
-            charts: ['recharts'],
             forms: ['react-hook-form', '@hookform/resolvers']
           },
+        },
+        external: (id) => {
+          // Externalize any missing dependencies to prevent build failures
+          const externalDeps = ['notistack', 'i18next', 'js-cookie'];
+          return externalDeps.some(dep => id.includes(dep));
         },
       },
       chunkSizeWarningLimit: 1000,

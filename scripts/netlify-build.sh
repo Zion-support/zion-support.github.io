@@ -15,8 +15,13 @@ yarn cache clean
 echo "Installing dependencies..."
 yarn install --frozen-lockfile --network-timeout 1000000 --ignore-engines
 
-# Build the application
-echo "Building application..."
-npm run build
+# Build the application using Vite
+echo "Building application with Vite..."
+npx vite build
+
+# Ensure dist directory exists and copy any necessary files
+echo "Preparing build output..."
+mkdir -p dist
+cp -r public/* dist/ 2>/dev/null || true
 
 echo "Build completed successfully!"

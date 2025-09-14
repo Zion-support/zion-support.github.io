@@ -39,6 +39,9 @@
   # Additional build optimizations
   CI = "true"
   GENERATE_SOURCEMAP = "false"
+  
+  # Vite specific configuration
+  VITE_BUILD_OPTIONS = "--mode production"
 
 # Cache configuration to prevent dependency issues
 [build.cache]
