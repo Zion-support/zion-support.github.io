@@ -50,6 +50,9 @@ import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026
 import AI2026RevolutionaryBanner from '../components/AI2026RevolutionaryBanner';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 
+// Import neural interface promotional components
+import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRevolutionBanner2025';
+
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
@@ -76,6 +79,7 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT PROMOTION BANNERS - LATEST */}
+        <NeuralInterfaceRevolutionBanner2025 />
         <AI2025UltimateBusinessTransformationPromotionBanner />
         <QuantumAI2026BreakthroughPromotionBanner />
         {/* Ultimate Content 2025 Promotion Banner - NEW FEATURED */}
