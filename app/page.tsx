@@ -244,6 +244,18 @@ import ROICalculatorWidget from '../components/ROICalculatorWidget';
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
 
+// Import new Quantum AI 2026 components
+import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
+import QuantumNeuralSuperintelligenceBanner from '../components/QuantumNeuralSuperintelligenceBanner';
+
+// Import new Neural Interface components
+import NeuralInterfaceRevolutionBanner from '../components/NeuralInterfaceRevolutionBanner';
+import NeuralArchitectureSearch2026Banner from '../components/NeuralArchitectureSearch2026Banner';
+
+// Import new service showcase components
+import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
+import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -308,6 +320,18 @@ export default function HomePage() {
         
         {/* ADVANCED NEURAL ARCHITECTURES SHOWCASE 2026 - NEW FEATURED */}
         <AdvancedNeuralArchitecturesShowcase2026 />
+        
+        {/* QUANTUM AI 2026 BREAKTHROUGH BANNER - NEW FEATURED */}
+        <QuantumAI2026BreakthroughBanner />
+        
+        {/* QUANTUM NEURAL SUPERINTELLIGENCE BANNER - NEW FEATURED */}
+        <QuantumNeuralSuperintelligenceBanner />
+        
+        {/* NEURAL INTERFACE REVOLUTION BANNER - NEW FEATURED */}
+        <NeuralInterfaceRevolutionBanner />
+        
+        {/* NEURAL ARCHITECTURE SEARCH 2026 BANNER - NEW FEATURED */}
+        <NeuralArchitectureSearch2026Banner />
         
         {/* ULTIMATE CONTENT SHOWCASE 2025 - FEATURED */}
         <UltimateContentShowcase2025 />
@@ -600,6 +624,12 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* COMPREHENSIVE SOLUTIONS 2025 BANNER - NEW FEATURED */}
+        <ComprehensiveSolutionsBanner2025 />
+        
+        {/* NEW SERVICES SHOWCASE 2025 - NEW FEATURED */}
+        <NewServicesShowcase2025 />
 
         {/* Content Promotion Banners */}
         <RevolutionaryContent2026Banner />
