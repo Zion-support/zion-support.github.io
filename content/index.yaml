@@ -69,6 +69,79 @@ content_index:
       featured: true
       is_new: true
 
+  new_2025_content_latest:
+    - id: "edge-computing-revolution"
+      type: "blog"
+      title: "AI 2025: The Edge Computing Revolution - Ultimate Guide to 450% ROI"
+      file_path: "/content/blog/ai-2025-edge-computing-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-edge-computing-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Edge Computing", "AI", "ROI", "Latency", "Security", "Cost Optimization"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        latency_reduction: "67%"
+        cost_savings: "89%"
+        uptime: "99.7%"
+        savings: "$2.3M annually"
+      reading_time: "18 min read"
+      
+    - id: "sustainable-technology-revolution"
+      type: "blog"
+      title: "AI 2025: The Sustainable Technology Revolution - 380% ROI Through Green AI"
+      file_path: "/content/blog/ai-2025-sustainable-technology-revolution.md"
+      url: "/blog/ai-2025-sustainable-technology-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Sustainable AI", "Green Technology", "Carbon Footprint", "ESG", "ROI", "Environmental Impact"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "380%"
+        carbon_reduction: "67%"
+        energy_efficiency: "89%"
+        savings: "$3.2M annually"
+        esg_score: "94% improvement"
+      reading_time: "16 min read"
+      
+    - id: "financial-services-transformation"
+      type: "case-study"
+      title: "AI 2025 Financial Services Transformation: $850M Company Achieves 520% ROI with Intelligent Banking"
+      file_path: "/content/case-studies/ai-2025-financial-services-transformation-ultimate-success.md"
+      url: "/case-studies/ai-2025-financial-services-transformation-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Financial Services", "AI Transformation", "Banking", "ROI", "Customer Satisfaction", "Intelligent Automation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "520%"
+        savings: "$67M annually"
+        satisfaction: "99.8%"
+        efficiency: "89% improvement"
+        compliance: "100% adherence"
+      reading_time: "20 min read"
+      
+    - id: "implementation-ultimate-roadmap"
+      type: "resource"
+      title: "AI 2025 Implementation Ultimate Roadmap: From Strategy to 600% ROI in 12 Months"
+      file_path: "/content/resources/ai-2025-implementation-ultimate-roadmap.md"
+      url: "/resources/ai-2025-implementation-ultimate-roadmap"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Implementation", "Strategy", "ROI", "Roadmap", "Best Practices", "Framework"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        success_rate: "89%"
+        savings: "$4.2M annually"
+        time_to_value: "78% faster"
+        satisfaction: "99.7%"
+      reading_time: "35 min read"
+
   promotion_components:
     - name: "NewContent2025PromotionBanner"
       file_path: "/src/components/NewContent2025PromotionBanner.tsx"

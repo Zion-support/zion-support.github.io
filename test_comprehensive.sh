@@ -1,40 +1,25 @@
 #!/bin/bash
 
-# Batch merge script for handling multiple PRs efficiently
+# Test comprehensive PR merge with 5 branches
 set -e
 
-echo "🚀 Starting batch PR merge process..."
+echo "🧪 Testing comprehensive PR merge with 5 branches..."
 
-# Get all cursor branches, sorted by creation date (most recent first)
-BRANCHES=$(git branch -r | grep "cursor/" | grep -v "HEAD" | sed 's/origin\///' | sort -u)
+# Function to sync with remote
+sync_with_remote() {
+    echo "  🔄 Syncing with remote..."
+    git fetch origin main
+    git pull origin main --rebase
+}
 
-echo "📋 Found $(echo "$BRANCHES" | wc -l) branches to process"
-
-# Process in batches of 10
-BATCH_SIZE=10
-BATCH_NUM=1
-TOTAL_BRANCHES=$(echo "$BRANCHES" | wc -l)
-PROCESSED=0
-
-# Counter for tracking
-SUCCESS_COUNT=0
-CONFLICT_COUNT=0
-ERROR_COUNT=0
-
-echo "📊 Processing $TOTAL_BRANCHES branches in batches of $BATCH_SIZE"
-
-# Process branches in batches
-echo "$BRANCHES" | while IFS= read -r branch; do
-    if [ -z "$branch" ]; then
-        continue
-    fi
-    
-    # Calculate batch info
-    PROCESSED=$((PROCESSED + 1))
-    CURRENT_BATCH=$(((PROCESSED - 1) / BATCH_SIZE + 1))
+# Function to process a single branch
+process_branch() {
+    local branch=$1
+    local branch_num=$2
+    local total_branches=$3
     
     echo ""
-    echo "🔄 [$PROCESSED/$TOTAL_BRANCHES] Processing branch: $branch (Batch $CURRENT_BATCH)"
+    echo "🔄 [$branch_num/$total_branches] Processing branch: $branch"
     
     # Check if branch exists locally
     if git show-ref --verify --quiet refs/heads/$branch; then
@@ -43,7 +28,7 @@ echo "$BRANCHES" | while IFS= read -r branch; do
         echo "  📥 Fetching branch from remote..."
         if ! git fetch origin $branch:$branch 2>/dev/null; then
             echo "  ⚠️  Failed to fetch branch $branch, skipping..."
-            continue
+            return 1
         fi
     fi
     
@@ -55,11 +40,10 @@ echo "$BRANCHES" | while IFS= read -r branch; do
     
     if git merge $branch --no-ff -m "Merge $branch into main" 2>/dev/null; then
         echo "  ✅ Successfully merged $branch"
-        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+        return 0
         
     else
         echo "  ⚠️  Merge conflict detected in $branch"
-        CONFLICT_COUNT=$((CONFLICT_COUNT + 1))
         
         # Check what files have conflicts
         CONFLICT_FILES=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
@@ -76,19 +60,46 @@ echo "$BRANCHES" | while IFS= read -r branch; do
             # Commit the resolved merge
             if git commit -m "Merge $branch into main - conflicts resolved" --no-edit 2>/dev/null; then
                 echo "  ✅ Successfully resolved conflicts and merged $branch"
-                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+                return 0
             else
                 echo "  ❌ Failed to commit resolved merge for $branch"
-                ERROR_COUNT=$((ERROR_COUNT + 1))
-                
-                # Abort the merge
                 git merge --abort 2>/dev/null || true
+                return 1
             fi
         else
             echo "  ❌ No conflict files found, aborting merge"
             git merge --abort 2>/dev/null || true
-            ERROR_COUNT=$((ERROR_COUNT + 1))
+            return 1
         fi
+    fi
+}
+
+# Get 5 most recent cursor branches
+BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | tail -5 | sed 's/origin\///')
+TOTAL_BRANCHES=$(echo "$BRANCHES" | wc -l)
+
+echo "📋 Testing with $TOTAL_BRANCHES branches:"
+echo "$BRANCHES"
+
+# Counter for tracking
+SUCCESS_COUNT=0
+CONFLICT_COUNT=0
+ERROR_COUNT=0
+PROCESSED=0
+
+# Process each branch
+for branch in $BRANCHES; do
+    if [ -z "$branch" ]; then
+        continue
+    fi
+    
+    PROCESSED=$((PROCESSED + 1))
+    
+    # Process the branch
+    if process_branch "$branch" "$PROCESSED" "$TOTAL_BRANCHES"; then
+        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+    else
+        ERROR_COUNT=$((ERROR_COUNT + 1))
     fi
     
     # Clean up the local branch
@@ -96,24 +107,18 @@ echo "$BRANCHES" | while IFS= read -r branch; do
     git branch -D $branch 2>/dev/null || true
     
     echo "  ✅ Completed processing $branch"
-    
-    # Push changes every 5 successful merges
-    if [ $((SUCCESS_COUNT % 5)) -eq 0 ] && [ $SUCCESS_COUNT -gt 0 ]; then
-        echo "  📤 Pushing changes to remote..."
-        git push origin main
-    fi
 done
 
+# Final sync
+echo "  📤 Final sync with remote..."
+sync_with_remote
+
 echo ""
-echo "📊 Batch Merge Process Summary:"
+echo "📊 Test Comprehensive PR Merge Summary:"
 echo "  ✅ Successful merges: $SUCCESS_COUNT"
 echo "  ⚠️  Conflicts resolved: $CONFLICT_COUNT"
 echo "  ❌ Errors: $ERROR_COUNT"
-echo "  📋 Total processed: $((SUCCESS_COUNT + CONFLICT_COUNT + ERROR_COUNT))"
-
-# Final push
-echo "  📤 Final push to remote..."
-git push origin main
+echo "  📋 Total processed: $PROCESSED"
 
 echo ""
-echo "🎉 Batch PR merge process completed!"
+echo "🎉 Test comprehensive PR merge completed!"
