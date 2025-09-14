@@ -108,6 +108,10 @@ import NewContent2025UltimateBreakthroughBanner from './components/NewContent202
 import UltimateContentShowcase2025Banner from './components/UltimateContentShowcase2025Banner';
 import UltimateBreakthroughContentShowcase2025 from './components/UltimateBreakthroughContentShowcase2025';
 
+// Import new Autonomous Enterprise promotional components
+import AutonomousEnterprise2025PromotionBanner from '../components/AutonomousEnterprise2025PromotionBanner';
+import AutonomousEnterpriseContentShowcase from '../components/AutonomousEnterpriseContentShowcase';
+
 // Import new content revolution components
 import AI2025ContentRevolutionUltimateBanner from '../components/AI2025ContentRevolutionUltimateBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
@@ -293,6 +297,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AUTONOMOUS ENTERPRISE 2025 PROMOTION BANNER - NEWEST BREAKTHROUGH */}
+        <AutonomousEnterprise2025PromotionBanner />
+        
         {/* ULTIMATE DIGITAL TRANSFORMATION 2025 BANNER - NEWEST BREAKTHROUGH */}
         <UltimateDigitalTransformation2025Banner />
         
@@ -622,6 +629,9 @@ export default function HomePage() {
 
         {/* AI Business Intelligence Showcase 2025 - NEW FEATURED */}
         <AIBusinessIntelligenceShowcase2025 />
+        
+        {/* Autonomous Enterprise Content Showcase - NEWEST FEATURED */}
+        <AutonomousEnterpriseContentShowcase />
         
         {/* Advanced AI Components */}
         <AdvancedContentRecommendationEngine />
