@@ -244,7 +244,24 @@ export default function DocsPage() {
                   </div>
                 </motion.div>
               ))}
-            </div>
+            </motion.div>
+
+            {filteredDocs.length === 0 && (
+              <motion.div 
+                className="text-center py-16"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="w-20 h-20 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <BookOpen className="w-10 h-10 text-gray-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">No Documentation Found</h3>
+                <p className="text-gray-400">
+                  Try adjusting your search terms or category filters.
+                </p>
+              </motion.div>
+            )}
           </div>
         </section>
 

@@ -1,50 +1,21 @@
-import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
 <<<<<<< HEAD
   Menu, 
   X, 
-  Search, 
   ChevronDown, 
-  Phone, 
-  Linkedin, 
-  Twitter, 
-  Github, 
-  Youtube,
   Home,
   Briefcase,
   Brain,
   Atom,
   Rocket,
-  Shield,
-  Cloud,
   Target,
   Building,
-  Users,
   BookOpen,
-  FileText,
-  Video,
-  Code,
-  Zap,
-  Star,
-  Sparkles,
-  Globe,
-  Cpu,
-  Database,
-  Eye,
-  Heart,
-  Infinity,
-  TrendingUp,
-  Palette,
-  Layers,
-  Grid,
-  BarChart3,
-  Settings,
-  HelpCircle,
   MessageCircle,
-  Calendar,
-  Award,
-  Lightbulb,
+  Server,
+  Zap,
   Play,
   DollarSign,
   GraduationCap,
@@ -76,7 +47,7 @@ interface NavigationItem {
   category?: string;
 }
 
-// Enhanced navigation items with better organization
+// Enhanced navigation items with better organization and working links
 const navigationItems: NavigationItem[] = [
   {
     label: 'Home',
@@ -428,7 +399,7 @@ interface UltraFuturisticNavigation2045Props {
 const UltraFuturisticNavigation2045: React.FC<UltraFuturisticNavigation2045Props> = ({ 
   className = '' 
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
