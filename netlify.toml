@@ -1,10 +1,18 @@
 [build]
   functions = "netlify/functions"
+  command = "bash scripts/netlify-build-fix.sh"
 
 [build.environment]
   NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
   NODE_ENV = "production"
+  YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
+  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
 
+# Cache configuration to prevent dependency issues
+[build.cache]
+  directories = ["node_modules/.cache"]
+
+# Plugin configurations
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
