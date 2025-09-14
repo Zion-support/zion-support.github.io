@@ -2,332 +2,320 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Shield, 
-  Heart, 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Target
-} from 'lucide-react';
+import { ArrowRight, TrendingUp, Users, Clock, CheckCircle, Star, Zap, Target } from 'lucide-react';
 
-interface ContentItem {
+interface ContentShowcaseItem {
   id: string;
   title: string;
   type: 'blog' | 'case-study' | 'resource';
   url: string;
-  description: string;
+  excerpt: string;
   metrics: {
     roi?: string;
     savings?: string;
-    accuracy?: string;
     satisfaction?: string;
+    time?: string;
+    projects?: string;
   };
-  tags: string[];
-  featured: boolean;
-  isNew: boolean;
+  isNew?: boolean;
+  featured?: boolean;
+  category: string;
 }
 
 const UltimateContentShowcase2025: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
-  const contentItems: ContentItem[] = [
+  const contentItems: ContentShowcaseItem[] = [
     {
-      id: 'cybersecurity-revolution',
-      title: 'AI 2025: The Cybersecurity Revolution Protecting $50B+ in Enterprise Assets',
+      id: 'ai-enterprise-automation-revolution',
+      title: 'AI 2025: The Enterprise Automation Revolution - 500% ROI',
       type: 'blog',
-      url: '/blog/ai-2025-cybersecurity-revolution',
-      description: 'Discover how AI-powered security solutions are achieving 99.7% threat detection accuracy while reducing costs by 78%.',
+      url: '/blog/ai-2025-enterprise-automation-revolution',
+      excerpt: 'Discover how leading enterprises are achieving 500% ROI, reducing costs by 60%, and transforming operations with AI automation.',
       metrics: {
-        accuracy: '99.7%',
-        savings: '$50B+',
-        satisfaction: '98%'
+        roi: '500%',
+        savings: '$200M',
+        satisfaction: '99.8%',
+        time: '12 months',
+        projects: '500+'
       },
-      tags: ['AI Security', 'Enterprise', 'ROI'],
+      isNew: true,
       featured: true,
-      isNew: true
+      category: 'ai-automation'
     },
     {
-      id: 'healthcare-transformation',
-      title: 'Healthcare AI Transformation: $2.1B Health System Achieves 99.8% Patient Safety',
+      id: 'ai-transformation-500-roi-success',
+      title: 'AI Transformation Success: $2B Company Achieves 500% ROI',
       type: 'case-study',
-      url: '/case-studies/healthcare-ai-transformation-2025',
-      description: 'Learn how a major healthcare system generated $180M in savings while achieving unprecedented patient safety scores.',
+      url: '/case-studies/ai-transformation-500-roi-success-story',
+      excerpt: 'Real case study: How a Fortune 500 company achieved 500% ROI, $200M annual savings, and 400% productivity gains in 12 months.',
       metrics: {
-        savings: '$180M',
-        accuracy: '99.8%',
-        satisfaction: '94%'
+        roi: '500%',
+        savings: '$200M',
+        satisfaction: '99.8%',
+        time: '12 months',
+        projects: '1'
       },
-      tags: ['Healthcare', 'Case Study', 'Patient Safety'],
+      isNew: true,
       featured: true,
-      isNew: true
+      category: 'case-studies'
     },
     {
-      id: 'enterprise-implementation',
-      title: 'AI Implementation Enterprise Guide: From Strategy to $500M+ ROI',
+      id: 'ai-automation-implementation-guide',
+      title: 'AI Automation Implementation Guide 2025: From Strategy to 500% ROI',
       type: 'resource',
-      url: '/resources/ai-implementation-enterprise-guide-2025',
-      description: 'Complete framework for implementing AI solutions that deliver $500M+ ROI within 24 months.',
+      url: '/resources/ai-automation-implementation-guide-2025',
+      excerpt: 'Complete step-by-step guide to implementing AI automation. Achieve 500% ROI, reduce costs by 60%, and transform your business.',
       metrics: {
-        roi: '833%',
-        savings: '$500M+',
-        satisfaction: '95%'
+        roi: '500%',
+        savings: '60%',
+        satisfaction: '98%',
+        time: '6-12 months',
+        projects: '500+'
       },
-      tags: ['Implementation', 'ROI', 'Strategy'],
+      isNew: true,
       featured: true,
-      isNew: true
+      category: 'resources'
     }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % contentItems.length);
-    }, 8000);
+  const categories = [
+    { id: 'all', label: 'All Content', count: contentItems.length },
+    { id: 'ai-automation', label: 'AI Automation', count: contentItems.filter(item => item.category === 'ai-automation').length },
+    { id: 'case-studies', label: 'Case Studies', count: contentItems.filter(item => item.category === 'case-studies').length },
+    { id: 'resources', label: 'Resources', count: contentItems.filter(item => item.category === 'resources').length }
+  ];
 
-    return () => clearInterval(interval);
-  }, [contentItems.length]);
+  const filteredItems = activeCategory === 'all' 
+    ? contentItems 
+    : contentItems.filter(item => item.category === activeCategory);
 
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'blog': return <TrendingUp className="w-5 h-5" />;
-      case 'case-study': return <Users className="w-5 h-5" />;
-      case 'resource': return <Target className="w-5 h-5" />;
-      default: return <Star className="w-5 h-5" />;
+      case 'blog':
+        return '📝';
+      case 'case-study':
+        return '📊';
+      case 'resource':
+        return '📚';
+      default:
+        return '📄';
     }
   };
 
-  const getTypeColor = (type: string) => {
+  const getTypeLabel = (type: string) => {
     switch (type) {
-      case 'blog': return 'bg-blue-100 text-blue-800';
-      case 'case-study': return 'bg-green-100 text-green-800';
-      case 'resource': return 'bg-purple-100 text-purple-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'blog':
+        return 'Blog Post';
+      case 'case-study':
+        return 'Case Study';
+      case 'resource':
+        return 'Resource Guide';
+      default:
+        return 'Content';
     }
   };
 
-  if (!isVisible) return null;
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'ai-automation':
+        return 'from-purple-500 to-purple-700';
+      case 'case-studies':
+        return 'from-blue-500 to-blue-700';
+      case 'resources':
+        return 'from-green-500 to-green-700';
+      default:
+        return 'from-gray-500 to-gray-700';
+    }
+  };
 
   return (
-    <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20"></div>
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6"
-          >
-            <Star className="w-5 h-5 mr-2 text-yellow-400" />
-            <span className="text-sm font-medium">NEW 2025 CONTENT</span>
-          </motion.div>
-          
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold mb-6"
-          >
-            Transform Your Business with
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              AI Excellence
-            </span>
-          </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed"
-          >
-            Discover proven strategies, real success stories, and implementation guides that have helped organizations achieve $500M+ in ROI.
-          </motion.p>
+          <div className="inline-flex items-center space-x-2 bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <Star className="h-4 w-4" />
+            <span>ULTIMATE CONTENT SHOWCASE 2025</span>
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Revolutionary AI Content That Delivers Results
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover our latest content featuring real success stories, proven strategies, and actionable guides that help companies achieve 500% ROI with AI automation.
+          </p>
         </div>
 
-        {/* Content Carousel */}
-        <div className="relative">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+        {/* Category filters */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                activeCategory === category.id
+                  ? 'bg-purple-600 text-white shadow-lg transform scale-105'
+                  : 'bg-white text-gray-700 hover:bg-purple-50 hover:text-purple-700 border border-gray-200'
+              }`}
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                {/* Content Info */}
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium ${getTypeColor(contentItems[currentIndex].type)}`}>
-                      {getTypeIcon(contentItems[currentIndex].type)}
-                      {contentItems[currentIndex].type.toUpperCase()}
-                    </div>
-                    {contentItems[currentIndex].isNew && (
-                      <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800">
-                        <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                        NEW
-                      </div>
-                    )}
-                  </div>
+              {category.label}
+              <span className="ml-2 bg-white/20 px-2 py-1 rounded-full text-xs">
+                {category.count}
+              </span>
+            </button>
+          ))}
+        </div>
 
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-                    {contentItems[currentIndex].title}
-                  </h3>
-
-                  <p className="text-lg opacity-90 mb-6 leading-relaxed">
-                    {contentItems[currentIndex].description}
-                  </p>
-
-                  {/* Metrics */}
-                  <div className="grid grid-cols-3 gap-4 mb-6">
-                    {Object.entries(contentItems[currentIndex].metrics).map(([key, value]) => (
-                      <div key={key} className="text-center">
-                        <div className="text-2xl font-bold text-blue-400">{value}</div>
-                        <div className="text-sm opacity-75 capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {contentItems[currentIndex].tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 bg-white/20 rounded-full text-sm font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <Link
-                    href={contentItems[currentIndex].url}
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-                  >
-                    Read Full Article
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
+        {/* Content grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredItems.map((item) => (
+            <div
+              key={item.id}
+              className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden ${
+                hoveredItem === item.id ? 'transform scale-105' : ''
+              }`}
+              onMouseEnter={() => setHoveredItem(item.id)}
+              onMouseLeave={() => setHoveredItem(null)}
+            >
+              {/* Featured badge */}
+              {item.featured && (
+                <div className="absolute top-4 left-4 z-10">
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                    ⭐ FEATURED
+                  </span>
                 </div>
+              )}
 
-                {/* Visual Element */}
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-white/20">
-                    <div className="text-center">
-                      <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full mx-auto mb-6 flex items-center justify-center">
-                        {getTypeIcon(contentItems[currentIndex].type)}
-                      </div>
-                      <h4 className="text-xl font-bold mb-4">Key Benefits</h4>
-                      <div className="space-y-3">
-                        <div className="flex items-center gap-3">
-                          <CheckCircle className="w-5 h-5 text-green-400" />
-                          <span>Proven ROI of 340%+</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <CheckCircle className="w-5 h-5 text-green-400" />
-                          <span>Real-world case studies</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <CheckCircle className="w-5 h-5 text-green-400" />
-                          <span>Step-by-step implementation</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <CheckCircle className="w-5 h-5 text-green-400" />
-                          <span>Expert insights and best practices</span>
-                        </div>
-                      </div>
-                    </div>
+              {/* New badge */}
+              {item.isNew && (
+                <div className="absolute top-4 right-4 z-10">
+                  <span className="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">
+                    NEW
+                  </span>
+                </div>
+              )}
+
+              {/* Content type indicator */}
+              <div className={`absolute top-4 ${item.featured ? 'left-20' : 'left-4'} z-10`}>
+                <div className={`bg-gradient-to-r ${getCategoryColor(item.category)} text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg`}>
+                  {getTypeIcon(item.type)} {getTypeLabel(item.type)}
+                </div>
+              </div>
+
+              {/* Image placeholder with gradient */}
+              <div className={`h-48 bg-gradient-to-br ${getCategoryColor(item.category)} relative overflow-hidden`}>
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <h3 className="text-white text-xl font-bold leading-tight line-clamp-2">
+                    {item.title}
+                  </h3>
+                </div>
+                <div className="absolute top-4 right-4">
+                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                    <span className="text-2xl">{getTypeIcon(item.type)}</span>
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
 
-          {/* Navigation Dots */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {contentItems.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? 'bg-white' : 'bg-white/30'
-                }`}
-              />
-            ))}
-          </div>
+              {/* Content */}
+              <div className="p-6">
+                <p className="text-gray-600 mb-6 line-clamp-3">
+                  {item.excerpt}
+                </p>
+
+                {/* Metrics */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  {item.metrics.roi && (
+                    <div className="text-center p-3 bg-green-50 rounded-lg">
+                      <div className="text-2xl font-bold text-green-600">{item.metrics.roi}</div>
+                      <div className="text-xs text-gray-600">ROI</div>
+                    </div>
+                  )}
+                  {item.metrics.savings && (
+                    <div className="text-center p-3 bg-blue-50 rounded-lg">
+                      <div className="text-2xl font-bold text-blue-600">{item.metrics.savings}</div>
+                      <div className="text-xs text-gray-600">Savings</div>
+                    </div>
+                  )}
+                  {item.metrics.satisfaction && (
+                    <div className="text-center p-3 bg-purple-50 rounded-lg">
+                      <div className="text-2xl font-bold text-purple-600">{item.metrics.satisfaction}</div>
+                      <div className="text-xs text-gray-600">Satisfaction</div>
+                    </div>
+                  )}
+                  {item.metrics.time && (
+                    <div className="text-center p-3 bg-orange-50 rounded-lg">
+                      <div className="text-2xl font-bold text-orange-600">{item.metrics.time}</div>
+                      <div className="text-xs text-gray-600">Timeline</div>
+                    </div>
+                  )}
+                </div>
+
+                {/* CTA */}
+                <Link
+                  href={item.url}
+                  className="group/btn w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Read Now
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              {/* Hover effect overlay */}
+              <div className={`absolute inset-0 bg-gradient-to-t from-purple-600/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6`}>
+                <div className="text-white">
+                  <h4 className="text-lg font-bold mb-2">Key Benefits</h4>
+                  <ul className="text-sm space-y-1">
+                    <li className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4" />
+                      <span>Proven ROI methodology</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <TrendingUp className="h-4 w-4" />
+                      <span>Real-world case studies</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <Target className="h-4 w-4" />
+                      <span>Actionable strategies</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Success Metrics */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8"
-        >
-          <div className="text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">$500M+</div>
-            <div className="text-sm opacity-75">Average ROI Achieved</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-green-400 mb-2">500+</div>
-            <div className="text-sm opacity-75">Successful Implementations</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">99.8%</div>
-            <div className="text-sm opacity-75">Client Satisfaction</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-pink-400 mb-2">24</div>
-            <div className="text-sm opacity-75">Months to ROI</div>
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
-            <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              Join 500+ organizations that have achieved unprecedented success with our AI solutions. 
-              Get your free consultation and custom ROI analysis today.
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Ready to Achieve 500% ROI with AI Automation?
+            </h3>
+            <p className="text-xl text-gray-600 mb-8">
+              Join hundreds of companies that have transformed their operations and achieved unprecedented results with our proven AI automation strategies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+                href="/content"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                Get Free Consultation
-                <ArrowRight className="w-5 h-5" />
+                <Zap className="mr-2 h-5 w-5" />
+                Explore All Content
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                href="/services"
-                className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-purple-600 text-purple-600 font-semibold rounded-lg hover:bg-purple-600 hover:text-white transition-all duration-300"
               >
-                Explore Services
+                <Users className="mr-2 h-5 w-5" />
+                Get Free Assessment
               </Link>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
