@@ -69,6 +69,8 @@ import NewContentPromotionBanner2025 from '../components/NewContentPromotionBann
 import RevolutionaryTechShowcase2025 from '../components/RevolutionaryTechShowcase2025';
 import EnterpriseSuccessBanner from '../components/EnterpriseSuccessBanner';
 import FutureTechPreviewBanner from '../components/FutureTechPreviewBanner';
+import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
+import NewContent2025UltimateBreakthroughShowcase from '../components/NewContent2025UltimateBreakthroughShowcase';
 
 // New 2025 Content Components
 // New AI 2025 Breakthrough Content Components
@@ -222,6 +224,12 @@ export default function HomePage() {
         
         {/* FUTURE TECH PREVIEW BANNER - NEW CONTENT */}
         <FutureTechPreviewBanner />
+        
+        {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
+        <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* NEW ULTIMATE BREAKTHROUGH CONTENT SHOWCASE */}
+        <NewContent2025UltimateBreakthroughShowcase />
         
         {/* NEW 2025 ENHANCED CONTENT - TOP PRIORITY */}
         <AIInnovationPromotionBanner2025 />
