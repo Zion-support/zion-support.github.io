@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 import { useAuth } from '@/hooks/useAuth';
 import EmailVerificationBanner from '@/components/EmailVerificationBanner'; // Assuming path
 import { AppHeader } from "./AppHeader";
-import { Footer } from "@/components/Footer";
+import Footer from "@/components/Footer";
 import { SkipLink } from "@/components/SkipLink";
 // Removed GlobalLoaderContext import as it doesn't exist
 // import LoaderOverlay from '@/components/LoaderOverlay';

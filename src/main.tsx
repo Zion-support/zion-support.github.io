@@ -8,7 +8,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { HelmetProvider } from 'react-helmet-async';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { SnackbarProvider } from 'notistack';
-import { captureException } from '@/utils/sentry';
+import { captureException } from '@/utils/sentry-mock';
 import { useTranslation } from 'react-i18next';
 // Removed ToastInitializer import as it doesn't exist
 
@@ -22,7 +22,7 @@ import { AppLayout } from '@/layout/AppLayout';
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
-import { registerServiceWorker } from './serviceWorkerRegistration';
+import { register as registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
