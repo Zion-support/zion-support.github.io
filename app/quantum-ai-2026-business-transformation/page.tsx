@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function QuantumAI2026Page() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="Quantum AI 2026: The Ultimate Business Transformation Guide"
         description="Explore how quantum computing and AI are converging to create unprecedented business opportunities in 2026. Learn about quantum AI applications, implementation strategies, and future possibilities."
@@ -293,6 +293,6 @@ export default function QuantumAI2026Page() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }

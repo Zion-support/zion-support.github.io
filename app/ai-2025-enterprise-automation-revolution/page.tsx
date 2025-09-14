@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function AIEnterpriseAutomation2025Page() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="AI 2025 Enterprise Automation Revolution: The Ultimate Guide"
         description="Discover how AI-powered automation is revolutionizing enterprise operations in 2025. Learn about cutting-edge technologies, implementation strategies, and real-world success stories."
@@ -338,6 +338,6 @@ export default function AIEnterpriseAutomation2025Page() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }
