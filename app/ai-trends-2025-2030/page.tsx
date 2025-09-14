@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'AI Trends 2025-2030: Revolutionary Breakthroughs | Zion Tech Group',
@@ -11,7 +10,7 @@ export const metadata = {
 
 export default function AITrendsPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI Trends 2025-2030: Revolutionary Breakthroughs"
         description="Explore the most groundbreaking AI trends and predictions for 2025-2030. Quantum AI, neural interfaces, and autonomous business operations."
@@ -250,6 +249,6 @@ export default function AITrendsPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }
