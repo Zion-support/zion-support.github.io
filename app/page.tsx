@@ -82,6 +82,10 @@ import RevolutionaryContent2026Banner from '../components/RevolutionaryContent20
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
+import UltimateContentShowcase2025Banner from '../components/UltimateContentShowcase2025Banner';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+
+// Import additional promotional components
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import UltimateContent2025PromotionBanner from '../components/UltimateContent2025PromotionBanner';
@@ -458,6 +462,18 @@ export default function HomePage() {
 
         {/* Quantum Computing Showcase 2027 - NEW FEATURED */}
         <QuantumComputingShowcase2027 />
+        
+        {/* Content Promotion Banners */}
+        <UltimateContentShowcase2025Banner />
+        <NewContent2025PromotionBanner />
+        <NewContent2026PromotionBanner />
+        <QuantumAI2026BreakthroughBanner />
+        <NewContentShowcase2026 />
+        <QuantumAIContentShowcase2026 />
+        <AI2026ContentShowcaseBanner />
+        <RevolutionaryAI2026Banner />
+        <AI2026RevolutionaryBanner />
+        <RevolutionaryTechBanner2026 />
         
         {/* Ultimate Content Showcase 2025 - NEW */}
         <UltimateContentShowcase2025 />
