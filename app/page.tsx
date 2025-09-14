@@ -44,7 +44,7 @@ import AI2025_2026UltimateBreakthroughPromotionBanner from '../components/AI2025
 import AI2025_2026UltimateBreakthroughContentShowcase from '../components/AI2025_2026UltimateBreakthroughContentShowcase';
 
 // Import new Ultimate Content 2025 components
-import UltimateContent2025Banner from '../components/UltimateContent2025Banner';
+import UltimateContent2025Banner from './components/UltimateContent2025Banner';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import ContentNavigation2025 from '../components/ContentNavigation2025';
@@ -92,13 +92,11 @@ import RevolutionaryContent2026Banner from '../components/RevolutionaryContent20
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
-import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import UltimateContent2025PromotionBanner from '../components/UltimateContent2025PromotionBanner';
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 
 // Import comprehensive merged content banner
-import ComprehensiveContentMerged2025Banner from '../components/ComprehensiveContentMerged2025Banner';
+import ComprehensiveContentMerged2025Banner from './components/ComprehensiveContentMerged2025Banner';
 
 // Import new 2026 promotional components
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
@@ -128,11 +126,11 @@ import AI2026GlobalTransformation800ROISuccessBanner from '../components/AI2026G
 import AI2026ImplementationFrameworkUltimatePromotionBanner from '../components/AI2026ImplementationFrameworkUltimatePromotionBanner';
 
 // Import new ultimate content promotional components
-import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
+import RevolutionaryContent2025UltimateBanner from './components/RevolutionaryContent2025UltimateBanner';
 
 // Import new 2027 breakthrough promotional components
-import AI2027BreakthroughPromotionBanner from '../components/AI2027BreakthroughPromotionBanner';
-import QuantumComputingShowcase2027 from '../components/QuantumComputingShowcase2027';
+import AI2027BreakthroughPromotionBanner from './components/AI2027BreakthroughPromotionBanner';
+import QuantumComputingShowcase2027 from './components/QuantumComputingShowcase2027';
 
 // Import new Ultimate Autonomous AI Revolution components
 import UltimateAutonomousAIRevolutionBanner from '../components/UltimateAutonomousAIRevolutionBanner';
@@ -143,10 +141,8 @@ import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRe
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
 
 // Import new ultimate content showcase banners
-import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
 
 // Import new autonomous enterprise components
-import UltimateAutonomousEnterpriseBanner2025 from '../components/UltimateAutonomousEnterpriseBanner2025';
 import RevolutionaryContent2026UltimateShowcase from '../components/RevolutionaryContent2026UltimateShowcase';
 
 // Import new 2026 breakthrough content banners
@@ -189,15 +185,12 @@ import UltimateAIAutomationShowcase2025 from '../components/UltimateAIAutomation
 
 // Import new 2026 synthetic intelligence components
 import SyntheticIntelligence2026BreakthroughBanner from '../components/SyntheticIntelligence2026BreakthroughBanner';
-import RevolutionaryContent2026Showcase from '../components/RevolutionaryContent2026Showcase';
 
 // Import new AI Innovation Showcase components
 import AIInnovationShowcase2025Banner from '../components/AIInnovationShowcase2025Banner';
 import RevolutionaryAIContent2025Showcase from '../components/RevolutionaryAIContent2025Showcase';
 
 // Import new ultimate business transformation components
-import UltimateBusinessTransformation2025Banner from '../components/UltimateBusinessTransformation2025Banner';
-import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
 
 // Import new AI 2025-2026 Ultimate Business Transformation components
 import AI2025_2026UltimateBusinessTransformationRevolutionBanner from '../components/AI2025_2026UltimateBusinessTransformationRevolutionBanner';
@@ -207,11 +200,8 @@ import UltimateBusinessTransformationShowcase2025 from '../components/UltimateBu
 import AI2026BreakthroughRevolutionBanner from '../components/AI2026BreakthroughRevolutionBanner';
 import QuantumComputing2026UltimateBanner from '../components/QuantumComputing2026UltimateBanner';
 import NeuralInterfaceRevolution2026Banner from '../components/NeuralInterfaceRevolution2026Banner';
-import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
 
 // Import new Ultimate Content 2025 Revolutionary components
-import UltimateContent2025RevolutionaryBanner from '../components/UltimateContent2025RevolutionaryBanner';
-import UltimateContent2025Showcase from '../components/UltimateContent2025Showcase';
 // Import new content components
 import LatestAITrends2025 from '../components/LatestAITrends2025';
 import SuccessStoriesShowcase from '../components/SuccessStoriesShowcase';
@@ -228,7 +218,6 @@ import NewContent2026RevolutionaryBanner from '../components/NewContent2026Revol
 import UltimateContentShowcase2026Banner from '../components/UltimateContentShowcase2026Banner';
 import RevolutionaryContent2026UltimateBanner from '../components/RevolutionaryContent2026UltimateBanner';
 // Import new content components
-import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import RevolutionaryTechTrends2025 from '../components/RevolutionaryTechTrends2025';
 import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscoveryWidget';
 import InteractiveContentPromotionBanner from '../components/InteractiveContentPromotionBanner';
