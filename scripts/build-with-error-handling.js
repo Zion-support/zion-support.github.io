@@ -15,7 +15,7 @@ try {
   process.chdir(__dirname + '/..');
   
   console.log('📦 Installing dependencies...');
-  execSync('npm ci --production=false', { stdio: 'inherit' });
+  execSync('yarn install', { stdio: 'inherit' });
   
   // Check if Vite is available
   console.log('🔍 Checking if Vite is available...');
