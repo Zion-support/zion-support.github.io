@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "build:netlify": "node scripts/build-with-error-handling.js",
+    "build:netlify-fix": "yarn install --force --no-cache && yarn build",
     "prebuild": "echo \"Starting build...\"",
     "export": "next build && next export",
     "start": "next start -p 3000",
