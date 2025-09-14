@@ -77,6 +77,10 @@ import UltimateContentShowcase2025Banner from '../components/UltimateContentShow
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
 
+// Import new Ultimate AI 2025 Breakthrough components
+import UltimateAI2025BreakthroughBanner from '../components/UltimateAI2025BreakthroughBanner';
+import RevolutionaryAI2025Showcase from '../components/RevolutionaryAI2025Showcase';
+
 // Import new Revolutionary AI Automation 2025 components
 import RevolutionaryAIAutomationBanner2025 from '../components/RevolutionaryAIAutomationBanner2025';
 import RevolutionaryAIAutomationShowcase2025 from '../components/RevolutionaryAIAutomationShowcase2025';
@@ -284,6 +288,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate AI 2025 Breakthrough Banner - NEWEST FEATURED */}
+        <UltimateAI2025BreakthroughBanner />
+        
         {/* Revolutionary AI Automation Banner 2025 - NEW ULTIMATE FEATURED */}
         <RevolutionaryAIAutomationBanner2025 />
         
@@ -319,6 +326,9 @@ export default function HomePage() {
         
         {/* Revolutionary AI Automation Showcase 2025 - NEW FEATURED */}
         <RevolutionaryAIAutomationShowcase2025 />
+        
+        {/* Revolutionary AI 2025 Showcase - NEWEST FEATURED */}
+        <RevolutionaryAI2025Showcase />
         
         {/* NEW ULTIMATE CONTENT 2025 - TOP PRIORITY FEATURED */}
         <UltimateContent2025Banner />
