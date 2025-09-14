@@ -2756,7 +2756,7 @@
       "complexityScore": 0,
       "complexityLevel": "low",
       "metrics": {
-        "totalLines": 21,
+        "totalLines": 30,
         "jobCount": 0,
         "stepCount": 4,
         "conditionalCount": 0,

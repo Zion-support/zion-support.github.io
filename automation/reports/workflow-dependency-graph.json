@@ -2638,7 +2638,7 @@
       "runner": "ubuntu-latest",
       "memory": "standard",
       "timeout": 30,
-      "concurrentJobs": 3
+      "concurrentJobs": 5
     },
     "estimatedDuration": 25
   },
@@ -3450,7 +3450,7 @@
   "sync-health.yml": {
     "name": "sync-health.yml",
     "triggers": [
-      "workflow_dispatch {}",
+      "workflow_dispatch null",
       "schedule"
     ],
     "needs": [],
