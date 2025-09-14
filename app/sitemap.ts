@@ -57,6 +57,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
+    },
+    // New blog posts
+    {
+      url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2025-quantum-computing-breakthrough`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    // New case studies
+    {
+      url: `${baseUrl}/case-studies/enterprise-ai-transformation-success-story`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    // New resources
+    {
+      url: `${baseUrl}/resources/ai-implementation-checklist-2025`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
     }
   ]
 }
