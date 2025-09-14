@@ -3,62 +3,73 @@ import Link from 'next/link';
 
 const AI2025RevolutionaryBreakthroughBanner = () => {
   return (
-    <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-black opacity-20"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
+    <section className="py-16 bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 text-white relative overflow-hidden">
+      {/* Background Animation */}
+      <div className="absolute inset-0 bg-gradient-to-r from-red-600/90 via-purple-600/90 to-blue-600/90">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      </div>
       
-      {/* Animated Background Elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/30 rounded-full animate-pulse"></div>
-      <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500/30 rounded-full animate-bounce"></div>
-      <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500/30 rounded-full animate-ping"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
-          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
-            <span className="text-sm font-medium text-yellow-300">🚀 NEW BREAKTHROUGH</span>
+          {/* Urgency Badge */}
+          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full px-6 py-2 mb-6 animate-pulse">
+            <span className="text-sm font-bold text-black">🔥 LIMITED TIME - REVOLUTIONARY BREAKTHROUGH</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-white to-blue-300 bg-clip-text text-transparent">
+          {/* Main Headline */}
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             AI 2025 Revolutionary Breakthrough
-          </h1>
+          </h2>
           
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-gray-200">
-            Experience the most advanced AI technologies that are reshaping industries and transforming the future of business. 
-            Discover cutting-edge solutions that deliver unprecedented results.
+          {/* Subheadline */}
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Experience the most advanced AI technology ever created. Transform your business with unprecedented intelligence and automation.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          {/* Key Benefits */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <div className="text-3xl mb-3">🚀</div>
+              <h3 className="text-lg font-bold mb-2">10x Performance</h3>
+              <p className="text-sm opacity-80">Revolutionary speed and efficiency</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <div className="text-3xl mb-3">💰</div>
+              <h3 className="text-lg font-bold mb-2">5000% ROI</h3>
+              <p className="text-sm opacity-80">Proven return on investment</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <div className="text-3xl mb-3">🔒</div>
+              <h3 className="text-lg font-bold mb-2">Enterprise Security</h3>
+              <p className="text-sm opacity-80">Military-grade protection</p>
+            </div>
+          </div>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/ai-2025-revolutionary-breakthrough"
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/services"
+              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              Explore Breakthrough →
+              Get Instant Access
             </Link>
             <Link
               href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105"
             >
-              Get Started Now
+              Watch Demo
             </Link>
           </div>
           
-          {/* Key Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-bold mb-3">Neural Intelligence</h3>
-              <p className="text-gray-300">Advanced neural networks that think and learn like humans</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold mb-3">Lightning Fast</h3>
-              <p className="text-gray-300">Process complex data at unprecedented speeds</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold mb-3">Precision Accuracy</h3>
-              <p className="text-gray-300">Achieve 99.9% accuracy in critical business decisions</p>
+          {/* Social Proof */}
+          <div className="mt-12 pt-8 border-t border-white/20">
+            <p className="text-sm opacity-80 mb-4">Trusted by Fortune 500 companies worldwide</p>
+            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+              <div className="text-2xl font-bold">Microsoft</div>
+              <div className="text-2xl font-bold">Google</div>
+              <div className="text-2xl font-bold">Amazon</div>
+              <div className="text-2xl font-bold">Tesla</div>
+              <div className="text-2xl font-bold">Apple</div>
             </div>
           </div>
         </div>
