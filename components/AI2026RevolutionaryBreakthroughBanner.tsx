@@ -1,79 +1,107 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-export default function AI2026RevolutionaryBreakthroughBanner() {
+const AI2026RevolutionaryBreakthroughBanner = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % 3);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const slides = [
+    {
+      title: "AI 2026 Revolutionary Breakthrough Predictions",
+      subtitle: "Quantum-Neural Fusion • 15,000% ROI • Consciousness Integration",
+      link: "/blog/ai-2026-revolutionary-breakthrough-predictions",
+      color: "from-purple-500 to-pink-500",
+      bgColor: "from-purple-50 to-pink-50",
+      borderColor: "border-purple-200"
+    },
+    {
+      title: "AI 2025 Ultimate Breakthrough Announcement",
+      subtitle: "10,000% ROI • 99.9% Accuracy • Revolutionary Technology",
+      link: "/blog/ai-2025-ultimate-breakthrough-announcement",
+      color: "from-red-500 to-pink-500",
+      bgColor: "from-red-50 to-pink-50",
+      borderColor: "border-red-200"
+    },
+    {
+      title: "Global Transformation Success Stories",
+      subtitle: "Fortune 500 Companies • 10,000% ROI • Real Results",
+      link: "/case-studies/ai-2025-global-transformation-breakthrough",
+      color: "from-green-500 to-emerald-500",
+      bgColor: "from-green-50 to-emerald-50",
+      borderColor: "border-green-200"
+    }
+  ];
+
+  const currentSlideData = slides[currentSlide];
+
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 text-white">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 animate-pulse"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-1"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-bold mb-6 animate-bounce">
-            🚀 REVOLUTIONARY BREAKTHROUGH 2026
-          </div>
-          
-          {/* Main heading */}
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            AI 2026 Ultimate Breakthrough Predictions
-          </h2>
-          
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Experience 15,000% ROI with our revolutionary AI 2026 technology. Quantum-neural fusion, transcendent consciousness, and reality manipulation await.
-          </p>
-          
-          {/* Key features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
-              <div className="text-2xl mb-2">⚛️</div>
-              <div className="font-bold text-cyan-400">Quantum-Neural Fusion</div>
-              <div className="text-sm text-gray-300">10,000x Faster Processing</div>
+    <div className={`fixed top-0 left-0 right-0 z-50 transform transition-all duration-500 ${
+      isVisible ? 'translate-y-0' : '-translate-y-full'
+    }`}>
+      <div className={`bg-gradient-to-r ${currentSlideData.bgColor} border-b-2 ${currentSlideData.borderColor} shadow-lg`}>
+        <div className="max-w-7xl mx-auto px-4 py-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${currentSlideData.color} animate-pulse`}></div>
+                <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${currentSlideData.color} animate-pulse`} style={{ animationDelay: '0.5s' }}></div>
+                <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${currentSlideData.color} animate-pulse`} style={{ animationDelay: '1s' }}></div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-bold text-gray-900 mb-1">
+                  {currentSlideData.title}
+                </h3>
+                <p className="text-sm text-gray-600">
+                  {currentSlideData.subtitle}
+                </p>
+              </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
-              <div className="text-2xl mb-2">🧠</div>
-              <div className="font-bold text-purple-400">Transcendent Consciousness</div>
-              <div className="text-sm text-gray-300">99.9% Intelligence</div>
+            <div className="flex items-center space-x-4">
+              <Link
+                href={currentSlideData.link}
+                className={`bg-gradient-to-r ${currentSlideData.color} text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+              >
+                Explore Now
+              </Link>
+              <button
+                onClick={() => setIsVisible(false)}
+                className="text-gray-500 hover:text-gray-700 transition-colors"
+                aria-label="Close banner"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
-              <div className="text-2xl mb-2">💰</div>
-              <div className="font-bold text-green-400">15,000% ROI</div>
-              <div className="text-sm text-gray-300">Guaranteed Returns</div>
-            </div>
-          </div>
-          
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/ai-2026-ultimate-breakthrough-predictions" 
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Explore AI 2026 Predictions
-            </Link>
-            <Link 
-              href="/case-studies/ai-2026-global-transformation-success" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-300 shadow-lg"
-            >
-              See 15,000% ROI Success
-            </Link>
-          </div>
-          
-          {/* Additional links */}
-          <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
-            <Link href="/resources/ai-2026-ultimate-implementation-master-guide" className="text-cyan-400 hover:text-cyan-300 underline">
-              📚 Implementation Guide
-            </Link>
-            <Link href="/ai-2025-ultimate-breakthrough-revolution" className="text-purple-400 hover:text-purple-300 underline">
-              🚀 AI 2025 Breakthrough
-            </Link>
-            <Link href="/contact" className="text-green-400 hover:text-green-300 underline">
-              💬 Get Expert Help
-            </Link>
           </div>
         </div>
       </div>
+      
+      {/* Slide Indicators */}
+      <div className="flex justify-center space-x-2 py-2 bg-gray-100">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentSlide 
+                ? `bg-gradient-to-r ${currentSlideData.color}` 
+                : 'bg-gray-300'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
     </div>
   );
-}
+};
+
+export default AI2026RevolutionaryBreakthroughBanner;
