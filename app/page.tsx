@@ -36,6 +36,8 @@ import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import QuantumAIRevolutionBanner2025 from '../components/QuantumAIRevolutionBanner2025';
 import NewContent2025AnalyticsRevolutionBanner from '../components/NewContent2025AnalyticsRevolutionBanner';
 import AnalyticsContentShowcase2025 from '../components/AnalyticsContentShowcase2025';
+import NeuralInterfaceRevolution2025Banner from '../components/NeuralInterfaceRevolution2025Banner';
+import NeuralInterfaceContentShowcase2025 from '../components/NeuralInterfaceContentShowcase2025';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions | 500%+ ROI Guaranteed',
@@ -133,6 +135,11 @@ export default function HomePage() {
           <UltimateContent2025ShowcaseBanner />
         </section>
 
+        {/* Neural Interface Revolution Banner */}
+        <section className="py-16 bg-gradient-to-r from-purple-50 to-indigo-50">
+          <NeuralInterfaceRevolution2025Banner />
+        </section>
+
         {/* New Content 2025 Ultimate Showcase */}
         <section className="py-16 bg-white">
           <NewContent2025UltimateShowcaseBanner />
@@ -171,6 +178,11 @@ export default function HomePage() {
         {/* Analytics Content Showcase */}
         <section className="py-20 bg-gradient-to-r from-green-50 to-emerald-50">
           <AnalyticsContentShowcase2025 />
+        </section>
+
+        {/* Neural Interface Content Showcase */}
+        <section className="py-20 bg-white">
+          <NeuralInterfaceContentShowcase2025 />
         </section>
 
         {/* Core Services Section */}
