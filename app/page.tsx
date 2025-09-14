@@ -86,6 +86,10 @@ import RevolutionaryContent2025_2026Showcase from '../components/RevolutionaryCo
 import QuantumNeuralSuperintelligenceBanner from '../components/QuantumNeuralSuperintelligenceBanner';
 import UltimateBreakthrough2025Banner from '../components/UltimateBreakthrough2025Banner';
 
+// Import new 2025-2026 synthetic intelligence components
+import SyntheticIntelligence2025Banner from '../components/SyntheticIntelligence2025Banner';
+import UltimateContent2026Showcase from '../components/UltimateContent2026Showcase';
+
 // Import new 2025 advanced analytics promotional components
 import NewContent2025AdvancedAnalyticsBanner from '../components/NewContent2025AdvancedAnalyticsBanner';
 import EdgeComputingRevolutionBanner2025 from '../components/EdgeComputingRevolutionBanner2025';
@@ -115,6 +119,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Synthetic Intelligence 2025-2026 Banner - NEW ULTIMATE BREAKTHROUGH */}
+        <SyntheticIntelligence2025Banner />
+        
+        {/* Ultimate Content 2026 Showcase - NEW FEATURED */}
+        <UltimateContent2026Showcase />
+        
         {/* AI Innovation Showcase 2025 Banner - LATEST FEATURED */}
         <AIInnovationShowcase2025Banner />
         
