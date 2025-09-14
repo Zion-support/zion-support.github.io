@@ -1,375 +1,288 @@
 import React, { useState, useEffect } from 'react';
-
-interface AnalyticsData {
-  totalVisitors: number;
-  engagementRate: number;
-  conversionRate: number;
-  averageSessionDuration: number;
-  topContent: Array<{
-    title: string;
-    views: number;
-    engagement: number;
-    roi: number;
-  }>;
-  userSegments: Array<{
-    segment: string;
-    percentage: number;
-    growth: number;
-  }>;
-  revenueMetrics: {
-    totalRevenue: number;
-    monthlyGrowth: number;
-    roi: number;
-    costPerAcquisition: number;
-  };
-  aiInsights: Array<{
-    insight: string;
-    impact: 'High' | 'Medium' | 'Low';
-    recommendation: string;
-  }>;
-}
+import Link from 'next/link';
 
 const AI2025AdvancedAnalyticsDashboard = () => {
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [selectedTimeframe, setSelectedTimeframe] = useState('30d');
-  const [aiInsights, setAiInsights] = useState<string[]>([]);
+  const [timeRange, setTimeRange] = useState('7d');
+  const [activeMetric, setActiveMetric] = useState('roi');
+  const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    // Simulate loading analytics data
-    const loadAnalyticsData = async () => {
-      setIsLoading(true);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      const mockData: AnalyticsData = {
-        totalVisitors: 125847,
-        engagementRate: 87.3,
-        conversionRate: 12.4,
-        averageSessionDuration: 8.5,
-        topContent: [
-          {
-            title: 'AI 2025 Ultimate Content Revolution',
-            views: 45632,
-            engagement: 94.2,
-            roi: 50000
-          },
-          {
-            title: 'Neural Superintelligence Breakthrough',
-            views: 38921,
-            engagement: 91.8,
-            roi: 75000
-          },
-          {
-            title: 'Quantum Machine Learning Guide',
-            views: 32156,
-            engagement: 89.5,
-            roi: 100000
-          },
-          {
-            title: 'Fortune 500 AI Transformation',
-            views: 28743,
-            engagement: 92.1,
-            roi: 50000
-          }
-        ],
-        userSegments: [
-          { segment: 'Enterprise Leaders', percentage: 35, growth: 12.5 },
-          { segment: 'AI Enthusiasts', percentage: 28, growth: 18.3 },
-          { segment: 'Business Owners', percentage: 22, growth: 8.7 },
-          { segment: 'Developers', percentage: 15, growth: 25.1 }
-        ],
-        revenueMetrics: {
-          totalRevenue: 2847392,
-          monthlyGrowth: 23.7,
-          roi: 45000,
-          costPerAcquisition: 45.2
-        },
-        aiInsights: [
-          {
-            insight: 'Content about AI automation shows 40% higher engagement during business hours',
-            impact: 'High',
-            recommendation: 'Schedule AI automation content for 9-11 AM and 2-4 PM'
-          },
-          {
-            insight: 'Users spending 5+ minutes on ROI calculators have 85% higher conversion rate',
-            impact: 'High',
-            recommendation: 'Add more interactive ROI tools and calculators'
-          },
-          {
-            insight: 'Mobile users prefer shorter content (under 5 minutes) with visual elements',
-            impact: 'Medium',
-            recommendation: 'Create mobile-optimized content with infographics and videos'
-          },
-          {
-            insight: 'Enterprise segment responds best to case studies and implementation guides',
-            impact: 'High',
-            recommendation: 'Increase case study content by 30% and add implementation timelines'
-          }
-        ]
-      };
-      
-      setAnalyticsData(mockData);
-      setIsLoading(false);
-    };
+  const timeRanges = [
+    { value: '24h', label: '24 Hours' },
+    { value: '7d', label: '7 Days' },
+    { value: '30d', label: '30 Days' },
+    { value: '90d', label: '90 Days' },
+    { value: '1y', label: '1 Year' }
+  ];
 
-    loadAnalyticsData();
-  }, [selectedTimeframe]);
+  const metrics = [
+    { id: 'roi', label: 'ROI', value: '50000%', change: '+12.5%', color: 'green' },
+    { id: 'revenue', label: 'Revenue', value: '$2.5M', change: '+8.3%', color: 'blue' },
+    { id: 'efficiency', label: 'Efficiency', value: '95%', change: '+5.2%', color: 'purple' },
+    { id: 'automation', label: 'Automation', value: '87%', change: '+3.1%', color: 'orange' },
+    { id: 'satisfaction', label: 'Satisfaction', value: '98%', change: '+2.8%', color: 'pink' },
+    { id: 'uptime', label: 'Uptime', value: '99.9%', change: '+0.1%', color: 'indigo' }
+  ];
 
-  const generateAIInsights = () => {
-    if (!analyticsData) return;
-    
-    const insights = [
-      `🎯 Your top-performing content generates ${analyticsData.topContent[0].roi.toLocaleString()}% ROI`,
-      `📈 Engagement rate of ${analyticsData.engagementRate}% is ${analyticsData.engagementRate > 80 ? 'excellent' : 'good'} - ${analyticsData.engagementRate > 80 ? 'maintain this momentum' : 'consider content optimization'}`,
-      `💰 Revenue growth of ${analyticsData.revenueMetrics.monthlyGrowth}% indicates strong market demand`,
-      `👥 ${analyticsData.userSegments[0].segment} segment shows ${analyticsData.userSegments[0].growth}% growth - focus content strategy here`,
-      `⏱️ Average session duration of ${analyticsData.averageSessionDuration} minutes suggests high content quality`
-    ];
-    
-    setAiInsights(insights);
+  const chartData = {
+    roi: [
+      { month: 'Jan', value: 12000, target: 10000 },
+      { month: 'Feb', value: 18500, target: 15000 },
+      { month: 'Mar', value: 25000, target: 20000 },
+      { month: 'Apr', value: 32000, target: 25000 },
+      { month: 'May', value: 41000, target: 30000 },
+      { month: 'Jun', value: 50000, target: 35000 }
+    ],
+    revenue: [
+      { month: 'Jan', value: 150000, target: 120000 },
+      { month: 'Feb', value: 220000, target: 180000 },
+      { month: 'Mar', value: 310000, target: 250000 },
+      { month: 'Apr', value: 420000, target: 320000 },
+      { month: 'May', value: 580000, target: 400000 },
+      { month: 'Jun', value: 750000, target: 500000 }
+    ],
+    efficiency: [
+      { month: 'Jan', value: 75, target: 70 },
+      { month: 'Feb', value: 82, target: 75 },
+      { month: 'Mar', value: 87, target: 80 },
+      { month: 'Apr', value: 91, target: 85 },
+      { month: 'May', value: 94, target: 90 },
+      { month: 'Jun', value: 95, target: 92 }
+    ]
   };
 
-  if (isLoading) {
-    return (
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-indigo-600 mx-auto mb-4"></div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              🤖 AI Analytics Dashboard Loading...
-            </h2>
-            <p className="text-xl text-gray-600">
-              Analyzing your data with advanced AI algorithms
-            </p>
-          </div>
-        </div>
-      </section>
-    );
-  }
+  const topPages = [
+    { page: '/ai-2025-ultimate-breakthrough', views: 125000, conversion: 12.5 },
+    { page: '/case-studies', views: 98000, conversion: 15.2 },
+    { page: '/resources', views: 87000, conversion: 8.7 },
+    { page: '/contact', views: 76000, conversion: 22.1 },
+    { page: '/services', views: 65000, conversion: 18.9 }
+  ];
 
-  if (!analyticsData) return null;
+  const aiInsights = [
+    {
+      type: 'success',
+      title: 'High Performance Alert',
+      message: 'ROI has exceeded target by 42% this month. Consider scaling successful strategies.',
+      impact: 'High'
+    },
+    {
+      type: 'warning',
+      title: 'Optimization Opportunity',
+      message: 'Content generation efficiency could improve by 15% with advanced AI models.',
+      impact: 'Medium'
+    },
+    {
+      type: 'info',
+      title: 'Trend Analysis',
+      message: 'Mobile traffic increased 25% - optimize for mobile experience.',
+      impact: 'Low'
+    }
+  ];
+
+  const getColorClass = (color: string) => {
+    const colors = {
+      green: 'text-green-600 bg-green-50',
+      blue: 'text-blue-600 bg-blue-50',
+      purple: 'text-purple-600 bg-purple-50',
+      orange: 'text-orange-600 bg-orange-50',
+      pink: 'text-pink-600 bg-pink-50',
+      indigo: 'text-indigo-600 bg-indigo-50'
+    };
+    return colors[color] || 'text-gray-600 bg-gray-50';
+  };
+
+  const getInsightIcon = (type: string) => {
+    const icons = {
+      success: '✅',
+      warning: '⚠️',
+      info: 'ℹ️'
+    };
+    return icons[type] || 'ℹ️';
+  };
+
+  const getInsightColor = (type: string) => {
+    const colors = {
+      success: 'border-green-500 bg-green-50',
+      warning: 'border-orange-500 bg-orange-50',
+      info: 'border-blue-500 bg-blue-50'
+    };
+    return colors[type] || 'border-gray-500 bg-gray-50';
+  };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            🤖 AI 2025 Advanced Analytics Dashboard
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Powered by machine learning and neural networks, get real-time insights 
-            and AI-powered recommendations to optimize your content strategy.
+    <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-7xl mx-auto">
+      {/* Header */}
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+        <div>
+          <div className="text-6xl mb-4">📊</div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-2">AI 2025 Advanced Analytics</h2>
+          <p className="text-xl text-gray-600">
+            Real-time insights and performance metrics for your AI transformation
           </p>
-          
-          <div className="mt-6 flex justify-center space-x-4">
-            {['7d', '30d', '90d', '1y'].map(timeframe => (
-              <button
-                key={timeframe}
-                onClick={() => setSelectedTimeframe(timeframe)}
-                className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                  selectedTimeframe === timeframe
-                    ? 'bg-indigo-600 text-white'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                {timeframe}
-              </button>
+        </div>
+        <div className="mt-4 md:mt-0">
+          <select
+            value={timeRange}
+            onChange={(e) => setTimeRange(e.target.value)}
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+          >
+            {timeRanges.map((range) => (
+              <option key={range.value} value={range.value}>
+                {range.label}
+              </option>
             ))}
-          </div>
-        </div>
-
-        {/* Key Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-600">Total Visitors</p>
-                <p className="text-3xl font-bold text-gray-900">
-                  {analyticsData.totalVisitors.toLocaleString()}
-                </p>
-              </div>
-              <div className="text-3xl">👥</div>
-            </div>
-            <div className="mt-2">
-              <span className="text-green-600 text-sm font-medium">+12.5%</span>
-              <span className="text-gray-500 text-sm ml-2">vs last period</span>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-600">Engagement Rate</p>
-                <p className="text-3xl font-bold text-gray-900">
-                  {analyticsData.engagementRate}%
-                </p>
-              </div>
-              <div className="text-3xl">📊</div>
-            </div>
-            <div className="mt-2">
-              <span className="text-green-600 text-sm font-medium">+5.2%</span>
-              <span className="text-gray-500 text-sm ml-2">vs last period</span>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-600">Conversion Rate</p>
-                <p className="text-3xl font-bold text-gray-900">
-                  {analyticsData.conversionRate}%
-                </p>
-              </div>
-              <div className="text-3xl">🎯</div>
-            </div>
-            <div className="mt-2">
-              <span className="text-green-600 text-sm font-medium">+2.1%</span>
-              <span className="text-gray-500 text-sm ml-2">vs last period</span>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-600">Avg. Session</p>
-                <p className="text-3xl font-bold text-gray-900">
-                  {analyticsData.averageSessionDuration}m
-                </p>
-              </div>
-              <div className="text-3xl">⏱️</div>
-            </div>
-            <div className="mt-2">
-              <span className="text-green-600 text-sm font-medium">+1.2m</span>
-              <span className="text-gray-500 text-sm ml-2">vs last period</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          {/* Top Performing Content */}
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-6">🏆 Top Performing Content</h3>
-            <div className="space-y-4">
-              {analyticsData.topContent.map((content, index) => (
-                <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-gray-900 text-sm">{content.title}</h4>
-                    <div className="flex items-center space-x-4 mt-1 text-xs text-gray-600">
-                      <span>👀 {content.views.toLocaleString()} views</span>
-                      <span>📊 {content.engagement}% engagement</span>
-                      <span>💰 {content.roi.toLocaleString()}% ROI</span>
-                    </div>
-                  </div>
-                  <div className="text-2xl">
-                    {index === 0 ? '🥇' : index === 1 ? '🥈' : '🥉'}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* User Segments */}
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-6">👥 User Segments</h3>
-            <div className="space-y-4">
-              {analyticsData.userSegments.map((segment, index) => (
-                <div key={index} className="flex items-center justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-sm font-medium text-gray-900">{segment.segment}</span>
-                      <span className="text-sm text-gray-600">{segment.percentage}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div 
-                        className="bg-indigo-600 h-2 rounded-full transition-all duration-300"
-                        style={{ width: `${segment.percentage}%` }}
-                      ></div>
-                    </div>
-                    <div className="mt-1">
-                      <span className="text-green-600 text-xs font-medium">+{segment.growth}%</span>
-                      <span className="text-gray-500 text-xs ml-2">growth</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Revenue Metrics */}
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-12">
-          <h3 className="text-xl font-bold text-gray-900 mb-6">💰 Revenue Metrics</h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <p className="text-3xl font-bold text-gray-900">
-                ${(analyticsData.revenueMetrics.totalRevenue / 1000000).toFixed(1)}M
-              </p>
-              <p className="text-sm text-gray-600">Total Revenue</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl font-bold text-green-600">
-                +{analyticsData.revenueMetrics.monthlyGrowth}%
-              </p>
-              <p className="text-sm text-gray-600">Monthly Growth</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl font-bold text-blue-600">
-                {analyticsData.revenueMetrics.roi.toLocaleString()}%
-              </p>
-              <p className="text-sm text-gray-600">ROI</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl font-bold text-purple-600">
-                ${analyticsData.revenueMetrics.costPerAcquisition}
-              </p>
-              <p className="text-sm text-gray-600">Cost Per Acquisition</p>
-            </div>
-          </div>
-        </div>
-
-        {/* AI Insights */}
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl shadow-lg p-8 text-white">
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="text-2xl font-bold">🤖 AI-Powered Insights</h3>
-            <button
-              onClick={generateAIInsights}
-              className="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-            >
-              Generate New Insights
-            </button>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            {analyticsData.aiInsights.map((insight, index) => (
-              <div key={index} className="bg-white bg-opacity-10 rounded-lg p-4">
-                <div className="flex items-start space-x-3">
-                  <div className="text-2xl">
-                    {insight.impact === 'High' ? '🔥' : insight.impact === 'Medium' ? '⚡' : '💡'}
-                  </div>
-                  <div>
-                    <p className="font-medium mb-2">{insight.insight}</p>
-                    <p className="text-sm opacity-90">{insight.recommendation}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          {aiInsights.length > 0 && (
-            <div className="mt-6 p-4 bg-white bg-opacity-10 rounded-lg">
-              <h4 className="font-bold mb-3">🎯 Additional AI Insights:</h4>
-              <ul className="space-y-2">
-                {aiInsights.map((insight, index) => (
-                  <li key={index} className="text-sm">{insight}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+          </select>
         </div>
       </div>
-    </section>
+
+      {/* Key Metrics */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        {metrics.map((metric) => (
+          <div
+            key={metric.id}
+            className={`p-6 rounded-xl border-2 cursor-pointer transition-all duration-200 ${
+              activeMetric === metric.id
+                ? `border-${metric.color}-500 bg-${metric.color}-50`
+                : 'border-gray-200 hover:border-gray-300'
+            }`}
+            onClick={() => setActiveMetric(metric.id)}
+          >
+            <div className="flex justify-between items-start mb-4">
+              <h3 className="text-lg font-semibold text-gray-900">{metric.label}</h3>
+              <span className={`px-2 py-1 rounded-full text-sm font-medium ${getColorClass(metric.color)}`}>
+                {metric.change}
+              </span>
+            </div>
+            <div className="text-3xl font-bold text-gray-900 mb-2">{metric.value}</div>
+            <div className="text-sm text-gray-600">vs. previous period</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Chart Section */}
+      <div className="mb-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">
+          {activeMetric.toUpperCase()} Performance Over Time
+        </h3>
+        <div className="bg-gray-50 p-6 rounded-xl">
+          <div className="space-y-4">
+            {chartData[activeMetric]?.map((data, index) => (
+              <div key={index} className="flex items-center space-x-4">
+                <div className="w-20 text-sm font-semibold text-gray-600">{data.month}</div>
+                <div className="flex-1 bg-gray-200 rounded-full h-6 relative">
+                  <div
+                    className="bg-purple-500 h-6 rounded-full relative flex items-center justify-end pr-2"
+                    style={{ width: `${Math.min((data.value / data.target) * 100, 100)}%` }}
+                  >
+                    <span className="text-white text-xs font-bold">
+                      {activeMetric === 'revenue' ? `$${(data.value / 1000).toFixed(0)}K` : `${data.value}%`}
+                    </span>
+                  </div>
+                </div>
+                <div className="w-24 text-sm text-gray-600 text-right">
+                  Target: {activeMetric === 'revenue' ? `$${(data.target / 1000).toFixed(0)}K` : `${data.target}%`}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Top Pages */}
+      <div className="mb-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Top Performing Pages</h3>
+        <div className="bg-gray-50 p-6 rounded-xl">
+          <div className="space-y-4">
+            {topPages.map((page, index) => (
+              <div key={index} className="flex items-center justify-between bg-white p-4 rounded-lg">
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold">
+                    {index + 1}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">{page.page}</div>
+                    <div className="text-sm text-gray-600">{page.views.toLocaleString()} views</div>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="text-lg font-bold text-green-600">{page.conversion}%</div>
+                  <div className="text-sm text-gray-600">conversion</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* AI Insights */}
+      <div className="mb-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">AI-Powered Insights</h3>
+        <div className="space-y-4">
+          {aiInsights.map((insight, index) => (
+            <div
+              key={index}
+              className={`p-4 rounded-lg border-l-4 ${getInsightColor(insight.type)}`}
+            >
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">{getInsightIcon(insight.type)}</span>
+                <div className="flex-1">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <h4 className="font-semibold text-gray-900">{insight.title}</h4>
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                      insight.impact === 'High' ? 'bg-red-100 text-red-600' :
+                      insight.impact === 'Medium' ? 'bg-yellow-100 text-yellow-600' :
+                      'bg-green-100 text-green-600'
+                    }`}>
+                      {insight.impact} Impact
+                    </span>
+                  </div>
+                  <p className="text-gray-600">{insight.message}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Real-time Activity */}
+      <div className="mb-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Real-time Activity</h3>
+        <div className="bg-gray-900 text-green-400 p-6 rounded-xl font-mono text-sm">
+          <div className="space-y-2">
+            <div>[12:34:56] AI model processing 1,247 requests/min</div>
+            <div>[12:34:57] Content generation: 89% efficiency</div>
+            <div>[12:34:58] Customer queries: 95% automated response</div>
+            <div>[12:34:59] ROI calculation: +2.3% this hour</div>
+            <div>[12:35:00] System optimization: 99.9% uptime</div>
+            <div className="text-green-300 animate-pulse">[12:35:01] Processing...</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="text-center">
+        <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-2xl">
+          <h3 className="text-2xl font-bold mb-4">Want Deeper Analytics?</h3>
+          <p className="text-xl mb-6 opacity-90">
+            Get advanced AI-powered insights and custom analytics for your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+            >
+              Get Custom Analytics
+            </Link>
+            <Link
+              href="/demo"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-colors"
+            >
+              Schedule Demo
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
