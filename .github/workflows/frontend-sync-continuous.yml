@@ -3,7 +3,7 @@ name: Frontend Sync Continuous
 on:
   push:
     branches:
-    - main
+      - main
   schedule:
     - cron: '0 */2 * * *'
   workflow_dispatch: null
