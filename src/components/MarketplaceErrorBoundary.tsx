@@ -80,12 +80,7 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
     Sentry.withScope((scope) => {
       scope.setTag('errorBoundary', 'marketplace');
       scope.setContext('errorInfo', {
-<<<<<<< HEAD
-        componentStack: errorInfo.componentStack || undefined,
-      });
-=======
         componentStack: errorInfo.componentStack || undefined});
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       scope.setLevel('error');
       Sentry.captureException(error);
     });
@@ -99,8 +94,4 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
       {children}
     </ErrorBoundary>
   );
-<<<<<<< HEAD
 } 
-=======
-} 
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

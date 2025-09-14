@@ -4,58 +4,13 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-<<<<<<< HEAD
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-=======
   AccordionTrigger} from "@/components/ui/accordion";
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 import { FileText } from 'lucide-react'
 
 const faqs = [
   {
     question: "How do I publish my AI product or service?",
     answer:
-<<<<<<< HEAD
-      "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check.",
-  },
-  {
-    question: "What types of AI jobs can I find or post?",
-    answer:
-      "You can hire or apply for roles such as machine learning engineer, data scientist, AI researcher, computer vision expert and more.",
-  },
-  {
-    question: "What IT equipment is available to rent or buy?",
-    answer:
-      "Servers, storage solutions, networking gear, power supplies and complete rack setups are offered with flexible purchase or rental options.",
-  },
-  {
-    question: "How does Zion ensure 24x7x365 availability?",
-    answer:
-      "We use distributed data centers with automated failover and a global support team working in rotating shifts.",
-  },
-  {
-    question: "What is Zion's Green IT program?",
-    answer:
-      "Obsolete hardware is recycled or reused in line with WEEE, RoHS and e-Stewards standards, and we provide disposal certificates when required.",
-  },
-  {
-    question: "Are there fees for listing my products or services?",
-    answer:
-      "No. Listing products, services, jobs or CVs is free, with optional paid promotion for extra visibility.",
-  },
-  {
-    question: "How do I track my order status?",
-    answer:
-      "Check the Orders page in your account or ask our chatbot with your order ID for a quick update.",
-  },
-  {
-    question: "How do I contact support?",
-    answer:
-      "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime.",
-  },
-];
-=======
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."},
   {
     question: "What types of AI jobs can I find or post?",
@@ -85,7 +40,6 @@ const faqs = [
     question: "How do I contact support?",
     answer:
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}];
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
 export function FaqSection() {
   return (

@@ -15,10 +15,26 @@ try {
   process.chdir(__dirname + '/..');
   
   console.log('📦 Installing dependencies...');
-  execSync('yarn install --frozen-lockfile', { stdio: 'inherit' });
+  execSync('yarn install --production=false --frozen-lockfile', { stdio: 'inherit' });
+  
+  // Check if Vite is available
+  console.log('🔍 Checking if Vite is available...');
+  try {
+    execSync('npx vite --version', { stdio: 'pipe' });
+    console.log('✅ Vite is available');
+  } catch (error) {
+    console.log('⚠️ Vite not found via npx, trying direct path...');
+    try {
+      execSync('./node_modules/.bin/vite --version', { stdio: 'pipe' });
+      console.log('✅ Vite found in node_modules');
+    } catch (error2) {
+      throw new Error('Vite is not available. Please check installation.');
+    }
+  }
   
   console.log('🔨 Building application...');
-  execSync('yarn build', { stdio: 'inherit' });
+  execSync('npm run prebuild:netlify', { stdio: 'inherit' });
+  execSync('npm run build', { stdio: 'inherit' });
   
   // Check if build output exists
   const distPath = path.join(process.cwd(), 'dist');

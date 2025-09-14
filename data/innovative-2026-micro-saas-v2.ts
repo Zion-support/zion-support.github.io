@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import { ProductListing } from "../src/types/listings";
-
-export const innovative2026MicroSaasServicesV2: ProductListing[] = [
-  {
-    id: "ai-powered-project-management-2026",
-    title: "AI-Powered Project Management Platform 2026",
-    description: "Next-generation project management platform with AI-driven task prioritization, resource optimization, and predictive project completion forecasting.",
-    category: "Micro SAAS",
-    subcategory: "Project Management",
-    price: 399,
-    currency: "$",
-    tags: ["AI", "Project Management", "Task Optimization", "Predictive Analytics"],
-    author: {
-      name: "Zion Tech Group",
-      avatar: "/avatars/ziontech.jpg",
-      verified: true
-    },
-    images: ["/images/services/ai-project-management-2026.jpg"],
-    rating: 4.9,
-    reviewCount: 156,
-    location: "Middletown, DE",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-=======
 export interface Innovative2026MicroSaasV2 {
   id: string;
   name: string;
@@ -59,7 +34,6 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
     realImplementation: true,
     contactInfo: {
       mobile: "+1 302 464 0950",
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -124,11 +98,4 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
       custom: "Contact for enterprise pricing"
     }
   }
-<<<<<<< HEAD
 ];
-
-// Export the same data with the alternative name for backward compatibility
-export const innovative2026MicroSaasV2Services = innovative2026MicroSaasServicesV2;
-=======
-];
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

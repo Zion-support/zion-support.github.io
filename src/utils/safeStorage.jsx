@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-// Safe localStorage wrapper with error handling
-=======
 import { error as logErrorToProduction } from '@/utils/productionLogger';
 // In-memory storage for fallback with optimizations
 const inMemoryStore = {};
@@ -50,7 +47,6 @@ function safeConsoleError(message, error) {
         isLoggingError = false;
     }
 }
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 export const safeStorage = {
   getItem: (key) => {
     try {

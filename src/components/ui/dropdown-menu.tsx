@@ -194,9 +194,4 @@ export {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-<<<<<<< HEAD
-  DropdownMenuRadioGroup,
-}
-=======
   DropdownMenuRadioGroup}
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
