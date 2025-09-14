@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+"use client";
+import React{ useEffectuseState } from 'react';
 
 interface SecurityMetrics {
   cspViolations: number;
@@ -10,7 +11,7 @@ interface SecurityMetrics {
 }
 
 export default function SecurityEnhancer() {
-  const [securityMetrics, setSecurityMetrics] = useState<SecurityMetrics>({
+  const [securityMetricsetSecurityMetrics] = useState<SecurityMetrics>({
     cspViolations: 0,
     xssAttempts: 0,
     csrfAttempts: 0,
@@ -44,7 +45,7 @@ export default function SecurityEnhancer() {
         'X-Frame-Options': 'DENY',
         'X-XSS-Protection': '1; mode=block',
         'Referrer-Policy': 'strict-origin-when-cross-origin',
-        'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=()',
+        'Permissions-Policy': 'camera=()microphone=()geolocation=()payment=()',
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
         'Cross-Origin-Embedder-Policy': 'require-corp',
         'Cross-Origin-Opener-Policy': 'same-origin',
@@ -52,10 +53,10 @@ export default function SecurityEnhancer() {
       };
 
       // Apply headers to document
-      Object.entries(securityHeaders).forEach(([key, value]) => {
+      Object.entries(securityHeaders).forEach(([keyvalue]) => {
         const meta = document.createElement('meta');
-        meta.setAttribute('http-equiv', key);
-        meta.setAttribute('content', value);
+        meta.setAttribute('http-equiv'key);
+        meta.setAttribute('content'value);
         document.head.appendChild(meta);
       });
     };
@@ -65,22 +66,22 @@ export default function SecurityEnhancer() {
       // Sanitize user input
       const sanitizeInput = (input: string): string => {
         return input
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#x27;')
-          .replace(/\//g, '&#x2F;');
+          .replace(/</g'&lt;')
+          .replace(/>/g'&gt;')
+          .replace(/"/g'&quot;')
+          .replace(/'/g'&#x27;')
+          .replace(/\//g'&#x2F;');
       };
 
       // Override innerHTML to sanitize content
-      const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML') || 
-                                Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'innerHTML');
+      const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype'innerHTML') || 
+                                Object.getOwnPropertyDescriptor(HTMLElement.prototype'innerHTML');
       
       if (originalInnerHTML) {
-        Object.defineProperty(Element.prototype, 'innerHTML', {
+        Object.defineProperty(Element.prototype'innerHTML'{
           set: function(value) {
             const sanitizedValue = sanitizeInput(value);
-            originalInnerHTML.set?.call(this, sanitizedValue);
+            originalInnerHTML.set?.call(thisanitizedValue);
           },
           get: originalInnerHTML.get
         });
@@ -93,11 +94,11 @@ export default function SecurityEnhancer() {
       const generateCSRFToken = (): string => {
         const array = new Uint8Array(32);
         crypto.getRandomValues(array);
-        return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+        return Array.from(arraybyte => byte.toString(16).padStart(2'0')).join('');
       };
 
       const csrfToken = generateCSRFToken();
-      sessionStorage.setItem('csrf-token', csrfToken);
+      sessionStorage.setItem('csrf-token'csrfToken);
 
       // Add CSRF token to all forms
       const forms = document.querySelectorAll('form');
@@ -110,7 +111,7 @@ export default function SecurityEnhancer() {
       });
 
       // Validate CSRF token on form submission
-      document.addEventListener('submit', (e) => {
+      document.addEventListener('submit'(e) => {
         const form = e.target as HTMLFormElement;
         const formToken = form.querySelector('input[name="csrf-token"]') as HTMLInputElement;
         const sessionToken = sessionStorage.getItem('csrf-token');
@@ -124,7 +125,7 @@ export default function SecurityEnhancer() {
 
     // Rate Limiting
     const implementRateLimiting = () => {
-      const requestCounts = new Map<string, { count: number; resetTime: number }>();
+      const requestCounts = new Map<string{ count: number; resetTime: number }>();
       const RATE_LIMIT = 100; // requests per minute
       const WINDOW_SIZE = 60000; // 1 minute
 
@@ -133,7 +134,7 @@ export default function SecurityEnhancer() {
         const userRequests = requestCounts.get(identifier);
 
         if (!userRequests || now > userRequests.resetTime) {
-          requestCounts.set(identifier, { count: 1, resetTime: now + WINDOW_SIZE });
+          requestCounts.set(identifier{ count: 1resetTime: now + WINDOW_SIZE });
           return true;
         }
 
@@ -147,20 +148,20 @@ export default function SecurityEnhancer() {
 
       // Apply rate limiting to fetch requests
       const originalFetch = window.fetch;
-      window.fetch = async (input, init) => {
-        const identifier = 'global'; // In real implementation, use user IP or session ID
+      window.fetch = async (inputinit) => {
+        const identifier = 'global'; // In real implementationuse user IP or session ID
         if (!checkRateLimit(identifier)) {
           throw new Error('Rate limit exceeded');
         }
-        return originalFetch(input, init);
+        return originalFetch(inputinit);
       };
     };
 
     // Security Monitoring
     const implementSecurityMonitoring = () => {
       // Monitor CSP violations
-      document.addEventListener('securitypolicyviolation', (e) => {
-        console.warn('CSP Violation:', e);
+      document.addEventListener('securitypolicyviolation'(e) => {
+        console.warn('CSP Violation:'e);
         setSecurityMetrics(prev => ({
           ...prev,
           cspViolations: prev.cspViolations + 1
@@ -181,11 +182,11 @@ export default function SecurityEnhancer() {
       };
 
       // Monitor form submissions
-      document.addEventListener('submit', (e) => {
+      document.addEventListener('submit'(e) => {
         const form = e.target as HTMLFormElement;
         const formData = new FormData(form);
         
-        for (const [key, value] of formData.entries()) {
+        for (const [keyvalue] of formData.entries()) {
           if (typeof value === 'string' && checkForSuspiciousActivity(value)) {
             console.warn('Suspicious activity detected in form submission');
             setSecurityMetrics(prev => ({
@@ -208,7 +209,7 @@ export default function SecurityEnhancer() {
             xssAttempts: prev.xssAttempts + 1
           }));
         }
-        return originalPushState.apply(this, args);
+        return originalPushState.apply(thisargs);
       };
 
       history.replaceState = function(...args) {
@@ -219,13 +220,13 @@ export default function SecurityEnhancer() {
             xssAttempts: prev.xssAttempts + 1
           }));
         }
-        return originalReplaceState.apply(this, args);
+        return originalReplaceState.apply(thisargs);
       };
     };
 
     // Secure Cookie Implementation
     const implementSecureCookies = () => {
-      const setSecureCookie = (name: string, value: string, days: number = 30) => {
+      const setSecureCookie = (name: stringvalue: stringdays: number = 30) => {
         const expires = new Date();
         expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
         
@@ -237,7 +238,7 @@ export default function SecurityEnhancer() {
       };
 
       // Set security-related cookies
-      setSecureCookie('security-session', 'active', 1);
+      setSecureCookie('security-session'active'1);
     };
 
     // Initialize all security measures
@@ -254,7 +255,7 @@ export default function SecurityEnhancer() {
       secureConnections: location.protocol === 'https:' ? 1 : 0
     }));
 
-  }, []);
+  }[]);
 
   // Don't render in production
   if (process.env.NODE_ENV === 'production') {

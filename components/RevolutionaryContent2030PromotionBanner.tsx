@@ -13,7 +13,7 @@ export default function RevolutionaryContent2030PromotionBanner() {
             Explore the Future of Technology
           </h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed">
-            Discover groundbreaking AI trends, quantum computing breakthroughs, and neural interface revolutions that will shape the next decade.
+            Discover groundbreaking AI trendsquantum computing breakthroughsand neural interface revolutions that will shape the next decade.
           </p>
         </div>
 
@@ -81,7 +81,7 @@ export default function RevolutionaryContent2030PromotionBanner() {
             <div className="text-4xl mb-4">🧠</div>
             <h3 className="text-xl font-bold mb-4">Neural Interface Revolution</h3>
             <p className="text-sm opacity-90 mb-6 leading-relaxed">
-              Direct brain-computer interfaces that will transform how we think, communicate, and interact with technology.
+              Direct brain-computer interfaces that will transform how we thinkcommunicateand interact with technology.
             </p>
             <div className="space-y-2 mb-6">
               <div className="flex items-center text-sm">

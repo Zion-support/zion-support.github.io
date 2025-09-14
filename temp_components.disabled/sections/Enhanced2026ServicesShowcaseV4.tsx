@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Star, TrendingUp, Users, Zap, ArrowRight, CheckCircle, Clock, DollarSign } from 'lucide-react';
+import React{ useState } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
+StarTrendingUpUsersZapArrowRightCheckCircleClockDollarSign
 import Link from 'next/link';
 
 interface Service {
@@ -57,18 +57,18 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
   subtitle = "Experience the future of technology with our cutting-edge solutions",
   showFilters = true
 }) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState<string>('all');
+  const [selectedPriceRangesetSelectedPriceRange] = useState<string>('all');
+  const [sortBysetSortBy] = useState<string>('name');
+  const [searchTermsetSearchTerm] = useState('');
 
-  const categories = ['all', 'AI', 'Quantum', 'Enterprise', 'Micro SaaS', 'Emerging Tech', 'Cybersecurity', 'Blockchain'];
+  const categories = ['all'AI'Quantum'Enterprise'Micro SaaS'Emerging Tech'Cybersecurity'Blockchain'];
   const priceRanges = [
-    { id: 'all', label: 'All Prices' },
-    { id: 'low', label: 'Under $100', min: 0, max: 100 },
-    { id: 'medium', label: '$100 - $500', min: 100, max: 500 },
-    { id: 'high', label: '$500 - $1000', min: 500, max: 1000 },
-    { id: 'enterprise', label: '$1000+', min: 1000, max: Infinity }
+    { id: 'all'label: 'All Prices' },
+    { id: 'low'label: 'Under $100'min: 0max: 100 },
+    { id: 'medium'label: '$100 - $500'min: 100max: 500 },
+    { id: 'high'label: '$500 - $1000'min: 500max: 1000 },
+    { id: 'enterprise'label: '$1000+'min: 1000max: Infinity }
   ];
 
   const filteredServices = services.filter(service => {
@@ -81,7 +81,7 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
 
     let matchesPrice = true;
     if (selectedPriceRange !== 'all') {
-      const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+      const price = parseInt(service.price.replace(/[^0-9]/g''));
       const range = priceRanges.find(r => r.id === selectedPriceRange);
       if (range) {
         matchesPrice = price >= range.min && price <= range.max;
@@ -91,10 +91,10 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
     return matchesCategory && matchesSearch && matchesPrice;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort((ab) => {
     switch (sortBy) {
       case 'price':
-        return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+        return parseInt(a.price.replace(/[^0-9]/g'')) - parseInt(b.price.replace(/[^0-9]/g''));
       case 'rating':
         return b.rating - a.rating;
       case 'customers':
@@ -116,7 +116,7 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -135,8 +135,8 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -151,9 +151,9 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
         {/* Filters */}
         {showFilters && (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.6delay: 0.2 }}
             className="mb-12 space-y-6"
           >
             {/* Search */}
@@ -280,7 +280,7 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                     <div className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, index) => (
+                      {service.features.slice(03).map((featureindex) => (
                         <div key={index} className="flex items-center text-xs text-gray-400">
                           <CheckCircle className="h-3 w-3 text-cyan-400 mr-2 flex-shrink-0" />
                           {feature}

@@ -86,17 +86,17 @@ const RevolutionaryContentHub2026: React.FC = () => {
             Future Intelligence Library
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover the most advanced research, breakthroughs, and insights into the future of AI, 
-            quantum computing, and transcendent intelligence.
+            Discover the most advanced researchbreakthroughsand insights into the future of AI
+            quantum computingand transcendent intelligence.
           </p>
         </div>
 
         {/* Content Categories Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {contentCategories.map((category, index) => (
+          {contentCategories.map((categoryindex) => (
             <Link 
               key={index}
-              href={`/content/${category.title.toLowerCase().replace(/\s+/g, '-')}`}
+              href={`/content/${category.title.toLowerCase().replace(/\s+/g'-')}`}
               className="group relative p-6 bg-gradient-to-br from-purple-800/30 to-blue-800/30 rounded-2xl border border-purple-400/20 backdrop-blur-sm hover:border-purple-400/50 transition-all duration-500 hover:transform hover:scale-105"
             >
               <div className="flex items-start space-x-4">
@@ -139,7 +139,7 @@ const RevolutionaryContentHub2026: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {featuredArticles.map((article, index) => (
+            {featuredArticles.map((articleindex) => (
               <div key={index} className="group bg-gradient-to-br from-purple-700/50 to-blue-700/50 p-6 rounded-xl hover:from-cyan-700/50 hover:to-purple-700/50 transition-all duration-500">
                 <div className="flex items-center space-x-2 mb-3">
                   <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-xs font-bold rounded-full">
@@ -187,7 +187,7 @@ const RevolutionaryContentHub2026: React.FC = () => {
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-xl font-bold mb-4 text-white">Research Analytics</h3>
               <p className="text-gray-300 mb-6">
-                Track trending topics, research patterns, and breakthrough developments in real-time.
+                Track trending topicsresearch patternsand breakthrough developments in real-time.
               </p>
               <Link 
                 href="/analytics"

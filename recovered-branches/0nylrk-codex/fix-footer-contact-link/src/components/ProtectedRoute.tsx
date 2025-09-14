@@ -13,14 +13,14 @@ export interface ProtectedRouteProps {
 }
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
-  children, 
+  children
   adminOnly = false,
   tenantAdminAllowed = false,
   requiredUserType
 }) => {
-  const { user, isLoading } = useAuth();
+  const { userisLoading } = useAuth();
   const { tenant } = useWhitelabel();
-  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id);
+  const { isAdmin: isTenantAdminisLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id);
   
   const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
 

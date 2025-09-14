@@ -1,10 +1,11 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Wrench, 
-  Zap, 
+  Wrench
+  Zap
   Star,
   ArrowRight,
   Play,
@@ -18,16 +19,16 @@ import {
 } from 'lucide-react';
 
 const AI2025ToolsUtilitiesPromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentTool, setCurrentTool] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentToolsetCurrentTool] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentTool((prev) => (prev + 1) % featuredTools.length);
-    }, 2500);
+    }2500);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const featuredTools = [
     {
@@ -57,10 +58,10 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
   ];
 
   const stats = [
-    { icon: Zap, value: "100+", label: "AI Tools Available" },
-    { icon: Star, value: "4.8", label: "Average Rating" },
-    { icon: Globe, value: "200K+", label: "Active Users" },
-    { icon: CheckCircle, value: "99.9%", label: "Uptime" }
+    { icon: Zapvalue: "100+"label: "AI Tools Available" },
+    { icon: Starvalue: "4.8"label: "Average Rating" },
+    { icon: Globevalue: "200K+"label: "Active Users" },
+    { icon: CheckCirclevalue: "99.9%"label: "Uptime" }
   ];
 
   return (
@@ -76,8 +77,8 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0x: -50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
@@ -95,8 +96,8 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
               </h2>
               
               <p className="text-xl text-gray-300 leading-relaxed mb-8">
-                Discover our comprehensive suite of AI-powered tools and utilities designed to streamline your workflow, 
-                boost productivity, and drive innovation across all aspects of your business.
+                Discover our comprehensive suite of AI-powered tools and utilities designed to streamline your workflow
+                boost productivityand drive innovation across all aspects of your business.
               </p>
             </div>
 
@@ -144,9 +145,9 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
 
           {/* Right Content - Featured Tools */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="space-y-6"
           >
             {/* Featured Tool Card */}
@@ -158,8 +159,8 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
 
               <motion.div
                 key={currentTool}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0scale: 0.9 }}
+                animate={{ opacity: 1scale: 1 }}
                 transition={{ duration: 0.5 }}
                 className="text-center"
               >
@@ -193,7 +194,7 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
 
               {/* Tool Indicators */}
               <div className="flex justify-center space-x-2 mt-6">
-                {featuredTools.map((_, index) => (
+                {featuredTools.map((_index) => (
                   <div
                     key={index}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
@@ -206,12 +207,12 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
 
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isVisible ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                  transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
                   className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-4 border border-white/20 text-center"
                 >
                   <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500/20 to-blue-500/20 mb-3">
@@ -227,9 +228,9 @@ const AI2025ToolsUtilitiesPromotionBanner = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-indigo-500/10 to-blue-500/10 rounded-xl p-6 border border-indigo-500/20">

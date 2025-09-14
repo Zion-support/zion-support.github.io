@@ -1,12 +1,13 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Globe, 
-  Rocket, 
+  Brain
+  Zap
+  Globe
+  Rocket
   Target,
   TrendingUp,
   Users,
@@ -42,38 +43,38 @@ const innovations: Innovation[] = [
   {
     id: 'neural-consensus',
     title: 'Neural Consensus Engine',
-    description: 'Revolutionary AI system that achieves consensus across distributed neural networks, enabling unprecedented decision-making capabilities.',
+    description: 'Revolutionary AI system that achieves consensus across distributed neural networksenabling unprecedented decision-making capabilities.',
     category: 'AI Architecture',
     impact: 'High',
     status: 'released',
-    features: ['Distributed Learning', 'Consensus Algorithms', 'Real-time Adaptation', 'Scalable Architecture'],
+    features: ['Distributed Learning'Consensus Algorithms'Real-time Adaptation'Scalable Architecture'],
     icon: Brain,
     color: 'from-purple-500 to-pink-500',
-    metrics: { efficiency: 95, accuracy: 98, adoption: 87 }
+    metrics: { efficiency: 95accuracy: 98adoption: 87 }
   },
   {
     id: 'quantum-ai-fusion',
     title: 'Quantum-AI Fusion Platform',
-    description: 'Breakthrough integration of quantum computing with artificial intelligence, delivering exponential performance improvements.',
+    description: 'Breakthrough integration of quantum computing with artificial intelligencedelivering exponential performance improvements.',
     category: 'Quantum Computing',
     impact: 'Revolutionary',
     status: 'beta',
-    features: ['Quantum Algorithms', 'AI Optimization', 'Parallel Processing', 'Error Correction'],
+    features: ['Quantum Algorithms'AI Optimization'Parallel Processing'Error Correction'],
     icon: Cpu,
     color: 'from-blue-500 to-cyan-500',
-    metrics: { efficiency: 99, accuracy: 99, adoption: 45 }
+    metrics: { efficiency: 99accuracy: 99adoption: 45 }
   },
   {
     id: 'autonomous-systems',
     title: 'Autonomous Business Systems',
-    description: 'Self-managing AI systems that autonomously optimize business processes, reducing human intervention by 90%.',
+    description: 'Self-managing AI systems that autonomously optimize business processesreducing human intervention by 90%.',
     category: 'Automation',
     impact: 'High',
     status: 'released',
-    features: ['Self-Healing', 'Auto-Optimization', 'Predictive Maintenance', 'Adaptive Learning'],
+    features: ['Self-Healing'Auto-Optimization'Predictive Maintenance'Adaptive Learning'],
     icon: RefreshCw,
     color: 'from-green-500 to-emerald-500',
-    metrics: { efficiency: 92, accuracy: 94, adoption: 78 }
+    metrics: { efficiency: 92accuracy: 94adoption: 78 }
   },
   {
     id: 'neural-interfaces',
@@ -82,10 +83,10 @@ const innovations: Innovation[] = [
     category: 'Human-AI Interaction',
     impact: 'Revolutionary',
     status: 'coming-soon',
-    features: ['Brain-Computer Interface', 'Thought Recognition', 'Neural Feedback', 'Cognitive Enhancement'],
+    features: ['Brain-Computer Interface'Thought Recognition'Neural Feedback'Cognitive Enhancement'],
     icon: Target,
     color: 'from-orange-500 to-red-500',
-    metrics: { efficiency: 88, accuracy: 91, adoption: 23 }
+    metrics: { efficiency: 88accuracy: 91adoption: 23 }
   },
   {
     id: 'ai-security',
@@ -94,10 +95,10 @@ const innovations: Innovation[] = [
     category: 'Security',
     impact: 'High',
     status: 'released',
-    features: ['Threat Detection', 'Real-time Response', 'Behavioral Analysis', 'Zero-day Protection'],
+    features: ['Threat Detection'Real-time Response'Behavioral Analysis'Zero-day Protection'],
     icon: Shield,
     color: 'from-red-500 to-pink-500',
-    metrics: { efficiency: 97, accuracy: 99, adoption: 82 }
+    metrics: { efficiency: 97accuracy: 99adoption: 82 }
   },
   {
     id: 'global-ai-network',
@@ -106,19 +107,19 @@ const innovations: Innovation[] = [
     category: 'Infrastructure',
     impact: 'High',
     status: 'released',
-    features: ['Global Coverage', 'Edge Computing', 'Low Latency', 'High Availability'],
+    features: ['Global Coverage'Edge Computing'Low Latency'High Availability'],
     icon: Globe,
     color: 'from-indigo-500 to-purple-500',
-    metrics: { efficiency: 94, accuracy: 96, adoption: 91 }
+    metrics: { efficiency: 94accuracy: 96adoption: 91 }
   }
 ];
 
-const categories = ['All', 'AI Architecture', 'Quantum Computing', 'Automation', 'Human-AI Interaction', 'Security', 'Infrastructure'];
+const categories = ['All'AI Architecture'Quantum Computing'Automation'Human-AI Interaction'Security'Infrastructure'];
 
 export default function AIInnovationShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedInnovation, setSelectedInnovation] = useState<Innovation | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [selectedCategorysetSelectedCategory] = useState('All');
+  const [selectedInnovationsetSelectedInnovation] = useState<Innovation | null>(null);
+  const [isLoadingsetIsLoading] = useState(false);
 
   const filteredInnovations = selectedCategory === 'All' 
     ? innovations 
@@ -129,7 +130,7 @@ export default function AIInnovationShowcase2025() {
     setTimeout(() => {
       setSelectedInnovation(innovation);
       setIsLoading(false);
-    }, 300);
+    }300);
   };
 
   const getStatusColor = (status: string) => {
@@ -157,8 +158,8 @@ export default function AIInnovationShowcase2025() {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -199,9 +200,9 @@ export default function AIInnovationShowcase2025() {
       {/* Category Filter */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categories.map((category) => (
@@ -225,14 +226,14 @@ export default function AIInnovationShowcase2025() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence>
-            {filteredInnovations.map((innovation, index) => (
+            {filteredInnovations.map((innovationindex) => (
               <motion.div
                 key={innovation.id}
                 layout
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                exit={{ opacity: 0y: -20 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 className="group cursor-pointer"
                 onClick={() => handleInnovationClick(innovation)}
               >
@@ -243,7 +244,7 @@ export default function AIInnovationShowcase2025() {
                     </div>
                     <div className="flex gap-2">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(innovation.status)}`}>
-                        {innovation.status.replace('-', ' ')}
+                        {innovation.status.replace('-' ')}
                       </span>
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getImpactColor(innovation.impact)}`}>
                         {innovation.impact}
@@ -309,9 +310,9 @@ export default function AIInnovationShowcase2025() {
             onClick={() => setSelectedInnovation(null)}
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.9opacity: 0 }}
+              animate={{ scale: 1opacity: 1 }}
+              exit={{ scale: 0.9opacity: 0 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/20"
               onClick={(e) => e.stopPropagation()}
             >
@@ -355,7 +356,7 @@ export default function AIInnovationShowcase2025() {
               <div className="mb-6">
                 <h3 className="text-xl font-semibold text-white mb-4">Key Features</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {selectedInnovation.features.map((feature, index) => (
+                  {selectedInnovation.features.map((featureindex) => (
                     <div key={index} className="flex items-center text-gray-300">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       <span>{feature}</span>

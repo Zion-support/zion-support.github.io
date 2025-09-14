@@ -1,10 +1,10 @@
 
-import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import React{ useState } from "react";
+import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { BookmarkCheckChevronRightMapPinClockDollarSign } from "lucide-react";
+import { AvatarImageAvatarFallback } from "@/components/ui/avatar";
 
 interface BrowseItem {
   id: string;
@@ -25,14 +25,14 @@ interface BrowseCardsProps {
   onViewDetails: (id: string) => void;
 }
 
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
-  const [savedItems, setSavedItems] = useState<string[]>([]);
+export function BrowseCards({ itemstypeonViewDetails }: BrowseCardsProps) {
+  const [savedItemsetSavedItems] = useState<string[]>([]);
   
   const toggleSaved = (id: string) => {
     setSavedItems(prev => 
       prev.includes(id) 
         ? prev.filter(itemId => itemId !== id)
-        : [...prev, id]
+        : [...previd]
     );
   };
   
@@ -73,7 +73,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
               </div>
               
               <div className="mt-3 flex flex-wrap gap-1">
-                {item.badges.map((badge, index) => (
+                {item.badges.map((badgeindex) => (
                   <Badge 
                     key={index} 
                     variant="outline" 

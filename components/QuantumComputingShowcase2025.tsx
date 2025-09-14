@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Atom, Zap, Cpu, Shield, Target, TrendingUp, ArrowRight, Play, Pause } from 'lucide-react';
+"use client";
+import React{ useState } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
+AtomZapCpuShieldTargetTrendingUpArrowRightPlayPause
 import Link from 'next/link';
 
 const QuantumComputingShowcase2025: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(true);
+  const [activeTabsetActiveTab] = useState(0);
+  const [isAnimatingsetIsAnimating] = useState(true);
 
   const quantumSolutions = [
     {
@@ -93,7 +94,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
   const useCases = [
     {
       title: "Financial Modeling",
-      description: "Quantum algorithms for risk assessment, portfolio optimization, and high-frequency trading",
+      description: "Quantum algorithms for risk assessmentportfolio optimizationand high-frequency trading",
       icon: TrendingUp,
       impact: "300% faster risk calculations"
     },
@@ -122,8 +123,8 @@ const QuantumComputingShowcase2025: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -143,13 +144,13 @@ const QuantumComputingShowcase2025: React.FC = () => {
         {/* Interactive Tabs */}
         <div className="mb-16">
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {quantumSolutions.map((solution, index) => (
+            {quantumSolutions.map((solutionindex) => (
               <button
                 key={solution.id}
                 onClick={() => {
                   setActiveTab(index);
                   setIsAnimating(true);
-                  setTimeout(() => setIsAnimating(false), 500);
+                  setTimeout(() => setIsAnimating(false)500);
                 }}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   activeTab === index
@@ -166,9 +167,9 @@ const QuantumComputingShowcase2025: React.FC = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              exit={{ opacity: 0y: -20 }}
               transition={{ duration: 0.5 }}
               className="bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/10"
             >
@@ -190,7 +191,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
                   {/* Features */}
                   <div className="space-y-4 mb-8">
                     <h3 className="text-xl font-bold text-white mb-4">Key Features:</h3>
-                    {quantumSolutions[activeTab].features.map((feature, idx) => (
+                    {quantumSolutions[activeTab].features.map((featureidx) => (
                       <div key={idx} className="flex items-start gap-3">
                         <ArrowRight className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
@@ -201,7 +202,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
                   {/* Benefits */}
                   <div className="space-y-4 mb-8">
                     <h3 className="text-xl font-bold text-white mb-4">Benefits:</h3>
-                    {quantumSolutions[activeTab].benefits.map((benefit, idx) => (
+                    {quantumSolutions[activeTab].benefits.map((benefitidx) => (
                       <div key={idx} className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-gray-300">{benefit}</span>
@@ -225,14 +226,14 @@ const QuantumComputingShowcase2025: React.FC = () => {
                 <div className="relative">
                   <motion.div
                     animate={isAnimating ? { rotate: 360 } : { rotate: 0 }}
-                    transition={{ duration: 2, ease: "linear" }}
+                    transition={{ duration: 2ease: "linear" }}
                     className={`p-16 rounded-3xl bg-gradient-to-br ${quantumSolutions[activeTab].gradient} shadow-2xl text-center`}
                   >
                     <quantumSolutions[activeTab].icon className="w-32 h-32 text-white mx-auto mb-6" />
                     
                     {/* Quantum Animation */}
                     <div className="relative">
-                      {[...Array(8)].map((_, i) => (
+                      {[...Array(8)].map((_i) => (
                         <motion.div
                           key={i}
                           className="absolute w-4 h-4 bg-white/30 rounded-full"
@@ -242,8 +243,8 @@ const QuantumComputingShowcase2025: React.FC = () => {
                             transformOrigin: '0 0',
                           }}
                           animate={{
-                            rotate: [0, 360],
-                            scale: [1, 1.5, 1],
+                            rotate: [0360],
+                            scale: [1.51],
                           }}
                           transition={{
                             duration: 3,
@@ -257,7 +258,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
                   
                   {/* Floating Particles */}
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    {[...Array(15)].map((_, i) => (
+                    {[...Array(15)].map((_i) => (
                       <motion.div
                         key={i}
                         className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-60"
@@ -266,8 +267,8 @@ const QuantumComputingShowcase2025: React.FC = () => {
                           top: `${Math.random() * 100}%`,
                         }}
                         animate={{
-                          y: [0, -30, 0],
-                          opacity: [0, 1, 0],
+                          y: [0-30],
+                          opacity: [010],
                         }}
                         transition={{
                           duration: 2,
@@ -285,8 +286,8 @@ const QuantumComputingShowcase2025: React.FC = () => {
 
         {/* Use Cases Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
@@ -295,12 +296,12 @@ const QuantumComputingShowcase2025: React.FC = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCaseindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 30 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 text-center group hover:transform hover:scale-105"
               >
                 <useCase.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:text-cyan-300 transition-colors duration-300" />
@@ -314,8 +315,8 @@ const QuantumComputingShowcase2025: React.FC = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-lg rounded-3xl p-16 border border-white/10"
         >

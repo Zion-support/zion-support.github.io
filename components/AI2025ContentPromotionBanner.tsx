@@ -13,8 +13,8 @@ export default function AI2025ContentPromotionBanner() {
             Discover Revolutionary AI 2025 Content
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Explore our latest breakthrough content featuring cutting-edge AI technologies, 
-            success stories, and implementation guides delivering unprecedented ROI.
+            Explore our latest breakthrough content featuring cutting-edge AI technologies
+            success storiesand implementation guides delivering unprecedented ROI.
           </p>
         </div>
 

@@ -48,7 +48,7 @@ const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {feature}
@@ -68,7 +68,7 @@ const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefitindex) => (
               <div key={index} className="flex items-start">
                 <div className="flex-shrink-0">
                   <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">

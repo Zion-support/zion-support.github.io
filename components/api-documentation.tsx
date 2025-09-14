@@ -2,8 +2,8 @@ import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-  Code, Database, Shield, Zap, Globe, Cpu, 
-  BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
+  CodeDatabaseShieldZapGlobeCpu
+  BookOpenCheckCircleArrowRightBarChart3LockBrain
 } from 'lucide-react';
 
 export default function APIDocumentation() {
@@ -11,7 +11,7 @@ export default function APIDocumentation() {
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>API Documentation | Zion Tech Group</title>
-				<meta name="description" content="Explore API docs, references, and code generators." />
+				<meta name="description" content="Explore API docsreferencesand code generators." />
 				<link rel="canonical" href="https://ziontechgroup.com/api-documentation" />
 			</Head>
 			<div className="max-w-5xl mx-auto space-y-6">

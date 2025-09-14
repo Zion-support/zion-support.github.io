@@ -1,6 +1,6 @@
 
-import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useEffectuseState } from "react";
+import { useNavigateuseSearchParams } from "react-router-dom";
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { SearchSuggestion } from "@/types/search";
@@ -11,15 +11,15 @@ export default function SearchPage() {
   const [params] = useSearchParams();
   const navigate = useNavigate();
   const initial = params.get("q") || "";
-  const [query, setQuery] = useState(initial);
-  const { results, loading, search } = useAISearch();
+  const [querysetQuery] = useState(initial);
+  const { resultsloadingsearch } = useAISearch();
   const suggestions: SearchSuggestion[] = generateSearchSuggestions();
 
   useEffect(() => {
     if (initial) {
       search(initial);
     }
-  }, [initial]);
+  }[initial]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -35,7 +35,7 @@ export default function SearchPage() {
             value={query}
             onChange={setQuery}
             searchSuggestions={suggestions}
-            placeholder="Search talent, jobs, and projects..."
+            placeholder="Search talentjobsand projects..."
           />
         </form>
 

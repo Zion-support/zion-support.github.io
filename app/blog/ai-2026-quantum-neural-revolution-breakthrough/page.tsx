@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Cpu, Zap, Target, TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Atom } from 'lucide-react';
+import {  Zap,  TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Circle, Award } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
 export const metadata = {
@@ -24,7 +24,7 @@ export default function QuantumNeuralRevolutionPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <Atom className="w-5 h-5 mr-2" />
+                <Circle className="w-5 h-5 mr-2" />
               <span className="text-sm font-medium">QUANTUM NEURAL REVOLUTION</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -115,7 +115,7 @@ export default function QuantumNeuralRevolutionPage() {
 
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
                 <div className="flex items-center mb-4">
-                  <Cpu className="w-8 h-8 text-blue-600 mr-3" />
+                  <Brain className="w-8 h-8 text-blue-600 mr-3" />
                   <h4 className="text-xl font-bold text-gray-900">Manufacturing Giant</h4>
                 </div>
                 <p className="text-gray-600 mb-4">Complete supply chain optimization through quantum AI</p>
@@ -133,7 +133,7 @@ export default function QuantumNeuralRevolutionPage() {
             <div className="space-y-6 mb-12">
               <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-xl">
                 <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <Target className="w-6 h-6 text-purple-600 mr-3" />
+                  <Award className="w-6 h-6 text-purple-600 mr-3" />
                   Phase 1: Quantum Readiness Assessment
                 </h4>
                 <ul className="text-gray-600 space-y-2">

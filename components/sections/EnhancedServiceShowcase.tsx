@@ -1,9 +1,10 @@
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+"use client";
+import React{ useStateuseMemo } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Star, Users, TrendingUp, DollarSign, Clock, 
-  CheckCircle, ArrowRight, Zap, Shield, Rocket,
-  Brain, Globe, Lock, Code, Database, Cloud
+  StarUsersTrendingUpDollarSignClock
+  CheckCircleArrowRightZapShieldRocket,
+  BrainGlobeLockCodeDatabaseCloud
 } from 'lucide-react';
 import Button from '../ui/Button';
 
@@ -63,33 +64,33 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   services = [],
   maxServices = 12
 }) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('popular');
+  const [selectedCategorysetSelectedCategory] = useState<string>('all');
+  const [selectedPriceRangesetSelectedPriceRange] = useState<string>('all');
+  const [sortBysetSortBy] = useState<string>('popular');
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀' },
-    { id: 'ai', name: 'AI & ML', icon: '🧠' },
-    { id: 'quantum', name: 'Quantum', icon: '⚛️' },
-    { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },
-    { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
-    { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
+    { id: 'all'name: 'All Services'icon: '🚀' },
+    { id: 'ai'name: 'AI & ML'icon: '🧠' },
+    { id: 'quantum'name: 'Quantum'icon: '⚛️' },
+    { id: 'blockchain'name: 'Blockchain'icon: '⛓️' },
+    { id: 'enterprise'name: 'Enterprise'icon: '🏢' },
+    { id: 'emerging'name: 'Emerging Tech'icon: '🌟' }
   ];
 
   const priceRanges = [
-    { id: 'all', name: 'All Prices' },
-    { id: 'low', name: 'Under $1K/month' },
-    { id: 'medium', name: '$1K - $5K/month' },
-    { id: 'high', name: '$5K - $20K/month' },
-    { id: 'premium', name: '$20K+/month' }
+    { id: 'all'name: 'All Prices' },
+    { id: 'low'name: 'Under $1K/month' },
+    { id: 'medium'name: '$1K - $5K/month' },
+    { id: 'high'name: '$5K - $20K/month' },
+    { id: 'premium'name: '$20K+/month' }
   ];
 
   const sortOptions = [
-    { id: 'popular', name: 'Most Popular' },
-    { id: 'rating', name: 'Highest Rated' },
-    { id: 'roi', name: 'Best ROI' },
-    { id: 'price-low', name: 'Price Low to High' },
-    { id: 'price-high', name: 'Price High to Low' }
+    { id: 'popular'name: 'Most Popular' },
+    { id: 'rating'name: 'Highest Rated' },
+    { id: 'roi'name: 'Best ROI' },
+    { id: 'price-low'name: 'Price Low to High' },
+    { id: 'price-high'name: 'Price High to Low' }
   ];
 
   const filteredServices = useMemo(() => {
@@ -102,10 +103,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                              (selectedCategory === 'emerging' && (service.category.includes('Neural') || service.category.includes('Autonomous') || service.category.includes('Space') || service.category.includes('Biotech')));
 
       const matchesPrice = selectedPriceRange === 'all' ||
-                          (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g, '')) < 1000) ||
-                          (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, '')) >= 1000 && parseFloat(service.price.replace(/[$]/g, '')) < 5000) ||
-                          (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 20000) ||
-                          (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 20000);
+                          (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g'')) < 1000) ||
+                          (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g'')) >= 1000 && parseFloat(service.price.replace(/[$]/g'')) < 5000) ||
+                          (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g'')) >= 5000 && parseFloat(service.price.replace(/[$]/g'')) < 20000) ||
+                          (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g'')) >= 20000);
 
       return matchesCategory && matchesPrice;
     });
@@ -113,36 +114,36 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     // Sort services
     switch (sortBy) {
       case 'popular':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
+        filtered.sort((ab) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
         break;
       case 'rating':
-        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        filtered.sort((ab) => (b.rating || 0) - (a.rating || 0));
         break;
       case 'roi':
-        filtered.sort((a, b) => {
+        filtered.sort((ab) => {
           const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0');
           const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0');
           return bROI - aROI;
         });
         break;
       case 'price-low':
-        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, '')));
+        filtered.sort((ab) => parseFloat(a.price.replace(/[$]/g'')) - parseFloat(b.price.replace(/[$]/g'')));
         break;
       case 'price-high':
-        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, '')));
+        filtered.sort((ab) => parseFloat(b.price.replace(/[$]/g'')) - parseFloat(a.price.replace(/[$]/g'')));
         break;
       default:
         break;
     }
 
-    return filtered.slice(0, maxServices);
-  }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
+    return filtered.slice(0maxServices);
+  }[serviceselectedCategoryselectedPriceRangesortBymaxServices]);
 
   const stats = [
-    { label: 'Total Services', value: services.length, icon: Rocket, color: 'text-blue-400' },
-    { label: 'Active Customers', value: services.reduce((sum, s) => sum + (s.customers || 0), 0), icon: Users, color: 'text-green-400' },
-    { label: 'Average Rating', value: (services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length).toFixed(1), icon: Star, color: 'text-yellow-400' },
-    { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text-purple-400' }
+    { label: 'Total Services'value: services.lengthicon: Rocketcolor: 'text-blue-400' },
+    { label: 'Active Customers'value: services.reduce((sums) => sum + (s.customers || 0)icon: Userscolor: 'text-green-400' },
+    { label: 'Average Rating'value: (services.reduce((sums) => sum + (s.rating || 0) / services.length).toFixed(1)icon: Starcolor: 'text-yellow-400' },
+    { label: 'Market Growth'value: '300%+'icon: TrendingUpcolor: 'text-purple-400' }
   ];
 
   return (
@@ -151,17 +152,17 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
         {/* Header */}
         <div className="text-center mb-16">
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
           >
             {title}
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
             {subtitle}
@@ -169,12 +170,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.4 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
-            {stats.map((stat, index) => (
+            {stats.map((statindex) => (
               <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>
                   <stat.icon className="w-8 h-8" />
@@ -189,9 +190,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
         {/* Filters */}
         {showFilters && (
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.6 }}
             className="mb-12"
           >
             <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
@@ -250,19 +251,19 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
         {/* Services Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence>
-            {filteredServices.map((service, index) => (
+            {filteredServices.map((serviceindex) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5, scale: 1.02 }}
+                initial={{ opacity: 0y: 30scale: 0.9 }}
+                whileInView={{ opacity: 1y: 0scale: 1 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
+                whileHover={{ y: -5scale: 1.02 }}
                 className="group"
               >
                 <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full">
@@ -297,7 +298,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       Key Features
                     </h4>
                     <ul className="space-y-2">
-                      {service.features.slice(0, 4).map((feature, idx) => (
+                      {service.features.slice(04).map((featureidx) => (
                         <li key={idx} className="text-sm text-gray-400 flex items-start">
                           <span className="text-cyan-400 mr-2">•</span>
                           {feature}
@@ -367,9 +368,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 1.0 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
@@ -377,7 +378,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of companies already achieving breakthrough results with our cutting-edge AI, quantum, and blockchain solutions. 
+              Join thousands of companies already achieving breakthrough results with our cutting-edge AIquantumand blockchain solutions. 
               Get started today and see the future of business technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

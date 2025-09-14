@@ -1,6 +1,7 @@
-import React, { useEffect, useState, useCallback } from 'react';
+"use client";
+import React{ useEffectuseStateuseCallback } from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
+ZapClockTrendingUpActivityGaugeCpuDatabaseNetwork
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -16,7 +17,7 @@ interface PerformanceOptimizerProps {
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metricsetMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
@@ -24,9 +25,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
     firstInputDelay: 0,
     timeToInteractive: 0
   });
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationStatus, setOptimizationStatus] = useState<string>('idle');
-  const [showMetrics, setShowMetrics] = useState(false);
+  const [isOptimizingsetIsOptimizing] = useState(false);
+  const [optimizationStatusetOptimizationStatus] = useState<string>('idle');
+  const [showMetricsetShowMetrics] = useState(false);
 
   // Measure performance metrics
   const measurePerformance = useCallback(() => {
@@ -41,14 +42,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
         firstContentfulPaint: fcp ? fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp.startTime : 0,
-        cumulativeLayoutShift: 0, // Would need to be measured with CLS API
-        firstInputDelay: 0, // Would need to be measured with FID API
+        cumulativeLayoutShift: 0// Would need to be measured with CLS API
+        firstInputDelay: 0// Would need to be measured with FID API
         timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigationStart
       };
 
       setMetrics(newMetrics);
     }
-  }, []);
+  }[]);
 
   // Optimize images
   const optimizeImages = useCallback(async () => {
@@ -66,7 +67,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
           
           // Add responsive sizes if not present
           if (!img.sizes) {
-            img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
+            img.sizes = '(max-width: 768px) 100vw(max-width: 1200px) 50vw33vw';
           }
           
           optimizedCount++;
@@ -76,16 +77,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       setOptimizationStatus(`Optimized ${optimizedCount} images`);
       
       // Simulate optimization delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve1000));
       
       setOptimizationStatus('Image optimization complete');
     } catch (error) {
       setOptimizationStatus('Image optimization failed');
-      console.error('Image optimization error:', error);
+      console.error('Image optimization error:'error);
     } finally {
       setIsOptimizing(false);
     }
-  }, []);
+  }[]);
 
   // Optimize fonts
   const optimizeFonts = useCallback(async () => {
@@ -114,14 +115,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       setOptimizationStatus('Font optimization complete');
       
       // Simulate optimization delay
-      await new Promise(resolve => setTimeout(resolve, 800));
+      await new Promise(resolve => setTimeout(resolve800));
     } catch (error) {
       setOptimizationStatus('Font optimization failed');
-      console.error('Font optimization error:', error);
+      console.error('Font optimization error:'error);
     } finally {
       setIsOptimizing(false);
     }
-  }, []);
+  }[]);
 
   // Optimize CSS and JavaScript
   const optimizeCode = useCallback(async () => {
@@ -131,15 +132,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
     try {
       // Add resource hints for critical resources
       const preloadLinks = [
-        { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-        { rel: 'preload', href: '/fonts/jetbrains-mono-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
+        { rel: 'preload'href: '/fonts/inter-var.woff2'as: 'font'type: 'font/woff2'crossorigin: 'anonymous' },
+        { rel: 'preload'href: '/fonts/jetbrains-mono-var.woff2'as: 'font'type: 'font/woff2'crossorigin: 'anonymous' }
       ];
 
       preloadLinks.forEach(linkAttrs => {
         const link = document.createElement('link');
-        Object.entries(linkAttrs).forEach(([key, value]) => {
+        Object.entries(linkAttrs).forEach(([keyvalue]) => {
           if (key === 'crossorigin') {
-            link.setAttribute(key, value as string);
+            link.setAttribute(keyvalue as string);
           } else {
             (link as any)[key] = value;
           }
@@ -150,14 +151,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       setOptimizationStatus('Code optimization complete');
       
       // Simulate optimization delay
-      await new Promise(resolve => setTimeout(resolve, 1200));
+      await new Promise(resolve => setTimeout(resolve1200));
     } catch (error) {
       setOptimizationStatus('Code optimization failed');
-      console.error('Code optimization error:', error);
+      console.error('Code optimization error:'error);
     } finally {
       setIsOptimizing(false);
     }
-  }, []);
+  }[]);
 
   // Run all optimizations
   const runAllOptimizations = useCallback(async () => {
@@ -174,21 +175,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       // Re-measure performance after optimization
       setTimeout(() => {
         measurePerformance();
-      }, 500);
+      }500);
       
     } catch (error) {
       setOptimizationStatus('Optimization failed');
-      console.error('Optimization error:', error);
+      console.error('Optimization error:'error);
     } finally {
       setIsOptimizing(false);
     }
-  }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
+  }[optimizeImagesoptimizeFontsoptimizeCodemeasurePerformance]);
 
   // Initialize performance monitoring
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // Measure initial performance
-      window.addEventListener('load', measurePerformance);
+      window.addEventListener('load'measurePerformance);
       
       // Monitor for performance issues
       const observer = new PerformanceObserver((list) => {
@@ -196,7 +197,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
           if (entry.entryType === 'largest-contentful-paint') {
             const lcp = entry.startTime;
             if (lcp > 2500) { // LCP should be under 2.5s
-              console.warn('LCP is too slow:', lcp);
+              console.warn('LCP is too slow:'lcp);
             }
           }
         }
@@ -205,11 +206,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       
       return () => {
-        window.removeEventListener('load', measurePerformance);
+        window.removeEventListener('load'measurePerformance);
         observer.disconnect();
       };
     }
-  }, [measurePerformance]);
+  }[measurePerformance]);
 
   const getPerformanceScore = (): number => {
     let score = 100;
@@ -219,7 +220,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
     if (metrics.loadTime > 3000) score -= 15;
     if (metrics.timeToInteractive > 3500) score -= 20;
     
-    return Math.max(0, score);
+    return Math.max(0score);
   };
 
   const getPerformanceGrade = (score: number): string => {
@@ -259,7 +260,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${performanceScore}%` }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 1ease: "easeOut" }}
           />
         </div>
         <div className="text-right mt-1">
@@ -270,9 +271,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       {/* Metrics Display */}
       {showMetrics && (
         <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
+          initial={{ opacity: 0height: 0 }}
+          animate={{ opacity: 1height: 'auto' }}
+          exit={{ opacity: 0height: 0 }}
           className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
         >
           <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">

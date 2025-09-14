@@ -1,11 +1,12 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Award, 
-  TrendingUp, 
-  Users, 
+  Award
+  TrendingUp
+  Users
   DollarSign,
   ArrowRight,
   Star,
@@ -15,30 +16,30 @@ import {
 } from 'lucide-react';
 
 const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentStat, setCurrentStat] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentStatsetCurrentStat] = useState(0);
 
   const stats = [
-    { value: '500+', label: 'Projects', icon: CheckCircle },
-    { value: '99.2%', label: 'Satisfaction', icon: Star },
-    { value: '340%', label: 'Average ROI', icon: TrendingUp },
-    { value: '15+', label: 'Years Experience', icon: Award }
+    { value: '500+'label: 'Projects'icon: CheckCircle },
+    { value: '99.2%'label: 'Satisfaction'icon: Star },
+    { value: '340%'label: 'Average ROI'icon: TrendingUp },
+    { value: '15+'label: 'Years Experience'icon: Award }
   ];
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 2000);
+    const timer = setTimeout(() => setIsVisible(true)2000);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   useEffect(() => {
     if (isVisible) {
       const interval = setInterval(() => {
         setCurrentStat(prev => (prev + 1) % stats.length);
-      }, 1500);
+      }1500);
       return () => clearInterval(interval);
     }
-  }, [isVisible, stats.length]);
+  }[isVisiblestats.length]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
@@ -48,9 +49,9 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -100 }}
-      animate={{ isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 } }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      initial={{ opacity: 0y: -100 }}
+      animate={{ isVisible ? { opacity: 1y: 0 } : { opacity: 0y: -100 } }}
+      transition={{ duration: 0.8ease: "easeOut" }}
       className="relative bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-gray-900 overflow-hidden"
     >
       {/* Background Pattern */}
@@ -64,9 +65,9 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
           {/* Left Content */}
           <div className="flex-1">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.2 }}
               className="flex items-center gap-3 mb-3"
             >
               <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full">
@@ -74,34 +75,34 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
                 <span className="text-sm font-medium">SUCCESS STORIES</span>
               </div>
               <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
+                {[...Array(5)].map((_i) => (
                   <Star key={i} className="w-4 h-4 text-yellow-300 fill-current" />
                 ))}
               </div>
             </motion.div>
 
             <motion.h2
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.3 }}
               className="text-xl md:text-3xl font-bold mb-2"
             >
               🏆 Revolutionary Case Studies 2027
             </motion.h2>
 
             <motion.p
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.4 }}
               className="text-base md:text-lg text-gray-800 mb-4 max-w-2xl"
             >
-              Discover how leading companies achieved extraordinary results with our AI solutions. Real projects, real results, real transformation.
+              Discover how leading companies achieved extraordinary results with our AI solutions. Real projectsreal resultsreal transformation.
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.5 }}
               className="flex flex-wrap items-center gap-3"
             >
               <button className="bg-gray-900 text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 flex items-center gap-2 group">
@@ -118,16 +119,16 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
 
           {/* Right Content - Rotating Stats */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={{ opacity: 0x: 30 }}
+            animate={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.6delay: 0.4 }}
             className="hidden lg:flex items-center gap-8"
           >
             <div className="relative w-24 h-24">
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
+                  initial={{ opacity: 0scale: 0.8 }}
                   animate={{
                     opacity: currentStat === index ? 1 : 0,
                     scale: currentStat === index ? 1 : 0.8
@@ -161,7 +162,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6delay: 0.8 }}
           className="mt-4"
         >
           <div className="flex items-center justify-between text-sm text-gray-800 mb-2">
@@ -172,7 +173,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: "100%" }}
-              transition={{ duration: 4, delay: 1 }}
+              transition={{ duration: 4delay: 1 }}
               className="h-1.5 bg-gradient-to-r from-yellow-300 to-orange-300 rounded-full"
             />
           </div>
@@ -181,8 +182,8 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
         {/* Floating Elements */}
         <motion.div
           animate={{
-            y: [0, -6, 0],
-            rotate: [0, 2, 0]
+            y: [0-60],
+            rotate: [020]
           }}
           transition={{
             duration: 2,
@@ -196,8 +197,8 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
 
         <motion.div
           animate={{
-            y: [0, 6, 0],
-            rotate: [0, -2, 0]
+            y: [060],
+            rotate: [0-20]
           }}
           transition={{
             duration: 2.5,

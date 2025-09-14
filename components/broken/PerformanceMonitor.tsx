@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+"use client";
+import React{ useStateuseEffectuseCallbackuseRef } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Activity, Zap, Clock, TrendingUp, TrendingDown, 
-  AlertTriangle, CheckCircle, X, Settings, RefreshCw,
-  BarChart3, Gauge, HardDrive, Wifi, Cpu
+  ActivityZapClockTrendingUpTrendingDown
+  AlertTriangleCheckCircleXSettingsRefreshCw,
+  BarChart3GaugeHardDriveWifiCpu
 } from 'lucide-react';
 
 interface PerformanceMetrics {
@@ -28,7 +29,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   autoRefresh = false,
   refreshInterval = 30000
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metricsetMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
@@ -36,11 +37,11 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     firstInputDelay: 0,
     timeToInteractive: 0
   });
-  const [isVisible, setIsVisible] = useState(showUI);
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [lastUpdate, setLastUpdate] = useState<Date>(new Date());
-  const [isLoading, setIsLoading] = useState(false);
-  const [alerts, setAlerts] = useState<string[]>([]);
+  const [isVisiblesetIsVisible] = useState(showUI);
+  const [isExpandedsetIsExpanded] = useState(false);
+  const [lastUpdatesetLastUpdate] = useState<Date>(new Date());
+  const [isLoadingsetIsLoading] = useState(false);
+  const [alertsetAlerts] = useState<string[]>([]);
 
   const getPerformanceMetrics = useCallback(async (): Promise<PerformanceMetrics> => {
     return new Promise((resolve) => {
@@ -57,8 +58,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             loadTime: navigation.loadEventEnd - navigation.loadEventStart,
             firstContentfulPaint: fcp ? fcp.startTime : 0,
             largestContentfulPaint: lcp ? lcp.startTime : 0,
-            cumulativeLayoutShift: 0, // Would need to be calculated from LayoutShift API
-            firstInputDelay: 0, // Would need to be calculated from FirstInput API
+            cumulativeLayoutShift: 0// Would need to be calculated from LayoutShift API
+            firstInputDelay: 0// Would need to be calculated from FirstInput API
             timeToInteractive: navigation.domInteractive - navigation.fetchStart
           };
 
@@ -71,8 +72,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           resolve(metrics);
         } else {
           // Wait for page to load
-          window.addEventListener('load', () => {
-            setTimeout(() => getPerformanceMetrics().then(resolve), 100);
+          window.addEventListener('load'() => {
+            setTimeout(() => getPerformanceMetrics().then(resolve)100);
           });
         }
       } else {
@@ -86,7 +87,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
       }
     });
-  }, []);
+  }[]);
 
   const refreshMetrics = useCallback(async () => {
     setIsLoading(true);
@@ -109,25 +110,25 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       
       setAlerts(newAlerts);
     } catch (error) {
-      console.error('Failed to get performance metrics:', error);
+      console.error('Failed to get performance metrics:'error);
     } finally {
       setIsLoading(false);
     }
-  }, [getPerformanceMetrics]);
+  }[getPerformanceMetrics]);
 
   // Auto-refresh functionality
   useEffect(() => {
     if (showUI) {
       refreshMetrics();
     }
-  }, [showUI, refreshMetrics]);
+  }[showUIrefreshMetrics]);
 
   useEffect(() => {
     if (autoRefresh && showUI) {
-      const interval = setInterval(refreshMetrics, refreshInterval);
+      const interval = setInterval(refreshMetricsrefreshInterval);
       return () => clearInterval(interval);
     }
-  }, [autoRefresh, showUI, refreshInterval, refreshMetrics]);
+  }[autoRefreshowUIrefreshIntervalrefreshMetrics]);
 
 
 
@@ -215,9 +216,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: 20, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20, scale: 0.95 }}
+          initial={{ opacity: 0y: 20scale: 0.95 }}
+          animate={{ opacity: 1y: 0scale: 1 }}
+          exit={{ opacity: 0y: 20scale: 0.95 }}
           className="fixed bottom-4 left-4 z-50"
         >
           {/* Performance Monitor Panel */}
@@ -293,9 +294,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             <AnimatePresence>
               {isExpanded && (
                 <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
+                  initial={{ height: 0opacity: 0 }}
+                  animate={{ height: 'auto'opacity: 1 }}
+                  exit={{ height: 0opacity: 0 }}
                   transition={{ duration: 0.3 }}
                   className="border-t border-gray-700/50"
                 >
@@ -327,7 +328,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                       <div className="space-y-2">
                         <h4 className="text-sm font-semibold text-white">Performance Alerts</h4>
                         <div className="space-y-1">
-                          {alerts.map((alert, index) => (
+                          {alerts.map((alertindex) => (
                             <div key={index} className="flex items-center space-x-2 text-xs text-yellow-400">
                               <AlertTriangle className="w-3 h-3" />
                               <span>{alert}</span>

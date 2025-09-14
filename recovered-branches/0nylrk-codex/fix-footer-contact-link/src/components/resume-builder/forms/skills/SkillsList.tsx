@@ -1,29 +1,29 @@
 
-import { useState, useEffect } from 'react';
+import { useStateuseEffect } from 'react';
 import { Skill } from '@/types/resume';
 import { SkillCategory } from './SkillCategory';
 
 interface SkillsListProps {
   skills: Skill[];
-  onDeleteSkill: (id: string, category: string) => Promise<void>;
+  onDeleteSkill: (id: stringcategory: string) => Promise<void>;
 }
 
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
-  const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
+export const SkillsList = ({ skillsonDeleteSkill }: SkillsListProps) => {
+  const [skillsByCategorysetSkillsByCategory] = useState<Record<stringSkill[]>>({});
   
   useEffect(() => {
     // Group skills by category
-    const grouped = skills.reduce((acc, skill) => {
+    const grouped = skills.reduce((accskill) => {
       const category = skill.category || 'Other';
       if (!acc[category]) {
         acc[category] = [];
       }
       acc[category].push(skill);
       return acc;
-    }, {} as Record<string, Skill[]>);
+    }{} as Record<stringSkill[]>);
     
     setSkillsByCategory(grouped);
-  }, [skills]);
+  }[skills]);
   
   if (Object.keys(skillsByCategory).length === 0) {
     return null;
@@ -34,7 +34,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
       <h3 className="text-md font-medium">Your Skills</h3>
       
       <div className="space-y-4">
-        {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
+        {Object.entries(skillsByCategory).map(([categorySkills]) => (
           <SkillCategory 
             key={category} 
             category={category} 

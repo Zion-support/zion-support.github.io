@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { 
-  SERVICE_CATEGORIES, 
-  ALL_SERVICES, 
-  AI_SERVICES, 
-  IT_SERVICES, 
+  SERVICE_CATEGORIES
+  ALL_SERVICES
+  AI_SERVICES
+  IT_SERVICES
   MICRO_SAAS_SERVICES,
   CYBERSECURITY_SERVICES,
   DATA_ANALYTICS_SERVICES,
   CLOUD_SOLUTIONS
 } from '@/data/servicesData';
-import { ServiceCategory, ServiceSolution } from '@/types/services';
+import { ServiceCategoryServiceSolution } from '@/types/services';
 
 export function ServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState<string>('all');
+  const [searchTermsetSearchTerm] = useState('');
 
   const filteredServices = ALL_SERVICES.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -47,7 +47,7 @@ export function ServicesPage() {
               Zion Tech Group Services
             </h1>
             <p className="text-xl mb-8 text-blue-100">
-              Comprehensive IT, AI, and Micro SAAS solutions to transform your business. 
+              Comprehensive ITAIand Micro SAAS solutions to transform your business. 
               From cutting-edge artificial intelligence to robust infrastructure support.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -74,7 +74,7 @@ export function ServicesPage() {
           <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
             <div className="flex items-center gap-2">
               <span className="text-blue-600">📍</span>
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <span>364 E Main St STE 1008Middletown DE 19709</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-blue-600">📱</span>
@@ -148,7 +148,7 @@ export function ServicesPage() {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We deliver innovative, reliable, and cost-effective solutions that drive real business results
+              We deliver innovativereliableand cost-effective solutions that drive real business results
             </p>
           </div>
           
@@ -166,7 +166,7 @@ export function ServicesPage() {
                 <span className="text-2xl">🛡️</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
-              <p className="text-gray-600">SOC 2, HIPAA, GDPR compliant solutions</p>
+              <p className="text-gray-600">SOC 2HIPAAGDPR compliant solutions</p>
             </div>
             
             <div className="text-center">
@@ -195,7 +195,7 @@ export function ServicesPage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.
+            Get started with Zion Tech Group today and discover how our innovative solutions can drive growthefficiencyand success for your organization.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 
@@ -228,7 +228,7 @@ interface ServiceCardProps {
 }
 
 function ServiceCard({ service }: ServiceCardProps) {
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetailsetShowDetails] = useState(false);
 
   const getPopularPlan = () => {
     if (service.pricing.professional.popular) return service.pricing.professional;
@@ -312,7 +312,7 @@ function ServiceCard({ service }: ServiceCardProps) {
         <div className="mb-4">
           <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
           <div className="flex flex-wrap gap-2">
-            {service.features.slice(0, 3).map((feature, index) => (
+            {service.features.slice(03).map((featureindex) => (
               <span 
                 key={index}
                 className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs"
@@ -352,7 +352,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
                 <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-                  {service.benefits.slice(0, 3).map((benefit, index) => (
+                  {service.benefits.slice(03).map((benefitindex) => (
                     <li key={index}>{benefit}</li>
                   ))}
                 </ul>
@@ -362,7 +362,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Use Cases:</h4>
                 <div className="flex flex-wrap gap-2">
-                  {service.useCases.slice(0, 3).map((useCase, index) => (
+                  {service.useCases.slice(03).map((useCaseindex) => (
                     <span 
                       key={index}
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs"
@@ -377,7 +377,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                 <div className="flex flex-wrap gap-2">
-                  {service.technologies.slice(0, 4).map((tech, index) => (
+                  {service.technologies.slice(04).map((techindex) => (
                     <span 
                       key={index}
                       className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
@@ -396,7 +396,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                 </div>
                 <div>
                   <span className="font-medium text-gray-900">Support:</span>
-                  <p className="text-gray-600">{service.support.slice(0, 2).join(', ')}</p>
+                  <p className="text-gray-600">{service.support.slice(02).join(')}</p>
                 </div>
               </div>
 
@@ -404,7 +404,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Pricing Plans:</h4>
                 <div className="space-y-2">
-                  {Object.entries(service.pricing).map(([plan, details]) => (
+                  {Object.entries(service.pricing).map(([plandetails]) => (
                     <div key={plan} className="flex justify-between items-center text-sm">
                       <span className="capitalize font-medium">{plan}</span>
                       <span className="text-gray-600">

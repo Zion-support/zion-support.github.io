@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-  Atom, 
-  Cpu, 
-  Zap, 
-  Brain, 
+  Atom
+  Cpu
+  Zap
+  Brain
   ArrowRight,
   Star,
   Sparkles,
@@ -32,7 +32,7 @@ export default function QuantumAIBreakthrough2030PromotionBanner() {
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Witness the convergence of quantum computing and artificial intelligence, 
+            Witness the convergence of quantum computing and artificial intelligence
             unlocking computational power that will solve humanity's most complex challenges.
           </p>
         </div>

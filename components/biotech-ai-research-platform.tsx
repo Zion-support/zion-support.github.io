@@ -9,7 +9,7 @@ export default function BiotechAIResearchPlatformPage() {
     <Layout>
       <Head>
         <title>Biotech AI Research Platform | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI platform for biotechnology research—drug discovery, genetic analysis, and trial optimization." />
+        <meta name="description" content="Advanced AI platform for biotechnology research—drug discoverygenetic analysisand trial optimization." />
         <link rel="canonical" href="https://ziontechgroup.com/biotech-ai-research-platform" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -21,7 +21,7 @@ export default function BiotechAIResearchPlatformPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
               <h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
-              <p className="text-slate-300">Drug discovery automation, sequence analysis, structure prediction, trial optimization, and compliance workflows with auditability.</p>
+              <p className="text-slate-300">Drug discovery automationsequence analysistructure predictiontrial optimizationand compliance workflows with auditability.</p>
             </div>
             <div className="p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
               <div className="text-3xl font-bold text-white text-base font-medium text-gray-400">Starting at $12,999<span >/month</span></div>

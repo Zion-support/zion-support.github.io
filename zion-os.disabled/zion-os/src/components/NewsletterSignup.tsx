@@ -7,17 +7,17 @@ interface NewsletterSignupProps {
   className?: string;
 }
 
-export function NewsletterSignup({ variant = "default", className = "" }: NewsletterSignupProps) {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubscribed, setIsSubscribed] = useState(false);
+export function NewsletterSignup({ variant = "default"className = "" }: NewsletterSignupProps) {
+  const [emailsetEmail] = useState("");
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [isSubscribedsetIsSubscribed] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve1000));
     
     setIsSubscribed(true);
     setIsSubmitting(false);
@@ -92,7 +92,7 @@ export function NewsletterSignup({ variant = "default", className = "" }: Newsle
       <div className="text-center">
         <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
         <p className="text-white/70 mb-6 max-w-md mx-auto">
-          Get the latest insights on AI, Web3, and digital economies delivered to your inbox.
+          Get the latest insights on AIWeb3and digital economies delivered to your inbox.
         </p>
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
           <input
@@ -112,7 +112,7 @@ export function NewsletterSignup({ variant = "default", className = "" }: Newsle
           </button>
         </form>
         <p className="text-xs text-white/50 mt-3">
-          No spam, unsubscribe at any time.
+          No spamunsubscribe at any time.
         </p>
       </div>
     </div>

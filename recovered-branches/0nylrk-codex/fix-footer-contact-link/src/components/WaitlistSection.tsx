@@ -8,11 +8,11 @@ import { useToast } from "@/hooks/use-toast";
 import { Checkbox } from "@/components/ui/checkbox";
 
 export function WaitlistSection() {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [role, setRole] = useState("");
-  const [agreeTerms, setAgreeTerms] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailsetEmail] = useState("");
+  const [namesetName] = useState("");
+  const [rolesetRole] = useState("");
+  const [agreeTermsetAgreeTerms] = useState(false);
+  const [isSubmittingsetIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -30,7 +30,7 @@ export function WaitlistSection() {
     
     try {
       // Simulating an API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve1000));
       
       toast({
         title: "Success!",
@@ -97,7 +97,7 @@ export function WaitlistSection() {
               <Label htmlFor="role">Your Role</Label>
               <Input
                 id="role"
-                placeholder="IT Manager, Developer, Business Owner, etc."
+                placeholder="IT ManagerDeveloperBusiness Owneretc."
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light"

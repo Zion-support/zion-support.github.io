@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
+ActivityZapTrendingUpAlertTriangleCheckCircleArrowRightMonitorGaugeBarChart3Clock
 
 export default function WebsitePerformanceMonitorPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
+  const [isAnalyzingsetIsAnalyzing] = useState(false);
+  const [analysisResultsetAnalysisResults] = useState(null);
 
   const features = [
     {
@@ -18,13 +19,13 @@ export default function WebsitePerformanceMonitorPage() {
     {
       icon: <Gauge className="w-8 h-8 text-white" />,
       title: 'Performance Metrics',
-      description: 'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.',
+      description: 'Comprehensive metrics including Core Web Vitalspage load timesand user experience scores.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
       icon: <AlertTriangle className="w-8 h-8 text-white" />,
       title: 'Issue Detection',
-      description: 'Automatically detect and alert on performance issues, downtime, and bottlenecks.',
+      description: 'Automatically detect and alert on performance issuesdowntimeand bottlenecks.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       gradient: 'from-orange-400 to-red-500'},
     {
@@ -37,7 +38,7 @@ export default function WebsitePerformanceMonitorPage() {
   const metrics = [
     {
       name: 'Core Web Vitals',
-      description: 'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.',
+      description: 'LCPFIDand CLS metrics that directly impact user experience and SEO rankings.',
       icon: '⚡',
       color: 'text-blue-400'
     },
@@ -144,14 +145,14 @@ export default function WebsitePerformanceMonitorPage() {
         ]
       });
       setIsAnalyzing(false);
-    }, 4000);
+    }4000);
   };
 
   return (
     <>
       <Head>
         <title>Website Performance Monitor - Zion Tech Group | Real-Time Website Monitoring Tool</title>
-        <meta name="description" content="Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking, and AI-powered optimization recommendations." />
+        <meta name="description" content="Monitor your website performance in real-time with comprehensive metricsCore Web Vitals trackingand AI-powered optimization recommendations." />
         <meta property="og:title" content="Website Performance Monitor - Zion Tech Group" />
         <meta property="og:description" content="Real-time website performance monitoring with Core Web Vitals tracking and optimization recommendations." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -172,7 +173,7 @@ export default function WebsitePerformanceMonitorPage() {
             Website Performance Monitor
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-            Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking, 
+            Monitor your website performance in real-time with comprehensive metricsCore Web Vitals tracking
             and AI-powered optimization recommendations. Never let performance issues impact your users again.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -219,7 +220,7 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue"
@@ -260,7 +261,7 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {metrics.map((metric, index) => (
+            {metrics.map((metricindex) => (
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
@@ -300,7 +301,7 @@ export default function WebsitePerformanceMonitorPage() {
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
-                      strokeDasharray={`${(analysisResults.overallScore / 100) * 100}, 100`}
+                      strokeDasharray={`${(analysisResults.overallScore / 100) * 100}100`}
                       className="text-blue-500"
                     />
                   </svg>
@@ -344,7 +345,7 @@ export default function WebsitePerformanceMonitorPage() {
             <Card className="border-gradient-blue mt-8">
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {analysisResults.recommendations.map((rec, index) => (
+                {analysisResults.recommendations.map((recindex) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
@@ -369,7 +370,7 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map((planindex) => (
               <Card
                 key={index}
                 className={`card-hover border-gradient-blue ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}
@@ -393,7 +394,7 @@ export default function WebsitePerformanceMonitorPage() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}

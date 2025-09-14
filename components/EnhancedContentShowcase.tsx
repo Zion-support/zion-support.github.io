@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const EnhancedContentShowcase = () => {
-  const [activeTab, setActiveTab] = useState('breakthroughs');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState('breakthroughs');
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 500);
+    const timer = setTimeout(() => setIsVisible(true)500);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   const contentCategories = {
     breakthroughs: {
@@ -106,13 +107,13 @@ const EnhancedContentShowcase = () => {
             Discover Revolutionary AI Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our comprehensive collection of AI breakthroughs, success stories, and implementation guides designed to transform your business.
+            Explore our comprehensive collection of AI breakthroughsuccess storiesand implementation guides designed to transform your business.
           </p>
         </div>
 
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center mb-12">
-          {Object.entries(contentCategories).map(([key, category]) => (
+          {Object.entries(contentCategories).map(([keycategory]) => (
             <button
               key={key}
               onClick={() => setActiveTab(key)}
@@ -129,7 +130,7 @@ const EnhancedContentShowcase = () => {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {contentCategories[activeTab as keyof typeof contentCategories].items.map((item, index) => (
+          {contentCategories[activeTab as keyof typeof contentCategories].items.map((itemindex) => (
             <div
               key={index}
               className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 ${

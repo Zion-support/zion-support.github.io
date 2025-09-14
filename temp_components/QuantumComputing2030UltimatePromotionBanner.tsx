@@ -35,12 +35,12 @@ export default function QuantumComputing2030UltimatePromotionBanner() {
             <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 rounded-2xl p-6 border border-indigo-500/30 backdrop-blur-sm">
               <div className="text-4xl mb-3">⚛️</div>
               <h3 className="text-xl font-bold text-white mb-2">Quantum Supremacy</h3>
-              <p className="text-gray-300 text-sm">1M+ qubits, 10^100x faster processing</p>
+              <p className="text-gray-300 text-sm">1M+ qubits10^100x faster processing</p>
             </div>
             <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-2xl p-6 border border-purple-500/30 backdrop-blur-sm">
               <div className="text-4xl mb-3">🔧</div>
               <h3 className="text-xl font-bold text-white mb-2">Error-Corrected Quantum</h3>
-              <p className="text-gray-300 text-sm">99.99% accuracy, practical applications</p>
+              <p className="text-gray-300 text-sm">99.99% accuracypractical applications</p>
             </div>
             <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 rounded-2xl p-6 border border-cyan-500/30 backdrop-blur-sm">
               <div className="text-4xl mb-3">🧠⚛️</div>

@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 export default function NewContentDiscoveryWidget2025() {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategorysetActiveCategory] = useState('all');
 
   const contentCategories = [
-    { id: 'all', name: 'All Content', icon: '🚀' },
-    { id: 'ai-2025', name: 'AI 2025', icon: '🧠' },
-    { id: 'ai-2026-2030', name: 'AI 2026-2030', icon: '🔮' },
-    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️' },
-    { id: 'case-studies', name: 'Case Studies', icon: '🏆' },
-    { id: 'breakthroughs', name: 'Breakthroughs', icon: '💡' }
+    { id: 'all'name: 'All Content'icon: '🚀' },
+    { id: 'ai-2025'name: 'AI 2025'icon: '🧠' },
+    { id: 'ai-2026-2030'name: 'AI 2026-2030'icon: '🔮' },
+    { id: 'quantum'name: 'Quantum Computing'icon: '⚛️' },
+    { id: 'case-studies'name: 'Case Studies'icon: '🏆' },
+    { id: 'breakthroughs'name: 'Breakthroughs'icon: '💡' }
   ];
 
   const contentItems = [
@@ -94,7 +95,7 @@ export default function NewContentDiscoveryWidget2025() {
             Discover Revolutionary Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our latest breakthrough technologies, case studies, and future predictions 
+            Explore our latest breakthrough technologiescase studiesand future predictions 
             that are transforming businesses worldwide.
           </p>
         </div>
@@ -152,7 +153,7 @@ export default function NewContentDiscoveryWidget2025() {
                   </div>
                 </div>
                 <div className="text-sm text-gray-500 capitalize">
-                  {item.type.replace('-', ' ')}
+                  {item.type.replace('-' ')}
                 </div>
               </div>
               

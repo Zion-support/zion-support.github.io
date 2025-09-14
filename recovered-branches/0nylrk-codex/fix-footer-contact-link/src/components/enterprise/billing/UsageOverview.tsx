@@ -1,8 +1,8 @@
 
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 
 export function UsageOverview() {
   // Mock usage data
@@ -86,7 +86,7 @@ export function UsageOverview() {
             </div>
             
             <div className="pt-4 text-sm text-muted-foreground">
-              <p>Current billing period: May 1, 2025 - May 31, 2025</p>
+              <p>Current billing period: May 12025 - May 312025</p>
               <p className="mt-1">Usage resets at the beginning of each billing period.</p>
             </div>
           </TabsContent>

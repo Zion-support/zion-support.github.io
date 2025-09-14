@@ -1,6 +1,7 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 interface FeaturedContent {
@@ -63,17 +64,17 @@ const featuredContent: FeaturedContent[] = [
 ];
 
 export default function FeaturedContentBanner() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentIndexsetCurrentIndex] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredContent.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentContent = featuredContent[currentIndex];
 
@@ -132,7 +133,7 @@ export default function FeaturedContentBanner() {
 
             {/* Navigation Dots */}
             <div className="flex justify-center mt-6 space-x-2">
-              {featuredContent.map((_, index) => (
+              {featuredContent.map((_index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
@@ -147,7 +148,7 @@ export default function FeaturedContentBanner() {
 
           {/* Quick Links */}
           <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-            {featuredContent.slice(0, 4).map((content) => (
+            {featuredContent.slice(04).map((content) => (
               <Link
                 key={content.id}
                 href={content.link}
@@ -155,7 +156,7 @@ export default function FeaturedContentBanner() {
               >
                 <div className="text-2xl mb-2">{content.icon}</div>
                 <div className="text-sm font-semibold text-white group-hover:text-yellow-400 transition-colors">
-                  {content.title.split(' ').slice(0, 3).join(' ')}...
+                  {content.title.split(' ').slice(03).join(' ')}...
                 </div>
                 <div className="text-xs text-gray-300 mt-1">
                   {content.roi}

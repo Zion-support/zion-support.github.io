@@ -1,20 +1,21 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 export default function UltimateBreakthroughBanner() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   useEffect(() => {
     // Show banner after 2 seconds
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 2000);
+    }2000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsDismissed(true);

@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Sparkles, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  Clock, 
+  Brain
+  Sparkles
+  TrendingUp
+  Target
+  Users
+  Clock
   Star,
   ArrowRight,
   BookOpen,
@@ -41,11 +42,11 @@ import {
 } from 'lucide-react';
 
 const AIPoweredContentRecommendationSystemPromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const features = [
     'AI-Powered Personalization',
@@ -57,19 +58,19 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
   ];
 
   const stats = [
-    { value: '94.2%', label: 'AI Accuracy', icon: Target },
-    { value: '98.7%', label: 'Personalization', icon: Users },
-    { value: '+67%', label: 'Engagement Boost', icon: TrendingUp },
-    { value: '1,247', label: 'Content Matched', icon: Database }
+    { value: '94.2%'label: 'AI Accuracy'icon: Target },
+    { value: '98.7%'label: 'Personalization'icon: Users },
+    { value: '+67%'label: 'Engagement Boost'icon: TrendingUp },
+    { value: '1,247'label: 'Content Matched'icon: Database }
   ];
 
   const recommendationTypes = [
-    { icon: BookOpen, label: 'Blog Posts', count: '342', color: 'blue' },
-    { icon: Target, label: 'Case Studies', count: '156', color: 'purple' },
-    { icon: Play, label: 'Tutorials', count: '289', color: 'green' },
-    { icon: Cpu, label: 'Research', count: '123', color: 'orange' },
-    { icon: Activity, label: 'Videos', count: '89', color: 'red' },
-    { icon: Shield, label: 'Whitepapers', count: '78', color: 'indigo' }
+    { icon: BookOpenlabel: 'Blog Posts'count: '342'color: 'blue' },
+    { icon: Targetlabel: 'Case Studies'count: '156'color: 'purple' },
+    { icon: Playlabel: 'Tutorials'count: '289'color: 'green' },
+    { icon: Cpulabel: 'Research'count: '123'color: 'orange' },
+    { icon: Activitylabel: 'Videos'count: '89'color: 'red' },
+    { icon: Shieldlabel: 'Whitepapers'count: '78'color: 'indigo' }
   ];
 
   const aiCapabilities = [
@@ -114,8 +115,8 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
@@ -152,12 +153,12 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
 
         {/* AI Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
         >
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <div key={index} className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl mb-4">
                 <stat.icon className="w-8 h-8 text-white" />
@@ -170,12 +171,12 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
 
         {/* AI Capabilities */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
-          {aiCapabilities.map((capability, index) => (
+          {aiCapabilities.map((capabilityindex) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-4">
@@ -193,12 +194,12 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
 
         {/* Features Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
         >
-          {features.map((feature, index) => (
+          {features.map((featureindex) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="flex items-center mb-3">
                 <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-3">
@@ -215,9 +216,9 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
 
         {/* Content Types Showcase */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12"
         >
           <div className="text-center mb-8">
@@ -226,7 +227,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {recommendationTypes.map((type, index) => (
+            {recommendationTypes.map((typeindex) => (
               <div key={index} className="text-center group">
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-${type.color}-500/20 rounded-2xl mb-3 group-hover:scale-110 transition-transform duration-300`}>
                   <type.icon className="w-8 h-8 text-white" />
@@ -240,9 +241,9 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
 
         {/* AI Demo Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 1.0 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12"
         >
           <div className="text-center mb-8">
@@ -258,7 +259,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
                   <span className="text-white font-medium">AI Analysis</span>
                 </div>
                 <div className="text-blue-100 text-sm">
-                  Analyzing reading patterns, engagement history, and content preferences...
+                  Analyzing reading patternsengagement historyand content preferences...
                 </div>
               </div>
               
@@ -316,9 +317,9 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 1.2 }}
           className="text-center"
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">

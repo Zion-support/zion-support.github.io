@@ -1,50 +1,51 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 
 const InteractiveContentWidget = () => {
-  const [selectedCategory, setSelectedCategory] = useState('ai');
-  const [hoveredItem, setHoveredItem] = useState(null);
+  const [selectedCategorysetSelectedCategory] = useState('ai');
+  const [hoveredItemsetHoveredItem] = useState(null);
 
   const contentCategories = {
     ai: {
       title: 'AI & Machine Learning',
       icon: '🤖',
       items: [
-        { title: 'Advanced AI Services 2025', description: 'Revolutionary automation solutions', link: '/ai-services-2025', featured: true },
-        { title: 'Neural Network Architectures', description: 'Next-gen AI brain designs', link: '/neural-architectures' },
-        { title: 'Machine Learning Mastery', description: 'Complete ML implementation guide', link: '/ml-mastery' },
-        { title: 'AI Ethics & Governance', description: 'Responsible AI development', link: '/ai-ethics' }
+        { title: 'Advanced AI Services 2025'description: 'Revolutionary automation solutions'link: '/ai-services-2025'featured: true },
+        { title: 'Neural Network Architectures'description: 'Next-gen AI brain designs'link: '/neural-architectures' },
+        { title: 'Machine Learning Mastery'description: 'Complete ML implementation guide'link: '/ml-mastery' },
+        { title: 'AI Ethics & Governance'description: 'Responsible AI development'link: '/ai-ethics' }
       ]
     },
     quantum: {
       title: 'Quantum Computing',
       icon: '⚛️',
       items: [
-        { title: 'Quantum Supremacy 2025', description: 'Error-corrected quantum computers', link: '/quantum-supremacy', featured: true },
-        { title: 'Quantum Algorithms', description: 'Revolutionary problem-solving methods', link: '/quantum-algorithms' },
-        { title: 'Quantum Machine Learning', description: 'AI meets quantum computing', link: '/quantum-ml' },
-        { title: 'Quantum Cryptography', description: 'Unbreakable security systems', link: '/quantum-crypto' }
+        { title: 'Quantum Supremacy 2025'description: 'Error-corrected quantum computers'link: '/quantum-supremacy'featured: true },
+        { title: 'Quantum Algorithms'description: 'Revolutionary problem-solving methods'link: '/quantum-algorithms' },
+        { title: 'Quantum Machine Learning'description: 'AI meets quantum computing'link: '/quantum-ml' },
+        { title: 'Quantum Cryptography'description: 'Unbreakable security systems'link: '/quantum-crypto' }
       ]
     },
     automation: {
       title: 'Business Automation',
       icon: '🔄',
       items: [
-        { title: 'Autonomous Operations', description: 'Self-managing business systems', link: '/autonomous-ops', featured: true },
-        { title: 'Process Optimization', description: 'Streamline your workflows', link: '/process-optimization' },
-        { title: 'Intelligent Automation', description: 'Smart business process automation', link: '/intelligent-automation' },
-        { title: 'ROI Optimization', description: 'Maximize your returns', link: '/roi-optimization' }
+        { title: 'Autonomous Operations'description: 'Self-managing business systems'link: '/autonomous-ops'featured: true },
+        { title: 'Process Optimization'description: 'Streamline your workflows'link: '/process-optimization' },
+        { title: 'Intelligent Automation'description: 'Smart business process automation'link: '/intelligent-automation' },
+        { title: 'ROI Optimization'description: 'Maximize your returns'link: '/roi-optimization' }
       ]
     },
     future: {
       title: 'Future Technologies',
       icon: '🔮',
       items: [
-        { title: '2030 Technology Predictions', description: 'What the future holds', link: '/2030-predictions', featured: true },
-        { title: 'Neural Interface Revolution', description: 'Brain-computer integration', link: '/neural-interfaces' },
-        { title: 'Transcendent AI', description: 'Beyond human intelligence', link: '/transcendent-ai' },
-        { title: 'Omniversal Computing', description: 'Computing beyond reality', link: '/omniversal-computing' }
+        { title: '2030 Technology Predictions'description: 'What the future holds'link: '/2030-predictions'featured: true },
+        { title: 'Neural Interface Revolution'description: 'Brain-computer integration'link: '/neural-interfaces' },
+        { title: 'Transcendent AI'description: 'Beyond human intelligence'link: '/transcendent-ai' },
+        { title: 'Omniversal Computing'description: 'Computing beyond reality'link: '/omniversal-computing' }
       ]
     }
   };
@@ -53,8 +54,8 @@ const InteractiveContentWidget = () => {
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -68,12 +69,12 @@ const InteractiveContentWidget = () => {
 
         {/* Category Selector */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {Object.entries(contentCategories).map(([key, category]) => (
+          {Object.entries(contentCategories).map(([keycategory]) => (
             <button
               key={key}
               onClick={() => setSelectedCategory(key)}
@@ -93,18 +94,18 @@ const InteractiveContentWidget = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedCategory}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            exit={{ opacity: 0y: -30 }}
             transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"
           >
-            {contentCategories[selectedCategory].items.map((item, index) => (
+            {contentCategories[selectedCategory].items.map((itemindex) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
+                initial={{ opacity: 0scale: 0.9 }}
+                animate={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.4delay: index * 0.1 }}
                 onHoverStart={() => setHoveredItem(item.title)}
                 onHoverEnd={() => setHoveredItem(null)}
                 className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 cursor-pointer ${
@@ -154,9 +155,9 @@ const InteractiveContentWidget = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"
         >
           <Link 

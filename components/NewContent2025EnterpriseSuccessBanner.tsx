@@ -19,7 +19,7 @@ export default function NewContent2025EnterpriseSuccessBanner() {
               AI 2025 Global Enterprise Transformation
             </h2>
             <p className="text-xl mb-6 text-green-100">
-              Discover how a Fortune 500 company achieved 1,200% ROI through our AI transformation program. Real results, proven strategies, and actionable insights.
+              Discover how a Fortune 500 company achieved 1,200% ROI through our AI transformation program. Real resultsproven strategiesand actionable insights.
             </p>
             <div className="flex flex-wrap gap-4 text-sm">
               <span className="bg-white/20 px-3 py-1 rounded-full">🏢 Fortune 500</span>

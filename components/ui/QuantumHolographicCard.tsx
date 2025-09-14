@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
+StarZapShieldTrendingUpArrowRightExternalLinkCheckUsersClockDollarSign
 
 interface QuantumHolographicCardProps {
   service: {
@@ -46,12 +46,12 @@ interface QuantumHolographicCardProps {
   className?: string;
 }
 
-const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service, className = '' }) => {
+const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ serviceclassName = '' }) => {
   const cardVariants = {
-    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    hidden: { opacity: 0y: 50scale: 0.9 },
     visible: { 
-      opacity: 1, 
-      y: 0, 
+      opacity: 1
+      y: 0
       scale: 1,
       transition: {
         duration: 0.6,
@@ -69,10 +69,10 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
   };
 
   const glowVariants = {
-    initial: { opacity: 0.5, scale: 1 },
+    initial: { opacity: 0.5scale: 1 },
     animate: {
-      opacity: [0.5, 1, 0.5],
-      scale: [1, 1.05, 1],
+      opacity: [0.510.5],
+      scale: [1.051],
       transition: {
         duration: 3,
         repeat: Infinity,
@@ -82,7 +82,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
   };
 
   const featureVariants = {
-    hidden: { opacity: 0, x: -20 },
+    hidden: { opacity: 0x: -20 },
     visible: (i: number) => ({
       opacity: 1,
       x: 0,
@@ -101,7 +101,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
       initial="hidden"
       whileInView="visible"
       whileHover="hover"
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: truemargin: "-50px" }}
     >
       {/* Holographic glow effect */}
       <motion.div
@@ -185,7 +185,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
               <span>Key Features</span>
             </h4>
             <div className="space-y-2">
-              {service.features.slice(0, 4).map((feature, index) => (
+              {service.features.slice(04).map((featureindex) => (
                 <motion.div
                   key={index}
                   className="flex items-center space-x-2 text-sm text-gray-300"
@@ -225,7 +225,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
             <div className="bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">
               <div className="text-sm font-semibold text-orange-300 mb-1">Competitors</div>
               <div className="text-xs text-gray-300">
-                {service.competitors.slice(0, 2).join(', ')}
+                {service.competitors.slice(02).join(')}
               </div>
             </div>
           </div>

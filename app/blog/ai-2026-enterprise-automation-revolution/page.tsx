@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Share2, BookOpen, TrendingUp, Zap } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Clock, Share2, BookOpen, TrendingUp, Zap, Crosshair, Award } from 'lucide-react';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'AI 2026: The Enterprise Automation Revolution - Complete Transformation Guide',
@@ -12,7 +11,7 @@ export const metadata = {
 
 export default function AI2026EnterpriseAutomationPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2026: The Enterprise Automation Revolution - Complete Transformation Guide"
         description="Discover how AI automation is revolutionizing enterprise operations in 2026. Learn about cutting-edge technologies, implementation strategies, and real-world success stories."
@@ -91,7 +90,7 @@ export default function AI2026EnterpriseAutomationPage() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Target className="w-6 h-6 text-green-600 mr-3 mt-1" />
+                  <Award className="w-6 h-6 text-green-600 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900">95% Error Reduction</h3>
                     <p className="text-gray-600 text-sm">Quality improvement across processes</p>
@@ -341,7 +340,7 @@ export default function AI2026EnterpriseAutomationPage() {
               <Link href="/case-studies/ai-2026-global-transformation-success" className="group">
                 <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                    <Target className="w-6 h-6 text-green-600" />
+                    <Award className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
                     AI 2026 Global Transformation Success
@@ -369,6 +368,6 @@ export default function AI2026EnterpriseAutomationPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 
 export default function RevolutionaryNewsletterSignup2025() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [emailsetEmail] = useState('');
+  const [isSubscribedsetIsSubscribed] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve2000));
     
     setIsSubscribed(true);
     setIsLoading(false);
@@ -28,7 +29,7 @@ export default function RevolutionaryNewsletterSignup2025() {
             </h2>
             <p className="text-xl text-gray-200 mb-8">
               You've successfully joined the most exclusive AI revolution newsletter. 
-              Get ready for infinite insights, breakthrough updates, and revolutionary content.
+              Get ready for infinite insightsbreakthrough updatesand revolutionary content.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div className="bg-white/20 p-6 rounded-xl">
@@ -68,7 +69,7 @@ export default function RevolutionaryNewsletterSignup2025() {
             </h2>
             
             <p className="text-xl text-gray-300 mb-8">
-              Get exclusive access to the most revolutionary AI content, breakthrough updates, 
+              Get exclusive access to the most revolutionary AI contentbreakthrough updates
               and infinite ROI strategies. Be among the first to experience the future of AI.
             </p>
 

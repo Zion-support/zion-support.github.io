@@ -1,24 +1,25 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, ArrowRight, CheckCircle, Star, Zap, TrendingUp, Users, Award } from 'lucide-react';
+MailArrowRightCheckCircleStarZapTrendingUpUsersAward
 
 const NewsletterSignupPromotion2025 = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [emailsetEmail] = useState('');
+  const [isSubscribedsetIsSubscribed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
       setIsSubscribed(true);
       // Here you would typically send the email to your backend
-      console.log('Email subscribed:', email);
+      console.log('Email subscribed:'email);
     }
   };
 
@@ -31,10 +32,10 @@ const NewsletterSignupPromotion2025 = () => {
   ];
 
   const stats = [
-    { icon: <Users className="w-6 h-6" />, value: "50,000+", label: "Subscribers" },
-    { icon: <Star className="w-6 h-6" />, value: "4.9/5", label: "Rating" },
-    { icon: <TrendingUp className="w-6 h-6" />, value: "95%", label: "Open Rate" },
-    { icon: <Award className="w-6 h-6" />, value: "Weekly", label: "Updates" }
+    { icon: <Users className="w-6 h-6" />value: "50,000+"label: "Subscribers" },
+    { icon: <Star className="w-6 h-6" />value: "4.9/5"label: "Rating" },
+    { icon: <TrendingUp className="w-6 h-6" />value: "95%"label: "Open Rate" },
+    { icon: <Award className="w-6 h-6" />value: "Weekly"label: "Updates" }
   ];
 
   if (isSubscribed) {
@@ -42,8 +43,8 @@ const NewsletterSignupPromotion2025 = () => {
       <div className="py-16 bg-gradient-to-r from-green-500 to-blue-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0scale: 0.8 }}
+            animate={{ opacity: 1scale: 1 }}
             transition={{ duration: 0.5 }}
             className="bg-white rounded-2xl p-12 shadow-2xl"
           >
@@ -84,8 +85,8 @@ const NewsletterSignupPromotion2025 = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0x: -30 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="text-white"
           >
@@ -102,17 +103,17 @@ const NewsletterSignupPromotion2025 = () => {
             </h2>
             
             <p className="text-xl mb-8 opacity-90">
-              Get exclusive insights, early access to breakthrough technologies, and expert analysis delivered directly to your inbox.
+              Get exclusive insightsearly access to breakthrough technologiesand expert analysis delivered directly to your inbox.
             </p>
 
             {/* Benefits List */}
             <div className="space-y-4 mb-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefitindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isVisible ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={isVisible ? { opacity: 1x: 0 } : {}}
+                  transition={{ duration: 0.5delay: 0.2 + index * 0.1 }}
                   className="flex items-center gap-3"
                 >
                   <CheckCircle className="w-5 h-5 text-green-300" />
@@ -123,12 +124,12 @@ const NewsletterSignupPromotion2025 = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  animate={isVisible ? { opacity: 1y: 0 } : {}}
+                  transition={{ duration: 0.5delay: 0.6 + index * 0.1 }}
                   className="text-center"
                 >
                   <div className="text-white mb-2 flex justify-center">
@@ -143,9 +144,9 @@ const NewsletterSignupPromotion2025 = () => {
 
           {/* Right Column - Signup Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0x: 30 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="bg-white rounded-2xl p-8 shadow-2xl"
           >
             <div className="text-center mb-8">
@@ -185,7 +186,7 @@ const NewsletterSignupPromotion2025 = () => {
               </button>
 
               <p className="text-xs text-gray-500 text-center">
-                By subscribing, you agree to our privacy policy. Unsubscribe at any time.
+                By subscribingyou agree to our privacy policy. Unsubscribe at any time.
               </p>
             </form>
 
@@ -195,7 +196,7 @@ const NewsletterSignupPromotion2025 = () => {
                 Trusted by industry leaders
               </p>
               <div className="flex justify-center items-center gap-6 opacity-60">
-                {["Microsoft", "Google", "Amazon", "IBM"].map((company, index) => (
+                {["Microsoft"Google"Amazon"IBM"].map((companyindex) => (
                   <div key={index} className="text-gray-500 font-semibold text-sm">
                     {company}
                   </div>

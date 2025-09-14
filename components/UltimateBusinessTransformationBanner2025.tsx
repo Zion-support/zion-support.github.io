@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateBusinessTransformationBanner2025: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [animatedStats, setAnimatedStats] = useState({
+  const [isVisiblesetIsVisible] = useState(false);
+  const [animatedStatsetAnimatedStats] = useState({
     revenue: 0,
     efficiency: 0,
     costReduction: 0
@@ -38,11 +39,11 @@ const UltimateBusinessTransformationBanner2025: React.FC = () => {
         if (step >= steps) {
           clearInterval(timer);
         }
-      }, stepDuration);
+      }stepDuration);
     };
     
-    setTimeout(animateStats, 500);
-  }, []);
+    setTimeout(animateStats500);
+  }[]);
 
   return (
     <div className={`relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
@@ -69,7 +70,7 @@ const UltimateBusinessTransformationBanner2025: React.FC = () => {
           
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Join thousands of forward-thinking companies leveraging our cutting-edge solutions 
-            to achieve unprecedented growth, efficiency, and competitive advantage.
+            to achieve unprecedented growthefficiencyand competitive advantage.
           </p>
         </div>
 
@@ -114,7 +115,7 @@ const UltimateBusinessTransformationBanner2025: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Rapid Implementation</h3>
-                  <p className="text-gray-300">Get up and running in weeks, not months, with our proven deployment methodology.</p>
+                  <p className="text-gray-300">Get up and running in weeksnot monthswith our proven deployment methodology.</p>
                 </div>
               </div>
               
@@ -134,7 +135,7 @@ const UltimateBusinessTransformationBanner2025: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Scalable Growth</h3>
-                  <p className="text-gray-300">Built to scale with your business, from startup to enterprise level.</p>
+                  <p className="text-gray-300">Built to scale with your businessfrom startup to enterprise level.</p>
                 </div>
               </div>
             </div>

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import {
   Dialog,
   DialogContent,
@@ -26,17 +26,17 @@ export interface HireConfirmationModalProps {
 }
 
 export function HireConfirmationModal({ 
-  isOpen, 
-  onClose, 
-  candidateData, 
+  isOpen
+  onClose
+  candidateData
   application,
   onConfirm,
   isSubmitting = false
 }: HireConfirmationModalProps) {
-  const [projectName, setProjectName] = useState('');
-  const [projectDescription, setProjectDescription] = useState('');
-  const [updateAvailability, setUpdateAvailability] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
+  const [projectNamesetProjectName] = useState('');
+  const [projectDescriptionsetProjectDescription] = useState('');
+  const [updateAvailabilitysetUpdateAvailability] = useState(true);
+  const [isLoadingsetIsLoading] = useState(false);
   const { user } = useAuth();
 
   // Get talent information from either candidateData or application
@@ -71,7 +71,7 @@ export function HireConfirmationModal({
 
     // Create a new project
     try {
-      const { data: projectData, error: projectError } = await supabase
+      const { data: projectDataerror: projectError } = await supabase
         .from('projects')
         .insert([
           {
@@ -120,7 +120,7 @@ export function HireConfirmationModal({
           const { error: availabilityError } = await supabase
             .from('talent_profiles')
             .update({ availability_type: 'unavailable' })
-            .eq('id', talentData.id);
+            .eq('id'talentData.id);
 
           if (availabilityError) {
             toast({
@@ -131,7 +131,7 @@ export function HireConfirmationModal({
             return;
           }
         } catch (error) {
-          console.error('Error updating availability:', error);
+          console.error('Error updating availability:'error);
           toast({
             title: 'Error updating availability',
             description: 'Failed to update candidate availability status.',
@@ -147,7 +147,7 @@ export function HireConfirmationModal({
       onConfirm();
       onClose();
     } catch (error) {
-      console.error('Error hiring candidate:', error);
+      console.error('Error hiring candidate:'error);
       toast({
         title: 'Error hiring candidate',
         description: 'Failed to hire candidate. Please try again.',

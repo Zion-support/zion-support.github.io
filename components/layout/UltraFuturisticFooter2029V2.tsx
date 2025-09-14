@@ -2,16 +2,16 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Phone, Mail, MapPin, Globe, ArrowRight, 
-  Brain, Rocket, Target, Shield, Cpu, 
-  Facebook, Twitter, Linkedin, Instagram, Youtube,
-  Github, MessageCircle, Star, Zap, Sparkles,
-  Home, Users, Briefcase, BookOpen, TrendingUp,
-  MessageSquare, Calendar,
-  GraduationCap, ShieldCheck, Eye, Code, Wrench,
-  Smartphone, BarChart3, Palette, Camera, Video,
-  Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind,
-  Droplets, Mountain, Globe2, Bot, Crown, Infinity
+  PhoneMailMapPinGlobeArrowRight
+  BrainRocketTargetShieldCpu
+  FacebookTwitterLinkedinInstagramYoutube,
+  GithubMessageCircleStarZapSparkles,
+  HomeUsersBriefcaseBookOpenTrendingUp,
+  MessageSquareCalendar,
+  GraduationCapShieldCheckEyeCodeWrench,
+  SmartphoneBarChart3PaletteCameraVideo,
+  MusicGamepad2HeartLeafSunMoonWind,
+  DropletsMountainGlobe2BotCrownInfinity
 } from 'lucide-react';
 
 const contactInfo = {
@@ -27,10 +27,10 @@ const serviceCategories = [
     icon: Brain,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     services: [
-      { name: 'AI Consciousness Evolution', href: '/services/ai-consciousness-evolution-platform' },
-      { name: 'AI Emotional Intelligence', href: '/services/ai-emotional-intelligence-platform' },
-      { name: 'AI Creativity Orchestrator', href: '/services/ai-creativity-orchestrator' },
-      { name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager' }
+      { name: 'AI Consciousness Evolution'href: '/services/ai-consciousness-evolution-platform' },
+      { name: 'AI Emotional Intelligence'href: '/services/ai-emotional-intelligence-platform' },
+      { name: 'AI Creativity Orchestrator'href: '/services/ai-creativity-orchestrator' },
+      { name: 'AI Autonomous Business Manager'href: '/services/ai-autonomous-business-manager' }
     ]
   },
   {
@@ -38,10 +38,10 @@ const serviceCategories = [
     icon: Globe,
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     services: [
-      { name: 'Quantum Internet Security', href: '/services/quantum-internet-security-gateway' },
-      { name: 'Biotech DNA Computing', href: '/services/biotech-dna-computing-platform' },
-      { name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading-platform' },
-      { name: 'Quantum Creativity Studio', href: '/services/quantum-creativity-studio' }
+      { name: 'Quantum Internet Security'href: '/services/quantum-internet-security-gateway' },
+      { name: 'Biotech DNA Computing'href: '/services/biotech-dna-computing-platform' },
+      { name: 'Quantum Financial Trading'href: '/services/quantum-financial-trading-platform' },
+      { name: 'Quantum Creativity Studio'href: '/services/quantum-creativity-studio' }
     ]
   },
   {
@@ -49,10 +49,10 @@ const serviceCategories = [
     icon: Rocket,
     color: 'from-teal-600 via-emerald-600 to-green-600',
     services: [
-      { name: 'Space Mining Automation', href: '/services/space-mining-automation-platform' },
-      { name: 'Metaverse Digital Reality', href: '/services/metaverse-digital-reality-platform' },
-      { name: 'AI Predictive Health', href: '/services/ai-predictive-health-analytics' },
-      { name: 'Virtual Event Holograms', href: '/services/virtual-event-hologram-platform' }
+      { name: 'Space Mining Automation'href: '/services/space-mining-automation-platform' },
+      { name: 'Metaverse Digital Reality'href: '/services/metaverse-digital-reality-platform' },
+      { name: 'AI Predictive Health'href: '/services/ai-predictive-health-analytics' },
+      { name: 'Virtual Event Holograms'href: '/services/virtual-event-hologram-platform' }
     ]
   },
   {
@@ -60,110 +60,110 @@ const serviceCategories = [
     icon: Cpu,
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     services: [
-      { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-suite' },
-      { name: 'Smart Supply Chain', href: '/services/smart-supply-chain-optimization' },
-      { name: 'Intelligent HR Management', href: '/services/intelligent-hr-management-system' },
-      { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
+      { name: 'AI Business Intelligence'href: '/services/ai-business-intelligence-suite' },
+      { name: 'Smart Supply Chain'href: '/services/smart-supply-chain-optimization' },
+      { name: 'Intelligent HR Management'href: '/services/intelligent-hr-management-system' },
+      { name: 'Smart Financial Management'href: '/services/smart-financial-management-platform' }
     ]
   }
 ];
 
 const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
-  { name: 'Quantum Tech', href: '/quantum-tech', icon: Globe },
-  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu },
-  { name: 'Space Tech', href: '/space-tech', icon: Rocket },
-  { name: 'Micro SAAS', href: '/micro-saas', icon: Target },
-  { name: 'Innovations', href: '/innovations', icon: Sparkles },
-  { name: 'About', href: '/about', icon: Users },
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
+  { name: 'Home'href: '/'icon: Home },
+  { name: 'Services'href: '/services'icon: Briefcase },
+  { name: 'AI Solutions'href: '/ai-solutions'icon: Brain },
+  { name: 'Quantum Tech'href: '/quantum-tech'icon: Globe },
+  { name: 'Enterprise IT'href: '/enterprise-it'icon: Cpu },
+  { name: 'Space Tech'href: '/space-tech'icon: Rocket },
+  { name: 'Micro SAAS'href: '/micro-saas'icon: Target },
+  { name: 'Innovations'href: '/innovations'icon: Sparkles },
+  { name: 'About'href: '/about'icon: Users },
+  { name: 'Contact'href: '/contact'icon: MessageCircle }
 ];
 
 const quickLinks = [
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'News', href: '/news', icon: TrendingUp },
-  { name: 'Careers', href: '/careers', icon: GraduationCap },
-  { name: 'Support', href: '/support', icon: MessageCircle }
+  { name: 'About Us'href: '/about'icon: Users },
+  { name: 'Case Studies'href: '/case-studies'icon: BookOpen },
+  { name: 'Blog'href: '/blog'icon: BookOpen },
+  { name: 'News'href: '/news'icon: TrendingUp },
+  { name: 'Careers'href: '/careers'icon: GraduationCap },
+  { name: 'Support'href: '/support'icon: MessageCircle }
 ];
 
 const resources = [
-  { name: 'Documentation', href: '/docs', icon: BookOpen },
-  { name: 'API Reference', href: '/api', icon: Code },
-  { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
-  { name: 'White Papers', href: '/white-papers', icon: BookOpen },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'News', href: '/news', icon: TrendingUp },
-  { name: 'Events', href: '/events', icon: Calendar },
-  { name: 'Webinars', href: '/webinars', icon: Video }
+  { name: 'Documentation'href: '/docs'icon: BookOpen },
+  { name: 'API Reference'href: '/api'icon: Code },
+  { name: 'Case Studies'href: '/case-studies'icon: BookOpen },
+  { name: 'White Papers'href: '/white-papers'icon: BookOpen },
+  { name: 'Blog'href: '/blog'icon: BookOpen },
+  { name: 'News'href: '/news'icon: TrendingUp },
+  { name: 'Events'href: '/events'icon: Calendar },
+  { name: 'Webinars'href: '/webinars'icon: Video }
 ];
 
 const company = [
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Our Team', href: '/team', icon: Users },
-  { name: 'Careers', href: '/careers', icon: GraduationCap },
-  { name: 'Partners', href: '/partners', icon: Users },
-  { name: 'Investors', href: '/investors', icon: Star },
-  { name: 'Press', href: '/press', icon: BookOpen },
-  { name: 'Legal', href: '/legal', icon: Shield },
-  { name: 'Privacy', href: '/privacy', icon: ShieldCheck }
+  { name: 'About Us'href: '/about'icon: Users },
+  { name: 'Our Team'href: '/team'icon: Users },
+  { name: 'Careers'href: '/careers'icon: GraduationCap },
+  { name: 'Partners'href: '/partners'icon: Users },
+  { name: 'Investors'href: '/investors'icon: Star },
+  { name: 'Press'href: '/press'icon: BookOpen },
+  { name: 'Legal'href: '/legal'icon: Shield },
+  { name: 'Privacy'href: '/privacy'icon: ShieldCheck }
 ];
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-500' },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
+  { name: 'LinkedIn'href: 'https://linkedin.com/company/ziontechgroup'icon: Linkedincolor: 'hover:text-blue-500' },
+  { name: 'Twitter'href: 'https://twitter.com/ziontechgroup'icon: Twittercolor: 'hover:text-blue-400' },
+  { name: 'Facebook'href: 'https://facebook.com/ziontechgroup'icon: Facebookcolor: 'hover:text-blue-600' },
+  { name: 'Instagram'href: 'https://instagram.com/ziontechgroup'icon: Instagramcolor: 'hover:text-pink-500' },
+  { name: 'YouTube'href: 'https://youtube.com/@ziontechgroup'icon: Youtubecolor: 'hover:text-red-500' },
+  { name: 'GitHub'href: 'https://github.com/Zion-Holdings'icon: Githubcolor: 'hover:text-gray-400' }
 ];
 
 const footerSections = [
   {
     title: 'Services',
     links: [
-      { name: 'AI & Machine Learning', href: '/services/ai-ml' },
-      { name: 'Quantum Computing', href: '/services/quantum-computing' },
-      { name: 'Space Technology', href: '/services/space-technology' },
-      { name: 'Enterprise IT', href: '/services/enterprise-it' },
-      { name: 'Micro SAAS', href: '/services/micro-saas' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity' }
+      { name: 'AI & Machine Learning'href: '/services/ai-ml' },
+      { name: 'Quantum Computing'href: '/services/quantum-computing' },
+      { name: 'Space Technology'href: '/services/space-technology' },
+      { name: 'Enterprise IT'href: '/services/enterprise-it' },
+      { name: 'Micro SAAS'href: '/services/micro-saas' },
+      { name: 'Cybersecurity'href: '/services/cybersecurity' }
     ]
   },
   {
     title: 'Solutions',
     links: [
-      { name: 'AI Consciousness', href: '/solutions/ai-consciousness' },
-      { name: 'Quantum Security', href: '/solutions/quantum-security' },
-      { name: 'Space Mining', href: '/solutions/space-mining' },
-      { name: 'Metaverse Platform', href: '/solutions/metaverse' },
-      { name: 'Business Intelligence', href: '/solutions/business-intelligence' },
-      { name: 'Supply Chain AI', href: '/solutions/supply-chain-ai' }
+      { name: 'AI Consciousness'href: '/solutions/ai-consciousness' },
+      { name: 'Quantum Security'href: '/solutions/quantum-security' },
+      { name: 'Space Mining'href: '/solutions/space-mining' },
+      { name: 'Metaverse Platform'href: '/solutions/metaverse' },
+      { name: 'Business Intelligence'href: '/solutions/business-intelligence' },
+      { name: 'Supply Chain AI'href: '/solutions/supply-chain-ai' }
     ]
   },
   {
     title: 'Industries',
     links: [
-      { name: 'Healthcare', href: '/industries/healthcare' },
-      { name: 'Finance', href: '/industries/finance' },
-      { name: 'Manufacturing', href: '/industries/manufacturing' },
-      { name: 'Retail', href: '/industries/retail' },
-      { name: 'Education', href: '/industries/education' },
-      { name: 'Government', href: '/industries/government' }
+      { name: 'Healthcare'href: '/industries/healthcare' },
+      { name: 'Finance'href: '/industries/finance' },
+      { name: 'Manufacturing'href: '/industries/manufacturing' },
+      { name: 'Retail'href: '/industries/retail' },
+      { name: 'Education'href: '/industries/education' },
+      { name: 'Government'href: '/industries/government' }
     ]
   },
   {
     title: 'Resources',
     links: [
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'White Papers', href: '/white-papers' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Research', href: '/research' }
+      { name: 'Documentation'href: '/docs' },
+      { name: 'API Reference'href: '/api' },
+      { name: 'Case Studies'href: '/case-studies' },
+      { name: 'White Papers'href: '/white-papers' },
+      { name: 'Blog'href: '/blog' },
+      { name: 'Research'href: '/research' }
     ]
   }
 ];
@@ -177,8 +177,8 @@ export default function UltraFuturisticFooter2029V2() {
           {/* Company Info */}
           <div className="lg:col-span-2 xl:col-span-1">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -198,7 +198,7 @@ export default function UltraFuturisticFooter2029V2() {
               </Link>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Leading the future with cutting-edge AI, quantum computing, space technology, and innovative micro SAAS solutions. 
+                Leading the future with cutting-edge AIquantum computingspace technologyand innovative micro SAAS solutions. 
                 Transforming businesses through next-generation technology.
               </p>
               
@@ -225,12 +225,12 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
 
           {/* Service Categories */}
-          {footerSections.map((section, index) => (
+          {footerSections.map((sectionindex) => (
             <motion.div
               key={section.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               viewport={{ once: true }}
             >
               <h4 className="text-lg font-semibold text-white mb-6 flex items-center">
@@ -256,9 +256,9 @@ export default function UltraFuturisticFooter2029V2() {
 
         {/* Service Showcase */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.3 }}
           viewport={{ once: true }}
           className="mt-16 pt-12 border-t border-gray-800"
         >
@@ -266,12 +266,12 @@ export default function UltraFuturisticFooter2029V2() {
             Featured 2029 Services
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {serviceCategories.map((category, index) => (
+            {serviceCategories.map((categoryindex) => (
               <motion.div
                 key={category.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0scale: 0.9 }}
+                whileInView={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="group"
               >
@@ -283,7 +283,7 @@ export default function UltraFuturisticFooter2029V2() {
                     <h4 className="font-semibold text-white text-sm">{category.title}</h4>
                   </div>
                   <ul className="space-y-2">
-                    {category.services.slice(0, 3).map((service) => (
+                    {category.services.slice(03).map((service) => (
                       <li key={service.name}>
                         <Link
                           href={service.href}
@@ -307,8 +307,8 @@ export default function UltraFuturisticFooter2029V2() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0x: -20 }}
+              whileInView={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-gray-400 text-sm"
@@ -320,8 +320,8 @@ export default function UltraFuturisticFooter2029V2() {
 
             {/* Social Links */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0x: 20 }}
+              whileInView={{ opacity: 1x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="flex items-center space-x-4"
@@ -344,9 +344,9 @@ export default function UltraFuturisticFooter2029V2() {
 
       {/* Newsletter Signup */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
+        initial={{ opacity: 0y: 20 }}
+        whileInView={{ opacity: 1y: 0 }}
+        transition={{ duration: 0.6delay: 0.4 }}
         viewport={{ once: true }}
         className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20"
       >
@@ -356,7 +356,7 @@ export default function UltraFuturisticFooter2029V2() {
               Stay Ahead with Future Tech
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Get the latest updates on AI breakthroughs, quantum computing advances, space technology innovations, and cutting-edge micro SAAS solutions.
+              Get the latest updates on AI breakthroughsquantum computing advancespace technology innovationsand cutting-edge micro SAAS solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input

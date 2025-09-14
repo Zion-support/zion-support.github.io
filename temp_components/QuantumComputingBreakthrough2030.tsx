@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Atom, Zap, Cpu, Brain, Target, Globe, Shield, Rocket } from 'lucide-react';
+AtomZapCpuBrainTargetGlobeShieldRocket
 
 const QuantumComputingBreakthrough2030 = () => {
   return (
@@ -16,7 +16,7 @@ const QuantumComputingBreakthrough2030 = () => {
             QUANTUM BREAKTHROUGH
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the world's first commercially viable quantum computers with 10,000+ logical qubits, error correction, and practical quantum advantage across all industries
+            Experience the world's first commercially viable quantum computers with 10,000+ logical qubitserror correctionand practical quantum advantage across all industries
           </p>
         </div>
 
@@ -36,7 +36,7 @@ const QuantumComputingBreakthrough2030 = () => {
               <Zap className="w-8 h-8 text-black" />
             </div>
             <h3 className="text-2xl font-bold mb-4">Quantum Speedup</h3>
-            <p className="text-gray-300 mb-6">Exponential computational advantages over classical computers for optimization, cryptography, and simulation</p>
+            <p className="text-gray-300 mb-6">Exponential computational advantages over classical computers for optimizationcryptographyand simulation</p>
             <div className="text-purple-400 font-bold text-lg">10^12x Faster</div>
           </div>
 
@@ -121,7 +121,7 @@ const QuantumComputingBreakthrough2030 = () => {
                 <Zap className="w-6 h-6 text-black" />
               </div>
               <h3 className="text-xl font-bold mb-3">Optimization</h3>
-              <p className="text-gray-300 text-sm mb-4">Quantum optimization solving complex logistics, scheduling, and resource allocation</p>
+              <p className="text-gray-300 text-sm mb-4">Quantum optimization solving complex logisticschedulingand resource allocation</p>
               <div className="text-purple-400 font-semibold">Optimal Solutions</div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
+import React{ useStateuseRefuseEffectFormEventKeyboardEvent } from 'react';
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 
@@ -7,14 +7,14 @@ interface ChatInputProps {
   disabled?: boolean;
 }
 
-export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
-  const [message, setMessage] = useState('');
+export function ChatInput({ onSendisabled = false }: ChatInputProps) {
+  const [messagesetMessage] = useState('');
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     // Focus input when component mounts
     inputRef.current?.focus();
-  }, []);
+  }[]);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

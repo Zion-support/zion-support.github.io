@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, TrendingUp, Users, Award } from 'lucide-react';
+ArrowRightStarZapTrendingUpUsersAward
 
 const AI2025NewContentBreakthroughBanner = () => {
   return (
@@ -30,7 +30,7 @@ const AI2025NewContentBreakthroughBanner = () => {
           
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover our latest revolutionary content: Enterprise Automation Guide, Implementation Master Guide, and Global Transformation Case Study. 
+            Discover our latest revolutionary content: Enterprise Automation GuideImplementation Master Guideand Global Transformation Case Study. 
             <span className="text-yellow-400 font-bold">Achieve 4,200% ROI</span> with proven strategies.
           </p>
         </div>
@@ -69,7 +69,7 @@ const AI2025NewContentBreakthroughBanner = () => {
               <h3 className="text-xl font-bold text-white">Implementation Guide</h3>
             </div>
             <p className="text-blue-100 mb-6 leading-relaxed">
-              Complete roadmap to AI 2025 success with proven strategies, checklists, and step-by-step implementation.
+              Complete roadmap to AI 2025 success with proven strategieschecklistsand step-by-step implementation.
             </p>
             <div className="flex items-center justify-between mb-4">
               <span className="text-purple-400 font-bold text-lg">500+ Cases</span>

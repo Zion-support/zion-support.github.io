@@ -1,13 +1,14 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Play, 
-  Zap, 
-  Brain, 
-  Code, 
-  BarChart3, 
+  Play
+  Zap
+  Brain
+  Code
+  BarChart3
   Image,
   ArrowRight,
   Star,
@@ -16,30 +17,30 @@ import {
 } from 'lucide-react';
 
 const InteractiveAIToolsDemo2027PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentTool, setCurrentTool] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentToolsetCurrentTool] = useState(0);
 
   const tools = [
-    { icon: Code, name: 'Code Generator', color: 'from-blue-500 to-cyan-500' },
-    { icon: BarChart3, name: 'Data Analyzer', color: 'from-green-500 to-emerald-500' },
-    { icon: Image, name: 'Image Generator', color: 'from-purple-500 to-pink-500' },
-    { icon: Brain, name: 'AI Assistant', color: 'from-orange-500 to-red-500' }
+    { icon: Codename: 'Code Generator'color: 'from-blue-500 to-cyan-500' },
+    { icon: BarChart3name: 'Data Analyzer'color: 'from-green-500 to-emerald-500' },
+    { icon: Imagename: 'Image Generator'color: 'from-purple-500 to-pink-500' },
+    { icon: Brainame: 'AI Assistant'color: 'from-orange-500 to-red-500' }
   ];
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1500);
+    const timer = setTimeout(() => setIsVisible(true)1500);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   useEffect(() => {
     if (isVisible) {
       const interval = setInterval(() => {
         setCurrentTool(prev => (prev + 1) % tools.length);
-      }, 2000);
+      }2000);
       return () => clearInterval(interval);
     }
-  }, [isVisible, tools.length]);
+  }[isVisibletools.length]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
@@ -49,9 +50,9 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -100 }}
-      animate={{ isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 } }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      initial={{ opacity: 0y: -100 }}
+      animate={{ isVisible ? { opacity: 1y: 0 } : { opacity: 0y: -100 } }}
+      transition={{ duration: 0.8ease: "easeOut" }}
       className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white overflow-hidden"
     >
       {/* Background Pattern */}
@@ -65,9 +66,9 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
           {/* Left Content */}
           <div className="flex-1">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.2 }}
               className="flex items-center gap-3 mb-3"
             >
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
@@ -75,34 +76,34 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
                 <span className="text-sm font-medium">INTERACTIVE DEMO</span>
               </div>
               <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
+                {[...Array(5)].map((_i) => (
                   <Star key={i} className="w-4 h-4 text-yellow-300 fill-current" />
                 ))}
               </div>
             </motion.div>
 
             <motion.h2
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.3 }}
               className="text-xl md:text-3xl font-bold mb-2"
             >
               🎮 Try AI Tools Live - Interactive Demo 2027
             </motion.h2>
 
             <motion.p
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.4 }}
               className="text-base md:text-lg text-white/90 mb-4 max-w-2xl"
             >
-              Experience the power of AI tools with live demonstrations. Generate code, analyze data, create images, and more in real-time.
+              Experience the power of AI tools with live demonstrations. Generate codeanalyze datacreate imagesand more in real-time.
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.5 }}
               className="flex flex-wrap items-center gap-3"
             >
               <button className="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 group">
@@ -119,16 +120,16 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
 
           {/* Right Content - Rotating Tool Icons */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={{ opacity: 0x: 30 }}
+            animate={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.6delay: 0.4 }}
             className="hidden lg:flex items-center gap-6"
           >
             <div className="relative w-20 h-20">
-              {tools.map((tool, index) => (
+              {tools.map((toolindex) => (
                 <motion.div
                   key={tool.name}
-                  initial={{ opacity: 0, scale: 0.8 }}
+                  initial={{ opacity: 0scale: 0.8 }}
                   animate={{
                     opacity: currentTool === index ? 1 : 0,
                     scale: currentTool === index ? 1 : 0.8
@@ -159,7 +160,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6delay: 0.8 }}
           className="mt-4"
         >
           <div className="flex items-center justify-between text-sm text-white/80 mb-2">
@@ -170,7 +171,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: "100%" }}
-              transition={{ duration: 3, delay: 1 }}
+              transition={{ duration: 3delay: 1 }}
               className="h-1.5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"
             />
           </div>
@@ -179,8 +180,8 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
         {/* Floating Elements */}
         <motion.div
           animate={{
-            y: [0, -8, 0],
-            rotate: [0, 3, 0]
+            y: [0-80],
+            rotate: [030]
           }}
           transition={{
             duration: 2.5,
@@ -194,8 +195,8 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
 
         <motion.div
           animate={{
-            y: [0, 8, 0],
-            rotate: [0, -3, 0]
+            y: [080],
+            rotate: [0-30]
           }}
           transition={{
             duration: 3,

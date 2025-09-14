@@ -8,10 +8,10 @@ export default function Events() {
       title: 'Cloud Automation Summit 2025',
       date: '2025-02-15',
       time: '9:00 AM - 5:00 PM',
-      location: 'San Francisco, CA',
+      location: 'San FranciscoCA',
       type: 'Conference',
       description: 'Join industry leaders and experts for a day of insights into the future of cloud automation and AI-driven infrastructure.',
-      speakers: ['Dr. Sarah Chen', 'Mark Rodriguez', 'Lisa Thompson'],
+      speakers: ['Dr. Sarah Chen'Mark Rodriguez'Lisa Thompson'],
       capacity: 500,
       registered: 342
     },
@@ -23,7 +23,7 @@ export default function Events() {
       location: 'Virtual Event',
       type: 'Workshop',
       description: 'Hands-on workshop covering practical implementation of AI automation in cloud environments.',
-      speakers: ['Alex Johnson', 'Maria Garcia'],
+      speakers: ['Alex Johnson'Maria Garcia'],
       capacity: 100,
       registered: 87
     },
@@ -32,10 +32,10 @@ export default function Events() {
       title: 'Developer Meetup: Automation Tools',
       date: '2025-03-01',
       time: '6:00 PM - 9:00 PM',
-      location: 'New York, NY',
+      location: 'New YorkNY',
       type: 'Meetup',
       description: 'Network with fellow developers and learn about the latest automation tools and techniques.',
-      speakers: ['David Kim', 'Rachel Green'],
+      speakers: ['David Kim'Rachel Green'],
       capacity: 150,
       registered: 98
     }
@@ -66,7 +66,7 @@ export default function Events() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Head>
         <title>Events - Zion App</title>
-        <meta name="description" content="Upcoming events, conferences, and workshops hosted by Zion App" />
+        <meta name="description" content="Upcoming eventsconferencesand workshops hosted by Zion App" />
       </Head>
 
       <div className="container mx-auto px-4 py-16">
@@ -76,7 +76,7 @@ export default function Events() {
               Events & Meetups
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Join us for conferences, workshops, and networking events
+              Join us for conferencesworkshopsand networking events
             </p>
           </div>
 
@@ -172,7 +172,7 @@ export default function Events() {
                 Host an Event with Us
               </h3>
               <p className="text-gray-300 mb-6">
-                Interested in hosting a workshop, meetup, or conference? Let's collaborate!
+                Interested in hosting a workshopmeetupor conference? Let's collaborate!
               </p>
               <button className="px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors">
                 Get in Touch

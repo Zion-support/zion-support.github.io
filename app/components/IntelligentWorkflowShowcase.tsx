@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ArrowRight, Star, Clock, TrendingUp, Users, Award, CheckCircle, Zap } from 'lucide-react';
+import { ArrowRight, Star, Clock, TrendingUp, Users, Award, CheckCircle, Zap, ArrowRight } from 'lucide-react';
 
 const IntelligentWorkflowShowcase = () => {
   const [activeTab, setActiveTab] = useState('all');

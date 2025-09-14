@@ -1,11 +1,12 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 export default function RevolutionaryContentBanner() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
 
   const slides = [
     {
@@ -41,10 +42,10 @@ export default function RevolutionaryContentBanner() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }4000);
 
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }[slides.length]);
 
   if (!isVisible) return null;
 
@@ -91,7 +92,7 @@ export default function RevolutionaryContentBanner() {
 
       {/* Slide Indicators */}
       <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {slides.map((_, index) => (
+        {slides.map((_index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}

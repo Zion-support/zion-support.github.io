@@ -14,22 +14,22 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
   const currentTalentId = talentId || user?.id;
   const { 
-    isLoading, 
-    updateJobMatchStatus, 
+    isLoading
+    updateJobMatchStatus
     categorizedMatches: { 
-      newMatches, 
-      viewedMatches, 
+      newMatches
+      viewedMatches
       appliedMatches 
     } 
   } = useJobSuggestions(currentTalentId);
 
-  const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied');
-    // In a real app, this might redirect to application form or open a modal
+  const handleApply = (matchId: stringjobId: string) => {
+    updateJobMatchStatus(matchId'applied');
+    // In a real appthis might redirect to application form or open a modal
   };
 
   const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined');
+    updateJobMatchStatus(matchId'declined');
   };
 
   if (isLoading) {

@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+"use client";
+import React{ useEffectuseRefuseState } from 'react';
 import { motion } from 'framer-motion';
 
 interface UltraQuantumHolographicBackgroundProps {
@@ -19,8 +20,8 @@ export default function UltraQuantumHolographicBackground({
   className = ''
 }: UltraQuantumHolographicBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const [isVisible, setIsVisible] = useState(false);
+  const [dimensionsetDimensions] = useState({ width: 0height: 0 });
+  const [isVisiblesetIsVisible] = useState(false);
 
   // Color schemes
   const colorSchemes = {
@@ -29,37 +30,37 @@ export default function UltraQuantumHolographicBackground({
       secondary: '#ff00ff',
       tertiary: '#ffff00',
       accent: '#00ff00',
-      background: 'rgba(0, 0, 0, 0.95)',
-      overlay: 'rgba(0, 0, 0, 0.3)'
+      background: 'rgba(00.95)',
+      overlay: 'rgba(00.3)'
     },
     holographic: {
       primary: '#ff0080',
       secondary: '#8000ff',
       tertiary: '#00ffff',
       accent: '#ffff00',
-      background: 'rgba(0, 0, 0, 0.92)',
-      overlay: 'rgba(0, 0, 0, 0.25)'
+      background: 'rgba(00.92)',
+      overlay: 'rgba(00.25)'
     },
     cyberpunk: {
       primary: '#ff0040',
       secondary: '#00ffff',
       tertiary: '#ffff00',
       accent: '#ff00ff',
-      background: 'rgba(0, 0, 0, 0.94)',
-      overlay: 'rgba(0, 0, 0, 0.35)'
+      background: 'rgba(00.94)',
+      overlay: 'rgba(00.35)'
     },
     neon: {
       primary: '#00ff00',
       secondary: '#ff00ff',
       tertiary: '#ffff00',
       accent: '#00ffff',
-      background: 'rgba(0, 0, 0, 0.93)',
-      overlay: 'rgba(0, 0, 0, 0.28)'
+      background: 'rgba(00.93)',
+      overlay: 'rgba(00.28)'
     }
   };
 
   const colors = colorSchemes[colorScheme];
-  const intensityMultiplier = { low: 0.5, medium: 1, high: 1.5, ultra: 2.5 }[intensity];
+  const intensityMultiplier = { low: 0.5medium: 1high: 1.5ultra: 2.5 }[intensity];
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -70,11 +71,11 @@ export default function UltraQuantumHolographicBackground({
     };
 
     updateDimensions();
-    window.addEventListener('resize', updateDimensions);
+    window.addEventListener('resize'updateDimensions);
     setIsVisible(true);
 
-    return () => window.removeEventListener('resize', updateDimensions);
-  }, []);
+    return () => window.removeEventListener('resize'updateDimensions);
+  }[]);
 
   useEffect(() => {
     if (!canvasRef.current || !dimensions.width || !dimensions.height) return;
@@ -104,10 +105,10 @@ export default function UltraQuantumHolographicBackground({
         this.vx = (Math.random() - 0.5) * 2 * animationSpeed;
         this.vy = (Math.random() - 0.5) * 2 * animationSpeed;
         this.size = Math.random() * 3 * intensityMultiplier + 1;
-        this.color = [colors.primary, colors.secondary, colors.tertiary, colors.accent][Math.floor(Math.random() * 4)];
+        this.color = [colors.primarycolors.secondarycolors.tertiarycolors.accent][Math.floor(Math.random() * 4)];
         this.life = Math.random() * 100;
         this.maxLife = 100;
-        this.type = ['quantum', 'holographic', 'energy', 'matrix'][Math.floor(Math.random() * 4)] as any;
+        this.type = ['quantum'holographic'energy'matrix'][Math.floor(Math.random() * 4)] as any;
       }
 
       update() {
@@ -156,14 +157,14 @@ export default function UltraQuantumHolographicBackground({
           case 'quantum':
             // Quantum particle with wave function
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.arc(this.xthis.ythis.size0Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
             
             // Wave function rings
             for (let i = 1; i <= 3; i++) {
               ctx.beginPath();
-              ctx.arc(this.x, this.y, this.size * i, 0, Math.PI * 2);
+              ctx.arc(this.xthis.ythis.size * i0Math.PI * 2);
               ctx.strokeStyle = this.color;
               ctx.lineWidth = 0.5;
               ctx.globalAlpha = alpha * (0.3 / i);
@@ -174,10 +175,10 @@ export default function UltraQuantumHolographicBackground({
           case 'holographic':
             // Holographic projection
             ctx.beginPath();
-            ctx.moveTo(this.x - this.size, this.y);
-            ctx.lineTo(this.x + this.size, this.y);
-            ctx.lineTo(this.x, this.y - this.size);
-            ctx.lineTo(this.x - this.size, this.y);
+            ctx.moveTo(this.x - this.sizethis.y);
+            ctx.lineTo(this.x + this.sizethis.y);
+            ctx.lineTo(this.xthis.y - this.size);
+            ctx.lineTo(this.x - this.sizethis.y);
             ctx.fillStyle = this.color;
             ctx.fill();
             
@@ -185,17 +186,17 @@ export default function UltraQuantumHolographicBackground({
             ctx.strokeStyle = this.color;
             ctx.lineWidth = 0.5;
             ctx.globalAlpha = alpha * 0.5;
-            ctx.strokeRect(this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
+            ctx.strokeRect(this.x - this.sizethis.y - this.size * 2this.size * 2);
             break;
 
           case 'energy':
             // Energy field
-            const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
-            gradient.addColorStop(0, this.color);
-            gradient.addColorStop(1, 'transparent');
+            const gradient = ctx.createRadialGradient(this.xthis.y0this.xthis.ythis.size);
+            gradient.addColorStop(0this.color);
+            gradient.addColorStop(1'transparent');
             ctx.fillStyle = gradient;
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.arc(this.xthis.ythis.size0Math.PI * 2);
             ctx.fill();
             break;
 
@@ -203,7 +204,7 @@ export default function UltraQuantumHolographicBackground({
             // Matrix digital rain
             ctx.fillStyle = this.color;
             ctx.font = `${this.size * 2}px monospace`;
-            ctx.fillText('01', this.x, this.y);
+            ctx.fillText('01'this.xthis.y);
             break;
         }
 
@@ -220,7 +221,7 @@ export default function UltraQuantumHolographicBackground({
     // Animation loop
     let animationId: number;
     const animate = () => {
-      ctx.clearRect(0, 0, dimensions.width, dimensions.height);
+      ctx.clearRect(0dimensions.widthdimensions.height);
 
       // Draw quantum field background
       const gradient = ctx.createRadialGradient(
@@ -229,15 +230,15 @@ export default function UltraQuantumHolographicBackground({
         0,
         dimensions.width / 2,
         dimensions.height / 2,
-        Math.max(dimensions.width, dimensions.height) / 2
+        Math.max(dimensions.widthdimensions.height) / 2
       );
-      gradient.addColorStop(0, colors.background);
-      gradient.addColorStop(1, colors.overlay);
+      gradient.addColorStop(0colors.background);
+      gradient.addColorStop(1colors.overlay);
       ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, dimensions.width, dimensions.height);
+      ctx.fillRect(0dimensions.widthdimensions.height);
 
       // Update and draw particles
-      particles.forEach((particle, index) => {
+      particles.forEach((particleindex) => {
         particle.update();
         particle.draw();
 
@@ -260,8 +261,8 @@ export default function UltraQuantumHolographicBackground({
           
           if (distance < 100 && p1.life > 0 && p2.life > 0) {
             ctx.beginPath();
-            ctx.moveTo(p1.x, p1.y);
-            ctx.lineTo(p2.x, p2.y);
+            ctx.moveTo(p1.xp1.y);
+            ctx.lineTo(p2.xp2.y);
             ctx.stroke();
           }
         }
@@ -275,14 +276,14 @@ export default function UltraQuantumHolographicBackground({
       const gridSize = 50;
       for (let x = 0; x < dimensions.width; x += gridSize) {
         ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, dimensions.height);
+        ctx.moveTo(x0);
+        ctx.lineTo(xdimensions.height);
         ctx.stroke();
       }
       for (let y = 0; y < dimensions.height; y += gridSize) {
         ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(dimensions.width, y);
+        ctx.moveTo(0y);
+        ctx.lineTo(dimensions.widthy);
         ctx.stroke();
       }
 
@@ -296,7 +297,7 @@ export default function UltraQuantumHolographicBackground({
         cancelAnimationFrame(animationId);
       }
     };
-  }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);
+  }[dimensionscolorsparticleCountanimationSpeedintensityMultiplier]);
 
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
@@ -317,10 +318,10 @@ export default function UltraQuantumHolographicBackground({
           className="absolute inset-0"
           animate={{
             background: [
-              `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`,
-              `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`,
-              `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`,
-              `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
+              `radial-gradient(circle at 20% 20%${colors.primary}10 0%transparent 50%)`,
+              `radial-gradient(circle at 80% 80%${colors.secondary}10 0%transparent 50%)`,
+              `radial-gradient(circle at 20% 80%${colors.tertiary}10 0%transparent 50%)`,
+              `radial-gradient(circle at 80% 20%${colors.accent}10 0%transparent 50%)`
             ]
           }}
           transition={{
@@ -332,7 +333,7 @@ export default function UltraQuantumHolographicBackground({
 
         {/* Holographic Scan Lines */}
         <div className="absolute inset-0 opacity-20">
-          {Array.from({ length: Math.ceil(dimensions.height / 4) }).map((_, i) => (
+          {Array.from({ length: Math.ceil(dimensions.height / 4) }).map((_i) => (
             <motion.div
               key={i}
               className="absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent"
@@ -341,8 +342,8 @@ export default function UltraQuantumHolographicBackground({
                 color: colors.primary
               }}
               animate={{
-                opacity: [0, 1, 0],
-                scaleX: [0, 1, 0]
+                opacity: [010],
+                scaleX: [010]
               }}
               transition={{
                 duration: 2,

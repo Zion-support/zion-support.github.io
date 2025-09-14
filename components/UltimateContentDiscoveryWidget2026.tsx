@@ -1,16 +1,17 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, Star, Clock, TrendingUp, BookOpen, Video, FileText, Users, Zap } from 'lucide-react';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
+SearchFilterStarClockTrendingUpBookOpenVideoFileTextUsersZap
 import { 
-  Search, 
-  Filter, 
-  Grid, 
-  List, 
-  Star, 
-  Clock, 
-  Users, 
+  Search
+  Filter
+  Grid
+  List
+  Star
+  Clock
+  Users
   TrendingUp,
   ArrowRight,
   Play,
@@ -32,33 +33,33 @@ import {
 import Link from 'next/link';
 
 const UltimateContentDiscoveryWidget2026 = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [isSearching, setIsSearching] = useState(false);
+  const [searchQuerysetSearchQuery] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [isSearchingsetIsSearching] = useState(false);
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: <BookOpen className="w-4 h-4" /> },
-    { id: 'ai', name: 'AI Solutions', icon: <Zap className="w-4 h-4" /> },
-    { id: 'quantum', name: 'Quantum Computing', icon: <TrendingUp className="w-4 h-4" /> },
-    { id: 'automation', name: 'Automation', icon: <Users className="w-4 h-4" /> },
-    { id: 'tutorials', name: 'Tutorials', icon: <Video className="w-4 h-4" /> },
-    { id: 'case-studies', name: 'Case Studies', icon: <FileText className="w-4 h-4" /> }
-  const [viewMode, setViewMode] = useState('grid');
-  const [sortBy, setSortBy] = useState('trending');
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+    { id: 'all'name: 'All Content'icon: <BookOpen className="w-4 h-4" /> },
+    { id: 'ai'name: 'AI Solutions'icon: <Zap className="w-4 h-4" /> },
+    { id: 'quantum'name: 'Quantum Computing'icon: <TrendingUp className="w-4 h-4" /> },
+    { id: 'automation'name: 'Automation'icon: <Users className="w-4 h-4" /> },
+    { id: 'tutorials'name: 'Tutorials'icon: <Video className="w-4 h-4" /> },
+    { id: 'case-studies'name: 'Case Studies'icon: <FileText className="w-4 h-4" /> }
+  const [viewModesetViewMode] = useState('grid');
+  const [sortBysetSortBy] = useState('trending');
+  const [isFilterOpensetIsFilterOpen] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: Grid, color: 'from-purple-500 to-pink-500' },
-    { id: 'ai-innovations', name: 'AI Innovations', icon: Brain, color: 'from-blue-500 to-cyan-500' },
-    { id: 'automation', name: 'Automation', icon: Zap, color: 'from-green-500 to-emerald-500' },
-    { id: 'future-tech', name: 'Future Tech', icon: Rocket, color: 'from-orange-500 to-red-500' },
-    { id: 'tutorials', name: 'Tutorials', icon: BookOpen, color: 'from-indigo-500 to-purple-500' },
-    { id: 'case-studies', name: 'Case Studies', icon: TrendingUp, color: 'from-pink-500 to-rose-500' }
+    { id: 'all'name: 'All Content'icon: Gridcolor: 'from-purple-500 to-pink-500' },
+    { id: 'ai-innovations'name: 'AI Innovations'icon: Braincolor: 'from-blue-500 to-cyan-500' },
+    { id: 'automation'name: 'Automation'icon: Zapcolor: 'from-green-500 to-emerald-500' },
+    { id: 'future-tech'name: 'Future Tech'icon: Rocketcolor: 'from-orange-500 to-red-500' },
+    { id: 'tutorials'name: 'Tutorials'icon: BookOpencolor: 'from-indigo-500 to-purple-500' },
+    { id: 'case-studies'name: 'Case Studies'icon: TrendingUpcolor: 'from-pink-500 to-rose-500' }
   ];
 
   const contentItems = [
@@ -76,7 +77,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.9,
       trending: true,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['AI', 'Neural Networks', 'Brain-Computer Interface', 'Revolutionary']
+      tags: ['AI'Neural Networks'Brain-Computer Interface'Revolutionary']
     },
     {
       id: 2,
@@ -89,7 +90,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.8,
       trending: true,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Quantum Computing', 'AI', 'Fusion', 'Advanced']
+      tags: ['Quantum Computing'AI'Fusion'Advanced']
     },
     {
       id: 3,
@@ -102,7 +103,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.7,
       trending: false,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Automation', 'Business', 'AI', 'Operations']
+      tags: ['Automation'Business'AI'Operations']
     },
     {
       id: 4,
@@ -115,7 +116,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.9,
       trending: true,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Consciousness', 'AI', 'Self-Awareness', 'Emotional Intelligence']
+      tags: ['Consciousness'AI'Self-Awareness'Emotional Intelligence']
     },
     {
       id: 5,
@@ -128,7 +129,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.8,
       trending: false,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Manufacturing', 'AI', 'Predictive Maintenance', 'Industry 4.0']
+      tags: ['Manufacturing'AI'Predictive Maintenance'Industry 4.0']
     },
     {
       id: 6,
@@ -141,7 +142,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.8,
       trending: true,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Space', 'AI', 'Exploration', 'Communication']
+      tags: ['Space'AI'Exploration'Communication']
     }
   ];
 
@@ -159,7 +160,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
     setSearchQuery(query);
     setIsSearching(true);
     // Simulate search delay
-    setTimeout(() => setIsSearching(false), 1000);
+    setTimeout(() => setIsSearching(false)1000);
   };
 
   const toggleFavorite = (id) => {
@@ -202,8 +203,8 @@ const UltimateContentDiscoveryWidget2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
@@ -211,23 +212,23 @@ const UltimateContentDiscoveryWidget2026 = () => {
             Ultimate Content Discovery 2026
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover revolutionary AI content, breakthrough technologies, and transformative insights that will shape the future.
+            Discover revolutionary AI contentbreakthrough technologiesand transformative insights that will shape the future.
           </p>
         </motion.div>
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ delay: 0.2duration: 0.6 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8"
         >
           <div className="flex flex-col lg:flex-row gap-4">
     <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
@@ -235,7 +236,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
             Ultimate Content Discovery
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Powered by AI 2026
-  const sortedContent = [...filteredContent].sort((a, b) => {
+  const sortedContent = [...filteredContent].sort((ab) => {
     switch (sortBy) {
       case 'trending':
         return b.trending - a.trending || b.views.localeCompare(a.views);
@@ -252,8 +253,8 @@ const UltimateContentDiscoveryWidget2026 = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+      initial={{ opacity: 0y: 30 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
       transition={{ duration: 0.8 }}
       className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
     >
@@ -271,7 +272,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore the most advanced AI innovations, automation solutions, and future technologies
+            Explore the most advanced AI innovationsautomation solutionsand future technologies
             with our intelligent content discovery system.
           </p>
         </div>
@@ -286,11 +287,11 @@ const UltimateContentDiscoveryWidget2026 = () => {
               </div>
               <input
                 type="text"
-                placeholder="Search for content, tutorials, guides..."
+                placeholder="Search for contentutorialsguides..."
                 value={searchQuery}
                 onChange={(e) => handleSearch(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Search for content, topics, or technologies..."
+                placeholder="Search for contentopicsor technologies..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
@@ -360,7 +361,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className={`grid gap-6 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
@@ -368,13 +369,13 @@ const UltimateContentDiscoveryWidget2026 = () => {
           }`}
         >
           <AnimatePresence>
-            {sortedContent.map((item, index) => (
+            {sortedContent.map((itemindex) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                exit={{ opacity: 0y: -20 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 className={`bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300 ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}

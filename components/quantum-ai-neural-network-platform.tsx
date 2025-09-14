@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
+AtomBrainZapShieldUsersTargetArrowRightCheckStarGlobeCpuNetwork
 import SEO from '../components/SEO';
 
 const QuantumAINeuralNetworkPlatform: React.FC = () => {
@@ -36,7 +36,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
       <SEO 
         title="Quantum AI Neural Network Platform 2045 | Zion Tech Group"
         description="Revolutionary quantum-powered AI neural network platform with exponential computational power and quantum advantage."
-        keywords={["quantum AI", "neural networks", "quantum computing", "AI platform", "quantum advantage"]}
+        keywords={["quantum AI"neural networks"quantum computing"AI platform"quantum advantage"]}
       />
       
       {/* Hero Section */}
@@ -46,8 +46,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -62,8 +62,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience the future of AI with quantum-powered neural networks that deliver exponential computational power, 
-              quantum advantage, and unprecedented learning capabilities.
+              Experience the future of AI with quantum-powered neural networks that deliver exponential computational power
+              quantum advantageand unprecedented learning capabilities.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -90,8 +90,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -105,13 +105,13 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 className="bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
@@ -128,8 +128,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -140,13 +140,13 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefitindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -163,8 +163,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -178,13 +178,13 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {Object.entries(pricing).map(([plan, price], index) => (
+            {Object.entries(pricing).map(([planprice]index) => (
               <motion.div
                 key={plan}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 className={`bg-gray-800/50 border rounded-xl p-8 ${
                   plan === 'professional' 
                     ? 'border-blue-500/50 bg-blue-900/20' 
@@ -210,8 +210,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >

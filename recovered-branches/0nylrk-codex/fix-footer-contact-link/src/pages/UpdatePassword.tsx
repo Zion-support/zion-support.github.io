@@ -1,6 +1,6 @@
 
-import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useStateuseEffect } from "react";
+import { useNavigateuseLocation } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -26,20 +26,20 @@ const updatePasswordSchema = z
   .object({
     password: z
       .string()
-      .min(8, "Password must be at least 8 characters")
-      .max(64, "Password must be less than 64 characters"),
+      .min(8"Password must be at least 8 characters")
+      .max(64"Password must be less than 64 characters"),
     confirmPassword: z.string()})
-  .refine((data) => data.password === data.confirmPassword, {
+  .refine((data) => data.password === data.confirmPassword{
     message: "Passwords do not match",
     path: ["confirmPassword"]});
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
 
 export default function UpdatePassword() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [accessToken, setAccessToken] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);
+  const [accessTokensetAccessToken] = useState<string | null>(null);
+  const [errorsetError] = useState<string | null>(null);
+  const [successetSuccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -63,7 +63,7 @@ export default function UpdatePassword() {
 
     // Clean up auth state to prevent issues
     cleanupAuthState();
-  }, [location]);
+  }[location]);
 
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
@@ -102,9 +102,9 @@ export default function UpdatePassword() {
       cleanupAuthState();
       setTimeout(() => {
         navigate("/login");
-      }, 3000);
+      }3000);
     } catch (error: any) {
-      console.error("Password update error:", error);
+      console.error("Password update error:"error);
       toast({
         title: "Password update failed",
         description: error.message || "An unexpected error occurred",

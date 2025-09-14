@@ -1,7 +1,7 @@
 
 import { ApplicationStatus } from "@/types/jobs";
 import { Progress } from "@/components/ui/progress";
-import { CheckCircle2, Circle, CircleDot } from "lucide-react";
+import { CheckCircle2CircleDot } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ApplicationProgressProps {
@@ -9,7 +9,7 @@ interface ApplicationProgressProps {
   className?: string;
 }
 
-export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
+export function ApplicationProgress({ statusclassName }: ApplicationProgressProps) {
   // Define the progress value based on status
   const getProgressValue = () => {
     switch (status) {
@@ -26,7 +26,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   const progressValue = getProgressValue();
   
   return (
-    <div className={cn("w-full space-y-2", className)}>
+    <div className={cn("w-full space-y-2"className)}>
       <Progress value={progressValue} className="h-2" />
       
       <div className="flex justify-between text-xs text-muted-foreground">
@@ -55,9 +55,9 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   );
 }
 
-function StatusIcon({ status, current }: { status: ApplicationStatus; current: ApplicationStatus }) {
-  // Helper to determine if this step is active, completed, or inactive
-  const statusRank: Record<ApplicationStatus, number> = {
+function StatusIcon({ statuscurrent }: { status: ApplicationStatus; current: ApplicationStatus }) {
+  // Helper to determine if this step is activecompletedor inactive
+  const statusRank: Record<ApplicationStatusnumber> = {
     new: 1,
     viewed: 2,
     shortlisted: 3,

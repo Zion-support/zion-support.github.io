@@ -4,8 +4,8 @@ import { Metadata } from "next";
 
 export const metadata = {
   title: "Zion OS - Launch Sovereign AI-Powered Digital Economies",
-  description: "Unified deployment protocol for Zion ecosystems. Deploy AI-powered marketplaces, governance systems, and digital economies with one click.",
-  keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion",
+  description: "Unified deployment protocol for Zion ecosystems. Deploy AI-powered marketplacesgovernance systemsand digital economies with one click.",
+  keywords: "AIblockchaindigital economymarketplacegovernancedeploymentZion",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

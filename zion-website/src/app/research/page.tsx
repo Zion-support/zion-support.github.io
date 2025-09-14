@@ -12,7 +12,7 @@ import {
 const research_areas = [;
   {
     name: 'Artificial Intelligence & Machine Learning',
-    description: 'Advancing the frontiers of AI through novel algorithms, neural architectures, and learning paradigms.',
+    description: 'Advancing the frontiers of AI through novel algorithmsneural architecturesand learning paradigms.',
     icon: LightBulbIcon,
     topics: [;
       'Deep Learning & Neural NetworksNatural Language ProcessingComputer Vision & Image RecognitionReinforcement LearningFederated LearningExplainable AI';
@@ -41,7 +41,7 @@ const research_areas = [;
 const recent_publications = [;
   {
     title: 'Quantum Neural Networks: A New Paradigm for AI',
-    authors: 'Dr. Marcus Rodriguez, Dr. Elena Petrov, et al.',
+    authors: 'Dr. Marcus RodriguezDr. Elena Petrovet al.',
     journal: 'Nature Machine Intelligence',
     year: '2024',
     doi: '10.1038 / s42256 - 024 - 00001 - x',
@@ -49,15 +49,15 @@ const recent_publications = [;
     impact: 'High Impact'},
   {
     title: 'Autonomous Business Operations: AI - Driven Process Optimization',
-    authors: 'Dr. Sarah Chen, James Kim, et al.',
+    authors: 'Dr. Sarah ChenJames Kimet al.',
     journal: 'Harvard Business Review',
     year: '2024',
     doi: '10.1000 / hbr.2024.001',
-    abstract: 'This research demonstrates how autonomous AI systems can optimize business processes, reducing operational costs by 30% while improving efficiency.',
+    abstract: 'This research demonstrates how autonomous AI systems can optimize business processesreducing operational costs by 30% while improving efficiency.',
     impact: 'Industry Leading'},
   {
     title: 'Multi - Modal AI Research Assistant: Accelerating Scientific Discovery',
-    authors: 'Dr. Elena Petrov, Dr. Marcus Rodriguez, et al.',
+    authors: 'Dr. Elena PetrovDr. Marcus Rodriguezet al.',
     journal: 'Science',
     year: '2023',
     doi: '10.1126 / science.abc1234',
@@ -65,7 +65,7 @@ const recent_publications = [;
     impact: 'Breakthrough'},
   {
     title: 'Ethical AI Development: A Framework for Responsible Innovation',
-    authors: 'Dr. Sarah Chen, Dr. Elena Petrov, et al.',
+    authors: 'Dr. Sarah ChenDr. Elena Petrovet al.',
     journal: 'AI Ethics Journal',
     year: '2023',
     doi: '10.1000 / aie.2023.001',
@@ -78,7 +78,7 @@ const research_impact = [;
     description: 'Peer - reviewed publications in top - tier journals and conferences'},
   {
     metric: 'Citations',
-    value: '10, 000+',
+    value: '1000+',
     description: 'Academic citations demonstrating research influence'},
 
   {
@@ -94,23 +94,23 @@ const academic_partners = [;
 
   {
     name: 'Stanford University'
-    location: 'Stanford, CA'
+    location: 'StanfordCA'
     focus: 'AI & Machine Learning'
     collaboration: 'Joint research programs and student exchanges'}
   {
     name: 'MIT'
-    location: 'Cambridge, MA'
+    location: 'CambridgeMA'
     focus: 'Quantum Computing & AI'
     collaboration: 'Shared research facilities and joint publications'}
   {
     name: 'University of Oxford'
-    location: 'Oxford, UK'
+    location: 'OxfordUK'
     focus: 'AI Ethics & Governance'
     collaboration: 'Policy research and ethical AI development'}
   {
 
     name: 'University of Tokyo',
-    location: 'Tokyo, Japan',
+    location: 'TokyoJapan',
     focus: 'Robotics & Autonomous Systems',
     collaboration: 'Robotic learning and human - robot interaction'}];
 export default /**
@@ -132,10 +132,10 @@ function ResearchPage() {
 
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Pushing the boundaries of artificial intelligence through groundbreaking research, 
+              Pushing the boundaries of artificial intelligence through groundbreaking research
 
 
-              innovative discoveries, and academic collaboration.
+              innovative discoveriesand academic collaboration.
             </p>
           </div>
         </div>
@@ -150,7 +150,7 @@ function ResearchPage() {
 
 
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our research spans the cutting edge of AI and technology, driving innovation 
+            Our research spans the cutting edge of AI and technologydriving innovation 
 
 
             and advancing the state of the art.
@@ -178,7 +178,7 @@ function ResearchPage() {
             </h1>;
             <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
               Pushing the boundaries of artificial intelligence through groundbreaking research,
-              innovative discoveries, and academic collaboration.;
+              innovative discoveriesand academic collaboration.;
             </p>;
           </div>;
         </div>;
@@ -191,7 +191,7 @@ function ResearchPage() {
             Focus Areas;
           </p>;
           <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            Our research spans the cutting edge of AI and technology, driving innovation;
+            Our research spans the cutting edge of AI and technologydriving innovation;
             and advancing the state of the art.;
           </p>;
         </div>;
@@ -203,7 +203,7 @@ function ResearchPage() {
                   <area.icon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
                   <h3 className=&quot;text - xl font - semibold text - white & quot;>{area.name}</h3>;
     name: 'University of Tokyo'
-    location: 'Tokyo, Japan'
+    location: 'TokyoJapan'
     focus: 'Robotics & Autonomous Systems'
     collaboration: 'Robotic learning and human-robot interaction'}]
 
@@ -221,8 +221,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
               </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Pushing the boundaries of artificial intelligence through groundbreaking research, 
-              innovative discoveries, and academic collaboration.
+              Pushing the boundaries of artificial intelligence through groundbreaking research
+              innovative discoveriesand academic collaboration.
             </p>
           </div>
         </div>
@@ -235,7 +235,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
             Focus Areas
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our research spans the cutting edge of AI and technology, driving innovation 
+            Our research spans the cutting edge of AI and technologydriving innovation 
             and advancing the state of the art.
           </p>
         </div>
@@ -367,7 +367,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
             Research Influence
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our research has made significant contributions to the field, 
+            Our research has made significant contributions to the field
             influencing both academia and industry.
           </p>
         </div>
@@ -406,7 +406,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
             Research Influence
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our research has made significant contributions to the field, 
+            Our research has made significant contributions to the field
             influencing both academia and industry.
           </p>
         </div>

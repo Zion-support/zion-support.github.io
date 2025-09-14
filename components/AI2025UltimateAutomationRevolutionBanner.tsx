@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const AI2025UltimateAutomationRevolutionBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   const content = [
     {
@@ -58,14 +59,14 @@ const AI2025UltimateAutomationRevolutionBanner: React.FC = () => {
     // Auto-rotate content every 5 seconds
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, [content.length]);
+  }[content.length]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
-    localStorage.setItem('ai2025-automation-banner-dismissed', 'true');
+    localStorage.setItem('ai2025-automation-banner-dismissed'true');
   };
 
   const handleSlideChange = (index: number) => {
@@ -98,7 +99,7 @@ const AI2025UltimateAutomationRevolutionBanner: React.FC = () => {
                   <span className="text-sm font-medium">🚀 NEW CONTENT</span>
                 </div>
                 <div className="flex space-x-1">
-                  {content.map((_, index) => (
+                  {content.map((_index) => (
                     <button
                       key={index}
                       onClick={() => handleSlideChange(index)}
@@ -122,11 +123,11 @@ const AI2025UltimateAutomationRevolutionBanner: React.FC = () => {
 
               {/* Metrics Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                {Object.entries(currentContent.metrics).map(([key, value]) => (
+                {Object.entries(currentContent.metrics).map(([keyvalue]) => (
                   <div key={key} className="bg-white bg-opacity-10 rounded-lg p-3 text-center">
                     <div className="text-lg font-bold">{value}</div>
                     <div className="text-xs opacity-80 capitalize">
-                      {key.replace(/([A-Z])/g, ' $1').trim()}
+                      {key.replace(/([A-Z])/g' $1').trim()}
                     </div>
                   </div>
                 ))}

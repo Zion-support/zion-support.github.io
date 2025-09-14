@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
+CodeCopyRefreshCwCheckCircleXCircleArrowRightDownloadUploadSettingsEye
 
 export default function JSONFormatterPage() {
-  const [inputJson, setInputJson] = useState('');
-  const [formattedJson, setFormattedJson] = useState('');
-  const [isValid, setIsValid] = useState(true);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [indentSize, setIndentSize] = useState(2);
-  const [compactMode, setCompactMode] = useState(false);
-  const [showLineNumbers, setShowLineNumbers] = useState(true);
+  const [inputJsonsetInputJson] = useState('');
+  const [formattedJsonsetFormattedJson] = useState('');
+  const [isValidsetIsValid] = useState(true);
+  const [errorMessagesetErrorMessage] = useState('');
+  const [indentSizesetIndentSize] = useState(2);
+  const [compactModesetCompactMode] = useState(false);
+  const [showLineNumbersetShowLineNumbers] = useState(true);
 
   const formatJSON = () => {
     if (!inputJson.trim()) {
@@ -25,7 +26,7 @@ export default function JSONFormatterPage() {
       const parsed = JSON.parse(inputJson);
       const formatted = compactMode 
         ? JSON.stringify(parsed)
-        : JSON.stringify(parsed, null, indentSize);
+        : JSON.stringify(parsednullindentSize);
       
       setFormattedJson(formatted);
       setIsValid(true);
@@ -80,8 +81,8 @@ export default function JSONFormatterPage() {
     navigator.clipboard.writeText(text);
   };
 
-  const downloadJSON = (content: string, filename: string) => {
-    const blob = new Blob([content], { type: 'application/json' });
+  const downloadJSON = (content: stringfilename: string) => {
+    const blob = new Blob([content]{ type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -113,12 +114,12 @@ export default function JSONFormatterPage() {
           "number": "555-987-6543"
         }
       ],
-      "interests": ["programming", "reading", "hiking"],
+      "interests": ["programming"reading"hiking"],
       "active": true,
       "lastLogin": "2024-01-15T10:30:00Z"
     };
     
-    setInputJson(JSON.stringify(sample, null, 2));
+    setInputJson(JSON.stringify(samplenull2));
     setFormattedJson('');
     setIsValid(true);
     setErrorMessage('');
@@ -126,14 +127,14 @@ export default function JSONFormatterPage() {
 
   const getLineNumbers = (text: string) => {
     const lines = text.split('\n');
-    return lines.map((_, index) => index + 1).join('\n');
+    return lines.map((_index) => index + 1).join('\n');
   };
 
   return (
     <>
       <Head>
         <title>JSON Formatter - Zion Tech Group</title>
-        <meta name="description" content="Format, validate, and beautify JSON with our professional JSON formatter. Minify, prettify, and analyze JSON data with ease." />
+        <meta name="description" content="Formatvalidateand beautify JSON with our professional JSON formatter. Minifyprettifyand analyze JSON data with ease." />
         <meta property="og:title" content="JSON Formatter - Zion Tech Group" />
         <meta property="og:description" content="Professional JSON formatting and validation service." />
       </Head>
@@ -151,7 +152,7 @@ export default function JSONFormatterPage() {
             JSON Formatter
           </h1>
           <p className="text-xl text-teal-200 max-w-4xl mx-auto leading-relaxed">
-            Format, validate, and beautify JSON with our professional tools. Minify, prettify, and analyze 
+            Formatvalidateand beautify JSON with our professional tools. Minifyprettifyand analyze 
             JSON data with advanced features and real-time validation.
           </p>
         </div>
@@ -320,7 +321,7 @@ export default function JSONFormatterPage() {
                       Copy
                     </Button>
                     <Button
-                      onClick={() => downloadJSON(formattedJson, 'formatted.json')}
+                      onClick={() => downloadJSON(formattedJson'formatted.json')}
                       variant="outline"
                       size="sm"
                       className="border-gray-600 text-gray-300 hover:bg-gray-700"
@@ -425,7 +426,7 @@ export default function JSONFormatterPage() {
               <div className="text-4xl mb-4">⚙️</div>
               <h3 className="text-xl font-bold text-white mb-4">Customizable</h3>
               <p className="text-gray-400">
-                Adjust indentation size, toggle compact mode, and customize display options.
+                Adjust indentation sizetoggle compact modeand customize display options.
               </p>
             </Card>
           </div>
@@ -440,7 +441,7 @@ export default function JSONFormatterPage() {
               Perfect For Every JSON Need
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From development to data analysis, our JSON formatter serves all your formatting needs.
+              From development to data analysisour JSON formatter serves all your formatting needs.
             </p>
           </div>
 
@@ -449,7 +450,7 @@ export default function JSONFormatterPage() {
               <div className="text-4xl mb-4">👨‍💻</div>
               <h3 className="text-2xl font-bold text-white mb-4">Developers</h3>
               <p className="text-gray-400 mb-6">
-                Format API responses, debug JSON data, and prepare configuration files with professional formatting.
+                Format API responsesdebug JSON datand prepare configuration files with professional formatting.
               </p>
               <ul className="space-y-2 text-gray-300">
                 <li>• API development and testing</li>
@@ -462,7 +463,7 @@ export default function JSONFormatterPage() {
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>
               <p className="text-gray-400 mb-6">
-                Clean and format JSON datasets for analysis, reporting, and data visualization projects.
+                Clean and format JSON datasets for analysisreportingand data visualization projects.
               </p>
               <ul className="space-y-2 text-gray-300">
                 <li>• Data cleaning and preparation</li>
@@ -475,7 +476,7 @@ export default function JSONFormatterPage() {
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-2xl font-bold text-white mb-4">DevOps Engineers</h3>
               <p className="text-gray-400 mb-6">
-                Manage configuration files, validate deployment manifests, and format infrastructure as code.
+                Manage configuration filesvalidate deployment manifestsand format infrastructure as code.
               </p>
               <ul className="space-y-2 text-gray-300">
                 <li>• Configuration management</li>
@@ -488,7 +489,7 @@ export default function JSONFormatterPage() {
               <div className="text-4xl mb-4">📝</div>
               <h3 className="text-2xl font-bold text-white mb-4">Technical Writers</h3>
               <p className="text-gray-400 mb-6">
-                Format JSON examples for documentation, tutorials, and technical specifications.
+                Format JSON examples for documentationtutorialsand technical specifications.
               </p>
               <ul className="space-y-2 text-gray-300">
                 <li>• Documentation examples</li>

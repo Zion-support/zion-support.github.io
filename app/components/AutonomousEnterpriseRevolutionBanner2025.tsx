@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, TrendingUp, DollarSign, Users, Zap } from 'lucide-react';
+import { X, ArrowRight, TrendingUp, DollarSign, Users, Zap, ArrowRight } from 'lucide-react';
 
 interface ContentItem {
   id: string;

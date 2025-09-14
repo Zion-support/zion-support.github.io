@@ -1,17 +1,18 @@
+"use client";
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Globe, 
-  Users, 
-  Lock, 
-  TrendingUp, 
-  Code, 
-  Database, 
+  Zap
+  Shield
+  BarChart3
+  Globe
+  Users
+  Lock
+  TrendingUp
+  Code
+  Database
   Cloud,
   ArrowRight,
   Star,
@@ -39,13 +40,13 @@ export default function SaaSMarketplacePage() {
         'Team collaboration'
       ],
       website: 'https://zapier.com',
-      useCase: 'Perfect for businesses looking to automate customer support, marketing, and sales processes.',
-      pros: ['Easy to use', 'Extensive integrations', 'Reliable', 'Great support'],
-      cons: ['Can get expensive', 'Limited customization']
+      useCase: 'Perfect for businesses looking to automate customer supportmarketingand sales processes.',
+      pros: ['Easy to use'Extensive integrations'Reliable'Great support'],
+      cons: ['Can get expensive'Limited customization']
     },
     {
       name: 'Notion',
-      description: 'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.',
+      description: 'All-in-one workspace for notesdocsprojectsand team collaboration. Organize everything in one place.',
       category: 'Productivity',
       pricing: 'Free - $8/month',
       rating: 4.7,
@@ -61,13 +62,13 @@ export default function SaaSMarketplacePage() {
         'API integration'
       ],
       website: 'https://notion.so',
-      useCase: 'Ideal for teams that need a flexible workspace for documentation, project management, and knowledge sharing.',
-      pros: ['Highly flexible', 'Beautiful interface', 'Great templates', 'Free tier'],
-      cons: ['Learning curve', 'Limited offline access']
+      useCase: 'Ideal for teams that need a flexible workspace for documentationproject managementand knowledge sharing.',
+      pros: ['Highly flexible'Beautiful interface'Great templates'Free tier'],
+      cons: ['Learning curve'Limited offline access']
     },
     {
       name: 'Stripe',
-      description: 'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.',
+      description: 'Complete payment processing platform for online businesses. Accept paymentsmanage subscriptionsand handle compliance.',
       category: 'Payments',
       pricing: '2.9% + 30¢ per transaction',
       rating: 4.9,
@@ -83,13 +84,13 @@ export default function SaaSMarketplacePage() {
         'Analytics dashboard'
       ],
       website: 'https://stripe.com',
-      useCase: 'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.',
-      pros: ['Developer-friendly', 'Global reach', 'Excellent docs', 'Reliable'],
-      cons: ['Higher fees than some alternatives', 'Complex for beginners']
+      useCase: 'Essential for any online business that needs to accept paymentsespecially SaaS companies and e-commerce.',
+      pros: ['Developer-friendly'Global reach'Excellent docs'Reliable'],
+      cons: ['Higher fees than some alternatives'Complex for beginners']
     },
     {
       name: 'Intercom',
-      description: 'Customer messaging platform that helps businesses build better customer relationships through personalized, messenger-based experiences.',
+      description: 'Customer messaging platform that helps businesses build better customer relationships through personalizedmessenger-based experiences.',
       category: 'Customer Support',
       pricing: '$39 - $999/month',
       rating: 4.6,
@@ -106,8 +107,8 @@ export default function SaaSMarketplacePage() {
       ],
       website: 'https://intercom.com',
       useCase: 'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.',
-      pros: ['Great UX', 'Powerful features', 'Good integrations', 'Mobile apps'],
-      cons: ['Expensive', 'Complex pricing', 'Can be overwhelming']
+      pros: ['Great UX'Powerful features'Good integrations'Mobile apps'],
+      cons: ['Expensive'Complex pricing'Can be overwhelming']
     },
     {
       name: 'Mixpanel',
@@ -127,9 +128,9 @@ export default function SaaSMarketplacePage() {
         'Mobile analytics'
       ],
       website: 'https://mixpanel.com',
-      useCase: 'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.',
-      pros: ['Powerful analytics', 'Real-time data', 'Good documentation', 'Flexible'],
-      cons: ['Complex setup', 'Expensive at scale', 'Steep learning curve']
+      useCase: 'Essential for product teams that need to understand user behavioroptimize conversion funnelsand make data-driven decisions.',
+      pros: ['Powerful analytics'Real-time data'Good documentation'Flexible'],
+      cons: ['Complex setup'Expensive at scale'Steep learning curve']
     },
     {
       name: 'MongoDB Atlas',
@@ -149,13 +150,13 @@ export default function SaaSMarketplacePage() {
         'Monitoring & alerting'
       ],
       website: 'https://mongodb.com/atlas',
-      useCase: 'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.',
-      pros: ['Fully managed', 'Global distribution', 'Auto-scaling', 'Good free tier'],
-      cons: ['Can be expensive', 'Vendor lock-in', 'Limited customization']
+      useCase: 'Perfect for developers who want to use MongoDB without managing infrastructurespecially for modern web applications.',
+      pros: ['Fully managed'Global distribution'Auto-scaling'Good free tier'],
+      cons: ['Can be expensive'Vendor lock-in'Limited customization']
     },
     {
       name: 'Vercel',
-      description: 'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.',
+      description: 'Platform for deploying and hosting frontend applications with automatic scalinglobal CDNand zero configuration.',
       category: 'Hosting',
       pricing: 'Free - $20/month',
       rating: 4.8,
@@ -172,8 +173,8 @@ export default function SaaSMarketplacePage() {
       ],
       website: 'https://vercel.com',
       useCase: 'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent performance.',
-      pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier'],
-      cons: ['Limited backend features', 'Can be expensive for high traffic']
+      pros: ['Zero config'Excellent performance'Great DX'Free tier'],
+      cons: ['Limited backend features'Can be expensive for high traffic']
     },
     {
       name: 'Linear',
@@ -193,14 +194,14 @@ export default function SaaSMarketplacePage() {
         'Mobile apps'
       ],
       website: 'https://linear.app',
-      useCase: 'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.',
-      pros: ['Lightning fast', 'Beautiful design', 'Great keyboard shortcuts', 'Git integration'],
-      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
+      useCase: 'Perfect for software development teams that need a fastintuitive issue tracking and project management tool.',
+      pros: ['Lightning fast'Beautiful design'Great keyboard shortcuts'Git integration'],
+      cons: ['Limited reporting'No time tracking'Smaller ecosystem']
     }
   ];
 
-  const categories = ['All', 'Automation', 'Productivity', 'Payments', 'Customer Support', 'Analytics', 'Database', 'Hosting', 'Project Management'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const categories = ['All'Automation'Productivity'Payments'Customer Support'Analytics'Database'Hosting'Project Management'];
+  const [selectedCategorysetSelectedCategory] = React.useState('All');
 
   const filteredServices = selectedCategory === 'All' 
     ? microSaasServices 
@@ -210,7 +211,7 @@ export default function SaaSMarketplacePage() {
     <>
       <Head>
         <title>SaaS Marketplace - Zion Tech Group</title>
-        <meta name="description" content="Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more." />
+        <meta name="description" content="Discover the best micro SaaS services for your business. Curated selection of tools for automationproductivitypaymentsand more." />
         <meta property="og:title" content="SaaS Marketplace - Zion Tech Group" />
         <meta property="og:description" content="Curated selection of the best micro SaaS services for modern businesses." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -240,7 +241,7 @@ export default function SaaSMarketplacePage() {
             </h1>
             <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
               Discover the best micro SaaS services that power modern businesses. 
-              Hand-picked tools for automation, productivity, and growth.
+              Hand-picked tools for automationproductivityand growth.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
@@ -332,7 +333,7 @@ export default function SaaSMarketplacePage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredServices.map((service, index) => (
+            {filteredServices.map((serviceindex) => (
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
@@ -368,7 +369,7 @@ export default function SaaSMarketplacePage() {
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                       <div className="grid grid-cols-2 gap-2">
-                        {service.features.slice(0, 4).map((feature, featureIndex) => (
+                        {service.features.slice(04).map((featureIndex) => (
                           <div key={featureIndex} className="flex items-center text-sm text-gray-400">
                             <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                             {feature}

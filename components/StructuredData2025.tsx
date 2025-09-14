@@ -9,7 +9,7 @@ const StructuredData2025 = () => {
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
+    "description": "Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions. Expert consulting and implementation services.",
     "foundingDate": "2020",
     "address": {
       "@type": "PostalAddress",
@@ -68,7 +68,7 @@ const StructuredData2025 = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "AI & Technology Solutions",
-    "description": "Comprehensive AI, automation, and cloud infrastructure solutions for businesses",
+    "description": "Comprehensive AIautomationand cloud infrastructure solutions for businesses",
     "provider": {
       "@type": "Organization",
       "name": "Zion Tech Group"

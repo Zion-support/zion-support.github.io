@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Cog, TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Zap, Target, BarChart3 } from 'lucide-react';
+import { Settings, TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Zap, BarChart3, Award } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
 export const metadata = {
@@ -24,7 +24,7 @@ export default function EnterpriseAutomationRevolutionPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <Cog className="w-5 h-5 mr-2" />
+              <Settings className="w-5 h-5 mr-2" />
               <span className="text-sm font-medium">ENTERPRISE AUTOMATION REVOLUTION</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -129,7 +129,7 @@ export default function EnterpriseAutomationRevolutionPage() {
 
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
                 <div className="flex items-center mb-4">
-                  <Cog className="w-8 h-8 text-blue-600 mr-3" />
+                  <Settings className="w-8 h-8 text-blue-600 mr-3" />
                   <h4 className="text-xl font-bold text-gray-900">Manufacturing: $30B in Production Automation</h4>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -187,7 +187,7 @@ export default function EnterpriseAutomationRevolutionPage() {
             <div className="space-y-6 mb-12">
               <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl">
                 <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <Target className="w-6 h-6 text-green-600 mr-3" />
+                  <Award className="w-6 h-6 text-green-600 mr-3" />
                   Phase 1: Automation Assessment & Strategy (Months 1-2)
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -1,12 +1,13 @@
+"use client";
 
 const InteractiveNavigation = () => {};
 
 
 export default InteractiveNavigation;
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 
 export default function InteractiveNavigation() {
-  const [open, setOpen] = useState(false);
+  const [opensetOpen] = useState(false);
   return (
     <div>
       <a href="#main" className="sr-only focus:not-sr-only">Skip to content</a>

@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const RevolutionaryTechInnovationBanner2025: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   const features = [
     "AI-Powered Automation",
-    "Quantum Computing Solutions", 
+    "Quantum Computing Solutions"
     "Neural Interface Technology",
     "Blockchain Innovation",
     "IoT Smart Systems"
@@ -17,9 +18,9 @@ const RevolutionaryTechInnovationBanner2025: React.FC = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentFeature((prev: number) => (prev + 1) % features.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   return (
     <div className={`relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
@@ -50,7 +51,7 @@ const RevolutionaryTechInnovationBanner2025: React.FC = () => {
 
             <p className="text-xl text-gray-300 leading-relaxed">
               Experience unprecedented technological breakthroughs that are reshaping industries 
-              and transforming the way we work, live, and innovate. Join the revolution today.
+              and transforming the way we workliveand innovate. Join the revolution today.
             </p>
 
             {/* Feature highlights */}

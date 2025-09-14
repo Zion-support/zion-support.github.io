@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { Search, Filter, Grid, List, Star, Clock, TrendingUp, ArrowRight, Eye, BookOpen, Play, Download } from 'lucide-react';
+SearchFilterGridListStarClockTrendingUpArrowRightEyeBookOpenPlayDownload
 
 const InteractiveContentDiscovery2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentContent, setCurrentContent] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentContentsetCurrentContent] = useState(0);
 
   const contentTypes = [
     {
@@ -41,9 +42,9 @@ const InteractiveContentDiscovery2026PromotionBanner = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentContent((prev) => (prev + 1) % contentTypes.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentContentData = contentTypes[currentContent];
   const IconComponent = currentContentData.icon;
@@ -56,7 +57,7 @@ const InteractiveContentDiscovery2026PromotionBanner = () => {
       
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(20)].map((_i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-indigo-400/40 rounded-full animate-pulse"
@@ -85,7 +86,7 @@ const InteractiveContentDiscovery2026PromotionBanner = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our vast library of cutting-edge content, tutorials, case studies, and interactive experiences
+              Explore our vast library of cutting-edge contentutorialscase studiesand interactive experiences
             </p>
           </div>
 
@@ -109,7 +110,7 @@ const InteractiveContentDiscovery2026PromotionBanner = () => {
                   </span>
                 </div>
                 <div className="flex gap-2">
-                  {contentTypes.map((_, index) => (
+                  {contentTypes.map((_index) => (
                     <div
                       key={index}
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${
@@ -123,7 +124,7 @@ const InteractiveContentDiscovery2026PromotionBanner = () => {
 
             {/* Content List */}
             <div className="space-y-4">
-              {contentTypes.map((content, index) => {
+              {contentTypes.map((contentindex) => {
                 const IconComponent = content.icon;
                 return (
                   <div

@@ -1,8 +1,8 @@
 
-import { useEffect, useState } from "react";
+import { useEffectuseState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
 import { EmptyMatchesCard } from "./EmptyMatchesCard";
 import { JobMatchCard } from "./JobMatchCard";
 
@@ -11,15 +11,15 @@ interface SuggestedTalentsProps {
   jobTitle?: string;
 }
 
-export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
-  const [talents, setTalents] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isProcessing, setIsProcessing] = useState(false);
+export function SuggestedTalents({ jobIdjobTitle }: SuggestedTalentsProps) {
+  const [talentsetTalents] = useState([]);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [isProcessingsetIsProcessing] = useState(false);
 
   const fetchSuggestedTalents = async () => {
     setIsLoading(true);
     try {
-      const { data, error } = await supabase
+      const { dataerror } = await supabase
         .from("suggested_talents")
         .select(`
           *,
@@ -39,12 +39,12 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
             company_name
           )
         `)
-        .eq("job_id", jobId);
+        .eq("job_id"jobId);
 
       if (error) throw error;
       setTalents(data || []);
     } catch (error) {
-      console.error("Error fetching suggested talents:", error);
+      console.error("Error fetching suggested talents:"error);
       toast({
         title: "Error",
         description: "Failed to load suggested talents. Please try again later.",
@@ -56,7 +56,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
 
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
-    console.log("View talent profile:", talentId);
+    console.log("View talent profile:"talentId);
     toast({
       title: "View Profile",
       description: `Navigating to talent profile: ${talentId}`});
@@ -64,7 +64,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
 
   const handleInvite = (talentId: string) => {
     // Implement logic to invite talent
-    console.log("Invite talent:", talentId);
+    console.log("Invite talent:"talentId);
     toast({
       title: "Invite Talent",
       description: `Inviting talent: ${talentId}`});
@@ -81,7 +81,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     if (jobId) {
       fetchSuggestedTalents();
     }
-  }, [jobId]);
+  }[jobId]);
 
   // Transform data to match JobMatchCard component props
   const transformedTalents = talents.map(talent => {

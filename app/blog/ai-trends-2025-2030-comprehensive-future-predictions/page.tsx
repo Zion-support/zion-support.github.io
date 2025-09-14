@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag, Share2, BookOpen, Download, TrendingUp, Brain, Zap, Target, Rocket, Star } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User,  Share2, BookOpen, Download, TrendingUp, Brain, Zap,  ArrowUpRight, Star, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI Trends 2025-2030: Comprehensive Future Predictions & Enterprise Impact',
@@ -78,7 +78,7 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
         <section className="mb-12">
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-              <Target className="w-8 h-8 mr-3 text-blue-600" />
+              <Award className="w-8 h-8 mr-3 text-blue-600" />
               Executive Summary
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -139,7 +139,7 @@ export default function AITrends2025_2030ComprehensiveFuturePredictions() {
         {/* Timeline Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
-            <Rocket className="w-8 h-8 mr-3 text-purple-600" />
+            <ArrowUpRight className="w-8 h-8 mr-3 text-purple-600" />
             AI Evolution Timeline 2025-2030
           </h2>
           <div className="space-y-8">

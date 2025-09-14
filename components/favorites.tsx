@@ -1,24 +1,25 @@
-import { useEffect, useMemo, useState } from 'react';
+"use client";
+import { useEffectuseMemouseState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
 
 function useFavorites() {
   const storageKey = 'zion_favorites';
-  const [favorites, setFavorites] = useState<string[]>([]);
+  const [favoritesetFavorites] = useState<string[]>([]);
   useEffect(() => {
     try {
       const raw = localStorage.getItem(storageKey);
       if (raw) setFavorites(JSON.parse(raw));
     } catch {}
-  }, []);
+  }[]);
   const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug));
-  return { favorites, remove };
+  return { favoritesremove };
 }
 
 export default function FavoritesPage() {
-  const { favorites, remove } = useFavorites();
-  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
+  const { favoritesremove } = useFavorites();
+  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug))[favorites]);
 
   return (
     <div>
@@ -58,7 +59,7 @@ export default function FavoritesPage() {
               </div>
               <div className="mt-3 text-xs text-gray-500">{t.location}</div>
               <div className="mt-3 flex flex-wrap gap-2">
-                {t.skills.slice(0, 4).map((s) => (
+                {t.skills.slice(04).map((s) => (
                   <span key={s} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">{s}</span>
                 ))}
               </div>

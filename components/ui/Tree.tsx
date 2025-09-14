@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+"use client";
+import React{ useState } from "react";
 
 export interface TreeNode {
   name: string;
@@ -13,8 +14,8 @@ interface TreeProps {
   onDeploy?: (path: string) => void;
 }
 
-function NodeItem({ node, depth, onDeploy }: { node: TreeNode; depth: number; onDeploy?: (path: string) => void }) {
-  const [open, setOpen] = useState<boolean>(false);
+function NodeItem({ nodepthonDeploy }: { node: TreeNode; depth: number; onDeploy?: (path: string) => void }) {
+  const [opensetOpen] = useState<boolean>(false);
 
   const hasChildren = Array.isArray(node.children) && node.children.length > 0;
   const toggle = () => setOpen((v) => !v);
@@ -25,11 +26,11 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode; depth: number; on
 
   const clonePath = async () => {
     const url = `${window.location.origin}/api/dev/source-map`;
-    await fetch(url, {
+    await fetch(url{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // Expect an admin token in local storage, fall back to prompt
+        // Expect an admin token in local storagefall back to prompt
         "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any,
       body: JSON.stringify({ path: node.path })});
   };
@@ -66,7 +67,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode; depth: number; on
   );
 }
 
-export function Tree({ nodes, onDeploy }: TreeProps) {
+export function Tree({ nodesonDeploy }: TreeProps) {
   return (
     <div className="w-full">
       {nodes.map((n) => (

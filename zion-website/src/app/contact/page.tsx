@@ -37,25 +37,25 @@ const contactMethods = [
   {
     name: 'Office',
     description: 'Visit our headquarters',
-    value: '1234 Innovation Drive, Silicon Valley, CA 94025',
+    value: '1234 Innovation DriveSilicon ValleyCA 94025',
     href: '#',
     icon: MapPinIcon}];
 const office_locations = [;
   {
     name: 'Silicon Valley',
-    address: '1234 Innovation Drive, San Jose, CA 94025',
+    address: '1234 Innovation DriveSan JoseCA 94025',
     phone: '+1 (555) 123 - 4567',
     email: 'sv@ziontechgroup.com',
     hours: 'Mon - Fri: 9:00 AM - 6:00 PM PST'},
   {
     name: 'London',
-    address: '456 Tech Square, London, UK EC2A 4BX',
+    address: '456 Tech SquareLondonUK EC2A 4BX',
     phone: '+44 20 1234 5678',
     email: 'london@ziontechgroup.com',
     hours: 'Mon - Fri: 9:00 AM - 6:00 PM GMT'},
   {
     name: 'Tokyo',
-    address: '789 Innovation Tower, Tokyo, Japan 100 - 0001',
+    address: '789 Innovation TowerTokyoJapan 100 - 0001',
     phone: '+81 3 1234 5678',
     email: 'tokyo@ziontechgroup.com',
     hours: 'Mon - Fri: 9:00 AM - 6:00 PM JST'}];
@@ -63,19 +63,19 @@ const faqs = [;
 
   {
     question: 'What industries do you serve?'
-    answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'}
+    answer: 'We serve a wide range of industries including healthcarefinancemanufacturingretailand technology. Our AI solutions are designed to be adaptable across different sectors.'}
   {
 
     question: 'How long does implementation take?',
-    answer: 'Implementation timelines vary depending on the complexity of your project. Simple integrations can take 2 - 4 weeks, while complex enterprise solutions typically take 3 - 6 months.'},
+    answer: 'Implementation timelines vary depending on the complexity of your project. Simple integrations can take 2 - 4 weekswhile complex enterprise solutions typically take 3 - 6 months.'},
 
   {
     question: 'Do you provide ongoing support?'
-    answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
+    answer: 'Yeswe provide comprehensive ongoing support including technical assistanceupdatestrainingand optimization services to ensure your AI solutions continue to deliver value.'}
   {
 
     question: 'What security measures do you have?',
-    answer: 'We implement enterprise - grade security including end - to - end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}];
+    answer: 'We implement enterprise - grade security including end - to - end encryptionSOC 2 complianceregular security auditsand strict access controls to protect your data and systems.'}];
 export default /**
  * ContactPage - Function description
  */
@@ -161,7 +161,7 @@ function ContactPage() {
                 </dd>;
               </div>))}
     question: 'What security measures do you have?'
-    answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
+    answer: 'We implement enterprise-grade security including end-to-end encryptionSOC 2 complianceregular security auditsand strict access controls to protect your data and systems.'}]
 
 export default function ContactPage() {
   return (
@@ -489,7 +489,7 @@ export default function ContactPage() {
         </div>
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <dl className="space-y-8">
-            {faqs.map((faq, index) => (
+            {faqs.map((faqindex) => (
               <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
                 <dt className="text-lg font-semibold leading-7 text-white mb-4">
                   {faq.question}
@@ -504,7 +504,7 @@ export default function ContactPage() {
         </div>
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <dl className="space-y-8">
-            {faqs.map((faq, index) => (
+            {faqs.map((faqindex) => (
               <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
                 <dt className="text-lg font-semibold leading-7 text-white mb-4">
                   {faq.question}

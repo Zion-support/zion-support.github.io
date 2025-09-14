@@ -1,13 +1,14 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  ArrowRight, 
-  Star, 
-  Play, 
+  Brain
+  Zap
+  ArrowRight
+  Star
+  Play
   X,
   Sparkles,
   Rocket,
@@ -17,8 +18,8 @@ import {
 } from 'lucide-react';
 
 const AIRevolution2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
 
   const announcements = [
     {
@@ -58,9 +59,9 @@ const AIRevolution2025PromotionBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % announcements.length);
-    }, 4000);
+    }4000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -68,9 +69,9 @@ const AIRevolution2025PromotionBanner = () => {
 
   return (
     <motion.div
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ y: -100, opacity: 0 }}
+      initial={{ y: -100opacity: 0 }}
+      animate={{ y: 0opacity: 1 }}
+      exit={{ y: -100opacity: 0 }}
       className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-blue-900 text-white shadow-2xl"
     >
       {/* Animated Background */}
@@ -80,8 +81,8 @@ const AIRevolution2025PromotionBanner = () => {
         {/* Floating Elements */}
         <motion.div
           animate={{ 
-            y: [0, -20, 0],
-            rotate: [0, 5, 0]
+            y: [0-20],
+            rotate: [050]
           }}
           transition={{ 
             duration: 4,
@@ -95,8 +96,8 @@ const AIRevolution2025PromotionBanner = () => {
         
         <motion.div
           animate={{ 
-            y: [0, 15, 0],
-            rotate: [0, -5, 0]
+            y: [0150],
+            rotate: [0-50]
           }}
           transition={{ 
             duration: 3,
@@ -111,8 +112,8 @@ const AIRevolution2025PromotionBanner = () => {
 
         <motion.div
           animate={{ 
-            y: [0, -10, 0],
-            x: [0, 10, 0]
+            y: [0-10],
+            x: [010]
           }}
           transition={{ 
             duration: 5,
@@ -132,7 +133,7 @@ const AIRevolution2025PromotionBanner = () => {
           <div className="flex items-center gap-6">
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 8repeat: Infinityease: "linear" }}
               className="flex-shrink-0"
             >
               <div className="w-14 h-14 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
@@ -144,9 +145,9 @@ const AIRevolution2025PromotionBanner = () => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentSlide}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0x: 20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  exit={{ opacity: 0x: -20 }}
                   transition={{ duration: 0.5 }}
                   className="space-y-2"
                 >
@@ -207,8 +208,8 @@ const AIRevolution2025PromotionBanner = () => {
 
         {/* Mobile Action Button */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 10 }}
+          animate={{ opacity: 1y: 0 }}
           className="md:hidden mt-4"
         >
           <motion.button
@@ -228,7 +229,7 @@ const AIRevolution2025PromotionBanner = () => {
             className="h-full bg-gradient-to-r from-purple-500 to-blue-600"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
-            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 4repeat: Infinityease: "linear" }}
           />
         </div>
       </div>

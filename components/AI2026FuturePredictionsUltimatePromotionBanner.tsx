@@ -28,7 +28,7 @@ export default function AI2026FuturePredictionsUltimatePromotionBanner() {
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover the most comprehensive collection of AI 2026 future predictions, breakthrough technologies, 
+            Discover the most comprehensive collection of AI 2026 future predictionsbreakthrough technologies
             and revolutionary forecasts that will reshape our world.
           </p>
 

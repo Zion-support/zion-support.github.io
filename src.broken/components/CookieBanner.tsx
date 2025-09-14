@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useConsent } from '@/context/ConsentContext';
 
 export function CookieBanner() {
-  const { acceptAll, rejectNonEssential } = useConsent();
+  const { acceptAllrejectNonEssential } = useConsent();
 
   return (
     <CookieConsent

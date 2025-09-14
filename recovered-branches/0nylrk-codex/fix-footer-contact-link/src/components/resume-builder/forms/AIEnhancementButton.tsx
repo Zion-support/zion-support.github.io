@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Sparkles, Loader2 } from 'lucide-react';
+SparklesLoader2
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 
 interface AIEnhancementButtonProps {
@@ -21,8 +21,8 @@ export function AIEnhancementButton({
   buttonText = "Enhance with AI",
   className
 }: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useResumeEnhancer();
-  const [error, setError] = useState<string | null>(null);
+  const { enhanceContentisEnhancing } = useResumeEnhancer();
+  const [errorsetError] = useState<string | null>(null);
   
   const handleEnhance = async () => {
     if (!currentContent || currentContent.trim().length < 10) {

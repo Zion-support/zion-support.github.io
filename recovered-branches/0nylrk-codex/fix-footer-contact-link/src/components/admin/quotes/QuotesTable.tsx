@@ -1,31 +1,31 @@
 
 import React from "react";
-import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
+import { EyeMoreHorizontalArchiveTrash2 } from "lucide-react";
 import { 
-  Table, 
-  TableBody, 
-  TableCell, 
-  TableHead, 
-  TableHeader, 
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
   TableRow 
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import type { QuoteRequestQuoteStatus } from "@/types/quotes";
 import { formatDate } from "@/utils/dateUtils";
 
 interface QuotesTableProps {
   quotes: QuoteRequest[];
   isArchived?: boolean;
   isLoading: boolean;
-  updateStatus: (id: string, status: QuoteStatus) => void;
-  toggleArchive: (id: string, isArchived: boolean) => void;
+  updateStatus: (id: stringstatus: QuoteStatus) => void;
+  toggleArchive: (id: stringisArchived: boolean) => void;
   deleteQuote: (id: string) => void;
   onViewDetails: (quote: QuoteRequest) => void;
 }
@@ -116,7 +116,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                         <Button 
                           variant="ghost" 
                           size="icon"
-                          onClick={() => toggleArchive(quote.id, false)}
+                          onClick={() => toggleArchive(quote.idfalse)}
                         >
                           <Archive className="h-4 w-4" />
                           <span className="sr-only">Unarchive</span>
@@ -144,22 +144,22 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end">
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'new')}>
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id'new')}>
                             Mark as New
                           </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'in_review')}>
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id'in_review')}>
                             Mark as In Review
                           </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'responded')}>
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id'responded')}>
                             Mark as Responded
                           </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'accepted')}>
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id'accepted')}>
                             Mark as Accepted
                           </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'closed')}>
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id'closed')}>
                             Mark as Closed
                           </DropdownMenuItem>
-                          <DropdownMenuItem onClick={() => toggleArchive(quote.id, true)}>
+                          <DropdownMenuItem onClick={() => toggleArchive(quote.idtrue)}>
                             <Archive className="h-4 w-4 mr-2" />
                             Archive
                           </DropdownMenuItem>

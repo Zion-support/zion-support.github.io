@@ -13,22 +13,22 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from '@/components/ui/form';
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
+Loader2LinkFileImageGithubEdit
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';
 
 // Define schema for form validation
 const projectSchema = z.object({
-  title: z.string().min(1, 'Project title is required'),
+  title: z.string().min(1'Project title is required'),
   description: z.string().optional(),
   technologies: z.string().optional(),
   image_url: z.string().optional(),
   github_url: z
-    .union([z.string().url('Please enter a valid URL'), z.literal('')])
+    .union([z.string().url('Please enter a valid URL')z.literal('')])
     .optional(),
   demo_url: z
-    .union([z.string().url('Please enter a valid URL'), z.literal('')])
+    .union([z.string().url('Please enter a valid URL')z.literal('')])
     .optional(),
   pdf_url: z.string().optional()});
 
@@ -40,10 +40,10 @@ interface ProjectFormProps {
   onCancel: () => void;
 }
 
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
+export function ProjectForm({ projectonSuccessonCancel }: ProjectFormProps) {
   const { user } = useAuth();
-  const { addProject, updateProject } = usePortfolio();
-  const [isLoading, setIsLoading] = useState(false);
+  const { addProjectupdateProject } = usePortfolio();
+  const [isLoadingsetIsLoading] = useState(false);
   const isEditing = !!project;
   
   const form = useForm<ProjectFormValues>({
@@ -51,7 +51,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     defaultValues: {
       title: project?.title || '',
       description: project?.description || '',
-      technologies: project?.technologies ? project.technologies.join(', ') : '',
+      technologies: project?.technologies ? project.technologies.join(') : '',
       image_url: project?.image_url || '',
       github_url: project?.github_url || '',
       demo_url: project?.demo_url || '',
@@ -77,7 +77,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       let success = false;
       
       if (isEditing && project?.id) {
-        success = await updateProject(project.id, projectData);
+        success = await updateProject(project.idprojectData);
       } else {
         const projectId = await addProject(projectData);
         success = !!projectId;
@@ -88,7 +88,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         form.reset();
       }
     } catch (error) {
-      console.error('Error saving project:', error);
+      console.error('Error saving project:'error);
     } finally {
       setIsLoading(false);
     }
@@ -104,7 +104,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
-                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
+                <Input placeholder="E.g.AI ChatbotE-commerce Website" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -136,7 +136,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             <FormItem>
               <FormLabel>Technologies Used</FormLabel>
               <FormControl>
-                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />
+                <Input placeholder="ReactNode.jsMongoDBetc. (comma separated)" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

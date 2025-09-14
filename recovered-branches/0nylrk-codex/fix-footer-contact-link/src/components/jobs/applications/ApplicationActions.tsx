@@ -8,14 +8,14 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { Eye, ChevronDown, Loader2 } from "lucide-react";
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
+import { EyeChevronDownLoader2 } from "lucide-react";
+import { JobApplicationStatus } from "@/types/jobs";
 
 interface ApplicationActionsProps {
   application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+  onStatusChange: (applicationId: stringnewStatus: ApplicationStatus) => Promise<void>;
 }
 
 export function ApplicationActions({
@@ -51,22 +51,22 @@ export function ApplicationActions({
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuItem 
-            onClick={() => onStatusChange(application.id, "shortlisted")}
+            onClick={() => onStatusChange(application.id"shortlisted")}
           >
             Shortlist
           </DropdownMenuItem>
           <DropdownMenuItem 
-            onClick={() => onStatusChange(application.id, "interview")}
+            onClick={() => onStatusChange(application.id"interview")}
           >
             Schedule Interview
           </DropdownMenuItem>
           <DropdownMenuItem 
-            onClick={() => onStatusChange(application.id, "hired")}
+            onClick={() => onStatusChange(application.id"hired")}
           >
             Hire
           </DropdownMenuItem>
           <DropdownMenuItem 
-            onClick={() => onStatusChange(application.id, "rejected")}
+            onClick={() => onStatusChange(application.id"rejected")}
             className="text-red-600"
           >
             Reject

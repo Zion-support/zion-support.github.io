@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Users, 
-  Zap, 
-  Shield, 
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  Zap
+  Shield
   Brain,
   Globe,
   Target,
@@ -28,8 +29,8 @@ import {
 } from 'lucide-react';
 
 const BusinessSuccessStories2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentTestimonialsetCurrentTestimonial] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -37,47 +38,47 @@ const BusinessSuccessStories2025PromotionBanner = () => {
     // Rotate testimonials every 4 seconds
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % 3);
-    }, 4000);
+    }4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const testimonials = [
     {
       quote: 'Zion Tech Group transformed our operations completely. We went from struggling with manual processes to having a fully automated system that saves us thousands of hours every month.',
       author: 'Sarah Johnson',
-      role: 'CEO, TechCorp Solutions',
+      role: 'CEOTechCorp Solutions',
       company: 'TC',
       results: '+300% Efficiency'
     },
     {
-      quote: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementation, and our compliance scores are perfect.',
+      quote: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementationand our compliance scores are perfect.',
       author: 'Michael Chen',
-      role: 'CTO, Global Finance Inc',
+      role: 'CTOGlobal Finance Inc',
       company: 'GF',
       results: '99.9% Security'
     },
     {
       quote: 'Our supply chain is now running like a well-oiled machine. The AI optimization has reduced our delivery times by 60% and improved quality significantly.',
       author: 'Emily Rodriguez',
-      role: 'Operations Director, Manufacturing Plus',
+      role: 'Operations DirectorManufacturing Plus',
       company: 'MP',
       results: '+250% Efficiency'
     }
   ];
 
   const stats = [
-    { label: 'Success Stories', value: '1,200+', icon: BookOpen },
-    { label: 'Average ROI', value: '300%', icon: TrendingUp },
-    { label: 'Client Satisfaction', value: '99.8%', icon: Star },
-    { label: 'Cost Savings', value: '$50M+', icon: DollarSign }
+    { label: 'Success Stories'value: '1,200+'icon: BookOpen },
+    { label: 'Average ROI'value: '300%'icon: TrendingUp },
+    { label: 'Client Satisfaction'value: '99.8%'icon: Star },
+    { label: 'Cost Savings'value: '$50M+'icon: DollarSign }
   ];
 
   const industries = [
-    { name: 'Technology', projects: 45, icon: Brain },
-    { name: 'Finance', projects: 32, icon: DollarSign },
-    { name: 'Healthcare', projects: 28, icon: Shield },
-    { name: 'Manufacturing', projects: 25, icon: Building2 }
+    { name: 'Technology'projects: 45icon: Brain },
+    { name: 'Finance'projects: 32icon: DollarSign },
+    { name: 'Healthcare'projects: 28icon: Shield },
+    { name: 'Manufacturing'projects: 25icon: Building2 }
   ];
 
   return (
@@ -93,16 +94,16 @@ const BusinessSuccessStories2025PromotionBanner = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0x: -50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="text-white"
           >
             {/* Badge */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.2 }}
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 rounded-full text-sm font-medium mb-6"
             >
               <Sparkles className="w-4 h-4 mr-2" />
@@ -111,9 +112,9 @@ const BusinessSuccessStories2025PromotionBanner = () => {
 
             {/* Main Heading */}
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.3 }}
               className="text-4xl md:text-5xl font-bold mb-6"
             >
               Real Success{' '}
@@ -124,9 +125,9 @@ const BusinessSuccessStories2025PromotionBanner = () => {
 
             {/* Subheading */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.4 }}
               className="text-xl text-gray-300 mb-8"
             >
               Discover how businesses across industries have transformed their operations 
@@ -135,12 +136,12 @@ const BusinessSuccessStories2025PromotionBanner = () => {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.5 }}
               className="grid grid-cols-2 gap-4 mb-8"
             >
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <div key={index} className="text-center">
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-gray-300">{stat.label}</div>
@@ -150,14 +151,14 @@ const BusinessSuccessStories2025PromotionBanner = () => {
 
             {/* Industries */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.6 }}
               className="mb-8"
             >
               <h4 className="text-lg font-semibold text-white mb-4">Industries We Serve:</h4>
               <div className="flex flex-wrap gap-3">
-                {industries.map((industry, index) => (
+                {industries.map((industryindex) => (
                   <div key={index} className="flex items-center space-x-2 px-3 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
                     <industry.icon className="w-4 h-4 text-green-400" />
                     <span className="text-sm text-white">{industry.name}</span>
@@ -169,9 +170,9 @@ const BusinessSuccessStories2025PromotionBanner = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.7 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.7 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link
@@ -194,9 +195,9 @@ const BusinessSuccessStories2025PromotionBanner = () => {
 
           {/* Right Content - Testimonial Carousel */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="relative"
           >
             {/* Testimonial Card */}
@@ -214,8 +215,8 @@ const BusinessSuccessStories2025PromotionBanner = () => {
               {/* Testimonial Content */}
               <motion.div
                 key={currentTestimonial}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="mb-6"
               >
@@ -225,7 +226,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center space-x-1 mb-2">
-                      {[...Array(5)].map((_, i) => (
+                      {[...Array(5)].map((_i) => (
                         <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                       ))}
                     </div>
@@ -249,7 +250,7 @@ const BusinessSuccessStories2025PromotionBanner = () => {
 
               {/* Progress Indicators */}
               <div className="flex justify-center space-x-2 mb-4">
-                {testimonials.map((_, index) => (
+                {testimonials.map((_index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
@@ -268,15 +269,15 @@ const BusinessSuccessStories2025PromotionBanner = () => {
 
             {/* Floating Elements */}
             <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              animate={{ y: [0-10] }}
+              transition={{ duration: 2repeat: Infinity }}
               className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
             >
               <Star className="w-4 h-4 text-white" />
             </motion.div>
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+              animate={{ y: [010] }}
+              transition={{ duration: 2repeat: Infinitydelay: 1 }}
               className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center"
             >
               <CheckCircle className="w-3 h-3 text-white" />

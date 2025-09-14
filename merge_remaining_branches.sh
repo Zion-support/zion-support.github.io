@@ -1,69 +1,106 @@
 #!/bin/bash
 
-# Script to merge all remaining unmerged branches
+# Script to merge remaining cursor branches into main
+# This will attempt to merge branches systematically and resolve conflicts
+
 set -e
 
-echo "🚀 Starting to merge remaining unmerged branches..."
+echo "Starting systematic branch merge process for remaining branches..."
 
-# Get list of unmerged branches
-unmerged_branches=$(git branch -r | grep "cursor/create-and-deploy-new-content" | while read branch; do
-  if ! git merge-base --is-ancestor $branch main; then
-    echo $branch
-  fi
-done)
+# Get list of recent cursor branches that haven't been merged yet
+BRANCHES=(
+    "cursor/create-and-deploy-new-content-6179"
+    "cursor/create-and-deploy-new-content-8601"
+    "cursor/create-and-deploy-new-content-f513"
+    "enhanced-content-showcase"
+    "cursor/create-and-deploy-new-content-1847"
+    "cursor/create-and-deploy-new-content-a401"
+    "cursor/create-and-deploy-new-content-aa63"
+    "cursor/create-and-deploy-new-content-18dd"
+    "cursor/create-and-deploy-new-content-240a"
+    "new-content-and-promotional-banners"
+    "cursor/create-and-deploy-new-content-22af"
+    "cursor/create-and-deploy-new-content-9b5b"
+    "cursor/create-and-deploy-new-content-d16a"
+    "cursor/create-and-deploy-new-content-7e66"
+    "cursor/create-and-deploy-new-content-db22"
+    "cursor/create-and-deploy-new-content-83e8"
+    "feature/new-ai-content-2025"
+    "merged-content-and-promotion-final"
+    "cursor/create-and-deploy-new-content-3a84"
+    "cursor/create-and-deploy-new-content-6eb0"
+)
 
-echo "Found unmerged branches:"
-echo "$unmerged_branches"
+# Ensure we're on main branch
+git checkout main
+git pull origin main
 
-# Function to merge a branch with conflict resolution
-merge_branch() {
-    local branch_name=$1
-    echo "📋 Processing branch: $branch_name"
+# Track successful and failed merges
+SUCCESSFUL_MERGES=()
+FAILED_MERGES=()
+
+echo "Found ${#BRANCHES[@]} branches to process..."
+
+for branch in "${BRANCHES[@]}"; do
+    echo ""
+    echo "Processing branch: $branch"
+    echo "=========================================="
     
-    # Try to merge
-    if git merge $branch_name --no-ff -m "Merge $branch_name"; then
-        echo "  ✅ Successfully merged $branch_name"
-        return 0
-    else
-        echo "  ⚠️  Merge conflict detected in $branch_name"
+    # Check if branch exists
+    if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
+        echo "Branch $branch does not exist, skipping..."
+        continue
+    fi
+    
+    # Check if branch is already merged
+    if git merge-base --is-ancestor "origin/$branch" HEAD; then
+        echo "Branch $branch is already merged, skipping..."
+        continue
+    fi
+    
+    # Try to merge the branch
+    if git merge "origin/$branch" --no-edit; then
+        echo "✅ Successfully merged $branch"
+        SUCCESSFUL_MERGES+=("$branch")
         
-        # Check which files have conflicts
-        conflict_files=$(git diff --name-only --diff-filter=U)
-        echo "  📝 Conflicted files: $conflict_files"
-        
-        # Try to resolve conflicts automatically
-        for file in $conflict_files; do
-            echo "    🔨 Resolving conflicts in $file"
-            
-            # Check if it's a merge conflict
-            if grep -q "                else
-                    # For other files, try to keep both changes
-                    sed -i '/^                fi
-                
-                # Add the resolved file
-                git add "$file"
-            fi
-        done
-        
-        # Try to complete the merge
-        if git commit --no-edit; then
-            echo "  ✅ Successfully resolved conflicts and merged $branch_name"
-            return 0
+        # Push the merge
+        if git push origin main; then
+            echo "✅ Successfully pushed merge for $branch"
         else
-            echo "  ❌ Failed to resolve conflicts in $branch_name"
-            git merge --abort
-            return 1
+            echo "❌ Failed to push merge for $branch"
         fi
+    else
+        echo "❌ Merge conflict in $branch"
+        FAILED_MERGES+=("$branch")
+        
+        # Abort the merge
+        git merge --abort
+        echo "Aborted merge for $branch"
     fi
-}
-
-# Process each unmerged branch
-echo "$unmerged_branches" | while read branch; do
-    if [ -n "$branch" ]; then
-        echo ""
-        merge_branch "$branch"
-    fi
+    
+    echo "Current status:"
+    git status --porcelain
+    echo ""
 done
 
 echo ""
-echo "🎉 All remaining branches processed!"
+echo "=========================================="
+echo "MERGE SUMMARY"
+echo "=========================================="
+echo "Successful merges: ${#SUCCESSFUL_MERGES[@]}"
+for branch in "${SUCCESSFUL_MERGES[@]}"; do
+    echo "  ✅ $branch"
+done
+
+echo ""
+echo "Failed merges: ${#FAILED_MERGES[@]}"
+for branch in "${FAILED_MERGES[@]}"; do
+    echo "  ❌ $branch"
+done
+
+echo ""
+echo "Final git status:"
+git status
+
+echo ""
+echo "Script completed!"

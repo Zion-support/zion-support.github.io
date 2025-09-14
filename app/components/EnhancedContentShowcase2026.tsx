@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Users, Clock, Star, BookOpen, BarChart3, FileText, ExternalLink } from 'lucide-react';
+import { ArrowRight, TrendingUp, Users, Clock, Star, BookOpen, BarChart3, FileText, ExternalLink, ArrowRight } from 'lucide-react';
 
 interface ContentItem {
   id: string;

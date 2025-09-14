@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
-  Zap, 
-  Brain, 
-  Rocket, 
-  Star, 
-  TrendingUp, 
-  Users, 
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  Star
+  TrendingUp
+  Users
   Award,
   ChevronRight,
   Play,
@@ -22,12 +23,12 @@ import {
 } from 'lucide-react';
 
 const UltimateContentShowcase2027 = () => {
-  const [activeTab, setActiveTab] = useState('ai-innovations');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState('ai-innovations');
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const contentSections = {
     'ai-innovations': {
@@ -39,19 +40,19 @@ const UltimateContentShowcase2027 = () => {
         {
           title: 'Neural Interface Revolution',
           description: 'Direct brain-computer interfaces enabling unprecedented human-AI collaboration',
-          features: ['Real-time thought processing', 'Enhanced cognitive abilities', 'Seamless AI integration'],
+          features: ['Real-time thought processing'Enhanced cognitive abilities'Seamless AI integration'],
           impact: '500% productivity increase'
         },
         {
           title: 'Quantum AI Processing',
           description: 'Quantum-enhanced AI algorithms solving complex problems in seconds',
-          features: ['Quantum neural networks', 'Exponential speed improvements', 'Breakthrough problem solving'],
+          features: ['Quantum neural networks'Exponential speed improvements'Breakthrough problem solving'],
           impact: '1000x faster processing'
         },
         {
           title: 'Conscious AI Systems',
           description: 'Self-aware AI systems with emotional intelligence and ethical reasoning',
-          features: ['Emotional understanding', 'Ethical decision making', 'Autonomous problem solving'],
+          features: ['Emotional understanding'Ethical decision making'Autonomous problem solving'],
           impact: 'Human-level consciousness'
         }
       ]
@@ -65,19 +66,19 @@ const UltimateContentShowcase2027 = () => {
         {
           title: 'Autonomous Operations',
           description: 'Fully automated business operations requiring zero human intervention',
-          features: ['Self-managing systems', 'Predictive maintenance', 'Automatic optimization'],
+          features: ['Self-managing systems'Predictive maintenance'Automatic optimization'],
           impact: '99.9% uptime achieved'
         },
         {
           title: 'Intelligent Workflows',
           description: 'AI-powered workflow optimization adapting to business needs in real-time',
-          features: ['Dynamic process adaptation', 'Resource optimization', 'Performance monitoring'],
+          features: ['Dynamic process adaptation'Resource optimization'Performance monitoring'],
           impact: '300% efficiency gain'
         },
         {
           title: 'Predictive Analytics',
           description: 'Advanced forecasting and trend analysis for strategic decision making',
-          features: ['Market prediction', 'Risk assessment', 'Opportunity identification'],
+          features: ['Market prediction'Risk assessment'Opportunity identification'],
           impact: '95% accuracy rate'
         }
       ]
@@ -91,19 +92,19 @@ const UltimateContentShowcase2027 = () => {
         {
           title: 'Holographic Interfaces',
           description: '3D holographic displays and interaction systems for immersive experiences',
-          features: ['3D visualization', 'Gesture control', 'Immersive collaboration'],
+          features: ['3D visualization'Gesture control'Immersive collaboration'],
           impact: 'Revolutionary user experience'
         },
         {
           title: 'Blockchain Integration',
-          description: 'Decentralized systems ensuring security, transparency, and trust',
-          features: ['Smart contracts', 'Decentralized storage', 'Cryptographic security'],
+          description: 'Decentralized systems ensuring securitytransparencyand trust',
+          features: ['Smart contracts'Decentralized storage'Cryptographic security'],
           impact: '100% data integrity'
         },
         {
           title: 'Edge Computing',
           description: 'Distributed computing infrastructure for ultra-low latency applications',
-          features: ['Real-time processing', 'Local data handling', 'Reduced latency'],
+          features: ['Real-time processing'Local data handling'Reduced latency'],
           impact: '10ms response time'
         }
       ]
@@ -111,28 +112,28 @@ const UltimateContentShowcase2027 = () => {
   };
 
   const stats = [
-    { label: 'Active Users', value: '2.5M+', icon: Users },
-    { label: 'Success Rate', value: '99.8%', icon: Award },
-    { label: 'ROI Increase', value: '500%', icon: TrendingUp },
-    { label: 'Time Saved', value: '10M+ hrs', icon: Clock }
+    { label: 'Active Users'value: '2.5M+'icon: Users },
+    { label: 'Success Rate'value: '99.8%'icon: Award },
+    { label: 'ROI Increase'value: '500%'icon: TrendingUp },
+    { label: 'Time Saved'value: '10M+ hrs'icon: Clock }
   ];
 
   const testimonials = [
     {
       name: 'Sarah Chen',
-      role: 'CEO, TechCorp',
+      role: 'CEOTechCorp',
       content: 'This platform revolutionized our entire operation. The AI integration is seamless and the results are extraordinary.',
       rating: 5
     },
     {
       name: 'Michael Rodriguez',
-      role: 'CTO, InnovateLabs',
+      role: 'CTOInnovateLabs',
       content: 'The automation capabilities are unmatched. We\'ve seen a 400% increase in productivity since implementation.',
       rating: 5
     },
     {
       name: 'Dr. Emily Watson',
-      role: 'Research Director, FutureTech',
+      role: 'Research DirectorFutureTech',
       content: 'The quantum AI processing has opened doors we never thought possible. Truly groundbreaking technology.',
       rating: 5
     }
@@ -147,21 +148,21 @@ const UltimateContentShowcase2027 = () => {
           className="absolute top-0 left-0 w-full h-full"
           animate={{
             background: [
-              'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
+              'radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)',
+              'radial-gradient(circle at 40% 80%rgba(1202192550.3) 0%transparent 50%)',
+              'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
             ]
           }}
-          transition={{ duration: 20, repeat: Infinity }}
+          transition={{ duration: 20repeat: Infinity }}
         />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -181,20 +182,20 @@ const UltimateContentShowcase2027 = () => {
           </h1>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Experience the future of technology with our revolutionary AI innovations, 
-            automation mastery, and next-generation solutions that are transforming 
+            Experience the future of technology with our revolutionary AI innovations
+            automation masteryand next-generation solutions that are transforming 
             businesses worldwide.
           </p>
         </motion.div>
 
         {/* Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <div key={index} className="text-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
               <stat.icon className="w-8 h-8 text-purple-400 mx-auto mb-3" />
               <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
@@ -205,13 +206,13 @@ const UltimateContentShowcase2027 = () => {
 
         {/* Content Tabs */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {Object.entries(contentSections).map(([key, section]) => (
+            {Object.entries(contentSections).map(([keysection]) => (
               <button
                 key={key}
                 onClick={() => setActiveTab(key)}
@@ -230,9 +231,9 @@ const UltimateContentShowcase2027 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0x: 20 }}
+              animate={{ opacity: 1x: 0 }}
+              exit={{ opacity: 0x: -20 }}
               transition={{ duration: 0.5 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >
@@ -245,12 +246,12 @@ const UltimateContentShowcase2027 = () => {
               </div>
 
               <div className="grid md:grid-cols-3 gap-6">
-                {contentSections[activeTab].content.map((item, index) => (
+                {contentSections[activeTab].content.map((itemindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    initial={{ opacity: 0y: 20 }}
+                    animate={{ opacity: 1y: 0 }}
+                    transition={{ duration: 0.5delay: index * 0.1 }}
                     className="p-6 rounded-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 hover:border-white/40 transition-all duration-300 group"
                   >
                     <h4 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
@@ -259,7 +260,7 @@ const UltimateContentShowcase2027 = () => {
                     <p className="text-gray-300 mb-4 leading-relaxed">{item.description}</p>
                     
                     <ul className="space-y-2 mb-4">
-                      {item.features.map((feature, featureIndex) => (
+                      {item.features.map((featureIndex) => (
                         <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-400">
                           <ChevronRight className="w-4 h-4 text-purple-400" />
                           {feature}
@@ -280,23 +281,23 @@ const UltimateContentShowcase2027 = () => {
 
         {/* Testimonials */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-center text-white mb-12">What Our Clients Say</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonialindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.5delay: 0.8 + index * 0.1 }}
                 className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300"
               >
                 <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map((_i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -312,9 +313,9 @@ const UltimateContentShowcase2027 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 1.0 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 border border-purple-500/30">

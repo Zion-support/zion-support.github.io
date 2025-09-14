@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
 
 interface PortfolioItem {
   title: string;
@@ -19,7 +19,7 @@ export function PortfolioList({ projects }: PortfolioListProps) {
       </CardHeader>
       <CardContent>
         <ul className="space-y-2 list-disc ml-5">
-          {projects.map((p, i) => (
+          {projects.map((pi) => (
             <li key={i}>
               <span className="font-medium">{p.title}:</span> {p.description}
             </li>

@@ -1,15 +1,15 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Grid3X3, ListFilter } from "lucide-react";
+import { Grid3X3ListFilter } from "lucide-react";
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { FilterSidebar } from "@/components/search/FilterSidebar";
 import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
 import { ProductListingCard } from "@/components/ProductListingCard";
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
+import { MARKETPLACE_LISTINGSgenerateSearchSuggestionsgenerateFilterOptions } from "@/data/marketplaceData";
 import { toast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import { SearchSuggestion } from "@/types/search";
@@ -17,11 +17,11 @@ import { AppLayout } from "@/layout/AppLayout";
 
 export default function Marketplace() {
   const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+  const [searchQuerysetSearchQuery] = useState("");
+  const [selectedProductTypesetSelectedProductTypes] = useState<string[]>([]);
+  const [selectedLocationsetSelectedLocations] = useState<string[]>([]);
+  const [selectedAvailabilitysetSelectedAvailability] = useState<string[]>([]);
+  const [selectedRatingsetSelectedRating] = useState<number | null>(null);
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions();
   const filterOptions = generateFilterOptions();
@@ -58,22 +58,22 @@ export default function Marketplace() {
     return true;
   });
   
-  const handleFilterChange = (filterType: string, value: string) => {
+  const handleFilterChange = (filterType: stringvalue: string) => {
     console.log(`Filter changed: ${filterType} = ${value}`);
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev => 
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prevalue]
         );
         break;
       case 'location':
         setSelectedLocations(prev => 
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prevalue]
         );
         break;
       case 'availability':
         setSelectedAvailability(prev => 
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prevalue]
         );
         break;
     }
@@ -98,7 +98,7 @@ export default function Marketplace() {
       });
       
       // Navigate to the quote request page with the listing information
-      navigate("/request-quote", {
+      navigate("/request-quote"{
         state: { 
           serviceType: listing.category,
           specificItem: {

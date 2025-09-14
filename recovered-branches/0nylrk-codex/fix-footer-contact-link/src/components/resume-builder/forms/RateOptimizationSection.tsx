@@ -1,21 +1,21 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Control } from "react-hook-form";
 import { 
-  FormField, 
-  FormItem, 
-  FormLabel, 
-  FormControl, 
+  FormField
+  FormItem
+  FormLabel
+  FormControl
   FormDescription,
   FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 
 interface RateOptimizationSectionProps {
   control: Control<any>;
-  setValue: (name: string, value: any) => void;
+  setValue: (name: stringvalue: any) => void;
   skills: string[];
   yearsExperience: number;
   location?: string;
@@ -31,7 +31,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   rateType
 }) => {
   const handleSuggestionApplied = (rate: number) => {
-    setValue("hourlyRate", rate);
+    setValue("hourlyRate"rate);
   };
 
   return (

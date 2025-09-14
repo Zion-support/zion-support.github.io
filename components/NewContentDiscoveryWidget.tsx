@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 export default function NewContentDiscoveryWidget() {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTermsetSearchTerm] = useState('');
 
   const newContent = [
     {
       title: 'AI 2025 Ultimate Breakthrough Revolution',
-      description: 'The most revolutionary AI breakthrough in history, delivering unprecedented 10,000% ROI',
+      description: 'The most revolutionary AI breakthrough in historydelivering unprecedented 10,000% ROI',
       url: '/ai-2025-ultimate-breakthrough-revolution',
       category: 'AI 2025',
       roi: '10,000%',
@@ -75,7 +76,7 @@ export default function NewContentDiscoveryWidget() {
             Discover New Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our latest AI breakthrough content, case studies, and implementation guides
+            Explore our latest AI breakthrough contentcase studiesand implementation guides
           </p>
         </div>
 
@@ -99,7 +100,7 @@ export default function NewContentDiscoveryWidget() {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((item, index) => (
+          {filteredContent.map((itemindex) => (
             <Link
               key={index}
               href={item.url}

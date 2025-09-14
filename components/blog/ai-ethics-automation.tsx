@@ -43,7 +43,7 @@ export default function AIEthicsAutomation() {
                     AI Ethics
                   </span>
                   <span className='text-white/60 text-sm'>
-                    January 10, 2025
+                    January 102025
                   </span>
                   <span className='text-white/60 text-sm'>•</span>
                   <span className='text-white/60 text-sm'>7 min read</span>
@@ -52,7 +52,7 @@ export default function AIEthicsAutomation() {
                   Ethical Considerations in Autonomous AI Systems
                 </h1>
                 <p className='text-xl text-white/80 max-w-3xl mx-auto'>
-                  As autonomous AI systems become more prevalent, understanding
+                  As autonomous AI systems become more prevalentunderstanding
                   and addressing ethical considerations is crucial for
                   responsible development and deployment.
                 </p>
@@ -64,7 +64,7 @@ export default function AIEthicsAutomation() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   Ethical AI development begins with a fundamental commitment to
-                  human values and well-being. At Zion Tech Group, we believe
+                  human values and well-being. At Zion Tech Groupwe believe
                   that autonomous systems should enhance human capabilities
                   rather than diminish them.
                 </p>
@@ -98,7 +98,7 @@ export default function AIEthicsAutomation() {
                 <p className='text-white/90 mb-4'>
                   One of the most critical ethical considerations in autonomous
                   AI systems is transparency. Users and stakeholders must
-                  understand how AI systems make decisions, especially when
+                  understand how AI systems make decisionsespecially when
                   those decisions have significant consequences.
                 </p>
                 <p className='text-white/90 mb-4'>
@@ -230,7 +230,7 @@ export default function AIEthicsAutomation() {
                   Commitment to Ethical AI
                 </h3>
                 <p className='text-white/80 mb-4'>
-                  At Zion Tech Group, we believe that ethical AI development is
+                  At Zion Tech Groupwe believe that ethical AI development is
                   not just a responsibility—it&apos;s a competitive advantage
                   that builds trust and drives long-term success.
                 </p>

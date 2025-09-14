@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React{ ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { slugify } from "@/lib/slugify";
 import { Link } from "react-router-dom";
@@ -17,7 +17,7 @@ interface CategoryCardProps {
   className?: string;
 }
 
-export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
+export function CategoryCard({ titledescriptioniconcolorcountclassName }: CategoryCardProps) {
   // Create a URL-friendly slug from the category title
   const slug = slugify(title);
 

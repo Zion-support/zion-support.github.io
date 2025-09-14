@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, Star, TrendingUp, Zap, Brain, Atom, 
-  Rocket, Shield, Target, CheckCircle, ExternalLink,
-  Search, Filter, Grid, List, ChevronDown
+  ArrowRightStarTrendingUpZapBrainAtom
+  RocketShieldTargetCheckCircleExternalLink,
+  SearchFilterGridListChevronDown
 } from 'lucide-react';
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
 
 const Enhanced2027ServicesShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState('name');
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [viewModesetViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBysetSortBy] = useState('name');
 
   // Combine all 2027 services
   const all2027Services = [
@@ -24,7 +25,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
   ];
 
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(all2027Services.map(service => service.category)))];
+  const categories = ['all'...Array.from(new Set(all2027Services.map(service => service.category)))];
 
   // Filter and sort services
   const filteredServices = all2027Services
@@ -35,14 +36,14 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
     })
-    .sort((a, b) => {
+    .sort((ab) => {
       switch (sortBy) {
         case 'name':
           return a.name.localeCompare(b.name);
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          return parseFloat(a.price.replace(/[^0-9.]/g'')) - parseFloat(b.price.replace(/[^0-9.]/g''));
         case 'roi':
-          return parseFloat(a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b.roi.replace(/[^0-9.]/g, ''));
+          return parseFloat(a.roi.replace(/[^0-9.]/g'')) - parseFloat(b.roi.replace(/[^0-9.]/g''));
         default:
           return 0;
       }
@@ -90,8 +91,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-5xl font-bold mb-6">
@@ -100,8 +101,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover our cutting-edge portfolio of 500+ innovative services spanning AI consciousness, 
-            quantum computing, synthetic biology, and beyond. Each service delivers measurable ROI 
+            Discover our cutting-edge portfolio of 500+ innovative services spanning AI consciousness
+            quantum computingsynthetic biologyand beyond. Each service delivers measurable ROI 
             and transforms your business into a future-ready powerhouse.
           </p>
         </motion.div>
@@ -109,9 +110,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         {/* Search and Filters */}
         <motion.div 
           className="mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
         >
           <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6">
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -121,7 +122,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
                     type="text"
-                    placeholder="Search services, features, or use cases..."
+                    placeholder="Search servicesfeaturesor use cases..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50"
@@ -193,7 +194,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           className="mb-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6delay: 0.3 }}
         >
           <p className="text-gray-400">
             Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
@@ -206,18 +207,18 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           {viewMode === 'grid' ? (
             <motion.div
               key="grid"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0scale: 0.95 }}
+              animate={{ opacity: 1scale: 1 }}
+              exit={{ opacity: 0scale: 0.95 }}
               transition={{ duration: 0.3 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {filteredServices.map((service, index) => (
+              {filteredServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="group"
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2">
@@ -244,7 +245,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
-                        {service.features.slice(0, 3).map((feature, idx) => (
+                        {service.features.slice(03).map((featureidx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                             {feature}
@@ -255,7 +256,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-6">
-                      {service.tags.slice(0, 3).map((tag, idx) => (
+                      {service.tags.slice(03).map((tagidx) => (
                         <span
                           key={idx}
                           className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
@@ -280,18 +281,18 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           ) : (
             <motion.div
               key="list"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0scale: 0.95 }}
+              animate={{ opacity: 1scale: 1 }}
+              exit={{ opacity: 0scale: 0.95 }}
               transition={{ duration: 0.3 }}
               className="space-y-4"
             >
-              {filteredServices.map((service, index) => (
+              {filteredServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0x: -20 }}
+                  whileInView={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="group"
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">
@@ -316,7 +317,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           {service.description}
                         </p>
                         <div className="flex flex-wrap gap-2 mb-3">
-                          {service.tags.slice(0, 4).map((tag, idx) => (
+                          {service.tags.slice(04).map((tagidx) => (
                             <span
                               key={idx}
                               className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
@@ -377,9 +378,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         {/* CTA Section */}
         <motion.div 
           className="mt-20 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.8 }}
         >
           <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">

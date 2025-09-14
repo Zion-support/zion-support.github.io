@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+"use client";
+import React{ useState } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, ExternalLink, Star, TrendingUp, 
-  Users, Zap, Shield, Clock, Check, Brain,
-  Rocket, Dna, DollarSign, Lock, Globe
+  ArrowRightExternalLinkStarTrendingUp
+  UsersZapShieldClockCheckBrain,
+  RocketDnaDollarSignLockGlobe
 } from 'lucide-react';
 
 interface UltraAdvancedServiceCardProps {
@@ -50,8 +51,8 @@ interface UltraAdvancedServiceCardProps {
 }
 
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isExpandedsetIsExpanded] = useState(false);
+  const [isHoveredsetIsHovered] = useState(false);
 
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI') || category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
@@ -65,9 +66,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
   };
 
   const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0y: 20 },
     visible: { 
-      opacity: 1, 
+      opacity: 1
       y: 0,
       transition: {
         duration: 0.6,
@@ -84,9 +85,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
   };
 
   const contentVariants = {
-    hidden: { opacity: 0, height: 0 },
+    hidden: { opacity: 0height: 0 },
     visible: { 
-      opacity: 1, 
+      opacity: 1
       height: "auto",
       transition: {
         duration: 0.5,
@@ -111,7 +112,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           isHovered ? 'opacity-100' : 'opacity-50'
         }`}
         style={{
-          background: `linear-gradient(135deg, ${service.color})`,
+          background: `linear-gradient(135deg${service.color})`,
           transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
       />
       
@@ -140,8 +141,8 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             {service.popular && (
               <motion.div
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
-                animate={{ scale: [1, 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
+                animate={{ scale: [1.1] }}
+                transition={{ duration: 2repeat: Infinity }}
               >
                 POPULAR
               </motion.div>
@@ -215,7 +216,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 <div>
                   <h4 className="text-white font-semibold mb-2">Key Features</h4>
                   <div className="grid grid-cols-1 gap-2">
-                    {service.features.slice(0, 6).map((feature, index) => (
+                    {service.features.slice(06).map((featureindex) => (
                       <div key={index} className="flex items-center space-x-2 text-sm">
                         <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
@@ -258,7 +259,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              onClick={() => window.open(service.link, '_blank')}
+              onClick={() => window.open(service.link'_blank')}
             >
               <span>Learn More</span>
               <ExternalLink className="w-4 h-4" />
