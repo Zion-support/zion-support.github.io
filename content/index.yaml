@@ -620,6 +620,57 @@ content_index:
       - "Implemented interactive content discovery and filtering"
 
   new_content_january_2025:
+    - id: "advanced-automation-mastery-ultimate-success-guide"
+      type: "blog"
+      title: "AI 2025: Advanced Automation Mastery - Ultimate Success Guide"
+      file_path: "/content/blog/ai-2025-advanced-automation-mastery-ultimate-success-guide.md"
+      url: "/blog/ai-2025-advanced-automation-mastery-ultimate-success-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Automation", "Advanced Mastery", "ROI", "Business Transformation", "2025", "Ultimate Guide"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        efficiency: "85%"
+        savings: "$2.8M"
+        accuracy: "99.8%"
+      reading_time: "25 min read"
+      
+    - id: "ai-automation-fortune-500-success-story-2025"
+      type: "case-study"
+      title: "AI Automation Success Story: Fortune 500 Company Achieves 1,200% ROI in 12 Months"
+      file_path: "/content/case-studies/ai-automation-fortune-500-success-story-2025.md"
+      url: "/case-studies/ai-automation-fortune-500-success-story-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "AI Automation", "ROI", "Success Story", "Manufacturing", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,200%"
+        savings: "$5.2M"
+        automation: "95%"
+        satisfaction: "98%"
+      reading_time: "15 min read"
+      
+    - id: "ai-implementation-ultimate-success-framework-2025"
+      type: "resource"
+      title: "AI Implementation Ultimate Success Framework 2025: Complete Guide to 500%+ ROI"
+      file_path: "/content/resources/ai-implementation-ultimate-success-framework-2025.md"
+      url: "/resources/ai-implementation-ultimate-success-framework-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Framework", "2025", "Ultimate Success"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%+"
+        efficiency: "85%"
+        savings: "$2.8M"
+        success: "94%"
+      reading_time: "30 min read"
+      
     - id: "ultimate-business-transformation-revolution"
       type: "blog"
       title: "AI 2025: The Ultimate Business Transformation Revolution - Complete Guide"

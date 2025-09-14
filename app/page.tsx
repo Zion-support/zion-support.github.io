@@ -39,6 +39,8 @@ import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026
 // Import new 2025 revolutionary content components
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
@@ -69,6 +71,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Revolutionary Content 2025 Banner - NEW FEATURED */}
+        <RevolutionaryContent2025Banner />
+        
+        {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
+        <UltimateContentShowcase2025 />
+        
         {/* AI 2030 Content Showcase Banner - FEATURED */}
         <AI2030ContentShowcaseBanner />
         
