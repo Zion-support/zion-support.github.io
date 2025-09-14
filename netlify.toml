@@ -8,8 +8,8 @@
   # Functions directory
   functions = "netlify/functions"
   
-  # Disable framework auto-detection
-  edge_functions = false
+  # Edge functions directory
+  edge_functions = "edge-functions"
 
 [build.environment]
   # Node.js version
