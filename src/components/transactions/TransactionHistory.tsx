@@ -169,7 +169,7 @@ export function TransactionHistory() {
         <div className="text-center text-zion-slate-light">
           <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />
           <h3 className="font-bold text-xl text-white mb-2">Failed to load transactions</h3>
-          <p className="mb-4">{error.message}</p>
+          <p className="mb-4">{error instanceof Error ? error.message : "An unknown error occurred"}</p>
           <Button onClick={() => refetch()} variant="outline">
             <RefreshCcw className="mr-2 h-4 w-4" />
             Try Again
