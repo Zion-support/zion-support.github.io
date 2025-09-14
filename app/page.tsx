@@ -107,6 +107,10 @@ import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026
 import NewContent2025UltimateBreakthroughBanner from './components/NewContent2025UltimateBreakthroughBanner';
 import UltimateBreakthroughContentShowcase2025 from './components/UltimateBreakthroughContentShowcase2025';
 
+// Import new AI Content Revolution promotional components
+import AIContentRevolution2025Banner from '../components/AIContentRevolution2025Banner';
+import AIContentRevolutionShowcase2025 from '../components/AIContentRevolutionShowcase2025';
+
 // Import new Ultimate Enterprise Transformation components
 import AI2025UltimateEnterpriseTransformationBanner from '../components/AI2025UltimateEnterpriseTransformationBanner';
 import UltimateEnterpriseTransformationShowcase from '../components/UltimateEnterpriseTransformationShowcase';
@@ -247,6 +251,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI CONTENT REVOLUTION 2025 BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
+        <AIContentRevolution2025Banner />
+        
         {/* ULTIMATE AUTONOMOUS AI REVOLUTION BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
         <UltimateAutonomousAIRevolutionBanner />
         
@@ -261,6 +268,9 @@ export default function HomePage() {
         
         {/* AI 2026 CONTENT SHOWCASE - NEWEST FEATURED */}
         <AI2026ContentShowcase />
+        
+        {/* AI CONTENT REVOLUTION 2025 SHOWCASE - NEWEST ULTIMATE FEATURED */}
+        <AIContentRevolutionShowcase2025 />
         
         {/* NEURAL SUPERINTELLIGENCE 2025-2026 - TOP PRIORITY FEATURED */}
         <NeuralSuperintelligence2025Banner />
