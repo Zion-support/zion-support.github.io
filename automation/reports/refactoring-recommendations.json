@@ -188,6 +188,26 @@
       ]
     },
     {
+      "workflow": "release.yml",
+      "status": "active",
+      "complexityScore": 30,
+      "complexityLevel": "medium",
+      "metrics": {
+        "totalLines": 140,
+        "jobCount": 0,
+        "stepCount": 12,
+        "conditionalCount": 0,
+        "matrixCount": 0,
+        "dependencyCount": 0,
+        "environmentCount": 0,
+        "secretCount": 3,
+        "actionCount": 6
+      },
+      "refactoringStrategy": [
+        "Extract common functionality to reusable workflows"
+      ]
+    },
+    {
       "workflow": "seo-audit.yml",
       "status": "active",
       "complexityScore": 30,
