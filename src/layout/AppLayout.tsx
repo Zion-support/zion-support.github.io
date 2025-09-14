@@ -9,7 +9,7 @@ import { useSafePathname } from '../hooks/useSafePathname';
 import { logErrorToProduction } from '../utils/productionLogger';
 import EmailVerificationBanner from '../components/EmailVerificationBanner'; // Assuming path
 import { AppHeader } from "./AppHeader";
-import { Footer } from "../components/Footer";
+import Footer from "../components/Footer";
 import { SkipLink } from "../components/SkipLink";
 import { ErrorBoundary } from 'react-error-boundary';
 import { Toaster } from 'sonner';
