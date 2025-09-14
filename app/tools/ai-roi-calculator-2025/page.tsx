@@ -1,5 +1,5 @@
-'use client';
-
+"use client";
+"use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
