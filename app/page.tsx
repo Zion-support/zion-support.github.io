@@ -84,8 +84,6 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Revolutionary AI Content 2026 Banner - NEW FEATURED */}
         <RevolutionaryAIContent2026Banner />
         
@@ -94,32 +92,9 @@ export default function HomePage() {
         
         {/* New Content 2026 Ultimate Showcase - NEW FEATURED */}
         <NewContent2026UltimateShowcase />
-=======
-        {/* Revolutionary Content 2025 Banner - NEW */}
-        <RevolutionaryContentBanner2025 />
         
-        {/* Ultimate Content Showcase 2025 - NEW */}
-        <UltimateContentShowcase2025 />
-        
-        {/* Quantum AI Revolution Banner - NEW */}
-        <QuantumAIRevolutionBanner2025 />
->>>>>>> cursor/create-and-deploy-new-content-211c
-=======
         {/* New Content 2025 Ultimate Showcase */}
         <NewContent2025UltimateShowcase />
-        
-        {/* AI 2026 Ultimate Showcase Banner */}
-        <AI2026UltimateShowcaseBanner />
-        
-        {/* AI 2026 Quantum Revolution Banner */}
-        <AI2026QuantumRevolutionBanner />
-        
-        {/* AI 2026 Autonomous Systems Banner */}
-        <AI2026AutonomousSystemsBanner />
->>>>>>> origin/main
-        
-        {/* New Content 2025 Ultimate Banner */}
-        <NewContent2025UltimateBanner />
         
         {/* AI 2026 Ultimate Showcase Banner */}
         <AI2026UltimateShowcaseBanner />
@@ -141,9 +116,6 @@ export default function HomePage() {
         
         {/* New Content 2025 Showcase Banner */}
         <NewContent2025PromotionBanner />
-        
-        {/* Revolutionary Content 2025 Banner */}
-        <RevolutionaryContent2025Banner />
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -250,20 +222,14 @@ export default function HomePage() {
         <UltimateContentShowcase2025 />
         
         {/* Content Promotion Banners */}
-<<<<<<< HEAD
         <NewContentShowcase2025 />
-=======
         <NewContent2026PromotionBanner />
-        <QuantumAI2026BreakthroughBanner />
         <NewContentShowcase2026 />
         <QuantumAIContentShowcase2026 />
-        <AI2026ContentShowcaseBanner />
-        <RevolutionaryAI2026Banner />
->>>>>>> origin/main
+        <RevolutionaryAI2026ContentBanner />
         <UltimateContentShowcase2025 />
         <RevolutionaryContent2026Banner />
         <UltimateContentShowcase2026 />
-        <QuantumAIContentShowcase2026 />
         <NewContent2025PromotionBanner />
         <LatestContentShowcase2025 />
         <EnhancedContentPromotionBanner2026 />

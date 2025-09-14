@@ -169,25 +169,11 @@ content_index:
       url: "/blog/ai-2025-enterprise-data-revolution-ultimate-guide"
       status: "published"
       created: "2025-01-17"
-<<<<<<< HEAD
-      tags: ["Data Revolution", "Enterprise AI", "ROI Guide", "Fortune 500", "2025"]
-=======
-      tags: ["Data Intelligence", "ROI", "Enterprise", "AI Strategy", "Data Transformation"]
->>>>>>> origin/main
+      tags: ["Data Intelligence", "ROI", "Enterprise", "AI Strategy", "Data Transformation", "Fortune 500", "2025"]
       featured: true
       is_new: true
       metrics:
         roi: "600%"
-<<<<<<< HEAD
-        savings: "$25-100M"
-        accuracy: "99.7%"
-        satisfaction: "98%"
-      reading_time: "18 min read"
-      
-    - id: "fortune-500-ai-transformation-2025-ultimate-success"
-      type: "case-study"
-      title: "Fortune 500 AI Transformation 2025: $2.8B Annual Savings in 8 Months"
-=======
         savings: "$2.5B"
         accuracy: "99.7%"
         speed: "89% faster"
@@ -196,7 +182,6 @@ content_index:
     - id: "fortune-500-ai-transformation-2025-ultimate-success"
       type: "case-study"
       title: "Fortune 500 AI Transformation 2025: $3.2B Company Achieves 750% ROI in 15 Months"
->>>>>>> origin/main
       file_path: "/content/case-studies/fortune-500-ai-transformation-2025-ultimate-success.md"
       url: "/case-studies/fortune-500-ai-transformation-2025-ultimate-success"
       status: "published"
