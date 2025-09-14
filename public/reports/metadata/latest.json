@@ -35115,6 +35115,16 @@
       }
     },
     {
+      "route": "/reports/innovations/insight-2025-08-18-0340",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Checklist: Agent Ops",
+        "description": "Checklist: Agent Ops — auto-suggested description"
+      }
+    },
+    {
       "route": "/reports/innovations/insight-2025-08-18T03-11",
       "missing": [
         "og:image"
@@ -65074,6 +65084,16 @@
       "suggestion": {
         "title": "Autonomous Performance Tuning Guide — AI Service Design (2025-08-18 03:30 UTC)",
         "description": "Autonomous Performance Tuning Guide — AI Service Design (2025-08-18 03:30 UTC) — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-18-0340",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Performance Tuning Guide — Evaluation & Safety (2025-08-18 03:40 UTC)",
+        "description": "Autonomous Performance Tuning Guide — Evaluation & Safety (2025-08-18 03:40 UTC) — auto-suggested description"
       }
     },
     {
