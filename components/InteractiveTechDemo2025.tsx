@@ -1,375 +1,461 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Users, 
+  Play, 
+  Pause, 
+  RotateCcw, 
+  Settings, 
   Zap, 
-  Shield, 
-  Brain,
-  Globe,
-  Target,
-  Award,
-  CheckCircle,
-  PlayCircle,
-  BookOpen,
-  Lightbulb,
-  Code,
-  Cpu,
+  Brain, 
+  Cpu, 
   Database,
-  Network,
-  Monitor,
-  Smartphone,
   Cloud,
-  Lock,
-  Settings,
-  BarChart3,
-  PieChart,
-  Activity
+  Smartphone,
+  Laptop,
+  Server,
+  Network,
+  Shield,
+  Target,
+  TrendingUp,
+  Users,
+  Globe,
+  Code,
+  Atom,
+  Rocket,
+  Star,
+  CheckCircle,
+  AlertCircle,
+  Info,
+  ArrowRight,
+  Download,
+  Share2,
+  Heart,
+  MessageCircle,
+  BookOpen,
+  Lightbulb
 } from 'lucide-react';
 
 const InteractiveTechDemo2025 = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeDemo, setActiveDemo] = useState('ai-dashboard');
+  const [activeDemo, setActiveDemo] = useState('ai-consciousness');
   const [isPlaying, setIsPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [selectedFeature, setSelectedFeature] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
+  useEffect(() => {
+    let interval;
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setProgress(prev => {
+          if (prev >= 100) {
+            setIsPlaying(false);
+            return 100;
+          }
+          return prev + 2;
+        });
+      }, 100);
+    }
+    return () => clearInterval(interval);
+  }, [isPlaying]);
+
   const demos = {
-    'ai-dashboard': {
-      title: 'AI-Powered Analytics Dashboard',
-      description: 'Experience real-time data visualization and AI-driven insights',
-      icon: BarChart3,
-      color: 'from-purple-600 to-blue-600',
+    'ai-consciousness': {
+      title: 'AI Consciousness Evolution',
+      description: 'Experience the breakthrough in synthetic consciousness with real-time neural pattern analysis',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
       features: [
-        { name: 'Real-time Analytics', status: 'active', value: '99.8%' },
-        { name: 'AI Predictions', status: 'processing', value: '85%' },
-        { name: 'Data Processing', status: 'active', value: '2.3M records' },
-        { name: 'System Health', status: 'optimal', value: '100%' }
+        { name: 'Neural Pattern Recognition', value: 99.7, unit: '%' },
+        { name: 'Consciousness Index', value: 8.9, unit: '/10' },
+        { name: 'Learning Rate', value: 0.95, unit: 'α' },
+        { name: 'Memory Retention', value: 99.9, unit: '%' }
       ],
-      metrics: [
-        { label: 'Revenue Growth', value: '+45%', trend: 'up' },
-        { label: 'User Engagement', value: '+78%', trend: 'up' },
-        { label: 'Conversion Rate', value: '+32%', trend: 'up' },
-        { label: 'Error Rate', value: '-89%', trend: 'down' }
-      ]
+      visualization: 'neural-network'
     },
-    'automation-workflow': {
-      title: 'Intelligent Automation Workflow',
-      description: 'Watch AI automate complex business processes in real-time',
-      icon: Zap,
-      color: 'from-green-600 to-teal-600',
+    'quantum-computing': {
+      title: 'Quantum Neural Fusion',
+      description: 'Witness the integration of quantum computing with neural networks for unprecedented processing power',
+      icon: Atom,
+      color: 'from-indigo-500 to-purple-500',
       features: [
-        { name: 'Process Automation', status: 'active', value: '95%' },
-        { name: 'Error Detection', status: 'monitoring', value: '0 errors' },
-        { name: 'Time Saved', status: 'active', value: '2,400 hrs' },
-        { name: 'Efficiency Gain', status: 'optimal', value: '+300%' }
+        { name: 'Qubit Coherence', value: 99.8, unit: '%' },
+        { name: 'Processing Speed', value: 1000, unit: 'x' },
+        { name: 'Error Rate', value: 0.001, unit: '%' },
+        { name: 'Quantum Volume', value: 64, unit: 'QV' }
       ],
-      metrics: [
-        { label: 'Tasks Automated', value: '1,250', trend: 'up' },
-        { label: 'Time Saved', value: '2,400 hrs', trend: 'up' },
-        { label: 'Cost Reduction', value: '$180K', trend: 'up' },
-        { label: 'Accuracy Rate', value: '99.7%', trend: 'up' }
-      ]
+      visualization: 'quantum-circuit'
     },
-    'security-monitor': {
-      title: 'Advanced Security Monitoring',
-      description: 'See how AI detects and prevents threats in real-time',
-      icon: Shield,
-      color: 'from-red-600 to-orange-600',
+    'neural-interface': {
+      title: 'Brain-Computer Interface',
+      description: 'Direct neural communication enabling thought-controlled computing with 99.9% accuracy',
+      icon: Cpu,
+      color: 'from-green-500 to-teal-500',
       features: [
-        { name: 'Threat Detection', status: 'active', value: '99.9%' },
-        { name: 'Response Time', status: 'optimal', value: '< 2s' },
-        { name: 'False Positives', status: 'low', value: '0.1%' },
-        { name: 'System Protection', status: 'active', value: '100%' }
+        { name: 'Signal Accuracy', value: 99.9, unit: '%' },
+        { name: 'Response Time', value: 12, unit: 'ms' },
+        { name: 'Bandwidth', value: 1.2, unit: 'Gbps' },
+        { name: 'Neural Channels', value: 1024, unit: 'ch' }
       ],
-      metrics: [
-        { label: 'Threats Blocked', value: '15,420', trend: 'up' },
-        { label: 'Response Time', value: '< 2s', trend: 'down' },
-        { label: 'System Uptime', value: '99.99%', trend: 'up' },
-        { label: 'Compliance Score', value: '100%', trend: 'up' }
-      ]
+      visualization: 'neural-signals'
+    },
+    'edge-ai': {
+      title: 'Edge AI Processing',
+      description: 'Distributed AI processing at the edge for real-time decision making and ultra-low latency',
+      icon: Network,
+      color: 'from-blue-500 to-cyan-500',
+      features: [
+        { name: 'Latency Reduction', value: 95, unit: '%' },
+        { name: 'Processing Nodes', value: 10000, unit: '+' },
+        { name: 'Data Throughput', value: 50, unit: 'TB/s' },
+        { name: 'Energy Efficiency', value: 85, unit: '%' }
+      ],
+      visualization: 'edge-network'
     }
   };
 
-  const techStack = [
-    { name: 'React', icon: Code, color: 'text-blue-500' },
-    { name: 'Node.js', icon: Cpu, color: 'text-green-500' },
-    { name: 'MongoDB', icon: Database, color: 'text-green-600' },
-    { name: 'AWS', icon: Cloud, color: 'text-orange-500' },
-    { name: 'Docker', icon: Settings, color: 'text-blue-600' },
-    { name: 'Kubernetes', icon: Network, color: 'text-blue-700' }
-  ];
+  const currentDemo = demos[activeDemo];
 
-  const devices = [
-    { name: 'Desktop', icon: Monitor, active: true },
-    { name: 'Mobile', icon: Smartphone, active: false },
-    { name: 'Tablet', icon: Monitor, active: false }
-  ];
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+    if (progress >= 100) {
+      setProgress(0);
+    }
+  };
+
+  const handleReset = () => {
+    setIsPlaying(false);
+    setProgress(0);
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
 
   return (
-    <div className="bg-gradient-to-br from-slate-50 via-white to-purple-50 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Interactive <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Tech Demos</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Experience our cutting-edge technology solutions in action. Interact with live demos 
-            and see how our AI-powered tools can transform your business operations.
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
+            <Play className="w-5 h-5 text-blue-400 mr-2" />
+            <span className="text-sm font-medium text-white">Interactive Technology Demo 2025</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
+              Experience
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              The Future
+            </span>
+          </h1>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Interact with cutting-edge AI technologies, quantum computing systems, and neural interfaces 
+            in real-time. See the future of technology in action.
           </p>
         </motion.div>
 
         {/* Demo Selector */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center mb-12"
+          className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {Object.entries(demos).map(([key, demo]) => (
-            <button
-              key={key}
-              onClick={() => setActiveDemo(key)}
-              className={`px-6 py-3 m-2 rounded-full font-medium transition-all duration-300 ${
-                activeDemo === key
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-600 hover:bg-gray-50 shadow-md'
-              }`}
-            >
-              <demo.icon className="w-5 h-5 inline mr-2" />
-              {demo.title}
-            </button>
-          ))}
+          {Object.entries(demos).map(([key, demo]) => {
+            const Icon = demo.icon;
+            return (
+              <button
+                key={key}
+                onClick={() => setActiveDemo(key)}
+                className={`flex items-center px-6 py-3 rounded-full transition-all duration-300 ${
+                  activeDemo === key
+                    ? `bg-gradient-to-r ${demo.color} text-white shadow-lg scale-105`
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                }`}
+              >
+                <Icon className="w-5 h-5 mr-2" />
+                <span className="font-medium">{demo.title}</span>
+              </button>
+            );
+          })}
         </motion.div>
 
-        {/* Demo Container */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          {/* Demo Visual */}
-          <motion.div
-            key={activeDemo}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="relative"
-          >
-            {/* Demo Screen */}
-            <div className="bg-gray-900 rounded-2xl p-6 shadow-2xl">
-              {/* Screen Header */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="flex space-x-2">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  </div>
-                  <div className="text-white text-sm font-medium">
-                    {demos[activeDemo].title}
-                  </div>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-green-400 text-xs">LIVE</span>
-                </div>
-              </div>
-
-              {/* Demo Content */}
-              <div className="bg-white rounded-lg p-6 min-h-[400px]">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {demos[activeDemo].title}
-                  </h3>
-                  <button
-                    onClick={() => setIsPlaying(!isPlaying)}
-                    className="flex items-center space-x-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-                  >
-                    <PlayCircle className="w-4 h-4" />
-                    <span>{isPlaying ? 'Pause' : 'Play'} Demo</span>
-                  </button>
-                </div>
-
-                {/* Features Status */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  {demos[activeDemo].features.map((feature, index) => (
-                    <div key={index} className="p-3 bg-gray-50 rounded-lg">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-medium text-gray-700">
-                          {feature.name}
-                        </span>
-                        <div className={`w-2 h-2 rounded-full ${
-                          feature.status === 'active' ? 'bg-green-500' :
-                          feature.status === 'processing' ? 'bg-yellow-500' :
-                          feature.status === 'optimal' ? 'bg-blue-500' : 'bg-gray-400'
-                        }`}></div>
-                      </div>
-                      <div className="text-lg font-bold text-gray-900">
-                        {feature.value}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Metrics */}
-                <div className="space-y-3">
-                  {demos[activeDemo].metrics.map((metric, index) => (
-                    <div key={index} className="flex items-center justify-between p-3 bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg">
-                      <span className="text-sm text-gray-600">{metric.label}</span>
-                      <div className="flex items-center space-x-2">
-                        <span className="font-bold text-gray-900">{metric.value}</span>
-                        <TrendingUp className={`w-4 h-4 ${
-                          metric.trend === 'up' ? 'text-green-500' : 'text-red-500'
-                        }`} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Floating Elements */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
-            >
-              <Star className="w-4 h-4 text-white" />
-            </motion.div>
-          </motion.div>
-
-          {/* Demo Info */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="space-y-8"
-          >
-            {/* Demo Description */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {demos[activeDemo].title}
-              </h3>
-              <p className="text-gray-600 text-lg mb-6">
-                {demos[activeDemo].description}
-              </p>
-              <div className="flex items-center space-x-4">
-                <div className={`p-3 bg-gradient-to-r ${demos[activeDemo].color} rounded-lg`}>
-                  <demos[activeDemo].icon className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Live Demo</div>
-                  <div className="text-sm text-gray-600">Interactive experience</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Tech Stack */}
-            <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">Technology Stack</h4>
-              <div className="grid grid-cols-3 gap-3">
-                {techStack.map((tech, index) => (
-                  <div key={index} className="flex items-center space-x-2 p-3 bg-white rounded-lg shadow-sm">
-                    <tech.icon className={`w-5 h-5 ${tech.color}`} />
-                    <span className="text-sm font-medium text-gray-700">{tech.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Device Support */}
-            <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">Device Support</h4>
-              <div className="flex space-x-4">
-                {devices.map((device, index) => (
-                  <div key={index} className={`flex items-center space-x-2 p-3 rounded-lg ${
-                    device.active ? 'bg-purple-100 border-2 border-purple-500' : 'bg-gray-100'
-                  }`}>
-                    <device.icon className={`w-5 h-5 ${device.active ? 'text-purple-600' : 'text-gray-400'}`} />
-                    <span className={`text-sm font-medium ${device.active ? 'text-purple-600' : 'text-gray-500'}`}>
-                      {device.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* CTA */}
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-6 text-white">
-              <h4 className="text-xl font-bold mb-2">Ready to Try It Yourself?</h4>
-              <p className="text-purple-100 mb-4">
-                Get hands-on experience with our interactive demos and see the power of our solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link
-                  href="/demo"
-                  className="inline-flex items-center px-6 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  <PlayCircle className="w-5 h-5 mr-2" />
-                  Start Demo
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-colors"
-                >
-                  <ArrowRight className="w-5 h-5 mr-2" />
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Additional Demos */}
+        {/* Main Demo Area */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12"
         >
-          <h3 className="text-3xl font-bold text-gray-900 mb-8">
-            More Interactive Experiences
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Activity className="w-8 h-8 text-white" />
+          {/* Demo Visualization */}
+          <motion.div variants={itemVariants} className="space-y-6">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${currentDemo.color} flex items-center justify-center mr-4`}>
+                    {React.createElement(currentDemo.icon, { className: "w-6 h-6 text-white" })}
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">{currentDemo.title}</h3>
+                    <p className="text-gray-300">{currentDemo.description}</p>
+                  </div>
+                </div>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-2">Live Analytics</h4>
-              <p className="text-gray-600 mb-4">Real-time data visualization and insights</p>
-              <Link href="/analytics-demo" className="text-green-600 hover:text-green-700 font-semibold">
-                Try Demo →
-              </Link>
+
+              {/* Demo Visualization */}
+              <div className="relative h-64 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl overflow-hidden border border-white/10">
+                {/* Animated Background */}
+                <div className="absolute inset-0 opacity-20">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.3),transparent_50%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(168,85,247,0.3),transparent_50%)]" />
+                </div>
+
+                {/* Demo Content Based on Type */}
+                {currentDemo.visualization === 'neural-network' && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="grid grid-cols-4 gap-4">
+                      {[...Array(16)].map((_, i) => (
+                        <motion.div
+                          key={i}
+                          animate={{
+                            scale: isPlaying ? [1, 1.2, 1] : 1,
+                            opacity: isPlaying ? [0.5, 1, 0.5] : 0.7
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: isPlaying ? Infinity : 0,
+                            delay: i * 0.1
+                          }}
+                          className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {currentDemo.visualization === 'quantum-circuit' && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="relative">
+                      {[...Array(8)].map((_, i) => (
+                        <motion.div
+                          key={i}
+                          animate={{
+                            rotate: isPlaying ? 360 : 0,
+                            scale: isPlaying ? [1, 1.1, 1] : 1
+                          }}
+                          transition={{
+                            duration: 3,
+                            repeat: isPlaying ? Infinity : 0,
+                            delay: i * 0.2
+                          }}
+                          className="absolute w-16 h-16 border-2 border-indigo-400 rounded-full"
+                          style={{
+                            left: `${Math.cos(i * Math.PI / 4) * 60}px`,
+                            top: `${Math.sin(i * Math.PI / 4) * 60}px`
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {currentDemo.visualization === 'neural-signals' && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-full h-32 relative">
+                      {[...Array(5)].map((_, i) => (
+                        <motion.div
+                          key={i}
+                          animate={{
+                            scaleY: isPlaying ? [1, 2, 1] : 1,
+                            opacity: isPlaying ? [0.5, 1, 0.5] : 0.7
+                          }}
+                          transition={{
+                            duration: 1.5,
+                            repeat: isPlaying ? Infinity : 0,
+                            delay: i * 0.2
+                          }}
+                          className="absolute w-1 bg-gradient-to-t from-green-500 to-teal-500 rounded-full"
+                          style={{
+                            left: `${20 + i * 20}%`,
+                            height: '100%'
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {currentDemo.visualization === 'edge-network' && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="grid grid-cols-3 gap-4">
+                      {[...Array(9)].map((_, i) => (
+                        <motion.div
+                          key={i}
+                          animate={{
+                            scale: isPlaying ? [1, 1.3, 1] : 1,
+                            opacity: isPlaying ? [0.6, 1, 0.6] : 0.8
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: isPlaying ? Infinity : 0,
+                            delay: i * 0.1
+                          }}
+                          className="w-6 h-6 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Progress Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10">
+                  <motion.div
+                    className={`h-full bg-gradient-to-r ${currentDemo.color}`}
+                    style={{ width: `${progress}%` }}
+                    transition={{ duration: 0.1 }}
+                  />
+                </div>
+              </div>
+
+              {/* Controls */}
+              <div className="flex items-center justify-center space-x-4 mt-6">
+                <button
+                  onClick={handlePlayPause}
+                  className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
+                >
+                  {isPlaying ? <Pause className="w-6 h-6 text-white" /> : <Play className="w-6 h-6 text-white ml-1" />}
+                </button>
+                <button
+                  onClick={handleReset}
+                  className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                >
+                  <RotateCcw className="w-6 h-6 text-white" />
+                </button>
+                <button className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                  <Settings className="w-6 h-6 text-white" />
+                </button>
+              </div>
             </div>
-            <div className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Brain className="w-8 h-8 text-white" />
+          </motion.div>
+
+          {/* Features and Metrics */}
+          <motion.div variants={itemVariants} className="space-y-6">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Real-Time Metrics</h3>
+              
+              <div className="space-y-4">
+                {currentDemo.features.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
+                    onClick={() => setSelectedFeature(feature)}
+                  >
+                    <div>
+                      <p className="text-white font-medium">{feature.name}</p>
+                      <div className="w-32 h-2 bg-white/10 rounded-full mt-2">
+                        <motion.div
+                          className="h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
+                          initial={{ width: 0 }}
+                          animate={{ width: `${(feature.value / 100) * 100}%` }}
+                          transition={{ duration: 1, delay: index * 0.2 }}
+                        />
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-2xl font-bold text-white">
+                        {feature.value}
+                        <span className="text-sm text-gray-400 ml-1">{feature.unit}</span>
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-2">AI Assistant</h4>
-              <p className="text-gray-600 mb-4">Chat with our intelligent AI assistant</p>
-              <Link href="/ai-demo" className="text-blue-600 hover:text-blue-700 font-semibold">
-                Try Demo →
-              </Link>
             </div>
-            <div className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
+
+            {/* Additional Info */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
+              <h3 className="text-xl font-bold text-white mb-4">Technology Highlights</h3>
+              <div className="space-y-3">
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Industry-leading performance metrics</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Real-time processing capabilities</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Advanced error correction</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Scalable architecture</span>
+                </div>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-2">Security Monitor</h4>
-              <p className="text-gray-600 mb-4">Watch threat detection in real-time</p>
-              <Link href="/security-demo" className="text-red-600 hover:text-red-700 font-semibold">
-                Try Demo →
-              </Link>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/20">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Experience the Future?
+            </h2>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Get hands-on experience with our cutting-edge technologies and see how they can 
+              transform your business operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Rocket className="w-5 h-5 mr-2" />
+                Start Your Demo
+              </button>
+              <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-medium hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
+                <Download className="w-5 h-5 mr-2" />
+                Download SDK
+              </button>
             </div>
           </div>
         </motion.div>

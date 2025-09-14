@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 export default function AI2026QuantumNeuralFusionBanner() {
   return (
-<<<<<<< HEAD
     <section className="py-16 px-4 bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
