@@ -299,6 +299,7 @@ export default function AIROICalculator() {
             </div>
           </div>
 
+<<<<<<< HEAD
           <div className="mt-8 text-center">
             <Link
               href="/contact"
