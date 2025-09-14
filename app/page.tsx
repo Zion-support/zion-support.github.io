@@ -24,8 +24,6 @@ const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
 // Import key promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
-import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
-import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
@@ -37,13 +35,21 @@ import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPro
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
-// Import new promotional components
-import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
+import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
+import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
+import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
 
-// Import new 2026 promotional components
-import RevolutionaryAI2026ContentBanner from '../components/RevolutionaryAI2026ContentBanner';
-import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
+// Import new 2025 breakthrough promotional components
+import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI2025BreakthroughPromotionBanner';
+import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
+import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
+
+// Import new data transformation promotional components
+import RevolutionaryDataTransformationBanner2025 from '../components/RevolutionaryDataTransformationBanner2025';
+import UltimateDataTransformationShowcase2025 from '../components/UltimateDataTransformationShowcase2025';
 
 // Import new 2025 quantum AI promotional components
 import QuantumAIRevolutionBanner2025 from '../components/QuantumAIRevolutionBanner2025';
@@ -75,23 +81,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Revolutionary Data Transformation Banner - NEW */}
+        <RevolutionaryDataTransformationBanner2025 />
+        
         {/* Quantum AI Revolution Banner - NEW */}
         <QuantumAIRevolutionBanner2025 />
         
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
         
-        {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
-        
-        {/* Revolutionary AI 2026 Content Banner */}
-        <RevolutionaryAI2026ContentBanner />
-        
-        {/* New Content 2026 Ultimate Showcase */}
-        <NewContent2026UltimateShowcase />
-        
-        {/* Quantum AI 2026 Breakthrough Banner */}
-        <QuantumAI2026BreakthroughBanner />
+        {/* AI 2025 Ultimate Breakthrough Banner - NEW */}
+        <AI2025UltimateBreakthroughBanner />
         
         {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
@@ -101,6 +101,9 @@ export default function HomePage() {
         
         {/* New Content 2025 Showcase Banner */}
         <NewContent2025ShowcaseBanner />
+        
+        {/* Revolutionary Content 2025 Banner */}
+        <RevolutionaryContent2025Banner />
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -200,6 +203,14 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* New 2025 Breakthrough Content Promotions */}
+        <QuantumAI2025BreakthroughPromotionBanner />
+        <AutonomousBusinessOperationsPromotionBanner />
+        <AI1000ROISuccessStoryBanner />
+        
+        {/* Ultimate Data Transformation Showcase - NEW */}
+        <UltimateDataTransformationShowcase2025 />
+        
         {/* Content Promotion Banners */}
         <NewContent2025UltimateShowcase />
         <NewContent2026PromotionBanner />
@@ -212,10 +223,12 @@ export default function HomePage() {
         <UltimateContentShowcase2025 />
         <RevolutionaryContent2026Banner />
         <FeaturedContentShowcase2026 />
+        <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
         <NewContentPromotionBanner />
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
+        <NewContent2026Showcase />
         <InteractiveContentDiscoveryWidget />
 
         {/* Advanced AI Components */}

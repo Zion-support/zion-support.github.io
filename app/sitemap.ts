@@ -66,6 +66,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/blog/ai-2025-ultimate-breakthrough-revolutionary-autonomous-systems`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/blog/ai-2025-smart-automation-breakthrough`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
@@ -85,6 +91,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/case-studies/financial-services-ai-revolution`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies/global-enterprise-ai-2025-autonomous-transformation-ultimate-success`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
