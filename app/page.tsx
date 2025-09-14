@@ -99,6 +99,9 @@ import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI202
 import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
 
+// Import new Enterprise AI Agents promotional component
+import EnterpriseAIAgentsRevolutionaryBanner from '../components/EnterpriseAIAgentsRevolutionaryBanner';
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Import new ultimate AI transformation promotional components
@@ -194,6 +197,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Enterprise AI Agents Revolutionary Banner - NEW FEATURED */}
+        <EnterpriseAIAgentsRevolutionaryBanner />
+        
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -1030,6 +1030,58 @@ content_index:
       - "Added auto-rotating content showcase with metrics"
       - "Implemented interactive content discovery and filtering"
 
+  enterprise_ai_agents_revolution_2025:
+    - id: "ai-2025-enterprise-ai-agents-revolutionary-breakthrough"
+      type: "blog"
+      title: "AI 2025: The Enterprise AI Agents Revolutionary Breakthrough - 1,800% ROI in 8 Months"
+      file_path: "/content/blog/ai-2025-enterprise-ai-agents-revolutionary-breakthrough.md"
+      url: "/blog/ai-2025-enterprise-ai-agents-revolutionary-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Enterprise AI Agents", "AI Automation", "ROI", "Business Transformation", "2025", "Revolutionary Breakthrough"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,800%"
+        savings: "$8.2B"
+        accuracy: "99.7%"
+        efficiency: "450%"
+      reading_time: "25 min read"
+      
+    - id: "fortune-500-enterprise-ai-agents-1800-roi-ultimate-success"
+      type: "case-study"
+      title: "Fortune 500 Enterprise AI Agents Success: $3.2B Company Achieves 1,800% ROI in 8 Months"
+      file_path: "/content/case-studies/fortune-500-enterprise-ai-agents-1800-roi-ultimate-success.md"
+      url: "/case-studies/fortune-500-enterprise-ai-agents-1800-roi-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "Enterprise AI Agents", "ROI", "Success Story", "1,800% ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,800%"
+        savings: "$2.8B"
+        efficiency: "450%"
+        accuracy: "99.7%"
+      reading_time: "18 min read"
+      
+    - id: "enterprise-ai-agents-implementation-master-guide-2025"
+      type: "resource"
+      title: "Enterprise AI Agents Implementation Master Guide 2025: From Strategy to 1,800% ROI in 8 Months"
+      file_path: "/content/resources/enterprise-ai-agents-implementation-master-guide-2025.md"
+      url: "/resources/enterprise-ai-agents-implementation-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "Enterprise AI Agents", "ROI", "Strategy", "Master Guide", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,800%"
+        timeline: "8 months"
+        success_rate: "94%"
+        comprehensive: "Complete Framework"
+      reading_time: "35 min read"
+
   new_content_january_2025:
 <<<<<<< HEAD
     - id: "ai-2025-enterprise-ai-transformation-ultimate-guide"
