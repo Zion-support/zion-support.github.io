@@ -181,6 +181,11 @@ import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026Breakthr
 import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
 
+// Import new 2025 ultimate breakthrough promotional components
+import SyntheticIntelligence2025UltimateBreakthroughBanner from '../components/SyntheticIntelligence2025UltimateBreakthroughBanner';
+import AdvancedAutomationMastery2025Banner from '../components/AdvancedAutomationMastery2025Banner';
+import UltimateContentShowcase2025Banner from '../components/UltimateContentShowcase2025Banner';
+
 // Import new 2026 content promotional banners
 import EnterpriseAutomation2026Banner from '../components/EnterpriseAutomation2026Banner';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
@@ -290,6 +295,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW ULTIMATE BREAKTHROUGH BANNERS - LATEST FEATURED */}
+        <SyntheticIntelligence2025UltimateBreakthroughBanner />
+        <AdvancedAutomationMastery2025Banner />
+        <UltimateContentShowcase2025Banner />
+        
         {/* NEW 2025 CONTENT BANNERS - LATEST FEATURED */}
         <NewContent2025UltimateSecurityBanner />
         <QuantumAI2026BreakthroughBanner />
