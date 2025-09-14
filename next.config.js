@@ -76,6 +76,10 @@ const nextConfig = {
 export default nextConfig;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
@@ -89,3 +93,5 @@ export default nextConfig;
 >>>>>>> pr-17316
 =======
 >>>>>>> pr-17315
+>>>>>>> main
+>>>>>>> main
