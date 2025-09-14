@@ -1,4 +1,6 @@
 [build]
+<<<<<<< HEAD
+=======
   # Pre-build command to handle dependencies
   command = "bash scripts/netlify-pre-build.sh && npm run build"
   
@@ -101,3 +103,4 @@
   for = "/api/*"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+>>>>>>> cursor/create-and-deploy-new-content-040d

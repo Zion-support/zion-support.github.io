@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 
+<<<<<<< HEAD
+          </div>
+=======
 const RevolutionaryContent2026Banner = () => {
   return (
     <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-16">
@@ -54,6 +57,7 @@ const RevolutionaryContent2026Banner = () => {
               </div>
             </div>
           </div>
+>>>>>>> cursor/create-and-deploy-new-content-040d
 
           {/* Right Column - Visual Elements */}
           <div className="relative">
