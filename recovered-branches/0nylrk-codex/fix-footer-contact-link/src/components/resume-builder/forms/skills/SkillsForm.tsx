@@ -50,6 +50,8 @@ export function SkillsForm({ resumeIdskillsonCompleteonBack }: SkillsFormProps) 
     }
   };
 
+
+
   return (
     <div className="space-y-6">
       <div>

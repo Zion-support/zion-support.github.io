@@ -86,6 +86,7 @@ export function EducationForm({
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
 
+
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}

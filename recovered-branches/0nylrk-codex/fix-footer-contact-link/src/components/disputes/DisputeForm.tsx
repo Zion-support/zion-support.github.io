@@ -97,6 +97,7 @@ export function DisputeForm({
       toast.error("Failed to submit dispute. Please try again.");
     } finally {
       setIsSubmitting(false);
+
     }
   }
 

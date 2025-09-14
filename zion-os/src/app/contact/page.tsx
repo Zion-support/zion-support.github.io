@@ -2,10 +2,10 @@
 import Link from 'next/link';
 export default function ContactPage() {
 
+  return (;
+    <div className=&quot;min-h-screen bg-white&quot;>
   return (
     <div className="min-h-screen bg-white">
-
-
       {/* Hero Section */}
 
       <section className=&quot;bg - gradient - to - r from - indigo - 600 to - purple - 700 text - white py - 20 & quot;>;
@@ -154,7 +154,7 @@ export default function ContactPage() {
                     <p className="text - gray - 600">;
                       Zion Tech Group < br />;
                       123 Innovation Drive < br />;
-                      Tech ValleyCA 94000 < br />;
+                      Tech Valley, CA 94000 < br />;
                       United States;
                     </p>;
                   </div>;
@@ -217,10 +217,12 @@ export default function ContactPage() {
           </div>;
         </div>;
       </section>;
+
 import Link from 'next/link';
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -364,7 +366,7 @@ export default function ContactPage() {
                     <p className="text-gray-600">
                       Zion Tech Group<br />
                       123 Innovation Drive<br />
-                      Tech ValleyCA 94000<br />
+                      Tech Valley, CA 94000<br />
                       United States
                     </p>
                   </div>
@@ -451,7 +453,7 @@ export default function ContactPage() {
                 Do you offer ongoing support?;
               </h3>;
               <p className="text - gray - 600">;
-                Yeswe provide comprehensive ongoing supportmonitoringand optimization services to ensure your solutions continue to deliver value.;
+                Yes, we provide comprehensive ongoing support, monitoring, and optimization services to ensure your solutions continue to deliver value.;
               </p>;
             </div>;
             <div className="bg - white p - 6 rounded - lg shadow - sm">;
@@ -459,7 +461,7 @@ export default function ContactPage() {
                 What industries do you serve?;
               </h3>;
               <p className="text - gray - 600">;
-                We serve clients across all industries including healthcarefinancemanufacturingretailand technology. Our solutions are industry - agnostic.;
+                We serve clients across all industries including healthcare, finance, manufacturing, retail, and technology. Our solutions are industry - agnostic.;
               </p>;
             </div>;
             <div className="bg - white p - 6 rounded - lg shadow - sm">;

@@ -128,6 +128,7 @@ export function AIEnhancementPanel({
               <Button 
                 variant="ghost" 
                 size="sm" 
+
                 onClick={handleCopy}
                 className="h-8"
               >

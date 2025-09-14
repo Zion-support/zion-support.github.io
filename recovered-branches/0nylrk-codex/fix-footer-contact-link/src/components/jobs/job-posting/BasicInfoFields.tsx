@@ -139,6 +139,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
         </CardContent>
       </Card>
 
+
       <FormField
         control={control}
         name="location"

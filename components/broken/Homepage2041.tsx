@@ -25,6 +25,7 @@ import {
   Clock
 } from 'lucide-react';
 import Link from 'next/link';
+
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import { innovative2041MicroSaasServices } from '../data/innovative-2041-micro-saas-services';
 import { innovative2041ITServices } from '../data/innovative-2041-it-services';

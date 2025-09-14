@@ -172,6 +172,7 @@ function ResearchPage() {
                       <span className=&quot;text-sm text-gray-400&quot;>{topic}</span>
                     </div>
                   ))}
+
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Innovation;
               </span>;
@@ -255,6 +256,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                       <span className="text-sm text-gray-400">{topic}</span>
                     </div>
                   ))}
+
                 </div>;
                 <p className=&quot;text - gray - 300 mb - 6&quot;>{area.description}</p>;
                 <div className=&quot;space - y-2 & quot;>;
@@ -275,6 +277,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
 
 
             Recent Research
@@ -304,6 +307,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <p className=&quot;text - sm text - gray - 300 mb - 4&quot;>{publication.abstract}</p>;
                 <a;
                   href={`https://doi.org/${publication.doi}`}
+
                   target=&quot;_blank & quot;
                   rel=&quot;noopener noreferrer & quot;
                   className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
@@ -342,6 +346,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <p className="text-sm text-gray-300 mb-4">{publication.abstract}</p>
                 <a
                   href={`https://doi.org/${publication.doi}`}
+
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
@@ -380,6 +385,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <p className=&quot;mt-2 text-sm text-gray-400&quot;>{item.description}</p>
               </div>
             ))}
+
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Impact</h2>;
@@ -419,6 +425,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <p className="mt-2 text-sm text-gray-400">{item.description}</p>
               </div>
             ))}
+
           </dl>;
         </div>;
       </div>;
@@ -451,6 +458,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <div className=&quot;space-y-3 text-gray-300&quot;>
                   <p className=&quot;flex items-center gap-2&quot;>
                     <GlobeAltIcon className=&quot;h-5 w-5 text-blue-400&quot; />
+
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Collaborations</h2>;
@@ -525,13 +533,11 @@ const Page: React.FC<PageProps> = ({ className }) => {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
-
             Join our research community
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Interested in collaborating on cutting-edge AI research? 
+
             Let's explore opportunities to work together.
           </p>
           <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
@@ -572,6 +578,15 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </div>;
         </div>;
       </div>;
+
+      {/* CTA section */}
+
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
+
+=======
     </div>);
 }
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">

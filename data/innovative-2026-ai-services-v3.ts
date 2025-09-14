@@ -1,4 +1,7 @@
+
 export interface Innovative2026AiServiceV3 {
+export interface Innovative2026AiServiceV3 {;
+
   id: string;
   name: string;
   tagline: string;
@@ -11,12 +14,44 @@ export interface Innovative2026AiServiceV3 {
   contactInfo: {
     mobile: string;
     email: string;
+
+export interface Innovative2026AiServiceV3 {;
     address: string;
   };
+
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  description: string,;
+  features: string[],;
+  link: string,;
+  category: string,;
+  realImplementation: boolean,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string;
+  }
 }
 
 export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
   {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+
     id: "2026-innovative-ai-v3",
     name: "2026 Innovative AI Platform V3",
     tagline: "Third generation innovative AI",
@@ -35,7 +70,11 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+
+
+

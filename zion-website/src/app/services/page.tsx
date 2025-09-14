@@ -98,6 +98,7 @@ const reasonsToChoose = [;
     icon: ChartBarIcon}
   {
 
+
     name: 'Cutting - Edge Technology',
     description: 'Access to the latest AI research and technology innovations.',
     icon: LightBulbIcon},
@@ -317,6 +318,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </div>
               </div>
             ))}
+
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Our Process</h2>;
@@ -371,6 +373,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </div>
               </div>
             ))}
+
           </div>;
         </div>;
       </div>;
@@ -381,8 +384,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Why Choose Us</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
             The Zion Tech Group Advantage
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">

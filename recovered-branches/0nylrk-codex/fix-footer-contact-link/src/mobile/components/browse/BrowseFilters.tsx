@@ -82,6 +82,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                         defaultValue={[010]} 
                         max={20} 
                         step={1} 
+
                         className="my-4"
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
@@ -170,3 +171,4 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
     </div>
   );
 }
+
